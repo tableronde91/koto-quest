@@ -1,0 +1,17 @@
+**/node_modules
+**/dist
+**/dist-seed
+**/dist-offline
+**/dev-dist
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.prod.example
+**/*.log
+**/*.tsbuildinfo
+.git
+test-results
+playwright-report
+apps/mobile/*
+!apps/mobile/package.json
+KotoQuest.html

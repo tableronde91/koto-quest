@@ -1,0 +1,1262 @@
+{
+  "contentVersion": "2026.11-expr1",
+  "notice": "Expressions courantes sélectionnées par Koto Quest ; la lecture en kana et le registre (poli, familier…) aident à choisir la bonne formule selon la situation.",
+  "themes": [
+    {
+      "slug": "politesse",
+      "glyph": "礼",
+      "title": "Politesse essentielle",
+      "description": "Les petites formules qui rythment chaque journée au Japon.",
+      "expressions": [
+        {
+          "slug": "expr-yoroshiku",
+          "kind": "vocabulary",
+          "front": "よろしくお願いします",
+          "reading": "よろしくおねがいします",
+          "romaji": "yoroshiku onegai shimasu",
+          "meaning": "merci d’avance, je compte sur vous",
+          "note": "Formule passe-partout : après s’être présenté, en demandant un service, en commençant un travail ensemble.",
+          "register": "polite",
+          "example": {
+            "jp": "はじめまして、ケンです。よろしくお願いします。",
+            "fr": "Enchanté, je m’appelle Ken. Ravi de faire ta connaissance."
+          }
+        },
+        {
+          "slug": "expr-douzo",
+          "kind": "vocabulary",
+          "front": "どうぞ",
+          "reading": "どうぞ",
+          "romaji": "dōzo",
+          "meaning": "je vous en prie, allez-y",
+          "note": "Pour offrir quelque chose, céder le passage ou inviter quelqu’un à entrer.",
+          "register": "neutral",
+          "example": {
+            "jp": "どうぞ、こちらへ。",
+            "fr": "Je vous en prie, par ici."
+          }
+        },
+        {
+          "slug": "expr-doumo",
+          "kind": "vocabulary",
+          "front": "どうも",
+          "reading": "どうも",
+          "romaji": "dōmo",
+          "meaning": "merci (bref)",
+          "note": "Remerciement rapide et léger, ou salutation quand on croise une connaissance.",
+          "register": "neutral",
+          "example": {
+            "jp": "あ、どうも。",
+            "fr": "Ah, merci."
+          }
+        },
+        {
+          "slug": "expr-itadakimasu",
+          "kind": "vocabulary",
+          "front": "いただきます",
+          "reading": "いただきます",
+          "romaji": "itadakimasu",
+          "meaning": "bon appétit (avant de manger)",
+          "note": "Se dit avant de manger, mains jointes : on remercie pour le repas.",
+          "register": "neutral",
+          "example": {
+            "jp": "いただきます！",
+            "fr": "Bon appétit !"
+          }
+        },
+        {
+          "slug": "expr-gochisousama",
+          "kind": "vocabulary",
+          "front": "ごちそうさまでした",
+          "reading": "ごちそうさまでした",
+          "romaji": "gochisōsama deshita",
+          "meaning": "merci pour le repas (après)",
+          "note": "Se dit en fin de repas, à la maison comme au restaurant en partant.",
+          "register": "polite",
+          "example": {
+            "jp": "ごちそうさまでした。おいしかったです。",
+            "fr": "Merci pour le repas, c’était délicieux."
+          }
+        },
+        {
+          "slug": "expr-ojamashimasu",
+          "kind": "vocabulary",
+          "front": "お邪魔します",
+          "reading": "おじゃまします",
+          "romaji": "ojama shimasu",
+          "meaning": "pardon de vous déranger (en entrant chez quelqu’un)",
+          "note": "Se dit en entrant chez quelqu’un ; en repartant, on dit お邪魔しました.",
+          "register": "polite",
+          "example": {
+            "jp": "お邪魔します。",
+            "fr": "Je me permets d’entrer."
+          }
+        },
+        {
+          "slug": "expr-shitsureishimasu",
+          "kind": "vocabulary",
+          "front": "失礼します",
+          "reading": "しつれいします",
+          "romaji": "shitsurei shimasu",
+          "meaning": "excusez-moi (en entrant, en partant)",
+          "note": "Pour entrer dans un bureau, interrompre poliment ou prendre congé.",
+          "register": "formal",
+          "example": {
+            "jp": "失礼します。入ってもいいですか。",
+            "fr": "Excusez-moi, puis-je entrer ?"
+          }
+        },
+        {
+          "slug": "expr-otsukaresama",
+          "kind": "vocabulary",
+          "front": "お疲れさまです",
+          "reading": "おつかれさまです",
+          "romaji": "otsukaresama desu",
+          "meaning": "merci pour vos efforts, bon travail",
+          "note": "Salutation entre collègues tout au long de la journée et en fin de travail.",
+          "register": "polite",
+          "example": {
+            "jp": "お疲れさまです。今日は大変でしたね。",
+            "fr": "Bon travail. La journée a été dure, hein."
+          }
+        },
+        {
+          "slug": "expr-gomennasai",
+          "kind": "vocabulary",
+          "front": "ごめんなさい",
+          "reading": "ごめんなさい",
+          "romaji": "gomen nasai",
+          "meaning": "pardon, je suis désolé(e)",
+          "note": "Excuse sincère entre proches ; plus personnel que すみません.",
+          "register": "neutral",
+          "example": {
+            "jp": "遅れてごめんなさい。",
+            "fr": "Désolé(e) d’être en retard."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rencontres",
+      "glyph": "会",
+      "title": "Rencontres et au revoir",
+      "description": "Saluer, prendre des nouvelles et se quitter.",
+      "expressions": [
+        {
+          "slug": "expr-hajimemashite",
+          "kind": "vocabulary",
+          "front": "はじめまして",
+          "reading": "はじめまして",
+          "romaji": "hajimemashite",
+          "meaning": "enchanté(e) (première rencontre)",
+          "note": "Uniquement lors d’une toute première rencontre, suivi de son nom.",
+          "register": "polite",
+          "example": {
+            "jp": "はじめまして、ゆきです。",
+            "fr": "Enchantée, je suis Yuki."
+          }
+        },
+        {
+          "slug": "expr-ohisashiburi",
+          "kind": "vocabulary",
+          "front": "お久しぶりです",
+          "reading": "おひさしぶりです",
+          "romaji": "ohisashiburi desu",
+          "meaning": "ça fait longtemps !",
+          "note": "Quand on revoit quelqu’un après plusieurs semaines ou mois.",
+          "register": "polite",
+          "example": {
+            "jp": "お久しぶりです！元気でしたか。",
+            "fr": "Ça fait longtemps ! Tu allais bien ?"
+          }
+        },
+        {
+          "slug": "expr-ogenkidesuka",
+          "kind": "vocabulary",
+          "front": "お元気ですか",
+          "reading": "おげんきですか",
+          "romaji": "o-genki desu ka",
+          "meaning": "comment allez-vous ?",
+          "note": "Se demande surtout quand on ne s’est pas vus depuis un moment, pas tous les jours.",
+          "register": "polite",
+          "example": {
+            "jp": "お元気ですか。――はい、元気です。",
+            "fr": "Comment allez-vous ? – Bien, merci."
+          }
+        },
+        {
+          "slug": "expr-mataashita",
+          "kind": "vocabulary",
+          "front": "また明日",
+          "reading": "またあした",
+          "romaji": "mata ashita",
+          "meaning": "à demain",
+          "note": "Pour se quitter quand on se revoit le lendemain.",
+          "register": "casual",
+          "example": {
+            "jp": "じゃあ、また明日！",
+            "fr": "Bon, à demain !"
+          }
+        },
+        {
+          "slug": "expr-oyasuminasai",
+          "kind": "vocabulary",
+          "front": "おやすみなさい",
+          "reading": "おやすみなさい",
+          "romaji": "oyasuminasai",
+          "meaning": "bonne nuit",
+          "note": "Avant d’aller dormir ; entre amis, on abrège en おやすみ.",
+          "register": "polite",
+          "example": {
+            "jp": "もう寝ます。おやすみなさい。",
+            "fr": "Je vais me coucher. Bonne nuit."
+          }
+        },
+        {
+          "slug": "expr-ittekimasu",
+          "kind": "vocabulary",
+          "front": "行ってきます",
+          "reading": "いってきます",
+          "romaji": "itte kimasu",
+          "meaning": "j’y vais (et je reviens)",
+          "note": "Se dit en quittant la maison ou le bureau, quand on va revenir.",
+          "register": "neutral",
+          "example": {
+            "jp": "行ってきます！",
+            "fr": "J’y vais !"
+          }
+        },
+        {
+          "slug": "expr-itterasshai",
+          "kind": "vocabulary",
+          "front": "行ってらっしゃい",
+          "reading": "いってらっしゃい",
+          "romaji": "itterasshai",
+          "meaning": "bonne journée (à celui qui part)",
+          "note": "Réponse à 行ってきます, dite par ceux qui restent.",
+          "register": "neutral",
+          "example": {
+            "jp": "行ってらっしゃい。気をつけて！",
+            "fr": "Bonne journée, fais attention !"
+          }
+        },
+        {
+          "slug": "expr-tadaima",
+          "kind": "vocabulary",
+          "front": "ただいま",
+          "reading": "ただいま",
+          "romaji": "tadaima",
+          "meaning": "je suis rentré(e)",
+          "note": "Se dit en rentrant à la maison.",
+          "register": "neutral",
+          "example": {
+            "jp": "ただいま！",
+            "fr": "Je suis rentré !"
+          }
+        },
+        {
+          "slug": "expr-okaerinasai",
+          "kind": "vocabulary",
+          "front": "お帰りなさい",
+          "reading": "おかえりなさい",
+          "romaji": "okaerinasai",
+          "meaning": "bon retour (à celui qui rentre)",
+          "note": "Réponse à ただいま ; entre proches, お帰り.",
+          "register": "neutral",
+          "example": {
+            "jp": "お帰りなさい。疲れたでしょう。",
+            "fr": "Bon retour. Tu dois être fatigué."
+          }
+        },
+        {
+          "slug": "expr-kiotsukete",
+          "kind": "vocabulary",
+          "front": "気をつけて",
+          "reading": "きをつけて",
+          "romaji": "ki o tsukete",
+          "meaning": "fais attention à toi",
+          "note": "Pour souhaiter un bon trajet ou prévenir d’un danger.",
+          "register": "casual",
+          "example": {
+            "jp": "雨ですから、気をつけて帰ってね。",
+            "fr": "Il pleut, rentre prudemment."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "comprendre",
+      "glyph": "解",
+      "title": "Se faire comprendre",
+      "description": "Les phrases de survie quand la conversation va trop vite.",
+      "expressions": [
+        {
+          "slug": "expr-wakarimashita",
+          "kind": "vocabulary",
+          "front": "分かりました",
+          "reading": "わかりました",
+          "romaji": "wakarimashita",
+          "meaning": "compris, d’accord",
+          "note": "Pour dire qu’on a compris ou accepter une consigne.",
+          "register": "polite",
+          "example": {
+            "jp": "はい、分かりました。",
+            "fr": "Oui, c’est compris."
+          }
+        },
+        {
+          "slug": "expr-wakarimasen",
+          "kind": "vocabulary",
+          "front": "分かりません",
+          "reading": "わかりません",
+          "romaji": "wakarimasen",
+          "meaning": "je ne comprends pas, je ne sais pas",
+          "note": "Utile et honnête ; adoucir avec すみません、… devant.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、よく分かりません。",
+            "fr": "Désolé, je ne comprends pas bien."
+          }
+        },
+        {
+          "slug": "expr-mouichido",
+          "kind": "vocabulary",
+          "front": "もう一度お願いします",
+          "reading": "もういちどおねがいします",
+          "romaji": "mō ichido onegai shimasu",
+          "meaning": "encore une fois, s’il vous plaît",
+          "note": "Pour faire répéter une phrase.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、もう一度お願いします。",
+            "fr": "Pardon, encore une fois s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-yukkuri",
+          "kind": "vocabulary",
+          "front": "ゆっくり話してください",
+          "reading": "ゆっくりはなしてください",
+          "romaji": "yukkuri hanashite kudasai",
+          "meaning": "parlez lentement, s’il vous plaît",
+          "note": "Indispensable pour suivre une conversation à son rythme.",
+          "register": "polite",
+          "example": {
+            "jp": "日本語が下手なので、ゆっくり話してください。",
+            "fr": "Mon japonais n’est pas bon, parlez lentement s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-eigo",
+          "kind": "vocabulary",
+          "front": "英語が話せますか",
+          "reading": "えいごがはなせますか",
+          "romaji": "eigo ga hanasemasu ka",
+          "meaning": "parlez-vous anglais ?",
+          "note": "Forme potentielle de 話す : « pouvez-vous parler… ».",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、英語が話せますか。",
+            "fr": "Excusez-moi, parlez-vous anglais ?"
+          }
+        },
+        {
+          "slug": "expr-nihongosukoshi",
+          "kind": "vocabulary",
+          "front": "日本語が少し分かります",
+          "reading": "にほんごがすこしわかります",
+          "romaji": "nihongo ga sukoshi wakarimasu",
+          "meaning": "je comprends un peu le japonais",
+          "note": "Pour rassurer l’interlocuteur, avec modestie.",
+          "register": "polite",
+          "example": {
+            "jp": "日本語が少し分かります。",
+            "fr": "Je comprends un peu le japonais."
+          }
+        },
+        {
+          "slug": "expr-nihongodenan",
+          "kind": "vocabulary",
+          "front": "日本語で何と言いますか",
+          "reading": "にほんごでなんといいますか",
+          "romaji": "nihongo de nan to iimasu ka",
+          "meaning": "comment dit-on ça en japonais ?",
+          "note": "On montre l’objet, ou on dit le mot dans sa langue avant.",
+          "register": "polite",
+          "example": {
+            "jp": "これは日本語で何と言いますか。",
+            "fr": "Comment dit-on ceci en japonais ?"
+          }
+        },
+        {
+          "slug": "expr-chottomatte",
+          "kind": "vocabulary",
+          "front": "ちょっと待ってください",
+          "reading": "ちょっとまってください",
+          "romaji": "chotto matte kudasai",
+          "meaning": "attendez un instant, s’il vous plaît",
+          "note": "Pour gagner du temps ; entre amis, ちょっと待って.",
+          "register": "polite",
+          "example": {
+            "jp": "ちょっと待ってください。今、探します。",
+            "fr": "Un instant, je cherche."
+          }
+        },
+        {
+          "slug": "expr-douiuimi",
+          "kind": "vocabulary",
+          "front": "どういう意味ですか",
+          "reading": "どういういみですか",
+          "romaji": "dō iu imi desu ka",
+          "meaning": "qu’est-ce que ça veut dire ?",
+          "note": "Pour demander le sens d’un mot ou d’une phrase entendue.",
+          "register": "polite",
+          "example": {
+            "jp": "「やばい」はどういう意味ですか。",
+            "fr": "Que veut dire « yabai » ?"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "restaurant",
+      "glyph": "食",
+      "title": "Au restaurant et au café",
+      "description": "Entrer, commander, payer : tout le repas en japonais.",
+      "expressions": [
+        {
+          "slug": "expr-irasshaimase",
+          "kind": "vocabulary",
+          "front": "いらっしゃいませ",
+          "reading": "いらっしゃいませ",
+          "romaji": "irasshaimase",
+          "meaning": "bienvenue (dit par le personnel)",
+          "note": "Le personnel le crie à l’entrée ; on n’y répond pas, un signe de tête suffit.",
+          "register": "formal",
+          "example": {
+            "jp": "いらっしゃいませ！",
+            "fr": "Bienvenue !"
+          }
+        },
+        {
+          "slug": "expr-nanmeisama",
+          "kind": "vocabulary",
+          "front": "何名様ですか",
+          "reading": "なんめいさまですか",
+          "romaji": "nanmei-sama desu ka",
+          "meaning": "combien de personnes ?",
+          "note": "Question du serveur à l’entrée ; on répond avec les doigts ou ひとり、ふたり…",
+          "register": "formal",
+          "example": {
+            "jp": "何名様ですか。――二人です。",
+            "fr": "Combien êtes-vous ? – Deux."
+          }
+        },
+        {
+          "slug": "expr-menyuu",
+          "kind": "vocabulary",
+          "front": "メニューをお願いします",
+          "reading": "メニューをおねがいします",
+          "romaji": "menyū o onegai shimasu",
+          "meaning": "la carte, s’il vous plaît",
+          "note": "おねがいします permet de demander presque n’importe quoi.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、メニューをお願いします。",
+            "fr": "Excusez-moi, la carte s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-osusume",
+          "kind": "vocabulary",
+          "front": "おすすめは何ですか",
+          "reading": "おすすめはなんですか",
+          "romaji": "osusume wa nan desu ka",
+          "meaning": "qu’est-ce que vous recommandez ?",
+          "note": "Pour découvrir la spécialité de la maison.",
+          "register": "polite",
+          "example": {
+            "jp": "今日のおすすめは何ですか。",
+            "fr": "Quelle est la recommandation du jour ?"
+          }
+        },
+        {
+          "slug": "expr-koreokudasai",
+          "kind": "vocabulary",
+          "front": "これをください",
+          "reading": "これをください",
+          "romaji": "kore o kudasai",
+          "meaning": "je vais prendre ceci",
+          "note": "En montrant le plat sur la carte : pratique quand on ne sait pas le lire.",
+          "register": "polite",
+          "example": {
+            "jp": "これとこれをください。",
+            "fr": "Je prendrai ceci et ceci."
+          }
+        },
+        {
+          "slug": "expr-okaikei",
+          "kind": "vocabulary",
+          "front": "お会計お願いします",
+          "reading": "おかいけいおねがいします",
+          "romaji": "okaikei onegai shimasu",
+          "meaning": "l’addition, s’il vous plaît",
+          "note": "On paie souvent à la caisse près de la sortie, avec le ticket laissé sur la table.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、お会計お願いします。",
+            "fr": "Excusez-moi, l’addition s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-betsubetsu",
+          "kind": "vocabulary",
+          "front": "別々でお願いします",
+          "reading": "べつべつでおねがいします",
+          "romaji": "betsubetsu de onegai shimasu",
+          "meaning": "séparément, s’il vous plaît (paiement)",
+          "note": "Pour que chacun paie sa part.",
+          "register": "polite",
+          "example": {
+            "jp": "お会計は別々でお願いします。",
+            "fr": "Nous paierons séparément."
+          }
+        },
+        {
+          "slug": "expr-mizuokudasai",
+          "kind": "vocabulary",
+          "front": "お水をください",
+          "reading": "おみずをください",
+          "romaji": "o-mizu o kudasai",
+          "meaning": "de l’eau, s’il vous plaît",
+          "note": "L’eau (ou le thé) est généralement gratuite au restaurant.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、お水をください。",
+            "fr": "Excusez-moi, de l’eau s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-oishikatta",
+          "kind": "vocabulary",
+          "front": "おいしかったです",
+          "reading": "おいしかったです",
+          "romaji": "oishikatta desu",
+          "meaning": "c’était délicieux",
+          "note": "Compliment au chef ou à l’hôte, au passé.",
+          "register": "polite",
+          "example": {
+            "jp": "ラーメン、とてもおいしかったです。",
+            "fr": "Les ramen étaient vraiment délicieux."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "magasins",
+      "glyph": "買",
+      "title": "Dans les magasins",
+      "description": "Demander, essayer, payer… et refuser poliment.",
+      "expressions": [
+        {
+          "slug": "expr-mirudake",
+          "kind": "vocabulary",
+          "front": "見ているだけです",
+          "reading": "みているだけです",
+          "romaji": "mite iru dake desu",
+          "meaning": "je regarde seulement",
+          "note": "Pour décliner gentiment l’aide d’un vendeur.",
+          "register": "polite",
+          "example": {
+            "jp": "ありがとうございます。見ているだけです。",
+            "fr": "Merci, je regarde seulement."
+          }
+        },
+        {
+          "slug": "expr-kaado",
+          "kind": "vocabulary",
+          "front": "カードで払えますか",
+          "reading": "カードではらえますか",
+          "romaji": "kādo de haraemasu ka",
+          "meaning": "puis-je payer par carte ?",
+          "note": "Certains petits commerces n’acceptent encore que les espèces.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、カードで払えますか。",
+            "fr": "Excusez-moi, puis-je payer par carte ?"
+          }
+        },
+        {
+          "slug": "expr-fukuro",
+          "kind": "vocabulary",
+          "front": "袋はいりません",
+          "reading": "ふくろはいりません",
+          "romaji": "fukuro wa irimasen",
+          "meaning": "pas besoin de sac",
+          "note": "Les sacs sont souvent payants : on vous demandera 袋はいりますか.",
+          "register": "polite",
+          "example": {
+            "jp": "袋はいりません。",
+            "fr": "Je n’ai pas besoin de sac."
+          }
+        },
+        {
+          "slug": "expr-korenishimasu",
+          "kind": "vocabulary",
+          "front": "これにします",
+          "reading": "これにします",
+          "romaji": "kore ni shimasu",
+          "meaning": "je prends celui-ci",
+          "note": "〜にします = « je choisis… », pour un achat ou une commande.",
+          "register": "polite",
+          "example": {
+            "jp": "じゃあ、これにします。",
+            "fr": "Bon, je prends celui-ci."
+          }
+        },
+        {
+          "slug": "expr-shichaku",
+          "kind": "vocabulary",
+          "front": "試着してもいいですか",
+          "reading": "しちゃくしてもいいですか",
+          "romaji": "shichaku shite mo ii desu ka",
+          "meaning": "puis-je l’essayer ?",
+          "note": "Pour essayer un vêtement en cabine.",
+          "register": "polite",
+          "example": {
+            "jp": "このシャツ、試着してもいいですか。",
+            "fr": "Puis-je essayer cette chemise ?"
+          }
+        },
+        {
+          "slug": "expr-yasuino",
+          "kind": "vocabulary",
+          "front": "もう少し安いのはありますか",
+          "reading": "もうすこしやすいのはありますか",
+          "romaji": "mō sukoshi yasui no wa arimasu ka",
+          "meaning": "en avez-vous un un peu moins cher ?",
+          "note": "On ne marchande pas au Japon, mais on peut demander un autre modèle.",
+          "register": "polite",
+          "example": {
+            "jp": "もう少し安いのはありますか。",
+            "fr": "En avez-vous un un peu moins cher ?"
+          }
+        },
+        {
+          "slug": "expr-menzei",
+          "kind": "vocabulary",
+          "front": "免税できますか",
+          "reading": "めんぜいできますか",
+          "romaji": "menzei dekimasu ka",
+          "meaning": "puis-je acheter en détaxe ?",
+          "note": "Pour les touristes, sur présentation du passeport dans les boutiques affichant 免税.",
+          "register": "polite",
+          "example": {
+            "jp": "パスポートがあります。免税できますか。",
+            "fr": "J’ai mon passeport, puis-je acheter en détaxe ?"
+          }
+        },
+        {
+          "slug": "expr-ryoushuusho",
+          "kind": "vocabulary",
+          "front": "レシートをください",
+          "reading": "レシートをください",
+          "romaji": "reshīto o kudasai",
+          "meaning": "le ticket de caisse, s’il vous plaît",
+          "note": "Pour une note de frais, on demande plutôt un 領収書 (reçu officiel).",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、レシートをください。",
+            "fr": "Excusez-moi, le ticket s’il vous plaît."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "transports",
+      "glyph": "道",
+      "title": "Transports et orientation",
+      "description": "Trains, taxis, plans : ne plus jamais se perdre.",
+      "expressions": [
+        {
+          "slug": "expr-dokodesuka",
+          "kind": "vocabulary",
+          "front": "〜はどこですか",
+          "reading": "〜はどこですか",
+          "romaji": "~ wa doko desu ka",
+          "meaning": "où est… ?",
+          "note": "La question la plus utile du voyageur : remplacer 〜 par le lieu.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、駅はどこですか。",
+            "fr": "Excusez-moi, où est la gare ?"
+          }
+        },
+        {
+          "slug": "expr-mademade",
+          "kind": "vocabulary",
+          "front": "〜までお願いします",
+          "reading": "〜までおねがいします",
+          "romaji": "~ made onegai shimasu",
+          "meaning": "jusqu’à…, s’il vous plaît (taxi)",
+          "note": "Pour indiquer sa destination au chauffeur ; montrer l’adresse écrite aide.",
+          "register": "polite",
+          "example": {
+            "jp": "東京駅までお願いします。",
+            "fr": "À la gare de Tokyo, s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-tomarimasuka",
+          "kind": "vocabulary",
+          "front": "この電車は〜に止まりますか",
+          "reading": "このでんしゃは〜にとまりますか",
+          "romaji": "kono densha wa ~ ni tomarimasu ka",
+          "meaning": "ce train s’arrête-t-il à… ?",
+          "note": "Les trains express (急行・快速) sautent des gares : vérifiez avant de monter.",
+          "register": "polite",
+          "example": {
+            "jp": "この電車は新宿に止まりますか。",
+            "fr": "Ce train s’arrête-t-il à Shinjuku ?"
+          }
+        },
+        {
+          "slug": "expr-michinimayoi",
+          "kind": "vocabulary",
+          "front": "道に迷いました",
+          "reading": "みちにまよいました",
+          "romaji": "michi ni mayoimashita",
+          "meaning": "je me suis perdu(e)",
+          "note": "Les passants et les postes de police (交番) aident volontiers.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、道に迷いました。",
+            "fr": "Excusez-moi, je me suis perdu."
+          }
+        },
+        {
+          "slug": "expr-chikaku",
+          "kind": "vocabulary",
+          "front": "近くにコンビニはありますか",
+          "reading": "ちかくにコンビニはありますか",
+          "romaji": "chikaku ni konbini wa arimasu ka",
+          "meaning": "y a-t-il une supérette près d’ici ?",
+          "note": "Modèle réutilisable : 近くに〜はありますか.",
+          "register": "polite",
+          "example": {
+            "jp": "近くにコンビニはありますか。",
+            "fr": "Y a-t-il une supérette près d’ici ?"
+          }
+        },
+        {
+          "slug": "expr-norikae",
+          "kind": "vocabulary",
+          "front": "どこで乗り換えますか",
+          "reading": "どこでのりかえますか",
+          "romaji": "doko de norikaemasu ka",
+          "meaning": "où faut-il changer ?",
+          "note": "乗り換え = correspondance ; les panneaux l’indiquent en jaune ou en orange.",
+          "register": "polite",
+          "example": {
+            "jp": "渋谷へ行きたいです。どこで乗り換えますか。",
+            "fr": "Je veux aller à Shibuya, où dois-je changer ?"
+          }
+        },
+        {
+          "slug": "expr-aruite",
+          "kind": "vocabulary",
+          "front": "歩いて何分ですか",
+          "reading": "あるいてなんぷんですか",
+          "romaji": "aruite nan-pun desu ka",
+          "meaning": "c’est à combien de minutes à pied ?",
+          "note": "Les distances se donnent souvent en minutes de marche.",
+          "register": "polite",
+          "example": {
+            "jp": "駅から歩いて何分ですか。",
+            "fr": "C’est à combien de minutes à pied de la gare ?"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "reactions",
+      "glyph": "感",
+      "title": "Réactions et émotions",
+      "description": "Réagir naturellement dans une conversation.",
+      "expressions": [
+        {
+          "slug": "expr-sugoi",
+          "kind": "vocabulary",
+          "front": "すごい",
+          "reading": "すごい",
+          "romaji": "sugoi",
+          "meaning": "incroyable, génial",
+          "note": "Admiration ou étonnement ; すごいですね à l’oral poli.",
+          "register": "casual",
+          "example": {
+            "jp": "えっ、もう全部読んだの？すごい！",
+            "fr": "Quoi, tu as déjà tout lu ? Génial !"
+          }
+        },
+        {
+          "slug": "expr-hontou",
+          "kind": "vocabulary",
+          "front": "本当に？",
+          "reading": "ほんとうに？",
+          "romaji": "hontō ni?",
+          "meaning": "vraiment ?",
+          "note": "Pour marquer la surprise ; poli : 本当ですか.",
+          "register": "casual",
+          "example": {
+            "jp": "明日休み？本当に？",
+            "fr": "Demain c’est congé ? Vraiment ?"
+          }
+        },
+        {
+          "slug": "expr-naruhodo",
+          "kind": "vocabulary",
+          "front": "なるほど",
+          "reading": "なるほど",
+          "romaji": "naruhodo",
+          "meaning": "je vois, je comprends",
+          "note": "Montre qu’on suit et qu’on a compris ; à éviter seul face à un supérieur.",
+          "register": "neutral",
+          "example": {
+            "jp": "なるほど、そういうことですね。",
+            "fr": "Je vois, c’est donc ça."
+          }
+        },
+        {
+          "slug": "expr-yokatta",
+          "kind": "vocabulary",
+          "front": "よかった",
+          "reading": "よかった",
+          "romaji": "yokatta",
+          "meaning": "tant mieux, ouf",
+          "note": "Soulagement ou joie pour quelqu’un.",
+          "register": "casual",
+          "example": {
+            "jp": "試験に合格したの？よかった！",
+            "fr": "Tu as réussi l’examen ? Tant mieux !"
+          }
+        },
+        {
+          "slug": "expr-zannen",
+          "kind": "vocabulary",
+          "front": "残念",
+          "reading": "ざんねん",
+          "romaji": "zannen",
+          "meaning": "dommage",
+          "note": "Déception légère ; 残念ですね pour compatir poliment.",
+          "register": "neutral",
+          "example": {
+            "jp": "行けないの？残念！",
+            "fr": "Tu ne peux pas venir ? Dommage !"
+          }
+        },
+        {
+          "slug": "expr-ureshii",
+          "kind": "vocabulary",
+          "front": "うれしい",
+          "reading": "うれしい",
+          "romaji": "ureshii",
+          "meaning": "je suis content(e)",
+          "note": "Joie personnelle, souvent après un compliment ou un cadeau.",
+          "register": "casual",
+          "example": {
+            "jp": "プレゼント？うれしい！ありがとう。",
+            "fr": "Un cadeau ? Je suis trop content ! Merci."
+          }
+        },
+        {
+          "slug": "expr-bikkuri",
+          "kind": "vocabulary",
+          "front": "びっくりした",
+          "reading": "びっくりした",
+          "romaji": "bikkuri shita",
+          "meaning": "tu m’as fait peur, quelle surprise",
+          "note": "Après une surprise ou une frayeur.",
+          "register": "casual",
+          "example": {
+            "jp": "わっ、びっくりした！",
+            "fr": "Ouh, tu m’as fait peur !"
+          }
+        },
+        {
+          "slug": "expr-daijoubu",
+          "kind": "vocabulary",
+          "front": "大丈夫です",
+          "reading": "だいじょうぶです",
+          "romaji": "daijōbu desu",
+          "meaning": "ça va, pas de problème ; non merci",
+          "note": "Très polyvalent : rassurer, mais aussi refuser poliment une offre.",
+          "register": "polite",
+          "example": {
+            "jp": "袋は大丈夫です。",
+            "fr": "Pas besoin de sac, merci."
+          }
+        },
+        {
+          "slug": "expr-tanoshikatta",
+          "kind": "vocabulary",
+          "front": "楽しかったです",
+          "reading": "たのしかったです",
+          "romaji": "tanoshikatta desu",
+          "meaning": "je me suis bien amusé(e)",
+          "note": "Pour remercier après une sortie ou une soirée.",
+          "register": "polite",
+          "example": {
+            "jp": "今日はとても楽しかったです。",
+            "fr": "Je me suis beaucoup amusé aujourd’hui."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "urgences",
+      "glyph": "急",
+      "title": "Urgences et santé",
+      "description": "À connaître avant de partir, en espérant ne jamais s’en servir.",
+      "expressions": [
+        {
+          "slug": "expr-tasukete",
+          "kind": "vocabulary",
+          "front": "助けて！",
+          "reading": "たすけて！",
+          "romaji": "tasukete!",
+          "meaning": "au secours !",
+          "note": "Cri d’alerte en cas de danger.",
+          "register": "casual",
+          "example": {
+            "jp": "助けて！誰か！",
+            "fr": "Au secours ! Quelqu’un !"
+          }
+        },
+        {
+          "slug": "expr-kibungawarui",
+          "kind": "vocabulary",
+          "front": "気分が悪いです",
+          "reading": "きぶんがわるいです",
+          "romaji": "kibun ga warui desu",
+          "meaning": "je ne me sens pas bien",
+          "note": "Malaise, nausée : pour prévenir qu’on doit s’asseoir ou être aidé.",
+          "register": "polite",
+          "example": {
+            "jp": "すみません、気分が悪いです。",
+            "fr": "Excusez-moi, je ne me sens pas bien."
+          }
+        },
+        {
+          "slug": "expr-kyuukyuusha",
+          "kind": "vocabulary",
+          "front": "救急車を呼んでください",
+          "reading": "きゅうきゅうしゃをよんでください",
+          "romaji": "kyūkyūsha o yonde kudasai",
+          "meaning": "appelez une ambulance, s’il vous plaît",
+          "note": "Le numéro des urgences médicales et des pompiers au Japon est le 119.",
+          "register": "polite",
+          "example": {
+            "jp": "救急車を呼んでください！",
+            "fr": "Appelez une ambulance !"
+          }
+        },
+        {
+          "slug": "expr-keisatsu",
+          "kind": "vocabulary",
+          "front": "警察を呼んでください",
+          "reading": "けいさつをよんでください",
+          "romaji": "keisatsu o yonde kudasai",
+          "meaning": "appelez la police, s’il vous plaît",
+          "note": "Le numéro de la police au Japon est le 110.",
+          "register": "polite",
+          "example": {
+            "jp": "警察を呼んでください。",
+            "fr": "Appelez la police, s’il vous plaît."
+          }
+        },
+        {
+          "slug": "expr-saifu",
+          "kind": "vocabulary",
+          "front": "財布をなくしました",
+          "reading": "さいふをなくしました",
+          "romaji": "saifu o nakushimashita",
+          "meaning": "j’ai perdu mon portefeuille",
+          "note": "Les objets perdus sont souvent rapportés au 交番 ou aux objets trouvés de la gare.",
+          "register": "polite",
+          "example": {
+            "jp": "駅で財布をなくしました。",
+            "fr": "J’ai perdu mon portefeuille à la gare."
+          }
+        },
+        {
+          "slug": "expr-byouinwa",
+          "kind": "vocabulary",
+          "front": "病院はどこですか",
+          "reading": "びょういんはどこですか",
+          "romaji": "byōin wa doko desu ka",
+          "meaning": "où est l’hôpital ?",
+          "note": "Pour un petit souci, la pharmacie se dit 薬局（やっきょく）.",
+          "register": "polite",
+          "example": {
+            "jp": "この近くの病院はどこですか。",
+            "fr": "Où y a-t-il un hôpital près d’ici ?"
+          }
+        },
+        {
+          "slug": "expr-koko-itai",
+          "kind": "vocabulary",
+          "front": "ここが痛いです",
+          "reading": "ここがいたいです",
+          "romaji": "koko ga itai desu",
+          "meaning": "j’ai mal ici",
+          "note": "En montrant l’endroit : suffisant pour se faire comprendre chez le médecin.",
+          "register": "polite",
+          "example": {
+            "jp": "先生、ここが痛いです。",
+            "fr": "Docteur, j’ai mal ici."
+          }
+        },
+        {
+          "slug": "expr-arerugii",
+          "kind": "vocabulary",
+          "front": "アレルギーがあります",
+          "reading": "アレルギーがあります",
+          "romaji": "arerugī ga arimasu",
+          "meaning": "j’ai une allergie",
+          "note": "Précisez l’aliment : 〜アレルギーがあります (ex. えびアレルギー).",
+          "register": "polite",
+          "example": {
+            "jp": "たまごアレルギーがあります。",
+            "fr": "Je suis allergique aux œufs."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amis",
+      "glyph": "友",
+      "title": "Entre amis (familier)",
+      "description": "Le japonais de tous les jours, à ne pas utiliser avec un supérieur.",
+      "expressions": [
+        {
+          "slug": "expr-maji",
+          "kind": "vocabulary",
+          "front": "まじで？",
+          "reading": "まじで？",
+          "romaji": "maji de?",
+          "meaning": "sérieux ?",
+          "note": "Très familier : réservé aux amis proches.",
+          "register": "casual",
+          "example": {
+            "jp": "まじで？信じられない！",
+            "fr": "Sérieux ? J’y crois pas !"
+          }
+        },
+        {
+          "slug": "expr-yabai",
+          "kind": "vocabulary",
+          "front": "やばい",
+          "reading": "やばい",
+          "romaji": "yabai",
+          "meaning": "c’est chaud ; trop bien (selon le ton)",
+          "note": "À l’origine « dangereux » ; chez les jeunes, aussi « génial ».",
+          "register": "casual",
+          "example": {
+            "jp": "やばい、遅刻する！",
+            "fr": "Oh non, je vais être en retard !"
+          }
+        },
+        {
+          "slug": "expr-iine",
+          "kind": "vocabulary",
+          "front": "いいね",
+          "reading": "いいね",
+          "romaji": "ii ne",
+          "meaning": "sympa, bonne idée",
+          "note": "Pour approuver une proposition.",
+          "register": "casual",
+          "example": {
+            "jp": "映画に行こうよ。――いいね！",
+            "fr": "Allons au cinéma. – Bonne idée !"
+          }
+        },
+        {
+          "slug": "expr-ganbatte",
+          "kind": "vocabulary",
+          "front": "頑張って",
+          "reading": "がんばって",
+          "romaji": "ganbatte",
+          "meaning": "bon courage, vas-y !",
+          "note": "Encouragement avant un examen, un match, un défi.",
+          "register": "casual",
+          "example": {
+            "jp": "明日の試験、頑張って！",
+            "fr": "Bon courage pour l’examen demain !"
+          }
+        },
+        {
+          "slug": "expr-kinishinaide",
+          "kind": "vocabulary",
+          "front": "気にしないで",
+          "reading": "きにしないで",
+          "romaji": "ki ni shinaide",
+          "meaning": "ce n’est rien, ne t’en fais pas",
+          "note": "Réponse à une excuse ou à un remerciement appuyé.",
+          "register": "casual",
+          "example": {
+            "jp": "ごめんね。――気にしないで！",
+            "fr": "Désolé. – Ne t’en fais pas !"
+          }
+        },
+        {
+          "slug": "expr-matane",
+          "kind": "vocabulary",
+          "front": "またね",
+          "reading": "またね",
+          "romaji": "mata ne",
+          "meaning": "à plus !",
+          "note": "Au revoir décontracté entre amis.",
+          "register": "casual",
+          "example": {
+            "jp": "じゃあ、またね！",
+            "fr": "Allez, à plus !"
+          }
+        },
+        {
+          "slug": "expr-arigatone",
+          "kind": "vocabulary",
+          "front": "ありがとね",
+          "reading": "ありがとね",
+          "romaji": "arigato ne",
+          "meaning": "merci, hein !",
+          "note": "Remerciement chaleureux et familier.",
+          "register": "casual",
+          "example": {
+            "jp": "手伝ってくれて、ありがとね。",
+            "fr": "Merci de m’avoir aidé !"
+          }
+        },
+        {
+          "slug": "expr-sounanda",
+          "kind": "vocabulary",
+          "front": "そうなんだ",
+          "reading": "そうなんだ",
+          "romaji": "sō nan da",
+          "meaning": "ah bon, je vois",
+          "note": "Montre qu’on écoute ; poli : そうなんですか.",
+          "register": "casual",
+          "example": {
+            "jp": "来月、日本に行くんだ。――そうなんだ！",
+            "fr": "Je vais au Japon le mois prochain. – Ah bon !"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "travail",
+      "glyph": "仕",
+      "title": "Au travail (formel)",
+      "description": "Le keigo de base pour le bureau, les mails et les clients.",
+      "expressions": [
+        {
+          "slug": "expr-osewa",
+          "kind": "vocabulary",
+          "front": "お世話になっております",
+          "reading": "おせわになっております",
+          "romaji": "o-sewa ni natte orimasu",
+          "meaning": "merci pour votre soutien (formule d’ouverture)",
+          "note": "Phrase d’ouverture obligée des appels et e-mails professionnels.",
+          "register": "formal",
+          "example": {
+            "jp": "いつもお世話になっております。田中です。",
+            "fr": "Merci pour votre fidélité, ici Tanaka."
+          }
+        },
+        {
+          "slug": "expr-shoushou",
+          "kind": "vocabulary",
+          "front": "少々お待ちください",
+          "reading": "しょうしょうおまちください",
+          "romaji": "shōshō o-machi kudasai",
+          "meaning": "veuillez patienter un instant",
+          "note": "Version très polie de ちょっと待ってください, au téléphone ou en magasin.",
+          "register": "formal",
+          "example": {
+            "jp": "少々お待ちください。担当者を呼びます。",
+            "fr": "Veuillez patienter, j’appelle le responsable."
+          }
+        },
+        {
+          "slug": "expr-kashikomarimashita",
+          "kind": "vocabulary",
+          "front": "かしこまりました",
+          "reading": "かしこまりました",
+          "romaji": "kashikomarimashita",
+          "meaning": "bien compris, entendu (très poli)",
+          "note": "Forme respectueuse de 分かりました, envers un client ou un supérieur.",
+          "register": "formal",
+          "example": {
+            "jp": "コーヒーを二つですね。かしこまりました。",
+            "fr": "Deux cafés, entendu."
+          }
+        },
+        {
+          "slug": "expr-moushiwake",
+          "kind": "vocabulary",
+          "front": "申し訳ございません",
+          "reading": "もうしわけございません",
+          "romaji": "mōshiwake gozaimasen",
+          "meaning": "je vous prie de nous excuser",
+          "note": "Excuse la plus formelle, pour un client ou une faute professionnelle.",
+          "register": "formal",
+          "example": {
+            "jp": "ご迷惑をおかけして、申し訳ございません。",
+            "fr": "Nous vous prions de nous excuser pour la gêne occasionnée."
+          }
+        },
+        {
+          "slug": "expr-osakini",
+          "kind": "vocabulary",
+          "front": "お先に失礼します",
+          "reading": "おさきにしつれいします",
+          "romaji": "o-saki ni shitsurei shimasu",
+          "meaning": "je pars avant vous, excusez-moi",
+          "note": "Se dit en quittant le bureau avant ses collègues ; réponse : お疲れさまでした.",
+          "register": "formal",
+          "example": {
+            "jp": "今日はこれで、お先に失礼します。",
+            "fr": "J’en ai fini pour aujourd’hui, je vous laisse."
+          }
+        },
+        {
+          "slug": "expr-yoroshikuitashimasu",
+          "kind": "vocabulary",
+          "front": "よろしくお願いいたします",
+          "reading": "よろしくおねがいいたします",
+          "romaji": "yoroshiku onegai itashimasu",
+          "meaning": "je vous remercie par avance (très poli)",
+          "note": "Version humble de よろしくお願いします, pour conclure un e-mail.",
+          "register": "formal",
+          "example": {
+            "jp": "ご確認のほど、よろしくお願いいたします。",
+            "fr": "Merci par avance de bien vouloir vérifier."
+          }
+        },
+        {
+          "slug": "expr-yoroshiidesuka",
+          "kind": "vocabulary",
+          "front": "少しよろしいですか",
+          "reading": "すこしよろしいですか",
+          "romaji": "sukoshi yoroshii desu ka",
+          "meaning": "auriez-vous un moment ?",
+          "note": "Pour aborder poliment un collègue occupé.",
+          "register": "formal",
+          "example": {
+            "jp": "部長、少しよろしいですか。",
+            "fr": "Monsieur le directeur, auriez-vous un moment ?"
+          }
+        }
+      ]
+    }
+  ]
+}

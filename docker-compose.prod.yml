@@ -1,0 +1,56 @@
+# Production : PostgreSQL + Koto Quest (API et site) + Caddy (HTTPS automatique).
+#   cp .env.prod.example .env      (puis remplir les valeurs)
+#   docker compose -f docker-compose.prod.yml up -d --build
+# Si un Nginx/Apache gère déjà le HTTPS sur le serveur : lancer sans Caddy
+#   docker compose -f docker-compose.prod.yml up -d --build db app
+# et faire pointer le proxy existant vers http://127.0.0.1:3000 (voir docs/DEPLOIEMENT.md).
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: koto
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD manquant dans .env}
+      POSTGRES_DB: koto
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U koto"]
+      interval: 5s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://koto:${POSTGRES_PASSWORD}@db:5432/koto?schema=public
+      WEB_ORIGIN: https://${DOMAIN:?DOMAIN manquant dans .env}
+      COOKIE_SECURE: "true"
+      TRUST_PROXY: "1"
+    depends_on:
+      db:
+        condition: service_healthy
+    # Accessible seulement depuis le serveur lui-même (pour un proxy Nginx/Apache existant)
+    ports:
+      - "127.0.0.1:3000:3000"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

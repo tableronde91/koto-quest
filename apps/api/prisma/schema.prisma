@@ -1,0 +1,620 @@
+// Koto Quest — schéma de données (PostgreSQL / Prisma)
+// Conventions : identifiants UUID ; contenu identifié par `slug` (import idempotent) ;
+// toutes les données utilisateur sont supprimées en cascade avec le compte (RGPD).
+
+generator client {
+  provider        = "prisma-client-js"
+  engineType      = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ───────────────────────────── Comptes ─────────────────────────────
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  displayName  String
+  xp           Int       @default(0)
+  coins        Int       @default(0)
+  /// Apparence du personnage (AvatarConfig, voir learning-engine/cosmetics)
+  avatar       Json?
+  onboardedAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  sessions          Session[]
+  resetTokens       PasswordResetToken[]
+  preferences       UserPreferences?
+  notificationPrefs NotificationPreferences?
+  pushSubscriptions PushSubscription[]
+  reviewCards       ReviewCard[]
+  reviewHistory     ReviewHistory[]
+  lessonProgress    UserLessonProgress[]
+  learningSessions  LearningSession[]
+  questions         IssuedQuestion[]
+  answers           ExerciseAnswer[]
+  notifications     Notification[]
+  dailyActivity     DailyActivity[]
+  xpEvents          XpEvent[]
+  achievements      UserAchievement[]
+  inventory         InventoryItem[]
+  examAttempts      ExamAttempt[]
+  bossResults       BossResult[]
+  gameResults       GameResult[]
+  duelProfile       DuelProfile?
+  duelsAsP1         Duel[]            @relation("DuelP1")
+  duelsAsP2         Duel[]            @relation("DuelP2")
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  tokenHash String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userAgent String?
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  @@index([userId])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(uuid())
+  tokenHash String    @unique
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+model UserPreferences {
+  userId           String    @id
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// Niveau déclaré : beginner | kana | basics | n5 | n4plus
+  selfLevel        String    @default("beginner")
+  targetLevel      String    @default("N5")
+  examDate         DateTime?
+  minutesPerDay    Int       @default(15)
+  difficultAreas   String[]  @default([])
+  timezone         String    @default("Europe/Paris")
+  uiLanguage       String    @default("fr")
+  showFurigana     Boolean   @default(true)
+  theme            String    @default("system")
+  reducedMotion    Boolean   @default(false)
+  desiredRetention Float     @default(0.9)
+  /// Test de positionnement : date et nombre de mondes validés
+  placementAt      DateTime?
+  placedWorlds     Int       @default(0)
+  updatedAt        DateTime  @updatedAt
+}
+
+model NotificationPreferences {
+  userId      String    @id
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  consent     Boolean   @default(false)
+  consentAt   DateTime?
+  enabled     Boolean   @default(false)
+  /// calm | normal | intense | custom
+  mode        String    @default("normal")
+  customTimes Int[]     @default([])
+  windowStart Int       @default(540)
+  windowEnd   Int       @default(1260)
+  quietStart  Int?      @default(1320)
+  quietEnd    Int?      @default(480)
+  pausedUntil DateTime?
+  lastSlotKey String?
+  updatedAt   DateTime  @updatedAt
+}
+
+model PushSubscription {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  endpoint    String   @unique
+  p256dh      String
+  auth        String
+  failedCount Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+}
+
+// ───────────────────────────── Contenu ─────────────────────────────
+
+model JlptLevel {
+  code           String   @id // N5..N1
+  title          String
+  region         String
+  order          Int
+  notice         String?
+  contentVersion String
+  worlds         World[]
+  items          LearningItem[]
+  exams          Exam[]
+}
+
+model World {
+  id          String    @id @default(uuid())
+  slug        String    @unique
+  levelCode   String
+  level       JlptLevel @relation(fields: [levelCode], references: [code])
+  order       Int
+  title       String
+  region      String
+  description String
+  /// Gardien de fin de monde (phase 2)
+  bossName    String?
+  bossGlyph   String?
+  bossIntro   String?
+  /// Examen blanc proposé dans ce monde (slug)
+  examSlug    String?
+  chapters    Chapter[]
+}
+
+model Chapter {
+  id      String   @id @default(uuid())
+  slug    String   @unique
+  worldId String
+  world   World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+  order   Int
+  title   String
+  lessons Lesson[]
+}
+
+model Lesson {
+  id             String               @id @default(uuid())
+  slug           String               @unique
+  chapterId      String
+  chapter        Chapter              @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  order          Int
+  title          String
+  objective      String
+  minutes        Int
+  /// Paragraphs d'explication (string[])
+  explanation    Json
+  contentVersion String
+  items          LessonItem[]
+  examples       Example[]
+  exercises      Exercise[]
+  progress       UserLessonProgress[]
+  sessions       LearningSession[]
+}
+
+model LearningItem {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  /// kana | vocabulary | kanji | grammar
+  kind           String
+  front          String
+  reading        String?
+  romaji         String?
+  meaning        String
+  levelCode      String
+  level          JlptLevel @relation(fields: [levelCode], references: [code])
+  contentVersion String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  vocabulary Vocabulary?
+  kanji      Kanji?
+  grammar    GrammarPoint?
+  lessons    LessonItem[]
+  examples   Example[]
+  cards      ReviewCard[]
+}
+
+model Vocabulary {
+  itemId       String       @id
+  item         LearningItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  partOfSpeech String?
+}
+
+model Kanji {
+  itemId  String       @id
+  item    LearningItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  onyomi  String[]
+  kunyomi String[]
+  strokes Int?
+}
+
+model GrammarPoint {
+  itemId  String       @id
+  item    LearningItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  pattern String
+}
+
+model LessonItem {
+  lessonId String
+  itemId   String
+  order    Int
+  lesson   Lesson       @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  item     LearningItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@id([lessonId, itemId])
+}
+
+model Example {
+  id       String        @id @default(uuid())
+  lessonId String?
+  lesson   Lesson?       @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  itemId   String?
+  item     LearningItem? @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  order    Int
+  jp       String
+  reading  String?
+  fr       String
+}
+
+model Exercise {
+  id       String @id @default(uuid())
+  slug     String @unique
+  lessonId String
+  lesson   Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  order    Int
+  type     String
+  /// AuthoredExercise (voir learning-engine)
+  payload  Json
+}
+
+// ───────────────────────── Apprentissage ──────────────────────────
+
+model ReviewCard {
+  id         String       @id @default(uuid())
+  userId     String
+  user       User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemId     String
+  item       LearningItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  /// new | learning | review | relearning
+  state      String
+  stability  Float
+  difficulty Float
+  due        DateTime
+  lastReview DateTime?
+  reps       Int          @default(0)
+  lapses     Int          @default(0)
+  step       Int          @default(0)
+  createdAt  DateTime     @default(now())
+  history    ReviewHistory[]
+
+  @@unique([userId, itemId])
+  @@index([userId, due])
+}
+
+model ReviewHistory {
+  id              String     @id @default(uuid())
+  cardId          String
+  card            ReviewCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId       String?
+  rating          Int
+  stateBefore     String
+  stabilityAfter  Float
+  difficultyAfter Float
+  dueAfter        DateTime
+  responseMs      Int
+  /// lesson | mini_review | review | quiz
+  context         String
+  reviewedAt      DateTime   @default(now())
+
+  @@index([userId, reviewedAt])
+  @@index([cardId, sessionId])
+}
+
+model UserLessonProgress {
+  userId      String
+  lessonId    String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson      Lesson    @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  /// in_progress | completed
+  status      String
+  attempts    Int       @default(0)
+  bestScore   Int       @default(0)
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@id([userId, lessonId])
+}
+
+model LearningSession {
+  id         String    @id @default(uuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// lesson | review | quiz
+  kind       String
+  lessonId   String?
+  lesson     Lesson?   @relation(fields: [lessonId], references: [id], onDelete: SetNull)
+  /// Monde concerné pour un combat de boss (slug)
+  scope      String?
+  /// État d'une session en plusieurs étapes (test de positionnement)
+  state      Json?
+  startedAt  DateTime  @default(now())
+  endedAt    DateTime?
+  correct    Int       @default(0)
+  total      Int       @default(0)
+  xpEarned   Int       @default(0)
+  questions  IssuedQuestion[]
+}
+
+/// Question émise par le serveur. La bonne réponse ne quitte jamais le serveur avant correction.
+model IssuedQuestion {
+  id          String           @id @default(uuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId   String?
+  session     LearningSession? @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  itemId      String?
+  type        String
+  /// lesson | mini_review | review | quiz
+  phase       String
+  order       Int              @default(0)
+  payload     Json
+  answer      Json
+  explanation String
+  guessable   Boolean          @default(false)
+  /// Question ratée dont celle-ci est la reprise (exercice refait en fin de séance)
+  retryOf     String?
+  correct     Boolean?
+  answeredAt  DateTime?
+  /// Combat de gardien : affichage de la question (départ du chrono)
+  shownAt     DateTime?
+  createdAt   DateTime         @default(now())
+  answerLog   ExerciseAnswer?
+  notifications Notification[]
+
+  @@index([userId, sessionId])
+  @@index([retryOf])
+}
+
+model ExerciseAnswer {
+  id         String         @id @default(uuid())
+  questionId String         @unique
+  question   IssuedQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  given      Json
+  correct    Boolean
+  responseMs Int
+  createdAt  DateTime       @default(now())
+}
+
+// ───────────────────────── Engagement ──────────────────────────
+
+model Notification {
+  id         String          @id @default(uuid())
+  userId     String
+  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind       String          @default("reminder")
+  title      String
+  body       String
+  questionId String?
+  question   IssuedQuestion? @relation(fields: [questionId], references: [id], onDelete: SetNull)
+  /// pending | sent | opened | answered | expired
+  status     String          @default("pending")
+  pushed     Boolean         @default(false)
+  createdAt  DateTime        @default(now())
+  openedAt   DateTime?
+  expiresAt  DateTime
+
+  @@index([userId, status])
+}
+
+/// Agrégat quotidien (date locale de l'utilisateur) pour séries, quêtes et statistiques.
+model DailyActivity {
+  userId           String
+  dateKey          String
+  user             User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  seconds          Int    @default(0)
+  total            Int    @default(0)
+  correct          Int    @default(0)
+  reviews          Int    @default(0)
+  kanjiReviews     Int    @default(0)
+  newItems         Int    @default(0)
+  currentCombo     Int    @default(0)
+  bestCombo        Int    @default(0)
+  perfectLessons   Int    @default(0)
+  listeningCorrect Int    @default(0)
+  xp               Int    @default(0)
+  /// Quêtes du jour déjà récompensées (identifiants)
+  questsClaimed    String[] @default([])
+  /// Pièces gagnées en mini-jeux ce jour-là (plafonnées)
+  gameCoins        Int    @default(0)
+
+  @@id([userId, dateKey])
+}
+
+model XpEvent {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount    Int
+  reason    String
+  refId     String?
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+/// Résultats des combats de boss, par utilisateur et par monde.
+model BossResult {
+  userId         String
+  worldSlug      String
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempts       Int       @default(0)
+  victories      Int       @default(0)
+  bestHits       Int       @default(0)
+  firstVictoryAt DateTime?
+  updatedAt      DateTime  @updatedAt
+
+  @@id([userId, worldSlug])
+}
+
+/// Meilleurs scores des mini-jeux.
+model GameResult {
+  userId    String
+  gameId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plays     Int      @default(0)
+  bestScore Int      @default(0)
+  lastScore Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@id([userId, gameId])
+}
+
+// ──────────── Phases 2–3 (modélisées, non exploitées en phase 1) ────────────
+
+model Quest {
+  id          String @id @default(uuid())
+  slug        String @unique
+  /// daily | weekly
+  period      String
+  title       String
+  target      Int
+  xpReward    Int
+  coinReward  Int    @default(0)
+}
+
+model Achievement {
+  id          String            @id @default(uuid())
+  slug        String            @unique
+  title       String
+  description String
+  rarity      String            @default("common")
+  users       UserAchievement[]
+}
+
+model UserAchievement {
+  userId        String
+  achievementId String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+  unlockedAt    DateTime    @default(now())
+
+  @@id([userId, achievementId])
+}
+
+model InventoryItem {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sku       String
+  equipped  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, sku])
+}
+
+model Exam {
+  id        String        @id @default(uuid())
+  slug      String        @unique
+  levelCode String
+  level     JlptLevel     @relation(fields: [levelCode], references: [code])
+  title     String
+  sections  Json
+  attempts  ExamAttempt[]
+}
+
+model ExamAttempt {
+  id         String    @id @default(uuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId     String
+  exam       Exam      @relation(fields: [examId], references: [id], onDelete: Cascade)
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+  scores     Json?
+  sessionId  String?   @unique
+  percent    Int?
+  passed     Boolean?
+
+  @@index([userId, finishedAt])
+}
+
+/// Profil de duelliste : classement (Elo), palmarès et file d'attente du matchmaking.
+model DuelProfile {
+  userId      String    @id
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// Code public à partager pour être défié (ex. KQ-7F3K2A)
+  code        String    @unique
+  rating      Int       @default(1000)
+  peakRating  Int       @default(1000)
+  wins        Int       @default(0)
+  losses      Int       @default(0)
+  draws       Int       @default(0)
+  streak      Int       @default(0)
+  bestStreak  Int       @default(0)
+  damageDealt Int       @default(0)
+  lastDuelAt  DateTime?
+  /// Recherche d'adversaire en cours (null = pas dans la file)
+  queuedAt    DateTime?
+  queueSeenAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@index([rating])
+  @@index([wins])
+  @@index([queuedAt])
+}
+
+/// Duel entre deux joueurs (ou contre un adversaire simulé quand p2Id est nul).
+model Duel {
+  id            String       @id @default(uuid())
+  /// ranked (matchmaking) | friendly (défi) | practice (contre l'IA)
+  kind          String
+  /// pending | active | finished | declined | cancelled | expired
+  status        String
+  p1Id          String
+  p1            User         @relation("DuelP1", fields: [p1Id], references: [id], onDelete: Cascade)
+  p2Id          String?
+  p2            User?        @relation("DuelP2", fields: [p2Id], references: [id], onDelete: Cascade)
+  botName       String?
+  botRating     Int?
+  hp1           Int          @default(100)
+  hp2           Int          @default(100)
+  streak1       Int          @default(0)
+  streak2       Int          @default(0)
+  /// Question en cours (0..n-1) = nombre de questions déjà corrigées
+  round         Int          @default(0)
+  roundStartsAt DateTime?
+  /// Questions avec leurs réponses : jamais envoyées telles quelles au client
+  questions     Json
+  seen1         DateTime?
+  seen2         DateTime?
+  /// p1 | p2 | draw
+  outcome       String?
+  /// ko | points | forfeit
+  endReason     String?
+  rating1       Int?
+  rating2       Int?
+  delta1        Int?
+  delta2        Int?
+  createdAt     DateTime     @default(now())
+  startedAt     DateTime?
+  endedAt       DateTime?
+  answers       DuelAnswer[]
+
+  @@index([p1Id, status])
+  @@index([p2Id, status])
+}
+
+model DuelAnswer {
+  duelId    String
+  duel      Duel     @relation(fields: [duelId], references: [id], onDelete: Cascade)
+  round     Int
+  /// 1 ou 2
+  side      Int
+  answer    String
+  correct   Boolean
+  ms        Int
+  damage    Int      @default(0)
+  critical  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@id([duelId, round, side])
+}

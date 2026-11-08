@@ -1,0 +1,87 @@
+{
+  "name": "@koto/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main.js",
+    "db:migrate": "prisma migrate deploy",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "ts-node --transpile-only prisma/seed.ts",
+    "build:seed": "tsc prisma/seed.ts --outDir dist-seed --module commonjs --target es2022 --esModuleInterop --skipLibCheck --moduleResolution node --resolveJsonModule",
+    "vapid": "node scripts/ensure-vapid.js",
+    "test": "jest --runInBand",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "db:generate": "prisma generate",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:reset": "prisma migrate reset --force",
+    "env": "node scripts/ensure-vapid.js",
+    "db:migrate:test": "dotenv -v DATABASE_URL=postgresql://koto:koto@localhost:5432/koto_test?schema=public -- prisma migrate deploy"
+  },
+  "prisma": {
+    "seed": "ts-node --transpile-only prisma/seed.ts"
+  },
+  "dependencies": {
+    "@koto/learning-engine": "0.1.0",
+    "@koto/shared": "0.1.0",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/schedule": "^6.0.0",
+    "@nestjs/swagger": "^11.2.0",
+    "@nestjs/throttler": "^6.4.0",
+    "@prisma/adapter-pg": "6.19.3",
+    "@prisma/client": "6.19.3",
+    "bcryptjs": "^3.0.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "helmet": "^8.1.0",
+    "nodemailer": "^6.9.16",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/testing": "^11.1.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0",
+    "@types/nodemailer": "^6.4.17",
+    "@types/supertest": "^6.0.2",
+    "@types/web-push": "^3.6.4",
+    "dotenv-cli": "^8.0.0",
+    "jest": "^29.7.0",
+    "prisma": "6.19.3",
+    "supertest": "^7.1.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": "test/.*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "diagnostics": false
+        }
+      ]
+    },
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/test/setup-env.ts"
+    ],
+    "testTimeout": 30000
+  }
+}

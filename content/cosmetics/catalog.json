@@ -1,0 +1,196 @@
+{
+  "version": "2026.11.4",
+  "slots": [
+    {
+      "slot": "outfit",
+      "label": "Tenues"
+    },
+    {
+      "slot": "hat",
+      "label": "Couvre-chefs"
+    },
+    {
+      "slot": "accessory",
+      "label": "Accessoires"
+    },
+    {
+      "slot": "background",
+      "label": "Décors"
+    }
+  ],
+  "defaults": {
+    "outfit": "outfit-tshirt",
+    "background": "bg-paper"
+  },
+  "items": [
+    {
+      "sku": "outfit-tshirt",
+      "slot": "outfit",
+      "name": "T-shirt du voyageur",
+      "description": "Une tenue simple pour commencer l'aventure.",
+      "price": 0
+    },
+    {
+      "sku": "outfit-yukata-ai",
+      "slot": "outfit",
+      "name": "Yukata indigo",
+      "description": "Le yukata d'été, teint à l'indigo.",
+      "price": 40
+    },
+    {
+      "sku": "outfit-yukata-sakura",
+      "slot": "outfit",
+      "name": "Yukata sakura",
+      "description": "Un yukata rose pâle, motif de pétales.",
+      "price": 40
+    },
+    {
+      "sku": "outfit-happi",
+      "slot": "outfit",
+      "name": "Veste de festival",
+      "description": "La veste happi des fêtes de quartier.",
+      "price": 60
+    },
+    {
+      "sku": "outfit-hakama",
+      "slot": "outfit",
+      "name": "Hakama d'étudiant",
+      "description": "La tenue des cérémonies de fin d'études.",
+      "price": 90
+    },
+    {
+      "sku": "hat-hachimaki",
+      "slot": "hat",
+      "name": "Bandeau hachimaki",
+      "description": "Pour se concentrer avant un examen.",
+      "price": 25
+    },
+    {
+      "sku": "hat-kasa",
+      "slot": "hat",
+      "name": "Chapeau de paille",
+      "description": "Le chapeau conique des voyageurs.",
+      "price": 50
+    },
+    {
+      "sku": "hat-kappa",
+      "slot": "hat",
+      "name": "Coupelle du kappa",
+      "description": "Trophée du Kappa de la rivière.",
+      "price": 0,
+      "unlockBoss": "n5-w1"
+    },
+    {
+      "sku": "hat-tanuki-leaf",
+      "slot": "hat",
+      "name": "Feuille du tanuki",
+      "description": "Trophée du Tanuki farceur.",
+      "price": 0,
+      "unlockBoss": "n5-w2"
+    },
+    {
+      "sku": "hat-kitsune",
+      "slot": "hat",
+      "name": "Masque de kitsune",
+      "description": "Trophée de la Kitsune masquée.",
+      "price": 0,
+      "unlockBoss": "n5-w3"
+    },
+    {
+      "sku": "hat-oni",
+      "slot": "hat",
+      "name": "Cornes d'oni",
+      "description": "Trophée de l'Oni paresseux.",
+      "price": 0,
+      "unlockBoss": "n5-w6"
+    },
+    {
+      "sku": "acc-glasses",
+      "slot": "accessory",
+      "name": "Lunettes rondes",
+      "description": "Pour lire les kanji de près.",
+      "price": 20
+    },
+    {
+      "sku": "acc-scarf",
+      "slot": "accessory",
+      "name": "Écharpe rouge",
+      "description": "Chaude et voyante.",
+      "price": 30
+    },
+    {
+      "sku": "acc-sensu",
+      "slot": "accessory",
+      "name": "Éventail",
+      "description": "Un éventail pliant en papier.",
+      "price": 35
+    },
+    {
+      "sku": "acc-tengu-fan",
+      "slot": "accessory",
+      "name": "Éventail de plumes",
+      "description": "Trophée du Tengu de la montagne.",
+      "price": 0,
+      "unlockBoss": "n5-w4"
+    },
+    {
+      "sku": "acc-maneki",
+      "slot": "accessory",
+      "name": "Chat porte-bonheur",
+      "description": "Trophée du Chat-boulier.",
+      "price": 0,
+      "unlockBoss": "n5-w5"
+    },
+    {
+      "sku": "acc-lantern",
+      "slot": "accessory",
+      "name": "Lanterne",
+      "description": "Trophée du Marchand de lanternes.",
+      "price": 0,
+      "unlockBoss": "n5-w8"
+    },
+    {
+      "sku": "bg-paper",
+      "slot": "background",
+      "name": "Papier washi",
+      "description": "Un fond clair et calme.",
+      "price": 0
+    },
+    {
+      "sku": "bg-sakura",
+      "slot": "background",
+      "name": "Cerisiers",
+      "description": "Une pluie de pétales.",
+      "price": 50
+    },
+    {
+      "sku": "bg-night",
+      "slot": "background",
+      "name": "Nuit de lune",
+      "description": "Un ciel étoilé.",
+      "price": 60
+    },
+    {
+      "sku": "bg-fuji",
+      "slot": "background",
+      "name": "Mont Fuji",
+      "description": "La montagne au lever du jour.",
+      "price": 70
+    },
+    {
+      "sku": "bg-torii",
+      "slot": "background",
+      "name": "Torii",
+      "description": "Le portique d'un sanctuaire.",
+      "price": 80
+    },
+    {
+      "sku": "bg-dragon",
+      "slot": "background",
+      "name": "Ciel du dragon",
+      "description": "Trophée du Dragon des caractères.",
+      "price": 0,
+      "unlockBoss": "n5-w7"
+    }
+  ]
+}

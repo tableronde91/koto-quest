@@ -1,0 +1,5455 @@
+{
+  "contentVersion": "2026.11.4",
+  "level": {
+    "code": "N5",
+    "title": "Débutant : bases du japonais",
+    "region": "Archipel des débutants",
+    "order": 5
+  },
+  "notice": "Le parcours N5 couvre le vocabulaire, les kanji et la grammaire de l’examen blanc au format officiel. Les listes de Koto Quest ne sont pas des listes officielles du JLPT.",
+  "worlds": [
+    {
+      "slug": "n5-w1",
+      "title": "Découverte des hiragana",
+      "region": "Archipel des débutants",
+      "description": "Les 46 hiragana de base, l'alphabet indispensable du japonais.",
+      "chapters": [
+        {
+          "slug": "n5-w1-c1",
+          "title": "Voyelles et ligne K",
+          "lessons": [
+            {
+              "slug": "n5-hira-a",
+              "title": "Les voyelles あいうえお",
+              "objective": "Lire et reconnaître あいうえお.",
+              "minutes": 5,
+              "explanation": [
+                "Les cinq voyelles japonaises sont courtes et pures : a comme dans « papa », i comme « lit », u entre « ou » et « eu » (lèvres peu arrondies), e comme « été », o comme « mot ».",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-a",
+                  "kind": "kana",
+                  "front": "あ",
+                  "reading": "あ",
+                  "romaji": "a",
+                  "meaning": "a"
+                },
+                {
+                  "slug": "hira-i",
+                  "kind": "kana",
+                  "front": "い",
+                  "reading": "い",
+                  "romaji": "i",
+                  "meaning": "i"
+                },
+                {
+                  "slug": "hira-u",
+                  "kind": "kana",
+                  "front": "う",
+                  "reading": "う",
+                  "romaji": "u",
+                  "meaning": "u"
+                },
+                {
+                  "slug": "hira-e",
+                  "kind": "kana",
+                  "front": "え",
+                  "reading": "え",
+                  "romaji": "e",
+                  "meaning": "e"
+                },
+                {
+                  "slug": "hira-o",
+                  "kind": "kana",
+                  "front": "お",
+                  "reading": "お",
+                  "romaji": "o",
+                  "meaning": "o"
+                }
+              ],
+              "examples": [],
+              "exercises": []
+            },
+            {
+              "slug": "n5-hira-ka",
+              "title": "La ligne K : かきくけこ",
+              "objective": "Lire et reconnaître かきくけこ.",
+              "minutes": 6,
+              "explanation": [
+                "On ajoute simplement un « k » devant chaque voyelle : ka, ki, ku, ke, ko. Astuce : き ressemble à une clé (« key ») !",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ka",
+                  "kind": "kana",
+                  "front": "か",
+                  "reading": "か",
+                  "romaji": "ka",
+                  "meaning": "ka"
+                },
+                {
+                  "slug": "hira-ki",
+                  "kind": "kana",
+                  "front": "き",
+                  "reading": "き",
+                  "romaji": "ki",
+                  "meaning": "ki"
+                },
+                {
+                  "slug": "hira-ku",
+                  "kind": "kana",
+                  "front": "く",
+                  "reading": "く",
+                  "romaji": "ku",
+                  "meaning": "ku"
+                },
+                {
+                  "slug": "hira-ke",
+                  "kind": "kana",
+                  "front": "け",
+                  "reading": "け",
+                  "romaji": "ke",
+                  "meaning": "ke"
+                },
+                {
+                  "slug": "hira-ko",
+                  "kind": "kana",
+                  "front": "こ",
+                  "reading": "こ",
+                  "romaji": "ko",
+                  "meaning": "ko"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "あか",
+                  "reading": "あか",
+                  "fr": "rouge"
+                },
+                {
+                  "jp": "かお",
+                  "reading": "かお",
+                  "fr": "visage"
+                }
+              ],
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "n5-w1-c2",
+          "title": "Lignes S et T",
+          "lessons": [
+            {
+              "slug": "n5-hira-sa",
+              "title": "La ligne S : さしすせそ",
+              "objective": "Lire et reconnaître さしすせそ.",
+              "minutes": 6,
+              "explanation": [
+                "Attention : し se lit « shi » et non « si ». Les autres suivent la règle : sa, su, se, so.",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-sa",
+                  "kind": "kana",
+                  "front": "さ",
+                  "reading": "さ",
+                  "romaji": "sa",
+                  "meaning": "sa"
+                },
+                {
+                  "slug": "hira-shi",
+                  "kind": "kana",
+                  "front": "し",
+                  "reading": "し",
+                  "romaji": "shi",
+                  "meaning": "shi"
+                },
+                {
+                  "slug": "hira-su",
+                  "kind": "kana",
+                  "front": "す",
+                  "reading": "す",
+                  "romaji": "su",
+                  "meaning": "su"
+                },
+                {
+                  "slug": "hira-se",
+                  "kind": "kana",
+                  "front": "せ",
+                  "reading": "せ",
+                  "romaji": "se",
+                  "meaning": "se"
+                },
+                {
+                  "slug": "hira-so",
+                  "kind": "kana",
+                  "front": "そ",
+                  "reading": "そ",
+                  "romaji": "so",
+                  "meaning": "so"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "すし",
+                  "reading": "すし",
+                  "fr": "sushi"
+                },
+                {
+                  "jp": "あさ",
+                  "reading": "あさ",
+                  "fr": "matin"
+                }
+              ],
+              "exercises": []
+            },
+            {
+              "slug": "n5-hira-ta",
+              "title": "La ligne T : たちつてと",
+              "objective": "Lire et reconnaître たちつてと.",
+              "minutes": 6,
+              "explanation": [
+                "Deux exceptions : ち se lit « chi » (comme « tchi ») et つ se lit « tsu ». Les autres : ta, te, to.",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ta",
+                  "kind": "kana",
+                  "front": "た",
+                  "reading": "た",
+                  "romaji": "ta",
+                  "meaning": "ta"
+                },
+                {
+                  "slug": "hira-chi",
+                  "kind": "kana",
+                  "front": "ち",
+                  "reading": "ち",
+                  "romaji": "chi",
+                  "meaning": "chi"
+                },
+                {
+                  "slug": "hira-tsu",
+                  "kind": "kana",
+                  "front": "つ",
+                  "reading": "つ",
+                  "romaji": "tsu",
+                  "meaning": "tsu"
+                },
+                {
+                  "slug": "hira-te",
+                  "kind": "kana",
+                  "front": "て",
+                  "reading": "て",
+                  "romaji": "te",
+                  "meaning": "te"
+                },
+                {
+                  "slug": "hira-to",
+                  "kind": "kana",
+                  "front": "と",
+                  "reading": "と",
+                  "romaji": "to",
+                  "meaning": "to"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "くつ",
+                  "reading": "くつ",
+                  "fr": "chaussure"
+                },
+                {
+                  "jp": "ちかてつ",
+                  "reading": "ちかてつ",
+                  "fr": "métro"
+                }
+              ],
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "n5-w1-c3",
+          "title": "Lignes N et H",
+          "lessons": [
+            {
+              "slug": "n5-hira-na",
+              "title": "La ligne N : なにぬねの",
+              "objective": "Lire et reconnaître なにぬねの.",
+              "minutes": 6,
+              "explanation": [
+                "La ligne N est régulière : na, ni, nu, ne, no. の est aussi une particule très fréquente (« de »).",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-na",
+                  "kind": "kana",
+                  "front": "な",
+                  "reading": "な",
+                  "romaji": "na",
+                  "meaning": "na"
+                },
+                {
+                  "slug": "hira-ni",
+                  "kind": "kana",
+                  "front": "に",
+                  "reading": "に",
+                  "romaji": "ni",
+                  "meaning": "ni"
+                },
+                {
+                  "slug": "hira-nu",
+                  "kind": "kana",
+                  "front": "ぬ",
+                  "reading": "ぬ",
+                  "romaji": "nu",
+                  "meaning": "nu"
+                },
+                {
+                  "slug": "hira-ne",
+                  "kind": "kana",
+                  "front": "ね",
+                  "reading": "ね",
+                  "romaji": "ne",
+                  "meaning": "ne"
+                },
+                {
+                  "slug": "hira-no",
+                  "kind": "kana",
+                  "front": "の",
+                  "reading": "の",
+                  "romaji": "no",
+                  "meaning": "no"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "いぬ",
+                  "reading": "いぬ",
+                  "fr": "chien"
+                },
+                {
+                  "jp": "ねこ",
+                  "reading": "ねこ",
+                  "fr": "chat"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ねこ",
+                  "choices": [
+                    "neko",
+                    "nako",
+                    "noko"
+                  ],
+                  "answer": "neko",
+                  "explanation": "ね = ne, こ = ko : ねこ (neko) signifie « chat »."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "いぬ",
+                  "choices": [
+                    "inu",
+                    "ino",
+                    "enu"
+                  ],
+                  "answer": "inu",
+                  "explanation": "い = i, ぬ = nu : いぬ (inu) signifie « chien »."
+                }
+              ]
+            },
+            {
+              "slug": "n5-hira-ha",
+              "title": "La ligne H : はひふへほ",
+              "objective": "Lire et reconnaître はひふへほ.",
+              "minutes": 6,
+              "explanation": [
+                "ふ se lit « fu », à mi-chemin entre f et h, en soufflant doucement. Utilisé comme particule, は se prononce « wa ».",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ha",
+                  "kind": "kana",
+                  "front": "は",
+                  "reading": "は",
+                  "romaji": "ha",
+                  "meaning": "ha"
+                },
+                {
+                  "slug": "hira-hi",
+                  "kind": "kana",
+                  "front": "ひ",
+                  "reading": "ひ",
+                  "romaji": "hi",
+                  "meaning": "hi"
+                },
+                {
+                  "slug": "hira-fu",
+                  "kind": "kana",
+                  "front": "ふ",
+                  "reading": "ふ",
+                  "romaji": "fu",
+                  "meaning": "fu"
+                },
+                {
+                  "slug": "hira-he",
+                  "kind": "kana",
+                  "front": "へ",
+                  "reading": "へ",
+                  "romaji": "he",
+                  "meaning": "he"
+                },
+                {
+                  "slug": "hira-ho",
+                  "kind": "kana",
+                  "front": "ほ",
+                  "reading": "ほ",
+                  "romaji": "ho",
+                  "meaning": "ho"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "はな",
+                  "reading": "はな",
+                  "fr": "fleur"
+                },
+                {
+                  "jp": "ふね",
+                  "reading": "ふね",
+                  "fr": "bateau"
+                }
+              ],
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "n5-w1-c4",
+          "title": "Lignes M, Y, R, W et ん",
+          "lessons": [
+            {
+              "slug": "n5-hira-ma",
+              "title": "La ligne M : まみむめも",
+              "objective": "Lire et reconnaître まみむめも.",
+              "minutes": 6,
+              "explanation": [
+                "La ligne M est régulière : ma, mi, mu, me, mo.",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ma",
+                  "kind": "kana",
+                  "front": "ま",
+                  "reading": "ま",
+                  "romaji": "ma",
+                  "meaning": "ma"
+                },
+                {
+                  "slug": "hira-mi",
+                  "kind": "kana",
+                  "front": "み",
+                  "reading": "み",
+                  "romaji": "mi",
+                  "meaning": "mi"
+                },
+                {
+                  "slug": "hira-mu",
+                  "kind": "kana",
+                  "front": "む",
+                  "reading": "む",
+                  "romaji": "mu",
+                  "meaning": "mu"
+                },
+                {
+                  "slug": "hira-me",
+                  "kind": "kana",
+                  "front": "め",
+                  "reading": "め",
+                  "romaji": "me",
+                  "meaning": "me"
+                },
+                {
+                  "slug": "hira-mo",
+                  "kind": "kana",
+                  "front": "も",
+                  "reading": "も",
+                  "romaji": "mo",
+                  "meaning": "mo"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "みみ",
+                  "reading": "みみ",
+                  "fr": "oreille"
+                },
+                {
+                  "jp": "あめ",
+                  "reading": "あめ",
+                  "fr": "pluie"
+                }
+              ],
+              "exercises": []
+            },
+            {
+              "slug": "n5-hira-ya",
+              "title": "Y, W et ん : やゆよ・わをん",
+              "objective": "Lire et reconnaître やゆよわをん.",
+              "minutes": 6,
+              "explanation": [
+                "Seules trois syllabes en Y existent (ya, yu, yo). を (« wo ») se prononce « o » et sert presque uniquement de particule d'objet. ん est le seul son consonantique isolé : « n ».",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ya",
+                  "kind": "kana",
+                  "front": "や",
+                  "reading": "や",
+                  "romaji": "ya",
+                  "meaning": "ya"
+                },
+                {
+                  "slug": "hira-yu",
+                  "kind": "kana",
+                  "front": "ゆ",
+                  "reading": "ゆ",
+                  "romaji": "yu",
+                  "meaning": "yu"
+                },
+                {
+                  "slug": "hira-yo",
+                  "kind": "kana",
+                  "front": "よ",
+                  "reading": "よ",
+                  "romaji": "yo",
+                  "meaning": "yo"
+                },
+                {
+                  "slug": "hira-wa",
+                  "kind": "kana",
+                  "front": "わ",
+                  "reading": "わ",
+                  "romaji": "wa",
+                  "meaning": "wa"
+                },
+                {
+                  "slug": "hira-wo",
+                  "kind": "kana",
+                  "front": "を",
+                  "reading": "を",
+                  "romaji": "wo",
+                  "meaning": "wo"
+                },
+                {
+                  "slug": "hira-n",
+                  "kind": "kana",
+                  "front": "ん",
+                  "reading": "ん",
+                  "romaji": "n",
+                  "meaning": "n"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "やま",
+                  "reading": "やま",
+                  "fr": "montagne"
+                },
+                {
+                  "jp": "ほん",
+                  "reading": "ほん",
+                  "fr": "livre"
+                }
+              ],
+              "exercises": []
+            },
+            {
+              "slug": "n5-hira-ra",
+              "title": "La ligne R : らりるれろ",
+              "objective": "Lire et reconnaître らりるれろ.",
+              "minutes": 6,
+              "explanation": [
+                "Le « r » japonais est battu : la langue tape une fois derrière les dents, entre « r » et « l ».",
+                "Écoute chaque caractère, répète-le à voix haute, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "hira-ra",
+                  "kind": "kana",
+                  "front": "ら",
+                  "reading": "ら",
+                  "romaji": "ra",
+                  "meaning": "ra"
+                },
+                {
+                  "slug": "hira-ri",
+                  "kind": "kana",
+                  "front": "り",
+                  "reading": "り",
+                  "romaji": "ri",
+                  "meaning": "ri"
+                },
+                {
+                  "slug": "hira-ru",
+                  "kind": "kana",
+                  "front": "る",
+                  "reading": "る",
+                  "romaji": "ru",
+                  "meaning": "ru"
+                },
+                {
+                  "slug": "hira-re",
+                  "kind": "kana",
+                  "front": "れ",
+                  "reading": "れ",
+                  "romaji": "re",
+                  "meaning": "re"
+                },
+                {
+                  "slug": "hira-ro",
+                  "kind": "kana",
+                  "front": "ろ",
+                  "reading": "ろ",
+                  "romaji": "ro",
+                  "meaning": "ro"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "さくら",
+                  "reading": "さくら",
+                  "fr": "cerisier"
+                },
+                {
+                  "jp": "よる",
+                  "reading": "よる",
+                  "fr": "nuit"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "さくら",
+                  "choices": [
+                    "sakura",
+                    "sakuma",
+                    "sukura"
+                  ],
+                  "answer": "sakura",
+                  "explanation": "さ = sa, く = ku, ら = ra : さくら, le cerisier."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "boss": {
+        "name": "Le Kappa de la rivière",
+        "glyph": "河",
+        "intro": "Le kappa garde le gué des hiragana. Lis juste pour traverser !"
+      }
+    },
+    {
+      "slug": "n5-w2",
+      "title": "Maîtrise des katakana",
+      "region": "Archipel des débutants",
+      "description": "L'écriture des mots étrangers.",
+      "chapters": [
+        {
+          "slug": "n5-w2-c1",
+          "title": "Premiers katakana",
+          "lessons": [
+            {
+              "slug": "n5-kata-a",
+              "title": "Katakana : アイウエオ",
+              "objective": "Reconnaître les katakana de base, utilisés pour les mots d'origine étrangère.",
+              "minutes": 5,
+              "explanation": [
+                "Les katakana transcrivent surtout les mots étrangers (コーヒー, café) et les onomatopées. Ils ont les mêmes sons que les hiragana, avec des formes plus anguleuses."
+              ],
+              "items": [
+                {
+                  "slug": "kata-a",
+                  "kind": "kana",
+                  "front": "ア",
+                  "reading": "ア",
+                  "romaji": "a",
+                  "meaning": "a"
+                },
+                {
+                  "slug": "kata-i",
+                  "kind": "kana",
+                  "front": "イ",
+                  "reading": "イ",
+                  "romaji": "i",
+                  "meaning": "i"
+                },
+                {
+                  "slug": "kata-u",
+                  "kind": "kana",
+                  "front": "ウ",
+                  "reading": "ウ",
+                  "romaji": "u",
+                  "meaning": "u"
+                },
+                {
+                  "slug": "kata-e",
+                  "kind": "kana",
+                  "front": "エ",
+                  "reading": "エ",
+                  "romaji": "e",
+                  "meaning": "e"
+                },
+                {
+                  "slug": "kata-o",
+                  "kind": "kana",
+                  "front": "オ",
+                  "reading": "オ",
+                  "romaji": "o",
+                  "meaning": "o"
+                }
+              ],
+              "examples": [],
+              "exercises": []
+            },
+            {
+              "slug": "n5-kata-ka",
+              "title": "Katakana : カキクケコ",
+              "objective": "Reconnaître les katakana de base, utilisés pour les mots d'origine étrangère.",
+              "minutes": 5,
+              "explanation": [
+                "Les katakana transcrivent surtout les mots étrangers (コーヒー, café) et les onomatopées. Ils ont les mêmes sons que les hiragana, avec des formes plus anguleuses."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ka",
+                  "kind": "kana",
+                  "front": "カ",
+                  "reading": "カ",
+                  "romaji": "ka",
+                  "meaning": "ka"
+                },
+                {
+                  "slug": "kata-ki",
+                  "kind": "kana",
+                  "front": "キ",
+                  "reading": "キ",
+                  "romaji": "ki",
+                  "meaning": "ki"
+                },
+                {
+                  "slug": "kata-ku",
+                  "kind": "kana",
+                  "front": "ク",
+                  "reading": "ク",
+                  "romaji": "ku",
+                  "meaning": "ku"
+                },
+                {
+                  "slug": "kata-ke",
+                  "kind": "kana",
+                  "front": "ケ",
+                  "reading": "ケ",
+                  "romaji": "ke",
+                  "meaning": "ke"
+                },
+                {
+                  "slug": "kata-ko",
+                  "kind": "kana",
+                  "front": "コ",
+                  "reading": "コ",
+                  "romaji": "ko",
+                  "meaning": "ko"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "カカオ",
+                  "reading": "かかお",
+                  "fr": "cacao"
+                }
+              ],
+              "exercises": []
+            }
+          ]
+        }
+      ],
+      "boss": {
+        "name": "Le Tanuki farceur",
+        "glyph": "狸",
+        "intro": "Le tanuki mélange les katakana pour te piéger. Garde l'œil vif !"
+      }
+    },
+    {
+      "slug": "n5-w3",
+      "title": "Se présenter",
+      "region": "Archipel des débutants",
+      "description": "Saluer, dire qui l'on est et poser des questions simples.",
+      "chapters": [
+        {
+          "slug": "n5-w3-c1",
+          "title": "Salutations",
+          "lessons": [
+            {
+              "slug": "n5-greetings",
+              "title": "Bonjour, merci, au revoir",
+              "objective": "Saluer et remercier selon le moment de la journée.",
+              "minutes": 7,
+              "explanation": [
+                "Les salutations changent selon le moment : おはようございます le matin (おはよう entre amis), こんにちは en journée, こんばんは le soir.",
+                "ありがとう(ございます) sert à remercier ; すみません signifie à la fois « excusez-moi » et, souvent, « merci pour le dérangement »."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-ohayou",
+                  "kind": "vocabulary",
+                  "front": "おはよう",
+                  "reading": "おはよう",
+                  "romaji": "ohayou",
+                  "meaning": "bonjour (le matin)"
+                },
+                {
+                  "slug": "vocab-konnichiwa",
+                  "kind": "vocabulary",
+                  "front": "こんにちは",
+                  "reading": "こんにちは",
+                  "romaji": "konnichiwa",
+                  "meaning": "bonjour"
+                },
+                {
+                  "slug": "vocab-konbanwa",
+                  "kind": "vocabulary",
+                  "front": "こんばんは",
+                  "reading": "こんばんは",
+                  "romaji": "konbanwa",
+                  "meaning": "bonsoir"
+                },
+                {
+                  "slug": "vocab-arigatou",
+                  "kind": "vocabulary",
+                  "front": "ありがとう",
+                  "reading": "ありがとう",
+                  "romaji": "arigatou",
+                  "meaning": "merci"
+                },
+                {
+                  "slug": "vocab-sumimasen",
+                  "kind": "vocabulary",
+                  "front": "すみません",
+                  "reading": "すみません",
+                  "romaji": "sumimasen",
+                  "meaning": "excusez-moi"
+                },
+                {
+                  "slug": "vocab-sayounara",
+                  "kind": "vocabulary",
+                  "front": "さようなら",
+                  "reading": "さようなら",
+                  "romaji": "sayounara",
+                  "meaning": "au revoir"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "おはようございます。",
+                  "reading": "おはようございます。",
+                  "fr": "Bonjour. (le matin, poli)"
+                },
+                {
+                  "jp": "どうもありがとうございます。",
+                  "reading": "どうもありがとうございます。",
+                  "fr": "Merci beaucoup."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Il est 20 h. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Yuki",
+                      "jp": "こんばんは！"
+                    }
+                  ],
+                  "translation": "Yuki te salue le soir.",
+                  "choices": [
+                    "こんばんは！",
+                    "おはよう！",
+                    "さようなら！"
+                  ],
+                  "answer": "こんばんは！",
+                  "explanation": "Le soir, on répond こんばんは (bonsoir)."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "こんにちは",
+                  "translation": "こんにちは s'utilise surtout le matin au réveil.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "Le matin, on dit おはよう(ございます). こんにちは s'utilise en journée."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w3-c2",
+          "title": "Je suis…",
+          "lessons": [
+            {
+              "slug": "n5-wa-desu",
+              "title": "わたしは がくせいです",
+              "objective": "Dire qui l'on est avec 〜は〜です.",
+              "minutes": 9,
+              "explanation": [
+                "La structure A は B です signifie « A est B ». は (prononcé « wa ») marque le thème de la phrase, です rend la phrase polie et joue le rôle du verbe « être ».",
+                "En japonais, on omet souvent わたしは quand le contexte est clair : がくせいです suffit pour « Je suis étudiant »."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-watashi",
+                  "kind": "vocabulary",
+                  "front": "わたし",
+                  "reading": "わたし",
+                  "romaji": "watashi",
+                  "meaning": "je, moi"
+                },
+                {
+                  "slug": "vocab-gakusei",
+                  "kind": "vocabulary",
+                  "front": "がくせい",
+                  "reading": "がくせい",
+                  "romaji": "gakusei",
+                  "meaning": "étudiant"
+                },
+                {
+                  "slug": "vocab-sensei",
+                  "kind": "vocabulary",
+                  "front": "先生",
+                  "reading": "せんせい",
+                  "romaji": "sensei",
+                  "meaning": "professeur"
+                },
+                {
+                  "slug": "vocab-kaishain",
+                  "kind": "vocabulary",
+                  "front": "かいしゃいん",
+                  "reading": "かいしゃいん",
+                  "romaji": "kaishain",
+                  "meaning": "employé de bureau"
+                },
+                {
+                  "slug": "vocab-nihonjin",
+                  "kind": "vocabulary",
+                  "front": "にほんじん",
+                  "reading": "にほんじん",
+                  "romaji": "nihonjin",
+                  "meaning": "Japonais (personne)"
+                },
+                {
+                  "slug": "vocab-furansujin",
+                  "kind": "vocabulary",
+                  "front": "フランスじん",
+                  "reading": "ふらんすじん",
+                  "romaji": "furansujin",
+                  "meaning": "Français (personne)"
+                },
+                {
+                  "slug": "gram-wa-desu",
+                  "kind": "grammar",
+                  "front": "〜は〜です",
+                  "reading": "〜は〜です",
+                  "romaji": "~ wa ~ desu",
+                  "meaning": "A est B (forme polie)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "わたしは がくせいです。",
+                  "reading": "わたしは がくせいです。",
+                  "fr": "Je suis étudiant(e)."
+                },
+                {
+                  "jp": "たなかさんは せんせいです。",
+                  "reading": "たなかさんは せんせいです。",
+                  "fr": "M./Mme Tanaka est professeur."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "わたし＿がくせいです。",
+                  "translation": "Je suis étudiant(e).",
+                  "choices": [
+                    "は",
+                    "を",
+                    "に"
+                  ],
+                  "answer": "は",
+                  "explanation": "は marque le thème : わたしは = « quant à moi »."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets la phrase dans l'ordre : « Je suis Français(e). »",
+                  "answer": [
+                    "わたしは",
+                    "フランスじん",
+                    "です。"
+                  ],
+                  "explanation": "Ordre : thème (わたしは) + attribut (フランスじん) + です."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Mme Sato est employée de bureau. »",
+                  "sentence": "さとうさんは ＿ です。",
+                  "choices": [
+                    "かいしゃいん",
+                    "がくせい",
+                    "せんせい"
+                  ],
+                  "answer": "かいしゃいん",
+                  "explanation": "かいしゃいん = employé(e) de bureau."
+                }
+              ]
+            },
+            {
+              "slug": "n5-ka-no",
+              "title": "Questions avec か et possession avec の",
+              "objective": "Poser une question fermée et exprimer l'appartenance.",
+              "minutes": 9,
+              "explanation": [
+                "Ajouter か à la fin d'une phrase polie la transforme en question : がくせいですか。= « Êtes-vous étudiant ? ». Pas besoin d'inverser les mots.",
+                "の relie deux noms : わたしの ほん = « mon livre » (le livre de moi). On répond はい (oui) ou いいえ (non)."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-anata",
+                  "kind": "vocabulary",
+                  "front": "あなた",
+                  "reading": "あなた",
+                  "romaji": "anata",
+                  "meaning": "tu, vous"
+                },
+                {
+                  "slug": "vocab-namae",
+                  "kind": "vocabulary",
+                  "front": "なまえ",
+                  "reading": "なまえ",
+                  "romaji": "namae",
+                  "meaning": "nom, prénom"
+                },
+                {
+                  "slug": "vocab-hai",
+                  "kind": "vocabulary",
+                  "front": "はい",
+                  "reading": "はい",
+                  "romaji": "hai",
+                  "meaning": "oui"
+                },
+                {
+                  "slug": "vocab-iie",
+                  "kind": "vocabulary",
+                  "front": "いいえ",
+                  "reading": "いいえ",
+                  "romaji": "iie",
+                  "meaning": "non"
+                },
+                {
+                  "slug": "gram-ka",
+                  "kind": "grammar",
+                  "front": "〜ですか",
+                  "reading": "〜ですか",
+                  "romaji": "~ desu ka",
+                  "meaning": "question polie (est-ce que… ?)"
+                },
+                {
+                  "slug": "gram-no",
+                  "kind": "grammar",
+                  "front": "AのB",
+                  "reading": "AのB",
+                  "romaji": "A no B",
+                  "meaning": "le B de A (appartenance)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "あなたは がくせいですか。",
+                  "reading": "あなたは がくせいですか。",
+                  "fr": "Êtes-vous étudiant(e) ?"
+                },
+                {
+                  "jp": "いいえ、かいしゃいんです。",
+                  "reading": "いいえ、かいしゃいんです。",
+                  "fr": "Non, je suis employé(e) de bureau."
+                },
+                {
+                  "jp": "わたしの なまえは ユキです。",
+                  "reading": "わたしの なまえは ゆきです。",
+                  "fr": "Mon nom est Yuki."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "わたし＿なまえは ケンです。",
+                  "translation": "Mon nom est Ken.",
+                  "choices": [
+                    "の",
+                    "は",
+                    "か"
+                  ],
+                  "answer": "の",
+                  "explanation": "わたしの なまえ = « le nom de moi », donc « mon nom »."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Transforme en question.",
+                  "sentence": "せんせいです＿。",
+                  "translation": "Êtes-vous professeur ?",
+                  "choices": [
+                    "か",
+                    "の",
+                    "を"
+                  ],
+                  "answer": "か",
+                  "explanation": "か en fin de phrase transforme l'affirmation en question."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu es étudiant(e). Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Ken",
+                      "jp": "がくせいですか。",
+                      "reading": "がくせいですか。"
+                    }
+                  ],
+                  "translation": "Ken te demande si tu es étudiant(e).",
+                  "choices": [
+                    "はい、がくせいです。",
+                    "いいえ、がくせいです。",
+                    "はい、せんせいですか。"
+                  ],
+                  "answer": "はい、がくせいです。",
+                  "explanation": "はい (oui) + がくせいです : « Oui, je suis étudiant(e). »"
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Quel est votre nom ? » (littéralement : votre nom est… ?)",
+                  "answer": [
+                    "あなたの",
+                    "なまえは",
+                    "なんですか。"
+                  ],
+                  "explanation": "あなたの なまえは (votre nom) + なんですか (qu'est-ce que c'est ?)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w3-c3",
+          "title": "La famille",
+          "lessons": [
+            {
+              "slug": "n5-family",
+              "title": "Ma famille",
+              "objective": "Présenter sa famille et compter les personnes.",
+              "minutes": 9,
+              "explanation": [
+                "Pour parler de sa propre famille, on emploie des mots simples : ちち (mon père), はは (ma mère), あに, あね… Pour la famille des autres, on utilise des formes polies (おとうさん, おかあさん…).",
+                "Compter les personnes : ひとり, ふたり, さんにん, よにん, ごにん… « Nous sommes quatre » : よにん かぞくです。"
+              ],
+              "items": [
+                {
+                  "slug": "vocab-chichi",
+                  "kind": "vocabulary",
+                  "front": "父",
+                  "reading": "ちち",
+                  "romaji": "chichi",
+                  "meaning": "mon père"
+                },
+                {
+                  "slug": "vocab-haha",
+                  "kind": "vocabulary",
+                  "front": "母",
+                  "reading": "はは",
+                  "romaji": "haha",
+                  "meaning": "ma mère"
+                },
+                {
+                  "slug": "vocab-ani",
+                  "kind": "vocabulary",
+                  "front": "兄",
+                  "reading": "あに",
+                  "romaji": "ani",
+                  "meaning": "mon grand frère"
+                },
+                {
+                  "slug": "vocab-ane",
+                  "kind": "vocabulary",
+                  "front": "姉",
+                  "reading": "あね",
+                  "romaji": "ane",
+                  "meaning": "ma grande sœur"
+                },
+                {
+                  "slug": "vocab-otouto",
+                  "kind": "vocabulary",
+                  "front": "弟",
+                  "reading": "おとうと",
+                  "romaji": "otouto",
+                  "meaning": "mon petit frère"
+                },
+                {
+                  "slug": "vocab-imouto",
+                  "kind": "vocabulary",
+                  "front": "妹",
+                  "reading": "いもうと",
+                  "romaji": "imouto",
+                  "meaning": "ma petite sœur"
+                },
+                {
+                  "slug": "vocab-kazoku",
+                  "kind": "vocabulary",
+                  "front": "家族",
+                  "reading": "かぞく",
+                  "romaji": "kazoku",
+                  "meaning": "famille"
+                },
+                {
+                  "slug": "vocab-oji",
+                  "kind": "vocabulary",
+                  "front": "おじ",
+                  "reading": "おじ",
+                  "romaji": "oji",
+                  "meaning": "oncle"
+                },
+                {
+                  "slug": "vocab-oba",
+                  "kind": "vocabulary",
+                  "front": "おば",
+                  "reading": "おば",
+                  "romaji": "oba",
+                  "meaning": "tante"
+                },
+                {
+                  "slug": "gram-nin",
+                  "kind": "grammar",
+                  "front": "〜人（にん）",
+                  "reading": "〜人（にん）",
+                  "romaji": "~nin",
+                  "meaning": "compteur de personnes"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "わたしは 四人 家族です。",
+                  "reading": "わたしは よにん かぞくです。",
+                  "fr": "Nous sommes quatre dans ma famille."
+                },
+                {
+                  "jp": "父の 兄は おじです。",
+                  "reading": "ちちの あには おじです。",
+                  "fr": "Le grand frère de mon père est mon oncle."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "わたし＿ あには せんせいです。",
+                  "choices": [
+                    "の",
+                    "は",
+                    "を"
+                  ],
+                  "answer": "の",
+                  "explanation": "わたしの あに : « mon grand frère » (の relie deux noms).",
+                  "translation": "Mon grand frère est professeur."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ははの いもうとは わたしの ＿です。",
+                  "choices": [
+                    "おば",
+                    "おじ",
+                    "あね",
+                    "いもうと"
+                  ],
+                  "answer": "おば",
+                  "explanation": "La sœur de ma mère est ma tante : おば.",
+                  "translation": "La petite sœur de ma mère est ma …"
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On te demande combien vous êtes dans ta famille (ton père, ta mère et toi) :",
+                  "lines": [
+                    {
+                      "speaker": "ともだち",
+                      "jp": "なんにん かぞくですか。"
+                    }
+                  ],
+                  "choices": [
+                    "さんにんです。",
+                    "さんさいです。",
+                    "さんがいです。"
+                  ],
+                  "answer": "さんにんです。",
+                  "explanation": "Personnes : 〜にん. さんさい = 3 ans, さんがい = 3e étage."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "boss": {
+        "name": "La Kitsune masquée",
+        "glyph": "狐",
+        "intro": "La renarde ne laisse passer que les voyageurs bien élevés."
+      }
+    },
+    {
+      "slug": "n5-w4",
+      "title": "Construire ses premières phrases",
+      "region": "Archipel des débutants",
+      "description": "Désigner des objets et parler des animaux.",
+      "chapters": [
+        {
+          "slug": "n5-w4-c1",
+          "title": "Ceci, cela",
+          "lessons": [
+            {
+              "slug": "n5-kore-sore-are",
+              "title": "これ・それ・あれ",
+              "objective": "Désigner un objet selon sa distance.",
+              "minutes": 8,
+              "explanation": [
+                "これ désigne ce qui est près de celui qui parle, それ ce qui est près de l'interlocuteur, あれ ce qui est loin des deux.",
+                "これは ほんです。= « Ceci est un livre. » Les mots en kanji sont présentés avec leur lecture en furigana."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-kore",
+                  "kind": "vocabulary",
+                  "front": "これ",
+                  "reading": "これ",
+                  "romaji": "kore",
+                  "meaning": "ceci (près de moi)"
+                },
+                {
+                  "slug": "vocab-sore",
+                  "kind": "vocabulary",
+                  "front": "それ",
+                  "reading": "それ",
+                  "romaji": "sore",
+                  "meaning": "cela (près de toi)"
+                },
+                {
+                  "slug": "vocab-are",
+                  "kind": "vocabulary",
+                  "front": "あれ",
+                  "reading": "あれ",
+                  "romaji": "are",
+                  "meaning": "cela là-bas"
+                },
+                {
+                  "slug": "vocab-hon",
+                  "kind": "vocabulary",
+                  "front": "本",
+                  "reading": "ほん",
+                  "romaji": "hon",
+                  "meaning": "livre"
+                },
+                {
+                  "slug": "vocab-mizu",
+                  "kind": "vocabulary",
+                  "front": "水",
+                  "reading": "みず",
+                  "romaji": "mizu",
+                  "meaning": "eau"
+                },
+                {
+                  "slug": "vocab-kaban",
+                  "kind": "vocabulary",
+                  "front": "かばん",
+                  "reading": "かばん",
+                  "romaji": "kaban",
+                  "meaning": "sac"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "これは 本です。",
+                  "reading": "これは ほんです。",
+                  "fr": "Ceci est un livre."
+                },
+                {
+                  "jp": "それは 水ですか。",
+                  "reading": "それは みずですか。",
+                  "fr": "Est-ce de l'eau (près de toi) ?"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Le sac est loin de vous deux. Complète.",
+                  "sentence": "＿は かばんです。",
+                  "translation": "Ça, là-bas, c'est un sac.",
+                  "choices": [
+                    "あれ",
+                    "これ",
+                    "それ"
+                  ],
+                  "answer": "あれ",
+                  "explanation": "あれ désigne ce qui est éloigné des deux interlocuteurs."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Ceci est de l'eau. »",
+                  "answer": [
+                    "これは",
+                    "水",
+                    "です。"
+                  ],
+                  "explanation": "これは (ceci) + 水 (eau) + です."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w4-c2",
+          "title": "Les animaux",
+          "lessons": [
+            {
+              "slug": "n5-animals",
+              "title": "Les animaux",
+              "objective": "Nommer quelques animaux courants.",
+              "minutes": 6,
+              "explanation": [
+                "Beaucoup de noms d'animaux s'écrivent en kanji. On peut aussi les écrire en hiragana (ねこ) ou en katakana (ネコ) dans un style plus familier."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-neko",
+                  "kind": "vocabulary",
+                  "front": "猫",
+                  "reading": "ねこ",
+                  "romaji": "neko",
+                  "meaning": "chat"
+                },
+                {
+                  "slug": "vocab-inu",
+                  "kind": "vocabulary",
+                  "front": "犬",
+                  "reading": "いぬ",
+                  "romaji": "inu",
+                  "meaning": "chien"
+                },
+                {
+                  "slug": "vocab-tori",
+                  "kind": "vocabulary",
+                  "front": "鳥",
+                  "reading": "とり",
+                  "romaji": "tori",
+                  "meaning": "oiseau"
+                },
+                {
+                  "slug": "vocab-sakana",
+                  "kind": "vocabulary",
+                  "front": "魚",
+                  "reading": "さかな",
+                  "romaji": "sakana",
+                  "meaning": "poisson"
+                },
+                {
+                  "slug": "vocab-uma",
+                  "kind": "vocabulary",
+                  "front": "馬",
+                  "reading": "うま",
+                  "romaji": "uma",
+                  "meaning": "cheval"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "あれは 猫です。",
+                  "reading": "あれは ねこです。",
+                  "fr": "Ça, là-bas, c'est un chat."
+                },
+                {
+                  "jp": "わたしの 犬です。",
+                  "reading": "わたしの いぬです。",
+                  "fr": "C'est mon chien."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "« C'est le chien de Ken. » Choisis la particule.",
+                  "sentence": "ケンさん＿犬です。",
+                  "choices": [
+                    "の",
+                    "は",
+                    "か"
+                  ],
+                  "answer": "の",
+                  "explanation": "ケンさんの いぬ = le chien de Ken."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w4-c3",
+          "title": "Décrire",
+          "lessons": [
+            {
+              "slug": "n5-adj-i",
+              "title": "Adjectifs en い (1)",
+              "objective": "Décrire et nier avec les adjectifs en い.",
+              "minutes": 9,
+              "explanation": [
+                "Adjectif en い + です : ながいです. Négation : い → くないです (ながくないです).",
+                "Passé : い → かったです ; passé négatif : い → くなかったです. Attention : いい devient よくないです, よかったです."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-nagai",
+                  "kind": "vocabulary",
+                  "front": "長い",
+                  "reading": "ながい",
+                  "romaji": "nagai",
+                  "meaning": "long"
+                },
+                {
+                  "slug": "vocab-mijikai",
+                  "kind": "vocabulary",
+                  "front": "短い",
+                  "reading": "みじかい",
+                  "romaji": "mijikai",
+                  "meaning": "court"
+                },
+                {
+                  "slug": "vocab-shiroi",
+                  "kind": "vocabulary",
+                  "front": "白い",
+                  "reading": "しろい",
+                  "romaji": "shiroi",
+                  "meaning": "blanc"
+                },
+                {
+                  "slug": "vocab-kuroi",
+                  "kind": "vocabulary",
+                  "front": "黒い",
+                  "reading": "くろい",
+                  "romaji": "kuroi",
+                  "meaning": "noir"
+                },
+                {
+                  "slug": "vocab-atarashii",
+                  "kind": "vocabulary",
+                  "front": "新しい",
+                  "reading": "あたらしい",
+                  "romaji": "atarashii",
+                  "meaning": "neuf, nouveau"
+                },
+                {
+                  "slug": "vocab-furui",
+                  "kind": "vocabulary",
+                  "front": "古い",
+                  "reading": "ふるい",
+                  "romaji": "furui",
+                  "meaning": "vieux (objet)"
+                },
+                {
+                  "slug": "vocab-chiisai",
+                  "kind": "vocabulary",
+                  "front": "小さい",
+                  "reading": "ちいさい",
+                  "romaji": "chiisai",
+                  "meaning": "petit"
+                },
+                {
+                  "slug": "gram-kunai",
+                  "kind": "grammar",
+                  "front": "〜くないです・〜くなかったです",
+                  "reading": "〜くないです・〜くなかったです",
+                  "romaji": "~kunai desu / ~kunakatta desu",
+                  "meaning": "négation des adjectifs en い (présent, passé)"
+                },
+                {
+                  "slug": "kanji-nagai",
+                  "kind": "kanji",
+                  "front": "長",
+                  "reading": "ながい",
+                  "romaji": "nagai",
+                  "meaning": "long",
+                  "kanji": {
+                    "onyomi": [
+                      "チョウ"
+                    ],
+                    "kunyomi": [
+                      "なが(い)"
+                    ],
+                    "strokes": 8
+                  }
+                },
+                {
+                  "slug": "kanji-atarashii",
+                  "kind": "kanji",
+                  "front": "新",
+                  "reading": "あたらしい",
+                  "romaji": "atarashii",
+                  "meaning": "nouveau",
+                  "kanji": {
+                    "onyomi": [
+                      "シン"
+                    ],
+                    "kunyomi": [
+                      "あたら(しい)"
+                    ],
+                    "strokes": 13
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "この 川は とても 長いです。",
+                  "reading": "この かわは とても ながいです。",
+                  "fr": "Cette rivière est très longue."
+                },
+                {
+                  "jp": "わたしの くつは 新しくないです。",
+                  "reading": "わたしの くつは あたらしくないです。",
+                  "fr": "Mes chaussures ne sont pas neuves."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "この ほんは ふる＿。",
+                  "choices": [
+                    "くないです",
+                    "いないです",
+                    "じゃないです"
+                  ],
+                  "answer": "くないです",
+                  "explanation": "Adjectif en い : い → くないです.",
+                  "translation": "Ce livre n'est pas vieux."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "きのうの テストは むずかし＿。",
+                  "choices": [
+                    "くなかったです",
+                    "くないでした",
+                    "いじゃなかったです"
+                  ],
+                  "answer": "くなかったです",
+                  "explanation": "Passé négatif : い → くなかったです.",
+                  "translation": "Le test d'hier n'était pas difficile."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "いい → いくないです",
+                  "translation": "La négation de いい est いくないです.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "いい est irrégulier : よくないです, よかったです."
+                }
+              ]
+            },
+            {
+              "slug": "n5-adj-i-2",
+              "title": "Adjectifs en い (2)",
+              "objective": "Parler de l'espace, de la lumière et des distances.",
+              "minutes": 8,
+              "explanation": [
+                "Ces adjectifs vont souvent par paires de contraires : ひろい ⇔ せまい, あかるい ⇔ くらい, ちかい ⇔ とおい, おもい ⇔ かるい.",
+                "Négation : とおくないです (pas loin). Devant un nom, l'adjectif ne change pas : ひろい へや."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-hiroi",
+                  "kind": "vocabulary",
+                  "front": "広い",
+                  "reading": "ひろい",
+                  "romaji": "hiroi",
+                  "meaning": "spacieux, large"
+                },
+                {
+                  "slug": "vocab-semai",
+                  "kind": "vocabulary",
+                  "front": "狭い",
+                  "reading": "せまい",
+                  "romaji": "semai",
+                  "meaning": "étroit, petit (espace)"
+                },
+                {
+                  "slug": "vocab-akarui",
+                  "kind": "vocabulary",
+                  "front": "明るい",
+                  "reading": "あかるい",
+                  "romaji": "akarui",
+                  "meaning": "lumineux, clair"
+                },
+                {
+                  "slug": "vocab-kurai",
+                  "kind": "vocabulary",
+                  "front": "暗い",
+                  "reading": "くらい",
+                  "romaji": "kurai",
+                  "meaning": "sombre"
+                },
+                {
+                  "slug": "vocab-chikai",
+                  "kind": "vocabulary",
+                  "front": "近い",
+                  "reading": "ちかい",
+                  "romaji": "chikai",
+                  "meaning": "proche"
+                },
+                {
+                  "slug": "vocab-tooi",
+                  "kind": "vocabulary",
+                  "front": "遠い",
+                  "reading": "とおい",
+                  "romaji": "tooi",
+                  "meaning": "loin"
+                },
+                {
+                  "slug": "vocab-omoi",
+                  "kind": "vocabulary",
+                  "front": "重い",
+                  "reading": "おもい",
+                  "romaji": "omoi",
+                  "meaning": "lourd"
+                },
+                {
+                  "slug": "vocab-karui",
+                  "kind": "vocabulary",
+                  "front": "軽い",
+                  "reading": "かるい",
+                  "romaji": "karui",
+                  "meaning": "léger"
+                },
+                {
+                  "slug": "kanji-chikai",
+                  "kind": "kanji",
+                  "front": "近",
+                  "reading": "ちかい",
+                  "romaji": "chikai",
+                  "meaning": "proche",
+                  "kanji": {
+                    "onyomi": [
+                      "キン"
+                    ],
+                    "kunyomi": [
+                      "ちか(い)"
+                    ],
+                    "strokes": 7
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "わたしの へやは 狭いですが、明るいです。",
+                  "reading": "わたしの へやは せまいですが、あかるいです。",
+                  "fr": "Ma chambre est petite mais lumineuse."
+                },
+                {
+                  "jp": "駅は ここから 遠くないです。",
+                  "reading": "えきは ここから とおくないです。",
+                  "fr": "La gare n'est pas loin d'ici."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "へやが ＿ですね。でんきを つけましょう。",
+                  "choices": [
+                    "くらい",
+                    "あかるい",
+                    "ひろい",
+                    "かるい"
+                  ],
+                  "answer": "くらい",
+                  "explanation": "On allume la lumière parce que c'est sombre : くらい.",
+                  "translation": "La pièce est sombre, allumons."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "えきは ＿です。あるいて ２ふんです。",
+                  "choices": [
+                    "ちかい",
+                    "とおい",
+                    "おもい",
+                    "せまい"
+                  ],
+                  "answer": "ちかい",
+                  "explanation": "2 minutes à pied : c'est proche, ちかい.",
+                  "translation": "La gare est proche, à 2 minutes à pied."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "とおい ⇔ ちかい",
+                  "translation": "とおい est le contraire de ちかい.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "とおい (loin) ⇔ ちかい (proche)."
+                }
+              ]
+            },
+            {
+              "slug": "n5-adj-na",
+              "title": "Adjectifs en な",
+              "objective": "Décrire avec les adjectifs en な.",
+              "minutes": 9,
+              "explanation": [
+                "Devant un nom, on ajoute な : しずかな こうえん. Avec です : しずかです ; négation : しずかじゃないです ; passé : しずかでした.",
+                "Piège : きれい finit par い mais c'est un adjectif en な : きれいな へや, きれいじゃないです."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-shizuka",
+                  "kind": "vocabulary",
+                  "front": "静か",
+                  "reading": "しずか",
+                  "romaji": "shizuka",
+                  "meaning": "calme"
+                },
+                {
+                  "slug": "vocab-nigiyaka",
+                  "kind": "vocabulary",
+                  "front": "にぎやか",
+                  "reading": "にぎやか",
+                  "romaji": "nigiyaka",
+                  "meaning": "animé"
+                },
+                {
+                  "slug": "vocab-kirei",
+                  "kind": "vocabulary",
+                  "front": "きれい",
+                  "reading": "きれい",
+                  "romaji": "kirei",
+                  "meaning": "beau, propre"
+                },
+                {
+                  "slug": "vocab-genki",
+                  "kind": "vocabulary",
+                  "front": "元気",
+                  "reading": "げんき",
+                  "romaji": "genki",
+                  "meaning": "en forme"
+                },
+                {
+                  "slug": "vocab-yuumei",
+                  "kind": "vocabulary",
+                  "front": "有名",
+                  "reading": "ゆうめい",
+                  "romaji": "yuumei",
+                  "meaning": "célèbre"
+                },
+                {
+                  "slug": "vocab-shinsetsu",
+                  "kind": "vocabulary",
+                  "front": "親切",
+                  "reading": "しんせつ",
+                  "romaji": "shinsetsu",
+                  "meaning": "gentil, serviable"
+                },
+                {
+                  "slug": "vocab-jouzu",
+                  "kind": "vocabulary",
+                  "front": "上手",
+                  "reading": "じょうず",
+                  "romaji": "jouzu",
+                  "meaning": "doué"
+                },
+                {
+                  "slug": "vocab-heta",
+                  "kind": "vocabulary",
+                  "front": "下手",
+                  "reading": "へた",
+                  "romaji": "heta",
+                  "meaning": "maladroit, pas doué"
+                },
+                {
+                  "slug": "gram-na-adj",
+                  "kind": "grammar",
+                  "front": "〜な＋名詞・〜じゃないです",
+                  "reading": "〜な＋名詞・〜じゃないです",
+                  "romaji": "~na + nom / ~ja nai desu",
+                  "meaning": "adjectifs en な : devant un nom et négation"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ここは 静かな 公園です。",
+                  "reading": "ここは しずかな こうえんです。",
+                  "fr": "C'est un parc calme."
+                },
+                {
+                  "jp": "田中さんは 料理が 上手です。",
+                  "reading": "たなかさんは りょうりが じょうずです。",
+                  "fr": "M. Tanaka cuisine bien."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "これは ゆうめい＿ おてらです。",
+                  "choices": [
+                    "な",
+                    "の",
+                    "い"
+                  ],
+                  "answer": "な",
+                  "explanation": "Adjectif en な devant un nom : ゆうめいな.",
+                  "translation": "C'est un temple célèbre."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "この へやは きれい＿。",
+                  "choices": [
+                    "じゃないです",
+                    "くないです",
+                    "いないです"
+                  ],
+                  "answer": "じゃないです",
+                  "explanation": "きれい est un adjectif en な : きれいじゃないです.",
+                  "translation": "Cette pièce n'est pas propre."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "へた ⇔ じょうず",
+                  "translation": "へた est le contraire de じょうず.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "じょうず (doué) ⇔ へた (pas doué)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "boss": {
+        "name": "Le Tengu de la montagne",
+        "glyph": "山",
+        "intro": "Le tengu teste tes premières phrases au sommet du col."
+      }
+    },
+    {
+      "slug": "n5-w5",
+      "title": "Les nombres, heures et dates",
+      "region": "Archipel des débutants",
+      "description": "Compter, dire un prix, l'heure et le jour de la semaine.",
+      "boss": {
+        "name": "Le Chat-boulier",
+        "glyph": "算",
+        "intro": "Ce chat marchand ne laisse passer que ceux qui savent compter juste."
+      },
+      "chapters": [
+        {
+          "slug": "n5-w5-c1",
+          "title": "Compter",
+          "lessons": [
+            {
+              "slug": "n5-numbers",
+              "title": "Les nombres de 1 à 10",
+              "objective": "Lire et dire les nombres de 1 à 10, puis les combiner jusqu'à 99.",
+              "minutes": 8,
+              "explanation": [
+                "Les nombres japonais se combinent comme des briques : 十一 (じゅういち) = 10 + 1 = 11, 二十 (にじゅう) = 2 × 10 = 20, 二十三 (にじゅうさん) = 23.",
+                "Trois nombres ont deux lectures courantes : 4 se dit よん (ou し), 7 なな (ou しち) et 9 きゅう (ou く). En comptant, on préfère よん, なな et きゅう."
+              ],
+              "items": [
+                {
+                  "slug": "kanji-ichi",
+                  "kind": "kanji",
+                  "front": "一",
+                  "reading": "いち",
+                  "romaji": "ichi",
+                  "meaning": "un",
+                  "kanji": {
+                    "onyomi": [
+                      "イチ",
+                      "イツ"
+                    ],
+                    "kunyomi": [
+                      "ひと(つ)"
+                    ],
+                    "strokes": 1
+                  }
+                },
+                {
+                  "slug": "kanji-ni",
+                  "kind": "kanji",
+                  "front": "二",
+                  "reading": "に",
+                  "romaji": "ni",
+                  "meaning": "deux",
+                  "kanji": {
+                    "onyomi": [
+                      "ニ"
+                    ],
+                    "kunyomi": [
+                      "ふた(つ)"
+                    ],
+                    "strokes": 2
+                  }
+                },
+                {
+                  "slug": "kanji-san",
+                  "kind": "kanji",
+                  "front": "三",
+                  "reading": "さん",
+                  "romaji": "san",
+                  "meaning": "trois",
+                  "kanji": {
+                    "onyomi": [
+                      "サン"
+                    ],
+                    "kunyomi": [
+                      "み(っつ)"
+                    ],
+                    "strokes": 3
+                  }
+                },
+                {
+                  "slug": "kanji-yon",
+                  "kind": "kanji",
+                  "front": "四",
+                  "reading": "よん",
+                  "romaji": "yon",
+                  "meaning": "quatre",
+                  "kanji": {
+                    "onyomi": [
+                      "シ"
+                    ],
+                    "kunyomi": [
+                      "よ",
+                      "よ(つ)",
+                      "よん"
+                    ],
+                    "strokes": 5
+                  }
+                },
+                {
+                  "slug": "kanji-go",
+                  "kind": "kanji",
+                  "front": "五",
+                  "reading": "ご",
+                  "romaji": "go",
+                  "meaning": "cinq",
+                  "kanji": {
+                    "onyomi": [
+                      "ゴ"
+                    ],
+                    "kunyomi": [
+                      "いつ(つ)"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "kanji-roku",
+                  "kind": "kanji",
+                  "front": "六",
+                  "reading": "ろく",
+                  "romaji": "roku",
+                  "meaning": "six",
+                  "kanji": {
+                    "onyomi": [
+                      "ロク"
+                    ],
+                    "kunyomi": [
+                      "む(っつ)"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "kanji-nana",
+                  "kind": "kanji",
+                  "front": "七",
+                  "reading": "なな",
+                  "romaji": "nana",
+                  "meaning": "sept",
+                  "kanji": {
+                    "onyomi": [
+                      "シチ"
+                    ],
+                    "kunyomi": [
+                      "なな",
+                      "なな(つ)"
+                    ],
+                    "strokes": 2
+                  }
+                },
+                {
+                  "slug": "kanji-hachi",
+                  "kind": "kanji",
+                  "front": "八",
+                  "reading": "はち",
+                  "romaji": "hachi",
+                  "meaning": "huit",
+                  "kanji": {
+                    "onyomi": [
+                      "ハチ"
+                    ],
+                    "kunyomi": [
+                      "や(っつ)"
+                    ],
+                    "strokes": 2
+                  }
+                },
+                {
+                  "slug": "kanji-kyuu",
+                  "kind": "kanji",
+                  "front": "九",
+                  "reading": "きゅう",
+                  "romaji": "kyuu",
+                  "meaning": "neuf",
+                  "kanji": {
+                    "onyomi": [
+                      "キュウ",
+                      "ク"
+                    ],
+                    "kunyomi": [
+                      "ここの(つ)"
+                    ],
+                    "strokes": 2
+                  }
+                },
+                {
+                  "slug": "kanji-juu",
+                  "kind": "kanji",
+                  "front": "十",
+                  "reading": "じゅう",
+                  "romaji": "juu",
+                  "meaning": "dix",
+                  "kanji": {
+                    "onyomi": [
+                      "ジュウ"
+                    ],
+                    "kunyomi": [
+                      "とお"
+                    ],
+                    "strokes": 2
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "十一",
+                  "reading": "じゅういち",
+                  "fr": "onze"
+                },
+                {
+                  "jp": "二十五",
+                  "reading": "にじゅうご",
+                  "fr": "vingt-cinq"
+                },
+                {
+                  "jp": "九十九",
+                  "reading": "きゅうじゅうきゅう",
+                  "fr": "quatre-vingt-dix-neuf"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce nombre ?",
+                  "sentence": "十一",
+                  "choices": [
+                    "じゅういち",
+                    "いちじゅう",
+                    "じゅうに"
+                  ],
+                  "answer": "じゅういち",
+                  "explanation": "十一 = 10 + 1 : じゅう + いち."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce nombre ?",
+                  "sentence": "三十",
+                  "choices": [
+                    "さんじゅう",
+                    "じゅうさん",
+                    "さんじゅういち"
+                  ],
+                  "answer": "さんじゅう",
+                  "explanation": "三十 = 3 × 10 : さん + じゅう. L'ordre compte : じゅうさん, c'est 13."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "七",
+                  "translation": "七 peut se lire なな ou しち.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "7 a deux lectures : なな (la plus courante pour compter) et しち."
+                }
+              ]
+            },
+            {
+              "slug": "n5-prices",
+              "title": "Cent, mille et les prix",
+              "objective": "Comprendre et demander un prix en yens.",
+              "minutes": 9,
+              "explanation": [
+                "百 (ひゃく) = 100, 千 (せん) = 1 000, 万 (まん) = 10 000. Attention : 10 000 se dit いちまん, avec son propre mot.",
+                "Certaines combinaisons changent de son : 三百 se lit さんびゃく, 六百 ろっぴゃく, 八百 はっぴゃく, 三千 さんぜん, 八千 はっせん.",
+                "Pour demander un prix : いくらですか。 (Combien est-ce ?). On répond avec 円 (えん) : 五百円です。 (C'est 500 yens.)"
+              ],
+              "items": [
+                {
+                  "slug": "kanji-hyaku",
+                  "kind": "kanji",
+                  "front": "百",
+                  "reading": "ひゃく",
+                  "romaji": "hyaku",
+                  "meaning": "cent",
+                  "kanji": {
+                    "onyomi": [
+                      "ヒャク"
+                    ],
+                    "kunyomi": [],
+                    "strokes": 6
+                  }
+                },
+                {
+                  "slug": "kanji-sen",
+                  "kind": "kanji",
+                  "front": "千",
+                  "reading": "せん",
+                  "romaji": "sen",
+                  "meaning": "mille",
+                  "kanji": {
+                    "onyomi": [
+                      "セン"
+                    ],
+                    "kunyomi": [
+                      "ち"
+                    ],
+                    "strokes": 3
+                  }
+                },
+                {
+                  "slug": "kanji-man",
+                  "kind": "kanji",
+                  "front": "万",
+                  "reading": "まん",
+                  "romaji": "man",
+                  "meaning": "dix mille",
+                  "kanji": {
+                    "onyomi": [
+                      "マン",
+                      "バン"
+                    ],
+                    "kunyomi": [],
+                    "strokes": 3
+                  }
+                },
+                {
+                  "slug": "kanji-en",
+                  "kind": "kanji",
+                  "front": "円",
+                  "reading": "えん",
+                  "romaji": "en",
+                  "meaning": "yen, cercle",
+                  "kanji": {
+                    "onyomi": [
+                      "エン"
+                    ],
+                    "kunyomi": [
+                      "まる(い)"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "vocab-ikura",
+                  "kind": "vocabulary",
+                  "front": "いくら",
+                  "reading": "いくら",
+                  "romaji": "ikura",
+                  "meaning": "combien (prix)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "これは いくらですか。",
+                  "reading": "これは いくらですか。",
+                  "fr": "Combien coûte ceci ?"
+                },
+                {
+                  "jp": "三百円です。",
+                  "reading": "さんびゃくえんです。",
+                  "fr": "C'est 300 yens."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce prix ?",
+                  "sentence": "三百円",
+                  "choices": [
+                    "さんびゃくえん",
+                    "さんひゃくえん",
+                    "さんぴゃくえん"
+                  ],
+                  "answer": "さんびゃくえん",
+                  "explanation": "Après さん, ひゃく devient びゃく : さんびゃく."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce nombre ?",
+                  "sentence": "一万",
+                  "choices": [
+                    "いちまん",
+                    "じゅうせん",
+                    "いっせん"
+                  ],
+                  "answer": "いちまん",
+                  "explanation": "10 000 a son propre mot : 一万 (いちまん). On ne dit pas « dix mille »."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Le vendeur te répond. Quel prix annonce-t-il pour 500 yens ?",
+                  "lines": [
+                    {
+                      "speaker": "Toi",
+                      "jp": "これは いくらですか。"
+                    }
+                  ],
+                  "translation": "Tu demandes le prix d'un objet à 500 yens.",
+                  "choices": [
+                    "ごひゃくえんです。",
+                    "ごせんえんです。",
+                    "ごじゅうえんです。"
+                  ],
+                  "answer": "ごひゃくえんです。",
+                  "explanation": "500 = 五百 (ごひゃく) ; ごせん = 5 000 et ごじゅう = 50."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w5-c2",
+          "title": "L'heure",
+          "lessons": [
+            {
+              "slug": "n5-time",
+              "title": "Quelle heure est-il ?",
+              "objective": "Demander et dire l'heure.",
+              "minutes": 9,
+              "explanation": [
+                "Pour l'heure, on ajoute 時 (じ) au nombre : 一時 (いちじ), 二時 (にじ)… Trois heures sont irrégulières : 四時 (よじ), 七時 (しちじ), 九時 (くじ).",
+                "Pour la demie, on ajoute 半 (はん) : 三時半 (さんじはん) = 3 h 30. 午前 (ごぜん) indique le matin et 午後 (ごご) l'après-midi : 午後二時 = 14 h.",
+                "Pour demander l'heure : いま なんじですか。 (Quelle heure est-il maintenant ?)"
+              ],
+              "items": [
+                {
+                  "slug": "kanji-ji",
+                  "kind": "kanji",
+                  "front": "時",
+                  "reading": "じ",
+                  "romaji": "ji",
+                  "meaning": "heure, moment",
+                  "kanji": {
+                    "onyomi": [
+                      "ジ"
+                    ],
+                    "kunyomi": [
+                      "とき"
+                    ],
+                    "strokes": 10
+                  }
+                },
+                {
+                  "slug": "kanji-han",
+                  "kind": "kanji",
+                  "front": "半",
+                  "reading": "はん",
+                  "romaji": "han",
+                  "meaning": "moitié, demi",
+                  "kanji": {
+                    "onyomi": [
+                      "ハン"
+                    ],
+                    "kunyomi": [
+                      "なか(ば)"
+                    ],
+                    "strokes": 5
+                  }
+                },
+                {
+                  "slug": "kanji-ima",
+                  "kind": "kanji",
+                  "front": "今",
+                  "reading": "いま",
+                  "romaji": "ima",
+                  "meaning": "maintenant",
+                  "kanji": {
+                    "onyomi": [
+                      "コン",
+                      "キン"
+                    ],
+                    "kunyomi": [
+                      "いま"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "vocab-nanji",
+                  "kind": "vocabulary",
+                  "front": "何時",
+                  "reading": "なんじ",
+                  "romaji": "nanji",
+                  "meaning": "quelle heure"
+                },
+                {
+                  "slug": "vocab-gozen",
+                  "kind": "vocabulary",
+                  "front": "午前",
+                  "reading": "ごぜん",
+                  "romaji": "gozen",
+                  "meaning": "le matin (avant midi)"
+                },
+                {
+                  "slug": "vocab-gogo",
+                  "kind": "vocabulary",
+                  "front": "午後",
+                  "reading": "ごご",
+                  "romaji": "gogo",
+                  "meaning": "l’après-midi (après midi)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "いま なんじですか。",
+                  "reading": "いま なんじですか。",
+                  "fr": "Quelle heure est-il ?"
+                },
+                {
+                  "jp": "午後三時半です。",
+                  "reading": "ごごさんじはんです。",
+                  "fr": "Il est 15 h 30."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit cette heure ?",
+                  "sentence": "四時",
+                  "choices": [
+                    "よじ",
+                    "よんじ",
+                    "しじ"
+                  ],
+                  "answer": "よじ",
+                  "explanation": "4 heures est irrégulier : 四時 se lit よじ."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit cette heure ?",
+                  "sentence": "九時",
+                  "choices": [
+                    "くじ",
+                    "きゅうじ",
+                    "ここのじ"
+                  ],
+                  "answer": "くじ",
+                  "explanation": "9 heures se dit くじ (et non きゅうじ)."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Quelle heure est-il maintenant ? »",
+                  "answer": [
+                    "いま",
+                    "なんじ",
+                    "ですか。"
+                  ],
+                  "explanation": "いま (maintenant) + なんじ (quelle heure) + ですか (question polie)."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Il est 14 h. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Aiko",
+                      "jp": "いま なんじですか。"
+                    }
+                  ],
+                  "translation": "Aiko te demande l'heure.",
+                  "choices": [
+                    "ごご にじです。",
+                    "ごぜん にじです。",
+                    "ごご よじです。"
+                  ],
+                  "answer": "ごご にじです。",
+                  "explanation": "14 h = 2 h de l'après-midi : ごご にじ."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w5-c3",
+          "title": "Les jours",
+          "lessons": [
+            {
+              "slug": "n5-weekdays",
+              "title": "Les jours de la semaine",
+              "objective": "Nommer les jours de la semaine.",
+              "minutes": 8,
+              "explanation": [
+                "Chaque jour porte le nom d'un élément suivi de 曜日 (ようび) : 月 la lune, 火 le feu, 水 l'eau, 木 l'arbre, 金 le métal, 土 la terre, 日 le soleil.",
+                "Pour demander le jour : きょうは なんようびですか。 (Quel jour sommes-nous ?)"
+              ],
+              "items": [
+                {
+                  "slug": "vocab-getsuyoubi",
+                  "kind": "vocabulary",
+                  "front": "月曜日",
+                  "reading": "げつようび",
+                  "romaji": "getsuyoubi",
+                  "meaning": "lundi"
+                },
+                {
+                  "slug": "vocab-kayoubi",
+                  "kind": "vocabulary",
+                  "front": "火曜日",
+                  "reading": "かようび",
+                  "romaji": "kayoubi",
+                  "meaning": "mardi"
+                },
+                {
+                  "slug": "vocab-suiyoubi",
+                  "kind": "vocabulary",
+                  "front": "水曜日",
+                  "reading": "すいようび",
+                  "romaji": "suiyoubi",
+                  "meaning": "mercredi"
+                },
+                {
+                  "slug": "vocab-mokuyoubi",
+                  "kind": "vocabulary",
+                  "front": "木曜日",
+                  "reading": "もくようび",
+                  "romaji": "mokuyoubi",
+                  "meaning": "jeudi"
+                },
+                {
+                  "slug": "vocab-kinyoubi",
+                  "kind": "vocabulary",
+                  "front": "金曜日",
+                  "reading": "きんようび",
+                  "romaji": "kinyoubi",
+                  "meaning": "vendredi"
+                },
+                {
+                  "slug": "vocab-doyoubi",
+                  "kind": "vocabulary",
+                  "front": "土曜日",
+                  "reading": "どようび",
+                  "romaji": "doyoubi",
+                  "meaning": "samedi"
+                },
+                {
+                  "slug": "vocab-nichiyoubi",
+                  "kind": "vocabulary",
+                  "front": "日曜日",
+                  "reading": "にちようび",
+                  "romaji": "nichiyoubi",
+                  "meaning": "dimanche"
+                },
+                {
+                  "slug": "vocab-kyou",
+                  "kind": "vocabulary",
+                  "front": "今日",
+                  "reading": "きょう",
+                  "romaji": "kyou",
+                  "meaning": "aujourd’hui"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "今日は 金曜日です。",
+                  "reading": "きょうは きんようびです。",
+                  "fr": "Aujourd'hui, c'est vendredi."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Aujourd'hui, c'est samedi. »",
+                  "sentence": "きょうは ＿ です。",
+                  "choices": [
+                    "どようび",
+                    "にちようび",
+                    "げつようび"
+                  ],
+                  "answer": "どようび",
+                  "explanation": "Samedi = 土曜日 (どようび), le jour de la terre."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "水曜日",
+                  "translation": "水曜日 signifie « mercredi ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "水 (l'eau) + 曜日 : 水曜日 (すいようび) = mercredi."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On est jeudi. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Ken",
+                      "jp": "きょうは なんようびですか。"
+                    }
+                  ],
+                  "translation": "Ken te demande quel jour on est.",
+                  "choices": [
+                    "もくようびです。",
+                    "きんようびです。",
+                    "かようびです。"
+                  ],
+                  "answer": "もくようびです。",
+                  "explanation": "Jeudi = 木曜日 (もくようび), le jour de l'arbre."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w5-c4",
+          "title": "Calendrier et quantités",
+          "lessons": [
+            {
+              "slug": "n5-calendar",
+              "title": "Chaque jour, la semaine prochaine",
+              "objective": "Situer une action dans le calendrier.",
+              "minutes": 9,
+              "explanation": [
+                "毎 (まい) = chaque : まいあさ (chaque matin), まいばん (chaque soir), まいにち, まいしゅう.",
+                "Repères : せんしゅう (semaine dernière) → こんしゅう → らいしゅう ; おととい → きのう → きょう → あした → あさって ; らいげつ = le mois prochain."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-maiasa",
+                  "kind": "vocabulary",
+                  "front": "毎朝",
+                  "reading": "まいあさ",
+                  "romaji": "maiasa",
+                  "meaning": "chaque matin"
+                },
+                {
+                  "slug": "vocab-maiban",
+                  "kind": "vocabulary",
+                  "front": "毎晩",
+                  "reading": "まいばん",
+                  "romaji": "maiban",
+                  "meaning": "chaque soir"
+                },
+                {
+                  "slug": "vocab-maishuu",
+                  "kind": "vocabulary",
+                  "front": "毎週",
+                  "reading": "まいしゅう",
+                  "romaji": "maishuu",
+                  "meaning": "chaque semaine"
+                },
+                {
+                  "slug": "vocab-raishuu",
+                  "kind": "vocabulary",
+                  "front": "来週",
+                  "reading": "らいしゅう",
+                  "romaji": "raishuu",
+                  "meaning": "la semaine prochaine"
+                },
+                {
+                  "slug": "vocab-raigetsu",
+                  "kind": "vocabulary",
+                  "front": "来月",
+                  "reading": "らいげつ",
+                  "romaji": "raigetsu",
+                  "meaning": "le mois prochain"
+                },
+                {
+                  "slug": "vocab-senshuu",
+                  "kind": "vocabulary",
+                  "front": "先週",
+                  "reading": "せんしゅう",
+                  "romaji": "senshuu",
+                  "meaning": "la semaine dernière"
+                },
+                {
+                  "slug": "vocab-ototoi",
+                  "kind": "vocabulary",
+                  "front": "おととい",
+                  "reading": "おととい",
+                  "romaji": "ototoi",
+                  "meaning": "avant-hier"
+                },
+                {
+                  "slug": "vocab-asatte",
+                  "kind": "vocabulary",
+                  "front": "あさって",
+                  "reading": "あさって",
+                  "romaji": "asatte",
+                  "meaning": "après-demain"
+                },
+                {
+                  "slug": "kanji-mai",
+                  "kind": "kanji",
+                  "front": "毎",
+                  "reading": "まい",
+                  "romaji": "mai",
+                  "meaning": "chaque",
+                  "kanji": {
+                    "onyomi": [
+                      "マイ"
+                    ],
+                    "kunyomi": [],
+                    "strokes": 6
+                  }
+                },
+                {
+                  "slug": "kanji-kuru",
+                  "kind": "kanji",
+                  "front": "来",
+                  "reading": "らい",
+                  "romaji": "rai",
+                  "meaning": "venir, prochain",
+                  "kanji": {
+                    "onyomi": [
+                      "ライ"
+                    ],
+                    "kunyomi": [
+                      "く(る)",
+                      "き(ます)"
+                    ],
+                    "strokes": 7
+                  }
+                },
+                {
+                  "slug": "kanji-shuu",
+                  "kind": "kanji",
+                  "front": "週",
+                  "reading": "しゅう",
+                  "romaji": "shuu",
+                  "meaning": "semaine",
+                  "kanji": {
+                    "onyomi": [
+                      "シュウ"
+                    ],
+                    "kunyomi": [],
+                    "strokes": 11
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "毎朝 コーヒーを 飲みます。",
+                  "reading": "まいあさ コーヒーを のみます。",
+                  "fr": "Je bois un café chaque matin."
+                },
+                {
+                  "jp": "来月 日本へ 行きます。",
+                  "reading": "らいげつ にほんへ いきます。",
+                  "fr": "Je vais au Japon le mois prochain."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "きのうの まえの 日は ＿です。",
+                  "choices": [
+                    "おととい",
+                    "あさって",
+                    "らいしゅう",
+                    "まいばん"
+                  ],
+                  "answer": "おととい",
+                  "explanation": "Le jour avant hier : おととい.",
+                  "translation": "Le jour avant hier, c'est …"
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "よるは いつも ９じに ねます。＝ ＿ ９じに ねます。",
+                  "choices": [
+                    "まいばん",
+                    "まいあさ",
+                    "らいげつ",
+                    "せんしゅう"
+                  ],
+                  "answer": "まいばん",
+                  "explanation": "Tous les soirs : まいばん.",
+                  "translation": "Je me couche à 21 h tous les soirs."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "らいしゅう＿ どようびに あいましょう。",
+                  "choices": [
+                    "の",
+                    "を",
+                    "が"
+                  ],
+                  "answer": "の",
+                  "explanation": "らいしゅうの どようび : le samedi de la semaine prochaine.",
+                  "translation": "Voyons-nous samedi prochain."
+                }
+              ]
+            },
+            {
+              "slug": "n5-counters",
+              "title": "Compter les choses",
+              "objective": "Compter des objets avec ひとつ, ふたつ… et les compteurs courants.",
+              "minutes": 9,
+              "explanation": [
+                "Sans compteur particulier : ひとつ, ふたつ, みっつ, よっつ, いつつ, むっつ, ななつ, やっつ, ここのつ, とお.",
+                "Compteurs fréquents : 〜まい (objets plats : feuilles, timbres, chemises), 〜さつ (livres), 〜だい (voitures, machines), 〜ほん (objets longs). はんぶん = la moitié."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-hitotsu",
+                  "kind": "vocabulary",
+                  "front": "一つ",
+                  "reading": "ひとつ",
+                  "romaji": "hitotsu",
+                  "meaning": "un (objet)"
+                },
+                {
+                  "slug": "vocab-futatsu",
+                  "kind": "vocabulary",
+                  "front": "二つ",
+                  "reading": "ふたつ",
+                  "romaji": "futatsu",
+                  "meaning": "deux (objets)"
+                },
+                {
+                  "slug": "vocab-mittsu",
+                  "kind": "vocabulary",
+                  "front": "三つ",
+                  "reading": "みっつ",
+                  "romaji": "mittsu",
+                  "meaning": "trois (objets)"
+                },
+                {
+                  "slug": "vocab-muttsu",
+                  "kind": "vocabulary",
+                  "front": "六つ",
+                  "reading": "むっつ",
+                  "romaji": "muttsu",
+                  "meaning": "six (objets)"
+                },
+                {
+                  "slug": "gram-mai",
+                  "kind": "grammar",
+                  "front": "〜枚（まい）",
+                  "reading": "〜枚（まい）",
+                  "romaji": "~mai",
+                  "meaning": "compteur d'objets plats"
+                },
+                {
+                  "slug": "gram-satsu",
+                  "kind": "grammar",
+                  "front": "〜冊（さつ）",
+                  "reading": "〜冊（さつ）",
+                  "romaji": "~satsu",
+                  "meaning": "compteur de livres"
+                },
+                {
+                  "slug": "gram-dai",
+                  "kind": "grammar",
+                  "front": "〜台（だい）",
+                  "reading": "〜台（だい）",
+                  "romaji": "~dai",
+                  "meaning": "compteur de machines, véhicules"
+                },
+                {
+                  "slug": "vocab-hanbun",
+                  "kind": "vocabulary",
+                  "front": "半分",
+                  "reading": "はんぶん",
+                  "romaji": "hanbun",
+                  "meaning": "la moitié"
+                },
+                {
+                  "slug": "vocab-senen",
+                  "kind": "vocabulary",
+                  "front": "千円",
+                  "reading": "せんえん",
+                  "romaji": "sen en",
+                  "meaning": "mille yens"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "りんごを 六つ ください。",
+                  "reading": "りんごを むっつ ください。",
+                  "fr": "Six pommes, s'il vous plaît."
+                },
+                {
+                  "jp": "切手を 三枚 買いました。",
+                  "reading": "きってを さんまい かいました。",
+                  "fr": "J'ai acheté trois timbres."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ほんを ２＿ かりました。",
+                  "choices": [
+                    "さつ",
+                    "まい",
+                    "だい",
+                    "ひき"
+                  ],
+                  "answer": "さつ",
+                  "explanation": "Livres : 〜さつ.",
+                  "translation": "J'ai emprunté deux livres."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "きってを ５＿ ください。",
+                  "choices": [
+                    "まい",
+                    "さつ",
+                    "ほん",
+                    "だい"
+                  ],
+                  "answer": "まい",
+                  "explanation": "Timbres (objets plats) : 〜まい.",
+                  "translation": "Cinq timbres, s'il vous plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ケーキを ＿ たべました。のこりは あした たべます。",
+                  "choices": [
+                    "はんぶん",
+                    "むっつ",
+                    "せんえん",
+                    "ふたり"
+                  ],
+                  "answer": "はんぶん",
+                  "explanation": "La moitié : はんぶん.",
+                  "translation": "J'ai mangé la moitié du gâteau ; le reste demain."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n5-w6",
+      "title": "Verbes et conjugaisons de base",
+      "region": "Archipel des débutants",
+      "description": "La forme polie 〜ます, la négation et le passé.",
+      "boss": {
+        "name": "L’Oni paresseux",
+        "glyph": "鬼",
+        "intro": "Cet oni ne fait rien de la journée. Prouve-lui que tu sais conjuguer !"
+      },
+      "chapters": [
+        {
+          "slug": "n5-w6-c1",
+          "title": "La forme 〜ます",
+          "lessons": [
+            {
+              "slug": "n5-masu-1",
+              "title": "Manger, boire, lire",
+              "objective": "Dire ce que l'on fait avec un verbe poli et la particule を.",
+              "minutes": 9,
+              "explanation": [
+                "En japonais, le verbe est toujours à la fin : わたしは ごはんを たべます。 (Je mange du riz.)",
+                "La particule を (prononcée « o ») marque l'objet de l'action. La terminaison 〜ます rend le verbe poli et sert pour le présent comme pour le futur."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-tabemasu",
+                  "kind": "vocabulary",
+                  "front": "食べます",
+                  "reading": "たべます",
+                  "romaji": "tabemasu",
+                  "meaning": "manger"
+                },
+                {
+                  "slug": "vocab-nomimasu",
+                  "kind": "vocabulary",
+                  "front": "飲みます",
+                  "reading": "のみます",
+                  "romaji": "nomimasu",
+                  "meaning": "boire"
+                },
+                {
+                  "slug": "vocab-mimasu",
+                  "kind": "vocabulary",
+                  "front": "見ます",
+                  "reading": "みます",
+                  "romaji": "mimasu",
+                  "meaning": "regarder, voir"
+                },
+                {
+                  "slug": "vocab-yomimasu",
+                  "kind": "vocabulary",
+                  "front": "読みます",
+                  "reading": "よみます",
+                  "romaji": "yomimasu",
+                  "meaning": "lire"
+                },
+                {
+                  "slug": "vocab-gohan",
+                  "kind": "vocabulary",
+                  "front": "ごはん",
+                  "reading": "ごはん",
+                  "romaji": "gohan",
+                  "meaning": "repas, riz cuit"
+                },
+                {
+                  "slug": "vocab-ocha",
+                  "kind": "vocabulary",
+                  "front": "お茶",
+                  "reading": "おちゃ",
+                  "romaji": "ocha",
+                  "meaning": "thé vert"
+                },
+                {
+                  "slug": "gram-wo",
+                  "kind": "grammar",
+                  "front": "〜を〜ます",
+                  "reading": "〜を〜ます",
+                  "romaji": "~ o ~ masu",
+                  "meaning": "faire quelque chose (を marque l’objet)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "わたしは お茶を 飲みます。",
+                  "reading": "わたしは おちゃを のみます。",
+                  "fr": "Je bois du thé."
+                },
+                {
+                  "jp": "本を 読みます。",
+                  "reading": "ほんを よみます。",
+                  "fr": "Je lis un livre."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "ごはん＿たべます。",
+                  "translation": "Je mange du riz.",
+                  "choices": [
+                    "を",
+                    "は",
+                    "に"
+                  ],
+                  "answer": "を",
+                  "explanation": "を marque l'objet de l'action : ごはんを たべます."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Je bois du thé. »",
+                  "answer": [
+                    "わたしは",
+                    "おちゃを",
+                    "のみます。"
+                  ],
+                  "explanation": "Thème (わたしは) + objet (おちゃを) + verbe (のみます) : le verbe va à la fin."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je lis un livre. »",
+                  "sentence": "ほんを ＿。",
+                  "choices": [
+                    "よみます",
+                    "のみます",
+                    "たべます"
+                  ],
+                  "answer": "よみます",
+                  "explanation": "Lire = よみます (読みます)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w6-c2",
+          "title": "Négation et passé",
+          "lessons": [
+            {
+              "slug": "n5-masu-2",
+              "title": "〜ません、〜ました",
+              "objective": "Conjuguer un verbe poli à la forme négative et au passé.",
+              "minutes": 10,
+              "explanation": [
+                "On remplace 〜ます pour changer le sens : 〜ません (négatif), 〜ました (passé), 〜ませんでした (passé négatif).",
+                "Exemple avec のみます (boire) : のみません (je ne bois pas), のみました (j'ai bu), のみませんでした (je n'ai pas bu)."
+              ],
+              "items": [
+                {
+                  "slug": "gram-masen",
+                  "kind": "grammar",
+                  "front": "〜ません",
+                  "reading": "〜ません",
+                  "romaji": "~ masen",
+                  "meaning": "forme négative polie (ne… pas)"
+                },
+                {
+                  "slug": "gram-mashita",
+                  "kind": "grammar",
+                  "front": "〜ました",
+                  "reading": "〜ました",
+                  "romaji": "~ mashita",
+                  "meaning": "passé poli"
+                },
+                {
+                  "slug": "gram-masendeshita",
+                  "kind": "grammar",
+                  "front": "〜ませんでした",
+                  "reading": "〜ませんでした",
+                  "romaji": "~ masen deshita",
+                  "meaning": "passé négatif poli"
+                },
+                {
+                  "slug": "vocab-kaimasu",
+                  "kind": "vocabulary",
+                  "front": "買います",
+                  "reading": "かいます",
+                  "romaji": "kaimasu",
+                  "meaning": "acheter"
+                },
+                {
+                  "slug": "vocab-shimasu",
+                  "kind": "vocabulary",
+                  "front": "します",
+                  "reading": "します",
+                  "romaji": "shimasu",
+                  "meaning": "faire"
+                },
+                {
+                  "slug": "vocab-kinou",
+                  "kind": "vocabulary",
+                  "front": "昨日",
+                  "reading": "きのう",
+                  "romaji": "kinou",
+                  "meaning": "hier"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "昨日 本を 買いました。",
+                  "reading": "きのう ほんを かいました。",
+                  "fr": "Hier, j'ai acheté un livre."
+                },
+                {
+                  "jp": "お茶を 飲みません。",
+                  "reading": "おちゃを のみません。",
+                  "fr": "Je ne bois pas de thé."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je ne bois pas de thé. »",
+                  "sentence": "おちゃを ＿。",
+                  "choices": [
+                    "のみません",
+                    "のみます",
+                    "のみました"
+                  ],
+                  "answer": "のみません",
+                  "explanation": "〜ません = forme négative : のみません."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Hier, j'ai lu un livre. »",
+                  "sentence": "きのう ほんを ＿。",
+                  "choices": [
+                    "よみました",
+                    "よみます",
+                    "よみません"
+                  ],
+                  "answer": "よみました",
+                  "explanation": "〜ました = passé : よみました."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "たべませんでした",
+                  "translation": "たべませんでした signifie « je n'ai pas mangé ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "〜ませんでした = passé négatif : たべませんでした, je n'ai pas mangé."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Hier, j'ai acheté un livre. »",
+                  "answer": [
+                    "きのう",
+                    "ほんを",
+                    "かいました。"
+                  ],
+                  "explanation": "Moment (きのう) + objet (ほんを) + verbe au passé (かいました)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w6-c3",
+          "title": "Se déplacer",
+          "lessons": [
+            {
+              "slug": "n5-masu-3",
+              "title": "Aller, venir, rentrer",
+              "objective": "Indiquer une destination avec に.",
+              "minutes": 9,
+              "explanation": [
+                "Avec les verbes de déplacement, に indique la destination : がっこうに いきます。 (Je vais à l'école.)",
+                "いきます = aller, きます = venir, かえります = rentrer (chez soi)."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-ikimasu",
+                  "kind": "vocabulary",
+                  "front": "行きます",
+                  "reading": "いきます",
+                  "romaji": "ikimasu",
+                  "meaning": "aller"
+                },
+                {
+                  "slug": "vocab-kimasu",
+                  "kind": "vocabulary",
+                  "front": "来ます",
+                  "reading": "きます",
+                  "romaji": "kimasu",
+                  "meaning": "venir"
+                },
+                {
+                  "slug": "vocab-kaerimasu",
+                  "kind": "vocabulary",
+                  "front": "帰ります",
+                  "reading": "かえります",
+                  "romaji": "kaerimasu",
+                  "meaning": "rentrer"
+                },
+                {
+                  "slug": "vocab-gakkou",
+                  "kind": "vocabulary",
+                  "front": "学校",
+                  "reading": "がっこう",
+                  "romaji": "gakkou",
+                  "meaning": "école"
+                },
+                {
+                  "slug": "vocab-uchi",
+                  "kind": "vocabulary",
+                  "front": "うち",
+                  "reading": "うち",
+                  "romaji": "uchi",
+                  "meaning": "maison, chez soi"
+                },
+                {
+                  "slug": "vocab-ashita",
+                  "kind": "vocabulary",
+                  "front": "明日",
+                  "reading": "あした",
+                  "romaji": "ashita",
+                  "meaning": "demain"
+                },
+                {
+                  "slug": "gram-ni-iku",
+                  "kind": "grammar",
+                  "front": "〜に いきます",
+                  "reading": "〜に いきます",
+                  "romaji": "~ ni ikimasu",
+                  "meaning": "aller à (に marque la destination)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "明日 学校に 行きます。",
+                  "reading": "あした がっこうに いきます。",
+                  "fr": "Demain, je vais à l'école."
+                },
+                {
+                  "jp": "うちに 帰ります。",
+                  "reading": "うちに かえります。",
+                  "fr": "Je rentre à la maison."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "がっこう＿いきます。",
+                  "translation": "Je vais à l'école.",
+                  "choices": [
+                    "に",
+                    "を",
+                    "が"
+                  ],
+                  "answer": "に",
+                  "explanation": "に marque la destination d'un déplacement."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "うち＿かえります。",
+                  "translation": "Je rentre à la maison.",
+                  "choices": [
+                    "に",
+                    "を",
+                    "の"
+                  ],
+                  "answer": "に",
+                  "explanation": "かえります (rentrer) se construit aussi avec に pour la destination."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Demain, je vais à l'école. »",
+                  "answer": [
+                    "あした",
+                    "がっこうに",
+                    "いきます。"
+                  ],
+                  "explanation": "Moment (あした) + destination (がっこうに) + verbe (いきます)."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu vas à l'école. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Mai",
+                      "jp": "どこに いきますか。"
+                    }
+                  ],
+                  "translation": "Mai te demande où tu vas.",
+                  "choices": [
+                    "がっこうに いきます。",
+                    "ごはんを たべます。",
+                    "はい、いきます。"
+                  ],
+                  "answer": "がっこうに いきます。",
+                  "explanation": "どこに (où) appelle une destination : がっこうに いきます."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w6-c4",
+          "title": "Le quotidien en actions",
+          "lessons": [
+            {
+              "slug": "n5-te-basic",
+              "title": "La forme en て : « après » et « en train de »",
+              "objective": "Enchaîner deux actions et décrire une action en cours.",
+              "minutes": 10,
+              "explanation": [
+                "Forme en て : groupe 2 たべます → たべて ; groupe 1 かきます → かいて, のみます → のんで, まちます → まって ; irréguliers します → して, きます → きて (détails dans l'Archipel N4).",
+                "〜てから = après avoir… : しゅくだいを してから、テレビを みます。",
+                "〜ています = être en train de… : いま ごはんを たべて います。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-tekara",
+                  "kind": "grammar",
+                  "front": "〜てから",
+                  "reading": "〜てから",
+                  "romaji": "~te kara",
+                  "meaning": "après avoir…"
+                },
+                {
+                  "slug": "gram-teiru",
+                  "kind": "grammar",
+                  "front": "〜ています",
+                  "reading": "〜ています",
+                  "romaji": "~te imasu",
+                  "meaning": "être en train de…"
+                },
+                {
+                  "slug": "vocab-ha",
+                  "kind": "vocabulary",
+                  "front": "歯",
+                  "reading": "は",
+                  "romaji": "ha",
+                  "meaning": "dent"
+                },
+                {
+                  "slug": "vocab-migakimasu",
+                  "kind": "vocabulary",
+                  "front": "磨きます",
+                  "reading": "みがきます",
+                  "romaji": "migakimasu",
+                  "meaning": "brosser, polir"
+                },
+                {
+                  "slug": "vocab-sanpo",
+                  "kind": "vocabulary",
+                  "front": "散歩",
+                  "reading": "さんぽ",
+                  "romaji": "sanpo",
+                  "meaning": "promenade"
+                },
+                {
+                  "slug": "vocab-niwa",
+                  "kind": "vocabulary",
+                  "front": "庭",
+                  "reading": "にわ",
+                  "romaji": "niwa",
+                  "meaning": "jardin"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "宿題を してから、テレビを 見ます。",
+                  "reading": "しゅくだいを してから、テレビを みます。",
+                  "fr": "Je regarde la télé après avoir fait mes devoirs."
+                },
+                {
+                  "jp": "妹は いま 庭で 遊んで います。",
+                  "reading": "いもうとは いま にわで あそんで います。",
+                  "fr": "Ma petite sœur joue dans le jardin en ce moment."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "はを みがいて＿、ねます。",
+                  "choices": [
+                    "から",
+                    "まで",
+                    "ので"
+                  ],
+                  "answer": "から",
+                  "explanation": "〜てから : après avoir…",
+                  "translation": "Je me couche après m'être brossé les dents."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ちちは いま しんぶんを よんで ＿。",
+                  "choices": [
+                    "います",
+                    "あります",
+                    "なります"
+                  ],
+                  "answer": "います",
+                  "explanation": "Action en cours : 〜て います.",
+                  "translation": "Mon père lit le journal en ce moment."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Je me promène après avoir mangé. »",
+                  "answer": [
+                    "ごはんを",
+                    "たべてから、",
+                    "さんぽを",
+                    "します。"
+                  ],
+                  "explanation": "Action 1 + てから, puis action 2."
+                }
+              ]
+            },
+            {
+              "slug": "n5-daily-verbs",
+              "title": "Gestes du quotidien",
+              "objective": "Les verbes de la routine : s'habiller, se laver, ouvrir, fermer.",
+              "minutes": 9,
+              "explanation": [
+                "S'habiller : きます (le haut), はきます (chaussures, pantalon), ぬぎます (enlever). Se laver : シャワーを あびます.",
+                "あけます (ouvrir) ⇔ しめます (fermer). いれます = mettre dedans (さとうを いれます). やすみ = congé, jour de repos."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-hashirimasu",
+                  "kind": "vocabulary",
+                  "front": "走ります",
+                  "reading": "はしります",
+                  "romaji": "hashirimasu",
+                  "meaning": "courir"
+                },
+                {
+                  "slug": "vocab-nugimasu",
+                  "kind": "vocabulary",
+                  "front": "脱ぎます",
+                  "reading": "ぬぎます",
+                  "romaji": "nugimasu",
+                  "meaning": "enlever (vêtement)"
+                },
+                {
+                  "slug": "vocab-kimasu-wear",
+                  "kind": "vocabulary",
+                  "front": "着ます",
+                  "reading": "きます",
+                  "romaji": "kimasu",
+                  "meaning": "mettre, porter (haut)"
+                },
+                {
+                  "slug": "vocab-hakimasu",
+                  "kind": "vocabulary",
+                  "front": "はきます",
+                  "reading": "はきます",
+                  "romaji": "hakimasu",
+                  "meaning": "mettre (chaussures, pantalon)"
+                },
+                {
+                  "slug": "vocab-abimasu",
+                  "kind": "vocabulary",
+                  "front": "浴びます",
+                  "reading": "あびます",
+                  "romaji": "abimasu",
+                  "meaning": "prendre (une douche)"
+                },
+                {
+                  "slug": "vocab-shawaa",
+                  "kind": "vocabulary",
+                  "front": "シャワー",
+                  "reading": "シャワー",
+                  "romaji": "shawaa",
+                  "meaning": "douche"
+                },
+                {
+                  "slug": "vocab-iremasu",
+                  "kind": "vocabulary",
+                  "front": "入れます",
+                  "reading": "いれます",
+                  "romaji": "iremasu",
+                  "meaning": "mettre dedans"
+                },
+                {
+                  "slug": "vocab-akemasu",
+                  "kind": "vocabulary",
+                  "front": "開けます",
+                  "reading": "あけます",
+                  "romaji": "akemasu",
+                  "meaning": "ouvrir"
+                },
+                {
+                  "slug": "vocab-shimemasu",
+                  "kind": "vocabulary",
+                  "front": "閉めます",
+                  "reading": "しめます",
+                  "romaji": "shimemasu",
+                  "meaning": "fermer"
+                },
+                {
+                  "slug": "vocab-yasumi",
+                  "kind": "vocabulary",
+                  "front": "休み",
+                  "reading": "やすみ",
+                  "romaji": "yasumi",
+                  "meaning": "congé, repos"
+                },
+                {
+                  "slug": "kanji-hashiru",
+                  "kind": "kanji",
+                  "front": "走",
+                  "reading": "はしる",
+                  "romaji": "hashiru",
+                  "meaning": "courir",
+                  "kanji": {
+                    "onyomi": [
+                      "ソウ"
+                    ],
+                    "kunyomi": [
+                      "はし(る)"
+                    ],
+                    "strokes": 7
+                  }
+                },
+                {
+                  "slug": "kanji-yasumu",
+                  "kind": "kanji",
+                  "front": "休",
+                  "reading": "やすむ",
+                  "romaji": "yasumu",
+                  "meaning": "se reposer",
+                  "kanji": {
+                    "onyomi": [
+                      "キュウ"
+                    ],
+                    "kunyomi": [
+                      "やす(む)",
+                      "やす(み)"
+                    ],
+                    "strokes": 6
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "げんかんで くつを 脱ぎます。",
+                  "reading": "げんかんで くつを ぬぎます。",
+                  "fr": "On enlève ses chaussures dans l'entrée."
+                },
+                {
+                  "jp": "休みの 日に 公園を 走ります。",
+                  "reading": "やすみの ひに こうえんを はしります。",
+                  "fr": "Les jours de congé, je cours au parc."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "コーヒーに さとうを ＿。",
+                  "choices": [
+                    "いれます",
+                    "ぬぎます",
+                    "はしります",
+                    "あびます"
+                  ],
+                  "answer": "いれます",
+                  "explanation": "Mettre du sucre dans le café : いれます.",
+                  "translation": "Je mets du sucre dans mon café."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "あさ、シャワーを ＿。",
+                  "choices": [
+                    "あびます",
+                    "きます",
+                    "いれます",
+                    "しめます"
+                  ],
+                  "answer": "あびます",
+                  "explanation": "シャワーを あびます : prendre une douche.",
+                  "translation": "Le matin, je prends une douche."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "さむいですから、まどを ＿。",
+                  "choices": [
+                    "しめます",
+                    "あけます",
+                    "ぬぎます",
+                    "はきます"
+                  ],
+                  "answer": "しめます",
+                  "explanation": "Il fait froid : on ferme (しめます) la fenêtre.",
+                  "translation": "Il fait froid, je ferme la fenêtre."
+                }
+              ]
+            },
+            {
+              "slug": "n5-before-after",
+              "title": "Avant, après, pendant",
+              "objective": "Ordonner des actions avec まえに, あとで et ながら.",
+              "minutes": 9,
+              "explanation": [
+                "Verbe (forme du dictionnaire) + まえに = avant de… : ねる まえに. Avec un nom : ごはんの まえに.",
+                "Verbe (forme en た) + あとで = après… : たべた あとで. Avec un nom : じゅぎょうの あとで.",
+                "Verbe sans ます + ながら = tout en… : おんがくを ききながら、べんきょうします。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-maeni",
+                  "kind": "grammar",
+                  "front": "〜まえに",
+                  "reading": "〜まえに",
+                  "romaji": "~mae ni",
+                  "meaning": "avant de…"
+                },
+                {
+                  "slug": "gram-atode",
+                  "kind": "grammar",
+                  "front": "〜たあとで",
+                  "reading": "〜たあとで",
+                  "romaji": "~ta ato de",
+                  "meaning": "après avoir…"
+                },
+                {
+                  "slug": "gram-nagara",
+                  "kind": "grammar",
+                  "front": "〜ながら",
+                  "reading": "〜ながら",
+                  "romaji": "~nagara",
+                  "meaning": "tout en…, pendant que"
+                },
+                {
+                  "slug": "vocab-jugyou",
+                  "kind": "vocabulary",
+                  "front": "授業",
+                  "reading": "じゅぎょう",
+                  "romaji": "jugyou",
+                  "meaning": "cours, classe"
+                },
+                {
+                  "slug": "vocab-hirugohan",
+                  "kind": "vocabulary",
+                  "front": "昼ごはん",
+                  "reading": "ひるごはん",
+                  "romaji": "hirugohan",
+                  "meaning": "déjeuner"
+                },
+                {
+                  "slug": "vocab-ongaku",
+                  "kind": "vocabulary",
+                  "front": "音楽",
+                  "reading": "おんがく",
+                  "romaji": "ongaku",
+                  "meaning": "musique"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ねる 前に、本を 読みます。",
+                  "reading": "ねる まえに、ほんを よみます。",
+                  "fr": "Je lis avant de dormir."
+                },
+                {
+                  "jp": "音楽を 聞きながら、勉強します。",
+                  "reading": "おんがくを ききながら、べんきょうします。",
+                  "fr": "J'étudie en écoutant de la musique."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ごはんを たべた ＿、さんぽします。",
+                  "choices": [
+                    "あとで",
+                    "まえに",
+                    "ながら",
+                    "まで"
+                  ],
+                  "answer": "あとで",
+                  "explanation": "Forme en た + あとで : après avoir…",
+                  "translation": "Je me promène après avoir mangé."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ねる ＿、はを みがきます。",
+                  "choices": [
+                    "まえに",
+                    "あとで",
+                    "ながら",
+                    "から"
+                  ],
+                  "answer": "まえに",
+                  "explanation": "Forme du dictionnaire + まえに : avant de…",
+                  "translation": "Je me brosse les dents avant de dormir."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "テレビを み＿、ごはんを たべます。",
+                  "choices": [
+                    "ながら",
+                    "まえに",
+                    "あとで",
+                    "てから"
+                  ],
+                  "answer": "ながら",
+                  "explanation": "Radical + ながら : tout en…",
+                  "translation": "Je mange en regardant la télé."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n5-w7",
+      "title": "Premiers kanji",
+      "region": "Archipel des débutants",
+      "description": "Les premiers kanji : nombres, jour, lune, personne.",
+      "chapters": [
+        {
+          "slug": "n5-w7-c1",
+          "title": "Kanji fondamentaux",
+          "lessons": [
+            {
+              "slug": "n5-kanji-basics",
+              "title": "一・二・三・日・月・人",
+              "objective": "Reconnaître six kanji de base et leur lecture principale.",
+              "minutes": 9,
+              "explanation": [
+                "Chaque kanji a souvent plusieurs lectures : la lecture on (on'yomi, d'origine chinoise, notée en katakana) et la lecture kun (kun'yomi, japonaise, notée en hiragana).",
+                "Exemple : 日 se lit ひ (kun, « soleil, jour ») mais ニチ dans 日本 (にほん, le Japon). Ici, on apprend d'abord la lecture la plus utile."
+              ],
+              "items": [
+                {
+                  "slug": "kanji-ichi",
+                  "kind": "kanji",
+                  "front": "一",
+                  "reading": "いち",
+                  "romaji": "ichi",
+                  "meaning": "un",
+                  "kanji": {
+                    "onyomi": [
+                      "イチ",
+                      "イツ"
+                    ],
+                    "kunyomi": [
+                      "ひと(つ)"
+                    ],
+                    "strokes": 1
+                  }
+                },
+                {
+                  "slug": "kanji-ni",
+                  "kind": "kanji",
+                  "front": "二",
+                  "reading": "に",
+                  "romaji": "ni",
+                  "meaning": "deux",
+                  "kanji": {
+                    "onyomi": [
+                      "ニ"
+                    ],
+                    "kunyomi": [
+                      "ふた(つ)"
+                    ],
+                    "strokes": 2
+                  }
+                },
+                {
+                  "slug": "kanji-san",
+                  "kind": "kanji",
+                  "front": "三",
+                  "reading": "さん",
+                  "romaji": "san",
+                  "meaning": "trois",
+                  "kanji": {
+                    "onyomi": [
+                      "サン"
+                    ],
+                    "kunyomi": [
+                      "み(っつ)"
+                    ],
+                    "strokes": 3
+                  }
+                },
+                {
+                  "slug": "kanji-hi",
+                  "kind": "kanji",
+                  "front": "日",
+                  "reading": "ひ",
+                  "romaji": "hi",
+                  "meaning": "jour, soleil",
+                  "kanji": {
+                    "onyomi": [
+                      "ニチ",
+                      "ジツ"
+                    ],
+                    "kunyomi": [
+                      "ひ",
+                      "か"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "kanji-tsuki",
+                  "kind": "kanji",
+                  "front": "月",
+                  "reading": "つき",
+                  "romaji": "tsuki",
+                  "meaning": "lune, mois",
+                  "kanji": {
+                    "onyomi": [
+                      "ゲツ",
+                      "ガツ"
+                    ],
+                    "kunyomi": [
+                      "つき"
+                    ],
+                    "strokes": 4
+                  }
+                },
+                {
+                  "slug": "kanji-hito",
+                  "kind": "kanji",
+                  "front": "人",
+                  "reading": "ひと",
+                  "romaji": "hito",
+                  "meaning": "personne",
+                  "kanji": {
+                    "onyomi": [
+                      "ジン",
+                      "ニン"
+                    ],
+                    "kunyomi": [
+                      "ひと"
+                    ],
+                    "strokes": 2
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "日本人です。",
+                  "reading": "にほんじんです。",
+                  "fr": "Je suis Japonais(e)."
+                },
+                {
+                  "jp": "一月",
+                  "reading": "いちがつ",
+                  "fr": "janvier"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit 人 dans 日本人 (Japonais) ?",
+                  "sentence": "日本人",
+                  "reading": "にほんじん",
+                  "choices": [
+                    "じん",
+                    "ひと",
+                    "にん"
+                  ],
+                  "answer": "じん",
+                  "explanation": "Après un nom de pays, 人 se lit じん (lecture on) : 日本人 = にほんじん."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "boss": {
+        "name": "Le Dragon des caractères",
+        "glyph": "龍",
+        "intro": "Le dragon veille sur les premiers kanji. Montre-lui que tu les connais."
+      }
+    },
+    {
+      "slug": "n5-w8",
+      "title": "Conversations quotidiennes",
+      "region": "Archipel des débutants",
+      "description": "Au restaurant, en magasin et dans la rue.",
+      "boss": {
+        "name": "Le Marchand de lanternes",
+        "glyph": "灯",
+        "intro": "Ce marchand rusé ne vend qu'à ceux qui savent parler poliment."
+      },
+      "chapters": [
+        {
+          "slug": "n5-w8-c1",
+          "title": "Au restaurant",
+          "lessons": [
+            {
+              "slug": "n5-restaurant",
+              "title": "Commander au restaurant",
+              "objective": "Commander poliment une boisson ou un plat.",
+              "minutes": 8,
+              "explanation": [
+                "Pour commander : [chose] を ください。 (Donnez-moi…, s'il vous plaît) ou, plus doux, [chose] を おねがいします。",
+                "Le serveur peut demander : なにに しますか。 (Que prenez-vous ?). Après avoir goûté : おいしいです！ (C'est bon !)"
+              ],
+              "items": [
+                {
+                  "slug": "vocab-kudasai",
+                  "kind": "vocabulary",
+                  "front": "ください",
+                  "reading": "ください",
+                  "romaji": "kudasai",
+                  "meaning": "donnez-moi, s’il vous plaît"
+                },
+                {
+                  "slug": "vocab-onegaishimasu",
+                  "kind": "vocabulary",
+                  "front": "おねがいします",
+                  "reading": "おねがいします",
+                  "romaji": "onegaishimasu",
+                  "meaning": "s’il vous plaît (je vous en prie)"
+                },
+                {
+                  "slug": "vocab-koohii",
+                  "kind": "vocabulary",
+                  "front": "コーヒー",
+                  "reading": "コーヒー",
+                  "romaji": "koohii",
+                  "meaning": "café"
+                },
+                {
+                  "slug": "vocab-oishii",
+                  "kind": "vocabulary",
+                  "front": "おいしい",
+                  "reading": "おいしい",
+                  "romaji": "oishii",
+                  "meaning": "bon, délicieux"
+                },
+                {
+                  "slug": "vocab-mizu",
+                  "kind": "vocabulary",
+                  "front": "水",
+                  "reading": "みず",
+                  "romaji": "mizu",
+                  "meaning": "eau"
+                },
+                {
+                  "slug": "vocab-ocha",
+                  "kind": "vocabulary",
+                  "front": "お茶",
+                  "reading": "おちゃ",
+                  "romaji": "ocha",
+                  "meaning": "thé vert"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "コーヒーを ください。",
+                  "reading": "コーヒーを ください。",
+                  "fr": "Un café, s'il vous plaît."
+                },
+                {
+                  "jp": "お水を おねがいします。",
+                  "reading": "おみずを おねがいします。",
+                  "fr": "De l'eau, s'il vous plaît."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Un café, s'il vous plaît. »",
+                  "sentence": "コーヒーを ＿。",
+                  "choices": [
+                    "ください",
+                    "ありがとう",
+                    "すみません"
+                  ],
+                  "answer": "ください",
+                  "explanation": "〜を ください = donnez-moi…, s'il vous plaît."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu veux du thé. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Serveur",
+                      "jp": "なにに しますか。"
+                    }
+                  ],
+                  "translation": "Le serveur te demande ce que tu prends.",
+                  "choices": [
+                    "おちゃを おねがいします。",
+                    "おちゃを のみませんでした。",
+                    "おいしいです。"
+                  ],
+                  "answer": "おちゃを おねがいします。",
+                  "explanation": "〜を おねがいします permet de commander poliment."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "おいしい",
+                  "translation": "おいしい signifie « cher ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "おいしい signifie « bon, délicieux ». « Cher » se dit たかい."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w8-c2",
+          "title": "Au magasin",
+          "lessons": [
+            {
+              "slug": "n5-shop",
+              "title": "Faire des achats",
+              "objective": "Demander un prix et réagir.",
+              "minutes": 8,
+              "explanation": [
+                "この et その se placent devant un nom : この かばん (ce sac-ci, près de moi), その ほん (ce livre-là, près de toi).",
+                "Pour réagir à un prix : たかいですね。 (C'est cher !) ou やすいですね。 (Ce n'est pas cher !)"
+              ],
+              "items": [
+                {
+                  "slug": "vocab-kono",
+                  "kind": "vocabulary",
+                  "front": "この",
+                  "reading": "この",
+                  "romaji": "kono",
+                  "meaning": "ce… (près de moi)"
+                },
+                {
+                  "slug": "vocab-sono",
+                  "kind": "vocabulary",
+                  "front": "その",
+                  "reading": "その",
+                  "romaji": "sono",
+                  "meaning": "ce… (près de toi)"
+                },
+                {
+                  "slug": "vocab-takai",
+                  "kind": "vocabulary",
+                  "front": "高い",
+                  "reading": "たかい",
+                  "romaji": "takai",
+                  "meaning": "cher, haut"
+                },
+                {
+                  "slug": "vocab-yasui",
+                  "kind": "vocabulary",
+                  "front": "安い",
+                  "reading": "やすい",
+                  "romaji": "yasui",
+                  "meaning": "bon marché"
+                },
+                {
+                  "slug": "vocab-ikura",
+                  "kind": "vocabulary",
+                  "front": "いくら",
+                  "reading": "いくら",
+                  "romaji": "ikura",
+                  "meaning": "combien (prix)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "この かばんは いくらですか。",
+                  "reading": "この かばんは いくらですか。",
+                  "fr": "Combien coûte ce sac ?"
+                },
+                {
+                  "jp": "安いですね。",
+                  "reading": "やすいですね。",
+                  "fr": "Ce n'est pas cher !"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Combien coûte ce sac ? »",
+                  "sentence": "この かばんは ＿ ですか。",
+                  "choices": [
+                    "いくら",
+                    "なに",
+                    "どこ"
+                  ],
+                  "answer": "いくら",
+                  "explanation": "いくら = combien (pour un prix)."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Le sac coûte 30 000 yens, c'est beaucoup. Que dis-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Vendeur",
+                      "jp": "さんまんえんです。"
+                    }
+                  ],
+                  "translation": "Le vendeur annonce 30 000 yens.",
+                  "choices": [
+                    "たかいですね。",
+                    "やすいですね。",
+                    "おいしいですね。"
+                  ],
+                  "answer": "たかいですね。",
+                  "explanation": "たかい = cher. 30 000 yens pour un sac, c'est cher !"
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Combien coûte ce livre ? »",
+                  "answer": [
+                    "この",
+                    "ほんは",
+                    "いくらですか。"
+                  ],
+                  "explanation": "この + nom (ほん) + は + いくらですか."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w8-c3",
+          "title": "Dans la rue",
+          "lessons": [
+            {
+              "slug": "n5-directions",
+              "title": "Demander son chemin",
+              "objective": "Demander où se trouve un lieu.",
+              "minutes": 8,
+              "explanation": [
+                "ここ (ici), そこ (là, près de toi), あそこ (là-bas) suivent la même logique que これ, それ, あれ.",
+                "Pour demander où se trouve quelque chose : [lieu] は どこですか。 Commence par すみません pour interpeller poliment."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-koko",
+                  "kind": "vocabulary",
+                  "front": "ここ",
+                  "reading": "ここ",
+                  "romaji": "koko",
+                  "meaning": "ici"
+                },
+                {
+                  "slug": "vocab-soko",
+                  "kind": "vocabulary",
+                  "front": "そこ",
+                  "reading": "そこ",
+                  "romaji": "soko",
+                  "meaning": "là (près de toi)"
+                },
+                {
+                  "slug": "vocab-asoko",
+                  "kind": "vocabulary",
+                  "front": "あそこ",
+                  "reading": "あそこ",
+                  "romaji": "asoko",
+                  "meaning": "là-bas"
+                },
+                {
+                  "slug": "vocab-doko",
+                  "kind": "vocabulary",
+                  "front": "どこ",
+                  "reading": "どこ",
+                  "romaji": "doko",
+                  "meaning": "où"
+                },
+                {
+                  "slug": "vocab-eki",
+                  "kind": "vocabulary",
+                  "front": "駅",
+                  "reading": "えき",
+                  "romaji": "eki",
+                  "meaning": "gare"
+                },
+                {
+                  "slug": "vocab-toire",
+                  "kind": "vocabulary",
+                  "front": "トイレ",
+                  "reading": "トイレ",
+                  "romaji": "toire",
+                  "meaning": "toilettes"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "すみません、駅は どこですか。",
+                  "reading": "すみません、えきは どこですか。",
+                  "fr": "Excusez-moi, où est la gare ?"
+                },
+                {
+                  "jp": "あそこです。",
+                  "reading": "あそこです。",
+                  "fr": "C'est là-bas."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Où est la gare ? »",
+                  "sentence": "えきは ＿ ですか。",
+                  "choices": [
+                    "どこ",
+                    "いくら",
+                    "なに"
+                  ],
+                  "answer": "どこ",
+                  "explanation": "どこ = où."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Les toilettes sont là-bas. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "Touriste",
+                      "jp": "すみません、トイレは どこですか。"
+                    }
+                  ],
+                  "translation": "Un touriste te demande où sont les toilettes.",
+                  "choices": [
+                    "あそこです。",
+                    "いくらですか。",
+                    "おねがいします。"
+                  ],
+                  "answer": "あそこです。",
+                  "explanation": "あそこです = c'est là-bas."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "あそこ",
+                  "translation": "あそこ signifie « ici ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "あそこ = là-bas. « Ici » se dit ここ."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w8-c4",
+          "title": "En ville",
+          "lessons": [
+            {
+              "slug": "n5-city",
+              "title": "Les lieux de la ville",
+              "objective": "Nommer les lieux et dire où ils se trouvent.",
+              "minutes": 9,
+              "explanation": [
+                "Lieu + に あります : ぎんこうは えきの まえに あります。 Lieu + へ いきます : びょういんへ いきます。",
+                "いりぐち (entrée) ⇔ でぐち (sortie)."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-kaisha",
+                  "kind": "vocabulary",
+                  "front": "会社",
+                  "reading": "かいしゃ",
+                  "romaji": "kaisha",
+                  "meaning": "entreprise"
+                },
+                {
+                  "slug": "vocab-mise",
+                  "kind": "vocabulary",
+                  "front": "店",
+                  "reading": "みせ",
+                  "romaji": "mise",
+                  "meaning": "magasin"
+                },
+                {
+                  "slug": "vocab-ginkou",
+                  "kind": "vocabulary",
+                  "front": "銀行",
+                  "reading": "ぎんこう",
+                  "romaji": "ginkou",
+                  "meaning": "banque"
+                },
+                {
+                  "slug": "vocab-byouin",
+                  "kind": "vocabulary",
+                  "front": "病院",
+                  "reading": "びょういん",
+                  "romaji": "byouin",
+                  "meaning": "hôpital"
+                },
+                {
+                  "slug": "vocab-toshokan",
+                  "kind": "vocabulary",
+                  "front": "図書館",
+                  "reading": "としょかん",
+                  "romaji": "toshokan",
+                  "meaning": "bibliothèque"
+                },
+                {
+                  "slug": "vocab-yuubinkyoku",
+                  "kind": "vocabulary",
+                  "front": "郵便局",
+                  "reading": "ゆうびんきょく",
+                  "romaji": "yuubinkyoku",
+                  "meaning": "bureau de poste"
+                },
+                {
+                  "slug": "vocab-iriguchi",
+                  "kind": "vocabulary",
+                  "front": "入口",
+                  "reading": "いりぐち",
+                  "romaji": "iriguchi",
+                  "meaning": "entrée"
+                },
+                {
+                  "slug": "vocab-deguchi",
+                  "kind": "vocabulary",
+                  "front": "出口",
+                  "reading": "でぐち",
+                  "romaji": "deguchi",
+                  "meaning": "sortie"
+                },
+                {
+                  "slug": "vocab-kouen",
+                  "kind": "vocabulary",
+                  "front": "公園",
+                  "reading": "こうえん",
+                  "romaji": "kouen",
+                  "meaning": "parc"
+                },
+                {
+                  "slug": "kanji-au",
+                  "kind": "kanji",
+                  "front": "会",
+                  "reading": "かい",
+                  "romaji": "kai",
+                  "meaning": "rencontrer, réunion",
+                  "kanji": {
+                    "onyomi": [
+                      "カイ"
+                    ],
+                    "kunyomi": [
+                      "あ(う)"
+                    ],
+                    "strokes": 6
+                  }
+                },
+                {
+                  "slug": "kanji-sha",
+                  "kind": "kanji",
+                  "front": "社",
+                  "reading": "しゃ",
+                  "romaji": "sha",
+                  "meaning": "société, sanctuaire",
+                  "kanji": {
+                    "onyomi": [
+                      "シャ"
+                    ],
+                    "kunyomi": [
+                      "やしろ"
+                    ],
+                    "strokes": 7
+                  }
+                },
+                {
+                  "slug": "kanji-mise",
+                  "kind": "kanji",
+                  "front": "店",
+                  "reading": "みせ",
+                  "romaji": "mise",
+                  "meaning": "magasin",
+                  "kanji": {
+                    "onyomi": [
+                      "テン"
+                    ],
+                    "kunyomi": [
+                      "みせ"
+                    ],
+                    "strokes": 8
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "銀行は 駅の 前に あります。",
+                  "reading": "ぎんこうは えきの まえに あります。",
+                  "fr": "La banque est devant la gare."
+                },
+                {
+                  "jp": "出口は あちらです。",
+                  "reading": "でぐちは あちらです。",
+                  "fr": "La sortie est par là."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "かぜを ひきましたから、＿へ いきます。",
+                  "choices": [
+                    "びょういん",
+                    "ぎんこう",
+                    "としょかん",
+                    "こうえん"
+                  ],
+                  "answer": "びょういん",
+                  "explanation": "On va chez le médecin, à l'hôpital : びょういん.",
+                  "translation": "J'ai attrapé un rhume, je vais à l'hôpital."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "てがみを だしに ＿へ いきます。",
+                  "choices": [
+                    "ゆうびんきょく",
+                    "びょういん",
+                    "みせ",
+                    "こうえん"
+                  ],
+                  "answer": "ゆうびんきょく",
+                  "explanation": "Envoyer une lettre : à la poste, ゆうびんきょく.",
+                  "translation": "Je vais à la poste envoyer une lettre."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "でぐち",
+                  "translation": "でぐち veut dire « entrée ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "でぐち = sortie ; l'entrée se dit いりぐち."
+                }
+              ]
+            },
+            {
+              "slug": "n5-directions-2",
+              "title": "Points cardinaux et étranger",
+              "objective": "S'orienter : nord, sud, est, ouest, tourner, tout droit.",
+              "minutes": 9,
+              "explanation": [
+                "きた (nord), みなみ (sud), ひがし (est), にし (ouest). えきの きたに : au nord de la gare.",
+                "まっすぐ いきます (aller tout droit), みぎに まがります (tourner à droite). がいこく = l'étranger, がいこくじん = étranger (personne)."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-kita",
+                  "kind": "vocabulary",
+                  "front": "北",
+                  "reading": "きた",
+                  "romaji": "kita",
+                  "meaning": "nord"
+                },
+                {
+                  "slug": "vocab-minami",
+                  "kind": "vocabulary",
+                  "front": "南",
+                  "reading": "みなみ",
+                  "romaji": "minami",
+                  "meaning": "sud"
+                },
+                {
+                  "slug": "vocab-higashi",
+                  "kind": "vocabulary",
+                  "front": "東",
+                  "reading": "ひがし",
+                  "romaji": "higashi",
+                  "meaning": "est"
+                },
+                {
+                  "slug": "vocab-nishi",
+                  "kind": "vocabulary",
+                  "front": "西",
+                  "reading": "にし",
+                  "romaji": "nishi",
+                  "meaning": "ouest"
+                },
+                {
+                  "slug": "vocab-gaikoku",
+                  "kind": "vocabulary",
+                  "front": "外国",
+                  "reading": "がいこく",
+                  "romaji": "gaikoku",
+                  "meaning": "pays étranger"
+                },
+                {
+                  "slug": "vocab-chikaku",
+                  "kind": "vocabulary",
+                  "front": "近く",
+                  "reading": "ちかく",
+                  "romaji": "chikaku",
+                  "meaning": "près de, les environs"
+                },
+                {
+                  "slug": "vocab-massugu",
+                  "kind": "vocabulary",
+                  "front": "まっすぐ",
+                  "reading": "まっすぐ",
+                  "romaji": "massugu",
+                  "meaning": "tout droit"
+                },
+                {
+                  "slug": "vocab-magarimasu",
+                  "kind": "vocabulary",
+                  "front": "曲がります",
+                  "reading": "まがります",
+                  "romaji": "magarimasu",
+                  "meaning": "tourner"
+                },
+                {
+                  "slug": "kanji-kita",
+                  "kind": "kanji",
+                  "front": "北",
+                  "reading": "きた",
+                  "romaji": "kita",
+                  "meaning": "nord",
+                  "kanji": {
+                    "onyomi": [
+                      "ホク"
+                    ],
+                    "kunyomi": [
+                      "きた"
+                    ],
+                    "strokes": 5
+                  }
+                },
+                {
+                  "slug": "kanji-minami",
+                  "kind": "kanji",
+                  "front": "南",
+                  "reading": "みなみ",
+                  "romaji": "minami",
+                  "meaning": "sud",
+                  "kanji": {
+                    "onyomi": [
+                      "ナン"
+                    ],
+                    "kunyomi": [
+                      "みなみ"
+                    ],
+                    "strokes": 9
+                  }
+                },
+                {
+                  "slug": "kanji-higashi",
+                  "kind": "kanji",
+                  "front": "東",
+                  "reading": "ひがし",
+                  "romaji": "higashi",
+                  "meaning": "est",
+                  "kanji": {
+                    "onyomi": [
+                      "トウ"
+                    ],
+                    "kunyomi": [
+                      "ひがし"
+                    ],
+                    "strokes": 8
+                  }
+                },
+                {
+                  "slug": "kanji-nishi",
+                  "kind": "kanji",
+                  "front": "西",
+                  "reading": "にし",
+                  "romaji": "nishi",
+                  "meaning": "ouest",
+                  "kanji": {
+                    "onyomi": [
+                      "セイ",
+                      "サイ"
+                    ],
+                    "kunyomi": [
+                      "にし"
+                    ],
+                    "strokes": 6
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "駅の 北に 銀行が あります。",
+                  "reading": "えきの きたに ぎんこうが あります。",
+                  "fr": "Il y a une banque au nord de la gare."
+                },
+                {
+                  "jp": "外国の 友だちが います。",
+                  "reading": "がいこくの ともだちが います。",
+                  "fr": "J'ai des amis étrangers."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "つぎの かどを みぎに ＿ ください。",
+                  "choices": [
+                    "まがって",
+                    "まって",
+                    "まがり",
+                    "まがる"
+                  ],
+                  "answer": "まがって",
+                  "explanation": "Demande : forme en て + ください → まがって ください.",
+                  "translation": "Tournez à droite au prochain coin, s'il vous plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "がっこうは この みちを ＿ いって ください。",
+                  "choices": [
+                    "まっすぐ",
+                    "ちかく",
+                    "きた",
+                    "ひがし"
+                  ],
+                  "answer": "まっすぐ",
+                  "explanation": "Tout droit : まっすぐ.",
+                  "translation": "Pour l'école, allez tout droit dans cette rue."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On te demande où est la banque. Elle est près de la gare :",
+                  "lines": [
+                    {
+                      "speaker": "おとこの ひと",
+                      "jp": "ぎんこうは どこですか。"
+                    }
+                  ],
+                  "choices": [
+                    "えきの ちかくです。",
+                    "えきへ いきます。",
+                    "ぎんこうです。"
+                  ],
+                  "answer": "えきの ちかくです。",
+                  "explanation": "Situer un lieu : 〜の ちかくです."
+                }
+              ]
+            },
+            {
+              "slug": "n5-weather-health",
+              "title": "Météo et santé",
+              "objective": "Parler du temps qu'il fait et de sa santé.",
+              "minutes": 9,
+              "explanation": [
+                "Le temps : いい てんきですね (il fait beau), はれ (beau temps), くもり (nuageux), あめ (pluie).",
+                "La santé : あたまが いたいです (j'ai mal à la tête), かぜを ひきました (j'ai attrapé un rhume), くすりを のみます (prendre un médicament)."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-tenki",
+                  "kind": "vocabulary",
+                  "front": "天気",
+                  "reading": "てんき",
+                  "romaji": "tenki",
+                  "meaning": "temps (météo)"
+                },
+                {
+                  "slug": "vocab-hare",
+                  "kind": "vocabulary",
+                  "front": "晴れ",
+                  "reading": "はれ",
+                  "romaji": "hare",
+                  "meaning": "beau temps"
+                },
+                {
+                  "slug": "vocab-kumori",
+                  "kind": "vocabulary",
+                  "front": "曇り",
+                  "reading": "くもり",
+                  "romaji": "kumori",
+                  "meaning": "temps nuageux"
+                },
+                {
+                  "slug": "vocab-kasa",
+                  "kind": "vocabulary",
+                  "front": "傘",
+                  "reading": "かさ",
+                  "romaji": "kasa",
+                  "meaning": "parapluie"
+                },
+                {
+                  "slug": "vocab-kaze-cold",
+                  "kind": "vocabulary",
+                  "front": "風邪",
+                  "reading": "かぜ",
+                  "romaji": "kaze",
+                  "meaning": "rhume"
+                },
+                {
+                  "slug": "vocab-kusuri",
+                  "kind": "vocabulary",
+                  "front": "薬",
+                  "reading": "くすり",
+                  "romaji": "kusuri",
+                  "meaning": "médicament"
+                },
+                {
+                  "slug": "vocab-atama",
+                  "kind": "vocabulary",
+                  "front": "頭",
+                  "reading": "あたま",
+                  "romaji": "atama",
+                  "meaning": "tête"
+                },
+                {
+                  "slug": "vocab-itai",
+                  "kind": "vocabulary",
+                  "front": "痛い",
+                  "reading": "いたい",
+                  "romaji": "itai",
+                  "meaning": "douloureux, avoir mal"
+                },
+                {
+                  "slug": "vocab-karada",
+                  "kind": "vocabulary",
+                  "front": "体",
+                  "reading": "からだ",
+                  "romaji": "karada",
+                  "meaning": "corps"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "今日は いい 天気ですね。",
+                  "reading": "きょうは いい てんきですね。",
+                  "fr": "Il fait beau aujourd'hui."
+                },
+                {
+                  "jp": "頭が 痛いですから、薬を 飲みました。",
+                  "reading": "あたまが いたいですから、くすりを のみました。",
+                  "fr": "J'avais mal à la tête, j'ai pris un médicament."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "あめが ふって いますから、＿を もって いきます。",
+                  "choices": [
+                    "かさ",
+                    "くすり",
+                    "からだ",
+                    "はれ"
+                  ],
+                  "answer": "かさ",
+                  "explanation": "Il pleut : on prend un parapluie, かさ.",
+                  "translation": "Il pleut, je prends un parapluie."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "くすりを ＿。",
+                  "choices": [
+                    "のみます",
+                    "あびます",
+                    "はきます",
+                    "いれます"
+                  ],
+                  "answer": "のみます",
+                  "explanation": "On « boit » un médicament : くすりを のみます.",
+                  "translation": "Je prends un médicament."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "はれ",
+                  "translation": "はれ veut dire « pluie ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "はれ = beau temps ; la pluie se dit あめ."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w8-c5",
+          "title": "À l'école et au quotidien",
+          "lessons": [
+            {
+              "slug": "n5-school",
+              "title": "À l'école",
+              "objective": "Les objets de la classe, prêter et emprunter.",
+              "minutes": 9,
+              "explanation": [
+                "かします = prêter (je donne pour un temps) ; かります = emprunter (je reçois pour un temps). えんぴつを かして ください : prête-moi un crayon.",
+                "La classe : きょうしつ, つくえ (bureau), いす (chaise), とけい (horloge). はなし = ce que dit quelqu'un, une histoire."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-enpitsu",
+                  "kind": "vocabulary",
+                  "front": "鉛筆",
+                  "reading": "えんぴつ",
+                  "romaji": "enpitsu",
+                  "meaning": "crayon"
+                },
+                {
+                  "slug": "vocab-keshigomu",
+                  "kind": "vocabulary",
+                  "front": "消しゴム",
+                  "reading": "けしゴム",
+                  "romaji": "keshigomu",
+                  "meaning": "gomme"
+                },
+                {
+                  "slug": "vocab-tsukue",
+                  "kind": "vocabulary",
+                  "front": "机",
+                  "reading": "つくえ",
+                  "romaji": "tsukue",
+                  "meaning": "bureau, table"
+                },
+                {
+                  "slug": "vocab-isu",
+                  "kind": "vocabulary",
+                  "front": "椅子",
+                  "reading": "いす",
+                  "romaji": "isu",
+                  "meaning": "chaise"
+                },
+                {
+                  "slug": "vocab-kyoushitsu",
+                  "kind": "vocabulary",
+                  "front": "教室",
+                  "reading": "きょうしつ",
+                  "romaji": "kyoushitsu",
+                  "meaning": "salle de classe"
+                },
+                {
+                  "slug": "vocab-tokei",
+                  "kind": "vocabulary",
+                  "front": "時計",
+                  "reading": "とけい",
+                  "romaji": "tokei",
+                  "meaning": "montre, horloge"
+                },
+                {
+                  "slug": "vocab-karimasu",
+                  "kind": "vocabulary",
+                  "front": "借ります",
+                  "reading": "かります",
+                  "romaji": "karimasu",
+                  "meaning": "emprunter"
+                },
+                {
+                  "slug": "vocab-kashimasu",
+                  "kind": "vocabulary",
+                  "front": "貸します",
+                  "reading": "かします",
+                  "romaji": "kashimasu",
+                  "meaning": "prêter"
+                },
+                {
+                  "slug": "vocab-hanashi",
+                  "kind": "vocabulary",
+                  "front": "話",
+                  "reading": "はなし",
+                  "romaji": "hanashi",
+                  "meaning": "ce que l'on dit, histoire"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "鉛筆を 貸して ください。",
+                  "reading": "えんぴつを かして ください。",
+                  "fr": "Prête-moi un crayon, s'il te plaît."
+                },
+                {
+                  "jp": "先生の 話を 聞きました。",
+                  "reading": "せんせいの はなしを ききました。",
+                  "fr": "J'ai écouté ce que disait le professeur."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "としょかんで ほんを ＿。",
+                  "choices": [
+                    "かりました",
+                    "かしました",
+                    "うりました",
+                    "おしえました"
+                  ],
+                  "answer": "かりました",
+                  "explanation": "À la bibliothèque, on emprunte : かります.",
+                  "translation": "J'ai emprunté un livre à la bibliothèque."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "つくえの うえ＿ えんぴつが あります。",
+                  "choices": [
+                    "に",
+                    "で",
+                    "を"
+                  ],
+                  "answer": "に",
+                  "explanation": "Existence dans un lieu : 〜に あります.",
+                  "translation": "Il y a un crayon sur le bureau."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu veux utiliser le crayon de ton ami·e :",
+                  "lines": [
+                    {
+                      "speaker": "ともだち",
+                      "jp": "どうしたんですか。"
+                    }
+                  ],
+                  "choices": [
+                    "えんぴつを かして ください。",
+                    "えんぴつを かりて ください。",
+                    "えんぴつを かいましょう。"
+                  ],
+                  "answer": "えんぴつを かして ください。",
+                  "explanation": "On demande à l'autre de prêter : かして ください."
+                }
+              ]
+            },
+            {
+              "slug": "n5-transport-phone",
+              "title": "Le train et le téléphone",
+              "objective": "Se déplacer et téléphoner.",
+              "minutes": 8,
+              "explanation": [
+                "Moyen de transport + で : でんしゃで いきます. Monter dans : 〜に のります (バスに のります).",
+                "Téléphoner à quelqu'un : 〜に でんわを かけます."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-densha",
+                  "kind": "vocabulary",
+                  "front": "電車",
+                  "reading": "でんしゃ",
+                  "romaji": "densha",
+                  "meaning": "train"
+                },
+                {
+                  "slug": "vocab-denwa",
+                  "kind": "vocabulary",
+                  "front": "電話",
+                  "reading": "でんわ",
+                  "romaji": "denwa",
+                  "meaning": "téléphone"
+                },
+                {
+                  "slug": "vocab-jitensha",
+                  "kind": "vocabulary",
+                  "front": "自転車",
+                  "reading": "じてんしゃ",
+                  "romaji": "jitensha",
+                  "meaning": "vélo"
+                },
+                {
+                  "slug": "vocab-chikatetsu",
+                  "kind": "vocabulary",
+                  "front": "地下鉄",
+                  "reading": "ちかてつ",
+                  "romaji": "chikatetsu",
+                  "meaning": "métro"
+                },
+                {
+                  "slug": "vocab-norimasu",
+                  "kind": "vocabulary",
+                  "front": "乗ります",
+                  "reading": "のります",
+                  "romaji": "norimasu",
+                  "meaning": "monter (dans un transport)"
+                },
+                {
+                  "slug": "vocab-kippu",
+                  "kind": "vocabulary",
+                  "front": "切符",
+                  "reading": "きっぷ",
+                  "romaji": "kippu",
+                  "meaning": "billet, ticket"
+                },
+                {
+                  "slug": "vocab-kakemasu",
+                  "kind": "vocabulary",
+                  "front": "かけます",
+                  "reading": "かけます",
+                  "romaji": "kakemasu",
+                  "meaning": "passer (un appel)"
+                },
+                {
+                  "slug": "kanji-den",
+                  "kind": "kanji",
+                  "front": "電",
+                  "reading": "でん",
+                  "romaji": "den",
+                  "meaning": "électricité",
+                  "kanji": {
+                    "onyomi": [
+                      "デン"
+                    ],
+                    "kunyomi": [],
+                    "strokes": 13
+                  }
+                },
+                {
+                  "slug": "kanji-kuruma",
+                  "kind": "kanji",
+                  "front": "車",
+                  "reading": "くるま",
+                  "romaji": "kuruma",
+                  "meaning": "voiture, véhicule",
+                  "kanji": {
+                    "onyomi": [
+                      "シャ"
+                    ],
+                    "kunyomi": [
+                      "くるま"
+                    ],
+                    "strokes": 7
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "毎朝 電車で 会社へ 行きます。",
+                  "reading": "まいあさ でんしゃで かいしゃへ いきます。",
+                  "fr": "Je vais au travail en train chaque matin."
+                },
+                {
+                  "jp": "母に 電話を かけます。",
+                  "reading": "ははに でんわを かけます。",
+                  "fr": "J'appelle ma mère."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "まいにち じてんしゃ＿ がっこうへ いきます。",
+                  "choices": [
+                    "で",
+                    "を",
+                    "に"
+                  ],
+                  "answer": "で",
+                  "explanation": "Moyen de transport : で.",
+                  "translation": "Je vais à l'école à vélo tous les jours."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "５ばんの バス＿ のって ください。",
+                  "choices": [
+                    "に",
+                    "を",
+                    "で"
+                  ],
+                  "answer": "に",
+                  "explanation": "Monter dans un transport : 〜に のります.",
+                  "translation": "Prenez le bus numéro 5, s'il vous plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ははに でんわを ＿。",
+                  "choices": [
+                    "かけます",
+                    "のります",
+                    "とります",
+                    "いれます"
+                  ],
+                  "answer": "かけます",
+                  "explanation": "Téléphoner : でんわを かけます.",
+                  "translation": "J'appelle ma mère."
+                }
+              ]
+            },
+            {
+              "slug": "n5-questions",
+              "title": "Mots interrogatifs",
+              "objective": "Poser des questions et répondre « rien », « nulle part ».",
+              "minutes": 9,
+              "explanation": [
+                "どれ (lequel, parmi plusieurs), どんな (quel genre de), いくつ (combien d'objets / quel âge), いつ (quand), だれ (qui).",
+                "Mot interrogatif + も + négation = « personne / rien / nulle part » : なにも たべませんでした, どこへも いきませんでした, だれも いません."
+              ],
+              "items": [
+                {
+                  "slug": "vocab-dore",
+                  "kind": "vocabulary",
+                  "front": "どれ",
+                  "reading": "どれ",
+                  "romaji": "dore",
+                  "meaning": "lequel"
+                },
+                {
+                  "slug": "vocab-donna",
+                  "kind": "vocabulary",
+                  "front": "どんな",
+                  "reading": "どんな",
+                  "romaji": "donna",
+                  "meaning": "quel genre de"
+                },
+                {
+                  "slug": "vocab-ikutsu",
+                  "kind": "vocabulary",
+                  "front": "いくつ",
+                  "reading": "いくつ",
+                  "romaji": "ikutsu",
+                  "meaning": "combien (objets), quel âge"
+                },
+                {
+                  "slug": "vocab-itsu",
+                  "kind": "vocabulary",
+                  "front": "いつ",
+                  "reading": "いつ",
+                  "romaji": "itsu",
+                  "meaning": "quand"
+                },
+                {
+                  "slug": "vocab-dare",
+                  "kind": "vocabulary",
+                  "front": "だれ",
+                  "reading": "だれ",
+                  "romaji": "dare",
+                  "meaning": "qui"
+                },
+                {
+                  "slug": "gram-mo-neg",
+                  "kind": "grammar",
+                  "front": "なにも・どこへも・だれも＋否定",
+                  "reading": "なにも・どこへも・だれも＋否定",
+                  "romaji": "nani mo / doko e mo / dare mo + négation",
+                  "meaning": "rien, nulle part, personne"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "日曜日は どこへも 行きませんでした。",
+                  "reading": "にちようびは どこへも いきませんでした。",
+                  "fr": "Dimanche, je ne suis allé nulle part."
+                },
+                {
+                  "jp": "どれが あなたの 傘ですか。",
+                  "reading": "どれが あなたの かさですか。",
+                  "fr": "Lequel est ton parapluie ?"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "A「やまださんは ＿ ひとですか。」B「やさしい ひとです。」",
+                  "choices": [
+                    "どんな",
+                    "どの",
+                    "どう",
+                    "どれ"
+                  ],
+                  "answer": "どんな",
+                  "explanation": "Quel genre de personne : どんな ひと.",
+                  "translation": "Quel genre de personne est M. Yamada ?"
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "きのうは なに＿ たべませんでした。",
+                  "choices": [
+                    "も",
+                    "を",
+                    "が",
+                    "は"
+                  ],
+                  "answer": "も",
+                  "explanation": "なにも + négation : rien.",
+                  "translation": "Hier, je n'ai rien mangé."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "A「りんごは ＿ ありますか。」B「みっつ あります。」",
+                  "choices": [
+                    "いくつ",
+                    "いくら",
+                    "いつ",
+                    "だれ"
+                  ],
+                  "answer": "いくつ",
+                  "explanation": "Nombre d'objets : いくつ (いくら = quel prix).",
+                  "translation": "Combien y a-t-il de pommes ?"
+                }
+              ]
+            },
+            {
+              "slug": "n5-invite",
+              "title": "Inviter et comparer",
+              "objective": "Proposer, accepter, et nuancer avec あまり, ぜんぜん, ほど.",
+              "minutes": 9,
+              "explanation": [
+                "〜ませんか = et si on… ? (invitation polie) ; 〜ましょう = faisons… (accepter ou proposer).",
+                "あまり + négation = pas très ; ぜんぜん + négation = pas du tout ; すこし = un peu.",
+                "A は B ほど + négation = A n'est pas aussi … que B : わたしの へやは あねの へやほど ひろくないです。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-masenka",
+                  "kind": "grammar",
+                  "front": "〜ませんか",
+                  "reading": "〜ませんか",
+                  "romaji": "~masen ka",
+                  "meaning": "et si on… ? (invitation)"
+                },
+                {
+                  "slug": "gram-mashou",
+                  "kind": "grammar",
+                  "front": "〜ましょう",
+                  "reading": "〜ましょう",
+                  "romaji": "~mashou",
+                  "meaning": "faisons…"
+                },
+                {
+                  "slug": "gram-hodo",
+                  "kind": "grammar",
+                  "front": "A は B ほど〜ない",
+                  "reading": "A は B ほど〜ない",
+                  "romaji": "A wa B hodo ~nai",
+                  "meaning": "A n'est pas aussi … que B"
+                },
+                {
+                  "slug": "vocab-amari",
+                  "kind": "vocabulary",
+                  "front": "あまり",
+                  "reading": "あまり",
+                  "romaji": "amari",
+                  "meaning": "pas très (+ négation)"
+                },
+                {
+                  "slug": "vocab-zenzen",
+                  "kind": "vocabulary",
+                  "front": "ぜんぜん",
+                  "reading": "ぜんぜん",
+                  "romaji": "zenzen",
+                  "meaning": "pas du tout (+ négation)"
+                },
+                {
+                  "slug": "vocab-issho",
+                  "kind": "vocabulary",
+                  "front": "一緒に",
+                  "reading": "いっしょに",
+                  "romaji": "issho ni",
+                  "meaning": "ensemble"
+                },
+                {
+                  "slug": "vocab-sukoshi",
+                  "kind": "vocabulary",
+                  "front": "少し",
+                  "reading": "すこし",
+                  "romaji": "sukoshi",
+                  "meaning": "un peu"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "一緒に 昼ごはんを 食べませんか。",
+                  "reading": "いっしょに ひるごはんを たべませんか。",
+                  "fr": "Et si on déjeunait ensemble ?"
+                },
+                {
+                  "jp": "わたしの へやは 姉の へやほど 広くないです。",
+                  "reading": "わたしの へやは あねの へやほど ひろくないです。",
+                  "fr": "Ma chambre n'est pas aussi grande que celle de ma sœur."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Ton ami·e t'invite au cinéma. Tu acceptes :",
+                  "lines": [
+                    {
+                      "speaker": "ともだち",
+                      "jp": "あした、いっしょに えいがを みませんか。"
+                    }
+                  ],
+                  "choices": [
+                    "ええ、みましょう。",
+                    "いいえ、みました。",
+                    "はい、みません。"
+                  ],
+                  "answer": "ええ、みましょう。",
+                  "explanation": "Accepter une invitation : ええ、〜ましょう."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "この ほんは ぜんぜん ＿。",
+                  "choices": [
+                    "おもしろくないです",
+                    "おもしろいです",
+                    "おもしろかったです",
+                    "おもしろいでした"
+                  ],
+                  "answer": "おもしろくないです",
+                  "explanation": "ぜんぜん appelle une négation.",
+                  "translation": "Ce livre n'est pas du tout intéressant."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "（　）に 何を 入れますか。",
+                  "sentence": "ふゆは なつ＿ すきじゃないです。",
+                  "choices": [
+                    "ほど",
+                    "より",
+                    "まで",
+                    "だけ"
+                  ],
+                  "answer": "ほど",
+                  "explanation": "Comparaison négative : B ほど〜ない.",
+                  "translation": "Je n'aime pas l'hiver autant que l'été."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n5-final",
+      "title": "Simulation JLPT N5",
+      "region": "Archipel des débutants",
+      "description": "Examen blanc au format officiel du JLPT N5 : 67 questions en japonais (kanji, vocabulaire, grammaire, lecture, écoute), 70 minutes, notation sur 180 points.",
+      "chapters": [],
+      "exam": "n5-jlpt"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Jetons de couleur : teintes traditionnelles japonaises */
+:root {
+  --paper: #eef3f1;      /* asagi pâle : fond */
+  --surface: #ffffff;
+  --surface-2: #e2ebe8;
+  --ink: #1b2550;        /* ai : texte et marque */
+  --ink-soft: #4a5378;
+  --line: #c9d6d2;
+  --gold: #e3a13a;       /* yamabuki : XP, récompenses */
+  --gold-ink: #7a4f0c;
+  --ok: #5e8a3a;         /* matcha : réussite */
+  --ok-bg: #e4efd9;
+  --ko: #c23b4a;         /* beni : erreur, sceau */
+  --ko-bg: #f8e1e3;
+  --focus: #2f6fd6;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --paper: #11173a;
+  --surface: #1a2150;
+  --surface-2: #232b5e;
+  --ink: #eef0fb;
+  --ink-soft: #b4bad8;
+  --line: #333c72;
+  --gold: #f0b552;
+  --gold-ink: #f6d08e;
+  --ok: #9cc874;
+  --ok-bg: #263a2a;
+  --ko: #ee7480;
+  --ko-bg: #3f2233;
+  --focus: #8fb4ff;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11173a; --surface: #1a2150; --surface-2: #232b5e; --ink: #eef0fb; --ink-soft: #b4bad8; --line: #333c72;
+    --gold: #f0b552; --gold-ink: #f6d08e; --ok: #9cc874; --ok-bg: #263a2a; --ko: #ee7480; --ko-bg: #3f2233; --focus: #8fb4ff;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --color-gold-ink: var(--gold-ink);
+  --color-ok: var(--ok);
+  --color-ok-bg: var(--ok-bg);
+  --color-ko: var(--ko);
+  --color-ko-bg: var(--ko-bg);
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+html { font-size: var(--base-size, 17px); }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-sans); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, .font-display { font-family: var(--font-jp); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+.jp { font-family: var(--font-jp); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+ruby rt { font-size: 0.45em; color: var(--ink-soft); }
+.reduced * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: 0 1.25rem; border-radius: 14px; font-weight: 700; transition: transform .12s ease, background .15s; }
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-primary { background: var(--ink); color: var(--paper); box-shadow: 0 3px 0 0 color-mix(in srgb, var(--ink) 60%, black); }
+.btn-gold { background: var(--gold); color: #2a1a00; box-shadow: 0 3px 0 0 color-mix(in srgb, var(--gold) 55%, black); }
+.btn-quiet { background: transparent; color: var(--ink); border: 2px solid var(--line); }
+.btn-quiet:hover { border-color: var(--ink-soft); }
+.field { width: 100%; min-height: 48px; padding: .6rem .9rem; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); }
+.field:focus { border-color: var(--ink); outline: none; }
+.panel { background: var(--surface); border-radius: 20px; border: 1px solid var(--line); }
+
+/* Clignement des yeux du personnage (coupé si animations réduites) */
+.avatar-blink { transform-box: fill-box; transform-origin: center; animation: blink 5s infinite; }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+.reduced .avatar-blink { animation: none; }
+@media (prefers-reduced-motion: reduce) { .avatar-blink { animation: none; } }
+/* Secousse sur une erreur */
+@keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(7px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(3px); } }
+.shake { animation: shake .4s ease; }
+.reduced .shake { animation: none; }
+@media (prefers-reduced-motion: reduce) { .shake { animation: none; } }

@@ -1,0 +1,34 @@
+{
+  "name": "koto-quest",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:packages": "npm run build -w @koto/shared -w @koto/learning-engine",
+    "db:migrate": "npm run db:migrate -w @koto/api",
+    "db:seed": "npm run db:seed -w @koto/api",
+    "dev:api": "npm run dev -w @koto/api",
+    "dev:web": "npm run dev -w @koto/web",
+    "dev": "npm run build:packages && concurrently -n api,web -c blue,magenta \"npm run dev:api\" \"npm run dev:web\"",
+    "test": "npm run test -w @koto/learning-engine && npm run test -w @koto/api",
+    "test:e2e": "playwright test",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "setup": "npm install && npm run env -w @koto/api && npm run build:packages && npm run db:generate -w @koto/api && npm run db:migrate && npm run db:migrate:test -w @koto/api && npm run db:seed",
+    "build": "npm run build:packages && npm run build -w @koto/api && npm run build -w @koto/web",
+    "build:offline": "npm run build:packages && npm run build:offline -w @koto/web && cp apps/web/dist-offline/KotoQuest.html ./KotoQuest.html",
+    "test:offline": "playwright test -c playwright.offline.config.ts",
+    "dev:mobile": "npm run start -w @koto/mobile"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.1",
+    "concurrently": "^9.1.0",
+    "typescript": "~5.8.3"
+  },
+  "overrides": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}

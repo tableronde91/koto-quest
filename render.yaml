@@ -1,0 +1,40 @@
+# Render Blueprint : https://render.com/docs/blueprint-spec
+# Render → New → Blueprint → choisir ce dépôt. Les valeurs « sync: false » sont demandées à la création.
+services:
+  - type: web
+    name: koto-quest
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      # Chaîne de connexion Neon (connexion directe, sans « -pooler »)
+      - key: DATABASE_URL
+        sync: false
+      # Adresse publique du site, ex. https://koto-quest.ananda-garapati.fr
+      - key: WEB_ORIGIN
+        sync: false
+      - key: COOKIE_SECURE
+        value: "true"
+      # Render place plusieurs relais devant l'application : on lit l'IP d'origine.
+      # (Les connexions sont en plus limitées par compte, indépendamment de l'IP.)
+      - key: TRUST_PROXY
+        value: "true"
+      - key: SCHEDULER_ENABLED
+        value: "true"
+      - key: SESSION_TTL_DAYS
+        value: "30"
+      # Facultatif : notifications push (npx web-push generate-vapid-keys)
+      - key: VAPID_PUBLIC_KEY
+        sync: false
+      - key: VAPID_PRIVATE_KEY
+        sync: false
+      - key: VAPID_SUBJECT
+        value: mailto:contact@ananda-garapati.fr
+      # Facultatif : e-mails « mot de passe oublié »
+      - key: SMTP_URL
+        sync: false
+      - key: MAIL_FROM
+        value: Koto Quest <no-reply@ananda-garapati.fr>

@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+*.log
+test-results
+playwright-report
+apps/web/dev-dist
+apps/web/dist-offline
+test-results
+*.tsbuildinfo
+apps/mobile/dist-web
+apps/mobile/.expo
+dist-seed

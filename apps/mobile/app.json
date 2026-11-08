@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Koto Quest",
+    "slug": "koto-quest",
+    "scheme": "kotoquest",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "splash": { "image": "./assets/icon.png", "resizeMode": "contain", "backgroundColor": "#EEF2F1" },
+    "ios": { "bundleIdentifier": "app.kotoquest", "supportsTablet": true },
+    "android": { "package": "app.kotoquest", "adaptiveIcon": { "foregroundImage": "./assets/icon.png", "backgroundColor": "#1B2550" } },
+    "web": { "bundler": "metro", "output": "single" },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      ["expo-notifications", { "color": "#C8323F" }]
+    ],
+    "experiments": { "typedRoutes": false }
+  }
+}

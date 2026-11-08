@@ -1,0 +1,24 @@
+# Services nécessaires au développement local.
+#   docker compose up -d          → PostgreSQL
+#   docker compose --profile queue up -d → + Redis (réservé à BullMQ, phases suivantes)
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: koto
+      POSTGRES_PASSWORD: koto
+      POSTGRES_DB: koto
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U koto"]
+      interval: 5s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+    profiles: ["queue"]
+    ports: ["6379:6379"]
+volumes:
+  pgdata:

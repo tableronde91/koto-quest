@@ -1,0 +1,2920 @@
+{
+  "contentVersion": "2026.11.2",
+  "notice": "Les kanji proposés ici sont courants au niveau N5 ; ils ne constituent pas une liste officielle exhaustive du JLPT.",
+  "sections": [
+    {
+      "slug": "hiragana",
+      "title": "Hiragana",
+      "groups": [
+        {
+          "slug": "hira-voyelles",
+          "title": "Voyelles",
+          "items": [
+            {
+              "slug": "hira-a",
+              "kind": "kana",
+              "front": "あ",
+              "reading": "あ",
+              "romaji": "a",
+              "meaning": "a"
+            },
+            {
+              "slug": "hira-i",
+              "kind": "kana",
+              "front": "い",
+              "reading": "い",
+              "romaji": "i",
+              "meaning": "i"
+            },
+            {
+              "slug": "hira-u",
+              "kind": "kana",
+              "front": "う",
+              "reading": "う",
+              "romaji": "u",
+              "meaning": "u"
+            },
+            {
+              "slug": "hira-e",
+              "kind": "kana",
+              "front": "え",
+              "reading": "え",
+              "romaji": "e",
+              "meaning": "e"
+            },
+            {
+              "slug": "hira-o",
+              "kind": "kana",
+              "front": "お",
+              "reading": "お",
+              "romaji": "o",
+              "meaning": "o"
+            }
+          ]
+        },
+        {
+          "slug": "hira-k",
+          "title": "Ligne K",
+          "items": [
+            {
+              "slug": "hira-ka",
+              "kind": "kana",
+              "front": "か",
+              "reading": "か",
+              "romaji": "ka",
+              "meaning": "ka"
+            },
+            {
+              "slug": "hira-ki",
+              "kind": "kana",
+              "front": "き",
+              "reading": "き",
+              "romaji": "ki",
+              "meaning": "ki"
+            },
+            {
+              "slug": "hira-ku",
+              "kind": "kana",
+              "front": "く",
+              "reading": "く",
+              "romaji": "ku",
+              "meaning": "ku"
+            },
+            {
+              "slug": "hira-ke",
+              "kind": "kana",
+              "front": "け",
+              "reading": "け",
+              "romaji": "ke",
+              "meaning": "ke"
+            },
+            {
+              "slug": "hira-ko",
+              "kind": "kana",
+              "front": "こ",
+              "reading": "こ",
+              "romaji": "ko",
+              "meaning": "ko"
+            }
+          ]
+        },
+        {
+          "slug": "hira-s",
+          "title": "Ligne S",
+          "items": [
+            {
+              "slug": "hira-sa",
+              "kind": "kana",
+              "front": "さ",
+              "reading": "さ",
+              "romaji": "sa",
+              "meaning": "sa"
+            },
+            {
+              "slug": "hira-shi",
+              "kind": "kana",
+              "front": "し",
+              "reading": "し",
+              "romaji": "shi",
+              "meaning": "shi"
+            },
+            {
+              "slug": "hira-su",
+              "kind": "kana",
+              "front": "す",
+              "reading": "す",
+              "romaji": "su",
+              "meaning": "su"
+            },
+            {
+              "slug": "hira-se",
+              "kind": "kana",
+              "front": "せ",
+              "reading": "せ",
+              "romaji": "se",
+              "meaning": "se"
+            },
+            {
+              "slug": "hira-so",
+              "kind": "kana",
+              "front": "そ",
+              "reading": "そ",
+              "romaji": "so",
+              "meaning": "so"
+            }
+          ]
+        },
+        {
+          "slug": "hira-t",
+          "title": "Ligne T",
+          "items": [
+            {
+              "slug": "hira-ta",
+              "kind": "kana",
+              "front": "た",
+              "reading": "た",
+              "romaji": "ta",
+              "meaning": "ta"
+            },
+            {
+              "slug": "hira-chi",
+              "kind": "kana",
+              "front": "ち",
+              "reading": "ち",
+              "romaji": "chi",
+              "meaning": "chi"
+            },
+            {
+              "slug": "hira-tsu",
+              "kind": "kana",
+              "front": "つ",
+              "reading": "つ",
+              "romaji": "tsu",
+              "meaning": "tsu"
+            },
+            {
+              "slug": "hira-te",
+              "kind": "kana",
+              "front": "て",
+              "reading": "て",
+              "romaji": "te",
+              "meaning": "te"
+            },
+            {
+              "slug": "hira-to",
+              "kind": "kana",
+              "front": "と",
+              "reading": "と",
+              "romaji": "to",
+              "meaning": "to"
+            }
+          ]
+        },
+        {
+          "slug": "hira-n",
+          "title": "Ligne N",
+          "items": [
+            {
+              "slug": "hira-na",
+              "kind": "kana",
+              "front": "な",
+              "reading": "な",
+              "romaji": "na",
+              "meaning": "na"
+            },
+            {
+              "slug": "hira-ni",
+              "kind": "kana",
+              "front": "に",
+              "reading": "に",
+              "romaji": "ni",
+              "meaning": "ni"
+            },
+            {
+              "slug": "hira-nu",
+              "kind": "kana",
+              "front": "ぬ",
+              "reading": "ぬ",
+              "romaji": "nu",
+              "meaning": "nu"
+            },
+            {
+              "slug": "hira-ne",
+              "kind": "kana",
+              "front": "ね",
+              "reading": "ね",
+              "romaji": "ne",
+              "meaning": "ne"
+            },
+            {
+              "slug": "hira-no",
+              "kind": "kana",
+              "front": "の",
+              "reading": "の",
+              "romaji": "no",
+              "meaning": "no"
+            }
+          ]
+        },
+        {
+          "slug": "hira-h",
+          "title": "Ligne H",
+          "items": [
+            {
+              "slug": "hira-ha",
+              "kind": "kana",
+              "front": "は",
+              "reading": "は",
+              "romaji": "ha",
+              "meaning": "ha"
+            },
+            {
+              "slug": "hira-hi",
+              "kind": "kana",
+              "front": "ひ",
+              "reading": "ひ",
+              "romaji": "hi",
+              "meaning": "hi"
+            },
+            {
+              "slug": "hira-fu",
+              "kind": "kana",
+              "front": "ふ",
+              "reading": "ふ",
+              "romaji": "fu",
+              "meaning": "fu"
+            },
+            {
+              "slug": "hira-he",
+              "kind": "kana",
+              "front": "へ",
+              "reading": "へ",
+              "romaji": "he",
+              "meaning": "he"
+            },
+            {
+              "slug": "hira-ho",
+              "kind": "kana",
+              "front": "ほ",
+              "reading": "ほ",
+              "romaji": "ho",
+              "meaning": "ho"
+            }
+          ]
+        },
+        {
+          "slug": "hira-m",
+          "title": "Ligne M",
+          "items": [
+            {
+              "slug": "hira-ma",
+              "kind": "kana",
+              "front": "ま",
+              "reading": "ま",
+              "romaji": "ma",
+              "meaning": "ma"
+            },
+            {
+              "slug": "hira-mi",
+              "kind": "kana",
+              "front": "み",
+              "reading": "み",
+              "romaji": "mi",
+              "meaning": "mi"
+            },
+            {
+              "slug": "hira-mu",
+              "kind": "kana",
+              "front": "む",
+              "reading": "む",
+              "romaji": "mu",
+              "meaning": "mu"
+            },
+            {
+              "slug": "hira-me",
+              "kind": "kana",
+              "front": "め",
+              "reading": "め",
+              "romaji": "me",
+              "meaning": "me"
+            },
+            {
+              "slug": "hira-mo",
+              "kind": "kana",
+              "front": "も",
+              "reading": "も",
+              "romaji": "mo",
+              "meaning": "mo"
+            }
+          ]
+        },
+        {
+          "slug": "hira-y",
+          "title": "Ligne Y",
+          "items": [
+            {
+              "slug": "hira-ya",
+              "kind": "kana",
+              "front": "や",
+              "reading": "や",
+              "romaji": "ya",
+              "meaning": "ya"
+            },
+            {
+              "slug": "hira-yu",
+              "kind": "kana",
+              "front": "ゆ",
+              "reading": "ゆ",
+              "romaji": "yu",
+              "meaning": "yu"
+            },
+            {
+              "slug": "hira-yo",
+              "kind": "kana",
+              "front": "よ",
+              "reading": "よ",
+              "romaji": "yo",
+              "meaning": "yo"
+            }
+          ]
+        },
+        {
+          "slug": "hira-r",
+          "title": "Ligne R",
+          "items": [
+            {
+              "slug": "hira-ra",
+              "kind": "kana",
+              "front": "ら",
+              "reading": "ら",
+              "romaji": "ra",
+              "meaning": "ra"
+            },
+            {
+              "slug": "hira-ri",
+              "kind": "kana",
+              "front": "り",
+              "reading": "り",
+              "romaji": "ri",
+              "meaning": "ri"
+            },
+            {
+              "slug": "hira-ru",
+              "kind": "kana",
+              "front": "る",
+              "reading": "る",
+              "romaji": "ru",
+              "meaning": "ru"
+            },
+            {
+              "slug": "hira-re",
+              "kind": "kana",
+              "front": "れ",
+              "reading": "れ",
+              "romaji": "re",
+              "meaning": "re"
+            },
+            {
+              "slug": "hira-ro",
+              "kind": "kana",
+              "front": "ろ",
+              "reading": "ろ",
+              "romaji": "ro",
+              "meaning": "ro"
+            }
+          ]
+        },
+        {
+          "slug": "hira-w",
+          "title": "W et N",
+          "items": [
+            {
+              "slug": "hira-wa",
+              "kind": "kana",
+              "front": "わ",
+              "reading": "わ",
+              "romaji": "wa",
+              "meaning": "wa"
+            },
+            {
+              "slug": "hira-wo",
+              "kind": "kana",
+              "front": "を",
+              "reading": "を",
+              "romaji": "wo",
+              "meaning": "wo"
+            },
+            {
+              "slug": "hira-n",
+              "kind": "kana",
+              "front": "ん",
+              "reading": "ん",
+              "romaji": "n",
+              "meaning": "n"
+            }
+          ]
+        },
+        {
+          "slug": "hira-dakuten",
+          "title": "Dakuten et handakuten (゛ ゜)",
+          "items": [
+            {
+              "slug": "hira-ga",
+              "kind": "kana",
+              "front": "が",
+              "reading": "が",
+              "romaji": "ga",
+              "meaning": "ga"
+            },
+            {
+              "slug": "hira-gi",
+              "kind": "kana",
+              "front": "ぎ",
+              "reading": "ぎ",
+              "romaji": "gi",
+              "meaning": "gi"
+            },
+            {
+              "slug": "hira-gu",
+              "kind": "kana",
+              "front": "ぐ",
+              "reading": "ぐ",
+              "romaji": "gu",
+              "meaning": "gu"
+            },
+            {
+              "slug": "hira-ge",
+              "kind": "kana",
+              "front": "げ",
+              "reading": "げ",
+              "romaji": "ge",
+              "meaning": "ge"
+            },
+            {
+              "slug": "hira-go",
+              "kind": "kana",
+              "front": "ご",
+              "reading": "ご",
+              "romaji": "go",
+              "meaning": "go"
+            },
+            {
+              "slug": "hira-za",
+              "kind": "kana",
+              "front": "ざ",
+              "reading": "ざ",
+              "romaji": "za",
+              "meaning": "za"
+            },
+            {
+              "slug": "hira-ji",
+              "kind": "kana",
+              "front": "じ",
+              "reading": "じ",
+              "romaji": "ji",
+              "meaning": "ji"
+            },
+            {
+              "slug": "hira-zu",
+              "kind": "kana",
+              "front": "ず",
+              "reading": "ず",
+              "romaji": "zu",
+              "meaning": "zu"
+            },
+            {
+              "slug": "hira-ze",
+              "kind": "kana",
+              "front": "ぜ",
+              "reading": "ぜ",
+              "romaji": "ze",
+              "meaning": "ze"
+            },
+            {
+              "slug": "hira-zo",
+              "kind": "kana",
+              "front": "ぞ",
+              "reading": "ぞ",
+              "romaji": "zo",
+              "meaning": "zo"
+            },
+            {
+              "slug": "hira-da",
+              "kind": "kana",
+              "front": "だ",
+              "reading": "だ",
+              "romaji": "da",
+              "meaning": "da"
+            },
+            {
+              "slug": "hira-di",
+              "kind": "kana",
+              "front": "ぢ",
+              "reading": "ぢ",
+              "romaji": "ji",
+              "meaning": "ji"
+            },
+            {
+              "slug": "hira-du",
+              "kind": "kana",
+              "front": "づ",
+              "reading": "づ",
+              "romaji": "zu",
+              "meaning": "zu"
+            },
+            {
+              "slug": "hira-de",
+              "kind": "kana",
+              "front": "で",
+              "reading": "で",
+              "romaji": "de",
+              "meaning": "de"
+            },
+            {
+              "slug": "hira-do",
+              "kind": "kana",
+              "front": "ど",
+              "reading": "ど",
+              "romaji": "do",
+              "meaning": "do"
+            },
+            {
+              "slug": "hira-ba",
+              "kind": "kana",
+              "front": "ば",
+              "reading": "ば",
+              "romaji": "ba",
+              "meaning": "ba"
+            },
+            {
+              "slug": "hira-bi",
+              "kind": "kana",
+              "front": "び",
+              "reading": "び",
+              "romaji": "bi",
+              "meaning": "bi"
+            },
+            {
+              "slug": "hira-bu",
+              "kind": "kana",
+              "front": "ぶ",
+              "reading": "ぶ",
+              "romaji": "bu",
+              "meaning": "bu"
+            },
+            {
+              "slug": "hira-be",
+              "kind": "kana",
+              "front": "べ",
+              "reading": "べ",
+              "romaji": "be",
+              "meaning": "be"
+            },
+            {
+              "slug": "hira-bo",
+              "kind": "kana",
+              "front": "ぼ",
+              "reading": "ぼ",
+              "romaji": "bo",
+              "meaning": "bo"
+            },
+            {
+              "slug": "hira-pa",
+              "kind": "kana",
+              "front": "ぱ",
+              "reading": "ぱ",
+              "romaji": "pa",
+              "meaning": "pa"
+            },
+            {
+              "slug": "hira-pi",
+              "kind": "kana",
+              "front": "ぴ",
+              "reading": "ぴ",
+              "romaji": "pi",
+              "meaning": "pi"
+            },
+            {
+              "slug": "hira-pu",
+              "kind": "kana",
+              "front": "ぷ",
+              "reading": "ぷ",
+              "romaji": "pu",
+              "meaning": "pu"
+            },
+            {
+              "slug": "hira-pe",
+              "kind": "kana",
+              "front": "ぺ",
+              "reading": "ぺ",
+              "romaji": "pe",
+              "meaning": "pe"
+            },
+            {
+              "slug": "hira-po",
+              "kind": "kana",
+              "front": "ぽ",
+              "reading": "ぽ",
+              "romaji": "po",
+              "meaning": "po"
+            }
+          ]
+        },
+        {
+          "slug": "hira-combo",
+          "title": "Combinaisons (ゃ ゅ ょ)",
+          "items": [
+            {
+              "slug": "hira-kya",
+              "kind": "kana",
+              "front": "きゃ",
+              "reading": "きゃ",
+              "romaji": "kya",
+              "meaning": "kya"
+            },
+            {
+              "slug": "hira-kyu",
+              "kind": "kana",
+              "front": "きゅ",
+              "reading": "きゅ",
+              "romaji": "kyu",
+              "meaning": "kyu"
+            },
+            {
+              "slug": "hira-kyo",
+              "kind": "kana",
+              "front": "きょ",
+              "reading": "きょ",
+              "romaji": "kyo",
+              "meaning": "kyo"
+            },
+            {
+              "slug": "hira-sha",
+              "kind": "kana",
+              "front": "しゃ",
+              "reading": "しゃ",
+              "romaji": "sha",
+              "meaning": "sha"
+            },
+            {
+              "slug": "hira-shu",
+              "kind": "kana",
+              "front": "しゅ",
+              "reading": "しゅ",
+              "romaji": "shu",
+              "meaning": "shu"
+            },
+            {
+              "slug": "hira-sho",
+              "kind": "kana",
+              "front": "しょ",
+              "reading": "しょ",
+              "romaji": "sho",
+              "meaning": "sho"
+            },
+            {
+              "slug": "hira-cha",
+              "kind": "kana",
+              "front": "ちゃ",
+              "reading": "ちゃ",
+              "romaji": "cha",
+              "meaning": "cha"
+            },
+            {
+              "slug": "hira-chu",
+              "kind": "kana",
+              "front": "ちゅ",
+              "reading": "ちゅ",
+              "romaji": "chu",
+              "meaning": "chu"
+            },
+            {
+              "slug": "hira-cho",
+              "kind": "kana",
+              "front": "ちょ",
+              "reading": "ちょ",
+              "romaji": "cho",
+              "meaning": "cho"
+            },
+            {
+              "slug": "hira-nya",
+              "kind": "kana",
+              "front": "にゃ",
+              "reading": "にゃ",
+              "romaji": "nya",
+              "meaning": "nya"
+            },
+            {
+              "slug": "hira-nyu",
+              "kind": "kana",
+              "front": "にゅ",
+              "reading": "にゅ",
+              "romaji": "nyu",
+              "meaning": "nyu"
+            },
+            {
+              "slug": "hira-nyo",
+              "kind": "kana",
+              "front": "にょ",
+              "reading": "にょ",
+              "romaji": "nyo",
+              "meaning": "nyo"
+            },
+            {
+              "slug": "hira-hya",
+              "kind": "kana",
+              "front": "ひゃ",
+              "reading": "ひゃ",
+              "romaji": "hya",
+              "meaning": "hya"
+            },
+            {
+              "slug": "hira-hyu",
+              "kind": "kana",
+              "front": "ひゅ",
+              "reading": "ひゅ",
+              "romaji": "hyu",
+              "meaning": "hyu"
+            },
+            {
+              "slug": "hira-hyo",
+              "kind": "kana",
+              "front": "ひょ",
+              "reading": "ひょ",
+              "romaji": "hyo",
+              "meaning": "hyo"
+            },
+            {
+              "slug": "hira-mya",
+              "kind": "kana",
+              "front": "みゃ",
+              "reading": "みゃ",
+              "romaji": "mya",
+              "meaning": "mya"
+            },
+            {
+              "slug": "hira-myu",
+              "kind": "kana",
+              "front": "みゅ",
+              "reading": "みゅ",
+              "romaji": "myu",
+              "meaning": "myu"
+            },
+            {
+              "slug": "hira-myo",
+              "kind": "kana",
+              "front": "みょ",
+              "reading": "みょ",
+              "romaji": "myo",
+              "meaning": "myo"
+            },
+            {
+              "slug": "hira-rya",
+              "kind": "kana",
+              "front": "りゃ",
+              "reading": "りゃ",
+              "romaji": "rya",
+              "meaning": "rya"
+            },
+            {
+              "slug": "hira-ryu",
+              "kind": "kana",
+              "front": "りゅ",
+              "reading": "りゅ",
+              "romaji": "ryu",
+              "meaning": "ryu"
+            },
+            {
+              "slug": "hira-ryo",
+              "kind": "kana",
+              "front": "りょ",
+              "reading": "りょ",
+              "romaji": "ryo",
+              "meaning": "ryo"
+            },
+            {
+              "slug": "hira-gya",
+              "kind": "kana",
+              "front": "ぎゃ",
+              "reading": "ぎゃ",
+              "romaji": "gya",
+              "meaning": "gya"
+            },
+            {
+              "slug": "hira-gyu",
+              "kind": "kana",
+              "front": "ぎゅ",
+              "reading": "ぎゅ",
+              "romaji": "gyu",
+              "meaning": "gyu"
+            },
+            {
+              "slug": "hira-gyo",
+              "kind": "kana",
+              "front": "ぎょ",
+              "reading": "ぎょ",
+              "romaji": "gyo",
+              "meaning": "gyo"
+            },
+            {
+              "slug": "hira-ja",
+              "kind": "kana",
+              "front": "じゃ",
+              "reading": "じゃ",
+              "romaji": "ja",
+              "meaning": "ja"
+            },
+            {
+              "slug": "hira-ju",
+              "kind": "kana",
+              "front": "じゅ",
+              "reading": "じゅ",
+              "romaji": "ju",
+              "meaning": "ju"
+            },
+            {
+              "slug": "hira-jo",
+              "kind": "kana",
+              "front": "じょ",
+              "reading": "じょ",
+              "romaji": "jo",
+              "meaning": "jo"
+            },
+            {
+              "slug": "hira-bya",
+              "kind": "kana",
+              "front": "びゃ",
+              "reading": "びゃ",
+              "romaji": "bya",
+              "meaning": "bya"
+            },
+            {
+              "slug": "hira-byu",
+              "kind": "kana",
+              "front": "びゅ",
+              "reading": "びゅ",
+              "romaji": "byu",
+              "meaning": "byu"
+            },
+            {
+              "slug": "hira-byo",
+              "kind": "kana",
+              "front": "びょ",
+              "reading": "びょ",
+              "romaji": "byo",
+              "meaning": "byo"
+            },
+            {
+              "slug": "hira-pya",
+              "kind": "kana",
+              "front": "ぴゃ",
+              "reading": "ぴゃ",
+              "romaji": "pya",
+              "meaning": "pya"
+            },
+            {
+              "slug": "hira-pyu",
+              "kind": "kana",
+              "front": "ぴゅ",
+              "reading": "ぴゅ",
+              "romaji": "pyu",
+              "meaning": "pyu"
+            },
+            {
+              "slug": "hira-pyo",
+              "kind": "kana",
+              "front": "ぴょ",
+              "reading": "ぴょ",
+              "romaji": "pyo",
+              "meaning": "pyo"
+            }
+          ]
+        }
+      ],
+      "description": "L'écriture de base du japonais : terminaisons, particules et mots sans kanji."
+    },
+    {
+      "slug": "katakana",
+      "title": "Katakana",
+      "groups": [
+        {
+          "slug": "kata-voyelles",
+          "title": "Voyelles",
+          "items": [
+            {
+              "slug": "kata-a",
+              "kind": "kana",
+              "front": "ア",
+              "reading": "ア",
+              "romaji": "a",
+              "meaning": "a"
+            },
+            {
+              "slug": "kata-i",
+              "kind": "kana",
+              "front": "イ",
+              "reading": "イ",
+              "romaji": "i",
+              "meaning": "i"
+            },
+            {
+              "slug": "kata-u",
+              "kind": "kana",
+              "front": "ウ",
+              "reading": "ウ",
+              "romaji": "u",
+              "meaning": "u"
+            },
+            {
+              "slug": "kata-e",
+              "kind": "kana",
+              "front": "エ",
+              "reading": "エ",
+              "romaji": "e",
+              "meaning": "e"
+            },
+            {
+              "slug": "kata-o",
+              "kind": "kana",
+              "front": "オ",
+              "reading": "オ",
+              "romaji": "o",
+              "meaning": "o"
+            }
+          ]
+        },
+        {
+          "slug": "kata-k",
+          "title": "Ligne K",
+          "items": [
+            {
+              "slug": "kata-ka",
+              "kind": "kana",
+              "front": "カ",
+              "reading": "カ",
+              "romaji": "ka",
+              "meaning": "ka"
+            },
+            {
+              "slug": "kata-ki",
+              "kind": "kana",
+              "front": "キ",
+              "reading": "キ",
+              "romaji": "ki",
+              "meaning": "ki"
+            },
+            {
+              "slug": "kata-ku",
+              "kind": "kana",
+              "front": "ク",
+              "reading": "ク",
+              "romaji": "ku",
+              "meaning": "ku"
+            },
+            {
+              "slug": "kata-ke",
+              "kind": "kana",
+              "front": "ケ",
+              "reading": "ケ",
+              "romaji": "ke",
+              "meaning": "ke"
+            },
+            {
+              "slug": "kata-ko",
+              "kind": "kana",
+              "front": "コ",
+              "reading": "コ",
+              "romaji": "ko",
+              "meaning": "ko"
+            }
+          ]
+        },
+        {
+          "slug": "kata-s",
+          "title": "Ligne S",
+          "items": [
+            {
+              "slug": "kata-sa",
+              "kind": "kana",
+              "front": "サ",
+              "reading": "サ",
+              "romaji": "sa",
+              "meaning": "sa"
+            },
+            {
+              "slug": "kata-shi",
+              "kind": "kana",
+              "front": "シ",
+              "reading": "シ",
+              "romaji": "shi",
+              "meaning": "shi"
+            },
+            {
+              "slug": "kata-su",
+              "kind": "kana",
+              "front": "ス",
+              "reading": "ス",
+              "romaji": "su",
+              "meaning": "su"
+            },
+            {
+              "slug": "kata-se",
+              "kind": "kana",
+              "front": "セ",
+              "reading": "セ",
+              "romaji": "se",
+              "meaning": "se"
+            },
+            {
+              "slug": "kata-so",
+              "kind": "kana",
+              "front": "ソ",
+              "reading": "ソ",
+              "romaji": "so",
+              "meaning": "so"
+            }
+          ]
+        },
+        {
+          "slug": "kata-t",
+          "title": "Ligne T",
+          "items": [
+            {
+              "slug": "kata-ta",
+              "kind": "kana",
+              "front": "タ",
+              "reading": "タ",
+              "romaji": "ta",
+              "meaning": "ta"
+            },
+            {
+              "slug": "kata-chi",
+              "kind": "kana",
+              "front": "チ",
+              "reading": "チ",
+              "romaji": "chi",
+              "meaning": "chi"
+            },
+            {
+              "slug": "kata-tsu",
+              "kind": "kana",
+              "front": "ツ",
+              "reading": "ツ",
+              "romaji": "tsu",
+              "meaning": "tsu"
+            },
+            {
+              "slug": "kata-te",
+              "kind": "kana",
+              "front": "テ",
+              "reading": "テ",
+              "romaji": "te",
+              "meaning": "te"
+            },
+            {
+              "slug": "kata-to",
+              "kind": "kana",
+              "front": "ト",
+              "reading": "ト",
+              "romaji": "to",
+              "meaning": "to"
+            }
+          ]
+        },
+        {
+          "slug": "kata-n",
+          "title": "Ligne N",
+          "items": [
+            {
+              "slug": "kata-na",
+              "kind": "kana",
+              "front": "ナ",
+              "reading": "ナ",
+              "romaji": "na",
+              "meaning": "na"
+            },
+            {
+              "slug": "kata-ni",
+              "kind": "kana",
+              "front": "ニ",
+              "reading": "ニ",
+              "romaji": "ni",
+              "meaning": "ni"
+            },
+            {
+              "slug": "kata-nu",
+              "kind": "kana",
+              "front": "ヌ",
+              "reading": "ヌ",
+              "romaji": "nu",
+              "meaning": "nu"
+            },
+            {
+              "slug": "kata-ne",
+              "kind": "kana",
+              "front": "ネ",
+              "reading": "ネ",
+              "romaji": "ne",
+              "meaning": "ne"
+            },
+            {
+              "slug": "kata-no",
+              "kind": "kana",
+              "front": "ノ",
+              "reading": "ノ",
+              "romaji": "no",
+              "meaning": "no"
+            }
+          ]
+        },
+        {
+          "slug": "kata-h",
+          "title": "Ligne H",
+          "items": [
+            {
+              "slug": "kata-ha",
+              "kind": "kana",
+              "front": "ハ",
+              "reading": "ハ",
+              "romaji": "ha",
+              "meaning": "ha"
+            },
+            {
+              "slug": "kata-hi",
+              "kind": "kana",
+              "front": "ヒ",
+              "reading": "ヒ",
+              "romaji": "hi",
+              "meaning": "hi"
+            },
+            {
+              "slug": "kata-fu",
+              "kind": "kana",
+              "front": "フ",
+              "reading": "フ",
+              "romaji": "fu",
+              "meaning": "fu"
+            },
+            {
+              "slug": "kata-he",
+              "kind": "kana",
+              "front": "ヘ",
+              "reading": "ヘ",
+              "romaji": "he",
+              "meaning": "he"
+            },
+            {
+              "slug": "kata-ho",
+              "kind": "kana",
+              "front": "ホ",
+              "reading": "ホ",
+              "romaji": "ho",
+              "meaning": "ho"
+            }
+          ]
+        },
+        {
+          "slug": "kata-m",
+          "title": "Ligne M",
+          "items": [
+            {
+              "slug": "kata-ma",
+              "kind": "kana",
+              "front": "マ",
+              "reading": "マ",
+              "romaji": "ma",
+              "meaning": "ma"
+            },
+            {
+              "slug": "kata-mi",
+              "kind": "kana",
+              "front": "ミ",
+              "reading": "ミ",
+              "romaji": "mi",
+              "meaning": "mi"
+            },
+            {
+              "slug": "kata-mu",
+              "kind": "kana",
+              "front": "ム",
+              "reading": "ム",
+              "romaji": "mu",
+              "meaning": "mu"
+            },
+            {
+              "slug": "kata-me",
+              "kind": "kana",
+              "front": "メ",
+              "reading": "メ",
+              "romaji": "me",
+              "meaning": "me"
+            },
+            {
+              "slug": "kata-mo",
+              "kind": "kana",
+              "front": "モ",
+              "reading": "モ",
+              "romaji": "mo",
+              "meaning": "mo"
+            }
+          ]
+        },
+        {
+          "slug": "kata-y",
+          "title": "Ligne Y",
+          "items": [
+            {
+              "slug": "kata-ya",
+              "kind": "kana",
+              "front": "ヤ",
+              "reading": "ヤ",
+              "romaji": "ya",
+              "meaning": "ya"
+            },
+            {
+              "slug": "kata-yu",
+              "kind": "kana",
+              "front": "ユ",
+              "reading": "ユ",
+              "romaji": "yu",
+              "meaning": "yu"
+            },
+            {
+              "slug": "kata-yo",
+              "kind": "kana",
+              "front": "ヨ",
+              "reading": "ヨ",
+              "romaji": "yo",
+              "meaning": "yo"
+            }
+          ]
+        },
+        {
+          "slug": "kata-r",
+          "title": "Ligne R",
+          "items": [
+            {
+              "slug": "kata-ra",
+              "kind": "kana",
+              "front": "ラ",
+              "reading": "ラ",
+              "romaji": "ra",
+              "meaning": "ra"
+            },
+            {
+              "slug": "kata-ri",
+              "kind": "kana",
+              "front": "リ",
+              "reading": "リ",
+              "romaji": "ri",
+              "meaning": "ri"
+            },
+            {
+              "slug": "kata-ru",
+              "kind": "kana",
+              "front": "ル",
+              "reading": "ル",
+              "romaji": "ru",
+              "meaning": "ru"
+            },
+            {
+              "slug": "kata-re",
+              "kind": "kana",
+              "front": "レ",
+              "reading": "レ",
+              "romaji": "re",
+              "meaning": "re"
+            },
+            {
+              "slug": "kata-ro",
+              "kind": "kana",
+              "front": "ロ",
+              "reading": "ロ",
+              "romaji": "ro",
+              "meaning": "ro"
+            }
+          ]
+        },
+        {
+          "slug": "kata-w",
+          "title": "W et N",
+          "items": [
+            {
+              "slug": "kata-wa",
+              "kind": "kana",
+              "front": "ワ",
+              "reading": "ワ",
+              "romaji": "wa",
+              "meaning": "wa"
+            },
+            {
+              "slug": "kata-wo",
+              "kind": "kana",
+              "front": "ヲ",
+              "reading": "ヲ",
+              "romaji": "wo",
+              "meaning": "wo"
+            },
+            {
+              "slug": "kata-n",
+              "kind": "kana",
+              "front": "ン",
+              "reading": "ン",
+              "romaji": "n",
+              "meaning": "n"
+            }
+          ]
+        },
+        {
+          "slug": "kata-dakuten",
+          "title": "Dakuten et handakuten (゛ ゜)",
+          "items": [
+            {
+              "slug": "kata-ga",
+              "kind": "kana",
+              "front": "ガ",
+              "reading": "ガ",
+              "romaji": "ga",
+              "meaning": "ga"
+            },
+            {
+              "slug": "kata-gi",
+              "kind": "kana",
+              "front": "ギ",
+              "reading": "ギ",
+              "romaji": "gi",
+              "meaning": "gi"
+            },
+            {
+              "slug": "kata-gu",
+              "kind": "kana",
+              "front": "グ",
+              "reading": "グ",
+              "romaji": "gu",
+              "meaning": "gu"
+            },
+            {
+              "slug": "kata-ge",
+              "kind": "kana",
+              "front": "ゲ",
+              "reading": "ゲ",
+              "romaji": "ge",
+              "meaning": "ge"
+            },
+            {
+              "slug": "kata-go",
+              "kind": "kana",
+              "front": "ゴ",
+              "reading": "ゴ",
+              "romaji": "go",
+              "meaning": "go"
+            },
+            {
+              "slug": "kata-za",
+              "kind": "kana",
+              "front": "ザ",
+              "reading": "ザ",
+              "romaji": "za",
+              "meaning": "za"
+            },
+            {
+              "slug": "kata-ji",
+              "kind": "kana",
+              "front": "ジ",
+              "reading": "ジ",
+              "romaji": "ji",
+              "meaning": "ji"
+            },
+            {
+              "slug": "kata-zu",
+              "kind": "kana",
+              "front": "ズ",
+              "reading": "ズ",
+              "romaji": "zu",
+              "meaning": "zu"
+            },
+            {
+              "slug": "kata-ze",
+              "kind": "kana",
+              "front": "ゼ",
+              "reading": "ゼ",
+              "romaji": "ze",
+              "meaning": "ze"
+            },
+            {
+              "slug": "kata-zo",
+              "kind": "kana",
+              "front": "ゾ",
+              "reading": "ゾ",
+              "romaji": "zo",
+              "meaning": "zo"
+            },
+            {
+              "slug": "kata-da",
+              "kind": "kana",
+              "front": "ダ",
+              "reading": "ダ",
+              "romaji": "da",
+              "meaning": "da"
+            },
+            {
+              "slug": "kata-di",
+              "kind": "kana",
+              "front": "ヂ",
+              "reading": "ヂ",
+              "romaji": "ji",
+              "meaning": "ji"
+            },
+            {
+              "slug": "kata-du",
+              "kind": "kana",
+              "front": "ヅ",
+              "reading": "ヅ",
+              "romaji": "zu",
+              "meaning": "zu"
+            },
+            {
+              "slug": "kata-de",
+              "kind": "kana",
+              "front": "デ",
+              "reading": "デ",
+              "romaji": "de",
+              "meaning": "de"
+            },
+            {
+              "slug": "kata-do",
+              "kind": "kana",
+              "front": "ド",
+              "reading": "ド",
+              "romaji": "do",
+              "meaning": "do"
+            },
+            {
+              "slug": "kata-ba",
+              "kind": "kana",
+              "front": "バ",
+              "reading": "バ",
+              "romaji": "ba",
+              "meaning": "ba"
+            },
+            {
+              "slug": "kata-bi",
+              "kind": "kana",
+              "front": "ビ",
+              "reading": "ビ",
+              "romaji": "bi",
+              "meaning": "bi"
+            },
+            {
+              "slug": "kata-bu",
+              "kind": "kana",
+              "front": "ブ",
+              "reading": "ブ",
+              "romaji": "bu",
+              "meaning": "bu"
+            },
+            {
+              "slug": "kata-be",
+              "kind": "kana",
+              "front": "ベ",
+              "reading": "ベ",
+              "romaji": "be",
+              "meaning": "be"
+            },
+            {
+              "slug": "kata-bo",
+              "kind": "kana",
+              "front": "ボ",
+              "reading": "ボ",
+              "romaji": "bo",
+              "meaning": "bo"
+            },
+            {
+              "slug": "kata-pa",
+              "kind": "kana",
+              "front": "パ",
+              "reading": "パ",
+              "romaji": "pa",
+              "meaning": "pa"
+            },
+            {
+              "slug": "kata-pi",
+              "kind": "kana",
+              "front": "ピ",
+              "reading": "ピ",
+              "romaji": "pi",
+              "meaning": "pi"
+            },
+            {
+              "slug": "kata-pu",
+              "kind": "kana",
+              "front": "プ",
+              "reading": "プ",
+              "romaji": "pu",
+              "meaning": "pu"
+            },
+            {
+              "slug": "kata-pe",
+              "kind": "kana",
+              "front": "ペ",
+              "reading": "ペ",
+              "romaji": "pe",
+              "meaning": "pe"
+            },
+            {
+              "slug": "kata-po",
+              "kind": "kana",
+              "front": "ポ",
+              "reading": "ポ",
+              "romaji": "po",
+              "meaning": "po"
+            }
+          ]
+        },
+        {
+          "slug": "kata-combo",
+          "title": "Combinaisons (ゃ ゅ ょ)",
+          "items": [
+            {
+              "slug": "kata-kya",
+              "kind": "kana",
+              "front": "キャ",
+              "reading": "キャ",
+              "romaji": "kya",
+              "meaning": "kya"
+            },
+            {
+              "slug": "kata-kyu",
+              "kind": "kana",
+              "front": "キュ",
+              "reading": "キュ",
+              "romaji": "kyu",
+              "meaning": "kyu"
+            },
+            {
+              "slug": "kata-kyo",
+              "kind": "kana",
+              "front": "キョ",
+              "reading": "キョ",
+              "romaji": "kyo",
+              "meaning": "kyo"
+            },
+            {
+              "slug": "kata-sha",
+              "kind": "kana",
+              "front": "シャ",
+              "reading": "シャ",
+              "romaji": "sha",
+              "meaning": "sha"
+            },
+            {
+              "slug": "kata-shu",
+              "kind": "kana",
+              "front": "シュ",
+              "reading": "シュ",
+              "romaji": "shu",
+              "meaning": "shu"
+            },
+            {
+              "slug": "kata-sho",
+              "kind": "kana",
+              "front": "ショ",
+              "reading": "ショ",
+              "romaji": "sho",
+              "meaning": "sho"
+            },
+            {
+              "slug": "kata-cha",
+              "kind": "kana",
+              "front": "チャ",
+              "reading": "チャ",
+              "romaji": "cha",
+              "meaning": "cha"
+            },
+            {
+              "slug": "kata-chu",
+              "kind": "kana",
+              "front": "チュ",
+              "reading": "チュ",
+              "romaji": "chu",
+              "meaning": "chu"
+            },
+            {
+              "slug": "kata-cho",
+              "kind": "kana",
+              "front": "チョ",
+              "reading": "チョ",
+              "romaji": "cho",
+              "meaning": "cho"
+            },
+            {
+              "slug": "kata-nya",
+              "kind": "kana",
+              "front": "ニャ",
+              "reading": "ニャ",
+              "romaji": "nya",
+              "meaning": "nya"
+            },
+            {
+              "slug": "kata-nyu",
+              "kind": "kana",
+              "front": "ニュ",
+              "reading": "ニュ",
+              "romaji": "nyu",
+              "meaning": "nyu"
+            },
+            {
+              "slug": "kata-nyo",
+              "kind": "kana",
+              "front": "ニョ",
+              "reading": "ニョ",
+              "romaji": "nyo",
+              "meaning": "nyo"
+            },
+            {
+              "slug": "kata-hya",
+              "kind": "kana",
+              "front": "ヒャ",
+              "reading": "ヒャ",
+              "romaji": "hya",
+              "meaning": "hya"
+            },
+            {
+              "slug": "kata-hyu",
+              "kind": "kana",
+              "front": "ヒュ",
+              "reading": "ヒュ",
+              "romaji": "hyu",
+              "meaning": "hyu"
+            },
+            {
+              "slug": "kata-hyo",
+              "kind": "kana",
+              "front": "ヒョ",
+              "reading": "ヒョ",
+              "romaji": "hyo",
+              "meaning": "hyo"
+            },
+            {
+              "slug": "kata-mya",
+              "kind": "kana",
+              "front": "ミャ",
+              "reading": "ミャ",
+              "romaji": "mya",
+              "meaning": "mya"
+            },
+            {
+              "slug": "kata-myu",
+              "kind": "kana",
+              "front": "ミュ",
+              "reading": "ミュ",
+              "romaji": "myu",
+              "meaning": "myu"
+            },
+            {
+              "slug": "kata-myo",
+              "kind": "kana",
+              "front": "ミョ",
+              "reading": "ミョ",
+              "romaji": "myo",
+              "meaning": "myo"
+            },
+            {
+              "slug": "kata-rya",
+              "kind": "kana",
+              "front": "リャ",
+              "reading": "リャ",
+              "romaji": "rya",
+              "meaning": "rya"
+            },
+            {
+              "slug": "kata-ryu",
+              "kind": "kana",
+              "front": "リュ",
+              "reading": "リュ",
+              "romaji": "ryu",
+              "meaning": "ryu"
+            },
+            {
+              "slug": "kata-ryo",
+              "kind": "kana",
+              "front": "リョ",
+              "reading": "リョ",
+              "romaji": "ryo",
+              "meaning": "ryo"
+            },
+            {
+              "slug": "kata-gya",
+              "kind": "kana",
+              "front": "ギャ",
+              "reading": "ギャ",
+              "romaji": "gya",
+              "meaning": "gya"
+            },
+            {
+              "slug": "kata-gyu",
+              "kind": "kana",
+              "front": "ギュ",
+              "reading": "ギュ",
+              "romaji": "gyu",
+              "meaning": "gyu"
+            },
+            {
+              "slug": "kata-gyo",
+              "kind": "kana",
+              "front": "ギョ",
+              "reading": "ギョ",
+              "romaji": "gyo",
+              "meaning": "gyo"
+            },
+            {
+              "slug": "kata-ja",
+              "kind": "kana",
+              "front": "ジャ",
+              "reading": "ジャ",
+              "romaji": "ja",
+              "meaning": "ja"
+            },
+            {
+              "slug": "kata-ju",
+              "kind": "kana",
+              "front": "ジュ",
+              "reading": "ジュ",
+              "romaji": "ju",
+              "meaning": "ju"
+            },
+            {
+              "slug": "kata-jo",
+              "kind": "kana",
+              "front": "ジョ",
+              "reading": "ジョ",
+              "romaji": "jo",
+              "meaning": "jo"
+            },
+            {
+              "slug": "kata-bya",
+              "kind": "kana",
+              "front": "ビャ",
+              "reading": "ビャ",
+              "romaji": "bya",
+              "meaning": "bya"
+            },
+            {
+              "slug": "kata-byu",
+              "kind": "kana",
+              "front": "ビュ",
+              "reading": "ビュ",
+              "romaji": "byu",
+              "meaning": "byu"
+            },
+            {
+              "slug": "kata-byo",
+              "kind": "kana",
+              "front": "ビョ",
+              "reading": "ビョ",
+              "romaji": "byo",
+              "meaning": "byo"
+            },
+            {
+              "slug": "kata-pya",
+              "kind": "kana",
+              "front": "ピャ",
+              "reading": "ピャ",
+              "romaji": "pya",
+              "meaning": "pya"
+            },
+            {
+              "slug": "kata-pyu",
+              "kind": "kana",
+              "front": "ピュ",
+              "reading": "ピュ",
+              "romaji": "pyu",
+              "meaning": "pyu"
+            },
+            {
+              "slug": "kata-pyo",
+              "kind": "kana",
+              "front": "ピョ",
+              "reading": "ピョ",
+              "romaji": "pyo",
+              "meaning": "pyo"
+            }
+          ]
+        }
+      ],
+      "description": "Utilisés pour les mots d'origine étrangère, les noms et les onomatopées."
+    },
+    {
+      "slug": "kanji",
+      "title": "Kanji",
+      "description": "Un premier ensemble de kanji courants du niveau N5, avec leurs lectures on et kun.",
+      "groups": [
+        {
+          "slug": "kanji-nombres",
+          "title": "Nombres et argent",
+          "items": [
+            {
+              "slug": "kanji-ichi",
+              "kind": "kanji",
+              "front": "一",
+              "reading": "いち",
+              "romaji": "ichi",
+              "meaning": "un",
+              "kanji": {
+                "onyomi": [
+                  "イチ",
+                  "イツ"
+                ],
+                "kunyomi": [
+                  "ひと(つ)"
+                ],
+                "strokes": 1
+              }
+            },
+            {
+              "slug": "kanji-ni",
+              "kind": "kanji",
+              "front": "二",
+              "reading": "に",
+              "romaji": "ni",
+              "meaning": "deux",
+              "kanji": {
+                "onyomi": [
+                  "ニ"
+                ],
+                "kunyomi": [
+                  "ふた(つ)"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-san",
+              "kind": "kanji",
+              "front": "三",
+              "reading": "さん",
+              "romaji": "san",
+              "meaning": "trois",
+              "kanji": {
+                "onyomi": [
+                  "サン"
+                ],
+                "kunyomi": [
+                  "み(っつ)"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-yon",
+              "kind": "kanji",
+              "front": "四",
+              "reading": "よん",
+              "romaji": "yon",
+              "meaning": "quatre",
+              "kanji": {
+                "onyomi": [
+                  "シ"
+                ],
+                "kunyomi": [
+                  "よ",
+                  "よ(つ)",
+                  "よん"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-go",
+              "kind": "kanji",
+              "front": "五",
+              "reading": "ご",
+              "romaji": "go",
+              "meaning": "cinq",
+              "kanji": {
+                "onyomi": [
+                  "ゴ"
+                ],
+                "kunyomi": [
+                  "いつ(つ)"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-roku",
+              "kind": "kanji",
+              "front": "六",
+              "reading": "ろく",
+              "romaji": "roku",
+              "meaning": "six",
+              "kanji": {
+                "onyomi": [
+                  "ロク"
+                ],
+                "kunyomi": [
+                  "む(っつ)"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-nana",
+              "kind": "kanji",
+              "front": "七",
+              "reading": "なな",
+              "romaji": "nana",
+              "meaning": "sept",
+              "kanji": {
+                "onyomi": [
+                  "シチ"
+                ],
+                "kunyomi": [
+                  "なな",
+                  "なな(つ)"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-hachi",
+              "kind": "kanji",
+              "front": "八",
+              "reading": "はち",
+              "romaji": "hachi",
+              "meaning": "huit",
+              "kanji": {
+                "onyomi": [
+                  "ハチ"
+                ],
+                "kunyomi": [
+                  "や(っつ)"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-kyuu",
+              "kind": "kanji",
+              "front": "九",
+              "reading": "きゅう",
+              "romaji": "kyuu",
+              "meaning": "neuf",
+              "kanji": {
+                "onyomi": [
+                  "キュウ",
+                  "ク"
+                ],
+                "kunyomi": [
+                  "ここの(つ)"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-juu",
+              "kind": "kanji",
+              "front": "十",
+              "reading": "じゅう",
+              "romaji": "juu",
+              "meaning": "dix",
+              "kanji": {
+                "onyomi": [
+                  "ジュウ"
+                ],
+                "kunyomi": [
+                  "とお"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-hyaku",
+              "kind": "kanji",
+              "front": "百",
+              "reading": "ひゃく",
+              "romaji": "hyaku",
+              "meaning": "cent",
+              "kanji": {
+                "onyomi": [
+                  "ヒャク"
+                ],
+                "kunyomi": [],
+                "strokes": 6
+              }
+            },
+            {
+              "slug": "kanji-sen",
+              "kind": "kanji",
+              "front": "千",
+              "reading": "せん",
+              "romaji": "sen",
+              "meaning": "mille",
+              "kanji": {
+                "onyomi": [
+                  "セン"
+                ],
+                "kunyomi": [
+                  "ち"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-man",
+              "kind": "kanji",
+              "front": "万",
+              "reading": "まん",
+              "romaji": "man",
+              "meaning": "dix mille",
+              "kanji": {
+                "onyomi": [
+                  "マン",
+                  "バン"
+                ],
+                "kunyomi": [],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-en",
+              "kind": "kanji",
+              "front": "円",
+              "reading": "えん",
+              "romaji": "en",
+              "meaning": "yen, cercle",
+              "kanji": {
+                "onyomi": [
+                  "エン"
+                ],
+                "kunyomi": [
+                  "まる(い)"
+                ],
+                "strokes": 4
+              }
+            }
+          ]
+        },
+        {
+          "slug": "kanji-nature",
+          "title": "Jours et nature",
+          "items": [
+            {
+              "slug": "kanji-hi",
+              "kind": "kanji",
+              "front": "日",
+              "reading": "ひ",
+              "romaji": "hi",
+              "meaning": "jour, soleil",
+              "kanji": {
+                "onyomi": [
+                  "ニチ",
+                  "ジツ"
+                ],
+                "kunyomi": [
+                  "ひ",
+                  "か"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-tsuki",
+              "kind": "kanji",
+              "front": "月",
+              "reading": "つき",
+              "romaji": "tsuki",
+              "meaning": "lune, mois",
+              "kanji": {
+                "onyomi": [
+                  "ゲツ",
+                  "ガツ"
+                ],
+                "kunyomi": [
+                  "つき"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-ka-hi",
+              "kind": "kanji",
+              "front": "火",
+              "reading": "ひ",
+              "romaji": "ka-hi",
+              "meaning": "feu",
+              "kanji": {
+                "onyomi": [
+                  "カ"
+                ],
+                "kunyomi": [
+                  "ひ"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-mizu",
+              "kind": "kanji",
+              "front": "水",
+              "reading": "みず",
+              "romaji": "mizu",
+              "meaning": "eau",
+              "kanji": {
+                "onyomi": [
+                  "スイ"
+                ],
+                "kunyomi": [
+                  "みず"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-ki",
+              "kind": "kanji",
+              "front": "木",
+              "reading": "き",
+              "romaji": "ki",
+              "meaning": "arbre",
+              "kanji": {
+                "onyomi": [
+                  "モク",
+                  "ボク"
+                ],
+                "kunyomi": [
+                  "き"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-kane",
+              "kind": "kanji",
+              "front": "金",
+              "reading": "かね",
+              "romaji": "kane",
+              "meaning": "argent, or",
+              "kanji": {
+                "onyomi": [
+                  "キン",
+                  "コン"
+                ],
+                "kunyomi": [
+                  "かね"
+                ],
+                "strokes": 8
+              }
+            },
+            {
+              "slug": "kanji-tsuchi",
+              "kind": "kanji",
+              "front": "土",
+              "reading": "つち",
+              "romaji": "tsuchi",
+              "meaning": "terre",
+              "kanji": {
+                "onyomi": [
+                  "ド",
+                  "ト"
+                ],
+                "kunyomi": [
+                  "つち"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-yama",
+              "kind": "kanji",
+              "front": "山",
+              "reading": "やま",
+              "romaji": "yama",
+              "meaning": "montagne",
+              "kanji": {
+                "onyomi": [
+                  "サン"
+                ],
+                "kunyomi": [
+                  "やま"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-kawa",
+              "kind": "kanji",
+              "front": "川",
+              "reading": "かわ",
+              "romaji": "kawa",
+              "meaning": "rivière",
+              "kanji": {
+                "onyomi": [
+                  "セン"
+                ],
+                "kunyomi": [
+                  "かわ"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-ten",
+              "kind": "kanji",
+              "front": "天",
+              "reading": "てん",
+              "romaji": "ten",
+              "meaning": "ciel",
+              "kanji": {
+                "onyomi": [
+                  "テン"
+                ],
+                "kunyomi": [
+                  "あめ",
+                  "あま"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-ame",
+              "kind": "kanji",
+              "front": "雨",
+              "reading": "あめ",
+              "romaji": "ame",
+              "meaning": "pluie",
+              "kanji": {
+                "onyomi": [
+                  "ウ"
+                ],
+                "kunyomi": [
+                  "あめ"
+                ],
+                "strokes": 8
+              }
+            },
+            {
+              "slug": "kanji-hana",
+              "kind": "kanji",
+              "front": "花",
+              "reading": "はな",
+              "romaji": "hana",
+              "meaning": "fleur",
+              "kanji": {
+                "onyomi": [
+                  "カ"
+                ],
+                "kunyomi": [
+                  "はな"
+                ],
+                "strokes": 7
+              }
+            }
+          ]
+        },
+        {
+          "slug": "kanji-corps",
+          "title": "Personnes et corps",
+          "items": [
+            {
+              "slug": "kanji-hito",
+              "kind": "kanji",
+              "front": "人",
+              "reading": "ひと",
+              "romaji": "hito",
+              "meaning": "personne",
+              "kanji": {
+                "onyomi": [
+                  "ジン",
+                  "ニン"
+                ],
+                "kunyomi": [
+                  "ひと"
+                ],
+                "strokes": 2
+              }
+            },
+            {
+              "slug": "kanji-otoko",
+              "kind": "kanji",
+              "front": "男",
+              "reading": "おとこ",
+              "romaji": "otoko",
+              "meaning": "homme",
+              "kanji": {
+                "onyomi": [
+                  "ダン",
+                  "ナン"
+                ],
+                "kunyomi": [
+                  "おとこ"
+                ],
+                "strokes": 7
+              }
+            },
+            {
+              "slug": "kanji-onna",
+              "kind": "kanji",
+              "front": "女",
+              "reading": "おんな",
+              "romaji": "onna",
+              "meaning": "femme",
+              "kanji": {
+                "onyomi": [
+                  "ジョ",
+                  "ニョ"
+                ],
+                "kunyomi": [
+                  "おんな"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-ko",
+              "kind": "kanji",
+              "front": "子",
+              "reading": "こ",
+              "romaji": "ko",
+              "meaning": "enfant",
+              "kanji": {
+                "onyomi": [
+                  "シ",
+                  "ス"
+                ],
+                "kunyomi": [
+                  "こ"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-chichi",
+              "kind": "kanji",
+              "front": "父",
+              "reading": "ちち",
+              "romaji": "chichi",
+              "meaning": "père",
+              "kanji": {
+                "onyomi": [
+                  "フ"
+                ],
+                "kunyomi": [
+                  "ちち"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-haha",
+              "kind": "kanji",
+              "front": "母",
+              "reading": "はは",
+              "romaji": "haha",
+              "meaning": "mère",
+              "kanji": {
+                "onyomi": [
+                  "ボ"
+                ],
+                "kunyomi": [
+                  "はは"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-tomo",
+              "kind": "kanji",
+              "front": "友",
+              "reading": "とも",
+              "romaji": "tomo",
+              "meaning": "ami",
+              "kanji": {
+                "onyomi": [
+                  "ユウ"
+                ],
+                "kunyomi": [
+                  "とも"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-kuchi",
+              "kind": "kanji",
+              "front": "口",
+              "reading": "くち",
+              "romaji": "kuchi",
+              "meaning": "bouche",
+              "kanji": {
+                "onyomi": [
+                  "コウ",
+                  "ク"
+                ],
+                "kunyomi": [
+                  "くち"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-me",
+              "kind": "kanji",
+              "front": "目",
+              "reading": "め",
+              "romaji": "me",
+              "meaning": "œil",
+              "kanji": {
+                "onyomi": [
+                  "モク"
+                ],
+                "kunyomi": [
+                  "め"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-te",
+              "kind": "kanji",
+              "front": "手",
+              "reading": "て",
+              "romaji": "te",
+              "meaning": "main",
+              "kanji": {
+                "onyomi": [
+                  "シュ"
+                ],
+                "kunyomi": [
+                  "て"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-ashi",
+              "kind": "kanji",
+              "front": "足",
+              "reading": "あし",
+              "romaji": "ashi",
+              "meaning": "pied, jambe",
+              "kanji": {
+                "onyomi": [
+                  "ソク"
+                ],
+                "kunyomi": [
+                  "あし",
+                  "た(りる)"
+                ],
+                "strokes": 7
+              }
+            },
+            {
+              "slug": "kanji-mimi",
+              "kind": "kanji",
+              "front": "耳",
+              "reading": "みみ",
+              "romaji": "mimi",
+              "meaning": "oreille",
+              "kanji": {
+                "onyomi": [
+                  "ジ"
+                ],
+                "kunyomi": [
+                  "みみ"
+                ],
+                "strokes": 6
+              }
+            }
+          ]
+        },
+        {
+          "slug": "kanji-positions",
+          "title": "Positions et tailles",
+          "items": [
+            {
+              "slug": "kanji-ue",
+              "kind": "kanji",
+              "front": "上",
+              "reading": "うえ",
+              "romaji": "ue",
+              "meaning": "dessus, haut",
+              "kanji": {
+                "onyomi": [
+                  "ジョウ"
+                ],
+                "kunyomi": [
+                  "うえ",
+                  "あ(がる)"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-shita",
+              "kind": "kanji",
+              "front": "下",
+              "reading": "した",
+              "romaji": "shita",
+              "meaning": "dessous, bas",
+              "kanji": {
+                "onyomi": [
+                  "カ",
+                  "ゲ"
+                ],
+                "kunyomi": [
+                  "した",
+                  "さ(がる)"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-naka",
+              "kind": "kanji",
+              "front": "中",
+              "reading": "なか",
+              "romaji": "naka",
+              "meaning": "milieu, intérieur",
+              "kanji": {
+                "onyomi": [
+                  "チュウ"
+                ],
+                "kunyomi": [
+                  "なか"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-dai",
+              "kind": "kanji",
+              "front": "大",
+              "reading": "だい",
+              "romaji": "dai",
+              "meaning": "grand",
+              "kanji": {
+                "onyomi": [
+                  "ダイ",
+                  "タイ"
+                ],
+                "kunyomi": [
+                  "おお(きい)"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-shou",
+              "kind": "kanji",
+              "front": "小",
+              "reading": "しょう",
+              "romaji": "shou",
+              "meaning": "petit",
+              "kanji": {
+                "onyomi": [
+                  "ショウ"
+                ],
+                "kunyomi": [
+                  "ちい(さい)",
+                  "こ",
+                  "お"
+                ],
+                "strokes": 3
+              }
+            },
+            {
+              "slug": "kanji-hidari",
+              "kind": "kanji",
+              "front": "左",
+              "reading": "ひだり",
+              "romaji": "hidari",
+              "meaning": "gauche",
+              "kanji": {
+                "onyomi": [
+                  "サ"
+                ],
+                "kunyomi": [
+                  "ひだり"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-migi",
+              "kind": "kanji",
+              "front": "右",
+              "reading": "みぎ",
+              "romaji": "migi",
+              "meaning": "droite",
+              "kanji": {
+                "onyomi": [
+                  "ウ",
+                  "ユウ"
+                ],
+                "kunyomi": [
+                  "みぎ"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-soto",
+              "kind": "kanji",
+              "front": "外",
+              "reading": "そと",
+              "romaji": "soto",
+              "meaning": "extérieur",
+              "kanji": {
+                "onyomi": [
+                  "ガイ",
+                  "ゲ"
+                ],
+                "kunyomi": [
+                  "そと"
+                ],
+                "strokes": 5
+              }
+            }
+          ]
+        },
+        {
+          "slug": "kanji-temps",
+          "title": "Temps",
+          "items": [
+            {
+              "slug": "kanji-ima",
+              "kind": "kanji",
+              "front": "今",
+              "reading": "いま",
+              "romaji": "ima",
+              "meaning": "maintenant",
+              "kanji": {
+                "onyomi": [
+                  "コン",
+                  "キン"
+                ],
+                "kunyomi": [
+                  "いま"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-nen",
+              "kind": "kanji",
+              "front": "年",
+              "reading": "ねん",
+              "romaji": "nen",
+              "meaning": "année",
+              "kanji": {
+                "onyomi": [
+                  "ネン"
+                ],
+                "kunyomi": [
+                  "とし"
+                ],
+                "strokes": 6
+              }
+            },
+            {
+              "slug": "kanji-ji",
+              "kind": "kanji",
+              "front": "時",
+              "reading": "じ",
+              "romaji": "ji",
+              "meaning": "heure, moment",
+              "kanji": {
+                "onyomi": [
+                  "ジ"
+                ],
+                "kunyomi": [
+                  "とき"
+                ],
+                "strokes": 10
+              }
+            },
+            {
+              "slug": "kanji-fun",
+              "kind": "kanji",
+              "front": "分",
+              "reading": "ふん",
+              "romaji": "fun",
+              "meaning": "minute, partager",
+              "kanji": {
+                "onyomi": [
+                  "ブン",
+                  "フン",
+                  "ブ"
+                ],
+                "kunyomi": [
+                  "わ(ける)"
+                ],
+                "strokes": 4
+              }
+            },
+            {
+              "slug": "kanji-han",
+              "kind": "kanji",
+              "front": "半",
+              "reading": "はん",
+              "romaji": "han",
+              "meaning": "moitié, demi",
+              "kanji": {
+                "onyomi": [
+                  "ハン"
+                ],
+                "kunyomi": [
+                  "なか(ば)"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-saki",
+              "kind": "kanji",
+              "front": "先",
+              "reading": "さき",
+              "romaji": "saki",
+              "meaning": "avant, précédent",
+              "kanji": {
+                "onyomi": [
+                  "セン"
+                ],
+                "kunyomi": [
+                  "さき"
+                ],
+                "strokes": 6
+              }
+            },
+            {
+              "slug": "kanji-nani",
+              "kind": "kanji",
+              "front": "何",
+              "reading": "なに",
+              "romaji": "nani",
+              "meaning": "quoi",
+              "kanji": {
+                "onyomi": [
+                  "カ"
+                ],
+                "kunyomi": [
+                  "なに",
+                  "なん"
+                ],
+                "strokes": 7
+              }
+            }
+          ]
+        },
+        {
+          "slug": "kanji-vie",
+          "title": "Vie quotidienne",
+          "items": [
+            {
+              "slug": "kanji-sei",
+              "kind": "kanji",
+              "front": "生",
+              "reading": "せい",
+              "romaji": "sei",
+              "meaning": "vie, naître",
+              "kanji": {
+                "onyomi": [
+                  "セイ",
+                  "ショウ"
+                ],
+                "kunyomi": [
+                  "い(きる)",
+                  "う(まれる)"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-gaku",
+              "kind": "kanji",
+              "front": "学",
+              "reading": "がく",
+              "romaji": "gaku",
+              "meaning": "étudier, science",
+              "kanji": {
+                "onyomi": [
+                  "ガク"
+                ],
+                "kunyomi": [
+                  "まな(ぶ)"
+                ],
+                "strokes": 8
+              }
+            },
+            {
+              "slug": "kanji-hon",
+              "kind": "kanji",
+              "front": "本",
+              "reading": "ほん",
+              "romaji": "hon",
+              "meaning": "livre, origine",
+              "kanji": {
+                "onyomi": [
+                  "ホン"
+                ],
+                "kunyomi": [
+                  "もと"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-kuni",
+              "kind": "kanji",
+              "front": "国",
+              "reading": "くに",
+              "romaji": "kuni",
+              "meaning": "pays",
+              "kanji": {
+                "onyomi": [
+                  "コク"
+                ],
+                "kunyomi": [
+                  "くに"
+                ],
+                "strokes": 8
+              }
+            },
+            {
+              "slug": "kanji-na",
+              "kind": "kanji",
+              "front": "名",
+              "reading": "な",
+              "romaji": "na",
+              "meaning": "nom",
+              "kanji": {
+                "onyomi": [
+                  "メイ",
+                  "ミョウ"
+                ],
+                "kunyomi": [
+                  "な"
+                ],
+                "strokes": 6
+              }
+            },
+            {
+              "slug": "kanji-shiro",
+              "kind": "kanji",
+              "front": "白",
+              "reading": "しろ",
+              "romaji": "shiro",
+              "meaning": "blanc",
+              "kanji": {
+                "onyomi": [
+                  "ハク"
+                ],
+                "kunyomi": [
+                  "しろ"
+                ],
+                "strokes": 5
+              }
+            },
+            {
+              "slug": "kanji-ki-ki",
+              "kind": "kanji",
+              "front": "気",
+              "reading": "き",
+              "romaji": "ki-ki",
+              "meaning": "esprit, énergie",
+              "kanji": {
+                "onyomi": [
+                  "キ",
+                  "ケ"
+                ],
+                "kunyomi": [],
+                "strokes": 6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

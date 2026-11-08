@@ -1,0 +1,2698 @@
+{
+  "contentVersion": "2026.11.3",
+  "level": {
+    "code": "N4",
+    "title": "Élémentaire : la vie de tous les jours",
+    "region": "Archipel des voyageurs",
+    "order": 4
+  },
+  "notice": "Les listes de vocabulaire et de kanji de Koto Quest sont alignées sur les compétences attendues au N4 mais ne constituent pas des listes officielles du JLPT.",
+  "worlds": [
+    {
+      "slug": "n4-w1",
+      "title": "La forme en て",
+      "region": "Archipel des voyageurs",
+      "description": "La forme qui relie les actions, et la demande polie 〜てください.",
+      "boss": {
+        "name": "Le Tengu pressé",
+        "glyph": "天",
+        "intro": "Ce tengu enchaîne les actions sans jamais s’arrêter. Relie-les plus vite que lui !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w1-c1",
+          "title": "Relier et demander",
+          "lessons": [
+            {
+              "slug": "n4-te-ru",
+              "title": "Forme en て : verbes en る et irréguliers",
+              "objective": "Relier deux actions avec les verbes du groupe 2, します et 来ます.",
+              "minutes": 8,
+              "explanation": [
+                "La forme en て relie des actions qui se suivent (« je me lève, puis je mange ») et sert de base à de nombreuses tournures.",
+                "Verbes du groupe 2 (en る) : on remplace ます par て. 食べます → 食べて, 見ます → 見て, 起きます → 起きて.",
+                "Les deux verbes irréguliers : します → して, 来ます（きます）→ 来て（きて）."
+              ],
+              "items": [
+                {
+                  "slug": "gram-te-group2",
+                  "kind": "grammar",
+                  "front": "〜ます → 〜て",
+                  "reading": "〜ます → 〜て",
+                  "romaji": "~masu → ~te",
+                  "meaning": "forme en て des verbes du groupe 2"
+                },
+                {
+                  "slug": "vocab-okimasu",
+                  "kind": "vocabulary",
+                  "front": "起きます",
+                  "reading": "おきます",
+                  "romaji": "okimasu",
+                  "meaning": "se lever, se réveiller"
+                },
+                {
+                  "slug": "vocab-nemasu",
+                  "kind": "vocabulary",
+                  "front": "寝ます",
+                  "reading": "ねます",
+                  "romaji": "nemasu",
+                  "meaning": "dormir, se coucher"
+                },
+                {
+                  "slug": "vocab-oshiemasu",
+                  "kind": "vocabulary",
+                  "front": "教えます",
+                  "reading": "おしえます",
+                  "romaji": "oshiemasu",
+                  "meaning": "enseigner, indiquer"
+                },
+                {
+                  "slug": "vocab-shite",
+                  "kind": "vocabulary",
+                  "front": "して",
+                  "reading": "して",
+                  "romaji": "shite",
+                  "meaning": "forme en て de します (faire)"
+                },
+                {
+                  "slug": "vocab-kite",
+                  "kind": "vocabulary",
+                  "front": "来て",
+                  "reading": "きて",
+                  "romaji": "kite",
+                  "meaning": "forme en て de 来ます (venir)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "朝 起きて、ごはんを 食べます。",
+                  "reading": "あさ おきて、ごはんを たべます。",
+                  "fr": "Le matin, je me lève et je mange."
+                },
+                {
+                  "jp": "テレビを 見て、寝ます。",
+                  "reading": "テレビを みて、ねます。",
+                  "fr": "Je regarde la télé, puis je me couche."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de たべます.",
+                  "sentence": "ごはんを ＿、がっこうへ いきます。",
+                  "choices": [
+                    "たべて",
+                    "たべって",
+                    "たべいて"
+                  ],
+                  "answer": "たべて",
+                  "explanation": "Groupe 2 : on remplace ます par て : たべます → たべて.",
+                  "translation": "Je mange, puis je vais à l'école."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de します.",
+                  "sentence": "しゅくだいを ＿、ねます。",
+                  "choices": [
+                    "して",
+                    "しって",
+                    "しいて"
+                  ],
+                  "answer": "して",
+                  "explanation": "Irrégulier : します → して.",
+                  "translation": "Je fais mes devoirs, puis je me couche."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "きます → きって",
+                  "translation": "La forme en て de 来ます (venir) est きって.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "来ます → 来て（きて）. きって est la forme en て de きります (couper)."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Je me lève à 7 h et je mange. »",
+                  "answer": [
+                    "しちじに",
+                    "おきて、",
+                    "ごはんを",
+                    "たべます。"
+                  ],
+                  "explanation": "Les actions s'enchaînent dans l'ordre : おきて (je me lève) puis たべます (je mange)."
+                }
+              ]
+            },
+            {
+              "slug": "n4-te-u",
+              "title": "Forme en て : verbes en う",
+              "objective": "Former la forme en て des verbes du groupe 1.",
+              "minutes": 10,
+              "explanation": [
+                "Pour le groupe 1, la forme en て dépend de la syllabe placée avant ます.",
+                "い・ち・り → って : かいます → かって, まちます → まって. み・び・に → んで : のみます → のんで, あそびます → あそんで.",
+                "き → いて : かきます → かいて ; ぎ → いで : いそぎます → いそいで ; し → して : はなします → はなして.",
+                "Exception à retenir : いきます → いって."
+              ],
+              "items": [
+                {
+                  "slug": "gram-te-group1",
+                  "kind": "grammar",
+                  "front": "〜って・〜んで・〜いて",
+                  "reading": "〜って・〜んで・〜いて",
+                  "romaji": "~tte / ~nde / ~ite",
+                  "meaning": "forme en て des verbes du groupe 1"
+                },
+                {
+                  "slug": "vocab-machimasu",
+                  "kind": "vocabulary",
+                  "front": "待ちます",
+                  "reading": "まちます",
+                  "romaji": "machimasu",
+                  "meaning": "attendre"
+                },
+                {
+                  "slug": "vocab-hanashimasu",
+                  "kind": "vocabulary",
+                  "front": "話します",
+                  "reading": "はなします",
+                  "romaji": "hanashimasu",
+                  "meaning": "parler"
+                },
+                {
+                  "slug": "vocab-tsukaimasu",
+                  "kind": "vocabulary",
+                  "front": "使います",
+                  "reading": "つかいます",
+                  "romaji": "tsukaimasu",
+                  "meaning": "utiliser"
+                },
+                {
+                  "slug": "vocab-asobimasu",
+                  "kind": "vocabulary",
+                  "front": "遊びます",
+                  "reading": "あそびます",
+                  "romaji": "asobimasu",
+                  "meaning": "jouer, s'amuser"
+                },
+                {
+                  "slug": "vocab-kakimasu",
+                  "kind": "vocabulary",
+                  "front": "書きます",
+                  "reading": "かきます",
+                  "romaji": "kakimasu",
+                  "meaning": "écrire"
+                },
+                {
+                  "slug": "kanji-matsu",
+                  "kind": "kanji",
+                  "front": "待",
+                  "reading": "まつ",
+                  "romaji": "matsu",
+                  "meaning": "attendre",
+                  "kanji": {
+                    "onyomi": [
+                      "タイ"
+                    ],
+                    "kunyomi": [
+                      "ま(つ)"
+                    ],
+                    "strokes": 9
+                  }
+                },
+                {
+                  "slug": "kanji-hanasu",
+                  "kind": "kanji",
+                  "front": "話",
+                  "reading": "はなす",
+                  "romaji": "hanasu",
+                  "meaning": "parler, histoire",
+                  "kanji": {
+                    "onyomi": [
+                      "ワ"
+                    ],
+                    "kunyomi": [
+                      "はな(す)",
+                      "はなし"
+                    ],
+                    "strokes": 13
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ちょっと 待って ください。",
+                  "reading": "ちょっと まって ください。",
+                  "fr": "Attends un peu, s'il te plaît."
+                },
+                {
+                  "jp": "友だちと 話して、うちへ 帰りました。",
+                  "reading": "ともだちと はなして、うちへ かえりました。",
+                  "fr": "J'ai parlé avec un ami, puis je suis rentré."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de のみます.",
+                  "sentence": "おちゃを ＿、やすみます。",
+                  "choices": [
+                    "のんで",
+                    "のみて",
+                    "のって"
+                  ],
+                  "answer": "のんで",
+                  "explanation": "み → んで : のみます → のんで.",
+                  "translation": "Je bois du thé et je me repose."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de まちます.",
+                  "sentence": "ここで ＿ ください。",
+                  "choices": [
+                    "まって",
+                    "まちて",
+                    "まんで"
+                  ],
+                  "answer": "まって",
+                  "explanation": "ち → って : まちます → まって.",
+                  "translation": "Attendez ici, s'il vous plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de いきます.",
+                  "sentence": "がっこうへ ＿、べんきょうします。",
+                  "choices": [
+                    "いって",
+                    "いいて",
+                    "いきて"
+                  ],
+                  "answer": "いって",
+                  "explanation": "Exception : いきます → いって (et non いいて).",
+                  "translation": "Je vais à l'école et j'étudie."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en て de かきます.",
+                  "sentence": "てがみを ＿、だします。",
+                  "choices": [
+                    "かいて",
+                    "かって",
+                    "かきて"
+                  ],
+                  "answer": "かいて",
+                  "explanation": "き → いて : かきます → かいて.",
+                  "translation": "J'écris une lettre, puis je l'envoie."
+                }
+              ]
+            },
+            {
+              "slug": "n4-te-kudasai",
+              "title": "Demander poliment : 〜てください",
+              "objective": "Demander à quelqu'un de faire quelque chose avec politesse.",
+              "minutes": 8,
+              "explanation": [
+                "Forme en て + ください = « faites…, s'il vous plaît » : まって ください (attendez, s'il vous plaît).",
+                "Pour adoucir la demande, on commence par すみませんが、… (excusez-moi, mais…)."
+              ],
+              "items": [
+                {
+                  "slug": "gram-te-kudasai",
+                  "kind": "grammar",
+                  "front": "〜てください",
+                  "reading": "〜てください",
+                  "romaji": "~te kudasai",
+                  "meaning": "faites…, s'il vous plaît"
+                },
+                {
+                  "slug": "vocab-mado",
+                  "kind": "vocabulary",
+                  "front": "窓",
+                  "reading": "まど",
+                  "romaji": "mado",
+                  "meaning": "fenêtre"
+                },
+                {
+                  "slug": "vocab-mouichido",
+                  "kind": "vocabulary",
+                  "front": "もう一度",
+                  "reading": "もういちど",
+                  "romaji": "mou ichido",
+                  "meaning": "encore une fois"
+                },
+                {
+                  "slug": "vocab-yukkuri",
+                  "kind": "vocabulary",
+                  "front": "ゆっくり",
+                  "reading": "ゆっくり",
+                  "romaji": "yukkuri",
+                  "meaning": "lentement"
+                },
+                {
+                  "slug": "kanji-hiraku",
+                  "kind": "kanji",
+                  "front": "開",
+                  "reading": "ひらく",
+                  "romaji": "hiraku",
+                  "meaning": "ouvrir",
+                  "kanji": {
+                    "onyomi": [
+                      "カイ"
+                    ],
+                    "kunyomi": [
+                      "あ(ける)",
+                      "ひら(く)"
+                    ],
+                    "strokes": 12
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "すみませんが、窓を 開けて ください。",
+                  "reading": "すみませんが、まどを あけて ください。",
+                  "fr": "Excusez-moi, pourriez-vous ouvrir la fenêtre ?"
+                },
+                {
+                  "jp": "もう一度 ゆっくり 言って ください。",
+                  "reading": "もういちど ゆっくり いって ください。",
+                  "fr": "Répétez lentement, s'il vous plaît."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu n'as pas compris ce que dit ton professeur. Que réponds-tu ?",
+                  "lines": [
+                    {
+                      "speaker": "先生",
+                      "jp": "つぎの ページを よんで ください。"
+                    }
+                  ],
+                  "choices": [
+                    "もういちど いって ください。",
+                    "もういちど いきます。",
+                    "ゆっくり たべて ください。"
+                  ],
+                  "answer": "もういちど いって ください。",
+                  "explanation": "« Répétez, s'il vous plaît » : もういちど いって ください.",
+                  "translation": "Le professeur demande de lire la page suivante."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Fermez la porte, s'il vous plaît. »",
+                  "sentence": "ドアを ＿ ください。",
+                  "choices": [
+                    "しめて",
+                    "しめって",
+                    "しめで"
+                  ],
+                  "answer": "しめて",
+                  "explanation": "しめます (groupe 2) → しめて."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Ouvrez la fenêtre, s'il vous plaît. »",
+                  "answer": [
+                    "まどを",
+                    "あけて",
+                    "ください。"
+                  ],
+                  "explanation": "Objet (まどを) + forme en て + ください."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w2",
+      "title": "Permis ou interdit",
+      "region": "Archipel des voyageurs",
+      "description": "Demander la permission, poser un interdit et la forme en ない.",
+      "boss": {
+        "name": "Le Komainu vigilant",
+        "glyph": "狛",
+        "intro": "Ce gardien de sanctuaire connaît toutes les règles. Sauras-tu ce qui est permis ?"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w2-c1",
+          "title": "Les règles du quotidien",
+          "lessons": [
+            {
+              "slug": "n4-temo-ii",
+              "title": "Avoir le droit : 〜てもいいです",
+              "objective": "Demander et donner une permission.",
+              "minutes": 8,
+              "explanation": [
+                "Forme en て + もいいです = « on peut, on a le droit de… ». Pour demander : 〜てもいいですか。",
+                "Pour accepter : ええ、いいですよ。 Pour refuser poliment : すみません、ちょっと…。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-temo-ii",
+                  "kind": "grammar",
+                  "front": "〜てもいいです",
+                  "reading": "〜てもいいです",
+                  "romaji": "~te mo ii desu",
+                  "meaning": "avoir la permission de…"
+                },
+                {
+                  "slug": "vocab-shashin",
+                  "kind": "vocabulary",
+                  "front": "写真",
+                  "reading": "しゃしん",
+                  "romaji": "shashin",
+                  "meaning": "photo"
+                },
+                {
+                  "slug": "vocab-torimasu-photo",
+                  "kind": "vocabulary",
+                  "front": "撮ります",
+                  "reading": "とります",
+                  "romaji": "torimasu",
+                  "meaning": "prendre (une photo)"
+                },
+                {
+                  "slug": "vocab-suwarimasu",
+                  "kind": "vocabulary",
+                  "front": "座ります",
+                  "reading": "すわります",
+                  "romaji": "suwarimasu",
+                  "meaning": "s'asseoir"
+                },
+                {
+                  "slug": "vocab-tabako",
+                  "kind": "vocabulary",
+                  "front": "たばこ",
+                  "reading": "たばこ",
+                  "romaji": "tabako",
+                  "meaning": "cigarette"
+                },
+                {
+                  "slug": "vocab-suimasu",
+                  "kind": "vocabulary",
+                  "front": "吸います",
+                  "reading": "すいます",
+                  "romaji": "suimasu",
+                  "meaning": "fumer, aspirer"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ここで 写真を 撮っても いいですか。",
+                  "reading": "ここで しゃしんを とっても いいですか。",
+                  "fr": "Est-ce que je peux prendre des photos ici ?"
+                },
+                {
+                  "jp": "ええ、座っても いいですよ。",
+                  "reading": "ええ、すわっても いいですよ。",
+                  "fr": "Oui, tu peux t'asseoir."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je peux m'asseoir ici ? »",
+                  "sentence": "ここに ＿ いいですか。",
+                  "choices": [
+                    "すわっても",
+                    "すわりても",
+                    "すわんでも"
+                  ],
+                  "answer": "すわっても",
+                  "explanation": "すわります → すわって + も : すわっても いいですか."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Ton ami te demande s'il peut utiliser ton stylo. Tu acceptes :",
+                  "lines": [
+                    {
+                      "speaker": "友だち",
+                      "jp": "このペン、つかっても いいですか。"
+                    }
+                  ],
+                  "choices": [
+                    "ええ、いいですよ。",
+                    "いいえ、つかいます。",
+                    "いただきます。"
+                  ],
+                  "answer": "ええ、いいですよ。",
+                  "explanation": "Pour accorder une permission : ええ、いいですよ."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "しゃしんを とっても いいですか。",
+                  "translation": "Cette phrase signifie « Il faut prendre des photos ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "〜てもいいですか demande une permission : « Puis-je prendre des photos ? »"
+                }
+              ]
+            },
+            {
+              "slug": "n4-tewa-ikenai",
+              "title": "Interdire : 〜てはいけません",
+              "objective": "Exprimer une interdiction.",
+              "minutes": 8,
+              "explanation": [
+                "Forme en て + はいけません = « il ne faut pas, c'est interdit ». Le ton est ferme : règlements, panneaux, consignes.",
+                "Comparez : 〜ても いいです (permission) et 〜ては いけません (interdiction). À l'oral, 〜ては devient souvent 〜ちゃ."
+              ],
+              "items": [
+                {
+                  "slug": "gram-tewa-ikemasen",
+                  "kind": "grammar",
+                  "front": "〜てはいけません",
+                  "reading": "〜てはいけません",
+                  "romaji": "~te wa ikemasen",
+                  "meaning": "il est interdit de…"
+                },
+                {
+                  "slug": "vocab-hairimasu",
+                  "kind": "vocabulary",
+                  "front": "入ります",
+                  "reading": "はいります",
+                  "romaji": "hairimasu",
+                  "meaning": "entrer"
+                },
+                {
+                  "slug": "vocab-tomemasu",
+                  "kind": "vocabulary",
+                  "front": "止めます",
+                  "reading": "とめます",
+                  "romaji": "tomemasu",
+                  "meaning": "arrêter, garer"
+                },
+                {
+                  "slug": "vocab-chuushajou",
+                  "kind": "vocabulary",
+                  "front": "駐車場",
+                  "reading": "ちゅうしゃじょう",
+                  "romaji": "chuushajou",
+                  "meaning": "parking"
+                },
+                {
+                  "slug": "vocab-oogoe",
+                  "kind": "vocabulary",
+                  "front": "大声",
+                  "reading": "おおごえ",
+                  "romaji": "oogoe",
+                  "meaning": "voix forte"
+                },
+                {
+                  "slug": "kanji-hairu",
+                  "kind": "kanji",
+                  "front": "入",
+                  "reading": "はいる",
+                  "romaji": "hairu",
+                  "meaning": "entrer",
+                  "kanji": {
+                    "onyomi": [
+                      "ニュウ"
+                    ],
+                    "kunyomi": [
+                      "い(る)",
+                      "はい(る)",
+                      "い(れる)"
+                    ],
+                    "strokes": 2
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ここに 車を 止めては いけません。",
+                  "reading": "ここに くるまを とめては いけません。",
+                  "fr": "Il est interdit de se garer ici."
+                },
+                {
+                  "jp": "図書館で 大声で 話しては いけません。",
+                  "reading": "としょかんで おおごえで はなしては いけません。",
+                  "fr": "Il ne faut pas parler fort à la bibliothèque."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Il est interdit d'entrer ici. »",
+                  "sentence": "ここに ＿ いけません。",
+                  "choices": [
+                    "はいっては",
+                    "はいりては",
+                    "はいっても"
+                  ],
+                  "answer": "はいっては",
+                  "explanation": "Interdiction : forme en て + は いけません."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "ここで たばこを すって＿ いけません。",
+                  "choices": [
+                    "は",
+                    "も",
+                    "を"
+                  ],
+                  "answer": "は",
+                  "explanation": "〜ては いけません = interdiction ; 〜ても いいです = permission.",
+                  "translation": "Il est interdit de fumer ici."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "はいっても いいです。",
+                  "translation": "Cette phrase interdit d'entrer.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "〜ても いいです donne une permission : « Vous pouvez entrer. »"
+                }
+              ]
+            },
+            {
+              "slug": "n4-nai",
+              "title": "Forme en ない et 〜ないでください",
+              "objective": "Former la négation neutre et demander de ne pas faire.",
+              "minutes": 10,
+              "explanation": [
+                "La forme en ない est la négation neutre. Groupe 2 : たべます → たべない.",
+                "Groupe 1 : la syllabe en い devient la syllabe en あ + ない : かきます → かかない, のみます → のまない. Attention : い → わ : かいます → かわない.",
+                "Irréguliers : します → しない, 来ます → 来ない（こない）. 〜ないでください = « s'il vous plaît, ne … pas »."
+              ],
+              "items": [
+                {
+                  "slug": "gram-nai",
+                  "kind": "grammar",
+                  "front": "〜ない",
+                  "reading": "〜ない",
+                  "romaji": "~nai",
+                  "meaning": "forme négative neutre"
+                },
+                {
+                  "slug": "gram-naide-kudasai",
+                  "kind": "grammar",
+                  "front": "〜ないでください",
+                  "reading": "〜ないでください",
+                  "romaji": "~naide kudasai",
+                  "meaning": "ne faites pas…, s'il vous plaît"
+                },
+                {
+                  "slug": "vocab-wasuremasu",
+                  "kind": "vocabulary",
+                  "front": "忘れます",
+                  "reading": "わすれます",
+                  "romaji": "wasuremasu",
+                  "meaning": "oublier"
+                },
+                {
+                  "slug": "vocab-shinpai",
+                  "kind": "vocabulary",
+                  "front": "心配",
+                  "reading": "しんぱい",
+                  "romaji": "shinpai",
+                  "meaning": "inquiétude"
+                },
+                {
+                  "slug": "vocab-sawarimasu",
+                  "kind": "vocabulary",
+                  "front": "触ります",
+                  "reading": "さわります",
+                  "romaji": "sawarimasu",
+                  "meaning": "toucher"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "心配しないで ください。",
+                  "reading": "しんぱいしないで ください。",
+                  "fr": "Ne vous inquiétez pas."
+                },
+                {
+                  "jp": "かさを 忘れないで ください。",
+                  "reading": "かさを わすれないで ください。",
+                  "fr": "N'oubliez pas votre parapluie."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en ない de のみます.",
+                  "sentence": "おさけを ＿で ください。",
+                  "choices": [
+                    "のまない",
+                    "のみない",
+                    "のまらない"
+                  ],
+                  "answer": "のまない",
+                  "explanation": "み → ま + ない : のまない.",
+                  "translation": "Ne buvez pas d'alcool, s'il vous plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en ない de 来ます (venir).",
+                  "sentence": "あしたは ＿で ください。",
+                  "choices": [
+                    "こない",
+                    "きない",
+                    "くない"
+                  ],
+                  "answer": "こない",
+                  "explanation": "Irrégulier : きます → こない.",
+                  "translation": "Ne viens pas demain, s'il te plaît."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en ない de かいます (acheter).",
+                  "sentence": "それは ＿で ください。",
+                  "choices": [
+                    "かわない",
+                    "かあない",
+                    "かいない"
+                  ],
+                  "answer": "かわない",
+                  "explanation": "い → わ : かいます → かわない.",
+                  "translation": "N'achète pas ça, s'il te plaît."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Ton amie arrive en retard et s'excuse, l'air stressée. Tu la rassures :",
+                  "lines": [
+                    {
+                      "speaker": "さくら",
+                      "jp": "おそくなって、すみません！"
+                    }
+                  ],
+                  "choices": [
+                    "しんぱいしないで ください。",
+                    "わすれないで ください。",
+                    "はいっては いけません。"
+                  ],
+                  "answer": "しんぱいしないで ください。",
+                  "explanation": "« Ne t'inquiète pas » : しんぱいしないで ください."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w3",
+      "title": "Expériences et projets",
+      "region": "Archipel des voyageurs",
+      "description": "Raconter une expérience, dire ce que l'on veut et ce que l'on prévoit.",
+      "boss": {
+        "name": "Le Baku mangeur de rêves",
+        "glyph": "獏",
+        "intro": "Le Baku dévore les rêves de ceux qui ne savent pas les dire. Exprime tes envies pour les protéger !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w3-c1",
+          "title": "Hier, aujourd'hui, demain",
+          "lessons": [
+            {
+              "slug": "n4-ta-koto",
+              "title": "Forme en た et 〜たことがあります",
+              "objective": "Raconter une expérience déjà vécue.",
+              "minutes": 10,
+              "explanation": [
+                "La forme en た (passé neutre) se forme comme la forme en て, en remplaçant て/で par た/だ : たべて → たべた, のんで → のんだ, いって → いった.",
+                "〜たことがあります = « avoir déjà fait » (une expérience). Question : 〜たことがありますか。 Réponse négative : いいえ、ありません。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-ta",
+                  "kind": "grammar",
+                  "front": "〜た",
+                  "reading": "〜た",
+                  "romaji": "~ta",
+                  "meaning": "forme passée neutre"
+                },
+                {
+                  "slug": "gram-ta-koto",
+                  "kind": "grammar",
+                  "front": "〜たことがあります",
+                  "reading": "〜たことがあります",
+                  "romaji": "~ta koto ga arimasu",
+                  "meaning": "avoir déjà fait…"
+                },
+                {
+                  "slug": "vocab-fujisan",
+                  "kind": "vocabulary",
+                  "front": "富士山",
+                  "reading": "ふじさん",
+                  "romaji": "fujisan",
+                  "meaning": "le mont Fuji"
+                },
+                {
+                  "slug": "vocab-noborimasu",
+                  "kind": "vocabulary",
+                  "front": "登ります",
+                  "reading": "のぼります",
+                  "romaji": "noborimasu",
+                  "meaning": "gravir, monter"
+                },
+                {
+                  "slug": "vocab-ichido",
+                  "kind": "vocabulary",
+                  "front": "一度",
+                  "reading": "いちど",
+                  "romaji": "ichido",
+                  "meaning": "une fois"
+                },
+                {
+                  "slug": "vocab-onsen",
+                  "kind": "vocabulary",
+                  "front": "温泉",
+                  "reading": "おんせん",
+                  "romaji": "onsen",
+                  "meaning": "source chaude"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "富士山に 登った ことが あります。",
+                  "reading": "ふじさんに のぼった ことが あります。",
+                  "fr": "J'ai déjà gravi le mont Fuji."
+                },
+                {
+                  "jp": "温泉に 行った ことが ありますか。",
+                  "reading": "おんせんに いった ことが ありますか。",
+                  "fr": "Es-tu déjà allé·e dans une source chaude ?"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en た de のみます.",
+                  "sentence": "にほんの おさけを ＿ ことが あります。",
+                  "choices": [
+                    "のんだ",
+                    "のみた",
+                    "のった"
+                  ],
+                  "answer": "のんだ",
+                  "explanation": "Comme のんで → のんだ.",
+                  "translation": "J'ai déjà bu du saké japonais."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme en た de いきます.",
+                  "sentence": "おんせんに ＿ ことが ありますか。",
+                  "choices": [
+                    "いった",
+                    "いきた",
+                    "いいた"
+                  ],
+                  "answer": "いった",
+                  "explanation": "いきます → いって → いった.",
+                  "translation": "Es-tu déjà allé·e dans une source chaude ?"
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On te demande si tu as déjà mangé des sushis. Tu n'en as jamais mangé :",
+                  "lines": [
+                    {
+                      "speaker": "ゆき",
+                      "jp": "すしを たべた ことが ありますか。"
+                    }
+                  ],
+                  "choices": [
+                    "いいえ、ありません。",
+                    "はい、ありません。",
+                    "はい、たべます。"
+                  ],
+                  "answer": "いいえ、ありません。",
+                  "explanation": "Expérience jamais vécue : いいえ、(たべた ことが) ありません."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « J'ai déjà gravi le mont Fuji. »",
+                  "answer": [
+                    "ふじさんに",
+                    "のぼった",
+                    "ことが",
+                    "あります。"
+                  ],
+                  "explanation": "Forme en た + ことが あります."
+                }
+              ]
+            },
+            {
+              "slug": "n4-tai",
+              "title": "Exprimer une envie : 〜たいです",
+              "objective": "Dire ce que l'on veut faire ou ne pas faire.",
+              "minutes": 8,
+              "explanation": [
+                "Verbe sans ます + たいです = « je veux faire… » : たべます → たべたいです, いきます → いきたいです.",
+                "Négation : 〜たくないです (je ne veux pas). On l'emploie pour parler de soi, ou pour questionner un proche : 〜たいですか。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-tai",
+                  "kind": "grammar",
+                  "front": "〜たいです",
+                  "reading": "〜たいです",
+                  "romaji": "~tai desu",
+                  "meaning": "vouloir faire…"
+                },
+                {
+                  "slug": "gram-takunai",
+                  "kind": "grammar",
+                  "front": "〜たくないです",
+                  "reading": "〜たくないです",
+                  "romaji": "~takunai desu",
+                  "meaning": "ne pas vouloir faire…"
+                },
+                {
+                  "slug": "vocab-ryokou",
+                  "kind": "vocabulary",
+                  "front": "旅行",
+                  "reading": "りょこう",
+                  "romaji": "ryokou",
+                  "meaning": "voyage"
+                },
+                {
+                  "slug": "vocab-kaigai",
+                  "kind": "vocabulary",
+                  "front": "海外",
+                  "reading": "かいがい",
+                  "romaji": "kaigai",
+                  "meaning": "l'étranger (outre-mer)"
+                },
+                {
+                  "slug": "vocab-sumimasu",
+                  "kind": "vocabulary",
+                  "front": "住みます",
+                  "reading": "すみます",
+                  "romaji": "sumimasu",
+                  "meaning": "habiter"
+                },
+                {
+                  "slug": "kanji-sumu",
+                  "kind": "kanji",
+                  "front": "住",
+                  "reading": "すむ",
+                  "romaji": "sumu",
+                  "meaning": "habiter",
+                  "kanji": {
+                    "onyomi": [
+                      "ジュウ"
+                    ],
+                    "kunyomi": [
+                      "す(む)"
+                    ],
+                    "strokes": 7
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "日本に 住みたいです。",
+                  "reading": "にほんに すみたいです。",
+                  "fr": "Je veux habiter au Japon."
+                },
+                {
+                  "jp": "今日は どこも 行きたくないです。",
+                  "reading": "きょうは どこも いきたくないです。",
+                  "fr": "Aujourd'hui, je ne veux aller nulle part."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je veux manger des ramen. »",
+                  "sentence": "ラーメンが ＿です。",
+                  "choices": [
+                    "たべたい",
+                    "たべたく",
+                    "たべた"
+                  ],
+                  "answer": "たべたい",
+                  "explanation": "たべます → たべ + たい."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je ne veux pas travailler aujourd'hui. »",
+                  "sentence": "きょうは はたらき＿です。",
+                  "choices": [
+                    "たくない",
+                    "たいない",
+                    "ない"
+                  ],
+                  "answer": "たくない",
+                  "explanation": "Négation de 〜たい : 〜たくない."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "にほんに すみたいです。",
+                  "translation": "Cette phrase veut dire « J'habite au Japon ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "〜たいです exprime une envie : « Je veux habiter au Japon. »"
+                }
+              ]
+            },
+            {
+              "slug": "n4-tsumori",
+              "title": "Projets : forme du dictionnaire et 〜つもりです",
+              "objective": "Parler de ses intentions.",
+              "minutes": 10,
+              "explanation": [
+                "La forme du dictionnaire est le présent neutre. Groupe 2 : たべます → たべる. Groupe 1 : la syllabe en い devient la syllabe en う : かきます → かく, のみます → のむ, かいます → かう.",
+                "Irréguliers : します → する, 来ます → 来る（くる）.",
+                "Forme du dictionnaire + つもりです = « avoir l'intention de… ». Pour une intention négative : 〜ないつもりです."
+              ],
+              "items": [
+                {
+                  "slug": "gram-dictionary-form",
+                  "kind": "grammar",
+                  "front": "〜る・〜う",
+                  "reading": "〜る・〜う",
+                  "romaji": "~ru / ~u",
+                  "meaning": "forme du dictionnaire (présent neutre)"
+                },
+                {
+                  "slug": "gram-tsumori",
+                  "kind": "grammar",
+                  "front": "〜つもりです",
+                  "reading": "〜つもりです",
+                  "romaji": "~tsumori desu",
+                  "meaning": "avoir l'intention de…"
+                },
+                {
+                  "slug": "vocab-ryuugaku",
+                  "kind": "vocabulary",
+                  "front": "留学",
+                  "reading": "りゅうがく",
+                  "romaji": "ryuugaku",
+                  "meaning": "études à l'étranger"
+                },
+                {
+                  "slug": "vocab-shiken",
+                  "kind": "vocabulary",
+                  "front": "試験",
+                  "reading": "しけん",
+                  "romaji": "shiken",
+                  "meaning": "examen"
+                },
+                {
+                  "slug": "vocab-ukemasu",
+                  "kind": "vocabulary",
+                  "front": "受けます",
+                  "reading": "うけます",
+                  "romaji": "ukemasu",
+                  "meaning": "passer (un examen), recevoir"
+                },
+                {
+                  "slug": "kanji-tamesu",
+                  "kind": "kanji",
+                  "front": "試",
+                  "reading": "ためす",
+                  "romaji": "tamesu",
+                  "meaning": "essayer, épreuve",
+                  "kanji": {
+                    "onyomi": [
+                      "シ"
+                    ],
+                    "kunyomi": [
+                      "こころ(みる)",
+                      "ため(す)"
+                    ],
+                    "strokes": 13
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "来年 日本に 留学する つもりです。",
+                  "reading": "らいねん にほんに りゅうがくする つもりです。",
+                  "fr": "J'ai l'intention d'aller étudier au Japon l'an prochain."
+                },
+                {
+                  "jp": "十二月に JLPTを 受ける つもりです。",
+                  "reading": "じゅうにがつに JLPTを うける つもりです。",
+                  "fr": "J'ai l'intention de passer le JLPT en décembre."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme du dictionnaire de のみます.",
+                  "sentence": "まいにち みずを たくさん ＿ つもりです。",
+                  "choices": [
+                    "のむ",
+                    "のみ",
+                    "のんだ"
+                  ],
+                  "answer": "のむ",
+                  "explanation": "み → む : のみます → のむ.",
+                  "translation": "J'ai l'intention de boire beaucoup d'eau chaque jour."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme du dictionnaire de します.",
+                  "sentence": "らいねん りゅうがく＿ つもりです。",
+                  "choices": [
+                    "する",
+                    "します",
+                    "した"
+                  ],
+                  "answer": "する",
+                  "explanation": "つもり se place après la forme du dictionnaire : する.",
+                  "translation": "J'ai l'intention d'étudier à l'étranger l'an prochain."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme du dictionnaire de 来ます (venir).",
+                  "sentence": "かれは あした ＿ つもりです。",
+                  "choices": [
+                    "くる",
+                    "きる",
+                    "こる"
+                  ],
+                  "answer": "くる",
+                  "explanation": "Irrégulier : きます → くる.",
+                  "translation": "Il a l'intention de venir demain."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « J'ai l'intention de passer l'examen. »",
+                  "answer": [
+                    "しけんを",
+                    "うける",
+                    "つもりです。"
+                  ],
+                  "explanation": "Objet + forme du dictionnaire + つもりです."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w4",
+      "title": "Comparer",
+      "region": "Archipel des voyageurs",
+      "description": "Comparer deux choses, choisir entre deux, désigner le meilleur.",
+      "boss": {
+        "name": "La Grue rivale",
+        "glyph": "鶴",
+        "intro": "Cette grue se croit la plus rapide de l’archipel. Compare, choisis, et prouve-lui le contraire !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w4-c1",
+          "title": "Plus, moins, le plus",
+          "lessons": [
+            {
+              "slug": "n4-yori",
+              "title": "Comparer : A は B より〜",
+              "objective": "Dire qu'une chose est plus … qu'une autre.",
+              "minutes": 8,
+              "explanation": [
+                "A は B より + adjectif = « A est plus … que B » : しんかんせんは バスより はやいです。 (Le shinkansen est plus rapide que le bus.)",
+                "より se place juste après l'élément auquel on compare. L'adjectif ne change pas de forme : il n'y a pas de mot pour « plus »."
+              ],
+              "items": [
+                {
+                  "slug": "gram-yori",
+                  "kind": "grammar",
+                  "front": "A は B より〜",
+                  "reading": "A は B より〜",
+                  "romaji": "A wa B yori ~",
+                  "meaning": "A est plus … que B"
+                },
+                {
+                  "slug": "vocab-hayai-speed",
+                  "kind": "vocabulary",
+                  "front": "速い",
+                  "reading": "はやい",
+                  "romaji": "hayai",
+                  "meaning": "rapide"
+                },
+                {
+                  "slug": "vocab-benri",
+                  "kind": "vocabulary",
+                  "front": "便利",
+                  "reading": "べんり",
+                  "romaji": "benri",
+                  "meaning": "pratique"
+                },
+                {
+                  "slug": "vocab-shinkansen",
+                  "kind": "vocabulary",
+                  "front": "新幹線",
+                  "reading": "しんかんせん",
+                  "romaji": "shinkansen",
+                  "meaning": "train à grande vitesse"
+                },
+                {
+                  "slug": "vocab-hikouki",
+                  "kind": "vocabulary",
+                  "front": "飛行機",
+                  "reading": "ひこうき",
+                  "romaji": "hikouki",
+                  "meaning": "avion"
+                },
+                {
+                  "slug": "vocab-ookii",
+                  "kind": "vocabulary",
+                  "front": "大きい",
+                  "reading": "おおきい",
+                  "romaji": "ookii",
+                  "meaning": "grand, gros"
+                },
+                {
+                  "slug": "kanji-hayai",
+                  "kind": "kanji",
+                  "front": "速",
+                  "reading": "はやい",
+                  "romaji": "hayai",
+                  "meaning": "rapide, vitesse",
+                  "kanji": {
+                    "onyomi": [
+                      "ソク"
+                    ],
+                    "kunyomi": [
+                      "はや(い)"
+                    ],
+                    "strokes": 10
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "飛行機は 新幹線より 速いです。",
+                  "reading": "ひこうきは しんかんせんより はやいです。",
+                  "fr": "L'avion est plus rapide que le shinkansen."
+                },
+                {
+                  "jp": "東京は 大阪より 大きいです。",
+                  "reading": "とうきょうは おおさかより おおきいです。",
+                  "fr": "Tokyo est plus grand qu'Osaka."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "ひこうきは でんしゃ＿ はやいです。",
+                  "choices": [
+                    "より",
+                    "から",
+                    "まで"
+                  ],
+                  "answer": "より",
+                  "explanation": "より marque l'élément auquel on compare.",
+                  "translation": "L'avion est plus rapide que le train."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Le shinkansen est plus rapide que le bus. »",
+                  "answer": [
+                    "しんかんせんは",
+                    "バスより",
+                    "はやいです。"
+                  ],
+                  "explanation": "A は B より + adjectif."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "ねこは いぬより おおきいです。",
+                  "translation": "Cette phrase dit que le chien est plus grand que le chat.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "A は B より おおきい : c'est A (le chat) qui est plus grand."
+                }
+              ]
+            },
+            {
+              "slug": "n4-hou-ga",
+              "title": "Choisir entre deux : どちらが / のほうが",
+              "objective": "Demander et dire laquelle de deux choses on préfère.",
+              "minutes": 9,
+              "explanation": [
+                "Question : A と B と どちらが + adjectif ですか。 (Entre A et B, lequel est le plus … ?)",
+                "Réponse : A の ほうが + adjectif です。 (C'est A qui est plus …) ; pour dire « les deux » : どちらも〜です。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-dochira",
+                  "kind": "grammar",
+                  "front": "A と B と どちらが〜",
+                  "reading": "A と B と どちらが〜",
+                  "romaji": "A to B to dochira ga ~",
+                  "meaning": "entre A et B, lequel est plus … ?"
+                },
+                {
+                  "slug": "gram-hou-ga",
+                  "kind": "grammar",
+                  "front": "〜の ほうが〜",
+                  "reading": "〜の ほうが〜",
+                  "romaji": "~ no hou ga ~",
+                  "meaning": "c'est … qui est plus …"
+                },
+                {
+                  "slug": "vocab-natsu",
+                  "kind": "vocabulary",
+                  "front": "夏",
+                  "reading": "なつ",
+                  "romaji": "natsu",
+                  "meaning": "été"
+                },
+                {
+                  "slug": "vocab-fuyu",
+                  "kind": "vocabulary",
+                  "front": "冬",
+                  "reading": "ふゆ",
+                  "romaji": "fuyu",
+                  "meaning": "hiver"
+                },
+                {
+                  "slug": "vocab-suki",
+                  "kind": "vocabulary",
+                  "front": "好き",
+                  "reading": "すき",
+                  "romaji": "suki",
+                  "meaning": "aimé, préféré"
+                },
+                {
+                  "slug": "vocab-atsui",
+                  "kind": "vocabulary",
+                  "front": "暑い",
+                  "reading": "あつい",
+                  "romaji": "atsui",
+                  "meaning": "chaud (temps)"
+                },
+                {
+                  "slug": "vocab-samui",
+                  "kind": "vocabulary",
+                  "front": "寒い",
+                  "reading": "さむい",
+                  "romaji": "samui",
+                  "meaning": "froid (temps)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "夏と 冬と どちらが 好きですか。",
+                  "reading": "なつと ふゆと どちらが すきですか。",
+                  "fr": "Entre l'été et l'hiver, lequel préfères-tu ?"
+                },
+                {
+                  "jp": "冬の ほうが 好きです。",
+                  "reading": "ふゆの ほうが すきです。",
+                  "fr": "Je préfère l'hiver."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On te demande si tu préfères le thé ou le café. Tu préfères le thé :",
+                  "lines": [
+                    {
+                      "speaker": "けん",
+                      "jp": "こうちゃと コーヒーと どちらが すきですか。"
+                    }
+                  ],
+                  "choices": [
+                    "こうちゃの ほうが すきです。",
+                    "こうちゃより すきです。",
+                    "どちらが すきです。"
+                  ],
+                  "answer": "こうちゃの ほうが すきです。",
+                  "explanation": "Pour choisir : A の ほうが〜です."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "なつ＿ ふゆと どちらが すきですか。",
+                  "choices": [
+                    "と",
+                    "が",
+                    "より"
+                  ],
+                  "answer": "と",
+                  "explanation": "Structure : A と B と どちらが〜.",
+                  "translation": "Entre l'été et l'hiver, lequel préfères-tu ?"
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « C'est l'été qui est le plus chaud. »",
+                  "sentence": "なつの ＿が あついです。",
+                  "choices": [
+                    "ほう",
+                    "より",
+                    "どちら"
+                  ],
+                  "answer": "ほう",
+                  "explanation": "〜の ほうが : c'est … qui est plus …"
+                }
+              ]
+            },
+            {
+              "slug": "n4-ichiban",
+              "title": "Le superlatif : 〜で いちばん",
+              "objective": "Désigner ce qui est le plus … dans un groupe.",
+              "minutes": 8,
+              "explanation": [
+                "Groupe + で + いちばん + adjectif = « le plus … de » : くだものの なかで りんごが いちばん すきです。",
+                "Question : 〜の なかで なにが／どこが／だれが いちばん〜ですか。 Le mot interrogatif dépend de ce qu'on compare."
+              ],
+              "items": [
+                {
+                  "slug": "gram-ichiban",
+                  "kind": "grammar",
+                  "front": "〜で いちばん〜",
+                  "reading": "〜で いちばん〜",
+                  "romaji": "~ de ichiban ~",
+                  "meaning": "le plus … (dans un groupe)"
+                },
+                {
+                  "slug": "vocab-kisetsu",
+                  "kind": "vocabulary",
+                  "front": "季節",
+                  "reading": "きせつ",
+                  "romaji": "kisetsu",
+                  "meaning": "saison"
+                },
+                {
+                  "slug": "vocab-kudamono",
+                  "kind": "vocabulary",
+                  "front": "果物",
+                  "reading": "くだもの",
+                  "romaji": "kudamono",
+                  "meaning": "fruit"
+                },
+                {
+                  "slug": "vocab-sekai",
+                  "kind": "vocabulary",
+                  "front": "世界",
+                  "reading": "せかい",
+                  "romaji": "sekai",
+                  "meaning": "le monde"
+                },
+                {
+                  "slug": "vocab-kurabemasu",
+                  "kind": "vocabulary",
+                  "front": "比べます",
+                  "reading": "くらべます",
+                  "romaji": "kurabemasu",
+                  "meaning": "comparer"
+                },
+                {
+                  "slug": "kanji-yo",
+                  "kind": "kanji",
+                  "front": "世",
+                  "reading": "よ",
+                  "romaji": "yo",
+                  "meaning": "monde, génération",
+                  "kanji": {
+                    "onyomi": [
+                      "セ",
+                      "セイ"
+                    ],
+                    "kunyomi": [
+                      "よ"
+                    ],
+                    "strokes": 5
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "季節の 中で 春が いちばん 好きです。",
+                  "reading": "きせつの なかで はるが いちばん すきです。",
+                  "fr": "De toutes les saisons, c'est le printemps que je préfère."
+                },
+                {
+                  "jp": "世界で いちばん 高い 山は エベレストです。",
+                  "reading": "せかいで いちばん たかい やまは エベレストです。",
+                  "fr": "La plus haute montagne du monde est l'Everest."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "せかい＿ いちばん たかい やまは どこですか。",
+                  "choices": [
+                    "で",
+                    "に",
+                    "を"
+                  ],
+                  "answer": "で",
+                  "explanation": "Le groupe de comparaison est marqué par で.",
+                  "translation": "Quelle est la plus haute montagne du monde ?"
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Parmi les fruits, lequel préfères-tu ? »",
+                  "sentence": "くだものの なかで ＿が いちばん すきですか。",
+                  "choices": [
+                    "なに",
+                    "どこ",
+                    "だれ"
+                  ],
+                  "answer": "なに",
+                  "explanation": "Pour une chose : なに. どこ = lieu, だれ = personne."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « C'est le printemps que je préfère. »",
+                  "answer": [
+                    "きせつの なかで",
+                    "はるが",
+                    "いちばん",
+                    "すきです。"
+                  ],
+                  "explanation": "Groupe + で + élément + が いちばん + adjectif."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w5",
+      "title": "Opinions et raisons",
+      "region": "Archipel des voyageurs",
+      "description": "Donner son avis avec 〜と思います et justifier avec から ou ので.",
+      "boss": {
+        "name": "Le Kirin sage",
+        "glyph": "麒",
+        "intro": "Le Kirin n’accepte aucune affirmation sans raison. Donne ton avis et justifie-le !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w5-c1",
+          "title": "Penser et expliquer",
+          "lessons": [
+            {
+              "slug": "n4-to-omou",
+              "title": "Donner son avis : 〜と思います",
+              "objective": "Exprimer une opinion ou une supposition.",
+              "minutes": 9,
+              "explanation": [
+                "Forme neutre + と思います = « je pense que… » : あしたは あめが ふると思います。",
+                "Avec un nom ou un adjectif en な, on ajoute だ : かんたんだと思います。 Avec un adjectif en い, rien à ajouter : むずかしいと思います.",
+                "たぶん (probablement) renforce la supposition : たぶん だいじょうぶだと思います。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-to-omoimasu",
+                  "kind": "grammar",
+                  "front": "〜と思います",
+                  "reading": "〜と思います",
+                  "romaji": "~ to omoimasu",
+                  "meaning": "je pense que…"
+                },
+                {
+                  "slug": "vocab-tabun",
+                  "kind": "vocabulary",
+                  "front": "多分",
+                  "reading": "たぶん",
+                  "romaji": "tabun",
+                  "meaning": "probablement"
+                },
+                {
+                  "slug": "vocab-iken",
+                  "kind": "vocabulary",
+                  "front": "意見",
+                  "reading": "いけん",
+                  "romaji": "iken",
+                  "meaning": "avis, opinion"
+                },
+                {
+                  "slug": "vocab-kantan",
+                  "kind": "vocabulary",
+                  "front": "簡単",
+                  "reading": "かんたん",
+                  "romaji": "kantan",
+                  "meaning": "facile, simple"
+                },
+                {
+                  "slug": "vocab-muzukashii",
+                  "kind": "vocabulary",
+                  "front": "難しい",
+                  "reading": "むずかしい",
+                  "romaji": "muzukashii",
+                  "meaning": "difficile"
+                },
+                {
+                  "slug": "vocab-omoshiroi",
+                  "kind": "vocabulary",
+                  "front": "面白い",
+                  "reading": "おもしろい",
+                  "romaji": "omoshiroi",
+                  "meaning": "intéressant, amusant"
+                },
+                {
+                  "slug": "kanji-omou",
+                  "kind": "kanji",
+                  "front": "思",
+                  "reading": "おもう",
+                  "romaji": "omou",
+                  "meaning": "penser",
+                  "kanji": {
+                    "onyomi": [
+                      "シ"
+                    ],
+                    "kunyomi": [
+                      "おも(う)"
+                    ],
+                    "strokes": 9
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "この 映画は 面白いと 思います。",
+                  "reading": "この えいがは おもしろいと おもいます。",
+                  "fr": "Je pense que ce film est intéressant."
+                },
+                {
+                  "jp": "多分 あしたは 雨だと 思います。",
+                  "reading": "たぶん あしたは あめだと おもいます。",
+                  "fr": "Je pense qu'il pleuvra probablement demain."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je pense que c'est facile. »",
+                  "sentence": "かんたん＿と おもいます。",
+                  "choices": [
+                    "だ",
+                    "い",
+                    "な"
+                  ],
+                  "answer": "だ",
+                  "explanation": "Adjectif en な ou nom + だ + と思います."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Je pense qu'il viendra demain. »",
+                  "sentence": "かれは あした ＿と おもいます。",
+                  "choices": [
+                    "くる",
+                    "きます",
+                    "きて"
+                  ],
+                  "answer": "くる",
+                  "explanation": "Devant と思います, le verbe est à la forme neutre : くる."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "むずかしいだと おもいます。",
+                  "translation": "Cette phrase est correcte.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "Avec un adjectif en い, pas de だ : むずかしいと おもいます."
+                }
+              ]
+            },
+            {
+              "slug": "n4-kara",
+              "title": "Donner une raison : 〜から",
+              "objective": "Expliquer pourquoi, à l'oral.",
+              "minutes": 8,
+              "explanation": [
+                "Phrase-cause + から + conséquence = « comme…, donc… » : あついですから、まどを あけます。",
+                "Pour répondre à どうして (pourquoi), on termine par から : 「どうして やすみましたか。」「ねつが ありましたから。」"
+              ],
+              "items": [
+                {
+                  "slug": "gram-kara-reason",
+                  "kind": "grammar",
+                  "front": "〜から (raison)",
+                  "reading": "〜から (raison)",
+                  "romaji": "~ kara",
+                  "meaning": "parce que, comme"
+                },
+                {
+                  "slug": "vocab-doushite",
+                  "kind": "vocabulary",
+                  "front": "どうして",
+                  "reading": "どうして",
+                  "romaji": "doushite",
+                  "meaning": "pourquoi"
+                },
+                {
+                  "slug": "vocab-netsu",
+                  "kind": "vocabulary",
+                  "front": "熱",
+                  "reading": "ねつ",
+                  "romaji": "netsu",
+                  "meaning": "fièvre"
+                },
+                {
+                  "slug": "vocab-tsukaremasu",
+                  "kind": "vocabulary",
+                  "front": "疲れます",
+                  "reading": "つかれます",
+                  "romaji": "tsukaremasu",
+                  "meaning": "se fatiguer"
+                },
+                {
+                  "slug": "vocab-isogashii",
+                  "kind": "vocabulary",
+                  "front": "忙しい",
+                  "reading": "いそがしい",
+                  "romaji": "isogashii",
+                  "meaning": "occupé"
+                },
+                {
+                  "slug": "kanji-hayai-early",
+                  "kind": "kanji",
+                  "front": "早",
+                  "reading": "はやい",
+                  "romaji": "hayai",
+                  "meaning": "tôt, rapide",
+                  "kanji": {
+                    "onyomi": [
+                      "ソウ"
+                    ],
+                    "kunyomi": [
+                      "はや(い)",
+                      "はや(く)"
+                    ],
+                    "strokes": 6
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "熱が ありますから、今日は 休みます。",
+                  "reading": "ねつが ありますから、きょうは やすみます。",
+                  "fr": "Comme j'ai de la fièvre, je me repose aujourd'hui."
+                },
+                {
+                  "jp": "「どうして 来ませんでしたか。」「忙しかったですから。」",
+                  "reading": "「どうして きませんでしたか。」「いそがしかったですから。」",
+                  "fr": "« Pourquoi n'es-tu pas venu ? » « Parce que j'étais occupé. »"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "On te demande pourquoi tu étais absent. Tu avais de la fièvre :",
+                  "lines": [
+                    {
+                      "speaker": "先生",
+                      "jp": "どうして きのう やすみましたか。"
+                    }
+                  ],
+                  "choices": [
+                    "ねつが ありましたから。",
+                    "ねつが ありますか。",
+                    "どうして ですか。"
+                  ],
+                  "answer": "ねつが ありましたから。",
+                  "explanation": "Réponse à どうして : la raison + から."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "つかれました＿、はやく ねます。",
+                  "choices": [
+                    "から",
+                    "まで",
+                    "より"
+                  ],
+                  "answer": "から",
+                  "explanation": "から introduit la cause.",
+                  "translation": "Comme je suis fatigué, je me couche tôt."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Comme il fait chaud, j'ouvre la fenêtre. »",
+                  "answer": [
+                    "あついですから、",
+                    "まどを",
+                    "あけます。"
+                  ],
+                  "explanation": "Cause + から, puis conséquence."
+                }
+              ]
+            },
+            {
+              "slug": "n4-node",
+              "title": "Raison polie : 〜ので",
+              "objective": "Justifier avec douceur, pour s'excuser ou demander.",
+              "minutes": 9,
+              "explanation": [
+                "〜ので exprime aussi la cause, sur un ton plus doux et plus poli que から : excuses, demandes, situations formelles.",
+                "Forme neutre + ので ; avec un nom ou un adjectif en な : 〜なので. Exemple : びょうきなので、やすみます。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-node",
+                  "kind": "grammar",
+                  "front": "〜ので",
+                  "reading": "〜ので",
+                  "romaji": "~ node",
+                  "meaning": "étant donné que (cause, ton poli)"
+                },
+                {
+                  "slug": "vocab-youji",
+                  "kind": "vocabulary",
+                  "front": "用事",
+                  "reading": "ようじ",
+                  "romaji": "youji",
+                  "meaning": "affaire à régler, course"
+                },
+                {
+                  "slug": "vocab-okuremasu",
+                  "kind": "vocabulary",
+                  "front": "遅れます",
+                  "reading": "おくれます",
+                  "romaji": "okuremasu",
+                  "meaning": "être en retard"
+                },
+                {
+                  "slug": "vocab-byouki",
+                  "kind": "vocabulary",
+                  "front": "病気",
+                  "reading": "びょうき",
+                  "romaji": "byouki",
+                  "meaning": "maladie"
+                },
+                {
+                  "slug": "kanji-osoi",
+                  "kind": "kanji",
+                  "front": "遅",
+                  "reading": "おそい",
+                  "romaji": "osoi",
+                  "meaning": "en retard, lent",
+                  "kanji": {
+                    "onyomi": [
+                      "チ"
+                    ],
+                    "kunyomi": [
+                      "おく(れる)",
+                      "おそ(い)"
+                    ],
+                    "strokes": 12
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "用事が あるので、先に 帰ります。",
+                  "reading": "ようじが あるので、さきに かえります。",
+                  "fr": "Comme j'ai quelque chose à faire, je rentre avant vous."
+                },
+                {
+                  "jp": "電車が 遅れたので、遅刻しました。",
+                  "reading": "でんしゃが おくれたので、ちこくしました。",
+                  "fr": "Comme le train avait du retard, je suis arrivé en retard."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Comme je suis malade, je m'absente. »",
+                  "sentence": "びょうき＿ので、やすみます。",
+                  "choices": [
+                    "な",
+                    "だ",
+                    "の"
+                  ],
+                  "answer": "な",
+                  "explanation": "Nom ou adjectif en な + な + ので."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Tu dois partir plus tôt d'une réunion. Tu t'excuses poliment :",
+                  "lines": [
+                    {
+                      "speaker": "ぶちょう",
+                      "jp": "もう かえりますか。"
+                    }
+                  ],
+                  "choices": [
+                    "すみません、ようじが あるので…。",
+                    "ようじが あるから、かえるよ。",
+                    "かえりたくないです。"
+                  ],
+                  "answer": "すみません、ようじが あるので…。",
+                  "explanation": "ので adoucit l'excuse ; から serait plus direct."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "でんしゃが おくれたので、ちこくしました。",
+                  "translation": "La cause du retard est le train.",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "でんしゃが おくれた (le train était en retard) + ので = la cause."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w6",
+      "title": "Donner et recevoir",
+      "region": "Archipel des voyageurs",
+      "description": "あげる, もらう, くれる : qui donne à qui, et rendre service.",
+      "boss": {
+        "name": "Le Maneki-neko généreux",
+        "glyph": "招",
+        "intro": "Ce chat porte-bonheur adore offrir des cadeaux… à condition que tu saches dire qui donne à qui !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w6-c1",
+          "title": "Cadeaux et services",
+          "lessons": [
+            {
+              "slug": "n4-ageru",
+              "title": "Donner : あげます",
+              "objective": "Dire que l'on donne quelque chose à quelqu'un.",
+              "minutes": 8,
+              "explanation": [
+                "Donneur は Receveur に Objet を あげます = « donner ». Le point de vue part de celui qui donne, vers l'extérieur : わたしは ともだちに はなを あげました。",
+                "On n'emploie pas あげます quand quelqu'un nous donne quelque chose : pour cela, on utilisera くれます."
+              ],
+              "items": [
+                {
+                  "slug": "gram-agemasu",
+                  "kind": "grammar",
+                  "front": "〜に〜を あげます",
+                  "reading": "〜に〜を あげます",
+                  "romaji": "~ ni ~ o agemasu",
+                  "meaning": "donner (à quelqu'un)"
+                },
+                {
+                  "slug": "vocab-agemasu",
+                  "kind": "vocabulary",
+                  "front": "あげます",
+                  "reading": "あげます",
+                  "romaji": "agemasu",
+                  "meaning": "donner"
+                },
+                {
+                  "slug": "vocab-purezento",
+                  "kind": "vocabulary",
+                  "front": "プレゼント",
+                  "reading": "プレゼント",
+                  "romaji": "purezento",
+                  "meaning": "cadeau"
+                },
+                {
+                  "slug": "vocab-tanjoubi",
+                  "kind": "vocabulary",
+                  "front": "誕生日",
+                  "reading": "たんじょうび",
+                  "romaji": "tanjoubi",
+                  "meaning": "anniversaire"
+                },
+                {
+                  "slug": "vocab-omiyage",
+                  "kind": "vocabulary",
+                  "front": "お土産",
+                  "reading": "おみやげ",
+                  "romaji": "omiyage",
+                  "meaning": "souvenir (cadeau rapporté)"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "わたしは 母に 花を あげました。",
+                  "reading": "わたしは ははに はなを あげました。",
+                  "fr": "J'ai offert des fleurs à ma mère."
+                },
+                {
+                  "jp": "友だちの 誕生日に 時計を あげます。",
+                  "reading": "ともだちの たんじょうびに とけいを あげます。",
+                  "fr": "J'offre une montre à mon ami pour son anniversaire."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "わたしは ともだち＿ プレゼントを あげました。",
+                  "choices": [
+                    "に",
+                    "を",
+                    "が"
+                  ],
+                  "answer": "に",
+                  "explanation": "Le receveur est marqué par に.",
+                  "translation": "J'ai offert un cadeau à mon ami."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « J'ai offert des fleurs à ma mère. »",
+                  "answer": [
+                    "わたしは",
+                    "ははに",
+                    "はなを",
+                    "あげました。"
+                  ],
+                  "explanation": "Donneur は + receveur に + objet を + あげました."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "せんせいは わたしに ほんを あげました。",
+                  "translation": "Cette phrase est naturelle pour dire « Le professeur m'a donné un livre ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "Quand on reçoit soi-même, on dit くれました : せんせいは わたしに ほんを くれました."
+                }
+              ]
+            },
+            {
+              "slug": "n4-morau",
+              "title": "Recevoir : もらいます",
+              "objective": "Dire que l'on reçoit quelque chose de quelqu'un.",
+              "minutes": 8,
+              "explanation": [
+                "Receveur は Donneur に (ou から) Objet を もらいます = « recevoir » : わたしは あにに とけいを もらいました。",
+                "Le sujet est celui qui reçoit. に et から sont tous deux possibles pour la personne qui donne."
+              ],
+              "items": [
+                {
+                  "slug": "gram-moraimasu",
+                  "kind": "grammar",
+                  "front": "〜に〜を もらいます",
+                  "reading": "〜に〜を もらいます",
+                  "romaji": "~ ni ~ o moraimasu",
+                  "meaning": "recevoir (de quelqu'un)"
+                },
+                {
+                  "slug": "vocab-moraimasu",
+                  "kind": "vocabulary",
+                  "front": "もらいます",
+                  "reading": "もらいます",
+                  "romaji": "moraimasu",
+                  "meaning": "recevoir"
+                },
+                {
+                  "slug": "vocab-jisho",
+                  "kind": "vocabulary",
+                  "front": "辞書",
+                  "reading": "じしょ",
+                  "romaji": "jisho",
+                  "meaning": "dictionnaire"
+                },
+                {
+                  "slug": "kanji-kariru",
+                  "kind": "kanji",
+                  "front": "借",
+                  "reading": "かりる",
+                  "romaji": "kariru",
+                  "meaning": "emprunter",
+                  "kanji": {
+                    "onyomi": [
+                      "シャク"
+                    ],
+                    "kunyomi": [
+                      "か(りる)"
+                    ],
+                    "strokes": 10
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "姉に 辞書を もらいました。",
+                  "reading": "あねに じしょを もらいました。",
+                  "fr": "J'ai reçu un dictionnaire de ma grande sœur."
+                },
+                {
+                  "jp": "図書館で 本を 借ります。",
+                  "reading": "としょかんで ほんを かります。",
+                  "fr": "J'emprunte un livre à la bibliothèque."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « J'ai reçu une montre de mon père. »",
+                  "sentence": "ちちに とけいを ＿。",
+                  "choices": [
+                    "もらいました",
+                    "あげました",
+                    "かしました"
+                  ],
+                  "answer": "もらいました",
+                  "explanation": "Recevoir : もらいます. Le sujet (わたし) est le receveur."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Ton amie te montre un joli stylo. Tu demandes d'où il vient :",
+                  "lines": [
+                    {
+                      "speaker": "ゆみ",
+                      "jp": "この ペン、かわいいでしょう？"
+                    }
+                  ],
+                  "choices": [
+                    "だれに もらいましたか。",
+                    "だれに あげましたか。",
+                    "だれを かしましたか。"
+                  ],
+                  "answer": "だれに もらいましたか。",
+                  "explanation": "« De qui l'as-tu reçu ? » : だれに もらいましたか."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "かします",
+                  "translation": "かします veut dire « emprunter ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Faux",
+                  "explanation": "かします = prêter ; かります = emprunter."
+                }
+              ]
+            },
+            {
+              "slug": "n4-kureru-te",
+              "title": "On me donne : くれます et 〜てあげる／〜てもらう",
+              "objective": "Parler des cadeaux qu'on reçoit et des services rendus.",
+              "minutes": 10,
+              "explanation": [
+                "Donneur は わたしに Objet を くれます = « quelqu'un me donne ». くれます s'emploie quand le receveur est moi (ou un proche).",
+                "Avec la forme en て, ces verbes expriment un service : 〜てあげます (je fais pour quelqu'un), 〜てもらいます (quelqu'un fait pour moi, à ma demande), 〜てくれます (quelqu'un fait pour moi, gentiment)."
+              ],
+              "items": [
+                {
+                  "slug": "gram-kuremasu",
+                  "kind": "grammar",
+                  "front": "〜は わたしに〜を くれます",
+                  "reading": "〜は わたしに〜を くれます",
+                  "romaji": "~ wa watashi ni ~ o kuremasu",
+                  "meaning": "quelqu'un me donne"
+                },
+                {
+                  "slug": "gram-te-ageru-morau",
+                  "kind": "grammar",
+                  "front": "〜てあげる・〜てもらう・〜てくれる",
+                  "reading": "〜てあげる・〜てもらう・〜てくれる",
+                  "romaji": "~te ageru / morau / kureru",
+                  "meaning": "rendre / recevoir un service"
+                },
+                {
+                  "slug": "vocab-kuremasu",
+                  "kind": "vocabulary",
+                  "front": "くれます",
+                  "reading": "くれます",
+                  "romaji": "kuremasu",
+                  "meaning": "donner (à moi)"
+                },
+                {
+                  "slug": "vocab-tetsudaimasu",
+                  "kind": "vocabulary",
+                  "front": "手伝います",
+                  "reading": "てつだいます",
+                  "romaji": "tetsudaimasu",
+                  "meaning": "aider"
+                },
+                {
+                  "slug": "vocab-shukudai",
+                  "kind": "vocabulary",
+                  "front": "宿題",
+                  "reading": "しゅくだい",
+                  "romaji": "shukudai",
+                  "meaning": "devoirs"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "友だちが わたしに お土産を くれました。",
+                  "reading": "ともだちが わたしに おみやげを くれました。",
+                  "fr": "Mon ami m'a offert un souvenir."
+                },
+                {
+                  "jp": "兄に 宿題を 手伝って もらいました。",
+                  "reading": "あにに しゅくだいを てつだって もらいました。",
+                  "fr": "Mon grand frère m'a aidé pour mes devoirs."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Mon ami m'a offert un cadeau. »",
+                  "sentence": "ともだちが わたしに プレゼントを ＿。",
+                  "choices": [
+                    "くれました",
+                    "あげました",
+                    "もらいました"
+                  ],
+                  "answer": "くれました",
+                  "explanation": "Quelqu'un donne à moi : くれます."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « J'ai aidé ma mère. » (service rendu)",
+                  "sentence": "ははを てつだって ＿。",
+                  "choices": [
+                    "あげました",
+                    "くれました",
+                    "もらいました"
+                  ],
+                  "answer": "あげました",
+                  "explanation": "Je rends un service : 〜てあげます."
+                },
+                {
+                  "type": "dialogue_choice",
+                  "prompt": "Une collègue a porté tes cartons. Tu racontes ce qu'elle a fait pour toi, avec reconnaissance :",
+                  "lines": [
+                    {
+                      "speaker": "友だち",
+                      "jp": "ひっこし、たいへんでしたね。"
+                    }
+                  ],
+                  "choices": [
+                    "たなかさんが てつだって くれました。",
+                    "たなかさんを てつだって あげました。",
+                    "たなかさんに てつだいました。"
+                  ],
+                  "answer": "たなかさんが てつだって くれました。",
+                  "explanation": "Service reçu spontanément : 〜てくれました."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-w7",
+      "title": "Si, quand et pouvoir",
+      "region": "Archipel des voyageurs",
+      "description": "Le conditionnel 〜たら, la forme potentielle et 〜とき.",
+      "boss": {
+        "name": "Le Raijū de l’orage",
+        "glyph": "雷",
+        "intro": "Le Raijū gronde : « Et s’il pleut ? Et si tu ne peux pas ? » Montre-lui que tu sais parler des possibles !"
+      },
+      "chapters": [
+        {
+          "slug": "n4-w7-c1",
+          "title": "Conditions et capacités",
+          "lessons": [
+            {
+              "slug": "n4-tara",
+              "title": "Si… : 〜たら",
+              "objective": "Exprimer une condition ou « une fois que ».",
+              "minutes": 9,
+              "explanation": [
+                "Forme en た + ら = « si… » ou « quand / une fois que… » : あめが ふったら、いきません。 (S'il pleut, je n'irai pas.)",
+                "Avec un nom ou un adjectif en な : 〜だったら ; avec un adjectif en い : 〜かったら (やすかったら)."
+              ],
+              "items": [
+                {
+                  "slug": "gram-tara",
+                  "kind": "grammar",
+                  "front": "〜たら",
+                  "reading": "〜たら",
+                  "romaji": "~tara",
+                  "meaning": "si…, quand…, une fois que…"
+                },
+                {
+                  "slug": "vocab-furimasu",
+                  "kind": "vocabulary",
+                  "front": "降ります",
+                  "reading": "ふります",
+                  "romaji": "furimasu",
+                  "meaning": "tomber (pluie, neige)"
+                },
+                {
+                  "slug": "vocab-hima",
+                  "kind": "vocabulary",
+                  "front": "暇",
+                  "reading": "ひま",
+                  "romaji": "hima",
+                  "meaning": "libre, disponible"
+                },
+                {
+                  "slug": "vocab-tsukimasu",
+                  "kind": "vocabulary",
+                  "front": "着きます",
+                  "reading": "つきます",
+                  "romaji": "tsukimasu",
+                  "meaning": "arriver (à destination)"
+                },
+                {
+                  "slug": "vocab-renraku",
+                  "kind": "vocabulary",
+                  "front": "連絡",
+                  "reading": "れんらく",
+                  "romaji": "renraku",
+                  "meaning": "contact, prévenir"
+                },
+                {
+                  "slug": "kanji-tsuku",
+                  "kind": "kanji",
+                  "front": "着",
+                  "reading": "つく",
+                  "romaji": "tsuku",
+                  "meaning": "arriver, porter (vêtement)",
+                  "kanji": {
+                    "onyomi": [
+                      "チャク"
+                    ],
+                    "kunyomi": [
+                      "き(る)",
+                      "つ(く)"
+                    ],
+                    "strokes": 12
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "雨が 降ったら、うちに います。",
+                  "reading": "あめが ふったら、うちに います。",
+                  "fr": "S'il pleut, je reste à la maison."
+                },
+                {
+                  "jp": "駅に 着いたら、連絡して ください。",
+                  "reading": "えきに ついたら、れんらくして ください。",
+                  "fr": "Quand tu arrives à la gare, préviens-moi."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « S'il pleut, je n'y vais pas. »",
+                  "sentence": "あめが ＿、いきません。",
+                  "choices": [
+                    "ふったら",
+                    "ふるたら",
+                    "ふりたら"
+                  ],
+                  "answer": "ふったら",
+                  "explanation": "Forme en た + ら : ふった → ふったら."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Si tu es libre, viens. »",
+                  "sentence": "ひま＿、きて ください。",
+                  "choices": [
+                    "だったら",
+                    "かったら",
+                    "たら"
+                  ],
+                  "answer": "だったら",
+                  "explanation": "Adjectif en な ou nom : 〜だったら."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Si c'est bon marché, je l'achète. »",
+                  "sentence": "やす＿、かいます。",
+                  "choices": [
+                    "かったら",
+                    "だったら",
+                    "いたら"
+                  ],
+                  "answer": "かったら",
+                  "explanation": "Adjectif en い : い → かったら."
+                }
+              ]
+            },
+            {
+              "slug": "n4-kanou",
+              "title": "Pouvoir : la forme potentielle",
+              "objective": "Dire ce que l'on est capable de faire.",
+              "minutes": 10,
+              "explanation": [
+                "Groupe 2 : る → られる : たべる → たべられる. Groupe 1 : la syllabe en う devient la syllabe en え + る : よむ → よめる, はなす → はなせる, およぐ → およげる.",
+                "Irréguliers : する → できる, くる → こられる. L'objet prend souvent が : かんじが よめます。"
+              ],
+              "items": [
+                {
+                  "slug": "gram-potential",
+                  "kind": "grammar",
+                  "front": "〜られる・〜える",
+                  "reading": "〜られる・〜える",
+                  "romaji": "~rareru / ~eru",
+                  "meaning": "forme potentielle (pouvoir faire)"
+                },
+                {
+                  "slug": "vocab-dekimasu",
+                  "kind": "vocabulary",
+                  "front": "できます",
+                  "reading": "できます",
+                  "romaji": "dekimasu",
+                  "meaning": "pouvoir faire, savoir faire"
+                },
+                {
+                  "slug": "vocab-oyogimasu",
+                  "kind": "vocabulary",
+                  "front": "泳ぎます",
+                  "reading": "およぎます",
+                  "romaji": "oyogimasu",
+                  "meaning": "nager"
+                },
+                {
+                  "slug": "vocab-kanji-word",
+                  "kind": "vocabulary",
+                  "front": "漢字",
+                  "reading": "かんじ",
+                  "romaji": "kanji",
+                  "meaning": "kanji (caractère chinois)"
+                },
+                {
+                  "slug": "vocab-utaimasu",
+                  "kind": "vocabulary",
+                  "front": "歌います",
+                  "reading": "うたいます",
+                  "romaji": "utaimasu",
+                  "meaning": "chanter"
+                },
+                {
+                  "slug": "kanji-oyogu",
+                  "kind": "kanji",
+                  "front": "泳",
+                  "reading": "およぐ",
+                  "romaji": "oyogu",
+                  "meaning": "nager",
+                  "kanji": {
+                    "onyomi": [
+                      "エイ"
+                    ],
+                    "kunyomi": [
+                      "およ(ぐ)"
+                    ],
+                    "strokes": 8
+                  }
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "漢字が 少し 読めます。",
+                  "reading": "かんじが すこし よめます。",
+                  "fr": "Je sais lire un peu les kanji."
+                },
+                {
+                  "jp": "妹は 泳げません。",
+                  "reading": "いもうとは およげません。",
+                  "fr": "Ma petite sœur ne sait pas nager."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme potentielle de よむ.",
+                  "sentence": "かんじが ＿ます。",
+                  "choices": [
+                    "よめ",
+                    "よまれ",
+                    "よみられ"
+                  ],
+                  "answer": "よめ",
+                  "explanation": "Groupe 1 : む → め + る : よめる → よめます."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète avec la forme potentielle de たべる.",
+                  "sentence": "なっとうが ＿ますか。",
+                  "choices": [
+                    "たべられ",
+                    "たべれ",
+                    "たべめ"
+                  ],
+                  "answer": "たべられ",
+                  "explanation": "Groupe 2 : る → られる : たべられます."
+                },
+                {
+                  "type": "particle_choice",
+                  "prompt": "Choisis la particule qui convient.",
+                  "sentence": "わたしは ピアノ＿ できます。",
+                  "choices": [
+                    "が",
+                    "を",
+                    "で"
+                  ],
+                  "answer": "が",
+                  "explanation": "Avec できます et la forme potentielle, l'objet prend が.",
+                  "translation": "Je sais jouer du piano."
+                },
+                {
+                  "type": "true_false",
+                  "prompt": "Vrai ou faux ?",
+                  "sentence": "およげます",
+                  "translation": "およげます veut dire « je sais nager ».",
+                  "choices": [
+                    "Vrai",
+                    "Faux"
+                  ],
+                  "answer": "Vrai",
+                  "explanation": "およぐ → およげる (forme potentielle) → およげます."
+                }
+              ]
+            },
+            {
+              "slug": "n4-toki",
+              "title": "Quand… : 〜とき",
+              "objective": "Situer une action dans le temps.",
+              "minutes": 8,
+              "explanation": [
+                "Forme neutre + とき = « quand, au moment où » : ひまな とき、ほんを よみます。 Avec un nom : 〜の とき (こどもの とき).",
+                "Le temps du verbe devant とき compte : にほんへ いく とき (avant d'y aller) / にほんへ いった とき (une fois sur place)."
+              ],
+              "items": [
+                {
+                  "slug": "gram-toki",
+                  "kind": "grammar",
+                  "front": "〜とき",
+                  "reading": "〜とき",
+                  "romaji": "~ toki",
+                  "meaning": "quand, au moment où"
+                },
+                {
+                  "slug": "vocab-kodomo",
+                  "kind": "vocabulary",
+                  "front": "子ども",
+                  "reading": "こども",
+                  "romaji": "kodomo",
+                  "meaning": "enfant"
+                },
+                {
+                  "slug": "vocab-komarimasu",
+                  "kind": "vocabulary",
+                  "front": "困ります",
+                  "reading": "こまります",
+                  "romaji": "komarimasu",
+                  "meaning": "être embêté, en difficulté"
+                },
+                {
+                  "slug": "vocab-wakai",
+                  "kind": "vocabulary",
+                  "front": "若い",
+                  "reading": "わかい",
+                  "romaji": "wakai",
+                  "meaning": "jeune"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "子どもの とき、よく 泳ぎました。",
+                  "reading": "こどもの とき、よく およぎました。",
+                  "fr": "Quand j'étais enfant, je nageais souvent."
+                },
+                {
+                  "jp": "困った とき、電話して ください。",
+                  "reading": "こまった とき、でんわして ください。",
+                  "fr": "Quand tu as un souci, appelle-moi."
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Quand j'étais enfant… »",
+                  "sentence": "こども＿ とき、…",
+                  "choices": [
+                    "の",
+                    "な",
+                    "だ"
+                  ],
+                  "answer": "の",
+                  "explanation": "Nom + の + とき."
+                },
+                {
+                  "type": "fill_blank",
+                  "prompt": "Complète : « Quand je suis libre, je lis. »",
+                  "sentence": "ひま＿ とき、ほんを よみます。",
+                  "choices": [
+                    "な",
+                    "の",
+                    "だ"
+                  ],
+                  "answer": "な",
+                  "explanation": "Adjectif en な + な + とき."
+                },
+                {
+                  "type": "sentence_order",
+                  "prompt": "Remets dans l'ordre : « Quand tu as un souci, appelle-moi. »",
+                  "answer": [
+                    "こまった",
+                    "とき、",
+                    "でんわして",
+                    "ください。"
+                  ],
+                  "explanation": "Forme neutre + とき, puis la demande."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "n4-final",
+      "title": "Simulation JLPT N4",
+      "region": "Archipel des voyageurs",
+      "description": "Examen blanc non officiel du N4 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
+      "exam": "n4-mock",
+      "chapters": []
+    }
+  ]
+}
