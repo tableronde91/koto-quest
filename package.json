@@ -7,7 +7,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build:packages": "npm run build -w @koto/shared -w @koto/learning-engine",
+    "build:packages": "npm run build -w @koto/learning-engine && npm run build -w @koto/shared",
     "db:migrate": "npm run db:migrate -w @koto/api",
     "db:seed": "npm run db:seed -w @koto/api",
     "dev:api": "npm run dev -w @koto/api",
