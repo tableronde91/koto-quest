@@ -418,8 +418,8 @@ test('hors ligne : parcours N4, choix du niveau et première leçon de la forme 
   // Le choix du niveau est mémorisé
   await page.goto(FILE + '#/path');
   await expect(page.getByRole('tab', { name: /N4/ })).toHaveAttribute('aria-selected', 'true');
-  await expect(page.getByRole('tab', { name: /N4/ })).toContainText('1/21 leçons');
-  await expect(page.getByRole('button', { name: /Île 8 : Simulation JLPT N4, examen blanc/ })).toBeVisible();
+  await expect(page.getByRole('tab', { name: /N4/ })).toContainText('1/39 leçons');
+  await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N4, examen blanc/ })).toBeVisible();
 
   // Examen blanc N4 : présentation propre au niveau, copie rendue vide puis corrigée
   await page.goto(FILE + '#/exam/n4-mock');
@@ -541,7 +541,7 @@ test('hors ligne : atelier JLPT et exercices de leçon au format de l’examen',
 });
 
 test('hors ligne : duel classé contre un adversaire simulé, rang et classement', async ({ page }) => {
-  test.setTimeout(150_000);
+  test.setTimeout(300_000);
   await page.goto(FILE);
   for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
   await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
@@ -557,7 +557,7 @@ test('hors ligne : duel classé contre un adversaire simulé, rang et classement
     return d ? String(d.questions[d.round].answer) : null;
   });
   const end = page.getByRole('heading', { name: /^(Victoire !|Défaite|Égalité)$/ });
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 30; i++) {
     const q = page.getByRole('region', { name: /^Question \d+/ });
     await Promise.race([q.waitFor({ timeout: 20_000 }), end.waitFor({ timeout: 20_000 })]).catch(() => undefined);
     if (await end.isVisible()) break;
@@ -656,4 +656,31 @@ test('hors ligne : expressions utiles par thème, recherche et entraînement', a
   await expect(q.getByText('Bonne réponse !')).toBeVisible();
   await page.getByRole('button', { name: 'Quitter la session' }).click();
   await expect(page.getByText(/1 sur 8 vues|sur 8 vues/)).toBeVisible();
+});
+
+test('hors ligne : lecture du jour, un chapitre par jour, progression enregistrée', async ({ page }) => {
+  await page.goto(FILE);
+  for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+  await page.getByRole('link', { name: 'Lecture' }).first().click();
+  await expect(page.getByRole('heading', { name: 'Lecture', level: 1 })).toBeVisible();
+  await page.getByRole('button', { name: 'Lire le chapitre du jour' }).click();
+  await expect(page.getByTestId('sentence').first()).toContainText('むかしむかし');
+  await page.getByRole('radio', { name: 'À la rivière' }).check();
+  await page.getByRole('radio', { name: 'Une grosse pêche' }).check();
+  await page.getByRole('button', { name: 'Valider mes réponses' }).click();
+  await expect(page.getByText('2/2 bonnes réponses')).toBeVisible();
+  const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('koto-quest-local-v1')!).reading);
+  expect(stored).toHaveLength(1);
+  expect(stored[0]).toMatchObject({ chapter: 'momotaro-1', correct: 2 });
+  await page.getByRole('link', { name: 'Tous les contes' }).first().click();
+  await expect(page.getByText('Jour 1 · lu aujourd’hui')).toBeVisible();
+  // Le lendemain : on simule une lecture datée d'hier pour vérifier le déblocage
+  await page.evaluate(() => {
+    const s = JSON.parse(localStorage.getItem('koto-quest-local-v1')!);
+    s.reading[0].dateKey = '2000-01-01';
+    localStorage.setItem('koto-quest-local-v1', JSON.stringify(s));
+  });
+  await page.reload();
+  await expect(page.getByText(/Jour 2 · à lire aujourd’hui/)).toBeVisible();
 });

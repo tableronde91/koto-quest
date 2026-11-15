@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { createContext, useContext, useEffect, useMemo, useRef } from 'react';
 import { motion } from 'motion/react';
 import type { AvatarConfig, PathWorldDto } from '@koto/shared';
 import { Avatar } from './Avatar';
@@ -76,6 +76,84 @@ function blob(cx: number, cy: number, rx: number, ry: number, seed: number, wobb
 
 // ───────────── Décors ─────────────
 
+// ───────────── Ambiance de chaque niveau ─────────────
+// N5 : printemps lumineux (cerisiers, soleil). N4 : automne au crépuscule, plus sobre (érables, pins, lune, brume).
+interface MapTheme {
+  id: 'spring' | 'autumn';
+  sea: [string, string, string];
+  waves: number;
+  horizon: string;
+  shallow: string;
+  shallowOpacity: number;
+  grass: [string, string];
+  sand: string;
+  blossom: string;
+  blossomDark: string;
+  leaf: string;
+  leafDark: string;
+  cloud: string;
+  cloudOpacity: number;
+  foam: number;
+  path: string;
+  particles: string[];
+  banner: { fill: string; stroke: string; text: string; seal: string };
+  plaque: { fill: string; stroke: string; text: string; accent: string };
+  sail: string;
+  dusk: boolean;
+}
+
+const SPRING: MapTheme = {
+  id: 'spring',
+  sea: ['#1E6F8E', '#1A8C9C', '#127A86'],
+  waves: 0.1,
+  horizon: '#2E5E57',
+  shallow: '#5FD1C9',
+  shallowOpacity: 0.35,
+  grass: ['#6FA85A', '#5B9A4C'],
+  sand: '#EBD9AE',
+  blossom: '#F4A9C0',
+  blossomDark: '#E07A9B',
+  leaf: '#4E8B4A',
+  leafDark: '#356B3A',
+  cloud: '#FFFFFF',
+  cloudOpacity: 0.85,
+  foam: 0.6,
+  path: '#FFF3C4',
+  particles: ['#F4A9C0'],
+  banner: { fill: '#F6EBD3', stroke: '#7A4E2D', text: '#3B2A1C', seal: '#8E1B26' },
+  plaque: { fill: '#F6EBD3', stroke: '#7A4E2D', text: '#3B2A1C', accent: '#C8323F' },
+  sail: '#C8323F',
+  dusk: false,
+};
+
+const AUTUMN: MapTheme = {
+  id: 'autumn',
+  sea: ['#1B2A40', '#22394F', '#1A3044'],
+  waves: 0.06,
+  horizon: '#141F2B',
+  shallow: '#6F928F',
+  shallowOpacity: 0.18,
+  grass: ['#857A47', '#6C663E'],
+  sand: '#CDBB94',
+  blossom: '#C4472B',
+  blossomDark: '#8F2E1E',
+  leaf: '#2F5240',
+  leafDark: '#1F392C',
+  cloud: '#AEB7C2',
+  cloudOpacity: 0.35,
+  foam: 0.3,
+  path: '#E6D3A0',
+  particles: ['#C4472B', '#D9822B', '#9E3424'],
+  banner: { fill: '#1E1B22', stroke: '#B08D3C', text: '#EBDDB5', seal: '#9E3424' },
+  plaque: { fill: '#2B2622', stroke: '#8E7445', text: '#EFE3C8', accent: '#E2A23B' },
+  sail: '#5A4632',
+  dusk: true,
+};
+
+const ThemeCtx = createContext<MapTheme>(SPRING);
+const useMapTheme = () => useContext(ThemeCtx);
+export const mapThemeFor = (level: string) => (/N[1-4]/i.test(level) ? AUTUMN : SPRING);
+
 const SAKURA = '#F4A9C0';
 const SAKURA_DARK = '#E07A9B';
 const LEAF = '#4E8B4A';
@@ -87,16 +165,31 @@ const ROCK = '#7D7468';
 const ROCK_DARK = '#5A5249';
 
 function Tree({ x, y, s = 1, pink = false }: { x: number; y: number; s?: number; pink?: boolean }) {
+  const t = useMapTheme();
+  if (t.id === 'autumn' && !pink) return <Pine x={x} y={y} s={s} />;
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`}>
       <rect x="-1.6" y="-4" width="3.2" height="10" fill={WOOD} />
-      <circle cx="0" cy="-9" r="9" fill={pink ? SAKURA : LEAF} />
-      <circle cx="-5" cy="-6" r="6" fill={pink ? SAKURA_DARK : LEAF_DARK} opacity={0.55} />
+      <circle cx="0" cy="-9" r="9" fill={pink ? t.blossom : t.leaf} />
+      <circle cx="-5" cy="-6" r="6" fill={pink ? t.blossomDark : t.leafDark} opacity={0.55} />
+    </g>
+  );
+}
+
+/** Pin noir japonais (niveaux d'automne). */
+function Pine({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
+  const t = useMapTheme();
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <rect x="-1.4" y="-6" width="2.8" height="12" fill="#4A3424" />
+      <path d="M0 -26 L9 -12 L4 -12 L11 -2 L-11 -2 L-4 -12 L-9 -12Z" fill={t.leaf} />
+      <path d="M0 -26 L-9 -12 L-4 -12 L-11 -2 L-2 -2Z" fill={t.leafDark} opacity={0.6} />
     </g>
   );
 }
 
 function Palm({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
+  if (useMapTheme().id === 'autumn') return <Pine x={x} y={y} s={s * 0.9} />;
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`}>
       <path d="M0 6 Q2 -8 -2 -20" stroke={WOOD} strokeWidth="2.6" fill="none" />
@@ -250,6 +343,7 @@ function LandmarkFor({ kind, calm }: { kind: Landmark; calm: boolean }) {
 // ───────────── Île ─────────────
 
 function Island({ x, y, slot, seed, landmark, state, calm }: { x: number; y: number; slot: number; seed: number; landmark: Landmark; state: WorldState; calm: boolean }) {
+  const t = useMapTheme();
   const rx = 74;
   const ry = 44;
   const pink = slot % 2 === 0;
@@ -257,20 +351,20 @@ function Island({ x, y, slot, seed, landmark, state, calm }: { x: number; y: num
   return (
     <g transform={`translate(${x} ${y})`}>
       {/* Hauts-fonds turquoise, ombre portée, falaise, plage puis végétation */}
-      <path d={blob(0, 10, rx + 26, ry + 22, seed + 1, 0.25)} fill="#5FD1C9" opacity={0.35} />
+      <path d={blob(0, 10, rx + 26, ry + 22, seed + 1, 0.25)} fill={t.shallow} opacity={t.shallowOpacity} />
       <path d={blob(0, 18, rx + 4, ry + 6, seed + 2)} fill={ROCK_DARK} />
       <path d={blob(0, 10, rx, ry, seed + 2)} fill={ROCK} />
-      <path d={blob(0, 2, rx - 4, ry - 6, seed + 3)} fill={SAND} />
-      <path d={blob(4, -2, rx - 16, ry - 14, seed + 4, 0.28)} fill="#6FA85A" />
-      <path d={blob(-8, -6, rx - 34, ry - 24, seed + 5, 0.3)} fill="#5B9A4C" />
+      <path d={blob(0, 2, rx - 4, ry - 6, seed + 3)} fill={t.sand} />
+      <path d={blob(4, -2, rx - 16, ry - 14, seed + 4, 0.28)} fill={t.grass[0]} />
+      <path d={blob(-8, -6, rx - 34, ry - 24, seed + 5, 0.3)} fill={t.grass[1]} />
       {/* Écume */}
-      <path d={blob(0, 14, rx + 6, ry + 8, seed + 2)} fill="none" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="10 14" opacity={0.6} />
+      <path d={blob(0, 14, rx + 6, ry + 8, seed + 2)} fill="none" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="10 14" opacity={t.foam} />
       <Tree x={-52} y={0} pink={pink} />
       <Tree x={48} y={-6} s={0.9} pink={!pink} />
       <Palm x={54} y={14} s={0.8} />
       <Tree x={-38} y={-18} s={0.75} />
       <g transform="translate(0 -6)"><LandmarkFor kind={landmark} calm={calm} /></g>
-      {state === 'soon' && <path d={blob(0, 0, rx + 20, ry + 20, seed + 6, 0.2)} fill="#E8EEF2" opacity={0.75} />}
+      {state === 'soon' && <path d={blob(0, 0, rx + 20, ry + 20, seed + 6, 0.2)} fill={t.dusk ? '#5B6878' : '#E8EEF2'} opacity={0.75} />}
     </g>
   );
 }
@@ -387,6 +481,7 @@ function RuinedIsland({ x, y, seed, landmark, calm }: { x: number; y: number; se
 
 /** Îlot encore inexploré : silhouette dans la brume, sans interaction. */
 function MistyIslet({ x, y, seed }: { x: number; y: number; seed: number }) {
+  const t = useMapTheme();
   return (
     <g transform={`translate(${x} ${y})`} opacity={0.55} aria-hidden="true">
       <path d={blob(0, 14, 66, 36, seed, 0.3)} fill="#5FD1C9" opacity={0.25} />
@@ -394,7 +489,7 @@ function MistyIslet({ x, y, seed }: { x: number; y: number; seed: number }) {
       <path d={blob(0, 2, 44, 22, seed + 2, 0.3)} fill="#7FA184" />
       <Tree x={-14} y={0} s={0.8} />
       <Tree x={12} y={-4} s={0.7} />
-      <path d={blob(0, 0, 80, 46, seed + 3, 0.2)} fill="#E8F1F2" opacity={0.7} filter="url(#km-soft)" />
+      <path d={blob(0, 0, 80, 46, seed + 3, 0.2)} fill={t.dusk ? '#56657A' : '#E8F1F2'} opacity={0.7} filter="url(#km-soft)" />
       <text y="6" textAnchor="middle" fontSize="22" fontWeight="900" fill="#FFFFFF" opacity={0.9}>?</text>
     </g>
   );
@@ -424,21 +519,24 @@ function Bridge({ a, b }: { a: { x: number; y: number }; b: { x: number; y: numb
 }
 
 function Boat({ x, y, s = 1, flip = false, drift, calm }: { x: number; y: number; s?: number; flip?: boolean; drift: number; calm: boolean }) {
+  const t = useMapTheme();
   return (
     <motion.g initial={{ x, y }} animate={calm ? { x, y } : { x: [x, x + drift, x], y: [y, y - 3, y] }} transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}>
       <g transform={`scale(${flip ? -s : s} ${s})`}>
         <path d="M-12 0 L12 0 L8 6 L-8 6Z" fill={WOOD} />
         <path d="M0 0 V-20" stroke="#3B2A1C" strokeWidth="1.5" />
-        <path d="M1 -19 L12 -4 L1 -4Z" fill={VERMILION} />
-        <path d="M-1 -16 L-9 -4 L-1 -4Z" fill="#F5F1E8" />
+        <path d="M1 -19 L12 -4 L1 -4Z" fill={t.sail} />
+        <path d="M-1 -16 L-9 -4 L-1 -4Z" fill={t.dusk ? '#CDBFA3' : '#F5F1E8'} />
+        {t.dusk && <circle cx="-10" cy="-2" r="1.8" fill="#FFC86B" />}
         <path d="M-16 8 Q0 11 16 8" stroke="#FFFFFF" strokeWidth="1.2" fill="none" opacity={0.7} />
       </g>
     </motion.g>
   );
 }
 
-export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; avatar: AvatarConfig; region: string }) {
+export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: PathWorldDto[]; avatar: AvatarConfig; region: string; level?: string }) {
   const calm = useCalm();
+  const t = mapThemeFor(level);
   const pts = useMemo(() => islandPositions(worlds.length), [worlds.length]);
   const states = worldStates(worlds);
   const current = Math.max(0, states.indexOf('current'));
@@ -462,21 +560,30 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
   const petals = useMemo(() => Array.from({ length: 10 }, (_, i) => ({ x: (i * 97) % W, d: 9 + (i % 4) * 2, delay: i * 1.3 })), []);
 
   return (
-    <figure className="mb-10 overflow-hidden rounded-3xl border border-line shadow-sm">
+    <ThemeCtx.Provider value={t}>
+    <figure className="mb-10 overflow-hidden rounded-3xl border border-line shadow-sm" data-theme-map={t.id}>
       <figcaption className="sr-only">{T("Carte de l’archipel {0} : {1} îles{2}.", [ region , worlds.length , worlds.length < SLOTS.length ? T(", d’autres restent à découvrir") : '' ])}</figcaption>
       <div ref={scroller} className="overflow-x-auto">
         <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full min-w-[720px]" role="group" aria-label={T("Carte : {0}", [region])}>
           <defs>
             <linearGradient id="km-sea" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#1E6F8E" />
-              <stop offset="0.55" stopColor="#1A8C9C" />
-              <stop offset="1" stopColor="#127A86" />
+              <stop offset="0" stopColor={t.sea[0]} />
+              <stop offset="0.55" stopColor={t.sea[1]} />
+              <stop offset="1" stopColor={t.sea[2]} />
             </linearGradient>
-            <radialGradient id="km-sun" cx="0.92" cy="0.02" r="0.55">
-              <stop offset="0" stopColor="#FFD58A" stopOpacity="0.85" />
-              <stop offset="0.4" stopColor="#FFB86B" stopOpacity="0.25" />
-              <stop offset="1" stopColor="#FFB86B" stopOpacity="0" />
-            </radialGradient>
+            {t.dusk ? (
+              <radialGradient id="km-sun" cx="0.88" cy="0.1" r="0.5">
+                <stop offset="0" stopColor="#F3E9C8" stopOpacity="0.35" />
+                <stop offset="0.35" stopColor="#B9A6D6" stopOpacity="0.12" />
+                <stop offset="1" stopColor="#B9A6D6" stopOpacity="0" />
+              </radialGradient>
+            ) : (
+              <radialGradient id="km-sun" cx="0.92" cy="0.02" r="0.55">
+                <stop offset="0" stopColor="#FFD58A" stopOpacity="0.85" />
+                <stop offset="0.4" stopColor="#FFB86B" stopOpacity="0.25" />
+                <stop offset="1" stopColor="#FFB86B" stopOpacity="0" />
+              </radialGradient>
+            )}
             <linearGradient id="km-fall" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#FFFFFF" stopOpacity="0" />
               <stop offset="0.5" stopColor="#FFFFFF" stopOpacity="0.8" />
@@ -496,7 +603,7 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
               <stop offset="1" stopColor="#2E2620" stopOpacity="0" />
             </radialGradient>
             <pattern id="km-waves" width="80" height="40" patternUnits="userSpaceOnUse">
-              <path d="M4 20 q6 -4 12 0 M48 34 q9 -5 18 0" stroke="#FFFFFF" strokeWidth="1.2" fill="none" opacity={0.1} strokeLinecap="round" />
+              <path d="M4 20 q6 -4 12 0 M48 34 q9 -5 18 0" stroke="#FFFFFF" strokeWidth="1.2" fill="none" opacity={t.waves} strokeLinecap="round" />
             </pattern>
           </defs>
 
@@ -504,21 +611,30 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
           <rect width={W} height={H} fill="url(#km-sea)" />
           <motion.rect x="-80" width={W + 160} height={H} fill="url(#km-waves)" animate={calm ? undefined : { x: [-80, 0] }} transition={{ duration: 12, repeat: Infinity, ease: 'linear' }} />
           <rect width={W} height={H} fill="url(#km-sun)" />
+          {t.dusk && (
+            <g pointerEvents="none">
+              {/* Lune et son reflet */}
+              <circle cx="880" cy="62" r="34" fill="#F3E9C8" opacity={0.12} filter="url(#km-soft)" />
+              <circle cx="880" cy="62" r="20" fill="#F1E6C4" />
+              <circle cx="888" cy="56" r="17" fill={t.sea[0]} opacity={0.9} />
+              {[0, 1, 2, 3].map((i) => <rect key={i} x={866 - i * 6} y={96 + i * 14} width={28 + i * 12} height="2" rx="1" fill="#F1E6C4" opacity={0.25 - i * 0.05} />)}
+            </g>
+          )}
 
           {/* Îles lointaines à l'horizon */}
           <g opacity={0.55}>
-            <path d={blob(60, 22, 70, 14, 91)} fill="#2E5E57" />
-            <path d={blob(760, 18, 90, 12, 92)} fill="#2E5E57" />
-            <path d={blob(960, 70, 40, 10, 93)} fill="#2E5E57" />
+            <path d={blob(60, 22, 70, 14, 91)} fill={t.horizon} />
+            <path d={blob(760, 18, 90, 12, 92)} fill={t.horizon} />
+            <path d={blob(960, 70, 40, 10, 93)} fill={t.horizon} />
           </g>
 
           {/* Nuages */}
           {[{ x: 120, y: 60, s: 1 }, { x: 660, y: 40, s: 0.8 }, { x: 900, y: 140, s: 0.7 }].map((c, i) => (
-            <motion.g key={i} initial={{ x: c.x, y: c.y }} animate={calm ? undefined : { x: [c.x, c.x + 40, c.x] }} transition={{ duration: 30 + i * 6, repeat: Infinity, ease: 'easeInOut' }} opacity={0.85}>
+            <motion.g key={i} initial={{ x: c.x, y: c.y }} animate={calm ? undefined : { x: [c.x, c.x + 40, c.x] }} transition={{ duration: 30 + i * 6, repeat: Infinity, ease: 'easeInOut' }} opacity={t.cloudOpacity}>
               <g transform={`scale(${c.s})`} filter="url(#km-soft)">
-                <ellipse cx="0" cy="0" rx="60" ry="16" fill="#FFFFFF" />
-                <ellipse cx="-20" cy="-10" rx="30" ry="14" fill="#FFFFFF" />
-                <ellipse cx="22" cy="-8" rx="26" ry="12" fill="#FFFFFF" />
+                <ellipse cx="0" cy="0" rx="60" ry="16" fill={t.cloud} />
+                <ellipse cx="-20" cy="-10" rx="30" ry="14" fill={t.cloud} />
+                <ellipse cx="22" cy="-8" rx="26" ry="12" fill={t.cloud} />
               </g>
             </motion.g>
           ))}
@@ -526,14 +642,19 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
           {/* Bateaux */}
           <Boat x={470} y={530} s={1.2} drift={60} calm={calm} />
           <Boat x={640} y={200} drift={-50} flip calm={calm} />
-          <Boat x={90} y={330} s={0.8} drift={40} calm={calm} />
-          <Boat x={950} y={250} s={0.9} drift={-30} flip calm={calm} />
+          {!t.dusk && <Boat x={90} y={330} s={0.8} drift={40} calm={calm} />}
+          {!t.dusk && <Boat x={950} y={250} s={0.9} drift={-30} flip calm={calm} />}
+          {/* Bancs de brume au ras de l'eau */}
+          {t.dusk &&
+            [{ x: 260, y: 300, w: 260 }, { x: 760, y: 430, w: 220 }, { x: 120, y: 470, w: 180 }].map((m, i) => (
+              <motion.ellipse key={i} cx={m.x} cy={m.y} rx={m.w} ry="18" fill="#D9DEE6" opacity={0.1} filter="url(#km-soft)" animate={calm ? undefined : { cx: [m.x, m.x + 30, m.x] }} transition={{ duration: 26 + i * 5, repeat: Infinity, ease: 'easeInOut' }} pointerEvents="none" />
+            ))}
 
           {/* Chemins : sous les îles */}
           {segments.map((s, i) =>
             s.bridge ? null : (
               <g key={i}>
-                <path d={s.d} fill="none" stroke="#FFF3C4" strokeWidth="6" strokeDasharray="0.1 15" strokeLinecap="round" opacity={s.reached ? 1 : 0.7} filter="url(#km-glow)" />
+                <path d={s.d} fill="none" stroke={t.path} strokeWidth="6" strokeDasharray="0.1 15" strokeLinecap="round" opacity={s.reached ? 1 : 0.7} filter="url(#km-glow)" />
                 {s.reached && !calm && (
                   <motion.path d={s.d} fill="none" stroke="#FFFFFF" strokeWidth="6" strokeDasharray="0.1 16" strokeLinecap="round" animate={{ strokeDashoffset: [0, -32] }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }} opacity={0.7} />
                 )}
@@ -541,21 +662,21 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
             ),
           )}
 
-          {/* Branches de cerisier aux coins (sous les îles) */}
+          {/* Branches de cerisier (ou d'érable) aux coins, sous les îles */}
           <g pointerEvents="none">
             <path d="M0 560 Q60 520 120 540 M40 530 Q70 490 60 470" stroke="#5B3A2A" strokeWidth="6" fill="none" strokeLinecap="round" />
             {[[30, 525], [62, 505], [95, 530], [120, 545], [58, 470], [15, 555], [80, 488]].map(([cx, cy], i) => (
-              <circle key={i} cx={cx} cy={cy} r={i % 2 ? 13 : 16} fill={i % 3 ? SAKURA : SAKURA_DARK} opacity={0.95} />
+              <circle key={i} cx={cx} cy={cy} r={i % 2 ? 13 : 16} fill={i % 3 ? t.blossom : t.blossomDark} opacity={0.95} />
             ))}
             <path d="M1000 590 Q930 560 870 580 M960 575 Q940 540 955 520" stroke="#5B3A2A" strokeWidth="6" fill="none" strokeLinecap="round" />
             {[[985, 575], [940, 560], [905, 578], [872, 585], [955, 522], [925, 540]].map(([cx, cy], i) => (
-              <circle key={i} cx={cx} cy={cy} r={i % 2 ? 13 : 16} fill={i % 3 ? SAKURA : SAKURA_DARK} opacity={0.95} />
+              <circle key={i} cx={cx} cy={cy} r={i % 2 ? 13 : 16} fill={i % 3 ? t.blossom : t.blossomDark} opacity={0.95} />
             ))}
           </g>
           {/* Îles encore à découvrir */}
           {worlds.length < SLOTS.length && SLOTS.slice(worlds.length).map((p, i) => <MistyIslet key={i} x={p.x} y={p.y} seed={200 + i * 11} />)}
           {worlds.length < SLOTS.length && worlds.length > 0 && (
-            <path d={`M${pts[worlds.length - 1].x} ${pts[worlds.length - 1].y} Q${(pts[worlds.length - 1].x + SLOTS[worlds.length].x) / 2 + 30} ${(pts[worlds.length - 1].y + SLOTS[worlds.length].y) / 2} ${SLOTS[worlds.length].x} ${SLOTS[worlds.length].y}`} fill="none" stroke="#FFF3C4" strokeWidth="5" strokeDasharray="0.1 15" strokeLinecap="round" opacity={0.3} />
+            <path d={`M${pts[worlds.length - 1].x} ${pts[worlds.length - 1].y} Q${(pts[worlds.length - 1].x + SLOTS[worlds.length].x) / 2 + 30} ${(pts[worlds.length - 1].y + SLOTS[worlds.length].y) / 2} ${SLOTS[worlds.length].x} ${SLOTS[worlds.length].y}`} fill="none" stroke={t.path} strokeWidth="5" strokeDasharray="0.1 15" strokeLinecap="round" opacity={0.3} />
           )}
 
           {/* Îles */}
@@ -585,7 +706,7 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
                 <ellipse rx="96" ry="66" fill="transparent" />
                 <ellipse className="km-focus" rx="100" ry="70" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="6 6" opacity={0} />
                 {st === 'current' && !calm && (
-                  <motion.ellipse rx="92" ry="60" cy="8" fill="none" stroke="#FFE08A" strokeWidth="3" animate={{ opacity: [0.9, 0.2, 0.9], scale: [1, 1.06, 1] }} transition={{ duration: 2.2, repeat: Infinity }} />
+                  <motion.ellipse rx="92" ry="60" cy="8" fill="none" stroke={t.dusk ? "#E2A23B" : "#FFE08A"} strokeWidth="3" animate={{ opacity: [0.9, 0.2, 0.9], scale: [1, 1.06, 1] }} transition={{ duration: 2.2, repeat: Infinity }} />
                 )}
                 {/* Sceau rouge (gardien ou numéro) */}
                 <g transform="translate(46 -58)">
@@ -602,9 +723,9 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
                 </g>
                 {/* Plaque de bois avec le nom */}
                 <g transform="translate(0 74)">
-                  <rect x={-(title.length * 3.6 + 24)} y="-12" width={title.length * 7.2 + 48} height="24" rx="8" fill="#F6EBD3" stroke={WOOD} strokeWidth="2" />
-                  <text textAnchor="middle" dy="0.35em" fontSize="12.5" fontWeight="700" fill="#3B2A1C">
-                    <tspan fill={VERMILION}>{w.order} · </tspan>
+                  <rect x={-(title.length * 3.6 + 24)} y="-12" width={title.length * 7.2 + 48} height="24" rx="8" fill={t.plaque.fill} stroke={t.plaque.stroke} strokeWidth="2" />
+                  <text textAnchor="middle" dy="0.35em" fontSize="12.5" fontWeight="700" fill={t.plaque.text}>
+                    <tspan fill={t.plaque.accent}>{w.order} · </tspan>
                     {title}
                   </text>
                 </g>
@@ -616,16 +737,23 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
           <g pointerEvents="none">
             {!calm &&
               petals.map((p, i) => (
-                <motion.ellipse key={i} rx="3.5" ry="5.5" fill={SAKURA} opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 40 : -40)], rotate: [0, 200] }} transition={{ duration: p.d, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
+                t.dusk ? (
+                  /* Feuilles d'érable qui tombent lentement */
+                  <motion.g key={i} initial={{ x: p.x, y: -14 }} animate={{ y: [-14, H + 14], x: [p.x, p.x + (i % 2 ? 60 : -60)], rotate: [0, i % 2 ? 260 : -260] }} transition={{ duration: p.d * 1.6, repeat: Infinity, delay: p.delay * 1.5, ease: 'linear' }}>
+                    <path d="M0 -7 L2 -2 L7 -3 L3 1 L5 6 L0 3 L-5 6 L-3 1 L-7 -3 L-2 -2Z" fill={t.particles[i % t.particles.length]} opacity={0.85} />
+                  </motion.g>
+                ) : (
+                  <motion.ellipse key={i} rx="3.5" ry="5.5" fill={SAKURA} opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 40 : -40)], rotate: [0, 200] }} transition={{ duration: p.d, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
+                )
               ))}
           </g>
 
           {/* Bannière de la région */}
           <g transform="translate(24 24)" pointerEvents="none">
-            <rect width={region.length * 10.5 + 60} height="44" rx="10" fill="#F6EBD3" stroke={WOOD} strokeWidth="2.5" />
-            <circle cx="24" cy="22" r="11" fill="#8E1B26" />
-            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">島</text>
-            <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill="#3B2A1C">{region}</text>
+            <rect width={region.length * 10.5 + 60} height="44" rx="10" fill={t.banner.fill} stroke={t.banner.stroke} strokeWidth="2.5" />
+            <circle cx="24" cy="22" r="11" fill={t.banner.seal} />
+            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{t.dusk ? '秋' : '島'}</text>
+            <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill={t.banner.text}>{region}</text>
           </g>
 
           {/* Personnage sur l'île en cours */}
@@ -642,5 +770,6 @@ export function WorldMap({ worlds, avatar, region }: { worlds: PathWorldDto[]; a
         </svg>
       </div>
     </figure>
+    </ThemeCtx.Provider>
   );
 }

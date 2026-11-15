@@ -116,7 +116,7 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 
 ### Duels en ligne
 
-Page **Duels** (`/duel`) : deux joueurs reçoivent la même question au même instant. Une bonne réponse inflige 8 à 26 dégâts selon la vitesse. Sous 2 s, c'est un coup critique (+6), et les bonnes réponses enchaînées ajoutent un combo (jusqu'à +6). 100 PV chacun, 12 questions de 10 s au plus : le K.-O. ou le plus de PV l'emporte.
+Page **Duels** (`/duel`) : deux joueurs reçoivent la même question au même instant. Une bonne réponse inflige 6 à 16 dégâts selon la vitesse. Sous 2 s, c'est un coup critique (+3), et les bonnes réponses enchaînées ajoutent un combo (jusqu'à +4). 250 PV chacun, 30 questions de 10 s au plus : le K.-O. ou le plus de PV l'emporte. Un duel dure de 1 min 30 environ (joueurs rapides) à 5 min au plus.
 
 - **Duel classé** : matchmaking aléatoire (adversaire au classement le plus proche dans la file d'attente).
 - **Défi** : par code de duelliste (`KQ-XXXXXX`) ou recherche par nom. Le défi expire au bout de 2 min et le joueur défié reçoit une alerte partout dans l'application. Ces duels sont amicaux et ne comptent pas pour le classement.
@@ -158,6 +158,21 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Ajouter un texte** : écrire la phrase en français dans `T(…)` puis ajouter sa traduction au dictionnaire. Le test `apps/api/test/i18n.spec.ts` échoue si un texte de cours ou un exercice généré n'est pas traduit, ou si deux sens deviennent identiques en anglais.
 - **Limite** : l'application mobile (Expo) est encore en français uniquement.
 
+## Amis
+
+- Dans **Duels → Mes amis** : ajout par code de duelliste (`KQ-XXXXXX`) ou par nom, demande à accepter (alerte « X veut devenir ton ami » partout dans l'application), demandes croisées acceptées automatiquement.
+- Liste d'amis avec **présence en ligne** (signe de vie toutes les 10 s quand l'application est ouverte, « vu il y a… » sinon), rang, bilan de vos duels communs, bouton **Défier** en un clic, retrait avec confirmation.
+- Après un duel contre un vrai joueur : bouton « Ajouter en ami ».
+- Limites : 200 amis, 30 demandes envoyées en attente. API : `GET /friends`, `GET /friends/requests`, `POST /friends` (`code` ou `userId`), `POST /friends/:id/accept`, `DELETE /friends/:id`.
+- Version hors ligne : non disponible (pas d'autres joueurs).
+
+## Lecture quotidienne
+
+- Menu **Lecture** (`/lecture`) : six contes traditionnels japonais (Momotarō, Kasa Jizō, la grue reconnaissante, Urashima Tarō, Issun-bōshi, Kaguya-hime) réécrits en japonais simple, N5 puis N4, découpés en 28 chapitres de plus en plus longs (6 → 14 phrases).
+- **Un nouveau chapitre par jour** (date locale de l’utilisateur) ; les chapitres déjà lus restent relisibles. Série de jours de lecture, caractères lus, carte « Lecture du jour » sur l’accueil.
+- Liseuse : furigana affichables, traduction FR/EN phrase par phrase (au toucher, tout, aucune), écoute phrase par phrase ou du chapitre entier, vocabulaire du chapitre, questions de compréhension (XP et pièces à la première lecture seulement).
+- Contenu : `content/reading/stories.json` (furigana notés `{漢字|かな}`) ; logique commune serveur / hors ligne dans `packages/shared/src/reading.ts` ; API `GET /reading`, `GET /reading/chapters/:slug`, `POST /reading/chapters/:slug/complete`.
+
 ## Application mobile (Expo, phase 4)
 
 `apps/mobile` : application iOS / Android en React Native (Expo SDK 58, expo-router), qui réutilise `@koto/shared` (contrats d'API) et `@koto/learning-engine`.
@@ -183,13 +198,22 @@ Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLI
 
 Comptes, duels en ligne et classement nécessitent le serveur (API + PostgreSQL) ; la page `KotoQuest.html` n'est que la version hors ligne. Deux guides pas à pas : `docs/DEPLOIEMENT-RENDER.md` (gratuit : Render + base Neon, fichier `render.yaml`) et `docs/DEPLOIEMENT.md` (serveur/VPS avec Docker) : `Dockerfile`, `docker-compose.prod.yml` (PostgreSQL + application + Caddy pour le HTTPS automatique), `.env.prod.example`. En production, l'API sert aussi le site compilé (`WEB_DIST`) sur le même domaine.
 
+## Informations légales (RGPD, cookies)
+
+- Pied de page sur toutes les pages : **Mentions légales**, **Confidentialité**, **Cookies**, **Conditions d’utilisation** (`/mentions-legales`, `/confidentialite`, `/cookies`, `/conditions`), en français et en anglais (`apps/web/src/pages/Legal.tsx`).
+- Les informations de l’éditeur et des hébergeurs sont dans `content/legal/site.json` : un champ vide n’est pas affiché. **À compléter** : forme juridique, capital, siège, SIREN/RCS, TVA, directeur de la publication, e-mail de contact. Mettre à jour `updatedAt` à chaque modification des textes.
+- Pas de bandeau cookies : seul le cookie de session (strictement nécessaire) et des préférences en stockage local sont utilisés, sans mesure d’audience ni publicité (exemption CNIL).
+- Polices auto-hébergées (`@fontsource`) : plus aucune requête vers Google Fonts.
+- Comptes inactifs depuis 3 ans supprimés automatiquement chaque nuit (`RetentionService`), ainsi que les sessions et liens de réinitialisation expirés.
+- Export complet des données (Réglages → Télécharger mes données) et suppression immédiate du compte.
+
 ## Limites connues
 
 - **Audio** : synthèse vocale du navigateur (`ja-JP`). Si aucune voix japonaise n'est installée, l'exercice d'écoute affiche le mot à la place.
 - **Web Push sur iPhone** : nécessite d'installer l'application sur l'écran d'accueil (iOS 16.4 ou plus récent).
 - **Planificateur** : cron en mémoire dans le processus API (une seule instance). Passer à BullMQ + Redis avant de lancer plusieurs instances.
 - **E-mails** : envoyés par SMTP si `SMTP_URL` est renseigné ; sinon, les liens sont écrits dans la console de l'API.
-- **Contenu** : N5 partiel. Pas encore de test de positionnement (l'onboarding fixe le point de départ) ni d'examen blanc.
+- **Contenu** : N5 complet (9 îles, 43 leçons) et N4 (9 îles, 39 leçons, 239 notions) ; N3 à N1 à venir. Le contenu N4 ajouté le 10/11/2026 est généré par `scripts/n4-extension.py` (français + anglais).
 - **Migration initiale** : générée depuis le schéma Prisma dans un environnement sans accès aux moteurs Prisma. Après `npm run setup`, lancez `npm run db:migrate:dev -w @koto/api` une fois : si Prisma détecte un écart avec `schema.prisma`, il proposera une migration corrective.
 
 ## Variables d'environnement

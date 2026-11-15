@@ -3,6 +3,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { KotoThrottlerGuard } from './common/throttler.guard';
+import { RetentionService } from './common/retention.service';
 import { PrismaService } from './common/prisma.service';
 import { ClockService } from './common/clock.service';
 import { AuthController } from './auth/auth.controller';
@@ -39,7 +40,11 @@ import { JlptService } from './jlpt/jlpt.service';
 import { DuelController } from './duel/duel.controller';
 import { ExpressionsController } from './expressions/expressions.controller';
 import { ExpressionsService } from './expressions/expressions.service';
+import { ReadingController } from './reading/reading.controller';
+import { ReadingService } from './reading/reading.service';
 import { DuelService } from './duel/duel.service';
+import { FriendsController } from './duel/friends.controller';
+import { FriendsService } from './duel/friends.service';
 
 @Module({
   imports: [
@@ -47,11 +52,12 @@ import { DuelService } from './duel/duel.service';
     // Protection contre les abus : 300 requêtes/minute par IP par défaut (plus strict sur l'authentification).
     ThrottlerModule.forRoot([{ ttl: 60_000, limit: Number(process.env.API_RATE_LIMIT ?? 300) }]),
   ],
-  controllers: [HealthController, AuthController, MeController, ContentController, LearningController, DashboardController, NotificationsController, CharactersController, BossController, ShopController, GamesController, ExamController, AchievementsController, JlptController, DuelController, ExpressionsController],
+  controllers: [HealthController, AuthController, MeController, ContentController, LearningController, DashboardController, NotificationsController, CharactersController, BossController, ShopController, GamesController, ExamController, AchievementsController, JlptController, DuelController, ExpressionsController, ReadingController, FriendsController],
   providers: [
     PrismaService,
     ClockService,
     MailService,
+    RetentionService,
     AuthService,
     MeService,
     ContentService,
@@ -61,6 +67,8 @@ import { DuelService } from './duel/duel.service';
     JlptService,
     DuelService,
     ExpressionsService,
+    ReadingService,
+    FriendsService,
     DashboardService,
     PushService,
     NotificationsService,

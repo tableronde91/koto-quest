@@ -53,7 +53,11 @@ export class AuthService {
 
   async validateSession(token: string): Promise<AuthUser | null> {
     const session = await this.prisma.session.findUnique({ where: { tokenHash: hashToken(token) }, include: { user: true } });
-    if (!session || session.expiresAt <= this.clock.now()) return null;
+    const now = this.clock.now();
+    if (!session || session.expiresAt <= now) return null;
+    // Dernière visite, enregistrée au plus une fois par jour (durée de conservation des comptes)
+    if (!session.user.lastSeenAt || now.getTime() - session.user.lastSeenAt.getTime() > 86_400_000)
+      await this.prisma.user.update({ where: { id: session.user.id }, data: { lastSeenAt: now } }).catch(() => undefined);
     return { id: session.user.id, email: session.user.email, sessionId: session.id };
   }
 

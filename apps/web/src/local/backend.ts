@@ -94,6 +94,7 @@ import {
   achievementReward,
   longestStreak,
   newlyUnlocked,
+  readingReward,
 } from '@koto/learning-engine';
 import type {
   JlptDrillsDto,
@@ -128,11 +129,16 @@ import type {
   PathDto,
   SessionDto,
   StatsDto,
+  ReadingCatalog,
+  ReadingLogRow,
+  ReadingResultDto,
 } from '@koto/shared';
+import { ReadingError, readingChapter, readingGrade, readingOverview, readingResult } from '@koto/shared';
 import content from '../../../../content/n5/n5.json';
 import contentN4 from '../../../../content/n4/n4.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import expressionsContent from '../../../../content/expressions/expressions.json';
+import readingContent from '../../../../content/reading/stories.json';
 import cosmeticsCatalog from '../../../../content/cosmetics/catalog.json';
 import bankN5 from '../../../../content/exams/n5-jlpt.json';
 
@@ -205,6 +211,8 @@ interface State {
   achievements: Record<string, string>;
   /** Duels contre des adversaires simulés */
   duel?: LocalDuelState;
+  /** Lecture quotidienne : chapitres lus */
+  reading?: ReadingLogRow[];
   questions: Record<string, StoredQuestion>;
   notifications: { id: string; title: string; body: string; questionId: string; status: 'pending' | 'opened' | 'answered' | 'expired'; createdAt: string; expiresAt: string }[];
   daily: Record<string, Daily>;
@@ -1050,6 +1058,34 @@ function gameStart(id: string): GameStartDto {
   return { sessionId, game: info, questions: issued };
 }
 
+// ───────────────────────── Lecture quotidienne ─────────────────────────
+
+const READING = readingContent as unknown as ReadingCatalog;
+function readingCall<T>(fn: () => T): T {
+  try {
+    return fn();
+  } catch (e) {
+    if (e instanceof ReadingError) throw new HttpError(e.status, e.message);
+    throw e;
+  }
+}
+function readingComplete(slug: string, answers: number[], seconds: number): ReadingResultDto {
+  const s = load();
+  const logs = (s.reading ??= []);
+  const today = todayKey();
+  const graded = readingCall(() => readingGrade(READING, logs, today, slug, answers));
+  if (graded.log) {
+    logs.push(graded.log);
+    const reward = readingReward(graded.correct, graded.total);
+    s.coins = (s.coins ?? 0) + reward.coins;
+    addXp(reward.xp);
+    daily().seconds += Math.max(0, Math.min(3600, Math.round(seconds || 0)));
+    s.lastActivityAt = now().toISOString();
+    save();
+  }
+  return readingResult(READING, logs, today, slug, graded.correct, !!graded.log);
+}
+
 function gameFinish(id: string, sessionId: string): GameResultDto {
   const def = gameDef(id);
   const s = load();
@@ -1370,6 +1406,9 @@ export async function handle(method: string, fullPath: string, body: unknown): P
   if (route === 'PUT /me/avatar') return saveAvatar(b.avatar);
   if (route === 'GET /expressions') return expressions();
   if (route === 'POST /expressions/practice') return expressionPractice(String(b.theme));
+  if (route === 'GET /reading') return readingOverview(READING, load().reading ?? [], todayKey());
+  if ((m = route.match(/^GET \/reading\/chapters\/([\w-]+)$/))) return readingCall(() => readingChapter(READING, load().reading ?? [], todayKey(), m![1]));
+  if ((m = route.match(/^POST \/reading\/chapters\/([\w-]+)\/complete$/))) return readingComplete(m[1], Array.isArray(b.answers) ? (b.answers as unknown[]).map(Number) : [], Number(b.seconds ?? 0));
   if (route === 'GET /characters') return characters();
   if (route === 'POST /characters/practice') return characterPractice(String(b.scope));
   if (route === 'GET /reviews/summary') return reviewSummary();

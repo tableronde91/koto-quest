@@ -12,12 +12,15 @@ import { Coins } from '../pages/Character';
 import { AchievementWatcher } from './Achievements';
 import { DuelInviteWatcher } from '../pages/Duel';
 import { T } from '../i18n';
+import { SiteFooter } from '../pages/Legal';
+import { FriendRequestWatcher } from './Friends';
 
 const NAV = [
   { to: '/', label: T("Accueil"), icon: 'M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z' },
   { to: '/path', label: T("Parcours"), icon: "M5 20c3-1 4-4 7-4s4 3 7 2M7 12a2 2 0 100-4 2 2 0 000 4zM17 9a2 2 0 100-4 2 2 0 000 4zM8 10c3 0 5-2 8-3" },
   { to: '/characters', label: T("Caractères"), short: T("Kana"), glyph: 'あ', icon: '' },
   { to: '/expressions', label: T("Expressions"), short: T("Phrases"), glyph: '話', icon: '' },
+  { to: '/lecture', label: T("Lecture"), short: T("Lire"), glyph: '読', icon: '' },
   { to: '/reviews', label: T("Révisions"), icon: 'M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4' },
   { to: '/games', label: T("Jeux"), icon: 'M6 12h4M8 10v4M15 11h.01M18 13h.01M7 6h10a5 5 0 015 5v2a5 5 0 01-5 5c-1.5 0-2.5-1-3.5-2h-3c-1 1-2 2-3.5 2a5 5 0 01-5-5v-2a5 5 0 015-5z' },
   { to: '/duel', label: T("Duels"), glyph: '闘', icon: '' },
@@ -81,10 +84,11 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
 
       <main id="main" className={`mx-auto w-full flex-1 px-4 pt-6 sm:px-8 ${immersive ? 'max-w-3xl pb-10' : 'max-w-5xl pb-28 md:pb-12'}`}>
         {children}
+        {!immersive && <SiteFooter />}
       </main>
 
       {!immersive && (
-        <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-8 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
+        <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-9 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
           {NAV.filter((n) => n.to !== '/settings').map((n) => (
             <NavLink key={n.to} to={n.to} end={n.to === '/'} aria-label={n.label} className={({ isActive }) => `relative flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-bold ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
               <Icon d={n.icon} glyph={(n as { glyph?: string }).glyph} />
@@ -98,6 +102,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
       <ChallengePopup me={me} paused={immersive} />
       <AchievementWatcher />
       <DuelInviteWatcher path={location.pathname} />
+      <FriendRequestWatcher path={location.pathname} />
     </div>
   );
 }

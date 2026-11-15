@@ -1,0 +1,48 @@
+{
+  "//": "Informations affichées dans les mentions légales et la politique de confidentialité. Champ vide = ligne non affichée. Entrepreneur individuel (micro-entreprise) : nom et prénom, mention EI, adresse, SIREN/SIRET, TVA, téléphone et e-mail sont obligatoires (LCEN art. 6 III).",
+  "updatedAt": "2026-11-15",
+  "siteName": "Koto Quest",
+  "siteUrl": "https://koto-quest.ananda-garapati.fr",
+  "editor": {
+    "name": "AG SOFTWARE SOLUTION",
+    "owner": "Ananda GARAPATI",
+    "status": {
+      "fr": "Entrepreneur individuel (EI), micro-entreprise — profession libérale non réglementée",
+      "en": "Sole trader (EI), micro-enterprise — non-regulated liberal profession"
+    },
+    "address": "91000 Évry",
+    "siren": "988 460 895",
+    "siret": "988 460 895 00010",
+    "naf": {
+      "fr": "6209Z — Autres activités informatiques",
+      "en": "6209Z — Other information technology activities"
+    },
+    "register": {
+      "fr": "Registre national des entreprises (RNE), immatriculation le 24/06/2025",
+      "en": "French National Business Register (RNE), registered on 24/06/2025"
+    },
+    "vat": {
+      "fr": "TVA non applicable, article 293 B du Code général des impôts",
+      "en": "VAT not applicable, article 293 B of the French General Tax Code"
+    },
+    "director": "Ananda GARAPATI",
+    "email": "anandagarapati@gmail.com",
+    "phone": ""
+  },
+  "host": {
+    "name": "Render Services, Inc.",
+    "address": "525 Brannan Street, Suite 300, San Francisco, CA 94107, USA",
+    "website": "https://render.com"
+  },
+  "database": {
+    "name": "Neon (Databricks, Inc.)",
+    "region": "Francfort (Allemagne) / Frankfurt (Germany)",
+    "website": "https://neon.com"
+  },
+  "domain": {
+    "name": "IONOS SARL",
+    "address": "7 place de la Gare, BP 70109, 57201 Sarreguemines Cedex, France",
+    "phone": "09 70 80 89 11",
+    "website": "https://www.ionos.fr"
+  }
+}

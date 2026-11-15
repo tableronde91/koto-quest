@@ -8,6 +8,7 @@ import { Medal } from '../components/Achievements';
 import { ErrorBox, ProgressBar, Spinner } from '../components/ui';
 import { formatDuration } from '../lib/format';
 import { T, DATE_LOCALE } from '../i18n';
+import { ReadingTodayCard } from './Reading';
 
 function greeting() {
   const h = new Date().getHours();
@@ -73,6 +74,8 @@ export function DashboardPage() {
           <p className="mt-4 max-w-[55ch] text-sm opacity-85">{T("Tu as un peu de retard : on limite les nouveautés aujourd’hui pour que les révisions restent raisonnables.")}</p>
         )}
       </section>
+
+      <ReadingTodayCard />
 
       {d.suggestPlacement && (
         <section className="flex flex-col gap-3 rounded-3xl border-2 border-dashed border-gold p-5 sm:flex-row sm:items-center">

@@ -108,6 +108,6 @@ Voir `apps/api/prisma/schema.prisma` (source de vérité).
   dashboard, parcours N5 (premiers mondes), 8 types d'exercices, révisions FSRS,
   rappels push + popups, stats, RGPD, PWA, tests unitaires/intégration/E2E.
 - **Phase 2 (livrée)** : avatar, carte animée, inventaire, quêtes, boss, mini‑jeux, succès.
-- **Phase 3 (en cours)** : N5 complet, test de positionnement et examen blanc N5 livrés ; N4 : 7 îles et examen blanc N4 ; N3 → N1 à venir.
+- **Phase 3 (en cours)** : N5 complet, test de positionnement et examen blanc N5 livrés ; N4 : 8 îles et examen blanc N4 (39 leçons : forme en て, permission et obligation, intentions, apparences, ouï-dire, demandes, conditions, politesse, passif et causatif) ; N3 → N1 à venir.
 - **Phase 4 (en cours)** : application Expo livrée (parcours, leçons, révisions, rappels natifs, session par jeton Bearer) ; à venir : combats, mini-jeux, hors ligne.
 - **Phase 5** : assistant IA, prononciation, tracé de kanji, social.

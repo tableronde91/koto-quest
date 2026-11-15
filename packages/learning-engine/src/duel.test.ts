@@ -20,7 +20,7 @@ describe('duel', () => {
   });
 
   it('les bonnes réponses enchaînées ajoutent un combo plafonné', () => {
-    expect(duelDamage(true, 5000, 2).damage - duelDamage(true, 5000, 0).damage).toBe(4);
+    expect(duelDamage(true, 5000, 2).damage - duelDamage(true, 5000, 0).damage).toBe(2 * DUEL_RULES.comboBonus);
     expect(duelDamage(true, 5000, 20).damage - duelDamage(true, 5000, 0).damage).toBe(DUEL_RULES.comboMax);
   });
 
@@ -30,6 +30,14 @@ describe('duel', () => {
     expect(duelOutcome(40, 30, 5)).toBeNull();
     expect(duelOutcome(40, 30, DUEL_RULES.rounds)).toBe('p1');
     expect(duelOutcome(30, 30, DUEL_RULES.rounds)).toBe('draw');
+  });
+
+  it('un duel dure : au moins 10 coups rapides pour un K.-O.', () => {
+    let hp = DUEL_RULES.hp;
+    let hits = 0;
+    for (let streak = 0; hp > 0; streak++, hits++) hp -= duelDamage(true, 1500, streak).damage;
+    expect(hits).toBeGreaterThanOrEqual(10);
+    expect(hits).toBeLessThan(DUEL_RULES.rounds);
   });
 
   it('Elo : battre plus fort que soi rapporte plus', () => {

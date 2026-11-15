@@ -72,7 +72,7 @@ export function PathPage() {
         <span className="flex-1"><span className="block font-bold">{T("Atelier JLPT")}</span><span className="text-sm text-ink-soft">{T("Entraîne-toi épreuve par épreuve au format de l’examen, avec ce que tu as appris.")}</span></span>
         <span aria-hidden="true" className="text-xl">→</span>
       </Link>
-      <WorldMap worlds={data.worlds} avatar={me?.avatar ?? DEFAULT_AVATAR} region={data.level.region} />
+      <WorldMap worlds={data.worlds} avatar={me?.avatar ?? DEFAULT_AVATAR} region={data.level.region} level={data.level.code} />
       <ol className="flex flex-col gap-10">
         {data.worlds.map((w) => (
           <li key={w.slug} aria-labelledby={`w-${w.slug}`} className="scroll-mt-6">

@@ -25,7 +25,7 @@ async function playRound(page: Page) {
 
 test('duel en ligne : défi par code, combat simultané, résultat et classement', async ({ browser, baseURL }, info) => {
   test.skip(info.project.name !== 'desktop', 'un seul passage suffit');
-  test.setTimeout(240_000);
+  test.setTimeout(480_000);
   const a = await player(browser, 'Kenji', baseURL!);
   const b = await player(browser, 'Mio', baseURL!);
 
@@ -37,7 +37,7 @@ test('duel en ligne : défi par code, combat simultané, résultat et classement
 
   // Kenji défie Mio avec son code
   await a.getByLabel('Code ou nom du joueur').fill(code);
-  await a.getByRole('button', { name: 'Défier ce code' }).click();
+  await a.getByRole('list', { name: 'Résultats de recherche' }).getByRole('button', { name: 'Défier' }).click();
   await expect(a.getByRole('heading', { name: /Défi envoyé à Mio/ })).toBeVisible();
 
   // Mio reçoit le défi et l'accepte
@@ -48,7 +48,7 @@ test('duel en ligne : défi par code, combat simultané, résultat et classement
 
   // Les deux répondent jusqu'à la fin du duel
   const end = /^(Victoire !|Défaite|Égalité)$/;
-  for (let i = 0; i < 1200; i++) {
+  for (let i = 0; i < 2400; i++) {
     const doneA = await a.getByRole('heading', { name: end }).isVisible().catch(() => false);
     const doneB = await b.getByRole('heading', { name: end }).isVisible().catch(() => false);
     if (doneA && doneB) break;

@@ -592,7 +592,7 @@ export class DuelService {
   }
 
   /** Recherche d'un duelliste par son code (KQ-XXXXXX) ou son nom. */
-  async search(userId: string, q: string): Promise<DuelPlayerSearchDto> {
+  async search(userId: string, q: string): Promise<{ players: Omit<DuelPlayerSearchDto['players'][number], 'relation' | 'friendshipId'>[] }> {
     const term = q.trim();
     if (term.length < 2) return { players: [] };
     const code = term.toUpperCase().replace(/^(KQ)?-?/, 'KQ-');

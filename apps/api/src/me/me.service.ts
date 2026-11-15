@@ -92,12 +92,21 @@ export class MeService {
         xpEvents: true,
         inventory: true,
         bossResults: true,
+        achievements: true,
+        examAttempts: true,
+        gameResults: true,
+        readingLogs: { select: { chapter: true, dateKey: true, correct: true, total: true, seconds: true, createdAt: true } },
+        duelProfile: true,
+        friendsAsked: { select: { status: true, createdAt: true, acceptedAt: true } },
+        friendsAsking: { select: { status: true, createdAt: true, acceptedAt: true } },
+        duelsAsP1: { select: { id: true, kind: true, status: true, outcome: true, endReason: true, hp1: true, hp2: true, delta1: true, createdAt: true, endedAt: true, botName: true } },
+        duelsAsP2: { select: { id: true, kind: true, status: true, outcome: true, endReason: true, hp1: true, hp2: true, delta2: true, createdAt: true, endedAt: true } },
         pushSubscriptions: { select: { id: true, createdAt: true } },
         sessions: { select: { id: true, createdAt: true, expiresAt: true, userAgent: true } },
       },
     });
     const { passwordHash: _omit, ...safe } = user;
-    return { exportedAt: this.clock.now().toISOString(), format: 'koto-quest-export/1', data: safe };
+    return { exportedAt: this.clock.now().toISOString(), format: 'koto-quest-export/2', data: safe };
   }
 
   /** Suppression définitive du compte et de toutes ses données (cascade). */

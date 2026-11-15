@@ -534,10 +534,53 @@ export interface DuelLeaderboardDto {
   me: { position: number; rating: number; wins: number } | null;
 }
 
+/** Lien entre deux joueurs, du point de vue de l'utilisateur. */
+export type FriendRelation = 'friend' | 'incoming' | 'outgoing' | null;
+
 export interface DuelPlayerSearchDto {
-  players: (DuelPlayerDto & { code: string })[];
+  players: (DuelPlayerDto & { code: string; relation: FriendRelation; friendshipId: string | null })[];
+}
+
+// ───────────── Amis ─────────────
+
+export interface FriendPlayerDto extends DuelPlayerDto {
+  userId: string;
+  code: string;
+}
+
+export interface FriendDto {
+  /** Identifiant de l'amitié */
+  id: string;
+  player: FriendPlayerDto;
+  online: boolean;
+  lastSeenAt: string | null;
+  since: string;
+  /** Duels terminés entre nous deux, de mon point de vue */
+  record: { wins: number; losses: number; draws: number };
+  /** Défi déjà en attente entre nous deux */
+  pendingDuelId: string | null;
+}
+
+export interface FriendRequestDto {
+  id: string;
+  player: FriendPlayerDto;
+  createdAt: string;
+}
+
+export interface FriendsDto {
+  friends: FriendDto[];
+  incoming: FriendRequestDto[];
+  outgoing: FriendRequestDto[];
+  limits: { friends: number };
+}
+
+export interface FriendActionDto {
+  id: string;
+  status: 'pending' | 'accepted';
+  player: FriendPlayerDto;
 }
 export * from './i18n';
+export * from './reading';
 
 // ───────────── Expressions ─────────────
 
@@ -572,4 +615,117 @@ export interface ExpressionThemeDto {
 export interface ExpressionsDto {
   notice: string | null;
   themes: ExpressionThemeDto[];
+}
+
+// ───────────── Lecture ─────────────
+
+/** Texte rédigé dans les deux langues de l'interface. */
+export interface BiText {
+  fr: string;
+  en: string;
+}
+
+export interface ReadingTitle extends BiText {
+  /** Titre japonais, furigana notés {漢字|かな} */
+  jp: string;
+}
+
+export type ReadingChapterState = 'read' | 'available' | 'locked';
+
+export interface ReadingSentenceDto {
+  /** Japonais, furigana notés {漢字|かな} */
+  jp: string;
+  /** Même phrase entièrement en kana (lecture à voix haute) */
+  kana: string;
+  fr: string;
+  en: string;
+}
+
+export interface ReadingWordDto {
+  jp: string;
+  reading: string | null;
+  fr: string;
+  en: string;
+}
+
+export interface ReadingQuestionDto {
+  q: BiText;
+  choices: BiText[];
+}
+
+export interface ReadingChapterRefDto {
+  slug: string;
+  /** Jour du feuilleton (1, 2, 3…) */
+  day: number;
+  title: ReadingTitle;
+  state: ReadingChapterState;
+  sentences: number;
+  chars: number;
+  /** Score à la première lecture */
+  correct: number | null;
+  total: number;
+}
+
+export interface ReadingStoryInfoDto {
+  slug: string;
+  glyph: string;
+  level: string;
+  color: string;
+  title: ReadingTitle;
+  summary: BiText;
+}
+
+export interface ReadingStoryDto extends ReadingStoryInfoDto {
+  chapters: ReadingChapterRefDto[];
+  read: number;
+}
+
+export interface ReadingOverviewDto {
+  notice: BiText;
+  /** Chapitre du jour : à lire, déjà lu aujourd'hui, ou feuilleton terminé */
+  today: { state: 'new' | 'done' | 'finished'; chapter: ReadingChapterRefDto | null; story: ReadingStoryInfoDto | null };
+  /** Prochain chapitre (débloqué demain si celui du jour est lu) */
+  upcoming: (ReadingChapterRefDto & { story: ReadingStoryInfoDto }) | null;
+  streak: number;
+  bestStreak: number;
+  chaptersRead: number;
+  charsRead: number;
+  totalChapters: number;
+  stories: ReadingStoryDto[];
+}
+
+export interface ReadingChapterDto {
+  story: ReadingStoryInfoDto;
+  chapter: {
+    slug: string;
+    day: number;
+    /** Numéro du chapitre dans le conte, et nombre de chapitres du conte */
+    index: number;
+    count: number;
+    title: ReadingTitle;
+    paragraphs: ReadingSentenceDto[][];
+    words: ReadingWordDto[];
+    questions: ReadingQuestionDto[];
+  };
+  state: 'read' | 'available';
+  previous: string | null;
+  next: { slug: string; state: ReadingChapterState } | null;
+  /** Déjà lu : score de la première lecture et bonnes réponses */
+  result: { correct: number; total: number; answers: number[] } | null;
+}
+
+export interface ReadingCompleteInput {
+  answers: number[];
+  seconds?: number;
+}
+
+export interface ReadingResultDto {
+  correct: number;
+  total: number;
+  answers: number[];
+  firstTime: boolean;
+  xpGained: number;
+  coinsGained: number;
+  streak: number;
+  next: { slug: string; title: ReadingTitle; state: ReadingChapterState } | null;
 }

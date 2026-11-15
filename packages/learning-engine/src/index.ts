@@ -14,3 +14,4 @@ export * from './exam';
 export * from './achievements';
 export * from './jlpt';
 export * from './duel';
+export * from './reading';

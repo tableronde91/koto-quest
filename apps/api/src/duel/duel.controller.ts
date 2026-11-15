@@ -4,6 +4,7 @@ import { SkipThrottle } from '@nestjs/throttler';
 import { IsInt, IsOptional, IsString, IsUUID, Matches, Max, MaxLength, Min } from 'class-validator';
 import { AuthUser, CurrentUser } from '../common/decorators';
 import { DuelService } from './duel.service';
+import { FriendsService } from './friends.service';
 
 class DuelAnswerDto {
   @ApiProperty() @IsInt() @Min(0) @Max(50) round: number;
@@ -20,14 +21,16 @@ class ChallengeDto {
 @ApiTags('duels')
 @Controller('duels')
 export class DuelController {
-  constructor(private duels: DuelService) {}
+  constructor(private duels: DuelService, private friends: FriendsService) {}
 
   @Get() lobby(@CurrentUser() u: AuthUser) {
     return this.duels.lobby(u.id);
   }
 
   /** Défis reçus (sondé régulièrement par l'application pour afficher une alerte) */
-  @SkipThrottle() @Get('invites') invites(@CurrentUser() u: AuthUser) {
+  @SkipThrottle() @Get('invites') async invites(@CurrentUser() u: AuthUser) {
+    // Sert aussi de signe de vie : les amis voient qui est en ligne.
+    await this.friends.heartbeat(u.id);
     return this.duels.invites(u.id);
   }
 
@@ -35,8 +38,10 @@ export class DuelController {
     return this.duels.leaderboard(u.id, sort === 'wins' ? 'wins' : 'rating');
   }
 
-  @Get('players') search(@CurrentUser() u: AuthUser, @Query('q') q = '') {
-    return this.duels.search(u.id, String(q).slice(0, 40));
+  @Get('players') async search(@CurrentUser() u: AuthUser, @Query('q') q = '') {
+    const res = await this.duels.search(u.id, String(q).slice(0, 40));
+    const rel = await this.friends.relations(u.id, res.players.map((p) => p.userId!));
+    return { players: res.players.map((p) => ({ ...p, relation: rel.get(p.userId!)?.relation ?? null, friendshipId: rel.get(p.userId!)?.id ?? null })) };
   }
 
   @Post('queue') @HttpCode(200) join(@CurrentUser() u: AuthUser) {

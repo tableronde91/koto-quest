@@ -6,8 +6,10 @@ import { createRng, shuffle, type Rng } from './random';
  * Une bonne réponse inflige des dégâts d'autant plus forts qu'elle est rapide.
  */
 export const DUEL_RULES = {
-  hp: 100,
-  rounds: 12,
+  /** 250 PV : une dizaine de coups rapides, une quinzaine de coups moyens pour un K.-O. */
+  hp: 250,
+  /** Plafond de questions (au-delà, victoire aux PV) */
+  rounds: 30,
   /** Temps pour répondre à une question */
   roundMs: 10_000,
   /** Marge réseau tolérée après la fin du chrono */
@@ -16,14 +18,14 @@ export const DUEL_RULES = {
   revealMs: 2_800,
   /** Compte à rebours avant la première question */
   countdownMs: 3_500,
-  minDamage: 8,
-  maxDamage: 26,
+  minDamage: 6,
+  maxDamage: 16,
   /** Réponse très rapide : coup critique */
   criticalMs: 2_000,
-  criticalBonus: 6,
+  criticalBonus: 3,
   /** Bonus par bonne réponse consécutive (à partir de la 2e), plafonné */
-  comboBonus: 2,
-  comboMax: 6,
+  comboBonus: 1,
+  comboMax: 4,
   /** Un défi non accepté expire */
   inviteTtlMs: 120_000,
   /** Un joueur qui ne donne plus signe de vie perd par abandon */

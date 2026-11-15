@@ -24,6 +24,8 @@ model User {
   /// Apparence du personnage (AvatarConfig, voir learning-engine/cosmetics)
   avatar       Json?
   onboardedAt  DateTime?
+  /// Dernière visite (au jour près) : un compte inactif depuis 3 ans est supprimé
+  lastSeenAt   DateTime?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 
@@ -46,9 +48,12 @@ model User {
   examAttempts      ExamAttempt[]
   bossResults       BossResult[]
   gameResults       GameResult[]
+  readingLogs       ReadingLog[]
   duelProfile       DuelProfile?
   duelsAsP1         Duel[]            @relation("DuelP1")
   duelsAsP2         Duel[]            @relation("DuelP2")
+  friendsAsked      Friendship[]      @relation("FriendRequester")
+  friendsAsking     Friendship[]      @relation("FriendAddressee")
 }
 
 model Session {
@@ -456,6 +461,22 @@ model BossResult {
 }
 
 /// Meilleurs scores des mini-jeux.
+/// Lecture quotidienne : un chapitre de conte lu (première lecture)
+model ReadingLog {
+  userId    String
+  chapter   String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// Jour local de la première lecture (un nouveau chapitre par jour)
+  dateKey   String
+  correct   Int
+  total     Int
+  seconds   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@id([userId, chapter])
+  @@index([userId, dateKey])
+}
+
 model GameResult {
   userId    String
   gameId    String
@@ -555,6 +576,8 @@ model DuelProfile {
   /// Recherche d'adversaire en cours (null = pas dans la file)
   queuedAt    DateTime?
   queueSeenAt DateTime?
+  /// Dernier signe de vie dans l'application (présence « en ligne » pour les amis)
+  seenAt      DateTime?
   updatedAt   DateTime  @updatedAt
 
   @@index([rating])
@@ -563,6 +586,22 @@ model DuelProfile {
 }
 
 /// Duel entre deux joueurs (ou contre un adversaire simulé quand p2Id est nul).
+/// Amis : demande (pending) puis amitié acceptée (accepted). Une seule ligne par paire de joueurs.
+model Friendship {
+  id          String    @id @default(uuid())
+  requesterId String
+  addresseeId String
+  requester   User      @relation("FriendRequester", fields: [requesterId], references: [id], onDelete: Cascade)
+  addressee   User      @relation("FriendAddressee", fields: [addresseeId], references: [id], onDelete: Cascade)
+  /// pending | accepted
+  status      String
+  createdAt   DateTime  @default(now())
+  acceptedAt  DateTime?
+
+  @@unique([requesterId, addresseeId])
+  @@index([addresseeId, status])
+}
+
 model Duel {
   id            String       @id @default(uuid())
   /// ranked (matchmaking) | friendly (défi) | practice (contre l'IA)

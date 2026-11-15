@@ -122,7 +122,7 @@ test.describe('version anglaise', () => {
   test('en ligne : inscription en anglais, langue enregistrée sur le compte, erreurs du serveur traduites', async ({ page }, info) => {
     test.skip(info.project.name !== 'desktop', 'un seul passage suffit');
     await page.goto('/');
-    await expect(page.getByRole('heading', { name: 'A word in the morning, a challenge in the afternoon.' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Learn Japanese and pass your JLPT.' })).toBeVisible();
     // Erreur renvoyée par l'API en français, affichée en anglais
     await page.getByRole('tab', { name: 'Log in' }).click();
     await page.getByLabel('Email address').fill('nobody@test.local');

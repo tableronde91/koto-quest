@@ -63,5 +63,16 @@
  "Banque de questions introuvable.": "Question bank not found.",
  "Fonction indisponible en mode hors ligne ({0}).": "Not available in offline mode ({0}).",
  "Défier un ami nécessite la version en ligne de Koto Quest.": "Challenging a friend requires the online version of Koto Quest.",
- "Thème d’expressions inconnu.": "Unknown expression theme."
+ "Thème d’expressions inconnu.": "Unknown expression theme.",
+ "Ce chapitre se débloque un prochain jour : un nouveau chapitre par jour.": "This chapter unlocks on a later day: one new chapter a day.",
+ "Chapitre introuvable.": "Chapter not found.",
+ "Réponds à toutes les questions.": "Answer every question.",
+ "Tu ne peux pas t’ajouter toi-même.": "You can’t add yourself.",
+ "Vous êtes déjà amis.": "You are already friends.",
+ "Tu as atteint la limite de {0} amis.": "You have reached the limit of {0} friends.",
+ "Ce joueur a atteint sa limite d’amis.": "This player has reached their friend limit.",
+ "Trop de demandes en attente : attends qu’on te réponde.": "Too many pending requests: wait for some replies.",
+ "Seul le joueur invité peut accepter la demande.": "Only the invited player can accept the request.",
+ "Demande introuvable.": "Request not found.",
+ "Ami ou demande introuvable.": "Friend or request not found."
 }

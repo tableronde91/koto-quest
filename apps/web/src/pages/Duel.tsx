@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { AnimatePresence, motion, useAnimationControls } from 'motion/react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { normalizeAvatar } from '@koto/learning-engine';
+import { DUEL_RULES, normalizeAvatar } from '@koto/learning-engine';
 import type { DuelLeaderboardDto, DuelLobbyDto, DuelPlayerSearchDto, DuelQueueDto, DuelSideResultDto, DuelStateDto } from '@koto/shared';
 import { LOCAL, api, del, post } from '../api/client';
 import { ErrorBox, PageTitle, Spinner } from '../components/ui';
@@ -11,6 +11,7 @@ import { BossCreature, type BossMood } from '../components/BossCreature';
 import { Confetti, CountUp, Stamp, useCalm } from '../components/Celebrate';
 import { CrossedSwords, HpPlate, RankBadge } from '../components/DuelBits';
 import { T } from '../i18n';
+import { AddFriendButton, FriendsPanel } from '../components/Friends';
 
 const JP_RE = /[぀-ヿ一-龯]/;
 const KIND_LABEL = { ranked: T("Classé"), friendly: T("Amical"), practice: T("Entraînement") } as const;
@@ -158,11 +159,11 @@ export function DuelLobbyPage() {
       {/* Modes de jeu */}
       <section className="grid gap-4 md:grid-cols-3">
         <ModeCard glyph="闘" color="#C8323F" title={T("Duel classé")} text={T("Un adversaire de ton niveau, au hasard. Gagne des points pour monter de rang.")} action={T("Trouver un adversaire")} onClick={startSearch} primary />
-        <ModeCard glyph="友" color="#3FA7A0" title={T("Défier un ami")} text={T("Envoie un défi avec son code de duelliste. Duel amical, sans effet sur le classement.")} action={T("Voir ci-dessous")} onClick={() => document.getElementById('defi')?.scrollIntoView({ behavior: 'smooth' })} />
+        <ModeCard glyph="友" color="#3FA7A0" title={T("Défier un ami")} text={T("Ajoute tes amis, vois qui est en ligne et défie-les en un clic. Duel amical, sans effet sur le classement.")} action={T("Mes amis")} onClick={() => document.getElementById('amis')?.scrollIntoView({ behavior: 'smooth' })} />
         <ModeCard glyph="浪" color="#7B5BD6" title={T("Entraînement")} text={T("Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.")} action={T("S’entraîner")} onClick={practice} />
       </section>
 
-      <ChallengePanel lobby={data} onChange={() => qc.invalidateQueries({ queryKey: ['duels'] })} />
+      <FriendsPanel lobby={data} onChange={() => qc.invalidateQueries({ queryKey: ['duels'] })} />
 
       {/* Classement et historique */}
       <section className="flex flex-col gap-4">
@@ -239,93 +240,6 @@ function InviteCard({ invite, onDone }: { invite: DuelLobbyDto['invites'][number
   );
 }
 
-function ChallengePanel({ lobby, onChange }: { lobby: DuelLobbyDto; onChange: () => void }) {
-  const nav = useNavigate();
-  const [q, setQ] = useState('');
-  const [copied, setCopied] = useState(false);
-  const [err, setErr] = useState<unknown>(null);
-  const term = q.trim();
-  const { data } = useQuery({ queryKey: ['duel-players', term], queryFn: () => api<DuelPlayerSearchDto>(`/duels/players?q=${encodeURIComponent(term)}`), enabled: lobby.online && term.length >= 2 });
-
-  async function challenge(target: { code?: string; userId?: string }) {
-    setErr(null);
-    try {
-      const r = await post<{ duelId: string }>('/duels/challenges', target);
-      onChange();
-      nav(`/duel/${r.duelId}`);
-    } catch (e) {
-      setErr(e);
-    }
-  }
-  const looksLikeCode = /^(KQ-?)?[A-Z0-9]{6}$/i.test(term);
-
-  return (
-    <section id="defi" className="flex flex-col gap-4 rounded-3xl border border-line bg-surface p-5">
-      <h2 className="text-xl">{T("Défier un ami")}</h2>
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl bg-surface-2 p-3">
-        <span className="text-ink-soft">{T("Ton code de duelliste :")}</span>
-        <code className="font-display text-xl tracking-wider">{lobby.profile.code}</code>
-        <button
-          className="btn btn-quiet min-h-10 px-3 text-sm"
-          onClick={async () => {
-            try {
-              await navigator.clipboard.writeText(lobby.profile.code);
-              setCopied(true);
-              window.setTimeout(() => setCopied(false), 1500);
-            } catch {
-              /* presse-papiers indisponible */
-            }
-          }}
-        >
-          {copied ? T("Copié ✓") : T("Copier")}
-        </button>
-      </div>
-      {lobby.online ? (
-        <>
-          <form
-            className="flex flex-col gap-2 sm:flex-row"
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (looksLikeCode) void challenge({ code: term });
-            }}
-          >
-            <label className="sr-only" htmlFor="duel-search">{T("Code ou nom du joueur")}</label>
-            <input id="duel-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={T("Code (KQ-…) ou nom du joueur")} className="min-h-12 flex-1 rounded-xl border-2 border-line bg-surface px-3" autoComplete="off" />
-            <button type="submit" className="btn btn-primary" disabled={!looksLikeCode}>{T("Défier ce code")}</button>
-          </form>
-          {err != null && <ErrorBox error={err} />}
-          {data && data.players.length > 0 && (
-            <ul className="flex flex-col gap-2">
-              {data.players.map((pl) => (
-                <li key={pl.userId} className="flex items-center gap-3 rounded-2xl border border-line p-2">
-                  <RankBadge rank={pl.rank} size={32} />
-                  <span className="flex-1"><strong>{pl.name}</strong> <span className="text-sm text-ink-soft">· {pl.rank.label} · {pl.code}</span></span>
-                  <button className="btn btn-gold min-h-10 px-3" onClick={() => challenge({ userId: pl.userId! })}>{T("Défier")}</button>
-                </li>
-              ))}
-            </ul>
-          )}
-          {data && term.length >= 2 && data.players.length === 0 && <p className="text-ink-soft">{T("Aucun duelliste trouvé.")}</p>}
-          {lobby.sent.length > 0 && (
-            <div className="flex flex-col gap-2">
-              <h3 className="font-bold">{T("Défis envoyés")}</h3>
-              {lobby.sent.map((s) => (
-                <div key={s.id} className="flex items-center gap-3 rounded-2xl bg-surface-2 p-2">
-                  <span className="flex-1">{T("En attente de")}{' '}<strong>{s.player.name}</strong>…</span>
-                  <Link className="btn btn-quiet min-h-10 px-3" to={`/duel/${s.id}`}>{T("Voir")}</Link>
-                  <button className="btn btn-quiet min-h-10 px-3" onClick={async () => { await post(`/duels/${s.id}/decline`).catch(() => undefined); onChange(); }}>{T("Annuler")}</button>
-                </div>
-              ))}
-            </div>
-          )}
-        </>
-      ) : (
-        <p className="text-ink-soft">{T("Disponible dans la version en ligne : partage ton code, ton ami le saisit, et le duel commence dès qu’il accepte.")}</p>
-      )}
-    </section>
-  );
-}
-
 function Leaderboard() {
   const [sort, setSort] = useState<'rating' | 'wins'>('rating');
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ['duel-board', sort], queryFn: () => api<DuelLeaderboardDto>(`/duels/leaderboard?sort=${sort}`) });
@@ -392,8 +306,8 @@ function Rules({ lobby }: { lobby: DuelLobbyDto }) {
       <summary className="cursor-pointer text-lg font-bold">{T("Comment se déroule un duel ?")}</summary>
       <ul className="mt-3 flex list-disc flex-col gap-1.5 pl-5 text-ink-soft">
         <li>{T("Chacun commence avec {0} PV. {1} questions au maximum, {2} secondes chacune, la même pour les deux.", [ lobby.rules.hp , lobby.rules.rounds , lobby.rules.roundMs / 1000 ])}</li>
-        <li>{T("Une bonne réponse frappe l’adversaire : de 8 à 26 dégâts selon ta vitesse. Sous 2 secondes, c’est un coup critique (+6).")}</li>
-        <li>{T("Les bonnes réponses enchaînées ajoutent un combo (jusqu’à +6). Une erreur ne fait rien… mais casse ton combo.")}</li>
+        <li>{T("Une bonne réponse frappe l’adversaire : de {0} à {1} dégâts selon ta vitesse. Sous {2} secondes, c’est un coup critique (+{3}).", [DUEL_RULES.minDamage, DUEL_RULES.maxDamage, DUEL_RULES.criticalMs / 1000, DUEL_RULES.criticalBonus])}</li>
+        <li>{T("Les bonnes réponses enchaînées ajoutent un combo (jusqu’à +{0}). Une erreur ne fait rien… mais casse ton combo.", [DUEL_RULES.comboMax])}</li>
         <li>{T("Celui qui tombe à 0 PV perd. Sinon, après la dernière question, le plus de PV l’emporte.")}</li>
         <li>{T("Les duels classés font gagner ou perdre des points : battre plus fort que soi rapporte davantage. Rangs : Ashigaru, Samouraï, Kengō, Daimyō, Shōgun, Tenkabito.")}</li>
         <li>{T("Quitter un duel en cours compte comme un abandon.")}</li>
@@ -828,6 +742,7 @@ function ResultView({ s }: { s: DuelStateDto }) {
         <button className="btn btn-gold" onClick={again}>{s.kind === 'ranked' ? T("Nouveau duel classé") : s.kind === 'practice' ? T("Rejouer") : T("Revanche")}</button>
         <Link to="/duel" className="btn btn-quiet">{T("Retour au dojo")}</Link>
       </div>
+      {s.kind !== 'practice' && s.opponent.userId && <AddFriendButton userId={s.opponent.userId} name={s.opponent.name} />}
     </div>
   );
 }

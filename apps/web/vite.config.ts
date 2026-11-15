@@ -16,7 +16,14 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss(), ...(offline ? [viteSingleFile()] : [])],
     base: offline ? './' : '/',
-    resolve: { alias: { '@koto/learning-engine': src('learning-engine'), '@koto/shared': src('shared') } },
+    resolve: {
+      alias: [
+        { find: '@koto/learning-engine', replacement: src('learning-engine') },
+        { find: '@koto/shared', replacement: src('shared') },
+        // Hors ligne : pas de fichiers de police intégrés (le fichier unique resterait très lourd)
+        ...(offline ? [{ find: /^\.\/fonts$/, replacement: fileURLToPath(new URL('./src/fonts.offline.ts', import.meta.url)) }] : []),
+      ],
+    },
     server: {
       port: 5173,
       proxy: offline ? undefined : { '/api': { target: process.env.API_URL ?? 'http://localhost:3000', changeOrigin: false } },

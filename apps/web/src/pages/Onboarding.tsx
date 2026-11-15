@@ -7,6 +7,7 @@ import { qk } from '../api/hooks';
 import { ProgressBar } from '../components/ui';
 import { T, locale } from '../i18n';
 import { LanguageSwitch } from '../components/LanguageSwitch';
+import { SiteFooter } from './Legal';
 
 const LEVELS: { value: SelfLevel; label: string; hint: string }[] = [
   { value: 'beginner', label: T("Je pars de zéro"), hint: T("On commence par les hiragana.") },
@@ -155,6 +156,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
           <button className="btn btn-gold" onClick={finish}>{T("Commencer l’aventure")}</button>
         )}
       </div>
+      <SiteFooter />
     </div>
   );
 }

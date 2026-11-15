@@ -270,5 +270,50 @@ const VIGNETTES: Record<string, React.ReactNode> = {
       <circle cx="56" cy="70" r="3" fill={INK} />
     </g>
   ),
+  // N4 · comparer : balance
+  'n4-w4': (
+    <g>
+      <path d="M40 18 V64 M26 66 H54" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+      <path d="M16 28 L64 22" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+      <path d="M16 28 L8 46 H24 Z" fill={GOLD} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M64 22 L56 40 H72 Z" fill={MATCHA} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+    </g>
+  ),
+  // N4 · opinions et raisons : bulle de pensée
+  'n4-w5': (
+    <g>
+      <ellipse cx="44" cy="34" rx="26" ry="18" fill="var(--surface)" stroke={INK} strokeWidth="3" />
+      <circle cx="22" cy="58" r="5" fill="var(--surface)" stroke={INK} strokeWidth="2.5" />
+      <circle cx="14" cy="68" r="3" fill={INK} />
+      {glyph('思', 44, 42, 20, BENI)}
+    </g>
+  ),
+  // N4 · donner et recevoir : paquet cadeau
+  'n4-w6': (
+    <g>
+      <rect x="16" y="32" width="48" height="34" rx="4" fill={BENI} />
+      <rect x="12" y="24" width="56" height="12" rx="3" fill={BENI} stroke={INK} strokeWidth="2" />
+      <path d="M40 24 V66" stroke={GOLD} strokeWidth="6" />
+      <path d="M40 24 C30 10 22 18 30 24 M40 24 C50 10 58 18 50 24" stroke={GOLD} strokeWidth="4" fill="none" strokeLinecap="round" />
+    </g>
+  ),
+  // N4 · si, quand et pouvoir : chemin qui bifurque
+  'n4-w7': (
+    <g>
+      <path d="M40 70 V44 L22 22 M40 44 L58 22" stroke={INK} strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 26 L22 16 L28 26" fill={MATCHA} />
+      <path d="M52 26 L58 16 L64 26" fill={GOLD} />
+      {glyph('?', 40, 34, 16, BENI)}
+    </g>
+  ),
+  // N4 · politesse et voix : salut respectueux
+  'n4-w8': (
+    <g>
+      <circle cx="40" cy="40" r="26" fill={BENI} />
+      <circle cx="40" cy="40" r="26" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity={0.5} />
+      {glyph('礼', 40, 50, 28, '#FFFFFF')}
+    </g>
+  ),
   default: glyph('道', 40, 52, 30),
 };
+VIGNETTES['n4-final'] = VIGNETTES['n5-final'];

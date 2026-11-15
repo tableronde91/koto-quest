@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, HashRouter, Navigate, Route, Routes, useLocation } from 'react-router';
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MotionConfig, motion } from 'motion/react';
+import './fonts';
 import './index.css';
 import { ApiError, LOCAL } from './api/client';
 import { useMe } from './api/hooks';
@@ -27,6 +28,8 @@ import { AchievementsPage } from './pages/Achievements';
 import { PrepaPage } from './pages/Prepa';
 import { DuelArenaPage, DuelLobbyPage } from './pages/Duel';
 import { ExpressionPracticePage, ExpressionsPage } from './pages/Expressions';
+import { ReadingChapterPage, ReadingPage } from './pages/Reading';
+import { LEGAL_PAGES, LegalPage, LegalStandalone } from './pages/Legal';
 const StatsPage = lazy(() => import('./pages/Stats').then((m) => ({ default: m.StatsPage })));
 
 const onAuthError = (e: unknown) => {
@@ -72,12 +75,16 @@ function App() {
         <Route path="/welcome" element={<WelcomePage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
+        {LEGAL_PAGES.map((p) => <Route key={p.path} path={p.path} element={<LegalStandalone />} />)}
         {/* Après connexion, on revient sur la page demandée (ex. un mini-quiz ouvert depuis une notification) */}
         <Route path="*" element={<Navigate to="/welcome" replace state={{ from: location.pathname + location.search }} />} />
       </Routes>
     );
   }
-  if (!me.onboarded) return <OnboardingPage me={me} />;
+  if (!me.onboarded) {
+    if (LEGAL_PAGES.some((p) => p.path === location.pathname)) return <LegalStandalone back="/" />;
+    return <OnboardingPage me={me} />;
+  }
 
   return (
     <MotionConfig reducedMotion={me.preferences.reducedMotion ? 'always' : 'user'}>
@@ -96,6 +103,8 @@ function App() {
           <Route path="/games/:id" element={<GamePlayPage key={location.pathname} />} />
           <Route path="/characters" element={<CharactersPage />} />
           <Route path="/expressions" element={<ExpressionsPage />} />
+          <Route path="/lecture" element={<ReadingPage />} />
+          <Route path="/lecture/:slug" element={<ReadingChapterPage key={location.pathname} me={me} />} />
           <Route path="/expressions/practice/:theme" element={<ExpressionPracticePage key={location.pathname} me={me} />} />
           <Route path="/characters/practice/:scope" element={<CharacterPracticePage key={location.pathname} me={me} />} />
           <Route path="/reviews" element={<ReviewsPage />} />
@@ -107,6 +116,7 @@ function App() {
           <Route path="/prepa" element={<PrepaPage me={me} />} />
           <Route path="/stats" element={<Suspense fallback={<Spinner />}><StatsPage /></Suspense>} />
           <Route path="/settings" element={<SettingsPage me={me} />} />
+          {LEGAL_PAGES.map((p) => <Route key={p.path} path={p.path} element={<LegalPage />} />)}
           <Route path="/welcome" element={<Navigate to={(location.state as { from?: string } | null)?.from ?? '/'} replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
