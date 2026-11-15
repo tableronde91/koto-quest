@@ -1,6 +1,6 @@
 {
   "//": "Informations affichées dans les mentions légales et la politique de confidentialité. Champ vide = ligne non affichée. Entrepreneur individuel (micro-entreprise) : nom et prénom, mention EI, adresse, SIREN/SIRET, TVA, téléphone et e-mail sont obligatoires (LCEN art. 6 III).",
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-16",
   "siteName": "Koto Quest",
   "siteUrl": "https://koto-quest.ananda-garapati.fr",
   "editor": {
@@ -10,7 +10,7 @@
       "fr": "Entrepreneur individuel (EI), micro-entreprise — profession libérale non réglementée",
       "en": "Sole trader (EI), micro-enterprise — non-regulated liberal profession"
     },
-    "address": "91000 Évry",
+    "address": "1 place de la Résistance, 91000 Évry-Courcouronnes",
     "siren": "988 460 895",
     "siret": "988 460 895 00010",
     "naf": {
@@ -27,7 +27,7 @@
     },
     "director": "Ananda GARAPATI",
     "email": "anandagarapati@gmail.com",
-    "phone": ""
+    "phone": "06 52 04 72 48"
   },
   "host": {
     "name": "Render Services, Inc.",
