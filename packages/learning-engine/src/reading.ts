@@ -1,30 +1,26 @@
 import { addDays } from './time';
 
 /**
- * Lecture quotidienne : les chapitres des contes se lisent dans l'ordre, un nouveau chapitre par jour
- * (date locale de l'utilisateur). Les chapitres déjà lus restent relisibles à volonté.
+ * Lecture : tous les contes et tous leurs chapitres sont ouverts dès le départ, le lecteur lit ce qu'il veut,
+ * quand il veut. On lui propose simplement un chapitre du jour (le premier pas encore lu) pour garder l'habitude.
  */
-export type ReadingState = 'read' | 'available' | 'locked';
+export type ReadingState = 'read' | 'available';
 
 export interface ReadingLogLite {
   chapter: string;
   dateKey: string;
 }
 
-/** État de chaque chapitre, dans l'ordre du feuilleton. */
-export function readingStates(order: readonly string[], logs: readonly ReadingLogLite[], todayKey: string): Map<string, ReadingState> {
+/** État de chaque chapitre, dans l'ordre du catalogue : lu, ou disponible (jamais verrouillé). */
+export function readingStates(order: readonly string[], logs: readonly ReadingLogLite[]): Map<string, ReadingState> {
   const read = new Set(logs.map((l) => l.chapter));
-  const readToday = logs.some((l) => l.dateKey === todayKey);
-  const out = new Map<string, ReadingState>();
-  let nextGiven = false;
-  for (const slug of order) {
-    if (read.has(slug)) out.set(slug, 'read');
-    else if (!nextGiven) {
-      nextGiven = true;
-      out.set(slug, readToday ? 'locked' : 'available');
-    } else out.set(slug, 'locked');
-  }
-  return out;
+  return new Map(order.map((slug) => [slug, read.has(slug) ? 'read' : 'available'] as const));
+}
+
+/** Chapitre conseillé : le premier pas encore lu, dans l'ordre du catalogue (null quand tout est lu). */
+export function readingSuggestion(order: readonly string[], logs: readonly ReadingLogLite[]): string | null {
+  const read = new Set(logs.map((l) => l.chapter));
+  return order.find((slug) => !read.has(slug)) ?? null;
 }
 
 /** Jours de lecture consécutifs (la série tient tant que la lecture d'hier ou d'aujourd'hui est faite). */

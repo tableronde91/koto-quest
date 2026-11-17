@@ -95,9 +95,9 @@ export function PrepaPage({ me }: { me: MeDto }) {
         <span aria-hidden="true" className="jp text-5xl font-black">試</span>
         <div className="flex-1">
           <p className="text-lg font-bold">{T("Prêt·e pour l’épreuve complète ?")}</p>
-          <p className="opacity-80">{T("Examen blanc {0} : toutes les épreuves, chronométré, noté comme le vrai.", [ me.preferences.targetLevel === 'N4' ? 'N4' : 'N5' ])}</p>
+          <p className="opacity-80">{T("Examen blanc {0} : toutes les épreuves, chronométré, noté comme le vrai.", [ me.preferences.targetLevel ])}</p>
         </div>
-        <Link to={me.preferences.targetLevel === 'N4' ? '/exam/n4-mock' : '/exam/n5-jlpt'} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
+        <Link to={me.preferences.targetLevel === 'N5' ? '/exam/n5-jlpt' : me.preferences.targetLevel === 'N4' ? '/exam/n4-mock' : me.preferences.targetLevel === 'N3' ? '/exam/n3-mock' : me.preferences.targetLevel === 'N2' ? '/exam/n2-mock' : '/exam/n1-mock'} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
       </section>
     </div>
   );

@@ -630,7 +630,7 @@ export interface ReadingTitle extends BiText {
   jp: string;
 }
 
-export type ReadingChapterState = 'read' | 'available' | 'locked';
+export type ReadingChapterState = 'read' | 'available';
 
 export interface ReadingSentenceDto {
   /** Japonais, furigana notés {漢字|かな} */
@@ -655,7 +655,7 @@ export interface ReadingQuestionDto {
 
 export interface ReadingChapterRefDto {
   slug: string;
-  /** Jour du feuilleton (1, 2, 3…) */
+  /** Rang du chapitre dans la bibliothèque (1, 2, 3…) */
   day: number;
   title: ReadingTitle;
   state: ReadingChapterState;
@@ -682,9 +682,9 @@ export interface ReadingStoryDto extends ReadingStoryInfoDto {
 
 export interface ReadingOverviewDto {
   notice: BiText;
-  /** Chapitre du jour : à lire, déjà lu aujourd'hui, ou feuilleton terminé */
+  /** Chapitre conseillé : à lire, déjà lu aujourd'hui (la suite est dans `upcoming`), ou tout est lu */
   today: { state: 'new' | 'done' | 'finished'; chapter: ReadingChapterRefDto | null; story: ReadingStoryInfoDto | null };
-  /** Prochain chapitre (débloqué demain si celui du jour est lu) */
+  /** Chapitre suivant à lire (ouvert tout de suite, comme tous les autres) */
   upcoming: (ReadingChapterRefDto & { story: ReadingStoryInfoDto }) | null;
   streak: number;
   bestStreak: number;

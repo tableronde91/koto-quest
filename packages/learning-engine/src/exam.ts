@@ -118,6 +118,20 @@ export const EXAM_N4: ExamDef = {
   sectionMinPercent: 40,
 };
 
+export const EXAM_N3: ExamDef = {
+  slug: 'n3-mock',
+  level: 'N3',
+  title: 'Examen blanc JLPT N3',
+  durationMin: 35,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire et kanji', jpTitle: '文字・語彙', count: 16 },
+    { id: 'grammar', title: 'Grammaire et compréhension', jpTitle: '文法・読解', count: 14 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '聴解', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+};
+
 /** Examen blanc N5 au format officiel : banque rédigée, épreuves et barème du JLPT. */
 export const EXAM_N5_JLPT: ExamDef = {
   slug: 'n5-jlpt',
@@ -135,7 +149,35 @@ export const EXAM_N5_JLPT: ExamDef = {
   scoring: 'jlpt',
 };
 
-export const EXAMS: Record<string, ExamDef> = { [EXAM_N5.slug]: EXAM_N5, [EXAM_N4.slug]: EXAM_N4, [EXAM_N5_JLPT.slug]: EXAM_N5_JLPT };
+export const EXAM_N2: ExamDef = {
+  slug: 'n2-mock',
+  level: 'N2',
+  title: 'Examen blanc JLPT N2',
+  durationMin: 40,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire et kanji', jpTitle: '文字・語彙', count: 18 },
+    { id: 'grammar', title: 'Grammaire et compréhension', jpTitle: '文法・読解', count: 16 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '聴解', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+};
+
+export const EXAM_N1: ExamDef = {
+  slug: 'n1-mock',
+  level: 'N1',
+  title: 'Examen blanc JLPT N1',
+  durationMin: 45,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire et kanji', jpTitle: '文字・語彙', count: 18 },
+    { id: 'grammar', title: 'Grammaire et compréhension', jpTitle: '文法・読解', count: 18 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '聴解', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+};
+
+export const EXAMS: Record<string, ExamDef> = { [EXAM_N1.slug]: EXAM_N1, [EXAM_N5.slug]: EXAM_N5, [EXAM_N4.slug]: EXAM_N4, [EXAM_N3.slug]: EXAM_N3, [EXAM_N2.slug]: EXAM_N2, [EXAM_N5_JLPT.slug]: EXAM_N5_JLPT };
 
 /** Types de questions exclus d'une épreuve sans correction immédiate (association à plusieurs réponses). */
 const EXAM_TYPES_EXCLUDED = new Set(['matching']);
@@ -241,8 +283,26 @@ const TIPS_N4: Record<ExamSectionId, string> = {
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N4 en vitesse lente.',
 };
 
+const TIPS_N1: Record<ExamSectionId, string> = {
+  vocab: 'Vocabulaire et kanji : refais les leçons du N1 et entraîne-toi aux kanji avec Kanji Rush.',
+  grammar: 'Grammaire : reprends le style des proclamations et les extrêmes (îles 1 et 2), les concessions et les jugements (îles 3 et 4), puis les degrés, les occasions et les conditions inévitables (îles 5 à 7) et le style des discours (île 8).',
+  listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N1 en vitesse lente.',
+};
+
+const TIPS_N2: Record<ExamSectionId, string> = {
+  vocab: 'Vocabulaire et kanji : refais les leçons du N2 et entraîne-toi aux kanji avec Kanji Rush.',
+  grammar: 'Grammaire : reprends les points de vue et les sources (île 1), l’instant précis (île 2), les raisons et les oppositions (îles 3 et 4), puis l’étendue, les conditions et les tendances (îles 5 à 7) et les convictions du locuteur (île 8).',
+  listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N2 en vitesse lente.',
+};
+
+const TIPS_N3: Record<ExamSectionId, string> = {
+  vocab: 'Vocabulaire et kanji : refais les leçons du N3 et entraîne-toi aux kanji avec Kanji Rush.',
+  grammar: 'Grammaire : reprends les impressions (〜ようだ, 〜らしい, 〜はずだ) et les décisions (îles 1 et 2), puis les concessions et le moment de l’action (îles 3 et 4), les raisons, les degrés et les points de vue (îles 5 à 7).',
+  listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N3 en vitesse lente.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
-  const tips: Record<ExamSectionId, string> = level === 'N4' ? TIPS_N4 : {
+  const tips: Record<ExamSectionId, string> = level === 'N1' ? TIPS_N1 : level === 'N2' ? TIPS_N2 : level === 'N3' ? TIPS_N3 : level === 'N4' ? TIPS_N4 : {
     vocab: 'Vocabulaire et kanji : entraîne-toi dans l’onglet Caractères et avec Kanji Rush, puis refais les leçons des mondes 5 et 7.',
     grammar: 'Grammaire : reprends les leçons sur les particules (mondes 3, 4 et 6) et les phrases à remettre dans l’ordre.',
     listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons en vitesse lente.',

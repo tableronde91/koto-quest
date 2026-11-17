@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import type { IssuedQuestionDto } from '@koto/shared';
-import { scriptText, speak, speakScript, speechSupported } from '../lib/speech';
+import { scriptText, speak, speakScript, speechSupported, stopSpeech } from '../lib/speech';
 import { Jp } from './ui';
 import { T } from '../i18n';
 
@@ -40,13 +40,18 @@ function AudioPlayer({ script, maxPlays, qid }: { script: string; maxPlays?: num
     const fallback = window.setTimeout(() => setPlaying(false), 2000 + script.length * 160);
     if (!speakScript(script, () => { window.clearTimeout(fallback); setPlaying(false); })) setPlaying(false);
   };
-  // Lecture automatique à l'affichage (compte comme une écoute, une seule fois par question)
+  // Lecture automatique à l'affichage (compte comme une écoute, une seule fois par question).
+  // Petit délai : la lecture de la question précédente s'arrête d'abord, et un montage/démontage
+  // immédiat (mode strict de React) n'annule plus la lecture qu'il vient de lancer.
   useEffect(() => {
-    if (auto.current === qid) return;
-    auto.current = qid;
-    if (speechSupported()) play();
+    const t = window.setTimeout(() => {
+      if (auto.current === qid) return;
+      auto.current = qid;
+      if (speechSupported()) play();
+    }, 150);
     return () => {
-      if (speechSupported()) speechSynthesis.cancel();
+      window.clearTimeout(t);
+      stopSpeech();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qid]);

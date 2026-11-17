@@ -7,7 +7,7 @@ import type { BiText, MeDto, ReadingChapterDto, ReadingChapterRefDto, ReadingOve
 import { api, post } from '../api/client';
 import { ErrorBox, PageTitle, ProgressBar, SoundIcon, Spinner } from '../components/ui';
 import { Confetti, Flame, Stamp, useCalm } from '../components/Celebrate';
-import { speechSupported } from '../lib/speech';
+import { say, speechSupported, stopSpeech } from '../lib/speech';
 import { T, locale } from '../i18n';
 
 /** Texte dans la langue de l'interface (les contes sont rédigés en français et en anglais). */
@@ -56,10 +56,12 @@ export function ReadingPage() {
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
   const { today, upcoming } = data;
+  // Chapitre mis en avant dans la bibliothèque : le prochain à lire (tout reste ouvert).
+  const suggested = today.state === 'new' ? today.chapter?.slug : upcoming?.slug;
 
   return (
     <div className="flex flex-col gap-6">
-      <PageTitle sub={T('Un conte japonais en feuilleton : un nouveau chapitre chaque jour, un peu plus long à chaque fois. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
+      <PageTitle sub={T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
 
       {/* Chapitre du jour */}
       <section aria-label={T('Chapitre du jour')} className="relative overflow-hidden rounded-3xl bg-ink p-5 text-paper sm:p-7">
@@ -69,7 +71,7 @@ export function ReadingPage() {
             <StoryGlyph story={today.story} size="lg" />
             <div className="flex-1">
               <p className="text-sm font-bold uppercase tracking-wide text-gold">
-                {today.state === 'new' ? T('Jour {0} · à lire aujourd’hui', [today.chapter.day]) : T('Jour {0} · lu aujourd’hui', [today.chapter.day])}
+                {today.state === 'new' ? T('Conseillé aujourd’hui') : T('Lu aujourd’hui')}
               </p>
               <h2 className="mt-1 text-2xl sm:text-3xl">
                 <Ruby text={today.chapter.title.jp} furigana className="mr-2" />
@@ -79,14 +81,19 @@ export function ReadingPage() {
               <p className="mt-1 text-sm opacity-75"><ChapterMeta c={today.chapter} /></p>
               {today.state === 'done' && upcoming && (
                 <p className="mt-3 max-w-[52ch]">
-                  {T('Bravo ! La suite, « {0} », se débloque demain.', [bi(upcoming.title)])}
+                  {T('Bravo ! Envie de continuer ? La suite, « {0} », t’attend.', [bi(upcoming.title)])}
                 </p>
               )}
             </div>
-            <button className={`btn min-h-14 px-6 text-lg ${today.state === 'new' ? 'btn-gold' : 'border-2'}`}
-              style={today.state === 'new' ? undefined : { background: 'transparent', color: 'var(--paper)', borderColor: 'currentColor' }} onClick={() => navigate(`/lecture/${today.chapter!.slug}`)}>
-              {today.state === 'new' ? T('Lire le chapitre du jour') : T('Relire')}
-            </button>
+            <div className="flex flex-col gap-2">
+              {today.state === 'done' && upcoming && (
+                <button className="btn btn-gold min-h-14 px-6 text-lg" onClick={() => navigate(`/lecture/${upcoming.slug}`)}>{T('Continuer la lecture')}</button>
+              )}
+              <button className={`btn px-6 ${today.state === 'new' ? 'btn-gold min-h-14 text-lg' : 'min-h-11 border-2'}`}
+                style={today.state === 'new' ? undefined : { background: 'transparent', color: 'var(--paper)', borderColor: 'currentColor' }} onClick={() => navigate(`/lecture/${today.chapter!.slug}`)}>
+                {today.state === 'new' ? T('Lire le chapitre du jour') : T('Relire')}
+              </button>
+            </div>
           </div>
         ) : (
           <div className="relative">
@@ -134,18 +141,14 @@ export function ReadingPage() {
                 const label = T('Chapitre {0} : {1}', [k + 1, bi(c.title)]);
                 const inner = (
                   <>
-                    <span aria-hidden="true" className="font-bold">{c.state === 'read' ? '✓' : c.state === 'locked' ? '🔒' : '●'}</span>
+                    <span aria-hidden="true" className="font-bold">{c.state === 'read' ? '✓' : '●'}</span>
                     <span>{k + 1}. {bi(c.title)}</span>
                   </>
                 );
                 const base = 'flex min-h-10 items-center gap-2 rounded-xl border-2 px-3 text-sm';
                 return (
                   <li key={c.slug}>
-                    {c.state === 'locked' ? (
-                      <span className={`${base} border-dashed border-line text-ink-soft`} aria-label={`${label} (${T('à venir')})`} title={T('Un nouveau chapitre par jour')}>{inner}</span>
-                    ) : (
-                      <Link to={`/lecture/${c.slug}`} aria-label={label} className={`${base} ${c.state === 'available' ? 'border-gold bg-gold/15 font-bold' : 'border-line hover:border-ink-soft'}`}>{inner}</Link>
-                    )}
+                    <Link to={`/lecture/${c.slug}`} aria-label={c.slug === suggested ? `${label} (${T('conseillé')})` : label} aria-current={c.slug === suggested ? 'step' : undefined} className={`${base} ${c.slug === suggested ? 'border-gold bg-gold/15 font-bold' : 'border-line hover:border-ink-soft'}`}>{inner}</Link>
                   </li>
                 );
               })}
@@ -181,9 +184,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
     setAnswers([]);
     setResult(null);
     setShown(new Set());
-    return () => {
-      if (speechSupported()) speechSynthesis.cancel();
-    };
+    return () => stopSpeech();
   }, [slug]);
 
   if (isLoading) return <Spinner />;
@@ -193,22 +194,11 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
 
   /** Lecture à voix haute, phrase par phrase, avec la phrase en cours surlignée. */
   const play = (from: number, single = false) => {
-    if (!speechSupported()) return;
-    speechSynthesis.cancel();
     const list = single ? [sentences[from]] : sentences.slice(from);
-    const voice = speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith('ja'));
-    list.forEach(({ s, id }, k) => {
-      const u = new SpeechSynthesisUtterance(s.kana);
-      u.lang = 'ja-JP';
-      u.rate = 0.85;
-      if (voice) u.voice = voice;
-      u.onstart = () => setPlaying(id);
-      if (k === list.length - 1) u.onend = () => setPlaying(null);
-      speechSynthesis.speak(u);
-    });
+    say(list.map(({ s, id }) => ({ text: s.kana, rate: 0.85, onStart: () => setPlaying(id) })), () => setPlaying(null));
   };
   const stop = () => {
-    if (speechSupported()) speechSynthesis.cancel();
+    stopSpeech();
     setPlaying(null);
   };
 
@@ -241,7 +231,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
     <article className="flex flex-col gap-6" data-testid="reader">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <Link to="/lecture" className="text-ink-soft underline">← {T('Tous les contes')}</Link>
-        <span className="text-sm text-ink-soft">{T('Jour {0} du feuilleton', [chapter.day])}</span>
+        <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-sm font-bold">{story.level}</span>
       </div>
 
       <header className="flex items-center gap-4">
@@ -371,11 +361,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
               </div>
             </div>
             {result.next ? (
-              result.next.state === 'locked' ? (
-                <p>{T('La suite, « {0} », se débloque demain. Reviens lire un peu chaque jour !', [bi(result.next.title)])}</p>
-              ) : (
-                <Link to={`/lecture/${result.next.slug}`} className="btn btn-gold self-start">{T('Chapitre suivant')}</Link>
-              )
+              <Link to={`/lecture/${result.next.slug}`} className="btn btn-gold self-start">{T('Chapitre suivant')}</Link>
             ) : (
               <p>{T('C’était le dernier chapitre. Bravo, tu as lu tous les contes !')}</p>
             )}
@@ -389,7 +375,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
 
       <nav aria-label={T('Chapitres')} className="flex justify-between gap-3">
         {data.previous ? <Link to={`/lecture/${data.previous}`} className="btn btn-quiet">← {T('Chapitre précédent')}</Link> : <span />}
-        {data.next && data.next.state !== 'locked' && <Link to={`/lecture/${data.next.slug}`} className="btn btn-quiet">{T('Chapitre suivant')} →</Link>}
+        {data.next && <Link to={`/lecture/${data.next.slug}`} className="btn btn-quiet">{T('Chapitre suivant')} →</Link>}
       </nav>
     </article>
   );

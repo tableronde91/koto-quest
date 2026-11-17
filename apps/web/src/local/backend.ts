@@ -136,6 +136,9 @@ import type {
 import { ReadingError, readingChapter, readingGrade, readingOverview, readingResult } from '@koto/shared';
 import content from '../../../../content/n5/n5.json';
 import contentN4 from '../../../../content/n4/n4.json';
+import contentN3 from '../../../../content/n3/n3.json';
+import contentN2 from '../../../../content/n2/n2.json';
+import contentN1 from '../../../../content/n1/n1.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import expressionsContent from '../../../../content/expressions/expressions.json';
 import readingContent from '../../../../content/reading/stories.json';
@@ -155,7 +158,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,

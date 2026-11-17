@@ -13,7 +13,7 @@ const en = new Translator(['ui', 'engine', 'api', 'content'].map((f) => json(`co
 const FRENCH = /[àâçéèêëîïôûùœ«»]|\b(le|la|les|des|du|une|est|et|pour|avec|ce|cette|signifie|quel|quelle|que|comment)\b/i;
 const JP_ONLY = /^[\s　-ヿ一-鿿＀-￯0-9０-９.,!?()「」『』…〜・ー/★＿:：;]+$/;
 
-const levels = ['content/n5/n5.json', 'content/n4/n4.json'].map(json);
+const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json'].map(json);
 const items: EngineItem[] = [];
 const authored: AuthoredExercise[] = [];
 for (const lvl of levels)
@@ -37,7 +37,7 @@ describe('Traduction anglaise', () => {
       else if (o && typeof o === 'object') for (const [kk, v] of Object.entries(o)) !SKIP.has(kk) && walk(v, kk);
       else if (typeof o === 'string' && untranslated(o)) missing.add(o);
     };
-    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/exams/n5-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json']) walk(json(f));
+    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/exams/n5-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json']) walk(json(f));
     expect([...missing]).toEqual([]);
   });
 

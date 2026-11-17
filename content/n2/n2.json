@@ -1,0 +1,3998 @@
+{
+ "contentVersion": "2026.11.16b",
+ "level": {
+  "code": "N2",
+  "title": "Intermédiaire avancé : nuances et japonais soigné",
+  "region": "Capitale d’été",
+  "order": 2
+ },
+ "notice": "Les listes de vocabulaire et de kanji de Koto Quest sont alignées sur les compétences attendues au N2 mais ne constituent pas des listes officielles du JLPT.",
+ "worlds": [
+  {
+   "slug": "n2-w1",
+   "title": "Points de vue et sources",
+   "region": "Capitale d’été",
+   "description": "Juger depuis un point de vue, transmettre une information et dire sur quoi l’on se fonde.",
+   "boss": {
+    "name": "La Nue aux Quatre Visages",
+    "glyph": "鵺",
+    "intro": "Tête de singe, corps de tanuki, pattes de tigre, queue de serpent : la Nue change selon l’endroit d’où on la regarde. D’après qui, et vu d’où ?"
+   },
+   "chapters": [
+    {
+     "slug": "n2-w1-c1",
+     "title": "Juger et rapporter",
+     "lessons": [
+      {
+       "slug": "n2-kara-suru-to",
+       "title": "Du point de vue de… : 〜からすると・〜から見ると",
+       "objective": "Juger une situation depuis un point de vue ou à partir d’un indice.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + からすると / からすれば = du point de vue de, à en juger par : 親からすると、子どもは いつまでも 子どもだ.",
+        "Nom + から見ると / から見て / から見れば a le même sens : 私から見ると. Attention, 〜から言うと ne suit pas directement une personne : 親の 立場から言うと.",
+        "Avec un indice, on en tire une déduction : あの 話し方からすると、彼は 関西の 人だろう."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-kara-suru-to",
+         "kind": "grammar",
+         "front": "〜からすると",
+         "reading": "〜からすると",
+         "romaji": "~kara suru to",
+         "meaning": "du point de vue de… ; à en juger par…"
+        },
+        {
+         "slug": "gram-n2-kara-miru-to",
+         "kind": "grammar",
+         "front": "〜から見ると",
+         "reading": "〜からみると",
+         "romaji": "~kara miru to",
+         "meaning": "vu depuis…, aux yeux de…"
+        },
+        {
+         "slug": "vocab-tachiba",
+         "kind": "vocabulary",
+         "front": "立場",
+         "reading": "たちば",
+         "romaji": "tachiba",
+         "meaning": "position, point de vue (de quelqu’un)"
+        },
+        {
+         "slug": "vocab-senmonka",
+         "kind": "vocabulary",
+         "front": "専門家",
+         "reading": "せんもんか",
+         "romaji": "senmonka",
+         "meaning": "spécialiste, expert"
+        },
+        {
+         "slug": "vocab-shouhisha",
+         "kind": "vocabulary",
+         "front": "消費者",
+         "reading": "しょうひしゃ",
+         "romaji": "shouhisha",
+         "meaning": "consommateur"
+        },
+        {
+         "slug": "vocab-hyouka",
+         "kind": "vocabulary",
+         "front": "評価",
+         "reading": "ひょうか",
+         "romaji": "hyouka",
+         "meaning": "évaluation, appréciation"
+        },
+        {
+         "slug": "kanji-n2-han",
+         "kind": "kanji",
+         "front": "判",
+         "reading": "はん",
+         "romaji": "han",
+         "meaning": "juger, sceau",
+         "kanji": {
+          "onyomi": [
+           "ハン",
+           "バン"
+          ],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "kanji-n2-hyou",
+         "kind": "kanji",
+         "front": "評",
+         "reading": "ひょう",
+         "romaji": "hyou",
+         "meaning": "critique, jugement porté",
+         "kanji": {
+          "onyomi": [
+           "ヒョウ"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "親からすると、子どもは いくつに なっても 心配な ものです。",
+         "reading": "おやからすると、こどもは いくつに なっても しんぱいな ものです。",
+         "fr": "Du point de vue des parents, on s’inquiète pour ses enfants quel que soit leur âge."
+        },
+        {
+         "jp": "専門家から見ると、この 計画には 問題が 多いそうです。",
+         "reading": "せんもんかから みると、この けいかくには もんだいが おおいそうです。",
+         "fr": "Aux yeux des spécialistes, ce projet poserait beaucoup de problèmes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "あの 話し方＿、彼は 関西の 人だろう。",
+         "choices": [
+          "からすると",
+          "からには",
+          "からこそ"
+         ],
+         "answer": "からすると",
+         "explanation": "Indice + からすると = à en juger par.",
+         "translation": "À en juger par sa façon de parler, il doit être du Kansai."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "消費者の 立場＿ 言うと、値段は 安い ほうが いい。",
+         "choices": [
+          "から",
+          "まで",
+          "ので"
+         ],
+         "answer": "から",
+         "explanation": "〜の 立場から言うと = du point de vue de.",
+         "translation": "Du point de vue du consommateur, mieux vaut un prix bas."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Vu par un étranger, cette coutume est étonnante. »",
+         "answer": [
+          "外国人",
+          "から見ると",
+          "この 習慣は",
+          "不思議です"
+         ],
+         "explanation": "Nom + から見ると, puis le jugement."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "私から見ると、彼の 評価は 低すぎると 思います。",
+         "translation": "La personne trouve que cette évaluation est juste.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "低すぎる = trop basse : à ses yeux, l’évaluation est injuste."
+        }
+       ]
+      },
+      {
+       "slug": "n2-to-no-koto",
+       "title": "On me dit que… : 〜とのことだ・〜ということだ",
+       "objective": "Transmettre une information ou un message reçu, dans un registre soigné.",
+       "minutes": 10,
+       "explanation": [
+        "Phrase à la forme neutre + とのことだ = on m’a dit que, il est indiqué que. Sert à transmettre un message : 部長は 少し 遅れるとの ことです.",
+        "〜ということだ rapporte une information entendue ou lue, souvent avec 〜によると (d’après) : ニュースによると、台風が 来るという ことだ.",
+        "〜ということだ peut aussi tirer une conclusion : つまり、中止という ことですね (autrement dit, c’est annulé)."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-to-no-koto",
+         "kind": "grammar",
+         "front": "〜とのことだ",
+         "reading": "〜とのことだ",
+         "romaji": "~to no koto da",
+         "meaning": "on me dit que…, il est indiqué que…"
+        },
+        {
+         "slug": "gram-n2-to-iu-koto",
+         "kind": "grammar",
+         "front": "〜ということだ",
+         "reading": "〜ということだ",
+         "romaji": "~to iu koto da",
+         "meaning": "à ce qu’on dit… ; cela veut dire que…"
+        },
+        {
+         "slug": "vocab-houkoku",
+         "kind": "vocabulary",
+         "front": "報告",
+         "reading": "ほうこく",
+         "romaji": "houkoku",
+         "meaning": "rapport, compte rendu"
+        },
+        {
+         "slug": "vocab-higai",
+         "kind": "vocabulary",
+         "front": "被害",
+         "reading": "ひがい",
+         "romaji": "higai",
+         "meaning": "dégâts, dommages"
+        },
+        {
+         "slug": "vocab-happyou",
+         "kind": "vocabulary",
+         "front": "発表",
+         "reading": "はっぴょう",
+         "romaji": "happyou",
+         "meaning": "annonce, présentation"
+        },
+        {
+         "slug": "vocab-enki",
+         "kind": "vocabulary",
+         "front": "延期",
+         "reading": "えんき",
+         "romaji": "enki",
+         "meaning": "report (à plus tard)"
+        },
+        {
+         "slug": "kanji-n2-hou",
+         "kind": "kanji",
+         "front": "報",
+         "reading": "ほう",
+         "romaji": "hou",
+         "meaning": "informer, nouvelle",
+         "kanji": {
+          "onyomi": [
+           "ホウ"
+          ],
+          "kunyomi": [
+           "むく(いる)"
+          ],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n2-koku",
+         "kind": "kanji",
+         "front": "告",
+         "reading": "こく",
+         "romaji": "koku",
+         "meaning": "annoncer, déclarer",
+         "kanji": {
+          "onyomi": [
+           "コク"
+          ],
+          "kunyomi": [
+           "つ(げる)"
+          ],
+          "strokes": 7
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "山本さんから 電話が ありました。少し 遅れるとの ことです。",
+         "reading": "やまもとさんから でんわが ありました。すこし おくれるとの ことです。",
+         "fr": "M. Yamamoto a téléphoné. Il aura un peu de retard, m’a-t-il dit."
+        },
+        {
+         "jp": "発表によると、試合は 来週に 延期されたという ことです。",
+         "reading": "はっぴょうによると、しあいは らいしゅうに えんきされたという ことです。",
+         "fr": "D’après l’annonce, le match a été reporté à la semaine prochaine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "ニュース＿、台風の 被害は 大きいという ことだ。",
+         "choices": [
+          "によると",
+          "について",
+          "にとって"
+         ],
+         "answer": "によると",
+         "explanation": "Source de l’information : 〜によると.",
+         "translation": "D’après les informations, les dégâts du typhon seraient importants."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "先生は 今日 お休みだ＿ ことです。",
+         "choices": [
+          "との",
+          "ような",
+          "ための"
+         ],
+         "answer": "との",
+         "explanation": "Message transmis : forme neutre + とのことです.",
+         "translation": "On me dit que le professeur est absent aujourd’hui."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton chef demande si le client a appelé. Tu transmets le message.",
+         "lines": [
+          {
+           "speaker": "部長",
+           "jp": "田中さんから 連絡は ありましたか。"
+          }
+         ],
+         "translation": "Le chef demande si M. Tanaka a donné des nouvelles.",
+         "choices": [
+          "はい。報告は 明日 届くとの ことです。",
+          "はい。報告は 明日 届く ことに します。",
+          "はい。報告は 明日 届く つもりです。"
+         ],
+         "answer": "はい。報告は 明日 届くとの ことです。",
+         "explanation": "〜とのことです transmet ce que l’autre a dit."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "つまり、会議は 中止という ことですね。",
+         "translation": "La personne vérifie qu’elle a bien compris : la réunion est annulée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "つまり〜ということですね = autrement dit…, c’est bien ça ?"
+        }
+       ]
+      },
+      {
+       "slug": "n2-ni-motozuite",
+       "title": "Sur la base de… : 〜に基づいて・〜をもとに",
+       "objective": "Dire sur quoi reposent une décision, un récit ou une création.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + に基づいて = en se fondant sur (une règle, des données, un fait) : 調査の 結果に 基づいて 決めます. Devant un nom : 〜に基づいた / 〜に基づく.",
+        "Nom + をもとに(して) = à partir de, en prenant pour matériau : 事実を もとに 書かれた 小説.",
+        "Nuance : に基づいて reste fidèle à sa base (loi, données) ; をもとに s’en inspire pour créer autre chose."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ni-motozuite",
+         "kind": "grammar",
+         "front": "〜に基づいて",
+         "reading": "〜にもとづいて",
+         "romaji": "~ni motozuite",
+         "meaning": "en se fondant sur…"
+        },
+        {
+         "slug": "gram-n2-wo-moto-ni",
+         "kind": "grammar",
+         "front": "〜をもとに",
+         "reading": "〜をもとに",
+         "romaji": "~wo moto ni",
+         "meaning": "à partir de…, en s’inspirant de…"
+        },
+        {
+         "slug": "vocab-chousa",
+         "kind": "vocabulary",
+         "front": "調査",
+         "reading": "ちょうさ",
+         "romaji": "chousa",
+         "meaning": "enquête, étude"
+        },
+        {
+         "slug": "vocab-kekka",
+         "kind": "vocabulary",
+         "front": "結果",
+         "reading": "けっか",
+         "romaji": "kekka",
+         "meaning": "résultat"
+        },
+        {
+         "slug": "vocab-jijitsu",
+         "kind": "vocabulary",
+         "front": "事実",
+         "reading": "じじつ",
+         "romaji": "jijitsu",
+         "meaning": "fait (réel)"
+        },
+        {
+         "slug": "vocab-keiken",
+         "kind": "vocabulary",
+         "front": "経験",
+         "reading": "けいけん",
+         "romaji": "keiken",
+         "meaning": "expérience (vécue)"
+        },
+        {
+         "slug": "kanji-n2-moto",
+         "kind": "kanji",
+         "front": "基",
+         "reading": "もと",
+         "romaji": "moto",
+         "meaning": "base, fondement",
+         "kanji": {
+          "onyomi": [
+           "キ"
+          ],
+          "kunyomi": [
+           "もと",
+           "もと(づく)"
+          ],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "kanji-n2-jun",
+         "kind": "kanji",
+         "front": "準",
+         "reading": "じゅん",
+         "romaji": "jun",
+         "meaning": "norme, niveau",
+         "kanji": {
+          "onyomi": [
+           "ジュン"
+          ],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "この 映画は 事実に 基づいて 作られました。",
+         "reading": "この えいがは じじつに もとづいて つくられました。",
+         "fr": "Ce film a été réalisé d’après des faits réels."
+        },
+        {
+         "jp": "留学の 経験を もとに、本を 書きました。",
+         "reading": "りゅうがくの けいけんを もとに、ほんを かきました。",
+         "fr": "J’ai écrit un livre à partir de mon expérience d’études à l’étranger."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "調査の 結果＿ 基づいて、計画を 変えました。",
+         "choices": [
+          "に",
+          "を",
+          "で"
+         ],
+         "answer": "に",
+         "explanation": "〜に 基づいて.",
+         "translation": "Nous avons modifié le projet en nous fondant sur les résultats de l’enquête."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "この 歌は 古い 話＿ もとに 作られた。",
+         "choices": [
+          "を",
+          "に",
+          "が"
+         ],
+         "answer": "を",
+         "explanation": "〜を もとに.",
+         "translation": "Cette chanson a été composée à partir d’une vieille histoire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "これは 規則に ＿ 決定です。",
+         "choices": [
+          "基づいた",
+          "基づいて",
+          "もとに"
+         ],
+         "answer": "基づいた",
+         "explanation": "Devant un nom : 〜に基づいた + nom.",
+         "translation": "C’est une décision fondée sur le règlement."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この ドラマは 作者の 経験を もとに して います。",
+         "translation": "L’histoire s’inspire de ce que l’auteur a vécu.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "経験を もとに = à partir de son expérience."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w2",
+   "title": "L’instant précis",
+   "region": "Capitale d’été",
+   "description": "Dire qu’une chose arrive à peine une autre finie, à une occasion solennelle ou en plein milieu d’une action.",
+   "boss": {
+    "name": "La Lanterne aux Aguets",
+    "glyph": "瞬",
+    "intro": "Cette lanterne-fantôme ouvre l’œil à l’instant même où tu baisses la garde. À peine as-tu commencé ta phrase qu’elle a déjà changé de place."
+   },
+   "chapters": [
+    {
+     "slug": "n2-w2-c1",
+     "title": "À peine, lors de, en plein",
+     "lessons": [
+      {
+       "slug": "n2-ta-totan",
+       "title": "À peine… que… : 〜たとたん・〜かと思うと",
+       "objective": "Dire qu’un événement inattendu suit immédiatement un autre.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe en た + とたん(に) = à l’instant où, à peine… que. La suite est soudaine et involontaire : 立ち上がったとたん、めまいが した.",
+        "Verbe en た + かと思うと / かと思ったら = on croit à peine que… et déjà… ; le changement surprend celui qui observe : 空が 暗く なったかと思うと、雨が 降り出した.",
+        "Ces deux formes décrivent ce qu’on constate : on ne les emploie ni pour ses propres actions voulues, ni pour un ordre ou une intention."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ta-totan",
+         "kind": "grammar",
+         "front": "〜たとたん（に）",
+         "reading": "〜たとたん（に）",
+         "romaji": "~ta totan (ni)",
+         "meaning": "à l’instant même où…"
+        },
+        {
+         "slug": "gram-n2-ka-to-omou-to",
+         "kind": "grammar",
+         "front": "〜かと思うと",
+         "reading": "〜かとおもうと",
+         "romaji": "~ka to omou to",
+         "meaning": "à peine… que déjà…"
+        },
+        {
+         "slug": "vocab-tachiagarimasu",
+         "kind": "vocabulary",
+         "front": "立ち上がります",
+         "reading": "たちあがります",
+         "romaji": "tachiagarimasu",
+         "meaning": "se mettre debout"
+        },
+        {
+         "slug": "vocab-memai",
+         "kind": "vocabulary",
+         "front": "めまい",
+         "reading": "めまい",
+         "romaji": "memai",
+         "meaning": "vertige"
+        },
+        {
+         "slug": "vocab-totsuzen",
+         "kind": "vocabulary",
+         "front": "突然",
+         "reading": "とつぜん",
+         "romaji": "totsuzen",
+         "meaning": "soudain, tout à coup"
+        },
+        {
+         "slug": "vocab-kaminari",
+         "kind": "vocabulary",
+         "front": "雷",
+         "reading": "かみなり",
+         "romaji": "kaminari",
+         "meaning": "tonnerre, foudre"
+        },
+        {
+         "slug": "kanji-n2-shun",
+         "kind": "kanji",
+         "front": "瞬",
+         "reading": "しゅん",
+         "romaji": "shun",
+         "meaning": "instant, cligner",
+         "kanji": {
+          "onyomi": [
+           "シュン"
+          ],
+          "kunyomi": [
+           "またた(く)"
+          ],
+          "strokes": 18
+         }
+        },
+        {
+         "slug": "kanji-n2-tsuku",
+         "kind": "kanji",
+         "front": "突",
+         "reading": "つく",
+         "romaji": "tsuku",
+         "meaning": "heurter, surgir",
+         "kanji": {
+          "onyomi": [
+           "トツ"
+          ],
+          "kunyomi": [
+           "つ(く)"
+          ],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "立ち上がったとたんに、めまいが しました。",
+         "reading": "たちあがったとたんに、めまいが しました。",
+         "fr": "À l’instant où je me suis mis debout, j’ai eu un vertige."
+        },
+        {
+         "jp": "空が 暗く なったかと思うと、突然 雷が 鳴りました。",
+         "reading": "そらが くらく なったかとおもうと、とつぜん かみなりが なりました。",
+         "fr": "À peine le ciel s’était-il assombri que le tonnerre a soudain grondé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "ドアを ＿とたん、猫が 外へ 飛び出した。",
+         "choices": [
+          "開けた",
+          "開ける",
+          "開けて"
+         ],
+         "answer": "開けた",
+         "explanation": "とたん suit la forme en た.",
+         "translation": "À l’instant où j’ai ouvert la porte, le chat a bondi dehors."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "赤ちゃんは 泣いた＿、もう 笑って いる。",
+         "choices": [
+          "かと思うと",
+          "とたんで",
+          "あいだに"
+         ],
+         "answer": "かと思うと",
+         "explanation": "Changement rapide qu’on observe : 〜たかと思うと.",
+         "translation": "Le bébé pleurait à peine qu’il rit déjà."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "家に 帰ったとたん、勉強を 始める つもりです。",
+         "translation": "Cette phrase est naturelle en japonais.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜たとたん ne s’emploie pas avec une intention : la suite doit être un fait soudain, déjà constaté."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « À l’instant où je suis sorti, il s’est mis à pleuvoir. »",
+         "answer": [
+          "外に",
+          "出た",
+          "とたん",
+          "雨が",
+          "降り出した"
+         ],
+         "explanation": "Verbe en た + とたん, puis l’événement soudain."
+        }
+       ]
+      },
+      {
+       "slug": "n2-sai",
+       "title": "Lors de… : 〜際（に）・〜に際して",
+       "objective": "Parler d’une occasion dans un registre formel : annonces, guichets, contrats.",
+       "minutes": 10,
+       "explanation": [
+        "〜際(に) = lorsque, à l’occasion de ; c’est le とき des annonces et des documents. Verbe (dictionnaire ou た) + 際 ; nom + の + 際 : お降りの 際は、足元に ご注意ください.",
+        "Nom / verbe au dictionnaire + に際して = au moment d’entreprendre (un événement important, qui n’arrive pas tous les jours) : 契約に 際して、説明を 受けました.",
+        "〜に際して ne s’emploie que pour ce qui va commencer ; 〜際 convient aussi pour le passé : 先日 お会いした 際に."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-sai",
+         "kind": "grammar",
+         "front": "〜際（に）",
+         "reading": "〜さい（に）",
+         "romaji": "~sai (ni)",
+         "meaning": "lors de…, à l’occasion de… (formel)"
+        },
+        {
+         "slug": "gram-n2-ni-saishite",
+         "kind": "grammar",
+         "front": "〜に際して",
+         "reading": "〜にさいして",
+         "romaji": "~ni saishite",
+         "meaning": "au moment d’entreprendre…"
+        },
+        {
+         "slug": "vocab-keiyaku",
+         "kind": "vocabulary",
+         "front": "契約",
+         "reading": "けいやく",
+         "romaji": "keiyaku",
+         "meaning": "contrat"
+        },
+        {
+         "slug": "vocab-mibunshoumeisho",
+         "kind": "vocabulary",
+         "front": "身分証明書",
+         "reading": "みぶんしょうめいしょ",
+         "romaji": "mibunshoumeisho",
+         "meaning": "pièce d’identité"
+        },
+        {
+         "slug": "vocab-hijouguchi",
+         "kind": "vocabulary",
+         "front": "非常口",
+         "reading": "ひじょうぐち",
+         "romaji": "hijouguchi",
+         "meaning": "sortie de secours"
+        },
+        {
+         "slug": "vocab-moushikomi",
+         "kind": "vocabulary",
+         "front": "申し込み",
+         "reading": "もうしこみ",
+         "romaji": "moushikomi",
+         "meaning": "demande, inscription"
+        },
+        {
+         "slug": "kanji-n2-sai",
+         "kind": "kanji",
+         "front": "際",
+         "reading": "さい",
+         "romaji": "sai",
+         "meaning": "occasion, bord",
+         "kanji": {
+          "onyomi": [
+           "サイ"
+          ],
+          "kunyomi": [
+           "きわ"
+          ],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "kanji-n2-kei",
+         "kind": "kanji",
+         "front": "契",
+         "reading": "けい",
+         "romaji": "kei",
+         "meaning": "engagement, pacte",
+         "kanji": {
+          "onyomi": [
+           "ケイ"
+          ],
+          "kunyomi": [
+           "ちぎ(る)"
+          ],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "お申し込みの 際は、身分証明書が 必要です。",
+         "reading": "おもうしこみの さいは、みぶんしょうめいしょが ひつようです。",
+         "fr": "Lors de l’inscription, une pièce d’identité est nécessaire."
+        },
+        {
+         "jp": "契約に 際して、いくつか 注意して いただきたい ことが あります。",
+         "reading": "けいやくに さいして、いくつか ちゅういして いただきたい ことが あります。",
+         "fr": "Au moment de signer le contrat, je vous demanderai de faire attention à quelques points."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "非常の ＿は、この 非常口を ご利用ください。",
+         "choices": [
+          "際",
+          "間",
+          "最中"
+         ],
+         "answer": "際",
+         "explanation": "Nom + の + 際 : formule d’annonce.",
+         "translation": "En cas d’urgence, veuillez utiliser cette sortie de secours."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "出発＿ 際して、先生が あいさつを しました。",
+         "choices": [
+          "に",
+          "を",
+          "で"
+         ],
+         "answer": "に",
+         "explanation": "〜に 際して.",
+         "translation": "Au moment du départ, le professeur a dit quelques mots."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "お帰りの 際は、忘れ物に ご注意ください。",
+         "translation": "C’est une phrase qu’on entend plutôt dans une annonce qu’entre amis.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜際 est formel : entre amis, on dirait 帰る とき."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Au guichet, un client demande ce qu’il faut apporter pour s’inscrire.",
+         "lines": [
+          {
+           "speaker": "客",
+           "jp": "申し込みには 何が 必要ですか。"
+          }
+         ],
+         "translation": "Le client demande ce qui est nécessaire pour l’inscription.",
+         "choices": [
+          "お申し込みの 際は、身分証明書を お持ちください。",
+          "お申し込みの とたん、身分証明書を お持ちください。",
+          "お申し込みの 最中、身分証明書を お持ちください。"
+         ],
+         "answer": "お申し込みの 際は、身分証明書を お持ちください。",
+         "explanation": "Occasion formelle : 〜の 際は."
+        }
+       ]
+      },
+      {
+       "slug": "n2-saichuu",
+       "title": "En plein… : 〜最中に・〜ところに",
+       "objective": "Dire qu’un événement survient au beau milieu d’une action.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe en ている / nom + の + 最中(に) = en plein milieu de : 会議の 最中に 停電に なった. Ce qui arrive dérange souvent l’action.",
+        "Verbe + ところに / ところへ = juste au moment où (quelqu’un ou quelque chose arrive) : 出かけようと した ところへ、客が 来た.",
+        "〜ところを s’emploie dans des formules d’excuse ou de remerciement : お忙しい ところを すみません (désolé de vous déranger en plein travail)."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-saichuu",
+         "kind": "grammar",
+         "front": "〜最中（に）",
+         "reading": "〜さいちゅう（に）",
+         "romaji": "~saichuu (ni)",
+         "meaning": "en plein milieu de…"
+        },
+        {
+         "slug": "gram-n2-tokoro-ni",
+         "kind": "grammar",
+         "front": "〜ところに・〜ところへ",
+         "reading": "〜ところに・〜ところへ",
+         "romaji": "~tokoro ni / ~tokoro e",
+         "meaning": "juste au moment où… (quelque chose survient)"
+        },
+        {
+         "slug": "vocab-kaigi",
+         "kind": "vocabulary",
+         "front": "会議",
+         "reading": "かいぎ",
+         "romaji": "kaigi",
+         "meaning": "réunion (de travail)"
+        },
+        {
+         "slug": "vocab-teiden",
+         "kind": "vocabulary",
+         "front": "停電",
+         "reading": "ていでん",
+         "romaji": "teiden",
+         "meaning": "panne de courant"
+        },
+        {
+         "slug": "vocab-jama",
+         "kind": "vocabulary",
+         "front": "邪魔",
+         "reading": "じゃま",
+         "romaji": "jama",
+         "meaning": "gêne, dérangement"
+        },
+        {
+         "slug": "vocab-tazunemasu",
+         "kind": "vocabulary",
+         "front": "訪ねます",
+         "reading": "たずねます",
+         "romaji": "tazunemasu",
+         "meaning": "rendre visite à"
+        },
+        {
+         "slug": "kanji-n2-to",
+         "kind": "kanji",
+         "front": "途",
+         "reading": "と",
+         "romaji": "to",
+         "meaning": "chemin, cours (des choses)",
+         "kanji": {
+          "onyomi": [
+           "ト"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n2-gi",
+         "kind": "kanji",
+         "front": "議",
+         "reading": "ぎ",
+         "romaji": "gi",
+         "meaning": "délibérer, débat",
+         "kanji": {
+          "onyomi": [
+           "ギ"
+          ],
+          "kunyomi": [],
+          "strokes": 20
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "会議の 最中に、突然 停電に なりました。",
+         "reading": "かいぎの さいちゅうに、とつぜん ていでんに なりました。",
+         "fr": "En pleine réunion, il y a eu soudain une panne de courant."
+        },
+        {
+         "jp": "出かけようと した ところへ、友だちが 訪ねて 来ました。",
+         "reading": "でかけようと した ところへ、ともだちが たずねて きました。",
+         "fr": "Juste au moment où j’allais sortir, un ami est venu me rendre visite."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "今、食事の ＿だから、後で 電話します。",
+         "choices": [
+          "最中",
+          "際",
+          "とたん"
+         ],
+         "answer": "最中",
+         "explanation": "Nom + の + 最中 = en plein.",
+         "translation": "Je suis en plein repas, je rappellerai plus tard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "試験を ＿ 最中に、電話が 鳴って しまった。",
+         "choices": [
+          "受けて いる",
+          "受ける",
+          "受けた"
+         ],
+         "answer": "受けて いる",
+         "explanation": "Verbe en ている + 最中.",
+         "translation": "Mon téléphone a sonné en plein examen."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "お忙しい ＿ すみませんが、少し よろしいですか。",
+         "choices": [
+          "ところを",
+          "最中を",
+          "際を"
+         ],
+         "answer": "ところを",
+         "explanation": "お忙しい ところを すみません : formule pour s’excuser de déranger.",
+         "translation": "Désolé de vous déranger en plein travail, auriez-vous un instant ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "ちょうど 困って いた ところに、先生が 来て くれた。",
+         "translation": "Le professeur est arrivé au bon moment.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜ところに = juste à ce moment-là ; 来て くれた montre que c’était le bienvenu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w3",
+   "title": "Raisons et engagements",
+   "region": "Capitale d’été",
+   "description": "Dire qu’on ira jusqu’au bout puisqu’on s’est engagé, qu’un excès entraîne une conséquence, et qu’une cause explique un résultat.",
+   "boss": {
+    "name": "La Hannya aux Serments",
+    "glyph": "誓",
+    "intro": "Son masque est né d’un serment trahi. Puisque tu as promis, iras-tu jusqu’au bout ? Et que fait-on, à force d’émotion ?"
+   },
+   "chapters": [
+    {
+     "slug": "n2-w3-c1",
+     "title": "Puisque, à force de, justement parce que",
+     "lessons": [
+      {
+       "slug": "n2-kara-ni-wa",
+       "title": "Puisque… : 〜からには・〜以上（は）",
+       "objective": "Exprimer une conséquence qui s’impose : devoir, résolution, conseil.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + からには = puisque, du moment que ; la suite est une résolution, un devoir ou une demande : やるからには、最後まで やります.",
+        "Forme neutre + 以上(は) a le même sens, en plus formel ; nom + である + 以上 : 学生である 以上、勉強しなければ ならない.",
+        "La seconde partie contient souvent 〜べきだ, 〜なければならない, 〜つもりだ, 〜てください : jamais un simple constat."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-kara-ni-wa",
+         "kind": "grammar",
+         "front": "〜からには",
+         "reading": "〜からには",
+         "romaji": "~kara ni wa",
+         "meaning": "puisque…, du moment que…"
+        },
+        {
+         "slug": "gram-n2-ijou-wa",
+         "kind": "grammar",
+         "front": "〜以上（は）",
+         "reading": "〜いじょう（は）",
+         "romaji": "~ijou (wa)",
+         "meaning": "dès lors que… (formel)"
+        },
+        {
+         "slug": "vocab-gimu",
+         "kind": "vocabulary",
+         "front": "義務",
+         "reading": "ぎむ",
+         "romaji": "gimu",
+         "meaning": "obligation, devoir"
+        },
+        {
+         "slug": "vocab-hikiukemasu",
+         "kind": "vocabulary",
+         "front": "引き受けます",
+         "reading": "ひきうけます",
+         "romaji": "hikiukemasu",
+         "meaning": "accepter (une tâche), se charger de"
+        },
+        {
+         "slug": "vocab-zenryoku",
+         "kind": "vocabulary",
+         "front": "全力",
+         "reading": "ぜんりょく",
+         "romaji": "zenryoku",
+         "meaning": "toutes ses forces"
+        },
+        {
+         "slug": "vocab-mamorimasu",
+         "kind": "vocabulary",
+         "front": "守ります",
+         "reading": "まもります",
+         "romaji": "mamorimasu",
+         "meaning": "respecter (une règle), tenir (une promesse)"
+        },
+        {
+         "slug": "kanji-n2-mu",
+         "kind": "kanji",
+         "front": "務",
+         "reading": "む",
+         "romaji": "mu",
+         "meaning": "tâche, fonction",
+         "kanji": {
+          "onyomi": [
+           "ム"
+          ],
+          "kunyomi": [
+           "つと(める)"
+          ],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "kanji-n2-makaseru",
+         "kind": "kanji",
+         "front": "任",
+         "reading": "まかせる",
+         "romaji": "makaseru",
+         "meaning": "confier, charge",
+         "kanji": {
+          "onyomi": [
+           "ニン"
+          ],
+          "kunyomi": [
+           "まか(せる)"
+          ],
+          "strokes": 6
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "引き受けたからには、最後まで 全力で やります。",
+         "reading": "ひきうけたからには、さいごまで ぜんりょくで やります。",
+         "fr": "Puisque j’ai accepté, je m’y consacrerai de toutes mes forces jusqu’au bout."
+        },
+        {
+         "jp": "約束した 以上は、守らなければ なりません。",
+         "reading": "やくそくした いじょうは、まもらなければ なりません。",
+         "fr": "Dès lors qu’on a promis, il faut tenir parole."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "日本に 来た＿、日本語を 上手に 話せるように なりたい。",
+         "choices": [
+          "からには",
+          "からでは",
+          "からして"
+         ],
+         "answer": "からには",
+         "explanation": "Puisque… + souhait ou résolution : 〜からには.",
+         "translation": "Puisque je suis venu au Japon, je veux arriver à bien parler japonais."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "学生＿ 以上、勉強を 第一に 考えるべきだ。",
+         "choices": [
+          "である",
+          "の",
+          "な"
+         ],
+         "answer": "である",
+         "explanation": "Nom + である + 以上.",
+         "translation": "Dès lors qu’on est étudiant, on doit faire passer les études en premier."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "試合に 出るからには、勝ちたいです。",
+         "translation": "La personne compte jouer sans se soucier du résultat.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜からには : puisqu’elle participe, elle veut gagner."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Puisque c’est un devoir, il faut le respecter. »",
+         "answer": [
+          "義務である",
+          "以上は",
+          "守らなければ",
+          "なりません"
+         ],
+         "explanation": "〜である 以上は, puis l’obligation."
+        }
+       ]
+      },
+      {
+       "slug": "n2-amari",
+       "title": "Tellement… que… : 〜あまり・あまりの〜に",
+       "objective": "Dire qu’un sentiment ou un état excessif entraîne un résultat inattendu.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + の + あまり / verbe au dictionnaire ou en た + あまり = tellement… que ; le résultat est souvent négatif : 緊張の あまり、何も 言えなかった.",
+        "あまりの + nom + に = devant un tel…, tant… : あまりの 暑さに、外へ 出られない.",
+        "Avec un adjectif, on le transforme en nom : うれしさの あまり、悲しみの あまり. On ne l’emploie ni avec un ordre ni avec une intention."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-amari",
+         "kind": "grammar",
+         "front": "〜あまり",
+         "reading": "〜あまり",
+         "romaji": "~amari",
+         "meaning": "tellement… que…, à force de…"
+        },
+        {
+         "slug": "gram-n2-amari-no",
+         "kind": "grammar",
+         "front": "あまりの〜に",
+         "reading": "あまりの〜に",
+         "romaji": "amari no ~ ni",
+         "meaning": "devant un(e) tel(le)…"
+        },
+        {
+         "slug": "vocab-kinchou",
+         "kind": "vocabulary",
+         "front": "緊張",
+         "reading": "きんちょう",
+         "romaji": "kinchou",
+         "meaning": "nervosité, tension"
+        },
+        {
+         "slug": "vocab-kandou",
+         "kind": "vocabulary",
+         "front": "感動",
+         "reading": "かんどう",
+         "romaji": "kandou",
+         "meaning": "émotion (être touché)"
+        },
+        {
+         "slug": "vocab-namida",
+         "kind": "vocabulary",
+         "front": "涙",
+         "reading": "なみだ",
+         "romaji": "namida",
+         "meaning": "larme"
+        },
+        {
+         "slug": "vocab-koufun",
+         "kind": "vocabulary",
+         "front": "興奮",
+         "reading": "こうふん",
+         "romaji": "koufun",
+         "meaning": "excitation"
+        },
+        {
+         "slug": "kanji-n2-kin",
+         "kind": "kanji",
+         "front": "緊",
+         "reading": "きん",
+         "romaji": "kin",
+         "meaning": "tendu, serré",
+         "kanji": {
+          "onyomi": [
+           "キン"
+          ],
+          "kunyomi": [],
+          "strokes": 15
+         }
+        },
+        {
+         "slug": "kanji-n2-kan",
+         "kind": "kanji",
+         "front": "感",
+         "reading": "かん",
+         "romaji": "kan",
+         "meaning": "ressentir, sensation",
+         "kanji": {
+          "onyomi": [
+           "カン"
+          ],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "緊張の あまり、自分の 名前も 言えませんでした。",
+         "reading": "きんちょうの あまり、じぶんの なまえも いえませんでした。",
+         "fr": "J’étais tellement nerveux que je n’ai même pas pu dire mon nom."
+        },
+        {
+         "jp": "あまりの 感動に、涙が 止まりませんでした。",
+         "reading": "あまりの かんどうに、なみだが とまりませんでした。",
+         "fr": "Devant une telle émotion, je ne pouvais plus arrêter mes larmes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "心配＿ あまり、夜も 眠れなかった。",
+         "choices": [
+          "の",
+          "な",
+          "に"
+         ],
+         "answer": "の",
+         "explanation": "Nom + の + あまり.",
+         "translation": "J’étais tellement inquiet que je n’en dormais plus la nuit."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ 寒さに、手が 動かなく なった。",
+         "choices": [
+          "あまりの",
+          "あまり",
+          "あまりに"
+         ],
+         "answer": "あまりの",
+         "explanation": "あまりの + nom + に.",
+         "translation": "Il faisait un tel froid que mes mains ne bougeaient plus."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "彼は 興奮した＿、大きな 声を 出して しまった。",
+         "choices": [
+          "あまり",
+          "あまりの",
+          "あまりで"
+         ],
+         "answer": "あまり",
+         "explanation": "Verbe + あまり.",
+         "translation": "Dans son excitation, il s’est mis à parler très fort."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "うれしさの あまり、彼女は 泣き出した。",
+         "translation": "Elle a pleuré de tristesse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "うれしさの あまり = tant elle était heureuse."
+        }
+       ]
+      },
+      {
+       "slug": "n2-bakari-ni",
+       "title": "Rien que parce que…, comme attendu… : 〜ばかりに・〜だけあって",
+       "objective": "Regretter une cause unique qui a mal tourné, ou saluer un résultat à la hauteur.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + ばかりに = rien que parce que… (résultat regrettable) : 油断した ばかりに、試合に 負けた.",
+        "Forme neutre + だけあって = comme on pouvait s’y attendre de… (éloge) : 十年 住んで いた だけあって、日本語が 上手だ. Souvent avec さすが.",
+        "〜だけに = justement parce que… ; le résultat en est d’autant plus fort, en bien ou en mal : 楽しみに して いた だけに、中止は つらい."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-bakari-ni",
+         "kind": "grammar",
+         "front": "〜ばかりに",
+         "reading": "〜ばかりに",
+         "romaji": "~bakari ni",
+         "meaning": "rien que parce que… (regret)"
+        },
+        {
+         "slug": "gram-n2-dake-atte",
+         "kind": "grammar",
+         "front": "〜だけあって",
+         "reading": "〜だけあって",
+         "romaji": "~dake atte",
+         "meaning": "comme on pouvait s’y attendre de…"
+        },
+        {
+         "slug": "vocab-doryoku",
+         "kind": "vocabulary",
+         "front": "努力",
+         "reading": "どりょく",
+         "romaji": "doryoku",
+         "meaning": "effort"
+        },
+        {
+         "slug": "vocab-seiseki",
+         "kind": "vocabulary",
+         "front": "成績",
+         "reading": "せいせき",
+         "romaji": "seiseki",
+         "meaning": "résultats (scolaires), notes"
+        },
+        {
+         "slug": "vocab-yudan",
+         "kind": "vocabulary",
+         "front": "油断",
+         "reading": "ゆだん",
+         "romaji": "yudan",
+         "meaning": "relâchement, manque de vigilance"
+        },
+        {
+         "slug": "vocab-sasuga",
+         "kind": "vocabulary",
+         "front": "さすが",
+         "reading": "さすが",
+         "romaji": "sasuga",
+         "meaning": "c’est bien digne de…, vraiment"
+        },
+        {
+         "slug": "kanji-n2-do",
+         "kind": "kanji",
+         "front": "努",
+         "reading": "ど",
+         "romaji": "do",
+         "meaning": "s’efforcer",
+         "kanji": {
+          "onyomi": [
+           "ド"
+          ],
+          "kunyomi": [
+           "つと(める)"
+          ],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "kanji-n2-seki",
+         "kind": "kanji",
+         "front": "績",
+         "reading": "せき",
+         "romaji": "seki",
+         "meaning": "exploit, résultat obtenu",
+         "kanji": {
+          "onyomi": [
+           "セキ"
+          ],
+          "kunyomi": [],
+          "strokes": 17
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "うそを 言った ばかりに、友だちを なくして しまいました。",
+         "reading": "うそを いった ばかりに、ともだちを なくして しまいました。",
+         "fr": "Rien que pour avoir menti, j’ai perdu un ami."
+        },
+        {
+         "jp": "毎日 努力した だけあって、成績が 上がりました。",
+         "reading": "まいにち どりょくした だけあって、せいせきが あがりました。",
+         "fr": "Ses efforts quotidiens ont payé, comme on pouvait s’y attendre : ses notes ont monté."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "油断した＿、大切な 試合に 負けて しまった。",
+         "choices": [
+          "ばかりに",
+          "だけあって",
+          "からには"
+         ],
+         "answer": "ばかりに",
+         "explanation": "Cause unique, résultat regrettable : 〜ばかりに.",
+         "translation": "Rien que pour m’être relâché, j’ai perdu un match important."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "さすが 有名な 店＿、料理が おいしい。",
+         "choices": [
+          "だけあって",
+          "ばかりに",
+          "のあまり"
+         ],
+         "answer": "だけあって",
+         "explanation": "Éloge attendu : 〜だけあって, souvent avec さすが.",
+         "translation": "C’est bien un restaurant réputé : la cuisine est délicieuse."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "お金が ない ばかりに、旅行に 行けなかった。",
+         "translation": "La personne regrette de ne pas avoir pu partir.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜ばかりに exprime un regret : cette seule raison l’en a empêchée."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton amie a réussi son examen après des mois de travail. Tu la félicites.",
+         "lines": [
+          {
+           "speaker": "友だち",
+           "jp": "試験に 合格したよ。"
+          }
+         ],
+         "translation": "Ton amie annonce qu’elle a réussi l’examen.",
+         "choices": [
+          "おめでとう。努力した だけあって、すごいね。",
+          "おめでとう。努力した ばかりに、すごいね。",
+          "おめでとう。努力の あまり、すごいね。"
+         ],
+         "answer": "おめでとう。努力した だけあって、すごいね。",
+         "explanation": "Pour un éloge : 〜だけあって. 〜ばかりに exprimerait un regret."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w4",
+   "title": "Malgré tout",
+   "region": "Capitale d’été",
+   "description": "Opposer deux faits : malgré, bien que, alors que, contrairement à.",
+   "boss": {
+    "name": "Le Kasa-obake Contrariant",
+    "glyph": "逆",
+    "intro": "Ce parapluie-fantôme fait tout à l’envers : il s’ouvre quand il fait beau et se ferme sous l’averse. Malgré quoi ? Contrairement à quoi ?"
+   },
+   "chapters": [
+    {
+     "slug": "n2-w4-c1",
+     "title": "Malgré, bien que, alors que",
+     "lessons": [
+      {
+       "slug": "n2-nimo-kakawarazu",
+       "title": "Malgré… : 〜にもかかわらず・〜ものの",
+       "objective": "Dire qu’un résultat va à l’encontre de ce qu’on attendait.",
+       "minutes": 10,
+       "explanation": [
+        "Nom / forme neutre + にもかかわらず = malgré, bien que (registre soigné) : 悪天候にも かかわらず、大会は 行われた.",
+        "Forme neutre + ものの = certes… mais ; on reconnaît un fait, puis on dit que la suite ne suit pas : 買った ものの、一度も 使って いない.",
+        "Nom et adjectif en な devant ものの : 〜である ものの / 〜な ものの. La seconde partie est un constat, pas un ordre."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-nimo-kakawarazu",
+         "kind": "grammar",
+         "front": "〜にもかかわらず",
+         "reading": "〜にもかかわらず",
+         "romaji": "~ni mo kakawarazu",
+         "meaning": "malgré…, bien que… (soigné)"
+        },
+        {
+         "slug": "gram-n2-monono",
+         "kind": "grammar",
+         "front": "〜ものの",
+         "reading": "〜ものの",
+         "romaji": "~mono no",
+         "meaning": "certes… mais…"
+        },
+        {
+         "slug": "vocab-tenkou",
+         "kind": "vocabulary",
+         "front": "天候",
+         "reading": "てんこう",
+         "romaji": "tenkou",
+         "meaning": "conditions météo"
+        },
+        {
+         "slug": "vocab-taikai",
+         "kind": "vocabulary",
+         "front": "大会",
+         "reading": "たいかい",
+         "romaji": "taikai",
+         "meaning": "tournoi, grand rassemblement"
+        },
+        {
+         "slug": "vocab-jouken",
+         "kind": "vocabulary",
+         "front": "条件",
+         "reading": "じょうけん",
+         "romaji": "jouken",
+         "meaning": "condition (à remplir)"
+        },
+        {
+         "slug": "vocab-kouka",
+         "kind": "vocabulary",
+         "front": "効果",
+         "reading": "こうか",
+         "romaji": "kouka",
+         "meaning": "effet, efficacité"
+        },
+        {
+         "slug": "kanji-n2-kou",
+         "kind": "kanji",
+         "front": "候",
+         "reading": "こう",
+         "romaji": "kou",
+         "meaning": "saison, signe",
+         "kanji": {
+          "onyomi": [
+           "コウ"
+          ],
+          "kunyomi": [
+           "そうろう"
+          ],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n2-ken",
+         "kind": "kanji",
+         "front": "件",
+         "reading": "けん",
+         "romaji": "ken",
+         "meaning": "affaire, cas",
+         "kanji": {
+          "onyomi": [
+           "ケン"
+          ],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "悪い 天候にも かかわらず、大会は 行われました。",
+         "reading": "わるい てんこうにも かかわらず、たいかいは おこなわれました。",
+         "fr": "Malgré le mauvais temps, le tournoi a eu lieu."
+        },
+        {
+         "jp": "薬を 飲んだ ものの、あまり 効果が ありませんでした。",
+         "reading": "くすりを のんだ ものの、あまり こうかが ありませんでした。",
+         "fr": "J’ai bien pris le médicament, mais il n’a guère fait d’effet."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "彼は 熱が ある＿、仕事を 続けた。",
+         "choices": [
+          "にもかかわらず",
+          "からには",
+          "だけあって"
+         ],
+         "answer": "にもかかわらず",
+         "explanation": "Fait contraire à l’attente : 〜にもかかわらず.",
+         "translation": "Bien qu’il ait de la fièvre, il a continué à travailler."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "高い 辞書を 買った＿、ほとんど 使って いない。",
+         "choices": [
+          "ものの",
+          "ものを",
+          "ものか"
+         ],
+         "answer": "ものの",
+         "explanation": "On reconnaît un fait, puis on nuance : 〜ものの.",
+         "translation": "J’ai bien acheté un dictionnaire cher, mais je ne m’en sers presque pas."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "条件は いい ものの、その 仕事は 断りました。",
+         "translation": "La personne a accepté ce travail.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜ものの : les conditions sont bonnes, et pourtant elle a refusé."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Malgré la pluie, beaucoup de gens sont venus. »",
+         "answer": [
+          "雨",
+          "にもかかわらず",
+          "たくさんの 人が",
+          "来ました"
+         ],
+         "explanation": "Nom + にもかかわらず, puis le fait inattendu."
+        }
+       ]
+      },
+      {
+       "slug": "n2-ippou",
+       "title": "D’un côté…, contrairement à… : 〜一方（で）・〜に反して",
+       "objective": "Mettre en regard deux aspects, ou dire qu’un résultat contredit une attente.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + 一方(で) = d’un côté… de l’autre ; alors que : 人口が 減る 一方で、一人暮らしは 増えて いる.",
+        "Nom + に反して = contrairement à (une attente, une prévision, une volonté) : 予想に 反して、試験は やさしかった.",
+        "À ne pas confondre : verbe au dictionnaire + 一方だ = ne cesser de… (une tendance) : 物の 値段は 上がる 一方だ."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ippou-de",
+         "kind": "grammar",
+         "front": "〜一方（で）",
+         "reading": "〜いっぽう（で）",
+         "romaji": "~ippou (de)",
+         "meaning": "d’un côté… de l’autre ; alors que…"
+        },
+        {
+         "slug": "gram-n2-ni-hanshite",
+         "kind": "grammar",
+         "front": "〜に反して",
+         "reading": "〜にはんして",
+         "romaji": "~ni hanshite",
+         "meaning": "contrairement à…"
+        },
+        {
+         "slug": "vocab-zouka",
+         "kind": "vocabulary",
+         "front": "増加",
+         "reading": "ぞうか",
+         "romaji": "zouka",
+         "meaning": "augmentation"
+        },
+        {
+         "slug": "vocab-genshou",
+         "kind": "vocabulary",
+         "front": "減少",
+         "reading": "げんしょう",
+         "romaji": "genshou",
+         "meaning": "diminution"
+        },
+        {
+         "slug": "vocab-yosou",
+         "kind": "vocabulary",
+         "front": "予想",
+         "reading": "よそう",
+         "romaji": "yosou",
+         "meaning": "prévision, pronostic"
+        },
+        {
+         "slug": "vocab-jinkou",
+         "kind": "vocabulary",
+         "front": "人口",
+         "reading": "じんこう",
+         "romaji": "jinkou",
+         "meaning": "population"
+        },
+        {
+         "slug": "kanji-n2-fueru",
+         "kind": "kanji",
+         "front": "増",
+         "reading": "ふえる",
+         "romaji": "fueru",
+         "meaning": "augmenter, s’accroître",
+         "kanji": {
+          "onyomi": [
+           "ゾウ"
+          ],
+          "kunyomi": [
+           "ふ(える)",
+           "ま(す)"
+          ],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "kanji-n2-heru",
+         "kind": "kanji",
+         "front": "減",
+         "reading": "へる",
+         "romaji": "heru",
+         "meaning": "diminuer, se réduire",
+         "kanji": {
+          "onyomi": [
+           "ゲン"
+          ],
+          "kunyomi": [
+           "へ(る)"
+          ],
+          "strokes": 12
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "都会の 人口が 増加する 一方で、地方では 減少して います。",
+         "reading": "とかいの じんこうが ぞうかする いっぽうで、ちほうでは げんしょうして います。",
+         "fr": "Alors que la population des grandes villes augmente, elle diminue en province."
+        },
+        {
+         "jp": "予想に 反して、今年の 夏は 涼しかったです。",
+         "reading": "よそうに はんして、ことしの なつは すずしかったです。",
+         "fr": "Contrairement aux prévisions, l’été a été frais cette année."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "父は 厳しい＿、とても 優しい ところも あります。",
+         "choices": [
+          "一方で",
+          "一方に",
+          "一方を"
+         ],
+         "answer": "一方で",
+         "explanation": "Deux aspects en regard : 〜一方で.",
+         "translation": "Mon père est sévère, mais d’un autre côté il a aussi beaucoup de douceur."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "親の 期待＿ 反して、彼は 音楽の 道を 選んだ。",
+         "choices": [
+          "に",
+          "を",
+          "と"
+         ],
+         "answer": "に",
+         "explanation": "〜に 反して.",
+         "translation": "Contrairement à ce qu’espéraient ses parents, il a choisi la voie de la musique."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "物の 値段は 上がる 一方だ。",
+         "translation": "Les prix montent sans cesse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Verbe au dictionnaire + 一方だ = ne cesser de…"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "予想に ＿、試合は 私たちの チームが 勝った。",
+         "choices": [
+          "反して",
+          "対して",
+          "関して"
+         ],
+         "answer": "反して",
+         "explanation": "Contraire à une prévision : 〜に 反して.",
+         "translation": "Contre toute attente, c’est notre équipe qui a gagné le match."
+        }
+       ]
+      },
+      {
+       "slug": "n2-kuse-ni",
+       "title": "Alors même que… : 〜くせに・〜ながら（も）",
+       "objective": "Reprocher une contradiction, ou reconnaître un contraste avec retenue.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + くせに = alors même que… (reproche, ton familier) : 知って いる くせに、教えて くれない. Nom + の + くせに ; adjectif en な + な + くせに.",
+        "〜ながら(も) = tout en…, bien que (plus neutre, plutôt écrit) : 狭い ながらも、楽しい 我が家. Avec la base en ます, un adjectif en い ou un nom.",
+        "〜くせに ne s’emploie pas pour parler de soi, et le sujet des deux parties est le même."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-kuse-ni",
+         "kind": "grammar",
+         "front": "〜くせに",
+         "reading": "〜くせに",
+         "romaji": "~kuse ni",
+         "meaning": "alors même que… (reproche)"
+        },
+        {
+         "slug": "gram-n2-nagara-mo",
+         "kind": "grammar",
+         "front": "〜ながら（も）",
+         "reading": "〜ながら（も）",
+         "romaji": "~nagara (mo)",
+         "meaning": "tout en…, bien que… (contraste)"
+        },
+        {
+         "slug": "vocab-mazushii",
+         "kind": "vocabulary",
+         "front": "貧しい",
+         "reading": "まずしい",
+         "romaji": "mazushii",
+         "meaning": "pauvre, démuni"
+        },
+        {
+         "slug": "vocab-gyaku",
+         "kind": "vocabulary",
+         "front": "逆",
+         "reading": "ぎゃく",
+         "romaji": "gyaku",
+         "meaning": "inverse, à l’envers"
+        },
+        {
+         "slug": "vocab-erasou",
+         "kind": "vocabulary",
+         "front": "偉そう",
+         "reading": "えらそう",
+         "romaji": "erasou",
+         "meaning": "hautain, qui prend de grands airs"
+        },
+        {
+         "slug": "vocab-shiawase",
+         "kind": "vocabulary",
+         "front": "幸せ",
+         "reading": "しあわせ",
+         "romaji": "shiawase",
+         "meaning": "heureux ; bonheur"
+        },
+        {
+         "slug": "kanji-n2-sakarau",
+         "kind": "kanji",
+         "front": "逆",
+         "reading": "さからう",
+         "romaji": "sakarau",
+         "meaning": "aller à l’encontre",
+         "kanji": {
+          "onyomi": [
+           "ギャク"
+          ],
+          "kunyomi": [
+           "さか(らう)",
+           "さか"
+          ],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "kanji-n2-hin",
+         "kind": "kanji",
+         "front": "貧",
+         "reading": "ひん",
+         "romaji": "hin",
+         "meaning": "pauvreté, manque",
+         "kanji": {
+          "onyomi": [
+           "ヒン",
+           "ビン"
+          ],
+          "kunyomi": [
+           "まず(しい)"
+          ],
+          "strokes": 11
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "弟は 何も 知らない くせに、偉そうに 話します。",
+         "reading": "おとうとは なにも しらない くせに、えらそうに はなします。",
+         "fr": "Mon petit frère ne sait rien, et pourtant il parle en prenant de grands airs."
+        },
+        {
+         "jp": "貧しい ながらも、家族は 幸せに 暮らして いました。",
+         "reading": "まずしい ながらも、かぞくは しあわせに くらして いました。",
+         "fr": "Bien que pauvre, la famille vivait heureuse."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "自分で 約束した＿、彼は 来なかった。",
+         "choices": [
+          "くせに",
+          "ばかりに",
+          "からには"
+         ],
+         "answer": "くせに",
+         "explanation": "Reproche : 〜くせに.",
+         "translation": "C’est lui qui avait promis, et il n’est même pas venu."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "子ども＿ くせに、大人の ような ことを 言う。",
+         "choices": [
+          "の",
+          "な",
+          "だ"
+         ],
+         "answer": "の",
+         "explanation": "Nom + の + くせに.",
+         "translation": "Ce n’est qu’un enfant, et il parle comme un adulte."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "残念＿、今回は 参加できません。",
+         "choices": [
+          "ながら",
+          "くせに",
+          "ばかりに"
+         ],
+         "answer": "ながら",
+         "explanation": "残念ながら = malheureusement (formule figée).",
+         "translation": "Malheureusement, je ne pourrai pas participer cette fois."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 部屋は 狭い ながらも、とても 使いやすい。",
+         "translation": "La personne se plaint de sa chambre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜ながらも : petite, certes, mais très pratique. Le jugement est positif."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w5",
+   "title": "Bien au-delà",
+   "region": "Capitale d’été",
+   "description": "Dire qu’une chose ne se limite pas à un cas, qu’elle va à l’opposé de ce qu’on croit, ou qu’elle s’étend sur toute une durée.",
+   "boss": {
+    "name": "La Tsuchigumo aux Mille Fils",
+    "glyph": "蜘",
+    "intro": "Sa toile ne couvre pas seulement le jardin : elle court sur toute la ville, d’un bout à l’autre de la nuit. Jusqu’où s’étend-elle, et pendant combien de temps ?"
+   },
+   "chapters": [
+    {
+     "slug": "n2-w5-c1",
+     "title": "Pas seulement, loin de, tout au long de",
+     "lessons": [
+      {
+       "slug": "n2-ni-kagirazu",
+       "title": "Pas seulement… : 〜に限らず・〜のみならず",
+       "objective": "Dire qu’une chose vaut bien au-delà d’un seul cas.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + に限らず = pas seulement…, mais aussi (tous les autres) : 子どもに 限らず、大人も 楽しめます.",
+        "Nom / forme neutre + のみならず = non seulement… mais encore (écrit, soutenu) : 日本のみならず、世界中で 人気が ある.",
+        "À l’inverse, nom + に限って = justement (et seulement) dans ce cas : 急いで いる ときに 限って、バスが 来ない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ni-kagirazu",
+         "kind": "grammar",
+         "front": "〜に限らず",
+         "reading": "〜にかぎらず",
+         "romaji": "~ni kagirazu",
+         "meaning": "pas seulement…, mais aussi…"
+        },
+        {
+         "slug": "gram-n2-nominarazu",
+         "kind": "grammar",
+         "front": "〜のみならず",
+         "reading": "〜のみならず",
+         "romaji": "~nominarazu",
+         "meaning": "non seulement… mais encore… (soutenu)"
+        },
+        {
+         "slug": "vocab-ippan",
+         "kind": "vocabulary",
+         "front": "一般",
+         "reading": "いっぱん",
+         "romaji": "ippan",
+         "meaning": "général, ordinaire"
+        },
+        {
+         "slug": "vocab-sekaijuu",
+         "kind": "vocabulary",
+         "front": "世界中",
+         "reading": "せかいじゅう",
+         "romaji": "sekaijuu",
+         "meaning": "le monde entier"
+        },
+        {
+         "slug": "vocab-dansei",
+         "kind": "vocabulary",
+         "front": "男性",
+         "reading": "だんせい",
+         "romaji": "dansei",
+         "meaning": "homme (sexe masculin)"
+        },
+        {
+         "slug": "vocab-josei",
+         "kind": "vocabulary",
+         "front": "女性",
+         "reading": "じょせい",
+         "romaji": "josei",
+         "meaning": "femme (sexe féminin)"
+        },
+        {
+         "slug": "kanji-n2-kagiru",
+         "kind": "kanji",
+         "front": "限",
+         "reading": "かぎる",
+         "romaji": "kagiru",
+         "meaning": "limiter, borne",
+         "kanji": {
+          "onyomi": [
+           "ゲン"
+          ],
+          "kunyomi": [
+           "かぎ(る)"
+          ],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "kanji-n2-ippan",
+         "kind": "kanji",
+         "front": "般",
+         "reading": "はん",
+         "romaji": "han",
+         "meaning": "ensemble, sorte",
+         "kanji": {
+          "onyomi": [
+           "ハン"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "この ゲームは 子どもに 限らず、大人にも 人気が あります。",
+         "reading": "この ゲームは こどもに かぎらず、おとなにも にんきが あります。",
+         "fr": "Ce jeu plaît non seulement aux enfants, mais aussi aux adultes."
+        },
+        {
+         "jp": "彼女は 国内のみならず、世界中で 知られて います。",
+         "reading": "かのじょは こくないのみならず、せかいじゅうで しられて います。",
+         "fr": "Elle est connue non seulement dans le pays, mais dans le monde entier."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "この 料理は 女性に ＿、男性にも 人気が ある。",
+         "choices": [
+          "限らず",
+          "限って",
+          "限り"
+         ],
+         "answer": "限らず",
+         "explanation": "Pas seulement… : 〜に限らず.",
+         "translation": "Ce plat plaît non seulement aux femmes, mais aussi aux hommes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "出かけようと する ときに ＿、雨が 降る。",
+         "choices": [
+          "限って",
+          "限らず",
+          "のみならず"
+         ],
+         "answer": "限って",
+         "explanation": "Justement dans ce cas-là : 〜に限って.",
+         "translation": "C’est toujours quand je m’apprête à sortir qu’il se met à pleuvoir."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 問題は 学生のみならず、一般の 人にも 関係が あります。",
+         "translation": "Le problème ne concerne que les étudiants.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜のみならず : pas seulement les étudiants, le grand public aussi."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Pas seulement l’été, on peut en profiter toute l’année. »",
+         "answer": [
+          "夏",
+          "に限らず",
+          "一年中",
+          "楽しめます"
+         ],
+         "explanation": "Nom + に限らず, puis le cas plus large."
+        }
+       ]
+      },
+      {
+       "slug": "n2-dokoroka",
+       "title": "Loin de…, et même… : 〜どころか・〜ばかりか",
+       "objective": "Corriger une attente par son contraire, ou renchérir sur ce qu’on vient de dire.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre / nom + どころか = loin de…, bien au contraire : 薬を 飲んだのに、治るどころか、悪く なった.",
+        "〜どころか peut aussi renchérir : 漢字どころか、ひらがなも 読めない (les kanji ? il ne lit même pas les hiragana).",
+        "Forme neutre / nom + ばかりか = non seulement… mais en plus (souvent avec 〜も ou 〜まで) : 彼は 英語ばかりか、中国語も 話せる."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-dokoroka",
+         "kind": "grammar",
+         "front": "〜どころか",
+         "reading": "〜どころか",
+         "romaji": "~dokoro ka",
+         "meaning": "loin de… ; sans parler de…"
+        },
+        {
+         "slug": "gram-n2-bakari-ka",
+         "kind": "grammar",
+         "front": "〜ばかりか",
+         "reading": "〜ばかりか",
+         "romaji": "~bakari ka",
+         "meaning": "non seulement… mais en plus…"
+        },
+        {
+         "slug": "vocab-kaifuku",
+         "kind": "vocabulary",
+         "front": "回復",
+         "reading": "かいふく",
+         "romaji": "kaifuku",
+         "meaning": "rétablissement, reprise"
+        },
+        {
+         "slug": "vocab-akka",
+         "kind": "vocabulary",
+         "front": "悪化",
+         "reading": "あっか",
+         "romaji": "akka",
+         "meaning": "aggravation"
+        },
+        {
+         "slug": "vocab-meiwaku",
+         "kind": "vocabulary",
+         "front": "迷惑",
+         "reading": "めいわく",
+         "romaji": "meiwaku",
+         "meaning": "gêne causée aux autres"
+        },
+        {
+         "slug": "vocab-kansha",
+         "kind": "vocabulary",
+         "front": "感謝",
+         "reading": "かんしゃ",
+         "romaji": "kansha",
+         "meaning": "gratitude"
+        },
+        {
+         "slug": "kanji-n2-fuku",
+         "kind": "kanji",
+         "front": "復",
+         "reading": "ふく",
+         "romaji": "fuku",
+         "meaning": "revenir, de nouveau",
+         "kanji": {
+          "onyomi": [
+           "フク"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n2-mayou",
+         "kind": "kanji",
+         "front": "迷",
+         "reading": "まよう",
+         "romaji": "mayou",
+         "meaning": "hésiter, se perdre",
+         "kanji": {
+          "onyomi": [
+           "メイ"
+          ],
+          "kunyomi": [
+           "まよ(う)"
+          ],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "薬を 飲んだのに、回復するどころか、悪化して しまいました。",
+         "reading": "くすりを のんだのに、かいふくするどころか、あっかして しまいました。",
+         "fr": "J’ai pris le médicament, mais loin de me rétablir, mon état s’est aggravé."
+        },
+        {
+         "jp": "彼は 手伝って くれた ばかりか、お金まで 貸して くれました。",
+         "reading": "かれは てつだって くれた ばかりか、おかねまで かして くれました。",
+         "fr": "Non seulement il m’a aidé, mais il m’a même prêté de l’argent."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "休み＿、今週は 毎日 残業です。",
+         "choices": [
+          "どころか",
+          "ばかりか",
+          "に限らず"
+         ],
+         "answer": "どころか",
+         "explanation": "Le contraire de ce qu’on attend : 〜どころか.",
+         "translation": "Du repos ? Loin de là : cette semaine, je fais des heures supplémentaires tous les jours."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "あの 店は 料理が まずい＿、値段も 高い。",
+         "choices": [
+          "ばかりか",
+          "どころか",
+          "からには"
+         ],
+         "answer": "ばかりか",
+         "explanation": "On ajoute un second défaut : 〜ばかりか〜も.",
+         "translation": "Dans ce restaurant, non seulement la cuisine est mauvaise, mais en plus c’est cher."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "彼は 感謝するどころか、文句を 言った。",
+         "translation": "Il a remercié.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜どころか : au lieu de remercier, il s’est plaint."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Un collègue s’excuse de t’avoir dérangé. En réalité, il t’a rendu service.",
+         "lines": [
+          {
+           "speaker": "同僚",
+           "jp": "昨日は 迷惑を かけて、すみません。"
+          }
+         ],
+         "translation": "Ton collègue s’excuse de t’avoir causé du dérangement hier.",
+         "choices": [
+          "いいえ。迷惑どころか、助かりました。",
+          "いいえ。迷惑ばかりか、助かりました。",
+          "いいえ。迷惑に 限らず、助かりました。"
+         ],
+         "answer": "いいえ。迷惑どころか、助かりました。",
+         "explanation": "Loin d’être une gêne, cela a rendu service : 〜どころか."
+        }
+       ]
+      },
+      {
+       "slug": "n2-ni-watatte",
+       "title": "Tout au long de… : 〜にわたって・〜を通じて",
+       "objective": "Dire qu’une chose s’étend sur toute une durée ou un espace, ou passe par un intermédiaire.",
+       "minutes": 10,
+       "explanation": [
+        "Nom (durée, étendue, nombre) + にわたって = sur toute l’étendue de : 三日間に わたって, 全国に わたって. Devant un nom : 〜にわたる.",
+        "Nom + を通じて / を通して = pendant toute (une période) : 一年を 通じて 暖かい.",
+        "〜を通じて signifie aussi « par l’intermédiaire de » : 友人を 通じて 知り合った, インターネットを 通じて."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ni-watatte",
+         "kind": "grammar",
+         "front": "〜にわたって",
+         "reading": "〜にわたって",
+         "romaji": "~ni watatte",
+         "meaning": "sur toute l’étendue de…"
+        },
+        {
+         "slug": "gram-n2-wo-tsuujite",
+         "kind": "grammar",
+         "front": "〜を通じて",
+         "reading": "〜をつうじて",
+         "romaji": "~wo tsuujite",
+         "meaning": "tout au long de… ; par l’intermédiaire de…"
+        },
+        {
+         "slug": "vocab-kikan",
+         "kind": "vocabulary",
+         "front": "期間",
+         "reading": "きかん",
+         "romaji": "kikan",
+         "meaning": "période, durée"
+        },
+        {
+         "slug": "vocab-zenkoku",
+         "kind": "vocabulary",
+         "front": "全国",
+         "reading": "ぜんこく",
+         "romaji": "zenkoku",
+         "meaning": "tout le pays"
+        },
+        {
+         "slug": "vocab-chiiki",
+         "kind": "vocabulary",
+         "front": "地域",
+         "reading": "ちいき",
+         "romaji": "chiiki",
+         "meaning": "région, quartier"
+        },
+        {
+         "slug": "vocab-kouryuu",
+         "kind": "vocabulary",
+         "front": "交流",
+         "reading": "こうりゅう",
+         "romaji": "kouryuu",
+         "meaning": "échanges (entre personnes)"
+        },
+        {
+         "slug": "kanji-n2-ki",
+         "kind": "kanji",
+         "front": "期",
+         "reading": "き",
+         "romaji": "ki",
+         "meaning": "période, terme",
+         "kanji": {
+          "onyomi": [
+           "キ"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n2-iki",
+         "kind": "kanji",
+         "front": "域",
+         "reading": "いき",
+         "romaji": "iki",
+         "meaning": "zone, domaine",
+         "kanji": {
+          "onyomi": [
+           "イキ"
+          ],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "祭りは 三日間に わたって 行われます。",
+         "reading": "まつりは みっかかんに わたって おこなわれます。",
+         "fr": "La fête se déroule sur trois jours."
+        },
+        {
+         "jp": "この 地域は 一年を 通じて 雨が 多いです。",
+         "reading": "この ちいきは いちねんを つうじて あめが おおいです。",
+         "fr": "Dans cette région, il pleut beaucoup tout au long de l’année."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "会議は 五時間＿ わたって 続きました。",
+         "choices": [
+          "に",
+          "を",
+          "で"
+         ],
+         "answer": "に",
+         "explanation": "〜に わたって.",
+         "translation": "La réunion a duré cinq heures d’affilée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "私たちは インターネットを ＿ 知り合いました。",
+         "choices": [
+          "通じて",
+          "わたって",
+          "限って"
+         ],
+         "answer": "通じて",
+         "explanation": "Par l’intermédiaire de : 〜を通じて.",
+         "translation": "Nous nous sommes connus par Internet."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "全国に ＿ 調査が 行われた。",
+         "choices": [
+          "わたる",
+          "わたって",
+          "通じる"
+         ],
+         "answer": "わたる",
+         "explanation": "Devant un nom : 〜にわたる + nom.",
+         "translation": "Une enquête couvrant tout le pays a été menée."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 交流は 十年に わたって 続いて います。",
+         "translation": "Ces échanges ont duré une seule année.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "十年に わたって = sur dix ans."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w6",
+   "title": "Conditions et hypothèses",
+   "region": "Capitale d’été",
+   "description": "Poser une condition, raisonner sur une supposition et dire de quoi dépend la suite.",
+   "boss": {
+    "name": "Le Nurarihyon aux Conditions",
+    "glyph": "仮",
+    "intro": "Ce vieillard insaisissable s’installe au conseil comme s’il en était le maître, et ne cède jamais rien sans condition. Tant que… à supposer que… tout dépend de… : sauras-tu négocier ?"
+   },
+   "chapters": [
+    {
+     "slug": "n2-w6-c1",
+     "title": "Tant que, à supposer que, selon",
+     "lessons": [
+      {
+       "slug": "n2-kagiri",
+       "title": "Tant que… : 〜限り・〜ない限り",
+       "objective": "Poser la condition sans laquelle rien ne change, ou la limite de ce qu’on sait.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + 限り = tant que, aussi longtemps que : 体が 丈夫な 限り、働きたい.",
+        "Verbe en ない + 限り = à moins que, tant que… ne… pas : 許可が ない 限り、入れません.",
+        "Deux formules utiles : 私の 知る 限り = pour autant que je sache ; できる 限り = dans toute la mesure du possible."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-kagiri",
+         "kind": "grammar",
+         "front": "〜限り",
+         "reading": "〜かぎり",
+         "romaji": "~kagiri",
+         "meaning": "tant que… ; autant que…"
+        },
+        {
+         "slug": "gram-n2-nai-kagiri",
+         "kind": "grammar",
+         "front": "〜ない限り",
+         "reading": "〜ないかぎり",
+         "romaji": "~nai kagiri",
+         "meaning": "à moins que…, tant que… ne… pas"
+        },
+        {
+         "slug": "vocab-kyoka",
+         "kind": "vocabulary",
+         "front": "許可",
+         "reading": "きょか",
+         "romaji": "kyoka",
+         "meaning": "autorisation"
+        },
+        {
+         "slug": "vocab-jijou",
+         "kind": "vocabulary",
+         "front": "事情",
+         "reading": "じじょう",
+         "romaji": "jijou",
+         "meaning": "circonstances, situation"
+        },
+        {
+         "slug": "vocab-kyouryoku",
+         "kind": "vocabulary",
+         "front": "協力",
+         "reading": "きょうりょく",
+         "romaji": "kyouryoku",
+         "meaning": "coopération"
+        },
+        {
+         "slug": "vocab-joubu",
+         "kind": "vocabulary",
+         "front": "丈夫",
+         "reading": "じょうぶ",
+         "romaji": "joubu",
+         "meaning": "solide, robuste"
+        },
+        {
+         "slug": "kanji-n2-yurusu",
+         "kind": "kanji",
+         "front": "許",
+         "reading": "ゆるす",
+         "romaji": "yurusu",
+         "meaning": "permettre, pardonner",
+         "kanji": {
+          "onyomi": [
+           "キョ"
+          ],
+          "kunyomi": [
+           "ゆる(す)"
+          ],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "kanji-n2-kyou",
+         "kind": "kanji",
+         "front": "協",
+         "reading": "きょう",
+         "romaji": "kyou",
+         "meaning": "s’unir, ensemble",
+         "kanji": {
+          "onyomi": [
+           "キョウ"
+          ],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "許可が ない 限り、この 部屋には 入れません。",
+         "reading": "きょかが ない かぎり、この へやには はいれません。",
+         "fr": "À moins d’une autorisation, on ne peut pas entrer dans cette pièce."
+        },
+        {
+         "jp": "私の 知る 限り、彼は そんな 人では ありません。",
+         "reading": "わたしの しる かぎり、かれは そんな ひとでは ありません。",
+         "fr": "Pour autant que je sache, il n’est pas ce genre de personne."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "みんなの 協力が ＿ 限り、この 計画は 成功しない。",
+         "choices": [
+          "ない",
+          "ある",
+          "あった"
+         ],
+         "answer": "ない",
+         "explanation": "À moins de… : verbe en ない + 限り.",
+         "translation": "Sans la coopération de tous, ce projet ne réussira pas."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "体が 丈夫な＿、この 仕事を 続ける つもりです。",
+         "choices": [
+          "限り",
+          "限らず",
+          "どころか"
+         ],
+         "answer": "限り",
+         "explanation": "Tant que… : 〜限り.",
+         "translation": "Tant que ma santé tiendra, je compte continuer ce travail."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "できる＿ 早く 返事を します。",
+         "choices": [
+          "限り",
+          "ばかり",
+          "ながら"
+         ],
+         "answer": "限り",
+         "explanation": "できる 限り = autant que possible.",
+         "translation": "Je répondrai le plus vite possible."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "特別な 事情が ない 限り、欠席は 認められません。",
+         "translation": "On peut être absent sans raison particulière.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜ない限り : sans circonstance particulière, l’absence n’est pas acceptée."
+        }
+       ]
+      },
+      {
+       "slug": "n2-to-shitara",
+       "title": "À supposer que… : 〜としたら・〜とすれば",
+       "objective": "Raisonner à partir d’une hypothèse, réelle ou imaginaire.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + としたら / とすれば / とすると = à supposer que, si l’on admet que : 行くと したら、来週です.",
+        "Avec 仮に ou もし, l’hypothèse est imaginaire : 仮に 宝くじが 当たったと したら、何を 買いますか.",
+        "〜とすれば et 〜とすると servent surtout à tirer une conclusion logique : それが 本当だと すれば、大変だ. 〜としたら accepte aussi un souhait ou une question."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-to-shitara",
+         "kind": "grammar",
+         "front": "〜としたら",
+         "reading": "〜としたら",
+         "romaji": "~to shitara",
+         "meaning": "à supposer que…, si jamais…"
+        },
+        {
+         "slug": "gram-n2-to-sureba",
+         "kind": "grammar",
+         "front": "〜とすれば",
+         "reading": "〜とすれば",
+         "romaji": "~to sureba",
+         "meaning": "si l’on admet que…"
+        },
+        {
+         "slug": "vocab-karini",
+         "kind": "vocabulary",
+         "front": "仮に",
+         "reading": "かりに",
+         "romaji": "karini",
+         "meaning": "à supposer, par hypothèse"
+        },
+        {
+         "slug": "vocab-takarakuji",
+         "kind": "vocabulary",
+         "front": "宝くじ",
+         "reading": "たからくじ",
+         "romaji": "takarakuji",
+         "meaning": "loterie"
+        },
+        {
+         "slug": "vocab-atarimasu",
+         "kind": "vocabulary",
+         "front": "当たります",
+         "reading": "あたります",
+         "romaji": "atarimasu",
+         "meaning": "gagner (à un tirage), tomber juste"
+        },
+        {
+         "slug": "vocab-souzou",
+         "kind": "vocabulary",
+         "front": "想像",
+         "reading": "そうぞう",
+         "romaji": "souzou",
+         "meaning": "imagination"
+        },
+        {
+         "slug": "kanji-n2-kari",
+         "kind": "kanji",
+         "front": "仮",
+         "reading": "かり",
+         "romaji": "kari",
+         "meaning": "provisoire, supposé",
+         "kanji": {
+          "onyomi": [
+           "カ"
+          ],
+          "kunyomi": [
+           "かり"
+          ],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n2-sou",
+         "kind": "kanji",
+         "front": "想",
+         "reading": "そう",
+         "romaji": "sou",
+         "meaning": "idée, pensée",
+         "kanji": {
+          "onyomi": [
+           "ソウ"
+          ],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "仮に 宝くじが 当たったと したら、何を しますか。",
+         "reading": "かりに たからくじが あたったと したら、なにを しますか。",
+         "fr": "À supposer que vous gagniez à la loterie, que feriez-vous ?"
+        },
+        {
+         "jp": "その 話が 本当だと すれば、すぐに 知らせなければ なりません。",
+         "reading": "その はなしが ほんとうだと すれば、すぐに しらせなければ なりません。",
+         "fr": "Si cette histoire est vraie, il faut prévenir tout de suite."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "留学する＿、どの 国が いいですか。",
+         "choices": [
+          "としたら",
+          "どころか",
+          "ばかりに"
+         ],
+         "answer": "としたら",
+         "explanation": "Hypothèse + question : 〜としたら.",
+         "translation": "Si tu devais partir étudier à l’étranger, quel pays choisirais-tu ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ 明日 世界が 終わると したら、何を 食べたいですか。",
+         "choices": [
+          "仮に",
+          "必ず",
+          "さすが"
+         ],
+         "answer": "仮に",
+         "explanation": "仮に renforce l’hypothèse imaginaire.",
+         "translation": "À supposer que le monde s’arrête demain, que voudrais-tu manger ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "一人で 行くと すれば、三時間は かかるだろう。",
+         "translation": "La personne affirme qu’elle ira seule.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜とすれば : simple hypothèse, rien n’est décidé."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Si c’est vrai, c’est grave. »",
+         "answer": [
+          "それが",
+          "本当だ",
+          "と すれば",
+          "大変です"
+         ],
+         "explanation": "Forme neutre + と すれば, puis la conclusion."
+        }
+       ]
+      },
+      {
+       "slug": "n2-shidai",
+       "title": "Dès que…, selon… : 〜次第",
+       "objective": "Annoncer qu’on agira dès qu’une chose sera faite, et dire de quoi dépend un résultat.",
+       "minutes": 10,
+       "explanation": [
+        "Base en ます + 次第 = dès que (formel, pour une action future voulue) : 到着し次第、ご連絡します. Avec un nom d’action : 確認 次第.",
+        "Nom + 次第だ / 次第で = dépendre de : 結果は 努力 次第だ ; 天気 次第で 予定を 変えます.",
+        "〜次第 (dès que) ne s’emploie pas au passé : la suite est une promesse, une demande ou une intention."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-shidai",
+         "kind": "grammar",
+         "front": "〜次第",
+         "reading": "〜しだい",
+         "romaji": "~shidai",
+         "meaning": "dès que… (formel)"
+        },
+        {
+         "slug": "gram-n2-shidai-da",
+         "kind": "grammar",
+         "front": "〜次第だ・〜次第で",
+         "reading": "〜しだいだ・〜しだいで",
+         "romaji": "~shidai da / ~shidai de",
+         "meaning": "dépendre de…, selon…"
+        },
+        {
+         "slug": "vocab-touchaku",
+         "kind": "vocabulary",
+         "front": "到着",
+         "reading": "とうちゃく",
+         "romaji": "touchaku",
+         "meaning": "arrivée (à destination)"
+        },
+        {
+         "slug": "vocab-kakunin",
+         "kind": "vocabulary",
+         "front": "確認",
+         "reading": "かくにん",
+         "romaji": "kakunin",
+         "meaning": "vérification, confirmation"
+        },
+        {
+         "slug": "vocab-ketsuron",
+         "kind": "vocabulary",
+         "front": "結論",
+         "reading": "けつろん",
+         "romaji": "ketsuron",
+         "meaning": "conclusion"
+        },
+        {
+         "slug": "vocab-honnin",
+         "kind": "vocabulary",
+         "front": "本人",
+         "reading": "ほんにん",
+         "romaji": "honnin",
+         "meaning": "l’intéressé(e), la personne elle-même"
+        },
+        {
+         "slug": "kanji-n2-tsugi",
+         "kind": "kanji",
+         "front": "次",
+         "reading": "つぎ",
+         "romaji": "tsugi",
+         "meaning": "suivant, ordre",
+         "kanji": {
+          "onyomi": [
+           "ジ",
+           "シ"
+          ],
+          "kunyomi": [
+           "つぎ",
+           "つ(ぐ)"
+          ],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n2-tou",
+         "kind": "kanji",
+         "front": "到",
+         "reading": "とう",
+         "romaji": "tou",
+         "meaning": "atteindre, parvenir",
+         "kanji": {
+          "onyomi": [
+           "トウ"
+          ],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "荷物が 到着し次第、お知らせします。",
+         "reading": "にもつが とうちゃくし しだい、おしらせします。",
+         "fr": "Dès que le colis arrivera, je vous préviendrai."
+        },
+        {
+         "jp": "合格できるか どうかは、本人の 努力 次第です。",
+         "reading": "ごうかくできるか どうかは、ほんにんの どりょく しだいです。",
+         "fr": "Réussir ou non dépend des efforts de l’intéressé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "結論が ＿ 次第、ご報告します。",
+         "choices": [
+          "出",
+          "出る",
+          "出た"
+         ],
+         "answer": "出",
+         "explanation": "Base en ます + 次第 : 出ます → 出.",
+         "translation": "Dès qu’une conclusion sera trouvée, je vous en rendrai compte."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "明日の 試合は 天気＿です。",
+         "choices": [
+          "次第",
+          "限り",
+          "最中"
+         ],
+         "answer": "次第",
+         "explanation": "Nom + 次第だ = dépendre de.",
+         "translation": "Le match de demain dépendra du temps."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "昨日、家に 着き次第、電話しました。",
+         "translation": "Cette phrase est naturelle en japonais.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜次第 (dès que) ne s’emploie pas au passé : on dirait 着いて すぐ."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Un client attend une réponse. Tu promets de le rappeler après vérification.",
+         "lines": [
+          {
+           "speaker": "客",
+           "jp": "いつ 分かりますか。"
+          }
+         ],
+         "translation": "Le client demande quand il aura la réponse.",
+         "choices": [
+          "確認でき次第、お電話いたします。",
+          "確認できた とたん、お電話いたします。",
+          "確認できる 限り、お電話いたします。"
+         ],
+         "answer": "確認でき次第、お電話いたします。",
+         "explanation": "Promesse formelle : base en ます + 次第."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w7",
+   "title": "Tendances et évolutions",
+   "region": "Capitale d’été",
+   "description": "Décrire un changement en cours, deux évolutions liées, et un état qui s’installe.",
+   "boss": {
+    "name": "La Rokurokubi qui s’Allonge",
+    "glyph": "伸",
+    "intro": "Le jour, c’est une dame comme les autres. La nuit, son cou s’allonge, s’allonge encore… Plus l’heure avance, plus il grandit. Décris ce qui est en train de changer."
+   },
+   "chapters": [
+    {
+     "slug": "n2-w7-c1",
+     "title": "De plus en plus, à mesure que, un peu trop",
+     "lessons": [
+      {
+       "slug": "n2-tsutsu-aru",
+       "title": "En train de changer : 〜つつある・〜一方だ",
+       "objective": "Décrire une évolution en cours ou une tendance qui ne s’arrête pas.",
+       "minutes": 10,
+       "explanation": [
+        "Base en ます + つつある = être en train de (changer peu à peu ; plutôt écrit) : 景気は 回復しつつある.",
+        "Verbe au dictionnaire + 一方だ = ne cesser de…, aller toujours plus… (souvent en mal) : 物価は 上がる 一方だ.",
+        "Ces formes s’emploient avec des verbes de changement (増える, 減る, 変わる, 進む), pas avec des actions ponctuelles."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-tsutsu-aru",
+         "kind": "grammar",
+         "front": "〜つつある",
+         "reading": "〜つつある",
+         "romaji": "~tsutsu aru",
+         "meaning": "être en train de… (évolution)"
+        },
+        {
+         "slug": "gram-n2-ippou-da",
+         "kind": "grammar",
+         "front": "〜一方だ",
+         "reading": "〜いっぽうだ",
+         "romaji": "~ippou da",
+         "meaning": "ne cesser de…, aller toujours plus…"
+        },
+        {
+         "slug": "vocab-keiki",
+         "kind": "vocabulary",
+         "front": "景気",
+         "reading": "けいき",
+         "romaji": "keiki",
+         "meaning": "conjoncture économique"
+        },
+        {
+         "slug": "vocab-bukka",
+         "kind": "vocabulary",
+         "front": "物価",
+         "reading": "ぶっか",
+         "romaji": "bukka",
+         "meaning": "niveau des prix"
+        },
+        {
+         "slug": "vocab-koureika",
+         "kind": "vocabulary",
+         "front": "高齢化",
+         "reading": "こうれいか",
+         "romaji": "koureika",
+         "meaning": "vieillissement de la population"
+        },
+        {
+         "slug": "vocab-fukyuu",
+         "kind": "vocabulary",
+         "front": "普及",
+         "reading": "ふきゅう",
+         "romaji": "fukyuu",
+         "meaning": "diffusion, généralisation"
+        },
+        {
+         "slug": "kanji-n2-keshiki",
+         "kind": "kanji",
+         "front": "景",
+         "reading": "けい",
+         "romaji": "kei",
+         "meaning": "vue, aspect",
+         "kanji": {
+          "onyomi": [
+           "ケイ"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n2-rei",
+         "kind": "kanji",
+         "front": "齢",
+         "reading": "れい",
+         "romaji": "rei",
+         "meaning": "âge (en années)",
+         "kanji": {
+          "onyomi": [
+           "レイ"
+          ],
+          "kunyomi": [],
+          "strokes": 17
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "景気は 少しずつ 回復しつつ あります。",
+         "reading": "けいきは すこしずつ かいふくしつつ あります。",
+         "fr": "L’économie est en train de se redresser peu à peu."
+        },
+        {
+         "jp": "この 町の 人口は 減る 一方です。",
+         "reading": "この まちの じんこうは へる いっぽうです。",
+         "fr": "La population de cette ville ne cesse de diminuer."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "新しい 技術が 世界中に 普及し＿。",
+         "choices": [
+          "つつある",
+          "一方だ",
+          "次第だ"
+         ],
+         "answer": "つつある",
+         "explanation": "Base en ます + つつある.",
+         "translation": "La nouvelle technologie est en train de se répandre dans le monde entier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "物価は ＿ 一方で、生活が 苦しい。",
+         "choices": [
+          "上がる",
+          "上がり",
+          "上がって"
+         ],
+         "answer": "上がる",
+         "explanation": "Verbe au dictionnaire + 一方だ.",
+         "translation": "Les prix ne cessent de monter, et la vie est difficile."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "日本では 高齢化が 進みつつ あります。",
+         "translation": "Le vieillissement est un changement déjà terminé.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜つつある : le changement est en cours."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « La situation ne cesse d’empirer. »",
+         "answer": [
+          "状況は",
+          "悪く",
+          "なる",
+          "一方です"
+         ],
+         "explanation": "Verbe au dictionnaire + 一方です."
+        }
+       ]
+      },
+      {
+       "slug": "n2-ni-tsurete",
+       "title": "À mesure que… : 〜につれて・〜にしたがって",
+       "objective": "Relier deux évolutions qui avancent ensemble.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe au dictionnaire / nom + につれて = à mesure que (deux changements progressifs) : 年を 取るに つれて、体力が 落ちる.",
+        "〜にしたがって a le même sens, en plus formel ; il signifie aussi « conformément à » : 指示に したがって 行動する.",
+        "Les deux parties expriment un changement : on évite un ordre ou une action ponctuelle dans la seconde."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ni-tsurete",
+         "kind": "grammar",
+         "front": "〜につれて",
+         "reading": "〜につれて",
+         "romaji": "~ni tsurete",
+         "meaning": "à mesure que…"
+        },
+        {
+         "slug": "gram-n2-ni-shitagatte",
+         "kind": "grammar",
+         "front": "〜にしたがって",
+         "reading": "〜にしたがって",
+         "romaji": "~ni shitagatte",
+         "meaning": "à mesure que… ; en suivant…"
+        },
+        {
+         "slug": "vocab-seichou",
+         "kind": "vocabulary",
+         "front": "成長",
+         "reading": "せいちょう",
+         "romaji": "seichou",
+         "meaning": "croissance (grandir)"
+        },
+        {
+         "slug": "vocab-henka",
+         "kind": "vocabulary",
+         "front": "変化",
+         "reading": "へんか",
+         "romaji": "henka",
+         "meaning": "changement, évolution"
+        },
+        {
+         "slug": "vocab-hatten",
+         "kind": "vocabulary",
+         "front": "発展",
+         "reading": "はってん",
+         "romaji": "hatten",
+         "meaning": "développement, essor"
+        },
+        {
+         "slug": "vocab-tairyoku",
+         "kind": "vocabulary",
+         "front": "体力",
+         "reading": "たいりょく",
+         "romaji": "tairyoku",
+         "meaning": "force physique, endurance"
+        },
+        {
+         "slug": "kanji-n2-kawaru",
+         "kind": "kanji",
+         "front": "変",
+         "reading": "かわる",
+         "romaji": "kawaru",
+         "meaning": "changer ; étrange",
+         "kanji": {
+          "onyomi": [
+           "ヘン"
+          ],
+          "kunyomi": [
+           "か(わる)",
+           "か(える)"
+          ],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "kanji-n2-ten",
+         "kind": "kanji",
+         "front": "展",
+         "reading": "てん",
+         "romaji": "ten",
+         "meaning": "déployer, exposer",
+         "kanji": {
+          "onyomi": [
+           "テン"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "子どもは 成長するに つれて、親と 話さなく なります。",
+         "reading": "こどもは せいちょうするに つれて、おやと はなさなく なります。",
+         "fr": "À mesure qu’ils grandissent, les enfants parlent moins à leurs parents."
+        },
+        {
+         "jp": "町の 発展に したがって、交通も 便利に なりました。",
+         "reading": "まちの はってんに したがって、こうつうも べんりに なりました。",
+         "fr": "À mesure que la ville s’est développée, les transports sont devenus plus pratiques."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "年を 取る＿、体力が 落ちて きた。",
+         "choices": [
+          "につれて",
+          "に限って",
+          "次第"
+         ],
+         "answer": "につれて",
+         "explanation": "Deux changements liés : 〜につれて.",
+         "translation": "À mesure que je vieillis, mes forces diminuent."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "時代の 変化＿ したがって、考え方も 変わる。",
+         "choices": [
+          "に",
+          "を",
+          "が"
+         ],
+         "answer": "に",
+         "explanation": "〜に したがって.",
+         "translation": "À mesure que l’époque change, les façons de penser changent aussi."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "係員の 指示に したがって、避難して ください。",
+         "translation": "Ici, 〜にしたがって signifie « en suivant ».",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "指示に したがって = en suivant les consignes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "日本語が 上手に なるに ＿、友だちが 増えた。",
+         "choices": [
+          "つれて",
+          "限って",
+          "わたって"
+         ],
+         "answer": "つれて",
+         "explanation": "〜に つれて.",
+         "translation": "À mesure que mon japonais s’est amélioré, je me suis fait plus d’amis."
+        }
+       ]
+      },
+      {
+       "slug": "n2-gimi",
+       "title": "Un peu…, couvert de… : 〜気味・〜だらけ",
+       "objective": "Décrire un léger état qui s’installe, ou quelque chose qui en est rempli.",
+       "minutes": 10,
+       "explanation": [
+        "Nom / base en ます + 気味 = avoir un peu tendance à, se sentir un peu… (souvent négatif) : 風邪気味, 疲れ気味, 太り気味.",
+        "Nom + だらけ = plein de, couvert de (quelque chose de désagréable) : 泥だらけ, 間違いだらけ, 傷だらけ.",
+        "〜気味 décrit une impression légère, là où 〜がち (N3) parle de fréquence : 最近 疲れ気味だ / 最近 休みがちだ."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-gimi",
+         "kind": "grammar",
+         "front": "〜気味",
+         "reading": "〜ぎみ",
+         "romaji": "~gimi",
+         "meaning": "un peu…, une légère tendance à…"
+        },
+        {
+         "slug": "gram-n2-darake",
+         "kind": "grammar",
+         "front": "〜だらけ",
+         "reading": "〜だらけ",
+         "romaji": "~darake",
+         "meaning": "plein de…, couvert de…"
+        },
+        {
+         "slug": "vocab-doro",
+         "kind": "vocabulary",
+         "front": "泥",
+         "reading": "どろ",
+         "romaji": "doro",
+         "meaning": "boue"
+        },
+        {
+         "slug": "vocab-machigai",
+         "kind": "vocabulary",
+         "front": "間違い",
+         "reading": "まちがい",
+         "romaji": "machigai",
+         "meaning": "erreur, faute"
+        },
+        {
+         "slug": "vocab-nebusoku",
+         "kind": "vocabulary",
+         "front": "寝不足",
+         "reading": "ねぶそく",
+         "romaji": "nebusoku",
+         "meaning": "manque de sommeil"
+        },
+        {
+         "slug": "vocab-kizu",
+         "kind": "vocabulary",
+         "front": "傷",
+         "reading": "きず",
+         "romaji": "kizu",
+         "meaning": "blessure, éraflure"
+        },
+        {
+         "slug": "kanji-n2-tsukareru",
+         "kind": "kanji",
+         "front": "疲",
+         "reading": "つかれる",
+         "romaji": "tsukareru",
+         "meaning": "se fatiguer",
+         "kanji": {
+          "onyomi": [
+           "ヒ"
+          ],
+          "kunyomi": [
+           "つか(れる)"
+          ],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n2-yogoreru",
+         "kind": "kanji",
+         "front": "汚",
+         "reading": "よごれる",
+         "romaji": "yogoreru",
+         "meaning": "salir, sale",
+         "kanji": {
+          "onyomi": [
+           "オ"
+          ],
+          "kunyomi": [
+           "よご(れる)",
+           "きたな(い)"
+          ],
+          "strokes": 6
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "最近、寝不足で 少し 疲れ気味です。",
+         "reading": "さいきん、ねぶそくで すこし つかれぎみです。",
+         "fr": "Ces temps-ci, par manque de sommeil, je me sens un peu fatigué."
+        },
+        {
+         "jp": "子どもたちは 泥だらけに なって 遊んで います。",
+         "reading": "こどもたちは どろだらけに なって あそんで います。",
+         "fr": "Les enfants jouent, couverts de boue."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "今日は 風邪＿なので、早く 帰ります。",
+         "choices": [
+          "気味",
+          "だらけ",
+          "次第"
+         ],
+         "answer": "気味",
+         "explanation": "Léger état : nom + 気味.",
+         "translation": "Je me sens un peu enrhumé aujourd’hui, alors je rentre tôt."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "この 作文は 間違い＿だ。",
+         "choices": [
+          "だらけ",
+          "気味",
+          "がち"
+         ],
+         "answer": "だらけ",
+         "explanation": "Plein de (négatif) : nom + だらけ.",
+         "translation": "Cette rédaction est truffée de fautes."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "彼の 足は 傷だらけだった。",
+         "translation": "Il avait une seule petite blessure à la jambe.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "傷だらけ = couvert de blessures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "最近、少し 太り＿なので、運動を 始めました。",
+         "choices": [
+          "気味",
+          "だらけ",
+          "一方"
+         ],
+         "answer": "気味",
+         "explanation": "Base en ます + 気味 : 太ります → 太り気味.",
+         "translation": "J’ai un peu grossi ces temps-ci, alors je me suis mis au sport."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-w8",
+   "title": "Convictions du locuteur",
+   "region": "Capitale d’été",
+   "description": "Affirmer une certitude, ramener une chose à peu, dire ce qu’on ne peut éviter et donner une vérité générale ou un conseil.",
+   "boss": {
+    "name": "Tamamo aux Neuf Queues",
+    "glyph": "尾",
+    "intro": "La plus belle dame de la cour est une renarde à neuf queues. Ce ne peut être qu’elle ; ce n’est qu’une illusion ; on est bien forcé de l’admettre. Tranche, et dis ce que tu penses vraiment."
+   },
+   "chapters": [
+    {
+     "slug": "n2-w8-c1",
+     "title": "Sûrement, rien que, forcé de",
+     "lessons": [
+      {
+       "slug": "n2-ni-chigainai",
+       "title": "Sans aucun doute, rien de plus : 〜に違いない・〜にすぎない",
+       "objective": "Affirmer une conviction forte, ou ramener une chose à ce qu’elle est vraiment.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre / nom + に違いない = c’est sûrement, à n’en pas douter (conviction du locuteur) : 犯人は あの 男に 違いない.",
+        "À l’écrit, 〜に相違ない a le même sens, en plus formel.",
+        "Forme neutre / nom + にすぎない = n’être que, rien de plus que : それは うわさに すぎない ; 一例に すぎない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-ni-chigainai",
+         "kind": "grammar",
+         "front": "〜に違いない",
+         "reading": "〜にちがいない",
+         "romaji": "~ni chigainai",
+         "meaning": "sûrement, sans aucun doute"
+        },
+        {
+         "slug": "gram-n2-ni-suginai",
+         "kind": "grammar",
+         "front": "〜にすぎない",
+         "reading": "〜にすぎない",
+         "romaji": "~ni suginai",
+         "meaning": "n’être que…, rien de plus que…"
+        },
+        {
+         "slug": "vocab-hannin",
+         "kind": "vocabulary",
+         "front": "犯人",
+         "reading": "はんにん",
+         "romaji": "hannin",
+         "meaning": "coupable, auteur (d’un délit)"
+        },
+        {
+         "slug": "vocab-shouko",
+         "kind": "vocabulary",
+         "front": "証拠",
+         "reading": "しょうこ",
+         "romaji": "shouko",
+         "meaning": "preuve"
+        },
+        {
+         "slug": "vocab-uwasa",
+         "kind": "vocabulary",
+         "front": "うわさ",
+         "reading": "うわさ",
+         "romaji": "uwasa",
+         "meaning": "rumeur"
+        },
+        {
+         "slug": "vocab-guuzen",
+         "kind": "vocabulary",
+         "front": "偶然",
+         "reading": "ぐうぜん",
+         "romaji": "guuzen",
+         "meaning": "hasard, par hasard"
+        },
+        {
+         "slug": "kanji-n2-okasu",
+         "kind": "kanji",
+         "front": "犯",
+         "reading": "おかす",
+         "romaji": "okasu",
+         "meaning": "commettre, enfreindre",
+         "kanji": {
+          "onyomi": [
+           "ハン"
+          ],
+          "kunyomi": [
+           "おか(す)"
+          ],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "kanji-n2-shou",
+         "kind": "kanji",
+         "front": "証",
+         "reading": "しょう",
+         "romaji": "shou",
+         "meaning": "attester, témoignage",
+         "kanji": {
+          "onyomi": [
+           "ショウ"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "部屋の 電気が ついて います。彼は 家に いるに 違いありません。",
+         "reading": "へやの でんきが ついて います。かれは いえに いるに ちがいありません。",
+         "fr": "La lumière de sa chambre est allumée. Il est sûrement chez lui."
+        },
+        {
+         "jp": "それは 証拠の ない うわさに すぎません。",
+         "reading": "それは しょうこの ない うわさに すぎません。",
+         "fr": "Ce n’est qu’une rumeur sans preuve."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "こんなに 上手なのだから、たくさん 練習した＿。",
+         "choices": [
+          "に違いない",
+          "にすぎない",
+          "どころか"
+         ],
+         "answer": "に違いない",
+         "explanation": "Conviction forte : 〜に違いない.",
+         "translation": "Pour être aussi doué, il a sûrement beaucoup travaillé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "二人が 同じ 店に いたのは、偶然＿。",
+         "choices": [
+          "にすぎない",
+          "に違いある",
+          "に限らない"
+         ],
+         "answer": "にすぎない",
+         "explanation": "Rien de plus que : 〜にすぎない.",
+         "translation": "Qu’ils se soient trouvés dans le même magasin n’est qu’un hasard."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "犯人は この 中に いるに 違いない。",
+         "translation": "La personne a un simple soupçon, sans y croire vraiment.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜に違いない exprime une forte conviction."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Ce n’est qu’un exemple parmi d’autres. »",
+         "answer": [
+          "それは",
+          "一つの",
+          "例に",
+          "すぎません"
+         ],
+         "explanation": "Nom + に すぎません."
+        }
+       ]
+      },
+      {
+       "slug": "n2-zaru-wo-enai",
+       "title": "Forcé de…, ne pas pouvoir s’empêcher de… : 〜ざるを得ない・〜ずにはいられない",
+       "objective": "Dire qu’on agit par nécessité, ou sous l’effet d’un élan qu’on ne retient pas.",
+       "minutes": 10,
+       "explanation": [
+        "Radical en ない + ざるを得ない = ne pas avoir d’autre choix que de (à contrecœur) : 認めざるを 得ない. Irrégulier : する → せざるを得ない.",
+        "Radical en ない + ずにはいられない = ne pas pouvoir s’empêcher de (émotion, envie) : 笑わずには いられない. する → せずにはいられない.",
+        "L’oral préfère 〜ないではいられない et 〜しかない ; ces deux formes appartiennent plutôt à l’écrit et au registre soigné."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-zaru-wo-enai",
+         "kind": "grammar",
+         "front": "〜ざるを得ない",
+         "reading": "〜ざるをえない",
+         "romaji": "~zaru wo enai",
+         "meaning": "ne pas avoir d’autre choix que de…"
+        },
+        {
+         "slug": "gram-n2-zu-ni-wa-irarenai",
+         "kind": "grammar",
+         "front": "〜ずにはいられない",
+         "reading": "〜ずにはいられない",
+         "romaji": "~zu ni wa irarenai",
+         "meaning": "ne pas pouvoir s’empêcher de…"
+        },
+        {
+         "slug": "vocab-mitomemasu",
+         "kind": "vocabulary",
+         "front": "認めます",
+         "reading": "みとめます",
+         "romaji": "mitomemasu",
+         "meaning": "reconnaître, admettre"
+        },
+        {
+         "slug": "vocab-gaman",
+         "kind": "vocabulary",
+         "front": "我慢",
+         "reading": "がまん",
+         "romaji": "gaman",
+         "meaning": "patience, fait de se retenir"
+        },
+        {
+         "slug": "vocab-waraimasu",
+         "kind": "vocabulary",
+         "front": "笑います",
+         "reading": "わらいます",
+         "romaji": "waraimasu",
+         "meaning": "rire"
+        },
+        {
+         "slug": "vocab-henkou",
+         "kind": "vocabulary",
+         "front": "変更",
+         "reading": "へんこう",
+         "romaji": "henkou",
+         "meaning": "modification"
+        },
+        {
+         "slug": "kanji-n2-mitomeru",
+         "kind": "kanji",
+         "front": "認",
+         "reading": "みとめる",
+         "romaji": "mitomeru",
+         "meaning": "reconnaître, approuver",
+         "kanji": {
+          "onyomi": [
+           "ニン"
+          ],
+          "kunyomi": [
+           "みと(める)"
+          ],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "kanji-n2-eru",
+         "kind": "kanji",
+         "front": "得",
+         "reading": "える",
+         "romaji": "eru",
+         "meaning": "obtenir, gagner",
+         "kanji": {
+          "onyomi": [
+           "トク"
+          ],
+          "kunyomi": [
+           "え(る)",
+           "う(る)"
+          ],
+          "strokes": 11
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "雨が 強く なったので、試合は 中止せざるを 得ませんでした。",
+         "reading": "あめが つよく なったので、しあいは ちゅうしせざるを えませんでした。",
+         "fr": "La pluie s’étant renforcée, nous avons été contraints d’annuler le match."
+        },
+        {
+         "jp": "あの 映画を 見ると、泣かずには いられません。",
+         "reading": "あの えいがを みると、なかずには いられません。",
+         "fr": "Quand je vois ce film, je ne peux pas m’empêcher de pleurer."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "証拠が あるので、彼の 話を 信じ＿。",
+         "choices": [
+          "ざるを得ない",
+          "ずにはいられない",
+          "にすぎない"
+         ],
+         "answer": "ざるを得ない",
+         "explanation": "Nécessité, à contrecœur : 〜ざるを得ない.",
+         "translation": "Puisqu’il y a une preuve, je suis bien forcé de le croire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "計画を 変更＿を 得なかった。",
+         "choices": [
+          "せざる",
+          "しざる",
+          "さざる"
+         ],
+         "answer": "せざる",
+         "explanation": "する → せざるを得ない.",
+         "translation": "Nous avons été obligés de modifier le projet."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "その 話を 聞いて、笑わ＿ いられなかった。",
+         "choices": [
+          "ずには",
+          "ざるを",
+          "ないには"
+         ],
+         "answer": "ずには",
+         "explanation": "Élan irrépressible : 〜ずには いられない.",
+         "translation": "En entendant cette histoire, je n’ai pas pu m’empêcher de rire."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "熱が 高いので、今日は 休まざるを 得ない。",
+         "translation": "La personne se repose avec plaisir.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜ざるを得ない : elle n’a pas le choix, et aurait préféré faire autrement."
+        }
+       ]
+      },
+      {
+       "slug": "n2-mono-da",
+       "title": "C’est ainsi, voilà ce qu’il faut faire : 〜ものだ・〜ことだ",
+       "objective": "Énoncer une vérité générale, évoquer une habitude passée, et donner un conseil.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre + ものだ = il est dans la nature des choses que… : 人は だれでも 年を 取る ものだ. Elle dit aussi ce qui se fait : お年寄りには 席を ゆずる ものだ.",
+        "Verbe en た + ものだ = autrefois, je faisais souvent… (souvenir ému) : 子どもの ころ、この 川で よく 泳いだ ものだ.",
+        "Verbe au dictionnaire ou en ない + ことだ = il faut, le mieux est de (conseil personnel) : 上手に なりたければ、毎日 練習する ことだ."
+       ],
+       "items": [
+        {
+         "slug": "gram-n2-mono-da",
+         "kind": "grammar",
+         "front": "〜ものだ",
+         "reading": "〜ものだ",
+         "romaji": "~mono da",
+         "meaning": "c’est dans l’ordre des choses ; autrefois, je…"
+        },
+        {
+         "slug": "gram-n2-koto-da",
+         "kind": "grammar",
+         "front": "〜ことだ",
+         "reading": "〜ことだ",
+         "romaji": "~koto da",
+         "meaning": "il faut…, le mieux est de… (conseil)"
+        },
+        {
+         "slug": "vocab-jinsei",
+         "kind": "vocabulary",
+         "front": "人生",
+         "reading": "じんせい",
+         "romaji": "jinsei",
+         "meaning": "vie (d’une personne)"
+        },
+        {
+         "slug": "vocab-sunao",
+         "kind": "vocabulary",
+         "front": "素直",
+         "reading": "すなお",
+         "romaji": "sunao",
+         "meaning": "franc, sans détour ; docile"
+        },
+        {
+         "slug": "vocab-chuukoku",
+         "kind": "vocabulary",
+         "front": "忠告",
+         "reading": "ちゅうこく",
+         "romaji": "chuukoku",
+         "meaning": "conseil, mise en garde"
+        },
+        {
+         "slug": "vocab-omoidoori",
+         "kind": "vocabulary",
+         "front": "思いどおり",
+         "reading": "おもいどおり",
+         "romaji": "omoidoori",
+         "meaning": "comme on le souhaite"
+        },
+        {
+         "slug": "kanji-n2-so",
+         "kind": "kanji",
+         "front": "素",
+         "reading": "そ",
+         "romaji": "so",
+         "meaning": "simple, brut",
+         "kanji": {
+          "onyomi": [
+           "ソ",
+           "ス"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n2-naosu",
+         "kind": "kanji",
+         "front": "直",
+         "reading": "なおす",
+         "romaji": "naosu",
+         "meaning": "droit ; réparer",
+         "kanji": {
+          "onyomi": [
+           "チョク",
+           "ジキ"
+          ],
+          "kunyomi": [
+           "なお(す)",
+           "ただ(ちに)"
+          ],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "人生は 思いどおりに ならない ものです。",
+         "reading": "じんせいは おもいどおりに ならない ものです。",
+         "fr": "La vie ne se déroule jamais comme on le voudrait : c’est ainsi."
+        },
+        {
+         "jp": "試験に 合格したければ、毎日 少しずつ 勉強する ことです。",
+         "reading": "しけんに ごうかくしたければ、まいにち すこしずつ べんきょうする ことです。",
+         "fr": "Si tu veux réussir l’examen, le mieux est d’étudier un peu chaque jour."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "学生の ころは、よく 友だちと 朝まで 話した＿。",
+         "choices": [
+          "ものだ",
+          "ことだ",
+          "次第だ"
+         ],
+         "answer": "ものだ",
+         "explanation": "Souvenir d’une habitude : verbe en た + ものだ.",
+         "translation": "Quand j’étais étudiant, je parlais souvent avec mes amis jusqu’au matin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "風邪を 早く 治したいなら、ゆっくり 休む＿。",
+         "choices": [
+          "ことだ",
+          "ものだ",
+          "一方だ"
+         ],
+         "answer": "ことだ",
+         "explanation": "Conseil : verbe au dictionnaire + ことだ.",
+         "translation": "Si tu veux guérir vite de ton rhume, le mieux est de bien te reposer."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "人の 忠告は 素直に 聞く ものだ。",
+         "translation": "La phrase énonce ce qu’il est normal de faire.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜ものだ : c’est ce qui se fait, ce que le bon sens demande."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton ami veut progresser en japonais et te demande conseil.",
+         "lines": [
+          {
+           "speaker": "友だち",
+           "jp": "どう すれば、日本語が 上手に なりますか。"
+          }
+         ],
+         "translation": "Ton ami demande comment progresser en japonais.",
+         "choices": [
+          "とにかく、毎日 話して みる ことです。",
+          "とにかく、毎日 話して みた ものです。",
+          "とにかく、毎日 話して みるに すぎません。"
+         ],
+         "answer": "とにかく、毎日 話して みる ことです。",
+         "explanation": "Pour conseiller : 〜ことです."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n2-final",
+   "title": "Simulation JLPT N2",
+   "region": "Capitale d’été",
+   "description": "Examen blanc non officiel du N2 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
+   "exam": "n2-mock",
+   "chapters": []
+  }
+ ]
+}

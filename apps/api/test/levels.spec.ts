@@ -12,7 +12,27 @@ describe('Niveaux : parcours N4', () => {
     const { agent } = await signUp(ctx.app);
     const path = (await agent.get('/api/path/N4').expect(200)).body;
     expect(path.level.code).toBe('N4');
-    expect(path.levels.map((l: any) => l.code)).toEqual(['N5', 'N4']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['N5', 'N4', 'N3', 'N2', 'N1']);
+    // Le N3 s'ouvre lui aussi à sa première leçon
+    const n3 = (await agent.get('/api/path/N3').expect(200)).body;
+    expect(n3.level).toMatchObject({ code: 'N3', region: 'Cimes enneigées' });
+    expect(n3.worlds).toHaveLength(9);
+    expect(n3.worlds.at(-1)).toMatchObject({ slug: 'n3-final', exam: { slug: 'n3-mock' } });
+    expect(n3.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n3-you-da', status: 'available' });
+    // Le N2 s'ouvre de la même façon : 8 îles à gardien, puis l'examen blanc
+    const n2 = (await agent.get('/api/path/N2').expect(200)).body;
+    expect(n2.level).toMatchObject({ code: 'N2', region: 'Capitale d’été' });
+    expect(n2.worlds).toHaveLength(9);
+    expect(n2.worlds.slice(0, 8).every((w: any) => w.boss && !w.exam && !w.comingSoon && w.progress.total === 3)).toBe(true);
+    expect(n2.worlds.at(-1)).toMatchObject({ slug: 'n2-final', exam: { slug: 'n2-mock' } });
+    // Le N1 : 8 îles à gardien, puis l'examen blanc
+    const n1 = (await agent.get('/api/path/N1').expect(200)).body;
+    expect(n1.level).toMatchObject({ code: 'N1', region: 'Domaine du shōgun' });
+    expect(n1.worlds).toHaveLength(9);
+    expect(n1.worlds.slice(0, 8).every((w: any) => w.boss && !w.exam && !w.comingSoon && w.progress.total === 3)).toBe(true);
+    expect(n1.worlds.at(-1)).toMatchObject({ slug: 'n1-final', exam: { slug: 'n1-mock' } });
+    expect(n1.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n1-wo-motte', status: 'available' });
+    expect(n2.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n2-kara-suru-to', status: 'available' });
     expect(path.worlds.length).toBeGreaterThanOrEqual(3);
     const lessons = path.worlds.flatMap((w: any) => w.chapters.flatMap((c: any) => c.lessons));
     expect(lessons[0]).toMatchObject({ slug: 'n4-te-ru', status: 'available' });
@@ -62,8 +82,53 @@ describe('Niveaux : parcours N4', () => {
     expect(res.recommendations.join(' ')).toMatch(/N4/);
   });
 
-  it('niveau inexistant : 404', async () => {
+  it('examen blanc N3 : 38 questions issues du contenu N3, conseils propres au N3', async () => {
     const { agent } = await signUp(ctx.app);
-    await agent.get('/api/path/N1').expect(404);
+    const exam = await agent.post('/api/exams/n3-mock/start').expect(201);
+    expect(exam.body.exam).toMatchObject({ title: 'Examen blanc JLPT N3', durationMin: 35 });
+    const qs = exam.body.questions;
+    expect(qs).toHaveLength(38);
+    const issued = await ctx.prisma.issuedQuestion.findMany({ where: { id: { in: qs.map((q: any) => q.id) } } });
+    const items = await ctx.prisma.learningItem.findMany({ where: { id: { in: issued.map((q) => q.itemId).filter((x): x is string => !!x) } } });
+    expect(items.length).toBeGreaterThan(10);
+    expect(items.every((i) => i.levelCode === 'N3')).toBe(true);
+    const res = (await agent.post('/api/exams/n3-mock/submit').send({ sessionId: exam.body.sessionId, answers: {} }).expect(200)).body;
+    expect(res).toMatchObject({ correct: 0, passed: false });
+    expect(res.recommendations.join(' ')).toMatch(/N3/);
+  });
+
+  it('examen blanc N2 : 42 questions issues du contenu N2, conseils propres au N2', async () => {
+    const { agent } = await signUp(ctx.app);
+    const exam = await agent.post('/api/exams/n2-mock/start').expect(201);
+    expect(exam.body.exam).toMatchObject({ title: 'Examen blanc JLPT N2', durationMin: 40 });
+    const qs = exam.body.questions;
+    expect(qs).toHaveLength(42);
+    const issued = await ctx.prisma.issuedQuestion.findMany({ where: { id: { in: qs.map((q: any) => q.id) } } });
+    const items = await ctx.prisma.learningItem.findMany({ where: { id: { in: issued.map((q) => q.itemId).filter((x): x is string => !!x) } } });
+    expect(items.length).toBeGreaterThan(10);
+    expect(items.every((i) => i.levelCode === 'N2')).toBe(true);
+    const res = (await agent.post('/api/exams/n2-mock/submit').send({ sessionId: exam.body.sessionId, answers: {} }).expect(200)).body;
+    expect(res).toMatchObject({ correct: 0, passed: false });
+    expect(res.recommendations.join(' ')).toMatch(/N2/);
+  });
+
+  it('examen blanc N1 : 44 questions issues du contenu N1, conseils propres au N1', async () => {
+    const { agent } = await signUp(ctx.app);
+    const exam = await agent.post('/api/exams/n1-mock/start').expect(201);
+    expect(exam.body.exam).toMatchObject({ title: 'Examen blanc JLPT N1', durationMin: 45 });
+    const qs = exam.body.questions;
+    expect(qs).toHaveLength(44);
+    const issued = await ctx.prisma.issuedQuestion.findMany({ where: { id: { in: qs.map((q: any) => q.id) } } });
+    const items = await ctx.prisma.learningItem.findMany({ where: { id: { in: issued.map((q) => q.itemId).filter((x): x is string => !!x) } } });
+    expect(items.length).toBeGreaterThan(10);
+    expect(items.every((i) => i.levelCode === 'N1')).toBe(true);
+    const res = (await agent.post('/api/exams/n1-mock/submit').send({ sessionId: exam.body.sessionId, answers: {} }).expect(200)).body;
+    expect(res).toMatchObject({ correct: 0, passed: false });
+    expect(res.recommendations.join(' ')).toMatch(/N1/);
+  });
+
+  it('niveau JLPT inconnu : 400', async () => {
+    const { agent } = await signUp(ctx.app);
+    await agent.get('/api/path/N0').expect(400);
   });
 });

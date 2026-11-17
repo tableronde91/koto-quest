@@ -34,6 +34,9 @@ function Gate() {
       <Stack.Screen name="onboarding" />
       <Stack.Screen name="lesson/[slug]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="review" options={{ gestureEnabled: false }} />
+      <Stack.Screen name="reading/[slug]" />
+      <Stack.Screen name="boss/[slug]" options={{ gestureEnabled: false }} />
+      <Stack.Screen name="exam/[slug]" options={{ gestureEnabled: false }} />
     </Stack>
   );
 }

@@ -11,3 +11,5 @@ test-results
 apps/mobile/dist-web
 apps/mobile/.expo
 dist-seed
+__pycache__/
+*.pyc

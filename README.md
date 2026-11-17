@@ -2,7 +2,7 @@
 
 Application web (PWA) d'apprentissage du japonais, du JLPT N5 au N1 : leçons courtes, répétition espacée FSRS et petits défis envoyés au fil de la journée.
 
-> **État : phase 1 (MVP web).** Le parcours N5 complet (43 leçons alignées sur l'examen, examen blanc au format officiel) et le N4 (21 leçons et son examen blanc), le moteur de révision, les rappels et les statistiques sont fonctionnels. La gamification avancée (avatar, boss, mini-jeux), les niveaux N4 à N1 et les niveaux N3 à N1 correspondent aux phases suivantes : voir [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+> **État : phase 1 (MVP web).** Les parcours N5 (43 leçons), N4 (39 leçons), N3, N2 et N1 (24 leçons chacun) sont complets, chacun avec son examen blanc. Mode histoire, moteur de révision, lecture, duels, rappels et statistiques sont fonctionnels. L'application mobile correspond à la phase suivante : voir [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Démarrage rapide
 
@@ -74,6 +74,7 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 - **Charge quotidienne adaptative** : en cas de retard, les révisions sont plafonnées et les nouveautés ralenties au lieu de s'accumuler.
 - **Défis dans la journée** : consentement explicite, 4 modes de fréquence, horaires personnalisés, heures silencieuses, pause. Un défi n'est envoyé que s'il y a une notion pertinente à réviser et jamais pendant une session d'étude. Il arrive en notification Web Push si le navigateur l'autorise, sinon en popup interactive dans l'application. La notification ouvre directement le mini-quiz.
 - **Tableau de bord et statistiques** : série bienveillante (un jour manqué pardonné par semaine), XP et niveau, temps du jour, mots et kanji maîtrisés, révisions dues, leçon recommandée, 3 quêtes du jour, estimation prudente de préparation, graphiques et détail de chaque notion.
+- **Audio** : synthèse vocale du navigateur (`apps/web/src/lib/speech.ts`) ; on attend que les voix soient chargées, on préfère une voix japonaise installée sur l'appareil (les voix en ligne démarrent avec du retard ou restent muettes), on laisse au moteur un court instant pour s'arrêter avant d'enchaîner, et seule la dernière demande est jouée. Même logique dans l'appli mobile (`apps/mobile/src/speech.ts`).
 - **Interface** : responsive (barre d'onglets en bas sur mobile), modes clair et sombre, navigation clavier (touches 1 à 4 pour répondre), lecteurs d'écran, animations réduites sur demande, PWA installable.
 
 ### Examen blanc JLPT N5 au format officiel
@@ -104,6 +105,13 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 ### Progrès : « Mon aventure »
 - Fiche du héros (rang selon le niveau, anneau d'XP, série, pièces, leçons, temps d'étude), compétences façon RPG (kana, vocabulaire, kanji, grammaire : un niveau tous les 10 éléments maîtrisés), jardin de la mémoire (graines, pousses, fleurs, feuilles fragiles), carnet de route des 14 derniers jours, vitrine des gardiens vaincus, succès et tableau d'honneur.
 - Le grimoire des notions et les graphiques détaillés restent disponibles (graphiques repliés).
+
+### Mode histoire
+- Chaque niveau est une saga (`content/story/story.json`, français et anglais, régénéré par `scripts/gen-story.py`) : N5 « La Voie du samouraï » (侍), N4 « L'Ombre du ninja » (忍), N3 « Le Voyage de l'esprit » (霊), N2 « La Capitale de l'onmyōji » (陽), N1 « Le Règne du shōgun » (将). Les récits s'enchaînent.
+- Un chapitre par île : titre, introduction qui relie la notion étudiée au gardien, et dénouement affiché une fois le gardien vaincu (ou l'examen réussi). Prologue en tête du parcours, épilogue quand le niveau est terminé.
+- Sur la carte : bannière et sceau de la saga, emblème du héros sur le personnage, et un décor par île qui illustre son chapitre (`components/StoryScenes.tsx` : gué du Kappa, porte du château, pont de l'Oni, village caché, marché de nuit, palais sous l'orage, auberge aux horloges, forge de l'Oni, nid du corbeau…). La même île sert de vignette au chapitre dans la liste.
+- Ambiance par saga : N5 de jour sur les routes du Japon féodal (pins, bannières, châteaux à l'horizon) ; N4 de nuit (fenêtres éclairées, lune, étoiles de ninja, ombre qui bondit, éclairs) ; N3 nuit de neige chez les esprits (mer indigo, voiles de lumière, feux follets, lanternes sur l'eau, lueur de l'aube près de la dernière île) ; N2 soir d'été dans la capitale (eau de jade, hortensias, lotus, lucioles, feux d'artifice) ; N1 aube du Nouvel An (ciel violet qui s'embrase d'or, mont Fuji, grues, pruniers en fleur, paillettes d'or).
+- `apps/api/test/story.spec.ts` vérifie qu'aucune île n'est sans chapitre.
 
 ### Carte en archipel
 - Chaque niveau est un archipel (`components/WorldMap.tsx`, SVG original) : une île par monde avec son repère (torii, pagode, mont Fuji, phare, bambouseraie, lanternes, cascade, sanctuaire pour l'examen), sceau rouge du gardien, plaque de bois avec le nom, ponts de bois entre les îles proches et chemins lumineux sur l'eau.
@@ -166,10 +174,10 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - Limites : 200 amis, 30 demandes envoyées en attente. API : `GET /friends`, `GET /friends/requests`, `POST /friends` (`code` ou `userId`), `POST /friends/:id/accept`, `DELETE /friends/:id`.
 - Version hors ligne : non disponible (pas d'autres joueurs).
 
-## Lecture quotidienne
+## Lecture
 
-- Menu **Lecture** (`/lecture`) : six contes traditionnels japonais (Momotarō, Kasa Jizō, la grue reconnaissante, Urashima Tarō, Issun-bōshi, Kaguya-hime) réécrits en japonais simple, N5 puis N4, découpés en 28 chapitres de plus en plus longs (6 → 14 phrases).
-- **Un nouveau chapitre par jour** (date locale de l’utilisateur) ; les chapitres déjà lus restent relisibles. Série de jours de lecture, caractères lus, carte « Lecture du jour » sur l’accueil.
+- Menu **Lecture** (`/lecture`) : huit contes traditionnels japonais réécrits en japonais simple — N5 (Momotarō, Kasa Jizō, la grue reconnaissante), N4 (Urashima Tarō, Issun-bōshi, Kaguya-hime) et N3 (Yuki-onna, Warashibe Chōja) — découpés en 37 chapitres de plus en plus longs (6 → 16 phrases).
+- **Tout est ouvert dès le départ** : le lecteur lit le conte et le chapitre qu'il veut, dans l'ordre qu'il veut, autant de chapitres par jour qu'il veut. Le « chapitre du jour » n'est qu'un conseil (le premier pas encore lu) ; une fois la lecture du jour faite, « Continuer la lecture » propose la suite. Série de jours de lecture, caractères lus, carte « Lecture du jour » sur l'accueil.
 - Liseuse : furigana affichables, traduction FR/EN phrase par phrase (au toucher, tout, aucune), écoute phrase par phrase ou du chapitre entier, vocabulaire du chapitre, questions de compréhension (XP et pièces à la première lecture seulement).
 - Contenu : `content/reading/stories.json` (furigana notés `{漢字|かな}`) ; logique commune serveur / hors ligne dans `packages/shared/src/reading.ts` ; API `GET /reading`, `GET /reading/chapters/:slug`, `POST /reading/chapters/:slug/complete`.
 
@@ -177,10 +185,13 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 
 `apps/mobile` : application iOS / Android en React Native (Expo SDK 58, expo-router), qui réutilise `@koto/shared` (contrats d'API) et `@koto/learning-engine`.
 
-- **Écrans** : connexion / inscription, profil en un écran, accueil (action du moment, série, niveau, quêtes), parcours N5 / N4 par îles, leçon (notions avec prononciation, exemples, exercices de tous les types, reprise des erreurs, mini-révision), révisions, réglages.
+- **Écrans** : connexion / inscription, profil en un écran, accueil (action du moment, série, niveau, quêtes), parcours en mode histoire sur les cinq niveaux (saga du héros, chapitre et récit de chaque île), leçon (notions avec prononciation, exemples, exercices de tous les types, reprise des erreurs, mini-révision), lecture, révisions, réglages.
+- **Lecture** : les mêmes contes que sur le web, tous ouverts ; furigana à la demande (placés au-dessus des kanji, `src/Ruby.tsx`), traduction et prononciation au toucher d'une phrase, vocabulaire, questions de compréhension, série et récompenses communes au compte.
 - **Rappels natifs** : `expo-notifications` programme chaque jour des notifications locales aux créneaux calculés par le serveur (mêmes réglages que le web) ; toucher la notification ouvre une séance de révision.
 - **Session** : l'API renvoie un jeton au client mobile (en-tête `X-Koto-Client: mobile`), rangé dans le coffre sécurisé du téléphone (`expo-secure-store`) et envoyé en `Authorization: Bearer`. Le web garde son cookie httpOnly, jamais exposé au JavaScript.
-- Combats de gardiens, mini-jeux et examens blancs restent pour l'instant sur la version web (indiqué dans l'appli).
+- **Combats de gardiens** (`app/boss/[slug].tsx`) : vie du gardien, cœurs, coup final ; le résultat est recalculé par le serveur ; le dénouement du chapitre s'affiche à la victoire.
+- **Examens blancs** (`app/exam/[slug].tsx`) : chronomètre, navigation entre les questions, écoute avec nombre d'écoutes limité, copie rendue automatiquement à la fin du temps, résultat par compétence, conseils et erreurs corrigées.
+- Les mini-jeux et les duels restent pour l'instant sur la version web.
 
 Lancer sur un téléphone (application Expo Go) :
 
@@ -213,7 +224,7 @@ Comptes, duels en ligne et classement nécessitent le serveur (API + PostgreSQL)
 - **Web Push sur iPhone** : nécessite d'installer l'application sur l'écran d'accueil (iOS 16.4 ou plus récent).
 - **Planificateur** : cron en mémoire dans le processus API (une seule instance). Passer à BullMQ + Redis avant de lancer plusieurs instances.
 - **E-mails** : envoyés par SMTP si `SMTP_URL` est renseigné ; sinon, les liens sont écrits dans la console de l'API.
-- **Contenu** : N5 complet (9 îles, 43 leçons) et N4 (9 îles, 39 leçons, 239 notions) ; N3 à N1 à venir. Le contenu N4 ajouté le 10/11/2026 est généré par `scripts/n4-extension.py` (français + anglais).
+- **Contenu** : N5 complet (9 îles, 43 leçons) et N4 (9 îles, 39 leçons, 239 notions) ; N3 (9 îles, 24 leçons, 171 notions, examen blanc `n3-mock`, généré par `scripts/n3-level.py`) ; N2 (9 îles, 24 leçons, 192 notions, examen blanc `n2-mock`, généré par `scripts/n2-level.py`) ; N1 (9 îles, 24 leçons, 192 notions, examen blanc `n1-mock`, généré par `scripts/n1-level.py`). Le contenu N4 ajouté le 10/11/2026 est généré par `scripts/n4-extension.py` (français + anglais).
 - **Migration initiale** : générée depuis le schéma Prisma dans un environnement sans accès aux moteurs Prisma. Après `npm run setup`, lancez `npm run db:migrate:dev -w @koto/api` une fois : si Prisma détecte un écart avec `schema.prisma`, il proposera une migration corrective.
 
 ## Variables d'environnement

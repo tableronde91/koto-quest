@@ -133,11 +133,74 @@ async function answerFromStore(page: Page, correct: boolean) {
   return { id, type };
 }
 
+test('hors ligne : audio fiable (voix chargées en retard, voix installée préférée, dernière demande seule jouée)', async ({ page }) => {
+  // Synthèse simulée : la liste des voix n'arrive que plus tard (au signal du test), une voix en ligne est listée avant la voix installée,
+  // et le moteur reste « occupé » le temps de lire une phrase.
+  await page.addInitScript(() => {
+    const w = window as any;
+    w.__log = [];
+    const voices = [
+      { lang: 'ja-JP', name: 'Google 日本語', localService: false, default: false },
+      { lang: 'ja-JP', name: 'Kyoko', localService: true, default: false },
+    ];
+    let loaded = false;
+    const listeners: (() => void)[] = [];
+    const synth: any = {
+      speaking: false,
+      pending: false,
+      getVoices: () => (loaded ? voices : []),
+      addEventListener: (_: string, f: () => void) => listeners.push(f),
+      removeEventListener: () => {},
+      resume: () => w.__log.push('resume'),
+      cancel: () => { synth.speaking = false; w.__log.push('cancel'); },
+      speak: (u: any) => {
+        w.__log.push({ text: u.text, voice: u.__voice?.name ?? null, at: Date.now() });
+        synth.speaking = true;
+        setTimeout(() => { synth.speaking = false; u.onend?.(); }, 300);
+      },
+    };
+    // Le navigateur refuse un objet « voix » maison : on mémorise celle qui a été choisie
+    Object.defineProperty(SpeechSynthesisUtterance.prototype, 'voice', { set(v) { this.__voice = v; }, get() { return this.__voice ?? null; }, configurable: true });
+    Object.defineProperty(window, 'speechSynthesis', { value: synth });
+    w.__loadVoices = () => { loaded = true; listeners.forEach((f) => f()); };
+  });
+  await page.goto(FILE);
+  for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+  await page.goto(FILE + '#/lesson/n5-hira-a');
+  const listen = page.getByRole('button', { name: 'Écouter あ' });
+  await expect(listen).toBeVisible();
+  // Trois clics rapprochés pendant que les voix ne sont pas encore là : une seule lecture, avec la voix installée
+  await page.evaluate(() => ((window as any).__log = []));
+  await listen.click();
+  await listen.click();
+  await listen.click();
+  // Rien n'est lu avec une voix inconnue : on attend la liste des voix
+  expect(await page.evaluate(() => (window as any).__log.filter((x: any) => typeof x === 'object').length)).toBe(0);
+  await page.evaluate(() => (window as any).__loadVoices());
+  await expect.poll(() => page.evaluate(() => (window as any).__log.filter((x: any) => typeof x === 'object').length)).toBe(1);
+  await page.waitForTimeout(600);
+  const log = await page.evaluate(() => (window as any).__log);
+  const spoken = log.filter((x: any) => typeof x === 'object');
+  expect(spoken).toHaveLength(1);
+  expect(spoken[0].voice).toBe('Kyoko');
+  expect(log).toContain('resume');
+  // Relance pendant une lecture : arrêt, court délai, puis la nouvelle phrase (jamais avalée)
+  await page.evaluate(() => ((window as any).__log = []));
+  await listen.click();
+  await page.waitForTimeout(50);
+  await listen.click();
+  await expect.poll(() => page.evaluate(() => (window as any).__log.filter((x: any) => typeof x === 'object').length)).toBe(2);
+  const log2 = await page.evaluate(() => (window as any).__log);
+  const [a, b] = log2.filter((x: any) => typeof x === 'object');
+  expect(b.at - a.at).toBeGreaterThanOrEqual(100);
+});
+
 test('hors ligne : phrase complète prononcée après une bonne réponse, exercices ratés repris en fin de séance', async ({ page }) => {
   await page.addInitScript(() => {
     (window as any).__spoken = [];
     Object.defineProperty(window, 'speechSynthesis', {
-      value: { speak: (u: SpeechSynthesisUtterance) => (window as any).__spoken.push(u.text), cancel: () => {}, getVoices: () => [], onvoiceschanged: null },
+      value: { speak: (u: SpeechSynthesisUtterance) => (window as any).__spoken.push(u.text), cancel: () => {}, resume: () => {}, speaking: false, pending: false, getVoices: () => [{ lang: 'ja-JP', name: 'Kyoko', localService: true, default: false }], addEventListener: () => {}, removeEventListener: () => {} },
     });
   });
   await page.goto(FILE);
@@ -281,6 +344,8 @@ test('hors ligne : carte des mondes et mini-jeu chronométré', async ({ page })
 
   // Carte : le monde 1 est « en cours », toucher une étape mène à ses leçons
   await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: /N5 : La Voie du samouraï/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Chapitre 1 Le premier pinceau/ })).toBeVisible();
   await expect(page.getByRole('button', { name: /Île 1 : Découverte des hiragana, en cours/ })).toBeVisible();
   await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N5, examen blanc/ })).toBeVisible();
 
@@ -409,7 +474,9 @@ test('hors ligne : parcours N4, choix du niveau et première leçon de la forme 
   await page.goto(FILE + '#/path');
   await expect(page.getByRole('tab', { name: /N5/ })).toHaveAttribute('aria-selected', 'true');
   await page.getByRole('tab', { name: /N4/ }).click();
-  await expect(page.getByRole('heading', { name: /N4 : Archipel des voyageurs/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /N4 : L’Ombre du ninja/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Chapitre 1 L’entraînement de l’ombre/ })).toBeVisible();
+  await expect(page.getByText(/Le Tengu pressé ne te laissera aucun répit/)).toBeVisible();
   await expect(page.getByRole('heading', { name: /La forme en て/ })).toBeVisible();
   await page.getByRole('link', { name: /Forme en て : verbes en る/ }).click();
   await expect(page.getByRole('heading', { name: 'Forme en て : verbes en る et irréguliers' })).toBeVisible();
@@ -420,6 +487,30 @@ test('hors ligne : parcours N4, choix du niveau et première leçon de la forme 
   await expect(page.getByRole('tab', { name: /N4/ })).toHaveAttribute('aria-selected', 'true');
   await expect(page.getByRole('tab', { name: /N4/ })).toContainText('1/39 leçons');
   await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N4, examen blanc/ })).toBeVisible();
+
+  // N2 : carte d'été, une leçon de bout en bout, île de l'examen blanc
+  await page.getByRole('tab', { name: /N2/ }).click();
+  await expect(page.getByRole('heading', { name: /N2 : La Capitale de l’onmyōji/ })).toBeVisible();
+  await expect(page.locator('[data-theme-map="summer"]')).toBeVisible();
+  await expect(page.getByRole('tab', { name: /N2/ })).toContainText('0/24 leçons');
+  await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N2, examen blanc/ })).toBeVisible();
+  await expect(page.getByText('40 minutes, 42 questions, non officiel')).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Chapitre 1 L’observatoire des présages/ })).toBeVisible();
+  await page.getByRole('link', { name: /Du point de vue de…/ }).click();
+  await expect(page.getByRole('heading', { name: /Du point de vue de… : 〜からすると・〜から見ると/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('tab', { name: /N2/ })).toContainText('1/24 leçons');
+  // N1 : saga du shōgun, carte de l'aube du Nouvel An
+  await page.getByRole('tab', { name: /N1/ }).click();
+  await expect(page.getByRole('heading', { name: /N1 : Le Règne du shōgun/ })).toBeVisible();
+  await expect(page.locator('[data-theme-map="newyear"]')).toBeVisible();
+  await expect(page.getByRole('tab', { name: /N1/ })).toContainText('0/24 leçons');
+  await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N1, examen blanc/ })).toBeVisible();
+  await expect(page.getByText('45 minutes, 44 questions, non officiel')).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Chapitre 1 La cérémonie de succession/ })).toBeVisible();
+  await page.getByRole('tab', { name: /N4/ }).click();
 
   // Examen blanc N4 : présentation propre au niveau, copie rendue vide puis corrigée
   await page.goto(FILE + '#/exam/n4-mock');
@@ -658,7 +749,7 @@ test('hors ligne : expressions utiles par thème, recherche et entraînement', a
   await expect(page.getByText(/1 sur 8 vues|sur 8 vues/)).toBeVisible();
 });
 
-test('hors ligne : lecture du jour, un chapitre par jour, progression enregistrée', async ({ page }) => {
+test('hors ligne : lecture du jour, tous les chapitres ouverts, progression enregistrée', async ({ page }) => {
   await page.goto(FILE);
   for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
   await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
@@ -674,13 +765,20 @@ test('hors ligne : lecture du jour, un chapitre par jour, progression enregistr�
   expect(stored).toHaveLength(1);
   expect(stored[0]).toMatchObject({ chapter: 'momotaro-1', correct: 2 });
   await page.getByRole('link', { name: 'Tous les contes' }).first().click();
-  await expect(page.getByText('Jour 1 · lu aujourd’hui')).toBeVisible();
-  // Le lendemain : on simule une lecture datée d'hier pour vérifier le déblocage
+  await expect(page.getByText('Lu aujourd’hui')).toBeVisible();
+  // Rien n'est verrouillé : chaque chapitre de chaque conte est un lien
+  const chapters = page.getByTestId('story').getByRole('listitem');
+  expect(await chapters.getByRole('link').count()).toBe(await chapters.count());
+  await page.getByTestId('story').last().getByRole('link').last().click();
+  await expect(page.getByTestId('reader')).toBeVisible();
+  await page.goBack();
+  // Le lendemain : on simule une lecture datée d'hier, le chapitre conseillé est le suivant
   await page.evaluate(() => {
     const s = JSON.parse(localStorage.getItem('koto-quest-local-v1')!);
     s.reading[0].dateKey = '2000-01-01';
     localStorage.setItem('koto-quest-local-v1', JSON.stringify(s));
   });
   await page.reload();
-  await expect(page.getByText(/Jour 2 · à lire aujourd’hui/)).toBeVisible();
+  await expect(page.getByText('Conseillé aujourd’hui')).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Un garçon dans la pêche/ })).toBeVisible();
 });

@@ -143,7 +143,8 @@ test.describe('version anglaise', () => {
     expect(me.preferences.locale).toBe('en');
 
     await page.getByRole('link', { name: /^Path/ }).first().click();
-    await expect(page.getByRole('heading', { name: /N5: Beginners’ Archipelago/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /N5: The Way of the Samurai/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Chapter 1 The first brush/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /Island 1: Discovering hiragana, in progress/ })).toBeVisible();
 
     // Passage au français : enregistré sur le compte

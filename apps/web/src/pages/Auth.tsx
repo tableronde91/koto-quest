@@ -173,16 +173,16 @@ export function WelcomePage() {
 const JLPT_LEVELS = [
   { id: 'N5', ready: true, kanji: '100', words: '800', name: () => T("Les bases"), text: () => T("Lire hiragana, katakana et des kanji simples ; comprendre des phrases lentes du quotidien.") },
   { id: 'N4', ready: true, kanji: '300', words: '1 500', name: () => T("Japonais élémentaire"), text: () => T("Suivre des conversations courantes et lire des textes simples sur des sujets familiers.") },
-  { id: 'N3', ready: false, kanji: '650', words: '3 750', name: () => T("Niveau intermédiaire"), text: () => T("Comprendre le japonais de la vie quotidienne à une vitesse presque naturelle.") },
-  { id: 'N2', ready: false, kanji: '1 000', words: '6 000', name: () => T("Niveau avancé"), text: () => T("Lire articles et actualités, suivre des échanges de la vie courante et du travail.") },
-  { id: 'N1', ready: false, kanji: '2 000', words: '10 000', name: () => T("Maîtrise"), text: () => T("Comprendre des textes complexes et abstraits et des discours dans des situations variées.") },
+  { id: 'N3', ready: true, kanji: '650', words: '3 750', name: () => T("Niveau intermédiaire"), text: () => T("Comprendre le japonais de la vie quotidienne à une vitesse presque naturelle.") },
+  { id: 'N2', ready: true, kanji: '1 000', words: '6 000', name: () => T("Niveau avancé"), text: () => T("Lire articles et actualités, suivre des échanges de la vie courante et du travail.") },
+  { id: 'N1', ready: true, kanji: '2 000', words: '10 000', name: () => T("Maîtrise"), text: () => T("Comprendre des textes complexes et abstraits et des discours dans des situations variées.") },
 ];
 
 const FEATURES = [
-  { glyph: '道', color: '#C8323F', title: () => T("Un parcours niveau par niveau"), text: () => T("Des leçons de 5 à 10 minutes, organisées en mondes qui suivent le programme de chaque niveau du JLPT.") },
+  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme du JLPT.") },
   { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("La répétition espacée fait revenir chaque mot, kanji ou point de grammaire juste avant que tu l’oublies.") },
   { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT"), text: () => T("Chaque épreuve au format exact de l’examen, corrigée immédiatement, pour arriver le jour J sans surprise.") },
-  { glyph: '読', color: '#6E63B5', title: () => T("La lecture du jour"), text: () => T("Un conte japonais en feuilleton, un chapitre par jour, pour s’habituer à lire vraiment.") },
+  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais en japonais simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
   { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, classées par situation, avec l’audio.") },
   { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Affronte d’autres apprenants en quiz rapides pour réviser en t’amusant et grimper au classement.") },
 ];

@@ -78,10 +78,12 @@ export function OnboardingPage({ me }: { me: MeDto }) {
             onChange={(v) => set({ targetLevel: v as JlptCode })}
             options={[
               { value: 'N5', label: T("N5 — débutant"), hint: T("Disponible") },
-              { value: 'N4', label: T("N4 — élémentaire"), hint: T("Premiers mondes disponibles, la suite arrive") },
+              { value: 'N4', label: T("N4 — élémentaire"), hint: T("Disponible") },
+              { value: 'N3', label: T("N3 — intermédiaire"), hint: T("Disponible") },
+              { value: 'N2', label: T("N2 — intermédiaire avancé"), hint: T("Disponible") },
+              { value: 'N1', label: T("N1 — avancé"), hint: T("Disponible") },
             ]}
           />
-          <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux N3 à N1 seront ajoutés progressivement.")}</p>
         </>
       ),
     },

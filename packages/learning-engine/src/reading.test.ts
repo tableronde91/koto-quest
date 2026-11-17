@@ -1,16 +1,18 @@
 import { describe, expect, it } from 'vitest';
-import { readingReward, readingStates, readingStreak, rubySegments, stripRuby } from './reading';
+import { readingReward, readingStates, readingStreak, readingSuggestion, rubySegments, stripRuby } from './reading';
 
 describe('lecture quotidienne', () => {
   const order = ['a-1', 'a-2', 'b-1', 'b-2'];
 
-  it('un seul nouveau chapitre par jour, dans l’ordre', () => {
-    expect([...readingStates(order, [], '2026-11-10').values()]).toEqual(['available', 'locked', 'locked', 'locked']);
-    const today = [{ chapter: 'a-1', dateKey: '2026-11-10' }];
-    expect([...readingStates(order, today, '2026-11-10').values()]).toEqual(['read', 'locked', 'locked', 'locked']);
-    expect([...readingStates(order, today, '2026-11-11').values()]).toEqual(['read', 'available', 'locked', 'locked']);
-    // Après plusieurs jours d'absence, on reprend simplement au chapitre suivant
-    expect([...readingStates(order, today, '2026-12-01').values()]).toEqual(['read', 'available', 'locked', 'locked']);
+  it('tous les chapitres sont ouverts dès le départ ; le premier non lu est conseillé', () => {
+    expect([...readingStates(order, []).values()]).toEqual(['available', 'available', 'available', 'available']);
+    expect(readingSuggestion(order, [])).toBe('a-1');
+    // On peut lire dans le désordre : le conseil reste le premier chapitre non lu
+    const logs = [{ chapter: 'b-1', dateKey: '2026-11-10' }];
+    expect([...readingStates(order, logs).values()]).toEqual(['available', 'available', 'read', 'available']);
+    expect(readingSuggestion(order, logs)).toBe('a-1');
+    expect(readingSuggestion(order, [...logs, { chapter: 'a-1', dateKey: '2026-11-10' }])).toBe('a-2');
+    expect(readingSuggestion(order, order.map((chapter) => ({ chapter, dateKey: '2026-11-10' })))).toBeNull();
   });
 
   it('série de jours de lecture', () => {

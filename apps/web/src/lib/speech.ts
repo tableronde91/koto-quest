@@ -1,24 +1,125 @@
-/** Synthèse vocale japonaise via le navigateur (gratuite, sans fichier audio à licencier). */
+/**
+ * Synthèse vocale japonaise via le navigateur (gratuite, sans fichier audio à licencier).
+ *
+ * Toute la lecture passe par `say()`, qui contourne les défauts connus des navigateurs :
+ * - les voix se chargent en différé : au premier appel, la liste est vide et le navigateur lit le
+ *   japonais avec une voix étrangère (souvent muette) → on attend la liste avant de parler ;
+ * - les voix « en ligne » (Google 日本語…) mettent parfois plusieurs secondes à démarrer, ou ne
+ *   démarrent pas → on préfère une voix japonaise installée sur l'appareil ;
+ * - `cancel()` suivi immédiatement de `speak()` fait sauter ou retarder la phrase suivante (Chrome)
+ *   → si une lecture était en cours, on laisse un court instant au moteur pour s'arrêter ;
+ * - un moteur resté « en pause » ne lit plus rien → `resume()` avant chaque lecture ;
+ * - Chrome peut libérer une phrase en cours de lecture (plus d'événement de fin) → on garde une
+ *   référence sur les phrases jusqu'à la fin ;
+ * - deux lectures demandées coup sur coup se chevauchaient → seule la dernière demande est jouée.
+ */
 export const speechSupported = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
 
+export interface SpeechPart {
+  text: string;
+  rate?: number;
+  pitch?: number;
+  onStart?: () => void;
+}
+
 let voice: SpeechSynthesisVoice | null = null;
+let voicesReady: Promise<void> | null = null;
+
+/** Meilleure voix japonaise : installée sur l'appareil d'abord (démarrage immédiat), puis en ligne. */
+function chooseVoice(): SpeechSynthesisVoice | null {
+  const ja = speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().replace('_', '-').startsWith('ja'));
+  if (!ja.length) return null;
+  const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === 'ja-jp' ? 2 : 0) + (v.default ? 1 : 0);
+  return [...ja].sort((a, b) => score(b) - score(a))[0];
+}
+
 function pickVoice() {
   if (!speechSupported()) return null;
-  voice ??= speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith('ja')) ?? null;
+  voice ??= chooseVoice();
   return voice;
 }
-if (speechSupported()) speechSynthesis.onvoiceschanged = () => { voice = null; pickVoice(); };
+
+/** Attend que la liste des voix soit disponible (au plus 1,5 s : certains navigateurs n'envoient jamais l'événement). */
+function loadVoices(): Promise<void> {
+  if (!speechSupported()) return Promise.resolve();
+  if (speechSynthesis.getVoices().length) return Promise.resolve();
+  voicesReady ??= new Promise<void>((resolve) => {
+    const done = () => {
+      speechSynthesis.removeEventListener?.('voiceschanged', done);
+      voice = null;
+      resolve();
+    };
+    speechSynthesis.addEventListener?.('voiceschanged', done);
+    window.setTimeout(done, 1500);
+  });
+  return voicesReady;
+}
+
+if (speechSupported()) {
+  speechSynthesis.addEventListener?.('voiceschanged', () => {
+    voice = null;
+  });
+  // Charge la liste des voix dès le démarrage, pour que la première lecture parte tout de suite.
+  speechSynthesis.getVoices();
+}
+
+let request = 0;
+const live = new Set<SpeechSynthesisUtterance>();
+
+/** Lit une suite de phrases ; remplace toute lecture en cours. Renvoie false si le navigateur ne sait pas parler. */
+export function say(parts: SpeechPart[], onEnd?: () => void): boolean {
+  if (!speechSupported()) return false;
+  const list = parts.filter((p) => p.text.trim());
+  if (!list.length) return false;
+  const my = ++request;
+  const wasBusy = speechSynthesis.speaking || speechSynthesis.pending;
+  speechSynthesis.cancel();
+  live.clear();
+
+  const go = () => {
+    if (my !== request) return; // une lecture plus récente a été demandée entre-temps
+    const v = pickVoice();
+    speechSynthesis.resume();
+    list.forEach((p, i) => {
+      const u = new SpeechSynthesisUtterance(p.text);
+      u.lang = v?.lang ?? 'ja-JP';
+      try {
+        if (v) u.voice = v;
+      } catch {
+        // voix refusée par le navigateur : la langue suffit
+      }
+      u.rate = p.rate ?? 0.9;
+      u.pitch = p.pitch ?? 1;
+      u.volume = 1;
+      live.add(u);
+      if (p.onStart) u.onstart = () => my === request && p.onStart?.();
+      const finish = () => {
+        live.delete(u);
+        if (i === list.length - 1 && my === request) onEnd?.();
+      };
+      u.onend = finish;
+      u.onerror = finish;
+      speechSynthesis.speak(u);
+    });
+  };
+
+  const ready = speechSynthesis.getVoices().length > 0;
+  if (ready && !wasBusy) go();
+  else loadVoices().then(() => (wasBusy ? window.setTimeout(go, 120) : go()));
+  return true;
+}
 
 export function speak(text: string, slow = false) {
-  if (!speechSupported() || !text) return false;
+  if (!text) return false;
+  return say([{ text, rate: slow ? 0.55 : 0.9 }]);
+}
+
+/** Arrête toute lecture (et annule une lecture en attente de démarrage). */
+export function stopSpeech() {
+  if (!speechSupported()) return;
+  request++;
+  live.clear();
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ja-JP';
-  u.rate = slow ? 0.55 : 0.9;
-  const v = pickVoice();
-  if (v) u.voice = v;
-  speechSynthesis.speak(u);
-  return true;
 }
 
 export const hasJapaneseVoice = () => !!pickVoice();
@@ -28,20 +129,9 @@ export const hasJapaneseVoice = () => !!pickVoice();
  * Une seule voix japonaise est souvent disponible : on distingue les rôles par la hauteur de voix.
  */
 export function speakScript(script: string, onEnd?: () => void) {
-  if (!speechSupported() || !script) return false;
-  speechSynthesis.cancel();
-  const lines = script.split('\n').map((l) => (l[1] === '|' ? { who: l[0], text: l.slice(2) } : { who: 'N', text: l })).filter((l) => l.text.trim());
-  const v = pickVoice();
-  lines.forEach((l, i) => {
-    const u = new SpeechSynthesisUtterance(l.text);
-    u.lang = 'ja-JP';
-    u.rate = 0.9;
-    u.pitch = l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1;
-    if (v) u.voice = v;
-    if (i === lines.length - 1 && onEnd) u.onend = () => onEnd();
-    speechSynthesis.speak(u);
-  });
-  return true;
+  if (!script) return false;
+  const lines = script.split('\n').map((l) => (l[1] === '|' ? { who: l[0], text: l.slice(2) } : { who: 'N', text: l }));
+  return say(lines.map((l) => ({ text: l.text, rate: 0.9, pitch: l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1 })), onEnd);
 }
 
 /** Texte lisible d'un document d'écoute (sans les marques de rôle). */

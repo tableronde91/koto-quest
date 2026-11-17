@@ -1,0 +1,3972 @@
+{
+ "contentVersion": "2026.11.17b",
+ "level": {
+  "code": "N1",
+  "title": "Avancé : japonais écrit et soutenu",
+  "region": "Domaine du shōgun",
+  "order": 1
+ },
+ "notice": "Les listes de vocabulaire et de kanji de Koto Quest sont alignées sur les compétences attendues au N1 mais ne constituent pas des listes officielles du JLPT.",
+ "worlds": [
+  {
+   "slug": "n1-w1",
+   "title": "Ouvrir et clore",
+   "region": "Domaine du shōgun",
+   "description": "Annoncer officiellement un début ou une fin, et dire qu’une chose en déclenche aussitôt une autre.",
+   "boss": {
+    "name": "Le Sceau Animé",
+    "glyph": "印",
+    "intro": "Ce vieux sceau d’État a pris vie après cent ans de service. Il refuse de se laisser apposer tant que le nouveau maître ne parle pas comme un décret : à compter de, à partir de, à peine… que…"
+   },
+   "chapters": [
+    {
+     "slug": "n1-w1-c1",
+     "title": "Décrets et signaux",
+     "lessons": [
+      {
+       "slug": "n1-wo-motte",
+       "title": "À compter de…, par le moyen de… : 〜をもって",
+       "objective": "Annoncer une date officielle de fin et dire par quel moyen on agit, dans le style des communiqués.",
+       "minutes": 10,
+       "explanation": [
+        "Nom de date + をもって = à compter de, en date de (fin officielle) : 本日を もって 閉店いたします. C’est le style des annonces et des lettres officielles.",
+        "Nom de moyen + をもって = au moyen de, par : 書面を もって ご連絡いたします. C’est un で très soutenu.",
+        "〜をもってすれば = si l’on dispose de (une qualité, un moyen), alors… : 彼の 実力を もってすれば、優勝も 夢では ない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-wo-motte",
+         "kind": "grammar",
+         "front": "〜をもって",
+         "reading": "〜をもって",
+         "romaji": "~wo motte",
+         "meaning": "à compter de… ; au moyen de… (soutenu)"
+        },
+        {
+         "slug": "gram-n1-wo-motte-sureba",
+         "kind": "grammar",
+         "front": "〜をもってすれば",
+         "reading": "〜をもってすれば",
+         "romaji": "~wo motte sureba",
+         "meaning": "avec… (comme atout), il suffit de…"
+        },
+        {
+         "slug": "vocab-heiten",
+         "kind": "vocabulary",
+         "front": "閉店",
+         "reading": "へいてん",
+         "romaji": "heiten",
+         "meaning": "fermeture (d’un magasin)"
+        },
+        {
+         "slug": "vocab-shomen",
+         "kind": "vocabulary",
+         "front": "書面",
+         "reading": "しょめん",
+         "romaji": "shomen",
+         "meaning": "écrit, document écrit"
+        },
+        {
+         "slug": "vocab-jitsuryoku",
+         "kind": "vocabulary",
+         "front": "実力",
+         "reading": "じつりょく",
+         "romaji": "jitsuryoku",
+         "meaning": "compétence réelle, vrai niveau"
+        },
+        {
+         "slug": "vocab-taishoku",
+         "kind": "vocabulary",
+         "front": "退職",
+         "reading": "たいしょく",
+         "romaji": "taishoku",
+         "meaning": "départ (d’un emploi), retraite"
+        },
+        {
+         "slug": "kanji-n1-in",
+         "kind": "kanji",
+         "front": "印",
+         "reading": "いん",
+         "romaji": "in",
+         "meaning": "sceau, marque",
+         "kanji": {
+          "onyomi": [
+           "イン"
+          ],
+          "kunyomi": [
+           "しるし"
+          ],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n1-ryou",
+         "kind": "kanji",
+         "front": "了",
+         "reading": "りょう",
+         "romaji": "ryou",
+         "meaning": "achever, comprendre",
+         "kanji": {
+          "onyomi": [
+           "リョウ"
+          ],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "当店は 三月末日を もって 閉店いたします。",
+         "reading": "とうてんは さんがつまつじつを もって へいてんいたします。",
+         "fr": "Notre magasin fermera définitivement à compter du 31 mars."
+        },
+        {
+         "jp": "結果は 後日、書面を もって お知らせします。",
+         "reading": "けっかは ごじつ、しょめんを もって おしらせします。",
+         "fr": "Le résultat vous sera communiqué ultérieurement par écrit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "本日＿ もって、受付を 終了いたしました。",
+         "choices": [
+          "を",
+          "に",
+          "で"
+         ],
+         "answer": "を",
+         "explanation": "〜を もって = à compter de.",
+         "translation": "Les inscriptions sont closes à compter d’aujourd’hui."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "彼の 実力を ＿、この 試験は 簡単だろう。",
+         "choices": [
+          "もってすれば",
+          "もって",
+          "もとに"
+         ],
+         "answer": "もってすれば",
+         "explanation": "Avec un atout : 〜をもってすれば.",
+         "translation": "Avec son niveau, cet examen devrait être facile."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "田中は 今月を もって 退職する ことに なりました。",
+         "translation": "M. Tanaka commence un nouvel emploi ce mois-ci.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "今月を もって 退職 = il quitte son poste à la fin du mois."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Nous vous informerons par écrit. »",
+         "answer": [
+          "書面",
+          "を",
+          "もって",
+          "お知らせします"
+         ],
+         "explanation": "Moyen + を もって, puis le verbe."
+        }
+       ]
+      },
+      {
+       "slug": "n1-wo-kawakiri",
+       "title": "À commencer par…, pour la dernière fois : 〜を皮切りに・〜を限りに",
+       "objective": "Dire par où commence une série d’événements, et marquer le dernier jour de quelque chose.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + を皮切りに(して) = à commencer par, avec… comme point de départ (une série qui s’étend ensuite) : 東京を 皮切りに、全国で 公演する.",
+        "Nom de date + を限りに = à partir de… on arrête ; … sera la dernière fois : 今日を 限りに、たばこを やめる.",
+        "声を 限りに est une expression figée : crier à pleins poumons."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-wo-kawakiri-ni",
+         "kind": "grammar",
+         "front": "〜を皮切りに",
+         "reading": "〜をかわきりに",
+         "romaji": "~wo kawakiri ni",
+         "meaning": "à commencer par…"
+        },
+        {
+         "slug": "gram-n1-wo-kagiri-ni",
+         "kind": "grammar",
+         "front": "〜を限りに",
+         "reading": "〜をかぎりに",
+         "romaji": "~wo kagiri ni",
+         "meaning": "à partir de… plus jamais ; pour la dernière fois"
+        },
+        {
+         "slug": "vocab-kouen-show",
+         "kind": "vocabulary",
+         "front": "公演",
+         "reading": "こうえん",
+         "romaji": "kouen",
+         "meaning": "représentation (spectacle)"
+        },
+        {
+         "slug": "vocab-kakuchi",
+         "kind": "vocabulary",
+         "front": "各地",
+         "reading": "かくち",
+         "romaji": "kakuchi",
+         "meaning": "différentes régions, partout"
+        },
+        {
+         "slug": "vocab-intai",
+         "kind": "vocabulary",
+         "front": "引退",
+         "reading": "いんたい",
+         "romaji": "intai",
+         "meaning": "retrait (de la vie active, du sport)"
+        },
+        {
+         "slug": "vocab-kaimaku",
+         "kind": "vocabulary",
+         "front": "開幕",
+         "reading": "かいまく",
+         "romaji": "kaimaku",
+         "meaning": "lever de rideau, ouverture"
+        },
+        {
+         "slug": "kanji-n1-kawa",
+         "kind": "kanji",
+         "front": "皮",
+         "reading": "かわ",
+         "romaji": "kawa",
+         "meaning": "peau, écorce",
+         "kanji": {
+          "onyomi": [
+           "ヒ"
+          ],
+          "kunyomi": [
+           "かわ"
+          ],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "kanji-n1-maku",
+         "kind": "kanji",
+         "front": "幕",
+         "reading": "まく",
+         "romaji": "maku",
+         "meaning": "rideau, acte",
+         "kanji": {
+          "onyomi": [
+           "マク",
+           "バク"
+          ],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "コンサートは 大阪を 皮切りに、各地で 行われます。",
+         "reading": "コンサートは おおさかを かわきりに、かくちで おこなわれます。",
+         "fr": "Le concert aura lieu dans tout le pays, à commencer par Osaka."
+        },
+        {
+         "jp": "彼は 今シーズンを 限りに 引退すると 発表した。",
+         "reading": "かれは こんシーズンを かぎりに いんたいすると はっぴょうした。",
+         "fr": "Il a annoncé qu’il prendrait sa retraite à l’issue de cette saison."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "京都での 公演を ＿、全国ツアーが 始まった。",
+         "choices": [
+          "皮切りに",
+          "限りに",
+          "もって"
+         ],
+         "answer": "皮切りに",
+         "explanation": "Point de départ d’une série : 〜を皮切りに.",
+         "translation": "La tournée nationale a commencé par une représentation à Kyōto."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "今日を ＿、お酒を やめます。",
+         "choices": [
+          "限りに",
+          "皮切りに",
+          "もってすれば"
+         ],
+         "answer": "限りに",
+         "explanation": "Dernière fois : 〜を限りに.",
+         "translation": "À partir d’aujourd’hui, j’arrête l’alcool."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "彼女は 声を 限りに 叫んだ。",
+         "translation": "Elle a chuchoté.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "声を 限りに = à pleins poumons."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "開幕戦＿ 皮切りに、多くの 試合が 行われる。",
+         "choices": [
+          "を",
+          "に",
+          "が"
+         ],
+         "answer": "を",
+         "explanation": "〜を 皮切りに.",
+         "translation": "À commencer par le match d’ouverture, de nombreux matchs auront lieu."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ga-hayaika",
+       "title": "À peine… que déjà… : 〜が早いか・〜や否や",
+       "objective": "Raconter, dans un style écrit, qu’une action suit immédiatement une autre.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe au dictionnaire + が早いか = à peine… que (quasi simultané, souvent un geste vif) : ベルが 鳴るが 早いか、生徒は 教室を 飛び出した.",
+        "Verbe au dictionnaire + や否や / や = dès que, au moment même où (très écrit) : 彼は 家に 着くや否や、眠って しまった.",
+        "Ces formes racontent des faits passés constatés ; on ne les emploie ni pour soi-même au futur, ni avec un ordre."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ga-hayai-ka",
+         "kind": "grammar",
+         "front": "〜が早いか",
+         "reading": "〜がはやいか",
+         "romaji": "~ga hayai ka",
+         "meaning": "à peine… que déjà…"
+        },
+        {
+         "slug": "gram-n1-ya-ina-ya",
+         "kind": "grammar",
+         "front": "〜や否や",
+         "reading": "〜やいなや",
+         "romaji": "~ya ina ya",
+         "meaning": "dès que…, au moment même où… (écrit)"
+        },
+        {
+         "slug": "vocab-kaisatsu",
+         "kind": "vocabulary",
+         "front": "改札",
+         "reading": "かいさつ",
+         "romaji": "kaisatsu",
+         "meaning": "portillon (de gare)"
+        },
+        {
+         "slug": "vocab-aizu",
+         "kind": "vocabulary",
+         "front": "合図",
+         "reading": "あいず",
+         "romaji": "aizu",
+         "meaning": "signal, signe convenu"
+        },
+        {
+         "slug": "vocab-kansei",
+         "kind": "vocabulary",
+         "front": "歓声",
+         "reading": "かんせい",
+         "romaji": "kansei",
+         "meaning": "cris de joie, acclamations"
+        },
+        {
+         "slug": "vocab-issei-ni",
+         "kind": "vocabulary",
+         "front": "一斉に",
+         "reading": "いっせいに",
+         "romaji": "issei ni",
+         "meaning": "tous en même temps"
+        },
+        {
+         "slug": "kanji-n1-hitoshii",
+         "kind": "kanji",
+         "front": "斉",
+         "reading": "せい",
+         "romaji": "sei",
+         "meaning": "égal, ensemble",
+         "kanji": {
+          "onyomi": [
+           "セイ"
+          ],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "kanji-n1-fuda",
+         "kind": "kanji",
+         "front": "札",
+         "reading": "ふだ",
+         "romaji": "fuda",
+         "meaning": "billet, étiquette",
+         "kanji": {
+          "onyomi": [
+           "サツ"
+          ],
+          "kunyomi": [
+           "ふだ"
+          ],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "合図が 鳴るが 早いか、選手たちは 一斉に 走り出した。",
+         "reading": "あいずが なるが はやいか、せんしゅたちは いっせいに はしりだした。",
+         "fr": "À peine le signal avait-il retenti que les athlètes s’élancèrent tous ensemble."
+        },
+        {
+         "jp": "歌手が 登場するや否や、会場から 歓声が 上がった。",
+         "reading": "かしゅが とうじょうするや いなや、かいじょうから かんせいが あがった。",
+         "fr": "Dès que la chanteuse est apparue, la salle a explosé de joie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "電車の ドアが 開く＿、彼は 改札へ 走った。",
+         "choices": [
+          "が早いか",
+          "を皮切りに",
+          "をもって"
+         ],
+         "answer": "が早いか",
+         "explanation": "Quasi simultané : 〜が早いか.",
+         "translation": "À peine les portes du train ouvertes, il a couru vers les portillons."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "母の 顔を 見る＿、子どもは 泣き出した。",
+         "choices": [
+          "や否や",
+          "を限りに",
+          "をもって"
+         ],
+         "answer": "や否や",
+         "explanation": "Dès que (écrit) : 〜や否や.",
+         "translation": "Dès qu’il a vu le visage de sa mère, l’enfant s’est mis à pleurer."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "仕事が 終わるや否や、帰る つもりです。",
+         "translation": "Cette phrase est naturelle en japonais.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜や否や ne s’emploie pas avec une intention (つもり)."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « À peine assis, il s’est endormi. »",
+         "answer": [
+          "座る",
+          "が早いか",
+          "彼は",
+          "眠って しまった"
+         ],
+         "explanation": "Verbe au dictionnaire + が早いか."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w2",
+   "title": "Jusqu’aux extrêmes",
+   "region": "Domaine du shōgun",
+   "description": "Insister sur un cas extrême : même pas, pas un seul, et ce n’est qu’à ce stade que…",
+   "boss": {
+    "name": "L’Ōnyūdō Démesuré",
+    "glyph": "巨",
+    "intro": "Ce moine géant grandit à chaque fois qu’on le regarde avec crainte. Pour le réduire, il faut parler des extrêmes sans trembler : même pas un instant, pas un seul mot."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w2-c1",
+     "title": "Même, pas un seul, seul… peut",
+     "lessons": [
+      {
+       "slug": "n1-sura",
+       "title": "Même pas… : 〜すら・〜だに",
+       "objective": "Insister sur un exemple extrême pour montrer à quel point une situation est poussée.",
+       "minutes": 10,
+       "explanation": [
+        "Nom (+ particule) + すら = même (souvent dans une phrase négative) : 名前すら 知らない. C’est un さえ plus écrit.",
+        "Nom / verbe au dictionnaire + だに = ne serait-ce que (très écrit, avec peu de mots) : 想像するだに 恐ろしい ; 夢にだに 思わなかった.",
+        "微動だに しない est une expression figée : ne pas bouger d’un pouce."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-sura",
+         "kind": "grammar",
+         "front": "〜すら",
+         "reading": "〜すら",
+         "romaji": "~sura",
+         "meaning": "même… (écrit)"
+        },
+        {
+         "slug": "gram-n1-dani",
+         "kind": "grammar",
+         "front": "〜だに",
+         "reading": "〜だに",
+         "romaji": "~dani",
+         "meaning": "ne serait-ce que…, rien qu’à…"
+        },
+        {
+         "slug": "vocab-kyoufu",
+         "kind": "vocabulary",
+         "front": "恐怖",
+         "reading": "きょうふ",
+         "romaji": "kyoufu",
+         "meaning": "terreur, peur intense"
+        },
+        {
+         "slug": "vocab-bidou",
+         "kind": "vocabulary",
+         "front": "微動",
+         "reading": "びどう",
+         "romaji": "bidou",
+         "meaning": "léger mouvement"
+        },
+        {
+         "slug": "vocab-hitokoto",
+         "kind": "vocabulary",
+         "front": "一言",
+         "reading": "ひとこと",
+         "romaji": "hitokoto",
+         "meaning": "un seul mot, un petit mot"
+        },
+        {
+         "slug": "vocab-ue",
+         "kind": "vocabulary",
+         "front": "飢え",
+         "reading": "うえ",
+         "romaji": "ue",
+         "meaning": "faim (famine)"
+        },
+        {
+         "slug": "kanji-n1-osoreru",
+         "kind": "kanji",
+         "front": "恐",
+         "reading": "おそれる",
+         "romaji": "osoreru",
+         "meaning": "craindre",
+         "kanji": {
+          "onyomi": [
+           "キョウ"
+          ],
+          "kunyomi": [
+           "おそ(れる)",
+           "おそ(ろしい)"
+          ],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n1-bi",
+         "kind": "kanji",
+         "front": "微",
+         "reading": "び",
+         "romaji": "bi",
+         "meaning": "infime, subtil",
+         "kanji": {
+          "onyomi": [
+           "ビ"
+          ],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "忙しくて、食事を する 時間すら ありません。",
+         "reading": "いそがしくて、しょくじを する じかんすら ありません。",
+         "fr": "Je suis si occupé que je n’ai même pas le temps de manger."
+        },
+        {
+         "jp": "地震の 恐怖は 思い出すだに 体が 震える。",
+         "reading": "じしんの きょうふは おもいだすだに からだが ふるえる。",
+         "fr": "Rien qu’en repensant à la terreur du séisme, je tremble."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "あの 人は 自分の 国の 首都＿ 知らない。",
+         "choices": [
+          "すら",
+          "だに",
+          "たりとも"
+         ],
+         "answer": "すら",
+         "explanation": "Même pas (nom) : 〜すら.",
+         "translation": "Cette personne ne connaît même pas la capitale de son propre pays."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "兵士は 微動＿ しなかった。",
+         "choices": [
+          "だに",
+          "すら",
+          "さえも"
+         ],
+         "answer": "だに",
+         "explanation": "Expression figée : 微動だに しない.",
+         "translation": "Le soldat n’a pas bougé d’un pouce."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "優勝するとは 夢にだに 思わなかった。",
+         "translation": "La personne s’attendait à gagner.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "夢にだに 思わなかった = je n’en avais même pas rêvé."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Il n’a même pas dit un mot. »",
+         "answer": [
+          "彼は",
+          "一言",
+          "すら",
+          "言わなかった"
+         ],
+         "explanation": "Nom + すら + négation."
+        }
+       ]
+      },
+      {
+       "slug": "n1-taritomo",
+       "title": "Pas un seul… : 〜たりとも・誰一人として",
+       "objective": "Nier avec force en partant de la plus petite quantité possible.",
+       "minutes": 10,
+       "explanation": [
+        "一 + compteur + たりとも + négation = pas même un seul : 一円たりとも 無駄に できない ; 一瞬たりとも 気を 抜くな.",
+        "Interrogatif + 一 + compteur + として + négation = pas un seul : 誰一人として 来なかった ; 何一つとして 分からない.",
+        "Ces formes conviennent aux déclarations fermes, aux règles et aux ordres."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-taritomo",
+         "kind": "grammar",
+         "front": "〜たりとも",
+         "reading": "〜たりとも",
+         "romaji": "~taritomo",
+         "meaning": "pas même un(e) seul(e)…"
+        },
+        {
+         "slug": "gram-n1-hitori-to-shite",
+         "kind": "grammar",
+         "front": "誰一人として〜ない",
+         "reading": "だれひとりとして〜ない",
+         "romaji": "dare hitori to shite ~nai",
+         "meaning": "personne, pas une seule personne"
+        },
+        {
+         "slug": "vocab-isshun",
+         "kind": "vocabulary",
+         "front": "一瞬",
+         "reading": "いっしゅん",
+         "romaji": "isshun",
+         "meaning": "un instant"
+        },
+        {
+         "slug": "vocab-reigai",
+         "kind": "vocabulary",
+         "front": "例外",
+         "reading": "れいがい",
+         "romaji": "reigai",
+         "meaning": "exception"
+        },
+        {
+         "slug": "vocab-minogashimasu",
+         "kind": "vocabulary",
+         "front": "見逃します",
+         "reading": "みのがします",
+         "romaji": "minogashimasu",
+         "meaning": "laisser passer, ne pas voir"
+        },
+        {
+         "slug": "vocab-rouhi",
+         "kind": "vocabulary",
+         "front": "浪費",
+         "reading": "ろうひ",
+         "romaji": "rouhi",
+         "meaning": "gaspillage"
+        },
+        {
+         "slug": "kanji-n1-rou",
+         "kind": "kanji",
+         "front": "浪",
+         "reading": "ろう",
+         "romaji": "rou",
+         "meaning": "vague ; errer",
+         "kanji": {
+          "onyomi": [
+           "ロウ"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n1-nigeru",
+         "kind": "kanji",
+         "front": "逃",
+         "reading": "にげる",
+         "romaji": "nigeru",
+         "meaning": "fuir, s’échapper",
+         "kanji": {
+          "onyomi": [
+           "トウ"
+          ],
+          "kunyomi": [
+           "に(げる)",
+           "のが(す)"
+          ],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "試合中は 一瞬たりとも 油断できない。",
+         "reading": "しあいちゅうは いっしゅんたりとも ゆだんできない。",
+         "fr": "Pendant le match, on ne peut pas relâcher son attention une seule seconde."
+        },
+        {
+         "jp": "その 質問に 答えられる 人は 誰一人として いなかった。",
+         "reading": "その しつもんに こたえられる ひとは だれひとりとして いなかった。",
+         "fr": "Personne, pas une seule personne, n’a su répondre à cette question."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "税金は 一円＿ 浪費しては いけない。",
+         "choices": [
+          "たりとも",
+          "すら",
+          "だに"
+         ],
+         "answer": "たりとも",
+         "explanation": "一 + compteur + たりとも.",
+         "translation": "L’argent public ne doit pas être gaspillé, pas même d’un yen."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "この 規則には 一つの ＿も 認めない。",
+         "choices": [
+          "例外",
+          "一瞬",
+          "浪費"
+         ],
+         "answer": "例外",
+         "explanation": "例外 = exception.",
+         "translation": "Ce règlement ne souffre aucune exception."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "会議では 何一つとして 決まらなかった。",
+         "translation": "La réunion a pris plusieurs décisions.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "何一つとして〜ない = rien du tout."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton chef te demande de surveiller une machine importante.",
+         "lines": [
+          {
+           "speaker": "上司",
+           "jp": "この 数字から 目を 離さないで ください。"
+          }
+         ],
+         "translation": "Le chef te demande de ne pas quitter ces chiffres des yeux.",
+         "choices": [
+          "はい、一瞬たりとも 見逃しません。",
+          "はい、一瞬すら 見逃します。",
+          "はい、一瞬だに 見逃して ください。"
+         ],
+         "answer": "はい、一瞬たりとも 見逃しません。",
+         "explanation": "Engagement ferme : 一瞬たりとも + négation."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ni-shite",
+       "title": "Seul… pouvait…, propre à… : 〜にして・〜ならではの",
+       "objective": "Dire qu’une chose n’est possible qu’à un certain niveau, ou qu’elle n’appartient qu’à un lieu ou à une personne.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + にして(初めて) = ce n’est qu’à… que : 四十歳に して 初めて 結婚した. Avec un maître : 名人に して 初めて できる 技.",
+        "Proverbe : この 親に して この 子 あり = tel père, tel fils.",
+        "Nom + ならではの + nom = propre à, qu’on ne trouve que chez : 京都ならではの 景色 ; 職人ならではの 技."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ni-shite",
+         "kind": "grammar",
+         "front": "〜にして",
+         "reading": "〜にして",
+         "romaji": "~ni shite",
+         "meaning": "ce n’est qu’à… que ; seul… peut"
+        },
+        {
+         "slug": "gram-n1-naradewa-no",
+         "kind": "grammar",
+         "front": "〜ならではの",
+         "reading": "〜ならではの",
+         "romaji": "~naradewa no",
+         "meaning": "propre à…, typique de…"
+        },
+        {
+         "slug": "vocab-meijin",
+         "kind": "vocabulary",
+         "front": "名人",
+         "reading": "めいじん",
+         "romaji": "meijin",
+         "meaning": "maître, virtuose"
+        },
+        {
+         "slug": "vocab-shokunin",
+         "kind": "vocabulary",
+         "front": "職人",
+         "reading": "しょくにん",
+         "romaji": "shokunin",
+         "meaning": "artisan"
+        },
+        {
+         "slug": "vocab-waza",
+         "kind": "vocabulary",
+         "front": "技",
+         "reading": "わざ",
+         "romaji": "waza",
+         "meaning": "technique, savoir-faire"
+        },
+        {
+         "slug": "vocab-kyouchi",
+         "kind": "vocabulary",
+         "front": "境地",
+         "reading": "きょうち",
+         "romaji": "kyouchi",
+         "meaning": "état d’esprit atteint, stade"
+        },
+        {
+         "slug": "kanji-n1-takumi",
+         "kind": "kanji",
+         "front": "匠",
+         "reading": "たくみ",
+         "romaji": "takumi",
+         "meaning": "artisan habile",
+         "kanji": {
+          "onyomi": [
+           "ショウ"
+          ],
+          "kunyomi": [
+           "たくみ"
+          ],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n1-sakai",
+         "kind": "kanji",
+         "front": "境",
+         "reading": "さかい",
+         "romaji": "sakai",
+         "meaning": "frontière, limite",
+         "kanji": {
+          "onyomi": [
+           "キョウ",
+           "ケイ"
+          ],
+          "kunyomi": [
+           "さかい"
+          ],
+          "strokes": 14
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "これは 名人に して 初めて できる 技です。",
+         "reading": "これは めいじんに して はじめて できる わざです。",
+         "fr": "Seul un maître est capable d’une telle technique."
+        },
+        {
+         "jp": "この 祭りでは、地方ならではの 料理が 楽しめる。",
+         "reading": "この まつりでは、ちほうならではの りょうりが たのしめる。",
+         "fr": "Pendant cette fête, on peut goûter des plats propres à la région."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "六十歳＿ 初めて、絵を 習い始めた。",
+         "choices": [
+          "にして",
+          "ならでは",
+          "たりとも"
+         ],
+         "answer": "にして",
+         "explanation": "Ce n’est qu’à… que : 〜にして初めて.",
+         "translation": "Ce n’est qu’à soixante ans qu’il a commencé à apprendre la peinture."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "これは 職人＿の 丁寧な 仕事だ。",
+         "choices": [
+          "ならでは",
+          "にして",
+          "すら"
+         ],
+         "answer": "ならでは",
+         "explanation": "Propre à : 〜ならではの.",
+         "translation": "C’est un travail soigné comme seul un artisan sait le faire."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 親に して この 子 あり。",
+         "translation": "Les parents et l’enfant se ressemblent.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Proverbe : tel père, tel fils."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Un paysage qu’on ne voit qu’à Kyōto. »",
+         "answer": [
+          "京都",
+          "ならではの",
+          "景色"
+         ],
+         "explanation": "Nom + ならではの + nom."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w3",
+   "title": "Contre vents et marées",
+   "region": "Domaine du shōgun",
+   "description": "Agir sans se laisser arrêter, faire dépendre une décision d’un critère, et concéder un point tout en le dépassant.",
+   "boss": {
+    "name": "Fūjin, Seigneur des Vents",
+    "glyph": "風",
+    "intro": "Le dieu du vent souffle sur la route de l’armée. Il ne laissera passer que celui qui avance malgré la tempête et qui sait dire ce qui dépend de quoi."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w3-c1",
+     "title": "Sans se laisser arrêter",
+     "lessons": [
+      {
+       "slug": "n1-wo-monotomosezu",
+       "title": "Sans se laisser arrêter par… : 〜をものともせず・〜をよそに",
+       "objective": "Dire qu’on agit en bravant un obstacle, ou en ignorant l’avis et l’inquiétude des autres.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + をものともせず(に) = sans se laisser arrêter par, au mépris de (souvent admiratif) : 嵐を ものともせず、船は 進んだ.",
+        "Nom + をよそに = sans se soucier de, en ignorant (souvent l’inquiétude des proches, critique) : 親の 心配を よそに、彼は 一人で 旅に 出た.",
+        "On ne s’en sert pas pour parler de soi : c’est un regard extérieur sur l’action de quelqu’un."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-wo-monotomosezu",
+         "kind": "grammar",
+         "front": "〜をものともせず",
+         "reading": "〜をものともせず",
+         "romaji": "~wo mono tomo sezu",
+         "meaning": "sans se laisser arrêter par…"
+        },
+        {
+         "slug": "gram-n1-wo-yoso-ni",
+         "kind": "grammar",
+         "front": "〜をよそに",
+         "reading": "〜をよそに",
+         "romaji": "~wo yoso ni",
+         "meaning": "sans se soucier de…, en ignorant…"
+        },
+        {
+         "slug": "vocab-arashi",
+         "kind": "vocabulary",
+         "front": "嵐",
+         "reading": "あらし",
+         "romaji": "arashi",
+         "meaning": "tempête"
+        },
+        {
+         "slug": "vocab-shuui",
+         "kind": "vocabulary",
+         "front": "周囲",
+         "reading": "しゅうい",
+         "romaji": "shuui",
+         "meaning": "entourage, alentours"
+        },
+        {
+         "slug": "vocab-konnan",
+         "kind": "vocabulary",
+         "front": "困難",
+         "reading": "こんなん",
+         "romaji": "konnan",
+         "meaning": "difficulté"
+        },
+        {
+         "slug": "vocab-kyoukou",
+         "kind": "vocabulary",
+         "front": "強行",
+         "reading": "きょうこう",
+         "romaji": "kyoukou",
+         "meaning": "passage en force"
+        },
+        {
+         "slug": "kanji-n1-arashi",
+         "kind": "kanji",
+         "front": "嵐",
+         "reading": "あらし",
+         "romaji": "arashi",
+         "meaning": "tempête",
+         "kanji": {
+          "onyomi": [
+           "ラン"
+          ],
+          "kunyomi": [
+           "あらし"
+          ],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n1-kakomu",
+         "kind": "kanji",
+         "front": "囲",
+         "reading": "かこむ",
+         "romaji": "kakomu",
+         "meaning": "entourer",
+         "kanji": {
+          "onyomi": [
+           "イ"
+          ],
+          "kunyomi": [
+           "かこ(む)"
+          ],
+          "strokes": 7
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "彼女は 足の けがを ものともせず、最後まで 走り抜いた。",
+         "reading": "かのじょは あしの けがを ものともせず、さいごまで はしりぬいた。",
+         "fr": "Sans se laisser arrêter par sa blessure à la jambe, elle a couru jusqu’au bout."
+        },
+        {
+         "jp": "住民の 反対を よそに、工事は 強行された。",
+         "reading": "じゅうみんの はんたいを よそに、こうじは きょうこうされた。",
+         "fr": "Sans tenir compte de l’opposition des habitants, les travaux ont été menés de force."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "彼は 数々の 困難を ＿、夢を 実現した。",
+         "choices": [
+          "ものともせず",
+          "よそに",
+          "皮切りに"
+         ],
+         "answer": "ものともせず",
+         "explanation": "Braver un obstacle (admiratif) : 〜をものともせず.",
+         "translation": "Sans se laisser arrêter par mille difficultés, il a réalisé son rêve."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "周囲の 心配を ＿、彼は 会社を 辞めた。",
+         "choices": [
+          "よそに",
+          "ものともせず",
+          "限りに"
+         ],
+         "answer": "よそに",
+         "explanation": "Ignorer l’inquiétude des autres : 〜をよそに.",
+         "translation": "Sans se soucier de l’inquiétude de son entourage, il a quitté son entreprise."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "船は 嵐を ものともせず、港を 出た。",
+         "translation": "Le bateau est resté au port à cause de la tempête.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜をものともせず : il est parti malgré la tempête."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Sans se soucier des inquiétudes de ses parents, il est parti seul. »",
+         "answer": [
+          "親の 心配",
+          "を よそに",
+          "彼は",
+          "一人で 出かけた"
+         ],
+         "explanation": "Nom + を よそに, puis l’action."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ikan",
+       "title": "Selon…, quel que soit… : 〜いかんで・〜いかんによらず",
+       "objective": "Faire dépendre une décision d’un critère, ou dire qu’elle n’en dépend pas, dans le style des règlements.",
+       "minutes": 10,
+       "explanation": [
+        "Nom (+ の) + いかんで / いかんでは / いかんによって = selon, en fonction de : 結果いかんでは、計画を 中止する.",
+        "Nom (+ の) + いかんによらず / いかんにかかわらず / いかんを問わず = quel que soit : 理由の いかんを 問わず、返金は できません.",
+        "C’est le style des contrats et des avis officiels ; à l’oral, on dirait 〜次第 ou 〜に関係なく."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ikan-de",
+         "kind": "grammar",
+         "front": "〜いかんで（は）",
+         "reading": "〜いかんで（は）",
+         "romaji": "~ikan de (wa)",
+         "meaning": "selon…, en fonction de… (soutenu)"
+        },
+        {
+         "slug": "gram-n1-ikan-ni-yorazu",
+         "kind": "grammar",
+         "front": "〜いかんによらず",
+         "reading": "〜いかんによらず",
+         "romaji": "~ikan ni yorazu",
+         "meaning": "quel que soit…"
+        },
+        {
+         "slug": "vocab-seihi",
+         "kind": "vocabulary",
+         "front": "成否",
+         "reading": "せいひ",
+         "romaji": "seihi",
+         "meaning": "succès ou échec, issue"
+        },
+        {
+         "slug": "vocab-kokuseki",
+         "kind": "vocabulary",
+         "front": "国籍",
+         "reading": "こくせき",
+         "romaji": "kokuseki",
+         "meaning": "nationalité"
+        },
+        {
+         "slug": "vocab-henkin",
+         "kind": "vocabulary",
+         "front": "返金",
+         "reading": "へんきん",
+         "romaji": "henkin",
+         "meaning": "remboursement"
+        },
+        {
+         "slug": "vocab-taiou",
+         "kind": "vocabulary",
+         "front": "対応",
+         "reading": "たいおう",
+         "romaji": "taiou",
+         "meaning": "réponse apportée, prise en charge"
+        },
+        {
+         "slug": "kanji-n1-seki",
+         "kind": "kanji",
+         "front": "籍",
+         "reading": "せき",
+         "romaji": "seki",
+         "meaning": "registre, inscription",
+         "kanji": {
+          "onyomi": [
+           "セキ"
+          ],
+          "kunyomi": [],
+          "strokes": 20
+         }
+        },
+        {
+         "slug": "kanji-n1-ou",
+         "kind": "kanji",
+         "front": "応",
+         "reading": "おう",
+         "romaji": "ou",
+         "meaning": "répondre, s’adapter",
+         "kanji": {
+          "onyomi": [
+           "オウ"
+          ],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "交渉の 成否は、今後の 対応いかんで 決まる。",
+         "reading": "こうしょうの せいひは、こんごの たいおういかんで きまる。",
+         "fr": "L’issue des négociations dépendra de la manière dont nous réagirons désormais."
+        },
+        {
+         "jp": "国籍の いかんを 問わず、誰でも 参加できます。",
+         "reading": "こくせきの いかんを とわず、だれでも さんかできます。",
+         "fr": "Tout le monde peut participer, quelle que soit sa nationalité."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "試験の 結果＿では、卒業できない ことも ある。",
+         "choices": [
+          "いかん",
+          "よそ",
+          "すら"
+         ],
+         "answer": "いかん",
+         "explanation": "Selon : 〜いかんでは.",
+         "translation": "Selon les résultats de l’examen, il se peut qu’on ne puisse pas obtenir son diplôme."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "理由の いかんに ＿、一度 払った お金は 返金しません。",
+         "choices": [
+          "よらず",
+          "よって",
+          "つれて"
+         ],
+         "answer": "よらず",
+         "explanation": "Quel que soit : 〜いかんによらず.",
+         "translation": "Quelle qu’en soit la raison, nous ne remboursons pas les sommes versées."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "天候いかんでは、大会は 中止に なります。",
+         "translation": "Le tournoi aura lieu quoi qu’il arrive.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜いかんでは : selon la météo, il peut être annulé."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "年齢＿ いかんを 問わず、応募できます。",
+         "choices": [
+          "の",
+          "を",
+          "に"
+         ],
+         "answer": "の",
+         "explanation": "Nom + の + いかんを 問わず.",
+         "translation": "On peut postuler quel que soit son âge."
+        }
+       ]
+      },
+      {
+       "slug": "n1-to-wa-ie",
+       "title": "Certes…, même… : 〜とはいえ・〜といえども",
+       "objective": "Concéder un fait tout en montrant qu’il ne suffit pas, ou que même le cas le plus fort n’échappe pas à la règle.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre / nom + とはいえ = certes…, mais ; bien que (on admet, puis on nuance) : 春とは いえ、まだ 寒い.",
+        "Nom + といえども = même (un cas qu’on croirait à part) : 子どもと いえども、法律は 守らなければ ならない.",
+        "Souvent avec いかなる ou たとえ : いかなる 天才と いえども、努力なしには 成功しない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-to-wa-ie",
+         "kind": "grammar",
+         "front": "〜とはいえ",
+         "reading": "〜とはいえ",
+         "romaji": "~to wa ie",
+         "meaning": "certes…, bien que…"
+        },
+        {
+         "slug": "gram-n1-to-iedomo",
+         "kind": "grammar",
+         "front": "〜といえども",
+         "reading": "〜といえども",
+         "romaji": "~to iedomo",
+         "meaning": "même… (cas extrême)"
+        },
+        {
+         "slug": "vocab-tensai",
+         "kind": "vocabulary",
+         "front": "天才",
+         "reading": "てんさい",
+         "romaji": "tensai",
+         "meaning": "génie"
+        },
+        {
+         "slug": "vocab-houritsu",
+         "kind": "vocabulary",
+         "front": "法律",
+         "reading": "ほうりつ",
+         "romaji": "houritsu",
+         "meaning": "loi"
+        },
+        {
+         "slug": "vocab-ihan",
+         "kind": "vocabulary",
+         "front": "違反",
+         "reading": "いはん",
+         "romaji": "ihan",
+         "meaning": "infraction, violation"
+        },
+        {
+         "slug": "vocab-risshun",
+         "kind": "vocabulary",
+         "front": "立春",
+         "reading": "りっしゅん",
+         "romaji": "risshun",
+         "meaning": "début du printemps (calendrier)"
+        },
+        {
+         "slug": "kanji-n1-ritsu",
+         "kind": "kanji",
+         "front": "律",
+         "reading": "りつ",
+         "romaji": "ritsu",
+         "meaning": "loi, règle",
+         "kanji": {
+          "onyomi": [
+           "リツ",
+           "リチ"
+          ],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "kanji-n1-sai",
+         "kind": "kanji",
+         "front": "才",
+         "reading": "さい",
+         "romaji": "sai",
+         "meaning": "talent ; âge (ans)",
+         "kanji": {
+          "onyomi": [
+           "サイ"
+          ],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "立春とは いえ、まだ 雪が 降って いる。",
+         "reading": "りっしゅんとは いえ、まだ ゆきが ふって いる。",
+         "fr": "Certes, le printemps a officiellement commencé, mais il neige encore."
+        },
+        {
+         "jp": "大臣と いえども、法律に 違反すれば 罰せられる。",
+         "reading": "だいじんと いえども、ほうりつに いはんすれば ばっせられる。",
+         "fr": "Même un ministre est puni s’il enfreint la loi."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "安い ＿、この 値段では 買えない。",
+         "choices": [
+          "とはいえ",
+          "といえども",
+          "いかんで"
+         ],
+         "answer": "とはいえ",
+         "explanation": "Concession : 〜とはいえ.",
+         "translation": "C’est certes bon marché, mais je ne peux pas l’acheter à ce prix."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "いかなる 天才と ＿、努力なしでは 成功できない。",
+         "choices": [
+          "いえども",
+          "はいえ",
+          "して"
+         ],
+         "answer": "いえども",
+         "explanation": "Même le cas extrême : いかなる〜といえども.",
+         "translation": "Aucun génie, quel qu’il soit, ne réussit sans effort."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "子どもと いえども、ルールは 守るべきだ。",
+         "translation": "Les enfants sont dispensés de respecter les règles.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜といえども : même les enfants doivent les respecter."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Un ami te dit que tu as de la chance d’avoir un week-end de trois jours.",
+         "lines": [
+          {
+           "speaker": "友だち",
+           "jp": "三連休で いいね。"
+          }
+         ],
+         "translation": "Ton ami dit que c’est bien d’avoir trois jours de congé.",
+         "choices": [
+          "休みとは いえ、仕事の 準備で 忙しいんだ。",
+          "休みと いえども、とても 楽しみだ。",
+          "休みを ものともせず、うれしい。"
+         ],
+         "answer": "休みとは いえ、仕事の 準備で 忙しいんだ。",
+         "explanation": "On admet, puis on nuance : 〜とはいえ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w4",
+   "title": "Juger et s’indigner",
+   "region": "Domaine du shōgun",
+   "description": "Dire ce qui est indigne d’un rôle, ce qui mérite ou non l’attention, et une émotion qu’on ne peut retenir.",
+   "boss": {
+    "name": "Enma, Juge des Enfers",
+    "glyph": "閻",
+    "intro": "Le roi des enfers siège au tribunal du shōgun. Avant de rendre un verdict, il exige que chacun sache dire ce qui est indigne, ce qui mérite confiance, et ce qu’on ne peut s’empêcher de ressentir."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w4-c1",
+     "title": "Indigne, digne, irrépressible",
+     "lessons": [
+      {
+       "slug": "n1-majiki",
+       "title": "Indigne de…, interdit de… : 〜まじき・〜べからず",
+       "objective": "Condamner un acte contraire à ce qu’on attend d’un rôle, et lire les interdictions écrites.",
+       "minutes": 10,
+       "explanation": [
+        "Nom de rôle + に + ある + まじき + nom = indigne de, qu’un… ne devrait jamais commettre : 教師に ある まじき 行為.",
+        "Verbe au dictionnaire + べからず = interdit de (panneaux, maximes) : 立ち入る べからず ; 芝生に 入る べからず. する → す べからず.",
+        "Verbe + べからざる + nom = qu’on ne doit pas… ; indispensable : 欠く べからざる 存在 (une présence indispensable)."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-majiki",
+         "kind": "grammar",
+         "front": "〜まじき",
+         "reading": "〜まじき",
+         "romaji": "~majiki",
+         "meaning": "indigne de…, inadmissible pour…"
+        },
+        {
+         "slug": "gram-n1-bekarazu",
+         "kind": "grammar",
+         "front": "〜べからず",
+         "reading": "〜べからず",
+         "romaji": "~bekarazu",
+         "meaning": "interdit de… (écrit)"
+        },
+        {
+         "slug": "vocab-koui",
+         "kind": "vocabulary",
+         "front": "行為",
+         "reading": "こうい",
+         "romaji": "koui",
+         "meaning": "acte, agissement"
+        },
+        {
+         "slug": "vocab-kyoushi",
+         "kind": "vocabulary",
+         "front": "教師",
+         "reading": "きょうし",
+         "romaji": "kyoushi",
+         "meaning": "enseignant (métier)"
+        },
+        {
+         "slug": "vocab-hatsugen",
+         "kind": "vocabulary",
+         "front": "発言",
+         "reading": "はつげん",
+         "romaji": "hatsugen",
+         "meaning": "déclaration, propos"
+        },
+        {
+         "slug": "vocab-shobatsu",
+         "kind": "vocabulary",
+         "front": "処罰",
+         "reading": "しょばつ",
+         "romaji": "shobatsu",
+         "meaning": "sanction, punition"
+        },
+        {
+         "slug": "kanji-n1-tame",
+         "kind": "kanji",
+         "front": "為",
+         "reading": "ため",
+         "romaji": "tame",
+         "meaning": "faire, agir",
+         "kanji": {
+          "onyomi": [
+           "イ"
+          ],
+          "kunyomi": [
+           "ため"
+          ],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "kanji-n1-batsu",
+         "kind": "kanji",
+         "front": "罰",
+         "reading": "ばつ",
+         "romaji": "batsu",
+         "meaning": "punition",
+         "kanji": {
+          "onyomi": [
+           "バツ",
+           "バチ"
+          ],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "生徒を 傷つける ことは、教師に ある まじき 行為だ。",
+         "reading": "せいとを きずつける ことは、きょうしに ある まじき こういだ。",
+         "fr": "Blesser un élève est un acte indigne d’un enseignant."
+        },
+        {
+         "jp": "門には「関係者以外 入る べからず」と 書いて あった。",
+         "reading": "もんには「かんけいしゃいがい はいる べからず」と かいて あった。",
+         "fr": "Sur le portail était écrit : « Entrée interdite aux personnes non autorisées »."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "大臣に ある ＿ 発言で、大きな 問題に なった。",
+         "choices": [
+          "まじき",
+          "べからず",
+          "ならでは"
+         ],
+         "answer": "まじき",
+         "explanation": "Indigne d’un rôle : 〜にあるまじき + nom.",
+         "translation": "Ces propos indignes d’un ministre ont causé un grand scandale."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "ここで たばこを 吸う ＿。",
+         "choices": [
+          "べからず",
+          "まじき",
+          "たりとも"
+         ],
+         "answer": "べからず",
+         "explanation": "Interdiction écrite : 〜べからず.",
+         "translation": "Interdiction de fumer ici."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 規則は 我が社に 欠く べからざる ものだ。",
+         "translation": "Ce règlement est inutile à l’entreprise.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "欠く べからざる = indispensable."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Un acte indigne d’un policier. »",
+         "answer": [
+          "警察官",
+          "に ある",
+          "まじき",
+          "行為"
+         ],
+         "explanation": "Rôle + に ある まじき + nom."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ni-taenai",
+       "title": "Insupportable…, digne de… : 〜に堪えない・〜に足る",
+       "objective": "Juger qu’une chose ne mérite pas qu’on la regarde, ou qu’elle mérite la confiance.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe au dictionnaire + に堪えない = insupportable à…, qu’on ne peut pas… tant c’est mauvais : 見るに 堪えない 惨状 ; 聞くに 堪えない 悪口.",
+        "Nom d’émotion + に堪えない = ne pas pouvoir contenir (remerciements formels) : 感謝に 堪えません.",
+        "Verbe au dictionnaire / nom + に足る = digne de, qui mérite : 信頼するに 足る 人物 ; 取るに 足りない (insignifiant)."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ni-taenai",
+         "kind": "grammar",
+         "front": "〜に堪えない",
+         "reading": "〜にたえない",
+         "romaji": "~ni taenai",
+         "meaning": "insupportable à… ; ne pas pouvoir contenir…"
+        },
+        {
+         "slug": "gram-n1-ni-taru",
+         "kind": "grammar",
+         "front": "〜に足る",
+         "reading": "〜にたる",
+         "romaji": "~ni taru",
+         "meaning": "digne de…, qui mérite…"
+        },
+        {
+         "slug": "vocab-shinrai",
+         "kind": "vocabulary",
+         "front": "信頼",
+         "reading": "しんらい",
+         "romaji": "shinrai",
+         "meaning": "confiance"
+        },
+        {
+         "slug": "vocab-sanjou",
+         "kind": "vocabulary",
+         "front": "惨状",
+         "reading": "さんじょう",
+         "romaji": "sanjou",
+         "meaning": "scène désastreuse"
+        },
+        {
+         "slug": "vocab-jinbutsu",
+         "kind": "vocabulary",
+         "front": "人物",
+         "reading": "じんぶつ",
+         "romaji": "jinbutsu",
+         "meaning": "personnage, personne (de valeur)"
+        },
+        {
+         "slug": "vocab-hihan",
+         "kind": "vocabulary",
+         "front": "批判",
+         "reading": "ひはん",
+         "romaji": "hihan",
+         "meaning": "critique (reproche)"
+        },
+        {
+         "slug": "kanji-n1-taeru",
+         "kind": "kanji",
+         "front": "堪",
+         "reading": "たえる",
+         "romaji": "taeru",
+         "meaning": "supporter, endurer",
+         "kanji": {
+          "onyomi": [
+           "カン"
+          ],
+          "kunyomi": [
+           "た(える)"
+          ],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n1-san",
+         "kind": "kanji",
+         "front": "惨",
+         "reading": "さん",
+         "romaji": "san",
+         "meaning": "misérable, cruel",
+         "kanji": {
+          "onyomi": [
+           "サン",
+           "ザン"
+          ],
+          "kunyomi": [
+           "みじ(め)"
+          ],
+          "strokes": 11
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "事故現場は 見るに 堪えない 惨状だった。",
+         "reading": "じこげんばは みるに たえない さんじょうだった。",
+         "fr": "Le lieu de l’accident offrait un spectacle insoutenable."
+        },
+        {
+         "jp": "彼は 信頼するに 足る 人物だ。",
+         "reading": "かれは しんらいするに たる じんぶつだ。",
+         "fr": "C’est une personne digne de confiance."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "あの 批判は 聞くに ＿ ものだった。",
+         "choices": [
+          "堪えない",
+          "足る",
+          "まじき"
+         ],
+         "answer": "堪えない",
+         "explanation": "Insupportable à entendre : 聞くに 堪えない.",
+         "translation": "Ces critiques étaient insupportables à entendre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "それは 取るに ＿ ことだから、気に しないで。",
+         "choices": [
+          "足りない",
+          "堪えない",
+          "足る"
+         ],
+         "answer": "足りない",
+         "explanation": "取るに 足りない = insignifiant.",
+         "translation": "C’est insignifiant, ne t’en fais pas."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "皆様の ご協力に、感謝に 堪えません。",
+         "translation": "La personne remercie chaleureusement.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "感謝に 堪えない = être infiniment reconnaissant."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Une personne digne de confiance. »",
+         "answer": [
+          "信頼する",
+          "に 足る",
+          "人物"
+         ],
+         "explanation": "Verbe + に 足る + nom."
+        }
+       ]
+      },
+      {
+       "slug": "n1-wo-kinjienai",
+       "title": "Ne pas pouvoir retenir… : 〜を禁じ得ない・〜てやまない",
+       "objective": "Exprimer avec solennité une émotion ou un souhait qu’on ne peut contenir.",
+       "minutes": 10,
+       "explanation": [
+        "Nom d’émotion + を禁じ得ない = ne pas pouvoir s’empêcher de ressentir : 同情を 禁じ得ない ; 怒りを 禁じ得ない. C’est le style des éditoriaux et des discours.",
+        "Verbe en て + やまない = ne cesser de (souhaiter, espérer, aimer) : 皆様の 幸福を 願って やみません.",
+        "〜てやまない s’emploie pour ses propres sentiments durables ; on le trouve souvent en fin de discours ou de lettre."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-wo-kinjienai",
+         "kind": "grammar",
+         "front": "〜を禁じ得ない",
+         "reading": "〜をきんじえない",
+         "romaji": "~wo kinjienai",
+         "meaning": "ne pas pouvoir retenir… (émotion)"
+        },
+        {
+         "slug": "gram-n1-te-yamanai",
+         "kind": "grammar",
+         "front": "〜てやまない",
+         "reading": "〜てやまない",
+         "romaji": "~te yamanai",
+         "meaning": "ne cesser de… (souhait, sentiment)"
+        },
+        {
+         "slug": "vocab-doujou",
+         "kind": "vocabulary",
+         "front": "同情",
+         "reading": "どうじょう",
+         "romaji": "doujou",
+         "meaning": "compassion"
+        },
+        {
+         "slug": "vocab-ikari",
+         "kind": "vocabulary",
+         "front": "怒り",
+         "reading": "いかり",
+         "romaji": "ikari",
+         "meaning": "colère"
+        },
+        {
+         "slug": "vocab-giseisha",
+         "kind": "vocabulary",
+         "front": "犠牲者",
+         "reading": "ぎせいしゃ",
+         "romaji": "giseisha",
+         "meaning": "victime"
+        },
+        {
+         "slug": "vocab-koufuku",
+         "kind": "vocabulary",
+         "front": "幸福",
+         "reading": "こうふく",
+         "romaji": "koufuku",
+         "meaning": "bonheur, prospérité"
+        },
+        {
+         "slug": "kanji-n1-gi",
+         "kind": "kanji",
+         "front": "犠",
+         "reading": "ぎ",
+         "romaji": "gi",
+         "meaning": "sacrifice (animal offert)",
+         "kanji": {
+          "onyomi": [
+           "ギ"
+          ],
+          "kunyomi": [],
+          "strokes": 17
+         }
+        },
+        {
+         "slug": "kanji-n1-sei",
+         "kind": "kanji",
+         "front": "牲",
+         "reading": "せい",
+         "romaji": "sei",
+         "meaning": "victime offerte",
+         "kanji": {
+          "onyomi": [
+           "セイ"
+          ],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "事故の 犠牲者の ことを 思うと、同情を 禁じ得ない。",
+         "reading": "じこの ぎせいしゃの ことを おもうと、どうじょうを きんじえない。",
+         "fr": "Quand je pense aux victimes de l’accident, je ne peux retenir ma compassion."
+        },
+        {
+         "jp": "卒業生の 皆さんの 幸福を 願って やみません。",
+         "reading": "そつぎょうせいの みなさんの こうふくを ねがって やみません。",
+         "fr": "Je ne cesse de souhaiter le bonheur de chacun de vous, jeunes diplômés."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "不公平な 判決に 怒りを ＿。",
+         "choices": [
+          "禁じ得ない",
+          "やまない",
+          "堪えない"
+         ],
+         "answer": "禁じ得ない",
+         "explanation": "Émotion irrépressible : 〜を禁じ得ない.",
+         "translation": "Je ne peux contenir ma colère devant ce jugement injuste."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "平和が 続く ことを 願って ＿。",
+         "choices": [
+          "やみません",
+          "禁じ得ません",
+          "足りません"
+         ],
+         "answer": "やみません",
+         "explanation": "Souhait durable : 〜てやまない.",
+         "translation": "Je ne cesse d’espérer que la paix se maintienne."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "その 知らせに、驚きを 禁じ得なかった。",
+         "translation": "La nouvelle n’a pas du tout surpris.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "驚きを 禁じ得ない = ne pas pouvoir cacher sa surprise."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "被害者に 同情＿ 禁じ得ない。",
+         "choices": [
+          "を",
+          "に",
+          "が"
+         ],
+         "answer": "を",
+         "explanation": "〜を 禁じ得ない.",
+         "translation": "Je ne peux retenir ma compassion pour les victimes."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w5",
+   "title": "Presque, inutile de dire",
+   "region": "Domaine du shōgun",
+   "description": "Décrire un geste qui semble sur le point d’arriver, dire ce qui va sans dire, et comparer à un degré supérieur.",
+   "boss": {
+    "name": "Le Kodama Retentissant",
+    "glyph": "響",
+    "intro": "Dans la forêt de l’ouest, l’esprit des arbres répète chaque parole en l’exagérant. Pour le calmer, il faut mesurer ses mots : presque, inutile de, plus encore que."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w5-c1",
+     "title": "Presque, inutile, plus encore",
+     "lessons": [
+      {
+       "slug": "n1-n-bakari",
+       "title": "Comme si… allait… : 〜んばかりに・〜とばかりに",
+       "objective": "Décrire une attitude si marquée qu’on croirait l’action sur le point de se produire.",
+       "minutes": 10,
+       "explanation": [
+        "Radical en ない + んばかりに / んばかりの + nom = comme si l’on allait… : 泣かんばかりに 頼む ; 溢れんばかりの 笑顔. する → せんばかり.",
+        "Phrase + とばかりに = comme pour dire « … » ; on décrit l’attitude de quelqu’un d’autre : もう 帰れと ばかりに、時計を 見た.",
+        "Ces formes décrivent une impression extérieure, pas une intention qu’on exprime soi-même."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-n-bakari-ni",
+         "kind": "grammar",
+         "front": "〜んばかりに",
+         "reading": "〜んばかりに",
+         "romaji": "~n bakari ni",
+         "meaning": "comme si l’on allait…, presque à…"
+        },
+        {
+         "slug": "gram-n1-to-bakari-ni",
+         "kind": "grammar",
+         "front": "〜とばかりに",
+         "reading": "〜とばかりに",
+         "romaji": "~to bakari ni",
+         "meaning": "comme pour dire…"
+        },
+        {
+         "slug": "vocab-afuremasu",
+         "kind": "vocabulary",
+         "front": "溢れます",
+         "reading": "あふれます",
+         "romaji": "afuremasu",
+         "meaning": "déborder"
+        },
+        {
+         "slug": "vocab-egao",
+         "kind": "vocabulary",
+         "front": "笑顔",
+         "reading": "えがお",
+         "romaji": "egao",
+         "meaning": "visage souriant"
+        },
+        {
+         "slug": "vocab-hakushu",
+         "kind": "vocabulary",
+         "front": "拍手",
+         "reading": "はくしゅ",
+         "romaji": "hakushu",
+         "meaning": "applaudissements"
+        },
+        {
+         "slug": "vocab-koko-zo",
+         "kind": "vocabulary",
+         "front": "ここぞ",
+         "reading": "ここぞ",
+         "romaji": "koko zo",
+         "meaning": "c’est le moment ou jamais"
+        },
+        {
+         "slug": "kanji-n1-afureru",
+         "kind": "kanji",
+         "front": "溢",
+         "reading": "あふれる",
+         "romaji": "afureru",
+         "meaning": "déborder",
+         "kanji": {
+          "onyomi": [
+           "イツ"
+          ],
+          "kunyomi": [
+           "あふ(れる)"
+          ],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "kanji-n1-haku",
+         "kind": "kanji",
+         "front": "拍",
+         "reading": "はく",
+         "romaji": "haku",
+         "meaning": "battement, frapper",
+         "kanji": {
+          "onyomi": [
+           "ハク",
+           "ヒョウ"
+          ],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "彼女は 泣かんばかりに 助けを 求めた。",
+         "reading": "かのじょは なかんばかりに たすけを もとめた。",
+         "fr": "Elle a demandé de l’aide, presque en larmes."
+        },
+        {
+         "jp": "観客は 待って いたと ばかりに 拍手を 始めた。",
+         "reading": "かんきゃくは まって いたと ばかりに はくしゅを はじめた。",
+         "fr": "Le public s’est mis à applaudir comme s’il n’attendait que ça."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "子どもたちは 溢れ＿ 笑顔で 迎えて くれた。",
+         "choices": [
+          "んばかりの",
+          "とばかりに",
+          "までもない"
+         ],
+         "answer": "んばかりの",
+         "explanation": "Devant un nom : 〜んばかりの.",
+         "translation": "Les enfants nous ont accueillis avec des sourires débordants."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "彼は「ここぞ」＿、大きな 声で 意見を 述べた。",
+         "choices": [
+          "とばかりに",
+          "んばかりに",
+          "にもまして"
+         ],
+         "answer": "とばかりに",
+         "explanation": "Comme pour dire « … » : 〜とばかりに.",
+         "translation": "Comme si c’était le moment ou jamais, il a exposé son avis d’une voix forte."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "店員は 早く 帰れと ばかりに 片付けを 始めた。",
+         "translation": "Le vendeur a demandé poliment aux clients de rester.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜とばかりに : son attitude disait « partez vite »."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "犬は 散歩に 行きたいと ばかり＿、ドアの 前で 待って いた。",
+         "choices": [
+          "に",
+          "を",
+          "で"
+         ],
+         "answer": "に",
+         "explanation": "〜と ばかりに.",
+         "translation": "Le chien attendait devant la porte comme pour dire qu’il voulait sortir."
+        }
+       ]
+      },
+      {
+       "slug": "n1-made-mo-nai",
+       "title": "Inutile de… : 〜までもない・〜には及ばない",
+       "objective": "Dire qu’une action est superflue tant la chose est évidente ou simple.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe au dictionnaire + までもない = il n’est pas nécessaire d’aller jusqu’à… : 言うまでもない (il va sans dire). 〜までもなく = sans même avoir besoin de.",
+        "Verbe au dictionnaire / nom + には及ばない = ce n’est pas la peine de (formule polie) : わざわざ 来るには 及びません ; ご心配には 及びません.",
+        "〜に及ばない sans は signifie aussi « ne pas égaler » : 私は 兄に 及ばない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-made-mo-nai",
+         "kind": "grammar",
+         "front": "〜までもない",
+         "reading": "〜までもない",
+         "romaji": "~made mo nai",
+         "meaning": "inutile de…, il va sans dire"
+        },
+        {
+         "slug": "gram-n1-ni-wa-oyobanai",
+         "kind": "grammar",
+         "front": "〜には及ばない",
+         "reading": "〜にはおよばない",
+         "romaji": "~ni wa oyobanai",
+         "meaning": "ce n’est pas la peine de… (poli)"
+        },
+        {
+         "slug": "vocab-wazawaza",
+         "kind": "vocabulary",
+         "front": "わざわざ",
+         "reading": "わざわざ",
+         "romaji": "wazawaza",
+         "meaning": "exprès, en se donnant la peine"
+        },
+        {
+         "slug": "vocab-meihaku",
+         "kind": "vocabulary",
+         "front": "明白",
+         "reading": "めいはく",
+         "romaji": "meihaku",
+         "meaning": "évident, manifeste"
+        },
+        {
+         "slug": "vocab-joushiki",
+         "kind": "vocabulary",
+         "front": "常識",
+         "reading": "じょうしき",
+         "romaji": "joushiki",
+         "meaning": "bon sens, savoir commun"
+        },
+        {
+         "slug": "vocab-kyouyou",
+         "kind": "vocabulary",
+         "front": "強要",
+         "reading": "きょうよう",
+         "romaji": "kyouyou",
+         "meaning": "contrainte (forcer quelqu’un)"
+        },
+        {
+         "slug": "kanji-n1-oyobu",
+         "kind": "kanji",
+         "front": "及",
+         "reading": "およぶ",
+         "romaji": "oyobu",
+         "meaning": "atteindre, s’étendre à",
+         "kanji": {
+          "onyomi": [
+           "キュウ"
+          ],
+          "kunyomi": [
+           "およ(ぶ)"
+          ],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "kanji-n1-haku-white",
+         "kind": "kanji",
+         "front": "白",
+         "reading": "はく",
+         "romaji": "haku",
+         "meaning": "blanc ; clair",
+         "kanji": {
+          "onyomi": [
+           "ハク",
+           "ビャク"
+          ],
+          "kunyomi": [
+           "しろ"
+          ],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "健康が 大切な ことは 言うまでもない。",
+         "reading": "けんこうが たいせつな ことは いうまでもない。",
+         "fr": "Il va sans dire que la santé est essentielle."
+        },
+        {
+         "jp": "簡単な 手続きですから、わざわざ 来るには 及びません。",
+         "reading": "かんたんな てつづきですから、わざわざ くるには およびません。",
+         "fr": "C’est une démarche simple, ce n’est pas la peine de vous déplacer."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "この 程度の 問題なら、先生に 聞く＿。",
+         "choices": [
+          "までもない",
+          "にもまして",
+          "とばかりに"
+         ],
+         "answer": "までもない",
+         "explanation": "Inutile de… : 〜までもない.",
+         "translation": "Pour un problème de ce niveau, inutile de demander au professeur."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "ご心配には ＿。すぐ 治りますから。",
+         "choices": [
+          "及びません",
+          "堪えません",
+          "足りません"
+         ],
+         "answer": "及びません",
+         "explanation": "Formule polie : ご心配には 及びません.",
+         "translation": "Ne vous inquiétez pas, je vais vite guérir."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "結果は 調べるまでもなく 明白だった。",
+         "translation": "Il a fallu une longue enquête pour connaître le résultat.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜までもなく : c’était évident sans même vérifier."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Il va sans dire que c’est important. »",
+         "answer": [
+          "大切な",
+          "ことは",
+          "言う",
+          "までもない"
+         ],
+         "explanation": "言う + までもない."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ni-mo-mashite",
+       "title": "Plus encore que…, contrairement à… : 〜にもまして・〜にひきかえ",
+       "objective": "Comparer en surenchérissant, ou opposer deux personnes ou situations.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + にもまして = plus encore que : 去年にも まして 暑い ; 何にも まして 大切な もの (ce qui compte plus que tout).",
+        "Nom / forme neutre + の + にひきかえ = contrairement à, par contraste avec (souvent avec un jugement) : 兄に ひきかえ、弟は よく 働く.",
+        "〜にひきかえ oppose deux éléments comparables ; c’est plus écrit et plus tranché que 〜に比べて."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ni-mo-mashite",
+         "kind": "grammar",
+         "front": "〜にもまして",
+         "reading": "〜にもまして",
+         "romaji": "~ni mo mashite",
+         "meaning": "plus encore que…"
+        },
+        {
+         "slug": "gram-n1-ni-hikikae",
+         "kind": "grammar",
+         "front": "〜にひきかえ",
+         "reading": "〜にひきかえ",
+         "romaji": "~ni hikikae",
+         "meaning": "contrairement à…, par contraste avec…"
+        },
+        {
+         "slug": "vocab-kinben",
+         "kind": "vocabulary",
+         "front": "勤勉",
+         "reading": "きんべん",
+         "romaji": "kinben",
+         "meaning": "travailleur, assidu"
+        },
+        {
+         "slug": "vocab-taida",
+         "kind": "vocabulary",
+         "front": "怠惰",
+         "reading": "たいだ",
+         "romaji": "taida",
+         "meaning": "paresse"
+        },
+        {
+         "slug": "vocab-zennen",
+         "kind": "vocabulary",
+         "front": "前年",
+         "reading": "ぜんねん",
+         "romaji": "zennen",
+         "meaning": "l’année précédente"
+        },
+        {
+         "slug": "vocab-juuyousei",
+         "kind": "vocabulary",
+         "front": "重要性",
+         "reading": "じゅうようせい",
+         "romaji": "juuyousei",
+         "meaning": "importance"
+        },
+        {
+         "slug": "kanji-n1-da",
+         "kind": "kanji",
+         "front": "惰",
+         "reading": "だ",
+         "romaji": "da",
+         "meaning": "indolence",
+         "kanji": {
+          "onyomi": [
+           "ダ"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n1-okotaru",
+         "kind": "kanji",
+         "front": "怠",
+         "reading": "おこたる",
+         "romaji": "okotaru",
+         "meaning": "négliger, paresser",
+         "kanji": {
+          "onyomi": [
+           "タイ"
+          ],
+          "kunyomi": [
+           "おこた(る)",
+           "なま(ける)"
+          ],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "今年の 夏は 前年にも まして 暑い。",
+         "reading": "ことしの なつは ぜんねんにも まして あつい。",
+         "fr": "Cet été est encore plus chaud que l’an dernier."
+        },
+        {
+         "jp": "勤勉な 姉に ひきかえ、妹は 怠惰だ。",
+         "reading": "きんべんな あねに ひきかえ、いもうとは たいだだ。",
+         "fr": "Contrairement à sa sœur aînée, travailleuse, la cadette est paresseuse."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "何＿ 健康が 大切だ。",
+         "choices": [
+          "にもまして",
+          "にひきかえ",
+          "までもなく"
+         ],
+         "answer": "にもまして",
+         "explanation": "Plus que tout : 何にも まして.",
+         "translation": "La santé compte plus que tout."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "去年の 失敗＿、今年は 大成功だった。",
+         "choices": [
+          "にひきかえ",
+          "にもまして",
+          "とばかりに"
+         ],
+         "answer": "にひきかえ",
+         "explanation": "Opposition : 〜にひきかえ.",
+         "translation": "Contrairement à l’échec de l’an dernier, cette année a été un grand succès."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "教育の 重要性は 以前にも まして 高まって いる。",
+         "translation": "L’éducation compte moins qu’avant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜にもまして : son importance grandit encore plus."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "兄＿ ひきかえ、弟は よく 勉強する。",
+         "choices": [
+          "に",
+          "を",
+          "と"
+         ],
+         "answer": "に",
+         "explanation": "〜に ひきかえ.",
+         "translation": "Contrairement à son frère aîné, le cadet étudie beaucoup."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w6",
+   "title": "Occasions et aboutissements",
+   "region": "Domaine du shōgun",
+   "description": "Saisir une occasion pour changer, dire jusqu’où une chose est allée, et décrire une circonstance particulière.",
+   "boss": {
+    "name": "L’Umibōzu des Marées",
+    "glyph": "海",
+    "intro": "Au port de l’ouest, le moine des mers surgit des vagues et réclame un tonneau. Il n’épargne que les navires qui savent saisir l’occasion et dire jusqu’où ils sont allés."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w6-c1",
+     "title": "À l’occasion de, jusqu’à, puisque",
+     "lessons": [
+      {
+       "slug": "n1-wo-ki-ni",
+       "title": "À l’occasion de… : 〜を機に・〜を契機に",
+       "objective": "Dire qu’un événement a servi de point de départ à un changement.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + を機に = à l’occasion de, en profitant de (un tournant personnel) : 結婚を 機に、仕事を 辞めた.",
+        "Nom + を契機に / を契機として = à la suite de, avec… pour déclencheur (plus soutenu, souvent historique ou social) : 事故を 契機に、法律が 改正された.",
+        "La seconde partie exprime un changement ou un nouveau départ, jamais une simple suite d’événements."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-wo-ki-ni",
+         "kind": "grammar",
+         "front": "〜を機に",
+         "reading": "〜をきに",
+         "romaji": "~wo ki ni",
+         "meaning": "à l’occasion de…, en profitant de…"
+        },
+        {
+         "slug": "gram-n1-wo-keiki-ni",
+         "kind": "grammar",
+         "front": "〜を契機に",
+         "reading": "〜をけいきに",
+         "romaji": "~wo keiki ni",
+         "meaning": "à la suite de…, déclenché par…"
+        },
+        {
+         "slug": "vocab-kaisei",
+         "kind": "vocabulary",
+         "front": "改正",
+         "reading": "かいせい",
+         "romaji": "kaisei",
+         "meaning": "révision (d’une loi)"
+        },
+        {
+         "slug": "vocab-teinen",
+         "kind": "vocabulary",
+         "front": "定年",
+         "reading": "ていねん",
+         "romaji": "teinen",
+         "meaning": "âge de la retraite"
+        },
+        {
+         "slug": "vocab-kikai-ni",
+         "kind": "vocabulary",
+         "front": "機会",
+         "reading": "きかい",
+         "romaji": "kikai",
+         "meaning": "occasion, opportunité"
+        },
+        {
+         "slug": "vocab-kaikaku",
+         "kind": "vocabulary",
+         "front": "改革",
+         "reading": "かいかく",
+         "romaji": "kaikaku",
+         "meaning": "réforme"
+        },
+        {
+         "slug": "kanji-n1-ki",
+         "kind": "kanji",
+         "front": "機",
+         "reading": "き",
+         "romaji": "ki",
+         "meaning": "machine ; occasion",
+         "kanji": {
+          "onyomi": [
+           "キ"
+          ],
+          "kunyomi": [
+           "はた"
+          ],
+          "strokes": 16
+         }
+        },
+        {
+         "slug": "kanji-n1-kaku",
+         "kind": "kanji",
+         "front": "革",
+         "reading": "かく",
+         "romaji": "kaku",
+         "meaning": "cuir ; réformer",
+         "kanji": {
+          "onyomi": [
+           "カク"
+          ],
+          "kunyomi": [
+           "かわ"
+          ],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "転勤を 機に、家族で 田舎へ 引っ越した。",
+         "reading": "てんきんを きに、かぞくで いなかへ ひっこした。",
+         "fr": "Profitant de ma mutation, nous avons déménagé en famille à la campagne."
+        },
+        {
+         "jp": "その 事件を 契機に、政治改革が 始まった。",
+         "reading": "その じけんを けいきに、せいじかいかくが はじまった。",
+         "fr": "C’est à la suite de cette affaire que la réforme politique a commencé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "入院を ＿、たばこを やめた。",
+         "choices": [
+          "機に",
+          "限りに",
+          "もって"
+         ],
+         "answer": "機に",
+         "explanation": "Tournant personnel : 〜を機に.",
+         "translation": "Mon hospitalisation m’a poussé à arrêter de fumer."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "大地震を ＿ として、建物の 基準が 見直された。",
+         "choices": [
+          "契機",
+          "機会",
+          "改正"
+         ],
+         "answer": "契機",
+         "explanation": "〜を契機として = déclenché par.",
+         "translation": "À la suite du grand séisme, les normes de construction ont été revues."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "卒業を 機に、一人暮らしを 始めた。",
+         "translation": "La personne a commencé à vivre seule à l’occasion de son diplôme.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜を機に = en profitant de ce tournant."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « À l’occasion de son mariage, elle a déménagé. »",
+         "answer": [
+          "結婚",
+          "を 機に",
+          "彼女は",
+          "引っ越した"
+         ],
+         "explanation": "Nom + を 機に, puis le changement."
+        }
+       ]
+      },
+      {
+       "slug": "n1-ni-itatte",
+       "title": "Jusqu’à…, quant à… : 〜に至っては・〜に至るまで",
+       "objective": "Dire qu’une situation est allée jusqu’à un point extrême, ou couvre tout un ensemble.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + に至っては = quant à… (le cas le plus extrême d’une série, souvent négatif) : 父は 料理が 苦手だが、兄に 至っては お湯も 沸かせない.",
+        "Nom + に至るまで = jusqu’à (y compris le détail le plus inattendu) : 服装から 言葉遣いに 至るまで 注意された.",
+        "Verbe / nom + に至って(初めて) = ce n’est qu’en arrivant à ce stade que : 死者が 出るに 至って、ようやく 対策が とられた."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-ni-itatte-wa",
+         "kind": "grammar",
+         "front": "〜に至っては",
+         "reading": "〜にいたっては",
+         "romaji": "~ni itatte wa",
+         "meaning": "quant à… (cas extrême)"
+        },
+        {
+         "slug": "gram-n1-ni-itaru-made",
+         "kind": "grammar",
+         "front": "〜に至るまで",
+         "reading": "〜にいたるまで",
+         "romaji": "~ni itaru made",
+         "meaning": "jusqu’à… (y compris)"
+        },
+        {
+         "slug": "vocab-kotobazukai",
+         "kind": "vocabulary",
+         "front": "言葉遣い",
+         "reading": "ことばづかい",
+         "romaji": "kotobazukai",
+         "meaning": "façon de parler, langage"
+        },
+        {
+         "slug": "vocab-fukusou",
+         "kind": "vocabulary",
+         "front": "服装",
+         "reading": "ふくそう",
+         "romaji": "fukusou",
+         "meaning": "tenue vestimentaire"
+        },
+        {
+         "slug": "vocab-taisaku",
+         "kind": "vocabulary",
+         "front": "対策",
+         "reading": "たいさく",
+         "romaji": "taisaku",
+         "meaning": "mesures (contre un problème)"
+        },
+        {
+         "slug": "vocab-yamamichi",
+         "kind": "vocabulary",
+         "front": "山道",
+         "reading": "やまみち",
+         "romaji": "yamamichi",
+         "meaning": "chemin de montagne"
+        },
+        {
+         "slug": "kanji-n1-itaru",
+         "kind": "kanji",
+         "front": "至",
+         "reading": "いたる",
+         "romaji": "itaru",
+         "meaning": "atteindre, parvenir à",
+         "kanji": {
+          "onyomi": [
+           "シ"
+          ],
+          "kunyomi": [
+           "いた(る)"
+          ],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n1-saku",
+         "kind": "kanji",
+         "front": "策",
+         "reading": "さく",
+         "romaji": "saku",
+         "meaning": "plan, mesure",
+         "kanji": {
+          "onyomi": [
+           "サク"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "面接では 服装から 言葉遣いに 至るまで 見られる。",
+         "reading": "めんせつでは ふくそうから ことばづかいに いたるまで みられる。",
+         "fr": "En entretien, on regarde tout, de la tenue jusqu’à la façon de parler."
+        },
+        {
+         "jp": "被害が 広がるに 至って、ようやく 対策が とられた。",
+         "reading": "ひがいが ひろがるに いたって、ようやく たいさくが とられた。",
+         "fr": "Ce n’est qu’une fois les dégâts étendus que des mesures ont enfin été prises."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "みんな 遅刻したが、田中さん＿、来も しなかった。",
+         "choices": [
+          "に至っては",
+          "に至るまで",
+          "を機に"
+         ],
+         "answer": "に至っては",
+         "explanation": "Le cas le plus extrême : 〜に至っては.",
+         "translation": "Tout le monde est arrivé en retard, et M. Tanaka, lui, n’est même pas venu."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "子どもから お年寄り＿、誰もが 楽しめる 祭りだ。",
+         "choices": [
+          "に至るまで",
+          "に至っては",
+          "にひきかえ"
+         ],
+         "answer": "に至るまで",
+         "explanation": "Jusqu’à (inclus) : 〜に至るまで.",
+         "translation": "C’est une fête que tout le monde apprécie, des enfants jusqu’aux personnes âgées."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "問題が 大きく なるに 至って 初めて、政府は 動いた。",
+         "translation": "Le gouvernement a agi dès le début.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜に至って初めて : il n’a agi qu’une fois le problème devenu grave."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "細かい 点＿ 至るまで、よく 調べて ある。",
+         "choices": [
+          "に",
+          "を",
+          "で"
+         ],
+         "answer": "に",
+         "explanation": "〜に 至るまで.",
+         "translation": "Tout a été vérifié avec soin, jusque dans les moindres détails."
+        }
+       ]
+      },
+      {
+       "slug": "n1-to-atte",
+       "title": "Puisque c’est…, en pleine… : 〜とあって・〜ところを",
+       "objective": "Expliquer une situation par une circonstance exceptionnelle, et remercier ou s’excuser d’avoir dérangé.",
+       "minutes": 10,
+       "explanation": [
+        "Forme neutre / nom + とあって = étant donné que (une circonstance spéciale) ; la suite décrit ce qu’on observe : 連休とあって、観光地は 人で いっぱいだ.",
+        "〜とあれば = s’il s’agit de… (alors on est prêt à) : 子どもの ためと あれば、何でも する.",
+        "〜ところを (soutenu) = alors que vous êtes en train de… : お休みの ところを 失礼します ; お忙しい ところを ありがとうございます."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-to-atte",
+         "kind": "grammar",
+         "front": "〜とあって",
+         "reading": "〜とあって",
+         "romaji": "~to atte",
+         "meaning": "étant donné que… (circonstance spéciale)"
+        },
+        {
+         "slug": "gram-n1-to-areba",
+         "kind": "grammar",
+         "front": "〜とあれば",
+         "reading": "〜とあれば",
+         "romaji": "~to areba",
+         "meaning": "s’il s’agit de…, pour…"
+        },
+        {
+         "slug": "vocab-renkyuu",
+         "kind": "vocabulary",
+         "front": "連休",
+         "reading": "れんきゅう",
+         "romaji": "renkyuu",
+         "meaning": "jours fériés consécutifs, pont"
+        },
+        {
+         "slug": "vocab-kankouchi",
+         "kind": "vocabulary",
+         "front": "観光地",
+         "reading": "かんこうち",
+         "romaji": "kankouchi",
+         "meaning": "site touristique"
+        },
+        {
+         "slug": "vocab-gentei",
+         "kind": "vocabulary",
+         "front": "限定",
+         "reading": "げんてい",
+         "romaji": "gentei",
+         "meaning": "édition limitée, limité à"
+        },
+        {
+         "slug": "vocab-gyouretsu",
+         "kind": "vocabulary",
+         "front": "行列",
+         "reading": "ぎょうれつ",
+         "romaji": "gyouretsu",
+         "meaning": "file d’attente, cortège"
+        },
+        {
+         "slug": "kanji-n1-retsu",
+         "kind": "kanji",
+         "front": "列",
+         "reading": "れつ",
+         "romaji": "retsu",
+         "meaning": "rangée, file",
+         "kanji": {
+          "onyomi": [
+           "レツ"
+          ],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "kanji-n1-chin",
+         "kind": "kanji",
+         "front": "陳",
+         "reading": "ちん",
+         "romaji": "chin",
+         "meaning": "exposer, aligner",
+         "kanji": {
+          "onyomi": [
+           "チン"
+          ],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "期間限定の 商品とあって、店の 前には 長い 行列が できた。",
+         "reading": "きかんげんていの しょうひんとあって、みせの まえには ながい ぎょうれつが できた。",
+         "fr": "Comme c’était un produit en édition limitée, une longue file s’est formée devant le magasin."
+        },
+        {
+         "jp": "お休みの ところを お邪魔して、申し訳ありません。",
+         "reading": "おやすみの ところを おじゃまして、もうしわけありません。",
+         "fr": "Je suis désolé de vous déranger pendant votre jour de repos."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "人気歌手が 来る＿、会場は 満員だった。",
+         "choices": [
+          "とあって",
+          "ところを",
+          "に至っては"
+         ],
+         "answer": "とあって",
+         "explanation": "Circonstance spéciale : 〜とあって.",
+         "translation": "Comme une chanteuse célèbre venait, la salle était comble."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "お忙しい ＿、ありがとうございました。",
+         "choices": [
+          "ところを",
+          "とあって",
+          "までもなく"
+         ],
+         "answer": "ところを",
+         "explanation": "Remerciement poli : お忙しい ところを.",
+         "translation": "Merci de nous avoir accordé du temps malgré votre emploi du temps chargé."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "家族の ためと あれば、どんな 仕事でも する。",
+         "translation": "La personne refuse de travailler pour sa famille.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜とあれば : pour sa famille, elle est prête à tout."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Comme c’est un long week-end, les sites touristiques sont bondés. »",
+         "answer": [
+          "連休",
+          "とあって",
+          "観光地は",
+          "混んで いる"
+         ],
+         "explanation": "Nom + とあって, puis le constat."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w7",
+   "title": "Quoi qu’il arrive",
+   "region": "Domaine du shōgun",
+   "description": "Dire qu’une chose ne change rien, qu’une autre est indispensable, et qu’un résultat est inévitable.",
+   "boss": {
+    "name": "Le Gashadokuro Implacable",
+    "glyph": "骨",
+    "intro": "Ce squelette géant, fait des os de soldats oubliés, assiège le château de l’ouest. Il ne recule devant rien. Prouve que, quoi qu’il arrive, tu tiendras parole."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w7-c1",
+     "title": "Que…ou non, sans, forcément",
+     "lessons": [
+      {
+       "slug": "n1-you-ga",
+       "title": "Que… ou non : 〜ようが・〜ようが〜まいが",
+       "objective": "Dire qu’une condition ne change rien à la décision.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe à la forme volontaire + が / と = même si, peu importe que : 誰が 何と 言おうが、私は 行く.",
+        "Volontaire + が + verbe + まいが = que… ou non : 雨が 降ろうが 降るまいが、試合は 行う. まい = négation de la volonté (行くまい, するまい / しまい).",
+        "Avec un adjectif : 高かろうが 安かろうが ; avec un nom : 子どもだろうが 大人だろうが."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-you-ga",
+         "kind": "grammar",
+         "front": "〜ようが・〜ようと",
+         "reading": "〜ようが・〜ようと",
+         "romaji": "~you ga / ~you to",
+         "meaning": "peu importe que…, même si…"
+        },
+        {
+         "slug": "gram-n1-you-ga-mai-ga",
+         "kind": "grammar",
+         "front": "〜ようが〜まいが",
+         "reading": "〜ようが〜まいが",
+         "romaji": "~you ga ~mai ga",
+         "meaning": "que… ou non"
+        },
+        {
+         "slug": "vocab-kesshin",
+         "kind": "vocabulary",
+         "front": "決心",
+         "reading": "けっしん",
+         "romaji": "kesshin",
+         "meaning": "résolution, décision ferme"
+        },
+        {
+         "slug": "vocab-shinpai-goto",
+         "kind": "vocabulary",
+         "front": "心配事",
+         "reading": "しんぱいごと",
+         "romaji": "shinpaigoto",
+         "meaning": "souci"
+        },
+        {
+         "slug": "vocab-kitai-hazure",
+         "kind": "vocabulary",
+         "front": "期待外れ",
+         "reading": "きたいはずれ",
+         "romaji": "kitaihazure",
+         "meaning": "déception"
+        },
+        {
+         "slug": "vocab-kankei-nai",
+         "kind": "vocabulary",
+         "front": "無関係",
+         "reading": "むかんけい",
+         "romaji": "mukankei",
+         "meaning": "sans rapport"
+        },
+        {
+         "slug": "kanji-n1-kotsu",
+         "kind": "kanji",
+         "front": "骨",
+         "reading": "ほね",
+         "romaji": "hone",
+         "meaning": "os",
+         "kanji": {
+          "onyomi": [
+           "コツ"
+          ],
+          "kunyomi": [
+           "ほね"
+          ],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n1-tou",
+         "kind": "kanji",
+         "front": "頭",
+         "reading": "とう",
+         "romaji": "tou",
+         "meaning": "tête ; tête de bétail",
+         "kanji": {
+          "onyomi": [
+           "トウ",
+           "ズ"
+          ],
+          "kunyomi": [
+           "あたま"
+          ],
+          "strokes": 16
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "周りが 何と 言おうが、私の 決心は 変わらない。",
+         "reading": "まわりが なんと いおうが、わたしの けっしんは かわらない。",
+         "fr": "Quoi que disent les autres, ma décision ne changera pas."
+        },
+        {
+         "jp": "雨が 降ろうが 降るまいが、祭りは 予定どおり 行われる。",
+         "reading": "あめが ふろうが ふるまいが、まつりは よていどおり おこなわれる。",
+         "fr": "Qu’il pleuve ou non, la fête aura lieu comme prévu."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "反対され＿、この 計画は 続ける。",
+         "choices": [
+          "ようが",
+          "まいが",
+          "とあって"
+         ],
+         "answer": "ようが",
+         "explanation": "Même si : volontaire + が.",
+         "translation": "Même si on s’y oppose, je poursuivrai ce projet."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "参加しようが ＿、連絡だけは して ください。",
+         "choices": [
+          "しまいが",
+          "しないが",
+          "するまいと"
+         ],
+         "answer": "しまいが",
+         "explanation": "する → しまい / するまい.",
+         "translation": "Que vous participiez ou non, prévenez-nous au moins."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "高かろうが 安かろうが、必要な ものは 買う。",
+         "translation": "La personne n’achète que ce qui est bon marché.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜かろうが〜かろうが : le prix ne change rien."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Quoi qu’on dise, je ne renoncerai pas. »",
+         "answer": [
+          "誰が",
+          "何と 言おうが",
+          "あきらめない"
+         ],
+         "explanation": "Volontaire + が, puis la décision."
+        }
+       ]
+      },
+      {
+       "slug": "n1-nashi-ni-wa",
+       "title": "Sans… impossible : 〜なしには・〜なくしては",
+       "objective": "Dire qu’une chose est la condition indispensable d’une autre.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + なしには / なしでは + forme négative ou de possibilité niée = sans…, impossible de : 努力なしには 成功できない.",
+        "Nom + なくしては = sans (plus écrit et solennel) : 皆様の ご支援なくしては、この 成果は ありませんでした.",
+        "Nom + なしに = sans (simple absence) : 許可なしに 入らないで ください."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-nashi-ni-wa",
+         "kind": "grammar",
+         "front": "〜なしには",
+         "reading": "〜なしには",
+         "romaji": "~nashi ni wa",
+         "meaning": "sans… (impossible)"
+        },
+        {
+         "slug": "gram-n1-nakushite-wa",
+         "kind": "grammar",
+         "front": "〜なくしては",
+         "reading": "〜なくしては",
+         "romaji": "~nakushite wa",
+         "meaning": "sans… (solennel)"
+        },
+        {
+         "slug": "vocab-shien",
+         "kind": "vocabulary",
+         "front": "支援",
+         "reading": "しえん",
+         "romaji": "shien",
+         "meaning": "soutien, aide"
+        },
+        {
+         "slug": "vocab-seika",
+         "kind": "vocabulary",
+         "front": "成果",
+         "reading": "せいか",
+         "romaji": "seika",
+         "meaning": "résultat obtenu, fruit (du travail)"
+        },
+        {
+         "slug": "vocab-rikai",
+         "kind": "vocabulary",
+         "front": "理解",
+         "reading": "りかい",
+         "romaji": "rikai",
+         "meaning": "compréhension"
+        },
+        {
+         "slug": "vocab-namida-nashi",
+         "kind": "vocabulary",
+         "front": "涙なし",
+         "reading": "なみだなし",
+         "romaji": "namida nashi",
+         "meaning": "sans larmes"
+        },
+        {
+         "slug": "kanji-n1-en",
+         "kind": "kanji",
+         "front": "援",
+         "reading": "えん",
+         "romaji": "en",
+         "meaning": "soutenir, appuyer",
+         "kanji": {
+          "onyomi": [
+           "エン"
+          ],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "kanji-n1-ka",
+         "kind": "kanji",
+         "front": "果",
+         "reading": "か",
+         "romaji": "ka",
+         "meaning": "fruit, résultat",
+         "kanji": {
+          "onyomi": [
+           "カ"
+          ],
+          "kunyomi": [
+           "は(たす)",
+           "は(て)"
+          ],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "皆様の ご支援なくしては、この 成果は ありませんでした。",
+         "reading": "みなさまの ごしえんなくしては、この せいかは ありませんでした。",
+         "fr": "Sans votre soutien à tous, ce résultat n’aurait pas été possible."
+        },
+        {
+         "jp": "この 映画は 涙なしには 見られない。",
+         "reading": "この えいがは なみだなしには みられない。",
+         "fr": "On ne peut pas regarder ce film sans pleurer."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "家族の 理解＿、留学は できなかった。",
+         "choices": [
+          "なしには",
+          "とあって",
+          "ようが"
+         ],
+         "answer": "なしには",
+         "explanation": "Condition indispensable : 〜なしには.",
+         "translation": "Sans la compréhension de ma famille, je n’aurais pas pu partir étudier à l’étranger."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "許可＿ 写真を 撮っては いけません。",
+         "choices": [
+          "なしに",
+          "なくしては",
+          "ならでは"
+         ],
+         "answer": "なしに",
+         "explanation": "Simple absence : 〜なしに.",
+         "translation": "Il est interdit de prendre des photos sans autorisation."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "彼の 協力なくしては、成功しなかっただろう。",
+         "translation": "Son aide n’a joué aucun rôle.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜なくしては : sans lui, pas de succès."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "努力＿ しには、上手に ならない。",
+         "choices": [
+          "な",
+          "の",
+          "を"
+         ],
+         "answer": "な",
+         "explanation": "努力なしには.",
+         "translation": "Sans effort, on ne progresse pas."
+        }
+       ]
+      },
+      {
+       "slug": "n1-zu-ni-wa-okanai",
+       "title": "Ne manquera pas de… : 〜ずにはおかない・〜ずにはすまない",
+       "objective": "Dire qu’un effet se produira forcément, ou qu’une obligation ne peut être évitée.",
+       "minutes": 10,
+       "explanation": [
+        "Radical en ない + ずにはおかない = ne manquera pas de, provoque forcément (effet sur les autres) : 彼の 演説は 人々を 感動させずには おかない. する → せずにはおかない.",
+        "Radical en ない + ずにはすまない / ないではすまない = on ne peut pas s’en tirer sans (obligation sociale) : 謝らずには すまない.",
+        "Ces formes sont fermes et assez écrites ; à l’oral on dira 〜なければならない ou 〜しかない."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-zu-ni-wa-okanai",
+         "kind": "grammar",
+         "front": "〜ずにはおかない",
+         "reading": "〜ずにはおかない",
+         "romaji": "~zu ni wa okanai",
+         "meaning": "ne manquera pas de…, forcément"
+        },
+        {
+         "slug": "gram-n1-zu-ni-wa-sumanai",
+         "kind": "grammar",
+         "front": "〜ずにはすまない",
+         "reading": "〜ずにはすまない",
+         "romaji": "~zu ni wa sumanai",
+         "meaning": "ne pas pouvoir éviter de…"
+        },
+        {
+         "slug": "vocab-enzetsu",
+         "kind": "vocabulary",
+         "front": "演説",
+         "reading": "えんぜつ",
+         "romaji": "enzetsu",
+         "meaning": "discours (public)"
+        },
+        {
+         "slug": "vocab-hamon",
+         "kind": "vocabulary",
+         "front": "波紋",
+         "reading": "はもん",
+         "romaji": "hamon",
+         "meaning": "remous, répercussions"
+        },
+        {
+         "slug": "vocab-shazai",
+         "kind": "vocabulary",
+         "front": "謝罪",
+         "reading": "しゃざい",
+         "romaji": "shazai",
+         "meaning": "excuses officielles"
+        },
+        {
+         "slug": "vocab-sekininsha",
+         "kind": "vocabulary",
+         "front": "責任者",
+         "reading": "せきにんしゃ",
+         "romaji": "sekininsha",
+         "meaning": "responsable (personne)"
+        },
+        {
+         "slug": "kanji-n1-en-perform",
+         "kind": "kanji",
+         "front": "演",
+         "reading": "えん",
+         "romaji": "en",
+         "meaning": "jouer, représenter",
+         "kanji": {
+          "onyomi": [
+           "エン"
+          ],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "kanji-n1-zai",
+         "kind": "kanji",
+         "front": "罪",
+         "reading": "つみ",
+         "romaji": "tsumi",
+         "meaning": "faute, crime",
+         "kanji": {
+          "onyomi": [
+           "ザイ"
+          ],
+          "kunyomi": [
+           "つみ"
+          ],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "首相の 発言は 波紋を 呼ばずには おかないだろう。",
+         "reading": "しゅしょうの はつげんは はもんを よばずには おかないだろう。",
+         "fr": "Les propos du Premier ministre ne manqueront pas de faire des remous."
+        },
+        {
+         "jp": "これだけの 迷惑を かけたのだから、謝罪せずには すまない。",
+         "reading": "これだけの めいわくを かけたのだから、しゃざいせずには すまない。",
+         "fr": "Après avoir causé autant de tort, on ne peut pas se dispenser de présenter des excuses."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "この 作品は 見る 人を 感動させ＿。",
+         "choices": [
+          "ずにはおかない",
+          "ずにはすまない",
+          "なしには"
+         ],
+         "answer": "ずにはおかない",
+         "explanation": "Effet inévitable sur les autres : 〜ずにはおかない.",
+         "translation": "Cette œuvre ne manquera pas d’émouvoir ceux qui la verront."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "責任者として、説明せ＿ すまない。",
+         "choices": [
+          "ずには",
+          "ずにはおか",
+          "ないでも"
+         ],
+         "answer": "ずには",
+         "explanation": "Obligation : 〜ずには すまない ; する → せずには.",
+         "translation": "En tant que responsable, je ne peux pas me dispenser de m’expliquer."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "この 問題は 社会に 影響を 与えずには おかない。",
+         "translation": "Le problème n’aura sans doute aucun effet.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜ずにはおかない : il aura forcément un impact."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Tu as cassé un vase précieux chez ton hôte. Un ami te demande ce que tu vas faire.",
+         "lines": [
+          {
+           "speaker": "友だち",
+           "jp": "どう するの？"
+          }
+         ],
+         "translation": "Ton ami te demande ce que tu comptes faire.",
+         "choices": [
+          "直接 謝らずには すまないよ。",
+          "直接 謝らずには おかないよ。",
+          "直接 謝るまでもないよ。"
+         ],
+         "answer": "直接 謝らずには すまないよ。",
+         "explanation": "Obligation morale : 〜ずにはすまない."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-w8",
+   "title": "Le style des discours",
+   "region": "Domaine du shōgun",
+   "description": "Dire le but dans un style solennel, élever le ton selon le rang ou l’enjeu, et énumérer avec force.",
+   "boss": {
+    "name": "Ryūjin, Roi des Mers",
+    "glyph": "龍",
+    "intro": "Le dieu-dragon des mers s’est levé devant la côte. Il ne rendra la paix aux eaux que si le nouveau shōgun prononce un discours digne de son rang, devant tout le peuple."
+   },
+   "chapters": [
+    {
+     "slug": "n1-w8-c1",
+     "title": "Afin de, dès lors que, qu’il s’agisse de",
+     "lessons": [
+      {
+       "slug": "n1-beku",
+       "title": "Afin de… : 〜べく・〜んがため（に）",
+       "objective": "Exprimer un but dans le style des discours et des récits.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe au dictionnaire + べく = afin de, pour (écrit) : 夢を 実現す(る)べく、努力を 続けた. する → すべく.",
+        "Radical en ない + んがため(に) = dans le seul but de (très solennel) : 生きんが ために 働く. する → せんがため.",
+        "〜べく ne se termine pas sur un ordre ou une demande ; la phrase raconte ce qu’on a fait ou fait pour ce but."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-beku",
+         "kind": "grammar",
+         "front": "〜べく",
+         "reading": "〜べく",
+         "romaji": "~beku",
+         "meaning": "afin de…, pour… (écrit)"
+        },
+        {
+         "slug": "gram-n1-n-ga-tame",
+         "kind": "grammar",
+         "front": "〜んがため（に）",
+         "reading": "〜んがため（に）",
+         "romaji": "~n ga tame (ni)",
+         "meaning": "dans le seul but de…"
+        },
+        {
+         "slug": "vocab-jitsugen",
+         "kind": "vocabulary",
+         "front": "実現",
+         "reading": "じつげん",
+         "romaji": "jitsugen",
+         "meaning": "réalisation (d’un projet, d’un rêve)"
+        },
+        {
+         "slug": "vocab-kokumin",
+         "kind": "vocabulary",
+         "front": "国民",
+         "reading": "こくみん",
+         "romaji": "kokumin",
+         "meaning": "citoyens, peuple d’un pays"
+        },
+        {
+         "slug": "vocab-shimei",
+         "kind": "vocabulary",
+         "front": "使命",
+         "reading": "しめい",
+         "romaji": "shimei",
+         "meaning": "mission (devoir)"
+        },
+        {
+         "slug": "vocab-fukkou",
+         "kind": "vocabulary",
+         "front": "復興",
+         "reading": "ふっこう",
+         "romaji": "fukkou",
+         "meaning": "reconstruction, relèvement"
+        },
+        {
+         "slug": "kanji-n1-mei",
+         "kind": "kanji",
+         "front": "命",
+         "reading": "めい",
+         "romaji": "mei",
+         "meaning": "vie ; ordre",
+         "kanji": {
+          "onyomi": [
+           "メイ",
+           "ミョウ"
+          ],
+          "kunyomi": [
+           "いのち"
+          ],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "kanji-n1-kou-rise",
+         "kind": "kanji",
+         "front": "興",
+         "reading": "こう",
+         "romaji": "kou",
+         "meaning": "s’élever, intérêt",
+         "kanji": {
+          "onyomi": [
+           "コウ",
+           "キョウ"
+          ],
+          "kunyomi": [
+           "おこ(る)"
+          ],
+          "strokes": 16
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "町を 復興すべく、住民は 力を 合わせた。",
+         "reading": "まちを ふっこうすべく、じゅうみんは ちからを あわせた。",
+         "fr": "Pour reconstruire la ville, les habitants ont uni leurs forces."
+        },
+        {
+         "jp": "勝たんが ために、手段を 選ばない 人も いる。",
+         "reading": "かたんが ために、しゅだんを えらばない ひとも いる。",
+         "fr": "Certains sont prêts à tout dans le seul but de gagner."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "夢を 実現す＿、彼は 海外へ 渡った。",
+         "choices": [
+          "べく",
+          "べからず",
+          "まじき"
+         ],
+         "answer": "べく",
+         "explanation": "But (écrit) : 〜べく.",
+         "translation": "Pour réaliser son rêve, il est parti à l’étranger."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "国民の 生活を 守らん＿ ために、全力を 尽くします。",
+         "choices": [
+          "が",
+          "の",
+          "を"
+         ],
+         "answer": "が",
+         "explanation": "〜んが ため.",
+         "translation": "Je ferai tout mon possible dans le seul but de protéger la vie des citoyens."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "早く 来るべく、準備して ください。",
+         "translation": "Cette phrase est naturelle en japonais.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜べく ne s’emploie pas avec une demande (〜てください)."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Pour accomplir sa mission, il a travaillé jour et nuit. »",
+         "answer": [
+          "使命を",
+          "果たすべく",
+          "彼は",
+          "昼も 夜も 働いた"
+         ],
+         "explanation": "Verbe + べく, puis l’action."
+        }
+       ]
+      },
+      {
+       "slug": "n1-tomo-naru-to",
+       "title": "Dès lors qu’on devient… : 〜ともなると・〜ともなれば",
+       "objective": "Dire qu’à un certain rang, âge ou enjeu, les attentes changent naturellement.",
+       "minutes": 10,
+       "explanation": [
+        "Nom / verbe au dictionnaire + ともなると / ともなれば = dès lors que l’on atteint (un niveau élevé), naturellement… : 社長とも なると、毎日 忙しい.",
+        "La suite décrit ce qui va de soi à ce niveau : 大学生とも なれば、自分で 考える べきだ.",
+        "Nuance : 〜となると est plus neutre ; avec も, on souligne que le niveau atteint est remarquable."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-tomo-naru-to",
+         "kind": "grammar",
+         "front": "〜ともなると",
+         "reading": "〜ともなると",
+         "romaji": "~tomo naru to",
+         "meaning": "dès lors qu’on devient…, à ce niveau…"
+        },
+        {
+         "slug": "gram-n1-tomo-nareba",
+         "kind": "grammar",
+         "front": "〜ともなれば",
+         "reading": "〜ともなれば",
+         "romaji": "~tomo nareba",
+         "meaning": "quand il s’agit de… (niveau élevé)"
+        },
+        {
+         "slug": "vocab-shushou",
+         "kind": "vocabulary",
+         "front": "首相",
+         "reading": "しゅしょう",
+         "romaji": "shushou",
+         "meaning": "Premier ministre"
+        },
+        {
+         "slug": "vocab-chii",
+         "kind": "vocabulary",
+         "front": "地位",
+         "reading": "ちい",
+         "romaji": "chii",
+         "meaning": "position sociale, rang"
+        },
+        {
+         "slug": "vocab-omomi",
+         "kind": "vocabulary",
+         "front": "重み",
+         "reading": "おもみ",
+         "romaji": "omomi",
+         "meaning": "poids (importance)"
+        },
+        {
+         "slug": "vocab-taishou",
+         "kind": "vocabulary",
+         "front": "大将",
+         "reading": "たいしょう",
+         "romaji": "taishou",
+         "meaning": "général (armée), chef"
+        },
+        {
+         "slug": "kanji-n1-shou",
+         "kind": "kanji",
+         "front": "将",
+         "reading": "しょう",
+         "romaji": "shou",
+         "meaning": "général, commander",
+         "kanji": {
+          "onyomi": [
+           "ショウ"
+          ],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "kanji-n1-shin",
+         "kind": "kanji",
+         "front": "臣",
+         "reading": "しん",
+         "romaji": "shin",
+         "meaning": "vassal, sujet",
+         "kanji": {
+          "onyomi": [
+           "シン",
+           "ジン"
+          ],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "首相とも なると、一言の 重みが 違う。",
+         "reading": "しゅしょうとも なると、ひとことの おもみが ちがう。",
+         "fr": "Quand on est Premier ministre, chaque mot a un tout autre poids."
+        },
+        {
+         "jp": "年末とも なれば、どこも 人で いっぱいだ。",
+         "reading": "ねんまつとも なれば、どこも ひとで いっぱいだ。",
+         "fr": "En fin d’année, il y a du monde partout."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "社長＿、休みも ほとんど ない。",
+         "choices": [
+          "ともなると",
+          "をもって",
+          "にひきかえ"
+         ],
+         "answer": "ともなると",
+         "explanation": "Dès lors qu’on atteint ce rang : 〜ともなると.",
+         "translation": "Quand on est président d’entreprise, on n’a presque pas de congés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "プロ＿、ミスは 許されない。",
+         "choices": [
+          "ともなれば",
+          "までもなく",
+          "なしには"
+         ],
+         "answer": "ともなれば",
+         "explanation": "À un niveau élevé : 〜ともなれば.",
+         "translation": "Quand on est professionnel, l’erreur n’est pas permise."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "高い 地位とも なると、責任も 重く なる。",
+         "translation": "Plus le rang est élevé, plus la responsabilité est lourde.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "〜ともなると : à ce niveau, cela va de soi."
+        },
+        {
+         "type": "particle_choice",
+         "prompt": "Complète la phrase.",
+         "sentence": "大将 とも ＿ と、部下の 命を 預かる。",
+         "choices": [
+          "なる",
+          "する",
+          "ある"
+         ],
+         "answer": "なる",
+         "explanation": "〜とも なると.",
+         "translation": "Quand on est général, on a la vie de ses hommes entre ses mains."
+        }
+       ]
+      },
+      {
+       "slug": "n1-de-are",
+       "title": "Qu’il s’agisse de… : 〜であれ・〜といい〜といい",
+       "objective": "Énumérer des cas pour montrer que la règle vaut pour tous, ou louer une chose sous tous ses aspects.",
+       "minutes": 10,
+       "explanation": [
+        "Nom + であれ = que ce soit… : 誰で あれ、規則は 守るべきだ. Nom + であれ + nom + であれ = que ce soit… ou… : 大人で あれ 子どもで あれ.",
+        "Nom + といい + nom + といい = tant pour… que pour… (jugement d’ensemble, souvent admiratif) : 味と いい 値段と いい、文句 なしだ.",
+        "〜にしろ〜にしろ (N2) a un sens proche de 〜であれ〜であれ, en moins solennel."
+       ],
+       "items": [
+        {
+         "slug": "gram-n1-de-are",
+         "kind": "grammar",
+         "front": "〜であれ",
+         "reading": "〜であれ",
+         "romaji": "~de are",
+         "meaning": "que ce soit…, qui que ce soit…"
+        },
+        {
+         "slug": "gram-n1-to-ii-to-ii",
+         "kind": "grammar",
+         "front": "〜といい〜といい",
+         "reading": "〜といい〜といい",
+         "romaji": "~to ii ~to ii",
+         "meaning": "tant pour… que pour…"
+        },
+        {
+         "slug": "vocab-kibo",
+         "kind": "vocabulary",
+         "front": "規模",
+         "reading": "きぼ",
+         "romaji": "kibo",
+         "meaning": "échelle, envergure"
+        },
+        {
+         "slug": "vocab-monku-nashi",
+         "kind": "vocabulary",
+         "front": "文句なし",
+         "reading": "もんくなし",
+         "romaji": "monku nashi",
+         "meaning": "irréprochable"
+        },
+        {
+         "slug": "vocab-mibun",
+         "kind": "vocabulary",
+         "front": "身分",
+         "reading": "みぶん",
+         "romaji": "mibun",
+         "meaning": "condition sociale, statut"
+        },
+        {
+         "slug": "vocab-byoudou",
+         "kind": "vocabulary",
+         "front": "平等",
+         "reading": "びょうどう",
+         "romaji": "byoudou",
+         "meaning": "égalité"
+        },
+        {
+         "slug": "kanji-n1-mo",
+         "kind": "kanji",
+         "front": "模",
+         "reading": "も",
+         "romaji": "mo",
+         "meaning": "modèle, imiter",
+         "kanji": {
+          "onyomi": [
+           "モ",
+           "ボ"
+          ],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "kanji-n1-byou",
+         "kind": "kanji",
+         "front": "平",
+         "reading": "へい",
+         "romaji": "hei",
+         "meaning": "plat, paisible",
+         "kanji": {
+          "onyomi": [
+           "ヘイ",
+           "ビョウ"
+          ],
+          "kunyomi": [
+           "たい(ら)",
+           "ひら"
+          ],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [
+        {
+         "jp": "身分が 何で あれ、法の 前では 皆 平等だ。",
+         "reading": "みぶんが なんで あれ、ほうの まえでは みな びょうどうだ。",
+         "fr": "Quelle que soit leur condition, tous sont égaux devant la loi."
+        },
+        {
+         "jp": "規模と いい 内容と いい、素晴らしい 祭りだった。",
+         "reading": "きぼと いい ないようと いい、すばらしい まつりだった。",
+         "fr": "Tant par son ampleur que par son contenu, ce fut une fête magnifique."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "理由が 何＿、暴力は 許されない。",
+         "choices": [
+          "であれ",
+          "といい",
+          "ともなると"
+         ],
+         "answer": "であれ",
+         "explanation": "Quel que soit : 〜であれ.",
+         "translation": "Quelle qu’en soit la raison, la violence est inacceptable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "味と ＿ サービスと いい、この 店は 最高だ。",
+         "choices": [
+          "いい",
+          "あれ",
+          "して"
+         ],
+         "answer": "いい",
+         "explanation": "〜といい〜といい.",
+         "translation": "Tant pour le goût que pour le service, ce restaurant est le meilleur."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "大人で あれ 子どもで あれ、入場料は 同じだ。",
+         "translation": "Les enfants paient moins cher.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "〜であれ〜であれ : adulte ou enfant, même tarif."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets la phrase dans l’ordre : « Qui que ce soit, il faut respecter les règles. »",
+         "answer": [
+          "誰",
+          "で あれ",
+          "規則は",
+          "守るべきだ"
+         ],
+         "explanation": "Nom + で あれ, puis la règle."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "n1-final",
+   "title": "Simulation JLPT N1",
+   "region": "Domaine du shōgun",
+   "description": "Examen blanc non officiel du N1 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
+   "exam": "n1-mock",
+   "chapters": []
+  }
+ ]
+}

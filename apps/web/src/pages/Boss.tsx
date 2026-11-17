@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
+import { storyChapter, type StoryChapter } from '../lib/story';
 import { AnimatePresence, motion, useAnimationControls } from 'motion/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { bossTimeLimitSec, simulateBoss } from '@koto/learning-engine';
@@ -82,8 +83,8 @@ export function BossPage({ me }: { me: MeDto }) {
   if (error) return <div className="flex flex-col gap-4"><ErrorBox error={error} /><Link to="/path" className="underline">{T("Retour au parcours")}</Link></div>;
   if (stage.kind === 'fight') return <Fight fight={stage.fight} furigana={me.preferences.showFurigana} avatar={me.avatar} onEnd={() => finish(stage.fight)} />;
   if (stage.kind === 'finishing') return <Spinner label={T("Le combat s’achève…")} />;
-  if (stage.kind === 'done') return <Outcome boss={boss} outcome={stage.outcome} onRetry={start} />;
-  return <Intro boss={boss} worldTitle={w.title} onStart={start} />;
+  if (stage.kind === 'done') return <Outcome boss={boss} outcome={stage.outcome} onRetry={start} chapter={storyChapter(world)} />;
+  return <Intro boss={boss} worldTitle={w.title} onStart={start} chapter={storyChapter(world)} order={w.order} />;
 }
 
 /** Nuage de fumée (apparition ou disparition du gardien). */
@@ -107,7 +108,7 @@ function Smoke({ calm }: { calm: boolean }) {
   );
 }
 
-function Intro({ boss, worldTitle, onStart }: { boss: WorldBossDto; worldTitle: string; onStart: () => void }) {
+function Intro({ boss, worldTitle, onStart, chapter, order }: { boss: WorldBossDto; worldTitle: string; onStart: () => void; chapter: StoryChapter | null; order: number }) {
   const calm = useCalm();
   return (
     <div className="flex flex-col items-center gap-6 py-6 text-center">
@@ -123,6 +124,7 @@ function Intro({ boss, worldTitle, onStart }: { boss: WorldBossDto; worldTitle: 
         <span className="absolute -right-6 top-0"><BossSeal glyph={boss.glyph} size="sm" dim={!boss.available} /></span>
       </div>
       <div>
+        {chapter && <p className="font-bold text-ink-soft">{T("Chapitre {0}", [order])} · {chapter.title}</p>}
         <p className="text-ink-soft">{T("Gardien de l’île")}</p>
         <h1 className="text-4xl">{boss.name}</h1>
       </div>
@@ -283,7 +285,7 @@ function Fight({ fight, furigana, avatar, onEnd }: { fight: BossFightDto; furiga
   );
 }
 
-function Outcome({ boss, outcome, onRetry }: { boss: WorldBossDto; outcome: BossOutcomeDto; onRetry: () => void }) {
+function Outcome({ boss, outcome, onRetry, chapter }: { boss: WorldBossDto; outcome: BossOutcomeDto; onRetry: () => void; chapter: StoryChapter | null }) {
   const won = outcome.state === 'won';
   const calm = useCalm();
   return (
@@ -308,6 +310,7 @@ function Outcome({ boss, outcome, onRetry }: { boss: WorldBossDto; outcome: Boss
       </div>
       <Stamp className="jp text-6xl font-black text-ko">{won ? '勝利' : '敗北'}</Stamp>
       <h1 className="text-4xl">{won ? `${boss.name} est vaincu !` : T("Le gardien résiste…")}</h1>
+      {won && chapter && <p className="max-w-[46ch] rounded-2xl border border-line bg-surface px-5 py-3 text-lg">{chapter.outro}</p>}
       <p className="text-lg">{T("{0} coup{1} porté{2}, {3} cœur{4} restant{5}.", [ outcome.hits , outcome.hits > 1 ? 's' : '' , outcome.hits > 1 ? 's' : '' , outcome.heartsLeft , outcome.heartsLeft > 1 ? 's' : '' , outcome.heartsLeft > 1 ? 's' : '' ])}</p>
       <p className="font-bold text-gold-ink">{T("+{0} XP{1}", [ outcome.xpGained , outcome.coinsGained > 0 ? T(", +{0} pièces", [outcome.coinsGained]) : '' ])}</p>
       {!won && <p className="max-w-[46ch] text-ink-soft">{T("Les notions ratées reviendront dans tes révisions. Retente ta chance quand tu veux.")}</p>}

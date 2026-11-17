@@ -12,7 +12,8 @@ import type {
 } from './index';
 
 /**
- * Lecture quotidienne : logique commune au serveur et à la version hors ligne.
+ * Lecture : logique commune au serveur et à la version hors ligne. Tous les chapitres sont ouverts dès le départ ;
+ * le « chapitre du jour » n'est qu'un conseil (le premier pas encore lu).
  * Le catalogue vient de content/reading/stories.json ; les lectures de l'utilisateur sont passées en entrée.
  */
 export interface ReadingCatalog {
@@ -55,11 +56,10 @@ function chaptersOf(catalog: ReadingCatalog): Chapter[] {
 }
 
 const info = (s: Story): ReadingStoryInfoDto => ({ slug: s.slug, glyph: s.glyph, level: s.level, color: s.color, title: s.title, summary: s.summary });
-const LOCKED = 'Ce chapitre se débloque un prochain jour : un nouveau chapitre par jour.';
 
-function context(catalog: ReadingCatalog, logs: readonly ReadingLogRow[], today: string) {
+function context(catalog: ReadingCatalog, logs: readonly ReadingLogRow[]) {
   const chapters = chaptersOf(catalog);
-  const states = readingStates(chapters.map((c) => c.slug), logs, today);
+  const states = readingStates(chapters.map((c) => c.slug), logs);
   const byChapter = new Map(logs.map((l) => [l.chapter, l]));
   const ref = (c: Chapter): ReadingChapterRefDto => ({
     slug: c.slug,
@@ -80,17 +80,19 @@ function context(catalog: ReadingCatalog, logs: readonly ReadingLogRow[], today:
 }
 
 export function readingOverview(catalog: ReadingCatalog, logs: readonly ReadingLogRow[], today: string): ReadingOverviewDto {
-  const { chapters, ref } = context(catalog, logs, today);
+  const { chapters, ref } = context(catalog, logs);
   const read = new Set(logs.map((l) => l.chapter));
   const readToday = new Set(logs.filter((l) => l.dateKey === today).map((l) => l.chapter));
-  const available = chapters.find((c) => ref(c).state === 'available');
+  // Chapitre conseillé : le premier pas encore lu. Une fois la lecture du jour faite, on montre ce qui vient d'être lu
+  // et on propose la suite (`upcoming`), que le lecteur peut ouvrir tout de suite s'il en a envie.
+  const unread = chapters.filter((c) => !read.has(c.slug));
   const lastToday = chapters.filter((c) => readToday.has(c.slug)).at(-1);
-  const todayChapter = available ?? lastToday ?? null;
-  const upcoming = available ? chapters[chapters.indexOf(available) + 1] : chapters.find((c) => ref(c).state === 'locked');
+  const todayChapter = lastToday ?? unread[0] ?? null;
+  const upcoming = lastToday ? unread[0] : unread[1];
   const streak = readingStreak(logs.map((l) => l.dateKey), today);
   return {
     notice: catalog.notice,
-    today: { state: available ? 'new' : lastToday ? 'done' : 'finished', chapter: todayChapter ? ref(todayChapter) : null, story: todayChapter ? info(todayChapter.story) : null },
+    today: { state: lastToday ? 'done' : unread.length ? 'new' : 'finished', chapter: todayChapter ? ref(todayChapter) : null, story: todayChapter ? info(todayChapter.story) : null },
     upcoming: upcoming ? { ...ref(upcoming), story: info(upcoming.story) } : null,
     streak: streak.current,
     bestStreak: streak.best,
@@ -105,10 +107,9 @@ export function readingOverview(catalog: ReadingCatalog, logs: readonly ReadingL
 }
 
 export function readingChapter(catalog: ReadingCatalog, logs: readonly ReadingLogRow[], today: string, slug: string): ReadingChapterDto {
-  const { chapters, states, byChapter, find } = context(catalog, logs, today);
+  const { chapters, states, byChapter, find } = context(catalog, logs);
   const c = find(slug);
   const state = states.get(slug)!;
-  if (state === 'locked') throw new ReadingError(403, LOCKED);
   const i = chapters.indexOf(c);
   const next = chapters[i + 1];
   const log = byChapter.get(slug);
@@ -133,11 +134,10 @@ export function readingChapter(catalog: ReadingCatalog, logs: readonly ReadingLo
 
 /** Corrige les réponses ; `log` est la lecture à enregistrer si c'est la première fois (sinon null). */
 export function readingGrade(catalog: ReadingCatalog, logs: readonly ReadingLogRow[], today: string, slug: string, answers: readonly number[]) {
-  const { states, find } = context(catalog, logs, today);
+  const { states, find } = context(catalog, logs);
   const c = find(slug);
   if (answers.length !== c.questions.length) throw new ReadingError(400, 'Réponds à toutes les questions.');
   const state = states.get(slug)!;
-  if (state === 'locked') throw new ReadingError(403, LOCKED);
   const correct = c.questions.reduce((n, q, i) => n + (answers[i] === q.answer ? 1 : 0), 0);
   const log: ReadingLogRow | null = state === 'available' ? { chapter: slug, dateKey: today, correct, total: c.questions.length } : null;
   return { correct, total: c.questions.length, log };
@@ -145,7 +145,7 @@ export function readingGrade(catalog: ReadingCatalog, logs: readonly ReadingLogR
 
 /** Résultat renvoyé au lecteur, une fois la lecture éventuellement enregistrée. */
 export function readingResult(catalog: ReadingCatalog, logsAfter: readonly ReadingLogRow[], today: string, slug: string, correct: number, firstTime: boolean): ReadingResultDto {
-  const { chapters, states, find } = context(catalog, logsAfter, today);
+  const { chapters, states, find } = context(catalog, logsAfter);
   const c = find(slug);
   const reward = firstTime ? readingReward(correct, c.questions.length) : { xp: 0, coins: 0 };
   const next = chapters[chapters.indexOf(c) + 1];

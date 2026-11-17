@@ -68,7 +68,7 @@ export function validateLevel(data: LevelJson): string[] {
 
 function loadContent(root: string): LevelJson[] {
   return readdirSync(root)
-    .filter((d) => statSync(join(root, d)).isDirectory() && !['characters', 'cosmetics', 'exams', 'expressions', 'i18n', 'legal', 'reading'].includes(d))
+    .filter((d) => statSync(join(root, d)).isDirectory() && !['characters', 'cosmetics', 'exams', 'expressions', 'i18n', 'legal', 'reading', 'story'].includes(d))
     .flatMap((d) => readdirSync(join(root, d)).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(readFileSync(join(root, d, f), 'utf8')) as LevelJson));
 }
 

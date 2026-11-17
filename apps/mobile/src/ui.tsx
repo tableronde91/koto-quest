@@ -22,8 +22,8 @@ export function P({ children, soft, style }: { children: ReactNode; soft?: boole
   return <Text style={[s.p, soft && { color: C.inkSoft }, style]}>{children}</Text>;
 }
 
-export function Card({ children, style }: { children: ReactNode; style?: StyleProp<ViewStyle> }) {
-  return <View style={[s.card, style]}>{children}</View>;
+export function Card({ children, style, testID }: { children: ReactNode; style?: StyleProp<ViewStyle>; testID?: string }) {
+  return <View testID={testID} style={[s.card, style]}>{children}</View>;
 }
 
 export function Button({ label, onPress, tone = 'primary', disabled, style, testID }: { label: string; onPress: () => void; tone?: 'primary' | 'gold' | 'quiet'; disabled?: boolean; style?: StyleProp<ViewStyle>; testID?: string }) {

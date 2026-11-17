@@ -13,7 +13,7 @@ async function registerAndOnboard(page: Page) {
   await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
 }
 
-test('lecture : chapitre du jour, furigana, traduction au toucher, compréhension, suite le lendemain', async ({ page }) => {
+test('lecture : chapitre du jour, furigana, traduction au toucher, compréhension, suite ouverte tout de suite', async ({ page }) => {
   await registerAndOnboard(page);
   // Carte de lecture sur l'accueil
   await page.getByTestId('reading-today').click();
@@ -41,11 +41,25 @@ test('lecture : chapitre du jour, furigana, traduction au toucher, compréhensio
   await validate.click();
   await expect(page.getByText('2/2 bonnes réponses')).toBeVisible();
   await expect(page.getByText(/\+25 XP · \+10 pièces/)).toBeVisible();
-  await expect(page.getByText(/se débloque demain/)).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Chapitre suivant' }).first()).toBeVisible();
 
-  // Bibliothèque : chapitre 1 lu, chapitre 2 à venir
+  // Bibliothèque : chapitre 1 lu, chapitre 2 conseillé, et tous les contes ouverts sans attendre
   await page.getByRole('link', { name: 'Tous les contes' }).first().click();
-  await expect(page.getByText('Jour 1 · lu aujourd’hui')).toBeVisible();
-  await expect(page.getByLabel(/Chapitre 2 : Un garçon dans la pêche \(à venir\)/)).toBeVisible();
+  await expect(page.getByText('Lu aujourd’hui')).toBeVisible();
+  await expect(page.getByText(/Envie de continuer \? La suite, « Un garçon dans la pêche », t’attend/)).toBeVisible();
   await expect(page.getByRole('button', { name: 'Relire' })).toBeVisible();
+  await expect(page.getByRole('link', { name: /Chapitre 2 : Un garçon dans la pêche \(conseillé\)/ })).toBeVisible();
+  const chapters = page.getByTestId('story').getByRole('listitem');
+  expect(await chapters.count()).toBeGreaterThanOrEqual(28);
+  expect(await page.getByTestId('story').getByRole('listitem').getByRole('link').count()).toBe(await chapters.count());
+
+  // On ouvre directement le dernier chapitre du dernier conte
+  await page.getByTestId('story').last().getByRole('link').last().click();
+  await expect(page.getByTestId('reader')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Valider mes réponses' })).toBeVisible();
+
+  // « Continuer la lecture » mène au chapitre conseillé
+  await page.goBack();
+  await page.getByRole('button', { name: 'Continuer la lecture' }).click();
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('もも');
 });

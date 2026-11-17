@@ -41,17 +41,19 @@ describe('Lecture quotidienne', () => {
     expect(len(chapters.at(-2))).toBeGreaterThan(len(chapters[0]) * 1.8);
   });
 
-  it('un chapitre par jour, relecture libre, récompense unique, série de jours', async () => {
+  it('tous les chapitres ouverts, chapitre conseillé, relecture libre, récompense unique, série de jours', async () => {
     setNow(ctx.clock, new Date('2026-11-10T09:00:00Z'));
     const { agent } = await signUp(ctx.app);
     const o = (await agent.get('/api/reading').expect(200)).body;
     expect(o.today.state).toBe('new');
     expect(o.today.chapter).toMatchObject({ slug: 'momotaro-1', day: 1, state: 'available' });
-    expect(o.upcoming).toMatchObject({ slug: 'momotaro-2', state: 'locked' });
-    expect(o.stories[0].chapters[1].state).toBe('locked');
+    expect(o.upcoming).toMatchObject({ slug: 'momotaro-2', state: 'available' });
+    // Rien n'est verrouillé : tous les chapitres de tous les contes sont disponibles dès le départ
+    expect(o.stories.flatMap((s: any) => s.chapters).every((c: any) => c.state === 'available')).toBe(true);
     expect(o.totalChapters).toBeGreaterThanOrEqual(28);
 
-    await agent.get('/api/reading/chapters/momotaro-2').expect(403);
+    const last = catalog.stories.at(-1).chapters.at(-1);
+    expect((await agent.get(`/api/reading/chapters/${last.slug}`).expect(200)).body).toMatchObject({ state: 'available', next: null });
     await agent.get('/api/reading/chapters/inconnu').expect(404);
     const ch = (await agent.get('/api/reading/chapters/momotaro-1').expect(200)).body;
     expect(ch.chapter.paragraphs[0][0].jp).toContain('{村|むら}');
@@ -62,23 +64,29 @@ describe('Lecture quotidienne', () => {
     const answers = catalog.stories[0].chapters[0].questions.map((q: any) => q.answer);
     const coins = (await agent.get('/api/me').expect(200)).body.coins;
     const r = (await agent.post('/api/reading/chapters/momotaro-1/complete').send({ answers, seconds: 120 }).expect(201)).body;
-    expect(r).toMatchObject({ correct: answers.length, firstTime: true, xpGained: 15 + 5 * answers.length, coinsGained: 10, streak: 1, next: { slug: 'momotaro-2', state: 'locked' } });
+    expect(r).toMatchObject({ correct: answers.length, firstTime: true, xpGained: 15 + 5 * answers.length, coinsGained: 10, streak: 1, next: { slug: 'momotaro-2', state: 'available' } });
     expect((await agent.get('/api/me').expect(200)).body.coins).toBe(coins + 10);
 
-    // Relecture : aucune récompense, le chapitre suivant reste verrouillé jusqu'à demain
+    // Relecture : aucune récompense
     const again = (await agent.post('/api/reading/chapters/momotaro-1/complete').send({ answers }).expect(201)).body;
     expect(again).toMatchObject({ firstTime: false, xpGained: 0, coinsGained: 0 });
     const done = (await agent.get('/api/reading').expect(200)).body;
     expect(done.today).toMatchObject({ state: 'done', chapter: { slug: 'momotaro-1', state: 'read' } });
+    expect(done.upcoming).toMatchObject({ slug: 'momotaro-2', state: 'available' });
     expect(done.chaptersRead).toBe(1);
     expect(done.charsRead).toBeGreaterThan(50);
     expect((await agent.get('/api/reading/chapters/momotaro-1').expect(200)).body.result).toMatchObject({ correct: answers.length, answers });
-    await agent.post('/api/reading/chapters/momotaro-2/complete').send({ answers: [0, 0] }).expect(403);
 
-    // Le lendemain (heure de Paris), le chapitre 2 s'ouvre
+    // Le même jour, on peut enchaîner : un chapitre d'un autre conte, lu dans le désordre, est récompensé lui aussi
+    const other = catalog.stories[3].chapters[2];
+    const same = (await agent.post(`/api/reading/chapters/${other.slug}/complete`).send({ answers: other.questions.map((q: any) => q.answer) }).expect(201)).body;
+    expect(same).toMatchObject({ firstTime: true, streak: 1 });
+    expect((await agent.get('/api/reading').expect(200)).body).toMatchObject({ chaptersRead: 2, today: { state: 'done', chapter: { slug: other.slug } }, upcoming: { slug: 'momotaro-2' } });
+
+    // Le lendemain (heure de Paris), le conseil du jour est le premier chapitre pas encore lu
     setNow(ctx.clock, new Date('2026-11-11T07:00:00Z'));
     const next = (await agent.get('/api/reading').expect(200)).body;
-    expect(next.today.chapter).toMatchObject({ slug: 'momotaro-2', state: 'available' });
+    expect(next.today).toMatchObject({ state: 'new', chapter: { slug: 'momotaro-2', state: 'available' } });
     expect(next.streak).toBe(1);
     const r2 = (await agent.post('/api/reading/chapters/momotaro-2/complete').send({ answers: [9, 9] }).expect(201)).body;
     expect(r2).toMatchObject({ correct: 0, firstTime: true, coinsGained: 5, streak: 2 });

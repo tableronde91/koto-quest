@@ -8,7 +8,7 @@ import { ActivityService } from '../learning/activity.service';
 
 const CATALOG_PATH = resolve(__dirname, '../../../../content/reading/stories.json');
 
-/** Lecture quotidienne : contes en feuilleton, un nouveau chapitre par jour (logique commune dans @koto/shared). */
+/** Lecture : contes ouverts dès le départ, avec un chapitre conseillé chaque jour (logique commune dans @koto/shared). */
 @Injectable()
 export class ReadingService {
   private catalog: ReadingCatalog | null = null;

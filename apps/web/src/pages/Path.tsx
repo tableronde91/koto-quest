@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { ApiError } from '../api/client';
 import type { PathLessonDto, WorldBossDto } from '@koto/shared';
 import { BossSeal } from './Boss';
 import { useMe, usePath } from '../api/hooks';
-import { WorldMap } from '../components/WorldMap';
+import { IslandVignette, WorldMap } from '../components/WorldMap';
 import { DEFAULT_AVATAR } from '@koto/learning-engine';
 import { ErrorBox, PageTitle, Spinner } from '../components/ui';
 import { motion } from 'motion/react';
 import { WorldVignette } from '../components/Illustrations';
+import { EXAMS } from '@koto/learning-engine';
 import { T } from '../i18n';
+import { sagaFor, storyChapter, type Saga } from '../lib/story';
 
 /** Parcours : chemin vertical de « pierres » (inspiré du sugoroku), une par leçon. */
 const LEVEL_KEY = 'koto-path-level';
@@ -42,9 +44,13 @@ export function PathPage() {
   if (missing || isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
 
+  const saga = sagaFor(data.level.code);
+  const worldDone = (w: (typeof data.worlds)[number]) => (w.exam && w.progress.total === 0 ? w.exam.passed : w.boss ? w.boss.defeated : w.progress.total > 0 && w.progress.completed === w.progress.total);
+  const sagaDone = data.worlds.length > 0 && data.worlds.every((w) => !w.comingSoon && worldDone(w));
+
   return (
     <div>
-      <PageTitle sub={data.level.notice}>{T("{0} : {1}", [data.level.code, data.level.region])}</PageTitle>
+      {saga ? <SagaBanner saga={saga} code={data.level.code} region={data.level.region} notice={data.level.notice} done={sagaDone} /> : <PageTitle sub={data.level.notice}>{T("{0} : {1}", [data.level.code, data.level.region])}</PageTitle>}
       {data.levels.length > 1 && (
         <div role="tablist" aria-label={T("Niveau du parcours")} className="mb-6 flex flex-wrap gap-2">
           {data.levels.map((l) => {
@@ -59,7 +65,7 @@ export function PathPage() {
               >
                 <span className="font-display text-xl">{l.code}</span>
                 <span className="text-sm leading-tight">
-                  <span className="block font-bold">{l.title.split(' : ')[0]}</span>
+                  <span className="block font-bold">{sagaFor(l.code)?.short ?? l.title.split(' : ')[0]}</span>
                   <span className={active ? 'opacity-80' : 'text-ink-soft'}>{T("{0}/{1} leçons", [l.completed , l.lessons ])}</span>
                 </span>
               </button>
@@ -72,22 +78,45 @@ export function PathPage() {
         <span className="flex-1"><span className="block font-bold">{T("Atelier JLPT")}</span><span className="text-sm text-ink-soft">{T("Entraîne-toi épreuve par épreuve au format de l’examen, avec ce que tu as appris.")}</span></span>
         <span aria-hidden="true" className="text-xl">→</span>
       </Link>
-      <WorldMap worlds={data.worlds} avatar={me?.avatar ?? DEFAULT_AVATAR} region={data.level.region} level={data.level.code} />
+      <WorldMap worlds={data.worlds} avatar={me?.avatar ?? DEFAULT_AVATAR} region={data.level.region} level={data.level.code} saga={saga ? { glyph: saga.glyph, title: saga.title } : undefined} />
       <ol className="flex flex-col gap-10">
-        {data.worlds.map((w) => (
+        {data.worlds.map((w) => {
+          const ch = storyChapter(w.slug);
+          const done = !w.comingSoon && worldDone(w);
+          return (
           <li key={w.slug} aria-labelledby={`w-${w.slug}`} className="scroll-mt-6">
             <div className="flex items-center gap-4 border-b-2 border-line pb-2">
               <motion.div initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ type: 'spring', stiffness: 220, damping: 15 }}>
-                <WorldVignette slug={w.slug} size={64} />
+                {saga ? <IslandVignette slug={w.slug} level={data.level.code} size={72} /> : <WorldVignette slug={w.slug} size={64} />}
               </motion.div>
               <h2 id={`w-${w.slug}`} className="flex-1 text-2xl">
-                <span className="mr-2 text-ink-soft">{T("Île {0}", [ w.order])}</span>
-                {w.title}
+                {ch && (
+                  <span className="block">
+                    <span className="mr-1 text-ink-soft">{T("Chapitre {0}", [w.order])}</span>{' '}
+                    {ch.title}
+                  </span>
+                )}
+                <span className={ch ? 'block font-sans text-base font-bold text-ink-soft' : undefined}>
+                  <span className={ch ? undefined : 'mr-2 text-ink-soft'}>{T("Île {0}", [ w.order])}</span>
+                  {ch ? ' · ' : ''}
+                  {w.title}
+                </span>
               </h2>
               <span className="shrink-0 text-sm text-ink-soft">
                 {w.comingSoon ? T("Bientôt") : `${w.progress.completed}/${w.progress.total}`}
               </span>
             </div>
+            {ch && saga && (
+              <blockquote className="mt-3 rounded-r-2xl border-l-4 bg-surface-2 px-4 py-3 leading-relaxed" style={{ borderColor: saga.color }}>
+                <p>{ch.intro}</p>
+                {done && (
+                  <p className="mt-2 font-bold" style={{ color: saga.color }}>
+                    <span aria-hidden="true" className="jp mr-2">済</span>
+                    {ch.outro}
+                  </p>
+                )}
+              </blockquote>
+            )}
             <p className="mt-2 text-ink-soft">
               {w.description}
               {w.optional && !w.comingSoon && T(" Tu as indiqué connaître ces bases : cette île reste ouverte pour réviser.")}
@@ -109,16 +138,50 @@ export function PathPage() {
                 <span className="flex-1">
                   <span className="block text-lg font-bold">{w.exam.title}</span>
                   <span className="block text-sm text-ink-soft">
-                    {w.exam.attempts ? `Meilleur score : ${w.exam.bestPercent} %${w.exam.passed ? ', seuil atteint' : ''}` : '25 minutes, 30 questions, non officiel'}
+                    {w.exam.attempts
+                      ? T(w.exam.passed ? "Meilleur score : {0} %, seuil atteint" : "Meilleur score : {0} %", [w.exam.bestPercent])
+                      : EXAMS[w.exam.slug]
+                        ? T("{0} minutes, {1} questions, non officiel", [EXAMS[w.exam.slug].durationMin, EXAMS[w.exam.slug].sections.reduce((n, sec) => n + sec.count, 0)])
+                        : T("Examen blanc non officiel")}
                   </span>
                 </span>
                 <span className="btn btn-gold hidden sm:inline-flex">{w.exam.attempts ? T("Repasser") : T("Passer l’examen")}</span>
               </Link>
             )}
           </li>
-        ))}
+          );
+        })}
       </ol>
     </div>
+  );
+}
+
+/** En-tête du mode histoire : sceau du héros, titre de la saga, prologue (puis épilogue une fois le niveau terminé). */
+function SagaBanner({ saga, code, region, notice, done }: { saga: Saga; code: string; region: string; notice?: string | null; done: boolean }) {
+  // Sur téléphone, le prologue est replié pour laisser la carte visible.
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="mb-6 overflow-hidden rounded-3xl border-2 bg-surface" style={{ borderColor: saga.color }}>
+      <div className="flex items-center gap-3 p-3 text-white sm:gap-4 sm:p-5" style={{ background: saga.color }}>
+        <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-2 border-white/70 bg-black/15 text-3xl font-black sm:h-16 sm:w-16 sm:text-4xl">{saga.glyph}</span>
+        <div className="min-w-0">
+          <p className="text-xs font-bold uppercase tracking-wide opacity-90 sm:text-sm">{T("Mode histoire · {0}", [saga.hero])}</p>
+          <h1 className="text-2xl text-white sm:text-4xl">{T("{0} : {1}", [code, saga.title])}</h1>
+          <p className="jp mt-0.5 text-sm opacity-90" lang="ja">{saga.jp}</p>
+        </div>
+      </div>
+      <div className="p-3 sm:p-5">
+        <p className={`max-w-[70ch] leading-relaxed ${open ? '' : 'line-clamp-3 sm:line-clamp-none'}`}>{saga.prologue}</p>
+        {done && <p className="mt-3 max-w-[70ch] font-bold leading-relaxed" style={{ color: saga.color }}>{saga.epilogue}</p>}
+        <p className={`mt-3 text-sm text-ink-soft ${open ? '' : 'hidden sm:block'}`}>
+          {region}
+          {notice ? ` · ${notice}` : ''}
+        </p>
+        <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="mt-2 min-h-11 text-sm font-bold underline sm:hidden">
+          {open ? T("Replier") : T("Lire la suite")}
+        </button>
+      </div>
+    </header>
   );
 }
 

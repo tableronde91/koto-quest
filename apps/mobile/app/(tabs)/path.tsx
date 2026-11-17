@@ -1,55 +1,98 @@
 import { useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import type { PathLessonDto, PathWorldDto } from '@koto/shared';
 import { usePath } from '../../src/hooks';
+import { sagaFor, storyChapter } from '../../src/story';
 import { C } from '../../src/theme';
-import { ErrorBox, H1, Loading, P, Screen, Seal } from '../../src/ui';
+import { ErrorBox, Loading, P, Screen, Seal } from '../../src/ui';
 
 const STATUS_GLYPH: Record<PathLessonDto['status'], string> = { completed: '済', in_progress: '進', available: '道', locked: '錠' };
 
-/** Parcours : un onglet par niveau, une carte par île, un sentier de leçons. */
+const worldDone = (w: PathWorldDto) => (w.exam && w.progress.total === 0 ? w.exam.passed : w.boss ? w.boss.defeated : w.progress.total > 0 && w.progress.completed === w.progress.total);
+
+/** Parcours en mode histoire : un onglet par niveau (une saga par héros), un chapitre par île. */
 export default function PathScreen() {
   const router = useRouter();
   const [level, setLevel] = useState('N5');
+  const [more, setMore] = useState(false);
   const { data, isLoading, error, refetch } = usePath(level);
   if (isLoading) return <Loading />;
   if (error || !data) return <Screen><ErrorBox error={error} onRetry={refetch} /></Screen>;
+  const saga = sagaFor(data.level.code);
+  const color = saga?.color ?? C.ink;
+  const sagaDone = data.worlds.length > 0 && data.worlds.every((w) => !w.comingSoon && worldDone(w));
   return (
     <Screen>
-      <H1>{data.level.code} : {data.level.region}</H1>
-      <View style={{ flexDirection: 'row', gap: 8 }}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} accessibilityRole="tablist">
         {data.levels.map((l) => {
           const on = l.code === data.level.code;
           return (
-            <Pressable key={l.code} accessibilityRole="tab" accessibilityState={{ selected: on }} onPress={() => setLevel(l.code)} style={{ flex: 1, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.ink : C.surface, padding: 10 }}>
+            <Pressable key={l.code} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={`${l.code}, ${sagaFor(l.code)?.short ?? ''}, ${l.completed}/${l.lessons} leçons`} onPress={() => { setLevel(l.code); setMore(false); }} style={{ minWidth: 104, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.ink : C.surface, padding: 10 }}>
               <Text style={{ fontSize: 20, fontWeight: '900', color: on ? C.paper : C.ink }}>{l.code}</Text>
+              <Text style={{ color: on ? C.paper : C.ink, fontWeight: '700', fontSize: 13 }}>{sagaFor(l.code)?.short ?? l.title}</Text>
               <Text style={{ color: on ? C.paper : C.inkSoft, fontSize: 12 }}>{l.completed}/{l.lessons} leçons</Text>
             </Pressable>
           );
         })}
-      </View>
-      {data.worlds.map((w) => <Island key={w.slug} w={w} onLesson={(slug) => router.push(`/lesson/${slug}`)} />)}
+      </ScrollView>
+
+      {saga && (
+        <View style={{ borderRadius: 24, overflow: 'hidden', borderWidth: 2, borderColor: color, backgroundColor: C.surface }}>
+          <View style={{ backgroundColor: color, padding: 14, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+            <View style={{ width: 52, height: 52, borderRadius: 14, borderWidth: 2, borderColor: 'rgba(255,255,255,0.7)', backgroundColor: 'rgba(0,0,0,0.15)', alignItems: 'center', justifyContent: 'center' }}>
+              <Text style={{ fontSize: 30, fontWeight: '900', color: '#fff' }}>{saga.glyph}</Text>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: '#fff', fontSize: 12, fontWeight: '800', opacity: 0.9 }}>MODE HISTOIRE · {saga.hero.toUpperCase()}</Text>
+              <Text accessibilityRole="header" style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{data.level.code} : {saga.title}</Text>
+              <Text style={{ color: '#fff', opacity: 0.9 }}>{saga.jp}</Text>
+            </View>
+          </View>
+          <View style={{ padding: 14, gap: 8 }}>
+            <P style={{ lineHeight: 23 }} >{more ? saga.prologue : `${saga.prologue.slice(0, 150).replace(/\s\S*$/, '')}…`}</P>
+            {sagaDone && <P style={{ fontWeight: '800', color }}>{saga.epilogue}</P>}
+            <Pressable accessibilityRole="button" onPress={() => setMore(!more)} style={{ minHeight: 44, justifyContent: 'center' }}>
+              <Text style={{ fontWeight: '800', textDecorationLine: 'underline', color: C.ink }}>{more ? 'Replier' : 'Lire la suite'}</Text>
+            </Pressable>
+          </View>
+        </View>
+      )}
+
+      {data.worlds.map((w) => (
+        <Island
+          key={w.slug}
+          w={w}
+          color={color}
+          onLesson={(slug) => router.push(`/lesson/${slug}`)}
+          onBoss={() => router.push({ pathname: '/boss/[slug]', params: { slug: w.slug, order: String(w.order), name: w.boss?.name ?? '', glyph: w.boss?.glyph ?? '' } })}
+          onExam={() => w.exam && router.push({ pathname: '/exam/[slug]', params: { slug: w.exam.slug, title: w.title } })}
+        />
+      ))}
     </Screen>
   );
 }
 
-function Island({ w, onLesson }: { w: PathWorldDto; onLesson: (slug: string) => void }) {
+function Island({ w, color, onLesson, onBoss, onExam }: { w: PathWorldDto; color: string; onLesson: (slug: string) => void; onBoss: () => void; onExam: () => void }) {
   const lessons = w.chapters.flatMap((c) => c.lessons);
-  const done = w.progress.completed === w.progress.total && w.progress.total > 0;
+  const ch = storyChapter(w.slug);
+  const done = !w.comingSoon && worldDone(w);
   return (
     <View style={{ borderRadius: 24, overflow: 'hidden', backgroundColor: C.surface, borderWidth: 1, borderColor: C.line }}>
-      <View style={{ backgroundColor: '#1A8C9C', padding: 14, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-        <View style={{ width: 54, height: 40, borderRadius: 20, backgroundColor: '#EBD9AE', borderBottomWidth: 6, borderBottomColor: '#7D7468', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 18 }}>{w.exam ? '⛩️' : done ? '🌸' : '🌴'}</Text>
-        </View>
+      <View style={{ backgroundColor: color, padding: 14, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
         <View style={{ flex: 1 }}>
-          <Text style={{ color: '#E6FFFB', fontWeight: '700', fontSize: 12 }}>Île {w.order}</Text>
-          <Text style={{ color: '#FFFFFF', fontWeight: '800', fontSize: 18 }}>{w.title}</Text>
+          <Text accessibilityRole="header" style={{ color: '#FFFFFF', fontWeight: '800', fontSize: 18 }}>{ch ? `Chapitre ${w.order} · ${ch.title}` : `Île ${w.order} · ${w.title}`}</Text>
+          {ch && <Text style={{ color: '#FFFFFF', opacity: 0.9, fontWeight: '700', fontSize: 13 }}>Île {w.order} · {w.title}</Text>}
         </View>
-        {w.boss && <Seal glyph={w.boss.glyph} size={40} color={w.boss.defeated ? C.ok : C.seal} />}
+        {w.boss && <Seal glyph={w.boss.glyph} size={40} color={w.boss.defeated ? C.ok : 'rgba(0,0,0,0.35)'} />}
       </View>
       <View style={{ padding: 14, gap: 4 }}>
+        {ch && (
+          <View style={{ borderLeftWidth: 4, borderLeftColor: color, backgroundColor: C.surface2, borderRadius: 10, padding: 10, gap: 6, marginBottom: 6 }}>
+            <P style={{ lineHeight: 23 }}>{ch.intro}</P>
+            {done && <P style={{ fontWeight: '800', color }}>済 {ch.outro}</P>}
+          </View>
+        )}
         <P soft>{w.description}</P>
         {w.comingSoon && <P soft>Bientôt disponible.</P>}
         {lessons.map((l) => {
@@ -67,12 +110,23 @@ function Island({ w, onLesson }: { w: PathWorldDto; onLesson: (slug: string) => 
           );
         })}
         {w.boss && (
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 6, padding: 10, borderRadius: 14, backgroundColor: C.surface2 }}>
-            <Text style={{ fontSize: 20 }}>👹</Text>
-            <Text style={{ flex: 1, color: C.ink }}><Text style={{ fontWeight: '800' }}>{w.boss.name}</Text>{w.boss.defeated ? ' — vaincu' : w.boss.available ? ' — prêt (combat sur la version web)' : ''}</Text>
-          </View>
+          <Pressable accessibilityRole="button" accessibilityLabel={`Gardien : ${w.boss.name}${w.boss.defeated ? ', vaincu' : w.boss.available ? ', prêt au combat' : ', termine les leçons pour l’affronter'}`} disabled={!w.boss.available && !w.boss.defeated} onPress={onBoss} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 6, padding: 10, borderRadius: 14, backgroundColor: w.boss.available && !w.boss.defeated ? '#FBEFD9' : C.surface2, borderWidth: 2, borderColor: w.boss.available && !w.boss.defeated ? C.gold : 'transparent' }}>
+            <Seal glyph={w.boss.glyph} size={36} color={w.boss.defeated ? C.ok : C.seal} />
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: C.ink, fontWeight: '800' }}>{w.boss.name}</Text>
+              <Text style={{ color: C.inkSoft, fontSize: 13 }}>{w.boss.defeated ? 'Vaincu · revanche possible' : w.boss.available ? 'Prêt : touche pour combattre' : 'Termine les leçons de l’île pour l’affronter'}</Text>
+            </View>
+          </Pressable>
         )}
-        {w.exam && <P soft>Examen blanc {w.exam.bestPercent !== null ? `· meilleur score ${w.exam.bestPercent} %` : ''} (sur la version web)</P>}
+        {w.exam && (
+          <Pressable accessibilityRole="button" accessibilityLabel={`Examen blanc : ${w.title}`} onPress={onExam} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 6, padding: 12, borderRadius: 14, backgroundColor: '#FBEFD9', borderWidth: 2, borderColor: C.gold }}>
+            <Text style={{ fontSize: 22, fontWeight: '900', color: C.ko }}>模試</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: C.ink, fontWeight: '800' }}>Passer l’examen blanc</Text>
+              <Text style={{ color: C.inkSoft, fontSize: 13 }}>{w.exam.attempts ? `Meilleur score : ${w.exam.bestPercent} %${w.exam.passed ? ', seuil atteint' : ''}` : 'Chronométré, non officiel'}</Text>
+            </View>
+          </Pressable>
+        )}
       </View>
     </View>
   );

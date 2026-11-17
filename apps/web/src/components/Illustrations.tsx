@@ -317,3 +317,73 @@ const VIGNETTES: Record<string, React.ReactNode> = {
   default: glyph('道', 40, 52, 30),
 };
 VIGNETTES['n4-final'] = VIGNETTES['n5-final'];
+// N3 · impressions (renard), décisions (sommet), concessions (flocon), moment juste (horloge)
+VIGNETTES['n3-w1'] = (
+  <g>
+    <path d="M18 26 L28 44 L52 44 L62 26 L50 34 L30 34 Z" fill={GOLD} stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+    <path d="M28 44 L40 64 L52 44 Z" fill="var(--surface)" stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+    <circle cx="33" cy="42" r="2.5" fill={INK} />
+    <circle cx="47" cy="42" r="2.5" fill={INK} />
+    <circle cx="40" cy="61" r="2.5" fill={BENI} />
+  </g>
+);
+VIGNETTES['n3-w2'] = (
+  <g>
+    <path d="M8 66 L32 26 L44 44 L52 34 L72 66 Z" fill={MATCHA} stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+    <path d="M32 26 L25 38 L32 34 L38 38 Z" fill="#FFFFFF" />
+    <path d="M52 14 V34 M52 14 L64 19 L52 24" stroke={BENI} strokeWidth="3" fill={BENI} strokeLinejoin="round" />
+  </g>
+);
+VIGNETTES['n3-w3'] = (
+  <g stroke="#2F6FA8" strokeWidth="4" strokeLinecap="round">
+    {[0, 60, 120].map((a) => (
+      <g key={a} transform={`rotate(${a} 40 40)`}>
+        <path d="M40 12 V68 M40 20 L33 14 M40 20 L47 14 M40 60 L33 66 M40 60 L47 66" fill="none" />
+      </g>
+    ))}
+    <circle cx="40" cy="40" r="5" fill="#FFFFFF" />
+  </g>
+);
+VIGNETTES['n3-w4'] = (
+  <g>
+    <circle cx="40" cy="40" r="26" fill="var(--surface)" stroke={INK} strokeWidth="4" />
+    <path d="M40 40 V22 M40 40 L52 47" stroke={BENI} strokeWidth="4" strokeLinecap="round" />
+    {[0, 90, 180, 270].map((a) => <path key={a} d="M40 17 V21" stroke={INK} strokeWidth="3" strokeLinecap="round" transform={`rotate(${a} 40 40)`} />)}
+    <circle cx="40" cy="40" r="3" fill={INK} />
+  </g>
+);
+// N3 · raisons (point d'interrogation résolu), degrés (thermomètre), points de vue (œil), devoirs (daruma)
+VIGNETTES['n3-w5'] = (
+  <g>
+    <rect x="14" y="16" width="52" height="38" rx="10" fill="var(--surface)" stroke={INK} strokeWidth="3" />
+    <path d="M30 54 L26 66 L42 54" fill="var(--surface)" stroke={INK} strokeWidth="3" strokeLinejoin="round" />
+    {glyph('訳', 40, 44, 24, BENI)}
+  </g>
+);
+VIGNETTES['n3-w6'] = (
+  <g>
+    <rect x="33" y="10" width="14" height="42" rx="7" fill="var(--surface)" stroke={INK} strokeWidth="3" />
+    <circle cx="40" cy="58" r="12" fill={BENI} stroke={INK} strokeWidth="3" />
+    <rect x="37" y="26" width="6" height="30" rx="3" fill={BENI} />
+    {[20, 30, 40].map((y) => <path key={y} d={`M52 ${y} H60`} stroke={INK} strokeWidth="2.5" strokeLinecap="round" />)}
+  </g>
+);
+VIGNETTES['n3-w7'] = (
+  <g>
+    <path d="M8 40 Q40 10 72 40 Q40 70 8 40 Z" fill="var(--surface)" stroke={INK} strokeWidth="3" strokeLinejoin="round" />
+    <circle cx="40" cy="40" r="13" fill={MATCHA} stroke={INK} strokeWidth="2.5" />
+    <circle cx="40" cy="40" r="5" fill={INK} />
+    <circle cx="44" cy="36" r="2" fill="#FFFFFF" />
+  </g>
+);
+VIGNETTES['n3-w8'] = (
+  <g>
+    <path d="M40 10 C62 10 68 32 66 48 C64 62 54 70 40 70 C26 70 16 62 14 48 C12 32 18 10 40 10 Z" fill={BENI} stroke={INK} strokeWidth="3" />
+    <ellipse cx="40" cy="36" rx="17" ry="13" fill="#F5E6D3" stroke={INK} strokeWidth="2.5" />
+    <circle cx="33" cy="36" r="4" fill="#FFFFFF" stroke={INK} strokeWidth="2" />
+    <circle cx="47" cy="36" r="4" fill="#FFFFFF" stroke={INK} strokeWidth="2" />
+    <circle cx="47" cy="36" r="1.8" fill={INK} />
+    <path d="M30 58 Q40 64 50 58" stroke={GOLD} strokeWidth="3" fill="none" strokeLinecap="round" />
+  </g>
+);
+VIGNETTES['n3-final'] = VIGNETTES['n5-final'];

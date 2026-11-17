@@ -4,6 +4,8 @@ import type { AvatarConfig, PathWorldDto } from '@koto/shared';
 import { Avatar } from './Avatar';
 import { useCalm } from './Celebrate';
 import { T } from '../i18n';
+import { storyScene } from './StoryScenes';
+import { Bamboo, Castle, DawnGate, Hut, Lanterns, Pagoda, Torii, SAKURA, LEAF, WOOD, VERMILION, ROCK, ROCK_DARK } from './MapParts';
 
 /**
  * Carte du niveau en archipel : chaque monde est une île, reliée à la suivante par un chemin
@@ -79,7 +81,7 @@ function blob(cx: number, cy: number, rx: number, ry: number, seed: number, wobb
 // ───────────── Ambiance de chaque niveau ─────────────
 // N5 : printemps lumineux (cerisiers, soleil). N4 : automne au crépuscule, plus sobre (érables, pins, lune, brume).
 interface MapTheme {
-  id: 'spring' | 'autumn';
+  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear';
   sea: [string, string, string];
   waves: number;
   horizon: string;
@@ -150,23 +152,89 @@ const AUTUMN: MapTheme = {
   dusk: true,
 };
 
+// N3 : nuit de neige dans le monde des esprits, juste avant l'aube (îles blanches sur une mer indigo, lueurs bleues).
+const WINTER: MapTheme = {
+  id: 'winter',
+  sea: ['#1F2552', '#2B3470', '#3A3A7C'],
+  waves: 0.08,
+  horizon: '#161B40',
+  shallow: '#9FD8FF',
+  shallowOpacity: 0.2,
+  grass: ['#F3F7FA', '#DCE7EE'],
+  sand: '#BFCBDD',
+  blossom: '#FFFFFF',
+  blossomDark: '#C9D9E4',
+  leaf: '#2E5A4C',
+  leafDark: '#1E4236',
+  cloud: '#C9D3F0',
+  cloudOpacity: 0.28,
+  foam: 0.55,
+  path: '#BFE8FF',
+  particles: ['#FFFFFF'],
+  banner: { fill: '#1B2148', stroke: '#9FD8FF', text: '#EAF4FF', seal: '#2F6FA8' },
+  plaque: { fill: '#F4F8FB', stroke: '#2F4A66', text: '#1F3247', accent: '#2F6FA8' },
+  sail: '#2F6FA8',
+  dusk: false,
+};
+
+// N2 : soir d'été dans la capitale (eau de jade, verdure dense, hortensias, lucioles, feux d'artifice).
+const SUMMER: MapTheme = {
+  id: 'summer',
+  sea: ['#0F5E5A', '#15786A', '#1C8C76'],
+  waves: 0.09,
+  horizon: '#0B4440',
+  shallow: '#8EE6C4',
+  shallowOpacity: 0.3,
+  grass: ['#3F9150', '#2F7A45'],
+  sand: '#E6D4A0',
+  blossom: '#8FA8F0',
+  blossomDark: '#B48CE0',
+  leaf: '#2F7A45',
+  leafDark: '#1F5C36',
+  cloud: '#FFF3D6',
+  cloudOpacity: 0.7,
+  foam: 0.5,
+  path: '#FFE9A8',
+  particles: ['#E9FF8A'],
+  banner: { fill: '#0E3B36', stroke: '#E2B84A', text: '#F6EBD3', seal: '#C8323F' },
+  plaque: { fill: '#F6EBD3', stroke: '#1F5C4D', text: '#17352F', accent: '#1F7A66' },
+  sail: '#F2C14E',
+  dusk: false,
+};
+
+// N1 : aube du Nouvel An sur le domaine du shōgun (nuit violette qui s'embrase d'or, pins, pruniers en fleur, paillettes d'or).
+const NEWYEAR: MapTheme = {
+  id: 'newyear',
+  sea: ['#1E2348', '#3E3A6E', '#9C5E72'],
+  waves: 0.08,
+  horizon: '#15193A',
+  shallow: '#FFD9A0',
+  shallowOpacity: 0.22,
+  grass: ['#4E7A4A', '#3E6A3E'],
+  sand: '#E9D7B0',
+  blossom: '#E0566E',
+  blossomDark: '#B83A55',
+  leaf: '#2F5A3A',
+  leafDark: '#1F4229',
+  cloud: '#F6D9B8',
+  cloudOpacity: 0.4,
+  foam: 0.5,
+  path: '#FFD27A',
+  particles: ['#F2C14E'],
+  banner: { fill: '#1A1414', stroke: '#D4A537', text: '#F6E7C1', seal: '#C8323F' },
+  plaque: { fill: '#FFF8E6', stroke: '#8A6A2A', text: '#2B1F0E', accent: '#C8323F' },
+  sail: '#C8323F',
+  dusk: false,
+};
+
 const ThemeCtx = createContext<MapTheme>(SPRING);
 const useMapTheme = () => useContext(ThemeCtx);
-export const mapThemeFor = (level: string) => (/N[1-4]/i.test(level) ? AUTUMN : SPRING);
+export const mapThemeFor = (level: string) => (/N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
 
-const SAKURA = '#F4A9C0';
-const SAKURA_DARK = '#E07A9B';
-const LEAF = '#4E8B4A';
-const LEAF_DARK = '#356B3A';
-const WOOD = '#7A4E2D';
-const VERMILION = '#C8323F';
-const SAND = '#EBD9AE';
-const ROCK = '#7D7468';
-const ROCK_DARK = '#5A5249';
 
 function Tree({ x, y, s = 1, pink = false }: { x: number; y: number; s?: number; pink?: boolean }) {
   const t = useMapTheme();
-  if (t.id === 'autumn' && !pink) return <Pine x={x} y={y} s={s} />;
+  if (t.id !== 'spring' && t.id !== 'summer' && !pink) return <Pine x={x} y={y} s={s} />;
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`}>
       <rect x="-1.6" y="-4" width="3.2" height="10" fill={WOOD} />
@@ -184,57 +252,14 @@ function Pine({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
       <rect x="-1.4" y="-6" width="2.8" height="12" fill="#4A3424" />
       <path d="M0 -26 L9 -12 L4 -12 L11 -2 L-11 -2 L-4 -12 L-9 -12Z" fill={t.leaf} />
       <path d="M0 -26 L-9 -12 L-4 -12 L-11 -2 L-2 -2Z" fill={t.leafDark} opacity={0.6} />
+      {t.id === 'winter' && <path d="M0 -27 L6 -17 L2 -18 L0 -15 L-2 -18 L-6 -17Z M-9 -10 L-4 -12 L0 -9 L4 -12 L9 -10 L5 -7 L0 -9 L-5 -7Z" fill="#FFFFFF" />}
     </g>
   );
 }
 
+/** Petit pin de bord de mer (les palmiers d'origine ne collaient pas au Japon des sagas). */
 function Palm({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
-  if (useMapTheme().id === 'autumn') return <Pine x={x} y={y} s={s * 0.9} />;
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <path d="M0 6 Q2 -8 -2 -20" stroke={WOOD} strokeWidth="2.6" fill="none" />
-      {[-60, -20, 20, 60, 150].map((a) => (
-        <path key={a} d="M-2 -20 q8 -4 15 3" stroke={LEAF} strokeWidth="3.4" fill="none" strokeLinecap="round" transform={`rotate(${a} -2 -20)`} />
-      ))}
-    </g>
-  );
-}
-
-function Hut({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <rect x="-10" y="-8" width="20" height="12" fill="#B8865A" />
-      <path d="M-15 -7 L0 -20 L15 -7Z" fill="#8C6A3F" />
-      <rect x="-3" y="-3" width="6" height="7" fill="#3B2A1C" />
-      <rect x="4" y="-5" width="4" height="3" fill="#FFD27A" />
-    </g>
-  );
-}
-
-function Torii({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`} fill={VERMILION}>
-      <path d="M-18 -30 Q0 -34 18 -30 L18 -26 Q0 -30 -18 -26Z" fill="#2B2B2B" />
-      <rect x="-16" y="-26" width="32" height="4" />
-      <rect x="-12" y="-19" width="24" height="3" />
-      <rect x="-12" y="-24" width="4" height="26" />
-      <rect x="8" y="-24" width="4" height="26" />
-    </g>
-  );
-}
-
-function Pagoda({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      {[0, 1, 2].map((i) => (
-        <g key={i} transform={`translate(0 ${-i * 13})`}>
-          <rect x={-9 + i * 1.5} y="-9" width={18 - i * 3} height="9" fill="#C59B6B" />
-          <path d={`M${-17 + i * 2} -8 Q0 ${-16} ${17 - i * 2} -8 L${12 - i * 2} -12 L${-12 + i * 2} -12Z`} fill="#3A2F2A" />
-        </g>
-      ))}
-      <path d="M0 -50 V-40" stroke="#C9A24A" strokeWidth="2" />
-    </g>
-  );
+  return <Pine x={x} y={y} s={s * 0.9} />;
 }
 
 function Lighthouse({ x, y, s = 1, calm }: { x: number; y: number; s?: number; calm: boolean }) {
@@ -258,34 +283,6 @@ function Fuji({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
       <path d="M-48 4 L-10 -50 Q0 -58 10 -50 L48 4Z" fill="#5E6B78" />
       <path d="M-10 -50 Q0 -58 10 -50 L20 -36 L12 -40 L5 -32 L-2 -40 L-9 -33 L-20 -36Z" fill="#FFFFFF" />
       <path d="M-48 4 L-20 -30 L-14 4Z" fill="#4E5A66" opacity={0.6} />
-    </g>
-  );
-}
-
-function Bamboo({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      {[-12, -6, 0, 6, 12].map((dx, i) => (
-        <g key={dx}>
-          <rect x={dx - 1.6} y={-38 + (i % 2) * 6} width="3.2" height={40 - (i % 2) * 6} fill="#6FAE4F" />
-          <path d={`M${dx} ${-30 + i} q8 -4 12 2 M${dx} ${-20 + i} q-8 -4 -12 2`} stroke="#4E8B3A" strokeWidth="2.4" fill="none" strokeLinecap="round" />
-        </g>
-      ))}
-    </g>
-  );
-}
-
-function Lanterns({ x, y, s = 1, calm }: { x: number; y: number; s?: number; calm: boolean }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <path d="M-24 -28 Q0 -18 24 -28" stroke="#3B2A1C" strokeWidth="1.5" fill="none" />
-      {[-16, 0, 16].map((dx, i) => (
-        <motion.g key={dx} animate={calm ? undefined : { opacity: [0.85, 1, 0.85] }} transition={{ duration: 2 + i * 0.4, repeat: Infinity }}>
-          <ellipse cx={dx} cy={-20 + (i === 1 ? 3 : 0)} rx="5" ry="6.5" fill="#FF9A3D" />
-          <ellipse cx={dx} cy={-20 + (i === 1 ? 3 : 0)} rx="9" ry="10" fill="#FFB65C" opacity={0.25} />
-        </motion.g>
-      ))}
-      <Hut x={0} y={2} s={1.1} />
     </g>
   );
 }
@@ -314,7 +311,32 @@ function Shrine({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
   );
 }
 
-const LANDMARKS = ['torii', 'village', 'waterfall', 'pagoda', 'fuji', 'bamboo', 'lighthouse', 'lanterns', 'shrine'] as const;
+/** Étoile de ninja qui scintille dans le ciel du soir. */
+function Shuriken({ x, y, s = 1, delay = 0, calm }: { x: number; y: number; s?: number; delay?: number; calm: boolean }) {
+  return (
+    <motion.g initial={{ x, y }} animate={calm ? undefined : { rotate: [0, 90], opacity: [0.35, 0.85, 0.35] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay }} opacity={0.6}>
+      <g transform={`scale(${s})`}>
+        <path d="M0 -9 L2.4 -2.4 L9 0 L2.4 2.4 L0 9 L-2.4 2.4 L-9 0 L-2.4 -2.4Z" fill="#D9DEE6" />
+        <circle r="1.6" fill="#232A3D" />
+      </g>
+    </motion.g>
+  );
+}
+
+/** Feu follet (hitodama) : petite flamme bleue qui flotte au-dessus de l'eau. */
+function Hitodama({ x, y, s = 1, delay = 0, calm }: { x: number; y: number; s?: number; delay?: number; calm: boolean }) {
+  return (
+    <motion.g initial={{ x, y }} animate={calm ? undefined : { y: [y, y - 10, y], x: [x, x + 6, x], opacity: [0.55, 0.95, 0.55] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay }} opacity={0.8}>
+      <g transform={`scale(${s})`}>
+        <circle r="13" fill="#9FD8FF" opacity={0.35} filter="url(#km-soft)" />
+        <path d="M0 9 C-8 9 -9 0 -4 -5 C-2 -8 2 -10 1 -16 C7 -10 10 -3 8 3 C7 7 4 9 0 9Z" fill="#BFE8FF" />
+        <path d="M0 6 C-4 6 -5 1 -2 -2 C0 -4 1 -5 1 -8 C4 -4 5 0 4 3 C3 5 2 6 0 6Z" fill="#FFFFFF" />
+      </g>
+    </motion.g>
+  );
+}
+
+const LANDMARKS = ['torii', 'village', 'waterfall', 'pagoda', 'fuji', 'bamboo', 'lighthouse', 'lanterns', 'shrine', 'castle', 'dawn'] as const;
 type Landmark = (typeof LANDMARKS)[number];
 
 function LandmarkFor({ kind, calm }: { kind: Landmark; calm: boolean }) {
@@ -337,17 +359,21 @@ function LandmarkFor({ kind, calm }: { kind: Landmark; calm: boolean }) {
       return <Lanterns x={0} y={10} s={1.1} calm={calm} />;
     case 'shrine':
       return <Shrine x={8} y={10} s={1.15} />;
+    case 'castle':
+      return <Castle x={2} y={20} s={1.05} />;
+    case 'dawn':
+      return <DawnGate x={2} y={14} />;
   }
 }
 
 // ───────────── Île ─────────────
 
-function Island({ x, y, slot, seed, landmark, state, calm }: { x: number; y: number; slot: number; seed: number; landmark: Landmark; state: WorldState; calm: boolean }) {
+function Island({ x, y, slot, seed, landmark, scene, state, calm }: { x: number; y: number; slot: number; seed: number; landmark: Landmark; scene?: string; state: WorldState; calm: boolean }) {
   const t = useMapTheme();
   const rx = 74;
   const ry = 44;
   const pink = slot % 2 === 0;
-  if (state === 'done') return <RuinedIsland x={x} y={y} seed={seed} landmark={landmark} calm={calm} />;
+  if (state === 'done') return <RuinedIsland x={x} y={y} seed={seed} landmark={landmark} scene={scene} calm={calm} />;
   return (
     <g transform={`translate(${x} ${y})`}>
       {/* Hauts-fonds turquoise, ombre portée, falaise, plage puis végétation */}
@@ -363,7 +389,7 @@ function Island({ x, y, slot, seed, landmark, state, calm }: { x: number; y: num
       <Tree x={48} y={-6} s={0.9} pink={!pink} />
       <Palm x={54} y={14} s={0.8} />
       <Tree x={-38} y={-18} s={0.75} />
-      <g transform="translate(0 -6)"><LandmarkFor kind={landmark} calm={calm} /></g>
+      <g transform="translate(0 -6)">{(scene && storyScene(scene, calm)) ?? <LandmarkFor kind={landmark} calm={calm} />}</g>
       {state === 'soon' && <path d={blob(0, 0, rx + 20, ry + 20, seed + 6, 0.2)} fill={t.dusk ? '#5B6878' : '#E8EEF2'} opacity={0.75} />}
     </g>
   );
@@ -426,7 +452,7 @@ function VictoryFlag({ x, y, calm }: { x: number; y: number; calm: boolean }) {
  * Île conquise : terre brûlée, falaise fissurée, végétation réduite en souches,
  * repère effondré et calciné, fumée qui monte… et le drapeau de victoire du joueur.
  */
-function RuinedIsland({ x, y, seed, landmark, calm }: { x: number; y: number; seed: number; landmark: Landmark; calm: boolean }) {
+function RuinedIsland({ x, y, seed, landmark, scene, calm }: { x: number; y: number; seed: number; landmark: Landmark; scene?: string; calm: boolean }) {
   const rx = 74;
   const ry = 44;
   const tilt = seed % 2 === 0 ? -9 : 8;
@@ -455,7 +481,7 @@ function RuinedIsland({ x, y, seed, landmark, calm }: { x: number; y: number; se
       <Stump x={-38} y={-18} s={0.75} tilt={4} />
       {/* Repère effondré : penché, calciné, à moitié enfoui */}
       <g transform={`translate(0 2) rotate(${tilt}) translate(0 -8)`} filter="url(#km-ruin)" opacity={0.92}>
-        <LandmarkFor kind={landmark} calm />
+        {(scene && storyScene(scene, true)) ?? <LandmarkFor kind={landmark} calm />}
       </g>
       {/* Gravats au pied du repère */}
       <g fill="#4A423B" stroke="#2A2420" strokeWidth="0.8">
@@ -520,6 +546,19 @@ function Bridge({ a, b }: { a: { x: number; y: number }; b: { x: number; y: numb
 
 function Boat({ x, y, s = 1, flip = false, drift, calm }: { x: number; y: number; s?: number; flip?: boolean; drift: number; calm: boolean }) {
   const t = useMapTheme();
+  if (t.id === 'winter')
+    return (
+      <motion.g initial={{ x, y }} animate={calm ? { x, y } : { x: [x, x + drift, x], y: [y, y - 3, y] }} transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}>
+        {/* Lanterne de papier confiée à l'eau (tōrō nagashi) */}
+        <g transform={`scale(${s * 1.25})`}>
+          <circle cy="-6" r="16" fill="#FFC86B" opacity={0.22} filter="url(#km-soft)" />
+          <rect x="-8" y="0" width="16" height="2.4" rx="1" fill="#5A4632" />
+          <rect x="-5.5" y="-11" width="11" height="11" rx="1.2" fill="#FFE2A6" stroke="#B08D3C" strokeWidth="0.8" />
+          <ellipse cy="-5" rx="2.2" ry="3.4" fill="#FF9A3D" />
+          <path d="M-12 4 Q0 6.5 12 4" stroke="#FFE2A6" strokeWidth="1" fill="none" opacity={0.5} />
+        </g>
+      </motion.g>
+    );
   return (
     <motion.g initial={{ x, y }} animate={calm ? { x, y } : { x: [x, x + drift, x], y: [y, y - 3, y] }} transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}>
       <g transform={`scale(${flip ? -s : s} ${s})`}>
@@ -534,7 +573,25 @@ function Boat({ x, y, s = 1, flip = false, drift, calm }: { x: number; y: number
   );
 }
 
-export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: PathWorldDto[]; avatar: AvatarConfig; region: string; level?: string }) {
+/** Vignette d'un chapitre : la même île que sur la carte, en miniature (décor du mode histoire, sans animation). */
+export function IslandVignette({ slug, level, size = 64 }: { slug: string; level: string; size?: number }) {
+  const t = mapThemeFor(level);
+  const scene = storyScene(slug, true);
+  if (!scene) return null;
+  return (
+    <ThemeCtx.Provider value={t}>
+      <svg viewBox="-56 -64 112 112" width={size} height={size} aria-hidden="true" className="shrink-0 rounded-2xl" style={{ background: t.sea[1] }}>
+        <ellipse cy="20" rx="52" ry="25" fill={t.shallow} opacity={t.shallowOpacity} />
+        <ellipse cy="19" rx="48" ry="23" fill={ROCK_DARK} />
+        <ellipse cy="14" rx="48" ry="23" fill={t.sand} />
+        <ellipse cy="11" rx="41" ry="18" fill={t.grass[0]} />
+        {scene}
+      </svg>
+    </ThemeCtx.Provider>
+  );
+}
+
+export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { worlds: PathWorldDto[]; avatar: AvatarConfig; region: string; level?: string; saga?: { glyph: string; title: string } }) {
   const calm = useCalm();
   const t = mapThemeFor(level);
   const pts = useMemo(() => islandPositions(worlds.length), [worlds.length]);
@@ -578,11 +635,25 @@ export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: Pat
                 <stop offset="1" stopColor="#B9A6D6" stopOpacity="0" />
               </radialGradient>
             ) : (
-              <radialGradient id="km-sun" cx="0.92" cy="0.02" r="0.55">
-                <stop offset="0" stopColor="#FFD58A" stopOpacity="0.85" />
-                <stop offset="0.4" stopColor="#FFB86B" stopOpacity="0.25" />
-                <stop offset="1" stopColor="#FFB86B" stopOpacity="0" />
-              </radialGradient>
+              t.id === 'newyear' ? (
+                <radialGradient id="km-sun" cx="0.5" cy="1.08" r="0.75">
+                  <stop offset="0" stopColor="#FFE3A0" stopOpacity="0.85" />
+                  <stop offset="0.35" stopColor="#F59A6A" stopOpacity="0.35" />
+                  <stop offset="1" stopColor="#7C5BB0" stopOpacity="0" />
+                </radialGradient>
+              ) : t.id === 'winter' ? (
+                <radialGradient id="km-sun" cx="0.97" cy="0.86" r="0.6">
+                  <stop offset="0" stopColor="#FFC9A0" stopOpacity="0.6" />
+                  <stop offset="0.35" stopColor="#E78FB3" stopOpacity="0.24" />
+                  <stop offset="1" stopColor="#7C6BD0" stopOpacity="0" />
+                </radialGradient>
+              ) : (
+                <radialGradient id="km-sun" cx="0.92" cy="0.02" r="0.55">
+                  <stop offset="0" stopColor="#FFD58A" stopOpacity="0.85" />
+                  <stop offset="0.4" stopColor="#FFB86B" stopOpacity="0.25" />
+                  <stop offset="1" stopColor="#FFB86B" stopOpacity="0" />
+                </radialGradient>
+              )
             )}
             <linearGradient id="km-fall" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#FFFFFF" stopOpacity="0" />
@@ -621,12 +692,85 @@ export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: Pat
             </g>
           )}
 
+          {saga && t.id === 'newyear' && (
+            <g pointerEvents="none">
+              {/* Le mont Fuji au loin, et des grues qui volent vers le soleil levant */}
+              <g transform="translate(560 64)" opacity={0.85}>
+                <path d="M-150 30 L-38 -38 Q0 -50 38 -38 L150 30Z" fill="#4E4886" />
+                <path d="M-38 -38 Q0 -50 38 -38 L56 -26 L34 -22 L20 -30 L6 -20 L-10 -30 L-24 -21 L-56 -26Z" fill="#F4F0FA" />
+              </g>
+              {[{ x: 180, y: 70, s: 1 }, { x: 214, y: 54, s: 0.8 }, { x: 236, y: 82, s: 0.7 }].map((c, i) => (
+                <motion.g key={i} initial={{ x: c.x, y: c.y }} animate={calm ? undefined : { x: [c.x, c.x + 600], y: [c.y, c.y - 30] }} transition={{ duration: 40, repeat: Infinity, ease: 'linear', delay: i * 0.6 }}>
+                  <g transform={`scale(${c.s})`}>
+                    <path d="M-14 0 Q-6 -10 0 0 Q6 -10 14 0 Q6 -4 0 2 Q-6 -4 -14 0Z" fill="#FFFFFF" />
+                    <path d="M0 0 l9 -3" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" />
+                    <circle cx="9.5" cy="-3.2" r="1.2" fill="#C8323F" />
+                  </g>
+                </motion.g>
+              ))}
+            </g>
+          )}
+          {saga && t.id === 'summer' && (
+            <g pointerEvents="none">
+              {/* Feux d'artifice de la fête d'été */}
+              {[{ x: 300, y: 46, c: '#FFD27A', r: 30 }, { x: 560, y: 70, c: '#F4A9C0', r: 24 }, { x: 150, y: 96, c: '#9FE8D0', r: 20 }].map((f, i) => (
+                <motion.g key={i} initial={{ x: f.x, y: f.y }} style={{ transformOrigin: '0px 0px' }} animate={calm ? undefined : { scale: [0.2, 1, 1.08], opacity: [0, 0.9, 0] }} transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 2.4, delay: i * 1.5, ease: 'easeOut' }} opacity={0.75}>
+                  {Array.from({ length: 12 }, (_, k) => {
+                    const a = (k * Math.PI) / 6;
+                    return <path key={k} d={`M${Math.cos(a) * f.r * 0.35} ${Math.sin(a) * f.r * 0.35} L${Math.cos(a) * f.r} ${Math.sin(a) * f.r}`} stroke={f.c} strokeWidth="2.4" strokeLinecap="round" />;
+                  })}
+                  <circle r="3" fill="#FFFFFF" />
+                </motion.g>
+              ))}
+              {/* Nénuphars et lotus sur l'eau */}
+              {[[70, 210], [120, 420], [330, 560], [520, 250], [600, 520], [780, 120], [950, 430], [880, 560], [40, 330], [700, 250]].map(([lx, ly], i) => (
+                <g key={i} transform={`translate(${lx} ${ly}) scale(${1 + (i % 3) * 0.25})`}>
+                  <path d="M0 0 m-9 0 a9 5 0 1 0 18 0 a9 5 0 1 0 -18 0 M0 0 L8 -3" fill="#3F9150" stroke="#2F7A45" strokeWidth="0.8" />
+                  {i % 2 === 0 && <path d="M0 -2 q-4 -5 0 -9 q4 4 0 9Z M0 -2 q-7 -1.4 -6 -7 q5 1 6 7Z M0 -2 q7 -1.4 6 -7 q-5 1 -6 7Z" fill="#F4A9C0" />}
+                </g>
+              ))}
+            </g>
+          )}
+          {saga && t.id === 'autumn' && (
+            /* Une ombre bondit devant la lune */
+            <motion.g pointerEvents="none" initial={{ x: 872, y: 62 }} animate={calm ? undefined : { x: [846, 872, 898], y: [70, 56, 70], opacity: [0, 1, 1, 0] }} transition={{ duration: 3.4, repeat: Infinity, repeatDelay: 7, ease: 'easeInOut' }}>
+              <g fill="#0E1420">
+                <circle cx="3" cy="-7" r="2.6" />
+                <path d="M-6 0 Q-1 -6 3 -5 L8 -8 L9 -6.6 L5 -3 L6 2 L11 4 L10 5.6 L3 4 L0 0 L-5 4 L-9 3 L-8 1.4Z" />
+                <path d="M1 -8 l-7 -1.4 l0.4 1.4Z" />
+              </g>
+            </motion.g>
+          )}
+          {saga && t.id === 'winter' && (
+            /* Voiles de lumière : le ciel des esprits */
+            <g pointerEvents="none" filter="url(#km-soft)">
+              {[{ d: 'M-20 60 Q200 10 420 50 T860 30 T1040 60', c: '#7CF0D0', o: 0.3 }, { d: 'M-20 95 Q240 50 480 90 T1040 70', c: '#9FD8FF', o: 0.24 }, { d: 'M-20 30 Q300 -10 560 26 T1040 10', c: '#B89CF0', o: 0.3 }].map((r, i) => (
+                <motion.path key={i} d={r.d} stroke={r.c} strokeWidth={26 - i * 4} fill="none" strokeLinecap="round" opacity={r.o} animate={calm ? undefined : { opacity: [r.o * 0.5, r.o * 1.4, r.o * 0.5], y: [0, 6, 0] }} transition={{ duration: 9 + i * 3, repeat: Infinity, ease: 'easeInOut' }} />
+              ))}
+            </g>
+          )}
+
           {/* Îles lointaines à l'horizon */}
           <g opacity={0.55}>
             <path d={blob(60, 22, 70, 14, 91)} fill={t.horizon} />
             <path d={blob(760, 18, 90, 12, 92)} fill={t.horizon} />
             <path d={blob(960, 70, 40, 10, 93)} fill={t.horizon} />
           </g>
+
+          {/* Mode histoire : le décor du héros */}
+          {saga && t.id === 'spring' && (
+            <g pointerEvents="none" opacity={0.6}>
+              <Castle x={770} y={36} s={0.7} fill={t.horizon} />
+              <Castle x={600} y={30} s={0.4} fill={t.horizon} />
+            </g>
+          )}
+          {saga && t.id === 'autumn' && (
+            <g pointerEvents="none">
+              {[{ x: 300, y: 46, s: 1 }, { x: 560, y: 86, s: 0.7 }, { x: 730, y: 30, s: 0.85 }, { x: 150, y: 130, s: 0.6 }, { x: 940, y: 190, s: 0.7 }].map((p, i) => (
+                <Shuriken key={i} x={p.x} y={p.y} s={p.s} delay={i * 0.9} calm={calm} />
+              ))}
+            </g>
+          )}
 
           {/* Nuages */}
           {[{ x: 120, y: 60, s: 1 }, { x: 660, y: 40, s: 0.8 }, { x: 900, y: 140, s: 0.7 }].map((c, i) => (
@@ -684,9 +828,11 @@ export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: Pat
             const p = pts[i];
             // Chaque archipel a ses propres repères : décalage selon le niveau (n5 → 0, n4 → 3, n3 → 6…).
             const lvl = Number(/^n(\d)/.exec(w.slug)?.[1] ?? 5);
-            const scenic = LANDMARKS.filter((l) => l !== 'shrine');
-            const landmark: Landmark = w.exam ? 'shrine' : scenic[(p.slot + (5 - lvl) * 3) % scenic.length];
-            return <Island key={w.slug} x={p.x} y={p.y} slot={p.slot} seed={i * 7 + w.order * 13} landmark={landmark} state={states[i]} calm={calm} />;
+            const scenic = LANDMARKS.filter((l) => l !== 'shrine' && l !== 'castle' && l !== 'dawn');
+            // Dernière île : le château du seigneur (samouraï, ninja) ou la porte de l'aube (esprit).
+            const finale: Landmark = !saga ? 'shrine' : t.id === 'winter' ? 'dawn' : 'castle';
+            const landmark: Landmark = w.exam ? finale : scenic[(p.slot + (5 - lvl) * 3) % scenic.length];
+            return <Island key={w.slug} x={p.x} y={p.y} slot={p.slot} seed={i * 7 + w.order * 13} landmark={landmark} scene={saga ? w.slug : undefined} state={states[i]} calm={calm} />;
           })}
 
           {/* Ponts : par-dessus l'eau, entre deux îles proches */}
@@ -742,18 +888,35 @@ export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: Pat
                   <motion.g key={i} initial={{ x: p.x, y: -14 }} animate={{ y: [-14, H + 14], x: [p.x, p.x + (i % 2 ? 60 : -60)], rotate: [0, i % 2 ? 260 : -260] }} transition={{ duration: p.d * 1.6, repeat: Infinity, delay: p.delay * 1.5, ease: 'linear' }}>
                     <path d="M0 -7 L2 -2 L7 -3 L3 1 L5 6 L0 3 L-5 6 L-3 1 L-7 -3 L-2 -2Z" fill={t.particles[i % t.particles.length]} opacity={0.85} />
                   </motion.g>
+                ) : t.id === 'summer' ? (
+                  /* Lucioles : elles montent doucement en clignotant */
+                  <motion.circle key={i} r={i % 3 ? 2.2 : 3} fill="#E9FF8A" initial={{ cx: p.x, cy: 90 + ((i * 97) % 460), opacity: 0 }} animate={{ cy: [90 + ((i * 97) % 460), 60 + ((i * 97) % 460)], cx: [p.x, p.x + (i % 2 ? 26 : -26), p.x], opacity: [0, 0.95, 0.2, 0.9, 0] }} transition={{ duration: 5 + (i % 4), repeat: Infinity, delay: p.delay * 0.5, ease: 'easeInOut' }} />
+                ) : t.id === 'newyear' ? (
+                  /* Paillettes d'or qui descendent en scintillant */
+                  <motion.rect key={i} width={i % 3 ? 3 : 4.4} height={i % 3 ? 3 : 4.4} fill="#F2C14E" initial={{ x: p.x, y: -10 }} animate={{ y: [-10, H + 10], x: [p.x, p.x + (i % 2 ? 30 : -30)], rotate: [0, 360], opacity: [0.4, 1, 0.4, 1] }} transition={{ duration: p.d * 1.4, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
+                ) : t.id === 'winter' ? (
+                  /* Flocons de neige */
+                  <motion.circle key={i} r={i % 3 ? 2.6 : 3.8} fill="#FFFFFF" opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 25 : -25), p.x] }} transition={{ duration: p.d * 1.3, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
                 ) : (
                   <motion.ellipse key={i} rx="3.5" ry="5.5" fill={SAKURA} opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 40 : -40)], rotate: [0, 200] }} transition={{ duration: p.d, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
                 )
               ))}
           </g>
 
-          {/* Bannière de la région */}
+          {saga && t.id === 'winter' && (
+            <g pointerEvents="none">
+              {[{ x: 210, y: 250, s: 1 }, { x: 470, y: 120, s: 0.8 }, { x: 610, y: 400, s: 0.9 }, { x: 860, y: 330, s: 0.75 }, { x: 330, y: 500, s: 0.7 }].map((p, i) => (
+                <Hitodama key={i} x={p.x} y={p.y} s={p.s} delay={i * 0.8} calm={calm} />
+              ))}
+            </g>
+          )}
+
+          {/* Bannière : la saga du niveau (ou la région) */}
           <g transform="translate(24 24)" pointerEvents="none">
-            <rect width={region.length * 10.5 + 60} height="44" rx="10" fill={t.banner.fill} stroke={t.banner.stroke} strokeWidth="2.5" />
+            <rect width={(saga?.title ?? region).length * 10.5 + 60} height="44" rx="10" fill={t.banner.fill} stroke={t.banner.stroke} strokeWidth="2.5" />
             <circle cx="24" cy="22" r="11" fill={t.banner.seal} />
-            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{t.dusk ? '秋' : '島'}</text>
-            <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill={t.banner.text}>{region}</text>
+            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga?.glyph ?? (t.id === 'newyear' ? '新' : t.id === 'winter' ? '冬' : t.id === 'summer' ? '夏' : t.dusk ? '秋' : '島')}</text>
+            <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill={t.banner.text}>{saga?.title ?? region}</text>
           </g>
 
           {/* Personnage sur l'île en cours */}
@@ -765,6 +928,13 @@ export function WorldMap({ worlds, avatar, region, level = 'N5' }: { worlds: Pat
                   <Avatar config={avatar} size={54} title={T("Toi")} />
                 </div>
               </foreignObject>
+              {saga && (
+                <g transform="translate(56 6)">
+                  <circle r="12" fill="#FFFFFF" />
+                  <circle r="10" fill={t.banner.seal} />
+                  <text textAnchor="middle" dy="0.36em" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga.glyph}</text>
+                </g>
+              )}
             </motion.g>
           </motion.g>
         </svg>
