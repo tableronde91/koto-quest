@@ -35,6 +35,7 @@ async function answerUntil(page: Page, end: RegExp) {
 }
 
 test('appli mobile : inscription, profil, leçon complète, révisions, rappels, déconnexion', async ({ page }) => {
+  test.setTimeout(200_000);
   const email = `mobile${Date.now()}@test.local`;
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'Koto Quest' })).toBeVisible();
@@ -109,6 +110,41 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByTestId('reader')).toBeVisible();
   await page.getByRole('link', { name: '← Tous les contes' }).click();
 
+  // Mini-jeux : les jeux de kana sont débloqués après la première leçon ; une partie complète d'une minute
+  await page.getByRole('tab', { name: /Jeux/ }).click();
+  await expect(page.getByRole('heading', { name: 'Mini-jeux' })).toBeVisible();
+  await expect(page.getByTestId('game-card')).toHaveCount(3);
+  const playable = page.getByRole('button', { name: /^Jouer à / });
+  await expect(playable.first()).toBeVisible();
+  await playable.first().click();
+  await page.getByRole('button', { name: 'C’est parti' }).click();
+  await expect(page.getByRole('timer')).toBeVisible({ timeout: 5000 });
+  for (let k = 0; k < 6; k++) {
+    await page.getByLabel('Réponses').getByRole('button').first().click();
+    await page.waitForTimeout(800);
+  }
+  await expect(page.getByRole('heading', { name: /Nouveau record|Partie terminée/ })).toBeVisible({ timeout: 75_000 });
+  await expect(page.getByTestId('final-score')).toBeVisible();
+  await page.getByRole('button', { name: 'Autres mini-jeux' }).click();
+  await expect(page.getByText(/Record : \d+, 1 partie/)).toBeVisible();
+
+  // Duels : entraînement contre un rōnin, une réponse puis abandon
+  await page.getByRole('button', { name: 'Entrer dans le dojo' }).click();
+  await expect(page.getByText('TON RANG')).toBeVisible();
+  await expect(page.getByText(/Ton code de duelliste/)).toBeVisible();
+  await page.getByTestId('duel-practice').click();
+  await expect(page.getByTestId('duel-arena').filter({ visible: true })).toBeVisible();
+  await expect(page.getByTestId('duel-question').filter({ visible: true })).toBeVisible({ timeout: 15_000 });
+  await page.getByTestId('duel-choice').filter({ visible: true }).first().click();
+  await expect(page.getByText(/Juste ! Coup de|Raté…|pas de réponse|juste en|faux/).filter({ visible: true }).first()).toBeVisible({ timeout: 15_000 });
+  await page.getByRole('button', { name: 'Abandonner' }).filter({ visible: true }).first().click();
+  await page.getByRole('button', { name: 'Abandonner' }).filter({ visible: true }).last().click();
+  await expect(page.getByText('Tu as abandonné.').filter({ visible: true })).toBeVisible({ timeout: 10_000 });
+  await page.getByRole('button', { name: 'Retour au dojo' }).filter({ visible: true }).click();
+  await page.getByRole('tab', { name: 'Mes duels' }).filter({ visible: true }).click();
+  await expect(page.getByText('Défaite').filter({ visible: true }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+
   // Révisions et réglages
   await page.getByRole('tab', { name: /Révisions/ }).click();
   await expect(page.getByRole('heading', { name: 'Révisions' })).toBeVisible();
@@ -116,6 +152,18 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('switch', { name: 'Recevoir les rappels' }).click();
   await expect(page.getByText(/Rappels enregistrés/).filter({ visible: true })).toBeVisible();
   await expect(page.getByText(/Créneaux du jour/).filter({ visible: true })).toBeVisible();
+
+  // Anglais : interface, données de l'API et récit traduits ; retour au français
+  await page.getByRole('radio', { name: 'English' }).click();
+  await expect(page.getByRole('heading', { name: 'Settings' }).filter({ visible: true })).toBeVisible();
+  await page.getByRole('tab', { name: /Path/ }).click();
+  await expect(page.getByText(/STORY MODE/).filter({ visible: true }).first()).toBeVisible();
+  await expect(page.getByText(/^Chapter 1 · /).filter({ visible: true }).first()).toBeVisible();
+  await page.getByRole('tab', { name: /Home/ }).click();
+  await expect(page.getByText('Daily quests').filter({ visible: true })).toBeVisible();
+  await page.getByRole('tab', { name: /Settings/ }).click();
+  await page.getByRole('radio', { name: 'Français' }).click();
+  await expect(page.getByRole('heading', { name: 'Réglages' }).filter({ visible: true })).toBeVisible();
 
   // Session conservée au rechargement, puis déconnexion
   await page.reload();

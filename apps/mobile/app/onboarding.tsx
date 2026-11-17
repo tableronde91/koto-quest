@@ -5,14 +5,22 @@ import type { JlptCode, OnboardingInput, SelfLevel } from '@koto/shared';
 import { put } from '../src/api';
 import { C } from '../src/theme';
 import { Button, H1, H2, P, Screen } from '../src/ui';
+import { T, getLocale } from '../src/i18n';
 
-const LEVELS: { value: SelfLevel; label: string; hint: string }[] = [
-  { value: 'beginner', label: 'Je pars de zéro', hint: 'On commence par les hiragana.' },
-  { value: 'kana', label: 'Je lis les kana', hint: 'On passe aux premières phrases.' },
-  { value: 'basics', label: 'Je connais des bases', hint: 'Les premières îles restent ouvertes.' },
-  { value: 'n5', label: 'J’ai le niveau N5', hint: 'Vise le N4 juste en dessous.' },
+const LEVELS = (): { value: SelfLevel; label: string; hint: string }[] => [
+  { value: 'beginner', label: T('Je pars de zéro'), hint: T('On commence par les hiragana.') },
+  { value: 'kana', label: T('Je lis les kana'), hint: T('On passe aux premières phrases.') },
+  { value: 'basics', label: T('Je connais des bases'), hint: T('Les premières îles restent ouvertes.') },
+  { value: 'n5', label: T('J’ai le niveau N5'), hint: T('Vise le N4 juste en dessous.') },
 ];
 const MINUTES = [10, 15, 20, 30];
+const TARGETS: { code: JlptCode; hint: string }[] = [
+  { code: 'N5', hint: 'Débutant' },
+  { code: 'N4', hint: 'Élémentaire' },
+  { code: 'N3', hint: 'Intermédiaire' },
+  { code: 'N2', hint: 'Avancé' },
+  { code: 'N1', hint: 'Expert' },
+];
 
 function Choice({ selected, label, hint, onPress }: { selected: boolean; label: string; hint?: string; onPress: () => void }) {
   return (
@@ -36,11 +44,11 @@ export default function Onboarding() {
     setBusy(true);
     setError(null);
     try {
-      const body: OnboardingInput = { selfLevel, targetLevel: target, minutesPerDay: minutes, difficultAreas: [], reminderMode: 'normal', timezone: Intl.DateTimeFormat().resolvedOptions().timeZone };
+      const body: OnboardingInput = { selfLevel, targetLevel: target, minutesPerDay: minutes, difficultAreas: [], reminderMode: 'normal', timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, locale: getLocale() };
       await put('/me/onboarding', body);
       await qc.invalidateQueries();
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Erreur');
+      setError(e instanceof Error ? e.message : T('Erreur'));
     } finally {
       setBusy(false);
     }
@@ -48,20 +56,20 @@ export default function Onboarding() {
 
   return (
     <Screen>
-      <H1>Bienvenue dans l’archipel !</H1>
-      <P soft>Trois questions pour adapter ton programme.</P>
-      <H2>Où en es-tu en japonais ?</H2>
-      <View style={{ gap: 8 }}>{LEVELS.map((l) => <Choice key={l.value} selected={selfLevel === l.value} label={l.label} hint={l.hint} onPress={() => { setSelf(l.value); if (l.value === 'n5') setTarget('N4'); }} />)}</View>
-      <H2>Quel niveau vises-tu ?</H2>
-      <View style={{ flexDirection: 'row', gap: 8 }}>
-        {(['N5', 'N4'] as JlptCode[]).map((c) => <View key={c} style={{ flex: 1 }}><Choice selected={target === c} label={c} hint={c === 'N5' ? 'Débutant' : 'Élémentaire'} onPress={() => setTarget(c)} /></View>)}
+      <H1>{T('Bienvenue dans l’archipel !')}</H1>
+      <P soft>{T('Trois questions pour adapter ton programme.')}</P>
+      <H2>{T('Où en es-tu en japonais ?')}</H2>
+      <View style={{ gap: 8 }}>{LEVELS().map((l) => <Choice key={l.value} selected={selfLevel === l.value} label={l.label} hint={l.hint} onPress={() => { setSelf(l.value); if (l.value === 'n5') setTarget('N4'); }} />)}</View>
+      <H2>{T('Quel niveau vises-tu ?')}</H2>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+        {TARGETS.map((c) => <View key={c.code} style={{ width: '31%', flexGrow: 1 }}><Choice selected={target === c.code} label={c.code} hint={T(c.hint)} onPress={() => setTarget(c.code)} /></View>)}
       </View>
-      <H2>Combien de temps par jour ?</H2>
+      <H2>{T('Combien de temps par jour ?')}</H2>
       <View style={{ flexDirection: 'row', gap: 8 }}>
-        {MINUTES.map((m) => <View key={m} style={{ flex: 1 }}><Choice selected={minutes === m} label={`${m} min`} onPress={() => setMinutes(m)} /></View>)}
+        {MINUTES.map((m) => <View key={m} style={{ flex: 1 }}><Choice selected={minutes === m} label={T('{0} min', [m])} onPress={() => setMinutes(m)} /></View>)}
       </View>
       {error && <Text style={{ color: C.ko, fontWeight: '700' }}>{error}</Text>}
-      <Button tone="gold" label={busy ? '…' : 'Commencer l’aventure'} disabled={busy} onPress={save} />
+      <Button tone="gold" label={busy ? '…' : T('Commencer l’aventure')} disabled={busy} onPress={save} />
     </Screen>
   );
 }

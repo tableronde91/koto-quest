@@ -8,8 +8,9 @@ import { QuizRunner, RunSummary } from '../../src/QuizRunner';
 import { speak } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, Screen } from '../../src/ui';
+import { T } from '../../src/i18n';
 
-const KIND: Record<string, string> = { kana: 'Kana', vocabulary: 'Vocabulaire', kanji: 'Kanji', grammar: 'Grammaire' };
+const KIND: Record<string, string> = { kana: 'Kana', vocabulary: 'Vocabulaire', kanji: 'Kanji', grammar: 'Grammaire' }; // traduits à l'affichage
 type Stage = 'intro' | 'quiz' | 'completing' | 'mini' | 'done';
 
 export default function LessonScreen() {
@@ -46,15 +47,15 @@ export default function LessonScreen() {
   }
 
   if (isLoading) return <Loading />;
-  if (error || !lesson) return <Screen><ErrorBox error={error} onRetry={refetch} /><Button tone="quiet" label="Retour" onPress={() => router.back()} /></Screen>;
-  if (err) return <Screen><ErrorBox error={err} /><Button tone="quiet" label="Retour au parcours" onPress={() => router.replace('/path')} /></Screen>;
+  if (error || !lesson) return <Screen><ErrorBox error={error} onRetry={refetch} /><Button tone="quiet" label={T('Retour')} onPress={() => router.back()} /></Screen>;
+  if (err) return <Screen><ErrorBox error={err} /><Button tone="quiet" label={T('Retour au parcours')} onPress={() => router.replace('/path')} /></Screen>;
 
   if (stage === 'quiz' && session) return <Screen><QuizRunner questions={session.questions} onQuit={() => router.back()} onFinish={complete} /></Screen>;
-  if (stage === 'completing') return <Loading label="Validation de la leçon…" />;
+  if (stage === 'completing') return <Loading label={T('Validation de la leçon…')} />;
   if (stage === 'mini' && completion)
     return (
       <Screen>
-        <Card style={{ borderColor: C.gold, borderWidth: 2 }}><P><Text style={{ fontWeight: '800' }}>Mini-révision</Text> : quelques questions éclair pour ancrer la leçon.</P></Card>
+        <Card style={{ borderColor: C.gold, borderWidth: 2 }}><P><Text style={{ fontWeight: '800' }}>{T('Mini-révision')}</Text>{T(' : quelques questions éclair pour ancrer la leçon.')}</P></Card>
         <QuizRunner questions={completion.miniReview} onFinish={(s) => { setMini(s); setStage('done'); }} />
       </Screen>
     );
@@ -63,15 +64,15 @@ export default function LessonScreen() {
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
           <Text style={{ fontSize: 80, fontWeight: '900', color: C.ko }}>{completion.perfect ? '満点' : '完了'}</Text>
-          <H1>{completion.perfect ? 'Sans faute !' : 'Leçon terminée'}</H1>
-          <P style={{ textAlign: 'center' }}>{lesson.title} : {completion.correct}/{completion.total} bonnes réponses ({completion.score} %){mini ? `, mini-révision ${mini.correct}/${mini.total}` : ''}.</P>
+          <H1>{completion.perfect ? T('Sans faute !') : T('Leçon terminée')}</H1>
+          <P style={{ textAlign: 'center' }}>{T('{0} : {1}/{2} bonnes réponses ({3} %)', [lesson.title, completion.correct, completion.total, completion.score])}{mini ? T(', mini-révision {0}/{1}', [mini.correct, mini.total]) : ''}.</P>
           <Text style={{ color: C.goldInk, fontWeight: '800', fontSize: 16, textAlign: 'center' }}>
-            {completion.coinsGained > 0 ? `+${completion.coinsGained} pièces, ` : ''}+{completion.xpGained} XP{mini ? `, +${mini.xp} XP de mini-révision` : ''}
+            {completion.coinsGained > 0 ? T('+{0} pièces', [completion.coinsGained]) + ', ' : ''}+{completion.xpGained} XP{mini ? T(', +{0} XP de mini-révision', [mini.xp]) : ''}
           </Text>
-          <P soft style={{ textAlign: 'center' }}>Ces notions reviendront dans quelques heures sous forme de défi.</P>
+          <P soft style={{ textAlign: 'center' }}>{T('Ces notions reviendront dans quelques heures sous forme de défi.')}</P>
         </View>
-        {completion.nextLessonSlug && <Button tone="gold" label="Leçon suivante" onPress={() => router.replace(`/lesson/${completion.nextLessonSlug}`)} />}
-        <Button tone="quiet" label="Retour à l’accueil" onPress={() => router.replace('/')} />
+        {completion.nextLessonSlug && <Button tone="gold" label={T('Leçon suivante')} onPress={() => router.replace(`/lesson/${completion.nextLessonSlug}`)} />}
+        <Button tone="quiet" label={T('Retour à l’accueil')} onPress={() => router.replace('/')} />
       </Screen>
     );
 
@@ -81,23 +82,23 @@ export default function LessonScreen() {
       <H1>{lesson.title}</H1>
       <P soft>{lesson.objective}</P>
       {lesson.explanation.map((e, i) => <P key={i}>{e}</P>)}
-      <H2>Notions</H2>
+      <H2>{T('Notions')}</H2>
       <View style={{ gap: 8 }}>
         {lesson.items.map((it) => (
-          <Pressable key={it.id} onPress={() => speak(it.reading ?? it.front)} accessibilityLabel={`${it.front}, ${it.meaning}, écouter`}>
+          <Pressable key={it.id} onPress={() => speak(it.reading ?? it.front)} accessibilityLabel={`${it.front}, ${it.meaning}, ${T('écouter')}`}>
             <Card style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
               <Text style={{ fontSize: [...it.front].length <= 2 ? 40 : 24, fontWeight: '800', color: C.ink, minWidth: 56, textAlign: 'center' }}>{it.front}</Text>
               <View style={{ flex: 1 }}>
                 {it.reading && it.reading !== it.front && <Text style={{ color: C.inkSoft }}>{it.reading}{it.romaji ? ` · ${it.romaji}` : ''}</Text>}
                 <Text style={{ fontWeight: '700', color: C.ink }}>{it.meaning}</Text>
-                <Text style={{ color: C.inkSoft, fontSize: 12 }}>{KIND[it.kind]}</Text>
+                <Text style={{ color: C.inkSoft, fontSize: 12 }}>{T(KIND[it.kind] ?? it.kind)}</Text>
               </View>
               <Text style={{ fontSize: 18 }}>🔊</Text>
             </Card>
           </Pressable>
         ))}
       </View>
-      {lesson.examples.length > 0 && <H2>Exemples</H2>}
+      {lesson.examples.length > 0 && <H2>{T('Exemples')}</H2>}
       {lesson.examples.map((e, i) => (
         <Pressable key={i} onPress={() => speak(e.reading ?? e.jp)}>
           <Card style={{ gap: 2 }}>
@@ -107,7 +108,7 @@ export default function LessonScreen() {
           </Card>
         </Pressable>
       ))}
-      <Button tone="gold" label="Passer aux exercices" onPress={start} />
+      <Button tone="gold" label={T('Passer aux exercices')} onPress={start} />
     </Screen>
   );
 }

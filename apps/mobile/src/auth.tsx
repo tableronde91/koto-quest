@@ -2,6 +2,7 @@ import { ReactNode, createContext, useCallback, useContext, useEffect, useState 
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { MeDto } from '@koto/shared';
 import { ApiError, api, loadToken, post, saveToken } from './api';
+import { T } from './i18n';
 
 interface AuthState {
   ready: boolean;
@@ -44,7 +45,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const start = useCallback(
     async (token: string | undefined) => {
-      if (!token) throw new Error('Réponse de connexion inattendue.');
+      if (!token) throw new Error(T('Réponse de connexion inattendue.'));
       await saveToken(token);
       setHasToken(true);
       await qc.invalidateQueries();

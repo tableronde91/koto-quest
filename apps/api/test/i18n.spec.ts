@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
 import { Translator } from '@koto/shared';
 import { authoredToQuestion, createRng, generateQuestion, questionTypesFor, type AuthoredExercise, type EngineItem, type Question } from '@koto/learning-engine';
@@ -84,5 +84,19 @@ describe('Traduction anglaise', () => {
     expect(en.tr('Comment dit-on « eau » en japonais ?')).toBe('How do you say “water” in Japanese?');
     expect(en.t('Encore {0} points pour la division suivante', [12])).toBe('12 more points to the next division');
     expect(en.t('Plan du jour : jusqu’à {0} révisions et {1} nouvelles notions, environ {2} min.{3}', [5, 3, 10, false])).toBe('Today’s plan: up to 5 reviews and 3 new items, about 10 min.');
+  });
+
+  it('appli mobile : chaque texte passé à T() ou plural() a sa traduction anglaise', () => {
+    const dict = new Translator(['ui', 'engine', 'api', 'content', 'mobile'].map((f) => json(`content/i18n/en/${f}.json`)));
+    const files = (dir: string): string[] =>
+      readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? files(resolve(dir, e.name)) : /\.tsx?$/.test(e.name) ? [resolve(dir, e.name)] : []));
+    const keys = new Set<string>();
+    for (const f of [...files(resolve(ROOT, 'apps/mobile/app')), ...files(resolve(ROOT, 'apps/mobile/src'))]) {
+      const src = readFileSync(f, 'utf8').replace(/^\s*(\/\/|\*|\/\*).*$/gm, '');
+      for (const m of src.matchAll(/\b(?:T|plural)\(\s*'((?:[^'\\]|\\.)*)'(?:\s*,\s*'((?:[^'\\]|\\.)*)')?(?:\s*,\s*'((?:[^'\\]|\\.)*)')?/g))
+        for (const k of m.slice(1)) if (k && /[A-Za-zÀ-ÿ]/.test(k)) keys.add(k);
+    }
+    expect(keys.size).toBeGreaterThan(150);
+    expect([...keys].filter((k) => !dict.has(k))).toEqual([]);
   });
 });

@@ -10,6 +10,7 @@ import { Ruby } from '../../src/Ruby';
 import { speak } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H2, Loading, P, Screen } from '../../src/ui';
+import { T, bi, plural } from '../../src/i18n';
 
 /** Liseuse : furigana à la demande, traduction au toucher, vocabulaire, questions de compréhension. */
 export default function ReadingChapterScreen() {
@@ -50,16 +51,16 @@ export default function ReadingChapterScreen() {
   return (
     <Screen>
       <Pressable accessibilityRole="link" onPress={() => router.back()} style={{ minHeight: 44, justifyContent: 'center' }}>
-        <Text style={{ fontWeight: '800', color: C.ink }}>← Tous les contes</Text>
+        <Text style={{ fontWeight: '800', color: C.ink }}>{T('← Tous les contes')}</Text>
       </Pressable>
-      <Text style={{ color: C.inkSoft, fontWeight: '700' }}>{story.title.fr} · chapitre {chapter.index}/{chapter.count} · {story.level}</Text>
+      <Text style={{ color: C.inkSoft, fontWeight: '700' }}>{bi(story.title)} · {T('chapitre {0}/{1}', [chapter.index, chapter.count])} · {story.level}</Text>
       <Ruby text={chapter.title.jp} furigana={furigana} size={26} />
-      <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{chapter.title.fr}</Text>
+      <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{bi(chapter.title)}</Text>
 
       <View style={{ flexDirection: 'row', gap: 8 }}>
-        <Button label={furigana ? 'Masquer les furigana' : 'Afficher les furigana'} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />
+        <Button label={furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />
       </View>
-      <P soft>Touche une phrase pour voir sa traduction et l’écouter.</P>
+      <P soft>{T('Touche une phrase pour voir sa traduction et l’écouter.')}</P>
 
       <Card style={{ gap: 14 }} testID="reader">
         {chapter.paragraphs.map((para, pi) => (
@@ -70,7 +71,7 @@ export default function ReadingChapterScreen() {
               return (
                 <Pressable key={id} accessibilityRole="button" accessibilityLabel={stripRuby(s.jp)} accessibilityState={{ expanded: on }} onPress={() => { setOpen(on ? null : id); if (!on) speak(s.kana); }} style={{ borderRadius: 10, padding: 6, backgroundColor: on ? '#FBEFD9' : 'transparent' }}>
                   <Ruby text={s.jp} furigana={furigana} />
-                  {on && <Text style={{ marginTop: 6, color: C.inkSoft, fontSize: 15 }}>{s.fr}</Text>}
+                  {on && <Text style={{ marginTop: 6, color: C.inkSoft, fontSize: 15 }}>{bi(s)}</Text>}
                 </Pressable>
               );
             })}
@@ -78,28 +79,28 @@ export default function ReadingChapterScreen() {
         ))}
       </Card>
 
-      <H2>Vocabulaire</H2>
+      <H2>{T('Vocabulaire')}</H2>
       <Card style={{ gap: 8 }}>
         {chapter.words.map((w) => (
           <View key={w.jp} style={{ flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}>
             <Text style={{ fontWeight: '800', color: C.ink, fontSize: 16 }}>{w.jp}</Text>
             {w.reading && <Text style={{ color: C.inkSoft }}>{w.reading}</Text>}
-            <Text style={{ color: C.ink, flexShrink: 1 }}>{w.fr}</Text>
+            <Text style={{ color: C.ink, flexShrink: 1 }}>{bi(w)}</Text>
           </View>
         ))}
       </Card>
 
-      <H2>Compréhension</H2>
+      <H2>{T('Compréhension')}</H2>
       {chapter.questions.map((q, qi) => (
         <Card key={qi} style={{ gap: 8 }}>
-          <P style={{ fontWeight: '800' }}>{qi + 1}. {q.q.fr}</P>
+          <P style={{ fontWeight: '800' }}>{qi + 1}. {bi(q.q)}</P>
           {q.choices.map((c, ci) => {
             const picked = (shown ? shown.answers[qi] : answers[qi]) === ci && !shown;
             const good = shown && shown.answers[qi] === ci;
             const mine = !shown && answers[qi] === ci;
             return (
               <Pressable key={ci} accessibilityRole="radio" accessibilityState={{ checked: mine, disabled: !!shown }} disabled={!!shown} onPress={() => setAnswers((a) => { const n = [...a]; n[qi] = ci; return n; })} style={{ minHeight: 44, justifyContent: 'center', paddingHorizontal: 12, borderRadius: 12, borderWidth: 2, borderColor: good ? C.ok : mine || picked ? C.ink : C.line, backgroundColor: good ? C.okBg : mine ? C.surface2 : C.surface }}>
-                <Text style={{ color: C.ink, fontWeight: mine || good ? '800' : '500' }}>{c.fr}</Text>
+                <Text style={{ color: C.ink, fontWeight: mine || good ? '800' : '500' }}>{bi(c)}</Text>
               </Pressable>
             );
           })}
@@ -107,15 +108,15 @@ export default function ReadingChapterScreen() {
       ))}
 
       {!shown && (
-        <Button label="Valider mes réponses" tone="gold" disabled={sending || chapter.questions.some((_, i) => answers[i] === undefined)} onPress={submit} />
+        <Button label={T('Valider mes réponses')} tone="gold" disabled={sending || chapter.questions.some((_, i) => answers[i] === undefined)} onPress={submit} />
       )}
       {shown && (
         <Card style={{ gap: 10, borderColor: C.ok }}>
-          <Text accessibilityRole="header" style={{ fontSize: 20, fontWeight: '800', color: C.ink }}>{shown.correct}/{shown.total} bonnes réponses</Text>
-          {result?.firstTime && <P>+{result.xpGained} XP · +{result.coinsGained} pièces · série de {result.streak} jour{result.streak > 1 ? 's' : ''}</P>}
-          {!result && <P soft>Chapitre déjà lu : les bonnes réponses sont surlignées.</P>}
-          {data.next && <Button label="Chapitre suivant" tone="gold" onPress={() => router.replace(`/reading/${data.next!.slug}`)} />}
-          <Button label="Tous les contes" tone="quiet" onPress={() => router.back()} />
+          <Text accessibilityRole="header" style={{ fontSize: 20, fontWeight: '800', color: C.ink }}>{T('{0}/{1} bonnes réponses', [shown.correct, shown.total])}</Text>
+          {result?.firstTime && <P>{T('+{0} XP · +{1} pièces', [result.xpGained, result.coinsGained])} · {plural(result.streak, 'série de {0} jour', 'série de {0} jours')}</P>}
+          {!result && <P soft>{T('Chapitre déjà lu : les bonnes réponses sont surlignées.')}</P>}
+          {data.next && <Button label={T('Chapitre suivant')} tone="gold" onPress={() => router.replace(`/reading/${data.next!.slug}`)} />}
+          <Button label={T('Tous les contes')} tone="quiet" onPress={() => router.back()} />
         </Card>
       )}
     </Screen>

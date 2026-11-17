@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleProp, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { C, R } from './theme';
+import { T } from './i18n';
 
 export function Screen({ children, scroll = true, padded = true }: { children: ReactNode; scroll?: boolean; padded?: boolean }) {
   const inner = <View style={[padded && { padding: 18, gap: 18 }, { flexGrow: 1 }]}>{children}</View>;
@@ -64,8 +65,8 @@ export function Loading({ label }: { label?: string }) {
 export function ErrorBox({ error, onRetry }: { error: unknown; onRetry?: () => void }) {
   return (
     <Card style={{ borderColor: C.ko, gap: 10 }}>
-      <P style={{ fontWeight: '700', color: C.ko }}>{error instanceof Error ? error.message : 'Une erreur est survenue.'}</P>
-      {onRetry && <Button label="Réessayer" tone="quiet" onPress={onRetry} />}
+      <P style={{ fontWeight: '700', color: C.ko }}>{error instanceof Error ? error.message : T('Une erreur est survenue.')}</P>
+      {onRetry && <Button label={T('Réessayer')} tone="quiet" onPress={onRetry} />}
     </Card>
   );
 }

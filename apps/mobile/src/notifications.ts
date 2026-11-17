@@ -1,6 +1,7 @@
 import { Platform } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import type { NotificationPrefsDto } from '@koto/shared';
+import { T } from './i18n';
 
 /**
  * Rappels natifs : notifications locales planifiées chaque jour aux créneaux calculés par le serveur
@@ -37,13 +38,14 @@ export async function scheduleReminders(prefs: Pick<NotificationPrefsDto, 'enabl
   await Notifications.cancelAllScheduledNotificationsAsync();
   if (!prefs.consent || !prefs.enabled) return 0;
   if (Platform.OS === 'android') {
-    await Notifications.setNotificationChannelAsync('rappels', { name: 'Rappels de révision', importance: Notifications.AndroidImportance.DEFAULT });
+    await Notifications.setNotificationChannelAsync('rappels', { name: T('Rappels de révision'), importance: Notifications.AndroidImportance.DEFAULT });
   }
   let n = 0;
   for (const [i, minutes] of prefs.slots.entries()) {
     const m = MESSAGES[i % MESSAGES.length];
+    // Texte figé à la programmation : reprogrammé à chaque ouverture des réglages et changement de langue.
     await Notifications.scheduleNotificationAsync({
-      content: { title: m.title, body: m.body, data: { url: REVIEW_URL } },
+      content: { title: T(m.title), body: T(m.body), data: { url: REVIEW_URL } },
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DAILY, hour: Math.floor(minutes / 60), minute: minutes % 60, channelId: 'rappels' },
     });
     n++;

@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDashboard } from '../../src/hooks';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H2, Loading, P, ProgressBar } from '../../src/ui';
+import { T, plural } from '../../src/i18n';
 
 function greeting() {
   const h = new Date().getHours();
@@ -22,7 +23,7 @@ export default function Home() {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <View style={{ flex: 1 }}>
             <Text style={{ color: C.inkSoft, fontSize: 18 }}>{greeting()}、{d.displayName}</Text>
-            <Text accessibilityRole="header" style={{ fontSize: 26, fontWeight: '800', color: C.ink }}>{due ? `${due} notion${due > 1 ? 's' : ''} à réviser` : d.nextLesson ? 'Prêt·e pour la suite ?' : 'Tout est à jour'}</Text>
+            <Text accessibilityRole="header" style={{ fontSize: 26, fontWeight: '800', color: C.ink }}>{due ? plural(due, '{0} notion à réviser', '{0} notions à réviser') : d.nextLesson ? T('Prêt·e pour la suite ?') : T('Tout est à jour')}</Text>
           </View>
           <View style={{ backgroundColor: C.surface, borderRadius: 99, paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderColor: C.line }}>
             <Text style={{ fontWeight: '800', color: C.goldInk }}>🪙 {d.coins}</Text>
@@ -34,25 +35,25 @@ export default function Home() {
           <Text style={{ position: 'absolute', right: -10, top: -24, fontSize: 150, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>{due ? '復' : '学'}</Text>
           {due > 0 ? (
             <>
-              <Text style={{ color: C.paper, opacity: 0.85, fontSize: 16 }}>Ces notions sont sur le point de t’échapper. Une révision maintenant les fixe pour plusieurs jours.</Text>
-              <Button tone="gold" label="Réviser maintenant" onPress={() => router.push('/review')} />
+              <Text style={{ color: C.paper, opacity: 0.85, fontSize: 16 }}>{T('Ces notions sont sur le point de t’échapper. Une révision maintenant les fixe pour plusieurs jours.')}</Text>
+              <Button tone="gold" label={T('Réviser maintenant')} onPress={() => router.push('/review')} />
             </>
           ) : d.nextLesson ? (
             <>
               <Text style={{ color: C.paper, opacity: 0.75 }}>{d.nextLesson.worldTitle}</Text>
               <Text style={{ color: C.paper, fontSize: 24, fontWeight: '800' }}>{d.nextLesson.title}</Text>
-              <Button tone="gold" label="Commencer la leçon" onPress={() => router.push(`/lesson/${d.nextLesson!.slug}`)} />
+              <Button tone="gold" label={T('Commencer la leçon')} onPress={() => router.push(`/lesson/${d.nextLesson!.slug}`)} />
             </>
           ) : (
-            <Text style={{ color: C.paper }}>Tu as terminé tout le contenu disponible. Les révisions continueront d’arriver au bon moment.</Text>
+            <Text style={{ color: C.paper }}>{T('Tu as terminé tout le contenu disponible. Les révisions continueront d’arriver au bon moment.')}</Text>
           )}
         </View>
 
         <View style={{ flexDirection: 'row', gap: 10 }}>
           {[
-            { k: 'Série', v: `${d.streak.current} j`, icon: d.streak.todayDone ? '🔥' : '🪵' },
-            { k: 'Niveau', v: String(d.xp.level), icon: '⭐' },
-            { k: 'Mots', v: String(d.mastered.words), icon: '🌸' },
+            { k: T('Série'), v: T('{0} j', [d.streak.current]), icon: d.streak.todayDone ? '🔥' : '🪵' },
+            { k: T('Niveau'), v: String(d.xp.level), icon: '⭐' },
+            { k: T('Mots'), v: String(d.mastered.words), icon: '🌸' },
           ].map((x) => (
             <Card key={x.k} style={{ flex: 1, alignItems: 'center', paddingVertical: 12 }}>
               <Text style={{ fontSize: 22 }}>{x.icon}</Text>
@@ -63,13 +64,13 @@ export default function Home() {
         </View>
 
         <View style={{ gap: 6 }}>
-          <H2>Niveau {d.xp.level}</H2>
-          <View style={{ flexDirection: 'row' }}><ProgressBar value={d.xp.intoLevel} max={d.xp.forNext} color={C.gold} label="Expérience vers le niveau suivant" /></View>
-          <P soft>{d.xp.forNext - d.xp.intoLevel} XP avant le niveau {d.xp.level + 1}</P>
+          <H2>{T('Niveau {0}', [d.xp.level])}</H2>
+          <View style={{ flexDirection: 'row' }}><ProgressBar value={d.xp.intoLevel} max={d.xp.forNext} color={C.gold} label={T('Expérience vers le niveau suivant')} /></View>
+          <P soft>{T('{0} XP avant le niveau {1}', [d.xp.forNext - d.xp.intoLevel, d.xp.level + 1])}</P>
         </View>
 
         <View style={{ gap: 10 }}>
-          <H2>Quêtes du jour</H2>
+          <H2>{T('Quêtes du jour')}</H2>
           {d.quests.map((q) => (
             <Card key={q.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
               <View style={{ width: 36, height: 36, borderRadius: 18, backgroundColor: q.done ? C.gold : C.surface2, alignItems: 'center', justifyContent: 'center' }}>

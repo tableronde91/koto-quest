@@ -5,6 +5,7 @@ import { post } from './api';
 import { QuestionView } from './QuestionView';
 import { C } from './theme';
 import { ProgressBar } from './ui';
+import { T } from './i18n';
 
 export interface RunSummary {
   correct: number;
@@ -59,20 +60,20 @@ export function QuizRunner({ questions, onFinish, onQuit }: { questions: IssuedQ
     <View style={{ gap: 16 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
         {onQuit && (
-          <Pressable accessibilityRole="button" accessibilityLabel="Quitter la session" onPress={onQuit} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={T('Quitter la session')} onPress={onQuit} hitSlop={10}>
             <Text style={{ fontSize: 22, color: C.inkSoft }}>✕</Text>
           </Pressable>
         )}
-        <ProgressBar value={index} max={queue.length} label={`Question ${index + 1} sur ${queue.length}`} />
+        <ProgressBar value={index} max={queue.length} label={T('Question {0} sur {1}', [index + 1, queue.length])} />
         <Text style={{ color: C.inkSoft }}>{index + 1}/{queue.length}</Text>
       </View>
       {q.retryOf && (
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center', borderWidth: 2, borderColor: C.gold, borderRadius: 14, padding: 10, backgroundColor: C.surface }}>
           <Text style={{ fontSize: 22, fontWeight: '900', color: C.goldInk }}>復</Text>
-          <Text style={{ flex: 1, fontWeight: '700', color: C.ink }}>On reprend un exercice raté.</Text>
+          <Text style={{ flex: 1, fontWeight: '700', color: C.ink }}>{T('On reprend un exercice raté.')}</Text>
         </View>
       )}
-      <QuestionView key={q.id} q={q} onResult={onResult} onDone={next} willRetry={willRetry} continueLabel={(r) => (busy ? '…' : last && (r.correct || !willRetry) ? 'Terminer' : 'Continuer')} />
+      <QuestionView key={q.id} q={q} onResult={onResult} onDone={next} willRetry={willRetry} continueLabel={(r) => (busy ? '…' : last && (r.correct || !willRetry) ? T('Terminer') : T('Continuer'))} />
     </View>
   );
 }

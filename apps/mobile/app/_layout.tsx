@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '../src/auth';
 import { onNotificationOpen } from '../src/notifications';
 import { C } from '../src/theme';
 import { Loading } from '../src/ui';
+import { T, followAccount, getLocale, initLocale, takeReturnPath, useLocale } from '../src/i18n';
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { retry: 1, staleTime: 15_000 } } });
 
@@ -26,7 +27,19 @@ function Gate() {
 
   useEffect(() => onNotificationOpen((url) => router.push(url as never)), [router]);
 
-  if (!ready) return <Loading label="Ouverture de Koto Quest…" />;
+  // Connecté sans choix fait sur ce téléphone : la langue suit celle du compte.
+  useEffect(() => followAccount(me?.onboarded ? me.preferences.locale : undefined), [me?.onboarded, me?.preferences.locale]);
+
+  // Après un changement de langue (appli redessinée), on revient sur l'écran où l'on était.
+  useEffect(() => {
+    if (!ready) return;
+    const back = takeReturnPath();
+    if (!back || back === '/') return;
+    const t = setTimeout(() => router.replace(back as never), 0);
+    return () => clearTimeout(t);
+  }, [ready, router]);
+
+  if (!ready) return <Loading label={T('Ouverture de Koto Quest…')} />;
   return (
     <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: C.paper } }}>
       <Stack.Screen name="(tabs)" />
@@ -37,17 +50,37 @@ function Gate() {
       <Stack.Screen name="reading/[slug]" />
       <Stack.Screen name="boss/[slug]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="exam/[slug]" options={{ gestureEnabled: false }} />
+      <Stack.Screen name="games/[id]" options={{ gestureEnabled: false }} />
+      <Stack.Screen name="duel/index" />
+      <Stack.Screen name="duel/[id]" options={{ gestureEnabled: false }} />
     </Stack>
   );
 }
 
 export default function RootLayout() {
+  const [localeReady, setLocaleReady] = useState(false);
+  const locale = useLocale();
+  const [shown, setShown] = useState(locale);
+  useEffect(() => {
+    initLocale().then(() => {
+      setShown(getLocale());
+      setLocaleReady(true);
+    });
+  }, []);
+  // Changement de langue : les données déjà reçues sont retraduites en les rechargeant.
+  useEffect(() => {
+    if (!localeReady || locale === shown) return;
+    void queryClient.invalidateQueries(); // rechargées en arrière-plan, sans repasser par l'écran de chargement
+    setShown(locale);
+  }, [locale, shown, localeReady]);
+
+  if (!localeReady) return <Loading />;
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <StatusBar style="dark" />
-          <Gate />
+          <Gate key={locale} />
         </AuthProvider>
       </QueryClientProvider>
     </SafeAreaProvider>

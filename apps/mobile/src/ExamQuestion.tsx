@@ -4,6 +4,7 @@ import type { IssuedQuestionDto } from '@koto/shared';
 import { speak, speakScript } from './speech';
 import { C } from './theme';
 import { Button, P } from './ui';
+import { T, plural } from './i18n';
 
 const JP = /[぀-ヿ一-龯]/;
 export type ExamAnswer = string | string[] | undefined;
@@ -36,8 +37,8 @@ export function ExamQuestion({ q, number, value, onChange }: { q: IssuedQuestion
 
       {script ? (
         <View style={{ backgroundColor: C.surface2, borderRadius: 24, padding: 18, alignItems: 'center', gap: 8 }}>
-          <Button label={left <= 0 ? 'Plus d’écoute disponible' : '🔊  Écouter'} disabled={left <= 0} onPress={play} />
-          {d.maxPlays !== undefined && <P soft>{Math.max(0, left)} écoute{left > 1 ? 's' : ''} restante{left > 1 ? 's' : ''} sur {d.maxPlays}</P>}
+          <Button label={left <= 0 ? T('Plus d’écoute disponible') : `🔊  ${T('Écouter')}`} disabled={left <= 0} onPress={play} />
+          {d.maxPlays !== undefined && <P soft>{plural(Math.max(0, left), '{0} écoute restante sur {1}', '{0} écoutes restantes sur {1}', [Math.max(0, left), d.maxPlays])}</P>}
           {d.text && <Text style={{ fontSize: 20, fontWeight: '800', color: C.ink, textAlign: 'center' }}>{d.text}</Text>}
         </View>
       ) : d.passage ? (
@@ -73,12 +74,12 @@ export function ExamQuestion({ q, number, value, onChange }: { q: IssuedQuestion
           {q.choices.map((c, i) => {
             const on = value === c;
             return (
-              <Pressable key={c} accessibilityRole="radio" accessibilityState={{ checked: on }} accessibilityLabel={d.audioChoices ? `Réponse ${i + 1}` : c} onPress={() => onChange(c)} style={{ minHeight: 54, flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 14, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.surface2 : C.surface }}>
+              <Pressable key={c} accessibilityRole="radio" accessibilityState={{ checked: on }} accessibilityLabel={d.audioChoices ? T('Réponse {0}', [i + 1]) : c} onPress={() => onChange(c)} style={{ minHeight: 54, flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 14, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.surface2 : C.surface }}>
                 <View style={{ width: 22, height: 22, borderRadius: 11, borderWidth: 2, borderColor: C.ink, alignItems: 'center', justifyContent: 'center' }}>{on && <View style={{ width: 11, height: 11, borderRadius: 6, backgroundColor: C.ink }} />}</View>
                 {d.audioChoices ? (
                   <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Text style={{ fontSize: 20, fontWeight: '800', color: C.ink }}>{i + 1}</Text>
-                    <Pressable accessibilityRole="button" accessibilityLabel={`Écouter la réponse ${i + 1}`} onPress={() => speak(c)} style={{ padding: 8 }}><Text>🔊</Text></Pressable>
+                    <Pressable accessibilityRole="button" accessibilityLabel={T('Écouter la réponse {0}', [i + 1])} onPress={() => speak(c)} style={{ padding: 8 }}><Text>🔊</Text></Pressable>
                   </View>
                 ) : (
                   <Text style={{ flex: 1, fontSize: JP.test(c) ? 20 : 17, color: C.ink }}>{c}</Text>
@@ -108,7 +109,7 @@ function OrderPicker({ tokens, value, onChange }: { tokens: string[]; value: str
   return (
     <View style={{ gap: 10 }}>
       <View style={{ minHeight: 60, flexDirection: 'row', flexWrap: 'wrap', gap: 8, padding: 10, borderRadius: 16, borderWidth: 2, borderColor: C.line, backgroundColor: C.surface }}>
-        {value.length === 0 && <P soft>Touche les morceaux dans le bon ordre.</P>}
+        {value.length === 0 && <P soft>{T('Touche les morceaux dans le bon ordre.')}</P>}
         {used.map((i, k) => chip(tokens[i], true, () => onChange(value.filter((_, j) => j !== k)), k))}
       </View>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, justifyContent: 'center' }}>

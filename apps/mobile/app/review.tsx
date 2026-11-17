@@ -7,6 +7,7 @@ import { post } from '../src/api';
 import { QuizRunner, RunSummary } from '../src/QuizRunner';
 import { C } from '../src/theme';
 import { Button, ErrorBox, H1, Loading, P, Screen } from '../src/ui';
+import { T } from '../src/i18n';
 
 /** Séance de révision (aussi ouverte en touchant une notification). */
 export default function ReviewSession() {
@@ -23,18 +24,18 @@ export default function ReviewSession() {
   };
   useEffect(load, []);
 
-  if (error) return <Screen><ErrorBox error={error} /><Button tone="quiet" label="Retour" onPress={() => router.replace('/')} /></Screen>;
-  if (!session) return <Loading label="Préparation de ta révision…" />;
+  if (error) return <Screen><ErrorBox error={error} /><Button tone="quiet" label={T('Retour')} onPress={() => router.replace('/')} /></Screen>;
+  if (!session) return <Loading label={T('Préparation de ta révision…')} />;
   if (summary || session.questions.length === 0)
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
           <Text style={{ fontSize: 72, fontWeight: '900', color: C.ko }}>{summary ? '復習' : '😺'}</Text>
-          <H1>{summary ? 'Révision terminée' : 'Aucune révision due'}</H1>
-          {summary && <P>{summary.correct}/{summary.total} bonnes réponses · +{summary.xp} XP</P>}
+          <H1>{summary ? T('Révision terminée') : T('Aucune révision due')}</H1>
+          {summary && <P>{T('{0}/{1} bonnes réponses · +{2} XP', [summary.correct, summary.total, summary.xp])}</P>}
         </View>
-        <Button tone="gold" label="Continuer à réviser" onPress={() => { qc.invalidateQueries(); load(); }} />
-        <Button tone="quiet" label="Accueil" onPress={() => { qc.invalidateQueries(); router.replace('/'); }} />
+        <Button tone="gold" label={T('Continuer à réviser')} onPress={() => { qc.invalidateQueries(); load(); }} />
+        <Button tone="quiet" label={T('Accueil')} onPress={() => { qc.invalidateQueries(); router.replace('/'); }} />
       </Screen>
     );
   return <Screen><QuizRunner questions={session.questions} onQuit={() => router.replace('/')} onFinish={setSummary} /></Screen>;

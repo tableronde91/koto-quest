@@ -4,6 +4,8 @@ import { useAuth } from '../src/auth';
 import { API_URL } from '../src/config';
 import { C } from '../src/theme';
 import { Button, Card, H1, P, Screen } from '../src/ui';
+import { LanguageSwitch } from '../src/LanguageSwitch';
+import { T } from '../src/i18n';
 
 export default function Welcome() {
   const { login, register } = useAuth();
@@ -21,7 +23,7 @@ export default function Welcome() {
       if (mode === 'register') await register(name.trim(), email.trim(), password);
       else await login(email.trim(), password);
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Erreur');
+      setError(e instanceof Error ? e.message : T('Erreur'));
     } finally {
       setBusy(false);
     }
@@ -34,23 +36,24 @@ export default function Welcome() {
         <View style={{ alignItems: 'center', gap: 6, marginTop: 24 }}>
           <Text style={{ fontSize: 88, fontWeight: '900', color: C.ink }}>言<Text style={{ color: C.ko }}>。</Text></Text>
           <H1>Koto Quest</H1>
-          <P soft style={{ textAlign: 'center' }}>Un mot le matin, un défi l’après-midi. Le japonais du N5 au N1, au rythme de ta mémoire.</P>
+          <P soft style={{ textAlign: 'center' }}>{T('Un mot le matin, un défi l’après-midi. Le japonais du N5 au N1, au rythme de ta mémoire.')}</P>
+          <LanguageSwitch />
         </View>
         <Card style={{ gap: 12 }}>
           <View style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 12, padding: 4 }}>
             {(['login', 'register'] as const).map((m) => (
               <Pressable key={m} accessibilityRole="tab" accessibilityState={{ selected: mode === m }} onPress={() => setMode(m)} style={{ flex: 1, padding: 10, borderRadius: 10, backgroundColor: mode === m ? C.surface : 'transparent', alignItems: 'center' }}>
-                <Text style={{ fontWeight: '800', color: mode === m ? C.ink : C.inkSoft }}>{m === 'login' ? 'Se connecter' : 'Créer un compte'}</Text>
+                <Text style={{ fontWeight: '800', color: mode === m ? C.ink : C.inkSoft }}>{m === 'login' ? T('Se connecter') : T('Créer un compte')}</Text>
               </Pressable>
             ))}
           </View>
-          {mode === 'register' && <TextInput placeholder="Pseudo" accessibilityLabel="Pseudo" value={name} onChangeText={setName} style={field} />}
-          <TextInput placeholder="Adresse e-mail" accessibilityLabel="Adresse e-mail" autoCapitalize="none" keyboardType="email-address" autoComplete="email" value={email} onChangeText={setEmail} style={field} />
-          <TextInput placeholder="Mot de passe (8 caractères minimum)" accessibilityLabel="Mot de passe" secureTextEntry value={password} onChangeText={setPassword} style={field} />
+          {mode === 'register' && <TextInput placeholder={T('Pseudo')} accessibilityLabel={T('Pseudo')} value={name} onChangeText={setName} style={field} />}
+          <TextInput placeholder={T('Adresse e-mail')} accessibilityLabel={T('Adresse e-mail')} autoCapitalize="none" keyboardType="email-address" autoComplete="email" value={email} onChangeText={setEmail} style={field} />
+          <TextInput placeholder={T('Mot de passe (8 caractères minimum)')} accessibilityLabel={T('Mot de passe')} secureTextEntry value={password} onChangeText={setPassword} style={field} />
           {error && <Text style={{ color: C.ko, fontWeight: '700' }}>{error}</Text>}
-          <Button label={busy ? '…' : mode === 'login' ? 'Se connecter' : 'Créer mon compte'} disabled={busy || !email || password.length < 8 || (mode === 'register' && !name.trim())} onPress={submit} />
+          <Button label={busy ? '…' : mode === 'login' ? T('Se connecter') : T('Créer mon compte')} disabled={busy || !email || password.length < 8 || (mode === 'register' && !name.trim())} onPress={submit} />
         </Card>
-        <P soft style={{ textAlign: 'center', fontSize: 12 }}>Serveur : {API_URL}</P>
+        <P soft style={{ textAlign: 'center', fontSize: 12 }}>{T('Serveur : {0}', [API_URL])}</P>
       </Screen>
     </KeyboardAvoidingView>
   );

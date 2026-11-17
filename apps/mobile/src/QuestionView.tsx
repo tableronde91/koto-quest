@@ -7,6 +7,7 @@ import { post } from './api';
 import { speak } from './speech';
 import { C } from './theme';
 import { Button, P } from './ui';
+import { T } from './i18n';
 
 const JP = /[぀-ヿ一-龯]/;
 const isJp = (s: string) => JP.test(s);
@@ -25,7 +26,7 @@ function vibrate(ok: boolean) {
 }
 
 /** Un exercice émis par le serveur : réponse envoyée, correction reçue (la bonne réponse n'est jamais connue avant). */
-export function QuestionView({ q, onDone, onResult, continueLabel = 'Continuer', willRetry = false }: { q: IssuedQuestionDto; onDone: (r: AnswerResultDto) => void; onResult?: (r: AnswerResultDto) => void; continueLabel?: string | ((r: AnswerResultDto) => string); willRetry?: boolean }) {
+export function QuestionView({ q, onDone, onResult, continueLabel = T('Continuer'), willRetry = false }: { q: IssuedQuestionDto; onDone: (r: AnswerResultDto) => void; onResult?: (r: AnswerResultDto) => void; continueLabel?: string | ((r: AnswerResultDto) => string); willRetry?: boolean }) {
   const [result, setResult] = useState<AnswerResultDto | null>(null);
   const [given, setGiven] = useState<string | string[] | null>(null);
   const [pending, setPending] = useState(false);
@@ -53,7 +54,7 @@ export function QuestionView({ q, onDone, onResult, continueLabel = 'Continuer',
       }
     } catch (e) {
       setGiven(null);
-      setError(e instanceof Error ? e.message : 'Erreur');
+      setError(e instanceof Error ? e.message : T('Erreur'));
     } finally {
       setPending(false);
     }
@@ -72,8 +73,8 @@ export function QuestionView({ q, onDone, onResult, continueLabel = 'Continuer',
       {/* Zone principale */}
       {q.type === 'listening_choice' ? (
         <View style={{ backgroundColor: C.surface2, borderRadius: 24, padding: 24, alignItems: 'center', gap: 12 }}>
-          <Button label="🔊  Écouter" onPress={() => q.audio && speak(q.audio)} />
-          <Pressable onPress={() => q.audio && speak(q.audio, true)}><Text style={{ color: C.inkSoft, textDecorationLine: 'underline' }}>Écouter lentement</Text></Pressable>
+          <Button label={`🔊  ${T('Écouter')}`} onPress={() => q.audio && speak(q.audio)} />
+          <Pressable onPress={() => q.audio && speak(q.audio, true)}><Text style={{ color: C.inkSoft, textDecorationLine: 'underline' }}>{T('Écouter lentement')}</Text></Pressable>
         </View>
       ) : d.lines ? (
         <View style={{ backgroundColor: C.surface2, borderRadius: 24, padding: 18, gap: 10 }}>
@@ -97,7 +98,7 @@ export function QuestionView({ q, onDone, onResult, continueLabel = 'Continuer',
           {d.reading && q.type !== 'reading_choice' && !(q.type === 'fill_blank' && !result) && !blank && <Text style={{ color: C.inkSoft, fontSize: 16 }}>{d.reading}</Text>}
           {d.text && <Text style={{ fontSize: mainText && q.type !== 'true_false' ? 16 : 24, color: mainText && q.type !== 'true_false' ? C.inkSoft : C.ink, fontWeight: mainText && q.type !== 'true_false' ? '400' : '800', textAlign: 'center' }}>{d.text}</Text>}
           {(result ? spokenAfter(q, given ?? '') : q.audio && q.type !== 'reading_choice') && (
-            <Pressable accessibilityLabel="Écouter" onPress={() => speak((result ? spokenAfter(q, given ?? '') : q.audio) ?? '')} style={{ position: 'absolute', right: 10, top: 10, padding: 6 }}>
+            <Pressable accessibilityLabel={T('Écouter')} onPress={() => speak((result ? spokenAfter(q, given ?? '') : q.audio) ?? '')} style={{ position: 'absolute', right: 10, top: 10, padding: 6 }}>
               <Text style={{ fontSize: 20 }}>🔊</Text>
             </Pressable>
           )}
@@ -149,14 +150,14 @@ export function QuestionView({ q, onDone, onResult, continueLabel = 'Continuer',
               <Text style={{ fontSize: 26, fontWeight: '900', color: result.correct ? C.ko : C.ink }}>{result.correct ? '正' : '惜'}</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 18, fontWeight: '800', color: C.ink }}>{result.correct ? 'Bonne réponse !' : 'Pas tout à fait.'}</Text>
+              <Text style={{ fontSize: 18, fontWeight: '800', color: C.ink }}>{result.correct ? T('Bonne réponse !') : T('Pas tout à fait.')}</Text>
               {result.xpGained > 0 && <Text style={{ color: C.goldInk, fontWeight: '800' }}>+{result.xpGained} XP</Text>}
             </View>
           </View>
-          {!result.correct && q.type !== 'matching' && <P>Réponse attendue : <Text style={{ fontWeight: '800' }}>{Array.isArray(result.correctAnswer) ? result.correctAnswer.join(' ') : result.correctAnswer}</Text></P>}
+          {!result.correct && q.type !== 'matching' && <P>{T('Réponse attendue :')} <Text style={{ fontWeight: '800' }}>{Array.isArray(result.correctAnswer) ? result.correctAnswer.join(' ') : result.correctAnswer}</Text></P>}
           <P soft>{result.explanation}</P>
-          {!result.correct && willRetry && <P soft>Tu le referas en fin de séance.</P>}
-          {result.questsCompleted?.map((qc) => <Text key={qc.title} style={{ color: C.goldInk, fontWeight: '700' }}>Quête accomplie : {qc.title} (+{qc.xp} XP)</Text>)}
+          {!result.correct && willRetry && <P soft>{T('Tu le referas en fin de séance.')}</P>}
+          {result.questsCompleted?.map((qc) => <Text key={qc.title} style={{ color: C.goldInk, fontWeight: '700' }}>{T('Quête accomplie : {0} (+{1} XP)', [qc.title, qc.xp])}</Text>)}
           <Button label={typeof continueLabel === 'function' ? continueLabel(result) : continueLabel} onPress={() => onDone(result)} />
         </View>
       )}
@@ -177,13 +178,13 @@ function SentenceOrder({ tokens, disabled, onSubmit }: { tokens: string[]; disab
   return (
     <View style={{ gap: 12 }}>
       <View style={{ minHeight: 64, flexDirection: 'row', flexWrap: 'wrap', gap: 8, padding: 10, borderRadius: 16, borderWidth: 2, borderColor: C.line, backgroundColor: C.surface }}>
-        {placed.length === 0 && <P soft>Touche les morceaux dans le bon ordre.</P>}
+        {placed.length === 0 && <P soft>{T('Touche les morceaux dans le bon ordre.')}</P>}
         {placed.map((i) => <Chip key={i} label={tokens[i]} filled disabled={disabled} onPress={() => setPlaced(placed.filter((p) => p !== i))} />)}
       </View>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, justifyContent: 'center' }}>
         {tokens.map((t, i) => (placed.includes(i) ? <View key={i} style={{ minHeight: 46, minWidth: 40, borderRadius: 12, borderWidth: 2, borderStyle: 'dashed', borderColor: C.line }} /> : <Chip key={i} label={t} disabled={disabled} onPress={() => setPlaced([...placed, i])} />))}
       </View>
-      {!disabled && <Button label="Vérifier" disabled={placed.length !== tokens.length} onPress={() => onSubmit(placed.map((i) => tokens[i]))} />}
+      {!disabled && <Button label={T('Vérifier')} disabled={placed.length !== tokens.length} onPress={() => onSubmit(placed.map((i) => tokens[i]))} />}
     </View>
   );
 }
@@ -228,7 +229,7 @@ function Matching({ pairs, disabled, onSubmit, expected }: { pairs: { left: stri
           {pairs.left.map((l, i) => <P key={l}>{l} = <Text style={{ fontWeight: expected[i] === assign[i] ? '400' : '800', color: expected[i] === assign[i] ? C.ink : C.ko }}>{expected[i]}</Text></P>)}
         </View>
       )}
-      {!disabled && <Button label="Vérifier" disabled={Object.keys(assign).length !== pairs.left.length} onPress={() => onSubmit(pairs.left.map((_, i) => assign[i]))} />}
+      {!disabled && <Button label={T('Vérifier')} disabled={Object.keys(assign).length !== pairs.left.length} onPress={() => onSubmit(pairs.left.map((_, i) => assign[i]))} />}
     </View>
   );
 }

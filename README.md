@@ -164,7 +164,7 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Données** : le client HTTP traduit toutes les réponses de l'API, motifs à variables compris (« Que signifie « 水 » ? » → « What does “水” mean? »). Les réponses du joueur sont renvoyées en VO au serveur, d'après les traductions réellement affichées : la correction reste inchangée côté serveur.
 - **Côté serveur**, seuls les notifications push et l'e-mail de mot de passe sont traduits (`apps/api/src/common/i18n.ts`).
 - **Ajouter un texte** : écrire la phrase en français dans `T(…)` puis ajouter sa traduction au dictionnaire. Le test `apps/api/test/i18n.spec.ts` échoue si un texte de cours ou un exercice généré n'est pas traduit, ou si deux sens deviennent identiques en anglais.
-- **Limite** : l'application mobile (Expo) est encore en français uniquement.
+- **Appli mobile** : mêmes dictionnaires que le web, plus `content/i18n/en/mobile.json` pour les textes propres au téléphone (`apps/mobile/src/i18n.ts`). Langue du téléphone par défaut, choix FR/EN à l'accueil et dans les Réglages (enregistré sur le compte) ; sans choix sur le téléphone, la langue suit celle du compte. `python3 scripts/mobile-i18n-keys.py` liste les textes encore sans traduction, et un test le vérifie.
 
 ## Amis
 
@@ -191,7 +191,9 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Session** : l'API renvoie un jeton au client mobile (en-tête `X-Koto-Client: mobile`), rangé dans le coffre sécurisé du téléphone (`expo-secure-store`) et envoyé en `Authorization: Bearer`. Le web garde son cookie httpOnly, jamais exposé au JavaScript.
 - **Combats de gardiens** (`app/boss/[slug].tsx`) : vie du gardien, cœurs, coup final ; le résultat est recalculé par le serveur ; le dénouement du chapitre s'affiche à la victoire.
 - **Examens blancs** (`app/exam/[slug].tsx`) : chronomètre, navigation entre les questions, écoute avec nombre d'écoutes limité, copie rendue automatiquement à la fin du temps, résultat par compétence, conseils et erreurs corrigées.
-- Les mini-jeux et les duels restent pour l'instant sur la version web.
+- **Mini-jeux** (onglet Jeux, `app/games/[id].tsx`) : Kanji Rush, Speed Challenge et Listening Ninja, avec compte à rebours, minute chronométrée, série, correction instantanée, score validé par le serveur, record et pièces communs au compte.
+- **Langues** : français et anglais, comme le web (interface, cours, récit, contes, messages du serveur et rappels).
+- **Duels** (onglet Jeux → dojo, `app/duel/index.tsx` et `app/duel/[id].tsx`) : rang et palmarès, duel classé avec recherche d'adversaire, entraînement contre un rōnin, amis (code de duelliste, demandes, défi en un geste), invitations reçues, historique et classement. Dans l'arène, le chrono est calé sur l'horloge du serveur ; points de vie, combo, correction de chaque échange, abandon et revanche.
 
 Lancer sur un téléphone (application Expo Go) :
 
@@ -203,7 +205,7 @@ EXPO_PUBLIC_API_URL=http://<IP-de-ton-PC>:3000 npx expo start   # puis scanner l
 
 Sans variable, l'appli vise `http://10.0.2.2:3000` (émulateur Android) ou `http://localhost:3000`. Pour l'aperçu web de l'appli, ajoute son origine à l'API : `WEB_ORIGIN=http://localhost:5173,http://localhost:8081`.
 
-Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → révisions → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
+Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → lecture → mini-jeu → duel d'entraînement → révisions → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
 
 ## Mise en production
 

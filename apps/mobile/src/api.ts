@@ -1,6 +1,7 @@
 import { Platform } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import { API_URL } from './config';
+import { T, translator } from './i18n';
 
 /**
  * Client HTTP de l'application mobile : jeton de session rangé dans le coffre sécurisé
@@ -40,7 +41,20 @@ export async function saveToken(token: string | null) {
 
 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
+/** Appel à l'API ; en anglais, le texte reçu est traduit et les réponses du joueur repartent en VO. */
 export async function api<T>(path: string, init: { method?: string; body?: unknown } = {}): Promise<T> {
+  const t = translator();
+  if (!t) return raw<T>(path, init);
+  const body = init.body === undefined ? undefined : t.answersBack(init.body);
+  try {
+    return t.deep(await raw<T>(path, { ...init, body }));
+  } catch (e) {
+    if (e instanceof ApiError) throw new ApiError(e.status, t.tr(e.message));
+    throw e;
+  }
+}
+
+async function raw<T>(path: string, init: { method?: string; body?: unknown }): Promise<T> {
   let res: Response;
   try {
     res = await fetch(`${API_URL}/api${path}`, {
@@ -67,3 +81,4 @@ export async function api<T>(path: string, init: { method?: string; body?: unkno
 
 export const post = <T>(path: string, body: unknown = {}) => api<T>(path, { method: 'POST', body });
 export const put = <T>(path: string, body: unknown) => api<T>(path, { method: 'PUT', body });
+export const del = <T>(path: string) => api<T>(path, { method: 'DELETE' });
