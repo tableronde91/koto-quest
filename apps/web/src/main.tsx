@@ -23,6 +23,7 @@ import { OnboardingPage } from './pages/Onboarding';
 import { PathPage } from './pages/Path';
 import { QuizPage, ReviewSessionPage, ReviewsPage } from './pages/Reviews';
 import { SettingsPage } from './pages/Settings';
+import { ProfilePage } from './pages/Profile';
 // Les graphiques (recharts) ne sont chargés qu'à l'ouverture de la page Progrès.
 import { AchievementsPage } from './pages/Achievements';
 import { PrepaPage } from './pages/Prepa';
@@ -115,6 +116,7 @@ function App() {
           <Route path="/duel/:id" element={<DuelArenaPage key={location.pathname} />} />
           <Route path="/prepa" element={<PrepaPage me={me} />} />
           <Route path="/stats" element={<Suspense fallback={<Spinner />}><StatsPage /></Suspense>} />
+          <Route path="/profile" element={<ProfilePage me={me} />} />
           <Route path="/settings" element={<SettingsPage me={me} />} />
           {LEGAL_PAGES.map((p) => <Route key={p.path} path={p.path} element={<LegalPage />} />)}
           <Route path="/welcome" element={<Navigate to={(location.state as { from?: string } | null)?.from ?? '/'} replace />} />

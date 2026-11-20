@@ -51,6 +51,8 @@ function Gate() {
       <Stack.Screen name="boss/[slug]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="exam/[slug]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="games/[id]" options={{ gestureEnabled: false }} />
+      <Stack.Screen name="settings" />
+      <Stack.Screen name="practice" options={{ gestureEnabled: false }} />
       <Stack.Screen name="duel/index" />
       <Stack.Screen name="duel/[id]" options={{ gestureEnabled: false }} />
     </Stack>

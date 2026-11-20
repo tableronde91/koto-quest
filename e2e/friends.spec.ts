@@ -21,12 +21,12 @@ test('amis : ajout par code, alerte et acceptation, présence en ligne, défi en
   const a = await player(browser, 'Ren', baseURL!);
   const b = await player(browser, 'Yui', baseURL!);
 
-  await b.goto('/duel');
+  await b.goto('/profile');
   const code = (await b.getByTestId('my-code').textContent())!.trim();
   await b.goto('/');
 
-  // Ren ajoute Yui avec son code
-  await a.goto('/duel');
+  // Ren ajoute Yui avec son code, depuis son profil
+  await a.goto('/profile');
   await a.getByLabel('Code ou nom du joueur').fill(code);
   await a.getByRole('button', { name: 'Ajouter en ami' }).click();
   await expect(a.getByText('Demande envoyée à Yui.')).toBeVisible();
@@ -39,16 +39,18 @@ test('amis : ajout par code, alerte et acceptation, présence en ligne, défi en
   await toast.getByRole('button', { name: 'Accepter' }).click();
   await expect(toast).toBeHidden();
 
-  // Ren voit Yui en ligne et la défie en un clic
+  // Ren voit Yui en ligne dans son profil, puis la défie en un clic depuis le dojo
   await a.reload();
-  const friend = a.getByTestId('friend').filter({ hasText: 'Yui' });
+  await expect(a.getByTestId('friend').filter({ hasText: 'Yui' })).toContainText('En ligne', { timeout: 20_000 });
+  await a.goto('/duel');
+  const friend = a.getByTestId('friend-quick').filter({ hasText: 'Yui' });
   await expect(friend).toContainText('En ligne', { timeout: 20_000 });
   await friend.getByRole('button', { name: 'Défier Yui' }).click();
   await expect(a.getByRole('heading', { name: /Défi envoyé à Yui/ })).toBeVisible();
   await expect(b.getByText(/Ren.*te défie en duel/)).toBeVisible({ timeout: 15_000 });
 
   // Côté Yui, Ren apparaît dans la liste d'amis ; retrait avec confirmation
-  await b.goto('/duel');
+  await b.goto('/profile');
   const ren = b.getByTestId('friend').filter({ hasText: 'Ren' });
   await expect(ren).toBeVisible();
   await ren.getByRole('button', { name: 'Retirer Ren de mes amis' }).click();

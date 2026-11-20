@@ -96,6 +96,8 @@ describe('Traduction anglaise', () => {
       for (const m of src.matchAll(/\b(?:T|plural)\(\s*'((?:[^'\\]|\\.)*)'(?:\s*,\s*'((?:[^'\\]|\\.)*)')?(?:\s*,\s*'((?:[^'\\]|\\.)*)')?/g))
         for (const k of m.slice(1)) if (k && /[A-Za-zÀ-ÿ]/.test(k)) keys.add(k);
     }
+    // Libellés passés à T() par une table (onglet Caractères, maîtrise, registres)
+    for (const k of ['Hiragana', 'Katakana', 'Kanji', 'Expressions', 'Découverte', 'En apprentissage', 'Fragile', 'Maîtrisée', 'À réviser vite', 'Poli', 'Neutre', 'Familier', 'Formel']) keys.add(k);
     expect(keys.size).toBeGreaterThan(150);
     expect([...keys].filter((k) => !dict.has(k))).toEqual([]);
   });

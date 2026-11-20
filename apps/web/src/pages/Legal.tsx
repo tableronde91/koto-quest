@@ -158,7 +158,7 @@ function privacy(): Block[] {
         h: 'Your rights',
         p: [
           'Under the GDPR and the French Data Protection Act, you have the right to access, rectify, erase and port your data, to restrict or object to its processing, to withdraw your consent at any time, and to give instructions about your data after your death.',
-          <>Directly in the app: <Link to="/settings">Settings</Link> → “Download my data” (export) and “Delete my account” (immediate, permanent erasure). Your username and preferences can be edited in Settings. For any other request: {contact ?? 'see the legal notice'}. We reply within one month.</>,
+          <>Directly in the app: <Link to="/settings">Settings</Link> → “Download my data” (export) and “Delete my account” (immediate, permanent erasure). Your username and goals can be edited in your <Link to="/profile">Profile</Link>, other preferences in Settings. For any other request: {contact ?? 'see the legal notice'}. We reply within one month.</>,
           <>If you believe your rights are not respected, you can lodge a complaint with the CNIL ({ext('https://www.cnil.fr/fr/plaintes')}).</>,
         ],
       },
@@ -218,7 +218,7 @@ function privacy(): Block[] {
       h: 'Vos droits',
       p: [
         'Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement et de portabilité de vos données, d’un droit à la limitation et d’opposition, du droit de retirer votre consentement à tout moment, et du droit de définir des directives sur le sort de vos données après votre décès.',
-        <>Directement dans l’application : <Link to="/settings">Réglages</Link> → « Télécharger mes données » (export) et « Supprimer mon compte » (effacement immédiat et définitif). Le pseudo et les préférences se modifient dans les Réglages. Pour toute autre demande : {contact ?? 'voir les mentions légales'}. Réponse sous un mois.</>,
+        <>Directement dans l’application : <Link to="/settings">Réglages</Link> → « Télécharger mes données » (export) et « Supprimer mon compte » (effacement immédiat et définitif). Le pseudo et les objectifs se modifient dans le <Link to="/profile">Profil</Link>, les autres préférences dans les Réglages. Pour toute autre demande : {contact ?? 'voir les mentions légales'}. Réponse sous un mois.</>,
         <>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL ({ext('https://www.cnil.fr/fr/plaintes')}).</>,
       ],
     },

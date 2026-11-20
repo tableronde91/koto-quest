@@ -34,9 +34,12 @@ export function DashboardPage() {
           <Link to="/avatar?t=boutique" className="rounded-full border border-line bg-surface px-3 py-1.5 text-gold-ink" aria-label={T("{0} pièces, ouvrir la boutique", [d.coins])}>
             <Coins value={d.coins} />
           </Link>
-          <Link to="/settings" className="rounded-full p-2 text-ink-soft hover:bg-surface-2 md:hidden" aria-label={T("Réglages")}>
+          <div className="flex items-center gap-1 md:hidden">
+          <Link to="/profile" className="jp rounded-full p-2 text-xl font-black leading-none text-ink-soft hover:bg-surface-2" aria-label={T("Profil")}>人</Link>
+          <Link to="/settings" className="rounded-full p-2 text-ink-soft hover:bg-surface-2" aria-label={T("Réglages")}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" /><path d="M19 12a7 7 0 00-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 00-2-1.2L14 3h-4l-.5 2.6a7 7 0 00-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 005 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 002 1.2L10 21h4l.5-2.6a7 7 0 002-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /></svg>
           </Link>
+          </div>
         </div>
       </header>
 

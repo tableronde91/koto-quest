@@ -31,11 +31,13 @@ test('duel en ligne : défi par code, combat simultané, résultat et classement
 
   await a.goto('/duel');
   await expect(a.getByRole('heading', { name: 'Duels', level: 1 })).toBeVisible();
-  await b.goto('/duel');
-  const code = (await b.locator('code').first().textContent())!.trim();
+  await b.goto('/profile');
+  const code = (await b.getByTestId('my-code').textContent())!.trim();
   expect(code).toMatch(/^KQ-[A-Z0-9]{6}$/);
+  await b.goto('/duel');
 
-  // Kenji défie Mio avec son code
+  // Kenji retrouve Mio par son code depuis son profil et la défie
+  await a.goto('/profile');
   await a.getByLabel('Code ou nom du joueur').fill(code);
   await a.getByRole('list', { name: 'Résultats de recherche' }).getByRole('button', { name: 'Défier' }).click();
   await expect(a.getByRole('heading', { name: /Défi envoyé à Mio/ })).toBeVisible();

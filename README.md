@@ -166,10 +166,16 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Ajouter un texte** : écrire la phrase en français dans `T(…)` puis ajouter sa traduction au dictionnaire. Le test `apps/api/test/i18n.spec.ts` échoue si un texte de cours ou un exercice généré n'est pas traduit, ou si deux sens deviennent identiques en anglais.
 - **Appli mobile** : mêmes dictionnaires que le web, plus `content/i18n/en/mobile.json` pour les textes propres au téléphone (`apps/mobile/src/i18n.ts`). Langue du téléphone par défaut, choix FR/EN à l'accueil et dans les Réglages (enregistré sur le compte) ; sans choix sur le téléphone, la langue suit celle du compte. `python3 scripts/mobile-i18n-keys.py` liste les textes encore sans traduction, et un test le vérifie.
 
+## Profil
+
+- Page **Profil** (`/profile`, menu « Profil », ou carte du personnage en bas du menu) : carte d'identité (personnage, pseudo, niveau et XP, objectif JLPT, rang de duelliste, boutons « Personnaliser » et « Mes succès »), « Identité et objectifs » (pseudo, niveau visé N5 à N1, temps d'étude par jour, date d'examen) et gestion des amis.
+- Les **Réglages** gardent ce qui concerne l'application : défis dans la journée, langue et affichage, compte et données.
+- Appli mobile : onglet **Profil** (人) à la place de Réglages ; les réglages s'ouvrent depuis le bouton « 設 Réglages » du profil.
+
 ## Amis
 
-- Dans **Duels → Mes amis** : ajout par code de duelliste (`KQ-XXXXXX`) ou par nom, demande à accepter (alerte « X veut devenir ton ami » partout dans l'application), demandes croisées acceptées automatiquement.
-- Liste d'amis avec **présence en ligne** (signe de vie toutes les 10 s quand l'application est ouverte, « vu il y a… » sinon), rang, bilan de vos duels communs, bouton **Défier** en un clic, retrait avec confirmation.
+- Dans **Profil → Mes amis** : ajout par code de duelliste (`KQ-XXXXXX`) ou par nom, demande à accepter (alerte « X veut devenir ton ami » partout dans l'application), demandes croisées acceptées automatiquement.
+- Liste d'amis avec **présence en ligne** (signe de vie toutes les 10 s quand l'application est ouverte, « vu il y a… » sinon), rang, bilan de vos duels communs, bouton **Défier** en un clic, retrait avec confirmation. La page **Duels** garde un encart « Défier un ami » (amis en ligne en premier, défi en un clic) avec un lien vers la gestion des amis.
 - Après un duel contre un vrai joueur : bouton « Ajouter en ami ».
 - Limites : 200 amis, 30 demandes envoyées en attente. API : `GET /friends`, `GET /friends/requests`, `POST /friends` (`code` ou `userId`), `POST /friends/:id/accept`, `DELETE /friends/:id`.
 - Version hors ligne : non disponible (pas d'autres joueurs).
@@ -185,15 +191,16 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 
 `apps/mobile` : application iOS / Android en React Native (Expo SDK 58, expo-router), qui réutilise `@koto/shared` (contrats d'API) et `@koto/learning-engine`.
 
-- **Écrans** : connexion / inscription, profil en un écran, accueil (action du moment, série, niveau, quêtes), parcours en mode histoire sur les cinq niveaux (saga du héros, chapitre et récit de chaque île), leçon (notions avec prononciation, exemples, exercices de tous les types, reprise des erreurs, mini-révision), lecture, révisions, réglages.
+- **Écrans** : connexion / inscription, profil en un écran, accueil (action du moment, série, niveau, quêtes), parcours en mode histoire sur les cinq niveaux (saga du héros, chapitre et récit de chaque île), leçon (notions avec prononciation, exemples, exercices de tous les types, reprise des erreurs, mini-révision), onglet Kana (hiragana, katakana, kanji et expressions), lecture, révisions, profil (identité, objectifs, amis) et réglages.
 - **Lecture** : les mêmes contes que sur le web, tous ouverts ; furigana à la demande (placés au-dessus des kanji, `src/Ruby.tsx`), traduction et prononciation au toucher d'une phrase, vocabulaire, questions de compréhension, série et récompenses communes au compte.
 - **Rappels natifs** : `expo-notifications` programme chaque jour des notifications locales aux créneaux calculés par le serveur (mêmes réglages que le web) ; toucher la notification ouvre une séance de révision.
 - **Session** : l'API renvoie un jeton au client mobile (en-tête `X-Koto-Client: mobile`), rangé dans le coffre sécurisé du téléphone (`expo-secure-store`) et envoyé en `Authorization: Bearer`. Le web garde son cookie httpOnly, jamais exposé au JavaScript.
 - **Combats de gardiens** (`app/boss/[slug].tsx`) : vie du gardien, cœurs, coup final ; le résultat est recalculé par le serveur ; le dénouement du chapitre s'affiche à la victoire.
 - **Examens blancs** (`app/exam/[slug].tsx`) : chronomètre, navigation entre les questions, écoute avec nombre d'écoutes limité, copie rendue automatiquement à la fin du temps, résultat par compétence, conseils et erreurs corrigées.
+- **Kana** (onglet あ, `app/(tabs)/kana.tsx`) : grilles hiragana / katakana / kanji avec maîtrise par caractère, fiche au toucher (lectures on/kun, traits, écoute normale et lente), pratique d'un groupe ou d'une écriture entière ; expressions par thème avec recherche, registre, exemple et écoute, entraînement par thème (`app/practice.tsx`).
 - **Mini-jeux** (onglet Jeux, `app/games/[id].tsx`) : Kanji Rush, Speed Challenge et Listening Ninja, avec compte à rebours, minute chronométrée, série, correction instantanée, score validé par le serveur, record et pièces communs au compte.
 - **Langues** : français et anglais, comme le web (interface, cours, récit, contes, messages du serveur et rappels).
-- **Duels** (onglet Jeux → dojo, `app/duel/index.tsx` et `app/duel/[id].tsx`) : rang et palmarès, duel classé avec recherche d'adversaire, entraînement contre un rōnin, amis (code de duelliste, demandes, défi en un geste), invitations reçues, historique et classement. Dans l'arène, le chrono est calé sur l'horloge du serveur ; points de vie, combo, correction de chaque échange, abandon et revanche.
+- **Duels** (onglet Jeux → dojo, `app/duel/index.tsx` et `app/duel/[id].tsx`) : rang et palmarès, duel classé avec recherche d'adversaire, entraînement contre un rōnin, défi d'un ami en un geste (ajout et gestion dans le profil), invitations reçues, historique et classement. Dans l'arène, le chrono est calé sur l'horloge du serveur ; points de vie, combo, correction de chaque échange, abandon et revanche.
 
 Lancer sur un téléphone (application Expo Go) :
 
@@ -205,7 +212,7 @@ EXPO_PUBLIC_API_URL=http://<IP-de-ton-PC>:3000 npx expo start   # puis scanner l
 
 Sans variable, l'appli vise `http://10.0.2.2:3000` (émulateur Android) ou `http://localhost:3000`. Pour l'aperçu web de l'appli, ajoute son origine à l'API : `WEB_ORIGIN=http://localhost:5173,http://localhost:8081`.
 
-Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → lecture → mini-jeu → duel d'entraînement → révisions → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
+Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → kana et expressions → lecture → mini-jeu → duel d’entraînement → révisions → profil → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
 
 ## Mise en production
 

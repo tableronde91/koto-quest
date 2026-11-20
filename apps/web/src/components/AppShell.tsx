@@ -25,6 +25,7 @@ const NAV = [
   { to: '/games', label: T("Jeux"), icon: 'M6 12h4M8 10v4M15 11h.01M18 13h.01M7 6h10a5 5 0 015 5v2a5 5 0 01-5 5c-1.5 0-2.5-1-3.5-2h-3c-1 1-2 2-3.5 2a5 5 0 01-5-5v-2a5 5 0 015-5z' },
   { to: '/duel', label: T("Duels"), glyph: '闘', icon: '' },
   { to: '/stats', label: T("Progrès"), icon: 'M4 20V10M10 20V4M16 20v-7M22 20H2' },
+  { to: '/profile', label: T("Profil"), glyph: '人', icon: '' },
   { to: '/settings', label: T("Réglages"), icon: "M12 15a3 3 0 100-6 3 3 0 000 6zM19 12a7 7 0 00-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 00-2-1.2L14 3h-4l-.5 2.6a7 7 0 00-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 005 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 002 1.2L10 21h4l.5-2.6a7 7 0 002-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z" },
 ];
 
@@ -72,7 +73,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
               {n.to === '/reviews' && due > 0 && <span className="rounded-full bg-gold px-2 text-sm text-[#2a1a00]">{due}</span>}
             </NavLink>
           ))}
-          <NavLink to="/avatar" className={({ isActive }) => `mt-auto flex items-center gap-3 rounded-2xl p-2 ${isActive ? 'bg-surface-2' : 'hover:bg-surface-2'}`} aria-label={T("Mon personnage, {0} pièces", [me.coins])}>
+          <NavLink to="/profile" className={({ isActive }) => `mt-auto flex items-center gap-3 rounded-2xl p-2 ${isActive ? 'bg-surface-2' : 'hover:bg-surface-2'}`} aria-label={T("Mon profil, {0} pièces", [me.coins])}>
             <span className="overflow-hidden rounded-xl border border-line"><Avatar config={me.avatar} size={48} /></span>
             <span className="min-w-0">
               <span className="block truncate font-bold">{me.displayName}</span>
@@ -89,7 +90,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
 
       {!immersive && (
         <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-9 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
-          {NAV.filter((n) => n.to !== '/settings').map((n) => (
+          {NAV.filter((n) => n.to !== '/settings' && n.to !== '/profile').map((n) => (
             <NavLink key={n.to} to={n.to} end={n.to === '/'} aria-label={n.label} className={({ isActive }) => `relative flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-bold ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
               <Icon d={n.icon} glyph={(n as { glyph?: string }).glyph} />
               {(n as { short?: string }).short ?? n.label}

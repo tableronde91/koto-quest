@@ -146,5 +146,17 @@
  "Île {0} · {1}": "Island {0} · {1}",
  "écouter": "listen",
  "← Tous les contes": "← All tales",
- "−{0} au dernier échange": "−{0} in the last exchange"
+ "−{0} au dernier échange": "−{0} in the last exchange",
+ "AAAA-MM-JJ (facultatif)": "YYYY-MM-DD (optional)",
+ "Connecté avec {0}": "Signed in as {0}",
+ "Date attendue au format AAAA-MM-JJ, par exemple 2027-07-04.": "Expected date format: YYYY-MM-DD, for example 2027-07-04.",
+ "Expressions": "Expressions",
+ "Fragile": "Fragile",
+ "Hiragana": "Hiragana",
+ "Katakana": "Katakana",
+ "Kun’yomi": "Kun’yomi",
+ "On’yomi": "On’yomi",
+ "Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.": "Japanese scripts and everyday phrases, available any time.",
+ "Pas encore vue": "Not seen yet",
+ "{0} vus": "{0} seen"
 }

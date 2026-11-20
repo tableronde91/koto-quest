@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
 import type { MeDto, ReminderMode } from '@koto/shared';
 import { ApiError, LOCAL, del, post } from '../api/client';
@@ -181,16 +181,8 @@ function StudySection({ me }: { me: MeDto }) {
   const p = me.preferences;
   return (
     <section aria-labelledby="study-title" className="flex flex-col gap-5">
-      <h2 id="study-title" className="text-2xl">{T("Apprentissage et affichage")}</h2>
+      <h2 id="study-title" className="text-2xl">{T("Langue et affichage")}</h2>
       <div className="flex flex-wrap gap-6">
-        <label className="flex flex-col gap-1 font-bold">{T("Pseudo")}<input className="field w-60 font-normal" defaultValue={me.displayName} maxLength={40} onBlur={(e) => e.target.value.trim() && e.target.value !== me.displayName && update.mutate({ displayName: e.target.value })} />
-        </label>
-        <label className="flex flex-col gap-1 font-bold">{T("Temps d’étude par jour")}<select className="field w-44 font-normal" value={p.minutesPerDay} onChange={(e) => update.mutate({ minutesPerDay: Number(e.target.value) })}>
-            {[10, 15, 20, 30, 45, 60, 90].map((m) => <option key={m} value={m}>{T("{0} min", [m ])}</option>)}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1 font-bold">{T("Date d’examen")}<input type="date" className="field w-48 font-normal" defaultValue={p.examDate ?? ''} onBlur={(e) => update.mutate({ examDate: e.target.value || null })} />
-        </label>
         <div className="flex flex-col gap-1 font-bold">
           <span id="lang-label">{T("Langue de l’application")}</span>
           <LanguageSwitch saveToAccount />
@@ -207,7 +199,7 @@ function StudySection({ me }: { me: MeDto }) {
         <input type="checkbox" className="h-5 w-5 accent-[var(--ink)]" checked={p.showFurigana} onChange={(e) => update.mutate({ showFurigana: e.target.checked })} />{T("Afficher les furigana (lecture au-dessus des kanji)")}</label>
       <label className="flex items-center gap-3">
         <input type="checkbox" className="h-5 w-5 accent-[var(--ink)]" checked={p.reducedMotion} onChange={(e) => update.mutate({ reducedMotion: e.target.checked })} />{T("Réduire les animations")}</label>
-      <p className="text-sm text-ink-soft">{T("Fuseau horaire : {0}. Objectif : JLPT {1}.", [ p.timezone , p.targetLevel ])}</p>
+      <p className="text-sm text-ink-soft">{T("Fuseau horaire : {0}.", [p.timezone])} <Link to="/profile" className="underline">{T("Pseudo, niveau visé et objectifs : voir le profil.")}</Link></p>
     </section>
   );
 }

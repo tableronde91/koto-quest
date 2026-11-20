@@ -330,3 +330,54 @@ export function FriendRequestWatcher({ path }: { path: string }) {
     </motion.div>
   );
 }
+
+/** Encart du dojo : les amis (en ligne d'abord) à défier en un clic ; la gestion se fait dans le profil. */
+export function FriendsChallengeCard({ lobby, onChange }: { lobby: DuelLobbyDto; onChange: () => void }) {
+  const nav = useNavigate();
+  const { data } = useFriends(lobby.online);
+  const [err, setErr] = useState<unknown>(null);
+  const friends = [...(data?.friends ?? [])].sort((a, b) => Number(b.online) - Number(a.online)).slice(0, 5);
+
+  async function challenge(userId: string) {
+    setErr(null);
+    try {
+      const r = await post<{ duelId: string }>('/duels/challenges', { userId });
+      onChange();
+      nav(`/duel/${r.duelId}`);
+    } catch (e) {
+      setErr(e);
+    }
+  }
+
+  return (
+    <section id="amis" aria-labelledby="friends-challenge-title" className="flex flex-col gap-3 rounded-3xl border border-line bg-surface p-5">
+      <div className="flex flex-wrap items-center gap-2">
+        <h2 id="friends-challenge-title" className="flex-1 text-xl">{T('Défier un ami')}</h2>
+        <Link to="/profile#amis" className="btn btn-quiet min-h-10 px-3 text-sm">{T('Gérer mes amis')}</Link>
+      </div>
+      {!lobby.online ? (
+        <p className="text-ink-soft">{T('Disponible dans la version en ligne : ajoute tes amis avec leur code, vois qui est en ligne et défie-les en un clic.')}</p>
+      ) : friends.length === 0 ? (
+        data && <p className="text-ink-soft">{T('Tu n’as pas encore d’amis. Ajoute-les depuis ton profil avec leur code de duelliste.')}</p>
+      ) : (
+        <ul className="flex flex-col gap-2" aria-label={T('Amis à défier')}>
+          {friends.map((f) => (
+            <li key={f.id} className="flex items-center gap-3 rounded-2xl border border-line p-2.5" data-testid="friend-quick">
+              <PlayerFace p={f.player} online={f.online} />
+              <p className="min-w-0 flex-1">
+                <span className="block truncate font-bold">{f.player.name}</span>
+                <span className={`text-sm ${f.online ? 'font-bold text-[#1F7A40]' : 'text-ink-soft'}`}>{seen(f)}</span>
+              </p>
+              {f.pendingDuelId ? (
+                <Link to={`/duel/${f.pendingDuelId}`} className="btn btn-quiet min-h-10 px-3">{T('Défi en attente')}</Link>
+              ) : (
+                <button className={`btn min-h-10 px-4 ${f.online ? 'btn-gold' : 'btn-quiet'}`} onClick={() => challenge(f.player.userId)} aria-label={T('Défier {0}', [f.player.name])}>{T('Défier')}</button>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+      {err != null && <ErrorBox error={err} />}
+    </section>
+  );
+}

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import type { DuelInviteDto, DuelQueueDto } from '@koto/shared';
 import { DUEL_RULES } from '@koto/learning-engine';
 import { api, del, post } from '../../src/api';
-import { useDuelLeaderboard, useDuelLobby, useFriends } from '../../src/hooks';
+import { useDuelLeaderboard, useDuelLobby } from '../../src/hooks';
+import { FriendsQuick } from '../../src/Friends';
 import { RankBadge } from '../../src/RankBadge';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
@@ -159,7 +160,7 @@ export default function DuelLobbyScreen() {
         </>
       )}
 
-      <FriendsSection code={p.code} onOpen={open} />
+      <FriendsQuick onOpen={open} />
 
       <View style={{ flexDirection: 'row', gap: 8 }} accessibilityRole="tablist">
         {(['board', 'history'] as const).map((t) => (
@@ -241,94 +242,6 @@ function InviteCard({ invite, onOpen, onDone }: { invite: DuelInviteDto; onOpen:
         <Button label={T('Accepter')} tone="gold" style={{ flex: 1 }} onPress={async () => { try { await post(`/duels/${invite.id}/accept`); onOpen(invite.id); } catch (e) { setErr(e); } }} />
         <Button label={T('Refuser')} tone="quiet" style={{ flex: 1 }} onPress={async () => { await post(`/duels/${invite.id}/decline`).catch(() => undefined); onDone(); }} />
       </View>
-    </Card>
-  );
-}
-
-/** Amis : code à partager, ajout par code, demandes reçues, défi en un geste. */
-function FriendsSection({ code, onOpen }: { code: string; onOpen: (id: string) => void }) {
-  const qc = useQueryClient();
-  const { data } = useFriends();
-  const [input, setInput] = useState('');
-  const [msg, setMsg] = useState<string | null>(null);
-  const [err, setErr] = useState<unknown>(null);
-  const refresh = () => qc.invalidateQueries({ queryKey: ['friends'] });
-  const act = async (fn: () => Promise<unknown>) => {
-    setErr(null);
-    setMsg(null);
-    try {
-      await fn();
-    } catch (e) {
-      setErr(e);
-    }
-  };
-
-  return (
-    <Card style={{ gap: 12 }} testID="duel-friends">
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-        <View style={{ width: 52, height: 52, borderRadius: 14, backgroundColor: '#3FA7A0', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff' }}>友</Text>
-        </View>
-        <View style={{ flex: 1 }}>
-          <H2>{T('Défier un ami')}</H2>
-          <P soft style={{ fontSize: 14 }}>{T('Duel amical, sans effet sur le classement.')}</P>
-        </View>
-      </View>
-      <P>{T('Ton code de duelliste :')} <Text style={{ fontWeight: '900', letterSpacing: 1 }}>{code}</Text></P>
-      <View style={{ flexDirection: 'row', gap: 8 }}>
-        <TextInput
-          value={input}
-          onChangeText={setInput}
-          autoCapitalize="characters"
-          autoCorrect={false}
-          placeholder={T('Code d’un ami (KQ-…)')}
-          placeholderTextColor={C.inkSoft}
-          accessibilityLabel={T('Code de duelliste d’un ami')}
-          style={{ flex: 1, borderWidth: 2, borderColor: C.line, borderRadius: 14, paddingHorizontal: 12, fontSize: 16, color: C.ink, minHeight: 50 }}
-        />
-        <Button
-          label={T('Ajouter')}
-          disabled={!input.trim()}
-          onPress={() => act(async () => {
-            await post('/friends', { code: input.trim() });
-            setInput('');
-            setMsg(T('Demande envoyée.'));
-            refresh();
-          })}
-        />
-      </View>
-      {msg && <P style={{ color: C.ok, fontWeight: '700' }}>{msg}</P>}
-      {err != null && <ErrorBox error={err} />}
-
-      {data?.incoming.map((r) => (
-        <View key={r.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <RankBadge rank={r.player.rank} size={36} />
-          <P style={{ flex: 1 }}>{T('{0} veut être ton ami', [r.player.name])}</P>
-          <Button label={T('Accepter')} tone="gold" onPress={() => act(async () => { await post(`/friends/${r.id}/accept`); refresh(); })} />
-        </View>
-      ))}
-      {data?.outgoing.map((r) => (
-        <P key={r.id} soft style={{ fontSize: 14 }}>{T('Demande envoyée à {0}, en attente.', [r.player.name])}</P>
-      ))}
-
-      {data && data.friends.length === 0 && <P soft style={{ fontSize: 14 }}>{T('Pas encore d’ami : partage ton code ou entre le leur.')}</P>}
-      {data?.friends.map((f) => (
-        <View key={f.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <View>
-            <RankBadge rank={f.player.rank} size={40} />
-            <View style={{ position: 'absolute', right: -2, bottom: -2, width: 14, height: 14, borderRadius: 7, borderWidth: 2, borderColor: C.surface, backgroundColor: f.online ? C.ok : C.line }} />
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontWeight: '800', color: C.ink }}>{f.player.name}</Text>
-            <Text style={{ fontSize: 12, color: C.inkSoft }}>{f.online ? T('En ligne') : T('Hors ligne')} · {T('{0} V – {1} D', [f.record.wins, f.record.losses])}</Text>
-          </View>
-          {f.pendingDuelId ? (
-            <Button label={T('Voir le défi')} tone="quiet" onPress={() => onOpen(f.pendingDuelId!)} />
-          ) : (
-            <Button label={T('Défier')} onPress={() => act(async () => onOpen((await post<{ duelId: string }>('/duels/challenges', { userId: f.player.userId })).duelId))} />
-          )}
-        </View>
-      ))}
     </Card>
   );
 }

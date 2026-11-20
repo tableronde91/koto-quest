@@ -855,5 +855,21 @@
  "{0} minutes, {1} questions, non officiel": "{0} minutes, {1} questions, unofficial",
  "Examen blanc non officiel": "Unofficial mock exam",
  "N1 — avancé": "N1 — advanced",
- "Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme du JLPT.": "Samurai at N5, ninja at N4, spirit at N3, onmyōji at N2, shōgun at N1: every level is an adventure, with 5 to 10 minute lessons that follow the JLPT syllabus."
+ "Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme du JLPT.": "Samurai at N5, ninja at N4, spirit at N3, onmyōji at N2, shōgun at N1: every level is an adventure, with 5 to 10 minute lessons that follow the JLPT syllabus.",
+ "Amis à défier": "Friends to challenge",
+ "Carte d’identité": "Player card",
+ "Fuseau horaire : {0}.": "Time zone: {0}.",
+ "Gérer mes amis": "Manage my friends",
+ "Identité et objectifs": "Identity and goals",
+ "JLPT {0}": "JLPT {0}",
+ "Langue et affichage": "Language and display",
+ "Mon profil, {0} pièces": "My profile, {0} coins",
+ "Niveau visé": "Target level",
+ "Niveau {0} · objectif JLPT {1}": "Level {0} · goal: JLPT {1}",
+ "Personnaliser": "Customize",
+ "Profil": "Profile",
+ "Pseudo, niveau visé et objectifs : voir le profil.": "Username, target level and goals: see your profile.",
+ "Tu n’as pas encore d’amis. Ajoute-les depuis ton profil avec leur code de duelliste.": "You don’t have any friends yet. Add them from your profile with their duellist code.",
+ "XP du niveau": "Level XP",
+ "{0} / {1} XP": "{0} / {1} XP"
 }

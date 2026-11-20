@@ -1,21 +1,23 @@
 import { useEffect, useState } from 'react';
-import { Switch, Text, View } from 'react-native';
+import { Pressable, Switch, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import type { NotificationPrefsDto } from '@koto/shared';
-import { put } from '../../src/api';
-import { useAuth } from '../../src/auth';
-import { API_URL } from '../../src/config';
-import { useNotifPrefs } from '../../src/hooks';
-import { cancelReminders, notificationsSupported, requestPermission, scheduleReminders } from '../../src/notifications';
-import { C } from '../../src/theme';
-import { Button, Card, H1, H2, P, Screen } from '../../src/ui';
-import { LanguageSwitch } from '../../src/LanguageSwitch';
-import { T, plural } from '../../src/i18n';
+import { put } from '../src/api';
+import { useAuth } from '../src/auth';
+import { API_URL } from '../src/config';
+import { useNotifPrefs } from '../src/hooks';
+import { cancelReminders, notificationsSupported, requestPermission, scheduleReminders } from '../src/notifications';
+import { C } from '../src/theme';
+import { Button, Card, H1, H2, P, Screen } from '../src/ui';
+import { LanguageSwitch } from '../src/LanguageSwitch';
+import { T, plural } from '../src/i18n';
 
 const hhmm = (m: number) => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
 
 export default function Settings() {
   const { me, logout } = useAuth();
+  const router = useRouter();
   const qc = useQueryClient();
   const { data: prefs } = useNotifPrefs();
   const [busy, setBusy] = useState(false);
@@ -53,12 +55,12 @@ export default function Settings() {
   const on = !!prefs?.consent && !!prefs?.enabled;
   return (
     <Screen>
-      <H1>{T('Réglages')}</H1>
-      <Card style={{ gap: 4 }}>
-        <Text style={{ fontWeight: '800', fontSize: 18, color: C.ink }}>{me?.displayName}</Text>
-        <P soft>{me?.email}</P>
-        <P soft>{T('Objectif {0} · {1} min par jour', [me?.preferences.targetLevel, me?.preferences.minutesPerDay])}</P>
-      </Card>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Pressable accessibilityRole="button" accessibilityLabel={T('Retour')} onPress={() => (router.canGoBack() ? router.back() : router.replace('/profile'))} hitSlop={12}>
+          <Text style={{ fontSize: 26, color: C.ink, fontWeight: '800' }}>‹</Text>
+        </Pressable>
+        <H1>{T('Réglages')}</H1>
+      </View>
 
       <H2>{T('Langue')}</H2>
       <LanguageSwitch saveToAccount />
@@ -75,6 +77,7 @@ export default function Settings() {
       </Card>
 
       <H2>{T('Compte')}</H2>
+      <P soft>{T('Connecté avec {0}', [me?.email ?? ''])}</P>
       <Button tone="quiet" label={T('Se déconnecter')} onPress={async () => { await cancelReminders(); await logout(); }} />
       <P soft style={{ fontSize: 12, textAlign: 'center' }}>{T('Serveur : {0}', [API_URL])}</P>
     </Screen>

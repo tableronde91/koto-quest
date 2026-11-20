@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import type { DuelLeaderboardDto, DuelLobbyDto, FriendsDto, DashboardDto, GamesDto, NotificationPrefsDto, PathDto, ReadingChapterDto, ReadingOverviewDto } from '@koto/shared';
+import type { CharactersDto, ExpressionsDto, DuelLeaderboardDto, DuelLobbyDto, FriendsDto, DashboardDto, GamesDto, NotificationPrefsDto, PathDto, ReadingChapterDto, ReadingOverviewDto } from '@koto/shared';
 import { api } from './api';
 
 export const useDashboard = () => useQuery({ queryKey: ['dashboard'], queryFn: () => api<DashboardDto>('/dashboard') });
@@ -12,3 +12,5 @@ export const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api
 export const useDuelLobby = () => useQuery({ queryKey: ['duels'], queryFn: () => api<DuelLobbyDto>('/duels'), refetchInterval: 5000 });
 export const useFriends = () => useQuery({ queryKey: ['friends'], queryFn: () => api<FriendsDto>('/friends'), refetchInterval: 15_000 });
 export const useDuelLeaderboard = () => useQuery({ queryKey: ['duel-board'], queryFn: () => api<DuelLeaderboardDto>('/duels/leaderboard?sort=rating') });
+export const useCharacters = () => useQuery({ queryKey: ['characters'], queryFn: () => api<CharactersDto>('/characters') });
+export const useExpressions = () => useQuery({ queryKey: ['expressions'], queryFn: () => api<ExpressionsDto>('/expressions') });

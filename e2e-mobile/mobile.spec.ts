@@ -87,6 +87,30 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   // Gardien pas encore accessible tant que les leçons de l'île ne sont pas finies
   await expect(page.getByRole('button', { name: /Gardien : Le Sceau Animé, termine les leçons/ })).toBeDisabled();
 
+  // Caractères : grille des hiragana (les voyelles sont vues), fiche d'un caractère, pratique d'un groupe
+  await page.getByRole('tab', { name: /Kana/ }).click();
+  await expect(page.getByRole('heading', { name: 'Caractères' })).toBeVisible();
+  await page.getByRole('button', { name: /^あ, a, / }).click();
+  await expect(page.getByTestId('char-sheet')).toBeVisible();
+  await page.getByRole('button', { name: 'Fermer' }).click();
+  await expect(page.getByTestId('char-sheet')).toHaveCount(0);
+  await page.getByRole('button', { name: /^Pratiquer : / }).first().click();
+  await answerUntil(page, /Séance terminée/);
+  await expect(page.getByText(/bonnes réponses · \+\d+ XP/)).toBeVisible();
+  await page.getByRole('button', { name: 'Retour aux caractères' }).click();
+  await page.getByRole('tab', { name: 'Kanji' }).click();
+  await expect(page.getByTestId('char-group').filter({ visible: true }).first()).toBeVisible();
+  // Expressions : recherche, puis un thème à pratiquer (on quitte après la première question)
+  await page.getByRole('tab', { name: 'Expressions' }).click();
+  await page.getByLabel('Rechercher une expression').fill('merci');
+  await expect(page.getByText(/expression\(s\) trouvée\(s\)/)).toBeVisible();
+  await expect(page.getByTestId('expression').filter({ visible: true }).first()).toBeVisible();
+  await page.getByLabel('Rechercher une expression').fill('');
+  await page.getByRole('button', { name: 'Apprendre ces expressions' }).click();
+  await expect(page.getByTestId('question').last()).toBeVisible({ timeout: 10_000 });
+  await page.getByRole('button', { name: 'Quitter la session' }).click();
+  await expect(page.getByRole('heading', { name: 'Caractères' })).toBeVisible();
+
   // Lecture : tout est ouvert, liseuse avec traduction au toucher, compréhension
   await page.getByRole('tab', { name: /Lecture/ }).click();
   await expect(page.getByRole('heading', { name: 'Lecture', exact: true })).toBeVisible();
@@ -131,7 +155,7 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   // Duels : entraînement contre un rōnin, une réponse puis abandon
   await page.getByRole('button', { name: 'Entrer dans le dojo' }).click();
   await expect(page.getByText('TON RANG')).toBeVisible();
-  await expect(page.getByText(/Ton code de duelliste/)).toBeVisible();
+  await expect(page.getByTestId('duel-friends').filter({ visible: true })).toBeVisible();
   await page.getByTestId('duel-practice').click();
   await expect(page.getByTestId('duel-arena').filter({ visible: true })).toBeVisible();
   await expect(page.getByTestId('duel-question').filter({ visible: true })).toBeVisible({ timeout: 15_000 });
@@ -145,10 +169,20 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByText('Défaite').filter({ visible: true }).first()).toBeVisible();
   await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
 
-  // Révisions et réglages
+  // Révisions, profil et réglages
   await page.getByRole('tab', { name: /Révisions/ }).click();
   await expect(page.getByRole('heading', { name: 'Révisions' })).toBeVisible();
-  await page.getByRole('tab', { name: /Réglages/ }).click();
+  await page.getByRole('tab', { name: /Profil/ }).click();
+  await expect(page.getByRole('heading', { name: 'Profil' }).filter({ visible: true })).toBeVisible();
+  await expect(page.getByText(/^Niveau \d+ · objectif JLPT N5$/).filter({ visible: true })).toBeVisible();
+  await expect(page.getByTestId('my-code').filter({ visible: true })).toHaveText(/^KQ-/);
+  // Niveau visé modifié depuis le profil, enregistré sur le compte
+  await page.getByRole('radiogroup', { name: 'Niveau visé' }).filter({ visible: true }).getByRole('radio', { name: 'N4' }).click();
+  await expect(page.getByText(/objectif JLPT N4$/).filter({ visible: true })).toBeVisible();
+  await page.getByRole('radiogroup', { name: 'Niveau visé' }).filter({ visible: true }).getByRole('radio', { name: 'N5' }).click();
+  await expect(page.getByText(/objectif JLPT N5$/).filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Réglages' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Réglages' }).filter({ visible: true })).toBeVisible();
   await page.getByRole('switch', { name: 'Recevoir les rappels' }).click();
   await expect(page.getByText(/Rappels enregistrés/).filter({ visible: true })).toBeVisible();
   await expect(page.getByText(/Créneaux du jour/).filter({ visible: true })).toBeVisible();
@@ -156,12 +190,15 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   // Anglais : interface, données de l'API et récit traduits ; retour au français
   await page.getByRole('radio', { name: 'English' }).click();
   await expect(page.getByRole('heading', { name: 'Settings' }).filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Back' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Profile' }).filter({ visible: true })).toBeVisible();
   await page.getByRole('tab', { name: /Path/ }).click();
   await expect(page.getByText(/STORY MODE/).filter({ visible: true }).first()).toBeVisible();
   await expect(page.getByText(/^Chapter 1 · /).filter({ visible: true }).first()).toBeVisible();
   await page.getByRole('tab', { name: /Home/ }).click();
   await expect(page.getByText('Daily quests').filter({ visible: true })).toBeVisible();
-  await page.getByRole('tab', { name: /Settings/ }).click();
+  await page.getByRole('tab', { name: /Profile/ }).click();
+  await page.getByRole('button', { name: 'Settings' }).filter({ visible: true }).click();
   await page.getByRole('radio', { name: 'Français' }).click();
   await expect(page.getByRole('heading', { name: 'Réglages' }).filter({ visible: true })).toBeVisible();
 

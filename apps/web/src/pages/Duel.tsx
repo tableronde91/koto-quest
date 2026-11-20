@@ -11,7 +11,7 @@ import { BossCreature, type BossMood } from '../components/BossCreature';
 import { Confetti, CountUp, Stamp, useCalm } from '../components/Celebrate';
 import { CrossedSwords, HpPlate, RankBadge } from '../components/DuelBits';
 import { T } from '../i18n';
-import { AddFriendButton, FriendsPanel } from '../components/Friends';
+import { AddFriendButton, FriendsChallengeCard } from '../components/Friends';
 
 const JP_RE = /[぀-ヿ一-龯]/;
 const KIND_LABEL = { ranked: T("Classé"), friendly: T("Amical"), practice: T("Entraînement") } as const;
@@ -163,7 +163,7 @@ export function DuelLobbyPage() {
         <ModeCard glyph="浪" color="#7B5BD6" title={T("Entraînement")} text={T("Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.")} action={T("S’entraîner")} onClick={practice} />
       </section>
 
-      <FriendsPanel lobby={data} onChange={() => qc.invalidateQueries({ queryKey: ['duels'] })} />
+      <FriendsChallengeCard lobby={data} onChange={() => qc.invalidateQueries({ queryKey: ['duels'] })} />
 
       {/* Classement et historique */}
       <section className="flex flex-col gap-4">
