@@ -158,5 +158,13 @@
  "On’yomi": "On’yomi",
  "Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.": "Japanese scripts and everyday phrases, available any time.",
  "Pas encore vue": "Not seen yet",
- "{0} vus": "{0} seen"
+ "{0} vus": "{0} seen",
+ "Blond": "Blond",
+ "Rare": "Rare",
+ "obtenu": "unlocked",
+ "obtenu le {0}": "unlocked on {0}",
+ "Niveau {0} · {1} XP au total": "Level {0} · {1} XP in total",
+ "{0} jour(s) d’entraînement sur les 14 derniers": "{0} training day(s) in the last 14",
+ "{0} maîtrisé(s) · {1} rencontré(s) · encore {2} pour monter": "{0} mastered · {1} met · {2} more to level up",
+ "{0} notion(s) à arroser.": "{0} item(s) need watering."
 }

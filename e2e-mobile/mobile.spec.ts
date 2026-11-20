@@ -58,6 +58,8 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await answerUntil(page, /Sans faute|Leçon terminée/);
   await expect(page.getByText(/\+\d+ XP/).filter({ visible: true }).first()).toBeVisible();
   await page.getByRole('button', { name: 'Retour à l’accueil' }).click();
+  // Succès vérifié en revenant à l'accueil : bannière « Succès débloqué »
+  await expect(page.getByTestId('achievement-toast')).toBeVisible({ timeout: 10_000 });
 
   // Parcours : la leçon est terminée, la suivante est ouverte
   await page.getByRole('tab', { name: /Parcours/ }).click();
@@ -181,6 +183,26 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByText(/objectif JLPT N4$/).filter({ visible: true })).toBeVisible();
   await page.getByRole('radiogroup', { name: 'Niveau visé' }).filter({ visible: true }).getByRole('radio', { name: 'N5' }).click();
   await expect(page.getByText(/objectif JLPT N5$/).filter({ visible: true })).toBeVisible();
+  // Personnage : apparence enregistrée, boutique
+  await page.getByRole('button', { name: 'Personnaliser' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Mon personnage' }).filter({ visible: true })).toBeVisible();
+  await page.getByRole('radio', { name: 'Longs' }).filter({ visible: true }).click();
+  await page.getByRole('button', { name: 'Enregistrer' }).filter({ visible: true }).click();
+  await expect(page.getByText('Apparence enregistrée.').filter({ visible: true })).toBeVisible();
+  await page.getByRole('tab', { name: 'Boutique' }).filter({ visible: true }).click();
+  await expect(page.getByTestId('shop-item').filter({ visible: true }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+  // Succès : la première leçon en a débloqué au moins un
+  await page.getByRole('button', { name: 'Mes succès' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Succès' }).filter({ visible: true })).toBeVisible();
+  await expect(page.getByText(/^[1-9]\d* sur \d+ débloqués$/).filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+  // Mon aventure : fiche du héros, compétences, jardin
+  await page.getByRole('button', { name: 'Mon aventure' }).filter({ visible: true }).click();
+  await expect(page.getByTestId('hero').filter({ visible: true })).toBeVisible();
+  await expect(page.getByTestId('skill').filter({ visible: true })).toHaveCount(4);
+  await expect(page.getByText('Jardin de la mémoire').filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
   await page.getByRole('button', { name: 'Réglages' }).filter({ visible: true }).click();
   await expect(page.getByRole('heading', { name: 'Réglages' }).filter({ visible: true })).toBeVisible();
   await page.getByRole('switch', { name: 'Recevoir les rappels' }).click();

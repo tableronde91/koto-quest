@@ -63,7 +63,7 @@ function CharactersPane({ slug }: { slug: CharacterSectionDto['slug'] }) {
     <View style={{ gap: 18 }} testID="characters">
       <View style={{ backgroundColor: C.ink, borderRadius: 24, padding: 18, gap: 10 }}>
         <Text style={{ color: C.paper, opacity: 0.85 }}>{section.description}</Text>
-        <ProgressBar value={section.learned} max={section.total} color={C.gold} label={T('{0} vus', [section.title])} />
+        <View style={{ flexDirection: 'row' }}><ProgressBar value={section.learned} max={section.total} color={C.gold} label={T('{0} vus', [section.title])} /></View>
         <Text style={{ color: C.paper, opacity: 0.85, fontSize: 13 }}>{T('{0} sur {1} vus, {2} maîtrisés', [section.learned, section.total, section.mastered])}</Text>
         <Button
           tone="gold"
@@ -227,7 +227,7 @@ function ExpressionsPane() {
               <Text accessibilityRole="header" style={{ flex: 1, color: C.paper, fontSize: 22, fontWeight: '800' }}>{theme.title}</Text>
             </View>
             <Text style={{ color: C.paper, opacity: 0.85 }}>{theme.description}</Text>
-            <ProgressBar value={theme.learned} max={theme.total} color={C.gold} label={T('Expressions vues : {0}', [theme.title])} />
+            <View style={{ flexDirection: 'row' }}><ProgressBar value={theme.learned} max={theme.total} color={C.gold} label={T('Expressions vues : {0}', [theme.title])} /></View>
             <Text style={{ color: C.paper, opacity: 0.85, fontSize: 13 }}>{T('{0} sur {1} vues, {2} maîtrisées', [theme.learned, theme.total, theme.mastered])}</Text>
             <Button
               tone="gold"

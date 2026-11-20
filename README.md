@@ -198,6 +198,9 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Combats de gardiens** (`app/boss/[slug].tsx`) : vie du gardien, cœurs, coup final ; le résultat est recalculé par le serveur ; le dénouement du chapitre s'affiche à la victoire.
 - **Examens blancs** (`app/exam/[slug].tsx`) : chronomètre, navigation entre les questions, écoute avec nombre d'écoutes limité, copie rendue automatiquement à la fin du temps, résultat par compétence, conseils et erreurs corrigées.
 - **Kana** (onglet あ, `app/(tabs)/kana.tsx`) : grilles hiragana / katakana / kanji avec maîtrise par caractère, fiche au toucher (lectures on/kun, traits, écoute normale et lente), pratique d'un groupe ou d'une écriture entière ; expressions par thème avec recherche, registre, exemple et écoute, entraînement par thème (`app/practice.tsx`).
+- **Personnage** (`app/character.tsx`, depuis le profil ou les pièces de l'accueil) : même dessin que le web (`src/Avatar.tsx`, react-native-svg), apparence, garde-robe et boutique (achats en pièces, trophées des gardiens).
+- **Succès** (`app/achievements.tsx`) : médailles par catégorie ; vérifiés à chaque changement d'écran (hors séance en cours), avec une bannière « Succès débloqué » (`src/Achievements.tsx`).
+- **Mon aventure** (`app/progress.tsx`, depuis l'accueil ou le profil) : fiche du héros, compétences, jardin de la mémoire, carnet des 14 derniers jours, examens blancs.
 - **Mini-jeux** (onglet Jeux, `app/games/[id].tsx`) : Kanji Rush, Speed Challenge et Listening Ninja, avec compte à rebours, minute chronométrée, série, correction instantanée, score validé par le serveur, record et pièces communs au compte.
 - **Langues** : français et anglais, comme le web (interface, cours, récit, contes, messages du serveur et rappels).
 - **Duels** (onglet Jeux → dojo, `app/duel/index.tsx` et `app/duel/[id].tsx`) : rang et palmarès, duel classé avec recherche d'adversaire, entraînement contre un rōnin, défi d'un ami en un geste (ajout et gestion dans le profil), invitations reçues, historique et classement. Dans l'arène, le chrono est calé sur l'horloge du serveur ; points de vie, combo, correction de chaque échange, abandon et revanche.
@@ -212,7 +215,7 @@ EXPO_PUBLIC_API_URL=http://<IP-de-ton-PC>:3000 npx expo start   # puis scanner l
 
 Sans variable, l'appli vise `http://10.0.2.2:3000` (émulateur Android) ou `http://localhost:3000`. Pour l'aperçu web de l'appli, ajoute son origine à l'API : `WEB_ORIGIN=http://localhost:5173,http://localhost:8081`.
 
-Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → kana et expressions → lecture → mini-jeu → duel d’entraînement → révisions → profil → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
+Tests : `npx playwright test -c playwright.mobile.config.ts` (après `EXPO_PUBLIC_API_URL=http://localhost:3000 npm run export:web -w @koto/mobile`) déroule inscription → leçon complète → parcours → kana et expressions → lecture → mini-jeu → duel d’entraînement → révisions → profil → personnage et boutique → succès → mon aventure → rappels → déconnexion sur un téléphone émulé, contre la vraie API.
 
 ## Mise en production
 

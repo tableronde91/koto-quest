@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider, useAuth } from '../src/auth';
+import { AchievementWatcher } from '../src/Achievements';
 import { onNotificationOpen } from '../src/notifications';
 import { C } from '../src/theme';
 import { Loading } from '../src/ui';
@@ -41,6 +42,7 @@ function Gate() {
 
   if (!ready) return <Loading label={T('Ouverture de Koto Quest…')} />;
   return (
+    <>
     <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: C.paper } }}>
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="welcome" />
@@ -52,10 +54,15 @@ function Gate() {
       <Stack.Screen name="exam/[slug]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="games/[id]" options={{ gestureEnabled: false }} />
       <Stack.Screen name="settings" />
+      <Stack.Screen name="character" />
+      <Stack.Screen name="achievements" />
+      <Stack.Screen name="progress" />
       <Stack.Screen name="practice" options={{ gestureEnabled: false }} />
       <Stack.Screen name="duel/index" />
       <Stack.Screen name="duel/[id]" options={{ gestureEnabled: false }} />
     </Stack>
+    <AchievementWatcher />
+    </>
   );
 }
 

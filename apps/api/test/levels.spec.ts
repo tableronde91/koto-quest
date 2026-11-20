@@ -74,9 +74,10 @@ describe('Niveaux : parcours N4', () => {
     expect(qs).toHaveLength(34);
     const issued = await ctx.prisma.issuedQuestion.findMany({ where: { id: { in: qs.map((q: any) => q.id) } } });
     const itemIds = issued.map((q) => q.itemId).filter((x): x is string => !!x);
-    const items = await ctx.prisma.learningItem.findMany({ where: { id: { in: itemIds } } });
+    const items = await ctx.prisma.learningItem.findMany({ where: { id: { in: itemIds } }, include: { lessons: { include: { lesson: { include: { chapter: { include: { world: true } } } } } } } });
     expect(items.length).toBeGreaterThan(10);
-    expect(items.every((i) => i.levelCode === 'N4')).toBe(true);
+    // Toutes les notions viennent des leçons N4 (un kanji déjà vu au N5, comme 雨, peut y être repris)
+    expect(items.filter((i) => !i.lessons.some((l) => l.lesson.chapter.world.levelCode === 'N4')).map((i) => i.slug)).toEqual([]);
     const res = (await agent.post('/api/exams/n4-mock/submit').send({ sessionId: exam.body.sessionId, answers: {} }).expect(200)).body;
     expect(res).toMatchObject({ correct: 0, passed: false });
     expect(res.recommendations.join(' ')).toMatch(/N4/);
@@ -130,5 +131,27 @@ describe('Niveaux : parcours N4', () => {
   it('niveau JLPT inconnu : 400', async () => {
     const { agent } = await signUp(ctx.app);
     await agent.get('/api/path/N0').expect(400);
+  });
+});
+
+describe('Contenus : identifiants des notions', () => {
+  it('un même identifiant désigne toujours le même caractère ou mot, d’un fichier à l’autre', () => {
+    const { readFileSync } = require('fs') as typeof import('fs');
+    const { resolve } = require('path') as typeof import('path');
+    const seen = new Map<string, Set<string>>();
+    const walk = (o: unknown): void => {
+      if (Array.isArray(o)) o.forEach(walk);
+      else if (o && typeof o === 'object') {
+        const r = o as Record<string, unknown>;
+        if (typeof r.slug === 'string' && typeof r.front === 'string') {
+          if (!seen.has(r.slug)) seen.set(r.slug, new Set());
+          seen.get(r.slug)!.add(`${r.front}|${r.reading ?? ''}`);
+        }
+        Object.values(r).forEach(walk);
+      }
+    };
+    for (const f of ['n5/n5', 'n4/n4', 'n3/n3', 'n2/n2', 'n1/n1', 'characters/characters', 'expressions/expressions'])
+      walk(JSON.parse(readFileSync(resolve(__dirname, `../../../content/${f}.json`), 'utf8')));
+    expect([...seen].filter(([, v]) => v.size > 1).map(([k, v]) => `${k}: ${[...v].join(' / ')}`)).toEqual([]);
   });
 });

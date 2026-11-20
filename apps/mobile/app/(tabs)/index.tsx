@@ -1,4 +1,4 @@
-import { RefreshControl, ScrollView, Text, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDashboard } from '../../src/hooks';
@@ -25,9 +25,9 @@ export default function Home() {
             <Text style={{ color: C.inkSoft, fontSize: 18 }}>{greeting()}、{d.displayName}</Text>
             <Text accessibilityRole="header" style={{ fontSize: 26, fontWeight: '800', color: C.ink }}>{due ? plural(due, '{0} notion à réviser', '{0} notions à réviser') : d.nextLesson ? T('Prêt·e pour la suite ?') : T('Tout est à jour')}</Text>
           </View>
-          <View style={{ backgroundColor: C.surface, borderRadius: 99, paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderColor: C.line }}>
+          <Pressable accessibilityRole="button" accessibilityLabel={T('{0} pièces, ouvrir la boutique', [d.coins])} onPress={() => router.push({ pathname: '/character', params: { t: 'boutique' } })} style={{ backgroundColor: C.surface, borderRadius: 99, paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderColor: C.line }}>
             <Text style={{ fontWeight: '800', color: C.goldInk }}>🪙 {d.coins}</Text>
-          </View>
+          </Pressable>
         </View>
 
         {/* Action principale */}
@@ -67,6 +67,7 @@ export default function Home() {
           <H2>{T('Niveau {0}', [d.xp.level])}</H2>
           <View style={{ flexDirection: 'row' }}><ProgressBar value={d.xp.intoLevel} max={d.xp.forNext} color={C.gold} label={T('Expérience vers le niveau suivant')} /></View>
           <P soft>{T('{0} XP avant le niveau {1}', [d.xp.forNext - d.xp.intoLevel, d.xp.level + 1])}</P>
+          <Button tone="quiet" label={T('Mon aventure')} onPress={() => router.push('/progress')} />
         </View>
 
         <View style={{ gap: 10 }}>

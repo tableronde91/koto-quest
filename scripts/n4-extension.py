@@ -372,7 +372,7 @@ W7 = CH('n4-w7-c2', ('Autres conditions et capacités', 'More conditions and abi
       V('vocab-unten', '運転', 'うんてん', 'unten', ('conduite (d’un véhicule)', 'driving (a vehicle)')),
       V('vocab-piano', 'ピアノ', 'ピアノ', 'piano', ('piano', 'piano')),
       V('vocab-hikimasu', '弾きます', 'ひきます', 'hikimasu', ('jouer (d’un instrument à cordes ou clavier)', 'to play (a string or keyboard instrument)')),
-      K('kanji-ten', '転', 'てん', 'ten', ('tourner, rouler, tomber', 'turn, roll, fall'), ['テン'], ['ころ(ぶ)', 'ころ(がる)'], 11),
+      K('kanji-ten-korobu', '転', 'てん', 'ten', ('tourner, rouler, tomber', 'turn, roll, fall'), ['テン'], ['ころ(ぶ)', 'ころ(がる)'], 11),
       K('kanji-uta', '歌', 'うた', 'uta', ('chanson, chanter', 'song, sing'), ['カ'], ['うた', 'うた(う)'], 14),
     ], [
       ex('姉は ピアノを 弾く ことが できます。', 'あねは ピアノを ひく ことが できます。', 'Ma grande sœur sait jouer du piano.', 'My older sister can play the piano.'),

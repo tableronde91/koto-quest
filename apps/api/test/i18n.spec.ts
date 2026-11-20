@@ -97,7 +97,7 @@ describe('Traduction anglaise', () => {
         for (const k of m.slice(1)) if (k && /[A-Za-zÀ-ÿ]/.test(k)) keys.add(k);
     }
     // Libellés passés à T() par une table (onglet Caractères, maîtrise, registres)
-    for (const k of ['Hiragana', 'Katakana', 'Kanji', 'Expressions', 'Découverte', 'En apprentissage', 'Fragile', 'Maîtrisée', 'À réviser vite', 'Poli', 'Neutre', 'Familier', 'Formel']) keys.add(k);
+    for (const k of ['Hiragana', 'Katakana', 'Kanji', 'Expressions', 'Découverte', 'En apprentissage', 'Fragile', 'Maîtrisée', 'À réviser vite', 'Poli', 'Neutre', 'Familier', 'Formel', 'Courant', 'Rare', 'Épique', 'Courts', 'Longs', 'Chignon', 'En pétard', 'Carré', 'Rasés', 'Ronds', 'Rieurs', 'Sereins', 'Noir', 'Châtain', 'Roux', 'Blond', 'Gris', 'Bleu', 'Étude', 'Régularité', 'Maîtrise', 'Aventure', 'Jeux et collection', 'Maître du Koto', 'Sensei en herbe', 'Gardien·ne des kanji', 'Lame des kana', 'Voyageur·se des îles', 'Apprenti·e du dojo', 'Vocabulaire', 'Grammaire', 'En fleur', 'En pousse', 'Graines', 'Feuilles fragiles', 'À arroser vite']) keys.add(k);
     expect(keys.size).toBeGreaterThan(150);
     expect([...keys].filter((k) => !dict.has(k))).toEqual([]);
   });

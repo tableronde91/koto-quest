@@ -9,8 +9,9 @@ import { useAuth } from '../../src/auth';
 import { FriendsManager } from '../../src/Friends';
 import { useDuelLobby } from '../../src/hooks';
 import { RankBadge } from '../../src/RankBadge';
+import { Avatar } from '../../src/Avatar';
 import { C } from '../../src/theme';
-import { Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
+import { Button, Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
 import { T } from '../../src/i18n';
 
 const MINUTES = [10, 15, 20, 30, 45, 60, 90];
@@ -38,9 +39,9 @@ export default function Profile() {
       <View testID="identity" style={{ backgroundColor: C.ink, borderRadius: 24, padding: 20, gap: 12, overflow: 'hidden' }}>
         <Text style={{ position: 'absolute', right: -6, top: -26, fontSize: 140, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>人</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-          <View style={{ width: 64, height: 64, borderRadius: 20, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 30, fontWeight: '900', color: '#2a1a00' }}>{[...me.displayName.trim()][0]?.toUpperCase() ?? '人'}</Text>
-          </View>
+          <Pressable accessibilityRole="button" accessibilityLabel={T('Mon personnage')} onPress={() => router.push('/character')} style={{ borderRadius: 20, overflow: 'hidden', borderWidth: 2, borderColor: '#ffffff44' }}>
+            <Avatar config={me.avatar} size={72} />
+          </Pressable>
           <View style={{ flex: 1, gap: 2 }}>
             <Text style={{ color: C.paper, fontSize: 24, fontWeight: '800' }}>{me.displayName}</Text>
             <Text style={{ color: C.paper, opacity: 0.85 }}>{T('Niveau {0} · objectif JLPT {1}', [lv.level, me.preferences.targetLevel])}</Text>
@@ -52,8 +53,13 @@ export default function Profile() {
             </View>
           )}
         </View>
-        <ProgressBar value={lv.intoLevel} max={Math.max(1, lv.forNext)} color={C.gold} label={T('XP du niveau')} />
+        <View style={{ flexDirection: 'row' }}><ProgressBar value={lv.intoLevel} max={Math.max(1, lv.forNext)} color={C.gold} label={T('XP du niveau')} /></View>
         <Text style={{ color: C.paper, opacity: 0.75, fontSize: 13 }}>{T('{0} / {1} XP', [lv.intoLevel, lv.forNext])} · 🪙 {me.coins}</Text>
+        <View style={{ flexDirection: 'row', gap: 10 }}>
+          <Button tone="gold" label={T('Personnaliser')} onPress={() => router.push('/character')} style={{ flex: 1 }} />
+          <Button tone="quiet" label={T('Mes succès')} onPress={() => router.push('/achievements')} style={{ flex: 1, backgroundColor: C.surface }} />
+        </View>
+        <Button tone="quiet" label={T('Mon aventure')} onPress={() => router.push('/progress')} style={{ backgroundColor: C.surface }} />
       </View>
 
       <Goals me={me} />
