@@ -51,6 +51,10 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByRole('heading', { name: 'Prêt·e pour la suite ?' })).toBeVisible();
   // Le jeton est dans le stockage de l'appli, jamais dans un cookie
   expect((await page.context().cookies()).filter((c) => c.name.includes('koto'))).toHaveLength(0);
+  // Accueil d'un débutant : guide « Comment ça marche » et test de niveau proposé
+  await expect(page.getByTestId('how-it-works')).toBeVisible();
+  await expect(page.getByTestId('placement-suggest')).toBeVisible();
+  await expect(page.getByRole('tab')).toHaveCount(5);
 
   await page.getByRole('button', { name: 'Commencer la leçon' }).click();
   await expect(page.getByRole('heading', { name: 'Les voyelles あいうえお' })).toBeVisible();
@@ -90,7 +94,8 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByRole('button', { name: /Gardien : Le Sceau Animé, termine les leçons/ })).toBeDisabled();
 
   // Caractères : grille des hiragana (les voyelles sont vues), fiche d'un caractère, pratique d'un groupe
-  await page.getByRole('tab', { name: /Kana/ }).click();
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await page.getByRole('button', { name: 'Kana et kanji' }).filter({ visible: true }).click();
   await expect(page.getByRole('heading', { name: 'Caractères' })).toBeVisible();
   await page.getByRole('button', { name: /^あ, a, / }).click();
   await expect(page.getByTestId('char-sheet')).toBeVisible();
@@ -112,9 +117,11 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByTestId('question').last()).toBeVisible({ timeout: 10_000 });
   await page.getByRole('button', { name: 'Quitter la session' }).click();
   await expect(page.getByRole('heading', { name: 'Caractères' })).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
 
   // Lecture : tout est ouvert, liseuse avec traduction au toucher, compréhension
-  await page.getByRole('tab', { name: /Lecture/ }).click();
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await page.getByRole('button', { name: 'Lecture', exact: true }).filter({ visible: true }).click();
   await expect(page.getByRole('heading', { name: 'Lecture', exact: true })).toBeVisible();
   await expect(page.getByText('Conseillé aujourd’hui')).toBeVisible();
   await page.getByRole('button', { name: 'Lire le chapitre du jour' }).click();
@@ -137,7 +144,8 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('link', { name: '← Tous les contes' }).click();
 
   // Mini-jeux : les jeux de kana sont débloqués après la première leçon ; une partie complète d'une minute
-  await page.getByRole('tab', { name: /Jeux/ }).click();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+  await page.getByRole('tab', { name: /Jouer/ }).click();
   await expect(page.getByRole('heading', { name: 'Mini-jeux' })).toBeVisible();
   await expect(page.getByTestId('game-card')).toHaveCount(3);
   const playable = page.getByRole('button', { name: /^Jouer à / });
@@ -172,8 +180,24 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
 
   // Révisions, profil et réglages
-  await page.getByRole('tab', { name: /Révisions/ }).click();
-  await expect(page.getByRole('heading', { name: 'Révisions' })).toBeVisible();
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await page.getByTestId('learn-reviews').filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Révisions' }).filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+
+  // Atelier JLPT : les épreuves au format de l'examen
+  await page.getByRole('button', { name: 'Atelier JLPT' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'Atelier JLPT' }).filter({ visible: true })).toBeVisible();
+  await expect(page.getByTestId('drill').filter({ visible: true })).toHaveCount(5);
+  await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
+
+  // Test de niveau : « Je ne sais pas » au premier monde, le parcours reprend au début
+  await page.getByRole('button', { name: 'Test de niveau' }).filter({ visible: true }).click();
+  await page.getByRole('button', { name: 'Commencer le test' }).filter({ visible: true }).click();
+  await expect(page.getByTestId('exam-question').filter({ visible: true }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Je ne sais pas' }).filter({ visible: true }).click();
+  await expect(page.getByRole('heading', { name: 'On commence au début' }).filter({ visible: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Voir le parcours' }).filter({ visible: true }).click();
   await page.getByRole('tab', { name: /Profil/ }).click();
   await expect(page.getByRole('heading', { name: 'Profil' }).filter({ visible: true })).toBeVisible();
   await expect(page.getByText(/^Niveau \d+ · objectif JLPT N5$/).filter({ visible: true })).toBeVisible();

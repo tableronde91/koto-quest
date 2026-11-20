@@ -1,9 +1,9 @@
 import { Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useReviewSummary } from '../../src/hooks';
-import { C } from '../../src/theme';
-import { Button, Card, ErrorBox, H1, Loading, P, Screen } from '../../src/ui';
-import { T, plural } from '../../src/i18n';
+import { useReviewSummary } from '../src/hooks';
+import { C } from '../src/theme';
+import { Button, Card, ErrorBox, TitleBar, H1, Loading, P, Screen } from '../src/ui';
+import { T, plural } from '../src/i18n';
 
 export default function Reviews() {
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function Reviews() {
   if (error || !data) return <Screen><ErrorBox error={error} onRetry={refetch} /></Screen>;
   return (
     <Screen>
-      <H1>{T('Révisions')}</H1>
+      <TitleBar title={T('Révisions')} fallback="/learn" />
       <P soft>{T('Chaque notion revient au moment où tu risques de l’oublier. Les intervalles s’allongent quand tu réussis.')}</P>
       {data.due > 0 ? (
         <View style={{ backgroundColor: C.ink, borderRadius: 24, padding: 20, gap: 10 }}>

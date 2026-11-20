@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react';
 import { Modal, Pressable, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import type { CharacterDto, CharacterGroupDto, CharacterSectionDto, ExpressionDto, ExpressionRegister, ExpressionsDto } from '@koto/shared';
-import { useCharacters, useExpressions } from '../../src/hooks';
-import { MASTERY_COLOR, MASTERY_LABEL } from '../../src/mastery';
-import { speak } from '../../src/speech';
-import { C } from '../../src/theme';
-import { Button, Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
-import { T } from '../../src/i18n';
+import { useCharacters, useExpressions } from '../src/hooks';
+import { MASTERY_COLOR, MASTERY_LABEL } from '../src/mastery';
+import { speak } from '../src/speech';
+import { C } from '../src/theme';
+import { Button, Card, ErrorBox, TitleBar, H1, H2, Loading, P, ProgressBar, Screen } from '../src/ui';
+import { T } from '../src/i18n';
 
 type Pane = 'hiragana' | 'katakana' | 'kanji' | 'expressions';
 const PANES: { slug: Pane; glyph: string; label: string }[] = [
@@ -30,7 +30,7 @@ export default function KanaTab() {
   const [pane, setPane] = useState<Pane>('hiragana');
   return (
     <Screen>
-      <H1>{T('Caractères')}</H1>
+      <TitleBar title={T('Caractères')} fallback="/learn" />
       <P soft>{T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.')}</P>
       <View accessibilityRole="tablist" accessibilityLabel={T('Écriture')} style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 16, padding: 4 }}>
         {PANES.map((p) => {

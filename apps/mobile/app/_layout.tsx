@@ -57,6 +57,11 @@ function Gate() {
       <Stack.Screen name="character" />
       <Stack.Screen name="achievements" />
       <Stack.Screen name="progress" />
+      <Stack.Screen name="prepa" />
+      <Stack.Screen name="kana" />
+      <Stack.Screen name="reading" />
+      <Stack.Screen name="reviews" />
+      <Stack.Screen name="placement" />
       <Stack.Screen name="practice" options={{ gestureEnabled: false }} />
       <Stack.Screen name="duel/index" />
       <Stack.Screen name="duel/[id]" options={{ gestureEnabled: false }} />

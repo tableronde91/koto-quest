@@ -1,0 +1,63 @@
+import { Pressable, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useAuth } from '../../src/auth';
+import { useDashboard, useReading } from '../../src/hooks';
+import { C } from '../../src/theme';
+import { H1, P, Screen } from '../../src/ui';
+import { T, plural } from '../../src/i18n';
+import { MOCK_EXAM } from '../../src/exams';
+
+interface Tile { href: string; glyph: string; color: string; title: string; text: string; badge?: string | null; testID?: string }
+
+/** Apprendre : toutes les façons d'étudier, chacune expliquée en une phrase. */
+export default function Learn() {
+  const router = useRouter();
+  const { me } = useAuth();
+  const { data: d } = useDashboard();
+  const { data: reading } = useReading();
+  const due = d?.reviews.due ?? 0;
+  const level = me?.preferences.targetLevel ?? 'N5';
+
+  const daily: Tile[] = [
+    { href: '/reviews', glyph: '復', color: C.gold, title: T('Révisions'), text: due ? T('Les notions que tu risques d’oublier, au bon moment.') : T('Rien à réviser pour l’instant : reviens plus tard.'), badge: due ? plural(due, '{0} à revoir', '{0} à revoir') : null, testID: 'learn-reviews' },
+    { href: '/reading', glyph: '読', color: '#3F8F5B', title: T('Lecture'), text: T('Des contes japonais en japonais simple, un chapitre par jour.'), badge: reading?.today.state === 'new' ? T('Chapitre du jour') : null },
+  ];
+  const study: Tile[] = [
+    { href: '/kana', glyph: 'あ', color: '#E36A3A', title: T('Kana et kanji'), text: T('Les grilles d’écriture et les expressions du quotidien.') },
+    { href: '/prepa', glyph: '試', color: C.seal, title: T('Atelier JLPT'), text: T('S’entraîner épreuve par épreuve, au format de l’examen.') },
+    { href: `/exam/${MOCK_EXAM[level] ?? 'n5-jlpt'}`, glyph: '験', color: '#4F5DB8', title: T('Examen blanc {0}', [level]), text: T('Toutes les épreuves, chronométrées, notées comme le vrai.') },
+    { href: '/placement', glyph: '診', color: '#7B5BD6', title: T('Test de niveau'), text: T('Tu connais déjà un peu de japonais ? Saute ce que tu sais.') },
+  ];
+
+  return (
+    <Screen>
+      <H1>{T('Apprendre')}</H1>
+      <P soft>{T('Choisis comment étudier aujourd’hui.')}</P>
+      <Section title={T('Chaque jour')} tiles={daily} onOpen={(h) => router.push(h as never)} />
+      <Section title={T('Pour progresser')} tiles={study} onOpen={(h) => router.push(h as never)} />
+    </Screen>
+  );
+}
+
+function Section({ title, tiles, onOpen }: { title: string; tiles: Tile[]; onOpen: (href: string) => void }) {
+  return (
+    <View style={{ gap: 10 }}>
+      <Text accessibilityRole="header" style={{ fontSize: 13, fontWeight: '800', color: C.inkSoft, textTransform: 'uppercase', letterSpacing: 0.6 }}>{title}</Text>
+      {tiles.map((t) => (
+        <Pressable key={t.href} testID={t.testID} accessibilityRole="button" accessibilityLabel={t.title} onPress={() => onOpen(t.href)} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, backgroundColor: C.surface, borderWidth: 1, borderColor: C.line, borderRadius: 20, padding: 14 }}>
+          <View style={{ width: 52, height: 52, borderRadius: 16, backgroundColor: t.color, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ color: '#fff', fontSize: 26, fontWeight: '900' }}>{t.glyph}</Text>
+          </View>
+          <View style={{ flex: 1, gap: 2 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+              <Text style={{ fontSize: 17, fontWeight: '800', color: C.ink }}>{t.title}</Text>
+              {t.badge && <Text style={{ fontSize: 11, fontWeight: '800', color: '#2a1a00', backgroundColor: C.gold, borderRadius: 99, paddingHorizontal: 8, paddingVertical: 2, overflow: 'hidden' }}>{t.badge}</Text>}
+            </View>
+            <Text style={{ fontSize: 13, color: C.inkSoft }}>{t.text}</Text>
+          </View>
+          <Text style={{ fontSize: 24, color: C.inkSoft }}>›</Text>
+        </Pressable>
+      ))}
+    </View>
+  );
+}

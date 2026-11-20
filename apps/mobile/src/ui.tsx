@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useRouter } from 'expo-router';
 import { ActivityIndicator, Pressable, ScrollView, StyleProp, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { C, R } from './theme';
@@ -88,3 +89,17 @@ export const s = StyleSheet.create({
   btnText: { fontSize: 16, fontWeight: '800' },
   bar: { height: 10, backgroundColor: C.surface2, borderRadius: 99, overflow: 'hidden', flex: 1 },
 });
+
+/** Titre d'écran avec retour (‹) : revient en arrière, ou vers `fallback` si l'écran a été ouvert directement. */
+export function TitleBar({ title, fallback = '/', right }: { title: string; fallback?: string; right?: ReactNode }) {
+  const router = useRouter();
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+      <Pressable accessibilityRole="button" accessibilityLabel={T('Retour')} onPress={() => (router.canGoBack() ? router.back() : router.replace(fallback as never))} hitSlop={12} style={{ minWidth: 28, minHeight: 44, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 30, color: C.ink, fontWeight: '800' }}>‹</Text>
+      </Pressable>
+      <H1 style={{ flex: 1 }}>{title}</H1>
+      {right}
+    </View>
+  );
+}

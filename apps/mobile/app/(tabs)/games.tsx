@@ -15,7 +15,7 @@ export default function GamesScreen() {
   if (error || !data) return <Screen><ErrorBox error={error} onRetry={refetch} /></Screen>;
   return (
     <Screen>
-      <H1>{T('Jeux')}</H1>
+      <H1>{T('Jouer')}</H1>
       <Card style={{ gap: 10, backgroundColor: '#2A2858', borderColor: '#2A2858' }} testID="duel-card">
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <View style={{ width: 56, height: 56, borderRadius: 16, backgroundColor: C.ko, alignItems: 'center', justifyContent: 'center' }}>

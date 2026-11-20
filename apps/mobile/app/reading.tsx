@@ -1,10 +1,10 @@
 import { Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useReading } from '../../src/hooks';
-import { Ruby } from '../../src/Ruby';
-import { C } from '../../src/theme';
-import { Button, Card, ErrorBox, H1, H2, Loading, P, Screen, Seal } from '../../src/ui';
-import { T, bi } from '../../src/i18n';
+import { useReading } from '../src/hooks';
+import { Ruby } from '../src/Ruby';
+import { C } from '../src/theme';
+import { Button, Card, ErrorBox, TitleBar, H1, H2, Loading, P, Screen, Seal } from '../src/ui';
+import { T, bi } from '../src/i18n';
 
 /** Lecture : contes japonais, tous ouverts ; un chapitre conseillé chaque jour. */
 export default function ReadingScreen() {
@@ -16,7 +16,7 @@ export default function ReadingScreen() {
   const suggested = today.state === 'new' ? today.chapter?.slug : upcoming?.slug;
   return (
     <Screen>
-      <H1>{T('Lecture')}</H1>
+      <TitleBar title={T('Lecture')} fallback="/learn" />
       <P soft>{T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.')}</P>
 
       {today.chapter && today.story && (

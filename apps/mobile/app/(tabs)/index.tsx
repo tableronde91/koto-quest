@@ -49,6 +49,39 @@ export default function Home() {
           )}
         </View>
 
+        {d.suggestPlacement && (
+          <Card testID="placement-suggest" style={{ flexDirection: 'row', alignItems: 'center', gap: 12, borderColor: '#7B5BD6', borderWidth: 2 }}>
+            <Text style={{ fontSize: 30, fontWeight: '900', color: '#7B5BD6' }}>診</Text>
+            <View style={{ flex: 1, gap: 6 }}>
+              <Text style={{ fontWeight: '800', color: C.ink }}>{T('Tu connais déjà un peu de japonais ?')}</Text>
+              <Text style={{ color: C.inkSoft, fontSize: 13 }}>{T('Un test de quelques minutes valide ce que tu sais déjà, pour commencer au bon endroit.')}</Text>
+              <Button tone="quiet" label={T('Passer le test de niveau')} onPress={() => router.push('/placement')} />
+            </View>
+          </Card>
+        )}
+
+        {d.progress.completedLessons < 3 && (
+          <Card testID="how-it-works" style={{ gap: 10 }}>
+            <H2>{T('Comment ça marche ?')}</H2>
+            {[
+              ['学', T('Une leçon de 5 à 10 minutes'), T('De nouveaux kana, mots ou kanji, puis des exercices.')],
+              ['復', T('Des révisions au bon moment'), T('Koto Quest te redemande chaque notion juste avant que tu l’oublies.')],
+              ['島', T('Une aventure à suivre'), T('Chaque île du parcours raconte un chapitre et se termine par un gardien à vaincre.')],
+            ].map(([g, t, x], i) => (
+              <View key={g} style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+                <View style={{ width: 36, height: 36, borderRadius: 12, backgroundColor: C.surface2, alignItems: 'center', justifyContent: 'center' }}>
+                  <Text style={{ fontWeight: '900', color: C.ink, fontSize: 18 }}>{g}</Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontWeight: '800', color: C.ink }}>{i + 1}. {t}</Text>
+                  <Text style={{ color: C.inkSoft, fontSize: 13 }}>{x}</Text>
+                </View>
+              </View>
+            ))}
+            <Text style={{ color: C.inkSoft, fontSize: 13 }}>{T('Le plus important : un peu chaque jour. Ta série 🔥 compte les jours d’affilée.')}</Text>
+          </Card>
+        )}
+
         <View style={{ flexDirection: 'row', gap: 10 }}>
           {[
             { k: T('Série'), v: T('{0} j', [d.streak.current]), icon: d.streak.todayDone ? '🔥' : '🪵' },
@@ -67,7 +100,22 @@ export default function Home() {
           <H2>{T('Niveau {0}', [d.xp.level])}</H2>
           <View style={{ flexDirection: 'row' }}><ProgressBar value={d.xp.intoLevel} max={d.xp.forNext} color={C.gold} label={T('Expérience vers le niveau suivant')} /></View>
           <P soft>{T('{0} XP avant le niveau {1}', [d.xp.forNext - d.xp.intoLevel, d.xp.level + 1])}</P>
-          <Button tone="quiet" label={T('Mon aventure')} onPress={() => router.push('/progress')} />
+        </View>
+
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: -5 }}>
+          {[
+            { href: '/learn', glyph: '学', label: T('Apprendre') },
+            { href: '/games', glyph: '遊', label: T('Jouer') },
+            { href: '/progress', glyph: '冒', label: T('Mon aventure') },
+            { href: '/character', glyph: '衣', label: T('Mon personnage') },
+          ].map((x) => (
+            <View key={x.href} style={{ width: '50%', padding: 5 }}>
+              <Pressable accessibilityRole="button" accessibilityLabel={x.label} onPress={() => router.push(x.href as never)} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.surface, borderWidth: 1, borderColor: C.line, borderRadius: 16, padding: 12 }}>
+                <Text style={{ fontSize: 20, fontWeight: '900', color: C.ink }}>{x.glyph}</Text>
+                <Text style={{ flex: 1, fontWeight: '800', color: C.ink }}>{x.label}</Text>
+              </Pressable>
+            </View>
+          ))}
         </View>
 
         <View style={{ gap: 10 }}>
