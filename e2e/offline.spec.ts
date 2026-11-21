@@ -782,3 +782,81 @@ test('hors ligne : lecture du jour, tous les chapitres ouverts, progression enre
   await expect(page.getByText('Conseillé aujourd’hui')).toBeVisible();
   await expect(page.getByRole('heading', { name: /Un garçon dans la pêche/ })).toBeVisible();
 });
+
+test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retour au japonais)', async ({ page }) => {
+  await page.goto(FILE);
+  await expect(page.getByRole('heading', { name: 'Quelle langue veux-tu apprendre ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Coréen/ }).click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en coréen ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Je pars de zéro/ }).click();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('heading', { name: 'Quel niveau TOPIK vises-tu ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /TOPIK 1 — débutant/ })).toHaveAttribute('aria-checked', 'true');
+  await expect(page.getByRole('radio', { name: /TOPIK 2 — élémentaire/ })).toBeEnabled();
+  await expect(page.getByRole('radio', { name: /TOPIK 3 — intermédiaire/ })).toBeEnabled();
+  await expect(page.getByRole('radio', { name: /TOPIK 4 — intermédiaire avancé/ })).toBeEnabled();
+  await expect(page.getByRole('radio', { name: /TOPIK 5 — avancé/ })).toBeEnabled();
+  await expect(page.getByRole('radio', { name: /TOPIK 6 — maîtrise/ })).toBeEnabled();
+  for (let i = 0; i < 4; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Première leçon : les voyelles du hangeul
+  await page.getByRole('link', { name: 'Commencer la leçon' }).click();
+  await expect(page.getByRole('heading', { name: 'Les voyelles ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ' })).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+
+  // Parcours : la saga coréenne et son archipel
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Les lettres du roi Sejong/ })).toBeVisible();
+  await expect(page.locator('[data-theme-map="korea"]')).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 2/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 2 : Le Conteur du tigre blanc' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Le village de Jeonju/ })).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 3/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 3 : L’Inspecteur royal secret' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Le marché aux rumeurs/ })).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 4/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 4 : L’Historien des Annales' })).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 5/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 5 : Le Chant de la princesse Bari' })).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 6/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 6 : La Légende de Dangun' })).toBeVisible();
+  await page.getByRole('tab', { name: /TOPIK 1/ }).click();
+
+  // Onglet Hangeul
+  await page.goto(FILE + '#/characters');
+  await expect(page.getByRole('heading', { name: 'Hangeul', level: 1 })).toBeVisible();
+  await expect(page.getByRole('tab', { name: /Voyelles/ })).toBeVisible();
+  await page.getByRole('tab', { name: /Consonnes/ }).click();
+  await expect(page.getByRole('button', { name: /^ㄱ, g \/ k/ })).toBeVisible();
+
+  // Expressions : la révision des proverbes
+  await page.goto(FILE + '#/expressions');
+  await page.getByRole('button', { name: /Expressions en quatre caractères/ }).click();
+  await expect(page.getByText('작심삼일', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: /Proverbes des contes/ }).click();
+  await expect(page.getByText('누워서 떡 먹기', { exact: true })).toBeVisible();
+
+  // Lecture : les contes coréens
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('해님 달님').first()).toBeVisible();
+  await expect(page.getByText('선녀와 나무꾼').first()).toBeVisible();
+  await expect(page.getByText('춘향전').first()).toBeVisible();
+  await expect(page.getByText('홍길동전').first()).toBeVisible();
+  await expect(page.getByText('바리공주').first()).toBeVisible();
+  await expect(page.getByText('금도끼 은도끼').first()).toBeVisible();
+  await expect(page.getByText('콩쥐팥쥐').first()).toBeVisible();
+  await expect(page.getByText('심청전').first()).toBeVisible();
+  await expect(page.getByText('단군 신화').first()).toBeVisible();
+  await expect(page.getByText('ももたろう')).toHaveCount(0);
+
+  // Retour au japonais : le parcours N5 et les contes japonais reviennent, la progression coréenne reste
+  await page.goto(FILE + '#/path');
+  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /日本語/ }).click();
+  await expect(page.getByRole('heading', { name: /N5 : La Voie du samouraï/ })).toBeVisible();
+  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /한국어/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
+  await expect(page.getByText('1/4').first()).toBeVisible();
+});

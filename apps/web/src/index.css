@@ -55,7 +55,7 @@
   --color-ko: var(--ko);
   --color-ko-bg: var(--ko-bg);
   --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  --font-jp: "Zen Maru Gothic", "Gowun Dodum", "Hiragino Maru Gothic ProN", "Yu Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 html { font-size: var(--base-size, 17px); }

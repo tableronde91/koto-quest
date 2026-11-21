@@ -8,6 +8,7 @@ import { ErrorBox, PageTitle, Spinner } from '../components/ui';
 import { hhmmToMinutes, minutesToHHMM } from '../lib/format';
 import { permission, pushSupported, subscribePush, unsubscribePush } from '../lib/push';
 import { LanguageSwitch } from '../components/LanguageSwitch';
+import { StudyLanguageSwitch } from '../components/StudyLanguage';
 import { T, DATE_LOCALE } from '../i18n';
 
 export function SettingsPage({ me }: { me: MeDto }) {
@@ -186,7 +187,12 @@ function StudySection({ me }: { me: MeDto }) {
         <div className="flex flex-col gap-1 font-bold">
           <span id="lang-label">{T("Langue de l’application")}</span>
           <LanguageSwitch saveToAccount />
-          <span className="text-sm font-normal text-ink-soft">{T("Les cours, exercices et messages s’affichent dans cette langue. Le japonais reste en japonais !")}</span>
+          <span className="text-sm font-normal text-ink-soft">{T("Les cours, exercices et messages s’affichent dans cette langue. Le japonais reste en japonais, le coréen en coréen !")}</span>
+        </div>
+        <div className="flex flex-col gap-1 font-bold">
+          <span>{T("Langue étudiée")}</span>
+          <StudyLanguageSwitch className="w-72 font-normal" />
+          <span className="max-w-xs text-sm font-normal text-ink-soft">{T("Parcours, révisions, lecture et caractères suivent la langue choisie. Ta progression dans l’autre langue est conservée.")}</span>
         </div>
         <label className="flex flex-col gap-1 font-bold">{T("Thème")}<select className="field w-44 font-normal" value={p.theme} onChange={(e) => update.mutate({ theme: e.target.value })}>
             <option value="system">{T("Comme l’appareil")}</option>

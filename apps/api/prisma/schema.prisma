@@ -84,6 +84,10 @@ model UserPreferences {
   /// Niveau déclaré : beginner | kana | basics | n5 | n4plus
   selfLevel        String    @default("beginner")
   targetLevel      String    @default("N5")
+  /// Langue étudiée : ja (japonais, JLPT) | ko (coréen, TOPIK). Le niveau visé appartient toujours à cette langue.
+  studyLanguage    String    @default("ja")
+  /// Dernier niveau visé dans chaque langue (retrouvé quand on revient à une langue) : { "ja": "N4", "ko": "TOPIK1" }
+  levelByLanguage  Json      @default("{}")
   examDate         DateTime?
   minutesPerDay    Int       @default(15)
   difficultAreas   String[]  @default([])
@@ -132,8 +136,9 @@ model PushSubscription {
 
 // ───────────────────────────── Contenu ─────────────────────────────
 
+/// Niveau d'un parcours, toutes langues confondues (le nom est historique) : N5..N1 (japonais), TOPIK1..TOPIK6 (coréen)
 model JlptLevel {
-  code           String   @id // N5..N1
+  code           String   @id // N5..N1, TOPIK1..TOPIK6
   title          String
   region         String
   order          Int

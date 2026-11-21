@@ -9,6 +9,7 @@ import { ErrorBox, Jp, ProgressBar, Spinner } from '../components/ui';
 import { Coins } from './Character';
 import { Confetti, CountUp, Stamp } from '../components/Celebrate';
 import { EXAMS } from '@koto/learning-engine';
+import { langOf } from '../lib/format';
 import { T } from '../i18n';
 
 type Answers = Record<string, string | string[] | undefined>;
@@ -26,6 +27,7 @@ export function ExamPage() {
   const [busy, setBusy] = useState(false);
   const qc = useQueryClient();
   const info = path?.worlds.find((w) => w.exam?.slug === slug)?.exam;
+  const topik = (def?.level ?? '').startsWith('TOPIK');
 
   async function start() {
     setError(null);
@@ -61,9 +63,23 @@ export function ExamPage() {
   return (
     <div className="flex flex-col items-center gap-5 py-6 text-center">
       <Link to={`/path?niveau=${def?.level ?? 'N5'}`} className="self-start text-ink-soft underline">{T("← Parcours")}</Link>
-      <Stamp className="jp text-6xl font-black text-ko">模試</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{topik ? '모의고사' : '模試'}</Stamp>
       <h1 className="text-4xl">{def?.title ?? T("Examen blanc")}</h1>
-      <p className="max-w-[52ch] text-lg">{T("{0} questions en {1} minutes, réparties comme au JLPT : vocabulaire et kanji (文字・語彙), grammaire (文法・読解) et écoute (聴解). Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [ def ? def.sections.reduce((n, x) => n + x.count, 0) : 30 , def?.durationMin ?? 25 ])}</p>
+      {topik ? (
+        <p className="max-w-[52ch] text-lg">{T("{0} questions en {1} minutes, réparties comme au TOPIK : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25, def?.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ') ?? ''])}</p>
+      ) : (
+        <p className="max-w-[52ch] text-lg">{T("{0} questions en {1} minutes, réparties comme au JLPT : vocabulaire et kanji (文字・語彙), grammaire (文法・読解) et écoute (聴解). Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [ def ? def.sections.reduce((n, x) => n + x.count, 0) : 30 , def?.durationMin ?? 25 ])}</p>
+      )}
+      {def?.scoring === 'topik' && (
+        <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en coréen")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Écoute réelle")}</strong>{T("Dialogues à deux voix, 2 écoutes au maximum.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Barème officiel")}</strong>{T("Sur 200 : niveau 1 à partir de 80, niveau 2 à partir de 140.")}</li>
+        </ul>
+      )}
+      {def?.scoring === 'topik' && (
+        <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier TOPIK")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={def?.level === 'TOPIK6' ? '/exam/topik6-mock' : def?.level === 'TOPIK5' ? '/exam/topik5-mock' : def?.level === 'TOPIK4' ? '/exam/topik4-mock' : def?.level === 'TOPIK3' ? '/exam/topik3-mock' : def?.level === 'TOPIK2' ? '/exam/topik2-mock' : '/exam/topik1-mock'} className="underline">{T("version entraînement")}</Link>{' '}{T("(plus facile)")}</p>
+      )}
       {def?.scoring === 'jlpt' && (
         <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
           <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en japonais")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
@@ -74,7 +90,7 @@ export function ExamPage() {
       {def?.scoring === 'jlpt' && (
         <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier JLPT")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to="/exam/n5-mock" className="underline">{T("version entraînement")}</Link>{' '}{T("(plus facile)")}</p>
       )}
-      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
+      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{topik ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.") : T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
       {info && info.attempts > 0 && <p>{T("Meilleur score :")}{' '}<strong>{info.bestPercent} %</strong> ({info.attempts}{' '}{T("tentative")}{info.attempts > 1 ? 's' : ''})</p>}
       <button className="btn btn-gold min-h-14 px-10 text-lg" onClick={start}>{T("Commencer l’examen")}</button>
     </div>
@@ -163,12 +179,14 @@ function ExamRunner({ exam, onSubmit }: { exam: ExamStartDto; onSubmit: (a: Answ
 }
 
 function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () => void }) {
+  const topik = result.scaled?.max.system === 'topik';
   return (
     <div className="flex flex-col gap-8">
       <header className="flex flex-col items-center gap-2 text-center">
         {result.passed && <Confetti count={60} />}
-        <Stamp className="jp text-5xl font-black text-ko">{result.passed ? '合格' : '不合格'}</Stamp>
-        <h1 className="text-4xl">{result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
+        <Stamp className="jp text-5xl font-black text-ko">{topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? '合格' : '不合格'}</Stamp>
+        <h1 className="text-4xl">{topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
+        {topik && !result.passed && (result.scaled!.level ?? 0) > 0 && <p className="font-bold text-ko">{T("Il faut le niveau {0} ({1} points) pour valider cet examen.", [result.scaled!.max.passLevel ?? 2, result.scaled!.max.levels?.find((l) => l.level === (result.scaled!.max.passLevel ?? 2))?.min ?? 140])}</p>}
         {result.scaled ? (
           <p className="font-display text-7xl tabular-nums"><CountUp value={result.scaled.total} /><span className="text-3xl text-ink-soft"> / {result.scaled.max.total}</span></p>
         ) : (
@@ -177,26 +195,37 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
         <p className="text-ink-soft">{T("{0} bonnes réponses sur {1}{2}", [result.correct , result.total, result.late ? T(" (copie rendue après le temps imparti)") : ''])}</p>
         <p className="flex items-center gap-3 font-bold text-gold-ink">+{result.xpGained}{' '}{T("XP")}{' '}{result.coinsGained > 0 && <Coins value={result.coinsGained} />}</p>
         <p className="max-w-[56ch] text-sm text-ink-soft">
-          {result.scaled
+          {topik && result.scaled!.max.writing
+            ? T("Barème du TOPIK II : écoute, écriture et lecture sur {0} points chacune, soit {1} ; niveau 3 à partir de {2}, 4 à {3}, 5 à {4}, 6 à {5}. Version abrégée, écriture adaptée en questions à choix ; questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.listening, result.scaled!.max.total, ...(result.scaled!.max.levels ?? []).map((l) => l.min)])
+            : topik
+            ? T("Barème du TOPIK I : écoute sur {0} et lecture sur {1}, soit {2} points ; niveau 1 à partir de {3}, niveau 2 à partir de {4}. Questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.listening, result.scaled!.max.language, result.scaled!.max.total, result.scaled!.max.levels?.[0]?.min ?? 80, result.scaled!.max.levels?.[1]?.min ?? 140])
+            : result.scaled
             ? T("Barème du JLPT : réussite à {0}/{1}, avec au moins {2}/{3} en langue et lecture et {4}/{5} en écoute. Questions rédigées par Koto Quest, non officielles.", [result.scaled.max.passTotal, result.scaled.max.total, result.scaled.max.passLanguage, result.scaled.max.language, result.scaled.max.passListening, result.scaled.max.listening])
             : T("Seuil Koto Quest : {0} % au total et au moins {1} % dans chaque section. Examen blanc non officiel.", [result.passPercent, result.sectionMinPercent])}
         </p>
       </header>
 
       {result.scaled && (
-        <section aria-labelledby="jlpt-title" className="grid gap-4 sm:grid-cols-2">
+        <section aria-labelledby="jlpt-title" className={`grid gap-4 ${result.scaled.max.writing ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
           <h2 id="jlpt-title" className="sr-only">{T("Score par partie (barème JLPT)")}</h2>
-          {[
-            { label: '言語知識・読解', sub: T("Langue et lecture"), v: result.scaled.language, max: result.scaled.max.language, min: result.scaled.max.passLanguage },
-            { label: '聴解', sub: T("Écoute"), v: result.scaled.listening, max: result.scaled.max.listening, min: result.scaled.max.passListening },
-          ].map((x) => (
+          {(topik
+            ? [
+                { label: '듣기', sub: T("Écoute"), v: result.scaled.listening, max: result.scaled.max.listening, min: result.scaled.max.passListening },
+                ...(result.scaled.max.writing ? [{ label: '쓰기', sub: T("Écriture"), v: result.scaled.writing ?? 0, max: result.scaled.max.writing, min: 0 }] : []),
+                { label: '읽기', sub: T("Lecture"), v: result.scaled.language, max: result.scaled.max.language, min: result.scaled.max.passLanguage },
+              ]
+            : [
+                { label: '言語知識・読解', sub: T("Langue et lecture"), v: result.scaled.language, max: result.scaled.max.language, min: result.scaled.max.passLanguage },
+                { label: '聴解', sub: T("Écoute"), v: result.scaled.listening, max: result.scaled.max.listening, min: result.scaled.max.passListening },
+              ]
+          ).map((x) => (
             <div key={x.label} className="rounded-2xl border border-line bg-surface p-4">
-              <p className="flex items-baseline justify-between gap-2"><span><span lang="ja" className="jp font-bold">{x.label}</span> <span className="text-sm text-ink-soft">{x.sub}</span></span><span className="font-display text-2xl tabular-nums">{x.v}<span className="text-base text-ink-soft">/{x.max}</span></span></p>
+              <p className="flex items-baseline justify-between gap-2"><span><span lang={langOf(x.label)} className="jp font-bold">{x.label}</span> <span className="text-sm text-ink-soft">{x.sub}</span></span><span className="font-display text-2xl tabular-nums">{x.v}<span className="text-base text-ink-soft">/{x.max}</span></span></p>
               <div className="relative mt-2">
                 <ProgressBar value={x.v} max={x.max} label={T("{0} : {1} sur {2}", [x.sub, x.v, x.max])} tone={x.v >= x.min ? 'ok' : 'gold'} />
                 <span aria-hidden="true" className="absolute -top-1 h-5 w-0.5 bg-ko" style={{ left: `${(x.min / x.max) * 100}%` }} />
               </div>
-              <p className="mt-1 text-xs text-ink-soft">{T("Minimum : {0} {1}", [ x.min , x.v >= x.min ? '✓' : '✗'])}</p>
+              {x.min > 0 && <p className="mt-1 text-xs text-ink-soft">{T("Minimum : {0} {1}", [ x.min , x.v >= x.min ? '✓' : '✗'])}</p>}
             </div>
           ))}
         </section>
@@ -209,7 +238,7 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
             <li key={s.id}>
               <div className="flex items-baseline justify-between gap-3">
                 <p className="font-bold">
-                  <span lang="ja" className="jp mr-2 text-ink-soft">{s.jpTitle}</span>
+                  <span lang={langOf(s.jpTitle)} className="jp mr-2 text-ink-soft">{s.jpTitle}</span>
                   {s.title}
                 </p>
                 <p className="tabular-nums">{s.correct}/{s.total} ({s.percent} %)</p>

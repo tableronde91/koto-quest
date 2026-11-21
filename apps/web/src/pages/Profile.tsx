@@ -2,7 +2,11 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { levelFromXp } from '@koto/learning-engine';
-import { JLPT_LEVELS, type DuelLobbyDto, type MeDto } from '@koto/shared';
+import { examLevelLabel, levelsOfLanguage, type DuelLobbyDto, type MeDto } from '@koto/shared';
+import { StudyLanguageSwitch } from '../components/StudyLanguage';
+
+/** Niveaux dont le parcours est publié (les autres sont affichés « bientôt »). */
+const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6']);
 import { api } from '../api/client';
 import { useUpdatePrefs } from '../api/hooks';
 import { Avatar } from '../components/Avatar';
@@ -46,7 +50,7 @@ function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
         <span className="overflow-hidden rounded-3xl border-2 border-[rgb(255_255_255/0.3)] bg-surface"><Avatar config={me.avatar} size={96} /></span>
         <div className="min-w-0 flex-1">
           <p className="font-display text-3xl leading-tight">{me.displayName}</p>
-          <p className="mt-1 opacity-85">{T("Niveau {0} · objectif JLPT {1}", [lv.level, me.preferences.targetLevel])}</p>
+          <p className="mt-1 opacity-85">{T("Niveau {0} · objectif {1}", [lv.level, examLevelLabel(me.preferences.targetLevel)])}</p>
           <div className="mt-3 h-2.5 max-w-xs overflow-hidden rounded-full bg-[rgb(255_255_255/0.2)]" role="progressbar" aria-label={T("XP du niveau")} aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
             <div className="h-full rounded-full bg-gold" style={{ width: `${pct}%` }} />
           </div>
@@ -77,8 +81,10 @@ function GoalsSection({ me }: { me: MeDto }) {
       <div className="flex flex-wrap gap-6">
         <label className="flex flex-col gap-1 font-bold">{T("Pseudo")}<input className="field w-60 font-normal" defaultValue={me.displayName} maxLength={40} onBlur={(e) => e.target.value.trim() && e.target.value !== me.displayName && update.mutate({ displayName: e.target.value })} />
         </label>
+        <div className="flex flex-col gap-1 font-bold">{T("Langue étudiée")}<StudyLanguageSwitch className="w-72 font-normal" />
+        </div>
         <label className="flex flex-col gap-1 font-bold">{T("Niveau visé")}<select className="field w-44 font-normal" value={p.targetLevel} onChange={(e) => update.mutate({ targetLevel: e.target.value })}>
-            {JLPT_LEVELS.map((l) => <option key={l} value={l}>{T("JLPT {0}", [l])}</option>)}
+            {levelsOfLanguage(p.studyLanguage ?? 'ja').map((l) => <option key={l} value={l} disabled={!READY_LEVELS.has(l)}>{READY_LEVELS.has(l) ? examLevelLabel(l) : T("{0} (bientôt)", [examLevelLabel(l)])}</option>)}
           </select>
         </label>
         <label className="flex flex-col gap-1 font-bold">{T("Temps d’étude par jour")}<select className="field w-44 font-normal" value={p.minutesPerDay} onChange={(e) => update.mutate({ minutesPerDay: Number(e.target.value) })}>

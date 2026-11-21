@@ -69,14 +69,14 @@ export function WelcomePage() {
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
           <p className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · {T("Préparation au JLPT, du N5 au N1")}
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · {T("Préparation au JLPT et au TOPIK")}
           </p>
-          <h1 id="hero-title" className="mt-4 max-w-[20ch] text-4xl sm:text-5xl">{T("Apprends le japonais et réussis ton JLPT.")}</h1>
+          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais ou le coréen, et réussis ton examen.")}</h1>
           <p className="mt-4 max-w-[54ch] text-lg text-ink-soft">
-            {T("Koto Quest a une seule mission : aider chacun à apprendre le japonais et à se présenter serein aux examens du JLPT. Du premier hiragana jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
+            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue d’Asie et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen. Du premier caractère jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
           </p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("Un parcours aligné sur les niveaux officiels du JLPT"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("Un parcours aligné sur les niveaux officiels du JLPT et du TOPIK"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -139,6 +139,28 @@ export function WelcomePage() {
         <p className="text-sm text-ink-soft">{T("Nombres de kanji et de mots : repères indicatifs couramment utilisés, non publiés par les organisateurs du JLPT.")}</p>
       </section>
 
+      {/* Le TOPIK, pour le coréen */}
+      <section aria-labelledby="topik-title" className="flex flex-col gap-5">
+        <div>
+          <h2 id="topik-title" className="text-3xl">{T("Et le coréen ? Le TOPIK")}</h2>
+          <p className="mt-2 max-w-[70ch] text-ink-soft">
+            {T("Le TOPIK (Test of Proficiency in Korean) est l’examen officiel de coréen pour les non-coréanophones. Le TOPIK I couvre les niveaux 1 et 2, le TOPIK II les niveaux 3 à 6 ; le niveau dépend du score obtenu. Il évalue l’écoute et la lecture, et l’écriture au TOPIK II. Koto Quest commence par le hangeul, l’alphabet coréen, que l’on apprend en quelques jours.")}
+          </p>
+        </div>
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {TOPIK_LEVELS.map((l) => (
+            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line'}`}>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-display text-2xl">{l.id}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface-2 text-ink-soft'}`}>{l.ready ? T("Disponible") : T("En préparation")}</span>
+              </div>
+              <p className="font-bold">{l.name()}</p>
+              <p className="text-sm text-ink-soft">{l.text()}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Comment Koto Quest prépare */}
       <section aria-labelledby="how-title" className="flex flex-col gap-5">
         <h2 id="how-title" className="text-3xl">{T("Comment Koto Quest te prépare")}</h2>
@@ -158,12 +180,12 @@ export function WelcomePage() {
       {/* Appel final */}
       <section aria-labelledby="cta-title" className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-10">
         <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[12rem] font-black leading-none opacity-[0.07]">合格</span>
-        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT commence aujourd’hui.")}</h2>
+        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT ou TOPIK commence aujourd’hui.")}</h2>
         <p className="relative mt-3 max-w-[56ch] text-lg opacity-85">{T("Débutant complet, étudiant, voyageur ou candidat à l’examen : fixe ton niveau visé et ta date d’examen, Koto Quest construit ton programme jour après jour.")}</p>
         <button className="btn btn-gold relative mt-6 min-h-14 px-6 text-lg" onClick={startNow}>{T("Commencer gratuitement")}</button>
       </section>
 
-      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
+      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
     </div>
     <div className="mx-auto max-w-5xl px-5"><SiteFooter className="mt-0" /></div>
     </>
@@ -178,12 +200,21 @@ const JLPT_LEVELS = [
   { id: 'N1', ready: true, kanji: '2 000', words: '10 000', name: () => T("Maîtrise"), text: () => T("Comprendre des textes complexes et abstraits et des discours dans des situations variées.") },
 ];
 
+const TOPIK_LEVELS = [
+  { id: 'TOPIK 1', ready: true, name: () => T("Débutant (TOPIK I)"), text: () => T("Lire le hangeul, se présenter, compter, faire ses courses et parler de son quotidien au présent, au passé et au futur.") },
+  { id: 'TOPIK 2', ready: true, name: () => T("Élémentaire (TOPIK I)"), text: () => T("Expliquer pourquoi, demander la permission, raconter ses expériences, décrire, situer dans le temps et parler poliment des aînés.") },
+  { id: 'TOPIK 3', ready: true, name: () => T("Intermédiaire (TOPIK II)"), text: () => T("Rapporter des paroles, expliquer un contexte, raconter un changement, exprimer un but, le passif et le causatif, regrets et souhaits.") },
+  { id: 'TOPIK 4', ready: true, name: () => T("Intermédiaire avancé (TOPIK II)"), text: () => T("Distinguer le vu de l’entendu, deviner, faire des hypothèses, la concession, causes et conséquences, l’actualité et la société.") },
+  { id: 'TOPIK 5', ready: true, name: () => T("Avancé (TOPIK II)"), text: () => T("Nuancer, comparer, argumenter, exprimer l’inévitable et le paradoxe : mythes, chamanisme et grands débats de société.") },
+  { id: 'TOPIK 6', ready: true, name: () => T("Maîtrise (TOPIK II)"), text: () => T("Style écrit soutenu, proverbes et expressions en quatre caractères, textes académiques et mythes fondateurs de la Corée.") },
+];
+
 const FEATURES = [
-  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme du JLPT.") },
+  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
   { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("La répétition espacée fait revenir chaque mot, kanji ou point de grammaire juste avant que tu l’oublies.") },
-  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT"), text: () => T("Chaque épreuve au format exact de l’examen, corrigée immédiatement, pour arriver le jour J sans surprise.") },
-  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais en japonais simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
-  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, classées par situation, avec l’audio.") },
+  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT et TOPIK"), text: () => T("Chaque épreuve au format exact de l’examen, corrigée immédiatement, pour arriver le jour J sans surprise.") },
+  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais et coréens en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
+  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon ou en Corée, classées par situation, avec l’audio.") },
   { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Affronte d’autres apprenants en quiz rapides pour réviser en t’amusant et grimper au classement.") },
 ];
 

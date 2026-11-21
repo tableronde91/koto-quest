@@ -1,6 +1,6 @@
 import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
 import { isValidTimeZone } from '@koto/learning-engine';
-import type { MeDto } from '@koto/shared';
+import { applyStudyChoice, languageOfLevel, type JlptCode, type MeDto, type StudyChoice, type StudyLanguage } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { AuthService } from '../auth/auth.service';
@@ -33,6 +33,7 @@ export class MeService {
         theme: p.theme as MeDto['preferences']['theme'],
         reducedMotion: p.reducedMotion,
         locale: p.uiLanguage === 'en' ? 'en' : 'fr',
+        studyLanguage: languageOfLevel(p.targetLevel),
       },
     };
   }
@@ -41,11 +42,25 @@ export class MeService {
     if (tz && !isValidTimeZone(tz)) throw new BadRequestException('Fuseau horaire inconnu.');
   }
 
+  /** Langue et niveau visé, en gardant en mémoire le dernier niveau de chaque langue. */
+  private async studyChoice(userId: string, patch: { studyLanguage?: string; targetLevel?: string }) {
+    const p = await this.prisma.userPreferences.findUnique({ where: { userId } });
+    const current: StudyChoice = {
+      studyLanguage: (p?.studyLanguage as StudyLanguage) ?? 'ja',
+      targetLevel: (p?.targetLevel as JlptCode) ?? 'N5',
+      levelByLanguage: (p?.levelByLanguage as StudyChoice['levelByLanguage']) ?? {},
+    };
+    return applyStudyChoice(current, { studyLanguage: patch.studyLanguage as StudyLanguage | undefined, targetLevel: patch.targetLevel as JlptCode | undefined });
+  }
+
   async onboarding(userId: string, dto: OnboardingDto) {
     this.checkTz(dto.timezone);
+    const choice = await this.studyChoice(userId, { studyLanguage: dto.studyLanguage, targetLevel: dto.targetLevel });
     const data = {
       selfLevel: dto.selfLevel,
-      targetLevel: dto.targetLevel,
+      targetLevel: choice.targetLevel,
+      studyLanguage: choice.studyLanguage,
+      levelByLanguage: choice.levelByLanguage,
       examDate: dto.examDate ? new Date(dto.examDate) : null,
       minutesPerDay: dto.minutesPerDay,
       difficultAreas: dto.difficultAreas,
@@ -66,10 +81,16 @@ export class MeService {
 
   async updatePreferences(userId: string, dto: PreferencesDto) {
     this.checkTz(dto.timezone);
-    const { displayName, examDate, locale, ...rest } = dto;
+    const { displayName, examDate, locale, studyLanguage, targetLevel, ...rest } = dto;
+    const study = studyLanguage || targetLevel ? await this.studyChoice(userId, { studyLanguage, targetLevel }) : null;
     await this.prisma.userPreferences.update({
       where: { userId },
-      data: { ...rest, ...(locale ? { uiLanguage: locale } : {}), ...(examDate !== undefined ? { examDate: examDate ? new Date(examDate) : null } : {}) },
+      data: {
+        ...rest,
+        ...(study ? { studyLanguage: study.studyLanguage, targetLevel: study.targetLevel, levelByLanguage: study.levelByLanguage } : {}),
+        ...(locale ? { uiLanguage: locale } : {}),
+        ...(examDate !== undefined ? { examDate: examDate ? new Date(examDate) : null } : {}),
+      },
     });
     if (displayName) await this.prisma.user.update({ where: { id: userId }, data: { displayName: displayName.trim() } });
     return this.me(userId);

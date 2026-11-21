@@ -159,10 +159,14 @@ export function pickDistractors(
   return out;
 }
 
-function kanaScript(s: string): 'hiragana' | 'katakana' | 'other' {
+function kanaScript(s: string): 'hiragana' | 'katakana' | 'consonant' | 'vowel' | 'syllable' | 'other' {
   const c = s.codePointAt(0) ?? 0;
   if (c >= 0x3040 && c <= 0x309f) return 'hiragana';
   if (c >= 0x30a0 && c <= 0x30ff) return 'katakana';
+  // Hangeul : consonnes (ㄱ…ㅎ), voyelles (ㅏ…ㅣ) et syllabes (가…) ne se mélangent pas dans les choix.
+  if (c >= 0x3131 && c <= 0x314e) return 'consonant';
+  if (c >= 0x314f && c <= 0x3163) return 'vowel';
+  if (c >= 0xac00 && c <= 0xd7af) return 'syllable';
   return 'other';
 }
 
@@ -213,7 +217,7 @@ export function generateQuestion(
     case 'reverse_choice':
       return choiceQuestion(
         'front',
-        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
+        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
         { text: item.meaning },
       );
     case 'reading_choice':
@@ -269,7 +273,7 @@ export function generateMatching(items: readonly EngineItem[], rng: Rng): Questi
   const chosen = shuffle(unique, rng).slice(0, 5);
   return {
     type: 'matching',
-    prompt: 'Associe chaque élément japonais à son sens.',
+    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : 'Associe chaque élément japonais à son sens.',
     pairs: { left: chosen.map((i) => i.front), right: shuffle(chosen.map((i) => i.meaning), rng) },
     answer: chosen.map((i) => i.meaning),
     explanation: chosen.map(describe).join(' '),
@@ -309,6 +313,16 @@ export function validateAuthoredExercise(ex: AuthoredExercise): string[] {
   return errors;
 }
 
+/** Texte coréen (hangeul) : sert à adapter les consignes et la mise en forme. */
+export function isKorean(s: string | null | undefined): boolean {
+  return !!s && /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(s);
+}
+
+/** Recolle les segments d'une phrase : sans espace en japonais, avec des espaces en coréen (띄어쓰기). */
+export function joinTokens(tokens: readonly string[]): string {
+  return tokens.some(isKorean) ? tokens.map((t) => t.trim()).join(' ') : tokens.join('');
+}
+
 /** Marque du trou dans une phrase à compléter. */
 export const BLANK = '＿';
 const BLANK_RE = /＿+|_+/g;
@@ -317,12 +331,12 @@ export const hasBlank = (s: string | null | undefined) => !!s && /＿|_/.test(s)
 
 /** Remplace le trou par la réponse (une liste de segments est recollée). Sans trou, renvoie le texte tel quel. */
 export function fillBlank(template: string, answer: string | string[]): string {
-  const value = Array.isArray(answer) ? answer.join('') : answer;
+  const value = Array.isArray(answer) ? joinTokens(answer) : answer;
   return hasBlank(template) ? template.replace(BLANK_RE, value) : template;
 }
 
 /** Les réponses en romaji (« neko ») ne se prononcent pas : on lit alors la phrase seule. */
-const isJapanese = (s: string) => /[\u3040-\u30ff\u4e00-\u9faf]/.test(s);
+const isJapanese = (s: string) => /[\u3040-\u30ff\u4e00-\u9faf]/.test(s) || isKorean(s);
 
 export function authoredToQuestion(ex: AuthoredExercise, rng: Rng, itemId?: string): Question {
   const display: Question['display'] = ex.lines

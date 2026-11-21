@@ -32,6 +32,7 @@ import type {
   DuelStateDto,
   DuelStatus,
 } from '@koto/shared';
+import { languageOfLevel, levelsOfLanguage } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { ContentService, toEngineItem } from '../content/content.service';
@@ -113,14 +114,16 @@ export class DuelService {
    * sinon celles de l'un ou de l'autre, sinon les kana du premier monde.
    */
   private async plan(seed: string, userIds: string[], tx: Tx): Promise<Question[]> {
-    const cards = await tx.reviewCard.findMany({ where: { userId: { in: userIds } }, select: { userId: true, itemId: true } });
+    // Langue du duel : celle qu'étudie le premier joueur (le matchmaking n'associe que des joueurs de la même langue).
+    const lang = languageOfLevel((await tx.userPreferences.findUnique({ where: { userId: userIds[0] }, select: { targetLevel: true } }))?.targetLevel);
+    const cards = await tx.reviewCard.findMany({ where: { userId: { in: userIds }, item: { levelCode: { in: levelsOfLanguage(lang) } } }, select: { userId: true, itemId: true } });
     const byUser = userIds.map((u) => new Set(cards.filter((c) => c.userId === u).map((c) => c.itemId)));
     const common = [...byUser[0]].filter((id) => byUser.every((s) => s.has(id)));
     const union = [...new Set(cards.map((c) => c.itemId))];
     let ids = common.length >= 8 ? common : union.length >= 8 ? union : [];
     let rows = ids.length ? await tx.learningItem.findMany({ where: { id: { in: ids } } }) : [];
     if (rows.length < 8) {
-      rows = await tx.learningItem.findMany({ where: { lessons: { some: { lesson: { chapter: { world: { slug: 'n5-w1' } } } } } } });
+      rows = await tx.learningItem.findMany({ where: { lessons: { some: { lesson: { chapter: { world: { slug: lang === 'ko' ? 'topik1-w1' : 'n5-w1' } } } } } } });
       ids = rows.map((r) => r.id);
     }
     const items = rows.map(toEngineItem);
@@ -320,8 +323,13 @@ export class DuelService {
         orderBy: { queuedAt: 'asc' },
         take: 50,
       });
-      if (others.length === 0) return { status: 'searching' as const, since: me.queuedAt.toISOString() };
-      const opp = others.reduce((best, o) => (Math.abs(o.rating - me.rating) < Math.abs(best.rating - me.rating) ? o : best));
+      // On n'affronte que des joueurs qui étudient la même langue.
+      const prefs = await tx.userPreferences.findMany({ where: { userId: { in: [userId, ...others.map((o) => o.userId)] } }, select: { userId: true, targetLevel: true } });
+      const langOf = new Map(prefs.map((p) => [p.userId, languageOfLevel(p.targetLevel)]));
+      const myLang = langOf.get(userId) ?? 'ja';
+      const sameLang = others.filter((o) => (langOf.get(o.userId) ?? 'ja') === myLang);
+      if (sameLang.length === 0) return { status: 'searching' as const, since: me.queuedAt.toISOString() };
+      const opp = sameLang.reduce((best, o) => (Math.abs(o.rating - me.rating) < Math.abs(best.rating - me.rating) ? o : best));
       const [p1, p2] = opp.queuedAt! <= me.queuedAt ? [opp.userId, userId] : [userId, opp.userId];
       const duel = await this.startDuel(tx, { kind: 'ranked', p1Id: p1, p2Id: p2 }, now);
       await tx.duelProfile.updateMany({ where: { userId: { in: [userId, opp.userId] } }, data: { queuedAt: null, queueSeenAt: null } });

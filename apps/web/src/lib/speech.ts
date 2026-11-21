@@ -1,5 +1,5 @@
 /**
- * Synthèse vocale japonaise via le navigateur (gratuite, sans fichier audio à licencier).
+ * Synthèse vocale japonaise et coréenne via le navigateur (gratuite, sans fichier audio à licencier).
  *
  * Toute la lecture passe par `say()`, qui contourne les défauts connus des navigateurs :
  * - les voix se chargent en différé : au premier appel, la liste est vide et le navigateur lit le
@@ -22,21 +22,26 @@ export interface SpeechPart {
   onStart?: () => void;
 }
 
-let voice: SpeechSynthesisVoice | null = null;
+type VoiceLang = 'ja' | 'ko';
+const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR' };
+const voices = new Map<VoiceLang, SpeechSynthesisVoice | null>();
 let voicesReady: Promise<void> | null = null;
 
-/** Meilleure voix japonaise : installée sur l'appareil d'abord (démarrage immédiat), puis en ligne. */
-function chooseVoice(): SpeechSynthesisVoice | null {
-  const ja = speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().replace('_', '-').startsWith('ja'));
-  if (!ja.length) return null;
-  const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === 'ja-jp' ? 2 : 0) + (v.default ? 1 : 0);
-  return [...ja].sort((a, b) => score(b) - score(a))[0];
+/** Langue d'un texte : coréen s'il contient du hangeul, japonais sinon. */
+export const voiceLangOf = (text: string): VoiceLang => (/[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(text) ? 'ko' : 'ja');
+
+/** Meilleure voix pour la langue : installée sur l'appareil d'abord (démarrage immédiat), puis en ligne. */
+function chooseVoice(lang: VoiceLang): SpeechSynthesisVoice | null {
+  const list = speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().replace('_', '-').startsWith(lang));
+  if (!list.length) return null;
+  const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === LOCALE[lang].toLowerCase() ? 2 : 0) + (v.default ? 1 : 0);
+  return [...list].sort((a, b) => score(b) - score(a))[0];
 }
 
-function pickVoice() {
+function pickVoice(lang: VoiceLang = 'ja') {
   if (!speechSupported()) return null;
-  voice ??= chooseVoice();
-  return voice;
+  if (!voices.has(lang) || !voices.get(lang)) voices.set(lang, chooseVoice(lang));
+  return voices.get(lang) ?? null;
 }
 
 /** Attend que la liste des voix soit disponible (au plus 1,5 s : certains navigateurs n'envoient jamais l'événement). */
@@ -46,7 +51,7 @@ function loadVoices(): Promise<void> {
   voicesReady ??= new Promise<void>((resolve) => {
     const done = () => {
       speechSynthesis.removeEventListener?.('voiceschanged', done);
-      voice = null;
+      voices.clear();
       resolve();
     };
     speechSynthesis.addEventListener?.('voiceschanged', done);
@@ -57,7 +62,7 @@ function loadVoices(): Promise<void> {
 
 if (speechSupported()) {
   speechSynthesis.addEventListener?.('voiceschanged', () => {
-    voice = null;
+    voices.clear();
   });
   // Charge la liste des voix dès le démarrage, pour que la première lecture parte tout de suite.
   speechSynthesis.getVoices();
@@ -78,11 +83,13 @@ export function say(parts: SpeechPart[], onEnd?: () => void): boolean {
 
   const go = () => {
     if (my !== request) return; // une lecture plus récente a été demandée entre-temps
-    const v = pickVoice();
     speechSynthesis.resume();
     list.forEach((p, i) => {
+      // Chaque phrase est lue par une voix de sa langue (japonais ou coréen).
+      const lang = voiceLangOf(p.text);
+      const v = pickVoice(lang);
       const u = new SpeechSynthesisUtterance(p.text);
-      u.lang = v?.lang ?? 'ja-JP';
+      u.lang = v?.lang ?? LOCALE[lang];
       try {
         if (v) u.voice = v;
       } catch {
@@ -122,7 +129,8 @@ export function stopSpeech() {
   speechSynthesis.cancel();
 }
 
-export const hasJapaneseVoice = () => !!pickVoice();
+export const hasJapaneseVoice = () => !!pickVoice('ja');
+export const hasVoiceFor = (lang: VoiceLang) => !!pickVoice(lang);
 
 /**
  * Document d'écoute d'examen : lignes « N|… » (narrateur), « M|… » (homme), « F|… » (femme).

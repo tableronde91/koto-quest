@@ -81,7 +81,7 @@ function blob(cx: number, cy: number, rx: number, ry: number, seed: number, wobb
 // ───────────── Ambiance de chaque niveau ─────────────
 // N5 : printemps lumineux (cerisiers, soleil). N4 : automne au crépuscule, plus sobre (érables, pins, lune, brume).
 interface MapTheme {
-  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear';
+  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear' | 'korea';
   sea: [string, string, string];
   waves: number;
   horizon: string;
@@ -102,6 +102,12 @@ interface MapTheme {
   plaque: { fill: string; stroke: string; text: string; accent: string };
   sail: string;
   dusk: boolean;
+  /** Pétales (azalées, forsythias) au lieu de feuilles d'érable */
+  petals?: boolean;
+  /** Lucioles d'été au lieu de feuilles d'érable */
+  fireflies?: boolean;
+  /** Flocons de neige au lieu de feuilles d'érable */
+  snow?: boolean;
 }
 
 const SPRING: MapTheme = {
@@ -227,9 +233,122 @@ const NEWYEAR: MapTheme = {
   dusk: false,
 };
 
+// TOPIK 1 : automne lumineux sur la péninsule (mer bleue, érables rouges du Seoraksan, couleurs du dancheong).
+const KOREA: MapTheme = {
+  id: 'korea',
+  sea: ['#2B6FA0', '#3584B3', '#3F95BF'],
+  waves: 0.1,
+  horizon: '#1F5680',
+  shallow: '#9FE0E6',
+  shallowOpacity: 0.28,
+  grass: ['#6E9A55', '#5A874A'],
+  sand: '#E9D9B0',
+  blossom: '#D9483B',
+  blossomDark: '#E8772E',
+  leaf: '#3F6E45',
+  leafDark: '#2C5233',
+  cloud: '#FFFFFF',
+  cloudOpacity: 0.75,
+  foam: 0.55,
+  path: '#FFE3A0',
+  particles: ['#D9483B', '#E8772E', '#E2B84A'],
+  banner: { fill: '#1F5C52', stroke: '#E2B84A', text: '#F6EBD3', seal: '#B23A3A' },
+  plaque: { fill: '#F6EBD3', stroke: '#2E8B7A', text: '#1F3D37', accent: '#B23A3A' },
+  sail: '#B23A3A',
+  dusk: false,
+};
+
+// TOPIK 2 : printemps coréen (azalées roses et forsythias jaunes sur les collines, mer turquoise, couleurs du dancheong).
+const KOREA_SPRING: MapTheme = {
+  ...KOREA,
+  sea: ['#1F7F92', '#2696A3', '#2FA6AE'],
+  horizon: '#1D6475',
+  shallow: '#A8F0E0',
+  grass: ['#7FB063', '#6A9D52'],
+  blossom: '#E9709A',
+  blossomDark: '#F2C230',
+  particles: ['#F29BB8', '#E9709A', '#F2C230'],
+  banner: { fill: '#4A2E5C', stroke: '#E2B84A', text: '#F6EBD3', seal: '#B23A3A' },
+  plaque: { fill: '#F8EEF3', stroke: '#8E5BA8', text: '#3A2347', accent: '#B23A3A' },
+  sail: '#8E5BA8',
+  petals: true,
+};
+
+// TOPIK 3 : soir d'été sous les Joseon (mer de jade, rizières vertes, lotus, lucioles, lanternes du banquet).
+const KOREA_SUMMER: MapTheme = {
+  ...KOREA,
+  sea: ['#14564F', '#1C6E62', '#25806E'],
+  horizon: '#0F423C',
+  shallow: '#8EE6C4',
+  grass: ['#4E9A4E', '#3F8A45'],
+  blossom: '#F29BB8',
+  blossomDark: '#E36A5A',
+  cloud: '#FFE9C4',
+  cloudOpacity: 0.55,
+  particles: ['#E9FF8A'],
+  banner: { fill: '#5A2A1A', stroke: '#E2B84A', text: '#F6EBD3', seal: '#B5562E' },
+  plaque: { fill: '#F6EBD3', stroke: '#B5562E', text: '#3A1F14', accent: '#2E8B7A' },
+  sail: '#B5562E',
+  fireflies: true,
+};
+
+// TOPIK 4 : hiver coréen (mer d'ardoise, îles enneigées, pins, flocons).
+const KOREA_WINTER: MapTheme = {
+  ...KOREA,
+  sea: ['#3E5C7A', '#4E6E8C', '#5E7E9A'],
+  horizon: '#2E4A66',
+  shallow: '#D8ECF6',
+  grass: ['#E8EEF2', '#D6E0E8'],
+  blossom: '#C8323F',
+  blossomDark: '#9A2230',
+  cloud: '#FFFFFF',
+  cloudOpacity: 0.7,
+  particles: ['#FFFFFF'],
+  banner: { fill: '#1F2F45', stroke: '#C9D6E2', text: '#F2F6FA', seal: '#C8323F' },
+  plaque: { fill: '#F2F6FA', stroke: '#3E5C8A', text: '#1F2F45', accent: '#C8323F' },
+  sail: '#3E5C8A',
+  snow: true,
+};
+
+// TOPIK 5 : crépuscule des esprits (mer violette, îles de brume, fleurs de résurrection, lueurs d'âmes).
+const KOREA_SPIRIT: MapTheme = {
+  ...KOREA,
+  sea: ['#2E2350', '#3A2E66', '#4A3A7A'],
+  horizon: '#1F1838',
+  shallow: '#C9A6F2',
+  grass: ['#6A8A6A', '#5A7A5E'],
+  blossom: '#C9A6F2',
+  blossomDark: '#8E6AC2',
+  cloud: '#E9DDF6',
+  cloudOpacity: 0.5,
+  particles: ['#E9DDF6', '#C9A6F2', '#FFE9A8'],
+  banner: { fill: '#3A2A5A', stroke: '#C9A6F2', text: '#F3EEFA', seal: '#6A4C93' },
+  plaque: { fill: '#F3EEFA', stroke: '#6A4C93', text: '#2A1F44', accent: '#C8323F' },
+  sail: '#6A4C93',
+  fireflies: true,
+};
+
+// TOPIK 6 : aube du premier royaume (mer dorée, monts sacrés, poussière d'or du ciel).
+const KOREA_DAWN: MapTheme = {
+  ...KOREA,
+  sea: ['#2F5D7A', '#4A7A8A', '#C9A06A'],
+  horizon: '#E2A65A',
+  shallow: '#F6E3A8',
+  grass: ['#7A9A4E', '#6A8A42'],
+  blossom: '#E7B53B',
+  blossomDark: '#A57E22',
+  cloud: '#FFF0D0',
+  cloudOpacity: 0.75,
+  particles: ['#F2D94E', '#FFE9A8', '#E7B53B'],
+  banner: { fill: '#4A3410', stroke: '#E7B53B', text: '#FFF6DE', seal: '#A57E22' },
+  plaque: { fill: '#FFF6DE', stroke: '#A57E22', text: '#3A2A10', accent: '#2E8B7A' },
+  sail: '#A57E22',
+  fireflies: true,
+};
+
 const ThemeCtx = createContext<MapTheme>(SPRING);
 const useMapTheme = () => useContext(ThemeCtx);
-export const mapThemeFor = (level: string) => (/N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
+export const mapThemeFor = (level: string) => (/^TOPIK2$/i.test(level) ? KOREA_SPRING : /^TOPIK3$/i.test(level) ? KOREA_SUMMER : /^TOPIK4$/i.test(level) ? KOREA_WINTER : /^TOPIK5$/i.test(level) ? KOREA_SPIRIT : /^TOPIK6$/i.test(level) ? KOREA_DAWN : /^TOPIK/i.test(level) ? KOREA : /N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
 
 
 function Tree({ x, y, s = 1, pink = false }: { x: number; y: number; s?: number; pink?: boolean }) {
@@ -764,6 +883,16 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
               <Castle x={600} y={30} s={0.4} fill={t.horizon} />
             </g>
           )}
+          {saga && t.id === 'korea' && (
+            /* Montagnes de la péninsule à l'horizon, toit de palais et pagode de pierre */
+            <g pointerEvents="none" opacity={0.55} fill={t.horizon}>
+              <path d="M520 70 L585 22 L620 46 L665 12 L735 70Z" />
+              <path d="M820 70 L860 40 L890 56 L930 30 L980 70Z" />
+              <path d="M700 70 Q712 58 724 56 H776 Q788 58 800 70Z" />
+              <rect x="728" y="58" width="44" height="12" />
+              <path d="M300 64 h14 v-6 h-11 v-6 h8 v-6 h-5 v-8 h-2 v8 h-5 v6 h8 v6 h-11 v6Z" />
+            </g>
+          )}
           {saga && t.id === 'autumn' && (
             <g pointerEvents="none">
               {[{ x: 300, y: 46, s: 1 }, { x: 560, y: 86, s: 0.7 }, { x: 730, y: 30, s: 0.85 }, { x: 150, y: 130, s: 0.6 }, { x: 940, y: 190, s: 0.7 }].map((p, i) => (
@@ -842,7 +971,7 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           {worlds.map((w, i) => {
             const p = pts[i];
             const st = states[i];
-            const glyph = w.exam ? '試' : w.boss?.glyph ?? String(w.order);
+            const glyph = w.exam ? (t.id === 'korea' ? '시' : '試') : w.boss?.glyph ?? String(w.order);
             const detail = w.exam && w.progress.total === 0 ? (w.exam.passed ? T("examen blanc réussi") : 'examen blanc') : T("{0} leçons sur {1}", [w.progress.completed, w.progress.total]);
             const label = T("Île {0} : {1}, {2}", [w.order, w.title, st === 'done' ? T("terminée") : st === 'current' ? T("en cours") : st === 'soon' ? T("bientôt") : detail]);
             const title = w.title.length > 20 ? `${w.title.slice(0, 19).trimEnd()}…` : w.title;
@@ -883,8 +1012,17 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           <g pointerEvents="none">
             {!calm &&
               petals.map((p, i) => (
-                t.dusk ? (
-                  /* Feuilles d'érable qui tombent lentement */
+                t.snow ? (
+                  /* Flocons qui tombent en se balançant */
+                  <motion.circle key={i} r={i % 3 ? 2.4 : 3.4} fill="#FFFFFF" opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 30 : -30), p.x] }} transition={{ duration: p.d * 1.4, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
+                ) : t.fireflies ? (
+                  /* Lucioles sur les rizières (ou lueurs d'esprits) : elles montent doucement en clignotant */
+                  <motion.circle key={i} r={i % 3 ? 2.2 : 3} fill={t.particles[i % t.particles.length]} initial={{ cx: p.x, cy: 90 + ((i * 97) % 460), opacity: 0 }} animate={{ cy: [90 + ((i * 97) % 460), 60 + ((i * 97) % 460)], cx: [p.x, p.x + (i % 2 ? 26 : -26), p.x], opacity: [0, 0.95, 0.2, 0.9, 0] }} transition={{ duration: 5 + (i % 4), repeat: Infinity, delay: p.delay * 0.5, ease: 'easeInOut' }} />
+                ) : t.petals ? (
+                  /* Pétales d'azalée et de forsythia portés par le vent de printemps */
+                  <motion.ellipse key={i} rx="3.2" ry="5" fill={t.particles[i % t.particles.length]} opacity={0.9} initial={{ cx: p.x, cy: -10 }} animate={{ cy: [-10, H + 10], cx: [p.x, p.x + (i % 2 ? 50 : -50)], rotate: [0, 220] }} transition={{ duration: p.d * 1.1, repeat: Infinity, delay: p.delay, ease: 'linear' }} />
+                ) : t.dusk || t.id === 'korea' ? (
+                  /* Feuilles d'érable qui tombent lentement (automne japonais, érables du Seoraksan) */
                   <motion.g key={i} initial={{ x: p.x, y: -14 }} animate={{ y: [-14, H + 14], x: [p.x, p.x + (i % 2 ? 60 : -60)], rotate: [0, i % 2 ? 260 : -260] }} transition={{ duration: p.d * 1.6, repeat: Infinity, delay: p.delay * 1.5, ease: 'linear' }}>
                     <path d="M0 -7 L2 -2 L7 -3 L3 1 L5 6 L0 3 L-5 6 L-3 1 L-7 -3 L-2 -2Z" fill={t.particles[i % t.particles.length]} opacity={0.85} />
                   </motion.g>
@@ -915,7 +1053,7 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           <g transform="translate(24 24)" pointerEvents="none">
             <rect width={(saga?.title ?? region).length * 10.5 + 60} height="44" rx="10" fill={t.banner.fill} stroke={t.banner.stroke} strokeWidth="2.5" />
             <circle cx="24" cy="22" r="11" fill={t.banner.seal} />
-            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga?.glyph ?? (t.id === 'newyear' ? '新' : t.id === 'winter' ? '冬' : t.id === 'summer' ? '夏' : t.dusk ? '秋' : '島')}</text>
+            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga?.glyph ?? (t.id === 'korea' ? '한' : t.id === 'newyear' ? '新' : t.id === 'winter' ? '冬' : t.id === 'summer' ? '夏' : t.dusk ? '秋' : '島')}</text>
             <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill={t.banner.text}>{saga?.title ?? region}</text>
           </g>
 

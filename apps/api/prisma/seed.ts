@@ -4,7 +4,7 @@
  * Le contenu est validé avant import ; en cas d'erreur, rien n'est écrit.
  */
 import 'dotenv/config';
-import { readdirSync, readFileSync, statSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'fs';
 import { join, resolve } from 'path';
 import { createHash } from 'crypto';
 import { PrismaClient, Prisma } from '@prisma/client';
@@ -154,14 +154,22 @@ export async function seed(prisma: PrismaClient, contentRoot = resolve(__dirname
 
 export interface CharactersJson {
   contentVersion: string;
+  /** ja (par défaut) ou ko */
+  language?: string;
   notice?: string;
-  sections: { slug: 'hiragana' | 'katakana' | 'kanji'; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[];
+  sections: { slug: string; glyph?: string; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[];
 }
 
-/** Onglet Caractères : mêmes notions (même slug) que le parcours, donc une maîtrise partagée. */
+/** Onglet Caractères : mêmes notions (même slug) que le parcours, donc une maîtrise partagée. Un catalogue par langue. */
 async function seedCharacters(prisma: PrismaClient, contentRoot: string) {
-  const file = join(contentRoot, 'characters', 'characters.json');
-  const data = JSON.parse(readFileSync(file, 'utf8')) as CharactersJson;
+  for (const f of ['characters.json', 'hangul.json']) {
+    const file = join(contentRoot, 'characters', f);
+    if (existsSync(file)) await seedCharacterFile(prisma, JSON.parse(readFileSync(file, 'utf8')) as CharactersJson);
+  }
+}
+
+async function seedCharacterFile(prisma: PrismaClient, data: CharactersJson) {
+  const levelCode = data.language === 'ko' ? 'TOPIK1' : 'N5';
   const seen = new Set<string>();
   let n = 0;
   for (const s of data.sections)
@@ -169,7 +177,7 @@ async function seedCharacters(prisma: PrismaClient, contentRoot: string) {
       for (const it of g.items) {
         if (seen.has(it.slug)) throw new Error(`Caractères : slug en double ${it.slug}`);
         seen.add(it.slug);
-        const base = { kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning, levelCode: 'N5', contentVersion: data.contentVersion };
+        const base = { kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning, levelCode, contentVersion: data.contentVersion };
         const item = await prisma.learningItem.upsert({ where: { slug: it.slug }, create: { slug: it.slug, ...base }, update: base });
         if (it.kanji) {
           const k = { onyomi: it.kanji.onyomi, kunyomi: it.kanji.kunyomi, strokes: it.kanji.strokes ?? null };
@@ -177,29 +185,37 @@ async function seedCharacters(prisma: PrismaClient, contentRoot: string) {
         }
         n++;
       }
-  console.log(`✔ Caractères (contenu ${data.contentVersion}) : ${n} caractères`);
+  console.log(`✔ Caractères ${data.language ?? 'ja'} (contenu ${data.contentVersion}) : ${n} caractères`);
 }
 
 export interface ExpressionsJson {
   contentVersion: string;
+  language?: string;
   notice?: string;
   themes: { slug: string; glyph: string; title: string; description: string; expressions: (ItemJson & { note: string; register: string; example?: { jp: string; fr: string } })[] }[];
 }
 
 /** Onglet Expressions : des notions de vocabulaire à part entière (révisions et maîtrise comprises). */
 async function seedExpressions(prisma: PrismaClient, contentRoot: string) {
-  const data = JSON.parse(readFileSync(join(contentRoot, 'expressions', 'expressions.json'), 'utf8')) as ExpressionsJson;
+  for (const f of ['expressions.json', 'expressions-ko.json']) {
+    const file = join(contentRoot, 'expressions', f);
+    if (existsSync(file)) await seedExpressionFile(prisma, JSON.parse(readFileSync(file, 'utf8')) as ExpressionsJson);
+  }
+}
+
+async function seedExpressionFile(prisma: PrismaClient, data: ExpressionsJson) {
+  const levelCode = data.language === 'ko' ? 'TOPIK1' : 'N5';
   const seen = new Set<string>();
   let n = 0;
   for (const t of data.themes)
     for (const it of t.expressions) {
       if (seen.has(it.slug)) throw new Error(`Expressions : slug en double ${it.slug}`);
       seen.add(it.slug);
-      const base = { kind: 'vocabulary', front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning, levelCode: 'N5', contentVersion: data.contentVersion };
+      const base = { kind: 'vocabulary', front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning, levelCode, contentVersion: data.contentVersion };
       await prisma.learningItem.upsert({ where: { slug: it.slug }, create: { slug: it.slug, ...base }, update: base });
       n++;
     }
-  console.log(`✔ Expressions (contenu ${data.contentVersion}) : ${data.themes.length} thèmes, ${n} expressions`);
+  console.log(`✔ Expressions ${data.language ?? 'ja'} (contenu ${data.contentVersion}) : ${data.themes.length} thèmes, ${n} expressions`);
 }
 
 /** Empreinte de tous les fichiers de contenu : l'import est sauté s'ils n'ont pas changé. */

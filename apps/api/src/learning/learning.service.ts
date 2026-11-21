@@ -29,7 +29,7 @@ import {
   bossTimeLimitSec,
   exampleIndex,
 } from '@koto/learning-engine';
-import type { AnswerResultDto, IssuedQuestionDto, LessonCompletionDto, SessionDto } from '@koto/shared';
+import { languageOfLevel, levelsOfLanguage, type AnswerResultDto, type IssuedQuestionDto, type LessonCompletionDto, type SessionDto } from '@koto/shared';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
@@ -337,9 +337,16 @@ export class LearningService {
 
   // ─────────────── Révisions ───────────────
 
+  /** Filtre « notions de la langue étudiée » : les révisions ne mélangent pas japonais et coréen. */
+  async languageFilter(userId: string) {
+    const prefs = await this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } });
+    return { levelCode: { in: levelsOfLanguage(languageOfLevel(prefs?.targetLevel ?? 'N5')) } };
+  }
+
   async dueCards(userId: string) {
     const now = this.clock.now();
-    const cards = await this.prisma.reviewCard.findMany({ where: { userId, due: { lte: now }, state: { not: 'new' } }, include: { item: true } });
+    const item = await this.languageFilter(userId);
+    const cards = await this.prisma.reviewCard.findMany({ where: { userId, due: { lte: now }, state: { not: 'new' }, item }, include: { item: true } });
     return orderReviewQueue(cards.map((c) => ({ row: c, card: toCardState(c) })), now);
   }
 
@@ -347,9 +354,10 @@ export class LearningService {
     const now = this.clock.now();
     const prefs = await this.prisma.userPreferences.findUnique({ where: { userId } });
     const levelCode = prefs?.targetLevel ?? 'N5';
+    const item = { levelCode: { in: levelsOfLanguage(languageOfLevel(levelCode)) } };
     const [due, soon, learnedCount, totalItems] = await Promise.all([
-      this.prisma.reviewCard.count({ where: { userId, due: { lte: now } } }),
-      this.prisma.reviewCard.count({ where: { userId, due: { gt: now, lte: new Date(now.getTime() + 3600_000) } } }),
+      this.prisma.reviewCard.count({ where: { userId, due: { lte: now }, item } }),
+      this.prisma.reviewCard.count({ where: { userId, due: { gt: now, lte: new Date(now.getTime() + 3600_000) }, item } }),
       this.prisma.reviewCard.count({ where: { userId, item: { levelCode } } }),
       this.prisma.learningItem.count({ where: { levelCode } }),
     ]);
@@ -390,7 +398,7 @@ export class LearningService {
     let [first] = await this.dueCards(userId);
     if (!first && opts.allowNotDue) {
       // Demande explicite de l'utilisateur : on prend la notion dont la révision est la plus proche.
-      const soonest = await this.prisma.reviewCard.findFirst({ where: { userId, state: { not: 'new' } }, orderBy: { due: 'asc' }, include: { item: true } });
+      const soonest = await this.prisma.reviewCard.findFirst({ where: { userId, state: { not: 'new' }, item: await this.languageFilter(userId) }, orderBy: { due: 'asc' }, include: { item: true } });
       if (soonest) first = { row: soonest, card: toCardState(soonest) };
     }
     if (!first) return null;

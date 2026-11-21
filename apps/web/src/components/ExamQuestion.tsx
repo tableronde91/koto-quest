@@ -3,6 +3,7 @@ import type { IssuedQuestionDto } from '@koto/shared';
 import { scriptText, speak, speakScript, speechSupported, stopSpeech } from '../lib/speech';
 import { Jp } from './ui';
 import { T } from '../i18n';
+import { langOf } from '../lib/format';
 
 const JP_RE = /[぀-ヿ一-龯]/;
 
@@ -10,7 +11,7 @@ const JP_RE = /[぀-ヿ一-龯]/;
 export function ExamSentence({ text, className = '' }: { text: string; className?: string }) {
   const parts = text.split(/(\{\{.*?\}\}|★|＿＿)/);
   return (
-    <span lang="ja" className={`jp ${className}`}>
+    <span lang={langOf(text)} className={`jp ${className}`}>
       {parts.map((p, i) =>
         p.startsWith('{{') ? (
           <u key={i} className="decoration-2 underline-offset-[6px]">{p.slice(2, -2)}</u>
@@ -56,7 +57,7 @@ function AudioPlayer({ script, maxPlays, qid }: { script: string; maxPlays?: num
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qid]);
   if (!speechSupported())
-    return <p className="whitespace-pre-line text-left">{T("Ce navigateur ne peut pas lire l’audio japonais. Transcription :")}{' '}{'\n'}<span lang="ja" className="jp">{scriptText(script)}</span></p>;
+    return <p className="whitespace-pre-line text-left">{T("Ce navigateur ne peut pas lire l’audio japonais. Transcription :")}{' '}{'\n'}<span lang={langOf(scriptText(script))} className="jp">{scriptText(script)}</span></p>;
   return (
     <div className="flex flex-col items-center gap-2">
       <button type="button" className="btn btn-quiet min-h-14 px-6 text-lg" onClick={play} disabled={left <= 0 || playing}>
@@ -89,7 +90,7 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
 
   return (
     <fieldset className="flex flex-col gap-4" data-testid="exam-question" data-qid={q.id} data-type={q.type}>
-      {d.part && <p lang="ja" className="jp -mb-2 text-sm font-bold text-ink-soft">{d.part}</p>}
+      {d.part && <p lang={langOf(d.part)} className="jp -mb-2 text-sm font-bold text-ink-soft">{d.part}</p>}
       <legend className="mb-1 text-lg font-bold">
         {number !== undefined && <span className="mr-2 text-ink-soft">{number}.</span>}
         <span lang={JP_RE.test(q.prompt) ? 'ja' : 'fr'} className={JP_RE.test(q.prompt) ? 'jp' : undefined}>{q.prompt}</span>
@@ -102,12 +103,12 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
           ) : (
             <AudioPlayer script={script} maxPlays={d.maxPlays} qid={q.id} />
           )}
-          {d.text && <p lang="ja" className="jp text-center text-xl font-bold">{d.text}</p>}
+          {d.text && <p lang={langOf(d.text)} className="jp text-center text-xl font-bold">{d.text}</p>}
         </div>
       ) : d.passage ? (
         <div className="flex flex-col gap-3">
-          <div lang="ja" className="jp whitespace-pre-line rounded-2xl border-2 border-line bg-surface p-5 text-lg leading-loose">{d.passage}</div>
-          {d.text && <p lang="ja" className="jp text-xl font-bold">{d.text}</p>}
+          <div lang={langOf(d.passage)} className="jp whitespace-pre-line rounded-2xl border-2 border-line bg-surface p-5 text-lg leading-loose">{d.passage}</div>
+          {d.text && <p lang={langOf(d.text)} className="jp text-xl font-bold">{d.text}</p>}
         </div>
       ) : d.lines ? (
         <div className="flex flex-col gap-2 rounded-3xl bg-surface-2 p-5">

@@ -9,3 +9,5 @@ import '@fontsource/atkinson-hyperlegible/700.css';
 import '@fontsource/zen-maru-gothic/500.css';
 import '@fontsource/zen-maru-gothic/700.css';
 import '@fontsource/zen-maru-gothic/900.css';
+// Coréen : police arrondie assortie à Zen Maru Gothic (Zen Maru Gothic n'a pas de hangeul).
+import '@fontsource/gowun-dodum/400.css';

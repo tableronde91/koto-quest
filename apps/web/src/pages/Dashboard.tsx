@@ -9,9 +9,12 @@ import { ErrorBox, ProgressBar, Spinner } from '../components/ui';
 import { formatDuration } from '../lib/format';
 import { T, DATE_LOCALE } from '../i18n';
 import { ReadingTodayCard } from './Reading';
+import { languageOfLevel, levelLabel } from '@koto/shared';
+import { StudyLanguageSwitch, studyWords } from '../components/StudyLanguage';
 
-function greeting() {
+function greeting(ko: boolean) {
   const h = new Date().getHours();
+  if (ko) return '안녕하세요';
   return h < 11 ? 'おはよう' : h < 18 ? 'こんにちは' : 'こんばんは';
 }
 
@@ -21,11 +24,13 @@ export function DashboardPage() {
   if (error || !d) return <ErrorBox error={error} onRetry={refetch} />;
 
   const hasReviews = d.reviews.due > 0;
+  const words = studyWords(languageOfLevel(d.targetLevel));
   return (
     <div className="flex flex-col gap-8">
+      <StudyLanguageSwitch className="max-w-sm md:hidden" />
       <header className="flex items-start gap-4">
         <div className="min-w-0 flex-1">
-        <p lang="ja" className="jp text-xl text-ink-soft">{greeting()}、{d.displayName}</p>
+        <p lang={words.htmlLang} className="jp text-xl text-ink-soft">{words.ko ? `${d.displayName} 님, ${greeting(true)}` : `${greeting(false)}、${d.displayName}`}</p>
         <h1 className="mt-1 text-3xl sm:text-4xl">
           {hasReviews ? T("{0} notion{1} à réviser", [d.reviews.due, d.reviews.due > 1 ? 's' : '']) : d.nextLesson ? T("Prêt·e pour la suite ?") : T("Tout est à jour")}
         </h1>
@@ -50,7 +55,7 @@ export function DashboardPage() {
             <Avatar config={d.avatar} size={76} />
           </motion.div>
         </Link>
-        <SpeechBubble>{companionLine(d, hasReviews)}</SpeechBubble>
+        <SpeechBubble>{companionLine(d, hasReviews, words.ko)}</SpeechBubble>
       </section>
 
       {/* Action principale : une seule chose à faire maintenant */}
@@ -128,17 +133,17 @@ export function DashboardPage() {
           </div>
           <AchievementsStrip />
           <Link to="/prepa" className="flex items-center gap-4 rounded-2xl border border-line p-4 hover:border-ink-soft">
-            <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#8E1B26] text-xl font-black text-white">試</span>
-            <span><span className="block font-bold">{T("Atelier JLPT")}</span><span className="text-sm text-ink-soft">{T("Kanji, orthographe, grammaire, ★, écoute : au format de l’examen.")}</span></span>
+            <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#8E1B26] text-xl font-black text-white">{words.ko ? '시' : '試'}</span>
+            <span><span className="block font-bold">{words.workshop}</span><span className="text-sm text-ink-soft">{words.ko ? T("Grammaire et écoute : au format du TOPIK, consignes en coréen.") : T("Kanji, orthographe, grammaire, ★, écoute : au format de l’examen.")}</span></span>
           </Link>
           <div>
-            <h2 className="text-xl">{T("Parcours {0}", [ d.targetLevel])}</h2>
-            <div className="mt-2"><ProgressBar value={d.progress.completedLessons} max={d.progress.totalLessons} label={T("Leçons {0} terminées", [d.targetLevel])} tone="ok" /></div>
+            <h2 className="text-xl">{T("Parcours {0}", [ levelLabel(d.targetLevel)])}</h2>
+            <div className="mt-2"><ProgressBar value={d.progress.completedLessons} max={d.progress.totalLessons} label={T("Leçons {0} terminées", [levelLabel(d.targetLevel)])} tone="ok" /></div>
             <p className="mt-1 text-sm text-ink-soft">{T("{0} leçon(s) sur {1} disponibles", [d.progress.completedLessons , d.progress.totalLessons ])}</p>
           </div>
           <div className="rounded-2xl border border-line p-4">
             <p className="font-bold">{T("Préparation estimée : {0} %", [ d.readiness.percent ])}</p>
-            <p className="text-sm text-ink-soft">{T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au JLPT officiel.", [d.readiness.label ])}</p>
+            <p className="text-sm text-ink-soft">{(words.ko ? T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au TOPIK officiel.", [d.readiness.label]) : T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au JLPT officiel.", [d.readiness.label ]))}</p>
             {d.examDate && <p className="mt-1 text-sm">{T("Examen prévu le {0}.", [ new Date(d.examDate).toLocaleDateString(DATE_LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }) ])}</p>}
           </div>
           {!d.notifications.consent && (
@@ -180,10 +185,10 @@ function AchievementsStrip() {
 }
 
 type Dash = NonNullable<ReturnType<typeof useDashboard>['data']>;
-function companionLine(d: Dash, hasReviews: boolean): string {
+function companionLine(d: Dash, hasReviews: boolean, ko = false): string {
   if (hasReviews) return T("Quelques notions commencent à s’effacer… On les revoit ensemble ?");
   if (!d.streak.todayDone && d.streak.current > 0) return T("Ta série de {0} jour{1} t’attend : une petite leçon suffit !", [d.streak.current, d.streak.current > 1 ? 's' : '']);
-  if (d.streak.todayDone && d.quests.every((q) => q.done)) return T("Toutes les quêtes du jour sont faites. お疲れさま！");
-  if (d.nextLesson) return T("Prochaine étape : « {0} ». がんばって！", [d.nextLesson.title]);
+  if (d.streak.todayDone && d.quests.every((q) => q.done)) return ko ? T("Toutes les quêtes du jour sont faites. 수고했어요!") : T("Toutes les quêtes du jour sont faites. お疲れさま！");
+  if (d.nextLesson) return ko ? T("Prochaine étape : « {0} ». 화이팅!", [d.nextLesson.title]) : T("Prochaine étape : « {0} ». がんばって！", [d.nextLesson.title]);
   return T("Tout est à jour. Un mini-jeu pour garder la main ?");
 }

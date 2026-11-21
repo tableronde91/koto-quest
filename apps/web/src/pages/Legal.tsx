@@ -65,8 +65,9 @@ function notice(): Block[] {
         h: 'Intellectual property',
         p: [
           `The ${site.siteName} name, design, illustrations, characters, lessons, exercises and texts are the property of ${E.owner} (${E.name}), unless stated otherwise. Any reproduction or reuse without permission is prohibited.`,
-          'Fonts: Atkinson Hyperlegible (Braille Institute of America) and Zen Maru Gothic (Yoshimichi Ohira), both under the SIL Open Font License 1.1.',
+          'Fonts: Atkinson Hyperlegible (Braille Institute of America), Zen Maru Gothic (Yoshimichi Ohira) and Gowun Dodum (Yanghee Ryu), all under the SIL Open Font License 1.1.',
           'JLPT (Japanese-Language Proficiency Test) is run by the Japan Foundation and Japan Educational Exchanges and Services. Koto Quest is not affiliated with them: its mock exams and lists are unofficial and do not guarantee any result.',
+          'TOPIK (Test of Proficiency in Korean) is run by the National Institute for International Education (NIIED) of the Republic of Korea. Koto Quest is not affiliated with it: its TOPIK mock exams and lists are unofficial and do not guarantee any result.',
         ],
       },
     ];
@@ -100,8 +101,9 @@ function notice(): Block[] {
       h: 'Propriété intellectuelle',
       p: [
         `Le nom ${site.siteName}, le design, les illustrations, les personnages, les leçons, les exercices et les textes sont la propriété de ${E.owner} (${E.name}), sauf mention contraire. Toute reproduction ou réutilisation sans autorisation est interdite.`,
-        'Polices de caractères : Atkinson Hyperlegible (Braille Institute of America) et Zen Maru Gothic (Yoshimichi Ohira), sous licence SIL Open Font License 1.1.',
+        'Polices de caractères : Atkinson Hyperlegible (Braille Institute of America), Zen Maru Gothic (Yoshimichi Ohira) et Gowun Dodum (Yanghee Ryu), sous licence SIL Open Font License 1.1.',
         'Le JLPT (Japanese-Language Proficiency Test) est organisé par la Japan Foundation et Japan Educational Exchanges and Services. Koto Quest n’est pas affilié à ces organismes : ses examens blancs et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
+        'Le TOPIK (Test of Proficiency in Korean) est organisé par le National Institute for International Education (NIIED) de la République de Corée. Koto Quest n’est pas affilié à cet organisme : ses examens blancs TOPIK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
       ],
     },
   ];
@@ -147,7 +149,7 @@ function privacy(): Block[] {
           <><strong>{site.database.name}</strong> (database hosting, servers in Frankfurt, European Union).</>,
           <><strong>IONOS</strong> (domain name and, where applicable, sending of emails such as password resets).</>,
           'Browser push services (Google, Mozilla, Apple…), only if you turn on notifications: they relay an encrypted message to your device.',
-          'Read-aloud: Japanese is read by your browser’s speech synthesis. Depending on the browser, it may use an online service from its publisher (for example Google for Chrome); only the Japanese text to be read is concerned.',
+          'Read-aloud: Japanese and Korean are read by your browser’s speech synthesis. Depending on the browser, it may use an online service from its publisher (for example Google for Chrome); only the Japanese or Korean text to be read is concerned.',
         ],
       },
       {
@@ -207,7 +209,7 @@ function privacy(): Block[] {
         <><strong>{site.database.name}</strong> (hébergement de la base de données, serveurs à Francfort, Union européenne).</>,
         <><strong>IONOS</strong> (nom de domaine et, le cas échéant, envoi des e-mails, comme la réinitialisation du mot de passe).</>,
         'Services de notification des navigateurs (Google, Mozilla, Apple…), uniquement si vous activez les notifications : ils relaient un message chiffré jusqu’à votre appareil.',
-        'Lecture audio : le japonais est lu par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte japonais à prononcer est concerné.',
+        'Lecture audio : le japonais et le coréen sont lus par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte japonais ou coréen à prononcer est concerné.',
       ],
     },
     {

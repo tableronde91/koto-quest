@@ -14,6 +14,7 @@ import { DuelInviteWatcher } from '../pages/Duel';
 import { T } from '../i18n';
 import { SiteFooter } from '../pages/Legal';
 import { FriendRequestWatcher } from './Friends';
+import { StudyLanguageSwitch, studyWords } from './StudyLanguage';
 
 const NAV = [
   { to: '/', label: T("Accueil"), icon: 'M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z' },
@@ -47,21 +48,25 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
   const { data: reviews } = useReviewSummary();
   const due = reviews?.due ?? 0;
   const location = useLocation();
+  // L'onglet Caractères suit la langue étudiée (kana ou hangeul).
+  const words = studyWords(me.preferences.studyLanguage ?? 'ja');
+  const nav = NAV.map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : n));
   const immersive = /^\/(lesson|quiz|boss|games|exam|duel)\//.test(location.pathname) || location.pathname === '/placement' || location.pathname === '/reviews/session' || location.pathname.startsWith('/characters/practice') || location.pathname.startsWith('/expressions/practice');
 
   return (
     <div className="min-h-dvh md:flex">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-lg focus:bg-surface focus:p-3">{T("Aller au contenu")}</a>
       {!immersive && (
-        <nav aria-label={T("Navigation principale")} className="sticky top-0 hidden h-dvh w-60 shrink-0 flex-col gap-1 border-r border-line p-4 md:flex">
-          <div className="mb-6 flex items-center gap-3 px-2">
+        <nav aria-label={T("Navigation principale")} className="sticky top-0 hidden h-dvh w-60 shrink-0 flex-col gap-1 overflow-y-auto border-r border-line p-4 md:flex">
+          <div className="mb-4 flex items-center gap-3 px-2">
             <img src="/icons/icon.svg" alt="" className="h-10 w-10" />
             <div>
               <p className="font-display text-lg leading-tight">{T("Koto Quest")}</p>
-              <p className="jp text-sm text-ink-soft">言葉の旅</p>
+              <p className="jp text-sm text-ink-soft">{words.ko ? '말의 여행' : '言葉の旅'}</p>
             </div>
           </div>
-          {NAV.map((n) => (
+          <StudyLanguageSwitch compact className="mb-3 shrink-0" />
+          {nav.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
@@ -90,7 +95,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
 
       {!immersive && (
         <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-9 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
-          {NAV.filter((n) => n.to !== '/settings' && n.to !== '/profile').map((n) => (
+          {nav.filter((n) => n.to !== '/settings' && n.to !== '/profile').map((n) => (
             <NavLink key={n.to} to={n.to} end={n.to === '/'} aria-label={n.label} className={({ isActive }) => `relative flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-bold ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
               <Icon d={n.icon} glyph={(n as { glyph?: string }).glyph} />
               {(n as { short?: string }).short ?? n.label}

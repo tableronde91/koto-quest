@@ -10,12 +10,15 @@ import { MASTERY_COLOR, MASTERY_LABEL } from '../lib/format';
 import { speak } from '../lib/speech';
 import { Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
+import { useStudyLang } from '../components/StudyLanguage';
+import { langOf } from '../lib/format';
 
 type SectionSlug = CharacterSectionDto['slug'];
 
 /** Onglet Caractères : grilles hiragana / katakana / kanji, ouvertes à tous, avec maîtrise par caractère. */
 export function CharactersPage() {
   const { data, isLoading, error, refetch } = useCharacters();
+  const words = useStudyLang();
   const [params, setParams] = useSearchParams();
   const [detail, setDetail] = useState<CharacterDto | null>(null);
   const navigate = useNavigate();
@@ -28,7 +31,7 @@ export function CharactersPage() {
 
   return (
     <div>
-      <PageTitle sub={T("Les écritures japonaises, accessibles à tout moment. Chaque caractère a sa propre barre de maîtrise, partagée avec ton parcours.")}>{T("Caractères")}</PageTitle>
+      <PageTitle sub={words.ko ? T("Le hangeul, l’alphabet coréen, accessible à tout moment. Chaque lettre et chaque syllabe a sa propre barre de maîtrise, partagée avec ton parcours.") : T("Les écritures japonaises, accessibles à tout moment. Chaque caractère a sa propre barre de maîtrise, partagée avec ton parcours.")}>{words.ko ? T("Hangeul") : T("Caractères")}</PageTitle>
 
       <div role="tablist" aria-label={T("Écriture")} className="mb-6 grid grid-cols-3 rounded-2xl bg-surface-2 p-1">
         {data.sections.map((s) => (
@@ -39,7 +42,7 @@ export function CharactersPage() {
             onClick={() => setParams({ s: s.slug }, { replace: true })}
             className={`min-h-12 rounded-xl font-bold ${s.slug === section.slug ? 'bg-surface shadow-sm' : 'text-ink-soft'}`}
           >
-            <span lang="ja" className="jp mr-1 hidden sm:inline">{s.slug === 'hiragana' ? 'あ' : s.slug === 'katakana' ? 'ア' : '字'}</span>
+            <span lang={words.htmlLang} className="jp mr-1 hidden sm:inline">{s.glyph ?? (s.slug === 'hiragana' ? 'あ' : s.slug === 'katakana' ? 'ア' : '字')}</span>
             {s.title}
           </button>
         ))}
@@ -119,7 +122,7 @@ function Cell({ c, kanji, onOpen }: { c: CharacterDto; kanji: boolean; onOpen: (
       aria-label={`${c.front}, ${label}${c.mastery ? `, ${MASTERY_LABEL[c.mastery]}` : ', pas encore vu'}`}
       className="flex w-full flex-col items-center gap-1 rounded-2xl border-2 border-line bg-surface px-1 pb-2 pt-3 hover:border-ink-soft"
     >
-      <span lang="ja" className={`jp font-bold leading-none ${c.front.length > 1 ? 'text-2xl sm:text-3xl' : 'text-3xl sm:text-4xl'}`} style={{ color: c.mastery ? 'var(--ink)' : 'var(--ink-soft)' }}>
+      <span lang={langOf(c.front)} className={`jp font-bold leading-none ${c.front.length > 1 ? 'text-2xl sm:text-3xl' : 'text-3xl sm:text-4xl'}`} style={{ color: c.mastery ? 'var(--ink)' : 'var(--ink-soft)' }}>
         {c.front}
       </span>
       <span className="w-full truncate text-center text-xs text-ink-soft sm:text-sm">{label}</span>
@@ -142,20 +145,23 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto; onClose: () => void }
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-[rgb(10_14_40/0.55)] p-3 sm:items-center" onClick={onClose}>
       <div role="dialog" aria-modal="true" aria-labelledby="char-title" className="w-full max-w-md rounded-3xl bg-paper p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-start justify-between">
-          <p id="char-title" lang="ja" className="jp text-8xl font-black leading-none">{c.front}</p>
+          <p id="char-title" lang={langOf(c.front)} className="jp text-8xl font-black leading-none">{c.front}</p>
           <button ref={closeRef} className="rounded-full p-2 text-ink-soft hover:bg-surface-2" onClick={onClose} aria-label={T("Fermer")}>
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" /></svg>
           </button>
         </div>
         <p className="mt-4 text-2xl font-bold">{c.kind === 'kanji' ? c.meaning : c.romaji}</p>
+        {c.kind === 'kana' && c.reading && c.reading !== c.front && (
+          <p className="mt-1 text-ink-soft">{T("Se prononce comme dans")} <span lang={langOf(c.reading)} className="jp text-xl font-bold text-ink">{c.reading}</span></p>
+        )}
         {c.kind === 'kanji' && (
           <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
             <dt className="text-ink-soft">{T("Lecture courante")}</dt>
-            <dd lang="ja" className="jp">{c.reading}</dd>
+            <dd lang={langOf(c.reading)} className="jp">{c.reading}</dd>
             <dt className="text-ink-soft">{T("On’yomi")}</dt>
-            <dd lang="ja" className="jp">{c.kanji?.onyomi.join('、') || '—'}</dd>
+            <dd lang={langOf(c.kanji?.onyomi.join('、') || '—')} className="jp">{c.kanji?.onyomi.join('、') || '—'}</dd>
             <dt className="text-ink-soft">{T("Kun’yomi")}</dt>
-            <dd lang="ja" className="jp">{c.kanji?.kunyomi.join('、') || '—'}</dd>
+            <dd lang={langOf(c.kanji?.kunyomi.join('、') || '—')} className="jp">{c.kanji?.kunyomi.join('、') || '—'}</dd>
             {c.kanji?.strokes ? (<><dt className="text-ink-soft">{T("Traits")}</dt><dd>{c.kanji.strokes}</dd></>) : null}
           </dl>
         )}

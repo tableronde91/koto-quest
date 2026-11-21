@@ -15,7 +15,7 @@ import {
   planPlacementBlock,
   schedule,
   ExamBank,
-  JLPT_SCALE,
+  examScale,
   planBankExam,
 } from '@koto/learning-engine';
 import type { ExamResultDto, ExamStartDto, PlacementStepDto } from '@koto/shared';
@@ -155,7 +155,7 @@ export class ExamService {
       coinsGained: coins,
       passPercent: def.passPercent,
       sectionMinPercent: def.sectionMinPercent,
-      scaled: grade.scaled ? { ...grade.scaled, max: JLPT_SCALE } : null,
+      scaled: grade.scaled ? { ...grade.scaled, max: examScale(def)! } : null,
     };
   }
 
@@ -237,7 +237,7 @@ export class ExamService {
     }
     await this.prisma.learningSession.update({ where: { id: sessionId }, data: { endedAt: now, state: { passed: passedSlugs } } });
     await this.prisma.userPreferences.update({ where: { userId }, data: { placementAt: now, placedWorlds: validated.length } });
-    const next = await this.content.nextRecommendedLesson(userId, 'N5');
+    const next = await this.content.nextRecommendedLesson(userId, worlds[0]?.world.levelCode ?? 'N5');
     return {
       done: true,
       validated: validated.map((w) => ({ slug: w.world.slug, title: w.world.title })),

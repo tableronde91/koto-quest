@@ -6,8 +6,8 @@ import type { AvatarConfig, CosmeticItem, CosmeticSlot, Mastery, PublicQuestion,
 
 export type { AvatarConfig, CosmeticItem, CosmeticSlot, Mastery, PublicQuestion, QuestStatus, ReadinessEstimate, ReminderMode };
 
-export type JlptCode = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
-export const JLPT_LEVELS: JlptCode[] = ['N5', 'N4', 'N3', 'N2', 'N1'];
+export * from './languages';
+import type { JlptCode, StudyLanguage } from './languages';
 
 export type SelfLevel = 'beginner' | 'kana' | 'basics' | 'n5' | 'n4plus';
 export const DIFFICULT_AREAS = ['kana', 'vocabulary', 'kanji', 'grammar', 'listening', 'reading'] as const;
@@ -32,6 +32,8 @@ export interface MeDto {
     theme: 'system' | 'light' | 'dark';
     reducedMotion: boolean;
     locale: 'fr' | 'en';
+    /** Langue étudiée (le parcours, les révisions et la lecture s'y rapportent). */
+    studyLanguage: StudyLanguage;
   };
 }
 
@@ -44,6 +46,7 @@ export interface OnboardingInput {
   reminderMode: ReminderMode | 'off';
   timezone?: string;
   locale?: 'fr' | 'en';
+  studyLanguage?: StudyLanguage;
 }
 
 export type LessonStatus = 'locked' | 'available' | 'in_progress' | 'completed';
@@ -138,7 +141,7 @@ export interface IssuedQuestionDto extends PublicQuestion {
   id: string;
   phase: 'lesson' | 'mini_review' | 'review' | 'quiz' | 'practice' | 'boss' | 'game' | 'exam' | 'placement';
   /** Section d'examen (vocabulaire, grammaire, écoute). */
-  section?: 'vocab' | 'grammar' | 'listening';
+  section?: 'vocab' | 'grammar' | 'listening' | 'reading' | 'writing';
   /** Identifiant de l'exercice raté que celui-ci reprend. */
   retryOf?: string | null;
 }
@@ -255,7 +258,9 @@ export interface CharacterGroupDto {
 }
 
 export interface CharacterSectionDto {
-  slug: 'hiragana' | 'katakana' | 'kanji';
+  slug: string;
+  /** Caractère emblème de l'onglet (あ, ア, 字, ㅏ, ㄱ, 가) */
+  glyph?: string;
   title: string;
   description: string;
   learned: number;
@@ -324,7 +329,7 @@ export interface GameResultDto {
 // ───────── Examen blanc ─────────
 
 export interface ExamSectionDto {
-  id: 'vocab' | 'grammar' | 'listening';
+  id: 'vocab' | 'grammar' | 'listening' | 'reading' | 'writing';
   title: string;
   jpTitle: string;
   count: number;
@@ -350,7 +355,18 @@ export interface ExamResultDto {
   passPercent: number;
   sectionMinPercent: number;
   /** Barème du JLPT (examen au format officiel) : points obtenus et maximums/seuils */
-  scaled?: { language: number; listening: number; total: number; max: { language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number } } | null;
+  /**
+   * Barème officiel. JLPT : langue et lecture / écoute. TOPIK I : `language` = lecture (읽기), `level` = niveau obtenu (0, 1 ou 2).
+   */
+  scaled?: {
+    language: number;
+    listening: number;
+    total: number;
+    level?: number;
+    /** TOPIK II : écriture (쓰기) */
+    writing?: number;
+    max: { system?: 'jlpt' | 'topik'; language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number; levels?: { level: number; min: number }[]; passLevel?: number; writing?: number };
+  } | null;
 }
 
 // ───────── Test de positionnement ─────────
@@ -729,3 +745,4 @@ export interface ReadingResultDto {
   streak: number;
   next: { slug: string; title: ReadingTitle; state: ReadingChapterState } | null;
 }
+

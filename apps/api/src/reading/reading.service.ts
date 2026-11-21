@@ -2,7 +2,7 @@ import { HttpException, Injectable } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { readingReward } from '@koto/learning-engine';
-import { ReadingError, readingChapter, readingGrade, readingOverview, readingResult, type ReadingCatalog, type ReadingChapterDto, type ReadingOverviewDto, type ReadingResultDto } from '@koto/shared';
+import { ReadingError, languageOfLevel, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type ReadingCatalog, type ReadingChapterDto, type ReadingOverviewDto, type ReadingResultDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ActivityService } from '../learning/activity.service';
 
@@ -20,9 +20,14 @@ export class ReadingService {
     return this.catalog;
   }
 
+  /** Contes de la langue étudiée seulement. */
   private async state(userId: string) {
-    const [logs, today] = await Promise.all([this.prisma.readingLog.findMany({ where: { userId } }), this.activity.todayKey(userId)]);
-    return { logs, today };
+    const [logs, today, prefs] = await Promise.all([
+      this.prisma.readingLog.findMany({ where: { userId } }),
+      this.activity.todayKey(userId),
+      this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } }),
+    ]);
+    return { logs, today, catalog: readingCatalogFor(this.load(), languageOfLevel(prefs?.targetLevel)) };
   }
 
   private run<T>(fn: () => T): T {
@@ -35,18 +40,18 @@ export class ReadingService {
   }
 
   async overview(userId: string): Promise<ReadingOverviewDto> {
-    const { logs, today } = await this.state(userId);
-    return readingOverview(this.load(), logs, today);
+    const { logs, today, catalog } = await this.state(userId);
+    return readingOverview(catalog, logs, today);
   }
 
   async chapter(userId: string, slug: string): Promise<ReadingChapterDto> {
-    const { logs, today } = await this.state(userId);
-    return this.run(() => readingChapter(this.load(), logs, today, slug));
+    const { logs, today, catalog } = await this.state(userId);
+    return this.run(() => readingChapter(catalog, logs, today, slug));
   }
 
   async complete(userId: string, slug: string, answers: number[], seconds = 0): Promise<ReadingResultDto> {
-    const { logs, today } = await this.state(userId);
-    const graded = this.run(() => readingGrade(this.load(), logs, today, slug, answers));
+    const { logs, today, catalog } = await this.state(userId);
+    const graded = this.run(() => readingGrade(catalog, logs, today, slug, answers));
     let firstTime = false;
     if (graded.log) {
       // Insertion unique : deux validations simultanées ne récompensent qu'une fois.
@@ -63,6 +68,6 @@ export class ReadingService {
       }
     }
     const after = firstTime ? [...logs, graded.log!] : logs;
-    return readingResult(this.load(), after, today, slug, graded.correct, firstTime);
+    return readingResult(catalog, after, today, slug, graded.correct, firstTime);
   }
 }

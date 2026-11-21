@@ -190,7 +190,35 @@ export function jlptListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Quest
   return { ...q, type: 'listening_choice', prompt: JLPT_PROMPTS.listening, display: { text: 'なんと こたえますか。', part: 'もんだい４　即時応答' }, audio: script, answerAudio: undefined };
 }
 
+/** Consignes du TOPIK, en coréen comme sur la copie. */
+export const TOPIK_PROMPTS = {
+  grammar: '(　)에 들어갈 가장 알맞은 것을 고르십시오.',
+  listening: '다음을 듣고 이어지는 말을 고르십시오.',
+  vocab: '다음 단어의 뜻으로 알맞은 것을 고르십시오.',
+} as const;
+
+/** Exercice de grammaire rédigé, présenté comme au TOPIK (빈칸 채우기). */
+export function topikGrammarQuestion(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'particle_choice' && ex.type !== 'fill_blank') return null;
+  const q = authoredToQuestion(ex, rng);
+  return { ...q, prompt: TOPIK_PROMPTS.grammar, display: { ...q.display, reading: undefined, part: '읽기 — 문법' } };
+}
+
+/** Dialogue rédigé → écoute au format TOPIK (이어지는 말). */
+export function topikListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'dialogue_choice' || !ex.lines?.length) return null;
+  const q = authoredToQuestion(ex, rng);
+  const script = ex.lines.map((l, i) => `${i % 2 === 0 ? 'F' : 'M'}|${l.jp}`).join('\n');
+  return { ...q, type: 'listening_choice', prompt: TOPIK_PROMPTS.listening, display: { text: '이어지는 말은?', part: '듣기 — 이어지는 말' }, audio: script, answerAudio: undefined };
+}
+
 export type JlptDrillPart = 'kanji' | 'writing' | 'grammar' | 'star' | 'listening';
+
+/** Atelier TOPIK : épreuves proposées pour le coréen (pas de kanji ni de question ★). */
+export const TOPIK_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitle: string; description: string }>> = {
+  grammar: { title: 'Grammaire', jpTitle: '문법', description: 'Complète la phrase avec la bonne particule ou terminaison, consigne en coréen comme au TOPIK.' },
+  listening: { title: 'Écoute', jpTitle: '듣기', description: 'Écoute un court dialogue et choisis la réplique qui suit, sans texte à lire.' },
+};
 
 export const JLPT_DRILLS: Record<JlptDrillPart, { title: string; jpTitle: string; description: string }> = {
   kanji: { title: 'Lecture des kanji', jpTitle: '漢字読み', description: 'Lis le mot souligné. Attention aux pièges : voyelle longue, ten-ten, petit っ.' },
@@ -206,9 +234,21 @@ export const JLPT_DRILL_SIZE = 10;
  * Série d'entraînement pour une épreuve, uniquement avec ce que l'utilisateur a déjà appris
  * (notions vues, exercices des leçons terminées).
  */
-export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map()): Question[] {
+export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map(), lang: 'ja' | 'ko' = 'ja'): Question[] {
   const n = JLPT_DRILL_SIZE;
   const fromItems = (make: (it: EngineItem) => Question | null) => shuffle(learned, rng).map(make).filter((q): q is Question => !!q).slice(0, n);
+  if (lang === 'ko') {
+    if (part === 'grammar') return shuffle(authored, rng).map((ex) => topikGrammarQuestion(ex, rng)).filter((q): q is Question => !!q).slice(0, n);
+    if (part === 'listening') {
+      const dialogues = shuffle(authored, rng).map((ex) => topikListeningFromDialogue(ex, rng)).filter((q): q is Question => !!q).slice(0, Math.ceil(n / 2));
+      const words = shuffle(learned.filter((i) => i.kind === 'vocabulary'), rng)
+        .map((it) => generateQuestion(it, pool, 'listening_choice', rng))
+        .filter((q): q is Question => !!q)
+        .slice(0, n - dialogues.length);
+      return shuffle([...dialogues, ...words], rng);
+    }
+    return [];
+  }
   switch (part) {
     case 'kanji':
       return fromItems((it) => jlptReadingQuestion(it, pool, rng, examples.get(it.id)));

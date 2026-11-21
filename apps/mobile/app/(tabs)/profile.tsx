@@ -3,7 +3,7 @@ import { Pressable, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import { levelFromXp } from '@koto/learning-engine';
-import { JLPT_LEVELS, type MeDto } from '@koto/shared';
+import { levelLabel, levelsOfLanguage, type MeDto } from '@koto/shared';
 import { put } from '../../src/api';
 import { useAuth } from '../../src/auth';
 import { FriendsManager } from '../../src/Friends';
@@ -102,7 +102,7 @@ function Goals({ me }: { me: MeDto }) {
         />
       </Field>
       <Field label={T('Niveau visé')}>
-        <Chips label={T('Niveau visé')} options={JLPT_LEVELS.map((l) => ({ value: l, label: l }))} value={p.targetLevel} onChange={(v) => save({ targetLevel: v })} />
+        <Chips label={T('Niveau visé')} options={levelsOfLanguage(p.studyLanguage ?? 'ja').map((l) => ({ value: l, label: levelLabel(l) }))} value={p.targetLevel} onChange={(v) => save({ targetLevel: v })} />
       </Field>
       <Field label={T('Temps d’étude par jour')}>
         <Chips label={T('Temps d’étude par jour')} options={MINUTES.map((m) => ({ value: m, label: T('{0} min', [m]) }))} value={p.minutesPerDay} onChange={(v) => save({ minutesPerDay: v })} />

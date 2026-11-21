@@ -1,5 +1,6 @@
 import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { DAILY_GAME_COIN_CAP, EngineItem, GAMES, GAME_IDS, GameDef, GameId, createRng, eligibleItems, focusedPool, gameReward, planTimedGame, scoreTimedGame } from '@koto/learning-engine';
+import { languageOfLevel, levelsOfLanguage } from '@koto/shared';
 import type { GameInfoDto, GameResultDto, GameStartDto, GamesDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
@@ -18,8 +19,11 @@ export class GamesService {
   ) {}
 
   /** Notions déjà rencontrées par l'utilisateur. */
+  /** Notions déjà rencontrées dans la langue étudiée. */
   private async seen(userId: string): Promise<EngineItem[]> {
-    const cards = await this.prisma.reviewCard.findMany({ where: { userId, state: { not: 'new' } }, include: { item: true } });
+    const prefs = await this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } });
+    const levelCode = { in: levelsOfLanguage(languageOfLevel(prefs?.targetLevel)) };
+    const cards = await this.prisma.reviewCard.findMany({ where: { userId, state: { not: 'new' }, item: { levelCode } }, include: { item: true } });
     return cards.map((c) => toEngineItem(c.item));
   }
 

@@ -12,7 +12,7 @@ import {
   normalizeAvatar,
   AvatarConfig,
 } from '@koto/learning-engine';
-import type { DashboardDto, JlptCode, StatsDto } from '@koto/shared';
+import { languageOfLevel, levelsOfLanguage, type DashboardDto, type JlptCode, type StatsDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { ContentService } from '../content/content.service';
@@ -40,7 +40,7 @@ export class DashboardService {
     const [{ seq, status }, activity, cards, summary, next, levelItemCount] = await Promise.all([
       this.content.lessonStatuses(userId, level),
       this.prisma.dailyActivity.findMany({ where: { userId, dateKey: { gte: addDays(todayKey, -400) } } }),
-      this.prisma.reviewCard.findMany({ where: { userId }, include: { item: { select: { kind: true, levelCode: true } } } }),
+      this.prisma.reviewCard.findMany({ where: { userId, item: { levelCode: { in: levelsOfLanguage(languageOfLevel(level)) } } }, include: { item: { select: { kind: true, levelCode: true } } } }),
       this.learning.reviewSummary(userId),
       this.content.nextLessonAnyLevel(userId, level),
       this.prisma.learningItem.count({ where: { levelCode: level } }),
@@ -92,7 +92,7 @@ export class DashboardService {
     const from = addDays(todayKey, -29);
     const [activity, cards, history, lessonsCompleted, examAttempts] = await Promise.all([
       this.prisma.dailyActivity.findMany({ where: { userId } }),
-      this.prisma.reviewCard.findMany({ where: { userId }, include: { item: true } }),
+      this.prisma.reviewCard.findMany({ where: { userId, item: { levelCode: { in: levelsOfLanguage(languageOfLevel(prefs?.targetLevel)) } } }, include: { item: true } }),
       this.prisma.reviewHistory.findMany({ where: { userId }, select: { cardId: true, stabilityAfter: true, reviewedAt: true }, orderBy: { reviewedAt: 'asc' } }),
       this.prisma.userLessonProgress.count({ where: { userId, status: 'completed' } }),
       this.prisma.examAttempt.findMany({ where: { userId, finishedAt: { not: null } }, orderBy: { finishedAt: 'asc' }, include: { exam: { select: { title: true } } } }),

@@ -9,7 +9,9 @@ import type {
   ReadingStoryInfoDto,
   ReadingTitle,
   ReadingWordDto,
+  StudyLanguage,
 } from './index';
+import { languageOfLevel } from './languages';
 
 /**
  * Lecture : logique commune au serveur et à la version hors ligne. Tous les chapitres sont ouverts dès le départ ;
@@ -159,4 +161,18 @@ export function readingResult(catalog: ReadingCatalog, logsAfter: readonly Readi
     streak: readingStreak(logsAfter.map((l) => l.dateKey), today).current,
     next: next ? { slug: next.slug, title: next.title, state: states.get(next.slug)! } : null,
   };
+}
+
+const byLanguage = new WeakMap<ReadingCatalog, Map<string, ReadingCatalog>>();
+/** Contes d'une langue (le niveau du conte dit sa langue : N5…N1 japonais, TOPIK1… coréen). Résultat mis en cache. */
+export function readingCatalogFor(catalog: ReadingCatalog, lang: StudyLanguage): ReadingCatalog {
+  let m = byLanguage.get(catalog);
+  if (!m) byLanguage.set(catalog, (m = new Map()));
+  let c = m.get(lang);
+  if (!c) {
+    const notice = (catalog as ReadingCatalog & { notices?: Partial<Record<StudyLanguage, BiText>> }).notices?.[lang] ?? catalog.notice;
+    c = { ...catalog, notice, stories: catalog.stories.filter((s) => languageOfLevel(s.level) === lang) };
+    m.set(lang, c);
+  }
+  return c;
 }

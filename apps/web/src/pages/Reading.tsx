@@ -9,6 +9,9 @@ import { ErrorBox, PageTitle, ProgressBar, SoundIcon, Spinner } from '../compone
 import { Confetti, Flame, Stamp, useCalm } from '../components/Celebrate';
 import { say, speechSupported, stopSpeech } from '../lib/speech';
 import { T, locale } from '../i18n';
+import { langOf } from '../lib/format';
+import { languageOfLevel, levelLabel } from '@koto/shared';
+import { studyWords } from '../components/StudyLanguage';
 
 /** Texte dans la langue de l'interface (les contes sont rédigés en français et en anglais). */
 const bi = (b: BiText) => (locale === 'en' ? b.en : b.fr);
@@ -19,7 +22,7 @@ export const useReading = () => useQuery({ queryKey: ['reading'], queryFn: () =>
 /** Japonais avec furigana notés {漢字|かな}. */
 export function Ruby({ text, furigana, className = '' }: { text: string; furigana: boolean; className?: string }) {
   return (
-    <span lang="ja" className={`jp ${className}`}>
+    <span lang={langOf(text)} className={`jp ${className}`}>
       {rubySegments(text).map((s, i) =>
         s.ruby && furigana ? (
           <ruby key={i}>
@@ -56,12 +59,13 @@ export function ReadingPage() {
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
   const { today, upcoming } = data;
+  const words = studyWords(languageOfLevel(data.stories[0]?.level));
   // Chapitre mis en avant dans la bibliothèque : le prochain à lire (tout reste ouvert).
   const suggested = today.state === 'new' ? today.chapter?.slug : upcoming?.slug;
 
   return (
     <div className="flex flex-col gap-6">
-      <PageTitle sub={T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
+      <PageTitle sub={words.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
 
       {/* Chapitre du jour */}
       <section aria-label={T('Chapitre du jour')} className="relative overflow-hidden rounded-3xl bg-ink p-5 text-paper sm:p-7">
@@ -129,7 +133,7 @@ export function ReadingPage() {
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
                   <h3 className="text-xl"><Ruby text={s.title.jp} furigana={false} /></h3>
-                  <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-xs font-bold">{s.level}</span>
+                  <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-xs font-bold">{levelLabel(s.level)}</span>
                   {s.read === s.chapters.length && <span className="rounded-full bg-ok-bg px-2.5 py-0.5 text-xs font-bold">{T('Terminé')}</span>}
                 </div>
                 <p className="font-bold">{bi(s.title)}</p>
@@ -231,7 +235,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
     <article className="flex flex-col gap-6" data-testid="reader">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <Link to="/lecture" className="text-ink-soft underline">← {T('Tous les contes')}</Link>
-        <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-sm font-bold">{story.level}</span>
+        <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-sm font-bold">{levelLabel(story.level)}</span>
       </div>
 
       <header className="flex items-center gap-4">
@@ -245,9 +249,11 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
 
       {/* Réglages de lecture */}
       <div className="flex flex-wrap items-center gap-2 sm:sticky sm:top-0 sm:z-10 sm:rounded-2xl sm:border sm:border-line sm:bg-paper/95 sm:px-4 sm:py-2 sm:backdrop-blur">
-        <button type="button" aria-pressed={furigana} onClick={() => setFurigana(!furigana)} className={`min-h-10 rounded-xl border-2 px-3 text-sm font-bold ${furigana ? 'border-ink bg-ink text-paper' : 'border-line'}`}>
-          <span lang="ja" className="jp">ふりがな</span> {furigana ? T('affichés') : T('masqués')}
-        </button>
+        {languageOfLevel(story.level) !== 'ko' && (
+          <button type="button" aria-pressed={furigana} onClick={() => setFurigana(!furigana)} className={`min-h-10 rounded-xl border-2 px-3 text-sm font-bold ${furigana ? 'border-ink bg-ink text-paper' : 'border-line'}`}>
+            <span lang="ja" className="jp">ふりがな</span> {furigana ? T('affichés') : T('masqués')}
+          </button>
+        )}
         <div role="radiogroup" aria-label={T('Traduction')} className="flex items-center rounded-xl border-2 border-line p-0.5 text-sm">
           <span className="px-2 font-bold text-ink-soft">{T('Traduction')}</span>
           {([['tap', T('au toucher')], ['all', T('tout')], ['none', T('aucune')]] as [TranslationMode, string][]).map(([m, label]) => (
@@ -293,8 +299,8 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
         <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {chapter.words.map((w) => (
             <li key={w.jp} className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 rounded-2xl border border-line bg-surface px-4 py-3">
-              <span lang="ja" className="jp whitespace-nowrap text-xl font-bold">{w.jp}</span>
-              {w.reading && <span lang="ja" className="jp whitespace-nowrap text-sm text-ink-soft">{w.reading}</span>}
+              <span lang={langOf(w.jp)} className="jp whitespace-nowrap text-xl font-bold">{w.jp}</span>
+              {w.reading && <span lang={langOf(w.reading)} className="jp whitespace-nowrap text-sm text-ink-soft">{w.reading}</span>}
               <span className="ml-auto text-right">{bi(w)}</span>
             </li>
           ))}

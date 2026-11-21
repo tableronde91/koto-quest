@@ -1,0 +1,663 @@
+{
+ "contentVersion": "2026.11.20",
+ "language": "ko",
+ "notice": "Romanisation révisée (système officiel de la Corée du Sud). Les consonnes se prononcent ici avec la voyelle ㅏ pour qu’on les entende.",
+ "sections": [
+  {
+   "slug": "hangul-vowels",
+   "glyph": "ㅏ",
+   "title": "Voyelles",
+   "description": "Les 21 voyelles du hangeul : six de base, quatre en « y », et les voyelles composées. Elles se tracent avec des traits horizontaux et verticaux.",
+   "groups": [
+    {
+     "slug": "hg-v-base",
+     "title": "Voyelles de base",
+     "items": [
+      {
+       "slug": "hg-a",
+       "kind": "kana",
+       "front": "ㅏ",
+       "reading": "아",
+       "romaji": "a",
+       "meaning": "a"
+      },
+      {
+       "slug": "hg-eo",
+       "kind": "kana",
+       "front": "ㅓ",
+       "reading": "어",
+       "romaji": "eo",
+       "meaning": "eo"
+      },
+      {
+       "slug": "hg-o",
+       "kind": "kana",
+       "front": "ㅗ",
+       "reading": "오",
+       "romaji": "o",
+       "meaning": "o"
+      },
+      {
+       "slug": "hg-u",
+       "kind": "kana",
+       "front": "ㅜ",
+       "reading": "우",
+       "romaji": "u",
+       "meaning": "u"
+      },
+      {
+       "slug": "hg-eu",
+       "kind": "kana",
+       "front": "ㅡ",
+       "reading": "으",
+       "romaji": "eu",
+       "meaning": "eu"
+      },
+      {
+       "slug": "hg-i",
+       "kind": "kana",
+       "front": "ㅣ",
+       "reading": "이",
+       "romaji": "i",
+       "meaning": "i"
+      }
+     ]
+    },
+    {
+     "slug": "hg-v-y",
+     "title": "Voyelles en y",
+     "items": [
+      {
+       "slug": "hg-ya",
+       "kind": "kana",
+       "front": "ㅑ",
+       "reading": "야",
+       "romaji": "ya",
+       "meaning": "ya"
+      },
+      {
+       "slug": "hg-yeo",
+       "kind": "kana",
+       "front": "ㅕ",
+       "reading": "여",
+       "romaji": "yeo",
+       "meaning": "yeo"
+      },
+      {
+       "slug": "hg-yo",
+       "kind": "kana",
+       "front": "ㅛ",
+       "reading": "요",
+       "romaji": "yo",
+       "meaning": "yo"
+      },
+      {
+       "slug": "hg-yu",
+       "kind": "kana",
+       "front": "ㅠ",
+       "reading": "유",
+       "romaji": "yu",
+       "meaning": "yu"
+      }
+     ]
+    },
+    {
+     "slug": "hg-v-ae",
+     "title": "ㅐ ㅔ ㅒ ㅖ",
+     "items": [
+      {
+       "slug": "hg-ae",
+       "kind": "kana",
+       "front": "ㅐ",
+       "reading": "애",
+       "romaji": "ae",
+       "meaning": "ae"
+      },
+      {
+       "slug": "hg-e",
+       "kind": "kana",
+       "front": "ㅔ",
+       "reading": "에",
+       "romaji": "e",
+       "meaning": "e"
+      },
+      {
+       "slug": "hg-yae",
+       "kind": "kana",
+       "front": "ㅒ",
+       "reading": "얘",
+       "romaji": "yae",
+       "meaning": "yae"
+      },
+      {
+       "slug": "hg-ye",
+       "kind": "kana",
+       "front": "ㅖ",
+       "reading": "예",
+       "romaji": "ye",
+       "meaning": "ye"
+      }
+     ]
+    },
+    {
+     "slug": "hg-v-w",
+     "title": "Voyelles en w et ㅢ",
+     "items": [
+      {
+       "slug": "hg-wa",
+       "kind": "kana",
+       "front": "ㅘ",
+       "reading": "와",
+       "romaji": "wa",
+       "meaning": "wa"
+      },
+      {
+       "slug": "hg-wae",
+       "kind": "kana",
+       "front": "ㅙ",
+       "reading": "왜",
+       "romaji": "wae",
+       "meaning": "wae"
+      },
+      {
+       "slug": "hg-oe",
+       "kind": "kana",
+       "front": "ㅚ",
+       "reading": "외",
+       "romaji": "oe",
+       "meaning": "oe"
+      },
+      {
+       "slug": "hg-wo",
+       "kind": "kana",
+       "front": "ㅝ",
+       "reading": "워",
+       "romaji": "wo",
+       "meaning": "wo"
+      },
+      {
+       "slug": "hg-we",
+       "kind": "kana",
+       "front": "ㅞ",
+       "reading": "웨",
+       "romaji": "we",
+       "meaning": "we"
+      },
+      {
+       "slug": "hg-wi",
+       "kind": "kana",
+       "front": "ㅟ",
+       "reading": "위",
+       "romaji": "wi",
+       "meaning": "wi"
+      },
+      {
+       "slug": "hg-ui",
+       "kind": "kana",
+       "front": "ㅢ",
+       "reading": "의",
+       "romaji": "ui",
+       "meaning": "ui"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hangul-consonants",
+   "glyph": "ㄱ",
+   "title": "Consonnes",
+   "description": "Les 19 consonnes : quatorze simples, dont quatre aspirées, et cinq doubles prononcées tendues. Leur forme imite la position de la bouche.",
+   "groups": [
+    {
+     "slug": "hg-c-base",
+     "title": "Consonnes de base",
+     "items": [
+      {
+       "slug": "hg-g",
+       "kind": "kana",
+       "front": "ㄱ",
+       "reading": "가",
+       "romaji": "g / k",
+       "meaning": "g / k"
+      },
+      {
+       "slug": "hg-n",
+       "kind": "kana",
+       "front": "ㄴ",
+       "reading": "나",
+       "romaji": "n",
+       "meaning": "n"
+      },
+      {
+       "slug": "hg-d",
+       "kind": "kana",
+       "front": "ㄷ",
+       "reading": "다",
+       "romaji": "d / t",
+       "meaning": "d / t"
+      },
+      {
+       "slug": "hg-r",
+       "kind": "kana",
+       "front": "ㄹ",
+       "reading": "라",
+       "romaji": "r / l",
+       "meaning": "r / l"
+      },
+      {
+       "slug": "hg-m",
+       "kind": "kana",
+       "front": "ㅁ",
+       "reading": "마",
+       "romaji": "m",
+       "meaning": "m"
+      },
+      {
+       "slug": "hg-b",
+       "kind": "kana",
+       "front": "ㅂ",
+       "reading": "바",
+       "romaji": "b / p",
+       "meaning": "b / p"
+      },
+      {
+       "slug": "hg-s",
+       "kind": "kana",
+       "front": "ㅅ",
+       "reading": "사",
+       "romaji": "s",
+       "meaning": "s"
+      },
+      {
+       "slug": "hg-ng",
+       "kind": "kana",
+       "front": "ㅇ",
+       "reading": "아",
+       "romaji": "muet / ng",
+       "meaning": "muet / ng"
+      },
+      {
+       "slug": "hg-j",
+       "kind": "kana",
+       "front": "ㅈ",
+       "reading": "자",
+       "romaji": "j",
+       "meaning": "j"
+      },
+      {
+       "slug": "hg-h",
+       "kind": "kana",
+       "front": "ㅎ",
+       "reading": "하",
+       "romaji": "h",
+       "meaning": "h"
+      }
+     ]
+    },
+    {
+     "slug": "hg-c-asp",
+     "title": "Consonnes aspirées",
+     "items": [
+      {
+       "slug": "hg-k",
+       "kind": "kana",
+       "front": "ㅋ",
+       "reading": "카",
+       "romaji": "k (aspiré)",
+       "meaning": "k (aspiré)"
+      },
+      {
+       "slug": "hg-t",
+       "kind": "kana",
+       "front": "ㅌ",
+       "reading": "타",
+       "romaji": "t (aspiré)",
+       "meaning": "t (aspiré)"
+      },
+      {
+       "slug": "hg-p",
+       "kind": "kana",
+       "front": "ㅍ",
+       "reading": "파",
+       "romaji": "p (aspiré)",
+       "meaning": "p (aspiré)"
+      },
+      {
+       "slug": "hg-ch",
+       "kind": "kana",
+       "front": "ㅊ",
+       "reading": "차",
+       "romaji": "ch",
+       "meaning": "ch"
+      }
+     ]
+    },
+    {
+     "slug": "hg-c-tense",
+     "title": "Consonnes doubles (tendues)",
+     "items": [
+      {
+       "slug": "hg-kk",
+       "kind": "kana",
+       "front": "ㄲ",
+       "reading": "까",
+       "romaji": "kk",
+       "meaning": "kk"
+      },
+      {
+       "slug": "hg-tt",
+       "kind": "kana",
+       "front": "ㄸ",
+       "reading": "따",
+       "romaji": "tt",
+       "meaning": "tt"
+      },
+      {
+       "slug": "hg-pp",
+       "kind": "kana",
+       "front": "ㅃ",
+       "reading": "빠",
+       "romaji": "pp",
+       "meaning": "pp"
+      },
+      {
+       "slug": "hg-ss",
+       "kind": "kana",
+       "front": "ㅆ",
+       "reading": "싸",
+       "romaji": "ss",
+       "meaning": "ss"
+      },
+      {
+       "slug": "hg-jj",
+       "kind": "kana",
+       "front": "ㅉ",
+       "reading": "짜",
+       "romaji": "jj",
+       "meaning": "jj"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hangul-syllables",
+   "glyph": "가",
+   "title": "Syllabes",
+   "description": "Les lettres s’assemblent en blocs : consonne + voyelle (가), parfois une consonne finale en dessous, le batchim (각).",
+   "groups": [
+    {
+     "slug": "hg-s-a",
+     "title": "Consonne + ㅏ",
+     "items": [
+      {
+       "slug": "hg-ga",
+       "kind": "kana",
+       "front": "가",
+       "reading": "가",
+       "romaji": "ga",
+       "meaning": "ga"
+      },
+      {
+       "slug": "hg-na",
+       "kind": "kana",
+       "front": "나",
+       "reading": "나",
+       "romaji": "na",
+       "meaning": "na"
+      },
+      {
+       "slug": "hg-da",
+       "kind": "kana",
+       "front": "다",
+       "reading": "다",
+       "romaji": "da",
+       "meaning": "da"
+      },
+      {
+       "slug": "hg-ra",
+       "kind": "kana",
+       "front": "라",
+       "reading": "라",
+       "romaji": "ra",
+       "meaning": "ra"
+      },
+      {
+       "slug": "hg-ma",
+       "kind": "kana",
+       "front": "마",
+       "reading": "마",
+       "romaji": "ma",
+       "meaning": "ma"
+      },
+      {
+       "slug": "hg-ba",
+       "kind": "kana",
+       "front": "바",
+       "reading": "바",
+       "romaji": "ba",
+       "meaning": "ba"
+      },
+      {
+       "slug": "hg-sa",
+       "kind": "kana",
+       "front": "사",
+       "reading": "사",
+       "romaji": "sa",
+       "meaning": "sa"
+      },
+      {
+       "slug": "hg-ja",
+       "kind": "kana",
+       "front": "자",
+       "reading": "자",
+       "romaji": "ja",
+       "meaning": "ja"
+      },
+      {
+       "slug": "hg-ha",
+       "kind": "kana",
+       "front": "하",
+       "reading": "하",
+       "romaji": "ha",
+       "meaning": "ha"
+      }
+     ]
+    },
+    {
+     "slug": "hg-s-asp",
+     "title": "Aspirées + ㅏ",
+     "items": [
+      {
+       "slug": "hg-ka",
+       "kind": "kana",
+       "front": "카",
+       "reading": "카",
+       "romaji": "ka",
+       "meaning": "ka"
+      },
+      {
+       "slug": "hg-ta",
+       "kind": "kana",
+       "front": "타",
+       "reading": "타",
+       "romaji": "ta",
+       "meaning": "ta"
+      },
+      {
+       "slug": "hg-pa",
+       "kind": "kana",
+       "front": "파",
+       "reading": "파",
+       "romaji": "pa",
+       "meaning": "pa"
+      },
+      {
+       "slug": "hg-cha",
+       "kind": "kana",
+       "front": "차",
+       "reading": "차",
+       "romaji": "cha",
+       "meaning": "cha"
+      }
+     ]
+    },
+    {
+     "slug": "hg-s-tense",
+     "title": "Doubles + ㅏ",
+     "items": [
+      {
+       "slug": "hg-kka",
+       "kind": "kana",
+       "front": "까",
+       "reading": "까",
+       "romaji": "kka",
+       "meaning": "kka"
+      },
+      {
+       "slug": "hg-tta",
+       "kind": "kana",
+       "front": "따",
+       "reading": "따",
+       "romaji": "tta",
+       "meaning": "tta"
+      },
+      {
+       "slug": "hg-ppa",
+       "kind": "kana",
+       "front": "빠",
+       "reading": "빠",
+       "romaji": "ppa",
+       "meaning": "ppa"
+      },
+      {
+       "slug": "hg-ssa",
+       "kind": "kana",
+       "front": "싸",
+       "reading": "싸",
+       "romaji": "ssa",
+       "meaning": "ssa"
+      },
+      {
+       "slug": "hg-jja",
+       "kind": "kana",
+       "front": "짜",
+       "reading": "짜",
+       "romaji": "jja",
+       "meaning": "jja"
+      }
+     ]
+    },
+    {
+     "slug": "hg-s-g",
+     "title": "ㄱ + voyelles",
+     "items": [
+      {
+       "slug": "hg-geo",
+       "kind": "kana",
+       "front": "거",
+       "reading": "거",
+       "romaji": "geo",
+       "meaning": "geo"
+      },
+      {
+       "slug": "hg-go",
+       "kind": "kana",
+       "front": "고",
+       "reading": "고",
+       "romaji": "go",
+       "meaning": "go"
+      },
+      {
+       "slug": "hg-gu",
+       "kind": "kana",
+       "front": "구",
+       "reading": "구",
+       "romaji": "gu",
+       "meaning": "gu"
+      },
+      {
+       "slug": "hg-geu",
+       "kind": "kana",
+       "front": "그",
+       "reading": "그",
+       "romaji": "geu",
+       "meaning": "geu"
+      },
+      {
+       "slug": "hg-gi",
+       "kind": "kana",
+       "front": "기",
+       "reading": "기",
+       "romaji": "gi",
+       "meaning": "gi"
+      }
+     ]
+    },
+    {
+     "slug": "hg-s-bc",
+     "title": "Batchim (consonne finale)",
+     "items": [
+      {
+       "slug": "hg-bc-gak",
+       "kind": "kana",
+       "front": "각",
+       "reading": "각",
+       "romaji": "gak",
+       "meaning": "gak"
+      },
+      {
+       "slug": "hg-bc-an",
+       "kind": "kana",
+       "front": "안",
+       "reading": "안",
+       "romaji": "an",
+       "meaning": "an"
+      },
+      {
+       "slug": "hg-bc-mal",
+       "kind": "kana",
+       "front": "말",
+       "reading": "말",
+       "romaji": "mal",
+       "meaning": "mal"
+      },
+      {
+       "slug": "hg-bc-bam",
+       "kind": "kana",
+       "front": "밤",
+       "reading": "밤",
+       "romaji": "bam",
+       "meaning": "bam"
+      },
+      {
+       "slug": "hg-bc-bap",
+       "kind": "kana",
+       "front": "밥",
+       "reading": "밥",
+       "romaji": "bap",
+       "meaning": "bap"
+      },
+      {
+       "slug": "hg-bc-gang",
+       "kind": "kana",
+       "front": "강",
+       "reading": "강",
+       "romaji": "gang",
+       "meaning": "gang"
+      },
+      {
+       "slug": "hg-bc-ot",
+       "kind": "kana",
+       "front": "옷",
+       "reading": "옷",
+       "romaji": "ot",
+       "meaning": "ot"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

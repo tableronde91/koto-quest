@@ -1,3 +1,4 @@
+import { languageOfLevel, levelsOfLanguage } from '@koto/shared';
 import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { ReminderMode, ReminderPrefs, decideReminder, hashSeed, reminderMessage, reminderSlots } from '@koto/learning-engine';
@@ -124,7 +125,8 @@ export class NotificationsService {
     const question = await this.learning.issueQuiz(userId, opts);
     if (!question) return null;
     const now = this.clock.now();
-    const body = reminderMessage(hashSeed(question.id));
+    const study = await this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } });
+    const body = reminderMessage(hashSeed(question.id), languageOfLevel(study?.targetLevel));
     const notif = await this.prisma.notification.create({
       data: { userId, title: 'Koto Quest', body, questionId: question.id, expiresAt: new Date(now.getTime() + NOTIFICATION_TTL_MS) },
     });
@@ -165,13 +167,13 @@ export class NotificationsService {
     const now = this.clock.now();
     const candidates = await this.prisma.notificationPreferences.findMany({
       where: { consent: true, enabled: true },
-      include: { user: { select: { preferences: { select: { timezone: true } } } } },
+      include: { user: { select: { preferences: { select: { timezone: true, targetLevel: true } } } } },
     });
     let sent = 0;
     for (const p of candidates) {
       const userId = p.userId;
       const [relevantItems, lastAnswer] = await Promise.all([
-        this.prisma.reviewCard.count({ where: { userId, due: { lte: now }, state: { not: 'new' } } }),
+        this.prisma.reviewCard.count({ where: { userId, due: { lte: now }, state: { not: 'new' }, item: { levelCode: { in: levelsOfLanguage(languageOfLevel(p.user.preferences?.targetLevel)) } } } }),
         this.prisma.exerciseAnswer.findFirst({ where: { userId }, orderBy: { createdAt: 'desc' }, select: { createdAt: true } }),
       ]);
       const decision = decideReminder({

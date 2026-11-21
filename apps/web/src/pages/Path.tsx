@@ -12,6 +12,8 @@ import { WorldVignette } from '../components/Illustrations';
 import { EXAMS } from '@koto/learning-engine';
 import { T } from '../i18n';
 import { sagaFor, storyChapter, type Saga } from '../lib/story';
+import { languageInfo, languageOfLevel, levelLabel } from '@koto/shared';
+import { StudyLanguageSwitch, useStudyLang } from '../components/StudyLanguage';
 
 /** Parcours : chemin vertical de « pierres » (inspiré du sugoroku), une par leçon. */
 const LEVEL_KEY = 'koto-path-level';
@@ -26,7 +28,11 @@ function storedLevel(): string | null {
 export function PathPage() {
   const [params, setParams] = useSearchParams();
   const { data: me } = useMe();
-  const level = params.get('niveau') ?? storedLevel() ?? me?.preferences.targetLevel ?? 'N5';
+  const words = useStudyLang();
+  // Le niveau mémorisé n'est repris que s'il appartient à la langue étudiée.
+  const stored = storedLevel();
+  const level = params.get('niveau') ?? (stored && languageOfLevel(stored) === words.lang ? stored : null) ?? me?.preferences.targetLevel ?? words.info.firstLevel;
+  const first = languageInfo(languageOfLevel(level)).firstLevel;
   const { data, isLoading, error, refetch } = usePath(level);
   const choose = (code: string) => {
     try {
@@ -36,10 +42,10 @@ export function PathPage() {
     }
     setParams({ niveau: code }, { replace: true });
   };
-  // Niveau mémorisé qui n'existe plus : retour au N5.
-  const missing = error instanceof ApiError && error.status === 404 && level !== 'N5';
+  // Niveau mémorisé qui n'existe plus : retour au premier niveau de la langue (N5, TOPIK 1).
+  const missing = error instanceof ApiError && error.status === 404 && level !== first;
   useEffect(() => {
-    if (missing) choose('N5');
+    if (missing) choose(first);
   });
   if (missing || isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
@@ -50,7 +56,8 @@ export function PathPage() {
 
   return (
     <div>
-      {saga ? <SagaBanner saga={saga} code={data.level.code} region={data.level.region} notice={data.level.notice} done={sagaDone} /> : <PageTitle sub={data.level.notice}>{T("{0} : {1}", [data.level.code, data.level.region])}</PageTitle>}
+      <StudyLanguageSwitch className="mb-4 max-w-sm" />
+      {saga ? <SagaBanner saga={saga} code={data.level.code} region={data.level.region} notice={data.level.notice} done={sagaDone} /> : <PageTitle sub={data.level.notice}>{T("{0} : {1}", [levelLabel(data.level.code), data.level.region])}</PageTitle>}
       {data.levels.length > 1 && (
         <div role="tablist" aria-label={T("Niveau du parcours")} className="mb-6 flex flex-wrap gap-2">
           {data.levels.map((l) => {
@@ -63,7 +70,7 @@ export function PathPage() {
                 onClick={() => choose(l.code)}
                 className={`flex min-h-12 items-center gap-3 rounded-2xl border-2 px-4 text-left ${active ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}
               >
-                <span className="font-display text-xl">{l.code}</span>
+                <span className="font-display text-xl">{levelLabel(l.code)}</span>
                 <span className="text-sm leading-tight">
                   <span className="block font-bold">{sagaFor(l.code)?.short ?? l.title.split(' : ')[0]}</span>
                   <span className={active ? 'opacity-80' : 'text-ink-soft'}>{T("{0}/{1} leçons", [l.completed , l.lessons ])}</span>
@@ -74,8 +81,8 @@ export function PathPage() {
         </div>
       )}
       <Link to="/prepa" className="mb-6 flex items-center gap-4 rounded-3xl border-2 border-[#8E1B26] bg-surface p-4 hover:bg-surface-2">
-        <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-2xl font-black text-white">試</span>
-        <span className="flex-1"><span className="block font-bold">{T("Atelier JLPT")}</span><span className="text-sm text-ink-soft">{T("Entraîne-toi épreuve par épreuve au format de l’examen, avec ce que tu as appris.")}</span></span>
+        <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-2xl font-black text-white">{words.ko ? '시' : '試'}</span>
+        <span className="flex-1"><span className="block font-bold">{words.workshop}</span><span className="text-sm text-ink-soft">{T("Entraîne-toi épreuve par épreuve au format de l’examen, avec ce que tu as appris.")}</span></span>
         <span aria-hidden="true" className="text-xl">→</span>
       </Link>
       <WorldMap worlds={data.worlds} avatar={me?.avatar ?? DEFAULT_AVATAR} region={data.level.region} level={data.level.code} saga={saga ? { glyph: saga.glyph, title: saga.title } : undefined} />
@@ -166,8 +173,8 @@ function SagaBanner({ saga, code, region, notice, done }: { saga: Saga; code: st
         <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-2 border-white/70 bg-black/15 text-3xl font-black sm:h-16 sm:w-16 sm:text-4xl">{saga.glyph}</span>
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-wide opacity-90 sm:text-sm">{T("Mode histoire · {0}", [saga.hero])}</p>
-          <h1 className="text-2xl text-white sm:text-4xl">{T("{0} : {1}", [code, saga.title])}</h1>
-          <p className="jp mt-0.5 text-sm opacity-90" lang="ja">{saga.jp}</p>
+          <h1 className="text-2xl text-white sm:text-4xl">{T("{0} : {1}", [levelLabel(code), saga.title])}</h1>
+          <p className="jp mt-0.5 text-sm opacity-90" lang={languageOfLevel(code) === 'ko' ? 'ko' : 'ja'}>{saga.jp}</p>
         </div>
       </div>
       <div className="p-3 sm:p-5">

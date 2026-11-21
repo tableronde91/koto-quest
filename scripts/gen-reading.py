@@ -755,6 +755,14 @@ data = {
              "en": "Traditional Japanese folk tales (public domain), retold in simple Japanese for Koto Quest."},
   "stories": stories,
 }
+# Les contes coréens (scripts/ko-reading.py) sont conservés tels quels.
+try:
+    old = json.load(open(OUT, encoding="utf-8"))
+    data["stories"] += [s for s in old["stories"] if s["level"].startswith("TOPIK")]
+    if "notices" in old:
+        data["notices"] = old["notices"]
+except FileNotFoundError:
+    pass
 json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 n = sum(len(s["chapters"]) for s in stories)
 sl = [sum(len(p) for p in c["paragraphs"]) for s in stories for c in s["chapters"]]

@@ -1,0 +1,789 @@
+{
+ "contentVersion": "2026.11.21",
+ "language": "ko",
+ "notice": "Expressions coréennes courantes sélectionnées par Koto Quest ; la romanisation et le registre (poli, familier…) aident à choisir la bonne formule selon la situation.",
+ "themes": [
+  {
+   "slug": "ko-politesse",
+   "glyph": "예",
+   "title": "Politesse essentielle",
+   "description": "Les petites formules polies qui ouvrent toutes les portes en Corée.",
+   "expressions": [
+    {
+     "slug": "ko-annyeonghaseyo",
+     "kind": "vocabulary",
+     "front": "안녕하세요",
+     "reading": null,
+     "romaji": "annyeonghaseyo",
+     "meaning": "bonjour (poli)",
+     "note": "Le salut de tous les jours, à toute heure. On l’accompagne d’une légère inclinaison de la tête.",
+     "register": "polite",
+     "example": {
+      "jp": "안녕하세요, 처음 뵙겠습니다.",
+      "fr": "Bonjour, enchanté de faire votre connaissance."
+     }
+    },
+    {
+     "slug": "kexpr-gamsahamnida",
+     "kind": "vocabulary",
+     "front": "감사합니다",
+     "reading": null,
+     "romaji": "gamsahamnida",
+     "meaning": "merci (formel)",
+     "note": "Le merci le plus courant avec des inconnus, dans les magasins et au travail.",
+     "register": "formal"
+    },
+    {
+     "slug": "kexpr-gomawoyo",
+     "kind": "vocabulary",
+     "front": "고마워요",
+     "reading": null,
+     "romaji": "gomawoyo",
+     "meaning": "merci (poli, plus chaleureux)",
+     "note": "Merci poli mais plus proche, entre collègues ou connaissances.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-joesonghamnida",
+     "kind": "vocabulary",
+     "front": "죄송합니다",
+     "reading": null,
+     "romaji": "joesonghamnida",
+     "meaning": "je suis désolé (formel)",
+     "note": "Pour s’excuser sincèrement, auprès d’un client, d’un aîné ou d’un supérieur.",
+     "register": "formal"
+    },
+    {
+     "slug": "kexpr-mianhaeyo",
+     "kind": "vocabulary",
+     "front": "미안해요",
+     "reading": null,
+     "romaji": "mianhaeyo",
+     "meaning": "pardon, désolé (poli)",
+     "note": "Excuses du quotidien, pour un petit retard ou une bousculade.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-gwaenchanayo",
+     "kind": "vocabulary",
+     "front": "괜찮아요",
+     "reading": null,
+     "romaji": "gwaenchanayo",
+     "meaning": "ça va, ce n’est rien",
+     "note": "Réponse passe-partout : pour rassurer, refuser poliment ou dire que tout va bien.",
+     "register": "polite",
+     "example": {
+      "jp": "— 미안해요! — 괜찮아요.",
+      "fr": "— Pardon ! — Ce n’est rien."
+     }
+    },
+    {
+     "slug": "kexpr-sillyehamnida",
+     "kind": "vocabulary",
+     "front": "실례합니다",
+     "reading": null,
+     "romaji": "sillyehamnida",
+     "meaning": "excusez-moi (pour déranger)",
+     "note": "Pour interpeller quelqu’un, entrer dans une pièce ou passer devant une personne.",
+     "register": "formal"
+    }
+   ]
+  },
+  {
+   "slug": "ko-rencontres",
+   "glyph": "만",
+   "title": "Rencontres et au revoir",
+   "description": "Se présenter et prendre congé, en tenant compte de qui part et qui reste.",
+   "expressions": [
+    {
+     "slug": "kexpr-cheoeum",
+     "kind": "vocabulary",
+     "front": "처음 뵙겠습니다",
+     "reading": null,
+     "romaji": "cheoeum boepgetseumnida",
+     "meaning": "enchanté (première rencontre)",
+     "note": "Formule très polie, à dire la toute première fois qu’on rencontre quelqu’un.",
+     "register": "formal"
+    },
+    {
+     "slug": "kexpr-mannaseo-bangawoyo",
+     "kind": "vocabulary",
+     "front": "만나서 반가워요",
+     "reading": null,
+     "romaji": "mannaseo bangawoyo",
+     "meaning": "ravi de vous rencontrer",
+     "note": "Plus naturel et chaleureux que 처음 뵙겠습니다.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-annyeonghi-gaseyo",
+     "kind": "vocabulary",
+     "front": "안녕히 가세요",
+     "reading": null,
+     "romaji": "annyeonghi gaseyo",
+     "meaning": "au revoir (à celui qui part)",
+     "note": "Littéralement « partez en paix » : on le dit quand l’autre s’en va.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-annyeonghi-gyeseyo",
+     "kind": "vocabulary",
+     "front": "안녕히 계세요",
+     "reading": null,
+     "romaji": "annyeonghi gyeseyo",
+     "meaning": "au revoir (à celui qui reste)",
+     "note": "Littéralement « restez en paix » : on le dit quand c’est soi qui part.",
+     "register": "polite",
+     "example": {
+      "jp": "사장님, 안녕히 계세요!",
+      "fr": "Au revoir, patron ! (en quittant la boutique)"
+     }
+    },
+    {
+     "slug": "kexpr-tto-mannayo",
+     "kind": "vocabulary",
+     "front": "또 만나요",
+     "reading": null,
+     "romaji": "tto mannayo",
+     "meaning": "à bientôt, à la prochaine",
+     "note": "Pour se quitter en promettant de se revoir.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-jal-jinaesseoyo",
+     "kind": "vocabulary",
+     "front": "잘 지냈어요?",
+     "reading": null,
+     "romaji": "jal jinaesseoyo?",
+     "meaning": "comment ça va depuis le temps ?",
+     "note": "Quand on retrouve quelqu’un qu’on n’a pas vu depuis un moment.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "ko-comprendre",
+   "glyph": "말",
+   "title": "Se faire comprendre",
+   "description": "Demander de répéter, de ralentir ou de traduire.",
+   "expressions": [
+    {
+     "slug": "kexpr-dasi",
+     "kind": "vocabulary",
+     "front": "다시 한번 말해 주세요",
+     "reading": null,
+     "romaji": "dasi hanbeon malhae juseyo",
+     "meaning": "pouvez-vous répéter, s’il vous plaît ?",
+     "note": "Indispensable quand on débute : personne ne s’en offusque.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-cheoncheonhi",
+     "kind": "vocabulary",
+     "front": "천천히 말해 주세요",
+     "reading": null,
+     "romaji": "cheoncheonhi malhae juseyo",
+     "meaning": "parlez lentement, s’il vous plaît",
+     "note": "천천히 = lentement.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-molla",
+     "kind": "vocabulary",
+     "front": "잘 모르겠어요",
+     "reading": null,
+     "romaji": "jal moreugesseoyo",
+     "meaning": "je ne sais pas trop, je ne comprends pas bien",
+     "note": "Façon douce de dire qu’on ne sait pas ou qu’on n’a pas compris.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-mwora",
+     "kind": "vocabulary",
+     "front": "이거 한국어로 뭐예요?",
+     "reading": null,
+     "romaji": "igeo hangugeoro mwoyeyo?",
+     "meaning": "comment dit-on ça en coréen ?",
+     "note": "En montrant un objet : le meilleur moyen d’apprendre du vocabulaire.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-arasseoyo",
+     "kind": "vocabulary",
+     "front": "알겠어요",
+     "reading": null,
+     "romaji": "algesseoyo",
+     "meaning": "j’ai compris, d’accord",
+     "note": "Pour confirmer qu’on a compris une consigne.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "ko-restaurant",
+   "glyph": "식",
+   "title": "Au restaurant et au café",
+   "description": "Commander, remercier, payer : la table coréenne a ses rituels.",
+   "expressions": [
+    {
+     "slug": "kexpr-yeogiyo",
+     "kind": "vocabulary",
+     "front": "여기요!",
+     "reading": null,
+     "romaji": "yeogiyo!",
+     "meaning": "s’il vous plaît ! (pour appeler le serveur)",
+     "note": "Littéralement « ici ! » : on appelle le serveur à voix haute, c’est tout à fait normal.",
+     "register": "neutral"
+    },
+    {
+     "slug": "ko-jal-meokgetseumnida",
+     "kind": "vocabulary",
+     "front": "잘 먹겠습니다",
+     "reading": null,
+     "romaji": "jal meokgetseumnida",
+     "meaning": "merci pour ce repas (avant de manger)",
+     "note": "À dire avant de commencer, surtout quand quelqu’un vous invite ou a cuisiné.",
+     "register": "formal"
+    },
+    {
+     "slug": "kexpr-jal-meogeosseumnida",
+     "kind": "vocabulary",
+     "front": "잘 먹었습니다",
+     "reading": null,
+     "romaji": "jal meogeotseumnida",
+     "meaning": "merci, c’était très bon (après le repas)",
+     "note": "À dire en finissant ou en quittant le restaurant.",
+     "register": "formal"
+    },
+    {
+     "slug": "kexpr-mat-itgye",
+     "kind": "vocabulary",
+     "front": "맛있게 드세요",
+     "reading": null,
+     "romaji": "masitge deuseyo",
+     "meaning": "bon appétit",
+     "note": "Ce que dit le serveur ou l’hôte en servant le plat.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-gyesan",
+     "kind": "vocabulary",
+     "front": "계산해 주세요",
+     "reading": null,
+     "romaji": "gyesanhae juseyo",
+     "meaning": "l’addition, s’il vous plaît",
+     "note": "En Corée, on paie souvent au comptoir à la sortie.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-an-maepge",
+     "kind": "vocabulary",
+     "front": "안 맵게 해 주세요",
+     "reading": null,
+     "romaji": "an maepge hae juseyo",
+     "meaning": "pas épicé, s’il vous plaît",
+     "note": "Utile : beaucoup de plats coréens sont relevés au piment (고추).",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "ko-magasins",
+   "glyph": "돈",
+   "title": "Dans les magasins",
+   "description": "Demander un prix, marchander un peu au marché, payer par carte.",
+   "expressions": [
+    {
+     "slug": "kexpr-eolmayeyo",
+     "kind": "vocabulary",
+     "front": "이거 얼마예요?",
+     "reading": null,
+     "romaji": "igeo eolmayeyo?",
+     "meaning": "combien coûte ceci ?",
+     "note": "La question à connaître par cœur au marché de Namdaemun.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-kkakka",
+     "kind": "vocabulary",
+     "front": "좀 깎아 주세요",
+     "reading": null,
+     "romaji": "jom kkakka juseyo",
+     "meaning": "faites-moi un petit prix",
+     "note": "Au marché traditionnel, marchander gentiment est courant ; pas dans les grands magasins.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-kadeu",
+     "kind": "vocabulary",
+     "front": "카드 돼요?",
+     "reading": null,
+     "romaji": "kadeu dwaeyo?",
+     "meaning": "vous acceptez la carte ?",
+     "note": "돼요 = « ça marche ? », « c’est possible ? ».",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-bongtu",
+     "kind": "vocabulary",
+     "front": "봉투 주세요",
+     "reading": null,
+     "romaji": "bongtu juseyo",
+     "meaning": "un sac, s’il vous plaît",
+     "note": "Les sacs sont souvent payants : on les demande à la caisse.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-gureogo",
+     "kind": "vocabulary",
+     "front": "그냥 구경하고 있어요",
+     "reading": null,
+     "romaji": "geunyang gugyeonghago isseoyo",
+     "meaning": "je regarde seulement",
+     "note": "Pour répondre au vendeur qui propose son aide.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "ko-transports",
+   "glyph": "길",
+   "title": "Transports et orientation",
+   "description": "Trouver son chemin dans le métro, le bus et le taxi.",
+   "expressions": [
+    {
+     "slug": "kexpr-eodi-isseoyo",
+     "kind": "vocabulary",
+     "front": "화장실이 어디에 있어요?",
+     "reading": null,
+     "romaji": "hwajangsiri eodie isseoyo?",
+     "meaning": "où sont les toilettes ?",
+     "note": "Nom + 이/가 어디에 있어요? : la question pour tout lieu.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-gajuseyo",
+     "kind": "vocabulary",
+     "front": "서울역으로 가 주세요",
+     "reading": null,
+     "romaji": "seoulyeogeuro ga juseyo",
+     "meaning": "à la gare de Séoul, s’il vous plaît (taxi)",
+     "note": "Destination + (으)로 가 주세요 : à dire au chauffeur de taxi.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-yeogiseo-naeryeo",
+     "kind": "vocabulary",
+     "front": "여기서 내려 주세요",
+     "reading": null,
+     "romaji": "yeogiseo naeryeo juseyo",
+     "meaning": "déposez-moi ici, s’il vous plaît",
+     "note": "En taxi, pour descendre tout de suite.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-eolmana-geollyeo",
+     "kind": "vocabulary",
+     "front": "얼마나 걸려요?",
+     "reading": null,
+     "romaji": "eolmana geollyeoyo?",
+     "meaning": "combien de temps ça prend ?",
+     "note": "Pour demander la durée d’un trajet.",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-gireul-ileosseoyo",
+     "kind": "vocabulary",
+     "front": "길을 잃었어요",
+     "reading": null,
+     "romaji": "gireul ireosseoyo",
+     "meaning": "je me suis perdu(e)",
+     "note": "Littéralement « j’ai perdu le chemin ».",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "ko-reactions",
+   "glyph": "감",
+   "title": "Réactions et émotions",
+   "description": "Les exclamations qu’on entend dans tous les dramas.",
+   "expressions": [
+    {
+     "slug": "kexpr-daebak",
+     "kind": "vocabulary",
+     "front": "대박!",
+     "reading": null,
+     "romaji": "daebak!",
+     "meaning": "génial ! incroyable !",
+     "note": "Exclamation familière d’émerveillement ou de surprise.",
+     "register": "casual"
+    },
+    {
+     "slug": "kexpr-jinjja",
+     "kind": "vocabulary",
+     "front": "진짜요?",
+     "reading": null,
+     "romaji": "jinjjayo?",
+     "meaning": "vraiment ?",
+     "note": "진짜 = vrai. Sans 요, entre amis : 진짜?",
+     "register": "polite"
+    },
+    {
+     "slug": "kexpr-hwaiting",
+     "kind": "vocabulary",
+     "front": "화이팅!",
+     "reading": null,
+     "romaji": "hwaiting!",
+     "meaning": "courage ! allez !",
+     "note": "Pour encourager quelqu’un avant un examen, un match, un entretien.",
+     "register": "casual",
+     "example": {
+      "jp": "토픽 시험 화이팅!",
+      "fr": "Courage pour le TOPIK !"
+     }
+    },
+    {
+     "slug": "kexpr-aigo",
+     "kind": "vocabulary",
+     "front": "아이고",
+     "reading": null,
+     "romaji": "aigo",
+     "meaning": "oh là là, aïe",
+     "note": "Soupir de fatigue, de surprise ou de compassion, très courant chez les plus âgés.",
+     "register": "casual"
+    },
+    {
+     "slug": "kexpr-sugohasyeosseumnida",
+     "kind": "vocabulary",
+     "front": "수고하셨습니다",
+     "reading": null,
+     "romaji": "sugohasyeotseumnida",
+     "meaning": "merci pour votre travail, bon travail",
+     "note": "Pour saluer l’effort de quelqu’un à la fin d’une tâche ou d’une journée.",
+     "register": "formal"
+    }
+   ]
+  },
+  {
+   "slug": "ko-sokdam",
+   "glyph": "속",
+   "title": "Proverbes du quotidien",
+   "description": "Les 속담 que les Coréens glissent dans la conversation : à réviser jusqu’à les reconnaître au vol.",
+   "expressions": [
+    {
+     "slug": "kprov-gowaya",
+     "kind": "vocabulary",
+     "front": "가는 말이 고와야 오는 말이 곱다",
+     "reading": null,
+     "romaji": "ganeun mari gowaya oneun mari gopda",
+     "meaning": "qui parle bien reçoit de bonnes paroles",
+     "note": "Mot à mot : « si les mots qui partent sont beaux, ceux qui reviennent le sont aussi ».",
+     "register": "neutral",
+     "example": {
+      "jp": "가는 말이 고와야 오는 말이 곱다고, 먼저 친절하게 말해 보세요.",
+      "fr": "Qui parle bien reçoit de bonnes paroles : commencez par parler gentiment."
+     }
+    },
+    {
+     "slug": "kprov-natmal",
+     "kind": "vocabulary",
+     "front": "낮말은 새가 듣고 밤말은 쥐가 듣는다",
+     "reading": null,
+     "romaji": "nanmareun saega deutgo bammareun jwiga deunneunda",
+     "meaning": "les murs ont des oreilles",
+     "note": "« Le jour, les oiseaux écoutent ; la nuit, les souris » : méfiez-vous de ce que vous dites.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-baekji",
+     "kind": "vocabulary",
+     "front": "백지장도 맞들면 낫다",
+     "reading": null,
+     "romaji": "baekjijangdo matdeulmyeon natda",
+     "meaning": "l’union fait la force",
+     "note": "« Même une feuille de papier est plus légère portée à deux. »",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-haneul",
+     "kind": "vocabulary",
+     "front": "하늘이 무너져도 솟아날 구멍이 있다",
+     "reading": null,
+     "romaji": "haneuri muneojyeodo sosanal gumeongi itda",
+     "meaning": "il y a toujours une issue",
+     "note": "« Même si le ciel s’effondre, il reste un trou par où s’échapper. »",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-so",
+     "kind": "vocabulary",
+     "front": "소 잃고 외양간 고친다",
+     "reading": null,
+     "romaji": "so ilko oeyanggan gochinda",
+     "meaning": "fermer l’écurie quand le cheval s’est enfui",
+     "note": "« Réparer l’étable après avoir perdu la vache » : agir trop tard.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-sijak",
+     "kind": "vocabulary",
+     "front": "시작이 반이다",
+     "reading": null,
+     "romaji": "sijagi banida",
+     "meaning": "commencer, c’est déjà faire la moitié du chemin",
+     "note": "On le dit pour encourager quelqu’un qui hésite à se lancer.",
+     "register": "neutral",
+     "example": {
+      "jp": "시작이 반이에요. 오늘부터 토픽 공부를 해 봐요!",
+      "fr": "Commencer, c’est déjà la moitié : on se met au TOPIK dès aujourd’hui !"
+     }
+    },
+    {
+     "slug": "kprov-beoreut",
+     "kind": "vocabulary",
+     "front": "세 살 버릇 여든까지 간다",
+     "reading": null,
+     "romaji": "se sal beoreut yeodeunkkaji ganda",
+     "meaning": "les habitudes d’enfance durent toute la vie",
+     "note": "« Une habitude prise à trois ans dure jusqu’à quatre-vingts ans. »",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-deungjan",
+     "kind": "vocabulary",
+     "front": "등잔 밑이 어둡다",
+     "reading": null,
+     "romaji": "deungjan miti eoduptta",
+     "meaning": "ce qu’on cherche est souvent sous son nez",
+     "note": "« Il fait sombre sous la lampe » : on ne voit pas ce qui est tout près.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-wonsungi",
+     "kind": "vocabulary",
+     "front": "원숭이도 나무에서 떨어진다",
+     "reading": null,
+     "romaji": "wonsungido namueseo tteoreojinda",
+     "meaning": "même les meilleurs se trompent",
+     "note": "Pour consoler quelqu’un de doué qui vient de faire une erreur.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-geumgang",
+     "kind": "vocabulary",
+     "front": "금강산도 식후경",
+     "reading": null,
+     "romaji": "geumgangsando sikugyeong",
+     "meaning": "on admire mieux le ventre plein",
+     "note": "Même les plus beaux monts Geumgang se contemplent après le repas : d’abord manger !",
+     "register": "casual"
+    }
+   ]
+  },
+  {
+   "slug": "ko-sokdam-contes",
+   "glyph": "담",
+   "title": "Proverbes des contes et des animaux",
+   "description": "Tigres, grenouilles, baleines et jarres percées : les images des contes devenues proverbes.",
+   "expressions": [
+    {
+     "slug": "kprov-horangi",
+     "kind": "vocabulary",
+     "front": "호랑이도 제 말 하면 온다",
+     "reading": null,
+     "romaji": "horangido je mal hamyeon onda",
+     "meaning": "quand on parle du loup, on en voit la queue",
+     "note": "« Même le tigre arrive quand on parle de lui. »",
+     "register": "casual",
+     "example": {
+      "jp": "호랑이도 제 말 하면 온다더니, 민수 씨가 왔네요!",
+      "fr": "Quand on parle du loup… voilà Minsu !"
+     }
+    },
+    {
+     "slug": "kprov-gaeguri",
+     "kind": "vocabulary",
+     "front": "개구리 올챙이 적 생각 못 한다",
+     "reading": null,
+     "romaji": "gaeguri olchaengi jeok saenggak mot handa",
+     "meaning": "oublier d’où l’on vient",
+     "note": "« La grenouille ne se souvient pas d’avoir été têtard » : se dit d’un parvenu.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-gorae",
+     "kind": "vocabulary",
+     "front": "고래 싸움에 새우 등 터진다",
+     "reading": null,
+     "romaji": "gorae ssaume saeu deung teojinda",
+     "meaning": "les petits paient les querelles des grands",
+     "note": "« Quand les baleines se battent, c’est le dos de la crevette qui éclate. »",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-umul",
+     "kind": "vocabulary",
+     "front": "우물 안 개구리",
+     "reading": null,
+     "romaji": "umul an gaeguri",
+     "meaning": "avoir une vision étroite du monde",
+     "note": "Se dit de quelqu’un qui ne connaît que son petit monde.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-kong",
+     "kind": "vocabulary",
+     "front": "콩 심은 데 콩 나고 팥 심은 데 팥 난다",
+     "reading": null,
+     "romaji": "kong simeun de kong nago pat simeun de pat nanda",
+     "meaning": "les effets découlent de leurs causes",
+     "note": "« Là où l’on sème du soja pousse du soja, là où l’on sème des haricots rouges poussent des haricots rouges. »",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-dok",
+     "kind": "vocabulary",
+     "front": "밑 빠진 독에 물 붓기",
+     "reading": null,
+     "romaji": "mit ppajin doge mul butgi",
+     "meaning": "un effort sans fin et sans résultat",
+     "note": "L’épreuve de Kongjwi dans le conte 콩쥐팥쥐 : remplir une jarre percée.",
+     "register": "neutral"
+    },
+    {
+     "slug": "kprov-nat",
+     "kind": "vocabulary",
+     "front": "낫 놓고 기역 자도 모른다",
+     "reading": null,
+     "romaji": "nat noko giyeok jado moreunda",
+     "meaning": "être complètement ignorant",
+     "note": "« Ne pas reconnaître la lettre ㄱ même avec une faucille (en forme de ㄱ) devant soi. »",
+     "register": "casual"
+    },
+    {
+     "slug": "kprov-tteok",
+     "kind": "vocabulary",
+     "front": "누워서 떡 먹기",
+     "reading": null,
+     "romaji": "nuwoseo tteok meokgi",
+     "meaning": "simple comme bonjour",
+     "note": "« Manger un gâteau de riz allongé » : une tâche très facile.",
+     "register": "casual",
+     "example": {
+      "jp": "이 문제는 누워서 떡 먹기예요.",
+      "fr": "Cet exercice, c’est simple comme bonjour."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "ko-sajaseongeo",
+   "glyph": "성",
+   "title": "Expressions en quatre caractères",
+   "description": "Les 사자성어, venus des caractères chinois, donnent du style à l’écrit et aux discours.",
+   "expressions": [
+    {
+     "slug": "kprov-ilseok",
+     "kind": "vocabulary",
+     "front": "일석이조",
+     "reading": null,
+     "romaji": "ilseogijo",
+     "meaning": "faire d’une pierre deux coups",
+     "note": "一石二鳥 : une pierre, deux oiseaux.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-uwang",
+     "kind": "vocabulary",
+     "front": "우왕좌왕",
+     "reading": null,
+     "romaji": "uwangjwawang",
+     "meaning": "aller dans tous les sens, s’affoler",
+     "note": "右往左往 : aller à droite, aller à gauche.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-dongmun",
+     "kind": "vocabulary",
+     "front": "동문서답",
+     "reading": null,
+     "romaji": "dongmunseodap",
+     "meaning": "répondre à côté de la question",
+     "note": "東問西答 : on demande à l’est, on répond à l’ouest.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-jaksim",
+     "kind": "vocabulary",
+     "front": "작심삼일",
+     "reading": null,
+     "romaji": "jaksimsamil",
+     "meaning": "bonnes résolutions sans lendemain",
+     "note": "作心三日 : une résolution qui tient trois jours.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-geumsi",
+     "kind": "vocabulary",
+     "front": "금시초문",
+     "reading": null,
+     "romaji": "geumsichomun",
+     "meaning": "première nouvelle",
+     "note": "今時初聞 : entendu pour la première fois à l’instant.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-jaeop",
+     "kind": "vocabulary",
+     "front": "자업자득",
+     "reading": null,
+     "romaji": "jaeopjadeuk",
+     "meaning": "on récolte ce qu’on a semé",
+     "note": "自業自得 : on reçoit le fruit de ses propres actes.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-gwayu",
+     "kind": "vocabulary",
+     "front": "과유불급",
+     "reading": null,
+     "romaji": "gwayubulgeup",
+     "meaning": "trop, c’est comme pas assez",
+     "note": "過猶不及 : l’excès vaut le manque (Confucius).",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-sipjung",
+     "kind": "vocabulary",
+     "front": "십중팔구",
+     "reading": null,
+     "romaji": "sipjungpalgu",
+     "meaning": "neuf fois sur dix",
+     "note": "十中八九 : huit ou neuf sur dix, presque sûrement.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-isim",
+     "kind": "vocabulary",
+     "front": "이심전심",
+     "reading": null,
+     "romaji": "isimjeonsim",
+     "meaning": "se comprendre sans un mot",
+     "note": "以心傳心 : de cœur à cœur.",
+     "register": "formal"
+    },
+    {
+     "slug": "kprov-daegi",
+     "kind": "vocabulary",
+     "front": "대기만성",
+     "reading": null,
+     "romaji": "daegimanseong",
+     "meaning": "les grands talents mûrissent lentement",
+     "note": "大器晩成 : les grands vases se font lentement. Pour encourager qui progresse doucement.",
+     "register": "formal"
+    }
+   ]
+  }
+ ]
+}

@@ -5,7 +5,7 @@ import { Rng, shuffle } from './random';
  * Examen blanc (phase 3) — format inspiré des épreuves du JLPT, sans prétendre les reproduire :
  * c'est un entraînement non officiel.
  */
-export type ExamSectionId = 'vocab' | 'grammar' | 'listening';
+export type ExamSectionId = 'vocab' | 'grammar' | 'listening' | 'reading' | 'writing';
 
 export interface ExamSectionDef {
   id: ExamSectionId;
@@ -25,12 +25,59 @@ export interface ExamDef {
   sectionMinPercent: number;
   /** Banque de questions rédigées (format officiel) au lieu des notions du parcours */
   bank?: string;
-  /** Notation : pourcentages (défaut) ou barème du JLPT (180 points) */
-  scoring?: 'percent' | 'jlpt';
+  /** Notation : pourcentages (défaut), barème du JLPT (180 points) ou du TOPIK I (200 points) */
+  scoring?: 'percent' | 'jlpt' | 'topik' | 'topik2';
+  /** TOPIK : niveau à obtenir pour réussir l'examen (1 par défaut) */
+  passLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 /** Barème officiel N4/N5 : langue + lecture sur 120, écoute sur 60 ; réussite à 80/180 avec 38 et 19 minimum. */
 export const JLPT_SCALE = { language: 120, listening: 60, total: 180, passTotal: 80, passLanguage: 38, passListening: 19 } as const;
+
+/**
+ * Barème du TOPIK I : écoute (듣기) sur 100 et lecture (읽기) sur 100. Pas de minimum par épreuve :
+ * niveau 1 à partir de 80/200, niveau 2 à partir de 140/200.
+ */
+export const TOPIK_I_SCALE = { language: 100, listening: 100, total: 200, passTotal: 80, passLanguage: 0, passListening: 0, level2: 140 } as const;
+
+/**
+ * Barème du TOPIK II : écoute (듣기), écriture (쓰기) et lecture (읽기), chacune sur 100, soit 300 points.
+ * Niveau 3 à partir de 120, 4 à 150, 5 à 190, 6 à 230.
+ */
+export const TOPIK_II_SCALE = { language: 100, listening: 100, writing: 100, total: 300, levels: [{ level: 3, min: 120 }, { level: 4, min: 150 }, { level: 5, min: 190 }, { level: 6, min: 230 }] } as const;
+
+export interface ExamScale {
+  system: 'jlpt' | 'topik';
+  language: number;
+  listening: number;
+  total: number;
+  passTotal: number;
+  passLanguage: number;
+  passListening: number;
+  /** TOPIK : seuils des niveaux obtenus (1 puis 2) */
+  levels?: { level: number; min: number }[];
+  /** TOPIK : niveau à obtenir pour réussir cet examen */
+  passLevel?: number;
+  /** TOPIK II : écriture (쓰기) */
+  writing?: number;
+}
+
+/** Barème d'un examen noté sur points (JLPT ou TOPIK), ou null s'il est noté en pourcentage. */
+export function examScale(def: ExamDef): ExamScale | null {
+  if (def.scoring === 'jlpt') return { system: 'jlpt', ...JLPT_SCALE };
+  if (def.scoring === 'topik') {
+    const { level2, ...rest } = TOPIK_I_SCALE;
+    return { system: 'topik', ...rest, levels: [{ level: 1, min: TOPIK_I_SCALE.passTotal }, { level: 2, min: level2 }], passLevel: def.passLevel ?? 1 };
+  }
+  if (def.scoring === 'topik2') {
+    const passLevel = def.passLevel ?? 3;
+    return {
+      system: 'topik', language: TOPIK_II_SCALE.language, listening: TOPIK_II_SCALE.listening, writing: TOPIK_II_SCALE.writing, total: TOPIK_II_SCALE.total,
+      passTotal: TOPIK_II_SCALE.levels[0].min, passLanguage: 0, passListening: 0, levels: TOPIK_II_SCALE.levels.map((l) => ({ ...l })), passLevel,
+    };
+  }
+  return null;
+}
 
 export interface BankQuestion {
   jp?: string;
@@ -84,9 +131,9 @@ export function planBankExam(bank: ExamBank, rng: Rng): PlannedExamQuestion[] {
 }
 
 /** Nombre de questions par section d'une banque (pour la définition de l'examen). */
-export function bankSections(bank: ExamBank): Record<ExamSectionId, number> {
-  const out: Record<ExamSectionId, number> = { vocab: 0, grammar: 0, listening: 0 };
-  for (const p of bank.parts) out[p.section] += p.count;
+export function bankSections(bank: ExamBank): Partial<Record<ExamSectionId, number>> {
+  const out: Partial<Record<ExamSectionId, number>> = {};
+  for (const p of bank.parts) out[p.section] = (out[p.section] ?? 0) + p.count;
   return out;
 }
 
@@ -177,7 +224,112 @@ export const EXAM_N1: ExamDef = {
   sectionMinPercent: 40,
 };
 
-export const EXAMS: Record<string, ExamDef> = { [EXAM_N1.slug]: EXAM_N1, [EXAM_N5.slug]: EXAM_N5, [EXAM_N4.slug]: EXAM_N4, [EXAM_N3.slug]: EXAM_N3, [EXAM_N2.slug]: EXAM_N2, [EXAM_N5_JLPT.slug]: EXAM_N5_JLPT };
+/** Examen d'entraînement TOPIK 1 généré à partir des leçons (vocabulaire, grammaire, écoute). */
+export const EXAM_TOPIK1_MOCK: ExamDef = {
+  slug: 'topik1-mock',
+  level: 'TOPIK1',
+  title: 'Entraînement TOPIK 1',
+  durationMin: 25,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire', jpTitle: '어휘', count: 12 },
+    { id: 'grammar', title: 'Grammaire', jpTitle: '문법', count: 10 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '듣기', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+};
+
+/** Examen blanc TOPIK I au format officiel : banque rédigée en coréen, épreuves et barème du TOPIK I. */
+export const EXAM_TOPIK1: ExamDef = {
+  slug: 'topik1-official',
+  level: 'TOPIK1',
+  title: 'Examen blanc TOPIK I — format officiel',
+  durationMin: 100,
+  sections: [
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '듣기', count: 30 },
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: '읽기', count: 40 },
+  ],
+  passPercent: 40,
+  sectionMinPercent: 0,
+  bank: 'topik1',
+  scoring: 'topik',
+};
+
+/** Examen blanc du niveau 2 : même format que le TOPIK I, banque enrichie de questions plus difficiles, réussite au niveau 2 (140/200). */
+export const EXAM_TOPIK2: ExamDef = {
+  ...EXAM_TOPIK1,
+  slug: 'topik2-official',
+  level: 'TOPIK2',
+  title: 'Examen blanc TOPIK I (niveau 2) — format officiel',
+  bank: 'topik2',
+  passPercent: 70,
+  passLevel: 2,
+};
+
+/** Examen blanc TOPIK II (version abrégée) : écoute, écriture (format adapté à choix) et lecture, notée sur 300 ; réussite au niveau 3 (120). */
+export const EXAM_TOPIK3: ExamDef = {
+  slug: 'topik3-official',
+  level: 'TOPIK3',
+  title: 'Examen blanc TOPIK II — format officiel (abrégé)',
+  durationMin: 90,
+  sections: [
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '듣기', count: 25 },
+    { id: 'writing', title: 'Expression écrite', jpTitle: '쓰기', count: 5 },
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: '읽기', count: 25 },
+  ],
+  passPercent: 40,
+  sectionMinPercent: 0,
+  bank: 'topik3',
+  scoring: 'topik2',
+  passLevel: 3,
+};
+
+/** Examen blanc TOPIK II du niveau 4 : même format, banque enrichie de questions plus difficiles, réussite au niveau 4 (150/300). */
+export const EXAM_TOPIK4: ExamDef = {
+  ...EXAM_TOPIK3,
+  slug: 'topik4-official',
+  level: 'TOPIK4',
+  title: 'Examen blanc TOPIK II (niveau 4) — format officiel (abrégé)',
+  bank: 'topik4',
+  passPercent: 50,
+  passLevel: 4,
+};
+
+/** Examens blancs TOPIK II des niveaux 5 et 6 : banques enrichies, réussite à 190 puis 230 points sur 300. */
+export const EXAM_TOPIK5: ExamDef = { ...EXAM_TOPIK3, slug: 'topik5-official', level: 'TOPIK5', title: 'Examen blanc TOPIK II (niveau 5) — format officiel (abrégé)', bank: 'topik5', passPercent: 63, passLevel: 5 };
+export const EXAM_TOPIK6: ExamDef = { ...EXAM_TOPIK3, slug: 'topik6-official', level: 'TOPIK6', title: 'Examen blanc TOPIK II (niveau 6) — format officiel (abrégé)', bank: 'topik6', passPercent: 77, passLevel: 6 };
+export const EXAM_TOPIK5_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik5-mock', level: 'TOPIK5', title: 'Entraînement TOPIK 5' };
+export const EXAM_TOPIK6_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik6-mock', level: 'TOPIK6', title: 'Entraînement TOPIK 6' };
+
+/** Examen d'entraînement TOPIK 4 généré à partir des leçons. */
+export const EXAM_TOPIK4_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik4-mock', level: 'TOPIK4', title: 'Entraînement TOPIK 4' };
+
+/** Examen d'entraînement TOPIK 3 généré à partir des leçons. */
+export const EXAM_TOPIK3_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik3-mock', level: 'TOPIK3', title: 'Entraînement TOPIK 3' };
+
+/** Examen d'entraînement TOPIK 2 généré à partir des leçons. */
+export const EXAM_TOPIK2_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik2-mock', level: 'TOPIK2', title: 'Entraînement TOPIK 2' };
+
+export const EXAMS: Record<string, ExamDef> = {
+  [EXAM_N1.slug]: EXAM_N1,
+  [EXAM_N5.slug]: EXAM_N5,
+  [EXAM_N4.slug]: EXAM_N4,
+  [EXAM_N3.slug]: EXAM_N3,
+  [EXAM_N2.slug]: EXAM_N2,
+  [EXAM_N5_JLPT.slug]: EXAM_N5_JLPT,
+  [EXAM_TOPIK1_MOCK.slug]: EXAM_TOPIK1_MOCK,
+  [EXAM_TOPIK1.slug]: EXAM_TOPIK1,
+  [EXAM_TOPIK2_MOCK.slug]: EXAM_TOPIK2_MOCK,
+  [EXAM_TOPIK2.slug]: EXAM_TOPIK2,
+  [EXAM_TOPIK3_MOCK.slug]: EXAM_TOPIK3_MOCK,
+  [EXAM_TOPIK3.slug]: EXAM_TOPIK3,
+  [EXAM_TOPIK4_MOCK.slug]: EXAM_TOPIK4_MOCK,
+  [EXAM_TOPIK4.slug]: EXAM_TOPIK4,
+  [EXAM_TOPIK5_MOCK.slug]: EXAM_TOPIK5_MOCK,
+  [EXAM_TOPIK5.slug]: EXAM_TOPIK5,
+  [EXAM_TOPIK6_MOCK.slug]: EXAM_TOPIK6_MOCK,
+  [EXAM_TOPIK6.slug]: EXAM_TOPIK6,
+};
 
 /** Types de questions exclus d'une épreuve sans correction immédiate (association à plusieurs réponses). */
 const EXAM_TYPES_EXCLUDED = new Set(['matching']);
@@ -242,8 +394,8 @@ export interface ExamGrade {
   percent: number;
   passed: boolean;
   weakest: ExamSectionId | null;
-  /** Barème JLPT (si l'examen l'utilise) */
-  scaled?: { language: number; listening: number; total: number };
+  /** Barème JLPT ou TOPIK (si l'examen l'utilise). TOPIK : `language` = lecture (읽기), `level` = niveau obtenu (0 = aucun). */
+  scaled?: { language: number; listening: number; total: number; level?: number; writing?: number };
 }
 
 /** Corrige une copie : `answers` contient la réponse donnée (ou rien) pour chaque question. */
@@ -271,45 +423,113 @@ export function gradeExam(def: ExamDef, questions: { section: ExamSectionId; typ
     const passed = scaled.total >= JLPT_SCALE.passTotal && scaled.language >= JLPT_SCALE.passLanguage && scaled.listening >= JLPT_SCALE.passListening;
     return { sections, correct, total, percent: Math.round((scaled.total / JLPT_SCALE.total) * 100), passed, weakest, results, scaled };
   }
+  if (def.scoring === 'topik') {
+    const lis = sections.filter((s) => s.id === 'listening');
+    const read = sections.filter((s) => s.id !== 'listening');
+    const pts = (list: typeof sections, max: number) => {
+      const t = list.reduce((n, s) => n + s.total, 0);
+      return t ? Math.round((list.reduce((n, s) => n + s.correct, 0) / t) * max) : 0;
+    };
+    const scaled = { language: pts(read, TOPIK_I_SCALE.language), listening: pts(lis, TOPIK_I_SCALE.listening), total: 0, level: 0 };
+    scaled.total = scaled.language + scaled.listening;
+    scaled.level = scaled.total >= TOPIK_I_SCALE.level2 ? 2 : scaled.total >= TOPIK_I_SCALE.passTotal ? 1 : 0;
+    return { sections, correct, total, percent: Math.round((scaled.total / TOPIK_I_SCALE.total) * 100), passed: scaled.level >= (def.passLevel ?? 1), weakest, results, scaled };
+  }
+  if (def.scoring === 'topik2') {
+    const pts = (id: ExamSectionId, max: number) => {
+      const s = sections.find((x) => x.id === id);
+      return s && s.total ? Math.round((s.correct / s.total) * max) : 0;
+    };
+    const scaled = { listening: pts('listening', TOPIK_II_SCALE.listening), writing: pts('writing', TOPIK_II_SCALE.writing), language: pts('reading', TOPIK_II_SCALE.language), total: 0, level: 0 };
+    scaled.total = scaled.listening + scaled.writing + scaled.language;
+    scaled.level = [...TOPIK_II_SCALE.levels].reverse().find((l) => scaled.total >= l.min)?.level ?? 0;
+    return { sections, correct, total, percent: Math.round((scaled.total / TOPIK_II_SCALE.total) * 100), passed: scaled.level >= (def.passLevel ?? 3), weakest, results, scaled };
+  }
   const percent = total ? Math.round((correct / total) * 100) : 0;
   const passed = percent >= def.passPercent && sections.every((s) => s.total === 0 || s.percent >= def.sectionMinPercent);
   return { sections, correct, total, percent, passed, weakest, results };
 }
 
 /** Conseils de révision selon les sections les plus faibles. */
-const TIPS_N4: Record<ExamSectionId, string> = {
+const TIPS_TOPIK1: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 1 et révise les mots du quotidien (nombres, lieux, famille, nourriture).',
+  grammar: 'Grammaire : reprends les particules (은/는, 이/가, 을/를, 에/에서) et les terminaisons -아요/-어요, -았어요, -(으)ㄹ 거예요.',
+  listening: 'Écoute (듣기) : réécoute les dialogues des leçons et joue à Listening Ninja ; entraîne-toi à reconnaître le lieu et le sujet d’une conversation.',
+  reading: 'Lecture (읽기) : lis un chapitre de conte coréen chaque jour et entraîne-toi à repérer le sujet d’un court texte, d’une annonce ou d’un message.',
+};
+
+const TIPS_TOPIK2: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 2 et révise les mots des îles (raisons, permissions, temps, respect).',
+  grammar: 'Grammaire : reprends les raisons (-아서, -(으)니까), les permissions et obligations, les propositions relatives (-는, -(으)ㄴ, -(으)ㄹ) et les honorifiques (-(으)시-, 드시다, 께).',
+  listening: 'Écoute (듣기) : réécoute les dialogues des leçons TOPIK 2 et repère l’idée principale et les détails (qui, quand, pourquoi).',
+  reading: 'Lecture (읽기) : lis les contes de niveau TOPIK 2 et entraîne-toi aux textes plus longs : idée principale, ordre des phrases, détails.',
+};
+
+const TIPS_TOPIK3: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 3 et révise les mots des îles (rumeurs, changements, buts, passif et causatif).',
+  grammar: 'Grammaire : reprends le discours indirect (-다고, -냐고, -대요), -는데, -거든요, -잖아요, -게 되다, -아/어지다, -기 위해서, -도록 et le passif.',
+  listening: 'Écoute (듣기) : réécoute les dialogues TOPIK 3 et entraîne-toi à deviner la suite d’une conversation et l’action qui va suivre.',
+  reading: 'Lecture (읽기) : lis les contes de niveau TOPIK 3 et entraîne-toi aux titres de presse, aux reformulations et aux textes longs.',
+  writing: 'Écriture (쓰기) : complète des phrases avec la grammaire du niveau (-기 위해서, -는데, -(으)ㄹ 것 같다) et entraîne-toi à décrire un tableau ou un graphique.',
+};
+
+const TIPS_TOPIK4: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 4 et révise les mots de société (environnement, prix, travail, presse).',
+  grammar: 'Grammaire : reprends -다면서요, -더라고요, -는 모양이다, -나 보다, -다면, -았/었더라면, -더라도, -는데도, -는 바람에, -느라고, -는 김에 et -아/어 버리다.',
+  listening: 'Écoute (듣기) : réécoute les dialogues TOPIK 4 et entraîne-toi à repérer l’attitude et l’intention de la personne qui parle.',
+  reading: 'Lecture (읽기) : lis les contes de niveau TOPIK 4 et entraîne-toi aux articles de presse, aux titres et au but d’un texte.',
+  writing: 'Écriture (쓰기) : complète des textes argumentés avec -더라도, -(으)ㄹ 뿐만 아니라, -는 데다가, et décris l’évolution d’un graphique.',
+};
+
+const TIPS_TOPIK5: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 5 et révise les mots abstraits (valeur, cause, influence, responsabilité, destin).',
+  grammar: 'Grammaire : reprends -기 마련이다, -는 법이다, -는 반면에, -(으)ㄹ 만하다, -(으)ㄹ 리가 없다, -는 한, -(으)므로, -(으)ㄴ 셈이다, -(으)ㄹ수록, -다가는, -기는커녕, 조차, 마저 et -(으)ㄴ 이상.',
+  listening: 'Écoute (듣기) : réécoute les dialogues TOPIK 5 et entraîne-toi aux exposés et aux débats : idée centrale, attitude, argument.',
+  reading: 'Lecture (읽기) : lis le conte de la princesse Bari et entraîne-toi aux textes argumentatifs et aux reformulations.',
+  writing: 'Écriture (쓰기) : complète des textes argumentés avec -기 마련이다, -(으)므로, -는 반면에, et compare des données d’un graphique.',
+};
+
+const TIPS_TOPIK6: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons TOPIK 6 et révise les proverbes (속담) et les expressions en quatre caractères (사자성어).',
+  grammar: 'Grammaire : reprends -고자 하다, -(으)며, -는 바, -(으)ㄴ들, -(으)ㄹ지언정, -다시피, -는 듯하다, -기 그지없다, -(으)ㄹ까 봐, -는 마당에, -(으)ㄴ 나머지, -기 십상이다 et -(으)ㄹ 게 뻔하다.',
+  listening: 'Écoute (듣기) : réécoute les dialogues TOPIK 6 et entraîne-toi aux conférences : but de l’intervenant, organisation, nuances.',
+  reading: 'Lecture (읽기) : lis le mythe de Dangun et entraîne-toi aux textes académiques, aux proverbes et aux idées implicites.',
+  writing: 'Écriture (쓰기) : complète des textes soutenus (-고자, -(으)며, -는 바와 같이) et justifie une opinion avec des arguments nuancés.',
+};
+
+const TIPS_N4: Partial<Record<ExamSectionId, string>> = {
   vocab: 'Vocabulaire et kanji : refais les leçons du N4 et entraîne-toi aux kanji avec Kanji Rush.',
   grammar: 'Grammaire : reprends les formes en て, ない, た et du dictionnaire (îles 1 à 3), puis les comparaisons et les raisons (îles 4 et 5), donner/recevoir et 〜たら (îles 6 et 7).',
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N4 en vitesse lente.',
 };
 
-const TIPS_N1: Record<ExamSectionId, string> = {
+const TIPS_N1: Partial<Record<ExamSectionId, string>> = {
   vocab: 'Vocabulaire et kanji : refais les leçons du N1 et entraîne-toi aux kanji avec Kanji Rush.',
   grammar: 'Grammaire : reprends le style des proclamations et les extrêmes (îles 1 et 2), les concessions et les jugements (îles 3 et 4), puis les degrés, les occasions et les conditions inévitables (îles 5 à 7) et le style des discours (île 8).',
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N1 en vitesse lente.',
 };
 
-const TIPS_N2: Record<ExamSectionId, string> = {
+const TIPS_N2: Partial<Record<ExamSectionId, string>> = {
   vocab: 'Vocabulaire et kanji : refais les leçons du N2 et entraîne-toi aux kanji avec Kanji Rush.',
   grammar: 'Grammaire : reprends les points de vue et les sources (île 1), l’instant précis (île 2), les raisons et les oppositions (îles 3 et 4), puis l’étendue, les conditions et les tendances (îles 5 à 7) et les convictions du locuteur (île 8).',
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N2 en vitesse lente.',
 };
 
-const TIPS_N3: Record<ExamSectionId, string> = {
+const TIPS_N3: Partial<Record<ExamSectionId, string>> = {
   vocab: 'Vocabulaire et kanji : refais les leçons du N3 et entraîne-toi aux kanji avec Kanji Rush.',
   grammar: 'Grammaire : reprends les impressions (〜ようだ, 〜らしい, 〜はずだ) et les décisions (îles 1 et 2), puis les concessions et le moment de l’action (îles 3 et 4), les raisons, les degrés et les points de vue (îles 5 à 7).',
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N3 en vitesse lente.',
 };
 
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
-  const tips: Record<ExamSectionId, string> = level === 'N1' ? TIPS_N1 : level === 'N2' ? TIPS_N2 : level === 'N3' ? TIPS_N3 : level === 'N4' ? TIPS_N4 : {
+  const tips: Partial<Record<ExamSectionId, string>> = level === 'TOPIK1' ? TIPS_TOPIK1 : level === 'TOPIK2' ? TIPS_TOPIK2 : level === 'TOPIK3' ? TIPS_TOPIK3 : level === 'TOPIK4' ? TIPS_TOPIK4 : level === 'TOPIK5' ? TIPS_TOPIK5 : level === 'TOPIK6' ? TIPS_TOPIK6 : level === 'N1' ? TIPS_N1 : level === 'N2' ? TIPS_N2 : level === 'N3' ? TIPS_N3 : level === 'N4' ? TIPS_N4 : {
     vocab: 'Vocabulaire et kanji : entraîne-toi dans l’onglet Caractères et avec Kanji Rush, puis refais les leçons des mondes 5 et 7.',
     grammar: 'Grammaire : reprends les leçons sur les particules (mondes 3, 4 et 6) et les phrases à remettre dans l’ordre.',
     listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons en vitesse lente.',
   };
   const weak = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
   if (!weak.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-  return weak.map((s) => tips[s.id]);
+  return weak.map((s) => tips[s.id] ?? tips.grammar ?? '').filter(Boolean);
 }
 
 // ───────── Test de positionnement ─────────

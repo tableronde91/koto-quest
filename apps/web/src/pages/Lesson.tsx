@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
-import type { LessonCompletionDto, LessonDto, MeDto, SessionDto } from '@koto/shared';
+import { hasHangul, type LessonCompletionDto, type LessonDto, type MeDto, type SessionDto } from '@koto/shared';
 import { post } from '../api/client';
 import { useLesson } from '../api/hooks';
 import { QuizRunner, RunSummary } from '../components/QuizRunner';
@@ -10,6 +10,7 @@ import { KIND_LABEL, MASTERY_LABEL } from '../lib/format';
 import { Avatar } from '../components/Avatar';
 import { Cheer, Confetti, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
+import { langOf } from '../lib/format';
 
 type Stage = 'intro' | 'exercises' | 'completing' | 'mini' | 'done';
 
@@ -82,8 +83,11 @@ export function LessonPage({ me }: { me: MeDto }) {
     <article className="flex flex-col gap-7">
       <div className="flex items-center justify-between gap-3">
         <Link to="/path" className="text-ink-soft underline">← {lesson.world.title}</Link>
-        <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={furigana} onChange={(e) => setFurigana(e.target.checked)} className="h-5 w-5 accent-[var(--ink)]" />{T("Afficher les furigana")}</label>
+        {/* Pas de furigana en coréen : le hangeul se lit tel quel */}
+        {!lesson.items.some((i) => hasHangul(i.front)) && (
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" checked={furigana} onChange={(e) => setFurigana(e.target.checked)} className="h-5 w-5 accent-[var(--ink)]" />{T("Afficher les furigana")}</label>
+        )}
       </div>
       <header>
         <p className="text-ink-soft">{T("{0} · {1} min", [lesson.chapter.title , lesson.minutes ])}</p>
@@ -113,7 +117,7 @@ export function LessonPage({ me }: { me: MeDto }) {
                 <div className="min-w-0">
                   {/* Phrase entière : la lecture va sur sa propre ligne plutôt qu'au-dessus de toute la phrase. */}
                   <Jp text={e.jp} furigana={false} className="text-2xl" />
-                  {furigana && e.reading && e.reading !== e.jp && <p lang="ja" className="jp text-sm text-ink-soft">{e.reading}</p>}
+                  {furigana && e.reading && e.reading !== e.jp && <p lang={langOf(e.reading)} className="jp text-sm text-ink-soft">{e.reading}</p>}
                   <p className="text-ink-soft">{e.fr}</p>
                 </div>
                 <SpeakButtons text={e.reading ?? e.jp} />

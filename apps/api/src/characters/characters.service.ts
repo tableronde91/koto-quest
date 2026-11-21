@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { EngineItem, createRng, masteryOf, masteryScore, planCharacterPractice } from '@koto/learning-engine';
-import type { CharacterDto, CharactersDto, SessionDto } from '@koto/shared';
+import { languageOfLevel, type CharacterDto, type CharactersDto, type SessionDto, type StudyLanguage } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { LearningService } from '../learning/learning.service';
@@ -11,26 +11,35 @@ import { toCardState } from '../learning/card-mapper';
 
 interface CharactersJson {
   contentVersion: string;
+  language?: StudyLanguage;
   notice?: string;
-  sections: { slug: 'hiragana' | 'katakana' | 'kanji'; title: string; description: string; groups: { slug: string; title: string; items: { slug: string }[] }[] }[];
+  sections: { slug: string; glyph?: string; title: string; description: string; groups: { slug: string; title: string; items: { slug: string }[] }[] }[];
 }
 
-/** Le catalogue (ordre, groupes) vient du fichier de contenu ; les notions et la maîtrise de la base. */
-const CATALOG_PATH = resolve(__dirname, '../../../../content/characters/characters.json');
+/** Le catalogue (ordre, groupes) vient des fichiers de contenu (un par langue) ; les notions et la maîtrise de la base. */
+const CATALOG_PATHS: Record<StudyLanguage, string> = {
+  ja: resolve(__dirname, '../../../../content/characters/characters.json'),
+  ko: resolve(__dirname, '../../../../content/characters/hangul.json'),
+};
 
 @Injectable()
 export class CharactersService {
-  private catalog: CharactersJson | null = null;
+  private catalogs = new Map<StudyLanguage, CharactersJson>();
 
   constructor(private prisma: PrismaService, private clock: ClockService, private learning: LearningService) {}
 
-  private load(): CharactersJson {
-    this.catalog ??= JSON.parse(readFileSync(CATALOG_PATH, 'utf8')) as CharactersJson;
-    return this.catalog;
+  private load(lang: StudyLanguage): CharactersJson {
+    let c = this.catalogs.get(lang);
+    if (!c) {
+      c = JSON.parse(readFileSync(CATALOG_PATHS[lang], 'utf8')) as CharactersJson;
+      this.catalogs.set(lang, c);
+    }
+    return c;
   }
 
   private async context(userId: string) {
-    const catalog = this.load();
+    const prefs = await this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } });
+    const catalog = this.load(languageOfLevel(prefs?.targetLevel));
     const slugs = catalog.sections.flatMap((s) => s.groups.flatMap((g) => g.items.map((i) => i.slug)));
     const items = await this.prisma.learningItem.findMany({ where: { slug: { in: slugs } }, include: { kanji: true } });
     const bySlug = new Map(items.map((i) => [i.slug, i]));
@@ -72,7 +81,7 @@ export class CharactersService {
               };
             }),
         }));
-        return { slug: s.slug, title: s.title, description: s.description, learned, mastered, due, total, groups };
+        return { slug: s.slug, glyph: s.glyph, title: s.title, description: s.description, learned, mastered, due, total, groups };
       }),
     };
   }

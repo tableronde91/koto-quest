@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 import { speak, speechSupported } from '../lib/speech';
 import { T } from '../i18n';
+import { langOf } from '../lib/format';
 
 /** Texte japonais avec lecture facultative (furigana) affichée au-dessus. */
 export function Jp({ text, reading, furigana, className = '' }: { text: string; reading?: string | null; furigana: boolean; className?: string }) {
   // Les furigana ne servent qu'au-dessus des kanji : sur un mot en kana, ils décaleraient la ligne pour rien.
   const show = furigana && reading && reading !== text && /[\u4e00-\u9faf\u3005]/.test(text);
-  if (!show) return <span lang="ja" className={`jp ${className}`}>{text}</span>;
+  if (!show) return <span lang={langOf(text)} className={`jp ${className}`}>{text}</span>;
   return (
     <ruby lang="ja" className={`jp ${className}`}>
       {text}

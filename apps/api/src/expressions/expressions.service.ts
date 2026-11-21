@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { createRng, masteryOf, masteryScore, planCharacterPractice, type EngineItem } from '@koto/learning-engine';
-import type { ExpressionDto, ExpressionRegister, ExpressionsDto, SessionDto } from '@koto/shared';
+import { languageOfLevel, type ExpressionDto, type ExpressionRegister, type ExpressionsDto, type SessionDto, type StudyLanguage } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { LearningService } from '../learning/learning.service';
@@ -14,22 +14,30 @@ interface ExpressionsJson {
   themes: { slug: string; glyph: string; title: string; description: string; expressions: { slug: string; note: string; register: ExpressionRegister; example?: { jp: string; fr: string } }[] }[];
 }
 
-/** Le recueil (thèmes, notes d'usage, exemples) vient du fichier de contenu ; les notions et la maîtrise de la base. */
-const CATALOG_PATH = resolve(__dirname, '../../../../content/expressions/expressions.json');
+/** Le recueil (thèmes, notes d'usage, exemples) vient des fichiers de contenu (un par langue) ; les notions et la maîtrise de la base. */
+const CATALOG_PATHS: Record<StudyLanguage, string> = {
+  ja: resolve(__dirname, '../../../../content/expressions/expressions.json'),
+  ko: resolve(__dirname, '../../../../content/expressions/expressions-ko.json'),
+};
 
 @Injectable()
 export class ExpressionsService {
-  private catalog: ExpressionsJson | null = null;
+  private catalogs = new Map<StudyLanguage, ExpressionsJson>();
 
   constructor(private prisma: PrismaService, private clock: ClockService, private learning: LearningService) {}
 
-  private load(): ExpressionsJson {
-    this.catalog ??= JSON.parse(readFileSync(CATALOG_PATH, 'utf8')) as ExpressionsJson;
-    return this.catalog;
+  private load(lang: StudyLanguage): ExpressionsJson {
+    let c = this.catalogs.get(lang);
+    if (!c) {
+      c = JSON.parse(readFileSync(CATALOG_PATHS[lang], 'utf8')) as ExpressionsJson;
+      this.catalogs.set(lang, c);
+    }
+    return c;
   }
 
   private async context(userId: string) {
-    const catalog = this.load();
+    const prefs = await this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } });
+    const catalog = this.load(languageOfLevel(prefs?.targetLevel));
     const slugs = catalog.themes.flatMap((t) => t.expressions.map((e) => e.slug));
     const items = await this.prisma.learningItem.findMany({ where: { slug: { in: slugs } } });
     const bySlug = new Map(items.map((i) => [i.slug, i]));

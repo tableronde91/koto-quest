@@ -3,7 +3,9 @@ import { resolve } from 'path';
 import { stripRuby } from '@koto/learning-engine';
 import { Ctx, createTestApp, resetUsers, setNow, signUp } from './helpers';
 
-const catalog = JSON.parse(readFileSync(resolve(__dirname, '../../../content/reading/stories.json'), 'utf8'));
+const all = JSON.parse(readFileSync(resolve(__dirname, '../../../content/reading/stories.json'), 'utf8'));
+// Contes japonais (les contes coréens sont réservés aux comptes qui étudient le coréen, voir korean.spec.ts).
+const catalog = { ...all, stories: all.stories.filter((s: any) => !s.level.startsWith('TOPIK')) };
 
 describe('Lecture quotidienne', () => {
   let ctx: Ctx;
@@ -18,6 +20,11 @@ describe('Lecture quotidienne', () => {
 
   it('contenu : furigana bien formés, traductions, questions valides, chapitres de plus en plus longs', () => {
     const chapters = catalog.stories.flatMap((s: any) => s.chapters);
+    for (const c of all.stories.flatMap((s: any) => s.chapters)) {
+      expect(c.questions.length).toBeGreaterThanOrEqual(2);
+      expect(c.words.length).toBeGreaterThanOrEqual(6);
+      for (const s of c.paragraphs.flat()) expect(s.fr && s.en && s.kana).toBeTruthy();
+    }
     expect(chapters.length).toBeGreaterThanOrEqual(28);
     const slugs = new Set(chapters.map((c: any) => c.slug));
     expect(slugs.size).toBe(chapters.length);

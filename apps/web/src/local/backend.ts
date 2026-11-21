@@ -51,11 +51,12 @@ import {
   planPlacementBlock,
   BOSS_RULES,
   JLPT_DRILLS,
+  TOPIK_DRILLS,
   JlptDrillPart,
   planJlptDrill,
   exampleIndex,
   ExamBank,
-  JLPT_SCALE,
+  examScale,
   planBankExam,
   TIMEOUT_ANSWER,
   bossAnswerTooLate,
@@ -133,20 +134,34 @@ import type {
   ReadingLogRow,
   ReadingResultDto,
 } from '@koto/shared';
-import { ReadingError, readingChapter, readingGrade, readingOverview, readingResult } from '@koto/shared';
+import { ReadingError, applyStudyChoice, languageOfLevel, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type StudyChoice, type StudyLanguage } from '@koto/shared';
 import content from '../../../../content/n5/n5.json';
 import contentN4 from '../../../../content/n4/n4.json';
 import contentN3 from '../../../../content/n3/n3.json';
 import contentN2 from '../../../../content/n2/n2.json';
 import contentN1 from '../../../../content/n1/n1.json';
+import contentTopik1 from '../../../../content/topik1/topik1.json';
+import contentTopik2 from '../../../../content/topik2/topik2.json';
+import contentTopik3 from '../../../../content/topik3/topik3.json';
+import contentTopik4 from '../../../../content/topik4/topik4.json';
+import contentTopik5 from '../../../../content/topik5/topik5.json';
+import contentTopik6 from '../../../../content/topik6/topik6.json';
 import charactersContent from '../../../../content/characters/characters.json';
+import hangulContent from '../../../../content/characters/hangul.json';
 import expressionsContent from '../../../../content/expressions/expressions.json';
+import expressionsKoContent from '../../../../content/expressions/expressions-ko.json';
 import readingContent from '../../../../content/reading/stories.json';
 import cosmeticsCatalog from '../../../../content/cosmetics/catalog.json';
 import bankN5 from '../../../../content/exams/n5-jlpt.json';
+import bankTopik1 from '../../../../content/exams/topik1.json';
+import bankTopik2 from '../../../../content/exams/topik2.json';
+import bankTopik3 from '../../../../content/exams/topik3.json';
+import bankTopik4 from '../../../../content/exams/topik4.json';
+import bankTopik5 from '../../../../content/exams/topik5.json';
+import bankTopik6 from '../../../../content/exams/topik6.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -158,7 +173,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4, contentN3, contentN2, contentN1].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,
@@ -168,19 +183,33 @@ const LEVELS = [content, contentN4, contentN3, contentN2, contentN1].map((c) => 
 const WORLDS = LEVELS.flatMap((l) => l.worlds);
 const LESSONS: LessonEntry[] = WORLDS.flatMap((w) => w.chapters.flatMap((c) => c.lessons.map((l) => ({ ...l, level: w.level, worldOrder: w.order, worldSlug: w.slug, worldTitle: w.title, chapterSlug: c.slug, chapterTitle: c.title }))));
 const lessonsOf = (code: string) => LESSONS.filter((l) => l.level === code);
+/** Langue étudiée (déduite du niveau visé) et niveaux de cette langue. */
+const studyLang = (): StudyLanguage => languageOfLevel(load().prefs.targetLevel);
+const levelsIn = (lang: StudyLanguage) => LEVELS.filter((l) => languageOfLevel(l.code) === lang);
 /** Contenu N5 (examen blanc et test de positionnement). */
 const N5_WORLDS = WORLDS.filter((w) => w.level === 'N5');
 const ITEMS = new Map<string, ItemJson>();
 LESSONS.forEach((l) => l.items.forEach((it) => ITEMS.set(it.slug, it)));
 // Onglet Caractères : mêmes slugs que le parcours, donc maîtrise partagée.
-const CHARACTERS = charactersContent as unknown as { notice?: string; sections: { slug: 'hiragana' | 'katakana' | 'kanji'; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[] };
-CHARACTERS.sections.forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => ITEMS.set(it.slug, it))));
+type CharactersJson = { notice?: string; sections: { slug: string; glyph?: string; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[] };
+const CHARACTERS_BY_LANG: Record<StudyLanguage, CharactersJson> = { ja: charactersContent as unknown as CharactersJson, ko: hangulContent as unknown as CharactersJson };
+/** Langue de chaque notion (les révisions, les jeux et les duels ne mélangent pas les langues). */
+const LANG_OF = new Map<string, StudyLanguage>();
+LESSONS.forEach((l) => l.items.forEach((it) => LANG_OF.set(it.slug, languageOfLevel(l.level))));
+for (const lang of ['ja', 'ko'] as const)
+  CHARACTERS_BY_LANG[lang].sections.forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => { ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); })));
 type ExpressionJson = ItemJson & { note: string; register: ExpressionRegister; example?: { jp: string; fr: string } };
-const EXPRESSIONS = expressionsContent as unknown as { notice?: string; themes: { slug: string; glyph: string; title: string; description: string; expressions: ExpressionJson[] }[] };
-EXPRESSIONS.themes.forEach((t) => t.expressions.forEach((it) => ITEMS.set(it.slug, it)));
+type ExpressionsJson = { notice?: string; themes: { slug: string; glyph: string; title: string; description: string; expressions: ExpressionJson[] }[] };
+const EXPRESSIONS_BY_LANG: Record<StudyLanguage, ExpressionsJson> = { ja: expressionsContent as unknown as ExpressionsJson, ko: expressionsKoContent as unknown as ExpressionsJson };
+for (const lang of ['ja', 'ko'] as const)
+  EXPRESSIONS_BY_LANG[lang].themes.forEach((t) => t.expressions.forEach((it) => { if (!ITEMS.has(it.slug)) ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); }));
 const POOL: EngineItem[] = [...ITEMS.values()].map(toEngine);
+/** Réserve de distracteurs par langue (jamais de choix japonais dans une question coréenne). */
+const POOL_BY_LANG: Record<StudyLanguage, EngineItem[]> = { ja: POOL.filter((i) => LANG_OF.get(i.id) !== 'ko'), ko: POOL.filter((i) => LANG_OF.get(i.id) === 'ko') };
+/** Notion de la langue étudiée. */
+const inLang = (id: string) => ITEMS.has(id) && (LANG_OF.get(id) ?? 'ja') === studyLang();
 /** Distracteurs centrés sur le monde de la leçon (voir focusedPool). */
-const WORLD_POOL = new Map(WORLDS.map((w) => [w.slug, focusedPool([...new Map(w.chapters.flatMap((c) => c.lessons.flatMap((l) => l.items.map((it) => [it.slug, toEngine(it)] as const)))).values()], POOL)]));
+const WORLD_POOL = new Map(WORLDS.map((w) => [w.slug, focusedPool([...new Map(w.chapters.flatMap((c) => c.lessons.flatMap((l) => l.items.map((it) => [it.slug, toEngine(it)] as const)))).values()], POOL_BY_LANG[languageOfLevel(w.level)])]));
 const poolFor = (worldSlug: string) => WORLD_POOL.get(worldSlug) ?? POOL;
 /** Phrase d'exemple des leçons pour chaque mot en kanji (questions au format JLPT). */
 const EXAMPLES = exampleIndex(POOL, LESSONS.flatMap((l) => l.examples.map((e) => e.jp)));
@@ -197,7 +226,7 @@ interface Daily { seconds: number; total: number; correct: number; reviews: numb
 interface State {
   version: 1;
   user: { displayName: string; xp: number; onboardedAt: string | null; createdAt: string };
-  prefs: Omit<MeDto['preferences'], 'locale'> & { desiredRetention: number };
+  prefs: Omit<MeDto['preferences'], 'locale' | 'studyLanguage'> & { desiredRetention: number };
   notif: { consent: boolean; enabled: boolean; mode: ReminderMode; customTimes: number[]; windowStart: number; windowEnd: number; quietStart: number | null; quietEnd: number | null; pausedUntil: string | null; lastSlotKey: string | null };
   cards: Record<string, StoredCard>;
   history: { itemId: string; sessionId: string | null; rating: number; stabilityAfter: number; reviewedAt: string }[];
@@ -216,6 +245,8 @@ interface State {
   duel?: LocalDuelState;
   /** Lecture quotidienne : chapitres lus */
   reading?: ReadingLogRow[];
+  /** Dernier niveau visé dans chaque langue */
+  levelByLanguage?: StudyChoice['levelByLanguage'];
   questions: Record<string, StoredQuestion>;
   notifications: { id: string; title: string; body: string; questionId: string; status: 'pending' | 'opened' | 'answered' | 'expired'; createdAt: string; expiresAt: string }[];
   daily: Record<string, Daily>;
@@ -284,7 +315,8 @@ function addXp(n: number) {
 // ───────────────────────── Parcours ─────────────────────────
 
 /** Seul le N5 commence par les kana : les autres niveaux s'ouvrent au premier monde. */
-const startWorld = (code: string = 'N5') => (code === 'N5' && ['kana', 'basics', 'n5', 'n4plus'].includes(load().prefs.selfLevel) ? 3 : 1);
+/** Seuls les premiers niveaux (N5, TOPIK 1) commencent par l'écriture : on la saute si on la connaît déjà. */
+const startWorld = (code: string = 'N5') => ((code === 'N5' || code === 'TOPIK1') && ['kana', 'basics', 'n5', 'n4plus'].includes(load().prefs.selfLevel) ? 3 : 1);
 
 /** Déblocage séquentiel, niveau par niveau. */
 function statuses(): Map<string, LessonStatus> {
@@ -308,8 +340,9 @@ function statuses(): Map<string, LessonStatus> {
 /** Prochaine leçon : niveau visé d'abord, puis les niveaux suivants (N5 → N4…), puis les plus faciles. */
 function nextLesson(preferred: string = load().prefs.targetLevel) {
   const st = statuses();
-  const idx = Math.max(0, LEVELS.findIndex((l) => l.code === preferred));
-  const order = [...LEVELS.slice(idx), ...LEVELS.slice(0, idx).reverse()];
+  const levels = levelsIn(languageOfLevel(preferred));
+  const idx = Math.max(0, levels.findIndex((l) => l.code === preferred));
+  const order = [...levels.slice(idx), ...levels.slice(0, idx).reverse()];
   for (const lvl of order) {
     const seq = lessonsOf(lvl.code);
     const start = startWorld(lvl.code);
@@ -334,7 +367,7 @@ function path(code: string): PathDto {
   const start = startWorld(code);
   return {
     level: { code: lvl.code, title: lvl.title, region: lvl.region, notice: lvl.notice },
-    levels: LEVELS.map((l) => ({ code: l.code, title: l.title, lessons: lessonsOf(l.code).length, completed: lessonsOf(l.code).filter((x) => st.get(x.slug) === 'completed').length })),
+    levels: levelsIn(languageOfLevel(code)).map((l) => ({ code: l.code, title: l.title, lessons: lessonsOf(l.code).length, completed: lessonsOf(l.code).filter((x) => st.get(x.slug) === 'completed').length })),
     worlds: lvl.worlds.map((w) => {
       const lessons = w.chapters.flatMap((c) => c.lessons);
       return {
@@ -576,7 +609,7 @@ function dueEntries() {
   const s = load();
   const t = now();
   return orderReviewQueue(
-    Object.entries(s.cards).filter(([id]) => ITEMS.has(id)).map(([id, c]) => ({ id, card: toCard(c) })),
+    Object.entries(s.cards).filter(([id]) => inLang(id)).map(([id, c]) => ({ id, card: toCard(c) })),
     t,
   );
 }
@@ -585,12 +618,13 @@ function reviewSummary() {
   const s = load();
   const t = now().getTime();
   const due = dueEntries().length;
-  const learningSoon = Object.values(s.cards).filter((c) => Date.parse(c.due) > t && Date.parse(c.due) <= t + 3600_000).length;
+  const learningSoon = Object.entries(s.cards).filter(([id, c]) => inLang(id) && Date.parse(c.due) > t && Date.parse(c.due) <= t + 3600_000).length;
   const d = daily();
+  const lang = studyLang();
   const plan = planDailyLoad({
     minutesPerDay: s.prefs.minutesPerDay,
     dueCount: due + d.reviews,
-    newItemsAvailable: Math.max(0, ITEMS.size - Object.keys(s.cards).length) + d.newItems,
+    newItemsAvailable: Math.max(0, POOL_BY_LANG[lang].length - Object.keys(s.cards).filter(inLang).length) + d.newItems,
     reviewsDoneToday: d.reviews,
     newItemsDoneToday: d.newItems,
   });
@@ -599,7 +633,8 @@ function reviewSummary() {
 
 function questionFor(id: string, reps: number, rng: () => number) {
   const item = toEngine(ITEMS.get(id)!);
-  return generateQuestion(item, POOL, chooseQuestionType(item, reps, rng), rng, EXAMPLES.get(id)) ?? generateQuestion(item, POOL, 'meaning_choice', rng);
+  const pool = POOL_BY_LANG[LANG_OF.get(id) ?? 'ja'];
+  return generateQuestion(item, pool, chooseQuestionType(item, reps, rng), rng, EXAMPLES.get(id)) ?? generateQuestion(item, pool, 'meaning_choice', rng);
 }
 
 function reviewSession(): SessionDto {
@@ -618,7 +653,7 @@ function issueQuiz(allowNotDue: boolean): IssuedQuestionDto | null {
   const s = load();
   let target = dueEntries()[0];
   if (!target && allowNotDue) {
-    const soonest = Object.entries(s.cards).filter(([id]) => ITEMS.has(id)).sort((a, b) => a[1].due.localeCompare(b[1].due))[0];
+    const soonest = Object.entries(s.cards).filter(([id]) => inLang(id)).sort((a, b) => a[1].due.localeCompare(b[1].due))[0];
     if (soonest) target = { id: soonest[0], card: toCard(soonest[1]) };
   }
   if (!target) return null;
@@ -651,7 +686,7 @@ function createChallenge(allowNotDue = false) {
   const q = issueQuiz(allowNotDue);
   if (!q) return null;
   const t = now();
-  const notif = { id: uid(), title: 'Koto Quest', body: reminderMessage(hashSeed(q.id)), questionId: q.id, status: 'pending' as const, createdAt: t.toISOString(), expiresAt: new Date(t.getTime() + 12 * 3600_000).toISOString() };
+  const notif = { id: uid(), title: 'Koto Quest', body: reminderMessage(hashSeed(q.id), studyLang()), questionId: q.id, status: 'pending' as const, createdAt: t.toISOString(), expiresAt: new Date(t.getTime() + 12 * 3600_000).toISOString() };
   load().notifications.push(notif);
   save();
   return { notificationId: notif.id, questionId: q.id, pushed: false, title: notif.title, body: notif.body };
@@ -689,14 +724,24 @@ function inbox(): InboxItemDto[] {
 function me(): MeDto {
   const s = load();
   const { desiredRetention: _r, ...prefs } = s.prefs;
-  const preferences = { ...prefs, locale };
+  const preferences = { ...prefs, locale, studyLanguage: languageOfLevel(prefs.targetLevel) };
   return { id: 'local', email: 'local', displayName: s.user.displayName, onboarded: !!s.user.onboardedAt, xp: s.user.xp, coins: s.coins ?? 0, avatar: normalizeAvatar(s.avatar), preferences };
+}
+
+/** Langue et niveau visé, en gardant en mémoire le dernier niveau de chaque langue. */
+function studyChoice(b: Record<string, unknown>) {
+  const s = load();
+  const current: StudyChoice = { studyLanguage: languageOfLevel(s.prefs.targetLevel), targetLevel: s.prefs.targetLevel, levelByLanguage: s.levelByLanguage ?? {} };
+  const next = applyStudyChoice(current, { studyLanguage: b.studyLanguage as StudyLanguage | undefined, targetLevel: b.targetLevel as JlptCode | undefined });
+  s.levelByLanguage = next.levelByLanguage;
+  return next.targetLevel;
 }
 
 function onboarding(b: Record<string, unknown>) {
   const s = load();
+  const targetLevel = studyChoice(b);
   Object.assign(s.prefs, {
-    selfLevel: b.selfLevel, targetLevel: b.targetLevel, examDate: (b.examDate as string) || null,
+    selfLevel: b.selfLevel, targetLevel, examDate: (b.examDate as string) || null,
     minutesPerDay: b.minutesPerDay, difficultAreas: b.difficultAreas,
     ...(typeof b.timezone === 'string' ? { timezone: b.timezone } : {}),
   });
@@ -708,8 +753,9 @@ function onboarding(b: Record<string, unknown>) {
 
 function updatePrefs(b: Record<string, unknown>) {
   const s = load();
-  const { displayName, locale: _locale, ...rest } = b;
+  const { displayName, locale: _locale, studyLanguage, targetLevel, ...rest } = b;
   if (typeof displayName === 'string' && displayName.trim()) s.user.displayName = displayName.trim().slice(0, 40);
+  if (studyLanguage || targetLevel) s.prefs.targetLevel = studyChoice({ studyLanguage, targetLevel });
   Object.assign(s.prefs, rest);
   save();
   return me();
@@ -719,14 +765,14 @@ function dashboard(): DashboardDto {
   const s = load();
   const t = now();
   const st = statuses();
-  const targetLessons = lessonsOf(s.prefs.targetLevel).length ? lessonsOf(s.prefs.targetLevel) : lessonsOf('N5');
+  const targetLessons = lessonsOf(s.prefs.targetLevel).length ? lessonsOf(s.prefs.targetLevel) : lessonsOf(studyLang() === 'ko' ? 'TOPIK1' : 'N5');
   const completed = targetLessons.filter((l) => st.get(l.slug) === 'completed').length;
   const key = todayKey();
   const today = s.daily[key];
   const mastered = { words: 0, kanji: 0, kana: 0, grammar: 0 };
   for (const [id, c] of Object.entries(s.cards)) {
     const it = ITEMS.get(id);
-    if (!it || masteryOf(toCard(c), t) !== 'mastered') continue;
+    if (!it || !inLang(id) || masteryOf(toCard(c), t) !== 'mastered') continue;
     if (it.kind === 'vocabulary') mastered.words++;
     else mastered[it.kind]++;
   }
@@ -747,7 +793,7 @@ function dashboard(): DashboardDto {
     plan: summary.plan,
     nextLesson: nl ? { slug: nl.slug, title: nl.title, worldTitle: nl.worldTitle } : null,
     quests: dailyQuests(key, { newItems: today?.newItems ?? 0, reviews: today?.reviews ?? 0, kanjiReviews: today?.kanjiReviews ?? 0, bestCombo: today?.bestCombo ?? 0, perfectLessons: today?.perfectLessons ?? 0, listeningCorrect: today?.listeningCorrect ?? 0 }),
-    readiness: estimateReadiness(Object.values(s.cards).map(toCard), ITEMS.size, t),
+    readiness: estimateReadiness(Object.entries(s.cards).filter(([id]) => inLang(id)).map(([, c]) => toCard(c)), POOL_BY_LANG[studyLang()].length, t),
     suggestPlacement: !s.placementAt && completed === 0,
     notifications: { consent: s.notif.consent, enabled: s.notif.enabled },
   };
@@ -778,7 +824,7 @@ function stats(): StatsDto {
   const items: StatsDto['items'] = [];
   for (const [id, c] of Object.entries(s.cards)) {
     const it = ITEMS.get(id);
-    if (!it) continue;
+    if (!it || !inLang(id)) continue;
     const m = masteryOf(toCard(c), t);
     masteryDistribution[m]++;
     byKind[it.kind].learned++;
@@ -837,6 +883,7 @@ export function resetAll() {
 function characters(): CharactersDto {
   const s = load();
   const t = now();
+  const CHARACTERS = CHARACTERS_BY_LANG[studyLang()];
   return {
     notice: CHARACTERS.notice ?? null,
     sections: CHARACTERS.sections.map((sec) => {
@@ -859,12 +906,13 @@ function characters(): CharactersDto {
           };
         }),
       }));
-      return { slug: sec.slug, title: sec.title, description: sec.description, learned, mastered, due, total, groups };
+      return { slug: sec.slug, glyph: sec.glyph, title: sec.title, description: sec.description, learned, mastered, due, total, groups };
     }),
   };
 }
 
 function characterPractice(scope: string): SessionDto {
+  const CHARACTERS = CHARACTERS_BY_LANG[studyLang()];
   const section = CHARACTERS.sections.find((x) => x.slug === scope || x.groups.some((g) => g.slug === scope));
   if (!section) throw new HttpError(404, 'Ensemble de caractères inconnu.');
   const groups = section.slug === scope ? section.groups : section.groups.filter((g) => g.slug === scope);
@@ -885,6 +933,7 @@ function characterPractice(scope: string): SessionDto {
 function expressions(): ExpressionsDto {
   const s = load();
   const t = now();
+  const EXPRESSIONS = EXPRESSIONS_BY_LANG[studyLang()];
   return {
     notice: EXPRESSIONS.notice ?? null,
     themes: EXPRESSIONS.themes.map((th) => {
@@ -905,6 +954,7 @@ function expressions(): ExpressionsDto {
 }
 
 function expressionPractice(theme: string): SessionDto {
+  const EXPRESSIONS = EXPRESSIONS_BY_LANG[studyLang()];
   const th = EXPRESSIONS.themes.find((x) => x.slug === theme);
   if (!th) throw new HttpError(404, 'Thème d’expressions inconnu.');
   const s = load();
@@ -1029,7 +1079,7 @@ function saveAvatar(config: unknown): AvatarConfig {
 
 // ───────────────────────── Mini-jeux ─────────────────────────
 
-const seenItems = () => Object.entries(load().cards).filter(([id, c]) => ITEMS.has(id) && c.state !== 'new').map(([id]) => toEngine(ITEMS.get(id)!));
+const seenItems = () => Object.entries(load().cards).filter(([id, c]) => inLang(id) && c.state !== 'new').map(([id]) => toEngine(ITEMS.get(id)!));
 
 function gameInfo(def: GameDef, seen: EngineItem[]): GameInfoDto {
   const r = load().games?.[def.id];
@@ -1052,7 +1102,7 @@ function gameStart(id: string): GameStartDto {
   const seen = seenItems();
   const info = gameInfo(def, seen);
   if (!info.available) throw new HttpError(403, `Rencontre au moins ${def.minItems} notions adaptées dans tes leçons pour débloquer ${def.title}.`);
-  const questions = planTimedGame(def, seen, focusedPool(seen, POOL), createRng(`${id}:${Date.now()}`));
+  const questions = planTimedGame(def, seen, focusedPool(seen, POOL_BY_LANG[studyLang()]), createRng(`${id}:${Date.now()}`));
   const s = load();
   const sessionId = uid();
   s.sessions[sessionId] = { kind: 'game', lessonSlug: null, endedAt: null, createdAt: now().toISOString(), scope: id };
@@ -1063,7 +1113,9 @@ function gameStart(id: string): GameStartDto {
 
 // ───────────────────────── Lecture quotidienne ─────────────────────────
 
-const READING = readingContent as unknown as ReadingCatalog;
+const READING_ALL = readingContent as unknown as ReadingCatalog;
+/** Contes de la langue étudiée. */
+const readingCatalog = () => readingCatalogFor(READING_ALL, studyLang());
 function readingCall<T>(fn: () => T): T {
   try {
     return fn();
@@ -1076,7 +1128,7 @@ function readingComplete(slug: string, answers: number[], seconds: number): Read
   const s = load();
   const logs = (s.reading ??= []);
   const today = todayKey();
-  const graded = readingCall(() => readingGrade(READING, logs, today, slug, answers));
+  const graded = readingCall(() => readingGrade(readingCatalog(), logs, today, slug, answers));
   if (graded.log) {
     logs.push(graded.log);
     const reward = readingReward(graded.correct, graded.total);
@@ -1086,7 +1138,7 @@ function readingComplete(slug: string, answers: number[], seconds: number): Read
     s.lastActivityAt = now().toISOString();
     save();
   }
-  return readingResult(READING, logs, today, slug, graded.correct, !!graded.log);
+  return readingResult(readingCatalog(), logs, today, slug, graded.correct, !!graded.log);
 }
 
 function gameFinish(id: string, sessionId: string): GameResultDto {
@@ -1138,7 +1190,7 @@ function examStart(slug: string): ExamStartDto {
     const lessons = lessonsOf(def.level);
     const items = [...new Map(lessons.flatMap((l) => l.items.map((it) => [it.slug, toEngine(it)]))).values()];
     const authored = lessons.flatMap((l) => l.exercises);
-    planned = planExam(def, items, authored, POOL, rng);
+    planned = planExam(def, items, authored, POOL_BY_LANG[languageOfLevel(def.level)], rng);
   }
   const s = load();
   const sessionId = uid();
@@ -1187,7 +1239,7 @@ function examSubmit(slug: string, sessionId: string, answers: Record<string, unk
         const p = q.payload as { prompt: string; display?: { jp?: string; text?: string }; audio?: string };
         return { section: section(q), prompt: p.prompt, jp: p.display?.jp ?? (q.type === 'listening_choice' ? p.audio ?? null : null), text: p.display?.text ?? null, given: show(answers[q.id]), correctAnswer: show(q.answer)!, explanation: q.explanation };
       }),
-    xpGained: xp, coinsGained: coins, passPercent: def.passPercent, sectionMinPercent: def.sectionMinPercent, scaled: grade.scaled ? { ...grade.scaled, max: JLPT_SCALE } : null,
+    xpGained: xp, coinsGained: coins, passPercent: def.passPercent, sectionMinPercent: def.sectionMinPercent, scaled: grade.scaled ? { ...grade.scaled, max: examScale(def)! } : null,
   };
 }
 
@@ -1256,11 +1308,13 @@ function placementAnswer(sessionId: string, answers: Record<string, unknown>): P
 
 // ───────────────────────── Atelier JLPT ─────────────────────────
 
+/** Atelier JLPT / TOPIK : uniquement les notions et les leçons de la langue étudiée. */
 function jlptMaterial() {
   const s = load();
-  const learned = Object.keys(s.cards).filter((id) => ITEMS.has(id)).map((id) => toEngine(ITEMS.get(id)!));
-  const authored = LESSONS.filter((l) => s.progress[l.slug]?.status === 'completed').flatMap((l) => l.exercises);
-  return { learned, authored };
+  const lang = studyLang();
+  const learned = Object.keys(s.cards).filter(inLang).map((id) => toEngine(ITEMS.get(id)!));
+  const authored = LESSONS.filter((l) => languageOfLevel(l.level) === lang && s.progress[l.slug]?.status === 'completed').flatMap((l) => l.exercises);
+  return { learned, authored, lang, pool: POOL_BY_LANG[lang], drills: lang === 'ko' ? TOPIK_DRILLS : JLPT_DRILLS };
 }
 
 function jlptDrills(): JlptDrillsDto {
@@ -1268,14 +1322,14 @@ function jlptDrills(): JlptDrillsDto {
   const rng = createRng('jlpt-count');
   return {
     minQuestions: 3,
-    drills: (Object.keys(JLPT_DRILLS) as JlptDrillPart[]).map((part) => ({ part, ...JLPT_DRILLS[part], available: planJlptDrill(part, m.learned, m.authored, POOL, rng, EXAMPLES).length })),
+    drills: (Object.keys(m.drills) as JlptDrillPart[]).map((part) => ({ part, ...m.drills[part]!, available: planJlptDrill(part, m.learned, m.authored, m.pool, rng, EXAMPLES, m.lang).length })),
   };
 }
 
 function jlptStart(part: string): SessionDto {
-  if (!(part in JLPT_DRILLS)) throw new HttpError(404, 'Épreuve inconnue.');
   const m = jlptMaterial();
-  const qs = planJlptDrill(part as JlptDrillPart, m.learned, m.authored, POOL, createRng(`jlpt:${part}:${Date.now()}`), EXAMPLES);
+  if (!(part in m.drills)) throw new HttpError(404, 'Épreuve inconnue.');
+  const qs = planJlptDrill(part as JlptDrillPart, m.learned, m.authored, m.pool, createRng(`jlpt:${part}:${Date.now()}`), EXAMPLES, m.lang);
   if (qs.length < 3) throw new HttpError(409, 'Pas encore assez de notions pour cette épreuve : termine quelques leçons de plus.');
   const s = load();
   const sessionId = uid();
@@ -1358,8 +1412,10 @@ const duels = localDuels({
   },
   me: () => ({ displayName: load().user.displayName, avatar: normalizeAvatar(load().avatar) }),
   seenItems: () => seenItems(),
-  starterItems: () => [...(WORLD_POOL.get('n5-w1') ?? [])].filter((i) => i.kind === 'kana'),
-  pool: POOL,
+  starterItems: () => [...(WORLD_POOL.get(studyLang() === 'ko' ? 'topik1-w1' : 'n5-w1') ?? [])].filter((i) => i.kind === 'kana'),
+  get pool() {
+    return POOL_BY_LANG[studyLang()];
+  },
   fail: (status, message) => {
     throw new HttpError(status, message);
   },
@@ -1409,8 +1465,8 @@ export async function handle(method: string, fullPath: string, body: unknown): P
   if (route === 'PUT /me/avatar') return saveAvatar(b.avatar);
   if (route === 'GET /expressions') return expressions();
   if (route === 'POST /expressions/practice') return expressionPractice(String(b.theme));
-  if (route === 'GET /reading') return readingOverview(READING, load().reading ?? [], todayKey());
-  if ((m = route.match(/^GET \/reading\/chapters\/([\w-]+)$/))) return readingCall(() => readingChapter(READING, load().reading ?? [], todayKey(), m![1]));
+  if (route === 'GET /reading') return readingOverview(readingCatalog(), load().reading ?? [], todayKey());
+  if ((m = route.match(/^GET \/reading\/chapters\/([\w-]+)$/))) return readingCall(() => readingChapter(readingCatalog(), load().reading ?? [], todayKey(), m![1]));
   if ((m = route.match(/^POST \/reading\/chapters\/([\w-]+)\/complete$/))) return readingComplete(m[1], Array.isArray(b.answers) ? (b.answers as unknown[]).map(Number) : [], Number(b.seconds ?? 0));
   if (route === 'GET /characters') return characters();
   if (route === 'POST /characters/practice') return characterPractice(String(b.scope));

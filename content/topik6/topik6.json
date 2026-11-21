@@ -1,0 +1,3321 @@
+{
+ "contentVersion": "2026.11.21",
+ "level": {
+  "code": "TOPIK6",
+  "title": "Maîtrise : la langue des discours, des proverbes et des mythes",
+  "region": "Royaume de Gojoseon",
+  "order": 11
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest sont alignées sur les compétences attendues au TOPIK II (niveau 6) mais ne constituent pas des listes officielles du TOPIK.",
+ "worlds": [
+  {
+   "slug": "topik6-w1",
+   "title": "La cité divine du mont Taebaek",
+   "region": "Royaume de Gojoseon",
+   "description": "La langue des discours et des textes officiels : -고자 하다, -(으)며, -는 바이다.",
+   "boss": {
+    "name": "Hwanung, fils du Ciel",
+    "glyph": "환",
+    "intro": "Descendu du ciel avec les maîtres du vent, de la pluie et des nuages, Hwanung fonda la cité divine pour « bénéficier largement à l’humanité ». Il ne reçoit que ceux qui s’expriment avec la dignité d’un discours."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w1-c1",
+     "title": "Parler en public",
+     "lessons": [
+      {
+       "slug": "ko-gojahada",
+       "title": "Dans le but de (formel) : -고자 하다",
+       "objective": "Annoncer une intention dans un discours ou un écrit officiel.",
+       "minutes": 10,
+       "explanation": [
+        "-고자 하다 = avoir l’intention de, vouloir (style soutenu) : 오늘은 환경 문제에 대해 말씀드리고자 합니다.",
+        "Devant un autre verbe, -고자 = afin de : 백성을 돕고자 하늘에서 내려왔다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-gojahada",
+         "kind": "grammar",
+         "front": "-고자 하다",
+         "reading": null,
+         "romaji": "-goja hada",
+         "meaning": "avoir l’intention de (formel)"
+        },
+        {
+         "slug": "ko-ingan",
+         "kind": "vocabulary",
+         "front": "인간",
+         "reading": null,
+         "romaji": "ingan",
+         "meaning": "être humain"
+        },
+        {
+         "slug": "ko-sesang",
+         "kind": "vocabulary",
+         "front": "세상",
+         "reading": null,
+         "romaji": "sesang",
+         "meaning": "le monde (des hommes)"
+        },
+        {
+         "slug": "ko-daseurida",
+         "kind": "vocabulary",
+         "front": "다스리다",
+         "reading": null,
+         "romaji": "daseurida",
+         "meaning": "gouverner"
+        },
+        {
+         "slug": "ko-neolli",
+         "kind": "vocabulary",
+         "front": "널리",
+         "reading": null,
+         "romaji": "neolli",
+         "meaning": "largement, partout"
+        },
+        {
+         "slug": "ko-iropda",
+         "kind": "vocabulary",
+         "front": "이롭다",
+         "reading": null,
+         "romaji": "iropda",
+         "meaning": "être profitable, bénéfique"
+        },
+        {
+         "slug": "ko-hongigingan",
+         "kind": "vocabulary",
+         "front": "홍익인간",
+         "reading": null,
+         "romaji": "hongigingan",
+         "meaning": "bénéficier largement à l’humanité"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "환웅은 인간 세상을 널리 이롭게 하고자 하늘에서 내려왔다.",
+         "reading": null,
+         "fr": "Hwanung descendit du ciel afin d’apporter de grands bienfaits au monde des hommes."
+        },
+        {
+         "jp": "오늘은 한국의 건국 신화에 대해 말씀드리고자 합니다.",
+         "reading": null,
+         "fr": "Aujourd’hui, je souhaiterais vous parler du mythe fondateur de la Corée."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이번 발표에서는 연구 결과를 ＿ 합니다.",
+         "choices": [
+          "소개하고자",
+          "소개하는 바",
+          "소개하며"
+         ],
+         "answer": "소개하고자",
+         "explanation": "Intention formelle : -고자 하다.",
+         "translation": "Dans cette présentation, je souhaite vous présenter les résultats de la recherche."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "환웅은 세상을 ＿ 바람, 비, 구름을 거느리고 내려왔다.",
+         "choices": [
+          "다스리고자",
+          "다스린 나머지",
+          "다스릴망정"
+         ],
+         "answer": "다스리고자",
+         "explanation": "But (soutenu) : -고자.",
+         "translation": "Pour gouverner le monde, Hwanung descendit accompagné du vent, de la pluie et des nuages."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je souhaiterais dire quelques mots. »",
+         "answer": [
+          "몇",
+          "말씀",
+          "드리고자",
+          "합니다."
+         ],
+         "explanation": "Formule de discours : -고자 합니다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "「홍익인간」은 널리 인간을 이롭게 한다는 뜻이다.",
+         "translation": "Hongik ingan signifie « bénéficier largement à l’humanité ».",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "널리 인간을 이롭게 하다 = être bénéfique à tous les hommes."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eumyeo",
+       "title": "Et, tout en (écrit) : -(으)며",
+       "objective": "Enchaîner des idées à l’écrit.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)며 = et (énumération écrite) : 그는 학자이며 시인이다. Aussi = tout en : 노래를 부르며 춤을 췄다.",
+        "C’est la version écrite de -고 et de -(으)면서."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eumyeo",
+         "kind": "grammar",
+         "front": "-(으)며",
+         "reading": null,
+         "romaji": "-(eu)myeo",
+         "meaning": "et ; tout en (écrit)"
+        },
+        {
+         "slug": "ko-goksik",
+         "kind": "vocabulary",
+         "front": "곡식",
+         "reading": null,
+         "romaji": "goksik",
+         "meaning": "céréales"
+        },
+        {
+         "slug": "ko-saengmyeong",
+         "kind": "vocabulary",
+         "front": "생명",
+         "reading": null,
+         "romaji": "saengmyeong",
+         "meaning": "vie (biologique)"
+        },
+        {
+         "slug": "ko-jilbyeong",
+         "kind": "vocabulary",
+         "front": "질병",
+         "reading": null,
+         "romaji": "jilbyeong",
+         "meaning": "maladie (soutenu)"
+        },
+        {
+         "slug": "ko-hyeongbeol",
+         "kind": "vocabulary",
+         "front": "형벌",
+         "reading": null,
+         "romaji": "hyeongbeol",
+         "meaning": "sanction, punition"
+        },
+        {
+         "slug": "ko-seonak",
+         "kind": "vocabulary",
+         "front": "선악",
+         "reading": null,
+         "romaji": "seonak",
+         "meaning": "le bien et le mal"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "환웅은 곡식과 생명, 질병과 형벌, 선악을 다스렸으며 인간 세상의 삼백육십 가지 일을 맡았다.",
+         "reading": null,
+         "fr": "Hwanung régnait sur les céréales et la vie, les maladies et les châtiments, le bien et le mal, et se chargeait des trois cent soixante affaires du monde."
+        },
+        {
+         "jp": "그는 소설가이며 화가이다.",
+         "reading": null,
+         "fr": "Il est romancier et peintre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이 도시는 역사가 ＿ 자연환경도 아름답다.",
+         "choices": [
+          "깊으며",
+          "깊고자",
+          "깊은 나머지"
+         ],
+         "answer": "깊으며",
+         "explanation": "Énumération écrite : -(으)며.",
+         "translation": "Cette ville a une longue histoire, et son environnement naturel est beau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "아이들은 노래를 ＿ 춤을 추었다.",
+         "choices": [
+          "부르며",
+          "부르고자",
+          "부를망정"
+         ],
+         "answer": "부르며",
+         "explanation": "Simultanéité (écrit) : -(으)며.",
+         "translation": "Les enfants dansaient en chantant."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il est enseignant et écrivain. »",
+         "answer": [
+          "그는",
+          "교사이며",
+          "작가이다."
+         ],
+         "explanation": "Nom + -(이)며."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "환웅은 선악과 형벌을 다스렸다.",
+         "translation": "Hwanung ne s’occupait que des céréales.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Il gouvernait aussi le bien, le mal et les châtiments."
+        }
+       ]
+      },
+      {
+       "slug": "ko-neun-baida",
+       "title": "Ce que… (formel) : -는 바",
+       "objective": "Employer 바 dans les discours et les textes officiels.",
+       "minutes": 9,
+       "explanation": [
+        "-는 바이다 = c’est ce que… (déclaration solennelle) : 여러분의 협조를 부탁드리는 바입니다.",
+        "-(으)ㄴ/는 바와 같이 = comme : 앞에서 말한 바와 같이 (comme indiqué plus haut). 바 remplace 것 dans le style écrit."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-neun-baida",
+         "kind": "grammar",
+         "front": "-는 바이다 / -(으)ㄴ 바와 같이",
+         "reading": null,
+         "romaji": "-neun baida / -(eu)n bawa gachi",
+         "meaning": "c’est ce que… ; comme (formel)"
+        },
+        {
+         "slug": "ko-seoneonhada",
+         "kind": "vocabulary",
+         "front": "선언하다",
+         "reading": null,
+         "romaji": "seoneonhada",
+         "meaning": "déclarer, proclamer"
+        },
+        {
+         "slug": "ko-gangjohada",
+         "kind": "vocabulary",
+         "front": "강조하다",
+         "reading": null,
+         "romaji": "gangjohada",
+         "meaning": "souligner, insister"
+        },
+        {
+         "slug": "ko-jujanghada",
+         "kind": "vocabulary",
+         "front": "주장하다",
+         "reading": null,
+         "romaji": "jujanghada",
+         "meaning": "affirmer, soutenir"
+        },
+        {
+         "slug": "ko-jeanhada",
+         "kind": "vocabulary",
+         "front": "제안하다",
+         "reading": null,
+         "romaji": "jeanhada",
+         "meaning": "proposer"
+        },
+        {
+         "slug": "ko-yeonseol",
+         "kind": "vocabulary",
+         "front": "연설",
+         "reading": null,
+         "romaji": "yeonseol",
+         "meaning": "discours"
+        },
+        {
+         "slug": "ko-gungmin",
+         "kind": "vocabulary",
+         "front": "국민",
+         "reading": null,
+         "romaji": "gungmin",
+         "meaning": "citoyens, peuple d’un pays"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "앞에서 말씀드린 바와 같이 이 정책은 국민 모두를 위한 것입니다.",
+         "reading": null,
+         "fr": "Comme je l’ai indiqué plus haut, cette politique est destinée à tous les citoyens."
+        },
+        {
+         "jp": "이에 새 나라의 시작을 선언하는 바입니다.",
+         "reading": null,
+         "fr": "Je proclame donc ici la naissance d’un nouveau pays."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "앞에서 ＿ 바와 같이 환경 보호가 중요합니다.",
+         "choices": [
+          "강조한",
+          "강조하며",
+          "강조하고자"
+         ],
+         "answer": "강조한",
+         "explanation": "Comme on l’a dit : -(으)ㄴ 바와 같이.",
+         "translation": "Comme souligné plus haut, la protection de l’environnement est importante."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "여러분의 적극적인 참여를 ＿ 바입니다.",
+         "choices": [
+          "부탁드리는",
+          "부탁드린 나머지",
+          "부탁드릴망정"
+         ],
+         "answer": "부탁드리는",
+         "explanation": "Déclaration solennelle : -는 바입니다.",
+         "translation": "Nous vous demandons votre participation active."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Le président a souligné ce point dans son discours. »",
+         "answer": [
+          "대통령은",
+          "연설에서",
+          "이",
+          "점을",
+          "강조했다."
+         ],
+         "explanation": "Sujet + lieu + objet + verbe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "그는 연설에서 새로운 정책을 제안했다.",
+         "translation": "Il a proposé une nouvelle politique.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "제안했다 = a proposé."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w2",
+   "title": "La caverne de l’ourse et du tigre",
+   "region": "Royaume de Gojoseon",
+   "description": "La concession forte : -(으)ㄴ들, -(으)ㄹ지언정, -(으)ㄹ망정.",
+   "boss": {
+    "name": "Ungnyeo, la femme-ourse",
+    "glyph": "웅",
+    "intro": "L’ourse resta cent jours dans la caverne, sans voir le soleil, à ne manger que de l’armoise et de l’ail. Le tigre abandonna ; elle devint femme et mère de Dangun. Elle n’honore que la persévérance absolue."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w2-c1",
+     "title": "Coûte que coûte",
+     "lessons": [
+      {
+       "slug": "ko-eundeul",
+       "title": "À quoi bon… : -(으)ㄴ들",
+       "objective": "Dire qu’une hypothèse ne changerait rien.",
+       "minutes": 10,
+       "explanation": [
+        "-(으)ㄴ들 = même si…, (à quoi bon / ça ne changerait rien) : 지금 후회한들 무슨 소용이 있겠어요?",
+        "Souvent suivi d’une question rhétorique : 아무리 빨리 간들 늦지 않겠어요?"
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eundeul",
+         "kind": "grammar",
+         "front": "-(으)ㄴ들",
+         "reading": null,
+         "romaji": "-(eu)ndeul",
+         "meaning": "même si… (à quoi bon)"
+        },
+        {
+         "slug": "ko-donggul",
+         "kind": "vocabulary",
+         "front": "동굴",
+         "reading": null,
+         "romaji": "donggul",
+         "meaning": "caverne, grotte"
+        },
+        {
+         "slug": "ko-ssuk",
+         "kind": "vocabulary",
+         "front": "쑥",
+         "reading": null,
+         "romaji": "ssuk",
+         "meaning": "armoise"
+        },
+        {
+         "slug": "ko-maneul",
+         "kind": "vocabulary",
+         "front": "마늘",
+         "reading": null,
+         "romaji": "maneul",
+         "meaning": "ail"
+        },
+        {
+         "slug": "ko-haetbit",
+         "kind": "vocabulary",
+         "front": "햇빛",
+         "reading": null,
+         "romaji": "haetbit",
+         "meaning": "lumière du soleil"
+        },
+        {
+         "slug": "ko-gom",
+         "kind": "vocabulary",
+         "front": "곰",
+         "reading": null,
+         "romaji": "gom",
+         "meaning": "ours"
+        },
+        {
+         "slug": "ko-horangi",
+         "kind": "vocabulary",
+         "front": "호랑이",
+         "reading": null,
+         "romaji": "horangi",
+         "meaning": "tigre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "호랑이가 아무리 후회한들 이미 늦었다.",
+         "reading": null,
+         "fr": "Le tigre avait beau regretter, il était déjà trop tard."
+        },
+        {
+         "jp": "햇빛을 백 일 동안 보지 못한들 사람이 될 수 있다면 참겠어요.",
+         "reading": null,
+         "fr": "Même si je ne dois pas voir le soleil pendant cent jours, je tiendrai si je peux devenir humaine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "지금 ＿ 무슨 소용이 있겠어요?",
+         "choices": [
+          "후회한들",
+          "후회하고자",
+          "후회하며"
+         ],
+         "answer": "후회한들",
+         "explanation": "À quoi bon : -(으)ㄴ들 + question rhétorique.",
+         "translation": "À quoi bon regretter maintenant ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "아무리 빨리 ＿ 기차를 탈 수 있을까요?",
+         "choices": [
+          "달린들",
+          "달린 나머지",
+          "달리는 바"
+         ],
+         "answer": "달린들",
+         "explanation": "Hypothèse vaine : -(으)ㄴ들.",
+         "translation": "Même en courant le plus vite possible, est-ce que j’attraperai le train ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton ami s’en veut d’avoir raté une occasion.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "그때 그 회사에 지원할걸 그랬어요."
+          }
+         ],
+         "translation": "Ton ami regrette de ne pas avoir postulé.",
+         "choices": [
+          "이제 와서 후회한들 소용없어요. 다음 기회를 준비해요.",
+          "후회하고자 합니다.",
+          "후회하는 바입니다."
+         ],
+         "answer": "이제 와서 후회한들 소용없어요. 다음 기회를 준비해요.",
+         "explanation": "Consoler : -(으)ㄴ들 소용없다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "곰은 동굴에서 쑥과 마늘만 먹으며 견뎠다.",
+         "translation": "L’ourse a mangé de la viande dans la caverne.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "쑥과 마늘만 = seulement de l’armoise et de l’ail."
+        }
+       ]
+      },
+      {
+       "slug": "ko-euljieonjeong",
+       "title": "Plutôt… que : -(으)ㄹ지언정",
+       "objective": "Exprimer une résolution inébranlable.",
+       "minutes": 10,
+       "explanation": [
+        "-(으)ㄹ지언정 = quitte à…, plutôt… que : 굶을지언정 뜻을 굽히지 않겠다 (je préfère jeûner plutôt que de renoncer).",
+        "Ton fort et littéraire, souvent avec 차라리 (plutôt)."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-euljieonjeong",
+         "kind": "grammar",
+         "front": "-(으)ㄹ지언정",
+         "reading": null,
+         "romaji": "-(eu)ljieonjeong",
+         "meaning": "quitte à…, plutôt… que"
+        },
+        {
+         "slug": "ko-gumda",
+         "kind": "vocabulary",
+         "front": "굶다",
+         "reading": null,
+         "romaji": "gumda",
+         "meaning": "jeûner, ne pas manger"
+        },
+        {
+         "slug": "ko-gupida",
+         "kind": "vocabulary",
+         "front": "굽히다",
+         "reading": null,
+         "romaji": "gupida",
+         "meaning": "plier, céder"
+        },
+        {
+         "slug": "ko-jajonsim",
+         "kind": "vocabulary",
+         "front": "자존심",
+         "reading": null,
+         "romaji": "jajonsim",
+         "meaning": "fierté, amour-propre"
+        },
+        {
+         "slug": "ko-tteut",
+         "kind": "vocabulary",
+         "front": "뜻",
+         "reading": null,
+         "romaji": "tteut",
+         "meaning": "sens ; volonté"
+        },
+        {
+         "slug": "ko-kkeokda",
+         "kind": "vocabulary",
+         "front": "꺾다",
+         "reading": null,
+         "romaji": "kkeokda",
+         "meaning": "briser, casser"
+        },
+        {
+         "slug": "ko-charari",
+         "kind": "vocabulary",
+         "front": "차라리",
+         "reading": null,
+         "romaji": "charari",
+         "meaning": "plutôt, autant"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "굶을지언정 남의 것을 빼앗지는 않겠다.",
+         "reading": null,
+         "fr": "Je préfère jeûner plutôt que de prendre ce qui appartient aux autres."
+        },
+        {
+         "jp": "곰은 힘들지언정 끝까지 뜻을 꺾지 않았다.",
+         "reading": null,
+         "fr": "Si dur que ce fût, l’ourse ne renonça jamais."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "차라리 ＿ 거짓말은 하지 않겠어요.",
+         "choices": [
+          "혼날지언정",
+          "혼난들요",
+          "혼나고자"
+         ],
+         "answer": "혼날지언정",
+         "explanation": "Plutôt… que : -(으)ㄹ지언정.",
+         "translation": "Je préfère me faire gronder plutôt que de mentir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "가난하게 ＿ 자존심을 버리지는 않겠다.",
+         "choices": [
+          "살지언정",
+          "사는 바",
+          "살며"
+         ],
+         "answer": "살지언정",
+         "explanation": "Résolution : -(으)ㄹ지언정.",
+         "translation": "Quitte à vivre pauvrement, je ne renoncerai pas à ma fierté."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je ne céderai pas. »",
+         "answer": [
+          "결코",
+          "뜻을",
+          "굽히지",
+          "않겠다."
+         ],
+         "explanation": "Adverbe + objet + 굽히지 않겠다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "호랑이는 굶을지언정 끝까지 참았다.",
+         "translation": "Le tigre a tenu jusqu’au bout.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Dans le mythe, le tigre abandonne avant les cent jours."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eulmangjeong",
+       "title": "Même si… au moins : -(으)ㄹ망정",
+       "objective": "Admettre un défaut pour mettre en valeur une qualité.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)ㄹ망정 = même si…, (au moins) : 비록 가난할망정 떳떳하게 살겠다 (pauvre peut-être, mais intègre).",
+        "Souvent avec 비록 (bien que). Très proche de -(으)ㄹ지언정."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eulmangjeong",
+         "kind": "grammar",
+         "front": "-(으)ㄹ망정",
+         "reading": null,
+         "romaji": "-(eu)lmangjeong",
+         "meaning": "même si… (au moins)"
+        },
+        {
+         "slug": "ko-gananhada",
+         "kind": "vocabulary",
+         "front": "가난하다",
+         "reading": null,
+         "romaji": "gananhada",
+         "meaning": "être pauvre"
+        },
+        {
+         "slug": "ko-birok",
+         "kind": "vocabulary",
+         "front": "비록",
+         "reading": null,
+         "romaji": "birok",
+         "meaning": "bien que, malgré le fait que"
+        },
+        {
+         "slug": "ko-tteottteotada",
+         "kind": "vocabulary",
+         "front": "떳떳하다",
+         "reading": null,
+         "romaji": "tteottteotada",
+         "meaning": "avoir la conscience tranquille, être intègre"
+        },
+        {
+         "slug": "ko-chameulseong",
+         "kind": "vocabulary",
+         "front": "참을성",
+         "reading": null,
+         "romaji": "chameulseong",
+         "meaning": "patience"
+        },
+        {
+         "slug": "ko-innae",
+         "kind": "vocabulary",
+         "front": "인내",
+         "reading": null,
+         "romaji": "innae",
+         "meaning": "endurance, persévérance"
+        },
+        {
+         "slug": "ko-baegil",
+         "kind": "vocabulary",
+         "front": "백일",
+         "reading": null,
+         "romaji": "baegil",
+         "meaning": "cent jours ; centième jour (d’un bébé)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "비록 가난할망정 떳떳하게 살고 싶어요.",
+         "reading": null,
+         "fr": "Même si je suis pauvre, je veux vivre la tête haute."
+        },
+        {
+         "jp": "곰은 인내와 참을성으로 백일을 견뎌 사람이 되었다.",
+         "reading": null,
+         "fr": "Grâce à sa persévérance et à sa patience, l’ourse tint cent jours et devint humaine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "비록 시험에 ＿ 최선을 다했으니 후회는 없어요.",
+         "choices": [
+          "떨어졌을망정",
+          "떨어지고자",
+          "떨어진 바"
+         ],
+         "answer": "떨어졌을망정",
+         "explanation": "Admettre un échec : -았/었을망정.",
+         "translation": "Même si j’ai échoué, j’ai fait de mon mieux : je n’ai pas de regrets."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "집은 ＿ 마음은 편해요.",
+         "choices": [
+          "작을망정",
+          "작으며",
+          "작고자"
+         ],
+         "answer": "작을망정",
+         "explanation": "Défaut + qualité : -(으)ㄹ망정.",
+         "translation": "La maison est petite, peut-être, mais on y est bien."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il lui faut de la patience. »",
+         "answer": [
+          "그에게는",
+          "참을성이",
+          "필요하다."
+         ],
+         "explanation": "Personne-에게는 + nom-이 필요하다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "비록 늦을망정 포기하지 않겠어요.",
+         "translation": "La personne renonce parce qu’elle est en retard.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "포기하지 않겠어요 = je n’abandonnerai pas."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w3",
+   "title": "La rivière de Jumong",
+   "region": "Royaume de Gojoseon",
+   "description": "Comparer et décrire finement : -다시피, -(으)ㄴ/는 듯하다, -듯이.",
+   "boss": {
+    "name": "Jumong, l’archer né d’un œuf",
+    "glyph": "주",
+    "intro": "Né d’un œuf, Jumong tirait si juste qu’on le jalousa ; poursuivi, il traversa la rivière sur un pont de poissons et de tortues et fonda Goguryeo. Il teste la précision de ta langue comme celle d’une flèche."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w3-c1",
+     "title": "Comme…",
+     "lessons": [
+      {
+       "slug": "ko-dasipi",
+       "title": "Comme vous le savez : -다시피",
+       "objective": "Renvoyer à ce que l’interlocuteur sait ou voit.",
+       "minutes": 10,
+       "explanation": [
+        "-다시피 = comme (vous le savez, le voyez) : 아시다시피 주몽은 활을 잘 쏘았습니다. Avec 알다, 보다, 듣다, 느끼다.",
+        "Avec d’autres verbes, -다시피 하다 = presque, pour ainsi dire : 매일 굶다시피 했다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-dasipi",
+         "kind": "grammar",
+         "front": "-다시피",
+         "reading": null,
+         "romaji": "-dasipi",
+         "meaning": "comme (vous le savez) ; presque"
+        },
+        {
+         "slug": "ko-hwal",
+         "kind": "vocabulary",
+         "front": "활",
+         "reading": null,
+         "romaji": "hwal",
+         "meaning": "arc"
+        },
+        {
+         "slug": "ko-ssoda",
+         "kind": "vocabulary",
+         "front": "쏘다",
+         "reading": null,
+         "romaji": "ssoda",
+         "meaning": "tirer (une flèche)"
+        },
+        {
+         "slug": "ko-hwasal",
+         "kind": "vocabulary",
+         "front": "화살",
+         "reading": null,
+         "romaji": "hwasal",
+         "meaning": "flèche"
+        },
+        {
+         "slug": "ko-myeongjunghada",
+         "kind": "vocabulary",
+         "front": "명중하다",
+         "reading": null,
+         "romaji": "myeongjunghada",
+         "meaning": "atteindre la cible"
+        },
+        {
+         "slug": "ko-somssi",
+         "kind": "vocabulary",
+         "front": "솜씨",
+         "reading": null,
+         "romaji": "somssi",
+         "meaning": "adresse, savoir-faire"
+        },
+        {
+         "slug": "ko-gwanyeok",
+         "kind": "vocabulary",
+         "front": "과녁",
+         "reading": null,
+         "romaji": "gwanyeok",
+         "meaning": "cible"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "여러분도 아시다시피 주몽은 활 솜씨가 뛰어났습니다.",
+         "reading": null,
+         "fr": "Comme vous le savez, Jumong était un archer remarquable."
+        },
+        {
+         "jp": "시험 기간에는 도서관에서 살다시피 했어요.",
+         "reading": null,
+         "fr": "Pendant les examens, je vivais pratiquement à la bibliothèque."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "보시＿ 이 화살은 과녁에 정확히 명중했습니다.",
+         "choices": [
+          "다시피",
+          "듯이",
+          "며"
+         ],
+         "answer": "다시피",
+         "explanation": "Comme vous le voyez : 보시다시피.",
+         "translation": "Comme vous le voyez, cette flèche a atteint la cible en plein centre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이사 준비 때문에 일주일 동안 밤을 ＿ 했어요.",
+         "choices": [
+          "새우다시피",
+          "새운 듯이",
+          "새우고자"
+         ],
+         "answer": "새우다시피",
+         "explanation": "Presque : -다시피 하다.",
+         "translation": "À cause des préparatifs du déménagement, j’ai pratiquement passé des nuits blanches toute la semaine."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Comme vous le savez, l’examen est demain. »",
+         "answer": [
+          "아시다시피",
+          "시험은",
+          "내일입니다."
+         ],
+         "explanation": "아시다시피 en tête de phrase."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "주몽은 화살을 쏘면 과녁에 명중했다.",
+         "translation": "Jumong ratait souvent la cible.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "명중했다 = il atteignait la cible."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eun-deutada",
+       "title": "Il semble que (écrit) : -는 듯하다",
+       "objective": "Exprimer une impression avec un style soutenu.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)ㄴ/는 듯하다 = il semble que, on dirait (soutenu) : 알이 곧 깨질 듯하다. Équivalent écrit de -는 것 같다.",
+        "Futur : -(으)ㄹ 듯하다 ; passé : -(으)ㄴ 듯하다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eun-deutada",
+         "kind": "grammar",
+         "front": "-(으)ㄴ/는 듯하다",
+         "reading": null,
+         "romaji": "-(eu)n / -neun deutada",
+         "meaning": "il semble que (soutenu)"
+        },
+        {
+         "slug": "ko-al",
+         "kind": "vocabulary",
+         "front": "알",
+         "reading": null,
+         "romaji": "al",
+         "meaning": "œuf ; grain"
+        },
+        {
+         "slug": "ko-kkaeda",
+         "kind": "vocabulary",
+         "front": "깨다",
+         "reading": null,
+         "romaji": "kkaeda",
+         "meaning": "casser ; se réveiller"
+        },
+        {
+         "slug": "ko-sinbiropda",
+         "kind": "vocabulary",
+         "front": "신비롭다",
+         "reading": null,
+         "romaji": "sinbiropda",
+         "meaning": "être mystérieux"
+        },
+        {
+         "slug": "ko-bibeomhada",
+         "kind": "vocabulary",
+         "front": "비범하다",
+         "reading": null,
+         "romaji": "bibeomhada",
+         "meaning": "être hors du commun"
+        },
+        {
+         "slug": "ko-sigihada",
+         "kind": "vocabulary",
+         "front": "시기하다",
+         "reading": null,
+         "romaji": "sigihada",
+         "meaning": "jalouser"
+        },
+        {
+         "slug": "ko-talchulhada",
+         "kind": "vocabulary",
+         "front": "탈출하다",
+         "reading": null,
+         "romaji": "talchulhada",
+         "meaning": "s’échapper"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "알에서 신비로운 빛이 나는 듯했다.",
+         "reading": null,
+         "fr": "Une lumière mystérieuse semblait émaner de l’œuf."
+        },
+        {
+         "jp": "왕자들은 주몽의 비범한 재주를 시기한 듯하다.",
+         "reading": null,
+         "fr": "Les princes semblent avoir jalousé les talents hors du commun de Jumong."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "하늘이 어두워지는 걸 보니 곧 비가 ＿.",
+         "choices": [
+          "올 듯하다",
+          "오다시피 하다",
+          "오는 바이다"
+         ],
+         "answer": "올 듯하다",
+         "explanation": "Impression sur l’avenir : -(으)ㄹ 듯하다.",
+         "translation": "Le ciel s’assombrit : il va sans doute pleuvoir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "그는 무언가 ＿ 듯했지만 끝내 말하지 않았다.",
+         "choices": [
+          "숨기는",
+          "숨기며",
+          "숨기고자"
+         ],
+         "answer": "숨기는",
+         "explanation": "Présent : -는 듯하다.",
+         "translation": "Il semblait cacher quelque chose, mais il ne dit rien jusqu’au bout."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « L’œuf s’est cassé et un enfant en est sorti. »",
+         "answer": [
+          "알이",
+          "깨지고",
+          "아이가",
+          "나왔다."
+         ],
+         "explanation": "Deux propositions reliées par -고."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "주몽은 왕자들의 시기를 피해 탈출했다.",
+         "translation": "Jumong a fui la jalousie des princes.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "시기를 피해 탈출했다 = s’est échappé pour fuir la jalousie."
+        }
+       ]
+      },
+      {
+       "slug": "ko-deusi",
+       "title": "Comme si : -듯이",
+       "objective": "Comparer une action à une autre, souvent dans des images.",
+       "minutes": 9,
+       "explanation": [
+        "-듯이 = comme, de même que : 물 쓰듯이 돈을 쓰다 (dépenser l’argent comme de l’eau). Aussi -는 듯이 = comme si : 아무 일도 없었다는 듯이.",
+        "Fréquent dans les proverbes et les récits."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-deusi",
+         "kind": "grammar",
+         "front": "-듯이",
+         "reading": null,
+         "romaji": "-deusi",
+         "meaning": "comme, comme si"
+        },
+        {
+         "slug": "ko-mulgogi",
+         "kind": "vocabulary",
+         "front": "물고기",
+         "reading": null,
+         "romaji": "mulgogi",
+         "meaning": "poisson"
+        },
+        {
+         "slug": "ko-jara",
+         "kind": "vocabulary",
+         "front": "자라",
+         "reading": null,
+         "romaji": "jara",
+         "meaning": "tortue d’eau douce"
+        },
+        {
+         "slug": "ko-dari",
+         "kind": "vocabulary",
+         "front": "다리",
+         "reading": null,
+         "romaji": "dari",
+         "meaning": "pont ; jambe"
+        },
+        {
+         "slug": "ko-geonneoda",
+         "kind": "vocabulary",
+         "front": "건너다",
+         "reading": null,
+         "romaji": "geonneoda",
+         "meaning": "traverser"
+        },
+        {
+         "slug": "ko-jjotgida",
+         "kind": "vocabulary",
+         "front": "쫓기다",
+         "reading": null,
+         "romaji": "jjotgida",
+         "meaning": "être poursuivi"
+        },
+        {
+         "slug": "ko-seuda",
+         "kind": "vocabulary",
+         "front": "세우다",
+         "reading": null,
+         "romaji": "seuda",
+         "meaning": "fonder, ériger ; arrêter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "물고기와 자라들이 약속이라도 한 듯이 다리를 만들었다.",
+         "reading": null,
+         "fr": "Les poissons et les tortues formèrent un pont, comme s’ils s’étaient donné le mot."
+        },
+        {
+         "jp": "그는 돈을 물 쓰듯이 썼다.",
+         "reading": null,
+         "fr": "Il dépensait l’argent comme de l’eau."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "그는 아무 일도 없었다는 ＿ 웃었다.",
+         "choices": [
+          "듯이",
+          "다시피",
+          "바와"
+         ],
+         "answer": "듯이",
+         "explanation": "Comme si : -는 듯이.",
+         "translation": "Il souriait comme si de rien n’était."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "쫓기던 주몽은 물고기 다리를 ＿ 강을 건넜다.",
+         "choices": [
+          "밟으며",
+          "밟고자",
+          "밟을망정"
+         ],
+         "answer": "밟으며",
+         "explanation": "Tout en (écrit) : -(으)며.",
+         "translation": "Poursuivi, Jumong traversa la rivière en marchant sur le pont de poissons."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Jumong fonda un pays. »",
+         "answer": [
+          "주몽은",
+          "나라를",
+          "세웠다."
+         ],
+         "explanation": "Sujet + 나라를 세우다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "물고기와 자라가 다리를 만들어 주몽을 도왔다.",
+         "translation": "Des poissons et des tortues ont aidé Jumong.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "다리를 만들어 도왔다 = ils l’ont aidé en formant un pont."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w4",
+   "title": "Le puits du cheval blanc",
+   "region": "Royaume de Gojoseon",
+   "description": "Les degrés extrêmes : -(으)ㄹ 나위가 없다, -기 그지없다, -기 짝이 없다.",
+   "boss": {
+    "name": "Bak Hyeokgeose, roi né d’un œuf",
+    "glyph": "박",
+    "intro": "Près d’un puits, un cheval blanc s’agenouilla devant un grand œuf, puis s’envola : il en sortit Bak Hyeokgeose, premier roi de Silla. Il n’accepte que des éloges et des reproches mesurés au plus juste."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w4-c1",
+     "title": "On ne peut plus…",
+     "lessons": [
+      {
+       "slug": "ko-eul-nawi",
+       "title": "Rien de mieux : -(으)ㄹ 나위가 없다",
+       "objective": "Dire qu’une chose est parfaite, qu’il n’y a rien à ajouter.",
+       "minutes": 10,
+       "explanation": [
+        "더할 나위 없다 = il n’y a rien de mieux, c’est parfait : 더할 나위 없이 행복해요. Aussi 말할 나위도 없다 (cela va sans dire).",
+        "Expression figée, utilisée surtout avec 더하다 et 말하다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eul-nawi",
+         "kind": "grammar",
+         "front": "-(으)ㄹ 나위가 없다",
+         "reading": null,
+         "romaji": "-(eu)l nawiga eopda",
+         "meaning": "il n’y a rien de plus à…"
+        },
+        {
+         "slug": "ko-wanbyeokada",
+         "kind": "vocabulary",
+         "front": "완벽하다",
+         "reading": null,
+         "romaji": "wanbyeokada",
+         "meaning": "être parfait"
+        },
+        {
+         "slug": "ko-hullyunghada",
+         "kind": "vocabulary",
+         "front": "훌륭하다",
+         "reading": null,
+         "romaji": "hullyunghada",
+         "meaning": "être remarquable, admirable"
+        },
+        {
+         "slug": "ko-manjokada",
+         "kind": "vocabulary",
+         "front": "만족하다",
+         "reading": null,
+         "romaji": "manjokada",
+         "meaning": "être satisfait"
+        },
+        {
+         "slug": "ko-baengma",
+         "kind": "vocabulary",
+         "front": "백마",
+         "reading": null,
+         "romaji": "baengma",
+         "meaning": "cheval blanc"
+        },
+        {
+         "slug": "ko-umul",
+         "kind": "vocabulary",
+         "front": "우물",
+         "reading": null,
+         "romaji": "umul",
+         "meaning": "puits"
+        },
+        {
+         "slug": "ko-tansaeng",
+         "kind": "vocabulary",
+         "front": "탄생",
+         "reading": null,
+         "romaji": "tansaeng",
+         "meaning": "naissance"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "새 왕의 탄생을 지켜본 백성들은 더할 나위 없이 기뻐했다.",
+         "reading": null,
+         "fr": "Le peuple, témoin de la naissance du nouveau roi, fut on ne peut plus heureux."
+        },
+        {
+         "jp": "그의 실력이 훌륭하다는 것은 말할 나위도 없다.",
+         "reading": null,
+         "fr": "Il va sans dire que son talent est remarquable."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이번 여행은 날씨도 좋고 음식도 맛있어서 더할 ＿ 없었어요.",
+         "choices": [
+          "나위",
+          "짝이",
+          "그지"
+         ],
+         "answer": "나위",
+         "explanation": "Expression : 더할 나위 없다.",
+         "translation": "Le voyage, avec le beau temps et la bonne cuisine, était parfait."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "그 선수가 최고라는 것은 ＿ 나위도 없어요.",
+         "choices": [
+          "말할",
+          "말한",
+          "말하는"
+         ],
+         "answer": "말할",
+         "explanation": "Cela va sans dire : 말할 나위도 없다.",
+         "translation": "Il va sans dire que ce joueur est le meilleur."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je suis parfaitement satisfait du résultat. »",
+         "answer": [
+          "결과에",
+          "더할",
+          "나위",
+          "없이",
+          "만족해요."
+         ],
+         "explanation": "더할 나위 없이 + verbe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "우물 옆에서 백마가 큰 알을 지키고 있었다.",
+         "translation": "Un cheval blanc gardait un grand œuf près du puits.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "우물 옆 = près du puits."
+        }
+       ]
+      },
+      {
+       "slug": "ko-gi-geujieopda",
+       "title": "Infiniment : -기 그지없다",
+       "objective": "Exprimer un sentiment poussé à l’extrême, dans un style soutenu.",
+       "minutes": 9,
+       "explanation": [
+        "Adjectif + -기 그지없다 = infiniment, au plus haut point : 기쁘기 그지없습니다 (je suis infiniment heureux).",
+        "Propre aux discours et aux lettres : 감사하기 그지없습니다, 송구하기 그지없습니다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-gi-geujieopda",
+         "kind": "grammar",
+         "front": "-기 그지없다",
+         "reading": null,
+         "romaji": "-gi geujieopda",
+         "meaning": "infiniment, au plus haut point"
+        },
+        {
+         "slug": "ko-gippeuda",
+         "kind": "vocabulary",
+         "front": "기쁘다",
+         "reading": null,
+         "romaji": "gippeuda",
+         "meaning": "être heureux, joyeux"
+        },
+        {
+         "slug": "ko-gamgyeokada",
+         "kind": "vocabulary",
+         "front": "감격하다",
+         "reading": null,
+         "romaji": "gamgyeokada",
+         "meaning": "être profondément ému"
+        },
+        {
+         "slug": "ko-yeonggwang",
+         "kind": "vocabulary",
+         "front": "영광",
+         "reading": null,
+         "romaji": "yeonggwang",
+         "meaning": "honneur, gloire"
+        },
+        {
+         "slug": "ko-songguhada",
+         "kind": "vocabulary",
+         "front": "송구하다",
+         "reading": null,
+         "romaji": "songguhada",
+         "meaning": "être confus (excuses)"
+        },
+        {
+         "slug": "ko-chukbok",
+         "kind": "vocabulary",
+         "front": "축복",
+         "reading": null,
+         "romaji": "chukbok",
+         "meaning": "bénédiction"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "이런 상을 받게 되어 영광스럽기 그지없습니다.",
+         "reading": null,
+         "fr": "Recevoir un tel prix est pour moi un immense honneur."
+        },
+        {
+         "jp": "기다리게 해 드려서 송구하기 그지없습니다.",
+         "reading": null,
+         "fr": "Je suis infiniment confus de vous avoir fait attendre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "여러분의 축하를 받으니 ＿ 그지없습니다.",
+         "choices": [
+          "기쁘기",
+          "기쁜",
+          "기뻐서"
+         ],
+         "answer": "기쁘기",
+         "explanation": "Adjectif + -기 그지없다.",
+         "translation": "Recevoir vos félicitations me remplit d’une joie infinie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "큰 실수를 하여 ＿ 그지없습니다.",
+         "choices": [
+          "송구하기",
+          "송구하고자",
+          "송구하며"
+         ],
+         "answer": "송구하기",
+         "explanation": "Excuses solennelles : 송구하기 그지없다.",
+         "translation": "J’ai commis une grave erreur : j’en suis infiniment confus."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Ce fut une bénédiction pour le pays. »",
+         "answer": [
+          "그것은",
+          "나라의",
+          "축복이었다."
+         ],
+         "explanation": "Sujet + nom-이었다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "감사하기 그지없습니다.",
+         "translation": "La personne exprime une immense gratitude.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "감사하기 그지없다 = infiniment reconnaissant."
+        }
+       ]
+      },
+      {
+       "slug": "ko-gi-jjak",
+       "title": "On ne peut plus (négatif) : -기 짝이 없다",
+       "objective": "Critiquer avec force.",
+       "minutes": 9,
+       "explanation": [
+        "Adjectif + -기 짝이 없다 = on ne peut plus…, au dernier degré (souvent négatif) : 무례하기 짝이 없다 (d’une impolitesse sans nom).",
+        "Plus familier que -기 그지없다 ; à réserver aux jugements sévères."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-gi-jjak",
+         "kind": "grammar",
+         "front": "-기 짝이 없다",
+         "reading": null,
+         "romaji": "-gi jjagi eopda",
+         "meaning": "on ne peut plus… (souvent négatif)"
+        },
+        {
+         "slug": "ko-eoriseokda",
+         "kind": "vocabulary",
+         "front": "어리석다",
+         "reading": null,
+         "romaji": "eoriseokda",
+         "meaning": "être sot, stupide"
+        },
+        {
+         "slug": "ko-muryehada",
+         "kind": "vocabulary",
+         "front": "무례하다",
+         "reading": null,
+         "romaji": "muryehada",
+         "meaning": "être impoli"
+        },
+        {
+         "slug": "ko-bukkeureopda",
+         "kind": "vocabulary",
+         "front": "부끄럽다",
+         "reading": null,
+         "romaji": "bukkeureopda",
+         "meaning": "avoir honte"
+        },
+        {
+         "slug": "ko-hansimhada",
+         "kind": "vocabulary",
+         "front": "한심하다",
+         "reading": null,
+         "romaji": "hansimhada",
+         "meaning": "être lamentable"
+        },
+        {
+         "slug": "ko-ppeonppeonhada",
+         "kind": "vocabulary",
+         "front": "뻔뻔하다",
+         "reading": null,
+         "romaji": "ppeonppeonhada",
+         "meaning": "être effronté"
+        },
+        {
+         "slug": "ko-changpihada",
+         "kind": "vocabulary",
+         "front": "창피하다",
+         "reading": null,
+         "romaji": "changpihada",
+         "meaning": "être gêné, avoir honte"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "약속을 어기고도 사과하지 않다니 뻔뻔하기 짝이 없다.",
+         "reading": null,
+         "fr": "Ne pas tenir sa promesse et ne même pas s’excuser : quel culot !"
+        },
+        {
+         "jp": "그런 실수를 하다니 창피하기 짝이 없어요.",
+         "reading": null,
+         "fr": "Avoir fait une telle erreur, j’en ai terriblement honte."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "어른께 그렇게 말하다니 ＿ 짝이 없어요.",
+         "choices": [
+          "무례하기",
+          "무례한",
+          "무례하고자"
+         ],
+         "answer": "무례하기",
+         "explanation": "Critique forte : -기 짝이 없다.",
+         "translation": "Parler ainsi à un aîné, c’est d’une impolitesse sans nom."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "같은 실수를 세 번이나 하다니 ＿ 짝이 없다.",
+         "choices": [
+          "한심하기",
+          "한심하며",
+          "한심할망정"
+         ],
+         "answer": "한심하기",
+         "explanation": "-기 짝이 없다.",
+         "translation": "Faire trois fois la même erreur : c’est lamentable."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton ami a trébuché devant toute la classe.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "사람들 앞에서 넘어져서 너무 창피했어요."
+          }
+         ],
+         "translation": "Ton ami a eu honte d’être tombé en public.",
+         "choices": [
+          "괜찮아요. 누구나 그럴 수 있어요.",
+          "창피하기 짝이 없네요.",
+          "창피하고자 했어요?"
+         ],
+         "answer": "괜찮아요. 누구나 그럴 수 있어요.",
+         "explanation": "On console plutôt que d’enfoncer."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "그 행동은 어리석기 짝이 없었다.",
+         "translation": "Le comportement était très sage.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "어리석기 짝이 없다 = d’une sottise extrême."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w5",
+   "title": "La cloche d’Emille",
+   "region": "Royaume de Gojoseon",
+   "description": "Craintes et avis prudents : -(으)ㄹ까 봐, -(으)ㄹ세라, -지 않을까 싶다.",
+   "boss": {
+    "name": "L’esprit de la cloche d’Emille",
+    "glyph": "종",
+    "intro": "La légende dit qu’on ne parvint à fondre la grande cloche de Silla qu’en y versant un enfant, et que son tintement appelle encore « emille, emille », maman. Parle-lui avec délicatesse et prudence."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w5-c1",
+     "title": "De peur que…",
+     "lessons": [
+      {
+       "slug": "ko-eulkka-bwa",
+       "title": "De peur que : -(으)ㄹ까 봐",
+       "objective": "Dire ce qu’on fait par crainte de quelque chose.",
+       "minutes": 10,
+       "explanation": [
+        "-(으)ㄹ까 봐(서) = de peur que : 늦을까 봐 택시를 탔어요. On ne l’emploie pas avec un ordre.",
+        "En fin de phrase : -(으)ㄹ까 봐 걱정이에요 (j’ai peur que…)."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eulkka-bwa",
+         "kind": "grammar",
+         "front": "-(으)ㄹ까 봐(서)",
+         "reading": null,
+         "romaji": "-(eu)lkka bwa(seo)",
+         "meaning": "de peur que"
+        },
+        {
+         "slug": "ko-jong",
+         "kind": "vocabulary",
+         "front": "종",
+         "reading": null,
+         "romaji": "jong",
+         "meaning": "cloche"
+        },
+        {
+         "slug": "ko-nokda",
+         "kind": "vocabulary",
+         "front": "녹다",
+         "reading": null,
+         "romaji": "nokda",
+         "meaning": "fondre"
+        },
+        {
+         "slug": "ko-soe",
+         "kind": "vocabulary",
+         "front": "쇠",
+         "reading": null,
+         "romaji": "soe",
+         "meaning": "fer, métal"
+        },
+        {
+         "slug": "ko-jeongseong",
+         "kind": "vocabulary",
+         "front": "정성",
+         "reading": null,
+         "romaji": "jeongseong",
+         "meaning": "dévouement, soin sincère"
+        },
+        {
+         "slug": "ko-geokjeongdoeda",
+         "kind": "vocabulary",
+         "front": "걱정되다",
+         "reading": null,
+         "romaji": "geokjeongdoeda",
+         "meaning": "être inquiet"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "종이 또 깨질까 봐 모두 정성을 다했다.",
+         "reading": null,
+         "fr": "De peur que la cloche ne se brise encore, tous y mirent tout leur cœur."
+        },
+        {
+         "jp": "시험에 떨어질까 봐 걱정이에요.",
+         "reading": null,
+         "fr": "J’ai peur d’échouer à l’examen."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "늦을 ＿ 서둘러 나갔어요.",
+         "choices": [
+          "까 봐",
+          "세라요",
+          "듯이요"
+         ],
+         "answer": "까 봐",
+         "explanation": "De peur que : -(으)ㄹ까 봐.",
+         "translation": "De peur d’être en retard, je suis sorti en vitesse."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "아이가 감기에 ＿ 걱정돼요.",
+         "choices": [
+          "걸릴까 봐",
+          "걸리고자",
+          "걸린 나머지"
+         ],
+         "answer": "걸릴까 봐",
+         "explanation": "Inquiétude : -(으)ㄹ까 봐 걱정되다.",
+         "translation": "J’ai peur que l’enfant n’attrape un rhume."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton amie hésite à dire la vérité à son amie.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "사실대로 말하면 친구가 화낼까 봐 무서워요."
+          }
+         ],
+         "translation": "Ton amie a peur que son amie se fâche.",
+         "choices": [
+          "솔직하게 말하는 게 더 나을 거예요.",
+          "화낼까 봐 말하세요.",
+          "화낼세라 기뻐요."
+         ],
+         "answer": "솔직하게 말하는 게 더 나을 거예요.",
+         "explanation": "On rassure par un conseil."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "쇠가 녹지 않을까 봐 걱정했다.",
+         "translation": "On craignait que le métal ne fonde pas.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "녹지 않을까 봐 = de peur qu’il ne fonde pas."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eulsera",
+       "title": "De crainte que (littéraire) : -(으)ㄹ세라",
+       "objective": "Exprimer une crainte délicate, dans un récit ou un poème.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)ㄹ세라 = de crainte que, de peur que… (littéraire) : 아기가 깰세라 살금살금 걸었다.",
+        "Plus poétique que -(으)ㄹ까 봐 ; souvent avec 행여 (au cas où, par malheur)."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eulsera",
+         "kind": "grammar",
+         "front": "-(으)ㄹ세라",
+         "reading": null,
+         "romaji": "-(eu)lsera",
+         "meaning": "de crainte que (littéraire)"
+        },
+        {
+         "slug": "ko-josimseureopda",
+         "kind": "vocabulary",
+         "front": "조심스럽다",
+         "reading": null,
+         "romaji": "josimseureopda",
+         "meaning": "être précautionneux"
+        },
+        {
+         "slug": "ko-salgeumsalgeum",
+         "kind": "vocabulary",
+         "front": "살금살금",
+         "reading": null,
+         "romaji": "salgeumsalgeum",
+         "meaning": "à pas de loup"
+        },
+        {
+         "slug": "ko-haengyeo",
+         "kind": "vocabulary",
+         "front": "행여",
+         "reading": null,
+         "romaji": "haengyeo",
+         "meaning": "par malheur, au cas où"
+        },
+        {
+         "slug": "ko-agi",
+         "kind": "vocabulary",
+         "front": "아기",
+         "reading": null,
+         "romaji": "agi",
+         "meaning": "bébé"
+        },
+        {
+         "slug": "ko-sumjugida",
+         "kind": "vocabulary",
+         "front": "숨죽이다",
+         "reading": null,
+         "romaji": "sumjugida",
+         "meaning": "retenir son souffle"
+        },
+        {
+         "slug": "ko-sojunghada",
+         "kind": "vocabulary",
+         "front": "소중하다",
+         "reading": null,
+         "romaji": "sojunghada",
+         "meaning": "être précieux"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "어머니는 아기가 깰세라 숨죽이며 방을 나갔다.",
+         "reading": null,
+         "fr": "De peur de réveiller le bébé, la mère sortit de la pièce en retenant son souffle."
+        },
+        {
+         "jp": "소중한 편지를 행여 잃어버릴세라 품에 꼭 안았다.",
+         "reading": null,
+         "fr": "De crainte de perdre la précieuse lettre, il la serra contre lui."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "아기가 ＿ 살금살금 걸었다.",
+         "choices": [
+          "깰세라",
+          "깨고자",
+          "깬 나머지"
+         ],
+         "answer": "깰세라",
+         "explanation": "Crainte littéraire : -(으)ㄹ세라.",
+         "translation": "De peur de réveiller le bébé, il marcha à pas de loup."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "꽃이 ＿ 조심스럽게 들고 갔다.",
+         "choices": [
+          "꺾일세라",
+          "꺾이며",
+          "꺾일 나위"
+         ],
+         "answer": "꺾일세라",
+         "explanation": "-(으)ㄹ세라 + action prudente.",
+         "translation": "De crainte que la fleur ne se brise, il la porta avec précaution."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Elle marcha à pas de loup. »",
+         "answer": [
+          "그녀는",
+          "살금살금",
+          "걸었다."
+         ],
+         "explanation": "Adverbe 살금살금 + verbe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "그는 행여 들킬세라 숨죽였다.",
+         "translation": "Il retenait son souffle de peur d’être découvert.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "들킬세라 = de peur d’être découvert."
+        }
+       ]
+      },
+      {
+       "slug": "ko-ji-aneulkka",
+       "title": "Il me semble que : -지 않을까 싶다",
+       "objective": "Donner un avis avec prudence et modestie.",
+       "minutes": 9,
+       "explanation": [
+        "-지 않을까 싶다 = je me demande si… ne… pas, il me semble que : 조금 쉬는 게 좋지 않을까 싶어요.",
+        "Façon très coréenne d’adoucir une opinion, fréquente à l’oral de l’examen et dans les débats."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-ji-aneulkka",
+         "kind": "grammar",
+         "front": "-지 않을까 싶다",
+         "reading": null,
+         "romaji": "-ji aneulkka sipda",
+         "meaning": "il me semble que (avis prudent)"
+        },
+        {
+         "slug": "ko-baramjikada",
+         "kind": "vocabulary",
+         "front": "바람직하다",
+         "reading": null,
+         "romaji": "baramjikada",
+         "meaning": "être souhaitable"
+        },
+        {
+         "slug": "ko-sinjunghada",
+         "kind": "vocabulary",
+         "front": "신중하다",
+         "reading": null,
+         "romaji": "sinjunghada",
+         "meaning": "être prudent, réfléchi"
+        },
+        {
+         "slug": "ko-jinachida",
+         "kind": "vocabulary",
+         "front": "지나치다",
+         "reading": null,
+         "romaji": "jinachida",
+         "meaning": "être excessif ; passer devant"
+        },
+        {
+         "slug": "ko-murihada",
+         "kind": "vocabulary",
+         "front": "무리하다",
+         "reading": null,
+         "romaji": "murihada",
+         "meaning": "en faire trop, forcer"
+        },
+        {
+         "slug": "ko-jeokjeolhada",
+         "kind": "vocabulary",
+         "front": "적절하다",
+         "reading": null,
+         "romaji": "jeokjeolhada",
+         "meaning": "être approprié"
+        },
+        {
+         "slug": "ko-daean",
+         "kind": "vocabulary",
+         "front": "대안",
+         "reading": null,
+         "romaji": "daean",
+         "meaning": "alternative, solution de rechange"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "지금 결정하기보다는 조금 더 신중하게 생각하는 게 바람직하지 않을까 싶습니다.",
+         "reading": null,
+         "fr": "Plutôt que de décider maintenant, il serait peut-être souhaitable d’y réfléchir encore un peu."
+        },
+        {
+         "jp": "너무 무리하면 건강을 해치지 않을까 싶어요.",
+         "reading": null,
+         "fr": "J’ai l’impression qu’à trop forcer, on risque d’abîmer sa santé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이 방법보다는 다른 대안을 찾는 게 ＿.",
+         "choices": [
+          "낫지 않을까 싶어요",
+          "나을세라요",
+          "나을 나위가 없어요"
+         ],
+         "answer": "낫지 않을까 싶어요",
+         "explanation": "Avis prudent : -지 않을까 싶다.",
+         "translation": "Il serait peut-être mieux de chercher une autre solution que cette méthode."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "그 표현은 이 자리에 ＿ 싶어요.",
+         "choices": [
+          "적절하지 않지 않을까",
+          "적절하지 않을까",
+          "적절할까 봐"
+         ],
+         "answer": "적절하지 않을까",
+         "explanation": "Il me semble que c’est approprié : -지 않을까 싶다.",
+         "translation": "Il me semble que cette expression convient à l’occasion."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "En réunion, on te demande ton avis sur un projet coûteux.",
+         "lines": [
+          {
+           "speaker": "부장님",
+           "jp": "이 계획에 대해 어떻게 생각해요?"
+          }
+         ],
+         "translation": "Ton chef demande ce que tu penses du projet.",
+         "choices": [
+          "비용이 좀 지나치지 않을까 싶습니다.",
+          "비용이 지나칠세라 기쁩니다.",
+          "비용이 지나친 바입니다."
+         ],
+         "answer": "비용이 좀 지나치지 않을까 싶습니다.",
+         "explanation": "Critique adoucie : -지 않을까 싶다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "너무 무리하지 않는 게 좋지 않을까 싶어요.",
+         "translation": "La personne conseille de forcer davantage.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "무리하지 않는 게 좋다 = mieux vaut ne pas forcer."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w6",
+   "title": "La flûte qui apaise les vagues",
+   "region": "Royaume de Gojoseon",
+   "description": "Circonstances et conséquences : -는 마당에, -(으)ㄴ 나머지, -는 통에.",
+   "boss": {
+    "name": "Manpasikjeok, la flûte des dix mille vagues",
+    "glyph": "적",
+    "intro": "Taillée dans un bambou offert par le dragon de la mer de l’Est, cette flûte apaise les tempêtes, guérit les maladies et chasse les ennemis. Elle ne joue que pour qui sait décrire le tumulte et ses conséquences."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w6-c1",
+     "title": "Dans un tel contexte…",
+     "lessons": [
+      {
+       "slug": "ko-neun-madange",
+       "title": "Alors que, dans ces circonstances : -는 마당에",
+       "objective": "Juger une action au regard d’une situation critique.",
+       "minutes": 10,
+       "explanation": [
+        "-(으)ㄴ/는 마당에 = alors que, dans une telle situation : 나라가 위기에 빠진 마당에 싸울 때가 아니다.",
+        "Souvent avec un reproche ou une question rhétorique : 이렇게 된 마당에 무엇을 망설이겠어요?"
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-neun-madange",
+         "kind": "grammar",
+         "front": "-(으)ㄴ/는 마당에",
+         "reading": null,
+         "romaji": "-(eu)n / -neun madange",
+         "meaning": "alors que, dans ces circonstances"
+        },
+        {
+         "slug": "ko-wigi",
+         "kind": "vocabulary",
+         "front": "위기",
+         "reading": null,
+         "romaji": "wigi",
+         "meaning": "crise"
+        },
+        {
+         "slug": "ko-jeonjaeng",
+         "kind": "vocabulary",
+         "front": "전쟁",
+         "reading": null,
+         "romaji": "jeonjaeng",
+         "meaning": "guerre"
+        },
+        {
+         "slug": "ko-jeok",
+         "kind": "vocabulary",
+         "front": "적",
+         "reading": null,
+         "romaji": "jeok",
+         "meaning": "ennemi"
+        },
+        {
+         "slug": "ko-piri",
+         "kind": "vocabulary",
+         "front": "피리",
+         "reading": null,
+         "romaji": "piri",
+         "meaning": "flûte"
+        },
+        {
+         "slug": "ko-pado",
+         "kind": "vocabulary",
+         "front": "파도",
+         "reading": null,
+         "romaji": "pado",
+         "meaning": "vague"
+        },
+        {
+         "slug": "ko-jamjaeuda",
+         "kind": "vocabulary",
+         "front": "잠재우다",
+         "reading": null,
+         "romaji": "jamjaeuda",
+         "meaning": "apaiser, calmer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "적이 쳐들어오는 마당에 서로 싸울 때가 아닙니다.",
+         "reading": null,
+         "fr": "Alors que l’ennemi nous envahit, ce n’est pas le moment de nous disputer."
+        },
+        {
+         "jp": "피리 소리가 거친 파도를 잠재웠다.",
+         "reading": null,
+         "fr": "Le son de la flûte apaisa les vagues déchaînées."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "회사가 어려운 ＿ 휴가를 갈 수는 없지요.",
+         "choices": [
+          "마당에",
+          "나머지",
+          "통에"
+         ],
+         "answer": "마당에",
+         "explanation": "Situation critique : -(으)ㄴ 마당에.",
+         "translation": "Alors que l’entreprise est en difficulté, je ne peux pas partir en vacances."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이미 늦은 ＿ 서두를 필요 없어요.",
+         "choices": [
+          "마당에",
+          "나머지",
+          "듯이"
+         ],
+         "answer": "마당에",
+         "explanation": "Puisque la situation est ainsi : -(으)ㄴ 마당에.",
+         "translation": "Puisqu’on est déjà en retard, inutile de se presser."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « La flûte apaisa la tempête. »",
+         "answer": [
+          "피리가",
+          "폭풍을",
+          "잠재웠다."
+         ],
+         "explanation": "Sujet + objet + 잠재우다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "나라가 위기에 빠진 마당에 모두 힘을 모았다.",
+         "translation": "Dans la crise, chacun a uni ses forces.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "힘을 모았다 = ont uni leurs forces."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eun-nameoji",
+       "title": "Si… que : -(으)ㄴ 나머지",
+       "objective": "Dire qu’un état excessif a entraîné une conséquence.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)ㄴ 나머지 = tellement…, que ; à force de : 너무 긴장한 나머지 실수를 했어요.",
+        "La conséquence est souvent négative et involontaire : 그만 (malgré soi)."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eun-nameoji",
+         "kind": "grammar",
+         "front": "-(으)ㄴ 나머지",
+         "reading": null,
+         "romaji": "-(eu)n nameoji",
+         "meaning": "tellement… que, à force de"
+        },
+        {
+         "slug": "ko-ginjanghada",
+         "kind": "vocabulary",
+         "front": "긴장하다",
+         "reading": null,
+         "romaji": "ginjanghada",
+         "meaning": "être tendu, stressé"
+        },
+        {
+         "slug": "ko-heungbunhada",
+         "kind": "vocabulary",
+         "front": "흥분하다",
+         "reading": null,
+         "romaji": "heungbunhada",
+         "meaning": "s’exciter, s’emporter"
+        },
+        {
+         "slug": "ko-jichida",
+         "kind": "vocabulary",
+         "front": "지치다",
+         "reading": null,
+         "romaji": "jichida",
+         "meaning": "être épuisé"
+        },
+        {
+         "slug": "ko-gijeolhada",
+         "kind": "vocabulary",
+         "front": "기절하다",
+         "reading": null,
+         "romaji": "gijeolhada",
+         "meaning": "s’évanouir"
+        },
+        {
+         "slug": "ko-seodureuda",
+         "kind": "vocabulary",
+         "front": "서두르다",
+         "reading": null,
+         "romaji": "seodureuda",
+         "meaning": "se dépêcher"
+        },
+        {
+         "slug": "ko-geuman",
+         "kind": "vocabulary",
+         "front": "그만",
+         "reading": null,
+         "romaji": "geuman",
+         "meaning": "sans le vouloir, malgré soi ; assez"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "너무 긴장한 나머지 그만 대사를 잊어버렸어요.",
+         "reading": null,
+         "fr": "J’étais tellement stressé que j’ai oublié mon texte."
+        },
+        {
+         "jp": "서두른 나머지 지갑을 두고 나왔어요.",
+         "reading": null,
+         "fr": "Dans ma précipitation, je suis parti sans mon portefeuille."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "너무 ＿ 나머지 소리를 질렀어요.",
+         "choices": [
+          "흥분한",
+          "흥분하는",
+          "흥분할"
+         ],
+         "answer": "흥분한",
+         "explanation": "Passé : -(으)ㄴ 나머지.",
+         "translation": "J’étais tellement excité que j’ai crié."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "하루 종일 걸어서 ＿ 나머지 바로 잠이 들었어요.",
+         "choices": [
+          "지친",
+          "지치는",
+          "지칠"
+         ],
+         "answer": "지친",
+         "explanation": "État excessif → conséquence.",
+         "translation": "J’avais tellement marché toute la journée que je me suis endormi aussitôt."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il s’est évanoui de surprise. »",
+         "answer": [
+          "너무",
+          "놀란",
+          "나머지",
+          "기절했다."
+         ],
+         "explanation": "Adverbe + -(으)ㄴ 나머지 + conséquence."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "너무 긴장한 나머지 실수를 했어요.",
+         "translation": "La personne a fait une erreur à cause du stress.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "긴장한 나머지 = tellement stressé que."
+        }
+       ]
+      },
+      {
+       "slug": "ko-neun-tonge",
+       "title": "Avec tout ce remue-ménage : -는 통에",
+       "objective": "Attribuer un désagrément à une agitation ou un tumulte.",
+       "minutes": 9,
+       "explanation": [
+        "-는 통에 = à cause de (agitation, bruit, tumulte) : 옆집이 공사하는 통에 잠을 설쳤어요.",
+        "Plus familier que -는 바람에 ; insiste sur le chaos de la situation."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-neun-tonge",
+         "kind": "grammar",
+         "front": "-는 통에",
+         "reading": null,
+         "romaji": "-neun tonge",
+         "meaning": "à cause du remue-ménage de"
+        },
+        {
+         "slug": "ko-sikkeureopda",
+         "kind": "vocabulary",
+         "front": "시끄럽다",
+         "reading": null,
+         "romaji": "sikkeureopda",
+         "meaning": "être bruyant"
+        },
+        {
+         "slug": "ko-tteodeulda",
+         "kind": "vocabulary",
+         "front": "떠들다",
+         "reading": null,
+         "romaji": "tteodeulda",
+         "meaning": "faire du bruit, bavarder bruyamment"
+        },
+        {
+         "slug": "ko-sodong",
+         "kind": "vocabulary",
+         "front": "소동",
+         "reading": null,
+         "romaji": "sodong",
+         "meaning": "tumulte, remue-ménage"
+        },
+        {
+         "slug": "ko-gongsa",
+         "kind": "vocabulary",
+         "front": "공사",
+         "reading": null,
+         "romaji": "gongsa",
+         "meaning": "travaux"
+        },
+        {
+         "slug": "ko-seolchida",
+         "kind": "vocabulary",
+         "front": "설치다",
+         "reading": null,
+         "romaji": "seolchida",
+         "meaning": "mal dormir ; s’agiter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "옆집이 공사하는 통에 밤새 잠을 설쳤어요.",
+         "reading": null,
+         "fr": "Avec les travaux chez les voisins, j’ai mal dormi toute la nuit."
+        },
+        {
+         "jp": "아이들이 떠드는 통에 전화 소리를 못 들었어요.",
+         "reading": null,
+         "fr": "Avec le vacarme des enfants, je n’ai pas entendu le téléphone."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "밖이 너무 ＿ 공부를 할 수 없었어요.",
+         "choices": [
+          "시끄러운 통에",
+          "시끄러운 마당에요",
+          "시끄러울세라"
+         ],
+         "answer": "시끄러운 통에",
+         "explanation": "Agitation → empêchement : -는 통에.",
+         "translation": "Avec tout ce bruit dehors, je n’ai pas pu étudier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "갑자기 소동이 ＿ 회의가 중단됐어요.",
+         "choices": [
+          "벌어지는 통에",
+          "벌어지고자",
+          "벌어질망정"
+         ],
+         "answer": "벌어지는 통에",
+         "explanation": "-는 통에 + conséquence.",
+         "translation": "À cause d’un tumulte soudain, la réunion a été interrompue."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « J’ai mal dormi la nuit dernière. »",
+         "answer": [
+          "어젯밤에",
+          "잠을",
+          "설쳤어요."
+         ],
+         "explanation": "잠을 설치다 = mal dormir."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "아이들이 떠드는 통에 아기가 깼어요.",
+         "translation": "Le bébé s’est réveillé à cause du bruit des enfants.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "떠드는 통에 = avec le bruit qu’ils faisaient."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w7",
+   "title": "La porte de Cheoyong",
+   "region": "Royaume de Gojoseon",
+   "description": "Prévoir l’évident : -기 십상이다, -기 일쑤이다, -(으)ㄹ 게 뻔하다.",
+   "boss": {
+    "name": "Cheoyong, le fils du dragon",
+    "glyph": "처",
+    "intro": "Trouvant l’esprit de la peste chez lui, Cheoyong ne se fâcha pas : il chanta et dansa. Confus, l’esprit promit de ne jamais franchir une porte ornée de son portrait. Il apprécie ceux qui voient venir les choses."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w7-c1",
+     "title": "C’était couru d’avance",
+     "lessons": [
+      {
+       "slug": "ko-gi-sipsang",
+       "title": "Avoir toutes les chances de : -기 십상이다",
+       "objective": "Prévenir d’un risque très probable.",
+       "minutes": 10,
+       "explanation": [
+        "-기 십상이다 = avoir toutes les chances de (résultat négatif) : 방심하면 감기에 걸리기 십상이에요.",
+        "Souvent après une condition -(으)면 : 서두르면 실수하기 십상이다."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-gi-sipsang",
+         "kind": "grammar",
+         "front": "-기 십상이다",
+         "reading": null,
+         "romaji": "-gi sipsangida",
+         "meaning": "avoir toutes les chances de (négatif)"
+        },
+        {
+         "slug": "ko-yeoksin",
+         "kind": "vocabulary",
+         "front": "역신",
+         "reading": null,
+         "romaji": "yeoksin",
+         "meaning": "esprit de la peste"
+        },
+        {
+         "slug": "ko-jeonyeombyeong",
+         "kind": "vocabulary",
+         "front": "전염병",
+         "reading": null,
+         "romaji": "jeonyeombyeong",
+         "meaning": "épidémie, maladie contagieuse"
+        },
+        {
+         "slug": "ko-peojida",
+         "kind": "vocabulary",
+         "front": "퍼지다",
+         "reading": null,
+         "romaji": "peojida",
+         "meaning": "se propager"
+        },
+        {
+         "slug": "ko-bangsimhada",
+         "kind": "vocabulary",
+         "front": "방심하다",
+         "reading": null,
+         "romaji": "bangsimhada",
+         "meaning": "relâcher son attention"
+        },
+        {
+         "slug": "ko-geollida",
+         "kind": "vocabulary",
+         "front": "걸리다",
+         "reading": null,
+         "romaji": "geollida",
+         "meaning": "attraper (une maladie) ; prendre (du temps)"
+        },
+        {
+         "slug": "ko-sonhae",
+         "kind": "vocabulary",
+         "front": "손해",
+         "reading": null,
+         "romaji": "sonhae",
+         "meaning": "perte, préjudice"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "겨울에 방심하면 감기에 걸리기 십상이에요.",
+         "reading": null,
+         "fr": "En hiver, si on relâche son attention, on a toutes les chances d’attraper un rhume."
+        },
+        {
+         "jp": "전염병은 손을 잘 씻지 않으면 퍼지기 십상이다.",
+         "reading": null,
+         "fr": "Si l’on ne se lave pas bien les mains, une épidémie a toutes les chances de se propager."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "서두르면 ＿.",
+         "choices": [
+          "실수하기 십상이에요",
+          "실수할세라요",
+          "실수할 나위가 없어요"
+         ],
+         "answer": "실수하기 십상이에요",
+         "explanation": "Risque probable : -기 십상이다.",
+         "translation": "Si on se presse, on a toutes les chances de faire une erreur."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "확인하지 않고 계약하면 손해를 ＿.",
+         "choices": [
+          "보기 십상이다",
+          "본 나머지",
+          "보는 바이다"
+         ],
+         "answer": "보기 십상이다",
+         "explanation": "-기 십상이다.",
+         "translation": "Signer sans vérifier, c’est s’exposer à une perte."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « La maladie s’est propagée dans tout le pays. »",
+         "answer": [
+          "병이",
+          "전국에",
+          "퍼졌다."
+         ],
+         "explanation": "Sujet + lieu + 퍼지다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "방심하면 병에 걸리기 십상이다.",
+         "translation": "Relâcher son attention protège des maladies.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "걸리기 십상이다 = on risque fort de tomber malade."
+        }
+       ]
+      },
+      {
+       "slug": "ko-gi-ilssu",
+       "title": "Avoir souvent tendance à : -기 일쑤이다",
+       "objective": "Décrire une mauvaise habitude fréquente.",
+       "minutes": 9,
+       "explanation": [
+        "-기 일쑤이다 = avoir souvent tendance à (négatif) : 그는 약속을 잊어버리기 일쑤예요.",
+        "Différence : -기 일쑤이다 décrit une habitude ; -기 십상이다 prédit un risque."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-gi-ilssu",
+         "kind": "grammar",
+         "front": "-기 일쑤이다",
+         "reading": null,
+         "romaji": "-gi ilssuida",
+         "meaning": "avoir souvent tendance à (négatif)"
+        },
+        {
+         "slug": "ko-deolleongdaeda",
+         "kind": "vocabulary",
+         "front": "덜렁대다",
+         "reading": null,
+         "romaji": "deolleongdaeda",
+         "meaning": "être étourdi"
+        },
+        {
+         "slug": "ko-ppatteurida",
+         "kind": "vocabulary",
+         "front": "빠뜨리다",
+         "reading": null,
+         "romaji": "ppatteurida",
+         "meaning": "oublier, omettre ; faire tomber"
+        },
+        {
+         "slug": "ko-kkamppakada",
+         "kind": "vocabulary",
+         "front": "깜빡하다",
+         "reading": null,
+         "romaji": "kkamppakada",
+         "meaning": "oublier sur le moment"
+        },
+        {
+         "slug": "ko-miruda",
+         "kind": "vocabulary",
+         "front": "미루다",
+         "reading": null,
+         "romaji": "miruda",
+         "meaning": "remettre à plus tard"
+        },
+        {
+         "slug": "ko-pinggye",
+         "kind": "vocabulary",
+         "front": "핑계",
+         "reading": null,
+         "romaji": "pinggye",
+         "meaning": "prétexte, excuse"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "동생은 덜렁대서 물건을 빠뜨리기 일쑤예요.",
+         "reading": null,
+         "fr": "Mon petit frère est étourdi : il oublie souvent ses affaires."
+        },
+        {
+         "jp": "그는 핑계를 대며 일을 미루기 일쑤였다.",
+         "reading": null,
+         "fr": "Il avait la fâcheuse habitude de remettre les choses à plus tard sous un prétexte."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "아침에 늦잠을 자서 ＿ 일쑤예요.",
+         "choices": [
+          "지각하기",
+          "지각하고자",
+          "지각한 바"
+         ],
+         "answer": "지각하기",
+         "explanation": "Mauvaise habitude : -기 일쑤이다.",
+         "translation": "Je fais souvent la grasse matinée et j’arrive souvent en retard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "바쁘면 점심을 ＿ 일쑤예요.",
+         "choices": [
+          "거르기",
+          "거른",
+          "거를세라"
+         ],
+         "answer": "거르기",
+         "explanation": "-기 일쑤이다.",
+         "translation": "Quand je suis occupé, il m’arrive souvent de sauter le déjeuner."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton collègue a encore oublié le dossier.",
+         "lines": [
+          {
+           "speaker": "동료",
+           "jp": "아, 또 서류를 깜빡했어요."
+          }
+         ],
+         "translation": "Ton collègue a encore oublié le document.",
+         "choices": [
+          "메모해 두면 잊어버리지 않을 거예요.",
+          "깜빡하기 일쑤일 나위가 없어요.",
+          "깜빡할세라 기뻐요."
+         ],
+         "answer": "메모해 두면 잊어버리지 않을 거예요.",
+         "explanation": "Conseil bienveillant."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "그는 일을 미루기 일쑤예요.",
+         "translation": "Il fait toujours tout à l’avance.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "미루기 일쑤예요 = il remet souvent à plus tard."
+        }
+       ]
+      },
+      {
+       "slug": "ko-eul-ge-ppeonhada",
+       "title": "C’est évident : -(으)ㄹ 게 뻔하다",
+       "objective": "Prédire un résultat évident.",
+       "minutes": 9,
+       "explanation": [
+        "-(으)ㄹ 게 뻔하다 = il est évident que, c’est couru d’avance : 지금 출발하면 늦을 게 뻔해요.",
+        "Proverbe proche : 불 보듯 뻔하다 (évident comme le feu qu’on regarde)."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-eul-ge-ppeonhada",
+         "kind": "grammar",
+         "front": "-(으)ㄹ 게 뻔하다",
+         "reading": null,
+         "romaji": "-(eu)l ge ppeonhada",
+         "meaning": "il est évident que"
+        },
+        {
+         "slug": "ko-gyeolmal",
+         "kind": "vocabulary",
+         "front": "결말",
+         "reading": null,
+         "romaji": "gyeolmal",
+         "meaning": "dénouement, fin"
+        },
+        {
+         "slug": "ko-yesanghada",
+         "kind": "vocabulary",
+         "front": "예상하다",
+         "reading": null,
+         "romaji": "yesanghada",
+         "meaning": "prévoir"
+        },
+        {
+         "slug": "ko-neogeureopda",
+         "kind": "vocabulary",
+         "front": "너그럽다",
+         "reading": null,
+         "romaji": "neogeureopda",
+         "meaning": "être indulgent, généreux"
+        },
+        {
+         "slug": "ko-yongseohada",
+         "kind": "vocabulary",
+         "front": "용서하다",
+         "reading": null,
+         "romaji": "yongseohada",
+         "meaning": "pardonner"
+        },
+        {
+         "slug": "ko-mulleonada",
+         "kind": "vocabulary",
+         "front": "물러나다",
+         "reading": null,
+         "romaji": "mulleonada",
+         "meaning": "se retirer, reculer"
+        },
+        {
+         "slug": "ko-eolgul",
+         "kind": "vocabulary",
+         "front": "얼굴",
+         "reading": null,
+         "romaji": "eolgul",
+         "meaning": "visage"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "처용이 너그럽게 용서하자 역신은 부끄러워 물러났다.",
+         "reading": null,
+         "fr": "Quand Cheoyong pardonna avec indulgence, l’esprit de la peste se retira, couvert de honte."
+        },
+        {
+         "jp": "그 드라마는 결말이 뻔해서 재미없어요.",
+         "reading": null,
+         "fr": "Ce feuilleton est sans intérêt : la fin est prévisible."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "지금 출발하면 ＿.",
+         "choices": [
+          "늦을 게 뻔해요",
+          "늦기 일쑤일 거예요요",
+          "늦을 나위가 없어요"
+         ],
+         "answer": "늦을 게 뻔해요",
+         "explanation": "Évidence : -(으)ㄹ 게 뻔하다.",
+         "translation": "Si on part maintenant, c’est sûr qu’on sera en retard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이렇게 준비를 안 하면 ＿.",
+         "choices": [
+          "실패할 게 뻔하다",
+          "실패하는 바이다",
+          "실패할세라"
+         ],
+         "answer": "실패할 게 뻔하다",
+         "explanation": "-(으)ㄹ 게 뻔하다.",
+         "translation": "Sans préparation, l’échec est assuré."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton ami se demande si son frère va encore dormir tard.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "동생이 내일 일찍 일어날까요?"
+          }
+         ],
+         "translation": "Ton ami demande si son frère se lèvera tôt demain.",
+         "choices": [
+          "어제도 늦게 잤으니 또 늦잠을 잘 게 뻔해요.",
+          "늦잠을 자고자 해요.",
+          "늦잠을 잘세라 기뻐요."
+         ],
+         "answer": "어제도 늦게 잤으니 또 늦잠을 잘 게 뻔해요.",
+         "explanation": "Prédiction évidente : -(으)ㄹ 게 뻔하다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "역신은 처용의 너그러움에 놀라 물러났다.",
+         "translation": "L’esprit de la peste s’est retiré devant la générosité de Cheoyong.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "물러났다 = s’est retiré."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-w8",
+   "title": "Le trône de Dangun",
+   "region": "Royaume de Gojoseon",
+   "description": "Aller au-delà, proverbes et expressions en quatre caractères.",
+   "boss": {
+    "name": "Dangun Wanggeom, le fondateur",
+    "glyph": "단",
+    "intro": "Fils de Hwanung et de la femme-ourse, Dangun fonda Gojoseon, le premier royaume coréen. Il garde la sagesse des ancêtres : proverbes et expressions que seuls les maîtres de la langue emploient avec justesse."
+   },
+   "chapters": [
+    {
+     "slug": "topik6-w8-c1",
+     "title": "La sagesse des ancêtres",
+     "lessons": [
+      {
+       "slug": "ko-geuchiji-anko",
+       "title": "Ne pas s’arrêter à : -는 데 그치지 않고",
+       "objective": "Montrer qu’une action va au-delà de ce qu’on attend.",
+       "minutes": 10,
+       "explanation": [
+        "-는 데 그치지 않고 = ne pas se contenter de…, aller au-delà : 전통을 지키는 데 그치지 않고 새롭게 발전시켰다.",
+        "Fréquent dans les textes d’analyse et de presse de niveau avancé."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-geuchiji-anko",
+         "kind": "grammar",
+         "front": "-는 데 그치지 않고",
+         "reading": null,
+         "romaji": "-neun de geuchiji anko",
+         "meaning": "ne pas se contenter de, aller au-delà"
+        },
+        {
+         "slug": "ko-jeontong",
+         "kind": "vocabulary",
+         "front": "전통",
+         "reading": null,
+         "romaji": "jeontong",
+         "meaning": "tradition"
+        },
+        {
+         "slug": "ko-gyeseunghada",
+         "kind": "vocabulary",
+         "front": "계승하다",
+         "reading": null,
+         "romaji": "gyeseunghada",
+         "meaning": "perpétuer, hériter"
+        },
+        {
+         "slug": "ko-baljeonsikida",
+         "kind": "vocabulary",
+         "front": "발전시키다",
+         "reading": null,
+         "romaji": "baljeonsikida",
+         "meaning": "développer, faire progresser"
+        },
+        {
+         "slug": "ko-huse",
+         "kind": "vocabulary",
+         "front": "후세",
+         "reading": null,
+         "romaji": "huse",
+         "meaning": "la postérité"
+        },
+        {
+         "slug": "ko-gaeguk",
+         "kind": "vocabulary",
+         "front": "개국",
+         "reading": null,
+         "romaji": "gaeguk",
+         "meaning": "fondation d’un pays"
+        },
+        {
+         "slug": "ko-gaecheonjeol",
+         "kind": "vocabulary",
+         "front": "개천절",
+         "reading": null,
+         "romaji": "gaecheonjeol",
+         "meaning": "fête de la Fondation nationale (3 octobre)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "그들은 전통을 계승하는 데 그치지 않고 새롭게 발전시켰다.",
+         "reading": null,
+         "fr": "Ils ne se sont pas contentés de perpétuer la tradition : ils l’ont renouvelée."
+        },
+        {
+         "jp": "개천절은 단군이 고조선을 세운 것을 기념하는 날이다.",
+         "reading": null,
+         "fr": "Gaecheonjeol commémore la fondation de Gojoseon par Dangun."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "그는 문제를 ＿ 해결 방법까지 제시했다.",
+         "choices": [
+          "지적하는 데 그치지 않고",
+          "지적한 나머지",
+          "지적할세라"
+         ],
+         "answer": "지적하는 데 그치지 않고",
+         "explanation": "Aller au-delà : -는 데 그치지 않고.",
+         "translation": "Il ne s’est pas contenté de signaler le problème : il a aussi proposé une solution."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "이 축제는 전통을 후세에 ＿ 중요한 역할을 한다.",
+         "choices": [
+          "전하는 데",
+          "전한 나머지",
+          "전할 게 뻔한"
+         ],
+         "answer": "전하는 데",
+         "explanation": "-는 데 (역할을 하다) : rôle dans…",
+         "translation": "Ce festival joue un rôle important dans la transmission de la tradition à la postérité."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Dangun fonda Gojoseon. »",
+         "answer": [
+          "단군이",
+          "고조선을",
+          "세웠다."
+         ],
+         "explanation": "Sujet + objet + 세우다."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "개천절은 단군의 개국을 기념하는 날이다.",
+         "translation": "Gaecheonjeol célèbre la fondation du pays par Dangun.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "개국 = fondation du pays."
+        }
+       ]
+      },
+      {
+       "slug": "ko-sokdam",
+       "title": "Les proverbes (속담)",
+       "objective": "Comprendre et employer les proverbes coréens les plus courants.",
+       "minutes": 12,
+       "explanation": [
+        "Les proverbes (속담) sont très présents au TOPIK II : on vous demande souvent lequel convient à une situation.",
+        "Beaucoup reposent sur des images de la vie paysanne : le bœuf, l’étable, les oiseaux, les souris."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-sokdam",
+         "kind": "grammar",
+         "front": "속담",
+         "reading": null,
+         "romaji": "sokdam",
+         "meaning": "proverbe"
+        },
+        {
+         "slug": "ko-sokdam-gameun",
+         "kind": "vocabulary",
+         "front": "가는 말이 고와야 오는 말이 곱다",
+         "reading": null,
+         "romaji": "ganeun mari gowaya oneun mari gopda",
+         "meaning": "qui parle bien reçoit de bonnes paroles"
+        },
+        {
+         "slug": "ko-sokdam-natmal",
+         "kind": "vocabulary",
+         "front": "낮말은 새가 듣고 밤말은 쥐가 듣는다",
+         "reading": null,
+         "romaji": "nanmareun saega deutgo bammareun jwiga deunneunda",
+         "meaning": "les murs ont des oreilles"
+        },
+        {
+         "slug": "ko-sokdam-baekji",
+         "kind": "vocabulary",
+         "front": "백지장도 맞들면 낫다",
+         "reading": null,
+         "romaji": "baekjijangdo matdeulmyeon natda",
+         "meaning": "l’union fait la force"
+        },
+        {
+         "slug": "ko-sokdam-haneul",
+         "kind": "vocabulary",
+         "front": "하늘이 무너져도 솟아날 구멍이 있다",
+         "reading": null,
+         "romaji": "haneuri muneojyeodo sosanal gumeongi itda",
+         "meaning": "il y a toujours une issue"
+        },
+        {
+         "slug": "ko-sokdam-so",
+         "kind": "vocabulary",
+         "front": "소 잃고 외양간 고친다",
+         "reading": null,
+         "romaji": "so ilko oeyanggan gochinda",
+         "meaning": "fermer l’écurie quand le cheval s’est enfui"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "백지장도 맞들면 낫다고, 같이 하면 금방 끝날 거예요.",
+         "reading": null,
+         "fr": "L’union fait la force : à plusieurs, ce sera vite fini."
+        },
+        {
+         "jp": "사고가 난 후에 안전 점검을 하다니, 소 잃고 외양간 고치는 격이네요.",
+         "reading": null,
+         "fr": "Contrôler la sécurité après l’accident : c’est fermer l’écurie après la fuite du cheval."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "가는 말이 고와야 ＿.",
+         "choices": [
+          "오는 말이 곱다",
+          "외양간 고친다",
+          "솟아날 구멍이 있다"
+         ],
+         "answer": "오는 말이 곱다",
+         "explanation": "Proverbe complet : 가는 말이 고와야 오는 말이 곱다.",
+         "translation": "Qui parle bien reçoit de bonnes paroles."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton ami raconte un secret à voix haute dans un café bondé.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "이건 비밀인데요, 우리 부장님이…"
+          }
+         ],
+         "translation": "Ton ami commence à révéler un secret sur son chef.",
+         "choices": [
+          "쉿! 낮말은 새가 듣고 밤말은 쥐가 들어요.",
+          "소 잃고 외양간 고쳐요.",
+          "백지장도 맞들면 나아요."
+         ],
+         "answer": "쉿! 낮말은 새가 듣고 밤말은 쥐가 들어요.",
+         "explanation": "Les murs ont des oreilles."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Ton amie désespère après un gros échec.",
+         "lines": [
+          {
+           "speaker": "친구",
+           "jp": "이제 아무 방법도 없는 것 같아요."
+          }
+         ],
+         "translation": "Ton amie pense qu’il n’y a plus aucune solution.",
+         "choices": [
+          "하늘이 무너져도 솟아날 구멍이 있다잖아요.",
+          "소 잃고 외양간 고친다잖아요.",
+          "가는 말이 고와야 해요."
+         ],
+         "answer": "하늘이 무너져도 솟아날 구멍이 있다잖아요.",
+         "explanation": "Il y a toujours une issue."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "「소 잃고 외양간 고친다」는 미리 준비하는 것을 칭찬하는 말이다.",
+         "translation": "Ce proverbe félicite celui qui se prépare à l’avance.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Il critique celui qui agit trop tard."
+        }
+       ]
+      },
+      {
+       "slug": "ko-sajaseongeo",
+       "title": "Expressions en quatre caractères (사자성어)",
+       "objective": "Comprendre les expressions sino-coréennes en quatre syllabes.",
+       "minutes": 12,
+       "explanation": [
+        "Les 사자성어 viennent du chinois classique : quatre syllabes qui résument une idée, comme 일석이조 (une pierre, deux oiseaux).",
+        "On les retrouve dans la presse, les discours et les questions de lecture du TOPIK II."
+       ],
+       "items": [
+        {
+         "slug": "gram-ko-sajaseongeo",
+         "kind": "grammar",
+         "front": "사자성어",
+         "reading": null,
+         "romaji": "sajaseongeo",
+         "meaning": "expression en quatre caractères"
+        },
+        {
+         "slug": "ko-ilseogijo",
+         "kind": "vocabulary",
+         "front": "일석이조",
+         "reading": null,
+         "romaji": "ilseogijo",
+         "meaning": "faire d’une pierre deux coups"
+        },
+        {
+         "slug": "ko-uwangjwawang",
+         "kind": "vocabulary",
+         "front": "우왕좌왕",
+         "reading": null,
+         "romaji": "uwangjwawang",
+         "meaning": "aller dans tous les sens, s’affoler"
+        },
+        {
+         "slug": "ko-dongmunseodap",
+         "kind": "vocabulary",
+         "front": "동문서답",
+         "reading": null,
+         "romaji": "dongmunseodap",
+         "meaning": "répondre à côté de la question"
+        },
+        {
+         "slug": "ko-jaksimsamil",
+         "kind": "vocabulary",
+         "front": "작심삼일",
+         "reading": null,
+         "romaji": "jaksimsamil",
+         "meaning": "bonnes résolutions sans lendemain"
+        },
+        {
+         "slug": "ko-geumsichomun",
+         "kind": "vocabulary",
+         "front": "금시초문",
+         "reading": null,
+         "romaji": "geumsichomun",
+         "meaning": "première nouvelle"
+        },
+        {
+         "slug": "ko-jaeopjadeuk",
+         "kind": "vocabulary",
+         "front": "자업자득",
+         "reading": null,
+         "romaji": "jaeopjadeuk",
+         "meaning": "on récolte ce qu’on a semé"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "운동도 하고 출퇴근도 하니 자전거 출근은 일석이조예요.",
+         "reading": null,
+         "fr": "Aller au travail à vélo, c’est faire d’une pierre deux coups : on fait du sport et on se déplace."
+        },
+        {
+         "jp": "새해 계획이 또 작심삼일로 끝났어요.",
+         "reading": null,
+         "fr": "Mes résolutions du Nouvel An n’ont encore tenu que trois jours."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "매년 운동을 결심하지만 늘 ＿로 끝나요.",
+         "choices": [
+          "작심삼일",
+          "일석이조",
+          "금시초문"
+         ],
+         "answer": "작심삼일",
+         "explanation": "Résolution abandonnée : 작심삼일.",
+         "translation": "Chaque année je décide de faire du sport, mais ça ne dure jamais."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Un collègue t’annonce une nouvelle que tu ignorais.",
+         "lines": [
+          {
+           "speaker": "동료",
+           "jp": "김 대리가 다음 달에 회사를 그만둔대요."
+          }
+         ],
+         "translation": "Ton collègue dit que M. Kim quitte l’entreprise.",
+         "choices": [
+          "정말요? 금시초문이에요.",
+          "일석이조네요.",
+          "동문서답이에요."
+         ],
+         "answer": "정말요? 금시초문이에요.",
+         "explanation": "Première nouvelle : 금시초문."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "갑자기 불이 나자 사람들은 ＿하며 어쩔 줄 몰랐다.",
+         "choices": [
+          "우왕좌왕",
+          "자업자득",
+          "일석이조"
+         ],
+         "answer": "우왕좌왕",
+         "explanation": "Courir en tous sens : 우왕좌왕.",
+         "translation": "Quand le feu se déclara, les gens couraient en tous sens sans savoir quoi faire."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "「자업자득」은 자기가 한 일의 결과를 자기가 받는다는 뜻이다.",
+         "translation": "L’expression signifie qu’on récolte ce qu’on a semé.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "자업자득 = on subit les conséquences de ses actes."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "topik6-final",
+   "title": "Simulation TOPIK II — niveau 6",
+   "region": "Royaume de Gojoseon",
+   "description": "Dernière épreuve : l’examen blanc au format du TOPIK II (version abrégée) avec les questions les plus difficiles, noté sur 300. Il faut 230 points pour obtenir le niveau 6, le plus haut du TOPIK.",
+   "exam": "topik6-official",
+   "chapters": []
+  }
+ ]
+}

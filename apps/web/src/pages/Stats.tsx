@@ -9,6 +9,7 @@ import { CountUp, Flame } from '../components/Celebrate';
 import { ErrorBox, PageTitle, Spinner } from '../components/ui';
 import { KIND_LABEL, MASTERY_COLOR, MASTERY_LABEL, formatDuration } from '../lib/format';
 import { Sprout } from '../components/Illustrations';
+import { useStudyLang } from '../components/StudyLanguage';
 import { T, DATE_LOCALE } from '../i18n';
 
 const shortDate = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString(DATE_LOCALE, { day: 'numeric', month: 'short' });
@@ -75,8 +76,18 @@ export function StatsPage() {
   const { data: s, isLoading, error, refetch } = useStats();
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
-  const { data: n5 } = usePath('N5');
-  const { data: n4 } = usePath('N4');
+  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen.
+  const ko = useStudyLang().ko;
+  const { data: n5 } = usePath(ko ? 'TOPIK1' : 'N5');
+  const { data: n4 } = usePath(ko ? 'TOPIK2' : 'N4');
+  const { data: topik3 } = usePath('TOPIK3');
+  const { data: topik4 } = usePath('TOPIK4');
+  const third = ko ? topik3 : undefined;
+  const fourth = ko ? topik4 : undefined;
+  const { data: topik5 } = usePath('TOPIK5');
+  const { data: topik6 } = usePath('TOPIK6');
+  const fifth = ko ? topik5 : undefined;
+  const sixth = ko ? topik6 : undefined;
   if (isLoading) return <Spinner />;
   if (error || !s) return <ErrorBox error={error} onRetry={refetch} />;
 
@@ -85,7 +96,7 @@ export function StatsPage() {
   const daily = s.days.map((d) => ({ ...d, label: shortDate(d.date), accuracy: d.answers ? Math.round((d.correct / d.answers) * 100) : null, minutes: Math.round(d.seconds / 60) }));
   const last14 = s.days.slice(-14);
   const activeDays = last14.filter((x) => x.answers > 0).length;
-  const bosses = [...(n5?.worlds ?? []), ...(n4?.worlds ?? [])].filter((w) => w.boss).map((w) => ({ slug: w.slug, island: w.title, ...w.boss! }));
+  const bosses = [...(n5?.worlds ?? []), ...(n4?.worlds ?? []), ...(third?.worlds ?? []), ...(fourth?.worlds ?? []), ...(fifth?.worlds ?? []), ...(sixth?.worlds ?? [])].filter((w) => w.boss).map((w) => ({ slug: w.slug, island: w.title, ...w.boss! }));
   const defeated = bosses.filter((b) => b.defeated).length;
   const bestExam = s.exams.length ? Math.max(...s.exams.map((e) => e.percent)) : null;
   const needsCare = s.masteryDistribution.fragile + s.masteryDistribution.urgent;

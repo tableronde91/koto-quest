@@ -10,6 +10,7 @@ import { Stamp } from '../components/Celebrate';
 import { MASTERY_COLOR, MASTERY_LABEL } from '../lib/format';
 import { speak, speechSupported } from '../lib/speech';
 import { T } from '../i18n';
+import { langOf } from '../lib/format';
 
 const REGISTER: Record<ExpressionRegister, { label: string; hint: string; color: string; bg: string }> = {
   polite: { label: T('Poli'), hint: T('Pour la plupart des situations, avec des inconnus et en public.'), color: '#1F5FA8', bg: '#E3EEFA' },
@@ -77,7 +78,7 @@ export function ExpressionsPage() {
                   onClick={() => setParams({ t: t.slug }, { replace: true })}
                   className={`flex items-center gap-2.5 rounded-2xl border-2 p-2.5 text-left transition-colors ${active ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}
                 >
-                  <span aria-hidden="true" lang="ja" className={`jp flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl font-black ${active ? 'bg-gold text-[#2a1a00]' : 'bg-surface-2'}`}>{t.glyph}</span>
+                  <span aria-hidden="true" lang={langOf(t.glyph)} className={`jp flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl font-black ${active ? 'bg-gold text-[#2a1a00]' : 'bg-surface-2'}`}>{t.glyph}</span>
                   <span className="min-w-0">
                     <span className="block text-sm font-bold leading-tight">{t.title}</span>
                     <span className={`block text-xs ${active ? 'opacity-80' : 'text-ink-soft'}`}>{T('{0}/{1} vues', [t.learned, t.total])}{t.due > 0 ? ` · ${T('{0} à revoir', [t.due])}` : ''}</span>
@@ -90,7 +91,7 @@ export function ExpressionsPage() {
           <section aria-label={theme.title} className="flex flex-col gap-5">
             <div className="flex flex-col gap-4 rounded-3xl bg-ink p-5 text-paper sm:flex-row sm:items-center sm:justify-between sm:p-6">
               <div className="flex flex-1 items-center gap-4">
-                <span aria-hidden="true" lang="ja" className="jp hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gold text-4xl font-black text-[#2a1a00] sm:flex">{theme.glyph}</span>
+                <span aria-hidden="true" lang={langOf(theme.glyph)} className="jp hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gold text-4xl font-black text-[#2a1a00] sm:flex">{theme.glyph}</span>
                 <div className="flex-1">
                   <h2 className="text-2xl">{theme.title}</h2>
                   <p className="max-w-[52ch] opacity-85">{theme.description}</p>
@@ -157,8 +158,8 @@ function ExpressionCard({ e, themeTitle }: { e: ExpressionDto; themeTitle?: stri
     <article className="flex h-full flex-col gap-3 rounded-3xl border border-line bg-surface p-5" data-testid="expression">
       <div className="flex items-start gap-3">
         <div className="min-w-0 flex-1">
-          <p lang="ja" className="jp text-2xl font-bold leading-snug sm:text-3xl">{e.front}</p>
-          {e.reading && e.reading !== e.front && <p lang="ja" className="jp text-ink-soft">{e.reading}</p>}
+          <p lang={langOf(e.front)} className="jp text-2xl font-bold leading-snug sm:text-3xl">{e.front}</p>
+          {e.reading && e.reading !== e.front && <p lang={langOf(e.reading)} className="jp text-ink-soft">{e.reading}</p>}
           {e.romaji && <p className="text-sm italic text-ink-soft">{e.romaji}</p>}
         </div>
         <ListenButton text={speakable} label={T('Écouter {0}', [e.front])} />
@@ -172,7 +173,7 @@ function ExpressionCard({ e, themeTitle }: { e: ExpressionDto; themeTitle?: stri
       {e.example && (
         <div className="mt-auto flex items-start gap-3 rounded-2xl bg-surface-2 p-3">
           <div className="flex-1">
-            <p lang="ja" className="jp text-lg">{e.example.jp}</p>
+            <p lang={langOf(e.example.jp)} className="jp text-lg">{e.example.jp}</p>
             <p className="text-sm text-ink-soft">{e.example.fr}</p>
           </div>
           <ListenButton small text={e.example.jp} label={T('Écouter l’exemple')} />

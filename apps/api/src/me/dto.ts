@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { ArrayMaxSize, IsArray, IsBoolean, IsIn, IsInt, IsISO8601, IsOptional, IsString, Length, Max, Min, ValidateIf } from 'class-validator';
-import { DIFFICULT_AREAS, JLPT_LEVELS } from '@koto/shared';
+import { DIFFICULT_AREAS, JLPT_LEVELS, STUDY_LANGUAGE_CODES } from '@koto/shared';
 
 const SELF_LEVELS = ['beginner', 'kana', 'basics', 'n5', 'n4plus'];
 
@@ -13,6 +13,7 @@ export class OnboardingDto {
   @ApiProperty({ enum: ['off', 'calm', 'normal', 'intense', 'custom'] }) @IsIn(['off', 'calm', 'normal', 'intense', 'custom']) reminderMode: string;
   @ApiPropertyOptional() @IsOptional() @IsString() @Length(1, 64) timezone?: string;
   @ApiPropertyOptional({ enum: ['fr', 'en'] }) @IsOptional() @IsIn(['fr', 'en']) locale?: string;
+  @ApiPropertyOptional({ enum: STUDY_LANGUAGE_CODES }) @IsOptional() @IsIn(STUDY_LANGUAGE_CODES) studyLanguage?: string;
 }
 
 export class PreferencesDto {
@@ -27,6 +28,7 @@ export class PreferencesDto {
   @IsOptional() @IsBoolean() reducedMotion?: boolean;
   @IsOptional() @IsIn(['fr', 'en']) locale?: string;
   @IsOptional() @IsString() @Length(1, 40) displayName?: string;
+  @IsOptional() @IsIn(STUDY_LANGUAGE_CODES) studyLanguage?: string;
 }
 
 export class DeleteAccountDto {

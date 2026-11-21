@@ -12,6 +12,7 @@ import { Confetti, CountUp, Stamp, useCalm } from '../components/Celebrate';
 import { CrossedSwords, HpPlate, RankBadge } from '../components/DuelBits';
 import { T } from '../i18n';
 import { AddFriendButton, FriendsChallengeCard } from '../components/Friends';
+import { langOf } from '../lib/format';
 
 const JP_RE = /[぀-ヿ一-龯]/;
 const KIND_LABEL = { ranked: T("Classé"), friendly: T("Amical"), practice: T("Entraînement") } as const;
@@ -438,7 +439,7 @@ export function DuelArenaPage() {
             </div>
             {(q.display?.jp || q.display?.text) && (
               <div className="flex min-h-24 flex-col items-center justify-center rounded-3xl bg-surface-2 p-4 text-center">
-                {q.display?.jp && <p lang="ja" className={`jp font-bold ${[...q.display.jp].length <= 3 ? 'text-6xl' : 'text-4xl'}`}>{q.display.jp}</p>}
+                {q.display?.jp && <p lang={langOf(q.display.jp)} className={`jp font-bold ${[...q.display.jp].length <= 3 ? 'text-6xl' : 'text-4xl'}`}>{q.display.jp}</p>}
                 {q.display?.text && <p className={q.display.jp ? 'text-ink-soft' : 'text-2xl font-bold'}>{q.display.text}</p>}
               </div>
             )}
@@ -640,7 +641,7 @@ function RevealView({ s }: { s: DuelStateDto }) {
   return (
     <motion.section initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3" aria-live="polite">
       <div className="rounded-3xl bg-surface-2 p-4 text-center">
-        <p className="text-sm text-ink-soft">{last.question.prompt} {last.question.display?.jp && <span lang="ja" className="jp font-bold text-ink">{last.question.display.jp}</span>}</p>
+        <p className="text-sm text-ink-soft">{last.question.prompt} {last.question.display?.jp && <span lang={langOf(last.question.display.jp)} className="jp font-bold text-ink">{last.question.display.jp}</span>}</p>
         <p className="mt-1 text-lg">{T("Réponse :")}{' '}<strong lang={JP_RE.test(last.answer) ? 'ja' : 'fr'} className={JP_RE.test(last.answer) ? 'jp text-2xl' : ''}>{last.answer}</strong>
         </p>
       </div>

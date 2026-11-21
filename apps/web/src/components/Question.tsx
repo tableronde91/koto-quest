@@ -9,6 +9,7 @@ import { Jp, SpeakButtons } from './ui';
 import { FloatingXp } from './Celebrate';
 import { ExamSentence } from './ExamQuestion';
 import { T } from '../i18n';
+import { langOf } from '../lib/format';
 
 interface Props {
   question: IssuedQuestionDto;
@@ -216,7 +217,7 @@ function SentenceWithBlank({ text, fill, className }: { text: string; fill: stri
         ),
       );
   });
-  return <span lang="ja" className={`jp ${className}`}>{nodes}</span>;
+  return <span lang={langOf(nodes)} className={`jp ${className}`}>{nodes}</span>;
 }
 
 /** Zone d'affichage principale : grand glyphe, phrase, dialogue ou bouton d'écoute. */
@@ -249,7 +250,7 @@ function Stage({ q, furigana, result, afterText }: { q: IssuedQuestionDto; furig
         {reply && (
           <p className="grid grid-cols-[4.5rem_1fr] items-baseline gap-3">
             <span className="text-sm font-bold text-ink-soft">{T("Toi")}</span>
-            <span lang="ja" className="jp text-2xl"><mark className="rounded-md bg-gold px-1 text-[#2a1a00]">{reply}</mark></span>
+            <span lang={langOf(reply)} className="jp text-2xl"><mark className="rounded-md bg-gold px-1 text-[#2a1a00]">{reply}</mark></span>
           </p>
         )}
         {d.text && <p className="text-ink-soft">{d.text}</p>}
@@ -264,7 +265,7 @@ function Stage({ q, furigana, result, afterText }: { q: IssuedQuestionDto; furig
   if (d.part && d.jp) {
     return (
       <div className="relative flex min-h-36 flex-col items-center justify-center gap-2 rounded-3xl bg-surface-2 px-12 py-6 text-center">
-        <span lang="ja" className="jp absolute left-4 top-3 text-xs font-bold text-ink-soft">{d.part}</span>
+        <span lang={langOf(d.part)} className="jp absolute left-4 top-3 text-xs font-bold text-ink-soft">{d.part}</span>
         <ExamSentence text={d.jp} className="text-3xl font-bold leading-loose sm:text-4xl" />
         {d.text && <p className="text-ink-soft">{d.text}</p>}
         {speaker}
@@ -423,7 +424,7 @@ function Matching({ pairs, disabled, onSubmit, result }: { pairs: { left: string
               style={{ borderColor: ok === null ? (active === i ? 'var(--ink)' : 'var(--line)') : ok ? 'var(--ok)' : 'var(--ko)' }}
             >
               {badge(assign[i] !== undefined ? i : undefined)}
-              <span lang="ja" className="jp min-w-0 flex-1 break-all text-lg leading-tight sm:text-2xl">{l}</span>
+              <span lang={langOf(l)} className="jp min-w-0 flex-1 break-all text-lg leading-tight sm:text-2xl">{l}</span>
             </button>,
             <button
               key={`r-${r}`}
@@ -445,7 +446,7 @@ function Matching({ pairs, disabled, onSubmit, result }: { pairs: { left: string
         <ul className="rounded-2xl bg-surface-2 p-3 text-sm">
           {pairs.left.map((l, i) => (
             <li key={l} className="grid grid-cols-[1fr_auto_1fr] gap-2">
-              <span lang="ja" className="jp text-right">{l}</span>
+              <span lang={langOf(l)} className="jp text-right">{l}</span>
               <span aria-hidden="true">=</span>
               <span className={expected[i] === assign[i] ? '' : 'font-bold text-ko'}>{expected[i]}</span>
             </li>

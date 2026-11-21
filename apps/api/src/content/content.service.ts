@@ -1,14 +1,14 @@
 import { ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { EngineItem, ItemKind, exampleIndex, focusedPool, masteryOf } from '@koto/learning-engine';
-import type { JlptCode, LessonDto, LessonStatus, PathDto, SelfLevel } from '@koto/shared';
+import { languageOfLevel, type JlptCode, type LessonDto, type LessonStatus, type PathDto, type SelfLevel } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { toCardState } from '../learning/card-mapper';
 
 /** Monde de départ selon le niveau déclaré à l'onboarding (en attendant le test de positionnement). */
 export function startWorldOrder(selfLevel: string, levelCode = 'N5'): number {
-  // Seul le N5 commence par les kana : les autres niveaux s'ouvrent toujours au premier monde.
-  if (levelCode !== 'N5') return 1;
+  // Seuls les premiers niveaux (N5, TOPIK 1) commencent par l'écriture (kana, hangeul) : les autres s'ouvrent au premier monde.
+  if (levelCode !== 'N5' && levelCode !== 'TOPIK1') return 1;
   return (['kana', 'basics', 'n5', 'n4plus'] as SelfLevel[]).includes(selfLevel as SelfLevel) ? 3 : 1;
 }
 
@@ -104,8 +104,8 @@ export class ContentService {
     return candidates.find((s) => ['available', 'in_progress'].includes(status.get(s.lessonId)!)) ?? null;
   }
 
-  /** Niveaux disponibles (du plus facile au plus difficile) avec la progression de l'utilisateur. */
-  async levelsOverview(userId: string): Promise<PathDto['levels']> {
+  /** Niveaux disponibles d'une langue (du plus facile au plus difficile) avec la progression de l'utilisateur. */
+  async levelsOverview(userId: string, language = 'ja'): Promise<PathDto['levels']> {
     const [levels, done] = await Promise.all([
       this.prisma.jlptLevel.findMany({ orderBy: { order: 'desc' }, include: { worlds: { include: { chapters: { include: { _count: { select: { lessons: true } } } } } } } }),
       this.prisma.userLessonProgress.findMany({ where: { userId, status: 'completed' }, include: { lesson: { select: { chapter: { select: { world: { select: { levelCode: true } } } } } } } }),
@@ -117,15 +117,15 @@ export class ContentService {
         lessons: l.worlds.reduce((n, w) => n + w.chapters.reduce((m, c) => m + c._count.lessons, 0), 0),
         completed: done.filter((d) => d.lesson.chapter.world.levelCode === l.code).length,
       }))
-      .filter((l) => l.lessons > 0);
+      .filter((l) => l.lessons > 0 && languageOfLevel(l.code) === language);
   }
 
   /**
    * Prochaine leçon conseillée : d'abord dans le niveau visé, puis dans les niveaux suivants
-   * (N5 → N4 → …), enfin dans les niveaux plus faciles s'il en reste.
+   * (N5 → N4 → …), enfin dans les niveaux plus faciles s'il en reste. Toujours dans la langue du niveau visé.
    */
   async nextLessonAnyLevel(userId: string, preferred: string) {
-    const levels = await this.prisma.jlptLevel.findMany({ orderBy: { order: 'desc' }, select: { code: true, order: true } });
+    const levels = (await this.prisma.jlptLevel.findMany({ orderBy: { order: 'desc' }, select: { code: true, order: true } })).filter((l) => languageOfLevel(l.code) === languageOfLevel(preferred));
     const pref = levels.find((l) => l.code === preferred);
     const ordered = pref ? [pref, ...levels.filter((l) => l.order < pref.order), ...levels.filter((l) => l.order > pref.order).reverse()] : levels;
     for (const l of ordered) {
@@ -158,7 +158,7 @@ export class ContentService {
     const bossBy = new Map(bossResults.map((b) => [b.worldSlug, b]));
     return {
       level: { code: level.code as JlptCode, title: level.title, region: level.region, notice: level.notice },
-      levels: await this.levelsOverview(userId),
+      levels: await this.levelsOverview(userId, languageOfLevel(levelCode)),
       worlds: worlds.map((w) => {
         const lessons = w.chapters.flatMap((c) => c.lessons);
         return {
