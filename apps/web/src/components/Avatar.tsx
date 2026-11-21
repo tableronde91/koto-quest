@@ -64,6 +64,55 @@ function Background({ sku, clip }: { sku: string | null; clip: string }) {
           <circle cx="160" cy="30" r="6" fill="#F0B552" />
         </g>
       );
+    case 'bg-palace':
+      return (
+        <g clipPath={`url(#${clip})`}>
+          <rect width="200" height="220" fill="#F3E6CF" />
+          <circle cx="160" cy="36" r="14" fill="#E9875A" />
+          <rect x="-10" y="150" width="220" height="70" fill="#C9B79A" />
+          <rect x="20" y="96" width="160" height="58" fill="#F4EEDF" />
+          <g fill="#B23A3A">
+            <rect x="26" y="96" width="9" height="58" />
+            <rect x="70" y="96" width="9" height="58" />
+            <rect x="121" y="96" width="9" height="58" />
+            <rect x="165" y="96" width="9" height="58" />
+          </g>
+          <rect x="18" y="88" width="164" height="9" fill="#2E8B7A" />
+          <path d="M18 92 H182" stroke="#E2B84A" strokeWidth="2" />
+          <path d="M-8 90 Q8 78 24 72 H176 Q192 78 208 90 Q100 76 -8 90Z" fill="#3A3F46" />
+          <path d="M24 72 Q100 54 176 72 L168 58 H32Z" fill="#3A3F46" />
+          <path d="M32 58 H168" stroke="#272B31" strokeWidth="3" />
+        </g>
+      );
+    case 'bg-hanok':
+      return (
+        <g clipPath={`url(#${clip})`}>
+          <rect width="200" height="220" fill="#22305E" />
+          <circle cx="150" cy="44" r="18" fill="#FFF3C4" />
+          <circle cx="145" cy="40" r="3" fill="#EADBA0" />
+          <circle cx="156" cy="50" r="2" fill="#EADBA0" />
+          <circle cx="30" cy="30" r="1.8" fill="#F6E7B0" />
+          <circle cx="70" cy="18" r="1.5" fill="#F6E7B0" />
+          <circle cx="110" cy="34" r="1.5" fill="#F6E7B0" />
+          <rect x="-4" y="148" width="62" height="72" fill="#F4EEDF" />
+          <path d="M-14 152 Q10 132 68 138 L64 148 Q10 144 -14 162Z" fill="#2B2F36" />
+          <rect x="10" y="166" width="14" height="18" fill="#F2B84B" opacity={0.85} />
+          <rect x="146" y="144" width="64" height="76" fill="#F4EEDF" />
+          <path d="M136 146 Q190 128 214 134 L214 154 Q190 140 140 156Z" fill="#2B2F36" />
+          <rect x="174" y="164" width="14" height="18" fill="#F2B84B" opacity={0.85} />
+        </g>
+      );
+    case 'bg-east-sea':
+      return (
+        <g clipPath={`url(#${clip})`}>
+          <rect width="200" height="220" fill="#CDEBF2" />
+          <circle cx="40" cy="44" r="16" fill="#F29A3A" />
+          <path d="M150 124 C170 92 198 102 190 72 C186 58 172 60 176 46" stroke="#2F8F7A" strokeWidth="10" fill="none" strokeLinecap="round" />
+          <path d="M172 48 L186 36 L183 52Z" fill="#E7B53B" />
+          <path d="M-10 140 Q20 128 50 140 T110 140 T170 140 T230 140 V220 H-10Z" fill="#3F8FD9" />
+          <path d="M-10 168 Q20 156 50 168 T110 168 T170 168 T230 168 V220 H-10Z" fill="#2F6FB0" />
+        </g>
+      );
     default:
       return (
         <g clipPath={`url(#${clip})`}>
@@ -105,6 +154,26 @@ function Outfit({ sku }: { sku: string | null }) {
           <path d="M84 168 L100 196 L116 168" fill="none" stroke="#C9C3B8" strokeWidth="4" />
           <path d="M46 198 H154 L162 222 H38Z" fill="#4A3A6B" />
           <path d="M80 198 V222 M100 198 V222 M120 198 V222" stroke="#382B54" strokeWidth="2" />
+        </g>
+      );
+    case 'outfit-hanbok':
+      return (
+        <g>
+          <path d={body} fill="#C8323F" />
+          <path d="M38 202 C42 178 64 166 100 166 C136 166 158 178 162 202 Q100 212 38 202Z" fill="#F2C94C" />
+          <path d="M44 194 L60 190 M42 200 L58 196" stroke="#2E8B7A" strokeWidth="3" />
+          <path d="M156 194 L140 190 M158 200 L142 196" stroke="#2E8B7A" strokeWidth="3" />
+          <path d="M84 168 L100 192 L116 168" fill="none" stroke="#FFFFFF" strokeWidth="5" />
+          <path d="M100 192 Q94 206 88 222 M100 192 Q108 206 112 220" stroke="#8E3B8E" strokeWidth="5" fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case 'outfit-durumagi':
+      return (
+        <g>
+          <path d={body} fill="#5E7A9A" />
+          <path d="M84 168 L100 196 L116 168" fill="none" stroke="#FFFFFF" strokeWidth="5" />
+          <path d="M100 196 V222" stroke="#4A6280" strokeWidth="3" />
+          <path d="M100 196 Q90 206 88 216 M100 196 Q108 208 112 214" stroke="#E9D9B0" strokeWidth="4" fill="none" strokeLinecap="round" />
         </g>
       );
     default:
@@ -210,6 +279,29 @@ function Hat({ sku }: { sku: string | null }) {
           <path d="M130 70 L138 40 L116 64Z" />
         </g>
       );
+    case 'hat-binyeo':
+      return (
+        <g transform="rotate(-8 100 60)">
+          <rect x="58" y="58" width="86" height="5" rx="2.5" fill="#E2B84A" stroke="#A57E22" strokeWidth="1" />
+          <circle cx="58" cy="60.5" r="6.5" fill="#C8323F" />
+          <circle cx="58" cy="60.5" r="2.5" fill="#F2C94C" />
+        </g>
+      );
+    case 'hat-dokkaebi':
+      return (
+        <g>
+          <path d="M91 68 L100 32 L109 68Z" fill="#F0D9A8" stroke="#C9A866" strokeWidth="1.5" />
+          <path d="M95 56 H105 M97 46 H103" stroke="#C9A866" strokeWidth="1.5" />
+        </g>
+      );
+    case 'hat-gat':
+      return (
+        <g>
+          <ellipse cx="100" cy="66" rx="74" ry="10" fill="#141418" opacity={0.92} />
+          <path d="M78 66 V36 Q100 28 122 36 V66Z" fill="#141418" opacity={0.92} />
+          <path d="M62 72 Q60 120 72 150 M138 72 Q140 120 128 150" stroke="#141418" strokeWidth="2" fill="none" />
+        </g>
+      );
     default:
       return null;
   }
@@ -266,6 +358,44 @@ function Accessory({ sku }: { sku: string | null }) {
           <ellipse cx="0" cy="6" rx="16" ry="20" fill="#C23B4A" />
           <path d="M-16 6 H16 M-14 -4 H14 M-14 16 H14" stroke="#9E2C3A" strokeWidth="1.5" />
           <rect x="-10" y="24" width="20" height="4" rx="1" fill={INK} />
+        </g>
+      );
+    case 'acc-buchae':
+      return (
+        <g transform="translate(36 160) rotate(-20)">
+          <path d="M0 40 L-28 4 A44 44 0 0 1 28 4Z" fill="#F29BB8" />
+          <path d="M-28 4 A44 44 0 0 1 28 4" stroke="#FFFFFF" strokeWidth="5" fill="none" />
+          <path d="M0 40 L-14 2 M0 40 L0 -2 M0 40 L14 2" stroke="#C8323F" strokeWidth="1.5" />
+          <circle cx="0" cy="40" r="3" fill="#E2B84A" />
+        </g>
+      );
+    case 'acc-haetae':
+      return (
+        <g transform="translate(162 184)">
+          <ellipse cx="0" cy="12" rx="16" ry="13" fill="#E2B84A" stroke="#A57E22" />
+          <circle cx="0" cy="-6" r="12" fill="#E2B84A" stroke="#A57E22" />
+          <circle cx="-9" cy="-14" r="5" fill="#2E8B7A" />
+          <circle cx="9" cy="-14" r="5" fill="#2E8B7A" />
+          <circle cx="0" cy="-18" r="5" fill="#2E8B7A" />
+          <path d="M-5 -6 h2 M3 -6 h2" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+          <path d="M-4 0 Q0 3 4 0" stroke={INK} strokeWidth="1.5" fill="none" />
+        </g>
+      );
+    case 'acc-fox-bead':
+      return (
+        <g transform="translate(160 176)">
+          <circle r="17" fill="#9FD8F2" opacity={0.45} />
+          <circle r="10" fill="#5FB8E8" />
+          <circle cx="-3" cy="-3" r="3" fill="#FFFFFF" opacity={0.85} />
+        </g>
+      );
+    case 'acc-gotgam':
+      return (
+        <g transform="translate(34 150)">
+          <path d="M0 -10 V52" stroke="#7A4E30" strokeWidth="2" />
+          <ellipse cx="0" cy="0" rx="9" ry="8" fill="#E36A3A" stroke="#B8502A" />
+          <ellipse cx="0" cy="18" rx="9" ry="8" fill="#E36A3A" stroke="#B8502A" />
+          <ellipse cx="0" cy="36" rx="9" ry="8" fill="#E36A3A" stroke="#B8502A" />
         </g>
       );
     default:

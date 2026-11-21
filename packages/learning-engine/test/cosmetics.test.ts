@@ -6,6 +6,15 @@ import { CosmeticCatalog, DEFAULT_AVATAR, checkAcquire, ownedSkus, validateAvata
 const catalog = JSON.parse(readFileSync(resolve(__dirname, '../../../content/cosmetics/catalog.json'), 'utf8')) as CosmeticCatalog;
 
 describe('cosmétiques', () => {
+  it('trophées : chaque objet à gagner vient d’un gardien qui existe (japonais ou coréen)', () => {
+    const levels = ['n5/n5.json', 'topik1/topik1.json'].map((f) => JSON.parse(readFileSync(resolve(__dirname, '../../../content/' + f), 'utf8')));
+    const bossWorlds = new Set(levels.flatMap((l: any) => l.worlds.filter((w: any) => w.boss).map((w: any) => w.slug)));
+    const trophies = catalog.items.filter((i) => i.unlockBoss);
+    for (const t of trophies) expect(bossWorlds.has(t.unlockBoss!)).toBe(true);
+    expect(trophies.filter((t) => t.unlockBoss!.startsWith('topik1')).map((t) => t.sku)).toEqual(['hat-dokkaebi', 'hat-gat', 'acc-haetae', 'acc-fox-bead', 'acc-gotgam', 'bg-east-sea']);
+    expect(catalog.items.filter((i) => ['outfit-hanbok', 'outfit-durumagi', 'hat-binyeo', 'acc-buchae', 'bg-palace', 'bg-hanok'].includes(i.sku)).every((i) => i.price > 0)).toBe(true);
+  });
+
   it('le catalogue est cohérent (skus uniques, emplacements connus, défauts gratuits)', () => {
     const skus = catalog.items.map((i) => i.sku);
     expect(new Set(skus).size).toBe(skus.length);

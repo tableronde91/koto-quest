@@ -1,5 +1,5 @@
 {
-  "version": "2026.11.4",
+  "version": "2026.11.21",
   "slots": [
     {
       "slot": "outfit",
@@ -59,6 +59,20 @@
       "price": 90
     },
     {
+      "sku": "outfit-hanbok",
+      "slot": "outfit",
+      "name": "Hanbok de fête",
+      "description": "Le hanbok des grandes fêtes : jeogori jaune et jupe rouge.",
+      "price": 80
+    },
+    {
+      "sku": "outfit-durumagi",
+      "slot": "outfit",
+      "name": "Durumagi du lettré",
+      "description": "Le long manteau des lettrés de Joseon.",
+      "price": 70
+    },
+    {
       "sku": "hat-hachimaki",
       "slot": "hat",
       "name": "Bandeau hachimaki",
@@ -103,6 +117,29 @@
       "description": "Trophée de l'Oni paresseux.",
       "price": 0,
       "unlockBoss": "n5-w6"
+    },
+    {
+      "sku": "hat-binyeo",
+      "slot": "hat",
+      "name": "Épingle binyeo",
+      "description": "L’épingle dorée qui tient le chignon.",
+      "price": 30
+    },
+    {
+      "sku": "hat-dokkaebi",
+      "slot": "hat",
+      "name": "Corne de dokkaebi",
+      "description": "Trophée du Dokkaebi farceur.",
+      "price": 0,
+      "unlockBoss": "topik1-w1"
+    },
+    {
+      "sku": "hat-gat",
+      "slot": "hat",
+      "name": "Chapeau gat",
+      "description": "Trophée du Messager de l’au-delà.",
+      "price": 0,
+      "unlockBoss": "topik1-w7"
     },
     {
       "sku": "acc-glasses",
@@ -150,6 +187,37 @@
       "unlockBoss": "n5-w8"
     },
     {
+      "sku": "acc-buchae",
+      "slot": "accessory",
+      "name": "Éventail de danse",
+      "description": "L’éventail rose de la danse buchaechum.",
+      "price": 35
+    },
+    {
+      "sku": "acc-haetae",
+      "slot": "accessory",
+      "name": "Haetae porte-bonheur",
+      "description": "Trophée du Haetae du palais.",
+      "price": 0,
+      "unlockBoss": "topik1-w2"
+    },
+    {
+      "sku": "acc-fox-bead",
+      "slot": "accessory",
+      "name": "Perle du renard",
+      "description": "Trophée de la Gumiho masquée.",
+      "price": 0,
+      "unlockBoss": "topik1-w3"
+    },
+    {
+      "sku": "acc-gotgam",
+      "slot": "accessory",
+      "name": "Kakis séchés",
+      "description": "Trophée du Tigre et le kaki séché.",
+      "price": 0,
+      "unlockBoss": "topik1-w4"
+    },
+    {
       "sku": "bg-paper",
       "slot": "background",
       "name": "Papier washi",
@@ -191,6 +259,28 @@
       "description": "Trophée du Dragon des caractères.",
       "price": 0,
       "unlockBoss": "n5-w7"
+    },
+    {
+      "sku": "bg-palace",
+      "slot": "background",
+      "name": "Palais de Joseon",
+      "description": "Les toits du palais, couleurs dancheong.",
+      "price": 80
+    },
+    {
+      "sku": "bg-hanok",
+      "slot": "background",
+      "name": "Village hanok",
+      "description": "Les maisons traditionnelles sous la lune.",
+      "price": 60
+    },
+    {
+      "sku": "bg-east-sea",
+      "slot": "background",
+      "name": "Mer de l’Est",
+      "description": "Trophée du Dragon de la mer de l’Est.",
+      "price": 0,
+      "unlockBoss": "topik1-w8"
     }
   ]
 }
