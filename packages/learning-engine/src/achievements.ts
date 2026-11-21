@@ -27,6 +27,14 @@ export interface AchievementStats {
   bestGameScore: number;
   itemsCollected: number;
   placementDone: number;
+  /** Lettres et syllabes du hangeul maîtrisées */
+  masteredHangul: number;
+  /** Gardiens coréens (îles du TOPIK) vaincus */
+  koreanBosses: number;
+  /** Examens blancs du TOPIK validés */
+  topikPassed: number;
+  /** Chapitres de contes coréens lus */
+  koreanChapters: number;
 }
 
 export interface AchievementDef {
@@ -39,6 +47,8 @@ export interface AchievementDef {
   rarity: AchievementRarity;
   metric: keyof AchievementStats;
   target: number;
+  /** Succès propre à une langue étudiée : montré seulement à qui l'étudie (ou l'a déjà débloqué). */
+  language?: 'ja' | 'ko';
 }
 
 export const ACHIEVEMENT_COINS: Record<AchievementRarity, number> = { common: 10, rare: 25, epic: 50 };
@@ -52,7 +62,7 @@ export const ACHIEVEMENT_CATEGORIES: Record<AchievementCategory, string> = {
   play: 'Jeux et collection',
 };
 
-const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target });
+const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number, language?: 'ja' | 'ko'): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target, ...(language ? { language } : {}) });
 
 export const ACHIEVEMENTS: AchievementDef[] = [
   // Étude
@@ -75,8 +85,10 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('mastered-25', '芽', 'Premières pousses', 'Maîtriser 25 notions.', 'mastery', 'common', 'masteredItems', 25),
   a('mastered-100', '木', 'Jeune arbre', 'Maîtriser 100 notions.', 'mastery', 'rare', 'masteredItems', 100),
   a('mastered-300', '森', 'Forêt du savoir', 'Maîtriser 300 notions.', 'mastery', 'epic', 'masteredItems', 300),
-  a('kanji-10', '字', 'Calligraphe', 'Maîtriser 10 kanji.', 'mastery', 'common', 'masteredKanji', 10),
-  a('kanji-50', '書', 'Maître du pinceau', 'Maîtriser 50 kanji.', 'mastery', 'epic', 'masteredKanji', 50),
+  a('kanji-10', '字', 'Calligraphe', 'Maîtriser 10 kanji.', 'mastery', 'common', 'masteredKanji', 10, 'ja'),
+  a('kanji-50', '書', 'Maître du pinceau', 'Maîtriser 50 kanji.', 'mastery', 'epic', 'masteredKanji', 50, 'ja'),
+  a('hangul-10', '한', 'Premières lettres', 'Maîtriser 10 lettres ou syllabes du hangeul.', 'mastery', 'common', 'masteredHangul', 10, 'ko'),
+  a('hangul-40', '글', 'Héritier·e du roi Sejong', 'Maîtriser 40 lettres et syllabes du hangeul.', 'mastery', 'epic', 'masteredHangul', 40, 'ko'),
   // Aventure
   a('first-boss', '勝', 'Premier gardien', 'Vaincre un gardien de fin de monde.', 'adventure', 'common', 'bossesDefeated', 1),
   a('four-bosses', '武', 'Chasseur de yokai', 'Vaincre 4 gardiens.', 'adventure', 'rare', 'bossesDefeated', 4),
@@ -84,6 +96,10 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('placement', '診', 'Bilan fait', 'Passer le test de positionnement.', 'adventure', 'common', 'placementDone', 1),
   a('first-exam', '試', 'Premier examen blanc', 'Rendre un examen blanc complet.', 'adventure', 'common', 'examsTaken', 1),
   a('exam-passed', '合', 'Seuil atteint', 'Atteindre le seuil indicatif d’un examen blanc.', 'adventure', 'epic', 'examsPassed', 1),
+  a('ko-bosses-8', '범', 'Ami·e des dokkaebi', 'Vaincre 8 gardiens coréens.', 'adventure', 'rare', 'koreanBosses', 8, 'ko'),
+  a('ko-bosses-24', '용', 'Gardien·ne des mythes', 'Vaincre 24 gardiens coréens.', 'adventure', 'epic', 'koreanBosses', 24, 'ko'),
+  a('topik-passed', '합', 'TOPIK en poche', 'Valider un examen blanc du TOPIK au niveau visé.', 'adventure', 'epic', 'topikPassed', 1, 'ko'),
+  a('ko-tales-10', '읽', 'Conteur·se de Corée', 'Lire 10 chapitres de contes coréens.', 'study', 'rare', 'koreanChapters', 10, 'ko'),
   // Jeux et collection
   a('games-10', '遊', 'Joueur·se', 'Jouer 10 parties de mini-jeux.', 'play', 'common', 'gamesPlayed', 10),
   a('game-score-20', '速', 'Réflexes éclair', 'Marquer 20 points dans une partie de mini-jeu.', 'play', 'rare', 'bestGameScore', 20),
@@ -99,10 +115,13 @@ export interface AchievementProgress {
   unlocked: boolean;
 }
 
-/** Progression de chaque succès (valeur plafonnée à la cible). */
-export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>): AchievementProgress[] {
+/**
+ * Progression de chaque succès (valeur plafonnée à la cible). Avec une langue, les succès propres
+ * à l'autre langue sont cachés, sauf s'ils ont déjà été débloqués.
+ */
+export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>, language?: 'ja' | 'ko'): AchievementProgress[] {
   const done = new Set(unlocked);
-  return ACHIEVEMENTS.map((def) => {
+  return ACHIEVEMENTS.filter((def) => !language || !def.language || def.language === language || done.has(def.slug)).map((def) => {
     const raw = Math.max(0, Math.floor(stats[def.metric] ?? 0));
     const isUnlocked = done.has(def.slug) || raw >= def.target;
     return { def, value: isUnlocked ? def.target : Math.min(raw, def.target), unlocked: isUnlocked };
@@ -137,5 +156,5 @@ export function longestStreak(dateKeys: Iterable<string>): number {
 export const EMPTY_ACHIEVEMENT_STATS: AchievementStats = {
   lessonsCompleted: 0, perfectLessons: 0, bestStreak: 0, correctAnswers: 0, reviewsDone: 0, bestCombo: 0,
   masteredItems: 0, masteredKanji: 0, bossesDefeated: 0, examsTaken: 0, examsPassed: 0, gamesPlayed: 0,
-  bestGameScore: 0, itemsCollected: 0, placementDone: 0,
+  bestGameScore: 0, itemsCollected: 0, placementDone: 0, masteredHangul: 0, koreanBosses: 0, topikPassed: 0, koreanChapters: 0,
 };

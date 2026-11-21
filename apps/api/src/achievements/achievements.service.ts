@@ -10,7 +10,8 @@ import {
   masteryOf,
   newlyUnlocked,
 } from '@koto/learning-engine';
-import type { AchievementCheckDto, AchievementDto, AchievementsDto } from '@koto/shared';
+import { hasHangul, languageOfLevel, type AchievementCheckDto, type AchievementDto, type AchievementsDto } from '@koto/shared';
+import { ReadingService } from '../reading/reading.service';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
@@ -18,7 +19,7 @@ import { toCardState } from '../learning/card-mapper';
 
 @Injectable()
 export class AchievementsService implements OnModuleInit {
-  constructor(private prisma: PrismaService, private clock: ClockService) {}
+  constructor(private prisma: PrismaService, private clock: ClockService, private reading: ReadingService) {}
 
   /** Le catalogue vit dans le moteur ; la table sert de référence pour les clés étrangères. */
   async onModuleInit() {
@@ -38,23 +39,29 @@ export class AchievementsService implements OnModuleInit {
   /** Statistiques agrégées, toutes recalculées depuis la base (aucune valeur fournie par le client). */
   async stats(userId: string): Promise<AchievementStats> {
     const now = this.clock.now();
-    const [lessons, activity, cards, bosses, examsTaken, examsPassed, games, items, placement] = await Promise.all([
+    const [lessons, activity, cards, bosses, examsTaken, examsPassed, games, items, placement, koBosses, topikPassed, chapters] = await Promise.all([
       this.prisma.userLessonProgress.count({ where: { userId, status: 'completed' } }),
       this.prisma.dailyActivity.findMany({ where: { userId }, select: { dateKey: true, total: true, correct: true, reviews: true, bestCombo: true, perfectLessons: true } }),
-      this.prisma.reviewCard.findMany({ where: { userId }, include: { item: { select: { kind: true } } } }),
+      this.prisma.reviewCard.findMany({ where: { userId }, include: { item: { select: { kind: true, front: true } } } }),
       this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null } } }),
       this.prisma.examAttempt.count({ where: { userId, finishedAt: { not: null } } }),
       this.prisma.examAttempt.count({ where: { userId, passed: true } }),
       this.prisma.gameResult.findMany({ where: { userId }, select: { plays: true, bestScore: true } }),
       this.prisma.inventoryItem.count({ where: { userId } }),
       this.prisma.learningSession.count({ where: { userId, kind: 'placement', endedAt: { not: null } } }),
+      this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null }, worldSlug: { startsWith: 'topik' } } }),
+      this.prisma.examAttempt.count({ where: { userId, passed: true, exam: { slug: { startsWith: 'topik' } } } }),
+      this.prisma.readingLog.findMany({ where: { userId }, select: { chapter: true } }),
     ]);
+    const koChapters = this.reading.chapterSlugs('ko');
     let masteredItems = 0;
     let masteredKanji = 0;
+    let masteredHangul = 0;
     for (const c of cards) {
       if (masteryOf(toCardState(c), now) !== 'mastered') continue;
       masteredItems++;
       if (c.item.kind === 'kanji') masteredKanji++;
+      if (c.item.kind === 'kana' && hasHangul(c.item.front)) masteredHangul++;
     }
     return {
       lessonsCompleted: lessons,
@@ -72,6 +79,10 @@ export class AchievementsService implements OnModuleInit {
       bestGameScore: games.reduce((n, g) => Math.max(n, g.bestScore), 0),
       itemsCollected: items,
       placementDone: placement > 0 ? 1 : 0,
+      masteredHangul,
+      koreanBosses: koBosses,
+      topikPassed,
+      koreanChapters: chapters.filter((r) => koChapters.has(r.chapter)).length,
     };
   }
 
@@ -88,8 +99,8 @@ export class AchievementsService implements OnModuleInit {
   }
 
   async list(userId: string): Promise<AchievementsDto> {
-    const [stats, done] = await Promise.all([this.stats(userId), this.unlockedMap(userId)]);
-    const progress = achievementProgress(stats, done.keys());
+    const [stats, done, prefs] = await Promise.all([this.stats(userId), this.unlockedMap(userId), this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } })]);
+    const progress = achievementProgress(stats, done.keys(), languageOfLevel(prefs?.targetLevel));
     return {
       unlocked: progress.filter((p) => p.unlocked).length,
       total: progress.length,

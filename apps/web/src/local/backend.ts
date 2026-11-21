@@ -1348,10 +1348,12 @@ function achievementStats(): AchievementStats {
   const days = Object.entries(s.daily);
   let masteredItems = 0;
   let masteredKanji = 0;
+  let masteredHangul = 0;
   for (const [id, c] of Object.entries(s.cards)) {
     if (masteryOf(toCard(c), t) !== 'mastered') continue;
     masteredItems++;
     if (ITEMS.get(id)?.kind === 'kanji') masteredKanji++;
+    if (ITEMS.get(id)?.kind === 'kana' && LANG_OF.get(id) === 'ko') masteredHangul++;
   }
   const games = Object.values(s.games ?? {});
   return {
@@ -1370,8 +1372,14 @@ function achievementStats(): AchievementStats {
     bestGameScore: games.reduce((n, g) => Math.max(n, g.bestScore), 0),
     itemsCollected: (s.inventory ?? []).length,
     placementDone: s.placementAt ? 1 : 0,
+    masteredHangul,
+    koreanBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && slug.startsWith('topik')).length,
+    topikPassed: (s.exams ?? []).filter((e) => e.passed && e.slug.startsWith('topik')).length,
+    koreanChapters: (s.reading ?? []).filter((r) => KO_CHAPTERS.has(r.chapter)).length,
   };
 }
+/** Chapitres des contes coréens (succès « contes coréens »). */
+const KO_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ko').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 
 const achievementDto = (def: AchievementDef, value: number, unlocked: boolean, at: string | null): AchievementDto => ({
   slug: def.slug, title: def.title, description: def.description, glyph: def.glyph, category: def.category, rarity: def.rarity,
@@ -1380,7 +1388,7 @@ const achievementDto = (def: AchievementDef, value: number, unlocked: boolean, a
 
 function achievements(): AchievementsDto {
   const done = load().achievements ?? {};
-  const progress = achievementProgress(achievementStats(), Object.keys(done));
+  const progress = achievementProgress(achievementStats(), Object.keys(done), studyLang());
   return { unlocked: progress.filter((p) => p.unlocked).length, total: progress.length, achievements: progress.map((p) => achievementDto(p.def, p.value, p.unlocked, done[p.def.slug] ?? null)) };
 }
 

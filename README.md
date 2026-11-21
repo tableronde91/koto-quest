@@ -111,7 +111,8 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 - Contrôle côté serveur : l'affichage de la question est enregistré (`POST /questions/:id/shown`) ; une réponse arrivée après la limite (+2,5 s de marge) compte comme une erreur. Sans déclaration d'affichage, le chrono part de la réponse précédente : impossible de gagner du temps en trichant.
 
 ### Succès
-- 29 succès en 5 catégories (étude, régularité, maîtrise, aventure, jeux et collection), de rareté courante, rare ou épique : 10, 25 ou 50 pièces et de l'XP, une seule fois.
+- 35 succès en 5 catégories (étude, régularité, maîtrise, aventure, jeux et collection), de rareté courante, rare ou épique : 10, 25 ou 50 pièces et de l'XP, une seule fois.
+- Succès propres à une langue : les kanji pour le japonais ; pour le coréen, le hangeul (10 puis 40 lettres et syllabes), les gardiens coréens (8 puis 24), un examen blanc TOPIK validé et 10 chapitres de contes coréens. Chacun ne voit que ceux de sa langue (plus ceux déjà débloqués).
 - Catalogue et règles dans le moteur (`packages/learning-engine/src/achievements.ts`), testés. Le serveur recalcule les statistiques depuis la base (`GET /api/achievements`, `POST /api/achievements/check`) ; la clé primaire (utilisateur, succès) empêche toute double récompense, même en appels simultanés.
 - L'application vérifie après chaque étape (fin de leçon, gardien, mini-jeu, examen, achat) et à chaque changement de page ; la notification attend la fin de l'exercice en cours. Collection dans « Succès » (depuis l'accueil ou Progrès).
 

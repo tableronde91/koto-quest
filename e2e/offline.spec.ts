@@ -837,6 +837,11 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await expect(page.getByRole('heading', { name: 'Hangeul Rush' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Kanji Rush' })).toHaveCount(0);
 
+  // Succès : ceux du coréen remplacent ceux des kanji
+  await page.goto(FILE + '#/achievements');
+  await expect(page.getByText('Héritier·e du roi Sejong').first()).toBeVisible();
+  await expect(page.getByText('Calligraphe')).toHaveCount(0);
+
   // Expressions : la révision des proverbes
   await page.goto(FILE + '#/expressions');
   await page.getByRole('button', { name: /Expressions en quatre caractères/ }).click();

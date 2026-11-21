@@ -237,6 +237,20 @@ describe('Coréen : apprendre une deuxième langue', () => {
     expect(done.nextLesson.slug).not.toMatch(/^ko-vowels/);
   });
 
+  it('succès : ceux du coréen (hangeul, gardiens, TOPIK, contes) remplacent ceux des kanji', async () => {
+    const { agent } = await signUpKorean(ctx);
+    const list = (await agent.get('/api/achievements').expect(200)).body;
+    const slugs = list.achievements.map((a: any) => a.slug);
+    expect(slugs).toEqual(expect.arrayContaining(['hangul-10', 'hangul-40', 'ko-bosses-8', 'ko-bosses-24', 'topik-passed', 'ko-tales-10']));
+    expect(slugs).not.toContain('kanji-10');
+    expect(list.total).toBe(slugs.length);
+    // Un chapitre de conte coréen lu compte pour « Conteur·se de Corée »
+    const ch = stories.stories.find((s: any) => s.slug === 'haenim-dalnim').chapters[0];
+    await agent.post(`/api/reading/chapters/${ch.slug}/complete`).send({ answers: ch.questions.map((q: any) => q.answer), seconds: 60 }).expect(201);
+    const after = (await agent.get('/api/achievements').expect(200)).body;
+    expect(after.achievements.find((a: any) => a.slug === 'ko-tales-10')).toMatchObject({ value: 1, target: 10, unlocked: false });
+  });
+
   it('mini-jeux : Hangeul Rush à la place de Kanji Rush, sur les lettres déjà apprises', async () => {
     const { agent } = await signUpKorean(ctx);
     let list = (await agent.get('/api/games').expect(200)).body;

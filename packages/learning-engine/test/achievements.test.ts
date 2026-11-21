@@ -28,6 +28,18 @@ describe('succès', () => {
     expect(k).toMatchObject({ unlocked: false, value: 3 });
   });
 
+  it('succès propres à chaque langue : hangeul, gardiens coréens, TOPIK et contes pour le coréen', () => {
+    const slugs = (lang: 'ja' | 'ko', done: string[] = []) => achievementProgress(EMPTY_ACHIEVEMENT_STATS, done, lang).map((p) => p.def.slug);
+    expect(slugs('ja')).toContain('kanji-10');
+    expect(slugs('ja')).not.toContain('hangul-10');
+    expect(slugs('ko')).toEqual(expect.arrayContaining(['hangul-10', 'hangul-40', 'ko-bosses-8', 'ko-bosses-24', 'topik-passed', 'ko-tales-10']));
+    expect(slugs('ko')).not.toContain('kanji-10');
+    // Un succès déjà débloqué reste affiché après un changement de langue
+    expect(slugs('ko', ['kanji-10'])).toContain('kanji-10');
+    const s = { ...EMPTY_ACHIEVEMENT_STATS, masteredHangul: 12, koreanBosses: 8, topikPassed: 1, koreanChapters: 10 };
+    expect(newlyUnlocked(s, []).map((a) => a.slug)).toEqual(['hangul-10', 'ko-bosses-8', 'topik-passed', 'ko-tales-10']);
+  });
+
   it('récompense selon la rareté', () => {
     const defs = ACHIEVEMENTS.filter((a) => ['first-lesson', 'ten-lessons', 'all-n5-lessons'].includes(a.slug));
     expect(achievementReward(defs)).toEqual({ coins: 10 + 25 + 50, xp: 10 + 30 + 60 });

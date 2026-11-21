@@ -20,6 +20,11 @@ export class ReadingService {
     return this.catalog;
   }
 
+  /** Chapitres des contes d'une langue (succès « contes coréens »). */
+  chapterSlugs(lang: 'ja' | 'ko'): Set<string> {
+    return new Set(readingCatalogFor(this.load(), lang).stories.flatMap((st) => st.chapters.map((c) => c.slug)));
+  }
+
   /** Contes de la langue étudiée seulement. */
   private async state(userId: string) {
     const [logs, today, prefs] = await Promise.all([
