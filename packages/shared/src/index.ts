@@ -294,7 +294,7 @@ export interface ShopDto {
 // ───────── Mini-jeux ─────────
 
 export interface GameInfoDto {
-  id: 'kanji-rush' | 'speed' | 'listening';
+  id: 'kanji-rush' | 'hangul-rush' | 'speed' | 'listening';
   title: string;
   description: string;
   durationSec: number;

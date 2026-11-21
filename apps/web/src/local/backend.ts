@@ -36,6 +36,7 @@ import {
   DAILY_GAME_COIN_CAP,
   GAMES,
   GAME_IDS,
+  gameIdsFor,
   GameDef,
   GameId,
   eligibleItems,
@@ -1094,7 +1095,7 @@ function gameDef(id: string) {
 
 function games(): GamesDto {
   const seen = seenItems();
-  return { games: GAME_IDS.map((id) => gameInfo(GAMES[id], seen)), coinsLeftToday: Math.max(0, DAILY_GAME_COIN_CAP - (daily().gameCoins ?? 0)) };
+  return { games: gameIdsFor(studyLang()).map((id) => gameInfo(GAMES[id], seen)), coinsLeftToday: Math.max(0, DAILY_GAME_COIN_CAP - (daily().gameCoins ?? 0)) };
 }
 
 function gameStart(id: string): GameStartDto {

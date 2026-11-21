@@ -5,6 +5,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import type { AnswerResultDto, GameInfoDto, GameResultDto, GameStartDto } from '@koto/shared';
 import { post } from '../../src/api';
 import { useGames } from '../../src/hooks';
+import { useAuth } from '../../src/auth';
 import { speak, stopSpeech } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, ErrorBox, H1, Loading, P, Screen } from '../../src/ui';
@@ -15,6 +16,7 @@ type Stage = { kind: 'intro' } | { kind: 'countdown'; game: GameStartDto } | { k
 
 /** Partie de mini-jeu : compte à rebours, une minute de questions enchaînées, score validé par le serveur. */
 export default function GameScreen() {
+  const { me } = useAuth();
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const qc = useQueryClient();
@@ -61,7 +63,7 @@ export default function GameScreen() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, paddingTop: 24 }}>
-          <Text style={{ fontSize: 52, fontWeight: '900', color: C.ko }}>{stage.result.newBest ? '新記録' : '終了'}</Text>
+          <Text style={{ fontSize: 52, fontWeight: '900', color: C.ko }}>{me?.preferences.studyLanguage === 'ko' ? (stage.result.newBest ? '신기록' : '끝') : stage.result.newBest ? '新記録' : '終了'}</Text>
           <H1 style={{ textAlign: 'center' }}>{stage.result.newBest ? T('Nouveau record !') : T('Partie terminée')}</H1>
           <Text testID="final-score" style={{ fontSize: 72, fontWeight: '900', color: C.ink }}>{stage.result.score}</Text>
           <P soft>{plural(stage.result.score, 'bonne réponse sur {1}, record : {2}', 'bonnes réponses sur {1}, record : {2}', [stage.result.score, stage.result.answered, stage.result.bestScore])}</P>

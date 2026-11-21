@@ -217,6 +217,23 @@ describe('Coréen : apprendre une deuxième langue', () => {
     expect(res).toMatchObject({ passed: n === 5, scaled: { total: 200, level: 5, max: { passLevel: n } } });
   });
 
+  it('mini-jeux : Hangeul Rush à la place de Kanji Rush, sur les lettres déjà apprises', async () => {
+    const { agent } = await signUpKorean(ctx);
+    let list = (await agent.get('/api/games').expect(200)).body;
+    expect(list.games.map((g: any) => g.id)).toEqual(['hangul-rush', 'speed', 'listening']);
+    expect(list.games[0]).toMatchObject({ title: 'Hangeul Rush', available: false });
+    for (let i = 0; i < 2; i++) {
+      const s = (await agent.post('/api/characters/practice').send({ scope: 'hg-v-base' }).expect(201)).body;
+      for (const q of s.questions) await agent.post(`/api/questions/${q.id}/answer`).send({ answer: await correctAnswer(ctx.prisma, q.id), responseMs: 3000 }).expect(200);
+    }
+    list = (await agent.get('/api/games').expect(200)).body;
+    expect(list.games[0].seenItems).toBeGreaterThanOrEqual(6);
+    expect(list.games[0]).toMatchObject({ id: 'hangul-rush', available: true });
+    const game = (await agent.post('/api/games/hangul-rush/start').expect(201)).body;
+    expect(game.questions.length).toBe(60);
+    expect(game.questions.every((q: any) => ['meaning_choice', 'reverse_choice'].includes(q.type))).toBe(true);
+  });
+
   it('duels : on n’affronte que des joueurs qui étudient la même langue', async () => {
     const a = await signUpKorean(ctx);
     const b = (await signUp(ctx.app)).agent; // japonais

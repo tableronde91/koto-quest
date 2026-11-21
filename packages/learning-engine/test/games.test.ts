@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DAILY_GAME_COIN_CAP, EngineItem, GAMES, createRng, gameReward, planTimedGame, scoreTimedGame } from '../src';
+import { DAILY_GAME_COIN_CAP, EngineItem, GAMES, createRng, gameIdsFor, gameReward, planTimedGame, scoreTimedGame } from '../src';
 
 const k = (id: string, front: string, reading: string, meaning: string): EngineItem => ({ id, kind: 'kanji', front, reading, meaning });
 const KANJI = [k('1', '一', 'いち', 'un'), k('2', '二', 'に', 'deux'), k('3', '三', 'さん', 'trois'), k('4', '山', 'やま', 'montagne'), k('5', '川', 'かわ', 'rivière'), k('6', '日', 'ひ', 'jour'), k('7', '月', 'つき', 'lune')];
@@ -31,5 +31,15 @@ describe('mini-jeux', () => {
     expect(gameReward(100, 0).xp).toBe(60);
     expect(gameReward(50, DAILY_GAME_COIN_CAP - 2).coins).toBe(2);
     expect(gameReward(50, DAILY_GAME_COIN_CAP).coins).toBe(0);
+  });
+
+  it('Hangeul Rush remplace Kanji Rush pour qui étudie le coréen', () => {
+    expect(gameIdsFor('ja')).toEqual(['kanji-rush', 'speed', 'listening']);
+    expect(gameIdsFor('ko')).toEqual(['hangul-rush', 'speed', 'listening']);
+    const h = (id: string, front: string, reading: string, meaning: string): EngineItem => ({ id, kind: 'kana', front, reading, meaning });
+    const HANGUL = [h('a', 'ㅏ', '아', 'a'), h('eo', 'ㅓ', '어', 'eo'), h('o', 'ㅗ', '오', 'o'), h('u', 'ㅜ', '우', 'u'), h('eu', 'ㅡ', '으', 'eu'), h('i', 'ㅣ', '이', 'i'), h('ga', '가', '가', 'ga')];
+    const qs = planTimedGame(GAMES['hangul-rush'], HANGUL, HANGUL, createRng(3));
+    expect(qs.length).toBe(60);
+    expect(qs.every((q) => ['meaning_choice', 'reverse_choice'].includes(q.type))).toBe(true);
   });
 });

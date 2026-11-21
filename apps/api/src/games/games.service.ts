@@ -1,5 +1,5 @@
 import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
-import { DAILY_GAME_COIN_CAP, EngineItem, GAMES, GAME_IDS, GameDef, GameId, createRng, eligibleItems, focusedPool, gameReward, planTimedGame, scoreTimedGame } from '@koto/learning-engine';
+import { DAILY_GAME_COIN_CAP, EngineItem, GAMES, GAME_IDS, GameDef, GameId, createRng, gameIdsFor, eligibleItems, focusedPool, gameReward, planTimedGame, scoreTimedGame } from '@koto/learning-engine';
 import { languageOfLevel, levelsOfLanguage } from '@koto/shared';
 import type { GameInfoDto, GameResultDto, GameStartDto, GamesDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
@@ -43,9 +43,9 @@ export class GamesService {
   }
 
   async overview(userId: string): Promise<GamesDto> {
-    const [seen, results, left] = await Promise.all([this.seen(userId), this.prisma.gameResult.findMany({ where: { userId } }), this.coinsLeftToday(userId)]);
+    const [seen, results, left, prefs] = await Promise.all([this.seen(userId), this.prisma.gameResult.findMany({ where: { userId } }), this.coinsLeftToday(userId), this.prisma.userPreferences.findUnique({ where: { userId }, select: { targetLevel: true } })]);
     const by = new Map(results.map((r) => [r.gameId, r]));
-    return { games: GAME_IDS.map((id) => this.info(GAMES[id], seen, by.get(id))), coinsLeftToday: left };
+    return { games: gameIdsFor(languageOfLevel(prefs?.targetLevel)).map((id) => this.info(GAMES[id], seen, by.get(id))), coinsLeftToday: left };
   }
 
   async start(userId: string, id: string): Promise<GameStartDto> {
