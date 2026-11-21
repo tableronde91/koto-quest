@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import type { PathLessonDto, PathWorldDto } from '@koto/shared';
+import { languageOfLevel, levelLabel, type PathLessonDto, type PathWorldDto } from '@koto/shared';
+import { useAuth } from '../../src/auth';
 import { usePath } from '../../src/hooks';
 import { sagaFor, storyChapter } from '../../src/story';
 import { C } from '../../src/theme';
@@ -15,7 +16,11 @@ const worldDone = (w: PathWorldDto) => (w.exam && w.progress.total === 0 ? w.exa
 /** Parcours en mode histoire : un onglet par niveau (une saga par héros), un chapitre par île. */
 export default function PathScreen() {
   const router = useRouter();
-  const [level, setLevel] = useState('N5');
+  const { me } = useAuth();
+  const target = me?.preferences.targetLevel ?? 'N5';
+  const [picked, setLevel] = useState<string | null>(null);
+  // Le niveau affiché suit le niveau visé, et revient à lui après un changement de langue étudiée
+  const level = picked && languageOfLevel(picked) === languageOfLevel(target) ? picked : target;
   const [more, setMore] = useState(false);
   const { data, isLoading, error, refetch } = usePath(level);
   if (isLoading) return <Loading />;
@@ -29,8 +34,8 @@ export default function PathScreen() {
         {data.levels.map((l) => {
           const on = l.code === data.level.code;
           return (
-            <Pressable key={l.code} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={`${l.code}, ${sagaFor(l.code)?.short ?? ''}, ${T('{0}/{1} leçons', [l.completed, l.lessons])}`} onPress={() => { setLevel(l.code); setMore(false); }} style={{ minWidth: 104, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.ink : C.surface, padding: 10 }}>
-              <Text style={{ fontSize: 20, fontWeight: '900', color: on ? C.paper : C.ink }}>{l.code}</Text>
+            <Pressable key={l.code} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={`${levelLabel(l.code)}, ${sagaFor(l.code)?.short ?? ''}, ${T('{0}/{1} leçons', [l.completed, l.lessons])}`} onPress={() => { setLevel(l.code); setMore(false); }} style={{ minWidth: 104, borderRadius: 16, borderWidth: 2, borderColor: on ? C.ink : C.line, backgroundColor: on ? C.ink : C.surface, padding: 10 }}>
+              <Text style={{ fontSize: 20, fontWeight: '900', color: on ? C.paper : C.ink }}>{levelLabel(l.code)}</Text>
               <Text style={{ color: on ? C.paper : C.ink, fontWeight: '700', fontSize: 13 }}>{sagaFor(l.code)?.short ?? l.title}</Text>
               <Text style={{ color: on ? C.paper : C.inkSoft, fontSize: 12 }}>{T('{0}/{1} leçons', [l.completed, l.lessons])}</Text>
             </Pressable>
@@ -46,7 +51,7 @@ export default function PathScreen() {
             </View>
             <View style={{ flex: 1 }}>
               <Text style={{ color: '#fff', fontSize: 12, fontWeight: '800', opacity: 0.9 }}>{T('MODE HISTOIRE · {0}', [saga.hero.toUpperCase()])}</Text>
-              <Text accessibilityRole="header" style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{T('{0} : {1}', [data.level.code, saga.title])}</Text>
+              <Text accessibilityRole="header" style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{T('{0} : {1}', [levelLabel(data.level.code), saga.title])}</Text>
               <Text style={{ color: '#fff', opacity: 0.9 }}>{saga.jp}</Text>
             </View>
           </View>

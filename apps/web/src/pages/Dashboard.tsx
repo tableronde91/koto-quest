@@ -8,6 +8,7 @@ import { Medal } from '../components/Achievements';
 import { ErrorBox, ProgressBar, Spinner } from '../components/ui';
 import { formatDuration } from '../lib/format';
 import { T, DATE_LOCALE } from '../i18n';
+import { useStudyLang } from '../components/StudyLanguage';
 import { ReadingTodayCard } from './Reading';
 import { languageOfLevel, levelLabel } from '@koto/shared';
 import { StudyLanguageSwitch, studyWords } from '../components/StudyLanguage';
@@ -20,6 +21,7 @@ function greeting(ko: boolean) {
 
 export function DashboardPage() {
   const { data: d, isLoading, error, refetch } = useDashboard();
+  const { ko } = useStudyLang();
   if (isLoading) return <Spinner />;
   if (error || !d) return <ErrorBox error={error} onRetry={refetch} />;
 
@@ -99,8 +101,17 @@ export function DashboardPage() {
       <section aria-label={T("Ta progression")} className="grid grid-cols-2 gap-x-6 gap-y-5 lg:grid-cols-4">
         <Stat label={T("Série")} icon={<Flame lit={d.streak.todayDone} />} value={<><CountUp value={d.streak.current} />{' '}{T("jour")}{d.streak.current > 1 ? 's' : ''}</>} note={d.streak.todayDone ? T("Fait aujourd’hui") : T("Pas encore aujourd’hui")} />
         <Stat label={T("Aujourd’hui")} value={formatDuration(d.today.seconds)} note={d.today.accuracy !== null ? T("{0} % de réussite", [d.today.accuracy]) : T("Objectif : {0} min", [d.plan.estimatedMinutes])} />
-        <Stat label={T("Mots maîtrisés")} value={<CountUp value={d.mastered.words} />} note={T("{0} kana, {1} points de grammaire", [d.mastered.kana, d.mastered.grammar])} />
-        <Stat label={T("Kanji maîtrisés")} value={<CountUp value={d.mastered.kanji} />} note={d.reviews.learningSoon ? T("{0} révision(s) dans l’heure", [d.reviews.learningSoon]) : ' '} />
+        {ko ? (
+          <>
+            <Stat label={T("Mots maîtrisés")} value={<CountUp value={d.mastered.words} />} note={T("{0} points de grammaire", [d.mastered.grammar])} />
+            <Stat label={T("Hangeul maîtrisé")} value={<CountUp value={d.mastered.kana} />} note={d.reviews.learningSoon ? T("{0} révision(s) dans l’heure", [d.reviews.learningSoon]) : T("lettres et syllabes")} />
+          </>
+        ) : (
+          <>
+            <Stat label={T("Mots maîtrisés")} value={<CountUp value={d.mastered.words} />} note={T("{0} kana, {1} points de grammaire", [d.mastered.kana, d.mastered.grammar])} />
+            <Stat label={T("Kanji maîtrisés")} value={<CountUp value={d.mastered.kanji} />} note={d.reviews.learningSoon ? T("{0} révision(s) dans l’heure", [d.reviews.learningSoon]) : ' '} />
+          </>
+        )}
       </section>
 
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">

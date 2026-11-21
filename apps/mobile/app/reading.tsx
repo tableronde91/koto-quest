@@ -5,10 +5,12 @@ import { Ruby } from '../src/Ruby';
 import { C } from '../src/theme';
 import { Button, Card, ErrorBox, TitleBar, H1, H2, Loading, P, Screen, Seal } from '../src/ui';
 import { T, bi } from '../src/i18n';
+import { useStudyLang } from '../src/study';
 
-/** Lecture : contes japonais, tous ouverts ; un chapitre conseillé chaque jour. */
+/** Lecture : contes de la langue étudiée (japonais ou coréen), tous ouverts ; un chapitre conseillé chaque jour. */
 export default function ReadingScreen() {
   const router = useRouter();
+  const w = useStudyLang();
   const { data, isLoading, error, refetch } = useReading();
   if (isLoading) return <Loading />;
   if (error || !data) return <Screen><ErrorBox error={error} onRetry={refetch} /></Screen>;
@@ -17,7 +19,7 @@ export default function ReadingScreen() {
   return (
     <Screen>
       <TitleBar title={T('Lecture')} fallback="/learn" />
-      <P soft>{T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.')}</P>
+      <P soft>{w.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.')}</P>
 
       {today.chapter && today.story && (
         <Card style={{ gap: 10, backgroundColor: C.ink, borderColor: C.ink }}>

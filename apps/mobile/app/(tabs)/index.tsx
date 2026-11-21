@@ -5,6 +5,7 @@ import { useDashboard } from '../../src/hooks';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H2, Loading, P, ProgressBar } from '../../src/ui';
 import { T, plural } from '../../src/i18n';
+import { useStudyLang } from '../../src/study';
 
 function greeting() {
   const h = new Date().getHours();
@@ -12,6 +13,7 @@ function greeting() {
 }
 
 export default function Home() {
+  const w = useStudyLang();
   const router = useRouter();
   const { data: d, isLoading, error, refetch, isRefetching } = useDashboard();
   if (isLoading) return <Loading />;
@@ -53,7 +55,7 @@ export default function Home() {
           <Card testID="placement-suggest" style={{ flexDirection: 'row', alignItems: 'center', gap: 12, borderColor: '#7B5BD6', borderWidth: 2 }}>
             <Text style={{ fontSize: 30, fontWeight: '900', color: '#7B5BD6' }}>診</Text>
             <View style={{ flex: 1, gap: 6 }}>
-              <Text style={{ fontWeight: '800', color: C.ink }}>{T('Tu connais déjà un peu de japonais ?')}</Text>
+              <Text style={{ fontWeight: '800', color: C.ink }}>{w.ko ? T('Tu connais déjà un peu de coréen ?') : T('Tu connais déjà un peu de japonais ?')}</Text>
               <Text style={{ color: C.inkSoft, fontSize: 13 }}>{T('Un test de quelques minutes valide ce que tu sais déjà, pour commencer au bon endroit.')}</Text>
               <Button tone="quiet" label={T('Passer le test de niveau')} onPress={() => router.push('/placement')} />
             </View>
@@ -64,7 +66,7 @@ export default function Home() {
           <Card testID="how-it-works" style={{ gap: 10 }}>
             <H2>{T('Comment ça marche ?')}</H2>
             {[
-              ['学', T('Une leçon de 5 à 10 minutes'), T('De nouveaux kana, mots ou kanji, puis des exercices.')],
+              ['学', T('Une leçon de 5 à 10 minutes'), w.ko ? T('Du hangeul, des mots ou de la grammaire, puis des exercices.') : T('De nouveaux kana, mots ou kanji, puis des exercices.')],
               ['復', T('Des révisions au bon moment'), T('Koto Quest te redemande chaque notion juste avant que tu l’oublies.')],
               ['島', T('Une aventure à suivre'), T('Chaque île du parcours raconte un chapitre et se termine par un gardien à vaincre.')],
             ].map(([g, t, x], i) => (

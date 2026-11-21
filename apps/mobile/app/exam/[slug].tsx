@@ -17,6 +17,7 @@ export default function ExamScreen() {
   const { slug, title } = useLocalSearchParams<{ slug: string; title?: string }>();
   const router = useRouter();
   const qc = useQueryClient();
+  const topik = String(slug ?? '').startsWith('topik');
   const [exam, setExam] = useState<ExamStartDto | null>(null);
   const [result, setResult] = useState<ExamResultDto | null>(null);
   const [busy, setBusy] = useState(false);
@@ -61,11 +62,20 @@ export default function ExamScreen() {
     <Screen>
       <Button label={T('← Parcours')} tone="quiet" onPress={() => router.back()} style={{ alignSelf: 'flex-start' }} />
       <View style={{ alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 56, fontWeight: '900', color: C.ko }}>模試</Text>
+        <Text style={{ fontSize: 56, fontWeight: '900', color: C.ko }}>{topik ? '모의고사' : '模試'}</Text>
         <H1 style={{ textAlign: 'center' }}>{title || T('Examen blanc')}</H1>
       </View>
-      <P>{T('Questions réparties comme au JLPT : vocabulaire et kanji (文字・語彙), grammaire (文法・読解) et écoute (聴解). Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.')}</P>
-      <Card><P soft>{T('Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.')}</P></Card>
+      {topik ? (
+        <>
+          <P>{T('Questions réparties comme au TOPIK : écoute (듣기), lecture (읽기) et, au TOPIK II, écriture (쓰기). Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.')}</P>
+          <Card><P soft>{T('Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.')}</P></Card>
+        </>
+      ) : (
+        <>
+          <P>{T('Questions réparties comme au JLPT : vocabulaire et kanji (文字・語彙), grammaire (文法・読解) et écoute (聴解). Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.')}</P>
+          <Card><P soft>{T('Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.')}</P></Card>
+        </>
+      )}
       {error ? <ErrorBox error={error} /> : null}
       <Button label={T('Commencer l’examen')} tone="gold" onPress={start} />
     </Screen>
@@ -138,15 +148,23 @@ function ExamRunner({ exam, onSubmit }: { exam: ExamStartDto; onSubmit: (a: Answ
 }
 
 function ExamResult({ result, onAgain, onBack }: { result: ExamResultDto; onAgain: () => void; onBack: () => void }) {
+  const topik = result.scaled?.max.system === 'topik' || result.scaled?.level !== undefined;
   return (
     <Screen>
       <View style={{ alignItems: 'center', gap: 6 }}>
-        <Text style={{ fontSize: 48, fontWeight: '900', color: C.ko }}>{result.passed ? '合格' : '不合格'}</Text>
+        <Text style={{ fontSize: 48, fontWeight: '900', color: C.ko }}>{topik ? (result.passed ? '합격' : '불합격') : result.passed ? '合格' : '不合格'}</Text>
         <H1 style={{ textAlign: 'center' }}>{result.passed ? T('Seuil indicatif atteint') : T('Pas encore le seuil')}</H1>
         <Text style={{ fontSize: 56, fontWeight: '900', color: C.ink }}>{result.scaled ? `${result.scaled.total} / ${result.scaled.max.total}` : `${result.percent} %`}</Text>
         <P soft>{T('{0} bonnes réponses sur {1}', [result.correct, result.total])}{result.late ? T(' (copie rendue après le temps imparti)') : ''}</P>
         <Text style={{ color: C.goldInk, fontWeight: '800', fontSize: 18 }}>+{result.xpGained} XP{result.coinsGained > 0 ? ' · ' + T('+{0} pièces', [result.coinsGained]) : ''}</Text>
-        <P soft style={{ textAlign: 'center' }}>{T('Seuil Koto Quest : {0} % au total et au moins {1} % dans chaque section. Examen blanc non officiel.', [result.passPercent, result.sectionMinPercent])}</P>
+        {topik && result.scaled ? (
+          <P soft style={{ textAlign: 'center' }}>
+            {result.scaled.level ? T('Niveau TOPIK obtenu : {0}.', [result.scaled.level]) : T('Aucun niveau TOPIK obtenu pour l’instant.')}{' '}
+            {result.scaled.max.passLevel ? T('Cet examen se valide à partir du niveau {0}. Examen blanc non officiel.', [result.scaled.max.passLevel]) : T('Examen blanc non officiel.')}
+          </P>
+        ) : (
+          <P soft style={{ textAlign: 'center' }}>{T('Seuil Koto Quest : {0} % au total et au moins {1} % dans chaque section. Examen blanc non officiel.', [result.passPercent, result.sectionMinPercent])}</P>
+        )}
       </View>
       <H2>{T('Par compétence')}</H2>
       {result.sections.map((s) => (

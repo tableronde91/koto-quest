@@ -24,7 +24,16 @@ const RANKS: [number, string][] = [
   [3, T("Voyageur·se des îles")],
   [1, T("Apprenti·e du dojo")],
 ];
-const rankFor = (level: number) => RANKS.find(([min]) => level >= min)![1];
+/** En coréen, les rangs parlent du hangeul et des contes plutôt que des kana et des kanji. */
+const RANKS_KO: [number, string][] = [
+  [16, T("Maître du Koto")],
+  [12, T("Sensei en herbe")],
+  [8, T("Gardien·ne des contes")],
+  [5, T("Pinceau du hangeul")],
+  [3, T("Voyageur·se des îles")],
+  [1, T("Apprenti·e du dojo")],
+];
+const rankFor = (level: number, ko = false) => (ko ? RANKS_KO : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés. */
 const SKILL_STEP = 10;
@@ -33,6 +42,12 @@ const SKILLS = [
   { kind: 'vocabulary', glyph: '語', label: T("Vocabulaire"), color: '#3F8F5B' },
   { kind: 'kanji', glyph: '字', label: T("Kanji"), color: '#8E1B26' },
   { kind: 'grammar', glyph: '文', label: T("Grammaire"), color: '#4F5DB8' },
+] as const;
+/** Compétences en coréen : le hangeul remplace les kana, pas de kanji. */
+const SKILLS_KO = [
+  { kind: 'kana', glyph: '한', label: T("Hangeul"), color: '#E36A3A' },
+  { kind: 'vocabulary', glyph: '말', label: T("Vocabulaire"), color: '#3F8F5B' },
+  { kind: 'grammar', glyph: '문', label: T("Grammaire"), color: '#4F5DB8' },
 ] as const;
 
 const GARDEN: { m: Mastery; icon: string; label: string; hint: string }[] = [
@@ -114,7 +129,7 @@ export function StatsPage() {
               <Avatar config={d.avatar} size={96} />
             </motion.div>
             <div className="order-last min-w-0 basis-full sm:order-none sm:basis-auto sm:flex-1">
-              <p className="text-sm font-bold uppercase tracking-wide text-[#FFD58A]">{rankFor(d.xp.level)}</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-[#FFD58A]">{rankFor(d.xp.level, ko)}</p>
               <p className="font-display text-3xl leading-tight">{d.displayName}</p>
               <p className="mt-1 text-sm opacity-80">{T("{0} XP avant le niveau {1} · {2} XP au total", [d.xp.forNext - d.xp.intoLevel , d.xp.level + 1 , d.xp.total ])}</p>
             </div>
@@ -139,7 +154,7 @@ export function StatsPage() {
       {/* Compétences */}
       <Section title={T("Compétences")} glyph="技">
         <ul className="grid gap-3 sm:grid-cols-2">
-          {SKILLS.map((k, i) => {
+          {(ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
             const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
             const into = v.mastered % SKILL_STEP;

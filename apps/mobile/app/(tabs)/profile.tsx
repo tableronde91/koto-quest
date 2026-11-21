@@ -3,7 +3,7 @@ import { Pressable, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import { levelFromXp } from '@koto/learning-engine';
-import { levelLabel, levelsOfLanguage, type MeDto } from '@koto/shared';
+import { STUDY_LANGUAGES, examLevelLabel, levelLabel, levelsOfLanguage, type MeDto } from '@koto/shared';
 import { put } from '../../src/api';
 import { useAuth } from '../../src/auth';
 import { FriendsManager } from '../../src/Friends';
@@ -44,7 +44,7 @@ export default function Profile() {
           </Pressable>
           <View style={{ flex: 1, gap: 2 }}>
             <Text style={{ color: C.paper, fontSize: 24, fontWeight: '800' }}>{me.displayName}</Text>
-            <Text style={{ color: C.paper, opacity: 0.85 }}>{T('Niveau {0} · objectif JLPT {1}', [lv.level, me.preferences.targetLevel])}</Text>
+            <Text style={{ color: C.paper, opacity: 0.85 }}>{T('Niveau {0} · objectif {1}', [lv.level, examLevelLabel(me.preferences.targetLevel)])}</Text>
           </View>
           {lobby && (
             <View style={{ alignItems: 'center', gap: 2 }}>
@@ -100,6 +100,9 @@ function Goals({ me }: { me: MeDto }) {
           onBlur={() => name.trim() && name.trim() !== me.displayName && save({ displayName: name.trim() })}
           style={inputStyle}
         />
+      </Field>
+      <Field label={T('Langue étudiée')}>
+        <Chips label={T('Langue étudiée')} options={STUDY_LANGUAGES.map((l) => ({ value: l.code, label: `${T(l.name)} · ${l.native}` }))} value={p.studyLanguage ?? 'ja'} onChange={(v) => save({ studyLanguage: v })} />
       </Field>
       <Field label={T('Niveau visé')}>
         <Chips label={T('Niveau visé')} options={levelsOfLanguage(p.studyLanguage ?? 'ja').map((l) => ({ value: l, label: levelLabel(l) }))} value={p.targetLevel} onChange={(v) => save({ targetLevel: v })} />

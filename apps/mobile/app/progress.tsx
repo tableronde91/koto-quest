@@ -10,6 +10,7 @@ import { MASTERY_COLOR } from '../src/mastery';
 import { C } from '../src/theme';
 import { Button, ErrorBox, H1, Loading, P, ProgressBar, Screen } from '../src/ui';
 import { T, getLocale } from '../src/i18n';
+import { useStudyLang } from '../src/study';
 
 // Libellés traduits à l'affichage avec T()
 const RANKS: [number, string][] = [
@@ -20,7 +21,15 @@ const RANKS: [number, string][] = [
   [3, 'Voyageur·se des îles'],
   [1, 'Apprenti·e du dojo'],
 ];
-const rankFor = (level: number) => RANKS.find(([min]) => level >= min)![1];
+const RANKS_KO: [number, string][] = [
+  [16, 'Maître du Koto'],
+  [12, 'Sensei en herbe'],
+  [8, 'Gardien·ne des contes'],
+  [5, 'Pinceau du hangeul'],
+  [3, 'Voyageur·se des îles'],
+  [1, 'Apprenti·e du dojo'],
+];
+const rankFor = (level: number, ko = false) => (ko ? RANKS_KO : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés (comme sur le web). */
 const SKILL_STEP = 10;
@@ -29,6 +38,12 @@ const SKILLS = [
   { kind: 'vocabulary', glyph: '語', label: 'Vocabulaire', color: '#3F8F5B' },
   { kind: 'kanji', glyph: '字', label: 'Kanji', color: '#8E1B26' },
   { kind: 'grammar', glyph: '文', label: 'Grammaire', color: '#4F5DB8' },
+] as const;
+/** En coréen : le hangeul remplace les kana, pas de kanji. */
+const SKILLS_KO = [
+  { kind: 'kana', glyph: '한', label: 'Hangeul', color: '#E36A3A' },
+  { kind: 'vocabulary', glyph: '말', label: 'Vocabulaire', color: '#3F8F5B' },
+  { kind: 'grammar', glyph: '문', label: 'Grammaire', color: '#4F5DB8' },
 ] as const;
 
 const GARDEN: { m: Mastery; icon: string; label: string; hint: string }[] = [
@@ -49,6 +64,7 @@ function duration(seconds: number) {
 
 /** Mon aventure : fiche du héros, compétences, jardin de la mémoire, carnet de route, examens. */
 export default function Progress() {
+  const { ko } = useStudyLang();
   const router = useRouter();
   const stats = useQuery({ queryKey: ['stats'], queryFn: () => api<StatsDto>('/stats') });
   const ach = useQuery({ queryKey: ['achievements'], queryFn: () => api<AchievementsDto>('/achievements') });
@@ -80,7 +96,7 @@ export default function Progress() {
             <Avatar config={d.avatar} size={80} />
           </View>
           <View style={{ flex: 1, gap: 2 }}>
-            <Text style={{ color: '#FFD58A', fontWeight: '800', fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }}>{T(rankFor(d.xp.level))}</Text>
+            <Text style={{ color: '#FFD58A', fontWeight: '800', fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }}>{T(rankFor(d.xp.level, ko))}</Text>
             <Text style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{d.displayName}</Text>
             <Text style={{ color: '#fff', opacity: 0.8, fontSize: 13 }}>{T('Niveau {0} · {1} XP au total', [d.xp.level, d.xp.total])}</Text>
           </View>
@@ -109,7 +125,7 @@ export default function Progress() {
 
       {/* Compétences */}
       <Section glyph="技" title={T('Compétences')}>
-        {SKILLS.map((k) => {
+        {(ko ? SKILLS_KO : SKILLS).map((k) => {
           const v = s.byKind[k.kind];
           const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
           const into = v.mastered % SKILL_STEP;
@@ -205,7 +221,7 @@ export default function Progress() {
       {/* Examens blancs */}
       <Section glyph="試" title={T('Examens blancs')}>
         {s.exams.length === 0 ? (
-          <P soft>{T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.')}</P>
+          <P soft>{ko ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours TOPIK 1.') : T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.')}</P>
         ) : (
           [...s.exams].reverse().map((e) => (
             <View key={e.date} testID="exam-result" style={{ gap: 4, borderWidth: 1, borderColor: C.line, borderRadius: 14, backgroundColor: C.surface, padding: 10 }}>

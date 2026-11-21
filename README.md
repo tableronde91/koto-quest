@@ -225,6 +225,7 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 - **Mon aventure** (`app/progress.tsx`, depuis l'accueil ou le profil) : fiche du héros, compétences, jardin de la mémoire, carnet des 14 derniers jours, examens blancs.
 - **Mini-jeux** (onglet Jeux, `app/games/[id].tsx`) : Kanji Rush, Speed Challenge et Listening Ninja, avec compte à rebours, minute chronométrée, série, correction instantanée, score validé par le serveur, record et pièces communs au compte.
 - **Langues** : français et anglais, comme le web (interface, cours, récit, contes, messages du serveur et rappels).
+- **Japonais ou coréen** : la langue étudiée se choisit à l'inscription (`app/onboarding.tsx`) et se change dans le profil. En coréen : parcours TOPIK 1 à 6 et leurs sagas, onglet Hangeul (voyelles, consonnes, syllabes, expressions et proverbes), Atelier TOPIK, examens blancs TOPIK (barème sur 200 ou 300, niveau obtenu), contes coréens, Hangeul Rush et voix coréenne (`src/study.ts`, `src/speech.ts`).
 - **Duels** (onglet Jeux → dojo, `app/duel/index.tsx` et `app/duel/[id].tsx`) : rang et palmarès, duel classé avec recherche d'adversaire, entraînement contre un rōnin, défi d'un ami en un geste (ajout et gestion dans le profil), invitations reçues, historique et classement. Dans l'arène, le chrono est calé sur l'horloge du serveur ; points de vie, combo, correction de chaque échange, abandon et revanche.
 
 Lancer sur un téléphone (application Expo Go) :

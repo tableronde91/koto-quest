@@ -254,3 +254,44 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('button', { name: 'Se déconnecter' }).click();
   await expect(page.getByRole('heading', { name: 'Koto Quest' })).toBeVisible();
 });
+
+test('appli mobile en coréen : choix de la langue, parcours TOPIK, hangeul et atelier TOPIK', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto('/');
+  await page.getByRole('tab', { name: 'Créer un compte' }).click();
+  await page.getByLabel('Pseudo').fill('민지');
+  await page.getByLabel('Adresse e-mail').fill(`mobile-ko${Date.now()}@test.local`);
+  await page.getByLabel('Mot de passe').fill('motdepasse123');
+  await page.getByRole('button', { name: 'Créer mon compte' }).click();
+
+  await expect(page.getByRole('heading', { name: 'Bienvenue dans l’archipel !' })).toBeVisible();
+  await page.getByTestId('lang-ko').click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en coréen ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /TOPIK 6/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Accueil : la première leçon est celle du hangeul
+  await expect(page.getByText('Tu connais déjà un peu de coréen ?')).toBeVisible();
+  await page.getByRole('tab', { name: /Parcours/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
+  await page.getByRole('tab', { name: /^TOPIK 6/ }).click();
+  await expect(page.getByRole('heading', { name: 'TOPIK 6 : La Légende de Dangun' })).toBeVisible();
+
+  // Apprendre : hangeul, atelier et examen TOPIK
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await expect(page.getByRole('button', { name: 'Atelier TOPIK' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Examen blanc TOPIK 1' })).toBeVisible();
+  await page.getByRole('button', { name: 'Hangeul et expressions' }).click();
+  await expect(page.getByRole('tab', { name: 'Voyelles' })).toBeVisible();
+  await expect(page.getByText('ㅏ', { exact: true }).first()).toBeVisible();
+  await page.getByRole('tab', { name: 'Expressions' }).click();
+  await expect(page.getByText('감사합니다', { exact: true }).first()).toBeVisible();
+
+  // Profil : la langue étudiée se change ici, et le parcours repasse au japonais
+  await page.goto('/profile');
+  await expect(page.getByText(/objectif TOPIK 1/)).toBeVisible();
+  await page.getByRole('radio', { name: /Japonais/ }).click();
+  await expect(page.getByText(/objectif JLPT N5/)).toBeVisible();
+  await page.getByRole('tab', { name: /Parcours/ }).click();
+  await expect(page.getByRole('heading', { name: 'N5 : La Voie du samouraï' })).toBeVisible();
+});

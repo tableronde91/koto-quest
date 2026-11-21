@@ -1,21 +1,31 @@
 import { useMemo, useState } from 'react';
 import { Modal, Pressable, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import type { CharacterDto, CharacterGroupDto, CharacterSectionDto, ExpressionDto, ExpressionRegister, ExpressionsDto } from '@koto/shared';
+import type { CharacterDto, CharacterGroupDto, ExpressionDto, ExpressionRegister, ExpressionsDto } from '@koto/shared';
 import { useCharacters, useExpressions } from '../src/hooks';
 import { MASTERY_COLOR, MASTERY_LABEL } from '../src/mastery';
 import { speak } from '../src/speech';
 import { C } from '../src/theme';
 import { Button, Card, ErrorBox, TitleBar, H1, H2, Loading, P, ProgressBar, Screen } from '../src/ui';
 import { T } from '../src/i18n';
+import { useStudyLang } from '../src/study';
 
-type Pane = 'hiragana' | 'katakana' | 'kanji' | 'expressions';
-const PANES: { slug: Pane; glyph: string; label: string }[] = [
-  { slug: 'hiragana', glyph: 'あ', label: 'Hiragana' },
-  { slug: 'katakana', glyph: 'ア', label: 'Katakana' },
-  { slug: 'kanji', glyph: '字', label: 'Kanji' },
-  { slug: 'expressions', glyph: '話', label: 'Expressions' },
-];
+type Pane = string;
+// Libellés traduits à l'affichage avec T()
+const PANES: Record<'ja' | 'ko', { slug: Pane; glyph: string; label: string }[]> = {
+  ja: [
+    { slug: 'hiragana', glyph: 'あ', label: 'Hiragana' },
+    { slug: 'katakana', glyph: 'ア', label: 'Katakana' },
+    { slug: 'kanji', glyph: '字', label: 'Kanji' },
+    { slug: 'expressions', glyph: '話', label: 'Expressions' },
+  ],
+  ko: [
+    { slug: 'hangul-vowels', glyph: 'ㅏ', label: 'Voyelles' },
+    { slug: 'hangul-consonants', glyph: 'ㄱ', label: 'Consonnes' },
+    { slug: 'hangul-syllables', glyph: '가', label: 'Syllabes' },
+    { slug: 'expressions', glyph: '말', label: 'Expressions' },
+  ],
+};
 
 // Traduits à l'affichage avec T()
 const REGISTER: Record<ExpressionRegister, { label: string; color: string; bg: string }> = {
@@ -25,15 +35,19 @@ const REGISTER: Record<ExpressionRegister, { label: string; color: string; bg: s
   formal: { label: 'Formel', color: '#6A3FA0', bg: '#EEE6F8' },
 };
 
-/** Onglet commun à tous : hiragana, katakana, kanji et expressions, avec maîtrise et entraînement. */
+/** Onglet commun à tous : l'écriture de la langue étudiée (kana et kanji, ou hangeul) et les expressions. */
 export default function KanaTab() {
-  const [pane, setPane] = useState<Pane>('hiragana');
+  const w = useStudyLang();
+  const panes = PANES[w.lang];
+  const [picked, setPane] = useState<Pane>(panes[0].slug);
+  // Après un changement de langue, l'onglet choisi peut ne plus exister
+  const pane = panes.some((p) => p.slug === picked) ? picked : panes[0].slug;
   return (
     <Screen>
-      <TitleBar title={T('Caractères')} fallback="/learn" />
-      <P soft>{T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.')}</P>
+      <TitleBar title={w.ko ? T('Hangeul') : T('Caractères')} fallback="/learn" />
+      <P soft>{w.ko ? T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.') : T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.')}</P>
       <View accessibilityRole="tablist" accessibilityLabel={T('Écriture')} style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 16, padding: 4 }}>
-        {PANES.map((p) => {
+        {panes.map((p) => {
           const on = p.slug === pane;
           return (
             <Pressable key={p.slug} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={T(p.label)} onPress={() => setPane(p.slug)} style={{ flex: 1, alignItems: 'center', paddingVertical: 8, borderRadius: 12, backgroundColor: on ? C.surface : 'transparent' }}>
@@ -50,7 +64,7 @@ export default function KanaTab() {
 
 // ─────────────── Caractères ───────────────
 
-function CharactersPane({ slug }: { slug: CharacterSectionDto['slug'] }) {
+function CharactersPane({ slug }: { slug: string }) {
   const router = useRouter();
   const { data, isLoading, error, refetch } = useCharacters();
   const [detail, setDetail] = useState<CharacterDto | null>(null);
@@ -181,6 +195,7 @@ function Row({ k, v }: { k: string; v: string }) {
 
 function ExpressionsPane() {
   const router = useRouter();
+  const { ko } = useStudyLang();
   const { data, isLoading, error, refetch } = useExpressions();
   const [themeSlug, setThemeSlug] = useState<string | null>(null);
   const [query, setQuery] = useState('');
@@ -195,7 +210,7 @@ function ExpressionsPane() {
       <TextInput
         value={query}
         onChangeText={setQuery}
-        placeholder={T('Rechercher : merci, おねがい, sumimasen…')}
+        placeholder={ko ? T('Rechercher : merci, 감사, gamsa…') : T('Rechercher : merci, おねがい, sumimasen…')}
         placeholderTextColor={C.inkSoft}
         accessibilityLabel={T('Rechercher une expression')}
         autoCorrect={false}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Text, View } from 'react-native';
+import { useStudyLang } from '../src/study';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import type { PlacementStepDto } from '@koto/shared';
@@ -11,6 +12,7 @@ import { T } from '../src/i18n';
 
 /** Test de positionnement : trois questions par monde, on valide les mondes déjà maîtrisés. */
 export default function Placement() {
+  const w = useStudyLang();
   const router = useRouter();
   const qc = useQueryClient();
   const [step, setStep] = useState<PlacementStepDto | null>(null);
@@ -51,8 +53,8 @@ export default function Placement() {
       <Screen>
         <TitleBar title={T('Test de niveau')} fallback="/learn" />
         <View style={{ alignItems: 'center', gap: 12 }}>
-          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>診断</Text>
-          <P style={{ textAlign: 'center' }}>{T('Tu connais déjà un peu de japonais ? Trois questions par monde, dans l’ordre du parcours : chaque monde réussi (2 bonnes réponses sur 3) est validé, et le test s’arrête au premier monde à travailler.')}</P>
+          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>{w.ko ? '진단' : '診断'}</Text>
+          <P style={{ textAlign: 'center' }}>{w.ko ? T('Tu connais déjà un peu de coréen ? Trois questions par monde, dans l’ordre du parcours : chaque monde réussi (2 bonnes réponses sur 3) est validé, et le test s’arrête au premier monde à travailler.') : T('Tu connais déjà un peu de japonais ? Trois questions par monde, dans l’ordre du parcours : chaque monde réussi (2 bonnes réponses sur 3) est validé, et le test s’arrête au premier monde à travailler.')}</P>
           <P soft style={{ textAlign: 'center', fontSize: 14 }}>{T('Réponds sans deviner : « Je ne sais pas » vaut mieux qu’un coup de chance. Les mondes validés reviendront en révision pour vérifier qu’ils sont bien acquis.')}</P>
         </View>
         {error != null && <ErrorBox error={error} />}
@@ -64,7 +66,7 @@ export default function Placement() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
-          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>完了</Text>
+          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>{w.ko ? '완료' : '完了'}</Text>
           <H1 style={{ textAlign: 'center' }}>{step.validated.length ? T('{0} monde(s) validé(s)', [step.validated.length]) : T('On commence au début')}</H1>
           {step.validated.map((w) => <Text key={w.slug} style={{ fontWeight: '800', color: C.ok }}>✓ {w.title}</Text>)}
           {step.stoppedAt && <P style={{ textAlign: 'center' }}>{T('Ton parcours reprend au monde « {0} ».', [step.stoppedAt.title])}</P>}

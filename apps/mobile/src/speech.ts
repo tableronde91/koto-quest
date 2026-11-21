@@ -1,12 +1,14 @@
 import * as Speech from 'expo-speech';
+import { hasHangul } from '@koto/shared';
 
 /**
- * Prononciation japonaise par la synthèse vocale du téléphone.
- * Comme sur le web : une voix japonaise choisie une fois (installée et de meilleure qualité d'abord),
+ * Prononciation japonaise ou coréenne par la synthèse vocale du téléphone.
+ * Comme sur le web : une voix par langue choisie une fois (installée et de meilleure qualité d'abord),
  * un court délai quand une lecture était en cours (l'arrêt est asynchrone et coupait la phrase
  * suivante), et seule la dernière demande est jouée.
  */
-let voiceId: string | undefined;
+type Lang = 'ja' | 'ko';
+const voiceId: Partial<Record<Lang, string>> = {};
 let voiceLoad: Promise<void> | null = null;
 let speaking = false;
 let request = 0;
@@ -14,9 +16,11 @@ let request = 0;
 function loadVoice(): Promise<void> {
   voiceLoad ??= Speech.getAvailableVoicesAsync()
     .then((voices) => {
-      const ja = voices.filter((v) => v.language.toLowerCase().replace('_', '-').startsWith('ja'));
-      const best = ja.sort((a, b) => (b.quality === Speech.VoiceQuality.Enhanced ? 1 : 0) - (a.quality === Speech.VoiceQuality.Enhanced ? 1 : 0))[0];
-      voiceId = best?.identifier;
+      for (const lang of ['ja', 'ko'] as const) {
+        const mine = voices.filter((v) => v.language.toLowerCase().replace('_', '-').startsWith(lang));
+        const best = mine.sort((a, b) => (b.quality === Speech.VoiceQuality.Enhanced ? 1 : 0) - (a.quality === Speech.VoiceQuality.Enhanced ? 1 : 0))[0];
+        voiceId[lang] = best?.identifier;
+      }
     })
     .catch(() => undefined);
   return voiceLoad;
@@ -39,10 +43,12 @@ function say(parts: Part[], onEnd?: () => void) {
   const go = () => {
     if (my !== request) return;
     speaking = true;
+    // Le coréen se reconnaît au hangeul : la même phrase n'est jamais lue avec une voix japonaise.
+    const lang: Lang = list.some((p) => hasHangul(p.text)) ? 'ko' : 'ja';
     list.forEach((p, i) =>
       Speech.speak(p.text, {
-        language: 'ja-JP',
-        voice: voiceId,
+        language: lang === 'ko' ? 'ko-KR' : 'ja-JP',
+        voice: voiceId[lang],
         rate: p.rate ?? 0.9,
         pitch: p.pitch ?? 1,
         onDone: i === list.length - 1 ? () => { if (my === request) { speaking = false; onEnd?.(); } } : undefined,

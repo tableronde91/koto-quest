@@ -217,6 +217,26 @@ describe('Coréen : apprendre une deuxième langue', () => {
     expect(res).toMatchObject({ passed: n === 5, scaled: { total: 200, level: 5, max: { passLevel: n } } });
   });
 
+  it('test de niveau en coréen : îles du TOPIK 1, validées une à une', async () => {
+    const { agent } = await signUpKorean(ctx);
+    expect((await agent.get('/api/dashboard')).body.suggestPlacement).toBe(true);
+    let step = (await agent.post('/api/placement/start').expect(201)).body;
+    expect(step).toMatchObject({ done: false, block: { index: 0, world: { slug: 'topik1-w1' } } });
+    const answer = async (ids: string[], ok: (i: number) => boolean) => {
+      const a: Record<string, unknown> = {};
+      for (const [i, id] of ids.entries()) a[id] = ok(i) ? await correctAnswer(ctx.prisma, id) : '__faux__';
+      return a;
+    };
+    let ids = step.block.questions.map((q: any) => q.id);
+    step = (await agent.post('/api/placement/answer').send({ sessionId: step.block.sessionId, answers: await answer(ids, () => true) }).expect(200)).body;
+    expect(step).toMatchObject({ done: false, lastPassed: true, block: { world: { slug: 'topik1-w2' } } });
+    ids = step.block.questions.map((q: any) => q.id);
+    const done = (await agent.post('/api/placement/answer').send({ sessionId: step.block.sessionId, answers: await answer(ids, () => false) }).expect(200)).body;
+    expect(done).toMatchObject({ done: true, stoppedAt: { slug: 'topik1-w2' } });
+    expect(done.validated.map((w: any) => w.slug)).toEqual(['topik1-w1']);
+    expect(done.nextLesson.slug).not.toMatch(/^ko-vowels/);
+  });
+
   it('mini-jeux : Hangeul Rush à la place de Kanji Rush, sur les lettres déjà apprises', async () => {
     const { agent } = await signUpKorean(ctx);
     let list = (await agent.get('/api/games').expect(200)).body;
