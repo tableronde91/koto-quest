@@ -34,12 +34,19 @@ describe('mini-jeux', () => {
   });
 
   it('Hangeul Rush remplace Kanji Rush pour qui étudie le coréen', () => {
-    expect(gameIdsFor('ja')).toEqual(['kanji-rush', 'speed', 'listening']);
+    expect(gameIdsFor('ja')).toEqual(['kana-rush', 'kanji-rush', 'speed', 'listening']);
     expect(gameIdsFor('ko')).toEqual(['hangul-rush', 'speed', 'listening']);
     const h = (id: string, front: string, reading: string, meaning: string): EngineItem => ({ id, kind: 'kana', front, reading, meaning });
     const HANGUL = [h('a', 'ㅏ', '아', 'a'), h('eo', 'ㅓ', '어', 'eo'), h('o', 'ㅗ', '오', 'o'), h('u', 'ㅜ', '우', 'u'), h('eu', 'ㅡ', '으', 'eu'), h('i', 'ㅣ', '이', 'i'), h('ga', '가', '가', 'ga')];
     const qs = planTimedGame(GAMES['hangul-rush'], HANGUL, HANGUL, createRng(3));
     expect(qs.length).toBe(60);
     expect(qs.every((q) => ['meaning_choice', 'reverse_choice'].includes(q.type))).toBe(true);
+  });
+
+  it('Kana Rush entraîne les hiragana et katakana dès les premières leçons de japonais', () => {
+    const kn = (id: string, front: string, romaji: string): EngineItem => ({ id, kind: 'kana', front, reading: front, meaning: romaji });
+    const KANA = [kn('a', 'あ', 'a'), kn('i', 'い', 'i'), kn('u', 'う', 'u'), kn('ka', 'カ', 'ka'), kn('ki', 'キ', 'ki'), kn('ku', 'ク', 'ku'), kn('sa', 'さ', 'sa')];
+    expect(planTimedGame(GAMES['kana-rush'], [...KANA, ...KANJI], KANA, createRng(4)).every((q) => KANA.some((x) => x.id === q.itemId))).toBe(true);
+    expect(planTimedGame(GAMES['kana-rush'], KANJI, KANJI, createRng(5))).toEqual([]);
   });
 });

@@ -366,6 +366,12 @@ test('hors ligne : carte des mondes et mini-jeu chronométré', async ({ page })
     }
   }
 
+  // En japonais : Kana Rush et Kanji Rush, pas Hangeul Rush
+  await page.goto(FILE + '#/games');
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kanji Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Hangeul Rush' })).toHaveCount(0);
+
   await page.goto(FILE + '#/games/kanji-rush');
   await page.getByRole('button', { name: 'C’est parti' }).click();
   // Quelques bonnes réponses rapides, puis on laisse le chrono s'écouler (accéléré)
@@ -862,6 +868,7 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await page.goto(FILE + '#/games');
   await expect(page.getByRole('heading', { name: 'Hangeul Rush' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Kanji Rush' })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toHaveCount(0);
 
   // Succès : ceux du coréen remplacent ceux des kanji
   await page.goto(FILE + '#/achievements');

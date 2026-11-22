@@ -10,8 +10,8 @@ import { Confetti, CountUp, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
 import { useStudyLang } from '../components/StudyLanguage';
 
-const GLYPH: Record<GameInfoDto['id'], string> = { 'kanji-rush': '速', 'hangul-rush': '한', speed: '走', listening: '耳' };
-const KIND_HINT: Record<GameInfoDto['id'], string> = { 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), speed: 'notions', listening: T("kana ou mots") };
+const GLYPH: Record<GameInfoDto['id'], string> = { 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', speed: '走', listening: '耳' };
+const KIND_HINT: Record<GameInfoDto['id'], string> = { 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), speed: 'notions', listening: T("kana ou mots") };
 
 const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api<GamesDto>('/games') });
 

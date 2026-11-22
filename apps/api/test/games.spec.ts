@@ -19,11 +19,27 @@ describe('Mini-jeux chronométrés', () => {
   it('reste verrouillé tant que trop peu de notions ont été vues', async () => {
     const { agent } = await signUp(ctx.app);
     const list = await agent.get('/api/games').expect(200);
-    expect(list.body.games.map((g: any) => g.id)).toEqual(['kanji-rush', 'speed', 'listening']);
+    expect(list.body.games.map((g: any) => g.id)).toEqual(['kana-rush', 'kanji-rush', 'speed', 'listening']);
     expect(list.body.games.every((g: any) => !g.available)).toBe(true);
     expect(list.body.coinsLeftToday).toBe(15);
     await agent.post('/api/games/kanji-rush/start').expect(403);
     await agent.post('/api/games/pacman/start').expect(404);
+  });
+
+  it('Kana Rush se débloque avec les premiers hiragana et ne propose que des kana', async () => {
+    const { agent } = await signUp(ctx.app);
+    for (const scope of ['hira-voyelles', 'hira-k']) {
+      for (let i = 0; i < 2; i++) {
+        const s = await agent.post('/api/characters/practice').send({ scope }).expect(201);
+        for (const q of s.body.questions) await agent.post(`/api/questions/${q.id}/answer`).send({ answer: await correctAnswer(ctx.prisma, q.id), responseMs: 3000 }).expect(200);
+      }
+    }
+    const list = (await agent.get('/api/games').expect(200)).body;
+    expect(list.games[0]).toMatchObject({ id: 'kana-rush', title: 'Kana Rush', available: true });
+    expect(list.games[1]).toMatchObject({ id: 'kanji-rush', available: false });
+    const game = (await agent.post('/api/games/kana-rush/start').expect(201)).body;
+    expect(game.questions.length).toBe(60);
+    expect(game.questions.every((q: any) => ['meaning_choice', 'reverse_choice'].includes(q.type))).toBe(true);
   });
 
   it('score recalculé côté serveur : seules les réponses dans le temps comptent, sans toucher aux révisions', async () => {

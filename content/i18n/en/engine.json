@@ -253,5 +253,6 @@
  "Même sens : {0}": "Same meaning: {0}",
  "Ordre : {0}": "Order: {0}",
  "「{0}」 se lit 「{1}」.": "「{0}」 is read 「{1}」.",
- "「{0}」 s'écrit 「{1}」.": "「{0}」 is written 「{1}」."
+ "「{0}」 s'écrit 「{1}」.": "「{0}」 is written 「{1}」.",
+ "Reconnais un maximum de hiragana et de katakana en une minute.": "Recognise as many hiragana and katakana as you can in one minute."
 }
