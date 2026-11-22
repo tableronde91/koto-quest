@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { hasHangul, type LessonCompletionDto, type LessonDto, type SessionDto } from '@koto/shared';
+import { hasHangul, type LessonCompletionDto, type LessonDto, type SessionDto, spokenForm } from '@koto/shared';
 import { api, post } from '../../src/api';
 import { QuizRunner, RunSummary } from '../../src/QuizRunner';
 import { speak } from '../../src/speech';
@@ -85,7 +85,7 @@ export default function LessonScreen() {
       <H2>{T('Notions')}</H2>
       <View style={{ gap: 8 }}>
         {lesson.items.map((it) => (
-          <Pressable key={it.id} onPress={() => speak(it.reading ?? it.front)} accessibilityLabel={`${it.front}, ${it.meaning}, ${T('écouter')}`}>
+          <Pressable key={it.id} onPress={() => speak(spokenForm(it.front, it.reading))} accessibilityLabel={`${it.front}, ${it.meaning}, ${T('écouter')}`}>
             <Card style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
               <Text style={{ fontSize: [...it.front].length <= 2 ? 40 : 24, fontWeight: '800', color: C.ink, minWidth: 56, textAlign: 'center' }}>{it.front}</Text>
               <View style={{ flex: 1 }}>
@@ -100,7 +100,7 @@ export default function LessonScreen() {
       </View>
       {lesson.examples.length > 0 && <H2>{T('Exemples')}</H2>}
       {lesson.examples.map((e, i) => (
-        <Pressable key={i} onPress={() => speak(e.reading ?? e.jp)}>
+        <Pressable key={i} onPress={() => speak(spokenForm(e.jp, e.reading))}>
           <Card style={{ gap: 2 }}>
             <Text style={{ fontSize: 20, color: C.ink }}>{e.jp} 🔊</Text>
             {e.reading && <Text style={{ color: C.inkSoft }}>{e.reading}</Text>}

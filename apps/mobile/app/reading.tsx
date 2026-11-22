@@ -19,7 +19,7 @@ export default function ReadingScreen() {
   return (
     <Screen>
       <TitleBar title={T('Lecture')} fallback="/learn" />
-      <P soft>{w.en ? T('Des contes et légendes en anglais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : w.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.')}</P>
+      <P soft>{w.en ? T('Des contes et légendes en anglais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : w.zh ? T('Des contes chinois à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : w.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts. Lire un peu chaque jour aide beaucoup à progresser.')}</P>
 
       {today.chapter && today.story && (
         <Card style={{ gap: 10, backgroundColor: C.ink, borderColor: C.ink }}>

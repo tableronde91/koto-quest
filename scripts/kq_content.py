@@ -66,8 +66,9 @@ def items_of(level):
             for l in c['lessons']:
                 yield from l['items']
 
-def check_and_write(level, path, other_paths):
-    """Contrôle doublons et traductions, puis écrit le niveau et le dictionnaire anglais."""
+def check_and_write(level, path, other_paths, same_lang_paths=None):
+    """Contrôle doublons et traductions, puis écrit le niveau et le dictionnaire anglais.
+    `same_lang_paths` : niveaux de la même langue pour le contrôle des graphies en double (par défaut tous)."""
     others = [json.load(open(os.path.join(ROOT, p), encoding='utf-8')) for p in other_paths]
     old = {}
     for o in others:
@@ -77,6 +78,9 @@ def check_and_write(level, path, other_paths):
     for th in expr['themes']:
         for it in th['expressions']:
             old.setdefault(it['slug'], it)
+    same = None
+    if same_lang_paths is not None:
+        same = {it['slug'] for p in same_lang_paths for it in items_of(json.load(open(os.path.join(ROOT, p), encoding='utf-8')))}
     problems, seen = [], {}
     new_items = list(items_of(level))
     for it in new_items:
@@ -86,7 +90,7 @@ def check_and_write(level, path, other_paths):
             problems.append(f"slug en double : {it['slug']}")
         seen[it['slug']] = it
         if it['kind'] in ('vocabulary', 'kanji'):
-            for o in list(old.values()) + [x for x in seen.values() if x is not it]:
+            for o in [v for v in old.values() if same is None or v['slug'] in same] + [x for x in seen.values() if x is not it]:
                 if o.get('kind') == it['kind'] and o['front'] == it['front'] and o['slug'] != it['slug']:
                     problems.append(f"{it['kind']} déjà présent : {it['front']} ({o['slug']})")
     full = {**DICO, **EN}

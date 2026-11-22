@@ -81,7 +81,7 @@ function blob(cx: number, cy: number, rx: number, ry: number, seed: number, wobb
 // ───────────── Ambiance de chaque niveau ─────────────
 // N5 : printemps lumineux (cerisiers, soleil). N4 : automne au crépuscule, plus sobre (érables, pins, lune, brume).
 interface MapTheme {
-  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear' | 'korea' | 'albion';
+  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear' | 'korea' | 'albion' | 'china';
   sea: [string, string, string];
   waves: number;
   horizon: string;
@@ -283,6 +283,32 @@ const KOREA: MapTheme = {
   dusk: false,
 };
 
+// HSK : la plaine du Fleuve jaune au temps des Royaumes combattants (eaux de jade, fleurs de prunier, laque vermillon et or).
+const CHINA: MapTheme = {
+  id: 'china',
+  sea: ['#2F7A6E', '#3A8C7C', '#47A08A'],
+  waves: 0.1,
+  horizon: '#5A4A3A',
+  shallow: '#E9D9A0',
+  shallowOpacity: 0.3,
+  grass: ['#8FA65A', '#7A944A'],
+  sand: '#E9CF9A',
+  blossom: '#E25A6A',
+  blossomDark: '#B23A4A',
+  leaf: '#4E6E3A',
+  leafDark: '#3A552A',
+  cloud: '#FFF6E6',
+  cloudOpacity: 0.8,
+  foam: 0.55,
+  path: '#F2D58A',
+  particles: ['#F4B6C2', '#E25A6A', '#FFFFFF'],
+  banner: { fill: '#8E1B26', stroke: '#E2B84A', text: '#FFF3DC', seal: '#E2B84A' },
+  plaque: { fill: '#FFF3DC', stroke: '#8E1B26', text: '#3A1A14', accent: '#2F7A6E' },
+  sail: '#8E1B26',
+  dusk: false,
+  petals: true,
+};
+
 // TOPIK 2 : printemps coréen (azalées roses et forsythias jaunes sur les collines, mer turquoise, couleurs du dancheong).
 const KOREA_SPRING: MapTheme = {
   ...KOREA,
@@ -373,7 +399,7 @@ const KOREA_DAWN: MapTheme = {
 
 const ThemeCtx = createContext<MapTheme>(SPRING);
 const useMapTheme = () => useContext(ThemeCtx);
-export const mapThemeFor = (level: string) => (/^[ABC][12]$/i.test(level) ? ALBION : /^TOPIK2$/i.test(level) ? KOREA_SPRING : /^TOPIK3$/i.test(level) ? KOREA_SUMMER : /^TOPIK4$/i.test(level) ? KOREA_WINTER : /^TOPIK5$/i.test(level) ? KOREA_SPIRIT : /^TOPIK6$/i.test(level) ? KOREA_DAWN : /^TOPIK/i.test(level) ? KOREA : /N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
+export const mapThemeFor = (level: string) => (/^HSK/i.test(level) ? CHINA : /^[ABC][12]$/i.test(level) ? ALBION : /^TOPIK2$/i.test(level) ? KOREA_SPRING : /^TOPIK3$/i.test(level) ? KOREA_SUMMER : /^TOPIK4$/i.test(level) ? KOREA_WINTER : /^TOPIK5$/i.test(level) ? KOREA_SPIRIT : /^TOPIK6$/i.test(level) ? KOREA_DAWN : /^TOPIK/i.test(level) ? KOREA : /N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
 
 
 function Tree({ x, y, s = 1, pink = false }: { x: number; y: number; s?: number; pink?: boolean }) {
@@ -908,6 +934,15 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
               <Castle x={600} y={30} s={0.4} fill={t.horizon} />
             </g>
           )}
+          {saga && t.id === 'china' && (
+            /* Monts du Shandong à l'horizon, muraille de Qin et tour à étages */
+            <g pointerEvents="none" opacity={0.55} fill={t.horizon}>
+              <path d="M500 70 L560 26 L600 50 L650 18 L720 70Z" />
+              <path d="M800 70 L850 36 L885 54 L935 28 L990 70Z" />
+              <path d="M560 70 v-10 h8 v4 h8 v-4 h8 v4 h8 v-4 h8 v4 h8 v-4 h8 v10Z" />
+              <path d="M300 70 h18 v-8 h-14 l-4 -4 h22 l-4 4 h-2 v-6 h-12 l-4 -4 h18 l-4 4 h-2 v-6 h-6 v6 h-4Z" />
+            </g>
+          )}
           {saga && t.id === 'korea' && (
             /* Montagnes de la péninsule à l'horizon, toit de palais et pagode de pierre */
             <g pointerEvents="none" opacity={0.55} fill={t.horizon}>
@@ -996,7 +1031,7 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           {worlds.map((w, i) => {
             const p = pts[i];
             const st = states[i];
-            const glyph = w.exam ? (t.id === 'korea' ? '시' : t.id === 'albion' ? 'T' : '試') : w.boss?.glyph ?? String(w.order);
+            const glyph = w.exam ? (t.id === 'korea' ? '시' : t.id === 'albion' ? 'T' : t.id === 'china' ? '考' : '試') : w.boss?.glyph ?? String(w.order);
             const detail = w.exam && w.progress.total === 0 ? (w.exam.passed ? T("examen blanc réussi") : 'examen blanc') : T("{0} leçons sur {1}", [w.progress.completed, w.progress.total]);
             const label = T("Île {0} : {1}, {2}", [w.order, w.title, st === 'done' ? T("terminée") : st === 'current' ? T("en cours") : st === 'soon' ? T("bientôt") : detail]);
             const title = w.title.length > 20 ? `${w.title.slice(0, 19).trimEnd()}…` : w.title;
@@ -1078,7 +1113,7 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           <g transform="translate(24 24)" pointerEvents="none">
             <rect width={(saga?.title ?? region).length * 10.5 + 60} height="44" rx="10" fill={t.banner.fill} stroke={t.banner.stroke} strokeWidth="2.5" />
             <circle cx="24" cy="22" r="11" fill={t.banner.seal} />
-            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga?.glyph ?? (t.id === 'korea' ? '한' : t.id === 'newyear' ? '新' : t.id === 'winter' ? '冬' : t.id === 'summer' ? '夏' : t.dusk ? '秋' : '島')}</text>
+            <text x="24" y="22" dy="0.36em" textAnchor="middle" fontSize="12" fontWeight="900" className="jp" fill="#FFFFFF">{saga?.glyph ?? (t.id === 'korea' ? '한' : t.id === 'china' ? '中' : t.id === 'newyear' ? '新' : t.id === 'winter' ? '冬' : t.id === 'summer' ? '夏' : t.dusk ? '秋' : '島')}</text>
             <text x="44" y="22" dy="0.35em" fontSize="20" className="font-display" fill={t.banner.text}>{saga?.title ?? region}</text>
           </g>
 

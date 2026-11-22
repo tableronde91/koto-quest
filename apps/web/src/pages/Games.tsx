@@ -10,8 +10,8 @@ import { Confetti, CountUp, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
 import { useStudyLang } from '../components/StudyLanguage';
 
-const GLYPH: Record<GameInfoDto['id'], string> = { 'word-rush': 'W', 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', speed: '走', listening: '耳' };
-const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), speed: 'notions', listening: T("kana ou mots") };
+const GLYPH: Record<GameInfoDto['id'], string> = { 'word-rush': 'W', 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', 'hanzi-rush': '字', speed: '走', listening: '耳' };
+const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), 'hanzi-rush': T("caractères"), speed: 'notions', listening: T("kana ou mots") };
 
 const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api<GamesDto>('/games') });
 
@@ -55,7 +55,7 @@ export function GamePlayPage() {
   const [stage, setStage] = useState<Stage>({ kind: 'intro' });
   const [error, setError] = useState<unknown>(null);
   const qc = useQueryClient();
-  const { ko, en } = useStudyLang();
+  const { ko, en, zh } = useStudyLang();
 
   const start = async () => {
     setError(null);
@@ -104,7 +104,7 @@ export function GamePlayPage() {
       <ul className="text-ink-soft">
         <li>{T("{0} secondes, pas de pause.", [info.durationSec ])}</li>
         <li>{T("Touche une réponse (ou les touches 1 à 4) : la suivante arrive aussitôt.")}</li>
-        {info.id === 'listening' && !speechSupported() && <li className="font-bold text-ko">{en ? T("Ce navigateur ne peut pas lire l’audio anglais.") : ko ? T("Ce navigateur ne peut pas lire l’audio coréen.") : T("Ce navigateur ne peut pas lire l’audio japonais.")}</li>}
+        {info.id === 'listening' && !speechSupported() && <li className="font-bold text-ko">{en ? T("Ce navigateur ne peut pas lire l’audio anglais.") : zh ? T("Ce navigateur ne peut pas lire l’audio chinois.") : ko ? T("Ce navigateur ne peut pas lire l’audio coréen.") : T("Ce navigateur ne peut pas lire l’audio japonais.")}</li>}
       </ul>
       {info.plays > 0 && <p>{T("Ton record :")}{' '}<strong>{info.bestScore}</strong></p>}
       {info.available ? (
@@ -241,11 +241,11 @@ function Play({ game, startedAt, onEnd }: { game: GameStartDto; startedAt: numbe
 }
 
 function Result({ info, result, onAgain }: { info: GameInfoDto; result: GameResultDto; onAgain: () => void }) {
-  const { ko, en } = useStudyLang();
+  const { ko, en, zh } = useStudyLang();
   return (
     <div className="flex flex-col items-center gap-4 py-8 text-center">
       {result.newBest && result.score > 0 && <Confetti />}
-      <Stamp className="jp text-6xl font-black text-ko">{en ? (result.newBest ? 'New record!' : 'Time!') : ko ? (result.newBest ? '신기록' : '끝') : result.newBest ? '新記録' : '終了'}</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{en ? (result.newBest ? 'New record!' : 'Time!') : zh ? (result.newBest ? '新纪录' : '结束') : ko ? (result.newBest ? '신기록' : '끝') : result.newBest ? '新記録' : '終了'}</Stamp>
       <h1 className="text-4xl">{result.newBest ? T("Nouveau record !") : T("Partie terminée")}</h1>
       <p className="font-display text-7xl tabular-nums"><CountUp value={result.score} /></p>
       <p className="text-ink-soft">{T("bonne{0} réponse{1} sur {2}, record : {3}", [ result.score > 1 ? 's' : '' , result.score > 1 ? 's' : '' , result.answered , result.bestScore ])}</p>

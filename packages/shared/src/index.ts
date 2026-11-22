@@ -294,7 +294,7 @@ export interface ShopDto {
 // ───────── Mini-jeux ─────────
 
 export interface GameInfoDto {
-  id: 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'word-rush' | 'speed' | 'listening';
+  id: 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'hanzi-rush' | 'word-rush' | 'speed' | 'listening';
   title: string;
   description: string;
   durationSec: number;
@@ -367,7 +367,7 @@ export interface ExamResultDto {
     writing?: number;
     /** JLPT N3 à N1 : lecture (読解) */
     reading?: number;
-    max: { system?: 'jlpt' | 'topik' | 'toeic'; language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number; levels?: { level: number; min: number }[]; passLevel?: number; writing?: number; reading?: number; passReading?: number };
+    max: { system?: 'jlpt' | 'topik' | 'toeic' | 'hsk'; language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number; levels?: { level: number; min: number }[]; passLevel?: number; writing?: number; reading?: number; passReading?: number };
   } | null;
 }
 

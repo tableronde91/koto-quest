@@ -334,3 +334,34 @@ test('appli mobile en anglais : choix de la langue, parcours A1 à C1, examen bl
   await page.getByTestId('exam-question').getByRole('radio').first().click();
   await expect(page.getByText('1 réponse sur 30.')).toBeVisible();
 });
+
+test('appli mobile en chinois : choix de la langue, parcours HSK 1, examen blanc HSK et fables', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto('/');
+  await page.getByRole('tab', { name: 'Créer un compte' }).click();
+  await page.getByLabel('Pseudo').fill('Mencius');
+  await page.getByLabel('Adresse e-mail').fill(`mobile-zh${Date.now()}@test.local`);
+  await page.getByLabel('Mot de passe').fill('motdepasse123');
+  await page.getByRole('button', { name: 'Créer mon compte' }).click();
+
+  await expect(page.getByRole('heading', { name: 'Bienvenue dans l’archipel !' })).toBeVisible();
+  await page.getByTestId('lang-zh').click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en chinois ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /^HSK 1/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Parcours : saga du messager des Royaumes
+  await page.getByRole('tab', { name: /Parcours/ }).click();
+  await expect(page.getByRole('heading', { name: 'HSK 1 : le messager des Royaumes' })).toBeVisible();
+
+  // Apprendre : fables chinoises, puis examen blanc HSK 1 (20 + 20 questions, 40 minutes)
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await expect(page.getByText('Des contes chinois en chinois simple, un chapitre par jour.')).toBeVisible();
+  await page.getByRole('button', { name: 'Examen blanc HSK 1' }).click();
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 1' })).toBeVisible();
+  await expect(page.getByText(/certification du HSK/)).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText(/40:00|39:5\d/)).toBeVisible();
+  await page.getByTestId('exam-question').getByRole('radio').first().click();
+  await expect(page.getByText('1 réponse sur 40.')).toBeVisible();
+});

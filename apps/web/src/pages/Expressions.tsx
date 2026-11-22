@@ -1,3 +1,4 @@
+import { spokenForm } from '@koto/shared';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { motion } from 'motion/react';
@@ -153,7 +154,7 @@ function ListenButton({ text, label, small }: { text: string; label: string; sma
 
 /** Fiche d'une expression : japonais, lecture, romaji, sens, usage et exemple. */
 function ExpressionCard({ e, themeTitle }: { e: ExpressionDto; themeTitle?: string }) {
-  const speakable = (e.reading ?? e.front).replace(/〜/g, '');
+  const speakable = spokenForm(e.front, e.reading).replace(/〜/g, '');
   return (
     <article className="flex h-full flex-col gap-3 rounded-3xl border border-line bg-surface p-5" data-testid="expression">
       <div className="flex items-start gap-3">

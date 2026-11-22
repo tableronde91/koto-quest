@@ -35,6 +35,68 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens chinois (HSK 1 — Royaumes combattants, bêtes du Classique des monts et des mers) ─────
+  // Nian : bête du Nouvel An, rouge, corne unique, crinière dorée, pétards
+  年: {
+    body: '#C8323F', belly: '#F2C14E', head: '#D9483B', eye: '#FFF3DC',
+    top: <><path d="M60 70 Q50 40 74 46 Q78 28 96 38 Q110 24 120 40 Q144 30 140 70Z" fill="#E2B84A" /><path d="M100 44 L96 14 L108 40Z" fill="#F6EBD3" stroke="#B8962A" strokeWidth="2" /></>,
+    face: <path d="M86 116 Q100 130 114 116" stroke="#5A1A10" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(160 150)"><rect x="-5" y="-14" width="10" height="22" rx="2" fill="#C8323F" stroke="#E2B84A" strokeWidth="2" /><path d="M0 -14 Q4 -22 0 -26" stroke="#5A4A3A" strokeWidth="2" fill="none" /></g>,
+  },
+  // Taotie : glouton des bronzes, vert-de-gris, motifs en spirale, grandes cornes
+  饕: {
+    body: '#3E7A6A', belly: '#8FBFA8', head: '#4E8A78', eye: '#F2D94E',
+    top: <path d="M62 66 Q40 40 56 22 Q60 44 78 50 M138 66 Q160 40 144 22 Q140 44 122 50" stroke="#2E5A4E" strokeWidth="9" fill="none" strokeLinecap="round" />,
+    under: <path d="M62 96 q8 -10 16 0 q-8 10 -16 0Z M122 96 q8 -10 16 0 q-8 10 -16 0Z" fill="none" stroke="#C9A24A" strokeWidth="2.4" />,
+    face: <path d="M80 118 H120 M86 118 v8 M100 118 v10 M114 118 v8" stroke="#F6EBD3" strokeWidth="3" strokeLinecap="round" />,
+  },
+  // Renarde à neuf queues : fourrure blanche et orange, éventail de queues
+  尾: {
+    body: '#F2F0EA', belly: '#FFFFFF', head: '#F6F3EC', eye: '#C8323F',
+    back: <g fill="#E8772E" stroke="#F6EBD3" strokeWidth="3">{[-60, -42, -24, -8, 8, 24, 42, 60, 0].map((a, i) => <ellipse key={i} cx="100" cy="96" rx="12" ry="56" transform={`rotate(${a} 100 150)`} />)}</g>,
+    top: <>{ear(58, false, '#F2F0EA', '#E8772E')}{ear(142, true, '#F2F0EA', '#E8772E')}</>,
+    under: <path d="M70 92 q6 -6 12 0 M118 92 q6 -6 12 0" stroke="#C8323F" strokeWidth="2.4" fill="none" />,
+    face: <path d="M95 106 L105 106 L100 112Z" fill="#5A4A4A" />,
+  },
+  // Kui : bête à une patte, gris de tempête, corne courte, tambour de peau
+  夔: {
+    body: '#5A6A7A', belly: '#9AAAB8', head: '#6A7A8A', eye: '#F2D94E',
+    top: <path d="M88 50 L94 30 L100 48 L106 30 L112 50" stroke="#3A4A58" strokeWidth="5" fill="none" strokeLinejoin="round" />,
+    face: <path d="M84 116 Q100 126 116 116" stroke="#2A3440" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(152 150)"><ellipse cx="0" cy="0" rx="16" ry="12" fill="#C9A86A" stroke="#7A5A34" strokeWidth="3" /><path d="M-24 -18 L-12 -6 M-30 -6 L-18 -2" stroke="#F2D94E" strokeWidth="3" strokeLinecap="round" /></g>,
+  },
+  // Pixiu : lion ailé doré qui avale l'or, pièces trouées
+  貔: {
+    body: '#D9A63A', belly: '#F6E3A8', head: '#E2B84A', eye: '#5A1A10',
+    back: <path d="M50 120 Q10 92 20 64 Q40 84 58 100 M150 120 Q190 92 180 64 Q160 84 142 100" fill="#C9A24A" stroke="#9A7A2A" strokeWidth="3" />,
+    top: <path d="M96 46 Q100 26 112 22 Q106 36 106 46" fill="#9A7A2A" />,
+    face: <path d="M84 116 Q100 128 116 116" stroke="#7A4A10" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(156 160)">{[0, 12].map((d) => <g key={d} transform={`translate(${d - 6} ${-d})`}><circle r="8" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="2" /><rect x="-2.5" y="-2.5" width="5" height="5" fill="#9A7A2A" /></g>)}</g>,
+  },
+  // Bifang : oiseau de feu à une patte, plumes bleues tachées de rouge, bec blanc, flammes
+  毕: {
+    body: '#2E6AA8', belly: '#9AC4E8', head: '#3A7ABA', eye: '#FFF3DC',
+    back: <path d="M46 130 Q8 110 16 76 Q34 102 56 112 M154 130 Q192 110 184 76 Q166 102 144 112" fill="#2E5A92" />,
+    top: <path d="M92 46 Q96 24 104 20 Q104 34 110 44" fill="#C8323F" />,
+    under: <path d="M64 136 l6 -4 M80 150 l6 -4 M120 150 l6 -4 M134 136 l6 -4" stroke="#C8323F" strokeWidth="4" strokeLinecap="round" />,
+    face: <path d="M92 104 L108 104 L100 120Z" fill="#F6F3EC" stroke="#C9C4BA" strokeWidth="1.5" />,
+    front: <g transform="translate(160 156)"><path d="M0 12 Q-12 0 -4 -10 Q-2 0 4 -2 Q2 -14 10 -20 Q12 -4 10 6 Q8 12 0 12Z" fill="#E8772E" /><path d="M2 10 Q-4 2 0 -4 Q4 2 6 0 Q8 6 2 10Z" fill="#F2D94E" /></g>,
+  },
+  // Xiangliu : serpent vert à neuf têtes dressées
+  柳: {
+    body: '#4E7A3A', belly: '#B8C98A', head: '#5E8A48', eye: '#E2483B',
+    back: <g stroke="#3E6A2E" strokeWidth="9" fill="none" strokeLinecap="round">{[-70, -52, -34, 34, 52, 70].map((a, i) => <path key={i} d="M100 130 Q100 80 100 40" transform={`rotate(${a} 100 130)`} />)}</g>,
+    under: <g fill="#5E8A48">{[-70, -52, -34, 34, 52, 70].map((a, i) => <circle key={i} cx="100" cy="36" r="8" transform={`rotate(${a} 100 130)`} />)}</g>,
+    face: <path d="M96 116 v10 l-4 5 M104 116 v10 l4 5" stroke="#C8323F" strokeWidth="2.6" fill="none" strokeLinecap="round" />,
+  },
+  // Zhulong : dragon-chandelle rouge, cornes de cerf, moustaches, bougie allumée
+  烛: {
+    body: '#B8322E', belly: '#F2C14E', head: '#C8423A', eye: '#F2D94E',
+    top: <path d="M78 50 L70 22 L62 28 M70 22 L76 10 M122 50 L130 22 L138 28 M130 22 L124 10" stroke="#E2B84A" strokeWidth="5" fill="none" strokeLinecap="round" />,
+    face: <path d="M84 112 Q60 118 46 108 M116 112 Q140 118 154 108" stroke="#F2C14E" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    back: <path d="M150 170 Q196 160 188 120 Q180 96 160 104" stroke="#B8322E" strokeWidth="14" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(156 152)"><rect x="-5" y="-6" width="10" height="22" rx="2" fill="#FFF3DC" stroke="#C9A24A" strokeWidth="2" /><path d="M0 -8 Q-6 -16 0 -26 Q6 -16 0 -8Z" fill="#F2A93B" /></g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {
@@ -888,7 +950,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

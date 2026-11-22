@@ -6,6 +6,8 @@ import { T } from '../i18n';
 import { langOf } from '../lib/format';
 
 const JP_RE = /[぀-ヿ一-龯]/;
+/** Pictogramme seul (HSK : il remplace l'image de la question), affiché en grand. */
+const isPicture = (s?: string) => !!s && [...s].length <= 3 && /^\p{Extended_Pictographic}/u.test(s);
 
 /** Phrase d'examen : {{…}} est souligné (comme sur la copie du JLPT), ★ et ＿＿ sont des cases. */
 export function ExamSentence({ text, className = '' }: { text: string; className?: string }) {
@@ -57,7 +59,7 @@ function AudioPlayer({ script, maxPlays, qid }: { script: string; maxPlays?: num
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qid]);
   if (!speechSupported())
-    return <p className="whitespace-pre-line text-left">{langOf(scriptText(script)) === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Transcription :") : langOf(scriptText(script)) === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Transcription :") : T("Ce navigateur ne peut pas lire l’audio japonais. Transcription :")}{' '}{'\n'}<span lang={langOf(scriptText(script))} className="jp">{scriptText(script)}</span></p>;
+    return <p className="whitespace-pre-line text-left">{langOf(scriptText(script)) === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Transcription :") : langOf(scriptText(script)) === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Transcription :") : langOf(scriptText(script)) === 'zh' ? T("Ce navigateur ne peut pas lire l’audio chinois. Transcription :") : T("Ce navigateur ne peut pas lire l’audio japonais. Transcription :")}{' '}{'\n'}<span lang={langOf(scriptText(script))} className="jp">{scriptText(script)}</span></p>;
   return (
     <div className="flex flex-col items-center gap-2">
       <button type="button" className="btn btn-quiet min-h-14 px-6 text-lg" onClick={play} disabled={left <= 0 || playing}>
@@ -106,7 +108,7 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
           ) : (
             <AudioPlayer script={script} maxPlays={d.maxPlays} qid={q.id} />
           )}
-          {d.text && <p lang={langOf(d.text)} className="jp text-center text-xl font-bold">{d.text}</p>}
+          {d.text && (isPicture(d.text) ? <p role="img" aria-label={T("Image de la question")} className="text-7xl leading-none">{d.text}</p> : <p lang={langOf(d.text)} className="jp text-center text-xl font-bold">{d.text}</p>)}
         </div>
       ) : d.passage ? (
         <div className="flex flex-col gap-3">
@@ -126,7 +128,9 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
       ) : d.jp || d.text ? (
         <div className="flex min-h-24 flex-col items-center justify-center gap-1 rounded-3xl bg-surface-2 p-5 text-center">
           {d.jp && !(q.type === 'true_false' && d.text) &&
-            (d.part ? (
+            (isPicture(d.jp) ? (
+              <p role="img" aria-label={T("Image de la question")} className="text-7xl leading-none">{d.jp}</p>
+            ) : d.part ? (
               <ExamSentence text={d.jp} className="text-2xl leading-loose sm:text-3xl" />
             ) : (
               <Jp text={d.jp.replace(/＿+/g, '（　）')} furigana={false} className={`${[...d.jp].length <= 3 ? 'text-6xl' : 'text-3xl'} font-bold`} />

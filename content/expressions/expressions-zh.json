@@ -1,0 +1,407 @@
+{
+ "contentVersion": "2026.11.22",
+ "language": "zh",
+ "notice": "Expressions chinoises courantes sélectionnées par Koto Quest ; le pinyin et le registre (poli, familier…) aident à choisir la bonne formule selon la situation.",
+ "themes": [
+  {
+   "slug": "zh-politesse",
+   "glyph": "礼",
+   "title": "Politesse essentielle",
+   "description": "Les formules de base pour saluer, remercier et s’excuser en chinois.",
+   "expressions": [
+    {
+     "slug": "zh-nihao",
+     "kind": "vocabulary",
+     "front": "你好",
+     "reading": "nǐ hǎo",
+     "romaji": null,
+     "meaning": "bonjour",
+     "note": "Le salut universel, à toute heure. Plus respectueux : 您好 (nín hǎo), avec 您, le « vous » de politesse.",
+     "register": "neutral",
+     "example": {
+      "jp": "你好！我叫大卫。",
+      "fr": "Bonjour ! Je m’appelle David."
+     }
+    },
+    {
+     "slug": "zexpr-ninhao",
+     "kind": "vocabulary",
+     "front": "您好",
+     "reading": "nín hǎo",
+     "romaji": null,
+     "meaning": "bonjour (respectueux)",
+     "note": "À une personne âgée, un client, un supérieur : 您 est la forme polie de 你.",
+     "register": "polite"
+    },
+    {
+     "slug": "zh-xiexie",
+     "kind": "vocabulary",
+     "front": "谢谢",
+     "reading": "xièxie",
+     "romaji": null,
+     "meaning": "merci",
+     "note": "On le double parfois pour insister : 谢谢谢谢！ Entre proches, on remercie moins qu’en français.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zh-bukeqi",
+     "kind": "vocabulary",
+     "front": "不客气",
+     "reading": "bú kèqi",
+     "romaji": null,
+     "meaning": "de rien",
+     "note": "Littéralement « ne fais pas de manières ». Variante : 不用谢 (bú yòng xiè), « pas besoin de remercier ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "zh-duibuqi",
+     "kind": "vocabulary",
+     "front": "对不起",
+     "reading": "duìbuqǐ",
+     "romaji": null,
+     "meaning": "pardon, désolé",
+     "note": "Pour une vraie excuse. Pour attirer l’attention, on dit plutôt 请问 ou 不好意思.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zh-meiguanxi",
+     "kind": "vocabulary",
+     "front": "没关系",
+     "reading": "méi guānxi",
+     "romaji": null,
+     "meaning": "ce n’est pas grave",
+     "note": "La réponse à 对不起 : « il n’y a pas de lien », rien de grave.",
+     "register": "neutral",
+     "example": {
+      "jp": "——对不起！——没关系。",
+      "fr": "— Pardon ! — Ce n’est pas grave."
+     }
+    },
+    {
+     "slug": "zexpr-buhaoyisi",
+     "kind": "vocabulary",
+     "front": "不好意思",
+     "reading": "bù hǎoyìsi",
+     "romaji": null,
+     "meaning": "excusez-moi, je suis gêné",
+     "note": "Excuse légère du quotidien : pour un petit retard, déranger quelqu’un ou refuser poliment.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "zh-rencontres",
+   "glyph": "见",
+   "title": "Rencontres et au revoir",
+   "description": "Se présenter, prendre des nouvelles et se quitter.",
+   "expressions": [
+    {
+     "slug": "zexpr-renshi-ni",
+     "kind": "vocabulary",
+     "front": "认识你很高兴",
+     "reading": "rènshi nǐ hěn gāoxìng",
+     "romaji": null,
+     "meaning": "ravi de te connaître",
+     "note": "À dire après une présentation. Réponse : 我也很高兴 (moi aussi).",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-ni-hao-ma",
+     "kind": "vocabulary",
+     "front": "你好吗？",
+     "reading": "nǐ hǎo ma?",
+     "romaji": null,
+     "meaning": "comment ça va ?",
+     "note": "Moins courant qu’en français ; on répond 我很好 (je vais bien). Entre amis, on demande plutôt 最近怎么样？",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-chi-le-ma",
+     "kind": "vocabulary",
+     "front": "吃了吗？",
+     "reading": "chī le ma?",
+     "romaji": null,
+     "meaning": "tu as mangé ? (salut familier)",
+     "note": "Salut traditionnel entre voisins et proches : ce n’est pas une invitation, juste une façon de dire bonjour.",
+     "register": "casual"
+    },
+    {
+     "slug": "zh-zaijian",
+     "kind": "vocabulary",
+     "front": "再见",
+     "reading": "zàijiàn",
+     "romaji": null,
+     "meaning": "au revoir",
+     "note": "« Se revoir ». Entre amis, on entend aussi 拜拜 (báibái), de l’anglais bye-bye.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-mingtian-jian",
+     "kind": "vocabulary",
+     "front": "明天见",
+     "reading": "míngtiān jiàn",
+     "romaji": null,
+     "meaning": "à demain",
+     "note": "Moment + 见 : 下午见 (à cet après-midi), 星期一见 (à lundi).",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-man-zou",
+     "kind": "vocabulary",
+     "front": "慢走",
+     "reading": "màn zǒu",
+     "romaji": null,
+     "meaning": "prends soin de toi en partant",
+     "note": "« Marche lentement » : l’hôte le dit à l’invité qui s’en va.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "zh-comprendre",
+   "glyph": "懂",
+   "title": "Se faire comprendre",
+   "description": "Demander de répéter, de ralentir ou de traduire.",
+   "expressions": [
+    {
+     "slug": "zexpr-qingwen",
+     "kind": "vocabulary",
+     "front": "请问",
+     "reading": "qǐngwèn",
+     "romaji": null,
+     "meaning": "excusez-moi, puis-je vous demander…",
+     "note": "Pour commencer une question à un inconnu : 请问，火车站在哪儿？",
+     "register": "polite",
+     "example": {
+      "jp": "请问，洗手间在哪儿？",
+      "fr": "Excusez-moi, où sont les toilettes ?"
+     }
+    },
+    {
+     "slug": "zexpr-ting-bu-dong",
+     "kind": "vocabulary",
+     "front": "我听不懂",
+     "reading": "wǒ tīng bu dǒng",
+     "romaji": null,
+     "meaning": "je ne comprends pas (à l’oral)",
+     "note": "听 = écouter, 懂 = comprendre : « j’écoute mais je ne comprends pas ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-zai-shuo",
+     "kind": "vocabulary",
+     "front": "请再说一遍",
+     "reading": "qǐng zài shuō yí biàn",
+     "romaji": null,
+     "meaning": "pouvez-vous répéter, s’il vous plaît ?",
+     "note": "一遍 = une fois (du début à la fin).",
+     "register": "polite"
+    },
+    {
+     "slug": "zexpr-man-dianr",
+     "kind": "vocabulary",
+     "front": "请说慢一点儿",
+     "reading": "qǐng shuō màn yìdiǎnr",
+     "romaji": null,
+     "meaning": "parlez plus lentement, s’il vous plaît",
+     "note": "慢 = lent ; 一点儿 = un peu (plus).",
+     "register": "polite"
+    },
+    {
+     "slug": "zexpr-zenme-shuo",
+     "kind": "vocabulary",
+     "front": "这个用汉语怎么说？",
+     "reading": "zhè ge yòng Hànyǔ zěnme shuō?",
+     "romaji": null,
+     "meaning": "comment dit-on ça en chinois ?",
+     "note": "En montrant un objet : le meilleur moyen d’apprendre du vocabulaire.",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "zh-restaurant",
+   "glyph": "吃",
+   "title": "Au restaurant",
+   "description": "Commander, trinquer et demander l’addition.",
+   "expressions": [
+    {
+     "slug": "zexpr-fuwuyuan",
+     "kind": "vocabulary",
+     "front": "服务员！",
+     "reading": "fúwùyuán!",
+     "romaji": null,
+     "meaning": "s’il vous plaît ! (au serveur)",
+     "note": "On appelle le serveur ou la serveuse à voix haute : c’est tout à fait normal en Chine.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-lai-yi-ge",
+     "kind": "vocabulary",
+     "front": "来一个…",
+     "reading": "lái yí ge…",
+     "romaji": null,
+     "meaning": "je vais prendre un…",
+     "note": "Pour commander de façon naturelle : 来一个米饭 (un riz, s’il vous plaît).",
+     "register": "casual"
+    },
+    {
+     "slug": "zexpr-ganbei",
+     "kind": "vocabulary",
+     "front": "干杯！",
+     "reading": "gānbēi!",
+     "romaji": null,
+     "meaning": "santé ! (cul sec)",
+     "note": "« Vider le verre » : on trinque souvent pendant les repas.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-mai-dan",
+     "kind": "vocabulary",
+     "front": "买单",
+     "reading": "mǎidān",
+     "romaji": null,
+     "meaning": "l’addition, s’il vous plaît",
+     "note": "Aussi 结账 (jiézhàng). En Chine, une seule personne invite souvent toute la table.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-hao-chi",
+     "kind": "vocabulary",
+     "front": "很好吃",
+     "reading": "hěn hǎochī",
+     "romaji": null,
+     "meaning": "c’est très bon",
+     "note": "好吃 = bon (à manger) ; 好喝 = bon (à boire).",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "zh-marche",
+   "glyph": "买",
+   "title": "Faire ses courses",
+   "description": "Demander un prix et marchander au marché.",
+   "expressions": [
+    {
+     "slug": "zexpr-duoshao-qian",
+     "kind": "vocabulary",
+     "front": "多少钱？",
+     "reading": "duōshao qián?",
+     "romaji": null,
+     "meaning": "combien ça coûte ?",
+     "note": "La question de base au marché ; la réponse se donne en 块 (yuans).",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-tai-gui",
+     "kind": "vocabulary",
+     "front": "太贵了！",
+     "reading": "tài guì le!",
+     "romaji": null,
+     "meaning": "c’est trop cher !",
+     "note": "Le premier mot pour marchander. 贵 = cher.",
+     "register": "casual"
+    },
+    {
+     "slug": "zexpr-pianyi",
+     "kind": "vocabulary",
+     "front": "便宜一点儿吧",
+     "reading": "piányi yìdiǎnr ba",
+     "romaji": null,
+     "meaning": "un peu moins cher, s’il vous plaît",
+     "note": "便宜 = bon marché ; 吧 adoucit la demande.",
+     "register": "casual"
+    },
+    {
+     "slug": "zexpr-wo-kankan",
+     "kind": "vocabulary",
+     "front": "我看看",
+     "reading": "wǒ kànkan",
+     "romaji": null,
+     "meaning": "je regarde seulement",
+     "note": "Le verbe redoublé (看看) rend l’action légère : « juste un coup d’œil ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-wo-yao-zhe-ge",
+     "kind": "vocabulary",
+     "front": "我要这个",
+     "reading": "wǒ yào zhè ge",
+     "romaji": null,
+     "meaning": "je prends celui-ci",
+     "note": "要 = vouloir, prendre ; en montrant l’objet.",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "zh-chengyu",
+   "glyph": "成",
+   "title": "Expressions en quatre caractères",
+   "description": "Les chengyu (成语), souvent tirés d’histoires de l’époque des Royaumes combattants.",
+   "expressions": [
+    {
+     "slug": "zexpr-yi-lu-ping-an",
+     "kind": "vocabulary",
+     "front": "一路平安",
+     "reading": "yí lù píng’ān",
+     "romaji": null,
+     "meaning": "bon voyage",
+     "note": "« Toute la route en paix » : à dire à quelqu’un qui part en voyage.",
+     "register": "neutral"
+    },
+    {
+     "slug": "zexpr-ma-ma-hu-hu",
+     "kind": "vocabulary",
+     "front": "马马虎虎",
+     "reading": "mǎmǎhūhū",
+     "romaji": null,
+     "meaning": "comme ci, comme ça",
+     "note": "« Cheval cheval tigre tigre » : ni bien ni mal, ou fait à la va-vite.",
+     "register": "casual"
+    },
+    {
+     "slug": "zexpr-wan-shi-ru-yi",
+     "kind": "vocabulary",
+     "front": "万事如意",
+     "reading": "wàn shì rú yì",
+     "romaji": null,
+     "meaning": "que tout se passe comme tu le souhaites",
+     "note": "Vœu du Nouvel An chinois, avec 新年快乐 (bonne année).",
+     "register": "formal"
+    },
+    {
+     "slug": "zexpr-hua-she-tian-zu",
+     "kind": "vocabulary",
+     "front": "画蛇添足",
+     "reading": "huà shé tiān zú",
+     "romaji": null,
+     "meaning": "en faire trop et tout gâcher",
+     "note": "« Ajouter des pattes au serpent qu’on dessine » : une fable du royaume de Chu.",
+     "register": "formal"
+    },
+    {
+     "slug": "zexpr-shou-zhu-dai-tu",
+     "kind": "vocabulary",
+     "front": "守株待兔",
+     "reading": "shǒu zhū dài tù",
+     "romaji": null,
+     "meaning": "attendre que la chance revienne sans rien faire",
+     "note": "« Garder la souche en attendant le lièvre » : un paysan de Song vit un lièvre s’assommer contre une souche et n’attendit plus que ça.",
+     "register": "formal"
+    },
+    {
+     "slug": "zexpr-zi-xiang-mao-dun",
+     "kind": "vocabulary",
+     "front": "自相矛盾",
+     "reading": "zì xiāng máodùn",
+     "romaji": null,
+     "meaning": "se contredire",
+     "note": "Un marchand de Chu vantait une lance qui perce tout et un bouclier que rien ne perce : d’où 矛盾, « lance-bouclier », la contradiction.",
+     "register": "formal"
+    }
+   ]
+  }
+ ]
+}

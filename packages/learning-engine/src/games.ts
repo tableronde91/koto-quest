@@ -5,7 +5,7 @@ import { Rng, shuffle } from './random';
  * Mini-jeux chronométrés (phase 2). Ils se jouent sur les notions déjà rencontrées :
  * c'est de l'entraînement, ils ne modifient pas la planification des révisions.
  */
-export type GameId = 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'word-rush' | 'speed' | 'listening';
+export type GameId = 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'hanzi-rush' | 'word-rush' | 'speed' | 'listening';
 
 export interface GameDef {
   id: GameId;
@@ -57,6 +57,15 @@ export const GAMES: Record<GameId, GameDef> = {
     kinds: ['kana'],
     questionTypes: ['meaning_choice', 'reverse_choice'],
   },
+  'hanzi-rush': {
+    id: 'hanzi-rush',
+    title: 'Hanzi Rush',
+    description: 'Reconnais un maximum de caractères chinois (sens et pinyin) en une minute.',
+    durationSec: 60,
+    minItems: 6,
+    kinds: ['kanji'],
+    questionTypes: ['meaning_choice', 'reverse_choice', 'reading_choice'],
+  },
   speed: {
     id: 'speed',
     title: 'Speed Challenge',
@@ -79,9 +88,9 @@ export const GAMES: Record<GameId, GameDef> = {
 
 export const GAME_IDS = Object.keys(GAMES) as GameId[];
 
-/** Mini-jeux proposés selon la langue étudiée : Kana Rush et Kanji Rush en japonais, Hangeul Rush en coréen, Word Rush en anglais. */
-export const gameIdsFor = (language: 'ja' | 'ko' | 'en'): GameId[] =>
-  language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : language === 'en' ? ['word-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening'];
+/** Mini-jeux proposés selon la langue étudiée : Kana Rush et Kanji Rush en japonais, Hangeul Rush en coréen, Word Rush en anglais, Hanzi Rush en chinois. */
+export const gameIdsFor = (language: 'ja' | 'ko' | 'en' | 'zh'): GameId[] =>
+  language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : language === 'en' ? ['word-rush', 'speed', 'listening'] : language === 'zh' ? ['hanzi-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening'];
 
 /** Marge accordée pour la latence réseau entre la fin du chrono et la dernière réponse. */
 export const GAME_GRACE_MS = 3000;

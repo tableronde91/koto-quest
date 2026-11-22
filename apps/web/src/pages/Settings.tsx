@@ -202,7 +202,7 @@ function StudySection({ me }: { me: MeDto }) {
         </label>
       </div>
       <label className="flex items-center gap-3">
-        <input type="checkbox" className="h-5 w-5 accent-[var(--ink)]" checked={p.showFurigana} onChange={(e) => update.mutate({ showFurigana: e.target.checked })} />{T("Afficher les furigana (lecture au-dessus des kanji)")}</label>
+        <input type="checkbox" className="h-5 w-5 accent-[var(--ink)]" checked={p.showFurigana} onChange={(e) => update.mutate({ showFurigana: e.target.checked })} />{p.studyLanguage === 'zh' ? T("Afficher le pinyin (lecture au-dessus des caractères)") : T("Afficher les furigana (lecture au-dessus des kanji)")}</label>
       <label className="flex items-center gap-3">
         <input type="checkbox" className="h-5 w-5 accent-[var(--ink)]" checked={p.reducedMotion} onChange={(e) => update.mutate({ reducedMotion: e.target.checked })} />{T("Réduire les animations")}</label>
       <p className="text-sm text-ink-soft">{T("Fuseau horaire : {0}.", [p.timezone])} <Link to="/profile" className="underline">{T("Pseudo, niveau visé et objectifs : voir le profil.")}</Link></p>

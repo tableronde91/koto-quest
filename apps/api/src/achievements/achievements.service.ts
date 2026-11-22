@@ -56,11 +56,12 @@ export class AchievementsService implements OnModuleInit {
       this.prisma.bossResult.findMany({ where: { userId, firstVictoryAt: { not: null } }, select: { worldSlug: true } }),
       this.prisma.examAttempt.findMany({ where: { userId, passed: true }, select: { exam: { select: { slug: true } } } }),
     ]);
-    const bossesIn = (lang: 'ja' | 'en') => jaBosses.filter((b) => languageOfSlug(b.worldSlug) === lang).length;
-    const passedIn = (lang: 'ja' | 'en') => jlptPassed.filter((e) => languageOfSlug(e.exam.slug) === lang).length;
+    const bossesIn = (lang: 'ja' | 'en' | 'zh') => jaBosses.filter((b) => languageOfSlug(b.worldSlug) === lang).length;
+    const passedIn = (lang: 'ja' | 'en' | 'zh') => jlptPassed.filter((e) => languageOfSlug(e.exam.slug) === lang).length;
     const enChapters = this.reading.chapterSlugs('en');
     const jaChapters = this.reading.chapterSlugs('ja');
     const koChapters = this.reading.chapterSlugs('ko');
+    const zhChapters = this.reading.chapterSlugs('zh');
     let masteredItems = 0;
     let masteredKanji = 0;
     let masteredHangul = 0;
@@ -99,6 +100,9 @@ export class AchievementsService implements OnModuleInit {
       englishBosses: bossesIn('en'),
       toeicPassed: passedIn('en'),
       englishChapters: chapters.filter((r) => enChapters.has(r.chapter)).length,
+      chineseBosses: bossesIn('zh'),
+      hskPassed: passedIn('zh'),
+      chineseChapters: chapters.filter((r) => zhChapters.has(r.chapter)).length,
     };
   }
 

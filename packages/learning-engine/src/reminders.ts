@@ -128,7 +128,15 @@ const MESSAGES_EN = [
   'Petit quiz express : tu te souviens ? 📚',
 ];
 
-export function reminderMessage(seed: number, lang: 'ja' | 'ko' | 'en' = 'ja'): string {
-  const list = lang === 'ko' ? MESSAGES_KO : lang === 'en' ? MESSAGES_EN : MESSAGES;
+const MESSAGES_ZH = [
+  'Un petit défi de chinois t’attend ! 🐉',
+  'Trente secondes pour réveiller ta mémoire ? 🧠',
+  'Un caractère veut te dire bonjour… 你好！ 👋',
+  'Les Royaumes combattants ne se conquièrent pas seuls : une révision ? ⚔️',
+  'Quatre tons, un mot : viens les réviser ! 🎵',
+];
+
+export function reminderMessage(seed: number, lang: 'ja' | 'ko' | 'en' | 'zh' = 'ja'): string {
+  const list = lang === 'ko' ? MESSAGES_KO : lang === 'en' ? MESSAGES_EN : lang === 'zh' ? MESSAGES_ZH : MESSAGES;
   return list[Math.abs(seed) % list.length];
 }

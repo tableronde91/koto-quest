@@ -1,3 +1,4 @@
+import { spokenForm } from '@koto/shared';
 import { useMemo, useState } from 'react';
 import { Modal, Pressable, Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -12,7 +13,7 @@ import { useStudyLang } from '../src/study';
 
 type Pane = string;
 // Libellés traduits à l'affichage avec T()
-const PANES: Record<'ja' | 'ko' | 'en', { slug: Pane; glyph: string; label: string }[]> = {
+const PANES: Record<'ja' | 'ko' | 'en' | 'zh', { slug: Pane; glyph: string; label: string }[]> = {
   ja: [
     { slug: 'hiragana', glyph: 'あ', label: 'Hiragana' },
     { slug: 'katakana', glyph: 'ア', label: 'Katakana' },
@@ -27,6 +28,11 @@ const PANES: Record<'ja' | 'ko' | 'en', { slug: Pane; glyph: string; label: stri
   ],
   // Pas d'écriture à apprendre en anglais : seulement les expressions et idiomes
   en: [{ slug: 'expressions', glyph: '“', label: 'Expressions' }],
+  // Chinois : les caractères (une section, un groupe par niveau du HSK) et les expressions
+  zh: [
+    { slug: 'hanzi', glyph: '字', label: 'Hanzi' },
+    { slug: 'expressions', glyph: '话', label: 'Expressions' },
+  ],
 };
 
 // Traduits à l'affichage avec T()
@@ -46,8 +52,8 @@ export default function KanaTab() {
   const pane = panes.some((p) => p.slug === picked) ? picked : panes[0].slug;
   return (
     <Screen>
-      <TitleBar title={w.pick(T('Caractères'), T('Hangeul'), T('Expressions'))} fallback="/learn" />
-      <P soft>{w.pick(T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.'), T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.'), T('Les expressions idiomatiques et les verbes à particule les plus utiles, accessibles à tout moment.'))}</P>
+      <TitleBar title={w.pick(T('Caractères'), T('Hangeul'), T('Expressions'), T('Hanzi'))} fallback="/learn" />
+      <P soft>{w.pick(T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.'), T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.'), T('Les expressions idiomatiques et les verbes à particule les plus utiles, accessibles à tout moment.'), T('Les caractères chinois avec leur pinyin et les expressions du quotidien, accessibles à tout moment.'))}</P>
       <View accessibilityRole="tablist" accessibilityLabel={T('Écriture')} style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 16, padding: 4 }}>
         {panes.map((p) => {
           const on = p.slug === pane;
@@ -134,7 +140,7 @@ function Cell({ c, kanji, onOpen }: { c: CharacterDto; kanji: boolean; onOpen: (
       accessibilityRole="button"
       accessibilityLabel={`${c.front}, ${label}, ${c.mastery ? T(MASTERY_LABEL[c.mastery]) : T('Pas encore vu')}`}
       onPress={() => {
-        speak(c.reading ?? c.front);
+        speak(spokenForm(c.front, c.reading));
         onOpen(c);
       }}
       style={{ alignItems: 'center', gap: 3, borderWidth: 2, borderColor: C.line, borderRadius: 16, backgroundColor: C.surface, paddingTop: 10, paddingBottom: 8, paddingHorizontal: 2 }}
@@ -149,6 +155,7 @@ function Cell({ c, kanji, onOpen }: { c: CharacterDto; kanji: boolean; onOpen: (
 }
 
 function CharacterSheet({ c, onClose }: { c: CharacterDto | null; onClose: () => void }) {
+  const { zh } = useStudyLang();
   return (
     <Modal visible={!!c} transparent animationType="fade" onRequestClose={onClose}>
       <Pressable onPress={onClose} style={{ flex: 1, backgroundColor: 'rgba(10,14,40,0.55)', justifyContent: 'flex-end', padding: 12 }}>
@@ -163,9 +170,9 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto | null; onClose: () =>
             <Text style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{c.kind === 'kanji' ? c.meaning : c.romaji}</Text>
             {c.kind === 'kanji' && (
               <View style={{ gap: 4 }}>
-                <Row k={T('Lecture courante')} v={c.reading ?? '—'} />
-                <Row k={T('On’yomi')} v={c.kanji?.onyomi.join('、') || '—'} />
-                <Row k={T('Kun’yomi')} v={c.kanji?.kunyomi.join('、') || '—'} />
+                <Row k={zh ? T('Pinyin') : T('Lecture courante')} v={c.reading ?? '—'} />
+                {(c.kanji?.onyomi.length ?? 0) + (c.kanji?.kunyomi.length ?? 0) > 0 && <Row k={T('On’yomi')} v={c.kanji?.onyomi.join('、') || '—'} />}
+                {(c.kanji?.onyomi.length ?? 0) + (c.kanji?.kunyomi.length ?? 0) > 0 && <Row k={T('Kun’yomi')} v={c.kanji?.kunyomi.join('、') || '—'} />}
                 {c.kanji?.strokes ? <Row k={T('Traits')} v={String(c.kanji.strokes)} /> : null}
               </View>
             )}
@@ -174,8 +181,8 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto | null; onClose: () =>
               <Text style={{ color: C.ink }}>{c.mastery ? T(MASTERY_LABEL[c.mastery]) : T('Pas encore vu')}</Text>
             </View>
             <View style={{ flexDirection: 'row', gap: 10 }}>
-              <Button label={`🔊 ${T('Écouter')}`} onPress={() => speak(c.reading ?? c.front)} style={{ flex: 1 }} />
-              <Button label={`🐢 ${T('Lentement')}`} tone="quiet" onPress={() => speak(c.reading ?? c.front, true)} style={{ flex: 1 }} />
+              <Button label={`🔊 ${T('Écouter')}`} onPress={() => speak(spokenForm(c.front, c.reading))} style={{ flex: 1 }} />
+              <Button label={`🐢 ${T('Lentement')}`} tone="quiet" onPress={() => speak(spokenForm(c.front, c.reading), true)} style={{ flex: 1 }} />
             </View>
           </Pressable>
         )}
@@ -197,7 +204,7 @@ function Row({ k, v }: { k: string; v: string }) {
 
 function ExpressionsPane() {
   const router = useRouter();
-  const { ko } = useStudyLang();
+  const { ko, zh } = useStudyLang();
   const { data, isLoading, error, refetch } = useExpressions();
   const [themeSlug, setThemeSlug] = useState<string | null>(null);
   const [query, setQuery] = useState('');
@@ -212,7 +219,7 @@ function ExpressionsPane() {
       <TextInput
         value={query}
         onChangeText={setQuery}
-        placeholder={ko ? T('Rechercher : merci, 감사, gamsa…') : T('Rechercher : merci, おねがい, sumimasen…')}
+        placeholder={zh ? T('Rechercher : merci, 谢谢, xièxie…') : ko ? T('Rechercher : merci, 감사, gamsa…') : T('Rechercher : merci, おねがい, sumimasen…')}
         placeholderTextColor={C.inkSoft}
         accessibilityLabel={T('Rechercher une expression')}
         autoCorrect={false}
@@ -276,7 +283,7 @@ function ExpressionCard({ e }: { e: ExpressionDto }) {
             <Text style={{ color: C.inkSoft }}>{[e.reading !== e.front ? e.reading : null, e.romaji].filter(Boolean).join(' · ')}</Text>
           ) : null}
         </View>
-        <Pressable accessibilityRole="button" accessibilityLabel={T('Écouter {0}', [e.front])} onPress={() => speak(e.reading ?? e.front)} hitSlop={10} style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: C.surface2, alignItems: 'center', justifyContent: 'center' }}>
+        <Pressable accessibilityRole="button" accessibilityLabel={T('Écouter {0}', [e.front])} onPress={() => speak(spokenForm(e.front, e.reading))} hitSlop={10} style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: C.surface2, alignItems: 'center', justifyContent: 'center' }}>
           <Text style={{ fontSize: 20 }}>🔊</Text>
         </Pressable>
       </View>

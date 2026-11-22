@@ -981,3 +981,54 @@ test('hors ligne : apprendre l’anglais pour le TOEIC (saga de Merlin, expressi
   await page.getByRole('button', { name: 'Suivante' }).click();
   await expect(page.getByText('Part 2 — Question-Response').first()).toBeVisible();
 });
+
+test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, hanzi, fables, examen sur 200)', async ({ page }) => {
+  await page.goto(FILE);
+  await page.getByRole('radio', { name: /Chinois/ }).click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en chinois ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Je pars de zéro/ }).click();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('heading', { name: 'Quel niveau HSK vises-tu ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /HSK 1 — débutant/ })).toHaveAttribute('aria-checked', 'true');
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  // Pas de kana parmi les difficultés proposées, mais les caractères (hanzi)
+  await expect(page.getByRole('button', { name: 'Les kana' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Les caractères (hanzi)' })).toBeVisible();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Première leçon : le pinyin et les quatre tons, le pinyin au-dessus des caractères
+  await page.getByRole('link', { name: 'Commencer la leçon' }).click();
+  await expect(page.getByRole('heading', { name: 'Le pinyin et les quatre tons' })).toBeVisible();
+  await expect(page.locator('ruby[lang="zh"]').filter({ hasText: 'bā' }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+
+  // Parcours : la saga du messager dans la plaine du Fleuve jaune
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: 'HSK 1 : le messager des Royaumes' })).toBeVisible();
+  await expect(page.locator('[data-theme-map="china"]')).toBeVisible();
+
+  // Onglet Hanzi : caractères du HSK 1, lus en pinyin
+  await page.goto(FILE + '#/characters');
+  await expect(page.getByText('人', { exact: true }).first()).toBeVisible();
+
+  // Mini-jeux : Hanzi Rush
+  await page.goto(FILE + '#/games');
+  await expect(page.getByRole('heading', { name: 'Hanzi Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toHaveCount(0);
+
+  // Lecture : les fables des Royaumes combattants
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('Le paysan qui attendait le lièvre').first()).toBeVisible();
+  await expect(page.getByText('ももたろう')).toHaveCount(0);
+
+  // Atelier HSK et examen blanc noté sur 200
+  await page.goto(FILE + '#/prepa');
+  await expect(page.getByRole('heading', { name: 'Atelier HSK' })).toBeVisible();
+  await page.goto(FILE + '#/exam/hsk1-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 1 — format officiel' })).toBeVisible();
+  await expect(page.getByText('Tout en chinois')).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('听力 第一部分（1～5）').first()).toBeVisible();
+});

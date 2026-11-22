@@ -36,7 +36,7 @@ export default function Welcome() {
         <View style={{ alignItems: 'center', gap: 6, marginTop: 24 }}>
           <Text style={{ fontSize: 88, fontWeight: '900', color: C.ink }}>言<Text style={{ color: C.ko }}>。</Text></Text>
           <H1>Koto Quest</H1>
-          <P soft style={{ textAlign: 'center' }}>{T('Un mot le matin, un défi l’après-midi. Le japonais du N5 au N1, le coréen du TOPIK 1 au TOPIK 6, au rythme de ta mémoire.')}</P>
+          <P soft style={{ textAlign: 'center' }}>{T('Un mot le matin, un défi l’après-midi. Le japonais du N5 au N1, le coréen du TOPIK 1 au TOPIK 6, l’anglais de A1 à C1 et le chinois dès le HSK 1, au rythme de ta mémoire.')}</P>
           <LanguageSwitch />
         </View>
         <Card style={{ gap: 12 }}>

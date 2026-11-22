@@ -65,7 +65,7 @@ export function ReadingPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageTitle sub={words.en ? T('Des contes et légendes en anglais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : words.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
+      <PageTitle sub={words.zh ? T('Des contes et légendes chinois à lire à ton rythme, avec le pinyin : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : words.en ? T('Des contes et légendes en anglais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : words.ko ? T('Des contes coréens à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.') : T('Des contes japonais à lire à ton rythme : tous les chapitres sont ouverts, du plus simple au plus long. Lire un peu tous les jours est l’un des meilleurs moyens de progresser.')}>{T('Lecture')}</PageTitle>
 
       {/* Chapitre du jour */}
       <section aria-label={T('Chapitre du jour')} className="relative overflow-hidden rounded-3xl bg-ink p-5 text-paper sm:p-7">
@@ -251,7 +251,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
       <div className="flex flex-wrap items-center gap-2 sm:sticky sm:top-0 sm:z-10 sm:rounded-2xl sm:border sm:border-line sm:bg-paper/95 sm:px-4 sm:py-2 sm:backdrop-blur">
         {languageOfLevel(story.level) === 'ja' && (
           <button type="button" aria-pressed={furigana} onClick={() => setFurigana(!furigana)} className={`min-h-10 rounded-xl border-2 px-3 text-sm font-bold ${furigana ? 'border-ink bg-ink text-paper' : 'border-line'}`}>
-            <span lang="ja" className="jp">ふりがな</span> {furigana ? T('affichés') : T('masqués')}
+            {langOf(chapter.title.jp) === 'zh' ? <span lang="zh" className="jp">拼音</span> : <span lang="ja" className="jp">ふりがな</span>} {furigana ? T('affichés') : T('masqués')}
           </button>
         )}
         <div role="radiogroup" aria-label={T('Traduction')} className="flex items-center rounded-xl border-2 border-line p-0.5 text-sm">

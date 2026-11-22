@@ -1,38 +1,40 @@
 import { useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { STUDY_LANGUAGES, examLevelLabel, languageInfo, type MeDto, type StudyLanguage } from '@koto/shared';
+import { STUDY_LANGUAGES, examLevelLabel, languageInfo, setHanLanguage, type MeDto, type StudyLanguage } from '@koto/shared';
 import { put } from '../api/client';
 import { useMe } from '../api/hooks';
 import { T } from '../i18n';
 
-/** Mots qui changent selon la langue étudiée (japonais / coréen). */
+/** Mots qui changent selon la langue étudiée (japonais, coréen, anglais, chinois). */
 export function studyWords(lang: StudyLanguage) {
   const ko = lang === 'ko';
   const en = lang === 'en';
-  /** Valeur selon la langue étudiée : japonais, coréen, anglais. */
-  const pick = <V,>(ja: V, kor: V, eng: V): V => (ko ? kor : en ? eng : ja);
+  const zh = lang === 'zh';
+  /** Valeur selon la langue étudiée : japonais, coréen, anglais, chinois. */
+  const pick = <V,>(ja: V, kor: V, eng: V, chi: V): V => (ko ? kor : en ? eng : zh ? chi : ja);
   return {
     lang,
     ko,
     en,
+    zh,
     pick,
     info: languageInfo(lang),
-    /** Nom de l'examen : JLPT, TOPIK ou TOEIC */
+    /** Nom de l'examen : JLPT, TOPIK, TOEIC ou HSK */
     exam: languageInfo(lang).exam,
-    /** « le japonais », « le coréen », « l'anglais » */
-    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais')),
-    /** adjectif : « japonais », « coréen », « anglais » */
-    adjective: pick(T('japonais'), T('coréen'), T('anglais')),
+    /** « le japonais », « le coréen », « l'anglais », « le chinois » */
+    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais'), T('le chinois')),
+    /** adjectif : « japonais », « coréen », « anglais », « chinois » */
+    adjective: pick(T('japonais'), T('coréen'), T('anglais'), T('chinois')),
     /** Nom de l'écriture à apprendre en premier (l'anglais n'en a pas) */
-    script: pick(T('les kana'), T('le hangeul'), ''),
+    script: pick(T('les kana'), T('le hangeul'), '', T('les caractères')),
     /** Onglet Caractères (libellé court et glyphe) ; l'anglais n'a pas d'onglet d'écriture */
-    charsShort: pick(T('Kana'), T('Hangeul'), ''),
-    charsGlyph: pick('あ', '한', ''),
+    charsShort: pick(T('Kana'), T('Hangeul'), '', T('Hanzi')),
+    charsGlyph: pick('あ', '한', '', '字'),
     hasCharacters: !en,
     /** Atelier d'entraînement */
-    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC')),
+    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC'), T('Atelier HSK')),
     /** Glyphe des examens */
-    examGlyph: pick('試', '시', 'T'),
+    examGlyph: pick('試', '시', 'T', '考'),
     /** Attribut lang des textes dans la langue étudiée */
     htmlLang: lang as string,
     levelLabel: examLevelLabel,
@@ -41,7 +43,9 @@ export function studyWords(lang: StudyLanguage) {
 
 export function useStudyLang() {
   const { data: me } = useMe();
-  return studyWords(me?.preferences.studyLanguage ?? 'ja');
+  const lang = me?.preferences.studyLanguage ?? 'ja';
+  setHanLanguage(lang);
+  return studyWords(lang);
 }
 
 /** Clé du niveau affiché dans Parcours (voir Path.tsx) : oubliée quand on change de langue. */
@@ -60,7 +64,7 @@ export async function switchStudyLanguage(lang: StudyLanguage, qc: ReturnType<ty
   return me;
 }
 
-/** Sélecteur de langue étudiée : 日本語 / 한국어. */
+/** Sélecteur de langue étudiée : 日本語 / 한국어 / English / 中文. */
 export function StudyLanguageSwitch({ className = '', compact = false }: { className?: string; compact?: boolean }) {
   const { data: me } = useMe();
   const qc = useQueryClient();

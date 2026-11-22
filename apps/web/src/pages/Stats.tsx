@@ -42,7 +42,16 @@ const RANKS_EN: [number, string][] = [
   [3, T("Voyageur·se des îles")],
   [1, T("Apprenti·e de Merlin")],
 ];
-const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : RANKS).find(([min]) => level >= min)![1];
+/** En chinois, les rangs suivent les Royaumes combattants. */
+const RANKS_ZH: [number, string][] = [
+  [16, T("Maître du Koto")],
+  [12, T("Stratège des Royaumes")],
+  [8, T("Gardien·ne des caractères")],
+  [5, T("Pinceau de Qin")],
+  [3, T("Voyageur·se des îles")],
+  [1, T("Apprenti·e lettré·e")],
+];
+const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' | 'zh' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'zh' ? RANKS_ZH : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés. */
 const SKILL_STEP = 10;
@@ -57,6 +66,12 @@ const SKILLS_KO = [
   { kind: 'kana', glyph: '한', label: T("Hangeul"), color: '#E36A3A' },
   { kind: 'vocabulary', glyph: '말', label: T("Vocabulaire"), color: '#3F8F5B' },
   { kind: 'grammar', glyph: '문', label: T("Grammaire"), color: '#4F5DB8' },
+] as const;
+/** Compétences en chinois : les caractères (hanzi), le vocabulaire et la grammaire. */
+const SKILLS_ZH = [
+  { kind: 'kanji', glyph: '字', label: T("Hanzi"), color: '#8E1B26' },
+  { kind: 'vocabulary', glyph: '词', label: T("Vocabulaire"), color: '#3F8F5B' },
+  { kind: 'grammar', glyph: '语', label: T("Grammaire"), color: '#4F5DB8' },
 ] as const;
 /** Compétences en anglais : pas d'écriture à apprendre, vocabulaire et grammaire. */
 const SKILLS_EN = [
@@ -105,20 +120,21 @@ export function StatsPage() {
   const { data: s, isLoading, error, refetch } = useStats();
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
-  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen.
+  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen, HSK 1 à 6 en chinois.
   const words = useStudyLang();
   const ko = words.ko;
-  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1'));
-  const { data: n4Raw } = usePath(ko ? 'TOPIK2' : 'N4');
+  const zh = words.zh;
+  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1', 'HSK1'));
+  const { data: n4Raw } = usePath(ko ? 'TOPIK2' : zh ? 'HSK2' : 'N4');
   const n4 = words.en ? undefined : n4Raw;
-  const { data: topik3 } = usePath('TOPIK3');
-  const { data: topik4 } = usePath('TOPIK4');
-  const third = ko ? topik3 : undefined;
-  const fourth = ko ? topik4 : undefined;
-  const { data: topik5 } = usePath('TOPIK5');
-  const { data: topik6 } = usePath('TOPIK6');
-  const fifth = ko ? topik5 : undefined;
-  const sixth = ko ? topik6 : undefined;
+  const { data: topik3 } = usePath(zh ? 'HSK3' : 'TOPIK3');
+  const { data: topik4 } = usePath(zh ? 'HSK4' : 'TOPIK4');
+  const third = ko || zh ? topik3 : undefined;
+  const fourth = ko || zh ? topik4 : undefined;
+  const { data: topik5 } = usePath(zh ? 'HSK5' : 'TOPIK5');
+  const { data: topik6 } = usePath(zh ? 'HSK6' : 'TOPIK6');
+  const fifth = ko || zh ? topik5 : undefined;
+  const sixth = ko || zh ? topik6 : undefined;
   if (isLoading) return <Spinner />;
   if (error || !s) return <ErrorBox error={error} onRetry={refetch} />;
 
@@ -170,7 +186,7 @@ export function StatsPage() {
       {/* Compétences */}
       <Section title={T("Compétences")} glyph="技">
         <ul className="grid gap-3 sm:grid-cols-2">
-          {(words.en ? SKILLS_EN : ko ? SKILLS_KO : SKILLS).map((k, i) => {
+          {(words.en ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
             const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
             const into = v.mastered % SKILL_STEP;

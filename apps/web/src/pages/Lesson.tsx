@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
-import { hasHangul, type LessonCompletionDto, type LessonDto, type MeDto, type SessionDto } from '@koto/shared';
+import { hasHangul, type LessonCompletionDto, type LessonDto, type MeDto, type SessionDto, spokenForm } from '@koto/shared';
 import { post } from '../api/client';
 import { useLesson } from '../api/hooks';
 import { QuizRunner, RunSummary } from '../components/QuizRunner';
@@ -120,7 +120,7 @@ export function LessonPage({ me }: { me: MeDto }) {
                   {furigana && e.reading && e.reading !== e.jp && <p lang={langOf(e.reading)} className="jp text-sm text-ink-soft">{e.reading}</p>}
                   <p className="text-ink-soft">{e.fr}</p>
                 </div>
-                <SpeakButtons text={e.reading ?? e.jp} />
+                <SpeakButtons text={spokenForm(e.jp, e.reading)} />
               </li>
             ))}
           </ul>
@@ -138,7 +138,7 @@ export function LessonPage({ me }: { me: MeDto }) {
 }
 
 function ItemCard({ item, furigana, reserveRuby }: { item: LessonDto['items'][number]; furigana: boolean; reserveRuby: boolean }) {
-  const audio = item.kind === 'grammar' ? null : item.reading ?? item.front;
+  const audio = item.kind === 'grammar' ? null : spokenForm(item.front, item.reading);
   return (
     <li className="flex flex-col gap-1 rounded-2xl border border-line bg-surface p-4">
       <span className="truncate text-xs text-ink-soft">{KIND_LABEL[item.kind]}{item.mastery ? `, ${MASTERY_LABEL[item.mastery]}` : ''}</span>
@@ -148,7 +148,7 @@ function ItemCard({ item, furigana, reserveRuby }: { item: LessonDto['items'][nu
       </button>
       <span className="font-bold">{item.meaning}</span>
       {item.kind !== 'kana' && item.romaji && <span className="text-sm text-ink-soft">{item.romaji}</span>}
-      {item.kanji && (
+      {item.kanji && item.kanji.onyomi.length + item.kanji.kunyomi.length > 0 && (
         <span className="text-sm text-ink-soft">{T("On :")}{' '}<span className="jp">{item.kanji.onyomi.join('、')}</span>
           <br />{T("Kun :")}{' '}<span className="jp">{item.kanji.kunyomi.join('、') || '—'}</span>
         </span>

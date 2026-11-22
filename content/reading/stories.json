@@ -20559,6 +20559,1107 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "shou-zhu-dai-tu",
+   "glyph": "兔",
+   "level": "HSK1",
+   "color": "#B5793A",
+   "title": {
+    "jp": "守株待兔",
+    "fr": "Le paysan qui attendait le lièvre",
+    "en": "The farmer who waited for the hare"
+   },
+   "summary": {
+    "fr": "Un paysan du royaume de Song voit un lièvre se cogner contre un arbre. Pourquoi travailler encore ?",
+    "en": "A farmer of the state of Song sees a hare run into a tree. Why work any more?"
+   },
+   "chapters": [
+    {
+     "slug": "shou-zhu-dai-tu-1",
+     "title": {
+      "jp": "宋国的农民",
+      "fr": "Le paysan de Song",
+      "en": "The farmer of Song"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{从前|cóngqián}，{宋国|Sòngguó}{有|yǒu}{一个|yí ge}{农民|nóngmín}。",
+        "fr": "Autrefois, dans le royaume de Song, vivait un paysan.",
+        "en": "Long ago, in the state of Song, there lived a farmer.",
+        "kana": "从前，宋国有一个农民。"
+       },
+       {
+        "jp": "{他|tā}{每天|měi tiān}{在|zài}{田|tián}{里|li}{工作|gōngzuò}。",
+        "fr": "Chaque jour, il travaillait dans son champ.",
+        "en": "Every day he worked in his field.",
+        "kana": "他每天在田里工作。"
+       },
+       {
+        "jp": "{他的|tā de}{田|tián}{里|li}{有|yǒu}{一|yì}{棵|kē}{大|dà}{树|shù}。",
+        "fr": "Dans son champ, il y avait un grand arbre.",
+        "en": "In his field there was a big tree.",
+        "kana": "他的田里有一棵大树。"
+       }
+      ],
+      [
+       {
+        "jp": "{一天|yì tiān}，{他|tā}{工作|gōngzuò}{的|de}{时候|shíhou}，{一只|yì zhī}{兔子|tùzi}{跑|pǎo}{来|lái}{了|le}。",
+        "fr": "Un jour, pendant qu’il travaillait, un lièvre arriva en courant.",
+        "en": "One day, while he was working, a hare came running.",
+        "kana": "一天，他工作的时候，一只兔子跑来了。"
+       },
+       {
+        "jp": "{兔子|tùzi}{跑|pǎo}{得|de}{太|tài}{快|kuài}{了|le}，{撞|zhuàng}{在|zài}{树|shù}{上|shang}，{死|sǐ}{了|le}。",
+        "fr": "Le lièvre courait trop vite : il se cogna contre l’arbre et mourut.",
+        "en": "The hare was running too fast: it crashed into the tree and died.",
+        "kana": "兔子跑得太快了，撞在树上，死了。"
+       },
+       {
+        "jp": "{农民|nóngmín}{很|hěn}{高兴|gāoxìng}：“{太|tài}{好|hǎo}{了|le}！”",
+        "fr": "Le paysan était ravi : « Formidable ! »",
+        "en": "The farmer was delighted: “Wonderful!”",
+        "kana": "农民很高兴：“太好了！”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "从前",
+       "reading": "cóngqián",
+       "fr": "autrefois",
+       "en": "long ago"
+      },
+      {
+       "jp": "农民",
+       "reading": "nóngmín",
+       "fr": "paysan",
+       "en": "farmer"
+      },
+      {
+       "jp": "田",
+       "reading": "tián",
+       "fr": "champ",
+       "en": "field"
+      },
+      {
+       "jp": "树",
+       "reading": "shù",
+       "fr": "arbre",
+       "en": "tree"
+      },
+      {
+       "jp": "兔子",
+       "reading": "tùzi",
+       "fr": "lièvre, lapin",
+       "en": "hare, rabbit"
+      },
+      {
+       "jp": "跑",
+       "reading": "pǎo",
+       "fr": "courir",
+       "en": "to run"
+      },
+      {
+       "jp": "快",
+       "reading": "kuài",
+       "fr": "rapide, vite",
+       "en": "fast"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où travaillait le paysan ?",
+        "en": "Where did the farmer work?"
+       },
+       "choices": [
+        {
+         "fr": "Au marché",
+         "en": "At the market"
+        },
+        {
+         "fr": "Dans son champ",
+         "en": "In his field"
+        },
+        {
+         "fr": "À l’école",
+         "en": "At school"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que s’est-il passé avec le lièvre ?",
+        "en": "What happened to the hare?"
+       },
+       "choices": [
+        {
+         "fr": "Il s’est cogné contre l’arbre",
+         "en": "It crashed into the tree"
+        },
+        {
+         "fr": "Il a mangé le riz",
+         "en": "It ate the rice"
+        },
+        {
+         "fr": "Il s’est enfui",
+         "en": "It ran away"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "shou-zhu-dai-tu-2",
+     "title": {
+      "jp": "等兔子",
+      "fr": "Attendre le lièvre",
+      "en": "Waiting for the hare"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{农民|nóngmín}{回家|huí jiā}{了|le}。",
+        "fr": "Le paysan rentra chez lui.",
+        "en": "The farmer went home.",
+        "kana": "农民回家了。"
+       },
+       {
+        "jp": "{那天|nà tiān}{晚上|wǎnshang}，{他|tā}{吃|chī}{了|le}{兔子|tùzi}，{很|hěn}{高兴|gāoxìng}。",
+        "fr": "Ce soir-là, il mangea le lièvre, très content.",
+        "en": "That evening he ate the hare and was very happy.",
+        "kana": "那天晚上，他吃了兔子，很高兴。"
+       },
+       {
+        "jp": "{他|tā}{想|xiǎng}：“{我|wǒ}{不|bù}{想|xiǎng}{工作|gōngzuò}{了|le}。{我|wǒ}{在|zài}{树|shù}{下|xià}{等|děng}{兔子|tùzi}！”",
+        "fr": "Il pensa : « Je n’ai plus envie de travailler. Je vais attendre les lièvres sous l’arbre ! »",
+        "en": "He thought: “I don’t want to work any more. I’ll wait for hares under the tree!”",
+        "kana": "他想：“我不想工作了。我在树下等兔子！”"
+       }
+      ],
+      [
+       {
+        "jp": "{第二天|dì-èr tiān}，{他|tā}{没|méi}{去|qù}{田|tián}{里|li}{工作|gōngzuò}。",
+        "fr": "Le lendemain, il n’alla pas travailler dans son champ.",
+        "en": "The next day he didn’t go to work in his field.",
+        "kana": "第二天，他没去田里工作。"
+       },
+       {
+        "jp": "{他|tā}{坐|zuò}{在|zài}{树|shù}{下|xià}，{等|děng}{兔子|tùzi}{来|lái}。",
+        "fr": "Il s’assit sous l’arbre et attendit qu’un lièvre arrive.",
+        "en": "He sat under the tree, waiting for a hare to come.",
+        "kana": "他坐在树下，等兔子来。"
+       },
+       {
+        "jp": "{一天|yì tiān}、{两天|liǎng tiān}、{三天|sān tiān}……{兔子|tùzi}{没有|méiyǒu}{来|lái}。",
+        "fr": "Un jour, deux jours, trois jours… aucun lièvre ne vint.",
+        "en": "One day, two days, three days… no hare came.",
+        "kana": "一天、两天、三天……兔子没有来。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "回家",
+       "reading": "huí jiā",
+       "fr": "rentrer à la maison",
+       "en": "to go home"
+      },
+      {
+       "jp": "晚上",
+       "reading": "wǎnshang",
+       "fr": "soir",
+       "en": "evening"
+      },
+      {
+       "jp": "等",
+       "reading": "děng",
+       "fr": "attendre",
+       "en": "to wait"
+      },
+      {
+       "jp": "第二天",
+       "reading": "dì-èr tiān",
+       "fr": "le lendemain",
+       "en": "the next day"
+      },
+      {
+       "jp": "坐",
+       "reading": "zuò",
+       "fr": "s’asseoir",
+       "en": "to sit"
+      },
+      {
+       "jp": "树下",
+       "reading": "shù xià",
+       "fr": "sous l’arbre",
+       "en": "under the tree"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que mange le paysan ce soir-là ?",
+        "en": "What does the farmer eat that evening?"
+       },
+       "choices": [
+        {
+         "fr": "Le lièvre",
+         "en": "The hare"
+        },
+        {
+         "fr": "Du riz",
+         "en": "Rice"
+        },
+        {
+         "fr": "Une pomme",
+         "en": "An apple"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait-il le lendemain ?",
+        "en": "What does he do the next day?"
+       },
+       "choices": [
+        {
+         "fr": "Il travaille dans son champ",
+         "en": "He works in his field"
+        },
+        {
+         "fr": "Il s’assoit sous l’arbre et attend",
+         "en": "He sits under the tree and waits"
+        },
+        {
+         "fr": "Il va au marché",
+         "en": "He goes to the market"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "shou-zhu-dai-tu-3",
+     "title": {
+      "jp": "田里没有米",
+      "fr": "Plus de riz dans le champ",
+      "en": "No rice left in the field"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{很多|hěn duō}{天|tiān}{过去|guòqu}{了|le}。",
+        "fr": "Bien des jours passèrent.",
+        "en": "Many days went by.",
+        "kana": "很多天过去了。"
+       },
+       {
+        "jp": "{农民|nóngmín}{每天|měi tiān}{坐|zuò}{在|zài}{树|shù}{下|xià}，{可是|kěshì}{一只|yì zhī}{兔子|tùzi}{也|yě}{没有|méiyǒu}{来|lái}。",
+        "fr": "Chaque jour, le paysan restait assis sous l’arbre, mais pas un seul lièvre ne vint.",
+        "en": "Every day the farmer sat under the tree, but not a single hare came.",
+        "kana": "农民每天坐在树下，可是一只兔子也没有来。"
+       },
+       {
+        "jp": "{他的|tā de}{田|tián}{里|li}{没有|méiyǒu}{米|mǐ}，{也|yě}{没有|méiyǒu}{菜|cài}。",
+        "fr": "Dans son champ, il n’y avait plus ni riz ni légumes.",
+        "en": "In his field there was no rice and no vegetables.",
+        "kana": "他的田里没有米，也没有菜。"
+       }
+      ],
+      [
+       {
+        "jp": "{宋国|Sòngguó}{的|de}{人|rén}{都|dōu}{笑|xiào}{他|tā}。",
+        "fr": "Tous les gens de Song se moquaient de lui.",
+        "en": "All the people of Song laughed at him.",
+        "kana": "宋国的人都笑他。"
+       },
+       {
+        "jp": "{他们|tāmen}{说|shuō}：“{你|nǐ}{不|bù}{工作|gōngzuò}，{只|zhǐ}{等|děng}{兔子|tùzi}，{太|tài}{不|bù}{聪明|cōngming}{了|le}！”",
+        "fr": "Ils disaient : « Tu ne travailles pas, tu ne fais qu’attendre les lièvres, ce n’est vraiment pas malin ! »",
+        "en": "They said: “You don’t work, you just wait for hares — that’s really not clever!”",
+        "kana": "他们说：“你不工作，只等兔子，太不聪明了！”"
+       },
+       {
+        "jp": "{这|zhè}{就是|jiù shì}“{守株待兔|shǒu zhū dài tù}”。",
+        "fr": "Voilà l’histoire de « garder la souche en attendant le lièvre ».",
+        "en": "That is the story of “guarding the stump, waiting for the hare”.",
+        "kana": "这就是“守株待兔”。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "过去",
+       "reading": "guòqu",
+       "fr": "passer (le temps)",
+       "en": "to pass (time)"
+      },
+      {
+       "jp": "可是",
+       "reading": "kěshì",
+       "fr": "mais",
+       "en": "but"
+      },
+      {
+       "jp": "都",
+       "reading": "dōu",
+       "fr": "tous, tout",
+       "en": "all"
+      },
+      {
+       "jp": "笑",
+       "reading": "xiào",
+       "fr": "rire, se moquer",
+       "en": "to laugh"
+      },
+      {
+       "jp": "只",
+       "reading": "zhǐ",
+       "fr": "seulement",
+       "en": "only"
+      },
+      {
+       "jp": "聪明",
+       "reading": "cōngming",
+       "fr": "intelligent, malin",
+       "en": "clever"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de lièvres sont venus ensuite ?",
+        "en": "How many hares came after that?"
+       },
+       "choices": [
+        {
+         "fr": "Un seul",
+         "en": "Just one"
+        },
+        {
+         "fr": "Aucun",
+         "en": "None"
+        },
+        {
+         "fr": "Trois",
+         "en": "Three"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que disent les gens de Song ?",
+        "en": "What do the people of Song say?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il est courageux",
+         "en": "That he is brave"
+        },
+        {
+         "fr": "Qu’il n’est pas très malin",
+         "en": "That he is not very clever"
+        },
+        {
+         "fr": "Qu’il est riche",
+         "en": "That he is rich"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hua-she-tian-zu",
+   "glyph": "蛇",
+   "level": "HSK1",
+   "color": "#3F8F5B",
+   "title": {
+    "jp": "画蛇添足",
+    "fr": "Le serpent à pattes",
+    "en": "The snake with legs"
+   },
+   "summary": {
+    "fr": "À Chu, des amis jouent une coupe de vin à qui dessinera un serpent le plus vite. Le plus rapide en fait un peu trop…",
+    "en": "In Chu, friends compete for a cup of wine: whoever draws a snake fastest wins it. The fastest one goes a little too far…"
+   },
+   "chapters": [
+    {
+     "slug": "hua-she-tian-zu-1",
+     "title": {
+      "jp": "一杯酒",
+      "fr": "Une coupe de vin",
+      "en": "A cup of wine"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{从前|cóngqián}，{楚国|Chǔguó}{有|yǒu}{一个|yí ge}{人|rén}。",
+        "fr": "Autrefois, dans le royaume de Chu, vivait un homme.",
+        "en": "Long ago, in the state of Chu, there lived a man.",
+        "kana": "从前，楚国有一个人。"
+       },
+       {
+        "jp": "{他|tā}{请|qǐng}{朋友们|péngyoumen}{来|lái}{家|jiā}{里|li}{吃饭|chī fàn}。",
+        "fr": "Il invita ses amis à manger chez lui.",
+        "en": "He invited his friends to his house for a meal.",
+        "kana": "他请朋友们来家里吃饭。"
+       },
+       {
+        "jp": "{吃|chī}{了|le}{饭|fàn}，{他|tā}{给|gěi}{朋友们|péngyoumen}{一|yì}{杯|bēi}{酒|jiǔ}。",
+        "fr": "Après le repas, il offrit à ses amis une coupe de vin.",
+        "en": "After the meal, he gave his friends a cup of wine.",
+        "kana": "吃了饭，他给朋友们一杯酒。"
+       }
+      ],
+      [
+       {
+        "jp": "{朋友们|péngyoumen}{说|shuō}：“{我们|wǒmen}{有|yǒu}{很多|hěn duō}{人|rén}，{可是|kěshì}{只|zhǐ}{有|yǒu}{一|yì}{杯|bēi}{酒|jiǔ}。”",
+        "fr": "Les amis dirent : « Nous sommes nombreux, mais il n’y a qu’une coupe de vin. »",
+        "en": "The friends said: “There are many of us, but there is only one cup of wine.”",
+        "kana": "朋友们说：“我们有很多人，可是只有一杯酒。”"
+       },
+       {
+        "jp": "{一个|yí ge}{人|rén}{说|shuō}：“{我们|wǒmen}{画|huà}{蛇|shé}{吧|ba}！”",
+        "fr": "L’un d’eux dit : « Dessinons un serpent ! »",
+        "en": "One of them said: “Let’s draw a snake!”",
+        "kana": "一个人说：“我们画蛇吧！”"
+       },
+       {
+        "jp": "“{谁|shéi}{先|xiān}{画|huà}{好|hǎo}，{谁|shéi}{喝|hē}{这|zhè}{杯|bēi}{酒|jiǔ}！”",
+        "fr": "« Le premier qui a fini boit la coupe ! »",
+        "en": "“Whoever finishes first drinks the cup!”",
+        "kana": "“谁先画好，谁喝这杯酒！”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "楚国",
+       "reading": "Chǔguó",
+       "fr": "le royaume de Chu",
+       "en": "the state of Chu"
+      },
+      {
+       "jp": "给",
+       "reading": "gěi",
+       "fr": "donner",
+       "en": "to give"
+      },
+      {
+       "jp": "酒",
+       "reading": "jiǔ",
+       "fr": "vin, alcool",
+       "en": "wine, alcohol"
+      },
+      {
+       "jp": "画",
+       "reading": "huà",
+       "fr": "dessiner",
+       "en": "to draw"
+      },
+      {
+       "jp": "蛇",
+       "reading": "shé",
+       "fr": "serpent",
+       "en": "snake"
+      },
+      {
+       "jp": "先",
+       "reading": "xiān",
+       "fr": "d’abord, en premier",
+       "en": "first"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de coupes de vin y a-t-il ?",
+        "en": "How many cups of wine are there?"
+       },
+       "choices": [
+        {
+         "fr": "Une",
+         "en": "One"
+        },
+        {
+         "fr": "Deux",
+         "en": "Two"
+        },
+        {
+         "fr": "Beaucoup",
+         "en": "Many"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que décident les amis ?",
+        "en": "What do the friends decide?"
+       },
+       "choices": [
+        {
+         "fr": "De dessiner un serpent",
+         "en": "To draw a snake"
+        },
+        {
+         "fr": "De chanter",
+         "en": "To sing"
+        },
+        {
+         "fr": "De partager le vin",
+         "en": "To share the wine"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "hua-she-tian-zu-2",
+     "title": {
+      "jp": "蛇有脚吗？",
+      "fr": "Les serpents ont-ils des pattes ?",
+      "en": "Do snakes have legs?"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{大家|dàjiā}{都|dōu}{在|zài}{地上|dìshang}{画|huà}{蛇|shé}。",
+        "fr": "Tout le monde se mit à dessiner un serpent par terre.",
+        "en": "Everyone began drawing a snake on the ground.",
+        "kana": "大家都在地上画蛇。"
+       },
+       {
+        "jp": "{一个|yí ge}{人|rén}{画|huà}{得|de}{很|hěn}{快|kuài}，{他|tā}{先|xiān}{画|huà}{好|hǎo}{了|le}。",
+        "fr": "L’un d’eux dessinait très vite : il finit le premier.",
+        "en": "One of them drew very fast: he finished first.",
+        "kana": "一个人画得很快，他先画好了。"
+       },
+       {
+        "jp": "{他|tā}{拿|ná}{起|qǐ}{酒杯|jiǔbēi}，{看|kàn}{了|le}{看|kan}{朋友们|péngyoumen}。",
+        "fr": "Il prit la coupe et regarda ses amis.",
+        "en": "He picked up the cup and looked at his friends.",
+        "kana": "他拿起酒杯，看了看朋友们。"
+       }
+      ],
+      [
+       {
+        "jp": "{他|tā}{想|xiǎng}：“{他们|tāmen}{画|huà}{得|de}{太|tài}{慢|màn}{了|le}！{我|wǒ}{还|hái}{能|néng}{给|gěi}{蛇|shé}{画|huà}{几|jǐ}{只|zhī}{脚|jiǎo}。”",
+        "fr": "Il pensa : « Ils dessinent trop lentement ! J’ai encore le temps d’ajouter quelques pattes au serpent. »",
+        "en": "He thought: “They are drawing far too slowly! I can still give the snake a few legs.”",
+        "kana": "他想：“他们画得太慢了！我还能给蛇画几只脚。”"
+       },
+       {
+        "jp": "{他|tā}{左手|zuǒshǒu}{拿|ná}{着|zhe}{酒|jiǔ}，{右手|yòushǒu}{画|huà}{蛇|shé}{脚|jiǎo}。",
+        "fr": "La coupe dans la main gauche, il dessina des pattes de la main droite.",
+        "en": "Holding the wine in his left hand, he drew legs with his right.",
+        "kana": "他左手拿着酒，右手画蛇脚。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "大家",
+       "reading": "dàjiā",
+       "fr": "tout le monde",
+       "en": "everyone"
+      },
+      {
+       "jp": "地上",
+       "reading": "dìshang",
+       "fr": "par terre",
+       "en": "on the ground"
+      },
+      {
+       "jp": "拿",
+       "reading": "ná",
+       "fr": "prendre, tenir",
+       "en": "to take, to hold"
+      },
+      {
+       "jp": "慢",
+       "reading": "màn",
+       "fr": "lent",
+       "en": "slow"
+      },
+      {
+       "jp": "还",
+       "reading": "hái",
+       "fr": "encore",
+       "en": "still"
+      },
+      {
+       "jp": "脚",
+       "reading": "jiǎo",
+       "fr": "pied, patte",
+       "en": "foot, leg"
+      },
+      {
+       "jp": "左手",
+       "reading": "zuǒshǒu",
+       "fr": "main gauche",
+       "en": "left hand"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui finit le premier ?",
+        "en": "Who finishes first?"
+       },
+       "choices": [
+        {
+         "fr": "L’un des amis",
+         "en": "One of the friends"
+        },
+        {
+         "fr": "L’hôte",
+         "en": "The host"
+        },
+        {
+         "fr": "Tout le monde en même temps",
+         "en": "Everyone at the same time"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait-il une fois son serpent fini ?",
+        "en": "What does he do once his snake is finished?"
+       },
+       "choices": [
+        {
+         "fr": "Il boit le vin",
+         "en": "He drinks the wine"
+        },
+        {
+         "fr": "Il ajoute des pattes au serpent",
+         "en": "He adds legs to the snake"
+        },
+        {
+         "fr": "Il rentre chez lui",
+         "en": "He goes home"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "hua-she-tian-zu-3",
+     "title": {
+      "jp": "没喝到酒",
+      "fr": "Pas de vin pour lui",
+      "en": "No wine for him"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{这个|zhè ge}{时候|shíhou}，{另|lìng}{一个|yí ge}{人|rén}{也|yě}{画|huà}{好|hǎo}{了|le}。",
+        "fr": "À ce moment-là, un autre avait fini lui aussi.",
+        "en": "At that moment, another man finished too.",
+        "kana": "这个时候，另一个人也画好了。"
+       },
+       {
+        "jp": "{他|tā}{拿|ná}{过|guò}{酒杯|jiǔbēi}，{说|shuō}：“{蛇|shé}{没有|méiyǒu}{脚|jiǎo}！{你|nǐ}{画|huà}{的|de}{不是|bú shì}{蛇|shé}。”",
+        "fr": "Il prit la coupe et dit : « Les serpents n’ont pas de pattes ! Ce que tu as dessiné n’est pas un serpent. »",
+        "en": "He took the cup and said: “Snakes have no legs! What you drew is not a snake.”",
+        "kana": "他拿过酒杯，说：“蛇没有脚！你画的不是蛇。”"
+       },
+       {
+        "jp": "{他|tā}{喝|hē}{了|le}{那|nà}{杯|bēi}{酒|jiǔ}。",
+        "fr": "Et il but la coupe de vin.",
+        "en": "And he drank the cup of wine.",
+        "kana": "他喝了那杯酒。"
+       }
+      ],
+      [
+       {
+        "jp": "{给|gěi}{蛇|shé}{画|huà}{脚|jiǎo}{的|de}{人|rén}{没|méi}{喝|hē}{到|dào}{酒|jiǔ}。",
+        "fr": "Celui qui avait dessiné des pattes au serpent n’eut pas de vin.",
+        "en": "The man who drew legs on the snake got no wine.",
+        "kana": "给蛇画脚的人没喝到酒。"
+       },
+       {
+        "jp": "{这|zhè}{就是|jiù shì}“{画蛇添足|huà shé tiān zú}”。{做|zuò}{得|de}{太|tài}{多|duō}，{有时候|yǒu shíhou}{不|bù}{好|hǎo}！",
+        "fr": "Voilà ce qu’on appelle « ajouter des pattes au serpent ». En faire trop, parfois, ce n’est pas bien !",
+        "en": "That is what is called “adding legs to the snake”. Doing too much is sometimes a bad thing!",
+        "kana": "这就是“画蛇添足”。做得太多，有时候不好！"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "另",
+       "reading": "lìng",
+       "fr": "autre",
+       "en": "other, another"
+      },
+      {
+       "jp": "酒杯",
+       "reading": "jiǔbēi",
+       "fr": "coupe de vin",
+       "en": "wine cup"
+      },
+      {
+       "jp": "到",
+       "reading": "dào",
+       "fr": "obtenir, arriver à",
+       "en": "to get, to reach"
+      },
+      {
+       "jp": "有时候",
+       "reading": "yǒu shíhou",
+       "fr": "parfois",
+       "en": "sometimes"
+      },
+      {
+       "jp": "画蛇添足",
+       "reading": "huà shé tiān zú",
+       "fr": "en faire trop et tout gâcher",
+       "en": "to overdo it and spoil everything"
+      },
+      {
+       "jp": "不是",
+       "reading": "bú shì",
+       "fr": "ne pas être",
+       "en": "is not"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le deuxième homme boit-il le vin ?",
+        "en": "Why does the second man drink the wine?"
+       },
+       "choices": [
+        {
+         "fr": "Parce qu’il est le plus âgé",
+         "en": "Because he is the oldest"
+        },
+        {
+         "fr": "Parce qu’un serpent n’a pas de pattes",
+         "en": "Because a snake has no legs"
+        },
+        {
+         "fr": "Parce qu’il a dessiné le plus vite",
+         "en": "Because he drew the fastest"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Quelle est la morale de l’histoire ?",
+        "en": "What is the moral of the story?"
+       },
+       "choices": [
+        {
+         "fr": "Il faut toujours finir le premier",
+         "en": "You must always finish first"
+        },
+        {
+         "fr": "En faire trop peut tout gâcher",
+         "en": "Overdoing it can spoil everything"
+        },
+        {
+         "fr": "Il ne faut jamais boire de vin",
+         "en": "You should never drink wine"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "zi-xiang-mao-dun",
+   "glyph": "盾",
+   "level": "HSK1",
+   "color": "#8E1B26",
+   "title": {
+    "jp": "自相矛盾",
+    "fr": "La lance et le bouclier",
+    "en": "The spear and the shield"
+   },
+   "summary": {
+    "fr": "Un marchand de Chu vante une lance qui perce tout et un bouclier que rien ne perce. Un passant pose une question…",
+    "en": "A merchant of Chu boasts of a spear that pierces everything and a shield nothing can pierce. A passer-by asks a question…"
+   },
+   "chapters": [
+    {
+     "slug": "zi-xiang-mao-dun-1",
+     "title": {
+      "jp": "最好的矛",
+      "fr": "La meilleure lance",
+      "en": "The best spear"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{从前|cóngqián}，{楚国|Chǔguó}{有|yǒu}{一个|yí ge}{人|rén}，{他|tā}{卖|mài}{矛|máo}{和|hé}{盾|dùn}。",
+        "fr": "Autrefois, dans le royaume de Chu, un homme vendait des lances et des boucliers.",
+        "en": "Long ago, in the state of Chu, a man sold spears and shields.",
+        "kana": "从前，楚国有一个人，他卖矛和盾。"
+       },
+       {
+        "jp": "{他|tā}{在|zài}{商店|shāngdiàn}{前面|qiánmiàn}{说|shuō}：“{请|qǐng}{看|kàn}{我的|wǒ de}{矛|máo}！”",
+        "fr": "Devant sa boutique, il criait : « Regardez ma lance ! »",
+        "en": "In front of his shop he called out: “Look at my spear!”",
+        "kana": "他在商店前面说：“请看我的矛！”"
+       },
+       {
+        "jp": "“{我的|wǒ de}{矛|máo}{是|shì}{最|zuì}{好|hǎo}{的|de}，{什么|shénme}{都|dōu}{能|néng}{刺破|cìpò}！”",
+        "fr": "« Ma lance est la meilleure, elle perce tout ! »",
+        "en": "“My spear is the best: it can pierce anything!”",
+        "kana": "“我的矛是最好的，什么都能刺破！”"
+       }
+      ],
+      [
+       {
+        "jp": "{他|tā}{又|yòu}{拿|ná}{起|qǐ}{盾|dùn}，{说|shuō}：“{请|qǐng}{看|kàn}{我的|wǒ de}{盾|dùn}！”",
+        "fr": "Puis il prit un bouclier et dit : « Regardez mon bouclier ! »",
+        "en": "Then he picked up a shield and said: “Look at my shield!”",
+        "kana": "他又拿起盾，说：“请看我的盾！”"
+       },
+       {
+        "jp": "“{我的|wǒ de}{盾|dùn}{也|yě}{是|shì}{最|zuì}{好|hǎo}{的|de}，{什么|shénme}{都|dōu}{不|bù}{能|néng}{刺破|cìpò}{它|tā}！”",
+        "fr": "« Mon bouclier aussi est le meilleur : rien ne peut le percer ! »",
+        "en": "“My shield is the best too: nothing can pierce it!”",
+        "kana": "“我的盾也是最好的，什么都不能刺破它！”"
+       },
+       {
+        "jp": "{很多|hěn duō}{人|rén}{来|lái}{看|kàn}{他的|tā de}{东西|dōngxi}。",
+        "fr": "Beaucoup de gens vinrent voir sa marchandise.",
+        "en": "Many people came to look at his goods.",
+        "kana": "很多人来看他的东西。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "卖",
+       "reading": "mài",
+       "fr": "vendre",
+       "en": "to sell"
+      },
+      {
+       "jp": "矛",
+       "reading": "máo",
+       "fr": "lance",
+       "en": "spear"
+      },
+      {
+       "jp": "盾",
+       "reading": "dùn",
+       "fr": "bouclier",
+       "en": "shield"
+      },
+      {
+       "jp": "最",
+       "reading": "zuì",
+       "fr": "le plus",
+       "en": "the most"
+      },
+      {
+       "jp": "刺破",
+       "reading": "cìpò",
+       "fr": "percer",
+       "en": "to pierce"
+      },
+      {
+       "jp": "又",
+       "reading": "yòu",
+       "fr": "de nouveau, puis",
+       "en": "again, then"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que vend l’homme ?",
+        "en": "What does the man sell?"
+       },
+       "choices": [
+        {
+         "fr": "Des fruits",
+         "en": "Fruit"
+        },
+        {
+         "fr": "Des lances et des boucliers",
+         "en": "Spears and shields"
+        },
+        {
+         "fr": "Des livres",
+         "en": "Books"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que dit-il de son bouclier ?",
+        "en": "What does he say about his shield?"
+       },
+       "choices": [
+        {
+         "fr": "Rien ne peut le percer",
+         "en": "Nothing can pierce it"
+        },
+        {
+         "fr": "Il est très léger",
+         "en": "It is very light"
+        },
+        {
+         "fr": "Il est bon marché",
+         "en": "It is cheap"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "zi-xiang-mao-dun-2",
+     "title": {
+      "jp": "用你的矛刺你的盾",
+      "fr": "Ta lance contre ton bouclier",
+      "en": "Your spear against your shield"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{一个|yí ge}{人|rén}{问|wèn}{他|tā}：“{如果|rúguǒ}{用|yòng}{你的|nǐ de}{矛|máo}{刺|cì}{你的|nǐ de}{盾|dùn}，{会|huì}{怎么样|zěnmeyàng}？”",
+        "fr": "Un passant lui demanda : « Et si l’on frappe ton bouclier avec ta lance, que se passe-t-il ? »",
+        "en": "Someone asked him: “What happens if you strike your shield with your spear?”",
+        "kana": "一个人问他：“如果用你的矛刺你的盾，会怎么样？”"
+       },
+       {
+        "jp": "{卖|mài}{东西|dōngxi}{的|de}{人|rén}{不|bù}{说话|shuōhuà}{了|le}。",
+        "fr": "Le marchand se tut.",
+        "en": "The merchant fell silent.",
+        "kana": "卖东西的人不说话了。"
+       },
+       {
+        "jp": "{他|tā}{不|bù}{知道|zhīdào}{怎么|zěnme}{回答|huídá}。",
+        "fr": "Il ne savait pas quoi répondre.",
+        "en": "He didn’t know how to answer.",
+        "kana": "他不知道怎么回答。"
+       }
+      ],
+      [
+       {
+        "jp": "{大家|dàjiā}{都|dōu}{笑|xiào}{了|le}。",
+        "fr": "Tout le monde éclata de rire.",
+        "en": "Everyone burst out laughing.",
+        "kana": "大家都笑了。"
+       },
+       {
+        "jp": "{他的|tā de}{话|huà}{前后|qiánhòu}{不|bù}{一样|yíyàng}，{这|zhè}{就是|jiù shì}“{自相矛盾|zì xiāng máodùn}”。",
+        "fr": "Ses paroles ne s’accordaient pas entre elles : voilà ce qu’on appelle « se contredire ».",
+        "en": "His words did not match each other: this is what is called “contradicting oneself”.",
+        "kana": "他的话前后不一样，这就是“自相矛盾”。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "问",
+       "reading": "wèn",
+       "fr": "demander, interroger",
+       "en": "to ask"
+      },
+      {
+       "jp": "如果",
+       "reading": "rúguǒ",
+       "fr": "si",
+       "en": "if"
+      },
+      {
+       "jp": "用",
+       "reading": "yòng",
+       "fr": "utiliser",
+       "en": "to use"
+      },
+      {
+       "jp": "知道",
+       "reading": "zhīdào",
+       "fr": "savoir",
+       "en": "to know"
+      },
+      {
+       "jp": "回答",
+       "reading": "huídá",
+       "fr": "répondre",
+       "en": "to answer"
+      },
+      {
+       "jp": "一样",
+       "reading": "yíyàng",
+       "fr": "pareil",
+       "en": "the same"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quelle question pose le passant ?",
+        "en": "What question does the passer-by ask?"
+       },
+       "choices": [
+        {
+         "fr": "Combien coûte la lance",
+         "en": "How much the spear costs"
+        },
+        {
+         "fr": "Ce qui se passe si sa lance frappe son bouclier",
+         "en": "What happens if his spear strikes his shield"
+        },
+        {
+         "fr": "Où se trouve sa boutique",
+         "en": "Where his shop is"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Comment réagit le marchand ?",
+        "en": "How does the merchant react?"
+       },
+       "choices": [
+        {
+         "fr": "Il ne sait pas quoi répondre",
+         "en": "He doesn’t know what to answer"
+        },
+        {
+         "fr": "Il se met en colère",
+         "en": "He gets angry"
+        },
+        {
+         "fr": "Il baisse ses prix",
+         "en": "He lowers his prices"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -20569,6 +21670,10 @@
   "en": {
    "fr": "Contes et légendes britanniques (domaine public), réécrits en anglais simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique.",
    "en": "British folk tales and legends (public domain), retold in simple English for Koto Quest. Word pronunciation is shown in phonetic script."
+  },
+  "zh": {
+   "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots ; touche une phrase pour l’entendre et la traduire.",
+   "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words; tap a sentence to hear and translate it."
   }
  }
 }

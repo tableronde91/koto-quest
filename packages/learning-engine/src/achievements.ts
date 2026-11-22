@@ -49,11 +49,18 @@ export interface AchievementStats {
   toeicPassed: number;
   /** Chapitres de contes anglais lus */
   englishChapters: number;
+  /** Gardiens chinois (îles du HSK) vaincus */
+  chineseBosses: number;
+  /** Examens blancs du HSK validés */
+  hskPassed: number;
+  /** Chapitres de contes chinois lus */
+  chineseChapters: number;
 }
 
-/** Langue d'un monde ou d'un examen d'après son slug : topik… → coréen, a1-…/c1-… → anglais, sinon japonais. */
-export function languageOfSlug(slug: string): 'ja' | 'ko' | 'en' {
+/** Langue d'un monde ou d'un examen d'après son slug : topik… → coréen, a1-…/c1-… → anglais, hsk… → chinois, sinon japonais. */
+export function languageOfSlug(slug: string): 'ja' | 'ko' | 'en' | 'zh' {
   if (slug.startsWith('topik')) return 'ko';
+  if (slug.startsWith('hsk')) return 'zh';
   return /^[abc][12]-/.test(slug) ? 'en' : 'ja';
 }
 
@@ -68,7 +75,7 @@ export interface AchievementDef {
   metric: keyof AchievementStats;
   target: number;
   /** Succès propre à une langue étudiée : montré seulement à qui l'étudie (ou l'a déjà débloqué). */
-  language?: 'ja' | 'ko' | 'en';
+  language?: 'ja' | 'ko' | 'en' | 'zh';
 }
 
 export const ACHIEVEMENT_COINS: Record<AchievementRarity, number> = { common: 10, rare: 25, epic: 50 };
@@ -82,7 +89,7 @@ export const ACHIEVEMENT_CATEGORIES: Record<AchievementCategory, string> = {
   play: 'Jeux et collection',
 };
 
-const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number, language?: 'ja' | 'ko' | 'en'): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target, ...(language ? { language } : {}) });
+const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number, language?: 'ja' | 'ko' | 'en' | 'zh'): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target, ...(language ? { language } : {}) });
 
 export const ACHIEVEMENTS: AchievementDef[] = [
   // Étude
@@ -130,6 +137,10 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('en-bosses-24', '♛', 'Légende d’Albion', 'Vaincre 24 gardiens anglais.', 'adventure', 'epic', 'englishBosses', 24, 'en'),
   a('toeic-passed', 'T', 'TOEIC en poche', 'Atteindre le score TOEIC visé à un examen blanc.', 'adventure', 'epic', 'toeicPassed', 1, 'en'),
   a('en-tales-10', '✒', 'Conteur·se d’Albion', 'Lire 10 chapitres de contes anglais.', 'study', 'rare', 'englishChapters', 10, 'en'),
+  a('zh-bosses-8', '戈', 'Stratège des Royaumes', 'Vaincre 8 gardiens chinois.', 'adventure', 'rare', 'chineseBosses', 8, 'zh'),
+  a('zh-bosses-24', '秦', 'Unificateur·rice des Royaumes', 'Vaincre 24 gardiens chinois.', 'adventure', 'epic', 'chineseBosses', 24, 'zh'),
+  a('hsk-passed', '过', 'HSK en poche', 'Valider un examen blanc du HSK.', 'adventure', 'epic', 'hskPassed', 1, 'zh'),
+  a('zh-tales-10', '书', 'Conteur·se de l’Empire du Milieu', 'Lire 10 chapitres de contes chinois.', 'study', 'rare', 'chineseChapters', 10, 'zh'),
   // Jeux et collection
   a('games-10', '遊', 'Joueur·se', 'Jouer 10 parties de mini-jeux.', 'play', 'common', 'gamesPlayed', 10),
   a('game-score-20', '速', 'Réflexes éclair', 'Marquer 20 points dans une partie de mini-jeu.', 'play', 'rare', 'bestGameScore', 20),
@@ -149,7 +160,7 @@ export interface AchievementProgress {
  * Progression de chaque succès (valeur plafonnée à la cible). Avec une langue, les succès propres
  * à l'autre langue sont cachés, sauf s'ils ont déjà été débloqués.
  */
-export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>, language?: 'ja' | 'ko' | 'en'): AchievementProgress[] {
+export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>, language?: 'ja' | 'ko' | 'en' | 'zh'): AchievementProgress[] {
   const done = new Set(unlocked);
   return ACHIEVEMENTS.filter((def) => !language || !def.language || def.language === language || done.has(def.slug)).map((def) => {
     const raw = Math.max(0, Math.floor(stats[def.metric] ?? 0));
@@ -187,5 +198,5 @@ export const EMPTY_ACHIEVEMENT_STATS: AchievementStats = {
   lessonsCompleted: 0, perfectLessons: 0, bestStreak: 0, correctAnswers: 0, reviewsDone: 0, bestCombo: 0,
   masteredItems: 0, masteredKanji: 0, bossesDefeated: 0, examsTaken: 0, examsPassed: 0, gamesPlayed: 0,
   bestGameScore: 0, itemsCollected: 0, placementDone: 0, masteredKana: 0, japaneseBosses: 0, jlptPassed: 0, japaneseChapters: 0, masteredHangul: 0, koreanBosses: 0, topikPassed: 0, koreanChapters: 0,
-  englishBosses: 0, toeicPassed: 0, englishChapters: 0,
+  englishBosses: 0, toeicPassed: 0, englishChapters: 0, chineseBosses: 0, hskPassed: 0, chineseChapters: 0,
 };

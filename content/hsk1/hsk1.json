@@ -1,0 +1,4220 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "HSK1",
+  "title": "HSK 1 : le messager des Royaumes",
+  "region": "Plaine du Fleuve Jaune",
+  "order": 46
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent le programme du HSK 1 (HSK 2.0, utilisé aux sessions de 2026) mais ne sont pas des listes officielles du Centre for Language Education and Cooperation (CLEC).",
+ "worlds": [
+  {
+   "slug": "hsk1-w1",
+   "title": "L’école du maître",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Le pinyin, les quatre tons, les nombres de un à dix et les premiers caractères.",
+   "boss": {
+    "name": "Le Nian du Nouvel An",
+    "glyph": "年",
+    "intro": "Chaque hiver, la bête Nian descend de la montagne pour dévorer les récoltes du royaume de Lu. Elle ne craint que le rouge, le bruit… et ceux qui prononcent les tons sans faute."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w1-c1",
+     "title": "Les sons du chinois",
+     "lessons": [
+      {
+       "slug": "zh-tones",
+       "title": "Le pinyin et les quatre tons",
+       "objective": "Lire le pinyin et reconnaître les quatre tons sur les nombres de un à dix.",
+       "minutes": 9,
+       "explanation": [
+        "Le pinyin écrit la prononciation du chinois en lettres latines. Chaque syllabe porte un ton, noté par un accent : ā (1er ton, haut et plat), á (2e, montant), ǎ (3e, descendant puis montant), à (4e, descendant sec).",
+        "Le ton change le sens : mā (maman), má (chanvre), mǎ (cheval), mà (gronder). Une syllabe sans accent est neutre, légère et brève : ma, de, le.",
+        "Les nombres sont un bon entraînement : yī, èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí. Attention : en pinyin, x se dit presque « s chuintant », q presque « tch », et sh comme « ch »."
+       ],
+       "items": [
+        {
+         "slug": "zh-yi",
+         "kind": "vocabulary",
+         "front": "一",
+         "reading": "yī",
+         "romaji": null,
+         "meaning": "un"
+        },
+        {
+         "slug": "zh-er",
+         "kind": "vocabulary",
+         "front": "二",
+         "reading": "èr",
+         "romaji": null,
+         "meaning": "deux"
+        },
+        {
+         "slug": "zh-san",
+         "kind": "vocabulary",
+         "front": "三",
+         "reading": "sān",
+         "romaji": null,
+         "meaning": "trois"
+        },
+        {
+         "slug": "zh-si",
+         "kind": "vocabulary",
+         "front": "四",
+         "reading": "sì",
+         "romaji": null,
+         "meaning": "quatre"
+        },
+        {
+         "slug": "zh-wu",
+         "kind": "vocabulary",
+         "front": "五",
+         "reading": "wǔ",
+         "romaji": null,
+         "meaning": "cinq"
+        },
+        {
+         "slug": "zh-liu",
+         "kind": "vocabulary",
+         "front": "六",
+         "reading": "liù",
+         "romaji": null,
+         "meaning": "six"
+        },
+        {
+         "slug": "zh-qi",
+         "kind": "vocabulary",
+         "front": "七",
+         "reading": "qī",
+         "romaji": null,
+         "meaning": "sept"
+        },
+        {
+         "slug": "zh-ba",
+         "kind": "vocabulary",
+         "front": "八",
+         "reading": "bā",
+         "romaji": null,
+         "meaning": "huit"
+        },
+        {
+         "slug": "zh-jiu",
+         "kind": "vocabulary",
+         "front": "九",
+         "reading": "jiǔ",
+         "romaji": null,
+         "meaning": "neuf"
+        },
+        {
+         "slug": "zh-shi",
+         "kind": "vocabulary",
+         "front": "十",
+         "reading": "shí",
+         "romaji": null,
+         "meaning": "dix"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "一、二、三、四、五",
+         "reading": "yī, èr, sān, sì, wǔ",
+         "fr": "un, deux, trois, quatre, cinq"
+        },
+        {
+         "jp": "六、七、八、九、十",
+         "reading": "liù, qī, bā, jiǔ, shí",
+         "fr": "six, sept, huit, neuf, dix"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Quel est le pinyin de ce nombre ?",
+         "sentence": "八 = ＿",
+         "choices": [
+          "bā",
+          "bà",
+          "pā"
+         ],
+         "answer": "bā",
+         "explanation": "八 se dit bā, au 1er ton (haut et plat).",
+         "translation": "huit"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Quel est le pinyin de ce nombre ?",
+         "sentence": "五 = ＿",
+         "choices": [
+          "wǔ",
+          "wù",
+          "wú"
+         ],
+         "answer": "wǔ",
+         "explanation": "五 se dit wǔ, au 3e ton (descendant puis montant).",
+         "translation": "cinq"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Quel est le pinyin de ce nombre ?",
+         "sentence": "十 = ＿",
+         "choices": [
+          "shí",
+          "sì",
+          "xí"
+         ],
+         "answer": "shí",
+         "explanation": "十 = shí (2e ton) ; ne le confonds pas avec 四 sì (quatre).",
+         "translation": "dix"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "七",
+         "translation": "Ce caractère se lit qī et signifie « sept ».",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "七 = qī, sept."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w1-c2",
+     "title": "Le pinceau et l’encre",
+     "lessons": [
+      {
+       "slug": "zh-hz-strokes",
+       "title": "Les premiers traits : 一 二 三 十 人 大 小 口",
+       "objective": "Reconnaître huit caractères simples et leur pinyin.",
+       "minutes": 5,
+       "explanation": [
+        "Un caractère se trace dans un ordre fixe : de haut en bas, de gauche à droite, l’horizontale avant la verticale. 十 : d’abord 一, puis le trait vertical.",
+        "Beaucoup de caractères dessinent ce qu’ils disent : 人 (rén) est une personne qui marche, 大 (dà) une personne qui écarte les bras, 口 (kǒu) une bouche ouverte."
+       ],
+       "items": [
+        {
+         "slug": "hz-yi",
+         "kind": "kanji",
+         "front": "一",
+         "reading": "yī",
+         "romaji": null,
+         "meaning": "un",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 1
+         }
+        },
+        {
+         "slug": "hz-er",
+         "kind": "kanji",
+         "front": "二",
+         "reading": "èr",
+         "romaji": null,
+         "meaning": "deux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        },
+        {
+         "slug": "hz-san",
+         "kind": "kanji",
+         "front": "三",
+         "reading": "sān",
+         "romaji": null,
+         "meaning": "trois",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-shi",
+         "kind": "kanji",
+         "front": "十",
+         "reading": "shí",
+         "romaji": null,
+         "meaning": "dix",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        },
+        {
+         "slug": "hz-ren",
+         "kind": "kanji",
+         "front": "人",
+         "reading": "rén",
+         "romaji": null,
+         "meaning": "personne, être humain",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        },
+        {
+         "slug": "hz-da",
+         "kind": "kanji",
+         "front": "大",
+         "reading": "dà",
+         "romaji": null,
+         "meaning": "grand",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-xiao",
+         "kind": "kanji",
+         "front": "小",
+         "reading": "xiǎo",
+         "romaji": null,
+         "meaning": "petit",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-kou",
+         "kind": "kanji",
+         "front": "口",
+         "reading": "kǒu",
+         "romaji": null,
+         "meaning": "bouche",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-hz-pictures",
+       "title": "Les caractères-images : 日 月 水 火 女 子 中 上 下",
+       "objective": "Reconnaître neuf caractères nés d’un dessin.",
+       "minutes": 5,
+       "explanation": [
+        "日 (rì) était un soleil rond devenu carré, 月 (yuè) un croissant de lune, 水 (shuǐ) de l’eau qui coule, 火 (huǒ) des flammes.",
+        "Certains caractères montrent une idée : 上 (shàng, au-dessus) et 下 (xià, en dessous) placent un trait au-dessus ou au-dessous d’une ligne ; 中 (zhōng, milieu) traverse un carré en son centre."
+       ],
+       "items": [
+        {
+         "slug": "hz-ri",
+         "kind": "kanji",
+         "front": "日",
+         "reading": "rì",
+         "romaji": null,
+         "meaning": "soleil, jour",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-yue",
+         "kind": "kanji",
+         "front": "月",
+         "reading": "yuè",
+         "romaji": null,
+         "meaning": "lune, mois",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-shui",
+         "kind": "kanji",
+         "front": "水",
+         "reading": "shuǐ",
+         "romaji": null,
+         "meaning": "eau",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-huo",
+         "kind": "kanji",
+         "front": "火",
+         "reading": "huǒ",
+         "romaji": null,
+         "meaning": "feu",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-nv",
+         "kind": "kanji",
+         "front": "女",
+         "reading": "nǚ",
+         "romaji": null,
+         "meaning": "femme",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-zi",
+         "kind": "kanji",
+         "front": "子",
+         "reading": "zǐ",
+         "romaji": null,
+         "meaning": "enfant",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-zhong",
+         "kind": "kanji",
+         "front": "中",
+         "reading": "zhōng",
+         "romaji": null,
+         "meaning": "milieu, centre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-shang",
+         "kind": "kanji",
+         "front": "上",
+         "reading": "shàng",
+         "romaji": null,
+         "meaning": "au-dessus, sur",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-xia",
+         "kind": "kanji",
+         "front": "下",
+         "reading": "xià",
+         "romaji": null,
+         "meaning": "en dessous, sous",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w2",
+   "title": "Le calendrier du roi de Qi",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Les dates, l’âge, les jours de la semaine, aujourd’hui, demain et hier.",
+   "boss": {
+    "name": "Le Taotie glouton",
+    "glyph": "饕",
+    "intro": "Le Taotie, monstre affamé gravé sur les bronzes de Qi, a avalé le calendrier du roi. Rends à chaque jour sa date pour qu’il le recrache !"
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w2-c1",
+     "title": "Compter les jours",
+     "lessons": [
+      {
+       "slug": "zh-hz-time",
+       "title": "Les caractères du temps : 几 岁 年 号 星 期 今 明 天 昨",
+       "objective": "Reconnaître les caractères des dates et de l’âge.",
+       "minutes": 5,
+       "explanation": [
+        "今 (jīn, maintenant), 明 (míng, clair : le soleil 日 et la lune 月 ensemble) et 昨 (zuó, la veille) se combinent avec 天 (tiān, ciel, jour) : 今天, 明天, 昨天.",
+        "星期 (xīngqī) signifie « semaine » ; 号 (hào) le numéro du jour dans le mois ; 岁 (suì) les années d’âge."
+       ],
+       "items": [
+        {
+         "slug": "hz-ji",
+         "kind": "kanji",
+         "front": "几",
+         "reading": "jǐ",
+         "romaji": null,
+         "meaning": "combien (petit nombre)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        },
+        {
+         "slug": "hz-sui",
+         "kind": "kanji",
+         "front": "岁",
+         "reading": "suì",
+         "romaji": null,
+         "meaning": "an (d’âge)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-nian",
+         "kind": "kanji",
+         "front": "年",
+         "reading": "nián",
+         "romaji": null,
+         "meaning": "an, année",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-hao",
+         "kind": "kanji",
+         "front": "号",
+         "reading": "hào",
+         "romaji": null,
+         "meaning": "numéro, jour du mois",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-xing",
+         "kind": "kanji",
+         "front": "星",
+         "reading": "xīng",
+         "romaji": null,
+         "meaning": "étoile",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-qi-period",
+         "kind": "kanji",
+         "front": "期",
+         "reading": "qī",
+         "romaji": null,
+         "meaning": "période",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-jin",
+         "kind": "kanji",
+         "front": "今",
+         "reading": "jīn",
+         "romaji": null,
+         "meaning": "maintenant, aujourd’hui",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-ming",
+         "kind": "kanji",
+         "front": "明",
+         "reading": "míng",
+         "romaji": null,
+         "meaning": "clair, lumineux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-tian",
+         "kind": "kanji",
+         "front": "天",
+         "reading": "tiān",
+         "romaji": null,
+         "meaning": "ciel, jour",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-zuo-yesterday",
+         "kind": "kanji",
+         "front": "昨",
+         "reading": "zuó",
+         "romaji": null,
+         "meaning": "hier, la veille",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-dates",
+       "title": "Les dates : 年、月、号 et 星期",
+       "objective": "Dire une date et un jour de la semaine.",
+       "minutes": 9,
+       "explanation": [
+        "Une date va du plus grand au plus petit : année + 年, mois + 月, jour + 号 (à l’écrit 日). 2026年11月22号 = le 22 novembre 2026.",
+        "Les mois se comptent : 一月 (janvier), 二月 (février)… 十二月 (décembre). Les jours de la semaine aussi : 星期一 (lundi)… 星期六 (samedi), mais dimanche = 星期天 (ou 星期日).",
+        "Pour demander : 今天几号？(quel jour sommes-nous ?), 今天星期几？(quel jour de la semaine ?). La réponse prend la place de 几."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-date-order",
+         "kind": "grammar",
+         "front": "年 + 月 + 号",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ordre de la date : année, mois, jour"
+        },
+        {
+         "slug": "zh-nian",
+         "kind": "vocabulary",
+         "front": "年",
+         "reading": "nián",
+         "romaji": null,
+         "meaning": "an, année"
+        },
+        {
+         "slug": "zh-yue",
+         "kind": "vocabulary",
+         "front": "月",
+         "reading": "yuè",
+         "romaji": null,
+         "meaning": "mois"
+        },
+        {
+         "slug": "zh-hao",
+         "kind": "vocabulary",
+         "front": "号",
+         "reading": "hào",
+         "romaji": null,
+         "meaning": "jour (du mois)"
+        },
+        {
+         "slug": "zh-xingqi",
+         "kind": "vocabulary",
+         "front": "星期",
+         "reading": "xīngqī",
+         "romaji": null,
+         "meaning": "semaine"
+        },
+        {
+         "slug": "zh-jintian",
+         "kind": "vocabulary",
+         "front": "今天",
+         "reading": "jīntiān",
+         "romaji": null,
+         "meaning": "aujourd’hui"
+        },
+        {
+         "slug": "zh-mingtian",
+         "kind": "vocabulary",
+         "front": "明天",
+         "reading": "míngtiān",
+         "romaji": null,
+         "meaning": "demain"
+        },
+        {
+         "slug": "zh-zuotian",
+         "kind": "vocabulary",
+         "front": "昨天",
+         "reading": "zuótiān",
+         "romaji": null,
+         "meaning": "hier"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "今天几号？——今天十一月二十二号。",
+         "reading": "Jīntiān jǐ hào? — Jīntiān shíyī yuè èrshí’èr hào.",
+         "fr": "Quel jour sommes-nous ? — Nous sommes le 22 novembre."
+        },
+        {
+         "jp": "明天星期天。",
+         "reading": "Míngtiān xīngqītiān.",
+         "fr": "Demain, c’est dimanche."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "今天十月一＿。",
+         "choices": [
+          "号",
+          "年",
+          "星期"
+         ],
+         "answer": "号",
+         "explanation": "Le jour du mois : nombre + 号.",
+         "translation": "Aujourd’hui, c’est le 1er octobre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "今天星期＿？",
+         "choices": [
+          "几",
+          "号",
+          "月"
+         ],
+         "answer": "几",
+         "explanation": "Pour demander le jour de la semaine : 星期几？",
+         "translation": "Quel jour de la semaine sommes-nous ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "昨天星期一，今天星期二。",
+         "translation": "Aujourd’hui, c’est mardi.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "星期二 = mardi (deuxième jour)."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Demain, c’est le 3 mai. »",
+         "answer": [
+          "明天",
+          "五月",
+          "三号。"
+         ],
+         "explanation": "Le moment, puis le mois, puis le jour."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w2-c2",
+     "title": "L’âge du prince",
+     "lessons": [
+      {
+       "slug": "zh-age",
+       "title": "L’âge : 几岁 et 多大",
+       "objective": "Demander et dire l’âge de quelqu’un.",
+       "minutes": 8,
+       "explanation": [
+        "Nombre + 岁 = … ans. Le verbe « être » n’est pas nécessaire : 我二十岁 (j’ai vingt ans).",
+        "Les dizaines se forment comme en multipliant : 二十 (2 × 10 = 20), 三十五 (35), 九十九 (99). Cent = 一百.",
+        "À un enfant : 你几岁？(petit nombre attendu). À un adulte : 你多大？ou 你多大了？"
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-sui",
+         "kind": "grammar",
+         "front": "数字 + 岁",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir … ans"
+        },
+        {
+         "slug": "zh-sui",
+         "kind": "vocabulary",
+         "front": "岁",
+         "reading": "suì",
+         "romaji": null,
+         "meaning": "an (âge)"
+        },
+        {
+         "slug": "zh-ji",
+         "kind": "vocabulary",
+         "front": "几",
+         "reading": "jǐ",
+         "romaji": null,
+         "meaning": "combien (petit nombre)"
+        },
+        {
+         "slug": "zh-duo",
+         "kind": "vocabulary",
+         "front": "多",
+         "reading": "duō",
+         "romaji": null,
+         "meaning": "beaucoup, nombreux"
+        },
+        {
+         "slug": "zh-da",
+         "kind": "vocabulary",
+         "front": "大",
+         "reading": "dà",
+         "romaji": null,
+         "meaning": "grand, âgé"
+        },
+        {
+         "slug": "zh-ling",
+         "kind": "vocabulary",
+         "front": "零",
+         "reading": "líng",
+         "romaji": null,
+         "meaning": "zéro"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你女儿几岁？——她七岁。",
+         "reading": "Nǐ nǚ’ér jǐ suì? — Tā qī suì.",
+         "fr": "Quel âge a ta fille ? — Elle a sept ans."
+        },
+        {
+         "jp": "王老师四十五岁。",
+         "reading": "Wáng lǎoshī sìshíwǔ suì.",
+         "fr": "Le professeur Wang a quarante-cinq ans."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我二十三＿。",
+         "choices": [
+          "岁",
+          "号",
+          "年"
+         ],
+         "answer": "岁",
+         "explanation": "L’âge : nombre + 岁.",
+         "translation": "J’ai vingt-trois ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Comment écrit-on 35 ?",
+         "sentence": "35 = ＿",
+         "choices": [
+          "三十五",
+          "五十三",
+          "三五"
+         ],
+         "answer": "三十五",
+         "explanation": "3 × 10 + 5 : 三十五.",
+         "translation": "trente-cinq"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "小明",
+           "jp": "你几岁？"
+          }
+         ],
+         "translation": "Xiaoming demande ton âge (tu as huit ans).",
+         "choices": [
+          "我八岁。",
+          "我八号。",
+          "今天八号。"
+         ],
+         "answer": "我八岁。",
+         "explanation": "L’âge se dit avec 岁."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他九十岁。",
+         "translation": "Il a dix-neuf ans.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "九十 = 90 ; dix-neuf se dit 十九."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w3",
+   "title": "La cour de Chu",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Saluer, remercier, s’excuser, dire son nom et sa nationalité, poser une question avec 吗 et 呢.",
+   "boss": {
+    "name": "La Renarde à neuf queues",
+    "glyph": "尾",
+    "intro": "À la cour de Chu, une renarde à neuf queues a pris l’apparence d’une dame d’honneur. Salue chacun comme il se doit et elle trahira sa vraie nature."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w3-c1",
+     "title": "Bonjour et merci",
+     "lessons": [
+      {
+       "slug": "zh-hz-people",
+       "title": "Les caractères des personnes : 你 我 他 她 们 好 是 不",
+       "objective": "Reconnaître les pronoms et les premiers verbes.",
+       "minutes": 5,
+       "explanation": [
+        "Beaucoup de caractères ont une « clé » qui indique le thème : 亻 (la personne) dans 你, 他, 们 ; 女 (la femme) dans 她 et 好.",
+        "好 (hǎo, bien) réunit une femme 女 et un enfant 子 : ce qui est bon. 他 (il) et 她 (elle) se prononcent tous les deux tā."
+       ],
+       "items": [
+        {
+         "slug": "hz-ni",
+         "kind": "kanji",
+         "front": "你",
+         "reading": "nǐ",
+         "romaji": null,
+         "meaning": "tu, toi",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-wo",
+         "kind": "kanji",
+         "front": "我",
+         "reading": "wǒ",
+         "romaji": null,
+         "meaning": "je, moi",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-ta-he",
+         "kind": "kanji",
+         "front": "他",
+         "reading": "tā",
+         "romaji": null,
+         "meaning": "il, lui",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-ta-she",
+         "kind": "kanji",
+         "front": "她",
+         "reading": "tā",
+         "romaji": null,
+         "meaning": "elle",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-men",
+         "kind": "kanji",
+         "front": "们",
+         "reading": "men",
+         "romaji": null,
+         "meaning": "marque du pluriel (personnes)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-hao-good",
+         "kind": "kanji",
+         "front": "好",
+         "reading": "hǎo",
+         "romaji": null,
+         "meaning": "bien, bon",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-shi-be",
+         "kind": "kanji",
+         "front": "是",
+         "reading": "shì",
+         "romaji": null,
+         "meaning": "être",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-bu",
+         "kind": "kanji",
+         "front": "不",
+         "reading": "bù",
+         "romaji": null,
+         "meaning": "ne… pas",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-greetings",
+       "title": "Bonjour, merci, pardon",
+       "objective": "Saluer, remercier, s’excuser et prendre congé.",
+       "minutes": 8,
+       "explanation": [
+        "你好 (nǐ hǎo) = bonjour. À plusieurs personnes : 你们好. Le 3e ton de 你 devient montant devant un autre 3e ton : on dit « ní hǎo ».",
+        "谢谢 (xièxie) = merci ; on répond 不客气 (bú kèqi, de rien). 对不起 (duìbuqǐ) = pardon ; on répond 没关系 (méi guānxi, ce n’est pas grave).",
+        "再见 (zàijiàn) = au revoir, littéralement « se revoir »."
+       ],
+       "items": [
+        {
+         "slug": "zh-nihao",
+         "kind": "vocabulary",
+         "front": "你好",
+         "reading": "nǐ hǎo",
+         "romaji": null,
+         "meaning": "bonjour"
+        },
+        {
+         "slug": "zh-xiexie",
+         "kind": "vocabulary",
+         "front": "谢谢",
+         "reading": "xièxie",
+         "romaji": null,
+         "meaning": "merci"
+        },
+        {
+         "slug": "zh-bukeqi",
+         "kind": "vocabulary",
+         "front": "不客气",
+         "reading": "bú kèqi",
+         "romaji": null,
+         "meaning": "de rien"
+        },
+        {
+         "slug": "zh-duibuqi",
+         "kind": "vocabulary",
+         "front": "对不起",
+         "reading": "duìbuqǐ",
+         "romaji": null,
+         "meaning": "pardon, désolé"
+        },
+        {
+         "slug": "zh-meiguanxi",
+         "kind": "vocabulary",
+         "front": "没关系",
+         "reading": "méi guānxi",
+         "romaji": null,
+         "meaning": "ce n’est pas grave"
+        },
+        {
+         "slug": "zh-zaijian",
+         "kind": "vocabulary",
+         "front": "再见",
+         "reading": "zàijiàn",
+         "romaji": null,
+         "meaning": "au revoir"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "谢谢你！——不客气。",
+         "reading": "Xièxie nǐ! — Bú kèqi.",
+         "fr": "Merci ! — De rien."
+        },
+        {
+         "jp": "对不起！——没关系。",
+         "reading": "Duìbuqǐ! — Méi guānxi.",
+         "fr": "Pardon ! — Ce n’est pas grave."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "王老师",
+           "jp": "谢谢你！"
+          }
+         ],
+         "translation": "Le professeur Wang te remercie.",
+         "choices": [
+          "不客气。",
+          "没关系。",
+          "再见。"
+         ],
+         "answer": "不客气。",
+         "explanation": "À 谢谢, on répond 不客气."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "小明",
+           "jp": "对不起！"
+          }
+         ],
+         "translation": "Xiaoming te bouscule et s’excuse.",
+         "choices": [
+          "没关系。",
+          "不客气。",
+          "你好。"
+         ],
+         "answer": "没关系。",
+         "explanation": "À 对不起, on répond 没关系."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "老师，再＿！",
+         "choices": [
+          "见",
+          "好",
+          "是"
+         ],
+         "answer": "见",
+         "explanation": "Au revoir : 再见.",
+         "translation": "Au revoir, professeur !"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "你们好！",
+         "translation": "On salue plusieurs personnes.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "们 marque le pluriel : 你们 = vous."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w3-c2",
+     "title": "Qui es-tu ?",
+     "lessons": [
+      {
+       "slug": "zh-shi",
+       "title": "Être : 是, 不是 et la question 吗",
+       "objective": "Dire qui l’on est et poser une question fermée.",
+       "minutes": 9,
+       "explanation": [
+        "Sujet + 是 + nom : 我是学生 (je suis étudiant). Les verbes ne se conjuguent jamais : 我是, 你是, 他是.",
+        "La négation 不 se place devant le verbe : 我不是老师. Devant un 4e ton, 不 se prononce bú : bú shì.",
+        "Pour une question fermée, ajoute 吗 à la fin d’une affirmation : 你是老师吗？On répond par le verbe : 是 / 不是."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-shi",
+         "kind": "grammar",
+         "front": "是",
+         "reading": "shì",
+         "romaji": null,
+         "meaning": "être (sujet + 是 + nom)"
+        },
+        {
+         "slug": "gram-zh-bu",
+         "kind": "grammar",
+         "front": "不",
+         "reading": "bù",
+         "romaji": null,
+         "meaning": "négation : ne… pas"
+        },
+        {
+         "slug": "gram-zh-ma",
+         "kind": "grammar",
+         "front": "吗",
+         "reading": "ma",
+         "romaji": null,
+         "meaning": "particule de question (oui / non)"
+        },
+        {
+         "slug": "zh-wo",
+         "kind": "vocabulary",
+         "front": "我",
+         "reading": "wǒ",
+         "romaji": null,
+         "meaning": "je, moi"
+        },
+        {
+         "slug": "zh-ni",
+         "kind": "vocabulary",
+         "front": "你",
+         "reading": "nǐ",
+         "romaji": null,
+         "meaning": "tu, toi"
+        },
+        {
+         "slug": "zh-ta-he",
+         "kind": "vocabulary",
+         "front": "他",
+         "reading": "tā",
+         "romaji": null,
+         "meaning": "il, lui"
+        },
+        {
+         "slug": "zh-ta-she",
+         "kind": "vocabulary",
+         "front": "她",
+         "reading": "tā",
+         "romaji": null,
+         "meaning": "elle"
+        },
+        {
+         "slug": "zh-women",
+         "kind": "vocabulary",
+         "front": "我们",
+         "reading": "wǒmen",
+         "romaji": null,
+         "meaning": "nous"
+        },
+        {
+         "slug": "zh-laoshi",
+         "kind": "vocabulary",
+         "front": "老师",
+         "reading": "lǎoshī",
+         "romaji": null,
+         "meaning": "professeur"
+        },
+        {
+         "slug": "zh-xuesheng",
+         "kind": "vocabulary",
+         "front": "学生",
+         "reading": "xuésheng",
+         "romaji": null,
+         "meaning": "étudiant, élève"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你是学生吗？——是，我是学生。",
+         "reading": "Nǐ shì xuésheng ma? — Shì, wǒ shì xuésheng.",
+         "fr": "Tu es étudiant ? — Oui, je suis étudiant."
+        },
+        {
+         "jp": "她不是老师，她是学生。",
+         "reading": "Tā bú shì lǎoshī, tā shì xuésheng.",
+         "fr": "Elle n’est pas professeure, elle est étudiante."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他是老师＿？",
+         "choices": [
+          "吗",
+          "不",
+          "是"
+         ],
+         "answer": "吗",
+         "explanation": "Question fermée : phrase + 吗.",
+         "translation": "Est-il professeur ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿是老师，我是学生。",
+         "choices": [
+          "不",
+          "吗",
+          "们"
+         ],
+         "answer": "不",
+         "explanation": "La négation 不 se place devant 是.",
+         "translation": "Je ne suis pas professeur, je suis étudiant."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Nous sommes étudiants. »",
+         "answer": [
+          "我们",
+          "是",
+          "学生。"
+         ],
+         "explanation": "Sujet + 是 + nom."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他不是学生。",
+         "translation": "Il est étudiant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "不是 = n’est pas."
+        }
+       ]
+      },
+      {
+       "slug": "zh-name",
+       "title": "Le nom et le pays : 叫、什么、哪国人",
+       "objective": "Demander et dire son nom et sa nationalité.",
+       "minutes": 9,
+       "explanation": [
+        "我叫… = je m’appelle… ; 你叫什么名字？= comment t’appelles-tu ? Le mot interrogatif reste à la place de la réponse : 什么 remplace le nom.",
+        "Nationalité = pays + 人 : 中国人 (Chinois), 法国人 (Français). Pour demander : 你是哪国人？",
+        "呢 renvoie la question : 我是法国人，你呢？(je suis français, et toi ?)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-ne",
+         "kind": "grammar",
+         "front": "呢",
+         "reading": "ne",
+         "romaji": null,
+         "meaning": "et toi ? (question renvoyée)"
+        },
+        {
+         "slug": "zh-jiao",
+         "kind": "vocabulary",
+         "front": "叫",
+         "reading": "jiào",
+         "romaji": null,
+         "meaning": "s’appeler"
+        },
+        {
+         "slug": "zh-shenme",
+         "kind": "vocabulary",
+         "front": "什么",
+         "reading": "shénme",
+         "romaji": null,
+         "meaning": "quoi"
+        },
+        {
+         "slug": "zh-mingzi",
+         "kind": "vocabulary",
+         "front": "名字",
+         "reading": "míngzi",
+         "romaji": null,
+         "meaning": "nom, prénom"
+        },
+        {
+         "slug": "zh-zhongguo",
+         "kind": "vocabulary",
+         "front": "中国",
+         "reading": "Zhōngguó",
+         "romaji": null,
+         "meaning": "la Chine"
+        },
+        {
+         "slug": "zh-ren",
+         "kind": "vocabulary",
+         "front": "人",
+         "reading": "rén",
+         "romaji": null,
+         "meaning": "personne, gens"
+        },
+        {
+         "slug": "zh-pengyou",
+         "kind": "vocabulary",
+         "front": "朋友",
+         "reading": "péngyou",
+         "romaji": null,
+         "meaning": "ami"
+        },
+        {
+         "slug": "zh-tongxue",
+         "kind": "vocabulary",
+         "front": "同学",
+         "reading": "tóngxué",
+         "romaji": null,
+         "meaning": "camarade de classe"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你叫什么名字？——我叫李月。",
+         "reading": "Nǐ jiào shénme míngzi? — Wǒ jiào Lǐ Yuè.",
+         "fr": "Comment t’appelles-tu ? — Je m’appelle Li Yue."
+        },
+        {
+         "jp": "我是中国人，你呢？",
+         "reading": "Wǒ shì Zhōngguó rén, nǐ ne?",
+         "fr": "Je suis chinois, et toi ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你叫＿名字？",
+         "choices": [
+          "什么",
+          "吗",
+          "呢"
+         ],
+         "answer": "什么",
+         "explanation": "什么 remplace le nom demandé.",
+         "translation": "Comment t’appelles-tu ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我是学生，你＿？",
+         "choices": [
+          "呢",
+          "吗",
+          "什么"
+         ],
+         "answer": "呢",
+         "explanation": "呢 renvoie la question : et toi ?",
+         "translation": "Je suis étudiant, et toi ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大卫",
+           "jp": "你是哪国人？"
+          }
+         ],
+         "translation": "David te demande ta nationalité (tu es chinois).",
+         "choices": [
+          "我是中国人。",
+          "我叫中国。",
+          "中国人呢？"
+         ],
+         "answer": "我是中国人。",
+         "explanation": "Pays + 人 pour la nationalité."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il est mon ami. »",
+         "answer": [
+          "他",
+          "是",
+          "我",
+          "朋友。"
+         ],
+         "explanation": "Sujet + 是 + nom (我朋友 : mon ami, entre proches)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w4",
+   "title": "La maison du général de Yan",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "La famille, la possession avec 的, avoir avec 有 / 没有, les classificateurs 个 et 口, et ceci, cela, qui.",
+   "boss": {
+    "name": "Le Kui à une patte",
+    "glyph": "夔",
+    "intro": "Le Kui, bête à une seule patte dont le cri sonne comme le tonnerre, s’est installé dans la maison du général. Il ne partira que si tu nommes chaque membre de la famille."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w4-c1",
+     "title": "La famille",
+     "lessons": [
+      {
+       "slug": "zh-hz-family",
+       "title": "Les caractères de la maison : 家 爸 妈 儿 有 没 的 个",
+       "objective": "Reconnaître les caractères de la famille et de la possession.",
+       "minutes": 5,
+       "explanation": [
+        "家 (jiā, maison, famille) montre un cochon 豕 sous un toit 宀 : dans la Chine ancienne, une maison abritait aussi les bêtes.",
+        "爸 (bà, papa) et 妈 (mā, maman) associent un sens et un son : 父 (père) + 巴 (ba), 女 (femme) + 马 (ma)."
+       ],
+       "items": [
+        {
+         "slug": "hz-jia",
+         "kind": "kanji",
+         "front": "家",
+         "reading": "jiā",
+         "romaji": null,
+         "meaning": "maison, famille",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-ba",
+         "kind": "kanji",
+         "front": "爸",
+         "reading": "bà",
+         "romaji": null,
+         "meaning": "papa",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-ma",
+         "kind": "kanji",
+         "front": "妈",
+         "reading": "mā",
+         "romaji": null,
+         "meaning": "maman",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-er-child",
+         "kind": "kanji",
+         "front": "儿",
+         "reading": "ér",
+         "romaji": null,
+         "meaning": "fils, enfant",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        },
+        {
+         "slug": "hz-you",
+         "kind": "kanji",
+         "front": "有",
+         "reading": "yǒu",
+         "romaji": null,
+         "meaning": "avoir, il y a",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-mei",
+         "kind": "kanji",
+         "front": "没",
+         "reading": "méi",
+         "romaji": null,
+         "meaning": "ne pas (avoir)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-de",
+         "kind": "kanji",
+         "front": "的",
+         "reading": "de",
+         "romaji": null,
+         "meaning": "particule de possession",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-ge",
+         "kind": "kanji",
+         "front": "个",
+         "reading": "gè",
+         "romaji": null,
+         "meaning": "classificateur général",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-family",
+       "title": "La famille et 的",
+       "objective": "Présenter sa famille et dire à qui est une chose.",
+       "minutes": 9,
+       "explanation": [
+        "的 relie le possesseur à l’objet : 我的书 (mon livre), 老师的名字 (le nom du professeur). Avec la famille et les proches, on l’omet souvent : 我妈妈, 我朋友.",
+        "Famille : 爸爸 (papa), 妈妈 (maman), 儿子 (fils), 女儿 (fille). 谁 (shéi) = qui : 他是谁？"
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-de",
+         "kind": "grammar",
+         "front": "的",
+         "reading": "de",
+         "romaji": null,
+         "meaning": "de (possession) : 我的 = mon, ma"
+        },
+        {
+         "slug": "zh-jia",
+         "kind": "vocabulary",
+         "front": "家",
+         "reading": "jiā",
+         "romaji": null,
+         "meaning": "maison, famille"
+        },
+        {
+         "slug": "zh-baba",
+         "kind": "vocabulary",
+         "front": "爸爸",
+         "reading": "bàba",
+         "romaji": null,
+         "meaning": "papa"
+        },
+        {
+         "slug": "zh-mama",
+         "kind": "vocabulary",
+         "front": "妈妈",
+         "reading": "māma",
+         "romaji": null,
+         "meaning": "maman"
+        },
+        {
+         "slug": "zh-erzi",
+         "kind": "vocabulary",
+         "front": "儿子",
+         "reading": "érzi",
+         "romaji": null,
+         "meaning": "fils"
+        },
+        {
+         "slug": "zh-nver",
+         "kind": "vocabulary",
+         "front": "女儿",
+         "reading": "nǚ’ér",
+         "romaji": null,
+         "meaning": "fille (enfant)"
+        },
+        {
+         "slug": "zh-shei",
+         "kind": "vocabulary",
+         "front": "谁",
+         "reading": "shéi",
+         "romaji": null,
+         "meaning": "qui"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "这是我的家。",
+         "reading": "Zhè shì wǒ de jiā.",
+         "fr": "Voici ma maison."
+        },
+        {
+         "jp": "她是谁？——她是我女儿。",
+         "reading": "Tā shì shéi? — Tā shì wǒ nǚ’ér.",
+         "fr": "Qui est-elle ? — C’est ma fille."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这是老师＿书。",
+         "choices": [
+          "的",
+          "吗",
+          "个"
+         ],
+         "answer": "的",
+         "explanation": "Possession : 老师的书.",
+         "translation": "C’est le livre du professeur."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他是＿？——他是我爸爸。",
+         "choices": [
+          "谁",
+          "什么",
+          "几"
+         ],
+         "answer": "谁",
+         "explanation": "Pour une personne : 谁.",
+         "translation": "Qui est-ce ? — C’est mon père."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « C’est mon fils. »",
+         "answer": [
+          "他",
+          "是",
+          "我",
+          "儿子。"
+         ],
+         "explanation": "Sujet + 是 + 我 + membre de la famille."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "她是我妈妈。",
+         "translation": "La personne présente sa mère.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "妈妈 = maman."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w4-c2",
+     "title": "Compter ce que l’on a",
+     "lessons": [
+      {
+       "slug": "zh-you",
+       "title": "Avoir : 有, 没有 et les classificateurs",
+       "objective": "Dire ce que l’on a et compter avec 个 et 口.",
+       "minutes": 10,
+       "explanation": [
+        "有 = avoir, il y a. Sa négation est toujours 没有 (jamais 不有) : 我没有猫.",
+        "Entre un nombre et un nom, il faut un classificateur : 一个人, 三个朋友. Pour les membres d’une famille : 我家有四口人 (nous sommes quatre à la maison).",
+        "Devant un classificateur, deux se dit 两 (liǎng) : 两个人. 二 sert pour compter (一、二、三) et dans les nombres (十二)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-you",
+         "kind": "grammar",
+         "front": "有 / 没有",
+         "reading": "yǒu / méiyǒu",
+         "romaji": null,
+         "meaning": "avoir, il y a / ne pas avoir"
+        },
+        {
+         "slug": "gram-zh-ge",
+         "kind": "grammar",
+         "front": "数字 + 个 + 名词",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nombre + classificateur + nom"
+        },
+        {
+         "slug": "zh-ge",
+         "kind": "vocabulary",
+         "front": "个",
+         "reading": "gè",
+         "romaji": null,
+         "meaning": "classificateur général"
+        },
+        {
+         "slug": "zh-kou",
+         "kind": "vocabulary",
+         "front": "口",
+         "reading": "kǒu",
+         "romaji": null,
+         "meaning": "classificateur des membres d’une famille"
+        },
+        {
+         "slug": "zh-gou",
+         "kind": "vocabulary",
+         "front": "狗",
+         "reading": "gǒu",
+         "romaji": null,
+         "meaning": "chien"
+        },
+        {
+         "slug": "zh-mao",
+         "kind": "vocabulary",
+         "front": "猫",
+         "reading": "māo",
+         "romaji": null,
+         "meaning": "chat"
+        },
+        {
+         "slug": "zh-meiyou",
+         "kind": "vocabulary",
+         "front": "没有",
+         "reading": "méiyǒu",
+         "romaji": null,
+         "meaning": "ne pas avoir, il n’y a pas"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我家有三口人：爸爸、妈妈和我。",
+         "reading": "Wǒ jiā yǒu sān kǒu rén: bàba, māma hé wǒ.",
+         "fr": "Nous sommes trois à la maison : papa, maman et moi."
+        },
+        {
+         "jp": "我有一个狗，我没有猫。",
+         "reading": "Wǒ yǒu yí ge gǒu, wǒ méiyǒu māo.",
+         "fr": "J’ai un chien, je n’ai pas de chat."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿有猫。",
+         "choices": [
+          "没",
+          "不",
+          "吗"
+         ],
+         "answer": "没",
+         "explanation": "La négation de 有 est toujours 没有.",
+         "translation": "Je n’ai pas de chat."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我有三＿朋友。",
+         "choices": [
+          "个",
+          "口",
+          "岁"
+         ],
+         "answer": "个",
+         "explanation": "Le classificateur général 个.",
+         "translation": "J’ai trois amis."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你家有几＿人？",
+         "choices": [
+          "口",
+          "个",
+          "号"
+         ],
+         "answer": "口",
+         "explanation": "Pour compter les membres d’une famille : 口.",
+         "translation": "Combien êtes-vous dans ta famille ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我有两个儿子。",
+         "translation": "La personne a deux fils.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "两个 = deux (devant un classificateur)."
+        }
+       ]
+      },
+      {
+       "slug": "zh-this-that",
+       "title": "Ceci, cela, lequel : 这、那、哪",
+       "objective": "Montrer et demander une chose avec 这, 那 et 哪.",
+       "minutes": 8,
+       "explanation": [
+        "这 (zhè) = ceci, proche ; 那 (nà) = cela, loin ; 哪 (nǎ) = lequel ? Avec un classificateur : 这个, 那个, 哪个.",
+        "这是什么？= qu’est-ce que c’est ? Attention aux tons : nà (cela) et nǎ (lequel) ne diffèrent que par le ton."
+       ],
+       "items": [
+        {
+         "slug": "zh-zhe",
+         "kind": "vocabulary",
+         "front": "这",
+         "reading": "zhè",
+         "romaji": null,
+         "meaning": "ceci, ce"
+        },
+        {
+         "slug": "zh-na-that",
+         "kind": "vocabulary",
+         "front": "那",
+         "reading": "nà",
+         "romaji": null,
+         "meaning": "cela, ce… là"
+        },
+        {
+         "slug": "zh-na-which",
+         "kind": "vocabulary",
+         "front": "哪",
+         "reading": "nǎ",
+         "romaji": null,
+         "meaning": "lequel, quel"
+        },
+        {
+         "slug": "zh-shu",
+         "kind": "vocabulary",
+         "front": "书",
+         "reading": "shū",
+         "romaji": null,
+         "meaning": "livre"
+        },
+        {
+         "slug": "zh-beizi",
+         "kind": "vocabulary",
+         "front": "杯子",
+         "reading": "bēizi",
+         "romaji": null,
+         "meaning": "verre, tasse"
+        },
+        {
+         "slug": "zh-dongxi",
+         "kind": "vocabulary",
+         "front": "东西",
+         "reading": "dōngxi",
+         "romaji": null,
+         "meaning": "chose, objet"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "这是什么？——这是我的书。",
+         "reading": "Zhè shì shénme? — Zhè shì wǒ de shū.",
+         "fr": "Qu’est-ce que c’est ? — C’est mon livre."
+        },
+        {
+         "jp": "哪个杯子是你的？——那个。",
+         "reading": "Nǎ ge bēizi shì nǐ de? — Nà ge.",
+         "fr": "Quel verre est à toi ? — Celui-là."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿是什么？——这是杯子。",
+         "choices": [
+          "这",
+          "哪",
+          "谁"
+         ],
+         "answer": "这",
+         "explanation": "Ce qui est proche : 这.",
+         "translation": "Qu’est-ce que c’est ? — C’est un verre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你是＿国人？",
+         "choices": [
+          "哪",
+          "那",
+          "这"
+         ],
+         "answer": "哪",
+         "explanation": "Pour demander lequel : 哪 (3e ton).",
+         "translation": "De quel pays es-tu ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "李月",
+           "jp": "这是谁的书？"
+          }
+         ],
+         "translation": "Li Yue tient ton livre.",
+         "choices": [
+          "是我的。",
+          "是这个。",
+          "我没有。"
+         ],
+         "answer": "是我的。",
+         "explanation": "À qui ? → 我的 (à moi)."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "那个东西是我的。",
+         "translation": "La chose là-bas est à moi.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "那个 = celui-là, 我的 = à moi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w5",
+   "title": "Le marché de Xinzheng",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Faire ses courses : acheter, demander un prix, compter l’argent, manger, boire, dire ce que l’on veut.",
+   "boss": {
+    "name": "Le Pixiu dévoreur d’or",
+    "glyph": "貔",
+    "intro": "Au marché de Xinzheng, le Pixiu avale toutes les pièces sans jamais les rendre. Marchande au juste prix et il crachera l’or des marchands."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w5-c1",
+     "title": "Combien ça coûte ?",
+     "lessons": [
+      {
+       "slug": "zh-hz-market",
+       "title": "Les caractères du marché : 买 钱 块 多 少 东 西 些",
+       "objective": "Reconnaître les caractères des achats.",
+       "minutes": 5,
+       "explanation": [
+        "钱 (qián, argent) porte la clé du métal 钅 : les premières monnaies étaient en bronze. 买 (mǎi, acheter) et 卖 (mài, vendre) ne diffèrent que d’un trait et d’un ton.",
+        "东 (dōng, est) + 西 (xī, ouest) = 东西 (dōngxi), « les choses » : tout ce qu’on trouve d’est en ouest."
+       ],
+       "items": [
+        {
+         "slug": "hz-mai",
+         "kind": "kanji",
+         "front": "买",
+         "reading": "mǎi",
+         "romaji": null,
+         "meaning": "acheter",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-qian",
+         "kind": "kanji",
+         "front": "钱",
+         "reading": "qián",
+         "romaji": null,
+         "meaning": "argent",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-kuai",
+         "kind": "kanji",
+         "front": "块",
+         "reading": "kuài",
+         "romaji": null,
+         "meaning": "morceau ; yuan (oral)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-duo",
+         "kind": "kanji",
+         "front": "多",
+         "reading": "duō",
+         "romaji": null,
+         "meaning": "beaucoup, nombreux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-shao",
+         "kind": "kanji",
+         "front": "少",
+         "reading": "shǎo",
+         "romaji": null,
+         "meaning": "peu",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-dong",
+         "kind": "kanji",
+         "front": "东",
+         "reading": "dōng",
+         "romaji": null,
+         "meaning": "est",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-xi",
+         "kind": "kanji",
+         "front": "西",
+         "reading": "xī",
+         "romaji": null,
+         "meaning": "ouest",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-xie",
+         "kind": "kanji",
+         "front": "些",
+         "reading": "xiē",
+         "romaji": null,
+         "meaning": "quelques",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-shopping",
+       "title": "Acheter : 买、多少钱、块",
+       "objective": "Demander un prix et l’annoncer en yuans.",
+       "minutes": 9,
+       "explanation": [
+        "多少钱？= combien ça coûte ? On répond avec 块 (kuài), le mot courant pour « yuan » : 十块 (10 yuans), 三块五 (3,50 yuans).",
+        "多少 (duōshao) demande une quantité quelconque, souvent grande ; 几 attend un petit nombre (moins de dix) et un classificateur.",
+        "一些 (yìxiē) = quelques, un peu de : 买一些水果 (acheter quelques fruits)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-duoshao",
+         "kind": "grammar",
+         "front": "多少钱？",
+         "reading": "duōshao qián?",
+         "romaji": null,
+         "meaning": "combien ça coûte ?"
+        },
+        {
+         "slug": "zh-mai",
+         "kind": "vocabulary",
+         "front": "买",
+         "reading": "mǎi",
+         "romaji": null,
+         "meaning": "acheter"
+        },
+        {
+         "slug": "zh-qian",
+         "kind": "vocabulary",
+         "front": "钱",
+         "reading": "qián",
+         "romaji": null,
+         "meaning": "argent"
+        },
+        {
+         "slug": "zh-kuai",
+         "kind": "vocabulary",
+         "front": "块",
+         "reading": "kuài",
+         "romaji": null,
+         "meaning": "yuan (oral)"
+        },
+        {
+         "slug": "zh-duoshao",
+         "kind": "vocabulary",
+         "front": "多少",
+         "reading": "duōshao",
+         "romaji": null,
+         "meaning": "combien (quantité)"
+        },
+        {
+         "slug": "zh-shangdian",
+         "kind": "vocabulary",
+         "front": "商店",
+         "reading": "shāngdiàn",
+         "romaji": null,
+         "meaning": "magasin"
+        },
+        {
+         "slug": "zh-yixie",
+         "kind": "vocabulary",
+         "front": "一些",
+         "reading": "yìxiē",
+         "romaji": null,
+         "meaning": "quelques, un peu de"
+        },
+        {
+         "slug": "zh-shao",
+         "kind": "vocabulary",
+         "front": "少",
+         "reading": "shǎo",
+         "romaji": null,
+         "meaning": "peu"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "这个杯子多少钱？——二十块。",
+         "reading": "Zhè ge bēizi duōshao qián? — Èrshí kuài.",
+         "fr": "Combien coûte ce verre ? — Vingt yuans."
+        },
+        {
+         "jp": "我去商店买一些东西。",
+         "reading": "Wǒ qù shāngdiàn mǎi yìxiē dōngxi.",
+         "fr": "Je vais au magasin acheter quelques affaires."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这本书多少＿？",
+         "choices": [
+          "钱",
+          "块",
+          "几"
+         ],
+         "answer": "钱",
+         "explanation": "Le prix : 多少钱？",
+         "translation": "Combien coûte ce livre ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "五十＿。",
+         "choices": [
+          "块",
+          "个",
+          "口"
+         ],
+         "answer": "块",
+         "explanation": "Les yuans à l’oral : 块.",
+         "translation": "Cinquante yuans."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "商店",
+           "jp": "你好！你买什么？"
+          }
+         ],
+         "translation": "Le marchand te demande ce que tu achètes (des verres).",
+         "choices": [
+          "我买杯子。",
+          "我是杯子。",
+          "杯子多少？"
+         ],
+         "answer": "我买杯子。",
+         "explanation": "Sujet + 买 + objet."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "苹果三块五。",
+         "translation": "Les pommes coûtent 3,50 yuans.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "三块五 = 3 yuans 50."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w5-c2",
+     "title": "À l’auberge",
+     "lessons": [
+      {
+       "slug": "zh-food",
+       "title": "Manger et boire : 吃、喝、想",
+       "objective": "Dire ce que l’on veut manger ou boire avec 想.",
+       "minutes": 9,
+       "explanation": [
+        "想 + verbe = avoir envie de, vouloir : 我想喝茶 (je voudrais boire du thé). Négation : 不想.",
+        "吃 (chī) = manger : 吃米饭 (manger du riz), 吃菜 (manger des plats). 喝 (hē) = boire : 喝水, 喝茶.",
+        "L’ordre est toujours sujet + verbe + complément, comme en français : 我吃苹果."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-xiang",
+         "kind": "grammar",
+         "front": "想 + 动词",
+         "reading": "xiǎng",
+         "romaji": null,
+         "meaning": "avoir envie de, vouloir (faire)"
+        },
+        {
+         "slug": "zh-chi",
+         "kind": "vocabulary",
+         "front": "吃",
+         "reading": "chī",
+         "romaji": null,
+         "meaning": "manger"
+        },
+        {
+         "slug": "zh-he",
+         "kind": "vocabulary",
+         "front": "喝",
+         "reading": "hē",
+         "romaji": null,
+         "meaning": "boire"
+        },
+        {
+         "slug": "zh-xiang",
+         "kind": "vocabulary",
+         "front": "想",
+         "reading": "xiǎng",
+         "romaji": null,
+         "meaning": "vouloir, penser"
+        },
+        {
+         "slug": "zh-cha",
+         "kind": "vocabulary",
+         "front": "茶",
+         "reading": "chá",
+         "romaji": null,
+         "meaning": "thé"
+        },
+        {
+         "slug": "zh-shui",
+         "kind": "vocabulary",
+         "front": "水",
+         "reading": "shuǐ",
+         "romaji": null,
+         "meaning": "eau"
+        },
+        {
+         "slug": "zh-mifan",
+         "kind": "vocabulary",
+         "front": "米饭",
+         "reading": "mǐfàn",
+         "romaji": null,
+         "meaning": "riz (cuit)"
+        },
+        {
+         "slug": "zh-cai",
+         "kind": "vocabulary",
+         "front": "菜",
+         "reading": "cài",
+         "romaji": null,
+         "meaning": "plat, légume"
+        },
+        {
+         "slug": "zh-pingguo",
+         "kind": "vocabulary",
+         "front": "苹果",
+         "reading": "píngguǒ",
+         "romaji": null,
+         "meaning": "pomme"
+        },
+        {
+         "slug": "zh-shuiguo",
+         "kind": "vocabulary",
+         "front": "水果",
+         "reading": "shuǐguǒ",
+         "romaji": null,
+         "meaning": "fruit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你想喝什么？——我想喝茶。",
+         "reading": "Nǐ xiǎng hē shénme? — Wǒ xiǎng hē chá.",
+         "fr": "Que veux-tu boire ? — Je voudrais du thé."
+        },
+        {
+         "jp": "我不想吃米饭，我想吃水果。",
+         "reading": "Wǒ bù xiǎng chī mǐfàn, wǒ xiǎng chī shuǐguǒ.",
+         "fr": "Je n’ai pas envie de riz, je voudrais des fruits."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我想＿水。",
+         "choices": [
+          "喝",
+          "吃",
+          "买"
+         ],
+         "answer": "喝",
+         "explanation": "On boit l’eau : 喝水.",
+         "translation": "Je voudrais boire de l’eau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你＿吃什么？",
+         "choices": [
+          "想",
+          "是",
+          "有"
+         ],
+         "answer": "想",
+         "explanation": "Vouloir faire : 想 + verbe.",
+         "translation": "Que veux-tu manger ?"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je ne veux pas manger de pomme. »",
+         "answer": [
+          "我",
+          "不想",
+          "吃",
+          "苹果。"
+         ],
+         "explanation": "Sujet + 不想 + verbe + objet."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他想喝茶。",
+         "translation": "Il veut manger du riz.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "喝茶 = boire du thé."
+        }
+       ]
+      },
+      {
+       "slug": "zh-tai",
+       "title": "Trop, très : 太…了 et 很",
+       "objective": "Donner son avis sur un prix ou un plat.",
+       "minutes": 8,
+       "explanation": [
+        "太 + adjectif + 了 = trop, vraiment : 太贵了？Non ! Au HSK 1 on dit plutôt 太多了 (c’est trop), 太好了 (génial !), 太少了 (c’est trop peu).",
+        "Un adjectif s’emploie sans 是 : 这个苹果很大 (cette pomme est grande). 很 (hěn) se met presque toujours devant, même sans vouloir dire « très »."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-tai-le",
+         "kind": "grammar",
+         "front": "太…了",
+         "reading": "tài… le",
+         "romaji": null,
+         "meaning": "trop…, vraiment… !"
+        },
+        {
+         "slug": "gram-zh-hen",
+         "kind": "grammar",
+         "front": "很 + 形容词",
+         "reading": "hěn",
+         "romaji": null,
+         "meaning": "(très) + adjectif, sans 是"
+        },
+        {
+         "slug": "zh-tai",
+         "kind": "vocabulary",
+         "front": "太",
+         "reading": "tài",
+         "romaji": null,
+         "meaning": "trop"
+        },
+        {
+         "slug": "zh-hen",
+         "kind": "vocabulary",
+         "front": "很",
+         "reading": "hěn",
+         "romaji": null,
+         "meaning": "très"
+        },
+        {
+         "slug": "zh-hao-good",
+         "kind": "vocabulary",
+         "front": "好",
+         "reading": "hǎo",
+         "romaji": null,
+         "meaning": "bien, bon"
+        },
+        {
+         "slug": "zh-xiao",
+         "kind": "vocabulary",
+         "front": "小",
+         "reading": "xiǎo",
+         "romaji": null,
+         "meaning": "petit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "五十块？太多了！",
+         "reading": "Wǔshí kuài? Tài duō le!",
+         "fr": "Cinquante yuans ? C’est trop !"
+        },
+        {
+         "jp": "这个菜很好。",
+         "reading": "Zhè ge cài hěn hǎo.",
+         "fr": "Ce plat est très bon."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "太好＿！",
+         "choices": [
+          "了",
+          "吗",
+          "的"
+         ],
+         "answer": "了",
+         "explanation": "Exclamation : 太 + adjectif + 了.",
+         "translation": "Génial !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个杯子＿小。",
+         "choices": [
+          "很",
+          "是",
+          "有"
+         ],
+         "answer": "很",
+         "explanation": "Adjectif sans 是 : 很 + adjectif.",
+         "translation": "Ce verre est (très) petit."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "商店",
+           "jp": "这个一百块。"
+          }
+         ],
+         "translation": "Le marchand demande 100 yuans pour un verre.",
+         "choices": [
+          "太多了！",
+          "太好了！",
+          "很小。"
+         ],
+         "answer": "太多了！",
+         "explanation": "Le prix est trop élevé : 太多了."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "水果太少了。",
+         "translation": "Il y a trop peu de fruits.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "太少了 = trop peu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w6",
+   "title": "Une journée au palais de Wei",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "L’heure, les moments de la journée, les activités quotidiennes et l’action accomplie avec 了.",
+   "boss": {
+    "name": "Le Bifang, oiseau de feu",
+    "glyph": "毕",
+    "intro": "Le Bifang, oiseau à une seule patte qui fait naître le feu, a déréglé toutes les clepsydres du palais de Wei. Donne l’heure juste pour éteindre ses flammes."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w6-c1",
+     "title": "Quelle heure est-il ?",
+     "lessons": [
+      {
+       "slug": "zh-hz-day",
+       "title": "Les caractères de la journée : 点 分 午 时 现 在 看 书",
+       "objective": "Reconnaître les caractères de l’heure et des activités.",
+       "minutes": 5,
+       "explanation": [
+        "点 (diǎn, point, heure) et 分 (fēn, minute) donnent l’heure : 三点十分 = 3 h 10. 午 (wǔ) désigne midi : 上午 (le matin), 中午 (midi), 下午 (l’après-midi).",
+        "看 (kàn, regarder) montre une main 手 au-dessus d’un œil 目, comme pour se protéger du soleil en regardant au loin."
+       ],
+       "items": [
+        {
+         "slug": "hz-dian",
+         "kind": "kanji",
+         "front": "点",
+         "reading": "diǎn",
+         "romaji": null,
+         "meaning": "point, heure",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-fen",
+         "kind": "kanji",
+         "front": "分",
+         "reading": "fēn",
+         "romaji": null,
+         "meaning": "minute, diviser",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-wu-noon",
+         "kind": "kanji",
+         "front": "午",
+         "reading": "wǔ",
+         "romaji": null,
+         "meaning": "midi",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-shi-time",
+         "kind": "kanji",
+         "front": "时",
+         "reading": "shí",
+         "romaji": null,
+         "meaning": "temps, heure",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-xian",
+         "kind": "kanji",
+         "front": "现",
+         "reading": "xiàn",
+         "romaji": null,
+         "meaning": "présent, actuel",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-zai",
+         "kind": "kanji",
+         "front": "在",
+         "reading": "zài",
+         "romaji": null,
+         "meaning": "être à, se trouver",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-kan",
+         "kind": "kanji",
+         "front": "看",
+         "reading": "kàn",
+         "romaji": null,
+         "meaning": "regarder, lire",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-shu",
+         "kind": "kanji",
+         "front": "书",
+         "reading": "shū",
+         "romaji": null,
+         "meaning": "livre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-time",
+       "title": "L’heure : 点、分、现在",
+       "objective": "Demander et dire l’heure, situer une action dans la journée.",
+       "minutes": 9,
+       "explanation": [
+        "现在几点？= quelle heure est-il ? Réponse : 现在八点 (il est 8 h), 八点二十分 (8 h 20). 分 peut s’omettre : 八点二十.",
+        "Le moment se place avant le verbe, jamais à la fin : 我下午三点去 (j’y vais à 15 h). On peut aussi le mettre en tête : 下午三点我去.",
+        "时候 (shíhou) = moment : 什么时候？= quand ? 你什么时候来？(quand viens-tu ?)"
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-time-before-verb",
+         "kind": "grammar",
+         "front": "时间 + 动词",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le moment se place avant le verbe"
+        },
+        {
+         "slug": "zh-xianzai",
+         "kind": "vocabulary",
+         "front": "现在",
+         "reading": "xiànzài",
+         "romaji": null,
+         "meaning": "maintenant"
+        },
+        {
+         "slug": "zh-dian",
+         "kind": "vocabulary",
+         "front": "点",
+         "reading": "diǎn",
+         "romaji": null,
+         "meaning": "heure(s) pile"
+        },
+        {
+         "slug": "zh-fenzhong",
+         "kind": "vocabulary",
+         "front": "分钟",
+         "reading": "fēnzhōng",
+         "romaji": null,
+         "meaning": "minute (durée)"
+        },
+        {
+         "slug": "zh-shangwu",
+         "kind": "vocabulary",
+         "front": "上午",
+         "reading": "shàngwǔ",
+         "romaji": null,
+         "meaning": "matin"
+        },
+        {
+         "slug": "zh-zhongwu",
+         "kind": "vocabulary",
+         "front": "中午",
+         "reading": "zhōngwǔ",
+         "romaji": null,
+         "meaning": "midi"
+        },
+        {
+         "slug": "zh-xiawu",
+         "kind": "vocabulary",
+         "front": "下午",
+         "reading": "xiàwǔ",
+         "romaji": null,
+         "meaning": "après-midi"
+        },
+        {
+         "slug": "zh-shihou",
+         "kind": "vocabulary",
+         "front": "时候",
+         "reading": "shíhou",
+         "romaji": null,
+         "meaning": "moment"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "现在几点？——现在十点十分。",
+         "reading": "Xiànzài jǐ diǎn? — Xiànzài shí diǎn shí fēn.",
+         "fr": "Quelle heure est-il ? — Il est 10 h 10."
+        },
+        {
+         "jp": "我们中午十二点吃饭。",
+         "reading": "Wǒmen zhōngwǔ shí’èr diǎn chī fàn.",
+         "fr": "Nous déjeunons à midi."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "现在几＿？——三点。",
+         "choices": [
+          "点",
+          "号",
+          "岁"
+         ],
+         "answer": "点",
+         "explanation": "L’heure : 几点？",
+         "translation": "Quelle heure est-il ? — Trois heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你什么＿来？",
+         "choices": [
+          "时候",
+          "现在",
+          "中午"
+         ],
+         "answer": "时候",
+         "explanation": "Quand ? = 什么时候？",
+         "translation": "Quand viens-tu ?"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je viens à 9 h du matin. »",
+         "answer": [
+          "我",
+          "上午",
+          "九点",
+          "来。"
+         ],
+         "explanation": "Sujet + moment + verbe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "下午两点",
+         "translation": "Il s’agit de 14 h.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "下午 = l’après-midi ; 两点 = deux heures."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w6-c2",
+     "title": "Les occupations du palais",
+     "lessons": [
+      {
+       "slug": "zh-activities",
+       "title": "Les activités : 看、读、写、学习、工作",
+       "objective": "Raconter ses activités de la journée.",
+       "minutes": 9,
+       "explanation": [
+        "看 = regarder, lire des yeux : 看书 (lire un livre), 看电视 (regarder la télé), 看电影 (voir un film). 读 = lire à voix haute, 写 = écrire : 写字 (écrire des caractères).",
+        "学习 (xuéxí) = étudier ; 工作 (gōngzuò) = travailler, le travail ; 做 (zuò) = faire : 你做什么工作？(quel est ton métier ?)",
+        "在 + verbe = être en train de : 他在看书 (il est en train de lire)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zai-doing",
+         "kind": "grammar",
+         "front": "在 + 动词",
+         "reading": "zài",
+         "romaji": null,
+         "meaning": "être en train de"
+        },
+        {
+         "slug": "zh-kan",
+         "kind": "vocabulary",
+         "front": "看",
+         "reading": "kàn",
+         "romaji": null,
+         "meaning": "regarder, lire"
+        },
+        {
+         "slug": "zh-du",
+         "kind": "vocabulary",
+         "front": "读",
+         "reading": "dú",
+         "romaji": null,
+         "meaning": "lire (à voix haute)"
+        },
+        {
+         "slug": "zh-xie",
+         "kind": "vocabulary",
+         "front": "写",
+         "reading": "xiě",
+         "romaji": null,
+         "meaning": "écrire"
+        },
+        {
+         "slug": "zh-zi",
+         "kind": "vocabulary",
+         "front": "字",
+         "reading": "zì",
+         "romaji": null,
+         "meaning": "caractère (écrit)"
+        },
+        {
+         "slug": "zh-xuexi",
+         "kind": "vocabulary",
+         "front": "学习",
+         "reading": "xuéxí",
+         "romaji": null,
+         "meaning": "étudier"
+        },
+        {
+         "slug": "zh-gongzuo",
+         "kind": "vocabulary",
+         "front": "工作",
+         "reading": "gōngzuò",
+         "romaji": null,
+         "meaning": "travailler, travail"
+        },
+        {
+         "slug": "zh-zuo",
+         "kind": "vocabulary",
+         "front": "做",
+         "reading": "zuò",
+         "romaji": null,
+         "meaning": "faire"
+        },
+        {
+         "slug": "zh-dianshi",
+         "kind": "vocabulary",
+         "front": "电视",
+         "reading": "diànshì",
+         "romaji": null,
+         "meaning": "télévision"
+        },
+        {
+         "slug": "zh-dianying",
+         "kind": "vocabulary",
+         "front": "电影",
+         "reading": "diànyǐng",
+         "romaji": null,
+         "meaning": "film"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "他在看电视。",
+         "reading": "Tā zài kàn diànshì.",
+         "fr": "Il est en train de regarder la télé."
+        },
+        {
+         "jp": "我们在学校学习汉语。",
+         "reading": "Wǒmen zài xuéxiào xuéxí Hànyǔ.",
+         "fr": "Nous étudions le chinois à l’école."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我在＿书。",
+         "choices": [
+          "看",
+          "喝",
+          "坐"
+         ],
+         "answer": "看",
+         "explanation": "Lire un livre : 看书.",
+         "translation": "Je suis en train de lire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你做什么＿？——我是老师。",
+         "choices": [
+          "工作",
+          "学习",
+          "电影"
+         ],
+         "answer": "工作",
+         "explanation": "Le métier : 做什么工作？",
+         "translation": "Que fais-tu comme travail ? — Je suis professeur."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "妈妈",
+           "jp": "你在做什么？"
+          }
+         ],
+         "translation": "Ta mère te demande ce que tu fais (tu écris des caractères).",
+         "choices": [
+          "我在写字。",
+          "我想写字。",
+          "我是字。"
+         ],
+         "answer": "我在写字。",
+         "explanation": "在 + verbe : en train de."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "她在看电影。",
+         "translation": "Elle regarde un film.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "看电影 = voir un film."
+        }
+       ]
+      },
+      {
+       "slug": "zh-le",
+       "title": "C’est fait : 了 et 睡觉、打电话",
+       "objective": "Dire qu’une action a eu lieu avec 了.",
+       "minutes": 9,
+       "explanation": [
+        "了 après le verbe (ou en fin de phrase) indique une action accomplie : 我买了一个杯子 (j’ai acheté un verre), 他去商店了 (il est allé au magasin).",
+        "La négation d’une action passée est 没 (sans 了) : 我没去 (je n’y suis pas allé).",
+        "Verbes de la journée : 睡觉 (shuìjiào, dormir, se coucher), 打电话 (dǎ diànhuà, téléphoner), 回家 (rentrer à la maison)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-le",
+         "kind": "grammar",
+         "front": "动词 + 了",
+         "reading": "le",
+         "romaji": null,
+         "meaning": "action accomplie"
+        },
+        {
+         "slug": "gram-zh-mei-past",
+         "kind": "grammar",
+         "front": "没 + 动词",
+         "reading": "méi",
+         "romaji": null,
+         "meaning": "ne pas avoir fait (passé)"
+        },
+        {
+         "slug": "zh-shuijiao",
+         "kind": "vocabulary",
+         "front": "睡觉",
+         "reading": "shuìjiào",
+         "romaji": null,
+         "meaning": "dormir, se coucher"
+        },
+        {
+         "slug": "zh-da-dianhua",
+         "kind": "vocabulary",
+         "front": "打电话",
+         "reading": "dǎ diànhuà",
+         "romaji": null,
+         "meaning": "téléphoner"
+        },
+        {
+         "slug": "zh-hui",
+         "kind": "vocabulary",
+         "front": "回",
+         "reading": "huí",
+         "romaji": null,
+         "meaning": "rentrer, revenir"
+        },
+        {
+         "slug": "zh-fanguan",
+         "kind": "vocabulary",
+         "front": "饭馆",
+         "reading": "fànguǎn",
+         "romaji": null,
+         "meaning": "restaurant"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "昨天我给妈妈打电话了。",
+         "reading": "Zuótiān wǒ gěi māma dǎ diànhuà le.",
+         "fr": "Hier, j’ai téléphoné à ma mère."
+        },
+        {
+         "jp": "你昨天几点睡觉的？——十一点。",
+         "reading": "Nǐ zuótiān jǐ diǎn shuìjiào de? — Shíyī diǎn.",
+         "fr": "À quelle heure t’es-tu couché hier ? — À 23 h."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我买＿两个苹果。",
+         "choices": [
+          "了",
+          "吗",
+          "的"
+         ],
+         "answer": "了",
+         "explanation": "Action accomplie : verbe + 了.",
+         "translation": "J’ai acheté deux pommes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "昨天我＿去饭馆。",
+         "choices": [
+          "没",
+          "不",
+          "了"
+         ],
+         "answer": "没",
+         "explanation": "Ne pas avoir fait : 没 + verbe (sans 了).",
+         "translation": "Hier, je ne suis pas allé au restaurant."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il est rentré à la maison. »",
+         "answer": [
+          "他",
+          "回家",
+          "了。"
+         ],
+         "explanation": "了 en fin de phrase : c’est fait."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我昨天没睡觉。",
+         "translation": "La personne a bien dormi hier.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "没睡觉 = n’a pas dormi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w7",
+   "title": "Les routes de Handan",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Se situer avec 在, demander où se trouve un lieu, aller, venir, prendre un moyen de transport.",
+   "boss": {
+    "name": "Le Xiangliu à neuf têtes",
+    "glyph": "柳",
+    "intro": "Le Xiangliu, serpent à neuf têtes, empoisonne les routes du royaume de Zhao. Chaque tête montre une direction différente : trouve la bonne pour arriver à Handan."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w7-c1",
+     "title": "Où est-ce ?",
+     "lessons": [
+      {
+       "slug": "zh-hz-places",
+       "title": "Les caractères des lieux : 去 来 回 坐 车 前 后 里",
+       "objective": "Reconnaître les caractères du déplacement.",
+       "minutes": 5,
+       "explanation": [
+        "车 (chē, char, voiture) est le dessin d’un char vu de dessus : l’essieu et les deux roues. Il se retrouve dans 火车 (train) et 出租车 (taxi).",
+        "去 (qù) = aller (s’éloigner), 来 (lái) = venir (vers celui qui parle), 回 (huí) = revenir : deux carrés emboîtés, comme un retour au point de départ."
+       ],
+       "items": [
+        {
+         "slug": "hz-qu",
+         "kind": "kanji",
+         "front": "去",
+         "reading": "qù",
+         "romaji": null,
+         "meaning": "aller",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-lai",
+         "kind": "kanji",
+         "front": "来",
+         "reading": "lái",
+         "romaji": null,
+         "meaning": "venir",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-hui",
+         "kind": "kanji",
+         "front": "回",
+         "reading": "huí",
+         "romaji": null,
+         "meaning": "rentrer, revenir",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-zuo-sit",
+         "kind": "kanji",
+         "front": "坐",
+         "reading": "zuò",
+         "romaji": null,
+         "meaning": "s’asseoir, prendre (un transport)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-che",
+         "kind": "kanji",
+         "front": "车",
+         "reading": "chē",
+         "romaji": null,
+         "meaning": "voiture, char",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-qian-front",
+         "kind": "kanji",
+         "front": "前",
+         "reading": "qián",
+         "romaji": null,
+         "meaning": "devant, avant",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-hou",
+         "kind": "kanji",
+         "front": "后",
+         "reading": "hòu",
+         "romaji": null,
+         "meaning": "derrière, après",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-li",
+         "kind": "kanji",
+         "front": "里",
+         "reading": "lǐ",
+         "romaji": null,
+         "meaning": "dedans, intérieur",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-zai",
+       "title": "Se trouver : 在、哪儿、这儿、那儿",
+       "objective": "Dire où se trouve une personne ou une chose.",
+       "minutes": 9,
+       "explanation": [
+        "Sujet + 在 + lieu = se trouver à : 我在家 (je suis à la maison), 书在桌子上 (le livre est sur la table).",
+        "哪儿 (nǎr) = où ? 这儿 (zhèr) = ici, 那儿 (nàr) = là-bas : 你在哪儿？——我在这儿.",
+        "La position se met après le nom : 桌子上 (sur la table), 桌子下 (sous la table), 杯子里 (dans le verre), 学校前面 (devant l’école), 后面 (derrière)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zai-place",
+         "kind": "grammar",
+         "front": "在 + 地点",
+         "reading": "zài",
+         "romaji": null,
+         "meaning": "se trouver à (un lieu)"
+        },
+        {
+         "slug": "gram-zh-noun-position",
+         "kind": "grammar",
+         "front": "名词 + 上 / 下 / 里",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sur / sous / dans (après le nom)"
+        },
+        {
+         "slug": "zh-zai",
+         "kind": "vocabulary",
+         "front": "在",
+         "reading": "zài",
+         "romaji": null,
+         "meaning": "être à, se trouver"
+        },
+        {
+         "slug": "zh-nar",
+         "kind": "vocabulary",
+         "front": "哪儿",
+         "reading": "nǎr",
+         "romaji": null,
+         "meaning": "où"
+        },
+        {
+         "slug": "zh-zher",
+         "kind": "vocabulary",
+         "front": "这儿",
+         "reading": "zhèr",
+         "romaji": null,
+         "meaning": "ici"
+        },
+        {
+         "slug": "zh-nar-there",
+         "kind": "vocabulary",
+         "front": "那儿",
+         "reading": "nàr",
+         "romaji": null,
+         "meaning": "là-bas"
+        },
+        {
+         "slug": "zh-zhuozi",
+         "kind": "vocabulary",
+         "front": "桌子",
+         "reading": "zhuōzi",
+         "romaji": null,
+         "meaning": "table"
+        },
+        {
+         "slug": "zh-yizi",
+         "kind": "vocabulary",
+         "front": "椅子",
+         "reading": "yǐzi",
+         "romaji": null,
+         "meaning": "chaise"
+        },
+        {
+         "slug": "zh-qianmian",
+         "kind": "vocabulary",
+         "front": "前面",
+         "reading": "qiánmiàn",
+         "romaji": null,
+         "meaning": "devant"
+        },
+        {
+         "slug": "zh-houmian",
+         "kind": "vocabulary",
+         "front": "后面",
+         "reading": "hòumiàn",
+         "romaji": null,
+         "meaning": "derrière"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你妈妈在哪儿？——她在家。",
+         "reading": "Nǐ māma zài nǎr? — Tā zài jiā.",
+         "fr": "Où est ta mère ? — Elle est à la maison."
+        },
+        {
+         "jp": "猫在椅子下面。",
+         "reading": "Māo zài yǐzi xiàmiàn.",
+         "fr": "Le chat est sous la chaise."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你在＿？——我在学校。",
+         "choices": [
+          "哪儿",
+          "那儿",
+          "这儿"
+         ],
+         "answer": "哪儿",
+         "explanation": "Où ? = 哪儿 (3e ton).",
+         "translation": "Où es-tu ? — Je suis à l’école."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "杯子在桌子＿。",
+         "choices": [
+          "上",
+          "前",
+          "在"
+         ],
+         "answer": "上",
+         "explanation": "Sur la table : 桌子上.",
+         "translation": "Le verre est sur la table."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Mon père est au restaurant. »",
+         "answer": [
+          "我爸爸",
+          "在",
+          "饭馆。"
+         ],
+         "explanation": "Sujet + 在 + lieu."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "狗在桌子后面。",
+         "translation": "Le chien est devant la table.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "后面 = derrière ; devant = 前面."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w7-c2",
+     "title": "En route",
+     "lessons": [
+      {
+       "slug": "zh-transport",
+       "title": "Aller et venir : 去、来、坐",
+       "objective": "Dire où l’on va et comment.",
+       "minutes": 10,
+       "explanation": [
+        "去 + lieu = aller à : 我去北京 (je vais à Pékin). 来 + lieu = venir : 你来我家吧 (viens chez moi).",
+        "Le moyen de transport se place avant le verbe : 坐 + transport + 去 + lieu. 我坐出租车去医院 (je vais à l’hôpital en taxi).",
+        "Lieux : 学校 (école), 医院 (hôpital), 火车站 (gare). Transports : 飞机 (avion), 火车 (train), 出租车 (taxi)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zuo-qu",
+         "kind": "grammar",
+         "front": "坐 + 交通 + 去 + 地点",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aller quelque part en (transport)"
+        },
+        {
+         "slug": "zh-qu",
+         "kind": "vocabulary",
+         "front": "去",
+         "reading": "qù",
+         "romaji": null,
+         "meaning": "aller"
+        },
+        {
+         "slug": "zh-lai",
+         "kind": "vocabulary",
+         "front": "来",
+         "reading": "lái",
+         "romaji": null,
+         "meaning": "venir"
+        },
+        {
+         "slug": "zh-zuo-sit",
+         "kind": "vocabulary",
+         "front": "坐",
+         "reading": "zuò",
+         "romaji": null,
+         "meaning": "s’asseoir ; prendre (un transport)"
+        },
+        {
+         "slug": "zh-xuexiao",
+         "kind": "vocabulary",
+         "front": "学校",
+         "reading": "xuéxiào",
+         "romaji": null,
+         "meaning": "école"
+        },
+        {
+         "slug": "zh-yiyuan",
+         "kind": "vocabulary",
+         "front": "医院",
+         "reading": "yīyuàn",
+         "romaji": null,
+         "meaning": "hôpital"
+        },
+        {
+         "slug": "zh-yisheng",
+         "kind": "vocabulary",
+         "front": "医生",
+         "reading": "yīshēng",
+         "romaji": null,
+         "meaning": "médecin"
+        },
+        {
+         "slug": "zh-huochezhan",
+         "kind": "vocabulary",
+         "front": "火车站",
+         "reading": "huǒchēzhàn",
+         "romaji": null,
+         "meaning": "gare"
+        },
+        {
+         "slug": "zh-feiji",
+         "kind": "vocabulary",
+         "front": "飞机",
+         "reading": "fēijī",
+         "romaji": null,
+         "meaning": "avion"
+        },
+        {
+         "slug": "zh-chuzuche",
+         "kind": "vocabulary",
+         "front": "出租车",
+         "reading": "chūzūchē",
+         "romaji": null,
+         "meaning": "taxi"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "明天我坐飞机去北京。",
+         "reading": "Míngtiān wǒ zuò fēijī qù Běijīng.",
+         "fr": "Demain, je vais à Pékin en avion."
+        },
+        {
+         "jp": "医生在医院工作。",
+         "reading": "Yīshēng zài yīyuàn gōngzuò.",
+         "fr": "Le médecin travaille à l’hôpital."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿出租车去火车站。",
+         "choices": [
+          "坐",
+          "在",
+          "来"
+         ],
+         "answer": "坐",
+         "explanation": "Prendre un transport : 坐.",
+         "translation": "Je vais à la gare en taxi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你什么时候＿我家？",
+         "choices": [
+          "来",
+          "坐",
+          "在"
+         ],
+         "answer": "来",
+         "explanation": "Vers celui qui parle : 来.",
+         "translation": "Quand viens-tu chez moi ?"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je vais à l’école en taxi. »",
+         "answer": [
+          "我",
+          "坐出租车",
+          "去",
+          "学校。"
+         ],
+         "explanation": "坐 + transport, puis 去 + lieu."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大卫",
+           "jp": "你去哪儿？"
+          }
+         ],
+         "translation": "David te demande où tu vas (à l’hôpital).",
+         "choices": [
+          "我去医院。",
+          "我在医院。",
+          "医院在哪儿？"
+         ],
+         "answer": "我去医院。",
+         "explanation": "Aller à : 去 + lieu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-w8",
+   "title": "Les portes de Xianyang",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Le temps qu’il fait, ce que l’on aime, ce que l’on sait faire avec 会 et 能, et les premières conversations.",
+   "boss": {
+    "name": "Le Zhulong, dragon-chandelle",
+    "glyph": "烛",
+    "intro": "Aux portes de Xianyang veille le Zhulong : quand il ouvre les yeux, c’est le jour ; quand il les ferme, la nuit. Parle-lui du temps, de ce que tu aimes et de ce que tu sais faire, et il t’ouvrira la capitale de Qin."
+   },
+   "chapters": [
+    {
+     "slug": "hsk1-w8-c1",
+     "title": "Le temps qu’il fait",
+     "lessons": [
+      {
+       "slug": "zh-hz-feelings",
+       "title": "Les caractères du cœur : 爱 喜 欢 会 能 说 听 请",
+       "objective": "Reconnaître les caractères des goûts et des capacités.",
+       "minutes": 5,
+       "explanation": [
+        "说 (shuō, parler) et 请 (qǐng, prier, inviter) portent la clé de la parole 讠. 听 (tīng, écouter) porte celle de la bouche 口.",
+        "喜 (xǐ, joie) + 欢 (huān, gaieté) = 喜欢, aimer bien. 爱 (ài) est plus fort : aimer, adorer."
+       ],
+       "items": [
+        {
+         "slug": "hz-ai",
+         "kind": "kanji",
+         "front": "爱",
+         "reading": "ài",
+         "romaji": null,
+         "meaning": "aimer, adorer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-xi-joy",
+         "kind": "kanji",
+         "front": "喜",
+         "reading": "xǐ",
+         "romaji": null,
+         "meaning": "joie",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-huan",
+         "kind": "kanji",
+         "front": "欢",
+         "reading": "huān",
+         "romaji": null,
+         "meaning": "gai, joyeux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-hui-can",
+         "kind": "kanji",
+         "front": "会",
+         "reading": "huì",
+         "romaji": null,
+         "meaning": "savoir (faire)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-neng",
+         "kind": "kanji",
+         "front": "能",
+         "reading": "néng",
+         "romaji": null,
+         "meaning": "pouvoir",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-shuo",
+         "kind": "kanji",
+         "front": "说",
+         "reading": "shuō",
+         "romaji": null,
+         "meaning": "parler, dire",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-ting",
+         "kind": "kanji",
+         "front": "听",
+         "reading": "tīng",
+         "romaji": null,
+         "meaning": "écouter",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-qing",
+         "kind": "kanji",
+         "front": "请",
+         "reading": "qǐng",
+         "romaji": null,
+         "meaning": "s’il vous plaît, inviter",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-weather",
+       "title": "Le temps : 天气、冷、热、下雨、怎么样",
+       "objective": "Parler du temps et demander comment est quelque chose.",
+       "minutes": 9,
+       "explanation": [
+        "怎么样 (zěnmeyàng) = comment est… ? 今天天气怎么样？(quel temps fait-il aujourd’hui ?) Il sert aussi à proposer : 我们去饭馆，怎么样？(on va au restaurant, ça te dit ?)",
+        "Les adjectifs se construisent avec 很 ou 太…了 : 今天很冷 (il fait froid), 太热了 (il fait trop chaud). Pluie : 下雨 (il pleut), 下雨了 (il s’est mis à pleuvoir)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zenmeyang",
+         "kind": "grammar",
+         "front": "…怎么样？",
+         "reading": "zěnmeyàng",
+         "romaji": null,
+         "meaning": "comment est… ? ; et si… ?"
+        },
+        {
+         "slug": "zh-tianqi",
+         "kind": "vocabulary",
+         "front": "天气",
+         "reading": "tiānqì",
+         "romaji": null,
+         "meaning": "temps (météo)"
+        },
+        {
+         "slug": "zh-leng",
+         "kind": "vocabulary",
+         "front": "冷",
+         "reading": "lěng",
+         "romaji": null,
+         "meaning": "froid"
+        },
+        {
+         "slug": "zh-re",
+         "kind": "vocabulary",
+         "front": "热",
+         "reading": "rè",
+         "romaji": null,
+         "meaning": "chaud"
+        },
+        {
+         "slug": "zh-xiayu",
+         "kind": "vocabulary",
+         "front": "下雨",
+         "reading": "xià yǔ",
+         "romaji": null,
+         "meaning": "pleuvoir"
+        },
+        {
+         "slug": "zh-zenme",
+         "kind": "vocabulary",
+         "front": "怎么",
+         "reading": "zěnme",
+         "romaji": null,
+         "meaning": "comment"
+        },
+        {
+         "slug": "zh-zenmeyang",
+         "kind": "vocabulary",
+         "front": "怎么样",
+         "reading": "zěnmeyàng",
+         "romaji": null,
+         "meaning": "comment (est-ce)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "今天天气怎么样？——很热。",
+         "reading": "Jīntiān tiānqì zěnmeyàng? — Hěn rè.",
+         "fr": "Quel temps fait-il aujourd’hui ? — Il fait très chaud."
+        },
+        {
+         "jp": "下雨了，我们坐出租车去吧。",
+         "reading": "Xià yǔ le, wǒmen zuò chūzūchē qù ba.",
+         "fr": "Il pleut, allons-y en taxi."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "明天天气＿？",
+         "choices": [
+          "怎么样",
+          "什么",
+          "哪儿"
+         ],
+         "answer": "怎么样",
+         "explanation": "Comment est… ? = 怎么样？",
+         "translation": "Quel temps fera-t-il demain ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "今天太＿了！",
+         "choices": [
+          "冷",
+          "雨",
+          "天"
+         ],
+         "answer": "冷",
+         "explanation": "太 + adjectif + 了 : 太冷了.",
+         "translation": "Il fait vraiment trop froid aujourd’hui !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "小明",
+           "jp": "我们明天去饭馆，怎么样？"
+          }
+         ],
+         "translation": "Xiaoming propose d’aller au restaurant demain.",
+         "choices": [
+          "太好了！",
+          "很冷。",
+          "是饭馆。"
+         ],
+         "answer": "太好了！",
+         "explanation": "On accepte avec enthousiasme : 太好了！"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "昨天下雨了。",
+         "translation": "Il a plu hier.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "下雨了 = il a plu."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk1-w8-c2",
+     "title": "Ce que j’aime, ce que je sais faire",
+     "lessons": [
+      {
+       "slug": "zh-like",
+       "title": "Aimer : 喜欢、爱 ; connaître : 认识",
+       "objective": "Dire ce que l’on aime et qui l’on connaît.",
+       "minutes": 9,
+       "explanation": [
+        "喜欢 + nom ou verbe = aimer bien : 我喜欢猫, 我喜欢看电影. 爱 = aimer (fort) : 我爱我的家.",
+        "认识 (rènshi) = connaître une personne : 认识你很高兴 (enchanté de te connaître). 高兴 (gāoxìng) = content.",
+        "Pour être poli : 请 + verbe = je vous en prie : 请坐 (asseyez-vous), 请喝茶 (prenez du thé). 先生 (monsieur), 小姐 (mademoiselle)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-qing",
+         "kind": "grammar",
+         "front": "请 + 动词",
+         "reading": "qǐng",
+         "romaji": null,
+         "meaning": "je vous prie de…, s’il vous plaît"
+        },
+        {
+         "slug": "zh-xihuan",
+         "kind": "vocabulary",
+         "front": "喜欢",
+         "reading": "xǐhuan",
+         "romaji": null,
+         "meaning": "aimer (bien)"
+        },
+        {
+         "slug": "zh-ai",
+         "kind": "vocabulary",
+         "front": "爱",
+         "reading": "ài",
+         "romaji": null,
+         "meaning": "aimer, adorer"
+        },
+        {
+         "slug": "zh-renshi",
+         "kind": "vocabulary",
+         "front": "认识",
+         "reading": "rènshi",
+         "romaji": null,
+         "meaning": "connaître (quelqu’un)"
+        },
+        {
+         "slug": "zh-gaoxing",
+         "kind": "vocabulary",
+         "front": "高兴",
+         "reading": "gāoxìng",
+         "romaji": null,
+         "meaning": "content, heureux"
+        },
+        {
+         "slug": "zh-qing",
+         "kind": "vocabulary",
+         "front": "请",
+         "reading": "qǐng",
+         "romaji": null,
+         "meaning": "s’il vous plaît, inviter"
+        },
+        {
+         "slug": "zh-xiansheng",
+         "kind": "vocabulary",
+         "front": "先生",
+         "reading": "xiānsheng",
+         "romaji": null,
+         "meaning": "monsieur"
+        },
+        {
+         "slug": "zh-xiaojie",
+         "kind": "vocabulary",
+         "front": "小姐",
+         "reading": "xiǎojiě",
+         "romaji": null,
+         "meaning": "mademoiselle"
+        },
+        {
+         "slug": "zh-piaoliang",
+         "kind": "vocabulary",
+         "front": "漂亮",
+         "reading": "piàoliang",
+         "romaji": null,
+         "meaning": "joli, beau"
+        },
+        {
+         "slug": "zh-yifu",
+         "kind": "vocabulary",
+         "front": "衣服",
+         "reading": "yīfu",
+         "romaji": null,
+         "meaning": "vêtement"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "认识你很高兴！",
+         "reading": "Rènshi nǐ hěn gāoxìng!",
+         "fr": "Enchanté de faire ta connaissance !"
+        },
+        {
+         "jp": "王先生，请坐，请喝茶。",
+         "reading": "Wáng xiānsheng, qǐng zuò, qǐng hē chá.",
+         "fr": "Monsieur Wang, asseyez-vous, prenez du thé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我很＿看书。",
+         "choices": [
+          "喜欢",
+          "认识",
+          "高兴"
+         ],
+         "answer": "喜欢",
+         "explanation": "Aimer faire : 喜欢 + verbe.",
+         "translation": "J’aime beaucoup lire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿你很高兴！",
+         "choices": [
+          "认识",
+          "喜欢",
+          "请"
+         ],
+         "answer": "认识",
+         "explanation": "Enchanté : 认识你很高兴.",
+         "translation": "Enchanté de te connaître !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "李小姐",
+           "jp": "你好！我叫李月。"
+          }
+         ],
+         "translation": "Li Yue se présente à toi.",
+         "choices": [
+          "认识你很高兴！",
+          "不客气！",
+          "没关系！"
+         ],
+         "answer": "认识你很高兴！",
+         "explanation": "Après une présentation : 认识你很高兴."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这件衣服很漂亮。",
+         "translation": "Ce vêtement est joli.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "漂亮 = joli."
+        }
+       ]
+      },
+      {
+       "slug": "zh-hui-neng",
+       "title": "Savoir et pouvoir : 会、能、说汉语",
+       "objective": "Dire ce que l’on sait faire et ce que l’on peut faire.",
+       "minutes": 10,
+       "explanation": [
+        "会 + verbe = savoir faire (appris) : 我会说汉语 (je sais parler chinois), 我会写汉字. 能 + verbe = pouvoir (possibilité, permission) : 你能来吗？(tu peux venir ?)",
+        "Négations : 不会 (ne pas savoir), 不能 (ne pas pouvoir). 会 annonce aussi l’avenir probable : 明天会下雨 (il pleuvra demain).",
+        "说 = parler, dire ; 听 = écouter ; 汉语 (Hànyǔ) = le chinois ; 说话 = parler, discuter. 住 (zhù) = habiter : 你住在哪儿？"
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-hui",
+         "kind": "grammar",
+         "front": "会 + 动词",
+         "reading": "huì",
+         "romaji": null,
+         "meaning": "savoir faire (会 + verbe)"
+        },
+        {
+         "slug": "gram-zh-neng",
+         "kind": "grammar",
+         "front": "能 + 动词",
+         "reading": "néng",
+         "romaji": null,
+         "meaning": "pouvoir (possibilité)"
+        },
+        {
+         "slug": "zh-hui-can",
+         "kind": "vocabulary",
+         "front": "会",
+         "reading": "huì",
+         "romaji": null,
+         "meaning": "savoir (faire)"
+        },
+        {
+         "slug": "zh-neng",
+         "kind": "vocabulary",
+         "front": "能",
+         "reading": "néng",
+         "romaji": null,
+         "meaning": "pouvoir"
+        },
+        {
+         "slug": "zh-shuo",
+         "kind": "vocabulary",
+         "front": "说",
+         "reading": "shuō",
+         "romaji": null,
+         "meaning": "parler, dire"
+        },
+        {
+         "slug": "zh-shuohua",
+         "kind": "vocabulary",
+         "front": "说话",
+         "reading": "shuōhuà",
+         "romaji": null,
+         "meaning": "parler, discuter"
+        },
+        {
+         "slug": "zh-ting",
+         "kind": "vocabulary",
+         "front": "听",
+         "reading": "tīng",
+         "romaji": null,
+         "meaning": "écouter"
+        },
+        {
+         "slug": "zh-hanyu",
+         "kind": "vocabulary",
+         "front": "汉语",
+         "reading": "Hànyǔ",
+         "romaji": null,
+         "meaning": "le chinois (langue)"
+        },
+        {
+         "slug": "zh-zhu",
+         "kind": "vocabulary",
+         "front": "住",
+         "reading": "zhù",
+         "romaji": null,
+         "meaning": "habiter"
+        },
+        {
+         "slug": "zh-kaiche",
+         "kind": "vocabulary",
+         "front": "开车",
+         "reading": "kāi chē",
+         "romaji": null,
+         "meaning": "conduire (une voiture)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "你会说汉语吗？——我会说一点儿。",
+         "reading": "Nǐ huì shuō Hànyǔ ma? — Wǒ huì shuō yìdiǎnr.",
+         "fr": "Tu sais parler chinois ? — Un petit peu."
+        },
+        {
+         "jp": "我今天不能去，我明天能去。",
+         "reading": "Wǒ jīntiān bù néng qù, wǒ míngtiān néng qù.",
+         "fr": "Je ne peux pas y aller aujourd’hui, je peux demain."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿开车。",
+         "choices": [
+          "会",
+          "是",
+          "在"
+         ],
+         "answer": "会",
+         "explanation": "Savoir conduire (appris) : 会开车.",
+         "translation": "Je sais conduire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "明天我有工作，不＿去。",
+         "choices": [
+          "能",
+          "会",
+          "想"
+         ],
+         "answer": "能",
+         "explanation": "Pas possible : 不能.",
+         "translation": "Demain je travaille, je ne peux pas y aller."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大卫",
+           "jp": "你住在哪儿？"
+          }
+         ],
+         "translation": "David te demande où tu habites (à Pékin).",
+         "choices": [
+          "我住在北京。",
+          "我会北京。",
+          "我想北京。"
+         ],
+         "answer": "我住在北京。",
+         "explanation": "Habiter à : 住在 + lieu."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Mon fils sait écrire les caractères chinois. »",
+         "answer": [
+          "我儿子",
+          "会",
+          "写",
+          "汉字。"
+         ],
+         "explanation": "Sujet + 会 + verbe + objet."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk1-final",
+   "title": "Simulation HSK 1 : la cour de Luoyang",
+   "region": "Plaine du Fleuve Jaune",
+   "description": "Examen blanc au format du HSK 1, en chinois : écoute (听力) et lecture (阅读). Noté sur 200 ; réussite à 120 points.",
+   "exam": "hsk1-official",
+   "chapters": []
+  }
+ ]
+}

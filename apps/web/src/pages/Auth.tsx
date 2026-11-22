@@ -69,14 +69,14 @@ export function WelcomePage() {
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
           <p className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · {T("Préparation au JLPT, au TOPIK et au TOEIC")}
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · {T("Préparation au JLPT, au TOPIK, au TOEIC et au HSK")}
           </p>
-          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen ou l’anglais, et réussis ton examen.")}</h1>
+          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen, l’anglais ou le chinois, et réussis ton examen.")}</h1>
           <p className="mt-4 max-w-[54ch] text-lg text-ink-soft">
-            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
+            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais, le HSK pour le chinois. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
           </p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK et du CECRL"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK, du CECRL et du HSK"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -183,6 +183,28 @@ export function WelcomePage() {
         </ol>
       </section>
 
+      {/* Le HSK, pour le chinois */}
+      <section aria-labelledby="hsk-title" className="flex flex-col gap-5">
+        <div>
+          <h2 id="hsk-title" className="text-3xl">{T("Et le chinois ? Le HSK")}</h2>
+          <p className="mt-2 max-w-[70ch] text-ink-soft">
+            {T("Le HSK (Hanyu Shuiping Kaoshi) est l’examen officiel de chinois pour les non-sinophones. Il compte six niveaux, de 150 mots au HSK 1 à plus de 5 000 au HSK 6. Koto Quest suit le format des sessions de 2026, avec le pinyin au-dessus des caractères qui s’efface au fil des niveaux, et t’emmène à travers les Royaumes combattants.")}
+          </p>
+        </div>
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {HSK_LEVELS.map((l) => (
+            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line bg-surface-2'}`}>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-display text-2xl">{l.id}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface text-ink-soft'}`}>{l.ready ? T("Disponible") : T("Bientôt")}</span>
+              </div>
+              <p className="font-bold">{l.name()}</p>
+              <p className="text-sm text-ink-soft">{l.text()}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Comment Koto Quest prépare */}
       <section aria-labelledby="how-title" className="flex flex-col gap-5">
         <h2 id="how-title" className="text-3xl">{T("Comment Koto Quest te prépare")}</h2>
@@ -202,12 +224,12 @@ export function WelcomePage() {
       {/* Appel final */}
       <section aria-labelledby="cta-title" className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-10">
         <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[12rem] font-black leading-none opacity-[0.07]">合格</span>
-        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT, TOPIK ou TOEIC commence aujourd’hui.")}</h2>
+        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT, TOPIK, TOEIC ou HSK commence aujourd’hui.")}</h2>
         <p className="relative mt-3 max-w-[56ch] text-lg opacity-85">{T("Débutant complet, étudiant, voyageur ou candidat à l’examen : fixe ton niveau visé et ta date d’examen, Koto Quest construit ton programme jour après jour.")}</p>
         <button className="btn btn-gold relative mt-6 min-h-14 px-6 text-lg" onClick={startNow}>{T("Commencer gratuitement")}</button>
       </section>
 
-      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK, ni à ETS, organisateur du TOEIC. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
+      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK, ni à ETS, organisateur du TOEIC, ni au CLEC (Centre for Language Education and Cooperation), organisateur du HSK. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
     </div>
     <div className="mx-auto max-w-5xl px-5"><SiteFooter className="mt-0" /></div>
     </>
@@ -239,12 +261,21 @@ const TOEIC_LEVELS = [
   { id: 'C1', name: () => T("Autonome · TOEIC 945+"), text: () => T("Registre soutenu, idiomes, nuances, stratégie, contrats et négociation de haut niveau.") },
 ];
 
+const HSK_LEVELS = [
+  { id: 'HSK 1', ready: true, name: () => T("Découverte · 150 mots"), text: () => T("Le pinyin et les tons, les nombres, se présenter, la famille, les achats, l’heure, les transports et le temps qu’il fait.") },
+  { id: 'HSK 2', ready: false, name: () => T("Élémentaire · 300 mots"), text: () => T("Comparer, raconter une expérience, les compléments de résultat et de durée, les petits échanges du quotidien.") },
+  { id: 'HSK 3', ready: false, name: () => T("Intermédiaire · 600 mots"), text: () => T("Se débrouiller en voyage, au travail et à l’école ; 把, 被, les compléments de direction ; premiers textes sans pinyin.") },
+  { id: 'HSK 4', ready: false, name: () => T("Intermédiaire avancé · 1 200 mots"), text: () => T("Discuter de sujets variés avec des natifs, lire des textes courants et rédiger de courtes phrases.") },
+  { id: 'HSK 5', ready: false, name: () => T("Avancé · 2 500 mots"), text: () => T("Lire journaux et magazines, suivre films et émissions, faire un exposé structuré.") },
+  { id: 'HSK 6', ready: false, name: () => T("Maîtrise · 5 000 mots"), text: () => T("Comprendre sans effort ce qu’on lit et entend, chengyu et langue écrite soutenue.") },
+];
+
 const FEATURES = [
-  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 ; en anglais, apprenti de Merlin en A1 jusqu’à héritier d’Arthur en C1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
+  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 ; en anglais, apprenti de Merlin en A1 jusqu’à héritier d’Arthur en C1 ; en chinois, messager des Royaumes au HSK 1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
   { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("La répétition espacée fait revenir chaque mot, kanji ou point de grammaire juste avant que tu l’oublies.") },
-  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT, TOPIK et TOEIC"), text: () => T("Au format exact du JLPT et du TOPIK, au format abrégé du TOEIC, corrigés immédiatement, pour arriver le jour J sans surprise.") },
-  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais, coréens et britanniques en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
-  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, en Corée ou en anglais, classées par situation, avec l’audio.") },
+  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT, TOPIK, TOEIC et HSK"), text: () => T("Au format exact du JLPT, du TOPIK et du HSK, au format abrégé du TOEIC, corrigés immédiatement, pour arriver le jour J sans surprise.") },
+  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais, coréens et britanniques et des fables chinoises en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
+  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, en Corée, en Chine ou en anglais, classées par situation, avec l’audio.") },
   { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Affronte d’autres apprenants en quiz rapides pour réviser en t’amusant et grimper au classement.") },
 ];
 

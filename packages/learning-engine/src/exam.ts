@@ -26,7 +26,7 @@ export interface ExamDef {
   /** Banque de questions rédigées (format officiel) au lieu des notions du parcours */
   bank?: string;
   /** Notation : pourcentages (défaut), barème du JLPT (180 points) ou du TOPIK I (200 points) */
-  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2' | 'toeic';
+  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2' | 'toeic' | 'hsk' | 'hsk3';
   /** TOPIK : niveau à obtenir pour réussir l'examen (1 par défaut) */
   passLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
@@ -63,8 +63,15 @@ export const TOPIK_II_SCALE = { language: 100, listening: 100, writing: 100, tot
 export const TOEIC_SCALE = { listening: 495, reading: 495, total: 990, floor: 5 } as const;
 export const TOEIC_PASS_TOTAL: Record<string, number> = { A1: 120, A2: 225, B1: 550, B2: 785, C1: 945 };
 
+/**
+ * Barème du HSK 2.0 : chaque épreuve (听力 écoute, 阅读 lecture, 书写 écriture à partir du HSK 3) est notée sur 100.
+ * HSK 1 et 2 : 200 points, réussite à 120 ; HSK 3 à 6 : 300 points, réussite à 180. Pas de minimum par épreuve.
+ */
+export const HSK_SCALE = { listening: 100, reading: 100, writing: 100 } as const;
+export const HSK_PASS_TOTAL = { hsk: 120, hsk3: 180 } as const;
+
 export interface ExamScale {
-  system: 'jlpt' | 'topik' | 'toeic';
+  system: 'jlpt' | 'topik' | 'toeic' | 'hsk';
   language: number;
   listening: number;
   total: number;
@@ -92,6 +99,10 @@ export function examScale(def: ExamDef): ExamScale | null {
   }
   if (def.scoring === 'toeic')
     return { system: 'toeic', language: TOEIC_SCALE.reading, listening: TOEIC_SCALE.listening, total: TOEIC_SCALE.total, passTotal: TOEIC_PASS_TOTAL[def.level] ?? 550, passLanguage: 0, passListening: 0 };
+  if (def.scoring === 'hsk')
+    return { system: 'hsk', language: HSK_SCALE.reading, listening: HSK_SCALE.listening, total: 200, passTotal: HSK_PASS_TOTAL.hsk, passLanguage: 0, passListening: 0 };
+  if (def.scoring === 'hsk3')
+    return { system: 'hsk', language: HSK_SCALE.reading, listening: HSK_SCALE.listening, writing: HSK_SCALE.writing, total: 300, passTotal: HSK_PASS_TOTAL.hsk3, passLanguage: 0, passListening: 0 };
   if (def.scoring === 'topik2') {
     const passLevel = def.passLevel ?? 3;
     return {
@@ -416,7 +427,47 @@ export const EXAM_B2_MOCK = TOEIC_MOCK('B2');
 export const EXAM_C1_TOEIC = TOEIC_OFFICIAL('C1', 50, 20, 20, 14);
 export const EXAM_C1_MOCK = TOEIC_MOCK('C1');
 
+/**
+ * Examen blanc HSK 2.0 au format officiel : 听力 (écoute), 阅读 (lecture) et, à partir du HSK 3, 书写 (écriture,
+ * en format à choix adapté). Banques content/exams/hsk<n>.json, rédigées en chinois.
+ */
+const HSK_OFFICIAL = (n: number, durationMin: number, listening: number, reading: number, writing = 0, abridged = false): ExamDef => ({
+  slug: `hsk${n}-official`,
+  level: `HSK${n}`,
+  title: `Examen blanc HSK ${n} — format officiel${abridged ? ' (abrégé)' : ''}`,
+  durationMin,
+  sections: [
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '听力', count: listening },
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: '阅读', count: reading },
+    ...(writing ? [{ id: 'writing' as const, title: 'Expression écrite', jpTitle: '书写', count: writing }] : []),
+  ],
+  passPercent: 60,
+  sectionMinPercent: 0,
+  bank: `hsk${n}`,
+  scoring: writing ? 'hsk3' : 'hsk',
+});
+
+/** Entraînement généré à partir des leçons d'un niveau HSK. */
+const HSK_MOCK = (n: number): ExamDef => ({
+  slug: `hsk${n}-mock`,
+  level: `HSK${n}`,
+  title: `Entraînement HSK ${n}`,
+  durationMin: 25,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire', jpTitle: '词汇', count: 12 },
+    { id: 'grammar', title: 'Grammaire', jpTitle: '语法', count: 10 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: '听力', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+});
+
+export const EXAM_HSK1 = HSK_OFFICIAL(1, 40, 20, 20);
+export const EXAM_HSK1_MOCK = HSK_MOCK(1);
+
 export const EXAMS: Record<string, ExamDef> = {
+  [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
+  [EXAM_HSK1.slug]: EXAM_HSK1,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
@@ -581,6 +632,19 @@ export function gradeExam(def: ExamDef, questions: { section: ExamSectionId; typ
     scaled.level = [...TOPIK_II_SCALE.levels].reverse().find((l) => scaled.total >= l.min)?.level ?? 0;
     return { sections, correct, total, percent: Math.round((scaled.total / TOPIK_II_SCALE.total) * 100), passed: scaled.level >= (def.passLevel ?? 3), weakest, results, scaled };
   }
+  if (def.scoring === 'hsk' || def.scoring === 'hsk3') {
+    // HSK : 听力 (écoute), 阅读 (lecture, `language`) et, à partir du HSK 3, 书写 (écriture), chacune sur 100.
+    const pts = (id: ExamSectionId) => {
+      const x = sections.find((y) => y.id === id);
+      return x && x.total ? Math.round((x.correct / x.total) * 100) : 0;
+    };
+    const writing = def.scoring === 'hsk3';
+    const scaled: NonNullable<ExamGrade['scaled']> = { listening: pts('listening'), language: pts('reading'), total: 0 };
+    if (writing) scaled.writing = pts('writing');
+    scaled.total = scaled.listening + scaled.language + (scaled.writing ?? 0);
+    const max = writing ? 300 : 200;
+    return { sections, correct, total, percent: Math.round((scaled.total / max) * 100), passed: scaled.total >= HSK_PASS_TOTAL[def.scoring], weakest, results, scaled };
+  }
   if (def.scoring === 'toeic') {
     // Lecture = parties 5 à 7 (phrases et textes à compléter, compréhension écrite) ; chaque épreuve vaut de 5 à 495.
     const pts = (list: typeof sections) => {
@@ -675,7 +739,21 @@ const TIPS_EN: Partial<Record<ExamSectionId, string>> = {
   reading: 'Compréhension écrite (partie 7) : lis un chapitre de conte en anglais chaque jour et entraîne-toi à repérer l’essentiel d’un e-mail, d’une annonce ou d’un mémo.',
 };
 
+/** Conseils HSK (communs aux niveaux : les leçons et contes du niveau étudié). */
+const TIPS_HSK: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons du niveau et joue à Hanzi Rush pour reconnaître vite les caractères, leur sens et leur pinyin.',
+  grammar: 'Grammaire : reprends les leçons de grammaire du niveau (ordre des mots, 的, 了, 吗, les mesures) et les phrases à remettre dans l’ordre.',
+  listening: 'Écoute (听力) : réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi à reconnaître les tons des mots du niveau.',
+  reading: 'Lecture (阅读) : lis un chapitre de conte chinois chaque jour et entraîne-toi à lire sans le pinyin les mots que tu connais.',
+  writing: 'Écriture (书写) : remets des mots dans l’ordre pour former une phrase et entraîne-toi à reconnaître le bon caractère d’après son pinyin.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
+  if (/^HSK[1-6]$/.test(level)) {
+    const weakZh = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
+    if (!weakZh.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
+    return weakZh.map((s) => TIPS_HSK[s.id] ?? TIPS_HSK.grammar!).filter(Boolean);
+  }
   if (/^[ABC][12]$/.test(level)) {
     const weakEn = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakEn.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];

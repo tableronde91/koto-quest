@@ -1,0 +1,1044 @@
+{
+ "contentVersion": "2026.11.22",
+ "language": "zh",
+ "sections": [
+  {
+   "slug": "hanzi-hsk1",
+   "glyph": "字",
+   "title": "HSK 1",
+   "description": "Les caractères du HSK 1 vus dans le parcours, avec leur pinyin et leur sens. Même caractère, même maîtrise que dans les leçons.",
+   "groups": [
+    {
+     "slug": "hzg-zh-hz-strokes",
+     "title": "Les premiers traits : 一 二 三 十 人 大 小 口",
+     "items": [
+      {
+       "slug": "hz-yi",
+       "kind": "kanji",
+       "front": "一",
+       "reading": "yī",
+       "romaji": null,
+       "meaning": "un",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 1
+       }
+      },
+      {
+       "slug": "hz-er",
+       "kind": "kanji",
+       "front": "二",
+       "reading": "èr",
+       "romaji": null,
+       "meaning": "deux",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 2
+       }
+      },
+      {
+       "slug": "hz-san",
+       "kind": "kanji",
+       "front": "三",
+       "reading": "sān",
+       "romaji": null,
+       "meaning": "trois",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-shi",
+       "kind": "kanji",
+       "front": "十",
+       "reading": "shí",
+       "romaji": null,
+       "meaning": "dix",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 2
+       }
+      },
+      {
+       "slug": "hz-ren",
+       "kind": "kanji",
+       "front": "人",
+       "reading": "rén",
+       "romaji": null,
+       "meaning": "personne, être humain",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 2
+       }
+      },
+      {
+       "slug": "hz-da",
+       "kind": "kanji",
+       "front": "大",
+       "reading": "dà",
+       "romaji": null,
+       "meaning": "grand",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-xiao",
+       "kind": "kanji",
+       "front": "小",
+       "reading": "xiǎo",
+       "romaji": null,
+       "meaning": "petit",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-kou",
+       "kind": "kanji",
+       "front": "口",
+       "reading": "kǒu",
+       "romaji": null,
+       "meaning": "bouche",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-pictures",
+     "title": "Les caractères-images : 日 月 水 火 女 子 中 上 下",
+     "items": [
+      {
+       "slug": "hz-ri",
+       "kind": "kanji",
+       "front": "日",
+       "reading": "rì",
+       "romaji": null,
+       "meaning": "soleil, jour",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-yue",
+       "kind": "kanji",
+       "front": "月",
+       "reading": "yuè",
+       "romaji": null,
+       "meaning": "lune, mois",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-shui",
+       "kind": "kanji",
+       "front": "水",
+       "reading": "shuǐ",
+       "romaji": null,
+       "meaning": "eau",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-huo",
+       "kind": "kanji",
+       "front": "火",
+       "reading": "huǒ",
+       "romaji": null,
+       "meaning": "feu",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-nv",
+       "kind": "kanji",
+       "front": "女",
+       "reading": "nǚ",
+       "romaji": null,
+       "meaning": "femme",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-zi",
+       "kind": "kanji",
+       "front": "子",
+       "reading": "zǐ",
+       "romaji": null,
+       "meaning": "enfant",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-zhong",
+       "kind": "kanji",
+       "front": "中",
+       "reading": "zhōng",
+       "romaji": null,
+       "meaning": "milieu, centre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-shang",
+       "kind": "kanji",
+       "front": "上",
+       "reading": "shàng",
+       "romaji": null,
+       "meaning": "au-dessus, sur",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      },
+      {
+       "slug": "hz-xia",
+       "kind": "kanji",
+       "front": "下",
+       "reading": "xià",
+       "romaji": null,
+       "meaning": "en dessous, sous",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-time",
+     "title": "Les caractères du temps : 几 岁 年 号 星 期 今 明 天 昨",
+     "items": [
+      {
+       "slug": "hz-ji",
+       "kind": "kanji",
+       "front": "几",
+       "reading": "jǐ",
+       "romaji": null,
+       "meaning": "combien (petit nombre)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 2
+       }
+      },
+      {
+       "slug": "hz-sui",
+       "kind": "kanji",
+       "front": "岁",
+       "reading": "suì",
+       "romaji": null,
+       "meaning": "an (d’âge)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-nian",
+       "kind": "kanji",
+       "front": "年",
+       "reading": "nián",
+       "romaji": null,
+       "meaning": "an, année",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-hao",
+       "kind": "kanji",
+       "front": "号",
+       "reading": "hào",
+       "romaji": null,
+       "meaning": "numéro, jour du mois",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-xing",
+       "kind": "kanji",
+       "front": "星",
+       "reading": "xīng",
+       "romaji": null,
+       "meaning": "étoile",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-qi-period",
+       "kind": "kanji",
+       "front": "期",
+       "reading": "qī",
+       "romaji": null,
+       "meaning": "période",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-jin",
+       "kind": "kanji",
+       "front": "今",
+       "reading": "jīn",
+       "romaji": null,
+       "meaning": "maintenant, aujourd’hui",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-ming",
+       "kind": "kanji",
+       "front": "明",
+       "reading": "míng",
+       "romaji": null,
+       "meaning": "clair, lumineux",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-tian",
+       "kind": "kanji",
+       "front": "天",
+       "reading": "tiān",
+       "romaji": null,
+       "meaning": "ciel, jour",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-zuo-yesterday",
+       "kind": "kanji",
+       "front": "昨",
+       "reading": "zuó",
+       "romaji": null,
+       "meaning": "hier, la veille",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-people",
+     "title": "Les caractères des personnes : 你 我 他 她 们 好 是 不",
+     "items": [
+      {
+       "slug": "hz-ni",
+       "kind": "kanji",
+       "front": "你",
+       "reading": "nǐ",
+       "romaji": null,
+       "meaning": "tu, toi",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-wo",
+       "kind": "kanji",
+       "front": "我",
+       "reading": "wǒ",
+       "romaji": null,
+       "meaning": "je, moi",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-ta-he",
+       "kind": "kanji",
+       "front": "他",
+       "reading": "tā",
+       "romaji": null,
+       "meaning": "il, lui",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-ta-she",
+       "kind": "kanji",
+       "front": "她",
+       "reading": "tā",
+       "romaji": null,
+       "meaning": "elle",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-men",
+       "kind": "kanji",
+       "front": "们",
+       "reading": "men",
+       "romaji": null,
+       "meaning": "marque du pluriel (personnes)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-hao-good",
+       "kind": "kanji",
+       "front": "好",
+       "reading": "hǎo",
+       "romaji": null,
+       "meaning": "bien, bon",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-shi-be",
+       "kind": "kanji",
+       "front": "是",
+       "reading": "shì",
+       "romaji": null,
+       "meaning": "être",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-bu",
+       "kind": "kanji",
+       "front": "不",
+       "reading": "bù",
+       "romaji": null,
+       "meaning": "ne… pas",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-family",
+     "title": "Les caractères de la maison : 家 爸 妈 儿 有 没 的 个",
+     "items": [
+      {
+       "slug": "hz-jia",
+       "kind": "kanji",
+       "front": "家",
+       "reading": "jiā",
+       "romaji": null,
+       "meaning": "maison, famille",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-ba",
+       "kind": "kanji",
+       "front": "爸",
+       "reading": "bà",
+       "romaji": null,
+       "meaning": "papa",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-ma",
+       "kind": "kanji",
+       "front": "妈",
+       "reading": "mā",
+       "romaji": null,
+       "meaning": "maman",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-er-child",
+       "kind": "kanji",
+       "front": "儿",
+       "reading": "ér",
+       "romaji": null,
+       "meaning": "fils, enfant",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 2
+       }
+      },
+      {
+       "slug": "hz-you",
+       "kind": "kanji",
+       "front": "有",
+       "reading": "yǒu",
+       "romaji": null,
+       "meaning": "avoir, il y a",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-mei",
+       "kind": "kanji",
+       "front": "没",
+       "reading": "méi",
+       "romaji": null,
+       "meaning": "ne pas (avoir)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-de",
+       "kind": "kanji",
+       "front": "的",
+       "reading": "de",
+       "romaji": null,
+       "meaning": "particule de possession",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-ge",
+       "kind": "kanji",
+       "front": "个",
+       "reading": "gè",
+       "romaji": null,
+       "meaning": "classificateur général",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 3
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-market",
+     "title": "Les caractères du marché : 买 钱 块 多 少 东 西 些",
+     "items": [
+      {
+       "slug": "hz-mai",
+       "kind": "kanji",
+       "front": "买",
+       "reading": "mǎi",
+       "romaji": null,
+       "meaning": "acheter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-qian",
+       "kind": "kanji",
+       "front": "钱",
+       "reading": "qián",
+       "romaji": null,
+       "meaning": "argent",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-kuai",
+       "kind": "kanji",
+       "front": "块",
+       "reading": "kuài",
+       "romaji": null,
+       "meaning": "morceau ; yuan (oral)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-duo",
+       "kind": "kanji",
+       "front": "多",
+       "reading": "duō",
+       "romaji": null,
+       "meaning": "beaucoup, nombreux",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-shao",
+       "kind": "kanji",
+       "front": "少",
+       "reading": "shǎo",
+       "romaji": null,
+       "meaning": "peu",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-dong",
+       "kind": "kanji",
+       "front": "东",
+       "reading": "dōng",
+       "romaji": null,
+       "meaning": "est",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-xi",
+       "kind": "kanji",
+       "front": "西",
+       "reading": "xī",
+       "romaji": null,
+       "meaning": "ouest",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-xie",
+       "kind": "kanji",
+       "front": "些",
+       "reading": "xiē",
+       "romaji": null,
+       "meaning": "quelques",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-day",
+     "title": "Les caractères de la journée : 点 分 午 时 现 在 看 书",
+     "items": [
+      {
+       "slug": "hz-dian",
+       "kind": "kanji",
+       "front": "点",
+       "reading": "diǎn",
+       "romaji": null,
+       "meaning": "point, heure",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-fen",
+       "kind": "kanji",
+       "front": "分",
+       "reading": "fēn",
+       "romaji": null,
+       "meaning": "minute, diviser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-wu-noon",
+       "kind": "kanji",
+       "front": "午",
+       "reading": "wǔ",
+       "romaji": null,
+       "meaning": "midi",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-shi-time",
+       "kind": "kanji",
+       "front": "时",
+       "reading": "shí",
+       "romaji": null,
+       "meaning": "temps, heure",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-xian",
+       "kind": "kanji",
+       "front": "现",
+       "reading": "xiàn",
+       "romaji": null,
+       "meaning": "présent, actuel",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-zai",
+       "kind": "kanji",
+       "front": "在",
+       "reading": "zài",
+       "romaji": null,
+       "meaning": "être à, se trouver",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-kan",
+       "kind": "kanji",
+       "front": "看",
+       "reading": "kàn",
+       "romaji": null,
+       "meaning": "regarder, lire",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-shu",
+       "kind": "kanji",
+       "front": "书",
+       "reading": "shū",
+       "romaji": null,
+       "meaning": "livre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-places",
+     "title": "Les caractères des lieux : 去 来 回 坐 车 前 后 里",
+     "items": [
+      {
+       "slug": "hz-qu",
+       "kind": "kanji",
+       "front": "去",
+       "reading": "qù",
+       "romaji": null,
+       "meaning": "aller",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-lai",
+       "kind": "kanji",
+       "front": "来",
+       "reading": "lái",
+       "romaji": null,
+       "meaning": "venir",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-hui",
+       "kind": "kanji",
+       "front": "回",
+       "reading": "huí",
+       "romaji": null,
+       "meaning": "rentrer, revenir",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-zuo-sit",
+       "kind": "kanji",
+       "front": "坐",
+       "reading": "zuò",
+       "romaji": null,
+       "meaning": "s’asseoir, prendre (un transport)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-che",
+       "kind": "kanji",
+       "front": "车",
+       "reading": "chē",
+       "romaji": null,
+       "meaning": "voiture, char",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-qian-front",
+       "kind": "kanji",
+       "front": "前",
+       "reading": "qián",
+       "romaji": null,
+       "meaning": "devant, avant",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-hou",
+       "kind": "kanji",
+       "front": "后",
+       "reading": "hòu",
+       "romaji": null,
+       "meaning": "derrière, après",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-li",
+       "kind": "kanji",
+       "front": "里",
+       "reading": "lǐ",
+       "romaji": null,
+       "meaning": "dedans, intérieur",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-feelings",
+     "title": "Les caractères du cœur : 爱 喜 欢 会 能 说 听 请",
+     "items": [
+      {
+       "slug": "hz-ai",
+       "kind": "kanji",
+       "front": "爱",
+       "reading": "ài",
+       "romaji": null,
+       "meaning": "aimer, adorer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-xi-joy",
+       "kind": "kanji",
+       "front": "喜",
+       "reading": "xǐ",
+       "romaji": null,
+       "meaning": "joie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-huan",
+       "kind": "kanji",
+       "front": "欢",
+       "reading": "huān",
+       "romaji": null,
+       "meaning": "gai, joyeux",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-hui-can",
+       "kind": "kanji",
+       "front": "会",
+       "reading": "huì",
+       "romaji": null,
+       "meaning": "savoir (faire)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-neng",
+       "kind": "kanji",
+       "front": "能",
+       "reading": "néng",
+       "romaji": null,
+       "meaning": "pouvoir",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-shuo",
+       "kind": "kanji",
+       "front": "说",
+       "reading": "shuō",
+       "romaji": null,
+       "meaning": "parler, dire",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-ting",
+       "kind": "kanji",
+       "front": "听",
+       "reading": "tīng",
+       "romaji": null,
+       "meaning": "écouter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-qing",
+       "kind": "kanji",
+       "front": "请",
+       "reading": "qǐng",
+       "romaji": null,
+       "meaning": "s’il vous plaît, inviter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "notice": "Pinyin avec les tons (ā á ǎ à). Les caractères sont présentés en écriture simplifiée, celle du HSK et de la Chine continentale."
+}

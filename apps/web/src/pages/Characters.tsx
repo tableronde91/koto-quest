@@ -1,3 +1,4 @@
+import { spokenForm } from '@koto/shared';
 import { useEffect, useRef, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
@@ -33,9 +34,9 @@ export function CharactersPage() {
 
   return (
     <div>
-      <PageTitle sub={words.ko ? T("Le hangeul, l’alphabet coréen, accessible à tout moment. Chaque lettre et chaque syllabe a sa propre barre de maîtrise, partagée avec ton parcours.") : T("Les écritures japonaises, accessibles à tout moment. Chaque caractère a sa propre barre de maîtrise, partagée avec ton parcours.")}>{words.ko ? T("Hangeul") : T("Caractères")}</PageTitle>
+      <PageTitle sub={words.zh ? T("Les caractères chinois (hanzi) des niveaux du HSK, avec leur pinyin, accessibles à tout moment. Chaque caractère a sa propre barre de maîtrise, partagée avec ton parcours.") : words.ko ? T("Le hangeul, l’alphabet coréen, accessible à tout moment. Chaque lettre et chaque syllabe a sa propre barre de maîtrise, partagée avec ton parcours.") : T("Les écritures japonaises, accessibles à tout moment. Chaque caractère a sa propre barre de maîtrise, partagée avec ton parcours.")}>{words.ko ? T("Hangeul") : words.zh ? T("Hanzi") : T("Caractères")}</PageTitle>
 
-      <div role="tablist" aria-label={T("Écriture")} className="mb-6 grid grid-cols-3 rounded-2xl bg-surface-2 p-1">
+      <div role="tablist" aria-label={T("Écriture")} className={`mb-6 grid ${data.sections.length === 1 ? 'grid-cols-1' : data.sections.length === 2 ? 'grid-cols-2' : 'grid-cols-3'} rounded-2xl bg-surface-2 p-1`}>
         {data.sections.map((s) => (
           <button
             key={s.slug}
@@ -60,7 +61,7 @@ export function CharactersPage() {
             <p className="mt-1 text-sm opacity-85">{T("{0} sur {1} vus, {2} maîtrisés", [ section.learned , section.total , section.mastered ])}</p>
           </div>
           <button className="btn btn-gold min-h-14 px-6 text-lg" onClick={() => practice(section.slug)}>
-            {section.due > 0 ? T("Réviser {0} caractère{1}", [section.due, section.due > 1 ? 's' : '']) : section.learned === 0 ? T("Apprendre les {0}", [section.title.toLowerCase()]) : T("Continuer")}
+            {section.due > 0 ? T("Réviser {0} caractère{1}", [section.due, section.due > 1 ? 's' : '']) : section.learned === 0 ? (/^HSK/.test(section.title) ? T("Apprendre les caractères du {0}", [section.title]) : T("Apprendre les {0}", [section.title.toLowerCase()])) : T("Continuer")}
           </button>
         </div>
 
@@ -118,7 +119,7 @@ function Cell({ c, kanji, onOpen }: { c: CharacterDto; kanji: boolean; onOpen: (
     <button
       type="button"
       onClick={() => {
-        speak(c.reading ?? c.front);
+        speak(spokenForm(c.front, c.reading));
         onOpen(c);
       }}
       aria-label={`${c.front}, ${label}${c.mastery ? `, ${MASTERY_LABEL[c.mastery]}` : ', pas encore vu'}`}
@@ -158,12 +159,15 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto; onClose: () => void }
         )}
         {c.kind === 'kanji' && (
           <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
-            <dt className="text-ink-soft">{T("Lecture courante")}</dt>
+            <dt className="text-ink-soft">{langOf(c.front) === 'zh' ? T("Pinyin") : T("Lecture courante")}</dt>
             <dd lang={langOf(c.reading)} className="jp">{c.reading}</dd>
+            {/* Les hanzi n'ont qu'une lecture (le pinyin) : pas d'on'yomi ni de kun'yomi */}
+            {(c.kanji?.onyomi.length ?? 0) + (c.kanji?.kunyomi.length ?? 0) > 0 && (<>
             <dt className="text-ink-soft">{T("On’yomi")}</dt>
             <dd lang={langOf(c.kanji?.onyomi.join('、') || '—')} className="jp">{c.kanji?.onyomi.join('、') || '—'}</dd>
             <dt className="text-ink-soft">{T("Kun’yomi")}</dt>
             <dd lang={langOf(c.kanji?.kunyomi.join('、') || '—')} className="jp">{c.kanji?.kunyomi.join('、') || '—'}</dd>
+            </>)}
             {c.kanji?.strokes ? (<><dt className="text-ink-soft">{T("Traits")}</dt><dd>{c.kanji.strokes}</dd></>) : null}
           </dl>
         )}
@@ -171,7 +175,7 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto; onClose: () => void }
           <span className="h-2.5 w-2.5 rounded-full" style={{ background: c.mastery ? MASTERY_COLOR[c.mastery] : 'var(--line)' }} aria-hidden="true" />
           {c.mastery ? MASTERY_LABEL[c.mastery] : T("Pas encore vu")}
         </p>
-        <div className="mt-5"><SpeakButtons text={c.reading ?? c.front} /></div>
+        <div className="mt-5"><SpeakButtons text={spokenForm(c.front, c.reading)} /></div>
       </div>
     </div>
   );

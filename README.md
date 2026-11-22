@@ -1,6 +1,6 @@
 # Koto Quest
 
-Application web (PWA) d'apprentissage du japonais (JLPT N5 à N1) et du coréen (TOPIK) : leçons courtes, répétition espacée FSRS et petits défis envoyés au fil de la journée.
+Application web (PWA) d'apprentissage du japonais (JLPT N5 à N1), du coréen (TOPIK), de l'anglais (TOEIC) et du chinois (HSK) : leçons courtes, répétition espacée FSRS et petits défis envoyés au fil de la journée.
 
 > **État : phase 1 (MVP web).** Les parcours N5 (43 leçons), N4 (39 leçons), N3, N2 et N1 (24 leçons chacun) sont complets, chacun avec son examen blanc. Mode histoire, moteur de révision, lecture, duels, rappels et statistiques sont fonctionnels. L'application mobile correspond à la phase suivante : voir [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -114,6 +114,16 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 - **Accents** : dans les écoutes d’examen en anglais, chaque rôle (narrateur, homme, femme) a son accent, américain, britannique, australien ou canadien, qui change d’un document à l’autre (`scriptAccents`) ; faute de voix installée pour un accent, la voix anglaise habituelle le remplace.
 - **Contes anglais A2 à C1** : Jack and the Beanstalk, King Canute and the Waves (A2), Robin Hood and the Golden Arrow, The Pedlar of Swaffham (B1), Tam Lin, Gelert the Faithful Hound (B2), The Lady of Shalott, Thomas the Rhymer (C1).
 - Les cinq niveaux, de A1 à C1, sont proposés à l’inscription et dans le profil.
+
+### Chinois : préparation au HSK (HSK 2.0, niveaux 1 à 6)
+- Quatrième langue étudiée (`studyLanguage: 'zh'`), niveaux `HSK1` à `HSK6` (`HSK_LEVELS`, `isHsk`). Un texte en caractères seuls se lit en chinois quand on étudie le chinois, en japonais sinon (`setHanLanguage`, `textLanguage`) ; polices du chinois simplifié pour `lang="zh"`.
+- **Pinyin** : il sert de « lecture » des mots et des hanzi et s’affiche au-dessus des caractères comme les furigana (réglage « Afficher le pinyin ») ; dans les contes, chaque mot porte son pinyin (`{汉字|pinyin}`) au HSK 1 et 2, puis de moins en moins. La synthèse vocale lit toujours les caractères, jamais le pinyin (`spokenForm`). Les formats JLPT (lecture en kana) sont remplacés par une question de pinyin (`isChineseItem`).
+- **HSK 1** (`content/hsk1/hsk1.json`, `scripts/hsk1-level.py`, outils `scripts/zh_common.py`) : 8 royaumes, 29 leçons, 238 notions — pinyin et tons, nombres, dates et âge, saluer et remercier, 是/不/吗/呢, 叫/什么/哪国人, famille et 的, 有/没有, classificateurs 个 et 口, 这/那/哪, acheter et 多少钱, 想, 太…了 et 很, l’heure et la place du moment, 在 + verbe, 了 et 没, 在 + lieu et positions, 去/来/坐, météo et 怎么样, 喜欢/认识/请, 会 et 能. Huit leçons de caractères (75 hanzi, lus en pinyin, sans on’yomi ni kun’yomi), reprises dans l’onglet **Hanzi** (`content/characters/hanzi.json`, une section par niveau).
+- **Mode histoire** : HSK 1 « Le messager des Royaumes » (信) dans la plaine du Fleuve jaune : Nian, Taotie, Renarde à neuf queues, Kui, Pixiu, Bifang, Xiangliu, Zhulong (bêtes du Classique des monts et des mers) ; carte aux fleurs de prunier et décors chinois (`components/ChineseScenes.tsx`).
+- **Examen blanc HSK 1** (`content/exams/hsk1.json`, `scripts/hsk1-exam.py`) : format officiel, 20 questions d’écoute (听力, quatre parties) et 20 de lecture (阅读, quatre parties) en 40 minutes, tirées d’une banque de 57 questions, consignes en chinois et pinyin comme sur la copie du HSK 1, images remplacées par des pictogrammes ; noté sur 200 (100 par épreuve), réussite à 120 (`scoring: 'hsk'` ; `hsk3` : 300 points avec l’écriture, réussite à 180). Entraînement généré à partir des leçons (`hsk1-mock`) et **Atelier HSK** (pinyin, grammaire, écoute).
+- **Expressions chinoises** (`content/expressions/expressions-zh.json`, `scripts/zh-expressions.py`) : politesse, rencontres, se faire comprendre, restaurant, marché, chengyu (6 thèmes, 34 expressions).
+- **Fables chinoises** (`scripts/zh-reading.py`) : 守株待兔, 画蛇添足, 自相矛盾 (HSK 1, 8 chapitres), fables de l’époque des Royaumes combattants.
+- **Hanzi Rush** (mini-jeu des caractères), succès propres au chinois (gardiens chinois, HSK en poche, fables), rangs des Royaumes dans les Progrès, voix `zh-CN`. Les phrases à remettre dans l’ordre se recollent sans espace.
 
 ### Examen blanc JLPT N5 au format officiel
 - Banque de 130 questions rédigées en japonais (`content/exams/n5-jlpt.json`), dans les 11 épreuves du JLPT N5 : 漢字読み, 表記, 文脈規定, 言い換え類義 ; 文法形式の判断, 文の組み立て (★), 読解 ; 聴解 (課題理解, ポイント理解, 発話表現, 即時応答). Chaque examen tire 67 questions (70 minutes), choix mélangés.

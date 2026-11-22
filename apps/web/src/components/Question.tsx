@@ -233,7 +233,7 @@ function Stage({ q, furigana, result, afterText }: { q: IssuedQuestionDto; furig
   if (q.type === 'listening_choice') {
     return (
       <div className="flex min-h-36 flex-col items-center justify-center gap-3 rounded-3xl bg-surface-2 p-6">
-        {speechSupported() ? <SpeakButtons text={q.audio ?? ''} size="lg" /> : <p className="text-center">{langOf(q.audio ?? '') === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Le mot était :") : langOf(q.audio ?? '') === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Le mot était :") : T("Ce navigateur ne peut pas lire l’audio japonais. Le mot était :")}{' '}<Jp text={q.audio ?? ''} furigana={false} className="text-3xl" /></p>}
+        {speechSupported() ? <SpeakButtons text={q.audio ?? ''} size="lg" /> : <p className="text-center">{langOf(q.audio ?? '') === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Le mot était :") : langOf(q.audio ?? '') === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Le mot était :") : langOf(q.audio ?? '') === 'zh' ? T("Ce navigateur ne peut pas lire l’audio chinois. Le mot était :") : T("Ce navigateur ne peut pas lire l’audio japonais. Le mot était :")}{' '}<Jp text={q.audio ?? ''} furigana={false} className="text-3xl" /></p>}
       </div>
     );
   }

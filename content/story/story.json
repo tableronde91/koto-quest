@@ -2448,6 +2448,159 @@
      }
     }
    }
+  },
+  "HSK1": {
+   "glyph": "信",
+   "jp": "信使之路",
+   "color": "#A33A2A",
+   "saga": {
+    "fr": "Le messager des Royaumes",
+    "en": "The messenger of the Kingdoms"
+   },
+   "hero": {
+    "fr": "Messager·ère de Lu",
+    "en": "Messenger of Lu"
+   },
+   "short": {
+    "fr": "Le messager",
+    "en": "The messenger"
+   },
+   "prologue": {
+    "fr": "Les sept royaumes se font la guerre et plus personne ne se comprend. Au royaume de Lu, le vieux maître de l’école te confie un rouleau scellé pour la cour du roi de Zhou, à Luoyang. « Un messager qui ne sait ni lire ni parler n’arrive jamais. Traverse les royaumes, apprends la langue des Han, et ta lettre ouvrira toutes les portes. »",
+    "en": "The seven kingdoms are at war and no one understands anyone any more. In the state of Lu, the old master of the school entrusts you with a sealed scroll for the court of the Zhou king, in Luoyang. “A messenger who can neither read nor speak never arrives. Cross the kingdoms, learn the language of the Han, and your letter will open every door.”"
+   },
+   "epilogue": {
+    "fr": "À la cour de Luoyang, le roi de Zhou brise le sceau et lit ta lettre à voix haute. Les sept royaumes acceptent de s’asseoir à la même table. Le roi te tend un nouveau rouleau : « Le général Sun t’attend à Wu. Il a besoin d’un messager qui comprend la stratégie… »",
+    "en": "At the court of Luoyang, the Zhou king breaks the seal and reads your letter aloud. The seven kingdoms agree to sit at the same table. The king hands you a new scroll: “General Sun awaits you in Wu. He needs a messenger who understands strategy…”"
+   },
+   "chapters": {
+    "hsk1-w1": {
+     "title": {
+      "fr": "Le pinceau du maître",
+      "en": "The master’s brush"
+     },
+     "intro": {
+      "fr": "À l’école de Lu, le maître t’apprend les quatre tons et tes premiers caractères. Mais l’hiver arrive, et avec lui le Nian, la bête qui dévore les récoltes. On dit qu’il fuit ceux qui prononcent juste.",
+      "en": "At the school of Lu, the master teaches you the four tones and your first characters. But winter is coming, and with it the Nian, the beast that devours the harvests. They say it flees from those who pronounce correctly."
+     },
+     "outro": {
+      "fr": "Le Nian s’enfuit vers la montagne sous les pétards rouges. Ton pinceau trace déjà ses premiers traits.",
+      "en": "The Nian flees to the mountain under the red firecrackers. Your brush is already tracing its first strokes."
+     }
+    },
+    "hsk1-w2": {
+     "title": {
+      "fr": "Le calendrier avalé",
+      "en": "The swallowed calendar"
+     },
+     "intro": {
+      "fr": "Au royaume de Qi, plus personne ne sait quel jour on est : le Taotie, le glouton des bronzes, a avalé le calendrier du roi. Rends à chaque jour sa date.",
+      "en": "In the state of Qi, no one knows what day it is any more: the Taotie, the glutton of the bronzes, has swallowed the king’s calendar. Give each day back its date."
+     },
+     "outro": {
+      "fr": "Le Taotie recrache le calendrier, un peu froissé. Le roi de Qi te laisse passer avec un sourire.",
+      "en": "The Taotie spits out the calendar, a little crumpled. The king of Qi lets you pass with a smile."
+     }
+    },
+    "hsk1-w3": {
+     "title": {
+      "fr": "La dame aux neuf queues",
+      "en": "The lady with nine tails"
+     },
+     "intro": {
+      "fr": "À la cour de Chu, les saluts sont un art. Une dame d’honneur te regarde étrangement : ce serait la Renarde à neuf queues. Présente-toi sans faute pour la démasquer.",
+      "en": "At the court of Chu, greetings are an art. A lady-in-waiting gives you a strange look: they say she is the Nine-Tailed Fox. Introduce yourself without a mistake to unmask her."
+     },
+     "outro": {
+      "fr": "La Renarde laisse échapper une queue sous sa robe et s’enfuit dans la forêt. La cour de Chu t’applaudit.",
+      "en": "The Fox lets a tail slip from under her robe and flees into the forest. The court of Chu applauds you."
+     }
+    },
+    "hsk1-w4": {
+     "title": {
+      "fr": "Le tonnerre dans la maison",
+      "en": "Thunder in the house"
+     },
+     "intro": {
+      "fr": "À Yan, le général t’offre l’hospitalité, mais un vacarme fait trembler sa maison : le Kui, la bête à une patte, s’y est installé. Nomme chaque membre de la famille pour le chasser.",
+      "en": "In Yan, the general offers you hospitality, but a din shakes his house: the Kui, the one-legged beast, has moved in. Name every member of the family to drive it out."
+     },
+     "outro": {
+      "fr": "Le Kui sautille hors de la maison en grondant. La famille du général t’invite à dîner.",
+      "en": "The Kui hops out of the house, rumbling. The general’s family invites you to dinner."
+     }
+    },
+    "hsk1-w5": {
+     "title": {
+      "fr": "L’or du marché",
+      "en": "The gold of the market"
+     },
+     "intro": {
+      "fr": "Au grand marché de Xinzheng, les marchands du royaume de Han se lamentent : le Pixiu avale toutes leurs pièces. Marchande au juste prix pour qu’il les rende.",
+      "en": "At the great market of Xinzheng, the merchants of the state of Han are lamenting: the Pixiu swallows all their coins. Bargain at the right price to make it give them back."
+     },
+     "outro": {
+      "fr": "Le Pixiu rend l’or et se couche, repu, devant l’étal du marchand de thé.",
+      "en": "The Pixiu gives back the gold and lies down, full, in front of the tea merchant’s stall."
+     }
+    },
+    "hsk1-w6": {
+     "title": {
+      "fr": "Les clepsydres en feu",
+      "en": "The burning water clocks"
+     },
+     "intro": {
+      "fr": "Au palais de Wei, plus rien n’arrive à l’heure : le Bifang, oiseau de feu à une patte, a enflammé les clepsydres. Donne l’heure juste pour éteindre ses flammes.",
+      "en": "At the palace of Wei, nothing happens on time any more: the Bifang, a one-legged fire bird, has set the water clocks ablaze. Tell the right time to put out its flames."
+     },
+     "outro": {
+      "fr": "Le Bifang replie ses ailes : les clepsydres gouttent de nouveau, une goutte par instant.",
+      "en": "The Bifang folds its wings: the water clocks drip again, one drop at a time."
+     }
+    },
+    "hsk1-w7": {
+     "title": {
+      "fr": "Les neuf routes",
+      "en": "The nine roads"
+     },
+     "intro": {
+      "fr": "Sur les routes de Zhao, le Xiangliu dresse ses neuf têtes, et chacune indique un chemin différent. Demande ta route et choisis le bon moyen de transport pour rejoindre Handan.",
+      "en": "On the roads of Zhao, the Xiangliu rears its nine heads, and each one points a different way. Ask your way and choose the right means of transport to reach Handan."
+     },
+     "outro": {
+      "fr": "Les neuf têtes du Xiangliu se nouent entre elles. La route de Handan est libre.",
+      "en": "The Xiangliu’s nine heads tie themselves in a knot. The road to Handan is clear."
+     }
+    },
+    "hsk1-w8": {
+     "title": {
+      "fr": "Le dragon des portes",
+      "en": "The dragon of the gates"
+     },
+     "intro": {
+      "fr": "Devant Xianyang, capitale de Qin, veille le Zhulong, dragon-chandelle dont le regard fait le jour et la nuit. Parle-lui du temps qu’il fait, de ce que tu aimes et de ce que tu sais faire.",
+      "en": "Before Xianyang, capital of Qin, watches the Zhulong, the candle dragon whose gaze makes day and night. Talk to it about the weather, what you like and what you can do."
+     },
+     "outro": {
+      "fr": "Le Zhulong ferme les yeux : la nuit tombe, et les portes de Qin s’ouvrent devant toi.",
+      "en": "The Zhulong closes its eyes: night falls, and the gates of Qin open before you."
+     }
+    },
+    "hsk1-final": {
+     "title": {
+      "fr": "La cour de Luoyang",
+      "en": "The court of Luoyang"
+     },
+     "intro": {
+      "fr": "À Luoyang, avant de remettre ta lettre, les lettrés du roi de Zhou te font passer l’épreuve : écouter et lire comme au HSK 1. Atteins 120 points sur 200.",
+      "en": "In Luoyang, before you hand over your letter, the scholars of the Zhou king put you to the test: listen and read as in the HSK 1. Reach 120 points out of 200."
+     },
+     "outro": {
+      "fr": "Les lettrés s’inclinent. Niveau HSK 1 validé : ta lettre est remise !",
+      "en": "The scholars bow. HSK 1 level complete: your letter is delivered!"
+     }
+    }
+   }
   }
  }
 }

@@ -15,6 +15,11 @@ const LEVELS = (lang: StudyLanguage): { value: SelfLevel; label: string; hint: s
         { value: 'beginner', label: T('Je pars de zéro ou presque'), hint: T('On commence par les salutations et les phrases de tous les jours.') },
         { value: 'basics', label: T('Je me débrouille un peu'), hint: T('Les premières îles restent ouvertes.') },
       ]
+    : lang === 'zh'
+    ? [
+        { value: 'beginner', label: T('Je pars de zéro'), hint: T('On commence par le pinyin, les quatre tons et les premiers caractères.') },
+        { value: 'basics', label: T('Je connais le pinyin et quelques caractères'), hint: T('Les îles du pinyin restent ouvertes.') },
+      ]
     : lang === 'ko'
     ? [
         { value: 'beginner', label: T('Je pars de zéro'), hint: T('On commence par le hangeul, l’alphabet coréen.') },
@@ -51,6 +56,10 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'B1', hint: 'Seuil · TOEIC 550+' },
     { code: 'B2', hint: 'Avancé · TOEIC 785+' },
     { code: 'C1', hint: 'Autonome · TOEIC 945+' },
+  ],
+  // Chinois : seuls les niveaux dont le parcours est prêt
+  zh: [
+    { code: 'HSK1', hint: 'Débutant · 150 mots' },
   ],
 };
 
@@ -109,7 +118,7 @@ export default function Onboarding() {
       <H2>{T('Quelle langue veux-tu apprendre ?')}</H2>
       <View style={{ gap: 8 }}>
         {STUDY_LANGUAGES.map((l) => (
-          <Choice key={l.code} testID={`lang-${l.code}`} glyph={l.glyph} selected={lang === l.code} label={`${T(l.name)} · ${l.native}`} hint={l.code === 'ko' ? T('Préparation au TOPIK, en commençant par le hangeul') : l.code === 'en' ? T('Préparation au TOEIC, du niveau A1 au C1') : T('Préparation au JLPT, du N5 au N1')} onPress={() => chooseLanguage(l.code)} />
+          <Choice key={l.code} testID={`lang-${l.code}`} glyph={l.glyph} selected={lang === l.code} label={`${T(l.name)} · ${l.native}`} hint={l.code === 'ko' ? T('Préparation au TOPIK, en commençant par le hangeul') : l.code === 'en' ? T('Préparation au TOEIC, du niveau A1 au C1') : l.code === 'zh' ? T('Préparation au HSK, du niveau 1 au 6, avec le pinyin') : T('Préparation au JLPT, du N5 au N1')} onPress={() => chooseLanguage(l.code)} />
         ))}
       </View>
       <H2>{T('Où en es-tu en {0} ?', [words.adjective])}</H2>

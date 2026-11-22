@@ -234,8 +234,30 @@ export function toeicListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Ques
   return { ...q, type: 'listening_choice', prompt: TOEIC_PROMPTS.listening, display: { text: 'What is the best response?', part: 'Part 2 — Question-Response' }, audio: script, answerAudio: undefined };
 }
 
+/** Consignes du HSK, en chinois comme sur la copie. */
+export const HSK_PROMPTS = {
+  grammar: '选词填空。',
+  listening: '听对话，选择正确答案。',
+  pinyin: '选择正确的拼音。',
+} as const;
+
+/** Lecture « 选词填空 » du HSK à partir d'un exercice de grammaire rédigé. */
+export function hskGrammarQuestion(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'particle_choice' && ex.type !== 'fill_blank') return null;
+  const q = authoredToQuestion(ex, rng);
+  return { ...q, prompt: HSK_PROMPTS.grammar, display: { ...q.display, part: '阅读 — 选词填空' } };
+}
+
+/** Écoute du HSK : le dialogue est lu, on choisit la réplique qui suit. */
+export function hskListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'dialogue_choice' || !ex.lines?.length) return null;
+  const q = authoredToQuestion(ex, rng);
+  const script = ex.lines.map((l, i) => `${i % 2 === 0 ? 'F' : 'M'}|${l.jp}`).join('\n');
+  return { ...q, type: 'listening_choice', prompt: HSK_PROMPTS.listening, display: { text: '接下来说什么？', part: '听力 — 对话' }, audio: script, answerAudio: undefined };
+}
+
 /** Langue étudiée (même valeurs que StudyLanguage dans @koto/shared). */
-export type EngineLanguage = 'ja' | 'ko' | 'en';
+export type EngineLanguage = 'ja' | 'ko' | 'en' | 'zh';
 
 export type JlptDrillPart = 'kanji' | 'writing' | 'grammar' | 'star' | 'listening';
 
@@ -251,8 +273,15 @@ export const TOEIC_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitl
   listening: { title: 'Questions-réponses', jpTitle: 'Part 2', description: 'Écoute une question et choisis la réponse qui convient, sans texte à lire.' },
 };
 
+/** Atelier HSK : pinyin des mots, phrases à compléter et écoute, consignes en chinois. */
+export const HSK_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitle: string; description: string }>> = {
+  kanji: { title: 'Pinyin', jpTitle: '拼音', description: 'Choisis le pinyin, avec les bons tons, du mot affiché en caractères.' },
+  grammar: { title: 'Phrases à compléter', jpTitle: '选词填空', description: 'Complète la phrase avec le bon mot, consigne en chinois comme au HSK.' },
+  listening: { title: 'Écoute', jpTitle: '听力', description: 'Écoute un court dialogue et choisis la réplique qui suit, sans texte à lire.' },
+};
+
 /** Épreuves de l'atelier selon la langue étudiée. */
-export const drillsFor = (lang: EngineLanguage) => (lang === 'ko' ? TOPIK_DRILLS : lang === 'en' ? TOEIC_DRILLS : JLPT_DRILLS);
+export const drillsFor = (lang: EngineLanguage) => (lang === 'ko' ? TOPIK_DRILLS : lang === 'en' ? TOEIC_DRILLS : lang === 'zh' ? HSK_DRILLS : JLPT_DRILLS);
 
 export const JLPT_DRILLS: Record<JlptDrillPart, { title: string; jpTitle: string; description: string }> = {
   kanji: { title: 'Lecture des kanji', jpTitle: '漢字読み', description: 'Lis le mot souligné. Attention aux pièges : voyelle longue, ten-ten, petit っ.' },
@@ -271,9 +300,16 @@ export const JLPT_DRILL_SIZE = 10;
 export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map(), lang: EngineLanguage = 'ja'): Question[] {
   const n = JLPT_DRILL_SIZE;
   const fromItems = (make: (it: EngineItem) => Question | null) => shuffle(learned, rng).map(make).filter((q): q is Question => !!q).slice(0, n);
-  if (lang === 'ko' || lang === 'en') {
-    const grammarOf = lang === 'en' ? toeicGrammarQuestion : topikGrammarQuestion;
-    const listeningOf = lang === 'en' ? toeicListeningFromDialogue : topikListeningFromDialogue;
+  if (lang === 'ko' || lang === 'en' || lang === 'zh') {
+    const grammarOf = lang === 'en' ? toeicGrammarQuestion : lang === 'zh' ? hskGrammarQuestion : topikGrammarQuestion;
+    const listeningOf = lang === 'en' ? toeicListeningFromDialogue : lang === 'zh' ? hskListeningFromDialogue : topikListeningFromDialogue;
+    if (lang === 'zh' && part === 'kanji')
+      return fromItems((it) => {
+        if (it.kind !== 'vocabulary' && it.kind !== 'kanji') return null;
+        if (!it.reading || it.reading === it.front) return null;
+        const q = generateQuestion(it, pool, 'reading_choice', rng);
+        return q ? { ...q, prompt: HSK_PROMPTS.pinyin, display: { ...q.display, reading: undefined, part: '拼音' } } : null;
+      });
     if (part === 'grammar') return shuffle(authored, rng).map((ex) => grammarOf(ex, rng)).filter((q): q is Question => !!q).slice(0, n);
     if (part === 'listening') {
       const dialogues = shuffle(authored, rng).map((ex) => listeningOf(ex, rng)).filter((q): q is Question => !!q).slice(0, Math.ceil(n / 2));

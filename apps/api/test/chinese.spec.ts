@@ -1,0 +1,103 @@
+import request from 'supertest';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+import { Ctx, completeFirstLesson, correctAnswer, createTestApp, resetUsers } from './helpers';
+
+/** Chinois (HSK 2.0) : une quatrième langue, avec son parcours, ses hanzi, ses expressions, ses fables et son examen. */
+const stories = JSON.parse(readFileSync(resolve(__dirname, '../../../content/reading/stories.json'), 'utf8'));
+const bank = JSON.parse(readFileSync(resolve(__dirname, '../../../content/exams/hsk1.json'), 'utf8'));
+
+async function signUpChinese(ctx: Ctx, selfLevel = 'beginner') {
+  const agent = request.agent(ctx.app.getHttpServer());
+  await agent.post('/api/auth/register').send({ email: `zh${Date.now()}${Math.random()}@test.local`, password: 'motdepasse123', displayName: 'Li' }).expect(201);
+  const me = (await agent.put('/api/me/onboarding').send({ selfLevel, targetLevel: 'HSK1', studyLanguage: 'zh', minutesPerDay: 20, difficultAreas: [], reminderMode: 'normal' }).expect(200)).body;
+  return { agent, me };
+}
+
+describe('Chinois : préparer le HSK', () => {
+  let ctx: Ctx;
+  beforeAll(async () => {
+    ctx = await createTestApp();
+    await resetUsers(ctx.prisma);
+  });
+  afterAll(() => ctx.app.close());
+
+  it('onboarding en chinois : parcours HSK 1, gardiens des Royaumes, niveaux chinois seulement', async () => {
+    const { agent, me } = await signUpChinese(ctx);
+    expect(me.preferences).toMatchObject({ studyLanguage: 'zh', targetLevel: 'HSK1' });
+    const path = (await agent.get('/api/path/HSK1').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'HSK1', region: 'Plaine du Fleuve Jaune' });
+    expect(path.levels.map((l: any) => l.code)).toEqual(['HSK1']);
+    expect(path.worlds).toHaveLength(9);
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['年', '饕', '尾', '夔', '貔', '毕', '柳', '烛']);
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'hsk1-final', exam: { slug: 'hsk1-official' } });
+    expect(path.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'zh-tones', status: 'available' });
+  });
+
+  it('qui connaît déjà les bases commence au deuxième royaume', async () => {
+    const { agent } = await signUpChinese(ctx, 'basics');
+    const dash = (await agent.get('/api/dashboard').expect(200)).body;
+    expect(dash.nextLesson.slug).toBe('zh-hz-time');
+  });
+
+  it('hanzi lus en pinyin, expressions, fables, jeux et atelier en chinois', async () => {
+    const { agent } = await signUpChinese(ctx);
+    const chars = (await agent.get('/api/characters').expect(200)).body;
+    expect(chars.sections.map((s: any) => s.slug)).toEqual(['hanzi-hsk1']);
+    const ren = chars.sections[0].groups.flatMap((g: any) => g.items).find((c: any) => c.front === '人');
+    expect(ren).toMatchObject({ kind: 'kanji', reading: 'rén', kanji: { onyomi: [], kunyomi: [], strokes: 2 } });
+
+    const expr = (await agent.get('/api/expressions').expect(200)).body;
+    expect(expr.themes.map((t: any) => t.slug)).toEqual(['zh-politesse', 'zh-rencontres', 'zh-comprendre', 'zh-restaurant', 'zh-marche', 'zh-chengyu']);
+    expect(expr.themes[0].expressions[0]).toMatchObject({ front: '你好', reading: 'nǐ hǎo' });
+
+    const reading = (await agent.get('/api/reading').expect(200)).body;
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['shou-zhu-dai-tu', 'hua-she-tian-zu', 'zi-xiang-mao-dun']);
+    await agent.get('/api/reading/chapters/momotaro-1').expect(404);
+    const ch = stories.stories.find((x: any) => x.slug === 'shou-zhu-dai-tu').chapters[0];
+    // Pinyin au-dessus de chaque mot ({汉字|pinyin}) ; le texte prononcé ne garde que les caractères
+    expect(ch.paragraphs[0][0].jp).toContain('{农民|nóngmín}');
+    expect(ch.paragraphs[0][0].kana).toBe('从前，宋国有一个农民。');
+    const r = (await agent.post('/api/reading/chapters/shou-zhu-dai-tu-1/complete').send({ answers: ch.questions.map((q: any) => q.answer) }).expect(201)).body;
+    expect(r).toMatchObject({ firstTime: true, correct: ch.questions.length, next: { slug: 'shou-zhu-dai-tu-2' } });
+
+    const games = (await agent.get('/api/games').expect(200)).body.games;
+    expect(games.map((g: any) => g.id)).toEqual(['hanzi-rush', 'speed', 'listening']);
+  });
+
+  it('une leçon de chinois : questions en chinois, pinyin en lecture, aucune question au format JLPT', async () => {
+    const { agent } = await signUpChinese(ctx);
+    const { start } = await completeFirstLesson(ctx, agent, 'zh-tones');
+    expect(start.questions.some((q: any) => q.display?.jp === '八' || q.choices?.includes('八'))).toBe(true);
+    expect(start.questions.every((q: any) => !String(q.type).startsWith('jlpt_'))).toBe(true);
+    const userId = (await agent.get('/api/me').expect(200)).body.id;
+    expect(await ctx.prisma.reviewCard.count({ where: { userId, item: { levelCode: 'HSK1' } } })).toBeGreaterThanOrEqual(8);
+    expect(await ctx.prisma.reviewCard.count({ where: { userId, item: { levelCode: { not: 'HSK1' } } } })).toBe(0);
+  });
+
+  it('examen blanc HSK 1 : 20 questions d’écoute et 20 de lecture, notées sur 200, réussite à 120', async () => {
+    const { agent } = await signUpChinese(ctx);
+    const exam = (await agent.post('/api/exams/hsk1-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(40);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(20);
+    expect(new Set(exam.questions.map((q: any) => q.display?.part))).toEqual(new Set(bank.parts.map((p: any) => p.jpTitle)));
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const result = (await agent.post('/api/exams/hsk1-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(result).toMatchObject({ passed: true, scaled: { listening: 100, language: 100, total: 200, max: { system: 'hsk', total: 200, passTotal: 120 } } });
+
+    const empty = (await agent.post('/api/exams/hsk1-official/start').expect(201)).body;
+    const zero = (await agent.post('/api/exams/hsk1-official/submit').send({ sessionId: empty.sessionId, answers: {} }).expect(200)).body;
+    expect(zero).toMatchObject({ passed: false, scaled: { total: 0 } });
+    const path = (await agent.get('/api/path/HSK1').expect(200)).body;
+    expect(path.worlds.at(-1)).toMatchObject({ exam: { slug: 'hsk1-official' } });
+  });
+
+  it('succès propres au chinois, cachés aux autres langues', async () => {
+    const { agent } = await signUpChinese(ctx);
+    const slugs = (await agent.get('/api/achievements').expect(200)).body.achievements.map((a: any) => a.slug);
+    expect(slugs).toEqual(expect.arrayContaining(['zh-bosses-8', 'hsk-passed', 'zh-tales-10']));
+    expect(slugs).not.toContain('hangul-10');
+    expect(slugs).not.toContain('toeic-passed');
+  });
+});

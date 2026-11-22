@@ -8,6 +8,8 @@ import { toCardState } from '../learning/card-mapper';
 /** Monde de départ selon le niveau déclaré à l'onboarding (en attendant le test de positionnement). */
 export function startWorldOrder(selfLevel: string, levelCode = 'N5'): number {
   // Seuls les premiers niveaux (N5, TOPIK 1) commencent par l'écriture (kana, hangeul) : les autres s'ouvrent au premier monde.
+  // HSK 1 : un seul monde d'écriture (pinyin et premiers caractères), sauté si on connaît déjà les bases.
+  if (levelCode === 'HSK1') return selfLevel === 'basics' ? 2 : 1;
   if (levelCode !== 'N5' && levelCode !== 'TOPIK1') return 1;
   return (['kana', 'basics', 'n5', 'n4plus'] as SelfLevel[]).includes(selfLevel as SelfLevel) ? 3 : 1;
 }

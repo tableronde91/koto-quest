@@ -1,5 +1,5 @@
 /**
- * Synthèse vocale japonaise et coréenne via le navigateur (gratuite, sans fichier audio à licencier).
+ * Synthèse vocale (japonais, coréen, anglais, chinois) via le navigateur (gratuite, sans fichier audio à licencier).
  *
  * Toute la lecture passe par `say()`, qui contourne les défauts connus des navigateurs :
  * - les voix se chargent en différé : au premier appel, la liste est vide et le navigateur lit le
@@ -26,19 +26,20 @@ export interface SpeechPart {
   onStart?: () => void;
 }
 
-type VoiceLang = 'ja' | 'ko' | 'en';
-const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB' };
+type VoiceLang = 'ja' | 'ko' | 'en' | 'zh';
+const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB', zh: 'zh-CN' };
 const voices = new Map<VoiceLang, SpeechSynthesisVoice | null>();
 let voicesReady: Promise<void> | null = null;
 
-/** Langue d'un texte : coréen (hangeul), japonais (kana, kanji) ou anglais (alphabet latin). */
+/** Langue d'un texte : coréen (hangeul), japonais (kana), chinois (caractères seuls quand on étudie le chinois) ou anglais (alphabet latin). */
 export const voiceLangOf = (text: string): VoiceLang => textLanguage(text);
 
 /** Meilleure voix pour la langue : installée sur l'appareil d'abord (démarrage immédiat), puis en ligne. */
 function chooseVoice(lang: VoiceLang): SpeechSynthesisVoice | null {
   const list = speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().replace('_', '-').startsWith(lang));
   if (!list.length) return null;
-  const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === LOCALE[lang].toLowerCase() ? 2 : 0) + (v.default ? 1 : 0);
+  // Chinois : mandarin de Chine continentale d'abord, jamais le cantonais (zh-HK) si une autre voix existe.
+  const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === LOCALE[lang].toLowerCase() ? 2 : 0) + (v.default ? 1 : 0) - (/zh-hk|yue/.test(v.lang.toLowerCase().replace('_', '-')) ? 10 : 0);
   return [...list].sort((a, b) => score(b) - score(a))[0];
 }
 

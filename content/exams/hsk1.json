@@ -1,0 +1,705 @@
+{
+ "slug": "hsk1",
+ "level": "HSK1",
+ "contentVersion": "2026.11.22",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel du HSK 1 (HSK 2.0 : types d’épreuves, consignes en chinois, pinyin, notation sur 200). Les images sont remplacées par des pictogrammes. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "l-judge",
+   "section": "listening",
+   "jpTitle": "听力 第一部分（1～5）",
+   "title": "Image : vrai ou faux",
+   "prompt": "听录音，判断对错。",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "N|苹果",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 苹果",
+     "text": "🍎"
+    },
+    {
+     "audio": "N|猫",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 猫",
+     "text": "🐶"
+    },
+    {
+     "audio": "N|喝茶",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 喝茶",
+     "text": "🍵"
+    },
+    {
+     "audio": "N|飞机",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 飞机",
+     "text": "🚆"
+    },
+    {
+     "audio": "N|看书",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 看书",
+     "text": "📖"
+    },
+    {
+     "audio": "N|下雨",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 下雨",
+     "text": "☀️"
+    },
+    {
+     "audio": "N|打电话",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 打电话",
+     "text": "📞"
+    },
+    {
+     "audio": "N|睡觉",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 睡觉",
+     "text": "✍️"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-picture",
+   "section": "listening",
+   "jpTitle": "听力 第二部分（6～10）",
+   "title": "Choisir l’image",
+   "prompt": "听录音，选择对应的图片。",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "N|我喜欢喝水。",
+     "choices": [
+      "💧",
+      "🍵",
+      "🍎"
+     ],
+     "answer": "💧",
+     "explanation": "Transcription : Narrateur : 我喜欢喝水。"
+    },
+    {
+     "audio": "N|他坐出租车去学校。",
+     "choices": [
+      "🚕",
+      "✈️",
+      "🚆"
+     ],
+     "answer": "🚕",
+     "explanation": "Transcription : Narrateur : 他坐出租车去学校。"
+    },
+    {
+     "audio": "N|我女儿很喜欢猫。",
+     "choices": [
+      "🐱",
+      "🐶",
+      "🐟"
+     ],
+     "answer": "🐱",
+     "explanation": "Transcription : Narrateur : 我女儿很喜欢猫。"
+    },
+    {
+     "audio": "N|今天太热了！",
+     "choices": [
+      "🔥",
+      "❄️",
+      "☔"
+     ],
+     "answer": "🔥",
+     "explanation": "Transcription : Narrateur : 今天太热了！"
+    },
+    {
+     "audio": "N|我在医院工作，我是医生。",
+     "choices": [
+      "🏥",
+      "🏫",
+      "🛒"
+     ],
+     "answer": "🏥",
+     "explanation": "Transcription : Narrateur : 我在医院工作，我是医生。"
+    },
+    {
+     "audio": "N|妈妈在看电视。",
+     "choices": [
+      "📺",
+      "📖",
+      "📞"
+     ],
+     "answer": "📺",
+     "explanation": "Transcription : Narrateur : 妈妈在看电视。"
+    },
+    {
+     "audio": "N|这是我的椅子。",
+     "choices": [
+      "🪑",
+      "🍵",
+      "👕"
+     ],
+     "answer": "🪑",
+     "explanation": "Transcription : Narrateur : 这是我的椅子。"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-dialogue",
+   "section": "listening",
+   "jpTitle": "听力 第三部分（11～15）",
+   "title": "Dialogue et image",
+   "prompt": "听对话，选择对应的图片。",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "M|你想吃什么？\nF|我想吃米饭。",
+     "choices": [
+      "🍚",
+      "🍎",
+      "🍵",
+      "💧"
+     ],
+     "answer": "🍚",
+     "explanation": "Transcription : Homme : 你想吃什么？ / Femme : 我想吃米饭。"
+    },
+    {
+     "audio": "F|你去哪儿？\nM|我去火车站。",
+     "choices": [
+      "🚉",
+      "🏥",
+      "🏫",
+      "🛒"
+     ],
+     "answer": "🚉",
+     "explanation": "Transcription : Femme : 你去哪儿？ / Homme : 我去火车站。"
+    },
+    {
+     "audio": "M|这件衣服怎么样？\nF|很漂亮！",
+     "choices": [
+      "👕",
+      "🪑",
+      "📖",
+      "📺"
+     ],
+     "answer": "👕",
+     "explanation": "Transcription : Homme : 这件衣服怎么样？ / Femme : 很漂亮！"
+    },
+    {
+     "audio": "F|明天天气怎么样？\nM|明天会下雨。",
+     "choices": [
+      "☔",
+      "☀️",
+      "🔥",
+      "❄️"
+     ],
+     "answer": "☔",
+     "explanation": "Transcription : Femme : 明天天气怎么样？ / Homme : 明天会下雨。"
+    },
+    {
+     "audio": "M|你在做什么？\nF|我在写字。",
+     "choices": [
+      "✍️",
+      "😴",
+      "📞",
+      "🍵"
+     ],
+     "answer": "✍️",
+     "explanation": "Transcription : Homme : 你在做什么？ / Femme : 我在写字。"
+    },
+    {
+     "audio": "F|你家有狗吗？\nM|有，我家有两个狗。",
+     "choices": [
+      "🐶",
+      "🐱",
+      "🐟",
+      "🍎"
+     ],
+     "answer": "🐶",
+     "explanation": "Transcription : Femme : 你家有狗吗？ / Homme : 有，我家有两个狗。"
+    },
+    {
+     "audio": "M|你会开车吗？\nF|会，我每天开车去工作。",
+     "choices": [
+      "🚗",
+      "✈️",
+      "🚆",
+      "🚕"
+     ],
+     "answer": "🚗",
+     "explanation": "Transcription : Homme : 你会开车吗？ / Femme : 会，我每天开车去工作。"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-question",
+   "section": "listening",
+   "jpTitle": "听力 第四部分（16～20）",
+   "title": "Phrase et question",
+   "prompt": "听句子和问题，选择正确答案。",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "M|我叫王明，我是老师，在学校工作。\nN|问：王明做什么工作？",
+     "choices": [
+      "老师 lǎoshī",
+      "医生 yīshēng",
+      "学生 xuésheng"
+     ],
+     "answer": "老师 lǎoshī",
+     "explanation": "Transcription : Homme : 我叫王明，我是老师，在学校工作。 / Narrateur : 问：王明做什么工作？"
+    },
+    {
+     "audio": "F|今天是星期三，明天我去北京。\nN|问：她星期几去北京？",
+     "choices": [
+      "星期四 xīngqīsì",
+      "星期三 xīngqīsān",
+      "星期二 xīngqī’èr"
+     ],
+     "answer": "星期四 xīngqīsì",
+     "explanation": "Transcription : Femme : 今天是星期三，明天我去北京。 / Narrateur : 问：她星期几去北京？"
+    },
+    {
+     "audio": "M|这个杯子二十块，那个三十块。\nN|问：那个杯子多少钱？",
+     "choices": [
+      "三十块 sānshí kuài",
+      "二十块 èrshí kuài",
+      "十块 shí kuài"
+     ],
+     "answer": "三十块 sānshí kuài",
+     "explanation": "Transcription : Homme : 这个杯子二十块，那个三十块。 / Narrateur : 问：那个杯子多少钱？"
+    },
+    {
+     "audio": "F|我女儿七岁，儿子五岁。\nN|问：她儿子几岁？",
+     "choices": [
+      "五岁 wǔ suì",
+      "七岁 qī suì",
+      "十二岁 shí’èr suì"
+     ],
+     "answer": "五岁 wǔ suì",
+     "explanation": "Transcription : Femme : 我女儿七岁，儿子五岁。 / Narrateur : 问：她儿子几岁？"
+    },
+    {
+     "audio": "M|下午三点我们在饭馆前面见。\nN|问：他们几点见？",
+     "choices": [
+      "三点 sān diǎn",
+      "十三点 shísān diǎn",
+      "四点 sì diǎn"
+     ],
+     "answer": "三点 sān diǎn",
+     "explanation": "Transcription : Homme : 下午三点我们在饭馆前面见。 / Narrateur : 问：他们几点见？"
+    },
+    {
+     "audio": "F|我不喜欢喝茶，我喜欢喝水。\nN|问：她喜欢喝什么？",
+     "choices": [
+      "水 shuǐ",
+      "茶 chá",
+      "米饭 mǐfàn"
+     ],
+     "answer": "水 shuǐ",
+     "explanation": "Transcription : Femme : 我不喜欢喝茶，我喜欢喝水。 / Narrateur : 问：她喜欢喝什么？"
+    },
+    {
+     "audio": "M|昨天下雨了，我没去商店。\nN|问：他昨天去商店了吗？",
+     "choices": [
+      "没去 méi qù",
+      "去了 qù le",
+      "明天去 míngtiān qù"
+     ],
+     "answer": "没去 méi qù",
+     "explanation": "Transcription : Homme : 昨天下雨了，我没去商店。 / Narrateur : 问：他昨天去商店了吗？"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "r-judge",
+   "section": "reading",
+   "jpTitle": "阅读 第一部分（21～25）",
+   "title": "Image et mot",
+   "prompt": "看图片和词语，判断对错。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Réponse : ✓ 对",
+     "jp": "🐱",
+     "text": "猫 māo"
+    },
+    {
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Réponse : ✗ 错",
+     "jp": "🍎",
+     "text": "茶 chá"
+    },
+    {
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Réponse : ✓ 对",
+     "jp": "✈️",
+     "text": "飞机 fēijī"
+    },
+    {
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Réponse : ✗ 错",
+     "jp": "📺",
+     "text": "书 shū"
+    },
+    {
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Réponse : ✓ 对",
+     "jp": "🏥",
+     "text": "医院 yīyuàn"
+    },
+    {
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Réponse : ✗ 错",
+     "jp": "❄️",
+     "text": "热 rè"
+    },
+    {
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Réponse : ✓ 对",
+     "jp": "🪑",
+     "text": "椅子 yǐzi"
+    }
+   ]
+  },
+  {
+   "id": "r-picture",
+   "section": "reading",
+   "jpTitle": "阅读 第二部分（26～30）",
+   "title": "Phrase et image",
+   "prompt": "选择与句子对应的图片。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "🚕",
+      "🚆",
+      "✈️"
+     ],
+     "answer": "🚕",
+     "explanation": "Réponse : 🚕",
+     "jp": "我坐出租车回家。",
+     "text": "Wǒ zuò chūzūchē huí jiā."
+    },
+    {
+     "choices": [
+      "🍚",
+      "🍎",
+      "🍵"
+     ],
+     "answer": "🍚",
+     "explanation": "Réponse : 🍚",
+     "jp": "中午我们吃米饭。",
+     "text": "Zhōngwǔ wǒmen chī mǐfàn."
+    },
+    {
+     "choices": [
+      "☔",
+      "☀️",
+      "❄️"
+     ],
+     "answer": "☔",
+     "explanation": "Réponse : ☔",
+     "jp": "今天下雨了。",
+     "text": "Jīntiān xià yǔ le."
+    },
+    {
+     "choices": [
+      "😴",
+      "✍️",
+      "📞"
+     ],
+     "answer": "😴",
+     "explanation": "Réponse : 😴",
+     "jp": "我儿子在睡觉。",
+     "text": "Wǒ érzi zài shuìjiào."
+    },
+    {
+     "choices": [
+      "🎬",
+      "📖",
+      "📺"
+     ],
+     "answer": "🎬",
+     "explanation": "Réponse : 🎬",
+     "jp": "我们去看电影吧。",
+     "text": "Wǒmen qù kàn diànyǐng ba."
+    },
+    {
+     "choices": [
+      "🛒",
+      "🏫",
+      "🏥"
+     ],
+     "answer": "🛒",
+     "explanation": "Réponse : 🛒",
+     "jp": "妈妈在商店买东西。",
+     "text": "Māma zài shāngdiàn mǎi dōngxi."
+    }
+   ]
+  },
+  {
+   "id": "r-answer",
+   "section": "reading",
+   "jpTitle": "阅读 第三部分（31～35）",
+   "title": "Question et réponse",
+   "prompt": "选择正确的回答。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "我叫李月。",
+      "我是中国人。",
+      "我十八岁。",
+      "我在家。"
+     ],
+     "answer": "我叫李月。",
+     "explanation": "Réponse : 我叫李月。",
+     "jp": "你叫什么名字？",
+     "text": "Nǐ jiào shénme míngzi?"
+    },
+    {
+     "choices": [
+      "我是法国人。",
+      "我是老师。",
+      "我叫大卫。",
+      "我去北京。"
+     ],
+     "answer": "我是法国人。",
+     "explanation": "Réponse : 我是法国人。",
+     "jp": "你是哪国人？",
+     "text": "Nǐ shì nǎ guó rén?"
+    },
+    {
+     "choices": [
+      "二十五块。",
+      "五个。",
+      "三点。",
+      "星期五。"
+     ],
+     "answer": "二十五块。",
+     "explanation": "Réponse : 二十五块。",
+     "jp": "这个苹果多少钱？",
+     "text": "Zhè ge píngguǒ duōshao qián?"
+    },
+    {
+     "choices": [
+      "不客气。",
+      "没关系。",
+      "再见。",
+      "你好。"
+     ],
+     "answer": "不客气。",
+     "explanation": "Réponse : 不客气。",
+     "jp": "谢谢你！",
+     "text": "Xièxie nǐ!"
+    },
+    {
+     "choices": [
+      "在桌子上。",
+      "是我的。",
+      "很好。",
+      "明天。"
+     ],
+     "answer": "在桌子上。",
+     "explanation": "Réponse : 在桌子上。",
+     "jp": "我的书在哪儿？",
+     "text": "Wǒ de shū zài nǎr?"
+    },
+    {
+     "choices": [
+      "我家有四口人。",
+      "我家很大。",
+      "我爱我的家。",
+      "我在家。"
+     ],
+     "answer": "我家有四口人。",
+     "explanation": "Réponse : 我家有四口人。",
+     "jp": "你家有几口人？",
+     "text": "Nǐ jiā yǒu jǐ kǒu rén?"
+    },
+    {
+     "choices": [
+      "会，我会说一点儿。",
+      "是，我是汉语。",
+      "有，我有汉语。",
+      "在，我在汉语。"
+     ],
+     "answer": "会，我会说一点儿。",
+     "explanation": "Réponse : 会，我会说一点儿。",
+     "jp": "你会说汉语吗？",
+     "text": "Nǐ huì shuō Hànyǔ ma?"
+    },
+    {
+     "choices": [
+      "八点。",
+      "八号。",
+      "八岁。",
+      "八个。"
+     ],
+     "answer": "八点。",
+     "explanation": "Réponse : 八点。",
+     "jp": "现在几点？",
+     "text": "Xiànzài jǐ diǎn?"
+    }
+   ]
+  },
+  {
+   "id": "r-blank",
+   "section": "reading",
+   "jpTitle": "阅读 第四部分（36～40）",
+   "title": "Choisir le mot",
+   "prompt": "选词填空。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "岁 suì",
+      "号 hào",
+      "个 gè",
+      "块 kuài"
+     ],
+     "answer": "岁 suì",
+     "explanation": "Réponse : 岁 suì",
+     "jp": "我女儿今年三＿＿。",
+     "text": "Wǒ nǚ’ér jīnnián sān ＿＿."
+    },
+    {
+     "choices": [
+      "坐 zuò",
+      "吃 chī",
+      "叫 jiào",
+      "有 yǒu"
+     ],
+     "answer": "坐 zuò",
+     "explanation": "Réponse : 坐 zuò",
+     "jp": "我们＿＿飞机去北京。",
+     "text": "Wǒmen ＿＿ fēijī qù Běijīng."
+    },
+    {
+     "choices": [
+      "喝 hē",
+      "看 kàn",
+      "写 xiě",
+      "读 dú"
+     ],
+     "answer": "喝 hē",
+     "explanation": "Réponse : 喝 hē",
+     "jp": "你想＿＿什么？茶还是水？",
+     "text": "Nǐ xiǎng ＿＿ shénme? Chá háishi shuǐ?"
+    },
+    {
+     "choices": [
+      "没 méi",
+      "不 bù",
+      "很 hěn",
+      "太 tài"
+     ],
+     "answer": "没 méi",
+     "explanation": "Réponse : 没 méi",
+     "jp": "我＿＿有猫，我有一个狗。",
+     "text": "Wǒ ＿＿ yǒu māo, wǒ yǒu yí ge gǒu."
+    },
+    {
+     "choices": [
+      "在 zài",
+      "是 shì",
+      "去 qù",
+      "叫 jiào"
+     ],
+     "answer": "在 zài",
+     "explanation": "Réponse : 在 zài",
+     "jp": "王老师＿＿学校工作。",
+     "text": "Wáng lǎoshī ＿＿ xuéxiào gōngzuò."
+    },
+    {
+     "choices": [
+      "认识 rènshi",
+      "喜欢 xǐhuan",
+      "高兴 gāoxìng",
+      "请 qǐng"
+     ],
+     "answer": "认识 rènshi",
+     "explanation": "Réponse : 认识 rènshi",
+     "jp": "我＿＿他，他是我的同学。",
+     "text": "Wǒ ＿＿ tā, tā shì wǒ de tóngxué."
+    },
+    {
+     "choices": [
+      "怎么样 zěnmeyàng",
+      "什么 shénme",
+      "哪儿 nǎr",
+      "几 jǐ"
+     ],
+     "answer": "怎么样 zěnmeyàng",
+     "explanation": "Réponse : 怎么样 zěnmeyàng",
+     "jp": "今天天气＿＿？",
+     "text": "Jīntiān tiānqì ＿＿?"
+    }
+   ]
+  }
+ ]
+}

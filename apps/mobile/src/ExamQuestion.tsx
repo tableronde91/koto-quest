@@ -5,6 +5,9 @@ import { TOEIC_SCENES, type IssuedQuestionDto } from '@koto/shared';
 import { speak, speakScript } from './speech';
 import { C } from './theme';
 import { Button, P } from './ui';
+
+/** Pictogramme seul (HSK : il remplace l'image de la question), affiché en grand. */
+const isPicture = (s: string) => [...s].length <= 3 && !/[0-9A-Za-z\u3040-\u9fff\uac00-\ud7af]/.test(s);
 import { T, plural } from './i18n';
 
 const JP = /[぀-ヿ一-龯]/;
@@ -45,7 +48,7 @@ export function ExamQuestion({ q, number, value, onChange }: { q: IssuedQuestion
           )}
           <Button label={left <= 0 ? T('Plus d’écoute disponible') : `🔊  ${T('Écouter')}`} disabled={left <= 0} onPress={play} />
           {d.maxPlays !== undefined && <P soft>{plural(Math.max(0, left), '{0} écoute restante sur {1}', '{0} écoutes restantes sur {1}', [Math.max(0, left), d.maxPlays])}</P>}
-          {d.text && <Text style={{ fontSize: 20, fontWeight: '800', color: C.ink, textAlign: 'center' }}>{d.text}</Text>}
+          {d.text && <Text style={{ fontSize: isPicture(d.text) ? 64 : 20, lineHeight: isPicture(d.text) ? 80 : undefined, fontWeight: '800', color: C.ink, textAlign: 'center' }}>{d.text}</Text>}
         </View>
       ) : d.passage ? (
         <View style={{ gap: 8 }}>

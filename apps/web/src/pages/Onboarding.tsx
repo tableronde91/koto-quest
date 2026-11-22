@@ -26,6 +26,10 @@ const LEVELS: Record<StudyLanguage, { value: SelfLevel; label: string; hint: str
     { value: 'beginner', label: T("Je pars de zéro ou presque"), hint: T("On commence par les salutations et les phrases de tous les jours.") },
     { value: 'basics', label: T("Je me débrouille dans les situations simples"), hint: T("Vise directement un niveau plus haut : tu pourras toujours revoir le A1.") },
   ],
+  zh: [
+    { value: 'beginner', label: T("Je pars de zéro"), hint: T("On commence par le pinyin, les quatre tons et les premiers caractères.") },
+    { value: 'basics', label: T("Je connais le pinyin et quelques caractères"), hint: T("Les îles du pinyin restent accessibles en révision.") },
+  ],
 };
 /** Niveaux visés : seuls les niveaux dont le parcours existe sont proposés comme disponibles. */
 const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: boolean }[]> = {
@@ -50,6 +54,14 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
     { value: 'B1', label: T("B1 — seuil (TOEIC 550+)"), ready: true },
     { value: 'B2', label: T("B2 — avancé (TOEIC 785+)"), ready: true },
     { value: 'C1', label: T("C1 — autonome (TOEIC 945+)"), ready: true },
+  ],
+  zh: [
+    { value: 'HSK1', label: T("HSK 1 — débutant (150 mots)"), ready: true },
+    { value: 'HSK2', label: T("HSK 2 — élémentaire (300 mots)"), ready: false },
+    { value: 'HSK3', label: T("HSK 3 — intermédiaire (600 mots)"), ready: false },
+    { value: 'HSK4', label: T("HSK 4 — intermédiaire avancé (1 200 mots)"), ready: false },
+    { value: 'HSK5', label: T("HSK 5 — avancé (2 500 mots)"), ready: false },
+    { value: 'HSK6', label: T("HSK 6 — maîtrise (5 000 mots)"), ready: false },
   ],
 };
 const AREAS: { value: DifficultArea; label: string }[] = [
@@ -120,7 +132,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
                 <span lang={l.code} aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ink text-3xl font-black text-paper">{l.glyph}</span>
                 <span>
                   <span className="block text-lg font-bold">{T(l.name)} <span lang={l.code} className="jp font-normal text-ink-soft">{l.native}</span></span>
-                  <span className="text-sm text-ink-soft">{l.code === 'ko' ? T("Préparation au TOPIK, en commençant par le hangeul") : l.code === 'en' ? T("Préparation au TOEIC, du niveau A1 au C1") : T("Préparation au JLPT, du N5 au N1")}</span>
+                  <span className="text-sm text-ink-soft">{l.code === 'ko' ? T("Préparation au TOPIK, en commençant par le hangeul") : l.code === 'en' ? T("Préparation au TOEIC, du niveau A1 au C1") : l.code === 'zh' ? T("Préparation au HSK, du niveau 1 au 6, avec le pinyin") : T("Préparation au JLPT, du N5 au N1")}</span>
                 </span>
               </button>
             ))}
@@ -146,6 +158,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
             options={TARGETS[lang].map((t) => ({ value: t.value, label: t.label, hint: t.ready ? T("Disponible") : T("En préparation"), disabled: !t.ready }))}
           />
           {lang === 'en' && <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Les cinq parcours, de A1 à C1, sont prêts.")}</p>}
+          {lang === 'zh' && <p className="mt-3 text-sm text-ink-soft">{T("Le HSK compte six niveaux (format des sessions ordinaires de 2026). Le parcours HSK 1 est prêt, les suivants arrivent.")}</p>}
           {lang === 'ko' && <p className="mt-3 text-sm text-ink-soft">{T("Le TOPIK I regroupe les niveaux 1 et 2 (parcours {0} et {1}), le TOPIK II les niveaux 3 à 6 (parcours {2}, {3}, {4} et {5}) : tous les parcours sont prêts.", [levelLabel('TOPIK1'), levelLabel('TOPIK2'), levelLabel('TOPIK3'), levelLabel('TOPIK4'), levelLabel('TOPIK5'), levelLabel('TOPIK6')])}</p>}
         </>
       ),
@@ -156,7 +169,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
         <div className="flex flex-col gap-3">
           <label className="flex flex-col gap-1 font-bold">{T("Date de l’examen (facultatif)")}<input type="date" className="field max-w-xs font-normal" value={data.examDate ?? ''} onChange={(e) => set({ examDate: e.target.value || null })} />
           </label>
-          <p className="text-sm text-ink-soft">{lang === 'en' ? T("Le TOEIC se passe toute l’année, dans des centres agréés ou en ligne selon les pays. Sans date, tu avances à ton rythme.") : lang === 'ko' ? T("Le TOPIK est organisé plusieurs fois par an, à des dates qui varient selon les pays. Sans date, tu avances à ton rythme.") : T("Le JLPT a lieu en juillet et en décembre dans la plupart des pays. Sans date, tu avances à ton rythme.")}</p>
+          <p className="text-sm text-ink-soft">{lang === 'en' ? T("Le TOEIC se passe toute l’année, dans des centres agréés ou en ligne selon les pays. Sans date, tu avances à ton rythme.") : lang === 'zh' ? T("Le HSK est organisé presque tous les mois, sur papier ou sur ordinateur, dans les centres agréés (souvent les Instituts Confucius). Sans date, tu avances à ton rythme.") : lang === 'ko' ? T("Le TOPIK est organisé plusieurs fois par an, à des dates qui varient selon les pays. Sans date, tu avances à ton rythme.") : T("Le JLPT a lieu en juillet et en décembre dans la plupart des pays. Sans date, tu avances à ton rythme.")}</p>
         </div>
       ),
     },
@@ -174,7 +187,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
       title: T("Qu’est-ce qui te semble difficile ?"),
       body: (
         <div className="flex flex-wrap gap-3">
-          {AREAS.filter((a) => (lang !== 'ko' || a.value !== 'kanji') && (lang !== 'en' || (a.value !== 'kanji' && a.value !== 'kana'))).map((a) => {
+          {AREAS.filter((a) => (lang !== 'ko' || a.value !== 'kanji') && (lang !== 'en' || (a.value !== 'kanji' && a.value !== 'kana')) && (lang !== 'zh' || a.value !== 'kana')).map((a) => {
             const on = data.difficultAreas.includes(a.value);
             return (
               <button
@@ -184,7 +197,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
                 onClick={() => set({ difficultAreas: on ? data.difficultAreas.filter((x) => x !== a.value) : [...data.difficultAreas, a.value] })}
                 className={`btn ${on ? 'btn-primary' : 'btn-quiet'}`}
               >
-                {lang === 'ko' && a.value === 'kana' ? T("Le hangeul") : a.label}
+                {lang === 'ko' && a.value === 'kana' ? T("Le hangeul") : lang === 'zh' && a.value === 'kanji' ? T("Les caractères (hanzi)") : a.label}
               </button>
             );
           })}

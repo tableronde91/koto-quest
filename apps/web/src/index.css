@@ -62,6 +62,8 @@ html { font-size: var(--base-size, 17px); }
 body { background: var(--paper); color: var(--ink); font-family: var(--font-sans); line-height: 1.55; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, .font-display { font-family: var(--font-jp); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
 .jp { font-family: var(--font-jp); }
+/* Chinois : polices du chinois simplifié (formes des caractères du continent), pas les glyphes japonais. */
+.jp:lang(zh), :lang(zh) > .jp, ruby:lang(zh) { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
 ruby rt { font-size: 0.45em; color: var(--ink-soft); }
 .reduced * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }

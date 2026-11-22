@@ -7,8 +7,8 @@ import { scriptAccents, textLanguage } from '@koto/shared';
  * un court délai quand une lecture était en cours (l'arrêt est asynchrone et coupait la phrase
  * suivante), et seule la dernière demande est jouée.
  */
-type Lang = 'ja' | 'ko' | 'en';
-const LOCALE: Record<Lang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB' };
+type Lang = 'ja' | 'ko' | 'en' | 'zh';
+const LOCALE: Record<Lang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB', zh: 'zh-CN' };
 const voiceId: Partial<Record<Lang, string>> = {};
 /** Voix par variante régionale de l'anglais (en-US, en-GB, en-AU, en-CA) pour les écoutes TOEIC */
 const localeVoiceId: Record<string, string | undefined> = {};
@@ -19,8 +19,9 @@ let request = 0;
 function loadVoice(): Promise<void> {
   voiceLoad ??= Speech.getAvailableVoicesAsync()
     .then((voices) => {
-      for (const lang of ['ja', 'ko', 'en'] as const) {
-        const mine = voices.filter((v) => v.language.toLowerCase().replace('_', '-').startsWith(lang));
+      for (const lang of ['ja', 'ko', 'en', 'zh'] as const) {
+        // Chinois : mandarin (zh-CN, zh-TW), pas le cantonais (zh-HK)
+        const mine = voices.filter((v) => v.language.toLowerCase().replace('_', '-').startsWith(lang) && !/zh-hk|yue/.test(v.language.toLowerCase().replace('_', '-')));
         const best = mine.sort((a, b) => (b.quality === Speech.VoiceQuality.Enhanced ? 1 : 0) - (a.quality === Speech.VoiceQuality.Enhanced ? 1 : 0))[0];
         voiceId[lang] = best?.identifier;
       }

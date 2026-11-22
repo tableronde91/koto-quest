@@ -116,7 +116,8 @@ export function questionTypesFor(item: EngineItem): QuestionType[] {
 export function chooseQuestionType(item: EngineItem, reps: number, rng: Rng): QuestionType {
   const types = questionTypesFor(item);
   if (reps < 1) return 'meaning_choice';
-  const withKanji = item.kind === 'vocabulary' && !!item.reading && /[一-龯々]/.test(item.front);
+  // Formats JLPT (lecture et écriture des kanji) : seulement pour le japonais (lecture en kana, pas en pinyin).
+  const withKanji = item.kind === 'vocabulary' && !!item.reading && /[一-龯々]/.test(item.front) && /[\u3040-\u30ff]/.test(item.reading);
   const jlpt: QuestionType[] = withKanji ? ['jlpt_reading', ...(item.reading !== item.front ? (['jlpt_writing'] as QuestionType[]) : [])] : [];
   if (reps < 2) return pick(types.filter((t) => t !== 'true_false'), rng);
   if (reps < 4) return pick([...types.filter((t) => t !== 'true_false'), ...jlpt], rng);
@@ -179,6 +180,13 @@ const kindLabel: Record<ItemKind, string> = {
   grammar: 'cette construction',
 };
 
+/** Notion chinoise : des caractères chinois lus en pinyin (lettres latines), sans kana. */
+export function isChineseItem(item: Pick<EngineItem, 'front' | 'reading'>): boolean {
+  return /[\u3400-\u9fff]/.test(item.front) && !/[\u3040-\u30ff]/.test(item.front) && !!item.reading && /[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(item.reading);
+}
+
+const labelOf = (item: EngineItem) => (item.kind === 'kanji' && isChineseItem(item) ? 'ce caractère' : kindLabel[item.kind]);
+
 function describe(item: EngineItem): string {
   const reading = item.reading && item.reading !== item.front ? ` (${item.reading})` : '';
   if (item.kind === 'kana') return `${item.front} se lit « ${item.meaning} ».`;
@@ -197,10 +205,12 @@ export function generateQuestion(
   /** Phrase d'exemple contenant le mot (format JLPT) */
   example?: string,
 ): Question | null {
+  // Les formats JLPT (lecture et écriture en kana) n'existent pas en chinois : on demande le pinyin.
+  if ((type === 'jlpt_reading' || type === 'jlpt_writing') && isChineseItem(item)) type = 'reading_choice';
   if (type === 'jlpt_reading') return jlptReadingQuestion(item, pool, rng, example);
   if (type === 'jlpt_writing') return jlptWritingQuestion(item, pool, rng, example);
   const base = { itemId: item.id, explanation: describe(item), guessable: false };
-  const audio = item.kind === 'grammar' ? undefined : (item.reading ?? item.front);
+  const audio = item.kind === 'grammar' ? undefined : isChineseItem(item) ? item.front : (item.reading ?? item.front);
   const choiceQuestion = (key: 'meaning' | 'front' | 'reading', prompt: string, display: Question['display'], extra: Partial<Question> = {}): Question | null => {
     const distractors = pickDistractors(item, pool, key, 3, rng);
     if (distractors.length < 2) return null;
@@ -212,18 +222,18 @@ export function generateQuestion(
     case 'meaning_choice':
       return choiceQuestion(
         'meaning',
-        item.kind === 'kana' ? 'Comment se lit ce caractère ?' : `Que signifie ${kindLabel[item.kind]} ?`,
+        item.kind === 'kana' ? 'Comment se lit ce caractère ?' : `Que signifie ${labelOf(item)} ?`,
         { jp: item.front, reading: item.kind === 'kana' ? undefined : (item.reading ?? undefined) },
         { audio },
       );
     case 'reverse_choice':
       return choiceQuestion(
         'front',
-        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : isEnglish(item.front) ? `Comment dit-on « ${item.meaning} » en anglais ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
+        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : isChineseItem(item) ? `Comment dit-on « ${item.meaning} » en chinois ?` : isEnglish(item.front) ? `Comment dit-on « ${item.meaning} » en anglais ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
         { text: item.meaning },
       );
     case 'reading_choice':
-      return choiceQuestion('reading', `Quelle est la lecture de ${kindLabel[item.kind]} ?`, { jp: item.front }, { audio });
+      return choiceQuestion('reading', isChineseItem(item) ? `Quel est le pinyin de ${labelOf(item)} ?` : `Quelle est la lecture de ${labelOf(item)} ?`, { jp: item.front }, { audio });
     case 'listening_choice':
       if (item.kind === 'kana') {
         return choiceQuestion('front', 'Écoute : quel caractère entends-tu ?', {}, { audio });
@@ -275,7 +285,7 @@ export function generateMatching(items: readonly EngineItem[], rng: Rng): Questi
   const chosen = shuffle(unique, rng).slice(0, 5);
   return {
     type: 'matching',
-    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : chosen.every((i) => isEnglish(i.front)) ? 'Associe chaque mot anglais à son sens.' : 'Associe chaque élément japonais à son sens.',
+    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : chosen.some(isChineseItem) ? 'Associe chaque élément chinois à son sens.' : chosen.every((i) => isEnglish(i.front)) ? 'Associe chaque mot anglais à son sens.' : 'Associe chaque élément japonais à son sens.',
     pairs: { left: chosen.map((i) => i.front), right: shuffle(chosen.map((i) => i.meaning), rng) },
     answer: chosen.map((i) => i.meaning),
     explanation: chosen.map(describe).join(' '),
@@ -352,7 +362,7 @@ export function authoredToQuestion(ex: AuthoredExercise, rng: Rng, itemId?: stri
   const display: Question['display'] = ex.lines
     ? { lines: ex.lines, text: ex.translation }
     : { jp: ex.sentence?.replace(BLANK_RE, BLANK), reading: ex.reading?.replace(BLANK_RE, BLANK), text: ex.translation };
-  const spoken = ex.sentence ? (ex.reading ?? ex.sentence).replace(BLANK_RE, BLANK) : undefined;
+  const spoken = ex.sentence ? (ex.reading && !/[a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/.test(ex.reading) ? ex.reading : ex.sentence).replace(BLANK_RE, BLANK) : undefined;
   // En anglais, la réponse se prononce aussi (ce n'est jamais du romaji).
   const answerIsJp = typeof ex.answer === 'string' && (isJapanese(ex.answer) || (isEnglish(spoken) && isEnglish(ex.answer)));
   let answerAudio: string | undefined;

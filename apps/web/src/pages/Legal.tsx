@@ -68,6 +68,8 @@ function notice(): Block[] {
           'Fonts: Atkinson Hyperlegible (Braille Institute of America), Zen Maru Gothic (Yoshimichi Ohira) and Gowun Dodum (Yanghee Ryu), all under the SIL Open Font License 1.1.',
           'JLPT (Japanese-Language Proficiency Test) is run by the Japan Foundation and Japan Educational Exchanges and Services. Koto Quest is not affiliated with them: its mock exams and lists are unofficial and do not guarantee any result.',
           'TOPIK (Test of Proficiency in Korean) is run by the National Institute for International Education (NIIED) of the Republic of Korea. Koto Quest is not affiliated with it: its TOPIK mock exams and lists are unofficial and do not guarantee any result.',
+          'TOEIC is a registered trademark of ETS. Koto Quest is not affiliated with ETS: its TOEIC-format mock exams are unofficial and do not predict any score.',
+          'HSK (Hanyu Shuiping Kaoshi) is run by the Centre for Language Education and Cooperation (CLEC) and Chinese Testing International. Koto Quest is not affiliated with them: its HSK mock exams and lists are unofficial and do not guarantee any result.',
         ],
       },
     ];
@@ -104,6 +106,8 @@ function notice(): Block[] {
         'Polices de caractères : Atkinson Hyperlegible (Braille Institute of America), Zen Maru Gothic (Yoshimichi Ohira) et Gowun Dodum (Yanghee Ryu), sous licence SIL Open Font License 1.1.',
         'Le JLPT (Japanese-Language Proficiency Test) est organisé par la Japan Foundation et Japan Educational Exchanges and Services. Koto Quest n’est pas affilié à ces organismes : ses examens blancs et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
         'Le TOPIK (Test of Proficiency in Korean) est organisé par le National Institute for International Education (NIIED) de la République de Corée. Koto Quest n’est pas affilié à cet organisme : ses examens blancs TOPIK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
+        'TOEIC est une marque déposée d’ETS. Koto Quest n’est pas affilié à ETS : ses examens blancs au format du TOEIC ne sont pas officiels et n’en prédisent pas le score.',
+        'Le HSK (Hanyu Shuiping Kaoshi) est organisé par le Centre for Language Education and Cooperation (CLEC) et Chinese Testing International. Koto Quest n’est pas affilié à ces organismes : ses examens blancs HSK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
       ],
     },
   ];
@@ -149,7 +153,7 @@ function privacy(): Block[] {
           <><strong>{site.database.name}</strong> (database hosting, servers in Frankfurt, European Union).</>,
           <><strong>IONOS</strong> (domain name and, where applicable, sending of emails such as password resets).</>,
           'Browser push services (Google, Mozilla, Apple…), only if you turn on notifications: they relay an encrypted message to your device.',
-          'Read-aloud: Japanese and Korean are read by your browser’s speech synthesis. Depending on the browser, it may use an online service from its publisher (for example Google for Chrome); only the Japanese or Korean text to be read is concerned.',
+          'Read-aloud: Japanese, Korean, English and Chinese are read by your browser’s speech synthesis. Depending on the browser, it may use an online service from its publisher (for example Google for Chrome); only the text to be read aloud is concerned.',
         ],
       },
       {
@@ -209,7 +213,7 @@ function privacy(): Block[] {
         <><strong>{site.database.name}</strong> (hébergement de la base de données, serveurs à Francfort, Union européenne).</>,
         <><strong>IONOS</strong> (nom de domaine et, le cas échéant, envoi des e-mails, comme la réinitialisation du mot de passe).</>,
         'Services de notification des navigateurs (Google, Mozilla, Apple…), uniquement si vous activez les notifications : ils relaient un message chiffré jusqu’à votre appareil.',
-        'Lecture audio : le japonais, le coréen et l’anglais sont lus par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte japonais, coréen ou anglais à prononcer est concerné.',
+        'Lecture audio : le japonais, le coréen, l’anglais et le chinois sont lus par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte à prononcer est concerné.',
       ],
     },
     {

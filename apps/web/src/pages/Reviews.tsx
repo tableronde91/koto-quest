@@ -102,7 +102,7 @@ export function QuizPage({ me }: { me: MeDto }) {
   };
   return (
     <div className="flex flex-col gap-4">
-      <PageTitle>{me.preferences.studyLanguage === 'ko' ? T("Petit défi coréen") : me.preferences.studyLanguage === 'en' ? T("Petit défi d’anglais") : T("Petit défi japonais")}</PageTitle>
+      <PageTitle>{me.preferences.studyLanguage === 'ko' ? T("Petit défi coréen") : me.preferences.studyLanguage === 'en' ? T("Petit défi d’anglais") : me.preferences.studyLanguage === 'zh' ? T("Petit défi de chinois") : T("Petit défi japonais")}</PageTitle>
       <Question
         question={data.question}
         furigana={me.preferences.showFurigana}

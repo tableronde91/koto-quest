@@ -7,6 +7,7 @@ import { stripRuby } from '@koto/learning-engine';
 import { post } from '../../src/api';
 import { useReadingChapter } from '../../src/hooks';
 import { Ruby } from '../../src/Ruby';
+import { useStudyLang } from '../../src/study';
 import { speak } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H2, Loading, P, Screen } from '../../src/ui';
@@ -18,6 +19,7 @@ export default function ReadingChapterScreen() {
   const router = useRouter();
   const qc = useQueryClient();
   const { data, isLoading, error, refetch } = useReadingChapter(slug);
+  const { zh } = useStudyLang();
   const [furigana, setFurigana] = useState(true);
   const [open, setOpen] = useState<string | null>(null);
   const [answers, setAnswers] = useState<number[]>([]);
@@ -58,7 +60,7 @@ export default function ReadingChapterScreen() {
       <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{bi(chapter.title)}</Text>
 
       <View style={{ flexDirection: 'row', gap: 8 }}>
-        <Button label={furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />
+        <Button label={zh ? (furigana ? T('Masquer le pinyin') : T('Afficher le pinyin')) : furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />
       </View>
       <P soft>{T('Touche une phrase pour voir sa traduction et l’écouter.')}</P>
 

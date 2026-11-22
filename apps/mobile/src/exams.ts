@@ -16,4 +16,5 @@ export const MOCK_EXAM: Record<string, string> = {
   B1: 'b1-toeic',
   B2: 'b2-toeic',
   C1: 'c1-toeic',
+  HSK1: 'hsk1-official',
 };

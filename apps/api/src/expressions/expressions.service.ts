@@ -19,6 +19,7 @@ const CATALOG_PATHS: Record<StudyLanguage, string> = {
   ja: resolve(__dirname, '../../../../content/expressions/expressions.json'),
   ko: resolve(__dirname, '../../../../content/expressions/expressions-ko.json'),
   en: resolve(__dirname, '../../../../content/expressions/expressions-en.json'),
+  zh: resolve(__dirname, '../../../../content/expressions/expressions-zh.json'),
 };
 
 @Injectable()

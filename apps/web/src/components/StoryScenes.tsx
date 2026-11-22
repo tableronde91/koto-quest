@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Bamboo, Castle, DawnGate, Hut, Lanterns, Pagoda, Torii, ROCK, ROCK_DARK, VERMILION } from './MapParts';
 import { KOREAN_SCENES } from './KoreanScenes';
 import { ENGLISH_SCENES } from './EnglishScenes';
+import { CHINESE_SCENES } from './ChineseScenes';
 
 /**
  * Mode histoire : le décor de chaque île raconte son chapitre (content/story/story.json).
@@ -1132,6 +1133,6 @@ const SCENES: Record<string, (calm: boolean) => ReactNode> = {
 
 /** Décor du chapitre de cette île, ou `null` hors mode histoire. */
 export function storyScene(worldSlug: string, calm: boolean): ReactNode | null {
-  return (SCENES[worldSlug] ?? KOREAN_SCENES[worldSlug] ?? ENGLISH_SCENES[worldSlug])?.(calm) ?? null;
+  return (SCENES[worldSlug] ?? KOREAN_SCENES[worldSlug] ?? ENGLISH_SCENES[worldSlug] ?? CHINESE_SCENES[worldSlug])?.(calm) ?? null;
 }
 export const hasStoryScene = (worldSlug: string) => worldSlug in SCENES;

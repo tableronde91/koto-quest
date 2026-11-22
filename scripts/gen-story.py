@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -809,6 +809,56 @@ story['levels']['C1'] = {
       ('Sur l’île d’Avalon, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau C1 pour rendre Excalibur.',
        'On the Isle of Avalon, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the C1 score to return Excalibur.'),
       ('Excalibur repose dans le lac. Niveau C1 validé : ta quête d’anglais est accomplie !', 'Excalibur rests in the lake. C1 level complete: your English quest is accomplished!')),
+   },
+}
+story['levels']['HSK1'] = {
+   'glyph': '信', 'jp': '信使之路', 'color': '#A33A2A',
+   'saga': B('Le messager des Royaumes', 'The messenger of the Kingdoms'),
+   'hero': B('Messager·ère de Lu', 'Messenger of Lu'),
+   'short': B('Le messager', 'The messenger'),
+   'prologue': B(
+     'Les sept royaumes se font la guerre et plus personne ne se comprend. Au royaume de Lu, le vieux maître de l’école te confie un rouleau scellé pour la cour du roi de Zhou, à Luoyang. « Un messager qui ne sait ni lire ni parler n’arrive jamais. Traverse les royaumes, apprends la langue des Han, et ta lettre ouvrira toutes les portes. »',
+     'The seven kingdoms are at war and no one understands anyone any more. In the state of Lu, the old master of the school entrusts you with a sealed scroll for the court of the Zhou king, in Luoyang. “A messenger who can neither read nor speak never arrives. Cross the kingdoms, learn the language of the Han, and your letter will open every door.”'),
+   'epilogue': B(
+     'À la cour de Luoyang, le roi de Zhou brise le sceau et lit ta lettre à voix haute. Les sept royaumes acceptent de s’asseoir à la même table. Le roi te tend un nouveau rouleau : « Le général Sun t’attend à Wu. Il a besoin d’un messager qui comprend la stratégie… »',
+     'At the court of Luoyang, the Zhou king breaks the seal and reads your letter aloud. The seven kingdoms agree to sit at the same table. The king hands you a new scroll: “General Sun awaits you in Wu. He needs a messenger who understands strategy…”'),
+   'chapters': {
+    'hsk1-w1': CHAP(('Le pinceau du maître', 'The master’s brush'),
+      ('À l’école de Lu, le maître t’apprend les quatre tons et tes premiers caractères. Mais l’hiver arrive, et avec lui le Nian, la bête qui dévore les récoltes. On dit qu’il fuit ceux qui prononcent juste.',
+       'At the school of Lu, the master teaches you the four tones and your first characters. But winter is coming, and with it the Nian, the beast that devours the harvests. They say it flees from those who pronounce correctly.'),
+      ('Le Nian s’enfuit vers la montagne sous les pétards rouges. Ton pinceau trace déjà ses premiers traits.', 'The Nian flees to the mountain under the red firecrackers. Your brush is already tracing its first strokes.')),
+    'hsk1-w2': CHAP(('Le calendrier avalé', 'The swallowed calendar'),
+      ('Au royaume de Qi, plus personne ne sait quel jour on est : le Taotie, le glouton des bronzes, a avalé le calendrier du roi. Rends à chaque jour sa date.',
+       'In the state of Qi, no one knows what day it is any more: the Taotie, the glutton of the bronzes, has swallowed the king’s calendar. Give each day back its date.'),
+      ('Le Taotie recrache le calendrier, un peu froissé. Le roi de Qi te laisse passer avec un sourire.', 'The Taotie spits out the calendar, a little crumpled. The king of Qi lets you pass with a smile.')),
+    'hsk1-w3': CHAP(('La dame aux neuf queues', 'The lady with nine tails'),
+      ('À la cour de Chu, les saluts sont un art. Une dame d’honneur te regarde étrangement : ce serait la Renarde à neuf queues. Présente-toi sans faute pour la démasquer.',
+       'At the court of Chu, greetings are an art. A lady-in-waiting gives you a strange look: they say she is the Nine-Tailed Fox. Introduce yourself without a mistake to unmask her.'),
+      ('La Renarde laisse échapper une queue sous sa robe et s’enfuit dans la forêt. La cour de Chu t’applaudit.', 'The Fox lets a tail slip from under her robe and flees into the forest. The court of Chu applauds you.')),
+    'hsk1-w4': CHAP(('Le tonnerre dans la maison', 'Thunder in the house'),
+      ('À Yan, le général t’offre l’hospitalité, mais un vacarme fait trembler sa maison : le Kui, la bête à une patte, s’y est installé. Nomme chaque membre de la famille pour le chasser.',
+       'In Yan, the general offers you hospitality, but a din shakes his house: the Kui, the one-legged beast, has moved in. Name every member of the family to drive it out.'),
+      ('Le Kui sautille hors de la maison en grondant. La famille du général t’invite à dîner.', 'The Kui hops out of the house, rumbling. The general’s family invites you to dinner.')),
+    'hsk1-w5': CHAP(('L’or du marché', 'The gold of the market'),
+      ('Au grand marché de Xinzheng, les marchands du royaume de Han se lamentent : le Pixiu avale toutes leurs pièces. Marchande au juste prix pour qu’il les rende.',
+       'At the great market of Xinzheng, the merchants of the state of Han are lamenting: the Pixiu swallows all their coins. Bargain at the right price to make it give them back.'),
+      ('Le Pixiu rend l’or et se couche, repu, devant l’étal du marchand de thé.', 'The Pixiu gives back the gold and lies down, full, in front of the tea merchant’s stall.')),
+    'hsk1-w6': CHAP(('Les clepsydres en feu', 'The burning water clocks'),
+      ('Au palais de Wei, plus rien n’arrive à l’heure : le Bifang, oiseau de feu à une patte, a enflammé les clepsydres. Donne l’heure juste pour éteindre ses flammes.',
+       'At the palace of Wei, nothing happens on time any more: the Bifang, a one-legged fire bird, has set the water clocks ablaze. Tell the right time to put out its flames.'),
+      ('Le Bifang replie ses ailes : les clepsydres gouttent de nouveau, une goutte par instant.', 'The Bifang folds its wings: the water clocks drip again, one drop at a time.')),
+    'hsk1-w7': CHAP(('Les neuf routes', 'The nine roads'),
+      ('Sur les routes de Zhao, le Xiangliu dresse ses neuf têtes, et chacune indique un chemin différent. Demande ta route et choisis le bon moyen de transport pour rejoindre Handan.',
+       'On the roads of Zhao, the Xiangliu rears its nine heads, and each one points a different way. Ask your way and choose the right means of transport to reach Handan.'),
+      ('Les neuf têtes du Xiangliu se nouent entre elles. La route de Handan est libre.', 'The Xiangliu’s nine heads tie themselves in a knot. The road to Handan is clear.')),
+    'hsk1-w8': CHAP(('Le dragon des portes', 'The dragon of the gates'),
+      ('Devant Xianyang, capitale de Qin, veille le Zhulong, dragon-chandelle dont le regard fait le jour et la nuit. Parle-lui du temps qu’il fait, de ce que tu aimes et de ce que tu sais faire.',
+       'Before Xianyang, capital of Qin, watches the Zhulong, the candle dragon whose gaze makes day and night. Talk to it about the weather, what you like and what you can do.'),
+      ('Le Zhulong ferme les yeux : la nuit tombe, et les portes de Qin s’ouvrent devant toi.', 'The Zhulong closes its eyes: night falls, and the gates of Qin open before you.')),
+    'hsk1-final': CHAP(('La cour de Luoyang', 'The court of Luoyang'),
+      ('À Luoyang, avant de remettre ta lettre, les lettrés du roi de Zhou te font passer l’épreuve : écouter et lire comme au HSK 1. Atteins 120 points sur 200.',
+       'In Luoyang, before you hand over your letter, the scholars of the Zhou king put you to the test: listen and read as in the HSK 1. Reach 120 points out of 200.'),
+      ('Les lettrés s’inclinent. Niveau HSK 1 validé : ta lettre est remise !', 'The scholars bow. HSK 1 level complete: your letter is delivered!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
