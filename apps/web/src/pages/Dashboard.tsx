@@ -11,7 +11,7 @@ import { T, DATE_LOCALE } from '../i18n';
 import { useStudyLang } from '../components/StudyLanguage';
 import { ReadingTodayCard } from './Reading';
 import { languageOfLevel, levelLabel } from '@koto/shared';
-import { StudyLanguageSwitch, studyWords } from '../components/StudyLanguage';
+import { studyWords } from '../components/StudyLanguage';
 
 function greeting(ko: boolean) {
   const h = new Date().getHours();
@@ -29,7 +29,6 @@ export function DashboardPage() {
   const words = studyWords(languageOfLevel(d.targetLevel));
   return (
     <div className="flex flex-col gap-8">
-      <StudyLanguageSwitch className="max-w-sm md:hidden" />
       <header className="flex items-start gap-4">
         <div className="min-w-0 flex-1">
         <p lang={words.htmlLang} className="jp text-xl text-ink-soft">{words.ko ? `${d.displayName} 님, ${greeting(true)}` : `${greeting(false)}、${d.displayName}`}</p>

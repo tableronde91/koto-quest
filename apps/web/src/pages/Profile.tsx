@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { levelFromXp } from '@koto/learning-engine';
 import { examLevelLabel, levelsOfLanguage, type DuelLobbyDto, type MeDto } from '@koto/shared';
-import { StudyLanguageSwitch } from '../components/StudyLanguage';
 
 /** Niveaux dont le parcours est publié (les autres sont affichés « bientôt »). */
 const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6']);
@@ -78,11 +77,10 @@ function GoalsSection({ me }: { me: MeDto }) {
   return (
     <section aria-labelledby="goals-title" className="flex flex-col gap-5">
       <h2 id="goals-title" className="text-2xl">{T("Identité et objectifs")}</h2>
+      <p className="-mt-3 text-sm text-ink-soft">{T("Tu étudies le {0}. Pour changer de langue, va dans les ", [(me.preferences.studyLanguage ?? 'ja') === 'ko' ? T('coréen') : T('japonais')])}<Link to="/settings" className="font-bold underline">{T("Réglages")}</Link>.</p>
       <div className="flex flex-wrap gap-6">
         <label className="flex flex-col gap-1 font-bold">{T("Pseudo")}<input className="field w-60 font-normal" defaultValue={me.displayName} maxLength={40} onBlur={(e) => e.target.value.trim() && e.target.value !== me.displayName && update.mutate({ displayName: e.target.value })} />
         </label>
-        <div className="flex flex-col gap-1 font-bold">{T("Langue étudiée")}<StudyLanguageSwitch className="w-72 font-normal" />
-        </div>
         <label className="flex flex-col gap-1 font-bold">{T("Niveau visé")}<select className="field w-44 font-normal" value={p.targetLevel} onChange={(e) => update.mutate({ targetLevel: e.target.value })}>
             {levelsOfLanguage(p.studyLanguage ?? 'ja').map((l) => <option key={l} value={l} disabled={!READY_LEVELS.has(l)}>{READY_LEVELS.has(l) ? examLevelLabel(l) : T("{0} (bientôt)", [examLevelLabel(l)])}</option>)}
           </select>

@@ -81,9 +81,9 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('button', { name: /Examen blanc : Simulation JLPT N1/ }).click();
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByRole('timer')).toBeVisible();
-  await expect(page.getByText(/45:00|44:5\d/)).toBeVisible();
+  await expect(page.getByText(/80:00|79:5\d/)).toBeVisible(); // N1 au format officiel abrégé
   await page.getByTestId('exam-question').getByRole('radio').first().click();
-  await expect(page.getByText('1 réponse sur 44.')).toBeVisible();
+  await expect(page.getByText('1 réponse sur 35.')).toBeVisible();
   await page.getByRole('button', { name: 'Rendre ma copie maintenant' }).click();
   await page.getByRole('button', { name: 'Confirmer : rendre ma copie' }).click();
   await expect(page.getByRole('heading', { name: 'Pas encore le seuil' })).toBeVisible();
@@ -147,7 +147,8 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await page.getByRole('button', { name: 'Retour' }).filter({ visible: true }).click();
   await page.getByRole('tab', { name: /Jouer/ }).click();
   await expect(page.getByRole('heading', { name: 'Mini-jeux' })).toBeVisible();
-  await expect(page.getByTestId('game-card')).toHaveCount(3);
+  await expect(page.getByTestId('game-card')).toHaveCount(4);
+  await expect(page.getByRole('button', { name: /^Jouer à Kana Rush/ })).toBeVisible();
   const playable = page.getByRole('button', { name: /^Jouer à / });
   await expect(playable.first()).toBeVisible();
   await playable.first().click();
@@ -287,10 +288,14 @@ test('appli mobile en coréen : choix de la langue, parcours TOPIK, hangeul et a
   await page.getByRole('tab', { name: 'Expressions' }).click();
   await expect(page.getByText('감사합니다', { exact: true }).first()).toBeVisible();
 
-  // Profil : la langue étudiée se change ici, et le parcours repasse au japonais
+  // La langue étudiée se change dans les réglages (le profil renvoie vers eux), et le parcours repasse au japonais
   await page.goto('/profile');
   await expect(page.getByText(/objectif TOPIK 1/)).toBeVisible();
-  await page.getByRole('radio', { name: /Japonais/ }).click();
+  await expect(page.getByText('Tu étudies le coréen. La langue se change dans les Réglages.')).toBeVisible();
+  await expect(page.getByRole('radio', { name: /Japonais/ })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Réglages' }).click();
+  await Promise.all([page.waitForResponse((r) => r.url().endsWith('/me/preferences') && r.request().method() === 'PUT' && r.ok()), page.getByTestId('study-ja').click()]);
+  await page.goto('/profile');
   await expect(page.getByText(/objectif JLPT N5/)).toBeVisible();
   await page.getByRole('tab', { name: /Parcours/ }).click();
   await expect(page.getByRole('heading', { name: 'N5 : La Voie du samouraï' })).toBeVisible();

@@ -25,7 +25,8 @@ export const GAMES: Record<GameId, GameDef> = {
     title: 'Kana Rush',
     description: 'Reconnais un maximum de hiragana et de katakana en une minute.',
     durationSec: 60,
-    minItems: 6,
+    // Les cinq voyelles de la première leçon suffisent pour jouer
+    minItems: 5,
     kinds: ['kana'],
     questionTypes: ['meaning_choice', 'reverse_choice'],
   },

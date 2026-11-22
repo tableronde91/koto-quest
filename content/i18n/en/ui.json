@@ -960,5 +960,6 @@
  "Sur 180 : réussite à {0}, avec au moins 38/120 et 19/60.": "Out of 180: pass at {0}, with at least 38/120 and 19/60.",
  "Barème du JLPT : réussite à {0}/{1}, avec au moins {2}/{3} en connaissances de la langue, en lecture et en écoute. Version abrégée ; questions rédigées par Koto Quest, non officielles.": "JLPT scoring: pass at {0}/{1}, with at least {2}/{3} in language knowledge, reading and listening. Abridged version; questions written by Koto Quest, not official.",
  "Langue (vocabulaire, grammaire)": "Language (vocabulary, grammar)",
- "Barème du JLPT : réussite à {0}/{1}, avec un minimum dans chaque partie. Examen blanc non officiel.": "JLPT scoring: pass at {0}/{1}, with a minimum in each part. Unofficial mock exam."
+ "Barème du JLPT : réussite à {0}/{1}, avec un minimum dans chaque partie. Examen blanc non officiel.": "JLPT scoring: pass at {0}/{1}, with a minimum in each part. Unofficial mock exam.",
+ "Tu étudies le {0}. Pour changer de langue, va dans les ": "You are studying {0}. To switch language, go to "
 }

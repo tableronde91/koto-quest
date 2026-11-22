@@ -72,14 +72,18 @@ test('coréen : inscription, choix du coréen, leçon de hangeul, saga du hwaran
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByText('다음을 듣고 물음에 맞는 대답을 고르십시오.').first()).toBeVisible();
 
-  // Passage au japonais depuis le parcours, puis retour au coréen
+  // Passage au japonais depuis les réglages (seul endroit où l'on change de langue), puis retour au coréen
+  await page.goto('/settings');
+  await page.getByTestId('study-language').getByRole('radio', { name: /日本語/ }).click();
+  await expect(page.getByTestId('study-language').getByRole('radio', { name: /日本語/ })).toHaveAttribute('aria-checked', 'true');
   await page.goto('/path');
-  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /日本語/ }).click();
   await expect(page.getByRole('heading', { name: /N5 : La Voie du samouraï/ })).toBeVisible();
   await page.goto('/characters');
   await expect(page.getByRole('tab', { name: /Hiragana/ })).toBeVisible();
+  await page.goto('/settings');
+  await page.getByTestId('study-language').getByRole('radio', { name: /한국어/ }).click();
+  await expect(page.getByTestId('study-language').getByRole('radio', { name: /한국어/ })).toHaveAttribute('aria-checked', 'true');
   await page.goto('/path');
-  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /한국어/ }).click();
   await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
   await page.goto('/characters');
   await expect(page.getByRole('tab', { name: /Consonnes/ })).toBeVisible();

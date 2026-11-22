@@ -13,7 +13,7 @@ import { EXAMS } from '@koto/learning-engine';
 import { T } from '../i18n';
 import { sagaFor, storyChapter, type Saga } from '../lib/story';
 import { languageInfo, languageOfLevel, levelLabel } from '@koto/shared';
-import { StudyLanguageSwitch, useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang } from '../components/StudyLanguage';
 
 /** Parcours : chemin vertical de « pierres » (inspiré du sugoroku), une par leçon. */
 const LEVEL_KEY = 'koto-path-level';
@@ -56,7 +56,6 @@ export function PathPage() {
 
   return (
     <div>
-      <StudyLanguageSwitch className="mb-4 max-w-sm" />
       {saga ? <SagaBanner saga={saga} code={data.level.code} region={data.level.region} notice={data.level.notice} done={sagaDone} /> : <PageTitle sub={data.level.notice}>{T("{0} : {1}", [levelLabel(data.level.code), data.level.region])}</PageTitle>}
       {data.levels.length > 1 && (
         <div role="tablist" aria-label={T("Niveau du parcours")} className="mb-6 flex flex-wrap gap-2">

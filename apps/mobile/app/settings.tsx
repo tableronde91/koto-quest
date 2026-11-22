@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Pressable, Switch, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
-import type { NotificationPrefsDto } from '@koto/shared';
+import { STUDY_LANGUAGES, type MeDto, type NotificationPrefsDto, type StudyLanguage } from '@koto/shared';
 import { put } from '../src/api';
 import { useAuth } from '../src/auth';
 import { API_URL } from '../src/config';
@@ -52,6 +52,20 @@ export default function Settings() {
     }
   }
 
+  const [switching, setSwitching] = useState(false);
+  async function chooseStudy(lang: StudyLanguage) {
+    setSwitching(true);
+    try {
+      const next = await put<MeDto>('/me/preferences', { studyLanguage: lang });
+      qc.setQueryData(['me'], next);
+      void qc.invalidateQueries({ predicate: (q) => q.queryKey[0] !== 'me' });
+    } catch (e) {
+      setMsg(e instanceof Error ? e.message : T('Erreur'));
+    } finally {
+      setSwitching(false);
+    }
+  }
+
   const on = !!prefs?.consent && !!prefs?.enabled;
   return (
     <Screen>
@@ -64,6 +78,19 @@ export default function Settings() {
 
       <H2>{T('Langue')}</H2>
       <LanguageSwitch saveToAccount />
+
+      <H2>{T('Langue étudiée')}</H2>
+      <View accessibilityRole="radiogroup" accessibilityLabel={T('Langue étudiée')} style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+        {STUDY_LANGUAGES.map((l) => {
+          const active = (me?.preferences.studyLanguage ?? 'ja') === l.code;
+          return (
+            <Pressable key={l.code} testID={`study-${l.code}`} accessibilityRole="radio" accessibilityState={{ checked: active, disabled: switching }} accessibilityLabel={`${T(l.name)} · ${l.native}`} disabled={switching} onPress={() => !active && chooseStudy(l.code)} style={{ paddingHorizontal: 14, paddingVertical: 8, borderRadius: 99, borderWidth: 2, borderColor: active ? C.ink : C.line, backgroundColor: active ? C.ink : C.surface }}>
+              <Text style={{ fontWeight: '800', color: active ? C.paper : C.inkSoft }}>{`${T(l.name)} · ${l.native}`}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      <P soft style={{ fontSize: 13 }}>{T('Parcours, révisions, lecture et caractères suivent la langue choisie. Ta progression dans l’autre langue est conservée.')}</P>
 
       <H2>{T('Rappels sur ce téléphone')}</H2>
       <Card style={{ gap: 10 }}>

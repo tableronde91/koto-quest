@@ -14,7 +14,7 @@ import { DuelInviteWatcher } from '../pages/Duel';
 import { T } from '../i18n';
 import { SiteFooter } from '../pages/Legal';
 import { FriendRequestWatcher } from './Friends';
-import { StudyLanguageSwitch, studyWords } from './StudyLanguage';
+import { studyWords } from './StudyLanguage';
 
 const NAV = [
   { to: '/', label: T("Accueil"), icon: 'M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z' },
@@ -65,7 +65,6 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
               <p className="jp text-sm text-ink-soft">{words.ko ? '말의 여행' : '言葉の旅'}</p>
             </div>
           </div>
-          <StudyLanguageSwitch compact className="mb-3 shrink-0" />
           {nav.map((n) => (
             <NavLink
               key={n.to}

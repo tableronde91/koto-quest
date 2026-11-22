@@ -500,7 +500,7 @@ test('hors ligne : parcours N4, choix du niveau et première leçon de la forme 
   await expect(page.locator('[data-theme-map="summer"]')).toBeVisible();
   await expect(page.getByRole('tab', { name: /N2/ })).toContainText('0/24 leçons');
   await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N2, examen blanc/ })).toBeVisible();
-  await expect(page.getByText('40 minutes, 42 questions, non officiel')).toBeVisible();
+  await expect(page.getByText('75 minutes, 40 questions, non officiel')).toBeVisible(); // format officiel abrégé
   await expect(page.getByRole('heading', { name: /Chapitre 1 L’observatoire des présages/ })).toBeVisible();
   await page.getByRole('link', { name: /Du point de vue de…/ }).click();
   await expect(page.getByRole('heading', { name: /Du point de vue de… : 〜からすると・〜から見ると/ })).toBeVisible();
@@ -514,7 +514,7 @@ test('hors ligne : parcours N4, choix du niveau et première leçon de la forme 
   await expect(page.locator('[data-theme-map="newyear"]')).toBeVisible();
   await expect(page.getByRole('tab', { name: /N1/ })).toContainText('0/24 leçons');
   await expect(page.getByRole('button', { name: /Île 9 : Simulation JLPT N1, examen blanc/ })).toBeVisible();
-  await expect(page.getByText('45 minutes, 44 questions, non officiel')).toBeVisible();
+  await expect(page.getByText('80 minutes, 35 questions, non officiel')).toBeVisible(); // format officiel abrégé
   await expect(page.getByRole('heading', { name: /Chapitre 1 La cérémonie de succession/ })).toBeVisible();
   await page.getByRole('tab', { name: /N4/ }).click();
 
@@ -896,8 +896,13 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await expect(page.getByText('ももたろう')).toHaveCount(0);
 
   // Retour au japonais : le parcours N5 et les contes japonais reviennent, la progression coréenne reste
+  // La langue étudiée ne se change plus que dans les réglages
   await page.goto(FILE + '#/path');
-  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /日本語/ }).click();
+  await expect(page.getByTestId('study-language')).toHaveCount(0);
+  await page.goto(FILE + '#/settings');
+  await page.getByTestId('study-language').getByRole('radio', { name: /日本語/ }).click();
+  await expect(page.getByTestId('study-language').getByRole('radio', { name: /日本語/ })).toHaveAttribute('aria-checked', 'true');
+  await page.goto(FILE + '#/path');
   await expect(page.getByRole('heading', { name: /N5 : La Voie du samouraï/ })).toBeVisible();
   // Contes japonais du N5 au N1, dont les nouveaux
   await page.goto(FILE + '#/lecture');
@@ -905,8 +910,10 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await expect(page.getByText('Hōichi sans oreilles').first()).toBeVisible();
   await expect(page.getByText('La Jeune Fille au bol').first()).toBeVisible();
   await expect(page.getByText('해님 달님')).toHaveCount(0);
+  await page.goto(FILE + '#/settings');
+  await page.getByTestId('study-language').getByRole('radio', { name: /한국어/ }).click();
+  await expect(page.getByTestId('study-language').getByRole('radio', { name: /한국어/ })).toHaveAttribute('aria-checked', 'true');
   await page.goto(FILE + '#/path');
-  await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /한국어/ }).click();
   await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
   await expect(page.getByText('1/4').first()).toBeVisible();
 });
