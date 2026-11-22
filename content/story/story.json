@@ -2145,11 +2145,11 @@
   },
   "B2": {
    "glyph": "K",
-   "jp": "The Green Knight",
-   "color": "#3E7A3A",
+   "jp": "Camlann",
+   "color": "#5A2E3A",
    "saga": {
-    "fr": "Le Chevalier vert",
-    "en": "The Green Knight"
+    "fr": "La trahison de Mordred",
+    "en": "Mordred’s treachery"
    },
    "hero": {
     "fr": "Champion·ne de Camelot",
@@ -2160,26 +2160,26 @@
     "en": "The champion"
    },
    "prologue": {
-    "fr": "Le soir de Noël, un géant vert entre à cheval dans la grande salle de Camelot et lance un défi : dans un an, quelqu’un devra le retrouver à la chapelle verte. Arthur te choisit, et Avalon & Co. te confie son expansion dans les Marches galloises. Sur la route, il faudra diriger une équipe, négocier, présenter et convaincre au plus haut niveau.",
-    "en": "On Christmas Eve, a green giant rides into the great hall of Camelot and issues a challenge: in a year, someone must find him at the Green Chapel. Arthur chooses you, and Avalon & Co. puts you in charge of its expansion into the Welsh Marches. On the way, you will have to lead a team, negotiate, present and persuade at the highest level."
+    "fr": "Pendant qu’Arthur guerroie au-delà des mers, son neveu Mordred s’empare du trône et sème la discorde à Camelot. Arthur te charge de rallier les chevaliers, et Avalon & Co. te confie son expansion dans les Marches galloises. Sur la route, il faudra diriger une équipe, négocier, présenter et convaincre au plus haut niveau.",
+    "en": "While Arthur wages war overseas, his nephew Mordred seizes the throne and sows discord in Camelot. Arthur asks you to rally the knights, and Avalon & Co. puts you in charge of its expansion into the Welsh Marches. On the way, you will have to lead a team, negotiate, present and persuade at the highest level."
    },
    "epilogue": {
-    "fr": "Dans la chapelle verte, le géant lève sa hache… puis sourit : tu as tenu parole sans faiblir. Il te tend une ceinture verte, signe d’honneur, et Camelot fête ton retour.",
-    "en": "In the Green Chapel, the giant raises his axe… then smiles: you kept your word without flinching. He hands you a green girdle, a mark of honour, and Camelot celebrates your return."
+    "fr": "Sur la plaine de Camlann, les chevaliers que tu as convaincus se rangent derrière Arthur. Mordred est vaincu, mais le roi est blessé : il te tend Excalibur et murmure qu’une dernière quête t’attend.",
+    "en": "On the plain of Camlann, the knights you persuaded line up behind Arthur. Mordred is defeated, but the king is wounded: he hands you Excalibur and whispers that one last quest awaits you."
    },
    "chapters": {
     "b2-w1": {
      "title": {
-      "fr": "Le chien des marais",
-      "en": "The marsh dog"
+      "fr": "Le chien des landes",
+      "en": "The moorland hound"
      },
      "intro": {
-      "fr": "Sur la côte, Black Shuck, le chien fantôme aux yeux de braise, garde le chemin. Il veut entendre ce qui serait arrivé si tes projets passés s’étaient déroulés autrement.",
-      "en": "On the coast, Black Shuck, the ghost dog with burning eyes, guards the path. He wants to hear what would have happened if your past projects had gone differently."
+      "fr": "Dans les ruelles d’York, le Barghest, chien-gobelin aux griffes immenses, garde le chemin. Il veut entendre ce qui serait arrivé si tes projets passés s’étaient déroulés autrement.",
+      "en": "In the alleys of York, the Barghest, a goblin hound with huge claws, guards the path. He wants to hear what would have happened if your past projects had gone differently."
      },
      "outro": {
-      "fr": "Le chien noir s’efface dans la brume des marais.",
-      "en": "The black dog fades into the marsh mist."
+      "fr": "Le Barghest s’efface dans la brume des landes.",
+      "en": "The Barghest fades into the moorland mist."
      }
     },
     "b2-w2": {
@@ -2212,16 +2212,16 @@
     },
     "b2-w4": {
      "title": {
-      "fr": "Le grenier en désordre",
-      "en": "The messy attic"
+      "fr": "La mine qui résonne",
+      "en": "The echoing mine"
      },
      "intro": {
-      "fr": "Dans les nouveaux bureaux, le Boggart du grenier a tout cassé. Fais réparer, installer et vérifier ce qu’il faut pour qu’il se calme.",
-      "en": "In the new offices, the attic Boggart has broken everything. Get things repaired, installed and checked so that it calms down."
+      "fr": "Sous les collines galloises, les Coblynau frappent les parois et ont cassé toutes les machines du nouveau site. Fais réparer, installer et vérifier ce qu’il faut pour qu’ils se calment.",
+      "en": "Beneath the Welsh hills, the Coblynau knock on the walls and have broken every machine at the new site. Get things repaired, installed and checked so that they calm down."
      },
      "outro": {
-      "fr": "Le boggart, vexé, va chercher une autre maison à hanter.",
-      "en": "Offended, the boggart goes off to haunt another house."
+      "fr": "Les coups cessent : les Coblynau retournent à leurs galeries.",
+      "en": "The knocking stops: the Coblynau return to their tunnels."
      }
     },
     "b2-w5": {
@@ -2268,30 +2268,183 @@
     },
     "b2-w8": {
      "title": {
-      "fr": "La parole donnée",
-      "en": "The word given"
+      "fr": "Le discours du traître",
+      "en": "The traitor’s speech"
      },
      "intro": {
-      "fr": "Le Chevalier vert t’attend au bout du chemin. Il exige que tu tiennes parole : convaincs-le avec des arguments impeccables et un langage diplomatique.",
-      "en": "The Green Knight awaits you at the end of the path. He demands that you keep your word: convince him with flawless arguments and diplomatic language."
+      "fr": "À Camelot, Mordred, le traître, harangue les chevaliers pour les rallier à sa cause. Réponds-lui avec des arguments impeccables et un langage diplomatique.",
+      "en": "In Camelot, Mordred harangues the knights to win them to his cause. Answer him with flawless arguments and diplomatic language."
      },
      "outro": {
-      "fr": "Le Chevalier vert hoche la tête : « Rendez-vous à la chapelle. »",
-      "en": "The Green Knight nods: “We meet at the chapel.”"
+      "fr": "Les chevaliers se détournent de Mordred, qui s’enfuit vers Camlann.",
+      "en": "The knights turn away from Mordred, who flees towards Camlann."
      }
     },
     "b2-final": {
      "title": {
-      "fr": "La chapelle verte",
-      "en": "The Green Chapel"
+      "fr": "La bataille de Camlann",
+      "en": "The battle of Camlann"
      },
      "intro": {
-      "fr": "Dans la chapelle verte, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B2 pour sortir la tête haute.",
-      "en": "In the Green Chapel, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B2 score to leave with your head held high."
+      "fr": "À Camlann, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B2 pour remporter la bataille.",
+      "en": "At Camlann, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B2 score to win the battle."
      },
      "outro": {
-      "fr": "La ceinture verte est à toi. Niveau B2 validé !",
-      "en": "The green girdle is yours. B2 level complete!"
+      "fr": "La bataille est gagnée. Niveau B2 validé !",
+      "en": "The battle is won. B2 level complete!"
+     }
+    }
+   }
+  },
+  "C1": {
+   "glyph": "E",
+   "jp": "Excalibur",
+   "color": "#2E5A8A",
+   "saga": {
+    "fr": "Le retour d’Excalibur",
+    "en": "The return of Excalibur"
+   },
+   "hero": {
+    "fr": "Héritier·ère d’Arthur",
+    "en": "Heir of Arthur"
+   },
+   "short": {
+    "fr": "L’héritier·ère",
+    "en": "The heir"
+   },
+   "prologue": {
+    "fr": "Blessé lors de sa dernière bataille, Arthur te confie Excalibur : l’épée doit retourner à la Dame du Lac, au-delà des îles du Nord. Avalon & Co. te nomme à sa direction pour la traversée. Pour mener à bien cette ultime quête, il faudra maîtriser l’anglais le plus fin : nuances, registre, persuasion.",
+    "en": "Wounded in his last battle, Arthur entrusts Excalibur to you: the sword must return to the Lady of the Lake, beyond the Northern Isles. Avalon & Co. appoints you to lead the company for the crossing. To complete this final quest, you will need to master the finest English: nuance, register, persuasion."
+   },
+   "epilogue": {
+    "fr": "Une main sort de l’eau et saisit Excalibur. La Dame du Lac t’adresse un sourire : « Tu parles désormais comme les rois. » Au loin, la barque d’Avalon s’éloigne dans la brume. Ta quête est accomplie.",
+    "en": "A hand rises from the water and grasps Excalibur. The Lady of the Lake smiles at you: “You now speak as kings do.” In the distance, the barge of Avalon glides away into the mist. Your quest is complete."
+   },
+   "chapters": {
+    "c1-w1": {
+     "title": {
+      "fr": "Le démon sans peau",
+      "en": "The skinless demon"
+     },
+     "intro": {
+      "fr": "Aux Orcades, le Nuckelavee sort de la mer et répand la maladie. Seules les hypothèses les plus subtiles, formulées dans un anglais soutenu, peuvent le repousser.",
+      "en": "In Orkney, the Nuckelavee rises from the sea and spreads disease. Only the subtlest hypotheses, expressed in formal English, can drive it back."
+     },
+     "outro": {
+      "fr": "Le Nuckelavee recule dans les vagues et l’air redevient pur.",
+      "en": "The Nuckelavee retreats into the waves and the air is clean again."
+     }
+    },
+    "c1-w2": {
+     "title": {
+      "fr": "La tempête en vers",
+      "en": "The storm in verse"
+     },
+     "intro": {
+      "fr": "Dans le détroit du Minch, les Hommes bleus soulèvent la tempête et lancent des défis en vers. Réponds avec l’expression juste pour traverser.",
+      "en": "In the Minch strait, the Blue Men raise a storm and challenge you in verse. Answer with the right expression to cross."
+     },
+     "outro": {
+      "fr": "Les Hommes bleus éclatent de rire et calment les flots.",
+      "en": "The Blue Men burst out laughing and calm the waters."
+     }
+    },
+    "c1-w3": {
+     "title": {
+      "fr": "Le sage à tête de loup",
+      "en": "The wolf-headed sage"
+     },
+     "intro": {
+      "fr": "Aux Shetland, le Wulver pêche en silence. Ce sage n’écoute que les phrases concises et parfaitement liées.",
+      "en": "In Shetland, the Wulver fishes in silence. This sage only listens to concise, perfectly linked sentences."
+     },
+     "outro": {
+      "fr": "Le Wulver hoche la tête et te tend un poisson en signe d’amitié.",
+      "en": "The Wulver nods and hands you a fish as a sign of friendship."
+     }
+    },
+    "c1-w4": {
+     "title": {
+      "fr": "Les ailes à la fenêtre",
+      "en": "Wings at the window"
+     },
+     "intro": {
+      "fr": "Une nuit, la Gwrach y Rhibyn frappe à ta fenêtre. Elle exige qu’on lui parle dans la langue la plus soutenue.",
+      "en": "One night, the Gwrach y Rhibyn taps at your window. She demands to be addressed in the most formal language."
+     },
+     "outro": {
+      "fr": "La sorcière replie ses ailes et s’envole sans prononcer ton nom.",
+      "en": "The hag folds her wings and flies off without calling your name."
+     }
+    },
+    "c1-w5": {
+     "title": {
+      "fr": "Le marteau de l’hiver",
+      "en": "The hammer of winter"
+     },
+     "intro": {
+      "fr": "Dans les Highlands, la Cailleach, reine de l’hiver, façonne les montagnes de son marteau. Elle veut des phrases aussi denses et solides que la pierre.",
+      "en": "In the Highlands, the Cailleach shapes the mountains with her hammer. She wants sentences as dense and solid as stone."
+     },
+     "outro": {
+      "fr": "La Cailleach pose son marteau : le printemps peut venir.",
+      "en": "The Cailleach lays down her hammer: spring may come."
+     }
+    },
+    "c1-w6": {
+     "title": {
+      "fr": "Le serpent de la baie",
+      "en": "The serpent of the bay"
+     },
+     "intro": {
+      "fr": "Dans la baie de Falmouth, Morgawr, le serpent de mer, ne se montre qu’à ceux qui nuancent chacune de leurs affirmations.",
+      "en": "In Falmouth Bay, Morgawr only shows itself to those who qualify every claim."
+     },
+     "outro": {
+      "fr": "Le serpent émerge un instant, te salue, puis replonge.",
+      "en": "The serpent surfaces for a moment, greets you, then dives again."
+     }
+    },
+    "c1-w7": {
+     "title": {
+      "fr": "La jatte de crème",
+      "en": "The bowl of cream"
+     },
+     "intro": {
+      "fr": "Au moulin, le Hob travaille la nuit en échange d’un peu de crème. Mais un mot mal placé, et il partira pour toujours.",
+      "en": "At the mill, the Hob works at night in exchange for a little cream. But one misplaced word, and he will leave forever."
+     },
+     "outro": {
+      "fr": "Le Hob boit sa crème et le moulin tourne jusqu’à l’aube.",
+      "en": "The Hob drinks his cream and the mill turns until dawn."
+     }
+    },
+    "c1-w8": {
+     "title": {
+      "fr": "Le bord du lac",
+      "en": "The lakeshore"
+     },
+     "intro": {
+      "fr": "Au bord du lac, la Dame du Lac attend. Elle ne reprendra Excalibur qu’à qui plaidera sa cause avec une éloquence parfaite.",
+      "en": "At the lakeshore, the Lady of the Lake waits. She will only take back Excalibur from one who pleads their case with perfect eloquence."
+     },
+     "outro": {
+      "fr": "La Dame du Lac tend la main : il ne reste qu’une épreuve.",
+      "en": "The Lady of the Lake holds out her hand: only one trial remains."
+     }
+    },
+    "c1-final": {
+     "title": {
+      "fr": "L’île d’Avalon",
+      "en": "The Isle of Avalon"
+     },
+     "intro": {
+      "fr": "Sur l’île d’Avalon, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau C1 pour rendre Excalibur.",
+      "en": "On the Isle of Avalon, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the C1 score to return Excalibur."
+     },
+     "outro": {
+      "fr": "Excalibur repose dans le lac. Niveau C1 validé : ta quête d’anglais est accomplie !",
+      "en": "Excalibur rests in the lake. C1 level complete: your English quest is accomplished!"
      }
     }
    }

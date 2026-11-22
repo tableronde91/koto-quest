@@ -984,7 +984,6 @@
  "On commence par les salutations et les phrases de tous les jours.": "We start with greetings and everyday phrases.",
  "Préparation au TOEIC, du niveau A1 au C1": "TOEIC preparation, from level A1 to C1",
  "Le TOEIC se passe toute l’année, dans des centres agréés ou en ligne selon les pays. Sans date, tu avances à ton rythme.": "The TOEIC can be taken all year round, in approved centres or online depending on the country. Without a date, you progress at your own pace.",
- "Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Le parcours A1 est prêt, les suivants arrivent.": "Levels follow the Common European Framework (CEFR); the TOEIC score shown is the one matching each level. The A1 path is ready, the next ones are on their way.",
  "Pas encore le score visé ({0})": "Not yet the target score ({0})",
  "Petit défi d’anglais": "Little English challenge",
  "Phrases à compléter et questions-réponses : au format du TOEIC, consignes en anglais.": "Incomplete sentences and question-response: in TOEIC format, instructions in English.",
@@ -1009,5 +1008,6 @@
  "Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.": "Koto Quest has a single mission: to help everyone learn a language and walk into their exam with confidence — the JLPT for Japanese, the TOPIK for Korean, the TOEIC for English. From the first word to the mock exam, you progress in 5 to 10-minute lessons, with reviews that come back just when you were about to forget.",
  "et expressions": "and expressions",
  "Grammaire maîtrisée": "Grammar mastered",
- "points de grammaire": "grammar points"
+ "points de grammaire": "grammar points",
+ "Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Les cinq parcours, de A1 à C1, sont prêts.": "Levels follow the Common European Framework (CEFR); the TOEIC score shown is the one matching each level. All five paths, from A1 to C1, are ready."
 }

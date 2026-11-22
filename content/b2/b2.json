@@ -2,7 +2,7 @@
  "contentVersion": "2026.11.22",
  "level": {
   "code": "B2",
-  "title": "B2 : le Chevalier vert",
+  "title": "B2 : la trahison de Mordred",
   "region": "Marches galloises",
   "order": 27
  },
@@ -10,13 +10,13 @@
  "worlds": [
   {
    "slug": "b2-w1",
-   "title": "Le chien noir des marais",
+   "title": "Le chien des landes",
    "region": "Marches galloises",
    "description": "Revenir sur le passé : le troisième conditionnel, les conditionnels mixtes et les regrets.",
    "boss": {
-    "name": "Black Shuck, le chien fantôme",
+    "name": "Le Barghest des landes",
     "glyph": "b",
-    "intro": "Ce chien noir aux yeux de braise erre sur les côtes de l’East Anglia. Il ne laisse passer que ceux qui savent dire ce qui serait arrivé si les choses s’étaient passées autrement."
+    "intro": "Ce chien-gobelin aux griffes immenses hante les ruelles d’York et les landes du Yorkshire. Il ne laisse passer que ceux qui savent dire ce qui serait arrivé si les choses s’étaient passées autrement."
    },
    "chapters": [
     {
@@ -258,11 +258,11 @@
          "prompt": "Que réponds-tu ?",
          "lines": [
           {
-           "speaker": "Black Shuck",
+           "speaker": "Barghest",
            "jp": "You missed the flight. What do you regret?"
           }
          ],
-         "translation": "Le chien fantôme t’interroge sur tes regrets.",
+         "translation": "Le Barghest t’interroge sur tes regrets.",
          "choices": [
           "I should have left home earlier.",
           "I should leave home earlier yesterday.",
@@ -1228,13 +1228,13 @@
   },
   {
    "slug": "b2-w4",
-   "title": "Le boggart du grenier",
+   "title": "La mine des Coblynau",
    "region": "Marches galloises",
    "description": "Déléguer et organiser : la forme causative (have / get something done), et les verbes make, let, help.",
    "boss": {
-    "name": "Le Boggart du grenier",
+    "name": "Les Coblynau des mines",
     "glyph": "h",
-    "intro": "Cet esprit farceur casse tout dans les maisons et les bureaux. Il ne se calme que si tu sais faire réparer ce qu’il a abîmé."
+    "intro": "Ces petits lutins des mines galloises frappent les parois et cassent les outils des mineurs. Ils ne se calment que si tu sais faire réparer ce qu’ils ont abîmé."
    },
    "chapters": [
     {
@@ -2834,13 +2834,13 @@
   },
   {
    "slug": "b2-w8",
-   "title": "Le défi du Chevalier vert",
+   "title": "La trahison de Mordred",
    "region": "Marches galloises",
    "description": "Argumenter et persuader : inversions d’insistance simples, phrases emphatiques et langage diplomatique.",
    "boss": {
-    "name": "Le Chevalier vert",
+    "name": "Mordred, le traître",
     "glyph": "k",
-    "intro": "Géant vert monté sur un cheval vert, il a lancé un défi à Camelot il y a un an. Aujourd’hui, il exige que tu tiennes parole : convaincs-le avec des arguments impeccables."
+    "intro": "Neveu d’Arthur, Mordred a profité de l’absence du roi pour s’emparer du trône. Il tente de rallier les chevaliers par de beaux discours : convaincs-les mieux que lui, avec des arguments impeccables."
    },
    "chapters": [
     {
@@ -3150,11 +3150,11 @@
          "prompt": "Que réponds-tu ?",
          "lines": [
           {
-           "speaker": "Green Knight",
+           "speaker": "Mordred",
            "jp": "Your plan is a disaster!"
           }
          ],
-         "translation": "Le Chevalier vert critique durement ton plan. Réponds avec diplomatie.",
+         "translation": "Mordred critique durement ton plan. Réponds avec diplomatie.",
          "choices": [
           "I appreciate your feedback. Perhaps we could look at it together?",
           "No, your plan is a disaster!",
@@ -3209,7 +3209,7 @@
   },
   {
    "slug": "b2-final",
-   "title": "Simulation TOEIC B2 : la chapelle verte",
+   "title": "Simulation TOEIC B2 : la bataille de Camlann",
    "region": "Marches galloises",
    "description": "Examen blanc au format du TOEIC Listening & Reading, en anglais : questions-réponses, conversations et annonces, phrases et textes à compléter, compréhension écrite. Noté sur 990 ; objectif B2 à 785 points.",
    "exam": "b2-toeic",

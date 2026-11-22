@@ -49,7 +49,7 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
     { value: 'A2', label: T("A2 — survie (TOEIC 225+)"), ready: true },
     { value: 'B1', label: T("B1 — seuil (TOEIC 550+)"), ready: true },
     { value: 'B2', label: T("B2 — avancé (TOEIC 785+)"), ready: true },
-    { value: 'C1', label: T("C1 — autonome (TOEIC 945+)"), ready: false },
+    { value: 'C1', label: T("C1 — autonome (TOEIC 945+)"), ready: true },
   ],
 };
 const AREAS: { value: DifficultArea; label: string }[] = [
@@ -145,7 +145,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
             onChange={(v) => set({ targetLevel: v as JlptCode })}
             options={TARGETS[lang].map((t) => ({ value: t.value, label: t.label, hint: t.ready ? T("Disponible") : T("En préparation"), disabled: !t.ready }))}
           />
-          {lang === 'en' && <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Le parcours A1 est prêt, les suivants arrivent.")}</p>}
+          {lang === 'en' && <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Les cinq parcours, de A1 à C1, sont prêts.")}</p>}
           {lang === 'ko' && <p className="mt-3 text-sm text-ink-soft">{T("Le TOPIK I regroupe les niveaux 1 et 2 (parcours {0} et {1}), le TOPIK II les niveaux 3 à 6 (parcours {2}, {3}, {4} et {5}) : tous les parcours sont prêts.", [levelLabel('TOPIK1'), levelLabel('TOPIK2'), levelLabel('TOPIK3'), levelLabel('TOPIK4'), levelLabel('TOPIK5'), levelLabel('TOPIK6')])}</p>}
         </>
       ),

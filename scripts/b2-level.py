@@ -1,14 +1,14 @@
 # Niveau B2 (anglais, CECRL B2, préparation au TOEIC) : 8 îles, 24 leçons et un examen blanc TOEIC (français + anglais).
-# Mode histoire : défi du Chevalier vert, responsable d'équipe chez Avalon & Co.
+# Mode histoire : la trahison de Mordred, responsable d'équipe chez Avalon & Co.
 # Usage : python3 scripts/b2-level.py   (réécrit content/b2/b2.json)
 from en_common import *
 
 REGION = 'Marches galloises'
 
 # ═════════════════════════ Île 1 : Les regrets ═════════════════════════
-W1 = WORLD('b2-w1', ('Le chien noir des marais', 'The black dog of the marshes'), REGION,
+W1 = WORLD('b2-w1', ('Le chien des landes', 'The moorland hound'), REGION,
   ('Revenir sur le passé : le troisième conditionnel, les conditionnels mixtes et les regrets.', 'Look back on the past: the third conditional, mixed conditionals and regrets.'),
-  (('Black Shuck, le chien fantôme', 'Black Shuck, the ghost dog'), 'b', ('Ce chien noir aux yeux de braise erre sur les côtes de l’East Anglia. Il ne laisse passer que ceux qui savent dire ce qui serait arrivé si les choses s’étaient passées autrement.', 'This black dog with burning eyes roams the coasts of East Anglia. It only lets pass those who can say what would have happened if things had gone differently.')),
+  (('Le Barghest des landes', 'The Barghest of the moors'), 'b', ('Ce chien-gobelin aux griffes immenses hante les ruelles d’York et les landes du Yorkshire. Il ne laisse passer que ceux qui savent dire ce qui serait arrivé si les choses s’étaient passées autrement.', 'This goblin hound with huge claws haunts the alleys of York and the Yorkshire moors. It only lets pass those who can say what would have happened if things had gone differently.')),
   [CH('b2-w1-c1', ('Si seulement…', 'If only…'), [
     L('en-third-conditional', ('Le troisième conditionnel : If I had known…', 'The third conditional: If I had known…'), ('Imaginer un passé différent et ses conséquences.', 'Imagine a different past and its consequences.'), 10, [
         ('If + past perfect, would have + participe passé : If I had known about the meeting, I would have come. (Je ne savais pas, je ne suis pas venu.)', 'If + past perfect, would have + past participle: If I had known about the meeting, I would have come. (I didn’t know, I didn’t come.)'),
@@ -47,7 +47,7 @@ W1 = WORLD('b2-w1', ('Le chien noir des marais', 'The black dog of the marshes')
         FB(CHOOSE, 'If I had studied medicine, I ＿ a doctor now.', ['would be', 'would have been', 'had been'], 'would be', ('Cause passée, résultat présent : would be.', 'Past cause, present result: would be.'), ('Si j’avais fait médecine, je serais médecin aujourd’hui.', 'If I had studied medicine, I would be a doctor now.')),
         FB(CHOOSE, 'I wish I ＿ that email. Now everyone is angry.', ['hadn’t sent', 'didn’t send', 'wouldn’t send'], 'hadn’t sent', ('Regret sur le passé : wish + past perfect.', 'Regret about the past: wish + past perfect.'), ('Je regrette d’avoir envoyé cet e-mail. Maintenant tout le monde est fâché.', 'I wish I hadn’t sent that email. Now everyone is angry.')),
         FB(CHOOSE, 'If he ＿ so shy, he would have spoken at the meeting.', ['weren’t', 'hadn’t', 'wouldn’t be'], 'weren’t', ('Trait présent, conséquence passée : If + prétérit.', 'Present trait, past result: If + past simple.'), ('S’il n’était pas si timide, il aurait pris la parole à la réunion.', 'If he weren’t so shy, he would have spoken at the meeting.')),
-        DC(ANSWER, [('Black Shuck', 'You missed the flight. What do you regret?')], ('Le chien fantôme t’interroge sur tes regrets.', 'The ghost dog asks about your regrets.'), ['I should have left home earlier.', 'I should leave home earlier yesterday.', 'I must have left earlier, I regret.'], 'I should have left home earlier.', ('Regret : should have + participe.', 'Regret: should have + participle.')),
+        DC(ANSWER, [('Barghest', 'You missed the flight. What do you regret?')], ('Le Barghest t’interroge sur tes regrets.', 'The Barghest asks about your regrets.'), ['I should have left home earlier.', 'I should leave home earlier yesterday.', 'I must have left earlier, I regret.'], 'I should have left home earlier.', ('Regret : should have + participe.', 'Regret: should have + participle.')),
       ]),
   ]),
   CH('b2-w1-c2', ('Le bilan', 'The review'), [
@@ -210,9 +210,9 @@ W3 = WORLD('b2-w3', ('L’étang du Grindylow', 'The Grindylow’s pond'), REGIO
   ])])
 
 # ═════════════════════════ Île 4 : Faire faire ═════════════════════════
-W4 = WORLD('b2-w4', ('Le boggart du grenier', 'The attic boggart'), REGION,
+W4 = WORLD('b2-w4', ('La mine des Coblynau', 'The Coblynau’s mine'), REGION,
   ('Déléguer et organiser : la forme causative (have / get something done), et les verbes make, let, help.', 'Delegate and organise: the causative (have / get something done), and make, let, help.'),
-  (('Le Boggart du grenier', 'The attic Boggart'), 'h', ('Cet esprit farceur casse tout dans les maisons et les bureaux. Il ne se calme que si tu sais faire réparer ce qu’il a abîmé.', 'This mischievous spirit breaks everything in homes and offices. It only calms down if you know how to get what it damaged repaired.')),
+  (('Les Coblynau des mines', 'The Coblynau of the mines'), 'h', ('Ces petits lutins des mines galloises frappent les parois et cassent les outils des mineurs. Ils ne se calment que si tu sais faire réparer ce qu’ils ont abîmé.', 'These little goblins of the Welsh mines knock on the walls and break the miners’ tools. They only calm down if you know how to get what they damaged repaired.')),
   [CH('b2-w4-c1', ('Le faire faire', 'Getting it done'), [
     L('en-causative', ('La forme causative : have something done', 'The causative: have something done'), ('Dire qu’on fait faire quelque chose par un professionnel.', 'Say that someone else does something for you.'), 10, [
         ('have + objet + participe passé : I had my car repaired (on m’a réparé ma voiture). We’re having the office painted.', 'have + object + past participle: I had my car repaired. We’re having the office painted.'),
@@ -478,9 +478,9 @@ W7 = WORLD('b2-w7', ('La chasse sauvage', 'The Wild Hunt'), REGION,
   ])])
 
 # ═════════════════════════ Île 8 : Le défi ═════════════════════════
-W8 = WORLD('b2-w8', ('Le défi du Chevalier vert', 'The Green Knight’s challenge'), REGION,
+W8 = WORLD('b2-w8', ('La trahison de Mordred', 'Mordred’s treachery'), REGION,
   ('Argumenter et persuader : inversions d’insistance simples, phrases emphatiques et langage diplomatique.', 'Argue and persuade: simple emphatic inversion, cleft sentences and diplomatic language.'),
-  (('Le Chevalier vert', 'The Green Knight'), 'k', ('Géant vert monté sur un cheval vert, il a lancé un défi à Camelot il y a un an. Aujourd’hui, il exige que tu tiennes parole : convaincs-le avec des arguments impeccables.', 'A green giant on a green horse, he challenged Camelot a year ago. Today, he demands that you keep your word: convince him with flawless arguments.')),
+  (('Mordred, le traître', 'Mordred the traitor'), 'k', ('Neveu d’Arthur, Mordred a profité de l’absence du roi pour s’emparer du trône. Il tente de rallier les chevaliers par de beaux discours : convaincs-les mieux que lui, avec des arguments impeccables.', 'Arthur’s nephew, Mordred seized the throne while the king was away. He tries to win the knights over with fine speeches: persuade them better than he does, with flawless arguments.')),
   [CH('b2-w8-c1', ('Insister', 'Emphasis'), [
     L('en-cleft', ('Les phrases emphatiques : What we need is…', 'Cleft sentences: What we need is…'), ('Mettre en relief une idée avec It is… that et What… is.', 'Highlight an idea with It is… that and What… is.'), 10, [
         ('It is / was + élément + that / who : It was Sarah who found the solution (c’est Sarah qui…).', 'It is / was + element + that / who: It was Sarah who found the solution.'),
@@ -534,12 +534,12 @@ W8 = WORLD('b2-w8', ('Le défi du Chevalier vert', 'The Green Knight’s challen
         x('I’m afraid we’re not in a position to offer a bigger discount.', 'Je crains que nous ne soyons pas en mesure d’accorder une remise plus importante.'),
         x('The report is not entirely accurate. We might want to check the figures again.', 'Le rapport n’est pas tout à fait exact. Il faudrait peut-être revérifier les chiffres.'),
       ], [
-        DC(ANSWER, [('Green Knight', 'Your plan is a disaster!')], ('Le Chevalier vert critique durement ton plan. Réponds avec diplomatie.', 'The Green Knight harshly criticises your plan. Answer diplomatically.'), ['I appreciate your feedback. Perhaps we could look at it together?', 'No, your plan is a disaster!', 'Be quiet, please.'], 'I appreciate your feedback. Perhaps we could look at it together?', ('Remercier puis proposer.', 'Thank, then propose.')),
+        DC(ANSWER, [('Mordred', 'Your plan is a disaster!')], ('Mordred critique durement ton plan. Réponds avec diplomatie.', 'Mordred harshly criticises your plan. Answer diplomatically.'), ['I appreciate your feedback. Perhaps we could look at it together?', 'No, your plan is a disaster!', 'Be quiet, please.'], 'I appreciate your feedback. Perhaps we could look at it together?', ('Remercier puis proposer.', 'Thank, then propose.')),
         FB(COMPLETE, 'Unfortunately, we are ＿ to deliver before June.', ['unable', 'impossible', 'not possible'], 'unable', ('be unable to = ne pas pouvoir.', 'be unable to = cannot.'), ('Malheureusement, nous ne sommes pas en mesure de livrer avant juin.', 'Unfortunately, we are unable to deliver before June.')),
         FB(COMPLETE, 'The results are not ＿ satisfactory.', ['entirely', 'whole', 'complete'], 'entirely', ('not entirely = pas tout à fait.', 'not entirely = not completely.'), ('Les résultats ne sont pas tout à fait satisfaisants.', 'The results are not entirely satisfactory.')),
         TF('I’m not in a position to accept your offer.', ('La personne accepte l’offre.', 'The person accepts the offer.'), FAUX, ('not in a position to = pas en mesure de.', 'not in a position to = unable to.')),
       ]),
   ])])
 
-write_level('B2', ('B2 : le Chevalier vert', 'B2: the Green Knight'), REGION, 'Welsh Marches', 27,
-  [W1, W2, W3, W4, W5, W6, W7, W8, FINAL('B2', REGION, ('Simulation TOEIC B2 : la chapelle verte', 'TOEIC B2 simulation: the Green Chapel'), 785)], PREVIOUS + ['content/a2/a2.json', 'content/b1/b1.json'])
+write_level('B2', ('B2 : la trahison de Mordred', 'B2: Mordred’s treachery'), REGION, 'Welsh Marches', 27,
+  [W1, W2, W3, W4, W5, W6, W7, W8, FINAL('B2', REGION, ('Simulation TOEIC B2 : la bataille de Camlann', 'TOEIC B2 simulation: the battle of Camlann'), 785)], PREVIOUS + ['content/a2/a2.json', 'content/b1/b1.json'])

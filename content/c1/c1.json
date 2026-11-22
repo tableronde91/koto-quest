@@ -1,0 +1,3260 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "C1",
+  "title": "C1 : le retour d’Excalibur",
+  "region": "Îles du Nord",
+  "order": 26
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau C1 du CECRL et préparent au TOEIC Listening & Reading, mais ne sont pas des listes officielles d’ETS.",
+ "worlds": [
+  {
+   "slug": "c1-w1",
+   "title": "Le démon de la mer",
+   "region": "Îles du Nord",
+   "description": "Formuler des hypothèses au registre soutenu : inversions conditionnelles, but for, otherwise, suppose.",
+   "boss": {
+    "name": "Le Nuckelavee des Orcades",
+    "glyph": "n",
+    "intro": "Ce démon marin, mi-cheval mi-homme et sans peau, sème la maladie sur les îles. Seuls ceux qui maîtrisent les hypothèses les plus subtiles peuvent le repousser vers la mer."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w1-c1",
+     "title": "Si jamais…",
+     "lessons": [
+      {
+       "slug": "en-conditional-inversion",
+       "title": "L’inversion conditionnelle : Should you…, Had I…",
+       "objective": "Remplacer if par une inversion dans les écrits formels.",
+       "minutes": 10,
+       "explanation": [
+        "Should + sujet + verbe = If… (éventualité) : Should you require further information, please contact us.",
+        "Were + sujet + to / were = deuxième conditionnel : Were we to accept the offer, we would need more staff.",
+        "Had + sujet + participe = troisième conditionnel : Had I known, I would have acted differently. La négation ne se contracte pas : Had it not been for…"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-conditional-inversion",
+         "kind": "grammar",
+         "front": "Should you… / Were we to… / Had I known…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "inversion conditionnelle (registre soutenu)"
+        },
+        {
+         "slug": "en-require",
+         "kind": "vocabulary",
+         "front": "to require",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir besoin de, exiger"
+        },
+        {
+         "slug": "en-further",
+         "kind": "vocabulary",
+         "front": "further",
+         "reading": null,
+         "romaji": null,
+         "meaning": "supplémentaire, complémentaire"
+        },
+        {
+         "slug": "en-hesitate",
+         "kind": "vocabulary",
+         "front": "to hesitate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hésiter"
+        },
+        {
+         "slug": "en-proceed",
+         "kind": "vocabulary",
+         "front": "to proceed",
+         "reading": null,
+         "romaji": null,
+         "meaning": "procéder, poursuivre"
+        },
+        {
+         "slug": "en-acquisition",
+         "kind": "vocabulary",
+         "front": "acquisition",
+         "reading": null,
+         "romaji": null,
+         "meaning": "acquisition, rachat"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Should you have any questions, please do not hesitate to contact me.",
+         "reading": null,
+         "fr": "Pour toute question, n’hésitez pas à me contacter."
+        },
+        {
+         "jp": "Had the board approved the acquisition, we would now be the market leader.",
+         "reading": null,
+         "fr": "Si le conseil avait approuvé l’acquisition, nous serions aujourd’hui leader du marché."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ you require any assistance, our staff will be happy to help.",
+         "choices": [
+          "Should",
+          "Would",
+          "Had"
+         ],
+         "answer": "Should",
+         "explanation": "Éventualité : Should + sujet.",
+         "translation": "Si vous avez besoin d’aide, notre personnel se fera un plaisir de vous aider."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ we known about the problem, we would have acted sooner.",
+         "choices": [
+          "Had",
+          "Should",
+          "Were"
+         ],
+         "answer": "Had",
+         "explanation": "Passé irréel : Had + sujet + participe.",
+         "translation": "Si nous avions été au courant du problème, nous aurions agi plus tôt."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Were the company ＿ relocate, many staff would resign.",
+         "choices": [
+          "to",
+          "for",
+          "and"
+         ],
+         "answer": "to",
+         "explanation": "Were + sujet + to + verbe.",
+         "translation": "Si l’entreprise devait déménager, beaucoup de salariés démissionneraient."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Had it ＿ been for your help, we would have failed.",
+         "choices": [
+          "not",
+          "no",
+          "n’t"
+         ],
+         "answer": "not",
+         "explanation": "Négation non contractée : Had it not been for…",
+         "translation": "Sans ton aide, nous aurions échoué."
+        }
+       ]
+      },
+      {
+       "slug": "en-but-for",
+       "title": "But for, otherwise, provided, supposing",
+       "objective": "Varier l’expression de la condition.",
+       "minutes": 10,
+       "explanation": [
+        "but for + nom = sans : But for the delay, we would have finished (sans le retard…). otherwise = sinon : Book now; otherwise, you may not get a seat.",
+        "provided / providing (that), as long as, on condition that = à condition que ; unless = à moins que ; supposing / suppose = imaginons que ; in case = au cas où (précaution).",
+        "Attention : in case n’est pas if : Take an umbrella in case it rains (par précaution)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-but-for",
+         "kind": "grammar",
+         "front": "but for / otherwise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sans / sinon"
+        },
+        {
+         "slug": "gram-en-in-case",
+         "kind": "grammar",
+         "front": "in case / unless / supposing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au cas où / à moins que / imaginons que"
+        },
+        {
+         "slug": "en-otherwise",
+         "kind": "vocabulary",
+         "front": "otherwise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sinon, autrement"
+        },
+        {
+         "slug": "en-unless",
+         "kind": "vocabulary",
+         "front": "unless",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à moins que, sauf si"
+        },
+        {
+         "slug": "en-supposing",
+         "kind": "vocabulary",
+         "front": "supposing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "imaginons que, à supposer que"
+        },
+        {
+         "slug": "en-on-condition",
+         "kind": "vocabulary",
+         "front": "on condition that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à condition que"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "But for the strong pound, our exports would have increased.",
+         "reading": null,
+         "fr": "Sans la vigueur de la livre, nos exportations auraient augmenté."
+        },
+        {
+         "jp": "We will sign, on condition that the delivery date is guaranteed.",
+         "reading": null,
+         "fr": "Nous signerons, à condition que la date de livraison soit garantie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ the bad weather, the event would have been a success.",
+         "choices": [
+          "But for",
+          "Unless",
+          "Otherwise"
+         ],
+         "answer": "But for",
+         "explanation": "But for + nom = sans.",
+         "translation": "Sans le mauvais temps, l’événement aurait été un succès."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Save your work regularly; ＿, you may lose everything.",
+         "choices": [
+          "otherwise",
+          "unless",
+          "in case"
+         ],
+         "answer": "otherwise",
+         "explanation": "Sinon : otherwise.",
+         "translation": "Enregistre régulièrement ton travail ; sinon, tu risques de tout perdre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Take some cash ＿ the card machine isn’t working.",
+         "choices": [
+          "in case",
+          "unless",
+          "provided"
+         ],
+         "answer": "in case",
+         "explanation": "Par précaution : in case.",
+         "translation": "Prends du liquide au cas où le terminal de paiement ne marcherait pas."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We won’t finish on time ＿ we hire more staff.",
+         "choices": [
+          "unless",
+          "provided",
+          "in case"
+         ],
+         "answer": "unless",
+         "explanation": "À moins que : unless.",
+         "translation": "Nous ne finirons pas à temps à moins d’embaucher plus de personnel."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w1-c2",
+     "title": "La stratégie",
+     "lessons": [
+      {
+       "slug": "en-strategy",
+       "title": "Parler stratégie d’entreprise",
+       "objective": "Analyser des options stratégiques et leurs risques.",
+       "minutes": 9,
+       "explanation": [
+        "Vocabulaire : a long-term strategy, to diversify (se diversifier), to expand into a market, a stakeholder (partie prenante), a shareholder (actionnaire), the board (conseil d’administration).",
+        "Peser les options : The main advantage of… is… / This would entail (impliquer)… / There is a risk that… / On balance, I would recommend…"
+       ],
+       "items": [
+        {
+         "slug": "en-strategy",
+         "kind": "vocabulary",
+         "front": "strategy",
+         "reading": null,
+         "romaji": null,
+         "meaning": "stratégie"
+        },
+        {
+         "slug": "en-diversify",
+         "kind": "vocabulary",
+         "front": "to diversify",
+         "reading": null,
+         "romaji": null,
+         "meaning": "diversifier, se diversifier"
+        },
+        {
+         "slug": "en-stakeholder",
+         "kind": "vocabulary",
+         "front": "stakeholder",
+         "reading": null,
+         "romaji": null,
+         "meaning": "partie prenante"
+        },
+        {
+         "slug": "en-shareholder",
+         "kind": "vocabulary",
+         "front": "shareholder",
+         "reading": null,
+         "romaji": null,
+         "meaning": "actionnaire"
+        },
+        {
+         "slug": "en-board",
+         "kind": "vocabulary",
+         "front": "the board",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le conseil d’administration"
+        },
+        {
+         "slug": "en-entail",
+         "kind": "vocabulary",
+         "front": "to entail",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impliquer, entraîner"
+        },
+        {
+         "slug": "en-on-balance",
+         "kind": "vocabulary",
+         "front": "on balance",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout bien considéré"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Expanding into Asia would entail significant investment.",
+         "reading": null,
+         "fr": "Une expansion en Asie impliquerait des investissements importants."
+        },
+        {
+         "jp": "On balance, I would recommend diversifying our product range.",
+         "reading": null,
+         "fr": "Tout bien considéré, je recommanderais de diversifier notre gamme de produits."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The proposal will be presented to the ＿ on Monday.",
+         "choices": [
+          "board",
+          "table",
+          "chair"
+         ],
+         "answer": "board",
+         "explanation": "Conseil d’administration = the board.",
+         "translation": "La proposition sera présentée au conseil d’administration lundi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The merger would ＿ closing two factories.",
+         "choices": [
+          "entail",
+          "enter",
+          "entitle"
+         ],
+         "answer": "entail",
+         "explanation": "Impliquer = entail.",
+         "translation": "La fusion impliquerait la fermeture de deux usines."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "On ＿, the risks outweigh the benefits.",
+         "choices": [
+          "balance",
+          "whole",
+          "average"
+         ],
+         "answer": "balance",
+         "explanation": "Tout bien considéré : on balance.",
+         "translation": "Tout bien considéré, les risques l’emportent sur les avantages."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Shareholders received a higher dividend this year.",
+         "translation": "Les actionnaires ont touché plus.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "shareholders = actionnaires."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w2",
+   "title": "Le détroit du Minch",
+   "region": "Îles du Nord",
+   "description": "Comprendre et employer les expressions idiomatiques et les collocations du monde professionnel.",
+   "boss": {
+    "name": "Les Hommes bleus du Minch",
+    "glyph": "p",
+    "intro": "Ces esprits des flots soulèvent des tempêtes et défient les capitaines en vers. Celui qui répond avec la bonne expression peut passer le détroit en paix."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w2-c1",
+     "title": "Les idiomes",
+     "lessons": [
+      {
+       "slug": "en-business-idioms",
+       "title": "Les idiomes du bureau",
+       "objective": "Comprendre les idiomes courants dans les réunions.",
+       "minutes": 10,
+       "explanation": [
+        "to get the ball rolling (lancer les choses), to be on the same page (être sur la même longueur d’onde), to think outside the box (sortir des sentiers battus).",
+        "to cut corners (bâcler pour économiser), to call it a day (s’arrêter là pour aujourd’hui), a ballpark figure (un ordre de grandeur), back to the drawing board (retour à la case départ)."
+       ],
+       "items": [
+        {
+         "slug": "en-ball-rolling",
+         "kind": "vocabulary",
+         "front": "to get the ball rolling",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lancer les choses, démarrer"
+        },
+        {
+         "slug": "en-same-page",
+         "kind": "vocabulary",
+         "front": "to be on the same page",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être sur la même longueur d’onde"
+        },
+        {
+         "slug": "en-cut-corners",
+         "kind": "vocabulary",
+         "front": "to cut corners",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rogner sur la qualité, bâcler"
+        },
+        {
+         "slug": "en-call-it-a-day",
+         "kind": "vocabulary",
+         "front": "to call it a day",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’arrêter là (pour aujourd’hui)"
+        },
+        {
+         "slug": "en-ballpark",
+         "kind": "vocabulary",
+         "front": "a ballpark figure",
+         "reading": null,
+         "romaji": null,
+         "meaning": "un ordre de grandeur, une estimation"
+        },
+        {
+         "slug": "en-drawing-board",
+         "kind": "vocabulary",
+         "front": "back to the drawing board",
+         "reading": null,
+         "romaji": null,
+         "meaning": "retour à la case départ"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Let’s get the ball rolling: who wants to present first?",
+         "reading": null,
+         "fr": "Lançons-nous : qui veut présenter en premier ?"
+        },
+        {
+         "jp": "The client rejected the design, so it’s back to the drawing board.",
+         "reading": null,
+         "fr": "Le client a refusé la maquette, donc retour à la case départ."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Can you give me a ＿ figure for the total cost?",
+         "choices": [
+          "ballpark",
+          "football",
+          "park"
+         ],
+         "answer": "ballpark",
+         "explanation": "Une estimation : a ballpark figure.",
+         "translation": "Peux-tu me donner un ordre de grandeur du coût total ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "We’ve been working for ten hours. Let’s call it a ＿.",
+         "choices": [
+          "day",
+          "night",
+          "job"
+         ],
+         "answer": "day",
+         "explanation": "S’arrêter là : call it a day.",
+         "translation": "On travaille depuis dix heures. Arrêtons-nous là."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "If we cut ＿, the product will be unsafe.",
+         "choices": [
+          "corners",
+          "edges",
+          "costs down"
+         ],
+         "answer": "corners",
+         "explanation": "Bâcler : cut corners.",
+         "translation": "Si nous rognons sur la qualité, le produit sera dangereux."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Before we start, let’s make sure we’re all on the same page.",
+         "translation": "L’orateur veut que tout le monde soit d’accord sur les bases.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "on the same page = même compréhension."
+        }
+       ]
+      },
+      {
+       "slug": "en-collocations",
+       "title": "Les collocations : make, do, take, raise",
+       "objective": "Associer les bons verbes et les bons noms.",
+       "minutes": 10,
+       "explanation": [
+        "make : a decision, a profit, a complaint, an effort, progress, arrangements. do : business, research, a favour, harm, your best.",
+        "take : action, part, place, advantage of, responsibility. raise : a question, an issue, funds, awareness. meet : a deadline, a demand. reach : an agreement."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-collocations",
+         "kind": "grammar",
+         "front": "make a decision / do business / take action",
+         "reading": null,
+         "romaji": null,
+         "meaning": "collocations verbe + nom"
+        },
+        {
+         "slug": "en-raise-issue",
+         "kind": "vocabulary",
+         "front": "to raise an issue",
+         "reading": null,
+         "romaji": null,
+         "meaning": "soulever un problème"
+        },
+        {
+         "slug": "en-take-advantage",
+         "kind": "vocabulary",
+         "front": "to take advantage of",
+         "reading": null,
+         "romaji": null,
+         "meaning": "profiter de"
+        },
+        {
+         "slug": "en-do-business",
+         "kind": "vocabulary",
+         "front": "to do business",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire des affaires"
+        },
+        {
+         "slug": "en-reach-agreement",
+         "kind": "vocabulary",
+         "front": "to reach an agreement",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parvenir à un accord"
+        },
+        {
+         "slug": "en-raise-funds",
+         "kind": "vocabulary",
+         "front": "to raise funds",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lever des fonds"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We need to take action before the situation gets worse.",
+         "reading": null,
+         "fr": "Nous devons agir avant que la situation ne s’aggrave."
+        },
+        {
+         "jp": "After long talks, the unions and management reached an agreement.",
+         "reading": null,
+         "fr": "Après de longues discussions, les syndicats et la direction sont parvenus à un accord."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We have ＿ good progress this month.",
+         "choices": [
+          "made",
+          "done",
+          "taken"
+         ],
+         "answer": "made",
+         "explanation": "make progress.",
+         "translation": "Nous avons bien progressé ce mois-ci."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The start-up ＿ two million pounds from investors.",
+         "choices": [
+          "raised",
+          "rose",
+          "lifted"
+         ],
+         "answer": "raised",
+         "explanation": "Lever des fonds : raise funds (raise transitif).",
+         "translation": "La jeune pousse a levé deux millions de livres auprès d’investisseurs."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Could you ＿ me a favour and check this report?",
+         "choices": [
+          "do",
+          "make",
+          "give"
+         ],
+         "answer": "do",
+         "explanation": "do someone a favour.",
+         "translation": "Pourrais-tu me rendre service et vérifier ce rapport ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The conference will ＿ place in Edinburgh.",
+         "choices": [
+          "take",
+          "make",
+          "have"
+         ],
+         "answer": "take",
+         "explanation": "take place = avoir lieu.",
+         "translation": "Le congrès aura lieu à Édimbourg."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w2-c2",
+     "title": "Les verbes à particule",
+     "lessons": [
+      {
+       "slug": "en-phrasal-business",
+       "title": "Verbes à particule du monde des affaires",
+       "objective": "Maîtriser les verbes à particule fréquents au TOEIC.",
+       "minutes": 10,
+       "explanation": [
+        "set up (créer), carry out (réaliser), take over (racheter, reprendre), draw up (rédiger un contrat), go through (examiner en détail), look into (étudier, enquêter).",
+        "bring forward (avancer une date), put off (repousser), call off (annuler), fall through (échouer, tomber à l’eau), run out of (être à court de), follow up (assurer le suivi)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-phrasal-verbs",
+         "kind": "grammar",
+         "front": "set up / carry out / take over…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "verbes à particule"
+        },
+        {
+         "slug": "en-carry-out",
+         "kind": "vocabulary",
+         "front": "to carry out",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réaliser, effectuer"
+        },
+        {
+         "slug": "en-draw-up",
+         "kind": "vocabulary",
+         "front": "to draw up",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rédiger, établir (un document)"
+        },
+        {
+         "slug": "en-look-into",
+         "kind": "vocabulary",
+         "front": "to look into",
+         "reading": null,
+         "romaji": null,
+         "meaning": "étudier, examiner"
+        },
+        {
+         "slug": "en-bring-forward",
+         "kind": "vocabulary",
+         "front": "to bring forward",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avancer (une date)"
+        },
+        {
+         "slug": "en-call-off",
+         "kind": "vocabulary",
+         "front": "to call off",
+         "reading": null,
+         "romaji": null,
+         "meaning": "annuler"
+        },
+        {
+         "slug": "en-fall-through",
+         "kind": "vocabulary",
+         "front": "to fall through",
+         "reading": null,
+         "romaji": null,
+         "meaning": "échouer, tomber à l’eau"
+        },
+        {
+         "slug": "en-follow-up",
+         "kind": "vocabulary",
+         "front": "to follow up",
+         "reading": null,
+         "romaji": null,
+         "meaning": "assurer le suivi, relancer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Our lawyers are drawing up the contract and will send it on Friday.",
+         "reading": null,
+         "fr": "Nos avocats rédigent le contrat et l’enverront vendredi."
+        },
+        {
+         "jp": "The deal fell through at the last minute, so the launch has been called off.",
+         "reading": null,
+         "fr": "L’accord est tombé à l’eau à la dernière minute, donc le lancement a été annulé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The meeting has been brought ＿ to Monday.",
+         "choices": [
+          "forward",
+          "up",
+          "off"
+         ],
+         "answer": "forward",
+         "explanation": "Avancer une date : bring forward.",
+         "translation": "La réunion a été avancée à lundi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We will look ＿ your complaint and reply within 48 hours.",
+         "choices": [
+          "into",
+          "after",
+          "up"
+         ],
+         "answer": "into",
+         "explanation": "Étudier : look into.",
+         "translation": "Nous allons étudier votre réclamation et répondre sous 48 heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The survey was carried ＿ by an independent agency.",
+         "choices": [
+          "out",
+          "on",
+          "over"
+         ],
+         "answer": "out",
+         "explanation": "Réaliser : carry out.",
+         "translation": "L’enquête a été réalisée par un organisme indépendant."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We have run ＿ of paper for the printer.",
+         "choices": [
+          "out",
+          "off",
+          "down"
+         ],
+         "answer": "out",
+         "explanation": "Être à court : run out of.",
+         "translation": "Nous n’avons plus de papier pour l’imprimante."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w3",
+   "title": "Le loup des Shetland",
+   "region": "Îles du Nord",
+   "description": "Condenser sa pensée : propositions participiales, liens logiques avancés (given that, whereby, hence).",
+   "boss": {
+    "name": "Le Wulver des Shetland",
+    "glyph": "g",
+    "intro": "Homme à tête de loup, le Wulver est un sage solitaire qui laisse du poisson aux familles pauvres. Il n’aime pas les longues phrases maladroites : sois concis et précis."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w3-c1",
+     "title": "Condenser",
+     "lessons": [
+      {
+       "slug": "en-participle-clauses",
+       "title": "Les propositions participiales",
+       "objective": "Remplacer une subordonnée par un participe.",
+       "minutes": 10,
+       "explanation": [
+        "-ing pour une action simultanée ou une cause : Walking into the office, I noticed the smell. Feeling tired, she went home.",
+        "Having + participe pour une action antérieure : Having finished the report, he left (après avoir fini…).",
+        "Participe passé pour le sens passif : Built in 1890, the hotel has been fully renovated. Le sujet doit être le même dans les deux parties !"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-participle-clauses",
+         "kind": "grammar",
+         "front": "Having finished…, / Built in…,",
+         "reading": null,
+         "romaji": null,
+         "meaning": "proposition participiale"
+        },
+        {
+         "slug": "en-renovate",
+         "kind": "vocabulary",
+         "front": "to renovate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rénover"
+        },
+        {
+         "slug": "en-notice",
+         "kind": "vocabulary",
+         "front": "to notice",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remarquer"
+        },
+        {
+         "slug": "en-fully",
+         "kind": "vocabulary",
+         "front": "fully",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entièrement, pleinement"
+        },
+        {
+         "slug": "en-assess",
+         "kind": "vocabulary",
+         "front": "to assess",
+         "reading": null,
+         "romaji": null,
+         "meaning": "évaluer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Having reviewed your application, we are pleased to offer you the position.",
+         "reading": null,
+         "fr": "Après examen de votre candidature, nous avons le plaisir de vous proposer le poste."
+        },
+        {
+         "jp": "Located in the heart of Edinburgh, the hotel offers stunning views of the castle.",
+         "reading": null,
+         "fr": "Situé au cœur d’Édimbourg, l’hôtel offre une vue imprenable sur le château."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ the figures, the director approved the budget.",
+         "choices": [
+          "Having checked",
+          "Checked",
+          "Having check"
+         ],
+         "answer": "Having checked",
+         "explanation": "Action antérieure : Having + participe.",
+         "translation": "Après avoir vérifié les chiffres, le directeur a approuvé le budget."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ in 1890, the bridge is still in use today.",
+         "choices": [
+          "Built",
+          "Building",
+          "Having built"
+         ],
+         "answer": "Built",
+         "explanation": "Sens passif : participe passé.",
+         "translation": "Construit en 1890, le pont est toujours utilisé aujourd’hui."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ that the store was closed, we went home.",
+         "choices": [
+          "Seeing",
+          "Seen",
+          "Saw"
+         ],
+         "answer": "Seeing",
+         "explanation": "Cause, sens actif : -ing.",
+         "translation": "Voyant que le magasin était fermé, nous sommes rentrés."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Having signed the contract, the client left.",
+         "translation": "Le client est parti avant de signer.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Having signed = après avoir signé."
+        }
+       ]
+      },
+      {
+       "slug": "en-advanced-linkers",
+       "title": "Liens logiques avancés",
+       "objective": "Relier ses idées avec précision dans un écrit formel.",
+       "minutes": 10,
+       "explanation": [
+        "Cause : given that, in view of, seeing that, on account of. Conséquence : hence, thus, consequently, thereby.",
+        "Concession : albeit (bien que), notwithstanding (nonobstant), even so. whereby = par lequel : a system whereby customers can pay online."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-advanced-linkers",
+         "kind": "grammar",
+         "front": "given that / hence / whereby / albeit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "connecteurs logiques avancés"
+        },
+        {
+         "slug": "en-given-that",
+         "kind": "vocabulary",
+         "front": "given that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "étant donné que"
+        },
+        {
+         "slug": "en-hence",
+         "kind": "vocabulary",
+         "front": "hence",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’où, par conséquent"
+        },
+        {
+         "slug": "en-whereby",
+         "kind": "vocabulary",
+         "front": "whereby",
+         "reading": null,
+         "romaji": null,
+         "meaning": "par lequel, selon lequel"
+        },
+        {
+         "slug": "en-albeit",
+         "kind": "vocabulary",
+         "front": "albeit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que, quoique"
+        },
+        {
+         "slug": "en-notwithstanding",
+         "kind": "vocabulary",
+         "front": "notwithstanding",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nonobstant, malgré"
+        },
+        {
+         "slug": "en-thereby",
+         "kind": "vocabulary",
+         "front": "thereby",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de ce fait, ainsi"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Given that demand is falling, we should reduce production.",
+         "reading": null,
+         "fr": "Étant donné que la demande baisse, nous devrions réduire la production."
+        },
+        {
+         "jp": "We introduced a scheme whereby employees can buy shares at a discount.",
+         "reading": null,
+         "fr": "Nous avons mis en place un dispositif permettant aux salariés d’acheter des actions à prix réduit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Costs have risen sharply; ＿ the need for new suppliers.",
+         "choices": [
+          "hence",
+          "whereby",
+          "albeit"
+         ],
+         "answer": "hence",
+         "explanation": "D’où : hence (+ nom).",
+         "translation": "Les coûts ont fortement augmenté ; d’où la nécessité de nouveaux fournisseurs."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The results were positive, ＿ slightly below expectations.",
+         "choices": [
+          "albeit",
+          "hence",
+          "given"
+         ],
+         "answer": "albeit",
+         "explanation": "Bien que : albeit (+ adjectif).",
+         "translation": "Les résultats étaient positifs, quoique légèrement inférieurs aux attentes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ that the deadline is tomorrow, we must work late.",
+         "choices": [
+          "Given",
+          "Hence",
+          "Albeit"
+         ],
+         "answer": "Given",
+         "explanation": "Étant donné que : given that.",
+         "translation": "Étant donné que l’échéance est demain, nous devons travailler tard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "This is a system ＿ clients can track their orders online.",
+         "choices": [
+          "whereby",
+          "whereas",
+          "hence"
+         ],
+         "answer": "whereby",
+         "explanation": "Par lequel : whereby.",
+         "translation": "C’est un système qui permet aux clients de suivre leurs commandes en ligne."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w3-c2",
+     "title": "Le droit des affaires",
+     "lessons": [
+      {
+       "slug": "en-contracts",
+       "title": "Les contrats et le juridique",
+       "objective": "Comprendre le vocabulaire des contrats et des litiges.",
+       "minutes": 9,
+       "explanation": [
+        "Contrat : a clause, terms and conditions, to be binding (contraignant), to breach a contract (rompre), to comply with (se conformer à), liability (responsabilité).",
+        "Litiges : a dispute, to settle out of court (régler à l’amiable), to sue (poursuivre), compensation (indemnisation), a warranty (garantie)."
+       ],
+       "items": [
+        {
+         "slug": "en-clause",
+         "kind": "vocabulary",
+         "front": "clause",
+         "reading": null,
+         "romaji": null,
+         "meaning": "clause"
+        },
+        {
+         "slug": "en-binding",
+         "kind": "vocabulary",
+         "front": "binding",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contraignant, ayant force obligatoire"
+        },
+        {
+         "slug": "en-breach",
+         "kind": "vocabulary",
+         "front": "breach",
+         "reading": null,
+         "romaji": null,
+         "meaning": "violation, rupture (de contrat)"
+        },
+        {
+         "slug": "en-comply",
+         "kind": "vocabulary",
+         "front": "to comply with",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se conformer à, respecter"
+        },
+        {
+         "slug": "en-liability",
+         "kind": "vocabulary",
+         "front": "liability",
+         "reading": null,
+         "romaji": null,
+         "meaning": "responsabilité (juridique)"
+        },
+        {
+         "slug": "en-dispute",
+         "kind": "vocabulary",
+         "front": "dispute",
+         "reading": null,
+         "romaji": null,
+         "meaning": "litige, différend"
+        },
+        {
+         "slug": "en-settle",
+         "kind": "vocabulary",
+         "front": "to settle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "régler (un litige, une facture)"
+        },
+        {
+         "slug": "en-warranty",
+         "kind": "vocabulary",
+         "front": "warranty",
+         "reading": null,
+         "romaji": null,
+         "meaning": "garantie (produit)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Failure to comply with clause 7 will be considered a breach of contract.",
+         "reading": null,
+         "fr": "Le non-respect de la clause 7 sera considéré comme une rupture de contrat."
+        },
+        {
+         "jp": "The two companies settled the dispute out of court.",
+         "reading": null,
+         "fr": "Les deux entreprises ont réglé le litige à l’amiable."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "All products must ＿ with EU safety standards.",
+         "choices": [
+          "comply",
+          "agree",
+          "respect"
+         ],
+         "answer": "comply",
+         "explanation": "comply with = se conformer à.",
+         "translation": "Tous les produits doivent être conformes aux normes de sécurité de l’UE."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The laptop is still under ＿, so the repair is free.",
+         "choices": [
+          "warranty",
+          "guarantor",
+          "insurance policy"
+         ],
+         "answer": "warranty",
+         "explanation": "Garantie produit : warranty.",
+         "translation": "L’ordinateur est encore sous garantie, donc la réparation est gratuite."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "They decided to ＿ the case out of court.",
+         "choices": [
+          "settle",
+          "set",
+          "solve up"
+         ],
+         "answer": "settle",
+         "explanation": "Régler à l’amiable : settle out of court.",
+         "translation": "Ils ont décidé de régler l’affaire à l’amiable."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "This agreement is legally binding.",
+         "translation": "Le contrat n’a aucune valeur juridique.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "binding = qui engage juridiquement."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w4",
+   "title": "La sorcière des brumes",
+   "region": "Îles du Nord",
+   "description": "Exprimer l’exigence et la recommandation au registre formel : subjonctif, It’s time…, would rather.",
+   "boss": {
+    "name": "La Gwrach y Rhibyn",
+    "glyph": "r",
+    "intro": "Cette sorcière galloise aux ailes de cuir frappe aux fenêtres en appelant ceux qui vont partir. Elle exige qu’on lui parle dans la langue la plus soutenue."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w4-c1",
+     "title": "Il est essentiel que…",
+     "lessons": [
+      {
+       "slug": "en-subjunctive",
+       "title": "Le subjonctif : It is essential that he be…",
+       "objective": "Utiliser la base verbale après les verbes et adjectifs d’exigence.",
+       "minutes": 10,
+       "explanation": [
+        "Après recommend, suggest, insist, demand, require + that : base verbale sans -s : We recommend that he attend the training. They insisted that she be present.",
+        "Après essential, vital, important, imperative + that : It is essential that every employee complete the form.",
+        "Négation : not + base : The board requested that the results not be published."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-subjunctive",
+         "kind": "grammar",
+         "front": "recommend that he attend / be",
+         "reading": null,
+         "romaji": null,
+         "meaning": "subjonctif (base verbale après that)"
+        },
+        {
+         "slug": "en-essential",
+         "kind": "vocabulary",
+         "front": "essential",
+         "reading": null,
+         "romaji": null,
+         "meaning": "essentiel, indispensable"
+        },
+        {
+         "slug": "en-imperative",
+         "kind": "vocabulary",
+         "front": "imperative",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impératif, crucial"
+        },
+        {
+         "slug": "en-demand",
+         "kind": "vocabulary",
+         "front": "to demand",
+         "reading": null,
+         "romaji": null,
+         "meaning": "exiger"
+        },
+        {
+         "slug": "en-compliance",
+         "kind": "vocabulary",
+         "front": "compliance",
+         "reading": null,
+         "romaji": null,
+         "meaning": "conformité"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "It is essential that all visitors wear a safety helmet.",
+         "reading": null,
+         "fr": "Il est indispensable que tous les visiteurs portent un casque."
+        },
+        {
+         "jp": "The auditors recommended that the company review its procedures.",
+         "reading": null,
+         "fr": "Les auditeurs ont recommandé que l’entreprise revoie ses procédures."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We recommend that he ＿ the course.",
+         "choices": [
+          "attend",
+          "attends",
+          "attended"
+         ],
+         "answer": "attend",
+         "explanation": "Subjonctif : base verbale, sans -s.",
+         "translation": "Nous recommandons qu’il suive la formation."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It is vital that the data ＿ kept confidential.",
+         "choices": [
+          "be",
+          "is",
+          "are"
+         ],
+         "answer": "be",
+         "explanation": "Subjonctif de be : be.",
+         "translation": "Il est vital que les données restent confidentielles."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The client insisted that the meeting ＿ postponed.",
+         "choices": [
+          "not be",
+          "won’t be",
+          "isn’t"
+         ],
+         "answer": "not be",
+         "explanation": "Négation : not + base.",
+         "translation": "Le client a exigé que la réunion ne soit pas reportée."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The board demanded that she resign.",
+         "translation": "Le conseil a exigé sa démission.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "demand that she resign = exiger qu’elle démissionne."
+        }
+       ]
+      },
+      {
+       "slug": "en-would-rather",
+       "title": "It’s time, would rather, as if",
+       "objective": "Exprimer préférence et irréel avec le prétérit modal.",
+       "minutes": 10,
+       "explanation": [
+        "It’s (high) time + sujet + prétérit = il est grand temps que : It’s high time we updated our website.",
+        "would rather + base (soi-même) : I’d rather stay. would rather + sujet + prétérit (autrui) : I’d rather you didn’t smoke here.",
+        "as if / as though + prétérit pour l’irréel : He talks as if he were the boss."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-its-time",
+         "kind": "grammar",
+         "front": "It’s high time we…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il est grand temps que"
+        },
+        {
+         "slug": "gram-en-would-rather",
+         "kind": "grammar",
+         "front": "I’d rather you didn’t…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je préférerais que tu ne… pas"
+        },
+        {
+         "slug": "en-as-if",
+         "kind": "vocabulary",
+         "front": "as if",
+         "reading": null,
+         "romaji": null,
+         "meaning": "comme si"
+        },
+        {
+         "slug": "en-outdated",
+         "kind": "vocabulary",
+         "front": "outdated",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dépassé, obsolète"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "It’s high time we replaced these outdated computers.",
+         "reading": null,
+         "fr": "Il est grand temps que nous remplacions ces ordinateurs obsolètes."
+        },
+        {
+         "jp": "I’d rather you sent the report by email.",
+         "reading": null,
+         "fr": "Je préférerais que tu envoies le rapport par e-mail."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It’s high time we ＿ a decision.",
+         "choices": [
+          "made",
+          "make",
+          "will make"
+         ],
+         "answer": "made",
+         "explanation": "It’s high time + prétérit.",
+         "translation": "Il est grand temps que nous prenions une décision."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’d rather you ＿ tell anyone about this.",
+         "choices": [
+          "didn’t",
+          "don’t",
+          "won’t"
+         ],
+         "answer": "didn’t",
+         "explanation": "would rather + sujet + prétérit.",
+         "translation": "Je préférerais que tu n’en parles à personne."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He behaves as if he ＿ the owner.",
+         "choices": [
+          "were",
+          "is",
+          "be"
+         ],
+         "answer": "were",
+         "explanation": "Irréel : as if + were.",
+         "translation": "Il se comporte comme s’il était le propriétaire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’d rather ＿ at home tonight.",
+         "choices": [
+          "stay",
+          "stayed",
+          "to stay"
+         ],
+         "answer": "stay",
+         "explanation": "Pour soi-même : would rather + base.",
+         "translation": "Je préférerais rester à la maison ce soir."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w4-c2",
+     "title": "Le registre",
+     "lessons": [
+      {
+       "slug": "en-formal-register",
+       "title": "Formel ou familier ?",
+       "objective": "Adapter son vocabulaire au registre attendu.",
+       "minutes": 9,
+       "explanation": [
+        "Familier → formel : get → obtain / receive, ask for → request, need → require, help → assist, start → commence, end → terminate, enough → sufficient.",
+        "À l’écrit formel : pas de contractions, voix passive plus fréquente, verbes simples plutôt qu’à particule."
+       ],
+       "items": [
+        {
+         "slug": "en-obtain",
+         "kind": "vocabulary",
+         "front": "to obtain",
+         "reading": null,
+         "romaji": null,
+         "meaning": "obtenir"
+        },
+        {
+         "slug": "en-assist",
+         "kind": "vocabulary",
+         "front": "to assist",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aider, assister"
+        },
+        {
+         "slug": "en-commence",
+         "kind": "vocabulary",
+         "front": "to commence",
+         "reading": null,
+         "romaji": null,
+         "meaning": "commencer (formel)"
+        },
+        {
+         "slug": "en-terminate",
+         "kind": "vocabulary",
+         "front": "to terminate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mettre fin à, résilier"
+        },
+        {
+         "slug": "en-sufficient",
+         "kind": "vocabulary",
+         "front": "sufficient",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffisant"
+        },
+        {
+         "slug": "en-inquire",
+         "kind": "vocabulary",
+         "front": "to inquire",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se renseigner, demander"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Construction will commence in April, subject to planning permission.",
+         "reading": null,
+         "fr": "Les travaux commenceront en avril, sous réserve du permis de construire."
+        },
+        {
+         "jp": "We regret to inform you that your contract will be terminated.",
+         "reading": null,
+         "fr": "Nous avons le regret de vous informer que votre contrat sera résilié."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Formal: Our staff will be glad to ＿ you.",
+         "choices": [
+          "assist",
+          "help out",
+          "give a hand"
+         ],
+         "answer": "assist",
+         "explanation": "Formel : assist.",
+         "translation": "Notre personnel se fera un plaisir de vous aider."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Formal: The funds are not ＿ to cover the costs.",
+         "choices": [
+          "sufficient",
+          "enough of",
+          "plenty"
+         ],
+         "answer": "sufficient",
+         "explanation": "Formel : sufficient.",
+         "translation": "Les fonds ne suffisent pas à couvrir les coûts."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Formal: I am writing to ＿ about the vacancy.",
+         "choices": [
+          "inquire",
+          "ask around",
+          "find out stuff"
+         ],
+         "answer": "inquire",
+         "explanation": "Formel : inquire.",
+         "translation": "Je vous écris pour me renseigner sur le poste vacant."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The agreement was terminated in June.",
+         "translation": "L’accord a pris fin en juin.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "terminated = résilié."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w5",
+   "title": "La reine de l’hiver",
+   "region": "Îles du Nord",
+   "description": "Écrire avec densité : nominalisation, groupes nominaux complexes, adjectifs composés.",
+   "boss": {
+    "name": "La Cailleach, reine de l’hiver",
+    "glyph": "c",
+    "intro": "La vieille déesse de l’hiver façonne les montagnes d’Écosse avec son marteau. Elle exige des phrases aussi denses et solides que la pierre."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w5-c1",
+     "title": "La nominalisation",
+     "lessons": [
+      {
+       "slug": "en-nominalisation",
+       "title": "Transformer des verbes en noms",
+       "objective": "Rendre un écrit plus formel et plus dense.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe → nom : decide → decision, analyse → analysis, fail → failure, reduce → reduction, introduce → introduction.",
+        "Prices rose sharply, which worried investors. → The sharp rise in prices worried investors.",
+        "Suffixes fréquents : -tion, -ment, -ance / -ence, -ity, -al (approval, refusal), -ure (failure)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-nominalisation",
+         "kind": "grammar",
+         "front": "the sharp rise in prices",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nominalisation (verbe → nom)"
+        },
+        {
+         "slug": "en-approval",
+         "kind": "vocabulary",
+         "front": "approval",
+         "reading": null,
+         "romaji": null,
+         "meaning": "approbation, accord"
+        },
+        {
+         "slug": "en-failure",
+         "kind": "vocabulary",
+         "front": "failure",
+         "reading": null,
+         "romaji": null,
+         "meaning": "échec, défaillance"
+        },
+        {
+         "slug": "en-reduction",
+         "kind": "vocabulary",
+         "front": "reduction",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réduction, baisse"
+        },
+        {
+         "slug": "en-implementation",
+         "kind": "vocabulary",
+         "front": "implementation",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mise en œuvre"
+        },
+        {
+         "slug": "en-analysis",
+         "kind": "vocabulary",
+         "front": "analysis",
+         "reading": null,
+         "romaji": null,
+         "meaning": "analyse"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The implementation of the new system has led to a significant reduction in errors.",
+         "reading": null,
+         "fr": "La mise en œuvre du nouveau système a entraîné une baisse significative des erreurs."
+        },
+        {
+         "jp": "The failure of the negotiations came as a surprise.",
+         "reading": null,
+         "fr": "L’échec des négociations a surpris tout le monde."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The project requires the board’s ＿.",
+         "choices": [
+          "approval",
+          "approve",
+          "approving"
+         ],
+         "answer": "approval",
+         "explanation": "Nom : approval.",
+         "translation": "Le projet nécessite l’approbation du conseil."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The ＿ of the plan will take two years.",
+         "choices": [
+          "implementation",
+          "implement",
+          "implemented"
+         ],
+         "answer": "implementation",
+         "explanation": "Nom : implementation.",
+         "translation": "La mise en œuvre du plan prendra deux ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There has been a sharp ＿ in demand.",
+         "choices": [
+          "increase",
+          "increasing",
+          "increased"
+         ],
+         "answer": "increase",
+         "explanation": "a + adjectif + nom : an increase.",
+         "translation": "Il y a eu une forte hausse de la demande."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "A detailed ＿ of the data is needed.",
+         "choices": [
+          "analysis",
+          "analysed",
+          "analytic"
+         ],
+         "answer": "analysis",
+         "explanation": "Nom : analysis.",
+         "translation": "Une analyse détaillée des données est nécessaire."
+        }
+       ]
+      },
+      {
+       "slug": "en-compound-adjectives",
+       "title": "Les adjectifs composés",
+       "objective": "Condenser une information : a two-day course, a well-known brand.",
+       "minutes": 9,
+       "explanation": [
+        "Nombre + nom au singulier : a two-day conference, a five-star hotel, a ten-minute walk (jamais « days »).",
+        "Adverbe + participe : well-known, highly-qualified, long-standing (de longue date), fast-growing ; nom + participe : time-consuming, award-winning."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-compound-adjectives",
+         "kind": "grammar",
+         "front": "a two-day course / a well-known brand",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adjectifs composés"
+        },
+        {
+         "slug": "en-time-consuming",
+         "kind": "vocabulary",
+         "front": "time-consuming",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chronophage, qui prend du temps"
+        },
+        {
+         "slug": "en-long-standing",
+         "kind": "vocabulary",
+         "front": "long-standing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de longue date"
+        },
+        {
+         "slug": "en-award-winning",
+         "kind": "vocabulary",
+         "front": "award-winning",
+         "reading": null,
+         "romaji": null,
+         "meaning": "primé"
+        },
+        {
+         "slug": "en-fast-growing",
+         "kind": "vocabulary",
+         "front": "fast-growing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en pleine croissance"
+        },
+        {
+         "slug": "en-highly-qualified",
+         "kind": "vocabulary",
+         "front": "highly qualified",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hautement qualifié"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We are a fast-growing company looking for highly qualified engineers.",
+         "reading": null,
+         "fr": "Nous sommes une entreprise en pleine croissance qui recherche des ingénieurs hautement qualifiés."
+        },
+        {
+         "jp": "The hotel is a ten-minute walk from the station.",
+         "reading": null,
+         "fr": "L’hôtel est à dix minutes à pied de la gare."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She attended a ＿ training course.",
+         "choices": [
+          "three-day",
+          "three-days",
+          "three days"
+         ],
+         "answer": "three-day",
+         "explanation": "Nombre + nom au singulier avec trait d’union.",
+         "translation": "Elle a suivi une formation de trois jours."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Checking every invoice by hand is very ＿.",
+         "choices": [
+          "time-consuming",
+          "time-consumed",
+          "consuming-time"
+         ],
+         "answer": "time-consuming",
+         "explanation": "Qui prend du temps : time-consuming.",
+         "translation": "Vérifier chaque facture à la main prend beaucoup de temps."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We have a ＿ relationship with this supplier.",
+         "choices": [
+          "long-standing",
+          "long-stood",
+          "standing-long"
+         ],
+         "answer": "long-standing",
+         "explanation": "De longue date : long-standing.",
+         "translation": "Nous entretenons une relation de longue date avec ce fournisseur."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "It is an award-winning restaurant.",
+         "translation": "Le restaurant a reçu des prix.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "award-winning = primé."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w5-c2",
+     "title": "Le développement durable",
+     "lessons": [
+      {
+       "slug": "en-sustainability",
+       "title": "Environnement et responsabilité",
+       "objective": "Parler des enjeux environnementaux et sociaux de l’entreprise.",
+       "minutes": 9,
+       "explanation": [
+        "Vocabulaire : sustainable (durable), renewable energy, carbon footprint (empreinte carbone), emissions, waste (déchets), to recycle, to offset (compenser).",
+        "Responsabilité : corporate social responsibility (RSE), ethical sourcing (approvisionnement éthique), supply chain (chaîne d’approvisionnement), transparency."
+       ],
+       "items": [
+        {
+         "slug": "en-sustainable",
+         "kind": "vocabulary",
+         "front": "sustainable",
+         "reading": null,
+         "romaji": null,
+         "meaning": "durable (écologique)"
+        },
+        {
+         "slug": "en-renewable",
+         "kind": "vocabulary",
+         "front": "renewable",
+         "reading": null,
+         "romaji": null,
+         "meaning": "renouvelable"
+        },
+        {
+         "slug": "en-carbon-footprint",
+         "kind": "vocabulary",
+         "front": "carbon footprint",
+         "reading": null,
+         "romaji": null,
+         "meaning": "empreinte carbone"
+        },
+        {
+         "slug": "en-waste",
+         "kind": "vocabulary",
+         "front": "waste",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déchets, gaspillage"
+        },
+        {
+         "slug": "en-supply-chain",
+         "kind": "vocabulary",
+         "front": "supply chain",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chaîne d’approvisionnement"
+        },
+        {
+         "slug": "en-offset",
+         "kind": "vocabulary",
+         "front": "to offset",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compenser"
+        },
+        {
+         "slug": "en-transparency",
+         "kind": "vocabulary",
+         "front": "transparency",
+         "reading": null,
+         "romaji": null,
+         "meaning": "transparence"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "By 2030, all our factories will run on renewable energy.",
+         "reading": null,
+         "fr": "D’ici 2030, toutes nos usines fonctionneront aux énergies renouvelables."
+        },
+        {
+         "jp": "We are working with suppliers to reduce waste across the supply chain.",
+         "reading": null,
+         "fr": "Nous travaillons avec nos fournisseurs pour réduire les déchets tout au long de la chaîne d’approvisionnement."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Wind and solar power are ＿ sources of energy.",
+         "choices": [
+          "renewable",
+          "renewing",
+          "renewed"
+         ],
+         "answer": "renewable",
+         "explanation": "Renouvelable : renewable.",
+         "translation": "L’éolien et le solaire sont des sources d’énergie renouvelables."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Flying less is the best way to reduce your carbon ＿.",
+         "choices": [
+          "footprint",
+          "footstep",
+          "fingerprint"
+         ],
+         "answer": "footprint",
+         "explanation": "Empreinte carbone : carbon footprint.",
+         "translation": "Prendre moins l’avion est le meilleur moyen de réduire ton empreinte carbone."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The airline plants trees to ＿ its emissions.",
+         "choices": [
+          "offset",
+          "set off",
+          "outset"
+         ],
+         "answer": "offset",
+         "explanation": "Compenser : offset.",
+         "translation": "La compagnie plante des arbres pour compenser ses émissions."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The company is committed to transparency.",
+         "translation": "L’entreprise cache ses informations.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "transparency = transparence."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w6",
+   "title": "Le serpent de Falmouth",
+   "region": "Îles du Nord",
+   "description": "Nuancer et spéculer avec prudence : hedging, seem / appear to, be likely to, there is bound to be.",
+   "boss": {
+    "name": "Morgawr, serpent de Falmouth",
+    "glyph": "s",
+    "intro": "Ce serpent de mer géant de Cornouailles n’apparaît qu’à ceux qui n’affirment rien sans preuve. Nuance chacune de tes affirmations pour l’apercevoir."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w6-c1",
+     "title": "Il semblerait que…",
+     "lessons": [
+      {
+       "slug": "en-hedging",
+       "title": "Le hedging : atténuer une affirmation",
+       "objective": "Présenter une information avec la prudence attendue dans un rapport.",
+       "minutes": 10,
+       "explanation": [
+        "seem / appear + to (+ have done) : Sales appear to have stabilised. It would seem that… / It would appear that…",
+        "Modaux et adverbes : may, might, could ; arguably (on peut soutenir que), presumably (vraisemblablement), to some extent (dans une certaine mesure), tend to."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-hedging",
+         "kind": "grammar",
+         "front": "It would appear that… / seem to have…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "atténuation (hedging)"
+        },
+        {
+         "slug": "en-appear-to",
+         "kind": "vocabulary",
+         "front": "to appear to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sembler, paraître"
+        },
+        {
+         "slug": "en-arguably",
+         "kind": "vocabulary",
+         "front": "arguably",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sans doute, on peut soutenir que"
+        },
+        {
+         "slug": "en-presumably",
+         "kind": "vocabulary",
+         "front": "presumably",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vraisemblablement, sans doute"
+        },
+        {
+         "slug": "en-to-some-extent",
+         "kind": "vocabulary",
+         "front": "to some extent",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dans une certaine mesure"
+        },
+        {
+         "slug": "en-tend-to",
+         "kind": "vocabulary",
+         "front": "to tend to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir tendance à"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "It would appear that the new campaign has had little effect on sales.",
+         "reading": null,
+         "fr": "Il semblerait que la nouvelle campagne ait eu peu d’effet sur les ventes."
+        },
+        {
+         "jp": "This is arguably the most important decision in the company’s history.",
+         "reading": null,
+         "fr": "C’est sans doute la décision la plus importante de l’histoire de l’entreprise."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The problem ＿ to have been caused by a software error.",
+         "choices": [
+          "appears",
+          "appear",
+          "is appearing"
+         ],
+         "answer": "appears",
+         "explanation": "Sujet singulier : appears to.",
+         "translation": "Le problème semble avoir été causé par une erreur logicielle."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Customers ＿ to prefer shopping online.",
+         "choices": [
+          "tend",
+          "tendency",
+          "tending"
+         ],
+         "answer": "tend",
+         "explanation": "Avoir tendance à : tend to.",
+         "translation": "Les clients ont tendance à préférer acheter en ligne."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It would ＿ that the figures are incorrect.",
+         "choices": [
+          "seem",
+          "look",
+          "show"
+         ],
+         "answer": "seem",
+         "explanation": "It would seem that…",
+         "translation": "Il semblerait que les chiffres soient erronés."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "To some extent, the plan was successful.",
+         "translation": "Le plan a été un succès total.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "to some extent = en partie seulement."
+        }
+       ]
+      },
+      {
+       "slug": "en-probability",
+       "title": "La probabilité : be likely to, be bound to",
+       "objective": "Graduer la probabilité d’un événement futur.",
+       "minutes": 10,
+       "explanation": [
+        "be bound to / be certain to = c’est sûr : Prices are bound to rise. be likely to / unlikely to = probable / peu probable : The deal is unlikely to go ahead.",
+        "There is a good chance that… / There is little chance of… / In all likelihood (selon toute vraisemblance)…"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-likely-bound",
+         "kind": "grammar",
+         "front": "be likely to / be bound to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être probable / être certain"
+        },
+        {
+         "slug": "en-likely",
+         "kind": "vocabulary",
+         "front": "likely",
+         "reading": null,
+         "romaji": null,
+         "meaning": "probable"
+        },
+        {
+         "slug": "en-bound-to",
+         "kind": "vocabulary",
+         "front": "bound to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "forcément, à coup sûr"
+        },
+        {
+         "slug": "en-likelihood",
+         "kind": "vocabulary",
+         "front": "likelihood",
+         "reading": null,
+         "romaji": null,
+         "meaning": "probabilité"
+        },
+        {
+         "slug": "en-go-ahead",
+         "kind": "vocabulary",
+         "front": "to go ahead",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir lieu, se poursuivre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Interest rates are likely to remain high for some time.",
+         "reading": null,
+         "fr": "Les taux d’intérêt devraient rester élevés pendant un certain temps."
+        },
+        {
+         "jp": "With so many changes, there are bound to be a few problems.",
+         "reading": null,
+         "fr": "Avec autant de changements, il y aura forcément quelques problèmes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Given the storm, the flight is ＿ to be delayed.",
+         "choices": [
+          "likely",
+          "probably",
+          "likelihood"
+         ],
+         "answer": "likely",
+         "explanation": "be likely to.",
+         "translation": "Vu la tempête, le vol risque d’être retardé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He’s been working so hard — he’s ＿ to succeed.",
+         "choices": [
+          "bound",
+          "binding",
+          "bond"
+         ],
+         "answer": "bound",
+         "explanation": "Certain : be bound to.",
+         "translation": "Il travaille tellement — il va forcément réussir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There is little ＿ of the merger going ahead.",
+         "choices": [
+          "chance",
+          "luck",
+          "likely"
+         ],
+         "answer": "chance",
+         "explanation": "little chance of + -ing.",
+         "translation": "Il y a peu de chances que la fusion aboutisse."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The project is unlikely to be finished on time.",
+         "translation": "Le projet sera probablement en retard.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "unlikely = peu probable."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w6-c2",
+     "title": "La gestion de crise",
+     "lessons": [
+      {
+       "slug": "en-crisis",
+       "title": "Communiquer en temps de crise",
+       "objective": "Annoncer une mauvaise nouvelle et rassurer.",
+       "minutes": 9,
+       "explanation": [
+        "Annoncer : We regret to announce that… / Due to unforeseen circumstances (circonstances imprévues)… / A product recall (rappel) has been issued.",
+        "Rassurer : We are taking every possible measure to… / We will keep you informed. / Rest assured that (soyez assurés que)…"
+       ],
+       "items": [
+        {
+         "slug": "en-unforeseen",
+         "kind": "vocabulary",
+         "front": "unforeseen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "imprévu"
+        },
+        {
+         "slug": "en-recall",
+         "kind": "vocabulary",
+         "front": "recall",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rappel (de produit)"
+        },
+        {
+         "slug": "en-measure",
+         "kind": "vocabulary",
+         "front": "measure",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mesure, disposition"
+        },
+        {
+         "slug": "en-rest-assured",
+         "kind": "vocabulary",
+         "front": "rest assured",
+         "reading": null,
+         "romaji": null,
+         "meaning": "soyez assurés"
+        },
+        {
+         "slug": "en-reputation",
+         "kind": "vocabulary",
+         "front": "reputation",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réputation"
+        },
+        {
+         "slug": "en-spokesperson",
+         "kind": "vocabulary",
+         "front": "spokesperson",
+         "reading": null,
+         "romaji": null,
+         "meaning": "porte-parole"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Due to unforeseen circumstances, tonight’s performance has been cancelled.",
+         "reading": null,
+         "fr": "En raison de circonstances imprévues, la représentation de ce soir est annulée."
+        },
+        {
+         "jp": "Rest assured that we are taking every possible measure to protect your data.",
+         "reading": null,
+         "fr": "Soyez assurés que nous prenons toutes les mesures possibles pour protéger vos données."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The company has issued a ＿ of all affected models.",
+         "choices": [
+          "recall",
+          "return back",
+          "remind"
+         ],
+         "answer": "recall",
+         "explanation": "Rappel de produit : recall.",
+         "translation": "L’entreprise a lancé un rappel de tous les modèles concernés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Rest ＿ that your money will be refunded.",
+         "choices": [
+          "assured",
+          "assuring",
+          "sure"
+         ],
+         "answer": "assured",
+         "explanation": "Rest assured = soyez assurés.",
+         "translation": "Soyez assurés que vous serez remboursés."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Journalist",
+           "jp": "Is it true that customer data was stolen?"
+          }
+         ],
+         "translation": "Tu es porte-parole ; l’enquête est en cours.",
+         "choices": [
+          "We are investigating and will keep you informed as soon as we know more.",
+          "Leave me alone, please.",
+          "Yes, everything was stolen, it’s a disaster."
+         ],
+         "answer": "We are investigating and will keep you informed as soon as we know more.",
+         "explanation": "Prudence et transparence."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The event was cancelled due to unforeseen circumstances.",
+         "translation": "L’annulation était prévue depuis longtemps.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "unforeseen = imprévu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w7",
+   "title": "Le moulin du Hob",
+   "region": "Îles du Nord",
+   "description": "Insister et structurer un discours : inversion après only, so, such ; fronting ; mots de discours.",
+   "boss": {
+    "name": "Le Hob du moulin",
+    "glyph": "e",
+    "intro": "Cet esprit domestique travaille la nuit en échange d’une jatte de crème, mais quitte la maison au moindre mot mal placé. Structure ton discours avec soin pour qu’il reste."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w7-c1",
+     "title": "Mettre en relief",
+     "lessons": [
+      {
+       "slug": "en-inversion-c1",
+       "title": "Inversions avancées : Only when…, So… that",
+       "objective": "Mettre une idée en tête de phrase pour insister.",
+       "minutes": 10,
+       "explanation": [
+        "Only + complément + inversion : Only when the results came in did we realise the scale of the problem. Only then…, Only by…, Only after…",
+        "So + adjectif + inversion + that : So successful was the launch that we sold out in a day. Such + be + nom : Such was the demand that…",
+        "Hardly / No sooner : Hardly had we arrived when it started raining. No sooner had he left than the phone rang."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-only-when",
+         "kind": "grammar",
+         "front": "Only when… did…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce n’est que lorsque… que…"
+        },
+        {
+         "slug": "gram-en-so-such-inversion",
+         "kind": "grammar",
+         "front": "So successful was… that / Such was…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si… que (inversion)"
+        },
+        {
+         "slug": "gram-en-no-sooner",
+         "kind": "grammar",
+         "front": "No sooner had… than / Hardly had… when",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à peine… que"
+        },
+        {
+         "slug": "en-scale",
+         "kind": "vocabulary",
+         "front": "scale",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ampleur, échelle"
+        },
+        {
+         "slug": "en-sell-out",
+         "kind": "vocabulary",
+         "front": "to sell out",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être épuisé (stock)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Only after the audit did we discover the error.",
+         "reading": null,
+         "fr": "Ce n’est qu’après l’audit que nous avons découvert l’erreur."
+        },
+        {
+         "jp": "No sooner had the product been launched than orders started pouring in.",
+         "reading": null,
+         "fr": "À peine le produit était-il lancé que les commandes ont afflué."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Only when I read the report ＿ how serious it was.",
+         "choices": [
+          "did I understand",
+          "I understood",
+          "I did understand"
+         ],
+         "answer": "did I understand",
+         "explanation": "Only when… + inversion.",
+         "translation": "Ce n’est qu’en lisant le rapport que j’ai compris la gravité de la situation."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No sooner had she sat down ＿ the fire alarm went off.",
+         "choices": [
+          "than",
+          "when",
+          "then"
+         ],
+         "answer": "than",
+         "explanation": "No sooner… than.",
+         "translation": "À peine s’était-elle assise que l’alarme incendie s’est déclenchée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "So popular ＿ the product that it sold out in hours.",
+         "choices": [
+          "was",
+          "it was",
+          "has"
+         ],
+         "answer": "was",
+         "explanation": "So + adjectif + verbe + sujet.",
+         "translation": "Le produit était si populaire qu’il a été épuisé en quelques heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hardly ＿ the meeting started when the power went out.",
+         "choices": [
+          "had",
+          "has",
+          "did"
+         ],
+         "answer": "had",
+         "explanation": "Hardly had… when.",
+         "translation": "La réunion avait à peine commencé que le courant a été coupé."
+        }
+       ]
+      },
+      {
+       "slug": "en-discourse-markers",
+       "title": "Les marqueurs du discours",
+       "objective": "Guider l’auditeur à l’oral comme à l’écrit.",
+       "minutes": 9,
+       "explanation": [
+        "Recentrer : As far as… is concerned (en ce qui concerne), With regard to, Regarding. Préciser : In other words, That is to say, To put it another way.",
+        "Revenir et digresser : Incidentally (au fait), Be that as it may (quoi qu’il en soit), Anyway, Having said that (cela dit)."
+       ],
+       "items": [
+        {
+         "slug": "en-as-far-as",
+         "kind": "vocabulary",
+         "front": "as far as… is concerned",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en ce qui concerne…"
+        },
+        {
+         "slug": "en-with-regard-to",
+         "kind": "vocabulary",
+         "front": "with regard to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en ce qui concerne, quant à"
+        },
+        {
+         "slug": "en-in-other-words",
+         "kind": "vocabulary",
+         "front": "in other words",
+         "reading": null,
+         "romaji": null,
+         "meaning": "autrement dit"
+        },
+        {
+         "slug": "en-incidentally",
+         "kind": "vocabulary",
+         "front": "incidentally",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au fait, soit dit en passant"
+        },
+        {
+         "slug": "en-having-said-that",
+         "kind": "vocabulary",
+         "front": "having said that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cela dit, ceci étant dit"
+        },
+        {
+         "slug": "en-be-that-as-it-may",
+         "kind": "vocabulary",
+         "front": "be that as it may",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quoi qu’il en soit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "As far as the budget is concerned, we are on track. Having said that, the schedule is tight.",
+         "reading": null,
+         "fr": "En ce qui concerne le budget, nous sommes dans les clous. Cela dit, le calendrier est serré."
+        },
+        {
+         "jp": "Sales fell by 20%. In other words, we need to act quickly.",
+         "reading": null,
+         "fr": "Les ventes ont chuté de 20 %. Autrement dit, nous devons agir vite."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "As far as I’m ＿, the plan is excellent.",
+         "choices": [
+          "concerned",
+          "concerning",
+          "concern"
+         ],
+         "answer": "concerned",
+         "explanation": "As far as I’m concerned = pour ma part.",
+         "translation": "Pour ma part, le plan est excellent."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The hotel is expensive. Having ＿ that, it’s very comfortable.",
+         "choices": [
+          "said",
+          "told",
+          "spoken"
+         ],
+         "answer": "said",
+         "explanation": "Cela dit : Having said that.",
+         "translation": "L’hôtel est cher. Cela dit, il est très confortable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "We’re over budget. In other ＿, we can’t hire anyone.",
+         "choices": [
+          "words",
+          "terms",
+          "ways"
+         ],
+         "answer": "words",
+         "explanation": "Autrement dit : in other words.",
+         "translation": "Nous dépassons le budget. Autrement dit, nous ne pouvons embaucher personne."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Incidentally, did you get my email?",
+         "translation": "La question est le sujet principal de la conversation.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "incidentally = au passage."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w7-c2",
+     "title": "Diriger",
+     "lessons": [
+      {
+       "slug": "en-leadership",
+       "title": "Le management et le leadership",
+       "objective": "Parler de motivation, de délégation et de changement.",
+       "minutes": 9,
+       "explanation": [
+        "to delegate (déléguer), to empower (responsabiliser), to motivate, to give feedback, accountability (responsabilité), morale (moral des équipes), to boost (stimuler).",
+        "Le changement : to implement change, to overcome resistance (surmonter les résistances), a smooth transition (une transition en douceur), to streamline (rationaliser)."
+       ],
+       "items": [
+        {
+         "slug": "en-delegate",
+         "kind": "vocabulary",
+         "front": "to delegate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déléguer"
+        },
+        {
+         "slug": "en-empower",
+         "kind": "vocabulary",
+         "front": "to empower",
+         "reading": null,
+         "romaji": null,
+         "meaning": "responsabiliser, donner du pouvoir"
+        },
+        {
+         "slug": "en-morale",
+         "kind": "vocabulary",
+         "front": "morale",
+         "reading": null,
+         "romaji": null,
+         "meaning": "moral (d’une équipe)"
+        },
+        {
+         "slug": "en-accountability",
+         "kind": "vocabulary",
+         "front": "accountability",
+         "reading": null,
+         "romaji": null,
+         "meaning": "responsabilité (devoir de rendre des comptes)"
+        },
+        {
+         "slug": "en-streamline",
+         "kind": "vocabulary",
+         "front": "to streamline",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rationaliser, simplifier"
+        },
+        {
+         "slug": "en-overcome",
+         "kind": "vocabulary",
+         "front": "to overcome",
+         "reading": null,
+         "romaji": null,
+         "meaning": "surmonter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "A good manager delegates tasks and empowers the team.",
+         "reading": null,
+         "fr": "Un bon manager délègue et responsabilise son équipe."
+        },
+        {
+         "jp": "The new software has streamlined our ordering process.",
+         "reading": null,
+         "fr": "Le nouveau logiciel a simplifié notre processus de commande."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Staff ＿ is low after the job cuts.",
+         "choices": [
+          "morale",
+          "moral",
+          "mood"
+         ],
+         "answer": "morale",
+         "explanation": "Moral d’une équipe : morale.",
+         "translation": "Le moral du personnel est au plus bas après les suppressions de postes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "You can’t do everything yourself; learn to ＿.",
+         "choices": [
+          "delegate",
+          "delete",
+          "delay"
+         ],
+         "answer": "delegate",
+         "explanation": "Déléguer : delegate.",
+         "translation": "Tu ne peux pas tout faire toi-même ; apprends à déléguer."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "We need to ＿ our procedures to save time.",
+         "choices": [
+          "streamline",
+          "downstream",
+          "outline"
+         ],
+         "answer": "streamline",
+         "explanation": "Simplifier : streamline.",
+         "translation": "Nous devons rationaliser nos procédures pour gagner du temps."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The team overcame many obstacles.",
+         "translation": "L’équipe a été arrêtée par les obstacles.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "overcome = surmonter."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-w8",
+   "title": "Le lac d’Excalibur",
+   "region": "Îles du Nord",
+   "description": "Convaincre au plus haut niveau : rhétorique, concessions habiles et nuances de sens entre mots proches.",
+   "boss": {
+    "name": "La Dame du Lac",
+    "glyph": "a",
+    "intro": "Gardienne d’Excalibur, la Dame du Lac ne reprendra l’épée que des mains de celui ou celle qui saura plaider sa cause avec une éloquence parfaite."
+   },
+   "chapters": [
+    {
+     "slug": "c1-w8-c1",
+     "title": "L’art de convaincre",
+     "lessons": [
+      {
+       "slug": "en-persuasion",
+       "title": "Argumenter et concéder",
+       "objective": "Construire un argumentaire en anticipant les objections.",
+       "minutes": 10,
+       "explanation": [
+        "Concéder pour mieux contrer : Admittedly, … ; however… / While it is true that…, … / Granted, …, but… / There is no denying that…, yet…",
+        "Renforcer : What is more, … / Not to mention… / Above all, … / The bottom line is (l’essentiel, c’est)…"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-concession",
+         "kind": "grammar",
+         "front": "Admittedly…, however… / While it is true that…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "concession argumentative"
+        },
+        {
+         "slug": "en-admittedly",
+         "kind": "vocabulary",
+         "front": "admittedly",
+         "reading": null,
+         "romaji": null,
+         "meaning": "certes, il faut l’admettre"
+        },
+        {
+         "slug": "en-granted",
+         "kind": "vocabulary",
+         "front": "granted",
+         "reading": null,
+         "romaji": null,
+         "meaning": "certes, d’accord"
+        },
+        {
+         "slug": "en-what-is-more",
+         "kind": "vocabulary",
+         "front": "what is more",
+         "reading": null,
+         "romaji": null,
+         "meaning": "qui plus est, de plus"
+        },
+        {
+         "slug": "en-bottom-line",
+         "kind": "vocabulary",
+         "front": "the bottom line",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’essentiel, le fond du problème"
+        },
+        {
+         "slug": "en-no-denying",
+         "kind": "vocabulary",
+         "front": "there is no denying that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "on ne peut nier que"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Admittedly, the initial cost is high; however, the savings will be considerable.",
+         "reading": null,
+         "fr": "Certes, le coût initial est élevé ; cependant, les économies seront considérables."
+        },
+        {
+         "jp": "The bottom line is that we cannot afford to lose this client.",
+         "reading": null,
+         "fr": "L’essentiel, c’est que nous ne pouvons pas nous permettre de perdre ce client."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿, the plan has risks, but the rewards are greater.",
+         "choices": [
+          "Admittedly",
+          "Consequently",
+          "Therefore"
+         ],
+         "answer": "Admittedly",
+         "explanation": "Concession : Admittedly.",
+         "translation": "Certes, le plan comporte des risques, mais les gains sont plus importants."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "While it is ＿ that prices are high, quality is excellent.",
+         "choices": [
+          "true",
+          "truth",
+          "truly"
+         ],
+         "answer": "true",
+         "explanation": "While it is true that…",
+         "translation": "S’il est vrai que les prix sont élevés, la qualité est excellente."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The product is cheap. What is ＿, it is eco-friendly.",
+         "choices": [
+          "more",
+          "better",
+          "plus"
+         ],
+         "answer": "more",
+         "explanation": "Qui plus est : What is more.",
+         "translation": "Le produit est bon marché. Qui plus est, il est écologique."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Lady of the Lake",
+           "jp": "Why should I take back the sword from you?"
+          }
+         ],
+         "translation": "Plaide ta cause avec éloquence.",
+         "choices": [
+          "Admittedly, I am not a king; yet there is no denying that I have kept my word.",
+          "Because I say so.",
+          "Take it, I don’t want it."
+         ],
+         "answer": "Admittedly, I am not a king; yet there is no denying that I have kept my word.",
+         "explanation": "Concession puis argument fort."
+        }
+       ]
+      },
+      {
+       "slug": "en-confusables",
+       "title": "Les faux amis et mots proches",
+       "objective": "Éviter les pièges classiques du TOEIC.",
+       "minutes": 10,
+       "explanation": [
+        "Faux amis : actually (en fait), eventually (finalement), sensible (raisonnable), library (bibliothèque), achieve (accomplir), currently (actuellement), to attend (assister à).",
+        "Paires piégeuses : affect (verbe) / effect (nom) ; economic (de l’économie) / economical (économe) ; principal (principal) / principle (principe) ; lose / loose ; rise (intransitif) / raise (transitif)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-affect-effect",
+         "kind": "grammar",
+         "front": "affect / effect",
+         "reading": null,
+         "romaji": null,
+         "meaning": "affecter (verbe) / effet (nom)"
+        },
+        {
+         "slug": "gram-en-rise-raise",
+         "kind": "grammar",
+         "front": "rise / raise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "augmenter (intransitif / transitif)"
+        },
+        {
+         "slug": "en-sensible",
+         "kind": "vocabulary",
+         "front": "sensible",
+         "reading": null,
+         "romaji": null,
+         "meaning": "raisonnable, sensé"
+        },
+        {
+         "slug": "en-economical",
+         "kind": "vocabulary",
+         "front": "economical",
+         "reading": null,
+         "romaji": null,
+         "meaning": "économique, économe (qui consomme peu)"
+        },
+        {
+         "slug": "en-principle",
+         "kind": "vocabulary",
+         "front": "principle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "principe"
+        },
+        {
+         "slug": "en-currently",
+         "kind": "vocabulary",
+         "front": "currently",
+         "reading": null,
+         "romaji": null,
+         "meaning": "actuellement"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The new rules will affect small businesses, but the effect on large firms will be limited.",
+         "reading": null,
+         "fr": "Les nouvelles règles toucheront les petites entreprises, mais l’effet sur les grandes sera limité."
+        },
+        {
+         "jp": "This car is very economical: it uses only four litres per 100 km.",
+         "reading": null,
+         "fr": "Cette voiture est très économique : elle ne consomme que quatre litres aux 100 km."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The strike will seriously ＿ deliveries.",
+         "choices": [
+          "affect",
+          "effect",
+          "afflict"
+         ],
+         "answer": "affect",
+         "explanation": "Verbe : affect.",
+         "translation": "La grève va sérieusement perturber les livraisons."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The company decided to ＿ its prices.",
+         "choices": [
+          "raise",
+          "rise",
+          "arise"
+         ],
+         "answer": "raise",
+         "explanation": "Transitif (avec complément) : raise.",
+         "translation": "L’entreprise a décidé d’augmenter ses prix."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Taking the train is the most ＿ option.",
+         "choices": [
+          "sensible",
+          "sensitive",
+          "sensational"
+         ],
+         "answer": "sensible",
+         "explanation": "Raisonnable : sensible.",
+         "translation": "Prendre le train est l’option la plus raisonnable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She is ＿ working on a new project.",
+         "choices": [
+          "currently",
+          "actually",
+          "eventually"
+         ],
+         "answer": "currently",
+         "explanation": "Actuellement : currently.",
+         "translation": "Elle travaille actuellement sur un nouveau projet."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "c1-w8-c2",
+     "title": "Négocier au sommet",
+     "lessons": [
+      {
+       "slug": "en-advanced-negotiation",
+       "title": "La négociation avancée",
+       "objective": "Mener une négociation complexe jusqu’à l’accord.",
+       "minutes": 9,
+       "explanation": [
+        "Sonder : What would it take for you to…? / Where do you have some flexibility? Conditionner : We could consider…, subject to… (sous réserve de).",
+        "Débloquer : Let’s find some common ground (un terrain d’entente). / Can we meet each other halfway (couper la poire en deux)? / That’s a deal-breaker (point de rupture) for us."
+       ],
+       "items": [
+        {
+         "slug": "en-common-ground",
+         "kind": "vocabulary",
+         "front": "common ground",
+         "reading": null,
+         "romaji": null,
+         "meaning": "terrain d’entente"
+        },
+        {
+         "slug": "en-meet-halfway",
+         "kind": "vocabulary",
+         "front": "to meet halfway",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire un compromis, couper la poire en deux"
+        },
+        {
+         "slug": "en-deal-breaker",
+         "kind": "vocabulary",
+         "front": "deal-breaker",
+         "reading": null,
+         "romaji": null,
+         "meaning": "point de rupture (rédhibitoire)"
+        },
+        {
+         "slug": "en-flexibility",
+         "kind": "vocabulary",
+         "front": "flexibility",
+         "reading": null,
+         "romaji": null,
+         "meaning": "souplesse, marge de manœuvre"
+        },
+        {
+         "slug": "en-subject-to",
+         "kind": "vocabulary",
+         "front": "subject to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sous réserve de"
+        },
+        {
+         "slug": "en-concession",
+         "kind": "vocabulary",
+         "front": "concession",
+         "reading": null,
+         "romaji": null,
+         "meaning": "concession"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We could consider a longer contract, subject to a review after one year.",
+         "reading": null,
+         "fr": "Nous pourrions envisager un contrat plus long, sous réserve d’un bilan au bout d’un an."
+        },
+        {
+         "jp": "Exclusive rights are a deal-breaker for us, but perhaps we can meet halfway on price.",
+         "reading": null,
+         "fr": "Les droits exclusifs sont rédhibitoires pour nous, mais nous pourrions peut-être faire un compromis sur le prix."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Let’s try to find some common ＿.",
+         "choices": [
+          "ground",
+          "land",
+          "field"
+         ],
+         "answer": "ground",
+         "explanation": "Terrain d’entente : common ground.",
+         "translation": "Essayons de trouver un terrain d’entente."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The offer is ＿ to approval by our lawyers.",
+         "choices": [
+          "subject",
+          "object",
+          "submitted"
+         ],
+         "answer": "subject",
+         "explanation": "Sous réserve de : subject to.",
+         "translation": "L’offre est sous réserve de validation par nos avocats."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Supplier",
+           "jp": "We cannot go below 50 pounds per unit."
+          }
+         ],
+         "translation": "Tu proposais 40 livres ; trouve un compromis.",
+         "choices": [
+          "Could we meet halfway at 45, provided you cover delivery?",
+          "Then the deal is over forever.",
+          "OK, 50, whatever you want."
+         ],
+         "answer": "Could we meet halfway at 45, provided you cover delivery?",
+         "explanation": "Compromis conditionnel."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The delivery date is a deal-breaker for us.",
+         "translation": "La date de livraison est négociable.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "deal-breaker = point non négociable."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "c1-final",
+   "title": "Simulation TOEIC C1 : l’île d’Avalon",
+   "region": "Îles du Nord",
+   "description": "Examen blanc au format du TOEIC Listening & Reading, en anglais : questions-réponses, conversations et annonces, phrases et textes à compléter, compréhension écrite. Noté sur 990 ; objectif C1 à 945 points.",
+   "exam": "c1-toeic",
+   "chapters": []
+  }
+ ]
+}

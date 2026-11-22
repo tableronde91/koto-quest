@@ -19805,6 +19805,760 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "lady-of-shalott",
+   "glyph": "L",
+   "level": "C1",
+   "color": "#4A6A8A",
+   "title": {
+    "jp": "The Lady of Shalott",
+    "fr": "La Dame de Shalott",
+    "en": "The Lady of Shalott"
+   },
+   "summary": {
+    "fr": "Enfermée dans une tour près de Camelot, une jeune femme ne peut regarder le monde qu’à travers un miroir. Le jour où elle voit passer Lancelot, elle brave la malédiction.",
+    "en": "Shut away in a tower near Camelot, a young woman may only look at the world through a mirror. The day she sees Lancelot ride by, she defies the curse."
+   },
+   "chapters": [
+    {
+     "slug": "shalott-1",
+     "title": {
+      "jp": "The curse",
+      "fr": "La malédiction",
+      "en": "The curse"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "On an island in the river that flows down to Camelot stood a grey tower, in which lived a lady whom hardly anyone had ever seen.",
+        "fr": "Sur une île de la rivière qui descend vers Camelot se dressait une tour grise, où vivait une dame que presque personne n’avait jamais vue.",
+        "en": "On an island in the river that flows down to Camelot stood a grey tower, in which lived a lady whom hardly anyone had ever seen.",
+        "kana": "On an island in the river that flows down to Camelot stood a grey tower, in which lived a lady whom hardly anyone had ever seen."
+       },
+       {
+        "jp": "Day and night she wove a magic tapestry, for she had been told that, were she to look directly at the outside world, a curse would fall upon her.",
+        "fr": "Jour et nuit, elle tissait une tapisserie magique, car on lui avait dit que si elle regardait directement le monde extérieur, une malédiction s’abattrait sur elle.",
+        "en": "Day and night she wove a magic tapestry, for she had been told that, were she to look directly at the outside world, a curse would fall upon her.",
+        "kana": "Day and night she wove a magic tapestry, for she had been told that, were she to look directly at the outside world, a curse would fall upon her."
+       }
+      ],
+      [
+       {
+        "jp": "Not knowing what the curse might be, she dared not disobey, and watched life pass only as reflections in a mirror.",
+        "fr": "Ignorant la nature de cette malédiction, elle n’osait désobéir et ne voyait passer la vie que sous forme de reflets dans un miroir.",
+        "en": "Not knowing what the curse might be, she dared not disobey, and watched life pass only as reflections in a mirror.",
+        "kana": "Not knowing what the curse might be, she dared not disobey, and watched life pass only as reflections in a mirror."
+       },
+       {
+        "jp": "Farmers, knights and young lovers appeared in the glass, yet she remained, in her own words, “half sick of shadows”.",
+        "fr": "Paysans, chevaliers et jeunes amoureux apparaissaient dans la glace ; pourtant, elle restait, selon ses propres mots, « à demi lasse des ombres ».",
+        "en": "Farmers, knights and young lovers appeared in the glass, yet she remained, in her own words, “half sick of shadows”.",
+        "kana": "Farmers, knights and young lovers appeared in the glass, yet she remained, in her own words, “half sick of shadows”."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "wove",
+       "reading": "/wəʊv/",
+       "fr": "tissait",
+       "en": "wove"
+      },
+      {
+       "jp": "tapestry",
+       "reading": "/ˈtæpəstri/",
+       "fr": "tapisserie",
+       "en": "tapestry"
+      },
+      {
+       "jp": "curse",
+       "reading": "/kɜːs/",
+       "fr": "malédiction",
+       "en": "curse"
+      },
+      {
+       "jp": "dared",
+       "reading": "/deəd/",
+       "fr": "osait",
+       "en": "dared"
+      },
+      {
+       "jp": "disobey",
+       "reading": "/ˌdɪsəˈbeɪ/",
+       "fr": "désobéir",
+       "en": "disobey"
+      },
+      {
+       "jp": "reflections",
+       "reading": "/rɪˈflekʃnz/",
+       "fr": "reflets",
+       "en": "reflections"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que se passerait-il si la dame regardait directement dehors ?",
+        "en": "What would happen if the lady looked directly outside?"
+       },
+       "choices": [
+        {
+         "fr": "Une malédiction s’abattrait sur elle",
+         "en": "A curse would fall upon her"
+        },
+        {
+         "fr": "Elle deviendrait reine",
+         "en": "She would become queen"
+        },
+        {
+         "fr": "La tour s’effondrerait",
+         "en": "The tower would collapse"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment voit-elle le monde ?",
+        "en": "How does she see the world?"
+       },
+       "choices": [
+        {
+         "fr": "Par la fenêtre",
+         "en": "Through the window"
+        },
+        {
+         "fr": "Dans un miroir",
+         "en": "In a mirror"
+        },
+        {
+         "fr": "Dans ses rêves",
+         "en": "In her dreams"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "shalott-2",
+     "title": {
+      "jp": "Sir Lancelot",
+      "fr": "Sire Lancelot",
+      "en": "Sir Lancelot"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "One bright summer morning, Sir Lancelot rode past the tower, his armour flashing in the sun and his voice ringing out in song.",
+        "fr": "Un lumineux matin d’été, sire Lancelot passa près de la tour, son armure étincelant au soleil et sa voix résonnant dans une chanson.",
+        "en": "One bright summer morning, Sir Lancelot rode past the tower, his armour flashing in the sun and his voice ringing out in song.",
+        "kana": "One bright summer morning, Sir Lancelot rode past the tower, his armour flashing in the sun and his voice ringing out in song."
+       },
+       {
+        "jp": "No sooner had his reflection crossed the mirror than the lady left her loom and went to the window.",
+        "fr": "À peine son reflet eut-il traversé le miroir que la dame quitta son métier à tisser et alla à la fenêtre.",
+        "en": "No sooner had his reflection crossed the mirror than the lady left her loom and went to the window.",
+        "kana": "No sooner had his reflection crossed the mirror than the lady left her loom and went to the window."
+       }
+      ],
+      [
+       {
+        "jp": "At that very moment, the mirror cracked from side to side and the tapestry flew out of the window.",
+        "fr": "À cet instant précis, le miroir se fendit d’un bout à l’autre et la tapisserie s’envola par la fenêtre.",
+        "en": "At that very moment, the mirror cracked from side to side and the tapestry flew out of the window.",
+        "kana": "At that very moment, the mirror cracked from side to side and the tapestry flew out of the window."
+       },
+       {
+        "jp": "“The curse is come upon me,” she cried, knowing that there was no turning back.",
+        "fr": "« La malédiction s’abat sur moi », s’écria-t-elle, sachant qu’il n’y avait plus de retour possible.",
+        "en": "“The curse is come upon me,” she cried, knowing that there was no turning back.",
+        "kana": "“The curse is come upon me,” she cried, knowing that there was no turning back."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "armour",
+       "reading": "/ˈɑːmə/",
+       "fr": "armure",
+       "en": "armour"
+      },
+      {
+       "jp": "flashing",
+       "reading": "/ˈflæʃɪŋ/",
+       "fr": "étincelant",
+       "en": "flashing"
+      },
+      {
+       "jp": "ringing out",
+       "reading": "/ˈrɪŋɪŋ aʊt/",
+       "fr": "résonnant",
+       "en": "ringing out"
+      },
+      {
+       "jp": "loom",
+       "reading": "/luːm/",
+       "fr": "métier à tisser",
+       "en": "loom"
+      },
+      {
+       "jp": "cracked",
+       "reading": "/krækt/",
+       "fr": "se fendit",
+       "en": "cracked"
+      },
+      {
+       "jp": "no turning back",
+       "reading": "/nəʊ ˈtɜːnɪŋ bæk/",
+       "fr": "pas de retour possible",
+       "en": "no turning back"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’est-ce qui pousse la dame à aller à la fenêtre ?",
+        "en": "What makes the lady go to the window?"
+       },
+       "choices": [
+        {
+         "fr": "Le passage de Lancelot",
+         "en": "Lancelot riding by"
+        },
+        {
+         "fr": "Un orage",
+         "en": "A storm"
+        },
+        {
+         "fr": "Un cri d’enfant",
+         "en": "A child’s cry"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que se passe-t-il quand elle regarde dehors ?",
+        "en": "What happens when she looks outside?"
+       },
+       "choices": [
+        {
+         "fr": "Elle s’endort",
+         "en": "She falls asleep"
+        },
+        {
+         "fr": "Le miroir se fend",
+         "en": "The mirror cracks"
+        },
+        {
+         "fr": "Lancelot s’arrête",
+         "en": "Lancelot stops"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "shalott-3",
+     "title": {
+      "jp": "The boat to Camelot",
+      "fr": "La barque vers Camelot",
+      "en": "The boat to Camelot"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Sensing that her end was near, she found a boat beneath a willow, wrote her name upon its prow and lay down in it.",
+        "fr": "Pressentant sa fin proche, elle trouva une barque sous un saule, inscrivit son nom sur la proue et s’y allongea.",
+        "en": "Sensing that her end was near, she found a boat beneath a willow, wrote her name upon its prow and lay down in it.",
+        "kana": "Sensing that her end was near, she found a boat beneath a willow, wrote her name upon its prow and lay down in it."
+       },
+       {
+        "jp": "The boat drifted down the river towards Camelot as she sang her last song, her voice growing ever fainter.",
+        "fr": "La barque dériva sur la rivière vers Camelot tandis qu’elle chantait son dernier chant, d’une voix de plus en plus faible.",
+        "en": "The boat drifted down the river towards Camelot as she sang her last song, her voice growing ever fainter.",
+        "kana": "The boat drifted down the river towards Camelot as she sang her last song, her voice growing ever fainter."
+       }
+      ],
+      [
+       {
+        "jp": "By the time it reached the town, she had died. Knights and ladies gathered on the bank, wondering who she might have been.",
+        "fr": "Le temps qu’elle atteigne la ville, la dame était morte. Chevaliers et dames se rassemblèrent sur la rive, se demandant qui elle avait bien pu être.",
+        "en": "By the time it reached the town, she had died. Knights and ladies gathered on the bank, wondering who she might have been.",
+        "kana": "By the time it reached the town, she had died. Knights and ladies gathered on the bank, wondering who she might have been."
+       },
+       {
+        "jp": "Only Lancelot paused to look at her face, and, unaware of the part he had played, said simply that she had a lovely face.",
+        "fr": "Seul Lancelot s’arrêta pour regarder son visage et, ignorant le rôle qu’il avait joué, dit simplement qu’elle avait un beau visage.",
+        "en": "Only Lancelot paused to look at her face, and, unaware of the part he had played, said simply that she had a lovely face.",
+        "kana": "Only Lancelot paused to look at her face, and, unaware of the part he had played, said simply that she had a lovely face."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "sensing",
+       "reading": "/ˈsensɪŋ/",
+       "fr": "pressentant",
+       "en": "sensing"
+      },
+      {
+       "jp": "willow",
+       "reading": "/ˈwɪləʊ/",
+       "fr": "saule",
+       "en": "willow"
+      },
+      {
+       "jp": "prow",
+       "reading": "/praʊ/",
+       "fr": "proue",
+       "en": "prow"
+      },
+      {
+       "jp": "drifted",
+       "reading": "/ˈdrɪftɪd/",
+       "fr": "dériva",
+       "en": "drifted"
+      },
+      {
+       "jp": "fainter",
+       "reading": "/ˈfeɪntə/",
+       "fr": "plus faible",
+       "en": "fainter"
+      },
+      {
+       "jp": "unaware",
+       "reading": "/ˌʌnəˈweə/",
+       "fr": "ignorant, inconscient",
+       "en": "unaware"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’écrit la dame sur la barque ?",
+        "en": "What does the lady write on the boat?"
+       },
+       "choices": [
+        {
+         "fr": "Son nom",
+         "en": "Her name"
+        },
+        {
+         "fr": "Une lettre à Lancelot",
+         "en": "A letter to Lancelot"
+        },
+        {
+         "fr": "Le nom de Camelot",
+         "en": "The name of Camelot"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que sait Lancelot de son rôle dans l’histoire ?",
+        "en": "What does Lancelot know about his part in the story?"
+       },
+       "choices": [
+        {
+         "fr": "Il se sent coupable",
+         "en": "He feels guilty"
+        },
+        {
+         "fr": "Il n’en sait rien",
+         "en": "He knows nothing of it"
+        },
+        {
+         "fr": "Il l’avait prévu",
+         "en": "He had planned it"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "thomas-rhymer",
+   "glyph": "H",
+   "level": "C1",
+   "color": "#3E7A5A",
+   "title": {
+    "jp": "Thomas the Rhymer",
+    "fr": "Thomas le Rimeur",
+    "en": "Thomas the Rhymer"
+   },
+   "summary": {
+    "fr": "Le poète écossais Thomas d’Erceldoune rencontre la reine d’Elfland sous un arbre. Il la suit dans son royaume, où le temps ne s’écoule pas comme ailleurs.",
+    "en": "The Scottish poet Thomas of Erceldoune meets the Queen of Elfland beneath a tree. He follows her into her kingdom, where time does not pass as it does elsewhere."
+   },
+   "chapters": [
+    {
+     "slug": "rhymer-1",
+     "title": {
+      "jp": "The Eildon Tree",
+      "fr": "L’arbre d’Eildon",
+      "en": "The Eildon Tree"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Thomas of Erceldoune, a poet renowned throughout the Borders, was resting beneath the Eildon Tree when a lady of dazzling beauty rode towards him.",
+        "fr": "Thomas d’Erceldoune, poète renommé dans tous les Borders, se reposait sous l’arbre d’Eildon quand une dame d’une beauté éblouissante s’avança vers lui à cheval.",
+        "en": "Thomas of Erceldoune, a poet renowned throughout the Borders, was resting beneath the Eildon Tree when a lady of dazzling beauty rode towards him.",
+        "kana": "Thomas of Erceldoune, a poet renowned throughout the Borders, was resting beneath the Eildon Tree when a lady of dazzling beauty rode towards him."
+       },
+       {
+        "jp": "Her horse was white as milk, and from its mane hung fifty silver bells that rang with every step.",
+        "fr": "Son cheval était blanc comme le lait, et à sa crinière pendaient cinquante clochettes d’argent qui tintaient à chaque pas.",
+        "en": "Her horse was white as milk, and from its mane hung fifty silver bells that rang with every step.",
+        "kana": "Her horse was white as milk, and from its mane hung fifty silver bells that rang with every step."
+       }
+      ],
+      [
+       {
+        "jp": "Mistaking her for the Queen of Heaven, Thomas knelt before her, only to be told that she was the Queen of fair Elfland.",
+        "fr": "La prenant pour la Reine des Cieux, Thomas s’agenouilla devant elle, avant d’apprendre qu’elle était la reine de la belle Elfland.",
+        "en": "Mistaking her for the Queen of Heaven, Thomas knelt before her, only to be told that she was the Queen of fair Elfland.",
+        "kana": "Mistaking her for the Queen of Heaven, Thomas knelt before her, only to be told that she was the Queen of fair Elfland."
+       },
+       {
+        "jp": "Bold, albeit unwise, he kissed her, thereby binding himself to serve her for seven years.",
+        "fr": "Audacieux, bien qu’imprudent, il l’embrassa, se liant ainsi à elle pour la servir sept ans.",
+        "en": "Bold, albeit unwise, he kissed her, thereby binding himself to serve her for seven years.",
+        "kana": "Bold, albeit unwise, he kissed her, thereby binding himself to serve her for seven years."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "renowned",
+       "reading": "/rɪˈnaʊnd/",
+       "fr": "renommé",
+       "en": "renowned"
+      },
+      {
+       "jp": "dazzling",
+       "reading": "/ˈdæzlɪŋ/",
+       "fr": "éblouissant",
+       "en": "dazzling"
+      },
+      {
+       "jp": "mane",
+       "reading": "/meɪn/",
+       "fr": "crinière",
+       "en": "mane"
+      },
+      {
+       "jp": "knelt",
+       "reading": "/nelt/",
+       "fr": "s’agenouilla",
+       "en": "knelt"
+      },
+      {
+       "jp": "bold",
+       "reading": "/bəʊld/",
+       "fr": "audacieux",
+       "en": "bold"
+      },
+      {
+       "jp": "binding",
+       "reading": "/ˈbaɪndɪŋ/",
+       "fr": "liant, engageant",
+       "en": "binding"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pour qui Thomas prend-il d’abord la dame ?",
+        "en": "Who does Thomas first take the lady to be?"
+       },
+       "choices": [
+        {
+         "fr": "La Reine des Cieux",
+         "en": "The Queen of Heaven"
+        },
+        {
+         "fr": "Une paysanne",
+         "en": "A peasant"
+        },
+        {
+         "fr": "La reine d’Écosse",
+         "en": "The Queen of Scotland"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Quelle est la conséquence du baiser ?",
+        "en": "What is the consequence of the kiss?"
+       },
+       "choices": [
+        {
+         "fr": "Il devient roi",
+         "en": "He becomes king"
+        },
+        {
+         "fr": "Il doit la servir sept ans",
+         "en": "He must serve her for seven years"
+        },
+        {
+         "fr": "Il perd la voix",
+         "en": "He loses his voice"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "rhymer-2",
+     "title": {
+      "jp": "Three roads",
+      "fr": "Trois chemins",
+      "en": "Three roads"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "They rode for forty days through darkness, wading through rivers of blood, until they came to a place where three roads met.",
+        "fr": "Ils chevauchèrent quarante jours dans l’obscurité, traversant à gué des rivières de sang, jusqu’à un lieu où trois chemins se rejoignaient.",
+        "en": "They rode for forty days through darkness, wading through rivers of blood, until they came to a place where three roads met.",
+        "kana": "They rode for forty days through darkness, wading through rivers of blood, until they came to a place where three roads met."
+       },
+       {
+        "jp": "The first, narrow and thorny, was the path of righteousness; the second, broad and easy, led to wickedness.",
+        "fr": "Le premier, étroit et épineux, était le chemin de la vertu ; le second, large et facile, menait au vice.",
+        "en": "The first, narrow and thorny, was the path of righteousness; the second, broad and easy, led to wickedness.",
+        "kana": "The first, narrow and thorny, was the path of righteousness; the second, broad and easy, led to wickedness."
+       }
+      ],
+      [
+       {
+        "jp": "The third, winding up a hillside of ferns, was the road to fair Elfland, and it was this one that they took.",
+        "fr": "Le troisième, serpentant sur un coteau de fougères, était la route de la belle Elfland, et c’est celui qu’ils prirent.",
+        "en": "The third, winding up a hillside of ferns, was the road to fair Elfland, and it was this one that they took.",
+        "kana": "The third, winding up a hillside of ferns, was the road to fair Elfland, and it was this one that they took."
+       },
+       {
+        "jp": "“Should you speak a single word while you are in my land,” the Queen warned, “you will never return to your own.”",
+        "fr": "« Si tu prononces un seul mot pendant ton séjour dans mon royaume, avertit la reine, tu ne reverras jamais le tien. »",
+        "en": "“Should you speak a single word while you are in my land,” the Queen warned, “you will never return to your own.”",
+        "kana": "“Should you speak a single word while you are in my land,” the Queen warned, “you will never return to your own.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "wading",
+       "reading": "/ˈweɪdɪŋ/",
+       "fr": "traversant à gué",
+       "en": "wading"
+      },
+      {
+       "jp": "thorny",
+       "reading": "/ˈθɔːni/",
+       "fr": "épineux",
+       "en": "thorny"
+      },
+      {
+       "jp": "righteousness",
+       "reading": "/ˈraɪtʃəsnəs/",
+       "fr": "vertu, droiture",
+       "en": "righteousness"
+      },
+      {
+       "jp": "wickedness",
+       "reading": "/ˈwɪkɪdnəs/",
+       "fr": "méchanceté, vice",
+       "en": "wickedness"
+      },
+      {
+       "jp": "winding",
+       "reading": "/ˈwaɪndɪŋ/",
+       "fr": "sinueux",
+       "en": "winding"
+      },
+      {
+       "jp": "ferns",
+       "reading": "/fɜːnz/",
+       "fr": "fougères",
+       "en": "ferns"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quel chemin mène à Elfland ?",
+        "en": "Which road leads to Elfland?"
+       },
+       "choices": [
+        {
+         "fr": "Le chemin sinueux parmi les fougères",
+         "en": "The winding road among the ferns"
+        },
+        {
+         "fr": "Le chemin étroit et épineux",
+         "en": "The narrow, thorny road"
+        },
+        {
+         "fr": "Le chemin large et facile",
+         "en": "The broad, easy road"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que ne doit pas faire Thomas à Elfland ?",
+        "en": "What must Thomas not do in Elfland?"
+       },
+       "choices": [
+        {
+         "fr": "Manger",
+         "en": "Eat"
+        },
+        {
+         "fr": "Prononcer un seul mot",
+         "en": "Speak a single word"
+        },
+        {
+         "fr": "Dormir",
+         "en": "Sleep"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "rhymer-3",
+     "title": {
+      "jp": "The gift of truth",
+      "fr": "Le don de vérité",
+      "en": "The gift of truth"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Thomas kept silent for what seemed to him three days, only to discover that seven years had passed.",
+        "fr": "Thomas garda le silence pendant ce qui lui sembla trois jours, avant de découvrir que sept années s’étaient écoulées.",
+        "en": "Thomas kept silent for what seemed to him three days, only to discover that seven years had passed.",
+        "kana": "Thomas kept silent for what seemed to him three days, only to discover that seven years had passed."
+       },
+       {
+        "jp": "Before sending him home, the Queen gave him a tongue that could never lie, a gift he considered, to some extent, a burden.",
+        "fr": "Avant de le renvoyer chez lui, la reine lui donna une langue incapable de mentir, un don qu’il considéra, dans une certaine mesure, comme un fardeau.",
+        "en": "Before sending him home, the Queen gave him a tongue that could never lie, a gift he considered, to some extent, a burden.",
+        "kana": "Before sending him home, the Queen gave him a tongue that could never lie, a gift he considered, to some extent, a burden."
+       }
+      ],
+      [
+       {
+        "jp": "Back in Scotland, he became famous for his prophecies, many of which were said to have come true.",
+        "fr": "De retour en Écosse, il devint célèbre pour ses prophéties, dont beaucoup se seraient réalisées.",
+        "en": "Back in Scotland, he became famous for his prophecies, many of which were said to have come true.",
+        "kana": "Back in Scotland, he became famous for his prophecies, many of which were said to have come true."
+       },
+       {
+        "jp": "Years later, when two white deer appeared at his door, he followed them into the forest and was never seen again.",
+        "fr": "Des années plus tard, quand deux cerfs blancs apparurent à sa porte, il les suivit dans la forêt et on ne le revit jamais.",
+        "en": "Years later, when two white deer appeared at his door, he followed them into the forest and was never seen again.",
+        "kana": "Years later, when two white deer appeared at his door, he followed them into the forest and was never seen again."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "silent",
+       "reading": "/ˈsaɪlənt/",
+       "fr": "silencieux",
+       "en": "silent"
+      },
+      {
+       "jp": "tongue",
+       "reading": "/tʌŋ/",
+       "fr": "langue (organe)",
+       "en": "tongue"
+      },
+      {
+       "jp": "burden",
+       "reading": "/ˈbɜːdn/",
+       "fr": "fardeau",
+       "en": "burden"
+      },
+      {
+       "jp": "prophecies",
+       "reading": "/ˈprɒfəsiz/",
+       "fr": "prophéties",
+       "en": "prophecies"
+      },
+      {
+       "jp": "come true",
+       "reading": "/kʌm truː/",
+       "fr": "se réaliser",
+       "en": "come true"
+      },
+      {
+       "jp": "deer",
+       "reading": "/dɪə/",
+       "fr": "cerf(s)",
+       "en": "deer"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de temps Thomas est-il vraiment resté à Elfland ?",
+        "en": "How long did Thomas really stay in Elfland?"
+       },
+       "choices": [
+        {
+         "fr": "Sept ans",
+         "en": "Seven years"
+        },
+        {
+         "fr": "Trois jours",
+         "en": "Three days"
+        },
+        {
+         "fr": "Quarante jours",
+         "en": "Forty days"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Quel don reçoit-il de la reine ?",
+        "en": "What gift does he receive from the Queen?"
+       },
+       "choices": [
+        {
+         "fr": "Une épée magique",
+         "en": "A magic sword"
+        },
+        {
+         "fr": "Une langue qui ne peut mentir",
+         "en": "A tongue that cannot lie"
+        },
+        {
+         "fr": "Un cheval blanc",
+         "en": "A white horse"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

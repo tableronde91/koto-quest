@@ -44,12 +44,13 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'TOPIK5', hint: 'Avancé' },
     { code: 'TOPIK6', hint: 'Maîtrise' },
   ],
-  // Anglais : seuls les niveaux dont le parcours est prêt (A1 pour l'instant)
+  // Anglais : les cinq niveaux du CECRL, de A1 à C1
   en: [
     { code: 'A1', hint: 'Découverte · TOEIC 120+' },
     { code: 'A2', hint: 'Survie · TOEIC 225+' },
     { code: 'B1', hint: 'Seuil · TOEIC 550+' },
     { code: 'B2', hint: 'Avancé · TOEIC 785+' },
+    { code: 'C1', hint: 'Autonome · TOEIC 945+' },
   ],
 };
 

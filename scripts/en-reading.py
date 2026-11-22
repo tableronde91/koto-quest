@@ -489,7 +489,114 @@ GELERT = STORY('gelert', 'D', 'B2', '#7A5A3A', ('Gelert the Faithful Hound', 'Ge
   ]),
 ])
 
-EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD, JACK, CANUTE, ROBIN, PEDLAR, TAMLIN, GELERT]
+
+# ═════════════════════════ C1 : The Lady of Shalott ═════════════════════════
+SHALOTT = STORY('lady-of-shalott', 'L', 'C1', '#4A6A8A', ('The Lady of Shalott', 'La Dame de Shalott'),
+  ('Enfermée dans une tour près de Camelot, une jeune femme ne peut regarder le monde qu’à travers un miroir. Le jour où elle voit passer Lancelot, elle brave la malédiction.', 'Shut away in a tower near Camelot, a young woman may only look at the world through a mirror. The day she sees Lancelot ride by, she defies the curse.'), [
+  CH('shalott-1', ('The curse', 'La malédiction'), [
+    [S('On an island in the river that flows down to Camelot stood a grey tower, in which lived a lady whom hardly anyone had ever seen.', 'Sur une île de la rivière qui descend vers Camelot se dressait une tour grise, où vivait une dame que presque personne n’avait jamais vue.'),
+     S('Day and night she wove a magic tapestry, for she had been told that, were she to look directly at the outside world, a curse would fall upon her.', 'Jour et nuit, elle tissait une tapisserie magique, car on lui avait dit que si elle regardait directement le monde extérieur, une malédiction s’abattrait sur elle.')],
+    [S('Not knowing what the curse might be, she dared not disobey, and watched life pass only as reflections in a mirror.', 'Ignorant la nature de cette malédiction, elle n’osait désobéir et ne voyait passer la vie que sous forme de reflets dans un miroir.'),
+     S('Farmers, knights and young lovers appeared in the glass, yet she remained, in her own words, “half sick of shadows”.', 'Paysans, chevaliers et jeunes amoureux apparaissaient dans la glace ; pourtant, elle restait, selon ses propres mots, « à demi lasse des ombres ».')],
+  ], [
+    W('wove', '/wəʊv/', 'tissait', 'wove'),
+    W('tapestry', '/ˈtæpəstri/', 'tapisserie', 'tapestry'),
+    W('curse', '/kɜːs/', 'malédiction', 'curse'),
+    W('dared', '/deəd/', 'osait', 'dared'),
+    W('disobey', '/ˌdɪsəˈbeɪ/', 'désobéir', 'disobey'),
+    W('reflections', '/rɪˈflekʃnz/', 'reflets', 'reflections'),
+  ], [
+    Q(('Que se passerait-il si la dame regardait directement dehors ?', 'What would happen if the lady looked directly outside?'), [('Une malédiction s’abattrait sur elle', 'A curse would fall upon her'), ('Elle deviendrait reine', 'She would become queen'), ('La tour s’effondrerait', 'The tower would collapse')], 0),
+    Q(('Comment voit-elle le monde ?', 'How does she see the world?'), [('Par la fenêtre', 'Through the window'), ('Dans un miroir', 'In a mirror'), ('Dans ses rêves', 'In her dreams')], 1),
+  ]),
+  CH('shalott-2', ('Sir Lancelot', 'Sire Lancelot'), [
+    [S('One bright summer morning, Sir Lancelot rode past the tower, his armour flashing in the sun and his voice ringing out in song.', 'Un lumineux matin d’été, sire Lancelot passa près de la tour, son armure étincelant au soleil et sa voix résonnant dans une chanson.'),
+     S('No sooner had his reflection crossed the mirror than the lady left her loom and went to the window.', 'À peine son reflet eut-il traversé le miroir que la dame quitta son métier à tisser et alla à la fenêtre.')],
+    [S('At that very moment, the mirror cracked from side to side and the tapestry flew out of the window.', 'À cet instant précis, le miroir se fendit d’un bout à l’autre et la tapisserie s’envola par la fenêtre.'),
+     S('“The curse is come upon me,” she cried, knowing that there was no turning back.', '« La malédiction s’abat sur moi », s’écria-t-elle, sachant qu’il n’y avait plus de retour possible.')],
+  ], [
+    W('armour', '/ˈɑːmə/', 'armure', 'armour'),
+    W('flashing', '/ˈflæʃɪŋ/', 'étincelant', 'flashing'),
+    W('ringing out', '/ˈrɪŋɪŋ aʊt/', 'résonnant', 'ringing out'),
+    W('loom', '/luːm/', 'métier à tisser', 'loom'),
+    W('cracked', '/krækt/', 'se fendit', 'cracked'),
+    W('no turning back', '/nəʊ ˈtɜːnɪŋ bæk/', 'pas de retour possible', 'no turning back'),
+  ], [
+    Q(('Qu’est-ce qui pousse la dame à aller à la fenêtre ?', 'What makes the lady go to the window?'), [('Le passage de Lancelot', 'Lancelot riding by'), ('Un orage', 'A storm'), ('Un cri d’enfant', 'A child’s cry')], 0),
+    Q(('Que se passe-t-il quand elle regarde dehors ?', 'What happens when she looks outside?'), [('Elle s’endort', 'She falls asleep'), ('Le miroir se fend', 'The mirror cracks'), ('Lancelot s’arrête', 'Lancelot stops')], 1),
+  ]),
+  CH('shalott-3', ('The boat to Camelot', 'La barque vers Camelot'), [
+    [S('Sensing that her end was near, she found a boat beneath a willow, wrote her name upon its prow and lay down in it.', 'Pressentant sa fin proche, elle trouva une barque sous un saule, inscrivit son nom sur la proue et s’y allongea.'),
+     S('The boat drifted down the river towards Camelot as she sang her last song, her voice growing ever fainter.', 'La barque dériva sur la rivière vers Camelot tandis qu’elle chantait son dernier chant, d’une voix de plus en plus faible.')],
+    [S('By the time it reached the town, she had died. Knights and ladies gathered on the bank, wondering who she might have been.', 'Le temps qu’elle atteigne la ville, la dame était morte. Chevaliers et dames se rassemblèrent sur la rive, se demandant qui elle avait bien pu être.'),
+     S('Only Lancelot paused to look at her face, and, unaware of the part he had played, said simply that she had a lovely face.', 'Seul Lancelot s’arrêta pour regarder son visage et, ignorant le rôle qu’il avait joué, dit simplement qu’elle avait un beau visage.')],
+  ], [
+    W('sensing', '/ˈsensɪŋ/', 'pressentant', 'sensing'),
+    W('willow', '/ˈwɪləʊ/', 'saule', 'willow'),
+    W('prow', '/praʊ/', 'proue', 'prow'),
+    W('drifted', '/ˈdrɪftɪd/', 'dériva', 'drifted'),
+    W('fainter', '/ˈfeɪntə/', 'plus faible', 'fainter'),
+    W('unaware', '/ˌʌnəˈweə/', 'ignorant, inconscient', 'unaware'),
+  ], [
+    Q(('Qu’écrit la dame sur la barque ?', 'What does the lady write on the boat?'), [('Son nom', 'Her name'), ('Une lettre à Lancelot', 'A letter to Lancelot'), ('Le nom de Camelot', 'The name of Camelot')], 0),
+    Q(('Que sait Lancelot de son rôle dans l’histoire ?', 'What does Lancelot know about his part in the story?'), [('Il se sent coupable', 'He feels guilty'), ('Il n’en sait rien', 'He knows nothing of it'), ('Il l’avait prévu', 'He had planned it')], 1),
+  ]),
+])
+
+# ═════════════════════════ C1 : Thomas the Rhymer ═════════════════════════
+RHYMER = STORY('thomas-rhymer', 'H', 'C1', '#3E7A5A', ('Thomas the Rhymer', 'Thomas le Rimeur'),
+  ('Le poète écossais Thomas d’Erceldoune rencontre la reine d’Elfland sous un arbre. Il la suit dans son royaume, où le temps ne s’écoule pas comme ailleurs.', 'The Scottish poet Thomas of Erceldoune meets the Queen of Elfland beneath a tree. He follows her into her kingdom, where time does not pass as it does elsewhere.'), [
+  CH('rhymer-1', ('The Eildon Tree', 'L’arbre d’Eildon'), [
+    [S('Thomas of Erceldoune, a poet renowned throughout the Borders, was resting beneath the Eildon Tree when a lady of dazzling beauty rode towards him.', 'Thomas d’Erceldoune, poète renommé dans tous les Borders, se reposait sous l’arbre d’Eildon quand une dame d’une beauté éblouissante s’avança vers lui à cheval.'),
+     S('Her horse was white as milk, and from its mane hung fifty silver bells that rang with every step.', 'Son cheval était blanc comme le lait, et à sa crinière pendaient cinquante clochettes d’argent qui tintaient à chaque pas.')],
+    [S('Mistaking her for the Queen of Heaven, Thomas knelt before her, only to be told that she was the Queen of fair Elfland.', 'La prenant pour la Reine des Cieux, Thomas s’agenouilla devant elle, avant d’apprendre qu’elle était la reine de la belle Elfland.'),
+     S('Bold, albeit unwise, he kissed her, thereby binding himself to serve her for seven years.', 'Audacieux, bien qu’imprudent, il l’embrassa, se liant ainsi à elle pour la servir sept ans.')],
+  ], [
+    W('renowned', '/rɪˈnaʊnd/', 'renommé', 'renowned'),
+    W('dazzling', '/ˈdæzlɪŋ/', 'éblouissant', 'dazzling'),
+    W('mane', '/meɪn/', 'crinière', 'mane'),
+    W('knelt', '/nelt/', 's’agenouilla', 'knelt'),
+    W('bold', '/bəʊld/', 'audacieux', 'bold'),
+    W('binding', '/ˈbaɪndɪŋ/', 'liant, engageant', 'binding'),
+  ], [
+    Q(('Pour qui Thomas prend-il d’abord la dame ?', 'Who does Thomas first take the lady to be?'), [('La Reine des Cieux', 'The Queen of Heaven'), ('Une paysanne', 'A peasant'), ('La reine d’Écosse', 'The Queen of Scotland')], 0),
+    Q(('Quelle est la conséquence du baiser ?', 'What is the consequence of the kiss?'), [('Il devient roi', 'He becomes king'), ('Il doit la servir sept ans', 'He must serve her for seven years'), ('Il perd la voix', 'He loses his voice')], 1),
+  ]),
+  CH('rhymer-2', ('Three roads', 'Trois chemins'), [
+    [S('They rode for forty days through darkness, wading through rivers of blood, until they came to a place where three roads met.', 'Ils chevauchèrent quarante jours dans l’obscurité, traversant à gué des rivières de sang, jusqu’à un lieu où trois chemins se rejoignaient.'),
+     S('The first, narrow and thorny, was the path of righteousness; the second, broad and easy, led to wickedness.', 'Le premier, étroit et épineux, était le chemin de la vertu ; le second, large et facile, menait au vice.')],
+    [S('The third, winding up a hillside of ferns, was the road to fair Elfland, and it was this one that they took.', 'Le troisième, serpentant sur un coteau de fougères, était la route de la belle Elfland, et c’est celui qu’ils prirent.'),
+     S('“Should you speak a single word while you are in my land,” the Queen warned, “you will never return to your own.”', '« Si tu prononces un seul mot pendant ton séjour dans mon royaume, avertit la reine, tu ne reverras jamais le tien. »')],
+  ], [
+    W('wading', '/ˈweɪdɪŋ/', 'traversant à gué', 'wading'),
+    W('thorny', '/ˈθɔːni/', 'épineux', 'thorny'),
+    W('righteousness', '/ˈraɪtʃəsnəs/', 'vertu, droiture', 'righteousness'),
+    W('wickedness', '/ˈwɪkɪdnəs/', 'méchanceté, vice', 'wickedness'),
+    W('winding', '/ˈwaɪndɪŋ/', 'sinueux', 'winding'),
+    W('ferns', '/fɜːnz/', 'fougères', 'ferns'),
+  ], [
+    Q(('Quel chemin mène à Elfland ?', 'Which road leads to Elfland?'), [('Le chemin sinueux parmi les fougères', 'The winding road among the ferns'), ('Le chemin étroit et épineux', 'The narrow, thorny road'), ('Le chemin large et facile', 'The broad, easy road')], 0),
+    Q(('Que ne doit pas faire Thomas à Elfland ?', 'What must Thomas not do in Elfland?'), [('Manger', 'Eat'), ('Prononcer un seul mot', 'Speak a single word'), ('Dormir', 'Sleep')], 1),
+  ]),
+  CH('rhymer-3', ('The gift of truth', 'Le don de vérité'), [
+    [S('Thomas kept silent for what seemed to him three days, only to discover that seven years had passed.', 'Thomas garda le silence pendant ce qui lui sembla trois jours, avant de découvrir que sept années s’étaient écoulées.'),
+     S('Before sending him home, the Queen gave him a tongue that could never lie, a gift he considered, to some extent, a burden.', 'Avant de le renvoyer chez lui, la reine lui donna une langue incapable de mentir, un don qu’il considéra, dans une certaine mesure, comme un fardeau.')],
+    [S('Back in Scotland, he became famous for his prophecies, many of which were said to have come true.', 'De retour en Écosse, il devint célèbre pour ses prophéties, dont beaucoup se seraient réalisées.'),
+     S('Years later, when two white deer appeared at his door, he followed them into the forest and was never seen again.', 'Des années plus tard, quand deux cerfs blancs apparurent à sa porte, il les suivit dans la forêt et on ne le revit jamais.')],
+  ], [
+    W('silent', '/ˈsaɪlənt/', 'silencieux', 'silent'),
+    W('tongue', '/tʌŋ/', 'langue (organe)', 'tongue'),
+    W('burden', '/ˈbɜːdn/', 'fardeau', 'burden'),
+    W('prophecies', '/ˈprɒfəsiz/', 'prophéties', 'prophecies'),
+    W('come true', '/kʌm truː/', 'se réaliser', 'come true'),
+    W('deer', '/dɪə/', 'cerf(s)', 'deer'),
+  ], [
+    Q(('Combien de temps Thomas est-il vraiment resté à Elfland ?', 'How long did Thomas really stay in Elfland?'), [('Sept ans', 'Seven years'), ('Trois jours', 'Three days'), ('Quarante jours', 'Forty days')], 0),
+    Q(('Quel don reçoit-il de la reine ?', 'What gift does he receive from the Queen?'), [('Une épée magique', 'A magic sword'), ('Une langue qui ne peut mentir', 'A tongue that cannot lie'), ('Un cheval blanc', 'A white horse')], 1),
+  ]),
+])
+
+EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD, JACK, CANUTE, ROBIN, PEDLAR, TAMLIN, GELERT, SHALOTT, RHYMER]
 EN_LEVELS = ('A1', 'A2', 'B1', 'B2', 'C1')
 
 data = json.load(open(P, encoding='utf-8'))

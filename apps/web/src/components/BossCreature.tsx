@@ -35,8 +35,66 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens anglais (C1 — îles du Nord) ─────
+  // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
+  n: {
+    body: '#B8322E', belly: '#E26A5A', head: '#C8423A', eye: '#F2D94E',
+    back: <path d="M40 120 Q10 160 30 196 M160 120 Q190 160 170 196" stroke="#8E1B26" strokeWidth="12" fill="none" strokeLinecap="round" />,
+    under: <path d="M70 140 Q80 120 90 140 M110 140 Q120 120 130 140 M84 170 Q100 150 116 170" stroke="#F2D94E" strokeWidth="2" fill="none" />,
+    face: <path d="M84 116 Q100 126 116 116" stroke="#5A1A10" strokeWidth="3" fill="none" />,
+    front: <path d="M20 190 Q40 180 60 190 T100 190 T140 190 T180 190" stroke="#5E8FA0" strokeWidth="4" fill="none" strokeLinecap="round" />,
+  },
+  // Hommes bleus du Minch : peau bleue, cheveux d'écume, vagues
+  p: {
+    body: '#2E5A9A', belly: '#6A9AD8', head: '#4A7AC0', eye: '#F4F1EA',
+    top: <path d="M58 72 q4 -28 18 -30 q6 -14 16 -6 q10 -14 20 0 q14 -8 16 8 q14 4 14 28" fill="#E8F2F8" />,
+    face: <path d="M82 114 Q100 128 118 114" stroke="#0E2A5A" strokeWidth="3" fill="none" />,
+    front: <path d="M14 182 Q34 166 54 182 T94 182 T134 182 T174 182 T194 182" stroke="#E8F2F8" strokeWidth="5" fill="none" strokeLinecap="round" />,
+  },
+  // Wulver : homme à tête de loup, pelage brun, poisson
+  g: {
+    body: '#6A5A4A', belly: '#B8A890', head: '#7A6A58', eye: '#F2D94E',
+    top: <>{ear(58, false, '#5A4A3A', '#B8A890')}{ear(142, true, '#5A4A3A', '#B8A890')}</>,
+    face: <><ellipse cx="100" cy="114" rx="16" ry="10" fill="#9A8A74" /><ellipse cx="100" cy="108" rx="5" ry="3.5" fill={INK} /></>,
+    front: <g transform="translate(152 158)"><path d="M-18 0 Q-6 -10 10 0 Q-6 10 -18 0Z" fill="#9AB8C8" /><path d="M10 0 L20 -8 L20 8Z" fill="#9AB8C8" /></g>,
+  },
+  // Gwrach y Rhibyn : sorcière galloise aux ailes de cuir
+  r: {
+    body: '#4A4458', belly: '#8A84A0', head: '#B8B0A8', eye: '#E2483B',
+    back: <><path d="M58 110 Q6 80 18 160 Q28 130 44 150 Q50 128 62 146Z" fill="#2A2434" /><path d="M142 110 Q194 80 182 160 Q172 130 156 150 Q150 128 138 146Z" fill="#2A2434" /></>,
+    top: <path d="M56 82 Q52 32 100 28 Q148 32 144 82 Q140 54 100 52 Q60 54 56 82Z" fill="#D8D4CC" />,
+    face: <path d="M86 116 l5 4 l5 -4 l5 4 l5 -4 l5 4" stroke={INK} strokeWidth="2.5" fill="none" />,
+  },
+  // Cailleach : vieille déesse de l'hiver, voile bleu, marteau
+  c: {
+    body: '#3E5A7A', belly: '#9AB8D8', head: '#D8D0C8', eye: '#2A3A5A',
+    top: <path d="M54 90 Q52 26 100 22 Q148 26 146 90 Q140 50 100 48 Q60 50 54 90Z" fill="#DDEFF5" stroke="#9CC6D1" strokeWidth="2" />,
+    face: <path d="M86 118 Q100 112 114 118" stroke={INK} strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(160 146)"><path d="M0 44 V-30" stroke="#6A4428" strokeWidth="5" /><rect x="-14" y="-44" width="28" height="16" rx="3" fill="#8A8E96" /></g>,
+  },
+  // Hob : petit esprit domestique poilu, jatte de crème
+  e: {
+    body: '#8A6A48', belly: '#C8A87A', head: '#9A7A56', eye: INK,
+    top: <path d="M60 74 q-4 -20 10 -26 q4 -14 16 -8 q10 -12 22 0 q12 -6 18 8 q14 6 10 26" fill="#6A4E34" />,
+    face: <><ellipse cx="100" cy="110" rx="6" ry="4" fill="#C87A5A" /><path d="M88 120 Q100 128 112 120" stroke={INK} strokeWidth="2.5" fill="none" /></>,
+    front: <g transform="translate(100 176)"><path d="M-22 -6 H22 Q20 10 0 12 Q-20 10 -22 -6Z" fill="#E8D8B8" stroke="#A8987A" strokeWidth="2" /><ellipse cx="0" cy="-6" rx="22" ry="5" fill="#FBF8F1" /></g>,
+  },
+  // Morgawr : serpent de mer de Cornouailles, bosses, long cou
+  s: {
+    body: '#3E6A5E', belly: '#8FBFA8', head: '#4E7F70', eye: '#F2D94E',
+    back: <>{[[28, 176], [172, 176]].map(([cx, cy]) => <path key={cx} d={`M${cx - 18} ${cy} Q${cx} ${cy - 30} ${cx + 18} ${cy}`} fill="#3E6A5E" />)}</>,
+    top: <path d="M80 50 l6 -10 l6 8 l8 -12 l8 12 l6 -8 l6 10" stroke="#2E5A4E" strokeWidth="4" fill="none" />,
+    front: <path d="M10 190 Q30 180 50 190 T90 190 T130 190 T170 190 T200 190" stroke="#5E9FC4" strokeWidth="4" fill="none" strokeLinecap="round" />,
+  },
+  // La Dame du Lac : robe d'eau, Excalibur
+  a: {
+    body: '#4A7AA8', belly: '#A8CCE8', head: '#EAD8C8', eye: '#2E4A6A',
+    top: <path d="M56 86 Q54 26 100 22 Q146 26 144 86 Q138 50 100 48 Q62 50 56 86Z" fill="#3A2E28" />,
+    back: <path d="M50 100 Q24 160 40 196 L160 196 Q176 160 150 100Z" fill="#7FB8D8" opacity={0.7} />,
+    front: <g transform="translate(160 150)"><path d="M0 40 V-46" stroke="#D8E0E8" strokeWidth="5" /><path d="M-10 26 H10" stroke="#C9A24A" strokeWidth="5" /><circle cy="34" r="3" fill="#C9A24A" /></g>,
+  },
   // ───── Gardiens anglais (B2 — Marches galloises) ─────
-  // Black Shuck : chien fantôme noir aux yeux de braise
+  // Barghest : chien-gobelin noir aux yeux de braise
   b: {
     body: '#1A1A20', belly: '#2E2E36', head: '#22222A', eye: '#F2482B',
     top: <path d="M58 70 Q44 40 62 30 Q70 50 80 58 M142 70 Q156 40 138 30 Q130 50 120 58" fill="#1A1A20" stroke="#1A1A20" strokeWidth="4" />,
@@ -58,7 +116,7 @@ const SPECIES: Record<string, Species> = {
     face: <path d="M84 114 l6 8 l6 -8 l6 8 l6 -8 l6 8" stroke="#F6F3EC" strokeWidth="2.5" fill="none" />,
     front: <>{[[46, 190], [154, 192]].map(([cx, cy]) => <g key={cx}><ellipse cx={cx} cy={cy} rx="14" ry="5" fill="#6DA84E" /><circle cx={cx} cy={cy - 4} r="4" fill="#F2A7BB" /></g>)}</>,
   },
-  // Boggart : petit esprit hirsute, objets cassés
+  // Coblynau : petits lutins des mines, hirsutes, outil cassé
   h: {
     body: '#6A5A48', belly: '#A8987A', head: '#7A6A56', eye: '#F2D94E',
     top: <path d="M58 70 q-6 -24 12 -30 q2 -16 18 -12 q8 -16 24 -4 q16 -10 22 8 q16 4 10 30" fill="#4A3E30" />,
@@ -86,12 +144,13 @@ const SPECIES: Record<string, Species> = {
     back: <path d="M54 96 Q18 150 36 194 L164 194 Q182 150 146 96Z" fill="#1E2640" />,
     front: <g transform="translate(152 150)"><path d="M-14 -10 Q10 -16 16 6 L8 10 Q4 -4 -12 -2Z" fill="#E2D2A8" stroke="#A8987A" strokeWidth="2" /></g>,
   },
-  // Le Chevalier vert : géant vert, barbe, hache
+  // Mordred : chevalier félon, armure noire, couronne volée, épée
   k: {
-    body: '#3E7A3A', belly: '#7FB86A', head: '#6DA84E', eye: '#F2D94E',
-    top: <path d="M60 72 Q58 26 100 22 Q142 26 140 72 Q124 50 100 50 Q76 50 60 72Z" fill="#2E5A2A" />,
-    face: <path d="M70 108 Q100 170 130 108 Q116 122 100 120 Q84 122 70 108Z" fill="#2E5A2A" />,
-    front: <g transform="translate(160 140)"><path d="M0 50 V-44" stroke="#6A4428" strokeWidth="5" /><path d="M0 -44 Q24 -40 22 -16 Q10 -26 0 -24Z" fill="#B8C0C8" stroke="#7A828A" strokeWidth="2" /></g>,
+    body: '#2A2A34', belly: '#5A5A6A', head: '#D8C8B8', eye: '#5A1A22',
+    top: <><path d="M60 78 Q58 30 100 26 Q142 30 140 78 Q124 56 100 56 Q76 56 60 78Z" fill="#3A2A20" /><path d="M72 36 L78 20 L88 32 L100 16 L112 32 L122 20 L128 36Z" fill="#C9A24A" stroke="#8C6A2A" strokeWidth="2" /></>,
+    face: <path d="M86 118 Q100 112 114 118" stroke="#5A1A22" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    back: <path d="M52 92 Q22 150 36 196 L164 196 Q178 150 148 92Z" fill="#5A1A22" />,
+    front: <g transform="translate(158 144)"><path d="M0 44 V-40" stroke="#A8B4C0" strokeWidth="5" /><path d="M-10 30 H10" stroke="#2A2A34" strokeWidth="5" /></g>,
   },
   // ───── Gardiens anglais (B1 — côtes de Cornouailles) ─────
   // L'Afanc : monstre du lac, castor-crocodile écailleux, vagues

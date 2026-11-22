@@ -1,0 +1,801 @@
+{
+ "slug": "c1-toeic",
+ "level": "C1",
+ "contentVersion": "2026.11.22",
+ "notice": "Questions rédigées par Koto Quest au format du TOEIC Listening & Reading (version abrégée : mêmes parties, consignes en anglais, notation sur 990). Ce ne sont pas des questions officielles d’ETS.",
+ "parts": [
+  {
+   "id": "p2",
+   "section": "listening",
+   "jpTitle": "Part 2 — Question-Response",
+   "title": "Questions-réponses",
+   "prompt": "You will hear a question or statement. Select the best response.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "M|Should the client call while I’m out, could you take a message?",
+     "choices": [
+      "Of course, I’ll make a note of it.",
+      "Yes, he should call.",
+      "I was out yesterday."
+     ],
+     "answer": "Of course, I’ll make a note of it.",
+     "explanation": "Transcription : Homme : Should the client call while I’m out, could you take a message?"
+    },
+    {
+     "audio": "F|Had you heard about the merger before it was announced?",
+     "choices": [
+      "Only rumours, nothing official.",
+      "I hear it every day.",
+      "It will be announced soon."
+     ],
+     "answer": "Only rumours, nothing official.",
+     "explanation": "Transcription : Femme : Had you heard about the merger before it was announced?"
+    },
+    {
+     "audio": "M|Isn’t it time we updated the website?",
+     "choices": [
+      "Absolutely, it looks very outdated.",
+      "It’s ten past three.",
+      "I visited it yesterday."
+     ],
+     "answer": "Absolutely, it looks very outdated.",
+     "explanation": "Transcription : Homme : Isn’t it time we updated the website?"
+    },
+    {
+     "audio": "F|Why was the launch called off?",
+     "choices": [
+      "The supplier deal fell through.",
+      "It was called on Monday.",
+      "Because I launched it."
+     ],
+     "answer": "The supplier deal fell through.",
+     "explanation": "Transcription : Femme : Why was the launch called off?"
+    },
+    {
+     "audio": "M|Would you rather I sent the figures now or after the meeting?",
+     "choices": [
+      "Now would be better, thanks.",
+      "I’d rather the meeting.",
+      "The figures are correct."
+     ],
+     "answer": "Now would be better, thanks.",
+     "explanation": "Transcription : Homme : Would you rather I sent the figures now or after the meeting?"
+    },
+    {
+     "audio": "F|Who’s going to draw up the new contract?",
+     "choices": [
+      "Our lawyers are working on it.",
+      "I drew a picture.",
+      "It’s a two-year contract."
+     ],
+     "answer": "Our lawyers are working on it.",
+     "explanation": "Transcription : Femme : Who’s going to draw up the new contract?"
+    },
+    {
+     "audio": "M|Do you think the deal is likely to go ahead?",
+     "choices": [
+      "It’s hard to say at this stage.",
+      "Yes, go ahead and sit down.",
+      "It went ahead last year."
+     ],
+     "answer": "It’s hard to say at this stage.",
+     "explanation": "Transcription : Homme : Do you think the deal is likely to go ahead?"
+    },
+    {
+     "audio": "F|Hardly anyone came to the presentation, did they?",
+     "choices": [
+      "No, it clashed with the board meeting.",
+      "Yes, it was hard.",
+      "I presented it well."
+     ],
+     "answer": "No, it clashed with the board meeting.",
+     "explanation": "Transcription : Femme : Hardly anyone came to the presentation, did they?"
+    },
+    {
+     "audio": "M|What would it take for you to sign today?",
+     "choices": [
+      "A slightly longer payment period.",
+      "It takes about an hour.",
+      "I signed it yesterday."
+     ],
+     "answer": "A slightly longer payment period.",
+     "explanation": "Transcription : Homme : What would it take for you to sign today?"
+    },
+    {
+     "audio": "F|Has the warranty expired on this printer?",
+     "choices": [
+      "I’ll check the purchase date.",
+      "It prints very well.",
+      "Yes, I bought ink."
+     ],
+     "answer": "I’ll check the purchase date.",
+     "explanation": "Transcription : Femme : Has the warranty expired on this printer?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p3",
+   "section": "listening",
+   "jpTitle": "Part 3 — Conversations",
+   "title": "Conversations",
+   "prompt": "You will hear a short conversation. Answer the question about it.",
+   "count": 7,
+   "questions": [
+    {
+     "audio": "M|Had we brought the launch forward, we would have beaten our competitors to market.\nF|True, but we couldn’t have guaranteed the quality. Cutting corners would have damaged our reputation.\nM|I suppose you’re right.",
+     "choices": [
+      "Protecting the company’s reputation.",
+      "Reducing costs.",
+      "Hiring more staff.",
+      "Changing suppliers."
+     ],
+     "answer": "Protecting the company’s reputation.",
+     "explanation": "Transcription : Homme : Had we brought the launch forward, we would have beaten our competitors to market. / Femme : True, but we couldn’t have guaranteed the quality. Cutting corners would have damaged our reputation. / Homme : I suppose you’re right.",
+     "text": "What is the woman most concerned about?"
+    },
+    {
+     "audio": "F|I’ve gone through the contract and clause 9 is a problem. One month’s notice is far too short.\nM|Would they accept two months?\nF|Possibly, but I’d rather we asked for three and met them halfway if necessary.",
+     "choices": [
+      "Ask for three months’ notice.",
+      "Accept one month’s notice.",
+      "Cancel the contract.",
+      "Hire a new lawyer."
+     ],
+     "answer": "Ask for three months’ notice.",
+     "explanation": "Transcription : Femme : I’ve gone through the contract and clause 9 is a problem. One month’s notice is far too short. / Homme : Would they accept two months? / Femme : Possibly, but I’d rather we asked for three and met them halfway if necessary.",
+     "text": "What does the woman want to do?"
+    },
+    {
+     "audio": "M|Morale has been low since the restructuring. People feel they’re not being consulted.\nF|Then it’s high time we involved them. Why don’t we hold a series of workshops?\nM|That’s a good idea. I’ll draw up a schedule.",
+     "choices": [
+      "Low staff morale.",
+      "A drop in sales.",
+      "A delayed project.",
+      "A shortage of equipment."
+     ],
+     "answer": "Low staff morale.",
+     "explanation": "Transcription : Homme : Morale has been low since the restructuring. People feel they’re not being consulted. / Femme : Then it’s high time we involved them. Why don’t we hold a series of workshops? / Homme : That’s a good idea. I’ll draw up a schedule.",
+     "text": "What problem are the speakers discussing?"
+    },
+    {
+     "audio": "F|Our carbon emissions fell by 18%, albeit short of our target.\nM|Packaging waste went up, though, didn’t it?\nF|Yes, owing to online orders. We’re looking into reusable packaging.",
+     "choices": [
+      "Online orders increased.",
+      "A factory closed.",
+      "Suppliers changed.",
+      "Prices rose."
+     ],
+     "answer": "Online orders increased.",
+     "explanation": "Transcription : Femme : Our carbon emissions fell by 18%, albeit short of our target. / Homme : Packaging waste went up, though, didn’t it? / Femme : Yes, owing to online orders. We’re looking into reusable packaging.",
+     "text": "Why did packaging waste increase?"
+    },
+    {
+     "audio": "M|Given the delays, it’s unlikely the new centre will open before March.\nF|In that case, we should warn our major clients now rather than later.\nM|Agreed. I’ll ask the communications team to draft a message.",
+     "choices": [
+      "Inform major clients.",
+      "Open the centre in January.",
+      "Hire extra staff.",
+      "Cancel the project."
+     ],
+     "answer": "Inform major clients.",
+     "explanation": "Transcription : Homme : Given the delays, it’s unlikely the new centre will open before March. / Femme : In that case, we should warn our major clients now rather than later. / Homme : Agreed. I’ll ask the communications team to draft a message.",
+     "text": "What do the speakers decide to do?"
+    },
+    {
+     "audio": "F|I’m afraid the conference room is being renovated, so the workshop will have to take place elsewhere.\nM|What about the hotel next door? They have meeting facilities.\nF|Good thinking. I’ll inquire about availability.",
+     "choices": [
+      "Contact the hotel.",
+      "Postpone the workshop.",
+      "Renovate the room.",
+      "Hold the workshop online."
+     ],
+     "answer": "Contact the hotel.",
+     "explanation": "Transcription : Femme : I’m afraid the conference room is being renovated, so the workshop will have to take place elsewhere. / Homme : What about the hotel next door? They have meeting facilities. / Femme : Good thinking. I’ll inquire about availability.",
+     "text": "What will the woman do next?"
+    },
+    {
+     "audio": "M|So successful was the trial that the client wants to roll the system out across all its sites.\nF|That’s fantastic news. Do we have the capacity?\nM|Not yet. We’ll need to recruit at least five engineers.",
+     "choices": [
+      "Recruit more engineers.",
+      "Reduce the price.",
+      "Repeat the trial.",
+      "Find a new client."
+     ],
+     "answer": "Recruit more engineers.",
+     "explanation": "Transcription : Homme : So successful was the trial that the client wants to roll the system out across all its sites. / Femme : That’s fantastic news. Do we have the capacity? / Homme : Not yet. We’ll need to recruit at least five engineers.",
+     "text": "What will the company need to do?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p4",
+   "section": "listening",
+   "jpTitle": "Part 4 — Talks",
+   "title": "Annonces",
+   "prompt": "You will hear a short talk. Answer the question about it.",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "N|Good morning. I’d like to begin by thanking you all for your hard work this year. Admittedly, it has not been easy: the loss of our largest client was a serious blow. Having said that, we have not only replaced that business but grown by 6%. What we need now is to consolidate these gains.",
+     "choices": [
+      "The company has grown despite losing a client.",
+      "The company has lost money.",
+      "A new director has been appointed.",
+      "The staff will receive a bonus."
+     ],
+     "answer": "The company has grown despite losing a client.",
+     "explanation": "Transcription : Narrateur : Good morning. I’d like to begin by thanking you all for your hard work this year. Admittedly, it has not been easy: the loss of our largest client was a serious blow. Having said that, we have not only replaced that business but grown by 6%. What we need now is to consolidate these gains.",
+     "text": "What is the main point of the talk?"
+    },
+    {
+     "audio": "N|This is a recorded message from Highland Rail. Due to unforeseen circumstances, services between Inverness and Thurso are suspended until further notice. Replacement buses will run from outside the station. Passengers holding advance tickets may claim a full refund. We apologise for any inconvenience.",
+     "choices": [
+      "Claim a refund.",
+      "Travel on another day.",
+      "Exchange their tickets.",
+      "Wait in the station."
+     ],
+     "answer": "Claim a refund.",
+     "explanation": "Transcription : Narrateur : This is a recorded message from Highland Rail. Due to unforeseen circumstances, services between Inverness and Thurso are suspended until further notice. Replacement buses will run from outside the station. Passengers holding advance tickets may claim a full refund. We apologise for any inconvenience.",
+     "text": "What may passengers with advance tickets do?"
+    },
+    {
+     "audio": "N|Welcome to this afternoon’s session. Over the next forty minutes, I’ll be looking at how companies can reduce their carbon footprint without hurting profits. I’ll start with a brief overview, then move on to three case studies. Should you have any questions, please hold them until the end.",
+     "choices": [
+      "Wait until the end to ask questions.",
+      "Introduce themselves.",
+      "Read the case studies.",
+      "Switch off their phones."
+     ],
+     "answer": "Wait until the end to ask questions.",
+     "explanation": "Transcription : Narrateur : Welcome to this afternoon’s session. Over the next forty minutes, I’ll be looking at how companies can reduce their carbon footprint without hurting profits. I’ll start with a brief overview, then move on to three case studies. Should you have any questions, please hold them until the end.",
+     "text": "What does the speaker ask the audience to do?"
+    },
+    {
+     "audio": "N|Hi Alistair, it’s Mairi. I’ve just come out of the meeting with our legal team. Provided you can extend the notice period to three months, we’ll sign this week. Otherwise, I’m afraid the deal is unlikely to go ahead. Let me know what you think.",
+     "choices": [
+      "Extend the notice period.",
+      "Lower the price.",
+      "Meet the legal team.",
+      "Sign immediately."
+     ],
+     "answer": "Extend the notice period.",
+     "explanation": "Transcription : Narrateur : Hi Alistair, it’s Mairi. I’ve just come out of the meeting with our legal team. Provided you can extend the notice period to three months, we’ll sign this week. Otherwise, I’m afraid the deal is unlikely to go ahead. Let me know what you think.",
+     "text": "What does Mairi want Alistair to do?"
+    },
+    {
+     "audio": "N|And in business news, shares in Draig Systems rose by 12% today after the company announced record profits. Analysts say the firm is bound to attract interest from foreign investors, although its chief executive insists that it has no plans to sell.",
+     "choices": [
+      "Its share price rose.",
+      "It was taken over.",
+      "Its profits fell.",
+      "Its chief executive resigned."
+     ],
+     "answer": "Its share price rose.",
+     "explanation": "Transcription : Narrateur : And in business news, shares in Draig Systems rose by 12% today after the company announced record profits. Analysts say the firm is bound to attract interest from foreign investors, although its chief executive insists that it has no plans to sell.",
+     "text": "What happened to Draig Systems today?"
+    },
+    {
+     "audio": "N|Attention, all staff. As part of our new safety procedures, it is essential that everyone attend a fire drill on Thursday at 11 a.m. When the alarm sounds, please leave the building by the nearest exit and gather in the car park. Under no circumstances should you use the lifts.",
+     "choices": [
+      "Use the lifts.",
+      "Leave by the nearest exit.",
+      "Gather in the car park.",
+      "Attend the fire drill."
+     ],
+     "answer": "Use the lifts.",
+     "explanation": "Transcription : Narrateur : Attention, all staff. As part of our new safety procedures, it is essential that everyone attend a fire drill on Thursday at 11 a.m. When the alarm sounds, please leave the building by the nearest exit and gather in the car park. Under no circumstances should you use the lifts.",
+     "text": "What are staff told NOT to do?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p5",
+   "section": "grammar",
+   "jpTitle": "Part 5 — Incomplete Sentences",
+   "title": "Phrases à compléter",
+   "prompt": "A word or phrase is missing in each sentence. Select the best answer to complete the sentence.",
+   "count": 15,
+   "questions": [
+    {
+     "choices": [
+      "Should",
+      "Would",
+      "Had",
+      "Were"
+     ],
+     "answer": "Should",
+     "explanation": "Réponse : Should",
+     "jp": "＿ you need any further information, please do not hesitate to contact us."
+    },
+    {
+     "choices": [
+      "Had",
+      "Should",
+      "Were",
+      "Did"
+     ],
+     "answer": "Had",
+     "explanation": "Réponse : Had",
+     "jp": "＿ the shipment arrived on time, we would not have lost the contract."
+    },
+    {
+     "choices": [
+      "to",
+      "for",
+      "that",
+      "and"
+     ],
+     "answer": "to",
+     "explanation": "Réponse : to",
+     "jp": "Were the company ＿ relocate to Glasgow, many employees would leave."
+    },
+    {
+     "choices": [
+      "But for",
+      "Unless",
+      "Otherwise",
+      "In case"
+     ],
+     "answer": "But for",
+     "explanation": "Réponse : But for",
+     "jp": "＿ the strong pound, our exports would have increased significantly."
+    },
+    {
+     "choices": [
+      "in case",
+      "unless",
+      "provided",
+      "whereas"
+     ],
+     "answer": "in case",
+     "explanation": "Réponse : in case",
+     "jp": "Please keep a printed copy of your ticket ＿ the app does not work."
+    },
+    {
+     "choices": [
+      "attend",
+      "attends",
+      "attended",
+      "will attend"
+     ],
+     "answer": "attend",
+     "explanation": "Réponse : attend",
+     "jp": "The committee recommends that every manager ＿ the leadership course."
+    },
+    {
+     "choices": [
+      "be",
+      "is",
+      "are",
+      "being"
+     ],
+     "answer": "be",
+     "explanation": "Réponse : be",
+     "jp": "It is imperative that all personal data ＿ stored securely."
+    },
+    {
+     "choices": [
+      "replaced",
+      "replace",
+      "will replace",
+      "have replaced"
+     ],
+     "answer": "replaced",
+     "explanation": "Réponse : replaced",
+     "jp": "It is high time we ＿ the outdated software."
+    },
+    {
+     "choices": [
+      "Having reviewed",
+      "Reviewed",
+      "To review",
+      "Having review"
+     ],
+     "answer": "Having reviewed",
+     "explanation": "Réponse : Having reviewed",
+     "jp": "＿ your application, we are pleased to offer you an interview."
+    },
+    {
+     "choices": [
+      "hence",
+      "whereby",
+      "albeit",
+      "whereas"
+     ],
+     "answer": "hence",
+     "explanation": "Réponse : hence",
+     "jp": "Demand has fallen sharply; ＿ the decision to reduce production."
+    },
+    {
+     "choices": [
+      "albeit",
+      "hence",
+      "despite",
+      "whereby"
+     ],
+     "answer": "albeit",
+     "explanation": "Réponse : albeit",
+     "jp": "The campaign was a success, ＿ a costly one."
+    },
+    {
+     "choices": [
+      "whereby",
+      "whereas",
+      "wherever",
+      "hence"
+     ],
+     "answer": "whereby",
+     "explanation": "Réponse : whereby",
+     "jp": "We have introduced a scheme ＿ employees can buy shares at a discount."
+    },
+    {
+     "choices": [
+      "did we realise",
+      "we realised",
+      "we did realise",
+      "realised we"
+     ],
+     "answer": "did we realise",
+     "explanation": "Réponse : did we realise",
+     "jp": "Only after the audit ＿ how serious the problem was."
+    },
+    {
+     "choices": [
+      "than",
+      "when",
+      "then",
+      "that"
+     ],
+     "answer": "than",
+     "explanation": "Réponse : than",
+     "jp": "No sooner had the product been launched ＿ orders started pouring in."
+    },
+    {
+     "choices": [
+      "likely",
+      "probably",
+      "likelihood",
+      "possibly"
+     ],
+     "answer": "likely",
+     "explanation": "Réponse : likely",
+     "jp": "Interest rates are ＿ to remain high for the rest of the year."
+    },
+    {
+     "choices": [
+      "affect",
+      "effect",
+      "afflict",
+      "effective"
+     ],
+     "answer": "affect",
+     "explanation": "Réponse : affect",
+     "jp": "The new regulations will ＿ small businesses in particular."
+    },
+    {
+     "choices": [
+      "comply",
+      "respect",
+      "agree",
+      "conform"
+     ],
+     "answer": "comply",
+     "explanation": "Réponse : comply",
+     "jp": "All suppliers must ＿ with our code of conduct."
+    },
+    {
+     "choices": [
+      "implementation",
+      "implement",
+      "implementing",
+      "implemented"
+     ],
+     "answer": "implementation",
+     "explanation": "Réponse : implementation",
+     "jp": "The ＿ of the new system will take approximately six months."
+    }
+   ]
+  },
+  {
+   "id": "p6",
+   "section": "grammar",
+   "jpTitle": "Part 6 — Text Completion",
+   "title": "Textes à compléter",
+   "prompt": "Read the text. A word or phrase is missing. Select the best answer to complete the text.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "which",
+      "who",
+      "what",
+      "whose"
+     ],
+     "answer": "which",
+     "explanation": "Réponse : which",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, ＿ will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "subject",
+      "object",
+      "according",
+      "due"
+     ],
+     "answer": "subject",
+     "explanation": "Réponse : subject",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, ＿ to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "be",
+      "are",
+      "will be",
+      "being"
+     ],
+     "answer": "be",
+     "explanation": "Réponse : be",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff ＿ available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "albeit",
+      "despite",
+      "hence",
+      "although of"
+     ],
+     "answer": "albeit",
+     "explanation": "Réponse : albeit",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, ＿ slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, owing to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "owing",
+      "because",
+      "thanks",
+      "given"
+     ],
+     "answer": "owing",
+     "explanation": "Réponse : owing",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, albeit slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, ＿ to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "Should",
+      "Would",
+      "Unless",
+      "Provided"
+     ],
+     "answer": "Should",
+     "explanation": "Réponse : Should",
+     "passage": "Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I am writing to confirm the terms we discussed. Kernow Logistics will handle all deliveries in the south-west for an initial period of two years, at a rate of 4.20 pounds per parcel. ＿ volumes exceed 10,000 parcels per month, this rate will be reduced to 3.90 pounds. Please find enclosed two copies of the contract. I would be grateful if you could sign both and return one to us by 30 June.\nYours sincerely,\nAlistair Reid\nCommercial Director",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "Having",
+      "Have",
+      "Had",
+      "Being"
+     ],
+     "answer": "Having",
+     "explanation": "Réponse : Having",
+     "passage": "From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. ＿ gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period were three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "were",
+      "is",
+      "will be",
+      "be"
+     ],
+     "answer": "were",
+     "explanation": "Réponse : were",
+     "passage": "From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. Having gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period ＿ three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi",
+     "text": "Choose the word for the blank."
+    }
+   ]
+  },
+  {
+   "id": "p7",
+   "section": "reading",
+   "jpTitle": "Part 7 — Reading Comprehension",
+   "title": "Compréhension écrite",
+   "prompt": "Read the text and answer the question.",
+   "count": 14,
+   "questions": [
+    {
+     "choices": [
+      "Up to three days per week.",
+      "Five days per week.",
+      "Only on Fridays.",
+      "Two days per month."
+     ],
+     "answer": "Up to three days per week.",
+     "explanation": "Réponse : Up to three days per week.",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "How often may employees work remotely?"
+    },
+    {
+     "choices": [
+      "From 10 a.m. to 3 p.m.",
+      "From 9 a.m. to 5 p.m.",
+      "All day.",
+      "In the mornings only."
+     ],
+     "answer": "From 10 a.m. to 3 p.m.",
+     "explanation": "Réponse : From 10 a.m. to 3 p.m.",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "When must staff be available?"
+    },
+    {
+     "choices": [
+      "It must be returned.",
+      "It may be kept.",
+      "It must be paid for.",
+      "It will be sold."
+     ],
+     "answer": "It must be returned.",
+     "explanation": "Réponse : It must be returned.",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "What happens to company equipment if an employee leaves?"
+    },
+    {
+     "choices": [
+      "In writing to Human Resources.",
+      "By phone to their manager.",
+      "At a staff meeting.",
+      "Online to the board."
+     ],
+     "answer": "In writing to Human Resources.",
+     "explanation": "Réponse : In writing to Human Resources.",
+     "passage": "AVALON & CO. - REMOTE WORKING POLICY (REVISED)\nFollowing a review carried out in the spring, the board has approved a revised remote working policy, which will come into effect on 1 March. Employees may work remotely for up to three days per week, subject to their manager’s approval. It is essential that all staff be available during core hours, from 10 a.m. to 3 p.m. Equipment provided by the company remains its property and must be returned should the employee leave. Requests for exceptions should be submitted in writing to Human Resources.",
+     "text": "How should requests for exceptions be made?"
+    },
+    {
+     "choices": [
+      "It almost reached its target.",
+      "It exceeded its target.",
+      "It failed completely.",
+      "It did not set a target."
+     ],
+     "answer": "It almost reached its target.",
+     "explanation": "Réponse : It almost reached its target.",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, albeit slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, owing to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "What is said about the reduction in carbon emissions?"
+    },
+    {
+     "choices": [
+      "Switching to renewable energy.",
+      "Closing factories.",
+      "Reducing online sales.",
+      "Buying new vehicles."
+     ],
+     "answer": "Switching to renewable energy.",
+     "explanation": "Réponse : Switching to renewable energy.",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, albeit slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, owing to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "How was the reduction mainly achieved?"
+    },
+    {
+     "choices": [
+      "Introduce reusable packaging.",
+      "Stop selling online.",
+      "Open a new plant in Scotland.",
+      "Raise prices."
+     ],
+     "answer": "Introduce reusable packaging.",
+     "explanation": "Réponse : Introduce reusable packaging.",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, albeit slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, owing to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "What does the Group plan to do?"
+    },
+    {
+     "choices": [
+      "It did not open on time.",
+      "It was too expensive.",
+      "It closed last year.",
+      "It is in Scotland."
+     ],
+     "answer": "It did not open on time.",
+     "explanation": "Réponse : It did not open on time.",
+     "passage": "Annual Sustainability Report - Summary\nOver the past year, the Group has reduced its carbon emissions by 18%, albeit slightly short of its 20% target. This reduction was largely achieved through the transition to renewable energy at our two Scottish plants. Packaging waste, on the other hand, rose by 4%, owing to a sharp increase in online orders. Given that e-commerce is likely to keep growing, the Group intends to introduce reusable packaging by the end of next year. Had the new logistics centre opened on schedule, the overall results would arguably have been stronger.",
+     "text": "What is implied about the new logistics centre?"
+    },
+    {
+     "choices": [
+      "To confirm an agreement.",
+      "To complain about a delivery.",
+      "To request a meeting.",
+      "To cancel a contract."
+     ],
+     "answer": "To confirm an agreement.",
+     "explanation": "Réponse : To confirm an agreement.",
+     "passage": "Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I am writing to confirm the terms we discussed. Kernow Logistics will handle all deliveries in the south-west for an initial period of two years, at a rate of 4.20 pounds per parcel. Should volumes exceed 10,000 parcels per month, this rate will be reduced to 3.90 pounds. Please find enclosed two copies of the contract. I would be grateful if you could sign both and return one to us by 30 June.\nYours sincerely,\nAlistair Reid\nCommercial Director",
+     "text": "Why did Alistair Reid write to Ms Campbell?"
+    },
+    {
+     "choices": [
+      "3.90 pounds.",
+      "4.20 pounds.",
+      "10 pounds.",
+      "2 pounds."
+     ],
+     "answer": "3.90 pounds.",
+     "explanation": "Réponse : 3.90 pounds.",
+     "passage": "Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I am writing to confirm the terms we discussed. Kernow Logistics will handle all deliveries in the south-west for an initial period of two years, at a rate of 4.20 pounds per parcel. Should volumes exceed 10,000 parcels per month, this rate will be reduced to 3.90 pounds. Please find enclosed two copies of the contract. I would be grateful if you could sign both and return one to us by 30 June.\nYours sincerely,\nAlistair Reid\nCommercial Director",
+     "text": "What will the rate be if volumes exceed 10,000 parcels a month?"
+    },
+    {
+     "choices": [
+      "Sign both copies and return one.",
+      "Call Mr Reid.",
+      "Send a cheque.",
+      "Visit the warehouse."
+     ],
+     "answer": "Sign both copies and return one.",
+     "explanation": "Réponse : Sign both copies and return one.",
+     "passage": "Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I am writing to confirm the terms we discussed. Kernow Logistics will handle all deliveries in the south-west for an initial period of two years, at a rate of 4.20 pounds per parcel. Should volumes exceed 10,000 parcels per month, this rate will be reduced to 3.90 pounds. Please find enclosed two copies of the contract. I would be grateful if you could sign both and return one to us by 30 June.\nYours sincerely,\nAlistair Reid\nCommercial Director",
+     "text": "What is Ms Campbell asked to do?"
+    },
+    {
+     "choices": [
+      "The notice period.",
+      "The price per parcel.",
+      "The length of the contract.",
+      "The delivery area."
+     ],
+     "answer": "The notice period.",
+     "explanation": "Réponse : The notice period.",
+     "passage": "From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. Having gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period were three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi",
+     "text": "What does Mairi want to change?"
+    },
+    {
+     "choices": [
+      "Because of the investment involved.",
+      "Because of a legal error.",
+      "Because prices have risen.",
+      "Because the contract is too long."
+     ],
+     "answer": "Because of the investment involved.",
+     "explanation": "Réponse : Because of the investment involved.",
+     "passage": "From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. Having gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period were three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi",
+     "text": "Why does Mairi request the change?"
+    },
+    {
+     "choices": [
+      "She will sign immediately.",
+      "She will look for another supplier.",
+      "She will call a meeting.",
+      "She will ask for a discount."
+     ],
+     "answer": "She will sign immediately.",
+     "explanation": "Réponse : She will sign immediately.",
+     "passage": "From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. Having gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period were three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi",
+     "text": "What will Mairi do if the change is accepted?"
+    },
+    {
+     "choices": [
+      "Two years.",
+      "One month.",
+      "Three months.",
+      "One year."
+     ],
+     "answer": "Two years.",
+     "explanation": "Réponse : Two years.",
+     "passage": "Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I am writing to confirm the terms we discussed. Kernow Logistics will handle all deliveries in the south-west for an initial period of two years, at a rate of 4.20 pounds per parcel. Should volumes exceed 10,000 parcels per month, this rate will be reduced to 3.90 pounds. Please find enclosed two copies of the contract. I would be grateful if you could sign both and return one to us by 30 June.\nYours sincerely,\nAlistair Reid\nCommercial Director",
+     "text": "How long is the initial period of the agreement?"
+    }
+   ]
+  }
+ ]
+}
