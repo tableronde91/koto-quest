@@ -367,4 +367,14 @@ export const ENGLISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'b1-w7': () => (<><Tower x={-10} y={14} /><Castle x={18} y={10} s={0.6} /></>),
   'b1-w8': () => (<><Mist x={0} y={6} /><Castle x={0} y={14} s={0.6} /><Mist x={-10} y={14} /></>),
   'b1-final': () => (<><Lighthouse x={-24} y={14} /><Grail x={8} y={6} s={1.3} /><Waves x={0} y={18} /></>),
+  // ───── B2 : Marches galloises ─────
+  'b2-w1': () => (<><Mist x={-6} y={10} /><Waves x={10} y={18} /><Oak x={-26} y={14} s={0.7} /></>),
+  'b2-w2': () => (<><ClockTower x={-16} y={12} /><Office x={14} y={14} /></>),
+  'b2-w3': () => (<><Waves x={0} y={16} /><Oak x={-22} y={12} s={0.8} /><Oak x={22} y={14} s={0.7} /></>),
+  'b2-w4': () => (<><Office x={-8} y={14} /><Teacup x={20} y={14} /></>),
+  'b2-w5': () => (<><Waves x={0} y={18} /><Lighthouse x={22} y={14} s={0.8} /></>),
+  'b2-w6': () => (<><Bridge x={0} y={14} /><Mist x={-14} y={8} /></>),
+  'b2-w7': () => (<><Castle x={0} y={14} s={0.8} /><Wisp x={-20} y={-14} /><Wisp x={20} y={-10} /></>),
+  'b2-w8': () => (<><Helm x={-14} y={10} /><Oak x={14} y={14} s={1.1} /></>),
+  'b2-final': () => (<><Castle x={0} y={14} s={0.9} /><Oak x={-28} y={14} s={0.8} /><Oak x={28} y={14} s={0.8} /></>),
 };

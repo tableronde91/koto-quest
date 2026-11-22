@@ -1,0 +1,778 @@
+{
+ "slug": "b2-toeic",
+ "level": "B2",
+ "contentVersion": "2026.11.22",
+ "notice": "Questions rédigées par Koto Quest au format du TOEIC Listening & Reading (version abrégée : mêmes parties, consignes en anglais, notation sur 990). Ce ne sont pas des questions officielles d’ETS.",
+ "parts": [
+  {
+   "id": "p2",
+   "section": "listening",
+   "jpTitle": "Part 2 — Question-Response",
+   "title": "Questions-réponses",
+   "prompt": "You will hear a question or statement. Select the best response.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "M|If you had known about the delay, would you have taken a later train?",
+     "choices": [
+      "Yes, I would have stayed for lunch.",
+      "I take the train every day.",
+      "It was delayed by an hour."
+     ],
+     "answer": "Yes, I would have stayed for lunch.",
+     "explanation": "Transcription : Homme : If you had known about the delay, would you have taken a later train?"
+    },
+    {
+     "audio": "F|Who was the report written by?",
+     "choices": [
+      "The finance team prepared it.",
+      "It’s about last year’s sales.",
+      "I wrote it down."
+     ],
+     "answer": "The finance team prepared it.",
+     "explanation": "Transcription : Femme : Who was the report written by?"
+    },
+    {
+     "audio": "M|Will you be using the meeting room this afternoon?",
+     "choices": [
+      "No, you can have it.",
+      "Yes, I used it yesterday.",
+      "It’s on the second floor."
+     ],
+     "answer": "No, you can have it.",
+     "explanation": "Transcription : Homme : Will you be using the meeting room this afternoon?"
+    },
+    {
+     "audio": "F|Haven’t you had the printer repaired yet?",
+     "choices": [
+      "The technician is coming tomorrow.",
+      "Yes, I printed it.",
+      "It’s a colour printer."
+     ],
+     "answer": "The technician is coming tomorrow.",
+     "explanation": "Transcription : Femme : Haven’t you had the printer repaired yet?"
+    },
+    {
+     "audio": "M|Why don’t we postpone the launch until spring?",
+     "choices": [
+      "That might give us more time.",
+      "It was launched in spring.",
+      "Because of the launch."
+     ],
+     "answer": "That might give us more time.",
+     "explanation": "Transcription : Homme : Why don’t we postpone the launch until spring?"
+    },
+    {
+     "audio": "F|Do you remember meeting Ms Price at the trade fair?",
+     "choices": [
+      "Vaguely. Was she from Cardiff?",
+      "Remember to meet her.",
+      "The fair is in March."
+     ],
+     "answer": "Vaguely. Was she from Cardiff?",
+     "explanation": "Transcription : Femme : Do you remember meeting Ms Price at the trade fair?"
+    },
+    {
+     "audio": "M|How much did sales rise last quarter?",
+     "choices": [
+      "By about six per cent.",
+      "They rose quickly.",
+      "In the last quarter."
+     ],
+     "answer": "By about six per cent.",
+     "explanation": "Transcription : Homme : How much did sales rise last quarter?"
+    },
+    {
+     "audio": "F|Is the new model due to be released this month?",
+     "choices": [
+      "No, it has been delayed until June.",
+      "It’s a very good model.",
+      "Yes, I released it."
+     ],
+     "answer": "No, it has been delayed until June.",
+     "explanation": "Transcription : Femme : Is the new model due to be released this month?"
+    },
+    {
+     "audio": "M|Which candidate was shortlisted?",
+     "choices": [
+      "Both of them, actually.",
+      "The list is short.",
+      "He was a candidate last year."
+     ],
+     "answer": "Both of them, actually.",
+     "explanation": "Transcription : Homme : Which candidate was shortlisted?"
+    },
+    {
+     "audio": "F|By the time the client arrives, will we have finished the slides?",
+     "choices": [
+      "I think so, if nothing goes wrong.",
+      "The client arrived yesterday.",
+      "There are twenty slides."
+     ],
+     "answer": "I think so, if nothing goes wrong.",
+     "explanation": "Transcription : Femme : By the time the client arrives, will we have finished the slides?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p3",
+   "section": "listening",
+   "jpTitle": "Part 3 — Conversations",
+   "title": "Conversations",
+   "prompt": "You will hear a short conversation. Answer the question about it.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "M|Have you seen the quarterly figures? Revenue rose sharply, but profits fell slightly.\nF|That’s because of the new factory. The building costs were higher than expected.\nM|Well, it should pay for itself within two years.",
+     "choices": [
+      "Building costs were high.",
+      "Sales went down.",
+      "A client cancelled an order.",
+      "Prices were reduced."
+     ],
+     "answer": "Building costs were high.",
+     "explanation": "Transcription : Homme : Have you seen the quarterly figures? Revenue rose sharply, but profits fell slightly. / Femme : That’s because of the new factory. The building costs were higher than expected. / Homme : Well, it should pay for itself within two years.",
+     "text": "Why did profits fall?"
+    },
+    {
+     "audio": "F|I’m calling about the conference in Brecon. I’d like to attend the gala dinner, but I missed the registration deadline.\nM|I’m afraid registration closed yesterday. Let me see if there are any cancellations.\nF|Thank you. I’d really appreciate it.",
+     "choices": [
+      "Check for cancellations.",
+      "Extend the deadline.",
+      "Book a hotel room.",
+      "Send an invoice."
+     ],
+     "answer": "Check for cancellations.",
+     "explanation": "Transcription : Femme : I’m calling about the conference in Brecon. I’d like to attend the gala dinner, but I missed the registration deadline. / Homme : I’m afraid registration closed yesterday. Let me see if there are any cancellations. / Femme : Thank you. I’d really appreciate it.",
+     "text": "What will the man do?"
+    },
+    {
+     "audio": "M|Did you hear that Gareth resigned?\nF|Really? I thought he was about to be promoted.\nM|Apparently he’s been offered a better position at a competitor.",
+     "choices": [
+      "He has resigned.",
+      "He has been promoted.",
+      "He has been laid off.",
+      "He has retired."
+     ],
+     "answer": "He has resigned.",
+     "explanation": "Transcription : Homme : Did you hear that Gareth resigned? / Femme : Really? I thought he was about to be promoted. / Homme : Apparently he’s been offered a better position at a competitor.",
+     "text": "What does the man say about Gareth?"
+    },
+    {
+     "audio": "F|We need to get the air conditioning serviced before the summer.\nM|I’ll have the facilities team call a technician.\nF|Great. Ask them to do it on a Friday, when the office is quieter.",
+     "choices": [
+      "On a Friday.",
+      "On a Monday.",
+      "In the summer.",
+      "At the weekend."
+     ],
+     "answer": "On a Friday.",
+     "explanation": "Transcription : Femme : We need to get the air conditioning serviced before the summer. / Homme : I’ll have the facilities team call a technician. / Femme : Great. Ask them to do it on a Friday, when the office is quieter.",
+     "text": "When does the woman want the work done?"
+    },
+    {
+     "audio": "M|If we had hired a second designer, we wouldn’t be so behind schedule.\nF|I agree, but it’s too late now. What we need is to extend the deadline.\nM|I’ll speak to the client this afternoon.",
+     "choices": [
+      "Extend the deadline.",
+      "Hire a designer.",
+      "Cancel the project.",
+      "Reduce the price."
+     ],
+     "answer": "Extend the deadline.",
+     "explanation": "Transcription : Homme : If we had hired a second designer, we wouldn’t be so behind schedule. / Femme : I agree, but it’s too late now. What we need is to extend the deadline. / Homme : I’ll speak to the client this afternoon.",
+     "text": "What does the woman suggest?"
+    },
+    {
+     "audio": "F|Your flight has been cancelled, I’m afraid. The next one leaves at 6 a.m.\nM|That means I’ll miss my meeting in Dublin. Can I be reimbursed?\nF|Yes, or we can book you on a flight with another airline at 9 tonight.",
+     "choices": [
+      "A flight was cancelled.",
+      "He lost his luggage.",
+      "His meeting was moved.",
+      "He missed his train."
+     ],
+     "answer": "A flight was cancelled.",
+     "explanation": "Transcription : Femme : Your flight has been cancelled, I’m afraid. The next one leaves at 6 a.m. / Homme : That means I’ll miss my meeting in Dublin. Can I be reimbursed? / Femme : Yes, or we can book you on a flight with another airline at 9 tonight.",
+     "text": "What is the man’s problem?"
+    },
+    {
+     "audio": "M|The survey shows that few customers use our app.\nF|That’s not surprising. It is said to be very slow.\nM|Then let’s ask the IT team to look at it before the campaign starts.",
+     "choices": [
+      "The app is slow.",
+      "The app is expensive.",
+      "The app is new.",
+      "The app is popular."
+     ],
+     "answer": "The app is slow.",
+     "explanation": "Transcription : Homme : The survey shows that few customers use our app. / Femme : That’s not surprising. It is said to be very slow. / Homme : Then let’s ask the IT team to look at it before the campaign starts.",
+     "text": "What does the woman say about the app?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p4",
+   "section": "listening",
+   "jpTitle": "Part 4 — Talks",
+   "title": "Annonces",
+   "prompt": "You will hear a short talk. Answer the question about it.",
+   "count": 4,
+   "questions": [
+    {
+     "audio": "N|Good morning, everyone. As you know, the merger with Northstar will be completed in December. I do understand that many of you are worried about your jobs, so let me be clear: no positions will be cut. What will change is our reporting structure, which I will explain in detail next week.",
+     "choices": [
+      "Employees are worried about their jobs.",
+      "The merger has been cancelled.",
+      "Sales have fallen.",
+      "The office is moving."
+     ],
+     "answer": "Employees are worried about their jobs.",
+     "explanation": "Transcription : Narrateur : Good morning, everyone. As you know, the merger with Northstar will be completed in December. I do understand that many of you are worried about your jobs, so let me be clear: no positions will be cut. What will change is our reporting structure, which I will explain in detail next week.",
+     "text": "What concern does the speaker address?"
+    },
+    {
+     "audio": "N|This is a message for passengers travelling to Swansea. Due to engineering works, trains will not be running between Cardiff and Swansea this weekend. A replacement bus service will operate from outside the main entrance. Journeys are expected to take thirty minutes longer than usual.",
+     "choices": [
+      "Take a replacement bus.",
+      "Change at Bristol.",
+      "Travel on Monday.",
+      "Buy a new ticket."
+     ],
+     "answer": "Take a replacement bus.",
+     "explanation": "Transcription : Narrateur : This is a message for passengers travelling to Swansea. Due to engineering works, trains will not be running between Cardiff and Swansea this weekend. A replacement bus service will operate from outside the main entrance. Journeys are expected to take thirty minutes longer than usual.",
+     "text": "What should passengers to Swansea do?"
+    },
+    {
+     "audio": "N|Thank you for joining this webinar. Over the next hour, I’ll be looking at how online sales have developed. As you can see on this slide, sales rose steadily until 2022, peaked in 2023 and have since levelled off. Moving on, I’d like to highlight three reasons for this.",
+     "choices": [
+      "They have levelled off.",
+      "They are rising sharply.",
+      "They have fallen dramatically.",
+      "They peaked last month."
+     ],
+     "answer": "They have levelled off.",
+     "explanation": "Transcription : Narrateur : Thank you for joining this webinar. Over the next hour, I’ll be looking at how online sales have developed. As you can see on this slide, sales rose steadily until 2022, peaked in 2023 and have since levelled off. Moving on, I’d like to highlight three reasons for this.",
+     "text": "What does the speaker say about online sales since 2023?"
+    },
+    {
+     "audio": "N|Hi Ffion, it’s Rhys. I’ve just had the contract checked by our lawyers. Not only is the price too high, but the delivery terms are unclear. I suggest we ask the supplier to rewrite section four before we sign. Could you call me back before five?",
+     "choices": [
+      "Ask the supplier to rewrite part of the contract.",
+      "Sign the contract today.",
+      "Find a new lawyer.",
+      "Lower the price."
+     ],
+     "answer": "Ask the supplier to rewrite part of the contract.",
+     "explanation": "Transcription : Narrateur : Hi Ffion, it’s Rhys. I’ve just had the contract checked by our lawyers. Not only is the price too high, but the delivery terms are unclear. I suggest we ask the supplier to rewrite section four before we sign. Could you call me back before five?",
+     "text": "What does Rhys suggest?"
+    },
+    {
+     "audio": "N|Welcome to Caerphilly Castle, which is believed to be the second largest castle in Britain. Please note that the tower is closed for repairs. Visitors are not allowed to climb on the walls. The audio guide, available in six languages, can be collected at the shop.",
+     "choices": [
+      "Climb on the walls.",
+      "Visit the shop.",
+      "Use an audio guide.",
+      "Take photos."
+     ],
+     "answer": "Climb on the walls.",
+     "explanation": "Transcription : Narrateur : Welcome to Caerphilly Castle, which is believed to be the second largest castle in Britain. Please note that the tower is closed for repairs. Visitors are not allowed to climb on the walls. The audio guide, available in six languages, can be collected at the shop.",
+     "text": "What are visitors not allowed to do?"
+    },
+    {
+     "audio": "N|And finally, the weather. After a week of heavy rain, conditions will improve gradually from Wednesday. By the weekend, temperatures will have risen to around eighteen degrees, with plenty of sunshine in the south.",
+     "choices": [
+      "It will gradually improve.",
+      "It will get colder.",
+      "Heavy rain will continue.",
+      "It will snow."
+     ],
+     "answer": "It will gradually improve.",
+     "explanation": "Transcription : Narrateur : And finally, the weather. After a week of heavy rain, conditions will improve gradually from Wednesday. By the weekend, temperatures will have risen to around eighteen degrees, with plenty of sunshine in the south.",
+     "text": "What will happen to the weather?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p5",
+   "section": "grammar",
+   "jpTitle": "Part 5 — Incomplete Sentences",
+   "title": "Phrases à compléter",
+   "prompt": "A word or phrase is missing in each sentence. Select the best answer to complete the sentence.",
+   "count": 13,
+   "questions": [
+    {
+     "choices": [
+      "had",
+      "has",
+      "would",
+      "was"
+     ],
+     "answer": "had",
+     "explanation": "Réponse : had",
+     "jp": "If the shipment ＿ arrived on time, we would not have lost the client."
+    },
+    {
+     "choices": [
+      "would be",
+      "would have been",
+      "will be",
+      "is"
+     ],
+     "answer": "would be",
+     "explanation": "Réponse : would be",
+     "jp": "If Ms Lloyd had accepted the offer, she ＿ living in New York now."
+    },
+    {
+     "choices": [
+      "whose",
+      "who",
+      "which",
+      "whom"
+     ],
+     "answer": "whose",
+     "explanation": "Réponse : whose",
+     "jp": "The firm ＿ software we use has been taken over by Northstar."
+    },
+    {
+     "choices": [
+      "which",
+      "that",
+      "what",
+      "who"
+     ],
+     "answer": "which",
+     "explanation": "Réponse : which",
+     "jp": "The meeting was cancelled at the last minute, ＿ annoyed many participants."
+    },
+    {
+     "choices": [
+      "submitted",
+      "submitting",
+      "submit",
+      "to submit"
+     ],
+     "answer": "submitted",
+     "explanation": "Réponse : submitted",
+     "jp": "All claims ＿ after 30 days will be rejected."
+    },
+    {
+     "choices": [
+      "hearing",
+      "hear",
+      "to hear",
+      "heard"
+     ],
+     "answer": "hearing",
+     "explanation": "Réponse : hearing",
+     "jp": "We look forward to ＿ from you at your earliest convenience."
+    },
+    {
+     "choices": [
+      "repaired",
+      "repair",
+      "repairing",
+      "to repair"
+     ],
+     "answer": "repaired",
+     "explanation": "Réponse : repaired",
+     "jp": "Mr Evans had his car ＿ at the garage next to the office."
+    },
+    {
+     "choices": [
+      "will have completed",
+      "will complete",
+      "completes",
+      "has completed"
+     ],
+     "answer": "will have completed",
+     "explanation": "Réponse : will have completed",
+     "jp": "By the end of next month, the team ＿ the installation."
+    },
+    {
+     "choices": [
+      "to have",
+      "having",
+      "have",
+      "had"
+     ],
+     "answer": "to have",
+     "explanation": "Réponse : to have",
+     "jp": "The director is reported ＿ left the company for personal reasons."
+    },
+    {
+     "choices": [
+      "taking",
+      "to take",
+      "take",
+      "taken"
+     ],
+     "answer": "taking",
+     "explanation": "Réponse : taking",
+     "jp": "The employee denied ＿ the documents home."
+    },
+    {
+     "choices": [
+      "by",
+      "to",
+      "at",
+      "of"
+     ],
+     "answer": "by",
+     "explanation": "Réponse : by",
+     "jp": "Production costs rose ＿ 3% compared with last year."
+    },
+    {
+     "choices": [
+      "Few",
+      "Little",
+      "A little",
+      "Much"
+     ],
+     "answer": "Few",
+     "explanation": "Réponse : Few",
+     "jp": "＿ customers complained about the new design, so we will keep it."
+    },
+    {
+     "choices": [
+      "did we",
+      "we did",
+      "we have",
+      "have we"
+     ],
+     "answer": "did we",
+     "explanation": "Réponse : did we",
+     "jp": "Not only ＿ exceed our sales target, but we also reduced costs."
+    },
+    {
+     "choices": [
+      "should",
+      "would",
+      "must",
+      "can"
+     ],
+     "answer": "should",
+     "explanation": "Réponse : should",
+     "jp": "Under no circumstances ＿ visitors enter the laboratory without a badge."
+    },
+    {
+     "choices": [
+      "What",
+      "That",
+      "It",
+      "Which"
+     ],
+     "answer": "What",
+     "explanation": "Réponse : What",
+     "jp": "＿ our clients value most is reliability."
+    },
+    {
+     "choices": [
+      "due",
+      "owing",
+      "because",
+      "thanks"
+     ],
+     "answer": "due",
+     "explanation": "Réponse : due",
+     "jp": "The flight was diverted ＿ to fog at Cardiff airport."
+    },
+    {
+     "choices": [
+      "unable",
+      "impossible",
+      "incapable",
+      "not able of"
+     ],
+     "answer": "unable",
+     "explanation": "Réponse : unable",
+     "jp": "Unfortunately, we are ＿ to offer refunds on sale items."
+    }
+   ]
+  },
+  {
+   "id": "p6",
+   "section": "grammar",
+   "jpTitle": "Part 6 — Text Completion",
+   "title": "Textes à compléter",
+   "prompt": "Read the text. A word or phrase is missing. Select the best answer to complete the text.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "Owing",
+      "Because",
+      "Despite",
+      "Although"
+     ],
+     "answer": "Owing",
+     "explanation": "Réponse : Owing",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\n＿ to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "approved",
+      "approving",
+      "approve",
+      "approval"
+     ],
+     "answer": "approved",
+     "explanation": "Réponse : approved",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be ＿ in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "submitted",
+      "submitting",
+      "submits",
+      "to submit"
+     ],
+     "answer": "submitted",
+     "explanation": "Réponse : submitted",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims ＿ more than 30 days after the trip will not be accepted.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "which",
+      "who",
+      "what",
+      "where"
+     ],
+     "answer": "which",
+     "explanation": "Réponse : which",
+     "passage": "CARDIFF - Welsh software firm Draig Systems has announced that it is to be taken over by the American group Northstar for 85 million pounds. The deal, ＿ is expected to be completed by the end of the year, will allow Draig to expand into the US market. Founded in 2011 by two former university friends, Draig now employs 240 people. Its chief executive, Ffion Price, said that no jobs would be lost and that the company would remain in Cardiff. Shares in Northstar rose by 4% following the announcement.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "expected",
+      "expecting",
+      "expect",
+      "expectation"
+     ],
+     "answer": "expected",
+     "explanation": "Réponse : expected",
+     "passage": "CARDIFF - Welsh software firm Draig Systems has announced that it is to be taken over by the American group Northstar for 85 million pounds. The deal, which is ＿ to be completed by the end of the year, will allow Draig to expand into the US market. Founded in 2011 by two former university friends, Draig now employs 240 people. Its chief executive, Ffion Price, said that no jobs would be lost and that the company would remain in Cardiff. Shares in Northstar rose by 4% following the announcement.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "What",
+      "That",
+      "Which",
+      "It"
+     ],
+     "answer": "What",
+     "explanation": "Réponse : What",
+     "passage": "From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi all,\nThe results of the customer survey are in. Overall, satisfaction has risen to 82%, up from 74% last year. ＿ customers appreciate most is our delivery speed. However, a large number of respondents found our website difficult to use, which is something we need to address. I suggest holding a meeting next Thursday to discuss possible changes. Please let me know if you are unable to attend.\nGareth",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "holding",
+      "to hold",
+      "hold",
+      "held"
+     ],
+     "answer": "holding",
+     "explanation": "Réponse : holding",
+     "passage": "From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi all,\nThe results of the customer survey are in. Overall, satisfaction has risen to 82%, up from 74% last year. What customers appreciate most is our delivery speed. However, a large number of respondents found our website difficult to use, which is something we need to address. I suggest ＿ a meeting next Thursday to discuss possible changes. Please let me know if you are unable to attend.\nGareth",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "wishing",
+      "wished",
+      "wish",
+      "wishes"
+     ],
+     "answer": "wishing",
+     "explanation": "Réponse : wishing",
+     "passage": "BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants ＿ to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.",
+     "text": "Choose the word for the blank."
+    }
+   ]
+  },
+  {
+   "id": "p7",
+   "section": "reading",
+   "jpTitle": "Part 7 — Reading Comprehension",
+   "title": "Compréhension écrite",
+   "prompt": "Read the text and answer the question.",
+   "count": 12,
+   "questions": [
+    {
+     "choices": [
+      "They must be approved in advance.",
+      "They are no longer allowed.",
+      "They must be booked online.",
+      "They are paid by the client."
+     ],
+     "answer": "They must be approved in advance.",
+     "explanation": "Réponse : They must be approved in advance.",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "What is said about business trips from 1 September?"
+    },
+    {
+     "choices": [
+      "When the journey is over three hours.",
+      "When travelling to London.",
+      "When the manager agrees.",
+      "When the train is full."
+     ],
+     "answer": "When the journey is over three hours.",
+     "explanation": "Réponse : When the journey is over three hours.",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "When can staff travel first class by train?"
+    },
+    {
+     "choices": [
+      "90 pounds.",
+      "120 pounds.",
+      "30 pounds.",
+      "The full cost."
+     ],
+     "answer": "90 pounds.",
+     "explanation": "Réponse : 90 pounds.",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "How much will be reimbursed for a hotel in Swansea?"
+    },
+    {
+     "choices": [
+      "To reduce costs.",
+      "To reward staff.",
+      "To simplify booking.",
+      "To protect the environment."
+     ],
+     "answer": "To reduce costs.",
+     "explanation": "Réponse : To reduce costs.",
+     "passage": "MEMO\nTo: All department heads\nFrom: Rhys Morgan, Finance Director\nRe: Travel expenses\n\nOwing to rising costs, the following changes will take effect on 1 September. All business travel must be approved in advance by your department head. Staff travelling by train should book standard class tickets, unless the journey lasts more than three hours. Hotel costs will be reimbursed up to 120 pounds per night in London and 90 pounds elsewhere. Claims submitted more than 30 days after the trip will not be accepted.",
+     "text": "Why are the changes being made?"
+    },
+    {
+     "choices": [
+      "It is being bought by another company.",
+      "It is opening an office in the US.",
+      "It is laying off staff.",
+      "It is moving to London."
+     ],
+     "answer": "It is being bought by another company.",
+     "explanation": "Réponse : It is being bought by another company.",
+     "passage": "CARDIFF - Welsh software firm Draig Systems has announced that it is to be taken over by the American group Northstar for 85 million pounds. The deal, which is expected to be completed by the end of the year, will allow Draig to expand into the US market. Founded in 2011 by two former university friends, Draig now employs 240 people. Its chief executive, Ffion Price, said that no jobs would be lost and that the company would remain in Cardiff. Shares in Northstar rose by 4% following the announcement.",
+     "text": "What is happening to Draig Systems?"
+    },
+    {
+     "choices": [
+      "No jobs will be lost.",
+      "Some staff will move to the US.",
+      "Profits will rise by 4%.",
+      "She will leave the company."
+     ],
+     "answer": "No jobs will be lost.",
+     "explanation": "Réponse : No jobs will be lost.",
+     "passage": "CARDIFF - Welsh software firm Draig Systems has announced that it is to be taken over by the American group Northstar for 85 million pounds. The deal, which is expected to be completed by the end of the year, will allow Draig to expand into the US market. Founded in 2011 by two former university friends, Draig now employs 240 people. Its chief executive, Ffion Price, said that no jobs would be lost and that the company would remain in Cardiff. Shares in Northstar rose by 4% following the announcement.",
+     "text": "What did Ffion Price say?"
+    },
+    {
+     "choices": [
+      "By the end of the year.",
+      "In 2011.",
+      "Next month.",
+      "It has already happened."
+     ],
+     "answer": "By the end of the year.",
+     "explanation": "Réponse : By the end of the year.",
+     "passage": "CARDIFF - Welsh software firm Draig Systems has announced that it is to be taken over by the American group Northstar for 85 million pounds. The deal, which is expected to be completed by the end of the year, will allow Draig to expand into the US market. Founded in 2011 by two former university friends, Draig now employs 240 people. Its chief executive, Ffion Price, said that no jobs would be lost and that the company would remain in Cardiff. Shares in Northstar rose by 4% following the announcement.",
+     "text": "When will the deal probably be completed?"
+    },
+    {
+     "choices": [
+      "It has risen.",
+      "It has fallen.",
+      "It has not changed.",
+      "It was not measured."
+     ],
+     "answer": "It has risen.",
+     "explanation": "Réponse : It has risen.",
+     "passage": "From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi all,\nThe results of the customer survey are in. Overall, satisfaction has risen to 82%, up from 74% last year. What customers appreciate most is our delivery speed. However, a large number of respondents found our website difficult to use, which is something we need to address. I suggest holding a meeting next Thursday to discuss possible changes. Please let me know if you are unable to attend.\nGareth",
+     "text": "What happened to customer satisfaction?"
+    },
+    {
+     "choices": [
+      "The website.",
+      "Delivery times.",
+      "Prices.",
+      "The product range."
+     ],
+     "answer": "The website.",
+     "explanation": "Réponse : The website.",
+     "passage": "From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi all,\nThe results of the customer survey are in. Overall, satisfaction has risen to 82%, up from 74% last year. What customers appreciate most is our delivery speed. However, a large number of respondents found our website difficult to use, which is something we need to address. I suggest holding a meeting next Thursday to discuss possible changes. Please let me know if you are unable to attend.\nGareth",
+     "text": "What do many customers find difficult?"
+    },
+    {
+     "choices": [
+      "Hold a meeting.",
+      "Run a new survey.",
+      "Hire a web designer.",
+      "Lower prices."
+     ],
+     "answer": "Hold a meeting.",
+     "explanation": "Réponse : Hold a meeting.",
+     "passage": "From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi all,\nThe results of the customer survey are in. Overall, satisfaction has risen to 82%, up from 74% last year. What customers appreciate most is our delivery speed. However, a large number of respondents found our website difficult to use, which is something we need to address. I suggest holding a meeting next Thursday to discuss possible changes. Please let me know if you are unable to attend.\nGareth",
+     "text": "What does Gareth propose?"
+    },
+    {
+     "choices": [
+      "By 30 September.",
+      "On 15 October.",
+      "By 14 October.",
+      "On 16 October."
+     ],
+     "answer": "By 30 September.",
+     "explanation": "Réponse : By 30 September.",
+     "passage": "BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants wishing to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.",
+     "text": "When must participants register for the gala dinner?"
+    },
+    {
+     "choices": [
+      "Parking may not be available.",
+      "The shuttle bus is expensive.",
+      "The hotel is far away.",
+      "The centre is closed on Sunday."
+     ],
+     "answer": "Parking may not be available.",
+     "explanation": "Réponse : Parking may not be available.",
+     "passage": "BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants wishing to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.",
+     "text": "What problem is mentioned in the notice?"
+    },
+    {
+     "choices": [
+      "Every 30 minutes.",
+      "Every hour.",
+      "Twice a day.",
+      "Only in the morning."
+     ],
+     "answer": "Every 30 minutes.",
+     "explanation": "Réponse : Every 30 minutes.",
+     "passage": "BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants wishing to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.",
+     "text": "How often does the shuttle bus run?"
+    },
+    {
+     "choices": [
+      "Five minutes from the centre.",
+      "Next to the station.",
+      "In Cardiff.",
+      "Thirty minutes away."
+     ],
+     "answer": "Five minutes from the centre.",
+     "explanation": "Réponse : Five minutes from the centre.",
+     "passage": "BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants wishing to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.",
+     "text": "Where is the Castle Hotel?"
+    }
+   ]
+  }
+ ]
+}

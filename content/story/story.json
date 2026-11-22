@@ -2142,6 +2142,159 @@
      }
     }
    }
+  },
+  "B2": {
+   "glyph": "K",
+   "jp": "The Green Knight",
+   "color": "#3E7A3A",
+   "saga": {
+    "fr": "Le Chevalier vert",
+    "en": "The Green Knight"
+   },
+   "hero": {
+    "fr": "Champion·ne de Camelot",
+    "en": "Champion of Camelot"
+   },
+   "short": {
+    "fr": "Le champion·la championne",
+    "en": "The champion"
+   },
+   "prologue": {
+    "fr": "Le soir de Noël, un géant vert entre à cheval dans la grande salle de Camelot et lance un défi : dans un an, quelqu’un devra le retrouver à la chapelle verte. Arthur te choisit, et Avalon & Co. te confie son expansion dans les Marches galloises. Sur la route, il faudra diriger une équipe, négocier, présenter et convaincre au plus haut niveau.",
+    "en": "On Christmas Eve, a green giant rides into the great hall of Camelot and issues a challenge: in a year, someone must find him at the Green Chapel. Arthur chooses you, and Avalon & Co. puts you in charge of its expansion into the Welsh Marches. On the way, you will have to lead a team, negotiate, present and persuade at the highest level."
+   },
+   "epilogue": {
+    "fr": "Dans la chapelle verte, le géant lève sa hache… puis sourit : tu as tenu parole sans faiblir. Il te tend une ceinture verte, signe d’honneur, et Camelot fête ton retour.",
+    "en": "In the Green Chapel, the giant raises his axe… then smiles: you kept your word without flinching. He hands you a green girdle, a mark of honour, and Camelot celebrates your return."
+   },
+   "chapters": {
+    "b2-w1": {
+     "title": {
+      "fr": "Le chien des marais",
+      "en": "The marsh dog"
+     },
+     "intro": {
+      "fr": "Sur la côte, Black Shuck, le chien fantôme aux yeux de braise, garde le chemin. Il veut entendre ce qui serait arrivé si tes projets passés s’étaient déroulés autrement.",
+      "en": "On the coast, Black Shuck, the ghost dog with burning eyes, guards the path. He wants to hear what would have happened if your past projects had gone differently."
+     },
+     "outro": {
+      "fr": "Le chien noir s’efface dans la brume des marais.",
+      "en": "The black dog fades into the marsh mist."
+     }
+    },
+    "b2-w2": {
+     "title": {
+      "fr": "Les toits de Londres",
+      "en": "The London rooftops"
+     },
+     "intro": {
+      "fr": "À Londres, Spring-heeled Jack bondit de toit en toit et brouille les descriptions des témoins. Décris précisément les gens et les choses pour le démasquer.",
+      "en": "In London, Spring-heeled Jack leaps from roof to roof and muddles the witnesses’ descriptions. Describe people and things precisely to unmask him."
+     },
+     "outro": {
+      "fr": "Démasqué, le sauteur disparaît dans un dernier bond.",
+      "en": "Unmasked, the leaper vanishes in one last bound."
+     }
+    },
+    "b2-w3": {
+     "title": {
+      "fr": "L’étang noir",
+      "en": "The black pond"
+     },
+     "intro": {
+      "fr": "Au bord d’un étang, le Grindylow tend ses longs bras vers les imprudents. Choisis sans hésiter entre -ing et to pour qu’il te lâche.",
+      "en": "At the edge of a pond, the Grindylow stretches its long arms towards the careless. Choose between -ing and to without hesitation and it will let you go."
+     },
+     "outro": {
+      "fr": "Le Grindylow retourne sous les nénuphars.",
+      "en": "The Grindylow sinks back beneath the water lilies."
+     }
+    },
+    "b2-w4": {
+     "title": {
+      "fr": "Le grenier en désordre",
+      "en": "The messy attic"
+     },
+     "intro": {
+      "fr": "Dans les nouveaux bureaux, le Boggart du grenier a tout cassé. Fais réparer, installer et vérifier ce qu’il faut pour qu’il se calme.",
+      "en": "In the new offices, the attic Boggart has broken everything. Get things repaired, installed and checked so that it calms down."
+     },
+     "outro": {
+      "fr": "Le boggart, vexé, va chercher une autre maison à hanter.",
+      "en": "Offended, the boggart goes off to haunt another house."
+     }
+    },
+    "b2-w5": {
+     "title": {
+      "fr": "La peau cachée",
+      "en": "The hidden skin"
+     },
+     "intro": {
+      "fr": "Sur une plage des Orcades, la Selkie cherche sa peau de phoque. Aide-la à planifier ce qu’elle fera et ce qu’elle aura accompli avant de regagner la mer.",
+      "en": "On an Orkney beach, the Selkie looks for her sealskin. Help her plan what she will be doing and what she will have achieved before she returns to the sea."
+     },
+     "outro": {
+      "fr": "La Selkie enfile sa peau et plonge dans les vagues.",
+      "en": "The Selkie puts on her skin and dives into the waves."
+     }
+    },
+    "b2-w6": {
+     "title": {
+      "fr": "Le gué des Highlands",
+      "en": "The Highland ford"
+     },
+     "intro": {
+      "fr": "Au bord d’un gué, la Bean Nighe lave du linge en silence. On dit qu’elle répond à trois questions : rapporte rumeurs et paroles avec précision.",
+      "en": "By a ford, the Bean Nighe washes clothes in silence. It is said she answers three questions: report rumours and words precisely."
+     },
+     "outro": {
+      "fr": "La lavandière répond, puis s’évanouit avec son linge.",
+      "en": "The washerwoman answers, then vanishes with her washing."
+     }
+    },
+    "b2-w7": {
+     "title": {
+      "fr": "La chasse dans le ciel",
+      "en": "The hunt in the sky"
+     },
+     "intro": {
+      "fr": "Dans le ciel gallois, Gwyn ap Nudd mène la Chasse sauvage et compte chaque âme. Décris les chiffres et les tendances sans erreur pour qu’il épargne la tienne.",
+      "en": "In the Welsh sky, Gwyn ap Nudd leads the Wild Hunt and counts every soul. Describe figures and trends without error and he will spare yours."
+     },
+     "outro": {
+      "fr": "La meute passe au-dessus de toi sans s’arrêter.",
+      "en": "The pack passes overhead without stopping."
+     }
+    },
+    "b2-w8": {
+     "title": {
+      "fr": "La parole donnée",
+      "en": "The word given"
+     },
+     "intro": {
+      "fr": "Le Chevalier vert t’attend au bout du chemin. Il exige que tu tiennes parole : convaincs-le avec des arguments impeccables et un langage diplomatique.",
+      "en": "The Green Knight awaits you at the end of the path. He demands that you keep your word: convince him with flawless arguments and diplomatic language."
+     },
+     "outro": {
+      "fr": "Le Chevalier vert hoche la tête : « Rendez-vous à la chapelle. »",
+      "en": "The Green Knight nods: “We meet at the chapel.”"
+     }
+    },
+    "b2-final": {
+     "title": {
+      "fr": "La chapelle verte",
+      "en": "The Green Chapel"
+     },
+     "intro": {
+      "fr": "Dans la chapelle verte, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B2 pour sortir la tête haute.",
+      "en": "In the Green Chapel, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B2 score to leave with your head held high."
+     },
+     "outro": {
+      "fr": "La ceinture verte est à toi. Niveau B2 validé !",
+      "en": "The green girdle is yours. B2 level complete!"
+     }
+    }
+   }
   }
  }
 }

@@ -382,7 +382,114 @@ PEDLAR = STORY('pedlar-swaffham', 'P', 'B1', '#8A5A2B', ('The Pedlar of Swaffham
   ]),
 ])
 
-EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD, JACK, CANUTE, ROBIN, PEDLAR]
+
+# ═════════════════════════ B2 : Tam Lin ═════════════════════════
+TAMLIN = STORY('tam-lin', 'T', 'B2', '#5A3E7A', ('Tam Lin', 'Tam Lin'),
+  ('Dans la forêt de Carterhaugh, la jeune Janet rencontre Tam Lin, un chevalier prisonnier de la reine des fées. Pour le sauver, elle devra tenir bon une nuit entière.', 'In the forest of Carterhaugh, young Janet meets Tam Lin, a knight held captive by the Queen of the Fairies. To save him, she will have to hold on for a whole night.'), [
+  CH('tamlin-1', ('The forbidden forest', 'La forêt interdite'), [
+    [S('Every young woman in the Scottish Borders had been warned never to go to Carterhaugh, a forest which was said to be guarded by an elf knight.', 'Toutes les jeunes filles des Borders écossais avaient été averties de ne jamais aller à Carterhaugh, une forêt que l’on disait gardée par un chevalier elfe.'),
+     S('Janet, however, was not the kind of person who did what she was told.', 'Janet, cependant, n’était pas du genre à obéir aux ordres.')],
+    [S('She had barely picked a single rose when a young man appeared, asking her who had given her permission to be there.', 'Elle avait à peine cueilli une rose qu’un jeune homme apparut et lui demanda qui lui avait permis d’être là.'),
+     S('“Carterhaugh is mine,” Janet replied. “My father gave it to me, so I need nobody’s permission.”', '« Carterhaugh m’appartient, répondit Janet. Mon père me l’a donnée, je n’ai donc besoin de la permission de personne. »')],
+  ], [
+    W('warned', '/wɔːnd/', 'averti, prévenu', 'warned'),
+    W('guarded', '/ˈɡɑːdɪd/', 'gardé', 'guarded'),
+    W('however', '/haʊˈevə/', 'cependant', 'however'),
+    W('barely', '/ˈbeəli/', 'à peine', 'barely'),
+    W('picked', '/pɪkt/', 'cueilli', 'picked'),
+    W('replied', '/rɪˈplaɪd/', 'répondit', 'replied'),
+  ], [
+    Q(('Que disait-on de la forêt de Carterhaugh ?', 'What was said about the forest of Carterhaugh?'), [('Qu’elle était gardée par un chevalier elfe', 'That it was guarded by an elf knight'), ('Qu’elle était pleine de trésors', 'That it was full of treasure'), ('Qu’elle avait brûlé', 'That it had burnt down')], 0),
+    Q(('Pourquoi Janet dit-elle n’avoir besoin d’aucune permission ?', 'Why does Janet say she needs no permission?'), [('Elle est une fée', 'She is a fairy'), ('Son père lui a donné la forêt', 'Her father gave her the forest'), ('Le chevalier l’a invitée', 'The knight invited her')], 1),
+  ]),
+  CH('tamlin-2', ('The prisoner of the fairies', 'Le prisonnier des fées'), [
+    [S('The young man, whose name was Tam Lin, explained that he had once been a mortal knight.', 'Le jeune homme, qui s’appelait Tam Lin, expliqua qu’il avait autrefois été un chevalier mortel.'),
+     S('Years before, he had fallen from his horse, and the Queen of the Fairies had caught him and taken him to her kingdom.', 'Des années plus tôt, il était tombé de cheval, et la reine des fées l’avait rattrapé et emmené dans son royaume.')],
+    [S('“Every seven years, the fairies pay a price to hell, and I fear I will be the price this time,” he said.', '« Tous les sept ans, les fées paient un tribut à l’enfer, et je crains d’être ce tribut cette fois-ci », dit-il.'),
+     S('“If you truly want to save me, you must pull me from my horse on Halloween night and hold me tight, whatever happens.”', '« Si tu veux vraiment me sauver, tu devras me faire tomber de cheval la nuit d’Halloween et me tenir serré, quoi qu’il arrive. »')],
+  ], [
+    W('mortal', '/ˈmɔːtl/', 'mortel', 'mortal'),
+    W('kingdom', '/ˈkɪŋdəm/', 'royaume', 'kingdom'),
+    W('fear', '/fɪə/', 'craindre', 'fear'),
+    W('truly', '/ˈtruːli/', 'vraiment, sincèrement', 'truly'),
+    W('pull', '/pʊl/', 'tirer', 'pull'),
+    W('whatever', '/wɒtˈevə/', 'quoi que', 'whatever'),
+  ], [
+    Q(('Comment Tam Lin est-il devenu prisonnier des fées ?', 'How did Tam Lin become the fairies’ prisoner?'), [('Il est tombé de cheval et la reine l’a emmené', 'He fell from his horse and the Queen took him'), ('Il est né chez les fées', 'He was born among the fairies'), ('Il a perdu un pari', 'He lost a bet')], 0),
+    Q(('Que doit faire Janet la nuit d’Halloween ?', 'What must Janet do on Halloween night?'), [('Chanter une chanson', 'Sing a song'), ('Le faire tomber de cheval et le tenir serré', 'Pull him from his horse and hold him tight'), ('Allumer un feu', 'Light a fire')], 1),
+  ]),
+  CH('tamlin-3', ('Halloween night', 'La nuit d’Halloween'), [
+    [S('At midnight, the fairy procession rode past, and Janet recognised Tam Lin on a white horse. She pulled him down and held him in her arms.', 'À minuit, le cortège des fées passa et Janet reconnut Tam Lin sur un cheval blanc. Elle le fit tomber et le serra dans ses bras.'),
+     S('Furious, the Queen turned him into a snake, then a lion, then a burning piece of iron, but Janet did not let go.', 'Furieuse, la reine le transforma en serpent, puis en lion, puis en morceau de fer brûlant, mais Janet ne lâcha pas prise.')],
+    [S('At last, Tam Lin became a man again. “Had I known what a human heart could do,” said the Queen bitterly, “I would have taken his eyes.”', 'Enfin, Tam Lin redevint un homme. « Si j’avais su de quoi un cœur humain est capable, dit la reine avec amertume, je lui aurais pris les yeux. »'),
+     S('Then the fairies vanished, and Janet and Tam Lin walked home together as the sun rose.', 'Puis les fées disparurent, et Janet et Tam Lin rentrèrent ensemble tandis que le soleil se levait.')],
+  ], [
+    W('procession', '/prəˈseʃn/', 'cortège', 'procession'),
+    W('recognised', '/ˈrekəɡnaɪzd/', 'reconnut', 'recognised'),
+    W('burning', '/ˈbɜːnɪŋ/', 'brûlant', 'burning'),
+    W('let go', '/let ɡəʊ/', 'lâcher prise', 'let go'),
+    W('bitterly', '/ˈbɪtəli/', 'avec amertume', 'bitterly'),
+    W('vanished', '/ˈvænɪʃt/', 'disparurent', 'vanished'),
+  ], [
+    Q(('Que fait la reine pour forcer Janet à lâcher Tam Lin ?', 'What does the Queen do to make Janet let go?'), [('Elle le transforme en créatures et en fer brûlant', 'She turns him into creatures and burning iron'), ('Elle appelle ses soldats', 'She calls her soldiers'), ('Elle lui offre de l’or', 'She offers her gold')], 0),
+    Q(('Que regrette la reine à la fin ?', 'What does the Queen regret at the end?'), [('D’avoir perdu son cheval', 'Losing her horse'), ('De ne pas avoir pris les yeux de Tam Lin', 'Not having taken Tam Lin’s eyes'), ('D’être venue à Carterhaugh', 'Coming to Carterhaugh')], 1),
+  ]),
+])
+
+# ═════════════════════════ B2 : Gelert ═════════════════════════
+GELERT = STORY('gelert', 'D', 'B2', '#7A5A3A', ('Gelert the Faithful Hound', 'Gelert, le chien fidèle'),
+  ('Le prince Llywelyn part à la chasse en laissant son fils sous la garde de son chien Gelert. À son retour, il découvre une scène terrible et agit sans réfléchir.', 'Prince Llywelyn goes hunting, leaving his son in the care of his hound Gelert. On his return, he finds a terrible scene and acts without thinking.'), [
+  CH('gelert-1', ('The prince’s hound', 'Le chien du prince'), [
+    [S('In the thirteenth century, Prince Llywelyn of Wales owned a hound called Gelert, which was said to be the most loyal dog in the kingdom.', 'Au XIIIe siècle, le prince Llywelyn de Galles possédait un chien nommé Gelert, que l’on disait le plus fidèle du royaume.'),
+     S('Gelert went everywhere with the prince, and nobody could remember seeing one without the other.', 'Gelert accompagnait le prince partout, et personne ne se souvenait d’avoir vu l’un sans l’autre.')],
+    [S('One day, however, Llywelyn decided to go hunting without him, leaving the dog to guard his baby son.', 'Un jour pourtant, Llywelyn décida d’aller chasser sans lui, laissant le chien veiller sur son bébé.'),
+     S('“Look after him,” the prince said, before riding off into the mountains of Snowdonia.', '« Veille sur lui », dit le prince avant de partir à cheval vers les montagnes de Snowdonia.')],
+  ], [
+    W('century', '/ˈsentʃəri/', 'siècle', 'century'),
+    W('owned', '/əʊnd/', 'possédait', 'owned'),
+    W('hound', '/haʊnd/', 'chien de chasse', 'hound'),
+    W('loyal', '/ˈlɔɪəl/', 'fidèle, loyal', 'loyal'),
+    W('hunting', '/ˈhʌntɪŋ/', 'chasse', 'hunting'),
+    W('look after', '/lʊk ˈɑːftə/', 'veiller sur, s’occuper de', 'look after'),
+  ], [
+    Q(('Que disait-on de Gelert ?', 'What was said about Gelert?'), [('Qu’il était le chien le plus fidèle du royaume', 'That he was the most loyal dog in the kingdom'), ('Qu’il était dangereux', 'That he was dangerous'), ('Qu’il était très vieux', 'That he was very old')], 0),
+    Q(('Pourquoi Gelert ne part-il pas à la chasse ce jour-là ?', 'Why doesn’t Gelert go hunting that day?'), [('Il est malade', 'He is ill'), ('Il doit garder le bébé', 'He must guard the baby'), ('Il s’est perdu', 'He got lost')], 1),
+  ]),
+  CH('gelert-2', ('A terrible mistake', 'Une terrible erreur'), [
+    [S('When the prince returned, Gelert ran to meet him, wagging his tail. His mouth was covered in blood.', 'Quand le prince revint, Gelert courut à sa rencontre en remuant la queue. Sa gueule était couverte de sang.'),
+     S('Llywelyn rushed into the house: the cradle had been turned over and his son was nowhere to be seen.', 'Llywelyn se précipita dans la maison : le berceau était renversé et son fils restait introuvable.')],
+    [S('Convinced that the dog had killed the child, the prince drew his sword and struck Gelert, who died with a last cry.', 'Convaincu que le chien avait tué l’enfant, le prince tira son épée et frappa Gelert, qui mourut en poussant un dernier cri.'),
+     S('At that very moment, a baby’s voice answered from under the cradle.', 'À cet instant précis, la voix d’un bébé répondit sous le berceau.')],
+  ], [
+    W('wagging', '/ˈwæɡɪŋ/', 'remuant (la queue)', 'wagging'),
+    W('rushed', '/rʌʃt/', 'se précipita', 'rushed'),
+    W('cradle', '/ˈkreɪdl/', 'berceau', 'cradle'),
+    W('nowhere', '/ˈnəʊweə/', 'nulle part', 'nowhere'),
+    W('convinced', '/kənˈvɪnst/', 'convaincu', 'convinced'),
+    W('struck', '/strʌk/', 'frappa', 'struck'),
+  ], [
+    Q(('Pourquoi le prince croit-il que Gelert a tué son fils ?', 'Why does the prince think Gelert killed his son?'), [('Le chien a du sang sur la gueule et l’enfant a disparu', 'The dog has blood on his mouth and the child is missing'), ('Un serviteur le lui a dit', 'A servant told him'), ('Le chien s’enfuit', 'The dog runs away')], 0),
+    Q(('Que se passe-t-il juste après la mort de Gelert ?', 'What happens just after Gelert dies?'), [('Le prince s’endort', 'The prince falls asleep'), ('On entend le bébé sous le berceau', 'The baby is heard under the cradle'), ('Un loup entre', 'A wolf comes in')], 1),
+  ]),
+  CH('gelert-3', ('The grave of Gelert', 'La tombe de Gelert'), [
+    [S('Under the cradle lay the baby, unharmed, and beside him lay an enormous dead wolf.', 'Sous le berceau se trouvait le bébé, indemne, et à côté de lui gisait un énorme loup mort.'),
+     S('Llywelyn understood at once: Gelert had not attacked his son but had saved him from the wolf.', 'Llywelyn comprit aussitôt : Gelert n’avait pas attaqué son fils, il l’avait sauvé du loup.')],
+    [S('Had he waited a moment longer, his faithful hound would still be alive. The prince was said never to have smiled again.', 'S’il avait attendu un instant de plus, son fidèle chien serait encore en vie. On dit que le prince ne sourit plus jamais.'),
+     S('He buried Gelert with great honour, and the village of Beddgelert, which means “Gelert’s grave”, still bears his name today.', 'Il enterra Gelert avec de grands honneurs, et le village de Beddgelert, qui signifie « la tombe de Gelert », porte encore son nom aujourd’hui.')],
+  ], [
+    W('unharmed', '/ʌnˈhɑːmd/', 'indemne', 'unharmed'),
+    W('beside', '/bɪˈsaɪd/', 'à côté de', 'beside'),
+    W('wolf', '/wʊlf/', 'loup', 'wolf'),
+    W('faithful', '/ˈfeɪθfl/', 'fidèle', 'faithful'),
+    W('grave', '/ɡreɪv/', 'tombe', 'grave'),
+    W('bears', '/beəz/', 'porte (un nom)', 'bears'),
+  ], [
+    Q(('Que s’était-il vraiment passé ?', 'What had really happened?'), [('Gelert avait sauvé le bébé d’un loup', 'Gelert had saved the baby from a wolf'), ('Le bébé était tombé du berceau', 'The baby had fallen from the cradle'), ('Un voleur était entré', 'A thief had come in')], 0),
+    Q(('Que signifie le nom Beddgelert ?', 'What does the name Beddgelert mean?'), [('Le chien fidèle', 'The faithful dog'), ('La tombe de Gelert', 'Gelert’s grave'), ('La maison du prince', 'The prince’s house')], 1),
+  ]),
+])
+
+EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD, JACK, CANUTE, ROBIN, PEDLAR, TAMLIN, GELERT]
 EN_LEVELS = ('A1', 'A2', 'B1', 'B2', 'C1')
 
 data = json.load(open(P, encoding='utf-8'))

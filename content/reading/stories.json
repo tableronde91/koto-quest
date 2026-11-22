@@ -19051,6 +19051,760 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "tam-lin",
+   "glyph": "T",
+   "level": "B2",
+   "color": "#5A3E7A",
+   "title": {
+    "jp": "Tam Lin",
+    "fr": "Tam Lin",
+    "en": "Tam Lin"
+   },
+   "summary": {
+    "fr": "Dans la forêt de Carterhaugh, la jeune Janet rencontre Tam Lin, un chevalier prisonnier de la reine des fées. Pour le sauver, elle devra tenir bon une nuit entière.",
+    "en": "In the forest of Carterhaugh, young Janet meets Tam Lin, a knight held captive by the Queen of the Fairies. To save him, she will have to hold on for a whole night."
+   },
+   "chapters": [
+    {
+     "slug": "tamlin-1",
+     "title": {
+      "jp": "The forbidden forest",
+      "fr": "La forêt interdite",
+      "en": "The forbidden forest"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Every young woman in the Scottish Borders had been warned never to go to Carterhaugh, a forest which was said to be guarded by an elf knight.",
+        "fr": "Toutes les jeunes filles des Borders écossais avaient été averties de ne jamais aller à Carterhaugh, une forêt que l’on disait gardée par un chevalier elfe.",
+        "en": "Every young woman in the Scottish Borders had been warned never to go to Carterhaugh, a forest which was said to be guarded by an elf knight.",
+        "kana": "Every young woman in the Scottish Borders had been warned never to go to Carterhaugh, a forest which was said to be guarded by an elf knight."
+       },
+       {
+        "jp": "Janet, however, was not the kind of person who did what she was told.",
+        "fr": "Janet, cependant, n’était pas du genre à obéir aux ordres.",
+        "en": "Janet, however, was not the kind of person who did what she was told.",
+        "kana": "Janet, however, was not the kind of person who did what she was told."
+       }
+      ],
+      [
+       {
+        "jp": "She had barely picked a single rose when a young man appeared, asking her who had given her permission to be there.",
+        "fr": "Elle avait à peine cueilli une rose qu’un jeune homme apparut et lui demanda qui lui avait permis d’être là.",
+        "en": "She had barely picked a single rose when a young man appeared, asking her who had given her permission to be there.",
+        "kana": "She had barely picked a single rose when a young man appeared, asking her who had given her permission to be there."
+       },
+       {
+        "jp": "“Carterhaugh is mine,” Janet replied. “My father gave it to me, so I need nobody’s permission.”",
+        "fr": "« Carterhaugh m’appartient, répondit Janet. Mon père me l’a donnée, je n’ai donc besoin de la permission de personne. »",
+        "en": "“Carterhaugh is mine,” Janet replied. “My father gave it to me, so I need nobody’s permission.”",
+        "kana": "“Carterhaugh is mine,” Janet replied. “My father gave it to me, so I need nobody’s permission.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "warned",
+       "reading": "/wɔːnd/",
+       "fr": "averti, prévenu",
+       "en": "warned"
+      },
+      {
+       "jp": "guarded",
+       "reading": "/ˈɡɑːdɪd/",
+       "fr": "gardé",
+       "en": "guarded"
+      },
+      {
+       "jp": "however",
+       "reading": "/haʊˈevə/",
+       "fr": "cependant",
+       "en": "however"
+      },
+      {
+       "jp": "barely",
+       "reading": "/ˈbeəli/",
+       "fr": "à peine",
+       "en": "barely"
+      },
+      {
+       "jp": "picked",
+       "reading": "/pɪkt/",
+       "fr": "cueilli",
+       "en": "picked"
+      },
+      {
+       "jp": "replied",
+       "reading": "/rɪˈplaɪd/",
+       "fr": "répondit",
+       "en": "replied"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que disait-on de la forêt de Carterhaugh ?",
+        "en": "What was said about the forest of Carterhaugh?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’elle était gardée par un chevalier elfe",
+         "en": "That it was guarded by an elf knight"
+        },
+        {
+         "fr": "Qu’elle était pleine de trésors",
+         "en": "That it was full of treasure"
+        },
+        {
+         "fr": "Qu’elle avait brûlé",
+         "en": "That it had burnt down"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Janet dit-elle n’avoir besoin d’aucune permission ?",
+        "en": "Why does Janet say she needs no permission?"
+       },
+       "choices": [
+        {
+         "fr": "Elle est une fée",
+         "en": "She is a fairy"
+        },
+        {
+         "fr": "Son père lui a donné la forêt",
+         "en": "Her father gave her the forest"
+        },
+        {
+         "fr": "Le chevalier l’a invitée",
+         "en": "The knight invited her"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "tamlin-2",
+     "title": {
+      "jp": "The prisoner of the fairies",
+      "fr": "Le prisonnier des fées",
+      "en": "The prisoner of the fairies"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "The young man, whose name was Tam Lin, explained that he had once been a mortal knight.",
+        "fr": "Le jeune homme, qui s’appelait Tam Lin, expliqua qu’il avait autrefois été un chevalier mortel.",
+        "en": "The young man, whose name was Tam Lin, explained that he had once been a mortal knight.",
+        "kana": "The young man, whose name was Tam Lin, explained that he had once been a mortal knight."
+       },
+       {
+        "jp": "Years before, he had fallen from his horse, and the Queen of the Fairies had caught him and taken him to her kingdom.",
+        "fr": "Des années plus tôt, il était tombé de cheval, et la reine des fées l’avait rattrapé et emmené dans son royaume.",
+        "en": "Years before, he had fallen from his horse, and the Queen of the Fairies had caught him and taken him to her kingdom.",
+        "kana": "Years before, he had fallen from his horse, and the Queen of the Fairies had caught him and taken him to her kingdom."
+       }
+      ],
+      [
+       {
+        "jp": "“Every seven years, the fairies pay a price to hell, and I fear I will be the price this time,” he said.",
+        "fr": "« Tous les sept ans, les fées paient un tribut à l’enfer, et je crains d’être ce tribut cette fois-ci », dit-il.",
+        "en": "“Every seven years, the fairies pay a price to hell, and I fear I will be the price this time,” he said.",
+        "kana": "“Every seven years, the fairies pay a price to hell, and I fear I will be the price this time,” he said."
+       },
+       {
+        "jp": "“If you truly want to save me, you must pull me from my horse on Halloween night and hold me tight, whatever happens.”",
+        "fr": "« Si tu veux vraiment me sauver, tu devras me faire tomber de cheval la nuit d’Halloween et me tenir serré, quoi qu’il arrive. »",
+        "en": "“If you truly want to save me, you must pull me from my horse on Halloween night and hold me tight, whatever happens.”",
+        "kana": "“If you truly want to save me, you must pull me from my horse on Halloween night and hold me tight, whatever happens.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "mortal",
+       "reading": "/ˈmɔːtl/",
+       "fr": "mortel",
+       "en": "mortal"
+      },
+      {
+       "jp": "kingdom",
+       "reading": "/ˈkɪŋdəm/",
+       "fr": "royaume",
+       "en": "kingdom"
+      },
+      {
+       "jp": "fear",
+       "reading": "/fɪə/",
+       "fr": "craindre",
+       "en": "fear"
+      },
+      {
+       "jp": "truly",
+       "reading": "/ˈtruːli/",
+       "fr": "vraiment, sincèrement",
+       "en": "truly"
+      },
+      {
+       "jp": "pull",
+       "reading": "/pʊl/",
+       "fr": "tirer",
+       "en": "pull"
+      },
+      {
+       "jp": "whatever",
+       "reading": "/wɒtˈevə/",
+       "fr": "quoi que",
+       "en": "whatever"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Comment Tam Lin est-il devenu prisonnier des fées ?",
+        "en": "How did Tam Lin become the fairies’ prisoner?"
+       },
+       "choices": [
+        {
+         "fr": "Il est tombé de cheval et la reine l’a emmené",
+         "en": "He fell from his horse and the Queen took him"
+        },
+        {
+         "fr": "Il est né chez les fées",
+         "en": "He was born among the fairies"
+        },
+        {
+         "fr": "Il a perdu un pari",
+         "en": "He lost a bet"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que doit faire Janet la nuit d’Halloween ?",
+        "en": "What must Janet do on Halloween night?"
+       },
+       "choices": [
+        {
+         "fr": "Chanter une chanson",
+         "en": "Sing a song"
+        },
+        {
+         "fr": "Le faire tomber de cheval et le tenir serré",
+         "en": "Pull him from his horse and hold him tight"
+        },
+        {
+         "fr": "Allumer un feu",
+         "en": "Light a fire"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "tamlin-3",
+     "title": {
+      "jp": "Halloween night",
+      "fr": "La nuit d’Halloween",
+      "en": "Halloween night"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "At midnight, the fairy procession rode past, and Janet recognised Tam Lin on a white horse. She pulled him down and held him in her arms.",
+        "fr": "À minuit, le cortège des fées passa et Janet reconnut Tam Lin sur un cheval blanc. Elle le fit tomber et le serra dans ses bras.",
+        "en": "At midnight, the fairy procession rode past, and Janet recognised Tam Lin on a white horse. She pulled him down and held him in her arms.",
+        "kana": "At midnight, the fairy procession rode past, and Janet recognised Tam Lin on a white horse. She pulled him down and held him in her arms."
+       },
+       {
+        "jp": "Furious, the Queen turned him into a snake, then a lion, then a burning piece of iron, but Janet did not let go.",
+        "fr": "Furieuse, la reine le transforma en serpent, puis en lion, puis en morceau de fer brûlant, mais Janet ne lâcha pas prise.",
+        "en": "Furious, the Queen turned him into a snake, then a lion, then a burning piece of iron, but Janet did not let go.",
+        "kana": "Furious, the Queen turned him into a snake, then a lion, then a burning piece of iron, but Janet did not let go."
+       }
+      ],
+      [
+       {
+        "jp": "At last, Tam Lin became a man again. “Had I known what a human heart could do,” said the Queen bitterly, “I would have taken his eyes.”",
+        "fr": "Enfin, Tam Lin redevint un homme. « Si j’avais su de quoi un cœur humain est capable, dit la reine avec amertume, je lui aurais pris les yeux. »",
+        "en": "At last, Tam Lin became a man again. “Had I known what a human heart could do,” said the Queen bitterly, “I would have taken his eyes.”",
+        "kana": "At last, Tam Lin became a man again. “Had I known what a human heart could do,” said the Queen bitterly, “I would have taken his eyes.”"
+       },
+       {
+        "jp": "Then the fairies vanished, and Janet and Tam Lin walked home together as the sun rose.",
+        "fr": "Puis les fées disparurent, et Janet et Tam Lin rentrèrent ensemble tandis que le soleil se levait.",
+        "en": "Then the fairies vanished, and Janet and Tam Lin walked home together as the sun rose.",
+        "kana": "Then the fairies vanished, and Janet and Tam Lin walked home together as the sun rose."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "procession",
+       "reading": "/prəˈseʃn/",
+       "fr": "cortège",
+       "en": "procession"
+      },
+      {
+       "jp": "recognised",
+       "reading": "/ˈrekəɡnaɪzd/",
+       "fr": "reconnut",
+       "en": "recognised"
+      },
+      {
+       "jp": "burning",
+       "reading": "/ˈbɜːnɪŋ/",
+       "fr": "brûlant",
+       "en": "burning"
+      },
+      {
+       "jp": "let go",
+       "reading": "/let ɡəʊ/",
+       "fr": "lâcher prise",
+       "en": "let go"
+      },
+      {
+       "jp": "bitterly",
+       "reading": "/ˈbɪtəli/",
+       "fr": "avec amertume",
+       "en": "bitterly"
+      },
+      {
+       "jp": "vanished",
+       "reading": "/ˈvænɪʃt/",
+       "fr": "disparurent",
+       "en": "vanished"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait la reine pour forcer Janet à lâcher Tam Lin ?",
+        "en": "What does the Queen do to make Janet let go?"
+       },
+       "choices": [
+        {
+         "fr": "Elle le transforme en créatures et en fer brûlant",
+         "en": "She turns him into creatures and burning iron"
+        },
+        {
+         "fr": "Elle appelle ses soldats",
+         "en": "She calls her soldiers"
+        },
+        {
+         "fr": "Elle lui offre de l’or",
+         "en": "She offers her gold"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que regrette la reine à la fin ?",
+        "en": "What does the Queen regret at the end?"
+       },
+       "choices": [
+        {
+         "fr": "D’avoir perdu son cheval",
+         "en": "Losing her horse"
+        },
+        {
+         "fr": "De ne pas avoir pris les yeux de Tam Lin",
+         "en": "Not having taken Tam Lin’s eyes"
+        },
+        {
+         "fr": "D’être venue à Carterhaugh",
+         "en": "Coming to Carterhaugh"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "gelert",
+   "glyph": "D",
+   "level": "B2",
+   "color": "#7A5A3A",
+   "title": {
+    "jp": "Gelert the Faithful Hound",
+    "fr": "Gelert, le chien fidèle",
+    "en": "Gelert the Faithful Hound"
+   },
+   "summary": {
+    "fr": "Le prince Llywelyn part à la chasse en laissant son fils sous la garde de son chien Gelert. À son retour, il découvre une scène terrible et agit sans réfléchir.",
+    "en": "Prince Llywelyn goes hunting, leaving his son in the care of his hound Gelert. On his return, he finds a terrible scene and acts without thinking."
+   },
+   "chapters": [
+    {
+     "slug": "gelert-1",
+     "title": {
+      "jp": "The prince’s hound",
+      "fr": "Le chien du prince",
+      "en": "The prince’s hound"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "In the thirteenth century, Prince Llywelyn of Wales owned a hound called Gelert, which was said to be the most loyal dog in the kingdom.",
+        "fr": "Au XIIIe siècle, le prince Llywelyn de Galles possédait un chien nommé Gelert, que l’on disait le plus fidèle du royaume.",
+        "en": "In the thirteenth century, Prince Llywelyn of Wales owned a hound called Gelert, which was said to be the most loyal dog in the kingdom.",
+        "kana": "In the thirteenth century, Prince Llywelyn of Wales owned a hound called Gelert, which was said to be the most loyal dog in the kingdom."
+       },
+       {
+        "jp": "Gelert went everywhere with the prince, and nobody could remember seeing one without the other.",
+        "fr": "Gelert accompagnait le prince partout, et personne ne se souvenait d’avoir vu l’un sans l’autre.",
+        "en": "Gelert went everywhere with the prince, and nobody could remember seeing one without the other.",
+        "kana": "Gelert went everywhere with the prince, and nobody could remember seeing one without the other."
+       }
+      ],
+      [
+       {
+        "jp": "One day, however, Llywelyn decided to go hunting without him, leaving the dog to guard his baby son.",
+        "fr": "Un jour pourtant, Llywelyn décida d’aller chasser sans lui, laissant le chien veiller sur son bébé.",
+        "en": "One day, however, Llywelyn decided to go hunting without him, leaving the dog to guard his baby son.",
+        "kana": "One day, however, Llywelyn decided to go hunting without him, leaving the dog to guard his baby son."
+       },
+       {
+        "jp": "“Look after him,” the prince said, before riding off into the mountains of Snowdonia.",
+        "fr": "« Veille sur lui », dit le prince avant de partir à cheval vers les montagnes de Snowdonia.",
+        "en": "“Look after him,” the prince said, before riding off into the mountains of Snowdonia.",
+        "kana": "“Look after him,” the prince said, before riding off into the mountains of Snowdonia."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "century",
+       "reading": "/ˈsentʃəri/",
+       "fr": "siècle",
+       "en": "century"
+      },
+      {
+       "jp": "owned",
+       "reading": "/əʊnd/",
+       "fr": "possédait",
+       "en": "owned"
+      },
+      {
+       "jp": "hound",
+       "reading": "/haʊnd/",
+       "fr": "chien de chasse",
+       "en": "hound"
+      },
+      {
+       "jp": "loyal",
+       "reading": "/ˈlɔɪəl/",
+       "fr": "fidèle, loyal",
+       "en": "loyal"
+      },
+      {
+       "jp": "hunting",
+       "reading": "/ˈhʌntɪŋ/",
+       "fr": "chasse",
+       "en": "hunting"
+      },
+      {
+       "jp": "look after",
+       "reading": "/lʊk ˈɑːftə/",
+       "fr": "veiller sur, s’occuper de",
+       "en": "look after"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que disait-on de Gelert ?",
+        "en": "What was said about Gelert?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il était le chien le plus fidèle du royaume",
+         "en": "That he was the most loyal dog in the kingdom"
+        },
+        {
+         "fr": "Qu’il était dangereux",
+         "en": "That he was dangerous"
+        },
+        {
+         "fr": "Qu’il était très vieux",
+         "en": "That he was very old"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Gelert ne part-il pas à la chasse ce jour-là ?",
+        "en": "Why doesn’t Gelert go hunting that day?"
+       },
+       "choices": [
+        {
+         "fr": "Il est malade",
+         "en": "He is ill"
+        },
+        {
+         "fr": "Il doit garder le bébé",
+         "en": "He must guard the baby"
+        },
+        {
+         "fr": "Il s’est perdu",
+         "en": "He got lost"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "gelert-2",
+     "title": {
+      "jp": "A terrible mistake",
+      "fr": "Une terrible erreur",
+      "en": "A terrible mistake"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "When the prince returned, Gelert ran to meet him, wagging his tail. His mouth was covered in blood.",
+        "fr": "Quand le prince revint, Gelert courut à sa rencontre en remuant la queue. Sa gueule était couverte de sang.",
+        "en": "When the prince returned, Gelert ran to meet him, wagging his tail. His mouth was covered in blood.",
+        "kana": "When the prince returned, Gelert ran to meet him, wagging his tail. His mouth was covered in blood."
+       },
+       {
+        "jp": "Llywelyn rushed into the house: the cradle had been turned over and his son was nowhere to be seen.",
+        "fr": "Llywelyn se précipita dans la maison : le berceau était renversé et son fils restait introuvable.",
+        "en": "Llywelyn rushed into the house: the cradle had been turned over and his son was nowhere to be seen.",
+        "kana": "Llywelyn rushed into the house: the cradle had been turned over and his son was nowhere to be seen."
+       }
+      ],
+      [
+       {
+        "jp": "Convinced that the dog had killed the child, the prince drew his sword and struck Gelert, who died with a last cry.",
+        "fr": "Convaincu que le chien avait tué l’enfant, le prince tira son épée et frappa Gelert, qui mourut en poussant un dernier cri.",
+        "en": "Convinced that the dog had killed the child, the prince drew his sword and struck Gelert, who died with a last cry.",
+        "kana": "Convinced that the dog had killed the child, the prince drew his sword and struck Gelert, who died with a last cry."
+       },
+       {
+        "jp": "At that very moment, a baby’s voice answered from under the cradle.",
+        "fr": "À cet instant précis, la voix d’un bébé répondit sous le berceau.",
+        "en": "At that very moment, a baby’s voice answered from under the cradle.",
+        "kana": "At that very moment, a baby’s voice answered from under the cradle."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "wagging",
+       "reading": "/ˈwæɡɪŋ/",
+       "fr": "remuant (la queue)",
+       "en": "wagging"
+      },
+      {
+       "jp": "rushed",
+       "reading": "/rʌʃt/",
+       "fr": "se précipita",
+       "en": "rushed"
+      },
+      {
+       "jp": "cradle",
+       "reading": "/ˈkreɪdl/",
+       "fr": "berceau",
+       "en": "cradle"
+      },
+      {
+       "jp": "nowhere",
+       "reading": "/ˈnəʊweə/",
+       "fr": "nulle part",
+       "en": "nowhere"
+      },
+      {
+       "jp": "convinced",
+       "reading": "/kənˈvɪnst/",
+       "fr": "convaincu",
+       "en": "convinced"
+      },
+      {
+       "jp": "struck",
+       "reading": "/strʌk/",
+       "fr": "frappa",
+       "en": "struck"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le prince croit-il que Gelert a tué son fils ?",
+        "en": "Why does the prince think Gelert killed his son?"
+       },
+       "choices": [
+        {
+         "fr": "Le chien a du sang sur la gueule et l’enfant a disparu",
+         "en": "The dog has blood on his mouth and the child is missing"
+        },
+        {
+         "fr": "Un serviteur le lui a dit",
+         "en": "A servant told him"
+        },
+        {
+         "fr": "Le chien s’enfuit",
+         "en": "The dog runs away"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que se passe-t-il juste après la mort de Gelert ?",
+        "en": "What happens just after Gelert dies?"
+       },
+       "choices": [
+        {
+         "fr": "Le prince s’endort",
+         "en": "The prince falls asleep"
+        },
+        {
+         "fr": "On entend le bébé sous le berceau",
+         "en": "The baby is heard under the cradle"
+        },
+        {
+         "fr": "Un loup entre",
+         "en": "A wolf comes in"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "gelert-3",
+     "title": {
+      "jp": "The grave of Gelert",
+      "fr": "La tombe de Gelert",
+      "en": "The grave of Gelert"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Under the cradle lay the baby, unharmed, and beside him lay an enormous dead wolf.",
+        "fr": "Sous le berceau se trouvait le bébé, indemne, et à côté de lui gisait un énorme loup mort.",
+        "en": "Under the cradle lay the baby, unharmed, and beside him lay an enormous dead wolf.",
+        "kana": "Under the cradle lay the baby, unharmed, and beside him lay an enormous dead wolf."
+       },
+       {
+        "jp": "Llywelyn understood at once: Gelert had not attacked his son but had saved him from the wolf.",
+        "fr": "Llywelyn comprit aussitôt : Gelert n’avait pas attaqué son fils, il l’avait sauvé du loup.",
+        "en": "Llywelyn understood at once: Gelert had not attacked his son but had saved him from the wolf.",
+        "kana": "Llywelyn understood at once: Gelert had not attacked his son but had saved him from the wolf."
+       }
+      ],
+      [
+       {
+        "jp": "Had he waited a moment longer, his faithful hound would still be alive. The prince was said never to have smiled again.",
+        "fr": "S’il avait attendu un instant de plus, son fidèle chien serait encore en vie. On dit que le prince ne sourit plus jamais.",
+        "en": "Had he waited a moment longer, his faithful hound would still be alive. The prince was said never to have smiled again.",
+        "kana": "Had he waited a moment longer, his faithful hound would still be alive. The prince was said never to have smiled again."
+       },
+       {
+        "jp": "He buried Gelert with great honour, and the village of Beddgelert, which means “Gelert’s grave”, still bears his name today.",
+        "fr": "Il enterra Gelert avec de grands honneurs, et le village de Beddgelert, qui signifie « la tombe de Gelert », porte encore son nom aujourd’hui.",
+        "en": "He buried Gelert with great honour, and the village of Beddgelert, which means “Gelert’s grave”, still bears his name today.",
+        "kana": "He buried Gelert with great honour, and the village of Beddgelert, which means “Gelert’s grave”, still bears his name today."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "unharmed",
+       "reading": "/ʌnˈhɑːmd/",
+       "fr": "indemne",
+       "en": "unharmed"
+      },
+      {
+       "jp": "beside",
+       "reading": "/bɪˈsaɪd/",
+       "fr": "à côté de",
+       "en": "beside"
+      },
+      {
+       "jp": "wolf",
+       "reading": "/wʊlf/",
+       "fr": "loup",
+       "en": "wolf"
+      },
+      {
+       "jp": "faithful",
+       "reading": "/ˈfeɪθfl/",
+       "fr": "fidèle",
+       "en": "faithful"
+      },
+      {
+       "jp": "grave",
+       "reading": "/ɡreɪv/",
+       "fr": "tombe",
+       "en": "grave"
+      },
+      {
+       "jp": "bears",
+       "reading": "/beəz/",
+       "fr": "porte (un nom)",
+       "en": "bears"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que s’était-il vraiment passé ?",
+        "en": "What had really happened?"
+       },
+       "choices": [
+        {
+         "fr": "Gelert avait sauvé le bébé d’un loup",
+         "en": "Gelert had saved the baby from a wolf"
+        },
+        {
+         "fr": "Le bébé était tombé du berceau",
+         "en": "The baby had fallen from the cradle"
+        },
+        {
+         "fr": "Un voleur était entré",
+         "en": "A thief had come in"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que signifie le nom Beddgelert ?",
+        "en": "What does the name Beddgelert mean?"
+       },
+       "choices": [
+        {
+         "fr": "Le chien fidèle",
+         "en": "The faithful dog"
+        },
+        {
+         "fr": "La tombe de Gelert",
+         "en": "Gelert’s grave"
+        },
+        {
+         "fr": "La maison du prince",
+         "en": "The prince’s house"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

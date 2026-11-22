@@ -404,6 +404,8 @@ export const EXAM_A2_TOEIC = TOEIC_OFFICIAL('A2', 35, 12, 14, 8);
 export const EXAM_A2_MOCK = TOEIC_MOCK('A2');
 export const EXAM_B1_TOEIC = TOEIC_OFFICIAL('B1', 40, 14, 16, 10);
 export const EXAM_B1_MOCK = TOEIC_MOCK('B1');
+export const EXAM_B2_TOEIC = TOEIC_OFFICIAL('B2', 45, 16, 18, 12);
+export const EXAM_B2_MOCK = TOEIC_MOCK('B2');
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
@@ -412,6 +414,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_A2_TOEIC.slug]: EXAM_A2_TOEIC,
   [EXAM_B1_MOCK.slug]: EXAM_B1_MOCK,
   [EXAM_B1_TOEIC.slug]: EXAM_B1_TOEIC,
+  [EXAM_B2_MOCK.slug]: EXAM_B2_MOCK,
+  [EXAM_B2_TOEIC.slug]: EXAM_B2_TOEIC,
   [EXAM_N1.slug]: EXAM_N1,
   [EXAM_N5.slug]: EXAM_N5,
   [EXAM_N4.slug]: EXAM_N4,

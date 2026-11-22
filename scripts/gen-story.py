@@ -709,6 +709,57 @@ story['levels']['B1'] = {
       ('Le Graal est à toi. Niveau B1 validé !', 'The Grail is yours. B1 level complete!')),
    },
 }
+
+story['levels']['B2'] = {
+   'glyph': 'K', 'jp': 'The Green Knight', 'color': '#3E7A3A',
+   'saga': B('Le Chevalier vert', 'The Green Knight'),
+   'hero': B('Champion·ne de Camelot', 'Champion of Camelot'),
+   'short': B('Le champion·la championne', 'The champion'),
+   'prologue': B(
+     'Le soir de Noël, un géant vert entre à cheval dans la grande salle de Camelot et lance un défi : dans un an, quelqu’un devra le retrouver à la chapelle verte. Arthur te choisit, et Avalon & Co. te confie son expansion dans les Marches galloises. Sur la route, il faudra diriger une équipe, négocier, présenter et convaincre au plus haut niveau.',
+     'On Christmas Eve, a green giant rides into the great hall of Camelot and issues a challenge: in a year, someone must find him at the Green Chapel. Arthur chooses you, and Avalon & Co. puts you in charge of its expansion into the Welsh Marches. On the way, you will have to lead a team, negotiate, present and persuade at the highest level.'),
+   'epilogue': B(
+     'Dans la chapelle verte, le géant lève sa hache… puis sourit : tu as tenu parole sans faiblir. Il te tend une ceinture verte, signe d’honneur, et Camelot fête ton retour.',
+     'In the Green Chapel, the giant raises his axe… then smiles: you kept your word without flinching. He hands you a green girdle, a mark of honour, and Camelot celebrates your return.'),
+   'chapters': {
+    'b2-w1': CHAP(('Le chien des marais', 'The marsh dog'),
+      ('Sur la côte, Black Shuck, le chien fantôme aux yeux de braise, garde le chemin. Il veut entendre ce qui serait arrivé si tes projets passés s’étaient déroulés autrement.',
+       'On the coast, Black Shuck, the ghost dog with burning eyes, guards the path. He wants to hear what would have happened if your past projects had gone differently.'),
+      ('Le chien noir s’efface dans la brume des marais.', 'The black dog fades into the marsh mist.')),
+    'b2-w2': CHAP(('Les toits de Londres', 'The London rooftops'),
+      ('À Londres, Spring-heeled Jack bondit de toit en toit et brouille les descriptions des témoins. Décris précisément les gens et les choses pour le démasquer.',
+       'In London, Spring-heeled Jack leaps from roof to roof and muddles the witnesses’ descriptions. Describe people and things precisely to unmask him.'),
+      ('Démasqué, le sauteur disparaît dans un dernier bond.', 'Unmasked, the leaper vanishes in one last bound.')),
+    'b2-w3': CHAP(('L’étang noir', 'The black pond'),
+      ('Au bord d’un étang, le Grindylow tend ses longs bras vers les imprudents. Choisis sans hésiter entre -ing et to pour qu’il te lâche.',
+       'At the edge of a pond, the Grindylow stretches its long arms towards the careless. Choose between -ing and to without hesitation and it will let you go.'),
+      ('Le Grindylow retourne sous les nénuphars.', 'The Grindylow sinks back beneath the water lilies.')),
+    'b2-w4': CHAP(('Le grenier en désordre', 'The messy attic'),
+      ('Dans les nouveaux bureaux, le Boggart du grenier a tout cassé. Fais réparer, installer et vérifier ce qu’il faut pour qu’il se calme.',
+       'In the new offices, the attic Boggart has broken everything. Get things repaired, installed and checked so that it calms down.'),
+      ('Le boggart, vexé, va chercher une autre maison à hanter.', 'Offended, the boggart goes off to haunt another house.')),
+    'b2-w5': CHAP(('La peau cachée', 'The hidden skin'),
+      ('Sur une plage des Orcades, la Selkie cherche sa peau de phoque. Aide-la à planifier ce qu’elle fera et ce qu’elle aura accompli avant de regagner la mer.',
+       'On an Orkney beach, the Selkie looks for her sealskin. Help her plan what she will be doing and what she will have achieved before she returns to the sea.'),
+      ('La Selkie enfile sa peau et plonge dans les vagues.', 'The Selkie puts on her skin and dives into the waves.')),
+    'b2-w6': CHAP(('Le gué des Highlands', 'The Highland ford'),
+      ('Au bord d’un gué, la Bean Nighe lave du linge en silence. On dit qu’elle répond à trois questions : rapporte rumeurs et paroles avec précision.',
+       'By a ford, the Bean Nighe washes clothes in silence. It is said she answers three questions: report rumours and words precisely.'),
+      ('La lavandière répond, puis s’évanouit avec son linge.', 'The washerwoman answers, then vanishes with her washing.')),
+    'b2-w7': CHAP(('La chasse dans le ciel', 'The hunt in the sky'),
+      ('Dans le ciel gallois, Gwyn ap Nudd mène la Chasse sauvage et compte chaque âme. Décris les chiffres et les tendances sans erreur pour qu’il épargne la tienne.',
+       'In the Welsh sky, Gwyn ap Nudd leads the Wild Hunt and counts every soul. Describe figures and trends without error and he will spare yours.'),
+      ('La meute passe au-dessus de toi sans s’arrêter.', 'The pack passes overhead without stopping.')),
+    'b2-w8': CHAP(('La parole donnée', 'The word given'),
+      ('Le Chevalier vert t’attend au bout du chemin. Il exige que tu tiennes parole : convaincs-le avec des arguments impeccables et un langage diplomatique.',
+       'The Green Knight awaits you at the end of the path. He demands that you keep your word: convince him with flawless arguments and diplomatic language.'),
+      ('Le Chevalier vert hoche la tête : « Rendez-vous à la chapelle. »', 'The Green Knight nods: “We meet at the chapel.”')),
+    'b2-final': CHAP(('La chapelle verte', 'The Green Chapel'),
+      ('Dans la chapelle verte, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B2 pour sortir la tête haute.',
+       'In the Green Chapel, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B2 score to leave with your head held high.'),
+      ('La ceinture verte est à toi. Niveau B2 validé !', 'The green girdle is yours. B2 level complete!')),
+   },
+}
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
 json.dump(story, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(sum(len(l['chapters']) for l in story['levels'].values()), 'chapitres')

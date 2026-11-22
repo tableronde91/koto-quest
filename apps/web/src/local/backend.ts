@@ -151,6 +151,7 @@ import contentTopik6 from '../../../../content/topik6/topik6.json';
 import contentA1 from '../../../../content/a1/a1.json';
 import contentA2 from '../../../../content/a2/a2.json';
 import contentB1 from '../../../../content/b1/b1.json';
+import contentB2 from '../../../../content/b2/b2.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import hangulContent from '../../../../content/characters/hangul.json';
 import expressionsContent from '../../../../content/expressions/expressions.json';
@@ -172,9 +173,10 @@ import bankTopik6 from '../../../../content/exams/topik6.json';
 import bankA1 from '../../../../content/exams/a1-toeic.json';
 import bankA2 from '../../../../content/exams/a2-toeic.json';
 import bankB1 from '../../../../content/exams/b1-toeic.json';
+import bankB2 from '../../../../content/exams/b2-toeic.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank, 'b2-toeic': bankB2 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -186,7 +188,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1, contentB2].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,

@@ -35,6 +35,64 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens anglais (B2 — Marches galloises) ─────
+  // Black Shuck : chien fantôme noir aux yeux de braise
+  b: {
+    body: '#1A1A20', belly: '#2E2E36', head: '#22222A', eye: '#F2482B',
+    top: <path d="M58 70 Q44 40 62 30 Q70 50 80 58 M142 70 Q156 40 138 30 Q130 50 120 58" fill="#1A1A20" stroke="#1A1A20" strokeWidth="4" />,
+    face: <><ellipse cx="100" cy="112" rx="14" ry="8" fill="#0E0E12" /><path d="M90 122 l4 6 l4 -6 M102 122 l4 6 l4 -6" stroke="#F6F3EC" strokeWidth="2" fill="none" /></>,
+    back: <path d="M30 170 Q60 150 50 190 M170 170 Q140 150 150 190" stroke="#4A4A58" strokeWidth="6" fill="none" opacity={0.6} strokeLinecap="round" />,
+  },
+  // Spring-heeled Jack : cape noire, haut-de-forme, bottes à ressorts
+  Z: {
+    body: '#22222E', belly: '#4A4A5E', head: '#D8D0C0', eye: '#E2483B',
+    top: <><rect x="72" y="16" width="56" height="34" fill="#1A1A20" /><rect x="60" y="48" width="80" height="8" rx="2" fill="#1A1A20" /></>,
+    back: <path d="M54 80 Q20 150 34 196 L166 196 Q180 150 146 80Z" fill="#5A1A22" />,
+    front: <>{[70, 130].map((x) => <path key={x} d={`M${x - 8} 186 l16 -6 l-16 -6 l16 -6`} stroke="#9AA0A8" strokeWidth="3" fill="none" />)}</>,
+  },
+  // Grindylow : démon aquatique vert, longs bras, nénuphars
+  I: {
+    body: '#3E6E52', belly: '#7FAF8E', head: '#4E8A62', eye: '#F2D94E',
+    back: <path d="M50 110 Q10 150 30 190 M150 110 Q190 150 170 190" stroke="#2E5A40" strokeWidth="10" fill="none" strokeLinecap="round" />,
+    top: <path d="M70 52 l6 -14 l6 12 l8 -16 l8 16 l8 -16 l8 16 l6 -12 l6 14" stroke="#2E5A40" strokeWidth="4" fill="none" />,
+    face: <path d="M84 114 l6 8 l6 -8 l6 8 l6 -8 l6 8" stroke="#F6F3EC" strokeWidth="2.5" fill="none" />,
+    front: <>{[[46, 190], [154, 192]].map(([cx, cy]) => <g key={cx}><ellipse cx={cx} cy={cy} rx="14" ry="5" fill="#6DA84E" /><circle cx={cx} cy={cy - 4} r="4" fill="#F2A7BB" /></g>)}</>,
+  },
+  // Boggart : petit esprit hirsute, objets cassés
+  h: {
+    body: '#6A5A48', belly: '#A8987A', head: '#7A6A56', eye: '#F2D94E',
+    top: <path d="M58 70 q-6 -24 12 -30 q2 -16 18 -12 q8 -16 24 -4 q16 -10 22 8 q16 4 10 30" fill="#4A3E30" />,
+    face: <path d="M84 116 Q100 104 116 116" stroke={INK} strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(150 166) rotate(20)"><path d="M-12 -12 H12 V12 H-12Z" fill="#C9C4BA" stroke="#8A8478" strokeWidth="2" /><path d="M-12 -12 L4 2 L-2 12" stroke="#5A564C" strokeWidth="2" fill="none" /></g>,
+  },
+  // Selkie : mi-femme mi-phoque, peau de phoque grise, vagues
+  f: {
+    body: '#7A8A96', belly: '#C9D4DC', head: '#E8D2BE', eye: '#3A5A7A',
+    top: <path d="M56 84 Q56 26 100 24 Q144 26 144 84 Q140 50 100 46 Q60 50 56 84Z" fill="#2E3A4A" />,
+    back: <path d="M48 96 Q20 160 52 194 L148 194 Q180 160 152 96Z" fill="#5A6A78" />,
+    front: <path d="M30 186 Q46 176 62 186 T94 186 T126 186 T158 186" stroke="#7FC4D9" strokeWidth="4" fill="none" strokeLinecap="round" />,
+  },
+  // Bean Nighe : lavandière des Highlands, linge blanc, eau du gué
+  m: {
+    body: '#3E5A4A', belly: '#7F9A88', head: '#D8C8B0', eye: '#2A3A30',
+    top: <path d="M58 80 Q58 30 100 26 Q142 30 142 80 Q130 60 100 58 Q70 60 58 80Z" fill="#7A7A7A" />,
+    face: <path d="M88 116 H112" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />,
+    front: <g transform="translate(100 176)"><path d="M-30 0 Q-10 -12 10 0 Q24 8 30 0" fill="#F4F1EA" stroke="#C9C4BA" strokeWidth="2" /><path d="M-44 12 Q-20 4 0 12 T44 12" stroke="#7FC4D9" strokeWidth="3" fill="none" /></g>,
+  },
+  // Gwyn ap Nudd : roi de l'Autre Monde, bois de cerf, cor de chasse
+  d: {
+    body: '#2E3A5A', belly: '#6A7AA0', head: '#D8D0E0', eye: '#7FD9E2',
+    top: <path d="M74 52 L66 24 L58 30 M66 24 L70 12 M126 52 L134 24 L142 30 M134 24 L130 12" stroke="#C9B89A" strokeWidth="5" fill="none" strokeLinecap="round" />,
+    back: <path d="M54 96 Q18 150 36 194 L164 194 Q182 150 146 96Z" fill="#1E2640" />,
+    front: <g transform="translate(152 150)"><path d="M-14 -10 Q10 -16 16 6 L8 10 Q4 -4 -12 -2Z" fill="#E2D2A8" stroke="#A8987A" strokeWidth="2" /></g>,
+  },
+  // Le Chevalier vert : géant vert, barbe, hache
+  k: {
+    body: '#3E7A3A', belly: '#7FB86A', head: '#6DA84E', eye: '#F2D94E',
+    top: <path d="M60 72 Q58 26 100 22 Q142 26 140 72 Q124 50 100 50 Q76 50 60 72Z" fill="#2E5A2A" />,
+    face: <path d="M70 108 Q100 170 130 108 Q116 122 100 120 Q84 122 70 108Z" fill="#2E5A2A" />,
+    front: <g transform="translate(160 140)"><path d="M0 50 V-44" stroke="#6A4428" strokeWidth="5" /><path d="M0 -44 Q24 -40 22 -16 Q10 -26 0 -24Z" fill="#B8C0C8" stroke="#7A828A" strokeWidth="2" /></g>,
+  },
   // ───── Gardiens anglais (B1 — côtes de Cornouailles) ─────
   // L'Afanc : monstre du lac, castor-crocodile écailleux, vagues
   A: {
