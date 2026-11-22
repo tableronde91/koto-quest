@@ -61,7 +61,7 @@ export default function ExamScreen() {
   if (exam) return <ExamRunner exam={exam} onSubmit={submit} />;
   return (
     <Screen>
-      <Button label={T('← Parcours')} tone="quiet" onPress={() => router.back()} style={{ alignSelf: 'flex-start' }} />
+      <Button label={T('← Retour')} tone="quiet" onPress={() => router.back()} style={{ alignSelf: 'flex-start' }} />
       <View style={{ alignItems: 'center', gap: 10 }}>
         <Text style={{ fontSize: 56, fontWeight: '900', color: C.ko }}>{toeic ? 'Mock test' : topik ? '모의고사' : '模試'}</Text>
         <H1 style={{ textAlign: 'center' }}>{title || T('Examen blanc')}</H1>

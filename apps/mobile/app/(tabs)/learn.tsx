@@ -28,7 +28,7 @@ export default function Learn() {
   const study: Tile[] = [
     { href: '/kana', glyph: w.charsGlyph, color: '#E36A3A', title: w.charsTitle, text: w.en ? T('Les expressions idiomatiques et les verbes à particule du quotidien.') : w.ko ? T('Le hangeul, les expressions du quotidien et les proverbes.') : T('Les grilles d’écriture et les expressions du quotidien.') },
     { href: '/prepa', glyph: '試', color: C.seal, title: w.workshop, text: T('S’entraîner épreuve par épreuve, au format de l’examen.') },
-    { href: `/exam/${MOCK_EXAM[level] ?? 'n5-jlpt'}`, glyph: '験', color: '#4F5DB8', title: T('Examen blanc {0}', [examLevelLabel(level)]), text: T('Toutes les épreuves, chronométrées, notées comme le vrai.') },
+    { href: `/exam/${MOCK_EXAM[level] ?? 'n5-jlpt'}?title=${encodeURIComponent(T('Examen blanc {0}', [examLevelLabel(level)]))}`, glyph: '験', color: '#4F5DB8', title: T('Examen blanc {0}', [examLevelLabel(level)]), text: T('Toutes les épreuves, chronométrées, notées comme le vrai.') },
     { href: '/placement', glyph: '診', color: '#7B5BD6', title: T('Test de niveau'), text: w.en ? T('Tu connais déjà un peu d’anglais ? Saute ce que tu sais.') : w.ko ? T('Tu connais déjà un peu de coréen ? Saute ce que tu sais.') : T('Tu connais déjà un peu de japonais ? Saute ce que tu sais.') },
   ];
 

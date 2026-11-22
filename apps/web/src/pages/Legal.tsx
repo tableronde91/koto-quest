@@ -209,7 +209,7 @@ function privacy(): Block[] {
         <><strong>{site.database.name}</strong> (hébergement de la base de données, serveurs à Francfort, Union européenne).</>,
         <><strong>IONOS</strong> (nom de domaine et, le cas échéant, envoi des e-mails, comme la réinitialisation du mot de passe).</>,
         'Services de notification des navigateurs (Google, Mozilla, Apple…), uniquement si vous activez les notifications : ils relaient un message chiffré jusqu’à votre appareil.',
-        'Lecture audio : le japonais et le coréen sont lus par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte japonais ou coréen à prononcer est concerné.',
+        'Lecture audio : le japonais, le coréen et l’anglais sont lus par la synthèse vocale de votre navigateur. Selon le navigateur, elle peut s’appuyer sur un service en ligne de son éditeur (par exemple Google pour Chrome) ; seul le texte japonais, coréen ou anglais à prononcer est concerné.',
       ],
     },
     {

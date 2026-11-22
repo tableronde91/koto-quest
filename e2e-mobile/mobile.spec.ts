@@ -300,3 +300,36 @@ test('appli mobile en coréen : choix de la langue, parcours TOPIK, hangeul et a
   await page.getByRole('tab', { name: /Parcours/ }).click();
   await expect(page.getByRole('heading', { name: 'N5 : La Voie du samouraï' })).toBeVisible();
 });
+
+test('appli mobile en anglais : choix de la langue, parcours A1 à C1, examen blanc TOEIC et contes', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto('/');
+  await page.getByRole('tab', { name: 'Créer un compte' }).click();
+  await page.getByLabel('Pseudo').fill('Arthur');
+  await page.getByLabel('Adresse e-mail').fill(`mobile-en${Date.now()}@test.local`);
+  await page.getByLabel('Mot de passe').fill('motdepasse123');
+  await page.getByRole('button', { name: 'Créer mon compte' }).click();
+
+  await expect(page.getByRole('heading', { name: 'Bienvenue dans l’archipel !' })).toBeVisible();
+  await page.getByTestId('lang-en').click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en anglais ?' })).toBeVisible();
+  for (const code of ['A1', 'A2', 'B1', 'B2', 'C1']) await expect(page.getByRole('radio', { name: new RegExp(`^${code}`) })).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Parcours : saga de l'A1, puis celle du C1
+  await page.getByRole('tab', { name: /Parcours/ }).click();
+  await expect(page.getByRole('heading', { name: 'A1 : L’Épée dans le bureau' })).toBeVisible();
+  await page.getByRole('tab', { name: /héritier/ }).click();
+  await expect(page.getByRole('heading', { name: 'C1 : Le retour d’Excalibur' })).toBeVisible();
+
+  // Apprendre : examen blanc TOEIC du niveau visé et contes en anglais
+  await page.getByRole('tab', { name: /Apprendre/ }).click();
+  await expect(page.getByText('Des contes et légendes en anglais simple, un chapitre par jour.')).toBeVisible();
+  await page.getByRole('button', { name: 'Examen blanc TOEIC A1' }).click();
+  await expect(page.getByRole('heading', { name: 'Examen blanc TOEIC A1' })).toBeVisible();
+  await expect(page.getByText(/le TOEIC d’ETS/)).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText(/30:00|29:5\d/)).toBeVisible(); // TOEIC A1 abrégé : 30 minutes
+  await page.getByTestId('exam-question').getByRole('radio').first().click();
+  await expect(page.getByText('1 réponse sur 28.')).toBeVisible();
+});

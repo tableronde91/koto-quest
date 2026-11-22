@@ -76,7 +76,7 @@ export function WelcomePage() {
             {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
           </p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("Un parcours aligné sur les niveaux officiels du JLPT et du TOPIK"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK et du CECRL"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -161,6 +161,28 @@ export function WelcomePage() {
         </ol>
       </section>
 
+      {/* Le TOEIC, pour l'anglais */}
+      <section aria-labelledby="toeic-title" className="flex flex-col gap-5">
+        <div>
+          <h2 id="toeic-title" className="text-3xl">{T("Et l’anglais ? Le TOEIC")}</h2>
+          <p className="mt-2 max-w-[70ch] text-ink-soft">
+            {T("Le TOEIC Listening & Reading est le test d’anglais professionnel le plus demandé par les entreprises. Il est noté sur 990 points (495 en écoute, 495 en lecture). Koto Quest suit les niveaux du CECRL, de A1 à C1, avec pour chacun le score TOEIC correspondant, et mêle l’anglais du bureau aux légendes britanniques.")}
+          </p>
+        </div>
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {TOEIC_LEVELS.map((l) => (
+            <li key={l.id} className="flex flex-col gap-2 rounded-3xl border-2 border-ink bg-surface p-4">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-display text-2xl">{l.id}</span>
+                <span className="rounded-full bg-ok-bg px-2.5 py-0.5 text-xs font-bold">{T("Disponible")}</span>
+              </div>
+              <p className="font-bold">{l.name()}</p>
+              <p className="text-sm text-ink-soft">{l.text()}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Comment Koto Quest prépare */}
       <section aria-labelledby="how-title" className="flex flex-col gap-5">
         <h2 id="how-title" className="text-3xl">{T("Comment Koto Quest te prépare")}</h2>
@@ -180,12 +202,12 @@ export function WelcomePage() {
       {/* Appel final */}
       <section aria-labelledby="cta-title" className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-10">
         <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[12rem] font-black leading-none opacity-[0.07]">合格</span>
-        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT ou TOPIK commence aujourd’hui.")}</h2>
+        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT, TOPIK ou TOEIC commence aujourd’hui.")}</h2>
         <p className="relative mt-3 max-w-[56ch] text-lg opacity-85">{T("Débutant complet, étudiant, voyageur ou candidat à l’examen : fixe ton niveau visé et ta date d’examen, Koto Quest construit ton programme jour après jour.")}</p>
         <button className="btn btn-gold relative mt-6 min-h-14 px-6 text-lg" onClick={startNow}>{T("Commencer gratuitement")}</button>
       </section>
 
-      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
+      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK, ni à ETS, organisateur du TOEIC. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
     </div>
     <div className="mx-auto max-w-5xl px-5"><SiteFooter className="mt-0" /></div>
     </>
@@ -209,12 +231,20 @@ const TOPIK_LEVELS = [
   { id: 'TOPIK 6', ready: true, name: () => T("Maîtrise (TOPIK II)"), text: () => T("Style écrit soutenu, proverbes et expressions en quatre caractères, textes académiques et mythes fondateurs de la Corée.") },
 ];
 
+const TOEIC_LEVELS = [
+  { id: 'A1', name: () => T("Découverte · TOEIC 120+"), text: () => T("Saluer, se présenter, compter, l’heure, commander, demander son chemin, le présent et le prétérit.") },
+  { id: 'A2', name: () => T("Survie · TOEIC 225+"), text: () => T("Raconter au passé, comparer, parler de ses projets, le present perfect, les règles et les conditions simples.") },
+  { id: 'B1', name: () => T("Seuil · TOEIC 550+"), text: () => T("E-mails professionnels, téléphone, entretien, passif, discours rapporté, hypothèses et négociation.") },
+  { id: 'B2', name: () => T("Avancé · TOEIC 785+"), text: () => T("Présentations, finance, ressources humaines, rapports, conditionnels mixtes et langage diplomatique.") },
+  { id: 'C1', name: () => T("Autonome · TOEIC 945+"), text: () => T("Registre soutenu, idiomes, nuances, stratégie, contrats et négociation de haut niveau.") },
+];
+
 const FEATURES = [
-  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
+  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 ; en anglais, apprenti de Merlin en A1 jusqu’à héritier d’Arthur en C1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
   { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("La répétition espacée fait revenir chaque mot, kanji ou point de grammaire juste avant que tu l’oublies.") },
-  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT et TOPIK"), text: () => T("Chaque épreuve au format exact de l’examen, corrigée immédiatement, pour arriver le jour J sans surprise.") },
-  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais et coréens en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
-  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon ou en Corée, classées par situation, avec l’audio.") },
+  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT, TOPIK et TOEIC"), text: () => T("Au format exact du JLPT et du TOPIK, au format abrégé du TOEIC, corrigés immédiatement, pour arriver le jour J sans surprise.") },
+  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais, coréens et britanniques en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
+  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, en Corée ou en anglais, classées par situation, avec l’audio.") },
   { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Affronte d’autres apprenants en quiz rapides pour réviser en t’amusant et grimper au classement.") },
 ];
 
