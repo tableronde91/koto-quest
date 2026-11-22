@@ -35,6 +35,64 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens anglais (A1 — légendes britanniques) ─────
+  // Boggart : lutin des maisons, nez crochu, bonnet mité, trousseau de badges volés
+  B: {
+    body: '#7A6A4A', belly: '#C9B98F', eye: '#F2D94E',
+    top: <><path d="M62 64 Q66 26 100 20 Q130 24 140 64 Q120 50 100 50 Q80 50 62 64Z" fill="#5A3E5E" /><circle cx="134" cy="26" r="7" fill="#C9A24A" /></>,
+    face: <path d="M100 92 Q114 104 104 112 Q98 108 100 92Z" fill="#5E4E34" />,
+    front: <g transform="translate(152 150)"><circle r="10" fill="none" stroke="#B0B6BE" strokeWidth="3" /><rect x="-4" y="6" width="16" height="12" rx="2" fill="#3F6FB5" /><rect x="-14" y="8" width="14" height="10" rx="2" fill="#C8323F" /></g>,
+  },
+  // Puck : lutin des bois, oreilles pointues, couronne de feuilles, fleur magique
+  P: {
+    body: '#6DA84E', belly: '#D7EBC4', head: '#E8C9A4', eye: INK,
+    top: <>{ear(58, false, '#E8C9A4', '#F2A7BB')}{ear(142, true, '#E8C9A4', '#F2A7BB')}{[64, 82, 100, 118, 136].map((x, i) => <path key={x} d={`M${x} ${i % 2 ? 44 : 50} q8 -14 16 0 q-8 6 -16 0Z`} fill="#3E7A3A" />)}</>,
+    face: <path d="M84 112 Q100 124 116 112" stroke={INK} strokeWidth="4" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(156 150)"><path d="M0 0 V24" stroke="#4E7F36" strokeWidth="3" />{[0, 72, 144, 216, 288].map((r) => <ellipse key={r} cx="0" cy="-8" rx="5" ry="9" fill="#A97BD6" transform={`rotate(${r})`} />)}<circle r="4" fill="#F2D94E" /></g>,
+  },
+  // Feu follet : petite flamme bleue qui flotte, lanterne de brume
+  W: {
+    body: '#7FB4E8', belly: '#DDEEFB', eye: '#1F3A5F',
+    back: <><path d="M100 190 Q40 160 56 100 Q66 120 76 110 Q70 70 100 30 Q130 70 124 110 Q134 120 144 100 Q160 160 100 190Z" fill="#A9D3F5" opacity={0.85} /><circle cx="40" cy="70" r="6" fill="#CFE8FB" /><circle cx="164" cy="60" r="4" fill="#CFE8FB" /></>,
+    top: <path d="M82 54 Q90 30 100 22 Q110 30 118 54Z" fill="#CFE8FB" />,
+  },
+  // Black Shuck : grand chien fantôme noir, yeux rouges, chaînes
+  S: {
+    body: '#2B2B33', belly: '#4A4A55', eye: '#E2483B',
+    back: <path d="M150 150 Q196 140 186 100 Q174 124 148 128Z" fill="#2B2B33" />,
+    top: <><path d="M58 70 L50 30 L82 54Z" fill="#2B2B33" /><path d="M142 70 L150 30 L118 54Z" fill="#2B2B33" /></>,
+    face: <><ellipse cx="100" cy="104" rx="18" ry="12" fill="#3A3A44" /><ellipse cx="100" cy="98" rx="7" ry="5" fill="#111" /><path d="M90 114 l4 8 l4 -8 M102 114 l4 8 l4 -8" fill="#F6F3EC" /></>,
+    front: <path d="M60 150 q10 8 20 0 q10 -8 20 0 q10 8 20 0 q10 -8 20 0" stroke="#8A8E96" strokeWidth="4" fill="none" />,
+  },
+  // Cormoran : géant de Cornouailles, barbe rousse, massue, tasse de thé géante
+  G: {
+    body: '#8A6A4A', belly: '#D9C2A0', head: '#E8B994', eye: INK,
+    top: <path d="M62 70 Q60 36 100 32 Q140 36 138 70 Q120 52 100 52 Q80 52 62 70Z" fill="#B5542E" />,
+    face: <path d="M74 112 Q100 168 126 112 Q114 126 100 122 Q86 126 74 112Z" fill="#B5542E" />,
+    front: <g transform="translate(152 160)"><path d="M-14 -12 H14 V8 Q14 18 0 18 Q-14 18 -14 8Z" fill="#F6F3EC" stroke="#C9C2B4" strokeWidth="2" /><path d="M14 -6 q10 0 10 8 q0 8 -10 8" stroke="#C9C2B4" strokeWidth="3" fill="none" /><path d="M-6 -18 q4 -6 0 -12 M4 -18 q4 -6 0 -12" stroke="#C9C2B4" strokeWidth="2" fill="none" /></g>,
+  },
+  // Nessie : monstre du loch, long cou, bosses dans l'eau, écailles vertes
+  N: {
+    body: '#3E8E6B', belly: '#A8D9BF', eye: INK,
+    back: <><path d="M0 178 Q30 166 60 178 T120 178 T200 178 L200 200 L0 200Z" fill="#3F7FBF" opacity={0.75} /><path d="M150 176 Q162 146 176 176Z M24 176 Q36 152 48 176Z" fill="#3E8E6B" /></>,
+    top: <>{[70, 86, 102, 118].map((x) => <path key={x} d={`M${x} 46 l8 -12 l8 12Z`} fill="#2E6B4F" />)}</>,
+    face: <><circle cx="86" cy="104" r="3" fill="#2E6B4F" /><circle cx="114" cy="104" r="3" fill="#2E6B4F" /></>,
+  },
+  // Chevalier vert : armure verte, heaume, hache, branche de houx
+  K: {
+    body: '#3E7A3A', belly: '#8FBF7A', head: '#8FBF7A', eye: '#F6F3EC',
+    top: <><path d="M62 82 Q60 32 100 28 Q140 32 138 82 L128 82 L128 70 H72 V82Z" fill="#5E8A4A" stroke="#2E5A2A" strokeWidth="3" /><path d="M100 28 Q96 12 108 4" stroke="#C8323F" strokeWidth="5" fill="none" strokeLinecap="round" /></>,
+    under: <path d="M72 84 H128" stroke="#2E5A2A" strokeWidth="4" />,
+    front: <g transform="translate(158 150) rotate(-15)"><path d="M0 40 V-40" stroke="#6A4428" strokeWidth="6" /><path d="M0 -40 Q26 -34 22 -10 Q10 -16 0 -14Z" fill="#B0B6BE" stroke="#7A808A" strokeWidth="2" /></g>,
+  },
+  // Y Ddraig Goch : dragon rouge du pays de Galles, ailes, cornes, flammes
+  D: {
+    body: '#C8323F', belly: '#F2C27A', eye: '#F2D94E',
+    back: <><path d="M60 120 Q10 80 20 40 Q40 70 60 60 Q50 90 70 110Z" fill="#A82632" /><path d="M140 120 Q190 80 180 40 Q160 70 140 60 Q150 90 130 110Z" fill="#A82632" /></>,
+    top: <><path d="M70 56 Q60 30 74 18 Q76 38 86 48Z" fill="#F2C27A" /><path d="M130 56 Q140 30 126 18 Q124 38 114 48Z" fill="#F2C27A" /></>,
+    face: <><circle cx="92" cy="104" r="3" fill="#7A1A22" /><circle cx="108" cy="104" r="3" fill="#7A1A22" /></>,
+    front: <path d="M118 120 Q150 114 164 130 Q152 124 146 134 Q140 124 130 130Z" fill="#F2943A" />,
+  },
   // ───── Gardiens coréens (TOPIK 1) ─────
   // Dokkaebi : lutin à corne unique, peau bleue, massue magique (bangmangi) à clous
   도: {

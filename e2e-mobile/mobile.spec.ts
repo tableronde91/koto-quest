@@ -235,7 +235,7 @@ test('appli mobile : inscription, profil, leçon complète, révisions, rappels,
   await expect(page.getByText(/Créneaux du jour/).filter({ visible: true })).toBeVisible();
 
   // Anglais : interface, données de l'API et récit traduits ; retour au français
-  await page.getByRole('radio', { name: 'English' }).click();
+  await page.getByRole('radio', { name: 'English', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Settings' }).filter({ visible: true })).toBeVisible();
   await page.getByRole('button', { name: 'Back' }).filter({ visible: true }).click();
   await expect(page.getByRole('heading', { name: 'Profile' }).filter({ visible: true })).toBeVisible();

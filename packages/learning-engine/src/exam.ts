@@ -26,7 +26,7 @@ export interface ExamDef {
   /** Banque de questions rédigées (format officiel) au lieu des notions du parcours */
   bank?: string;
   /** Notation : pourcentages (défaut), barème du JLPT (180 points) ou du TOPIK I (200 points) */
-  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2';
+  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2' | 'toeic';
   /** TOPIK : niveau à obtenir pour réussir l'examen (1 par défaut) */
   passLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
@@ -55,8 +55,16 @@ export const TOPIK_I_SCALE = { language: 100, listening: 100, total: 200, passTo
  */
 export const TOPIK_II_SCALE = { language: 100, listening: 100, writing: 100, total: 300, levels: [{ level: 3, min: 120 }, { level: 4, min: 150 }, { level: 5, min: 190 }, { level: 6, min: 230 }] } as const;
 
+/**
+ * Barème du TOEIC Listening & Reading : écoute et lecture notées chacune de 5 à 495, soit 10 à 990.
+ * Le TOEIC n'a pas de seuil de réussite : Koto Quest vise le score correspondant au niveau du CECRL
+ * (table de correspondance d'ETS), sans minimum par épreuve.
+ */
+export const TOEIC_SCALE = { listening: 495, reading: 495, total: 990, floor: 5 } as const;
+export const TOEIC_PASS_TOTAL: Record<string, number> = { A1: 120, A2: 225, B1: 550, B2: 785, C1: 945 };
+
 export interface ExamScale {
-  system: 'jlpt' | 'topik';
+  system: 'jlpt' | 'topik' | 'toeic';
   language: number;
   listening: number;
   total: number;
@@ -82,6 +90,8 @@ export function examScale(def: ExamDef): ExamScale | null {
     const { level2, ...rest } = TOPIK_I_SCALE;
     return { system: 'topik', ...rest, levels: [{ level: 1, min: TOPIK_I_SCALE.passTotal }, { level: 2, min: level2 }], passLevel: def.passLevel ?? 1 };
   }
+  if (def.scoring === 'toeic')
+    return { system: 'toeic', language: TOEIC_SCALE.reading, listening: TOEIC_SCALE.listening, total: TOEIC_SCALE.total, passTotal: TOEIC_PASS_TOTAL[def.level] ?? 550, passLanguage: 0, passListening: 0 };
   if (def.scoring === 'topik2') {
     const passLevel = def.passLevel ?? 3;
     return {
@@ -353,7 +363,47 @@ export const EXAM_TOPIK3_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik3-mo
 /** Examen d'entraînement TOPIK 2 généré à partir des leçons. */
 export const EXAM_TOPIK2_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik2-mock', level: 'TOPIK2', title: 'Entraînement TOPIK 2' };
 
+/**
+ * Examen blanc TOEIC Listening & Reading (version abrégée) : parties 2 à 4 (écoute), 5 et 6 (phrases et
+ * textes à compléter), 7 (compréhension écrite), noté sur 990. Banques content/exams/<niveau>-toeic.json.
+ */
+const TOEIC_OFFICIAL = (level: string, durationMin: number, listening: number, grammar: number, reading: number): ExamDef => ({
+  slug: `${level.toLowerCase()}-toeic`,
+  level,
+  title: `Examen blanc TOEIC ${level} — format officiel (abrégé)`,
+  durationMin,
+  sections: [
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Listening (Parts 2–4)', count: listening },
+    { id: 'grammar', title: 'Phrases et textes à compléter', jpTitle: 'Reading (Parts 5–6)', count: grammar },
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: 'Reading (Part 7)', count: reading },
+  ],
+  passPercent: 50,
+  sectionMinPercent: 0,
+  bank: `${level.toLowerCase()}-toeic`,
+  scoring: 'toeic',
+});
+
+/** Entraînement généré à partir des leçons d'un niveau d'anglais (notions et exercices déjà rencontrés). */
+const TOEIC_MOCK = (level: string): ExamDef => ({
+  slug: `${level.toLowerCase()}-mock`,
+  level,
+  title: `Entraînement anglais ${level}`,
+  durationMin: 25,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire', jpTitle: 'Vocabulary', count: 12 },
+    { id: 'grammar', title: 'Grammaire', jpTitle: 'Grammar', count: 10 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Listening', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+});
+
+export const EXAM_A1_TOEIC = TOEIC_OFFICIAL('A1', 30, 10, 12, 6);
+export const EXAM_A1_MOCK = TOEIC_MOCK('A1');
+
 export const EXAMS: Record<string, ExamDef> = {
+  [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
+  [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_N1.slug]: EXAM_N1,
   [EXAM_N5.slug]: EXAM_N5,
   [EXAM_N4.slug]: EXAM_N4,
@@ -508,6 +558,17 @@ export function gradeExam(def: ExamDef, questions: { section: ExamSectionId; typ
     scaled.level = [...TOPIK_II_SCALE.levels].reverse().find((l) => scaled.total >= l.min)?.level ?? 0;
     return { sections, correct, total, percent: Math.round((scaled.total / TOPIK_II_SCALE.total) * 100), passed: scaled.level >= (def.passLevel ?? 3), weakest, results, scaled };
   }
+  if (def.scoring === 'toeic') {
+    // Lecture = parties 5 à 7 (phrases et textes à compléter, compréhension écrite) ; chaque épreuve vaut de 5 à 495.
+    const pts = (list: typeof sections) => {
+      const t = list.reduce((n, s) => n + s.total, 0);
+      const c = list.reduce((n, s) => n + s.correct, 0);
+      return Math.round((TOEIC_SCALE.floor + (t ? (c / t) * (TOEIC_SCALE.listening - TOEIC_SCALE.floor) : 0)) / 5) * 5;
+    };
+    const scaled = { listening: pts(sections.filter((s) => s.id === 'listening')), language: pts(sections.filter((s) => s.id !== 'listening')), total: 0 };
+    scaled.total = scaled.listening + scaled.language;
+    return { sections, correct, total, percent: Math.round((scaled.total / TOEIC_SCALE.total) * 100), passed: scaled.total >= (TOEIC_PASS_TOTAL[def.level] ?? 550), weakest, results, scaled };
+  }
   const percent = total ? Math.round((correct / total) * 100) : 0;
   const passed = percent >= def.passPercent && sections.every((s) => s.total === 0 || s.percent >= def.sectionMinPercent);
   return { sections, correct, total, percent, passed, weakest, results };
@@ -584,7 +645,19 @@ const TIPS_N3: Partial<Record<ExamSectionId, string>> = {
   listening: 'Écoute : joue à Listening Ninja et réécoute les exemples des leçons N3 en vitesse lente.',
 };
 
+const TIPS_EN: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons du niveau et joue à Word Rush pour retrouver vite le sens des mots.',
+  grammar: 'Phrases à compléter (parties 5 et 6) : reprends les leçons de grammaire du niveau et entraîne-toi dans l’atelier TOEIC.',
+  listening: 'Écoute (parties 2 à 4) : réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi aux questions-réponses de l’atelier TOEIC.',
+  reading: 'Compréhension écrite (partie 7) : lis un chapitre de conte en anglais chaque jour et entraîne-toi à repérer l’essentiel d’un e-mail, d’une annonce ou d’un mémo.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
+  if (/^[ABC][12]$/.test(level)) {
+    const weakEn = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
+    if (!weakEn.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
+    return weakEn.map((s) => TIPS_EN[s.id] ?? TIPS_EN.grammar!).filter(Boolean);
+  }
   const tips: Partial<Record<ExamSectionId, string>> = level === 'TOPIK1' ? TIPS_TOPIK1 : level === 'TOPIK2' ? TIPS_TOPIK2 : level === 'TOPIK3' ? TIPS_TOPIK3 : level === 'TOPIK4' ? TIPS_TOPIK4 : level === 'TOPIK5' ? TIPS_TOPIK5 : level === 'TOPIK6' ? TIPS_TOPIK6 : level === 'N1' ? TIPS_N1 : level === 'N2' ? TIPS_N2 : level === 'N3' ? TIPS_N3 : level === 'N4' ? TIPS_N4 : {
     vocab: 'Vocabulaire et kanji : entraîne-toi dans l’onglet Caractères et avec Kanji Rush, puis refais les leçons des mondes 5 et 7.',
     grammar: 'Grammaire : reprends les leçons sur les particules (mondes 3, 4 et 6) et les phrases à remettre dans l’ordre.',

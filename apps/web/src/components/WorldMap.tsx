@@ -81,7 +81,7 @@ function blob(cx: number, cy: number, rx: number, ry: number, seed: number, wobb
 // ───────────── Ambiance de chaque niveau ─────────────
 // N5 : printemps lumineux (cerisiers, soleil). N4 : automne au crépuscule, plus sobre (érables, pins, lune, brume).
 interface MapTheme {
-  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear' | 'korea';
+  id: 'spring' | 'summer' | 'autumn' | 'winter' | 'newyear' | 'korea' | 'albion';
   sea: [string, string, string];
   waves: number;
   horizon: string;
@@ -233,6 +233,31 @@ const NEWYEAR: MapTheme = {
   dusk: false,
 };
 
+// A1 : printemps d'Albion (mer grise de la Manche, collines vert vif, bruyère et ajoncs, ciel de nuages).
+const ALBION: MapTheme = {
+  id: 'albion',
+  sea: ['#4A6E85', '#557C93', '#628AA0'],
+  waves: 0.12,
+  horizon: '#3B5A6E',
+  shallow: '#A9D2D6',
+  shallowOpacity: 0.26,
+  grass: ['#6FA84E', '#5B9340'],
+  sand: '#E6DCC0',
+  blossom: '#A97BD6',
+  blossomDark: '#E9C23B',
+  leaf: '#3E7A3A',
+  leafDark: '#2C5A2A',
+  cloud: '#FFFFFF',
+  cloudOpacity: 0.85,
+  foam: 0.6,
+  path: '#F2E2B0',
+  particles: ['#A97BD6', '#E9C23B', '#FFFFFF'],
+  banner: { fill: '#1F3A5F', stroke: '#C8A24A', text: '#F6EBD3', seal: '#C8323F' },
+  plaque: { fill: '#F6EBD3', stroke: '#2E6B4F', text: '#1F2A24', accent: '#C8323F' },
+  sail: '#1F3A5F',
+  dusk: false,
+};
+
 // TOPIK 1 : automne lumineux sur la péninsule (mer bleue, érables rouges du Seoraksan, couleurs du dancheong).
 const KOREA: MapTheme = {
   id: 'korea',
@@ -348,7 +373,7 @@ const KOREA_DAWN: MapTheme = {
 
 const ThemeCtx = createContext<MapTheme>(SPRING);
 const useMapTheme = () => useContext(ThemeCtx);
-export const mapThemeFor = (level: string) => (/^TOPIK2$/i.test(level) ? KOREA_SPRING : /^TOPIK3$/i.test(level) ? KOREA_SUMMER : /^TOPIK4$/i.test(level) ? KOREA_WINTER : /^TOPIK5$/i.test(level) ? KOREA_SPIRIT : /^TOPIK6$/i.test(level) ? KOREA_DAWN : /^TOPIK/i.test(level) ? KOREA : /N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
+export const mapThemeFor = (level: string) => (/^[ABC][12]$/i.test(level) ? ALBION : /^TOPIK2$/i.test(level) ? KOREA_SPRING : /^TOPIK3$/i.test(level) ? KOREA_SUMMER : /^TOPIK4$/i.test(level) ? KOREA_WINTER : /^TOPIK5$/i.test(level) ? KOREA_SPIRIT : /^TOPIK6$/i.test(level) ? KOREA_DAWN : /^TOPIK/i.test(level) ? KOREA : /N1/i.test(level) ? NEWYEAR : /N2/i.test(level) ? SUMMER : /N3/i.test(level) ? WINTER : /N4/i.test(level) ? AUTUMN : SPRING);
 
 
 function Tree({ x, y, s = 1, pink = false }: { x: number; y: number; s?: number; pink?: boolean }) {
@@ -971,7 +996,7 @@ export function WorldMap({ worlds, avatar, region, level = 'N5', saga }: { world
           {worlds.map((w, i) => {
             const p = pts[i];
             const st = states[i];
-            const glyph = w.exam ? (t.id === 'korea' ? '시' : '試') : w.boss?.glyph ?? String(w.order);
+            const glyph = w.exam ? (t.id === 'korea' ? '시' : t.id === 'albion' ? 'T' : '試') : w.boss?.glyph ?? String(w.order);
             const detail = w.exam && w.progress.total === 0 ? (w.exam.passed ? T("examen blanc réussi") : 'examen blanc') : T("{0} leçons sur {1}", [w.progress.completed, w.progress.total]);
             const label = T("Île {0} : {1}, {2}", [w.order, w.title, st === 'done' ? T("terminée") : st === 'current' ? T("en cours") : st === 'soon' ? T("bientôt") : detail]);
             const title = w.title.length > 20 ? `${w.title.slice(0, 19).trimEnd()}…` : w.title;

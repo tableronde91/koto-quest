@@ -1,6 +1,6 @@
 import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
-import { AuthoredExercise, EngineItem, JLPT_DRILLS, JlptDrillPart, TOPIK_DRILLS, createRng, planJlptDrill } from '@koto/learning-engine';
-import { languageOfLevel, levelsOfLanguage, type JlptDrillsDto, type SessionDto } from '@koto/shared';
+import { AuthoredExercise, EngineItem, JlptDrillPart, createRng, drillsFor, planJlptDrill } from '@koto/learning-engine';
+import { languageInfo, languageOfLevel, levelsOfLanguage, type JlptDrillsDto, type SessionDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { ContentService, toEngineItem } from '../content/content.service';
@@ -29,12 +29,12 @@ export class JlptService {
     const levels = [...new Set(cards.map((c) => c.item.levelCode))];
     const pool: EngineItem[] = [];
     const examples = new Map<string, string>();
-    for (const l of levels.length ? levels : [lang === 'ko' ? 'TOPIK1' : 'N5']) {
+    for (const l of levels.length ? levels : [languageInfo(lang).firstLevel]) {
       pool.push(...(await this.content.enginePool(l)));
       for (const [k, v] of await this.content.examples(l)) examples.set(k, v);
     }
     const authored = done.flatMap((p) => p.lesson.exercises.map((e) => e.payload as unknown as AuthoredExercise));
-    return { learned, pool, examples, authored, lang, drills: lang === 'ko' ? TOPIK_DRILLS : JLPT_DRILLS };
+    return { learned, pool, examples, authored, lang, drills: drillsFor(lang) };
   }
 
   async drills(userId: string): Promise<JlptDrillsDto> {

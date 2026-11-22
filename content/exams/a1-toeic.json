@@ -1,0 +1,573 @@
+{
+ "slug": "a1-toeic",
+ "level": "A1",
+ "contentVersion": "2026.11.22",
+ "notice": "Questions rédigées par Koto Quest au format du TOEIC Listening & Reading (version abrégée : mêmes parties, consignes en anglais, notation sur 990). Ce ne sont pas des questions officielles d’ETS.",
+ "parts": [
+  {
+   "id": "p2",
+   "section": "listening",
+   "jpTitle": "Part 2 — Question-Response",
+   "title": "Questions-réponses",
+   "prompt": "You will hear a question or statement. Select the best response.",
+   "count": 4,
+   "questions": [
+    {
+     "audio": "M|Where is the meeting room?",
+     "choices": [
+      "It’s next to the kitchen.",
+      "At ten o’clock.",
+      "Yes, it is."
+     ],
+     "answer": "It’s next to the kitchen.",
+     "explanation": "Transcription : Homme : Where is the meeting room?"
+    },
+    {
+     "audio": "F|What time does the train leave?",
+     "choices": [
+      "At half past eight.",
+      "From platform two.",
+      "By train."
+     ],
+     "answer": "At half past eight.",
+     "explanation": "Transcription : Femme : What time does the train leave?"
+    },
+    {
+     "audio": "M|Can I have a coffee, please?",
+     "choices": [
+      "Sure. Anything else?",
+      "No, I can’t swim.",
+      "It’s on Monday."
+     ],
+     "answer": "Sure. Anything else?",
+     "explanation": "Transcription : Homme : Can I have a coffee, please?"
+    },
+    {
+     "audio": "F|Who is your manager?",
+     "choices": [
+      "Mr Ambrose.",
+      "In London.",
+      "Every day."
+     ],
+     "answer": "Mr Ambrose.",
+     "explanation": "Transcription : Femme : Who is your manager?"
+    },
+    {
+     "audio": "M|How much is this umbrella?",
+     "choices": [
+      "Twelve pounds.",
+      "It’s raining.",
+      "It’s mine."
+     ],
+     "answer": "Twelve pounds.",
+     "explanation": "Transcription : Homme : How much is this umbrella?"
+    },
+    {
+     "audio": "F|Do you work at the weekend?",
+     "choices": [
+      "No, I don’t.",
+      "No, I’m not.",
+      "No, it isn’t."
+     ],
+     "answer": "No, I don’t.",
+     "explanation": "Transcription : Femme : Do you work at the weekend?"
+    },
+    {
+     "audio": "M|Have you got a pen?",
+     "choices": [
+      "Yes, here you are.",
+      "Yes, I am.",
+      "Yes, it’s sunny."
+     ],
+     "answer": "Yes, here you are.",
+     "explanation": "Transcription : Homme : Have you got a pen?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p3",
+   "section": "listening",
+   "jpTitle": "Part 3 — Conversations",
+   "title": "Conversations",
+   "prompt": "You will hear a short conversation. Answer the question about it.",
+   "count": 3,
+   "questions": [
+    {
+     "audio": "F|Hi, Tom. Are you coming to the meeting?\nM|Sorry, I can’t. I’m waiting for a call from a client.\nF|OK, no problem.",
+     "choices": [
+      "He is waiting for a call.",
+      "He is in a meeting.",
+      "He is on holiday.",
+      "He is at the station."
+     ],
+     "answer": "He is waiting for a call.",
+     "explanation": "Transcription : Femme : Hi, Tom. Are you coming to the meeting? / Homme : Sorry, I can’t. I’m waiting for a call from a client. / Femme : OK, no problem.",
+     "text": "Why can’t the man go to the meeting?"
+    },
+    {
+     "audio": "M|Good morning. A return ticket to Oxford, please.\nF|That’s twenty-four pounds. The train leaves from platform three.\nM|Thank you.",
+     "choices": [
+      "At a train station.",
+      "In a cafe.",
+      "At an airport.",
+      "In a bank."
+     ],
+     "answer": "At a train station.",
+     "explanation": "Transcription : Homme : Good morning. A return ticket to Oxford, please. / Femme : That’s twenty-four pounds. The train leaves from platform three. / Homme : Thank you.",
+     "text": "Where are the speakers?"
+    },
+    {
+     "audio": "F|What would you like?\nM|A tea and a chicken sandwich, please. To take away.\nF|That’s six pounds fifty.",
+     "choices": [
+      "A tea and a sandwich.",
+      "A coffee and a cake.",
+      "Two teas.",
+      "A glass of water."
+     ],
+     "answer": "A tea and a sandwich.",
+     "explanation": "Transcription : Femme : What would you like? / Homme : A tea and a chicken sandwich, please. To take away. / Femme : That’s six pounds fifty.",
+     "text": "What does the man order?"
+    },
+    {
+     "audio": "M|Where’s Kate today?\nF|She isn’t at the office. She’s working from home.\nM|Oh, right. I’ll send her an email.",
+     "choices": [
+      "She is working from home.",
+      "She is ill.",
+      "She is in Paris.",
+      "She is in the meeting room."
+     ],
+     "answer": "She is working from home.",
+     "explanation": "Transcription : Homme : Where’s Kate today? / Femme : She isn’t at the office. She’s working from home. / Homme : Oh, right. I’ll send her an email.",
+     "text": "Where is Kate?"
+    },
+    {
+     "audio": "F|Excuse me, how do I get to the museum?\nM|Go straight on and turn left at the bank. It’s opposite the park.\nF|Thanks a lot!",
+     "choices": [
+      "Directions to the museum.",
+      "The price of a ticket.",
+      "The opening hours.",
+      "A good restaurant."
+     ],
+     "answer": "Directions to the museum.",
+     "explanation": "Transcription : Femme : Excuse me, how do I get to the museum? / Homme : Go straight on and turn left at the bank. It’s opposite the park. / Femme : Thanks a lot!",
+     "text": "What does the woman ask for?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p4",
+   "section": "listening",
+   "jpTitle": "Part 4 — Talks",
+   "title": "Annonces",
+   "prompt": "You will hear a short talk. Answer the question about it.",
+   "count": 3,
+   "questions": [
+    {
+     "audio": "N|Attention, please. The ten fifteen train to Cardiff is now leaving from platform six. Platform six for the ten fifteen train to Cardiff.",
+     "choices": [
+      "Platform six.",
+      "Platform two.",
+      "Platform ten.",
+      "Platform fifteen."
+     ],
+     "answer": "Platform six.",
+     "explanation": "Transcription : Narrateur : Attention, please. The ten fifteen train to Cardiff is now leaving from platform six. Platform six for the ten fifteen train to Cardiff.",
+     "text": "Where does the train to Cardiff leave from?"
+    },
+    {
+     "audio": "N|Good morning, everyone. Welcome to Avalon and Company. The meeting starts at nine thirty in room twelve. Coffee is in the kitchen, next to the lifts.",
+     "choices": [
+      "At nine thirty.",
+      "At nine o’clock.",
+      "At twelve o’clock.",
+      "At ten thirty."
+     ],
+     "answer": "At nine thirty.",
+     "explanation": "Transcription : Narrateur : Good morning, everyone. Welcome to Avalon and Company. The meeting starts at nine thirty in room twelve. Coffee is in the kitchen, next to the lifts.",
+     "text": "When does the meeting start?"
+    },
+    {
+     "audio": "N|Hello, this is Anna from the City Cafe. Your table for two is ready for Friday at eight p.m. Please call us if you are late. Thank you!",
+     "choices": [
+      "To confirm a table.",
+      "To cancel a meeting.",
+      "To sell a ticket.",
+      "To ask for a job."
+     ],
+     "answer": "To confirm a table.",
+     "explanation": "Transcription : Narrateur : Hello, this is Anna from the City Cafe. Your table for two is ready for Friday at eight p.m. Please call us if you are late. Thank you!",
+     "text": "Why is Anna calling?"
+    },
+    {
+     "audio": "N|Today in London it’s cloudy in the morning, with some rain in the afternoon. Take an umbrella! Tomorrow will be sunny and warm.",
+     "choices": [
+      "Rain in the afternoon.",
+      "Snow in the morning.",
+      "Sun all day.",
+      "A very cold night."
+     ],
+     "answer": "Rain in the afternoon.",
+     "explanation": "Transcription : Narrateur : Today in London it’s cloudy in the morning, with some rain in the afternoon. Take an umbrella! Tomorrow will be sunny and warm.",
+     "text": "What is the weather like today?"
+    },
+    {
+     "audio": "N|The library is open from Monday to Friday, nine a.m. to six p.m. On Saturdays, it’s open in the morning only. It’s closed on Sundays.",
+     "choices": [
+      "On Sundays.",
+      "On Saturdays.",
+      "On Mondays.",
+      "On Fridays."
+     ],
+     "answer": "On Sundays.",
+     "explanation": "Transcription : Narrateur : The library is open from Monday to Friday, nine a.m. to six p.m. On Saturdays, it’s open in the morning only. It’s closed on Sundays.",
+     "text": "When is the library closed?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "p5",
+   "section": "grammar",
+   "jpTitle": "Part 5 — Incomplete Sentences",
+   "title": "Phrases à compléter",
+   "prompt": "A word or phrase is missing in each sentence. Select the best answer to complete the sentence.",
+   "count": 8,
+   "questions": [
+    {
+     "choices": [
+      "is",
+      "are",
+      "am",
+      "be"
+     ],
+     "answer": "is",
+     "explanation": "Réponse : is",
+     "jp": "Our office ＿ on the third floor."
+    },
+    {
+     "choices": [
+      "works",
+      "work",
+      "working",
+      "to work"
+     ],
+     "answer": "works",
+     "explanation": "Réponse : works",
+     "jp": "Ms Brown ＿ in the sales department."
+    },
+    {
+     "choices": [
+      "an",
+      "a",
+      "the",
+      "some"
+     ],
+     "answer": "an",
+     "explanation": "Réponse : an",
+     "jp": "He is ＿ engineer at a big company."
+    },
+    {
+     "choices": [
+      "any",
+      "some",
+      "a",
+      "an"
+     ],
+     "answer": "any",
+     "explanation": "Réponse : any",
+     "jp": "We haven’t got ＿ paper for the printer."
+    },
+    {
+     "choices": [
+      "on",
+      "at",
+      "in",
+      "to"
+     ],
+     "answer": "on",
+     "explanation": "Réponse : on",
+     "jp": "The meeting is ＿ Tuesday."
+    },
+    {
+     "choices": [
+      "at",
+      "on",
+      "in",
+      "by"
+     ],
+     "answer": "at",
+     "explanation": "Réponse : at",
+     "jp": "The shop opens ＿ nine o’clock."
+    },
+    {
+     "choices": [
+      "Does",
+      "Do",
+      "Is",
+      "Are"
+     ],
+     "answer": "Does",
+     "explanation": "Réponse : Does",
+     "jp": "＿ your manager speak French?"
+    },
+    {
+     "choices": [
+      "are calling",
+      "calls",
+      "call",
+      "is call"
+     ],
+     "answer": "are calling",
+     "explanation": "Réponse : are calling",
+     "jp": "Please wait. We ＿ the client right now."
+    },
+    {
+     "choices": [
+      "went",
+      "go",
+      "goes",
+      "going"
+     ],
+     "answer": "went",
+     "explanation": "Réponse : went",
+     "jp": "Last week, the team ＿ to Manchester."
+    },
+    {
+     "choices": [
+      "can",
+      "cans",
+      "can to",
+      "is can"
+     ],
+     "answer": "can",
+     "explanation": "Réponse : can",
+     "jp": "I ＿ help you with the report."
+    },
+    {
+     "choices": [
+      "their",
+      "there",
+      "they",
+      "them"
+     ],
+     "answer": "their",
+     "explanation": "Réponse : their",
+     "jp": "The interns are in ＿ office."
+    },
+    {
+     "choices": [
+      "were",
+      "was",
+      "are",
+      "is"
+     ],
+     "answer": "were",
+     "explanation": "Réponse : were",
+     "jp": "Mr and Mrs Lee ＿ in Paris yesterday."
+    }
+   ]
+  },
+  {
+   "id": "p6",
+   "section": "grammar",
+   "jpTitle": "Part 6 — Text Completion",
+   "title": "Textes à compléter",
+   "prompt": "Read the text. A word or phrase is missing. Select the best answer to complete the text.",
+   "count": 4,
+   "questions": [
+    {
+     "choices": [
+      "has got",
+      "have got",
+      "is",
+      "are"
+     ],
+     "answer": "has got",
+     "explanation": "Réponse : has got",
+     "passage": "To: All staff\nFrom: Mr Ambrose\nSubject: New colleague\n\nPlease welcome Emma Martin to the team. She is our new intern. Emma is from Lyon and she ＿ two brothers. Her desk is next to the window.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "next to",
+      "under",
+      "between",
+      "behind"
+     ],
+     "answer": "next to",
+     "explanation": "Réponse : next to",
+     "passage": "Welcome to the City Cafe!\nOur new coffee machine is ＿ the door, on your right as you come in. Please take a cup and help yourself.",
+     "text": "Choose the words for the blank."
+    },
+    {
+     "choices": [
+      "closed",
+      "open",
+      "opens",
+      "close"
+     ],
+     "answer": "closed",
+     "explanation": "Réponse : closed",
+     "passage": "NOTICE\nThe staff kitchen is ＿ on Friday afternoon for cleaning. Sorry for the trouble. It opens again on Monday at 8 a.m.",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "Can",
+      "Do",
+      "Are",
+      "Is"
+     ],
+     "answer": "Can",
+     "explanation": "Réponse : Can",
+     "passage": "Hi Tom,\nI’m at the station and my train is late. ＿ you start the meeting without me? I’ll be there at 10.\nThanks,\nKate",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "bought",
+      "buy",
+      "buys",
+      "buyed"
+     ],
+     "answer": "bought",
+     "explanation": "Réponse : bought",
+     "passage": "Dear Anna,\nThank you for the lovely weekend in Bath! We visited the Roman baths and I ＿ a book about the city. See you soon!\nSam",
+     "text": "Choose the word for the blank."
+    },
+    {
+     "choices": [
+      "tickets",
+      "ticket",
+      "a ticket",
+      "the ticket"
+     ],
+     "answer": "tickets",
+     "explanation": "Réponse : tickets",
+     "passage": "CITY MUSEUM\nAdult ＿ cost £8. Children under 12 are free. Open every day from 10 a.m. to 5 p.m.",
+     "text": "Choose the word for the blank."
+    }
+   ]
+  },
+  {
+   "id": "p7",
+   "section": "reading",
+   "jpTitle": "Part 7 — Reading Comprehension",
+   "title": "Compréhension écrite",
+   "prompt": "Read the text and answer the question.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "At 3 p.m.",
+      "At 10 a.m.",
+      "At 1 p.m.",
+      "At 5 p.m."
+     ],
+     "answer": "At 3 p.m.",
+     "explanation": "Réponse : At 3 p.m.",
+     "passage": "MEMO\nTo: Sales team\nThe team meeting is now at 3 p.m., not 10 a.m. It is in room 4. Please bring your laptop.\nMr Ambrose",
+     "text": "When is the meeting?"
+    },
+    {
+     "choices": [
+      "Bring a laptop.",
+      "Call Mr Ambrose.",
+      "Go to room 10.",
+      "Buy a coffee."
+     ],
+     "answer": "Bring a laptop.",
+     "explanation": "Réponse : Bring a laptop.",
+     "passage": "MEMO\nTo: Sales team\nThe team meeting is now at 3 p.m., not 10 a.m. It is in room 4. Please bring your laptop.\nMr Ambrose",
+     "text": "What must the team do?"
+    },
+    {
+     "choices": [
+      "£2.50",
+      "£3.20",
+      "£4.00",
+      "£1.80"
+     ],
+     "answer": "£2.50",
+     "explanation": "Réponse : £2.50",
+     "passage": "CITY CAFE — MENU\nTea ........ £1.80\nCoffee ...... £2.50\nSandwich .... £4.00\nCake ........ £3.20",
+     "text": "How much is a coffee?"
+    },
+    {
+     "choices": [
+      "On Sunday.",
+      "On Monday.",
+      "On Saturday morning.",
+      "On Friday."
+     ],
+     "answer": "On Sunday.",
+     "explanation": "Réponse : On Sunday.",
+     "passage": "GREEN PARK SWIMMING POOL\nMonday – Friday: 7 a.m. – 9 p.m.\nSaturday: 8 a.m. – 1 p.m.\nSunday: closed",
+     "text": "When is the pool closed?"
+    },
+    {
+     "choices": [
+      "She is ill.",
+      "She is on holiday.",
+      "Her train is late.",
+      "She is in a meeting."
+     ],
+     "answer": "She is ill.",
+     "explanation": "Réponse : She is ill.",
+     "passage": "Hi Tom,\nI’m sorry, I can’t come to work today. I’m ill and I’m staying at home. I can answer emails this afternoon.\nKate",
+     "text": "Why is Kate not at work?"
+    },
+    {
+     "choices": [
+      "A new intern.",
+      "A new office.",
+      "A party.",
+      "A trip to Lyon."
+     ],
+     "answer": "A new intern.",
+     "explanation": "Réponse : A new intern.",
+     "passage": "To: All staff\nSubject: New colleague\nPlease welcome Emma Martin. She is our new intern. Emma is from Lyon. She speaks French and English.",
+     "text": "What is the email about?"
+    },
+    {
+     "choices": [
+      "By train.",
+      "By bus.",
+      "By car.",
+      "On foot."
+     ],
+     "answer": "By train.",
+     "explanation": "Réponse : By train.",
+     "passage": "Dear Sam,\nWe went to Edinburgh last weekend. We took the train from London — it was fast and comfortable! We saw the castle and we ate in a great restaurant.\nAnna",
+     "text": "How did Anna travel to Edinburgh?"
+    },
+    {
+     "choices": [
+      "A castle.",
+      "A museum.",
+      "A park.",
+      "A shop."
+     ],
+     "answer": "A castle.",
+     "explanation": "Réponse : A castle.",
+     "passage": "Dear Sam,\nWe went to Edinburgh last weekend. We took the train from London — it was fast and comfortable! We saw the castle and we ate in a great restaurant.\nAnna",
+     "text": "What did Anna see?"
+    },
+    {
+     "choices": [
+      "Two.",
+      "One.",
+      "Three.",
+      "Four."
+     ],
+     "answer": "Two.",
+     "explanation": "Réponse : Two.",
+     "passage": "FOR SALE\nSmall flat in Camden: two bedrooms, one kitchen, one bathroom. Near the Underground station. £1,500 a month. Call 020 7946 0321.",
+     "text": "How many bedrooms are there?"
+    }
+   ]
+  }
+ ]
+}

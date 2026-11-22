@@ -17,9 +17,11 @@ interface CharactersJson {
 }
 
 /** Le catalogue (ordre, groupes) vient des fichiers de contenu (un par langue) ; les notions et la maîtrise de la base. */
-const CATALOG_PATHS: Record<StudyLanguage, string> = {
+const CATALOG_PATHS: Record<StudyLanguage, string | null> = {
   ja: resolve(__dirname, '../../../../content/characters/characters.json'),
   ko: resolve(__dirname, '../../../../content/characters/hangul.json'),
+  // L'anglais s'écrit avec l'alphabet latin : pas d'onglet d'écriture
+  en: null,
 };
 
 @Injectable()
@@ -31,7 +33,8 @@ export class CharactersService {
   private load(lang: StudyLanguage): CharactersJson {
     let c = this.catalogs.get(lang);
     if (!c) {
-      c = JSON.parse(readFileSync(CATALOG_PATHS[lang], 'utf8')) as CharactersJson;
+      const path = CATALOG_PATHS[lang];
+      c = path ? (JSON.parse(readFileSync(path, 'utf8')) as CharactersJson) : { contentVersion: '', language: lang, sections: [] };
       this.catalogs.set(lang, c);
     }
     return c;

@@ -1,0 +1,3716 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "A1",
+  "title": "A1 : premiers pas en anglais",
+  "region": "Royaume d’Albion",
+  "order": 30
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau A1 du CECRL et préparent au TOEIC Listening & Reading, mais ne sont pas des listes officielles d’ETS.",
+ "worlds": [
+  {
+   "slug": "a1-w1",
+   "title": "Hello, London !",
+   "region": "Royaume d’Albion",
+   "description": "Saluer, se présenter, épeler son nom et compter jusqu’à vingt : le verbe be au présent.",
+   "boss": {
+    "name": "Le Boggart farceur",
+    "glyph": "B",
+    "intro": "Ce lutin des maisons anglaises cache les badges et mélange les noms à l’accueil d’Avalon & Co. Présente-toi sans faute pour qu’il te rende le tien !"
+   },
+   "chapters": [
+    {
+     "slug": "a1-w1-c1",
+     "title": "Premiers mots",
+     "lessons": [
+      {
+       "slug": "en-hello",
+       "title": "Bonjour ! Saluer et prendre congé",
+       "objective": "Saluer quelqu’un, demander comment il va et dire au revoir.",
+       "minutes": 7,
+       "explanation": [
+        "Hello est le bonjour de tous les jours ; Hi est plus familier. Le matin, on dit aussi Good morning, l’après-midi Good afternoon, le soir Good evening.",
+        "How are you? (Comment vas-tu ?) appelle une réponse courte : I’m fine, thank you. And you?",
+        "Pour partir : Goodbye, ou plus simplement Bye. See you! = à plus tard. Attention : Good night ne sert qu’à souhaiter une bonne nuit."
+       ],
+       "items": [
+        {
+         "slug": "en-hello",
+         "kind": "vocabulary",
+         "front": "hello",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bonjour"
+        },
+        {
+         "slug": "en-good-morning",
+         "kind": "vocabulary",
+         "front": "good morning",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bonjour (le matin)"
+        },
+        {
+         "slug": "en-good-evening",
+         "kind": "vocabulary",
+         "front": "good evening",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bonsoir"
+        },
+        {
+         "slug": "en-how-are-you",
+         "kind": "vocabulary",
+         "front": "How are you?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Comment vas-tu ?"
+        },
+        {
+         "slug": "en-fine",
+         "kind": "vocabulary",
+         "front": "fine",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien (en forme)"
+        },
+        {
+         "slug": "en-thank-you",
+         "kind": "vocabulary",
+         "front": "thank you",
+         "reading": null,
+         "romaji": null,
+         "meaning": "merci"
+        },
+        {
+         "slug": "en-goodbye",
+         "kind": "vocabulary",
+         "front": "goodbye",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au revoir"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Good morning, Mr Ambrose! — Good morning! How are you?",
+         "reading": null,
+         "fr": "Bonjour, monsieur Ambrose ! — Bonjour ! Comment allez-vous ?"
+        },
+        {
+         "jp": "I’m fine, thank you. And you?",
+         "reading": null,
+         "fr": "Je vais bien, merci. Et vous ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Mr Ambrose",
+           "jp": "How are you?"
+          }
+         ],
+         "translation": "M. Ambrose te demande comment tu vas.",
+         "choices": [
+          "I’m fine, thank you.",
+          "Good night!",
+          "I’m Emma."
+         ],
+         "answer": "I’m fine, thank you.",
+         "explanation": "À How are you?, on répond I’m fine, thank you."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "It’s 9 a.m. Good ＿, everyone!",
+         "choices": [
+          "morning",
+          "night",
+          "evening"
+         ],
+         "answer": "morning",
+         "explanation": "À 9 heures du matin : Good morning.",
+         "translation": "Il est 9 heures. Bonjour à tous !"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Goodbye! See you tomorrow.",
+         "translation": "La personne arrive au bureau.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Goodbye = au revoir : la personne s’en va."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Tu quittes le bureau à 18 h. Que dis-tu ?",
+         "lines": [
+          {
+           "speaker": "Anna",
+           "jp": "Bye! See you tomorrow!"
+          }
+         ],
+         "translation": "Anna te dit au revoir.",
+         "choices": [
+          "Goodbye, Anna!",
+          "Good morning, Anna!",
+          "How are you, Anna?"
+         ],
+         "answer": "Goodbye, Anna!",
+         "explanation": "On répond à Bye par Goodbye ou Bye."
+        }
+       ]
+      },
+      {
+       "slug": "en-be-i",
+       "title": "Je suis… : I am, you are",
+       "objective": "Se présenter avec I am et poser une question avec Are you… ?",
+       "minutes": 8,
+       "explanation": [
+        "Le verbe be (être) : I am (je suis), you are (tu es / vous êtes). À l’oral, on contracte : I’m, you’re.",
+        "My name is… ou I’m… pour donner son nom. What’s your name? = comment t’appelles-tu ?",
+        "Question : on inverse le verbe. You are French → Are you French? Réponse courte : Yes, I am. / No, I’m not."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-i-am",
+         "kind": "grammar",
+         "front": "I am / you are",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je suis / tu es (be)"
+        },
+        {
+         "slug": "en-name",
+         "kind": "vocabulary",
+         "front": "name",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nom, prénom"
+        },
+        {
+         "slug": "en-my",
+         "kind": "vocabulary",
+         "front": "my",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mon, ma, mes"
+        },
+        {
+         "slug": "en-your",
+         "kind": "vocabulary",
+         "front": "your",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ton, ta, tes ; votre, vos"
+        },
+        {
+         "slug": "en-yes",
+         "kind": "vocabulary",
+         "front": "yes",
+         "reading": null,
+         "romaji": null,
+         "meaning": "oui"
+        },
+        {
+         "slug": "en-no",
+         "kind": "vocabulary",
+         "front": "no",
+         "reading": null,
+         "romaji": null,
+         "meaning": "non"
+        },
+        {
+         "slug": "en-french",
+         "kind": "vocabulary",
+         "front": "French",
+         "reading": null,
+         "romaji": null,
+         "meaning": "français, française"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Hello, I’m Emma. I’m French. — Nice to meet you, Emma!",
+         "reading": null,
+         "fr": "Bonjour, je suis Emma. Je suis française. — Enchanté, Emma !"
+        },
+        {
+         "jp": "Are you the new intern? — Yes, I am.",
+         "reading": null,
+         "fr": "Tu es le nouveau stagiaire ? — Oui."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Hello! I ＿ Tom.",
+         "choices": [
+          "am",
+          "are",
+          "is"
+         ],
+         "answer": "am",
+         "explanation": "Avec I : am.",
+         "translation": "Bonjour ! Je suis Tom."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿ you French? — Yes, I am.",
+         "choices": [
+          "Are",
+          "Am",
+          "Is"
+         ],
+         "answer": "Are",
+         "explanation": "Question avec you : Are you… ?",
+         "translation": "Tu es français ? — Oui."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Mr Ambrose",
+           "jp": "What’s your name?"
+          }
+         ],
+         "translation": "M. Ambrose te demande ton nom.",
+         "choices": [
+          "My name is Emma.",
+          "I’m fine.",
+          "Yes, I am."
+         ],
+         "answer": "My name is Emma.",
+         "explanation": "What’s your name? → My name is…"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je m’appelle Sam. »",
+         "answer": [
+          "My",
+          "name",
+          "is",
+          "Sam."
+         ],
+         "explanation": "My name is + prénom."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w1-c2",
+     "title": "Lettres et nombres",
+     "lessons": [
+      {
+       "slug": "en-spell",
+       "title": "Épeler et compter jusqu’à 10",
+       "objective": "Épeler son nom et dire les nombres de 0 à 10.",
+       "minutes": 8,
+       "explanation": [
+        "Au téléphone ou à l’accueil, on demande souvent : How do you spell that? (Comment ça s’écrit ?). Attention aux lettres piège : A se dit « eï », E « i », I « aï ».",
+        "Les nombres : zero (ou « oh » dans un numéro de téléphone), one, two, three, four, five, six, seven, eight, nine, ten.",
+        "Un numéro se lit chiffre par chiffre : 07 52 → oh seven five two. Deux chiffres pareils : double five (55)."
+       ],
+       "items": [
+        {
+         "slug": "en-spell",
+         "kind": "vocabulary",
+         "front": "to spell",
+         "reading": null,
+         "romaji": null,
+         "meaning": "épeler"
+        },
+        {
+         "slug": "en-one",
+         "kind": "vocabulary",
+         "front": "one",
+         "reading": null,
+         "romaji": null,
+         "meaning": "un (1)"
+        },
+        {
+         "slug": "en-two",
+         "kind": "vocabulary",
+         "front": "two",
+         "reading": null,
+         "romaji": null,
+         "meaning": "deux (2)"
+        },
+        {
+         "slug": "en-three",
+         "kind": "vocabulary",
+         "front": "three",
+         "reading": null,
+         "romaji": null,
+         "meaning": "trois (3)"
+        },
+        {
+         "slug": "en-five",
+         "kind": "vocabulary",
+         "front": "five",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cinq (5)"
+        },
+        {
+         "slug": "en-eight",
+         "kind": "vocabulary",
+         "front": "eight",
+         "reading": null,
+         "romaji": null,
+         "meaning": "huit (8)"
+        },
+        {
+         "slug": "en-ten",
+         "kind": "vocabulary",
+         "front": "ten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dix (10)"
+        },
+        {
+         "slug": "en-phone-number",
+         "kind": "vocabulary",
+         "front": "phone number",
+         "reading": null,
+         "romaji": null,
+         "meaning": "numéro de téléphone"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "How do you spell your name? — M-A-R-T-I-N.",
+         "reading": null,
+         "fr": "Comment s’écrit ton nom ? — M-A-R-T-I-N."
+        },
+        {
+         "jp": "My phone number is oh seven, double five, three, eight.",
+         "reading": null,
+         "fr": "Mon numéro est le 07 55 38."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Three + five = ＿",
+         "choices": [
+          "eight",
+          "seven",
+          "ten"
+         ],
+         "answer": "eight",
+         "explanation": "3 + 5 = 8 : eight.",
+         "translation": "Trois plus cinq égale huit."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Receptionist",
+           "jp": "How do you spell your name?"
+          }
+         ],
+         "translation": "La réceptionniste te demande d’épeler ton nom.",
+         "choices": [
+          "E-M-M-A.",
+          "I’m fine.",
+          "Ten."
+         ],
+         "answer": "E-M-M-A.",
+         "explanation": "How do you spell…? → on épelle lettre par lettre."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "My phone number is double two, five, one.",
+         "translation": "Le numéro commence par 22.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "double two = 22."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Ten − eight = ＿",
+         "choices": [
+          "two",
+          "three",
+          "one"
+         ],
+         "answer": "two",
+         "explanation": "10 − 8 = 2 : two.",
+         "translation": "Dix moins huit égale deux."
+        }
+       ]
+      },
+      {
+       "slug": "en-be-he",
+       "title": "Il est, elle est : he is, she is, it is",
+       "objective": "Présenter quelqu’un avec he / she is et compter jusqu’à 20.",
+       "minutes": 9,
+       "explanation": [
+        "He is (il est) pour un homme, she is (elle est) pour une femme, it is pour une chose ou un animal. Contractions : he’s, she’s, it’s.",
+        "Négation : is not → isn’t. She isn’t English, she’s Irish. Question : Is he your manager?",
+        "De 11 à 20 : eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty. -teen = 13 à 19."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-he-is",
+         "kind": "grammar",
+         "front": "he is / she is / it is",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il est / elle est (be)"
+        },
+        {
+         "slug": "gram-en-isnt",
+         "kind": "grammar",
+         "front": "isn’t",
+         "reading": null,
+         "romaji": null,
+         "meaning": "n’est pas (is not)"
+        },
+        {
+         "slug": "en-he",
+         "kind": "vocabulary",
+         "front": "he",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il (homme)"
+        },
+        {
+         "slug": "en-she",
+         "kind": "vocabulary",
+         "front": "she",
+         "reading": null,
+         "romaji": null,
+         "meaning": "elle (femme)"
+        },
+        {
+         "slug": "en-twelve",
+         "kind": "vocabulary",
+         "front": "twelve",
+         "reading": null,
+         "romaji": null,
+         "meaning": "douze (12)"
+        },
+        {
+         "slug": "en-fifteen",
+         "kind": "vocabulary",
+         "front": "fifteen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quinze (15)"
+        },
+        {
+         "slug": "en-twenty",
+         "kind": "vocabulary",
+         "front": "twenty",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vingt (20)"
+        },
+        {
+         "slug": "en-english",
+         "kind": "vocabulary",
+         "front": "English",
+         "reading": null,
+         "romaji": null,
+         "meaning": "anglais, anglaise"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "This is Anna. She’s from Dublin. She isn’t English, she’s Irish.",
+         "reading": null,
+         "fr": "Voici Anna. Elle vient de Dublin. Elle n’est pas anglaise, elle est irlandaise."
+        },
+        {
+         "jp": "The meeting room is on floor twelve.",
+         "reading": null,
+         "fr": "La salle de réunion est au douzième étage."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "This is Mr Ambrose. ＿ is our manager.",
+         "choices": [
+          "He",
+          "She",
+          "It"
+         ],
+         "answer": "He",
+         "explanation": "Mr = monsieur : he.",
+         "translation": "Voici M. Ambrose. C’est notre responsable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Anna ＿ Irish.",
+         "choices": [
+          "is",
+          "are",
+          "am"
+         ],
+         "answer": "is",
+         "explanation": "Avec une personne (she) : is.",
+         "translation": "Anna est irlandaise."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He ＿ English, he’s Scottish.",
+         "choices": [
+          "isn’t",
+          "aren’t",
+          "not"
+         ],
+         "answer": "isn’t",
+         "explanation": "Négation de is : isn’t.",
+         "translation": "Il n’est pas anglais, il est écossais."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Twelve + three = fifteen.",
+         "translation": "12 + 3 = 15.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "twelve (12) + three (3) = fifteen (15)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w2",
+   "title": "Ma famille et mes collègues",
+   "region": "Royaume d’Albion",
+   "description": "Parler de sa famille, de son métier et de ce que l’on possède : have got, a / an, les possessifs.",
+   "boss": {
+    "name": "Puck le malicieux",
+    "glyph": "P",
+    "intro": "Le lutin de Shakespeare échange les photos de famille sur tous les bureaux. Dis qui est qui, et il remettra chaque cadre à sa place."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w2-c1",
+     "title": "Qui est-ce ?",
+     "lessons": [
+      {
+       "slug": "en-family",
+       "title": "La famille : his, her, their",
+       "objective": "Présenter sa famille avec les adjectifs possessifs.",
+       "minutes": 9,
+       "explanation": [
+        "Les possessifs dépendent du possesseur : my (je), your (tu/vous), his (à lui), her (à elle), our (nous), their (eux). His sister = la sœur de lui ; her brother = le frère d’elle.",
+        "Le possessif ’s : Tom’s mother = la mère de Tom. The manager’s office = le bureau du responsable."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-his-her",
+         "kind": "grammar",
+         "front": "his / her / their",
+         "reading": null,
+         "romaji": null,
+         "meaning": "son, sa (à lui / à elle), leur"
+        },
+        {
+         "slug": "gram-en-apostrophe-s",
+         "kind": "grammar",
+         "front": "’s (Tom’s)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de (possession : Tom’s = de Tom)"
+        },
+        {
+         "slug": "en-mother",
+         "kind": "vocabulary",
+         "front": "mother",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mère"
+        },
+        {
+         "slug": "en-father",
+         "kind": "vocabulary",
+         "front": "father",
+         "reading": null,
+         "romaji": null,
+         "meaning": "père"
+        },
+        {
+         "slug": "en-sister",
+         "kind": "vocabulary",
+         "front": "sister",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sœur"
+        },
+        {
+         "slug": "en-brother",
+         "kind": "vocabulary",
+         "front": "brother",
+         "reading": null,
+         "romaji": null,
+         "meaning": "frère"
+        },
+        {
+         "slug": "en-children",
+         "kind": "vocabulary",
+         "front": "children",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enfants"
+        },
+        {
+         "slug": "en-wife",
+         "kind": "vocabulary",
+         "front": "wife",
+         "reading": null,
+         "romaji": null,
+         "meaning": "épouse, femme"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "This is my brother Paul and his wife, Emma. Their children are six and nine.",
+         "reading": null,
+         "fr": "Voici mon frère Paul et sa femme, Emma. Leurs enfants ont six et neuf ans."
+        },
+        {
+         "jp": "Is that Anna’s sister? — Yes, her name is Kate.",
+         "reading": null,
+         "fr": "C’est la sœur d’Anna ? — Oui, elle s’appelle Kate."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Anna is here with ＿ brother.",
+         "choices": [
+          "her",
+          "his",
+          "their"
+         ],
+         "answer": "her",
+         "explanation": "Anna est une femme : her brother.",
+         "translation": "Anna est là avec son frère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Tom and Kate are with ＿ children.",
+         "choices": [
+          "their",
+          "his",
+          "her"
+         ],
+         "answer": "their",
+         "explanation": "Deux possesseurs : their.",
+         "translation": "Tom et Kate sont avec leurs enfants."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "This is ＿ office.",
+         "choices": [
+          "Mr Ambrose’s",
+          "Mr Ambrose",
+          "of Mr Ambrose"
+         ],
+         "answer": "Mr Ambrose’s",
+         "explanation": "La possession : nom + ’s.",
+         "translation": "C’est le bureau de M. Ambrose."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Paul is my brother. His wife is Emma.",
+         "translation": "Emma est la femme de Paul.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "His wife = la femme de Paul."
+        }
+       ]
+      },
+      {
+       "slug": "en-jobs",
+       "title": "Les métiers : a / an",
+       "objective": "Dire son métier avec l’article a ou an.",
+       "minutes": 8,
+       "explanation": [
+        "Pour un métier, l’anglais met toujours un article : I’m an engineer, she’s a teacher (en français : je suis ingénieur, sans article).",
+        "a devant un son consonne (a manager), an devant un son voyelle (an accountant, an hour).",
+        "What do you do? = qu’est-ce que tu fais (dans la vie) ?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-a-an",
+         "kind": "grammar",
+         "front": "a / an",
+         "reading": null,
+         "romaji": null,
+         "meaning": "un, une (a devant consonne, an devant voyelle)"
+        },
+        {
+         "slug": "en-job",
+         "kind": "vocabulary",
+         "front": "job",
+         "reading": null,
+         "romaji": null,
+         "meaning": "travail, emploi"
+        },
+        {
+         "slug": "en-teacher",
+         "kind": "vocabulary",
+         "front": "teacher",
+         "reading": null,
+         "romaji": null,
+         "meaning": "professeur"
+        },
+        {
+         "slug": "en-engineer",
+         "kind": "vocabulary",
+         "front": "engineer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ingénieur"
+        },
+        {
+         "slug": "en-nurse",
+         "kind": "vocabulary",
+         "front": "nurse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "infirmier, infirmière"
+        },
+        {
+         "slug": "en-manager",
+         "kind": "vocabulary",
+         "front": "manager",
+         "reading": null,
+         "romaji": null,
+         "meaning": "responsable, manager"
+        },
+        {
+         "slug": "en-intern",
+         "kind": "vocabulary",
+         "front": "intern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "stagiaire"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "What do you do? — I’m an engineer. And you? — I’m a nurse.",
+         "reading": null,
+         "fr": "Tu fais quoi dans la vie ? — Je suis ingénieur. Et toi ? — Je suis infirmière."
+        },
+        {
+         "jp": "Emma is an intern at Avalon & Co.",
+         "reading": null,
+         "fr": "Emma est stagiaire chez Avalon & Co."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She’s ＿ engineer.",
+         "choices": [
+          "an",
+          "a",
+          "—"
+         ],
+         "answer": "an",
+         "explanation": "engineer commence par un son voyelle : an.",
+         "translation": "Elle est ingénieure."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’m ＿ teacher.",
+         "choices": [
+          "a",
+          "an",
+          "—"
+         ],
+         "answer": "a",
+         "explanation": "teacher commence par une consonne : a.",
+         "translation": "Je suis professeur."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Kate",
+           "jp": "What do you do?"
+          }
+         ],
+         "translation": "Kate te demande ton métier.",
+         "choices": [
+          "I’m an intern.",
+          "I’m fine.",
+          "I’m twenty."
+         ],
+         "answer": "I’m an intern.",
+         "explanation": "What do you do? → I’m a / an + métier."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Tom is a nurse.",
+         "translation": "Tom est infirmier.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "nurse = infirmier."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w2-c2",
+     "title": "Ce que j’ai",
+     "lessons": [
+      {
+       "slug": "en-have-got",
+       "title": "Avoir : have got / has got",
+       "objective": "Dire ce que l’on a avec have got et has got.",
+       "minutes": 9,
+       "explanation": [
+        "En anglais britannique, avoir = have got : I’ve got a car, you’ve got a cat. Avec he / she / it : has got (he’s got).",
+        "Négation : haven’t got / hasn’t got. Question : Have you got a pen? — Yes, I have. / No, I haven’t.",
+        "L’âge se dit avec be, pas avec have : I’m twenty (j’ai vingt ans)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-have-got",
+         "kind": "grammar",
+         "front": "have got / has got",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir (posséder)"
+        },
+        {
+         "slug": "en-car",
+         "kind": "vocabulary",
+         "front": "car",
+         "reading": null,
+         "romaji": null,
+         "meaning": "voiture"
+        },
+        {
+         "slug": "en-cat",
+         "kind": "vocabulary",
+         "front": "cat",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chat"
+        },
+        {
+         "slug": "en-dog",
+         "kind": "vocabulary",
+         "front": "dog",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chien"
+        },
+        {
+         "slug": "en-pen",
+         "kind": "vocabulary",
+         "front": "pen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "stylo"
+        },
+        {
+         "slug": "en-laptop",
+         "kind": "vocabulary",
+         "front": "laptop",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ordinateur portable"
+        },
+        {
+         "slug": "en-old",
+         "kind": "vocabulary",
+         "front": "old",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vieux ; âgé (âge)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Have you got a pen? — Yes, I have. Here you are.",
+         "reading": null,
+         "fr": "Tu as un stylo ? — Oui. Tiens."
+        },
+        {
+         "jp": "Kate has got two cats and a dog. She’s thirty years old.",
+         "reading": null,
+         "fr": "Kate a deux chats et un chien. Elle a trente ans."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Tom ＿ got a new laptop.",
+         "choices": [
+          "has",
+          "have",
+          "is"
+         ],
+         "answer": "has",
+         "explanation": "Avec he (Tom) : has got.",
+         "translation": "Tom a un nouvel ordinateur portable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ you got a car?",
+         "choices": [
+          "Have",
+          "Has",
+          "Are"
+         ],
+         "answer": "Have",
+         "explanation": "Question avec you : Have you got… ?",
+         "translation": "Tu as une voiture ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ twenty-five.",
+         "choices": [
+          "am",
+          "have",
+          "have got"
+         ],
+         "answer": "am",
+         "explanation": "L’âge se dit avec be : I’m 25.",
+         "translation": "J’ai vingt-cinq ans."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Anna",
+           "jp": "Have you got a pen?"
+          }
+         ],
+         "translation": "Anna te demande un stylo.",
+         "choices": [
+          "Yes, I have. Here you are.",
+          "Yes, I am.",
+          "Yes, it is."
+         ],
+         "answer": "Yes, I have. Here you are.",
+         "explanation": "Have you got…? → Yes, I have. / No, I haven’t."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w3",
+   "title": "Les couloirs d’Avalon & Co.",
+   "region": "Royaume d’Albion",
+   "description": "Décrire le bureau et trouver les objets : there is / there are, les prépositions de lieu, this / that, les pluriels.",
+   "boss": {
+    "name": "Le Feu follet",
+    "glyph": "W",
+    "intro": "Cette petite flamme bleue égare les visiteurs dans les couloirs. Décris exactement où se trouvent les choses pour qu’elle te montre la bonne porte."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w3-c1",
+     "title": "Dans la pièce",
+     "lessons": [
+      {
+       "slug": "en-there-is",
+       "title": "Il y a : there is, there are",
+       "objective": "Dire ce qu’il y a dans une pièce, au singulier et au pluriel.",
+       "minutes": 9,
+       "explanation": [
+        "There is (there’s) + un seul objet ; there are + plusieurs : There’s a printer. There are two desks.",
+        "Le pluriel ajoute -s (desk → desks), -es après s, sh, ch, x (box → boxes). Quelques irréguliers : person → people, man → men, woman → women.",
+        "Question : Is there a coffee machine? Are there any chairs?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-there-is",
+         "kind": "grammar",
+         "front": "there is / there are",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il y a"
+        },
+        {
+         "slug": "gram-en-plural-s",
+         "kind": "grammar",
+         "front": "plural -s / -es (desks, boxes)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pluriel des noms (desks, boxes)"
+        },
+        {
+         "slug": "en-desk",
+         "kind": "vocabulary",
+         "front": "desk",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bureau (meuble)"
+        },
+        {
+         "slug": "en-chair",
+         "kind": "vocabulary",
+         "front": "chair",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chaise"
+        },
+        {
+         "slug": "en-printer",
+         "kind": "vocabulary",
+         "front": "printer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "imprimante"
+        },
+        {
+         "slug": "en-window",
+         "kind": "vocabulary",
+         "front": "window",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fenêtre"
+        },
+        {
+         "slug": "en-people",
+         "kind": "vocabulary",
+         "front": "people",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gens, personnes"
+        },
+        {
+         "slug": "en-meeting-room",
+         "kind": "vocabulary",
+         "front": "meeting room",
+         "reading": null,
+         "romaji": null,
+         "meaning": "salle de réunion"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "There’s a printer next to the window, and there are four desks.",
+         "reading": null,
+         "fr": "Il y a une imprimante à côté de la fenêtre, et il y a quatre bureaux."
+        },
+        {
+         "jp": "Is there a meeting room on this floor? — Yes, there is.",
+         "reading": null,
+         "fr": "Il y a une salle de réunion à cet étage ? — Oui."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There ＿ three chairs in the room.",
+         "choices": [
+          "are",
+          "is",
+          "am"
+         ],
+         "answer": "are",
+         "explanation": "Plusieurs chaises : there are.",
+         "translation": "Il y a trois chaises dans la pièce."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There ＿ a printer on the desk.",
+         "choices": [
+          "is",
+          "are",
+          "have"
+         ],
+         "answer": "is",
+         "explanation": "Une seule imprimante : there is.",
+         "translation": "Il y a une imprimante sur le bureau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There are ten ＿ in the meeting room.",
+         "choices": [
+          "people",
+          "peoples",
+          "person"
+         ],
+         "answer": "people",
+         "explanation": "Pluriel de person : people.",
+         "translation": "Il y a dix personnes dans la salle de réunion."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "There are two windows in my office.",
+         "translation": "Il y a une seule fenêtre dans le bureau.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "two windows = deux fenêtres."
+        }
+       ]
+      },
+      {
+       "slug": "en-where",
+       "title": "Où est… ? in, on, under, next to",
+       "objective": "Situer un objet avec les prépositions de lieu.",
+       "minutes": 8,
+       "explanation": [
+        "in = dans, on = sur, under = sous, next to = à côté de, behind = derrière, in front of = devant, between = entre.",
+        "Where’s my phone? — It’s on your desk, next to the laptop."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-prep-place",
+         "kind": "grammar",
+         "front": "in / on / under / next to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dans / sur / sous / à côté de"
+        },
+        {
+         "slug": "en-where",
+         "kind": "vocabulary",
+         "front": "where",
+         "reading": null,
+         "romaji": null,
+         "meaning": "où"
+        },
+        {
+         "slug": "en-behind",
+         "kind": "vocabulary",
+         "front": "behind",
+         "reading": null,
+         "romaji": null,
+         "meaning": "derrière"
+        },
+        {
+         "slug": "en-between",
+         "kind": "vocabulary",
+         "front": "between",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entre"
+        },
+        {
+         "slug": "en-key",
+         "kind": "vocabulary",
+         "front": "key",
+         "reading": null,
+         "romaji": null,
+         "meaning": "clé"
+        },
+        {
+         "slug": "en-bag",
+         "kind": "vocabulary",
+         "front": "bag",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sac"
+        },
+        {
+         "slug": "en-door",
+         "kind": "vocabulary",
+         "front": "door",
+         "reading": null,
+         "romaji": null,
+         "meaning": "porte"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Where are my keys? — They’re in your bag, under the folder.",
+         "reading": null,
+         "fr": "Où sont mes clés ? — Elles sont dans ton sac, sous le classeur."
+        },
+        {
+         "jp": "The coffee machine is between the kitchen and the meeting room.",
+         "reading": null,
+         "fr": "La machine à café est entre la cuisine et la salle de réunion."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The phone is ＿ the desk.",
+         "choices": [
+          "on",
+          "in",
+          "under"
+         ],
+         "answer": "on",
+         "explanation": "sur = on.",
+         "translation": "Le téléphone est sur le bureau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The keys are ＿ my bag.",
+         "choices": [
+          "in",
+          "on",
+          "between"
+         ],
+         "answer": "in",
+         "explanation": "dans = in.",
+         "translation": "Les clés sont dans mon sac."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Tom",
+           "jp": "Where’s the meeting room?"
+          }
+         ],
+         "translation": "Tom cherche la salle de réunion.",
+         "choices": [
+          "It’s next to the kitchen.",
+          "It’s ten o’clock.",
+          "Yes, there is."
+         ],
+         "answer": "It’s next to the kitchen.",
+         "explanation": "Where…? → on répond avec un lieu."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The cat is under the chair.",
+         "translation": "Le chat est sur la chaise.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "under = sous."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w3-c2",
+     "title": "Ceci et cela",
+     "lessons": [
+      {
+       "slug": "en-this-that",
+       "title": "Ceci, cela : this, that, these, those",
+       "objective": "Désigner ce qui est proche ou loin, au singulier et au pluriel.",
+       "minutes": 8,
+       "explanation": [
+        "this (près, singulier), these (près, pluriel), that (loin, singulier), those (loin, pluriel).",
+        "Is this your coffee? — No, that’s my coffee, over there. What’s this? = qu’est-ce que c’est ?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-this-that",
+         "kind": "grammar",
+         "front": "this / that / these / those",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce…ci, ce…là (démonstratifs)"
+        },
+        {
+         "slug": "en-folder",
+         "kind": "vocabulary",
+         "front": "folder",
+         "reading": null,
+         "romaji": null,
+         "meaning": "classeur, dossier"
+        },
+        {
+         "slug": "en-notebook",
+         "kind": "vocabulary",
+         "front": "notebook",
+         "reading": null,
+         "romaji": null,
+         "meaning": "carnet"
+        },
+        {
+         "slug": "en-umbrella",
+         "kind": "vocabulary",
+         "front": "umbrella",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parapluie"
+        },
+        {
+         "slug": "en-glasses",
+         "kind": "vocabulary",
+         "front": "glasses",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lunettes"
+        },
+        {
+         "slug": "en-mine",
+         "kind": "vocabulary",
+         "front": "mine",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le mien, la mienne"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Are these your glasses? — No, those are my glasses, on the table.",
+         "reading": null,
+         "fr": "Ce sont tes lunettes ? — Non, mes lunettes sont là-bas, sur la table."
+        },
+        {
+         "jp": "Is this umbrella yours? — Yes, it’s mine. Thanks!",
+         "reading": null,
+         "fr": "Ce parapluie est à toi ? — Oui, c’est le mien. Merci !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ folders here are for the meeting.",
+         "choices": [
+          "These",
+          "This",
+          "That"
+         ],
+         "answer": "These",
+         "explanation": "Près et pluriel : these.",
+         "translation": "Ces classeurs-ci sont pour la réunion."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Look at ＿ building over there!",
+         "choices": [
+          "that",
+          "these",
+          "those"
+         ],
+         "answer": "that",
+         "explanation": "Loin et singulier : that.",
+         "translation": "Regarde ce bâtiment là-bas !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Anna",
+           "jp": "Is this notebook yours?"
+          }
+         ],
+         "translation": "Anna te montre un carnet.",
+         "choices": [
+          "Yes, it’s mine. Thank you!",
+          "Yes, I’m fine.",
+          "Yes, there are."
+         ],
+         "answer": "Yes, it’s mine. Thank you!",
+         "explanation": "Is this yours? → Yes, it’s mine."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Ce sont mes clés ? »",
+         "answer": [
+          "Are",
+          "these",
+          "my",
+          "keys?"
+         ],
+         "explanation": "Question : Are + these + nom ?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w4",
+   "title": "Une journée à Londres",
+   "region": "Royaume d’Albion",
+   "description": "Raconter ses habitudes, dire l’heure et les jours : le présent simple et ses questions.",
+   "boss": {
+    "name": "Black Shuck, le chien noir",
+    "glyph": "S",
+    "intro": "Le grand chien fantôme du Norfolk rôde à la tombée de la nuit et dérègle toutes les horloges. Dis-lui l’heure juste et raconte ta journée pour qu’il retourne dans la lande."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w4-c1",
+     "title": "Mes habitudes",
+     "lessons": [
+      {
+       "slug": "en-present-simple",
+       "title": "Le présent simple : I work, she works",
+       "objective": "Parler de ses habitudes et de son travail au présent simple.",
+       "minutes": 10,
+       "explanation": [
+        "Le présent simple sert aux habitudes et aux vérités générales : I work in London. I drink tea every morning.",
+        "Avec he / she / it, on ajoute -s : she works, he drinks. -es après o, s, sh, ch : he goes, she watches. have → has.",
+        "Mots de fréquence avant le verbe : always (toujours), usually (d’habitude), sometimes (parfois), never (jamais)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-present-simple",
+         "kind": "grammar",
+         "front": "present simple (he works)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "présent des habitudes (-s à la 3e personne)"
+        },
+        {
+         "slug": "en-work",
+         "kind": "vocabulary",
+         "front": "to work",
+         "reading": null,
+         "romaji": null,
+         "meaning": "travailler"
+        },
+        {
+         "slug": "en-live",
+         "kind": "vocabulary",
+         "front": "to live",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vivre, habiter"
+        },
+        {
+         "slug": "en-drink",
+         "kind": "vocabulary",
+         "front": "to drink",
+         "reading": null,
+         "romaji": null,
+         "meaning": "boire"
+        },
+        {
+         "slug": "en-get-up",
+         "kind": "vocabulary",
+         "front": "to get up",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se lever"
+        },
+        {
+         "slug": "en-usually",
+         "kind": "vocabulary",
+         "front": "usually",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’habitude"
+        },
+        {
+         "slug": "en-never",
+         "kind": "vocabulary",
+         "front": "never",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jamais"
+        },
+        {
+         "slug": "en-every-day",
+         "kind": "vocabulary",
+         "front": "every day",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tous les jours"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I get up at seven and I usually drink tea. My sister drinks coffee.",
+         "reading": null,
+         "fr": "Je me lève à sept heures et je bois d’habitude du thé. Ma sœur boit du café."
+        },
+        {
+         "jp": "Mr Ambrose lives in Camden and works in the City.",
+         "reading": null,
+         "fr": "M. Ambrose habite à Camden et travaille dans la City."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She ＿ in a bank.",
+         "choices": [
+          "works",
+          "work",
+          "working"
+         ],
+         "answer": "works",
+         "explanation": "he / she / it : verbe + -s.",
+         "translation": "Elle travaille dans une banque."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He ＿ to the gym on Mondays.",
+         "choices": [
+          "goes",
+          "gos",
+          "go"
+         ],
+         "answer": "goes",
+         "explanation": "go → goes (après o : -es).",
+         "translation": "Il va à la salle de sport le lundi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ drink coffee in the evening.",
+         "choices": [
+          "never",
+          "usually",
+          "always"
+         ],
+         "answer": "never",
+         "explanation": "jamais = never.",
+         "translation": "Je ne bois jamais de café le soir."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il habite à Londres. »",
+         "answer": [
+          "He",
+          "lives",
+          "in",
+          "London."
+         ],
+         "explanation": "Sujet + verbe en -s + lieu."
+        }
+       ]
+      },
+      {
+       "slug": "en-do-does",
+       "title": "Questions et négations : do, does",
+       "objective": "Poser des questions et dire non au présent simple.",
+       "minutes": 10,
+       "explanation": [
+        "Question : Do you work here? / Does she like tea? Avec does, le verbe perd son -s : Does she like…? (pas likes).",
+        "Négation : I don’t (do not) eat meat. He doesn’t (does not) speak French.",
+        "Réponses courtes : Yes, I do. / No, she doesn’t."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-do-does",
+         "kind": "grammar",
+         "front": "do / does",
+         "reading": null,
+         "romaji": null,
+         "meaning": "auxiliaire des questions au présent"
+        },
+        {
+         "slug": "gram-en-dont-doesnt",
+         "kind": "grammar",
+         "front": "don’t / doesn’t",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ne… pas (présent simple)"
+        },
+        {
+         "slug": "en-like",
+         "kind": "vocabulary",
+         "front": "to like",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aimer (bien)"
+        },
+        {
+         "slug": "en-speak",
+         "kind": "vocabulary",
+         "front": "to speak",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parler"
+        },
+        {
+         "slug": "en-eat",
+         "kind": "vocabulary",
+         "front": "to eat",
+         "reading": null,
+         "romaji": null,
+         "meaning": "manger"
+        },
+        {
+         "slug": "en-meat",
+         "kind": "vocabulary",
+         "front": "meat",
+         "reading": null,
+         "romaji": null,
+         "meaning": "viande"
+        },
+        {
+         "slug": "en-weekend",
+         "kind": "vocabulary",
+         "front": "weekend",
+         "reading": null,
+         "romaji": null,
+         "meaning": "week-end"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Do you speak English? — Yes, I do. A little!",
+         "reading": null,
+         "fr": "Tu parles anglais ? — Oui. Un peu !"
+        },
+        {
+         "jp": "Tom doesn’t work at the weekend.",
+         "reading": null,
+         "fr": "Tom ne travaille pas le week-end."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ she like tea?",
+         "choices": [
+          "Does",
+          "Do",
+          "Is"
+         ],
+         "answer": "Does",
+         "explanation": "Question avec she : Does.",
+         "translation": "Est-ce qu’elle aime le thé ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ eat meat. I’m vegetarian.",
+         "choices": [
+          "don’t",
+          "doesn’t",
+          "not"
+         ],
+         "answer": "don’t",
+         "explanation": "Négation avec I : don’t.",
+         "translation": "Je ne mange pas de viande. Je suis végétarien."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Does he ＿ French?",
+         "choices": [
+          "speak",
+          "speaks",
+          "speaking"
+         ],
+         "answer": "speak",
+         "explanation": "Après does : verbe sans -s.",
+         "translation": "Est-ce qu’il parle français ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Kate",
+           "jp": "Do you work at the weekend?"
+          }
+         ],
+         "translation": "Kate te demande si tu travailles le week-end.",
+         "choices": [
+          "No, I don’t.",
+          "No, I’m not.",
+          "No, it isn’t."
+         ],
+         "answer": "No, I don’t.",
+         "explanation": "Do you…? → Yes, I do. / No, I don’t."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w4-c2",
+     "title": "L’heure et les jours",
+     "lessons": [
+      {
+       "slug": "en-time",
+       "title": "Quelle heure est-il ?",
+       "objective": "Dire et demander l’heure, parler des jours de la semaine.",
+       "minutes": 9,
+       "explanation": [
+        "What time is it? — It’s nine o’clock (9 h), half past nine (9 h 30), quarter past nine (9 h 15), quarter to ten (9 h 45).",
+        "at + heure (at 9 a.m.), on + jour (on Monday), in + moment de la journée (in the morning).",
+        "Les jours prennent une majuscule : Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-at-on-in",
+         "kind": "grammar",
+         "front": "at / on / in (time)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à (heure) / le (jour) / le, en (moment)"
+        },
+        {
+         "slug": "en-oclock",
+         "kind": "vocabulary",
+         "front": "o’clock",
+         "reading": null,
+         "romaji": null,
+         "meaning": "heure(s) pile"
+        },
+        {
+         "slug": "en-half-past",
+         "kind": "vocabulary",
+         "front": "half past",
+         "reading": null,
+         "romaji": null,
+         "meaning": "et demie"
+        },
+        {
+         "slug": "en-quarter",
+         "kind": "vocabulary",
+         "front": "quarter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quart"
+        },
+        {
+         "slug": "en-monday",
+         "kind": "vocabulary",
+         "front": "Monday",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lundi"
+        },
+        {
+         "slug": "en-friday",
+         "kind": "vocabulary",
+         "front": "Friday",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vendredi"
+        },
+        {
+         "slug": "en-morning",
+         "kind": "vocabulary",
+         "front": "morning",
+         "reading": null,
+         "romaji": null,
+         "meaning": "matin"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The meeting is on Monday at half past ten.",
+         "reading": null,
+         "fr": "La réunion est lundi à dix heures et demie."
+        },
+        {
+         "jp": "What time is it? — It’s quarter to six. Time to go home!",
+         "reading": null,
+         "fr": "Quelle heure est-il ? — Six heures moins le quart. L’heure de rentrer !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The train leaves ＿ 8 o’clock.",
+         "choices": [
+          "at",
+          "on",
+          "in"
+         ],
+         "answer": "at",
+         "explanation": "Une heure : at.",
+         "translation": "Le train part à 8 heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I go to the gym ＿ Friday.",
+         "choices": [
+          "on",
+          "at",
+          "in"
+         ],
+         "answer": "on",
+         "explanation": "Un jour : on.",
+         "translation": "Je vais à la salle de sport le vendredi."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "It’s half past seven.",
+         "translation": "Il est 7 h 30.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "half past seven = 7 h 30."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Tom",
+           "jp": "What time is it?"
+          }
+         ],
+         "translation": "Tom te demande l’heure.",
+         "choices": [
+          "It’s ten o’clock.",
+          "It’s Monday.",
+          "It’s on the desk."
+         ],
+         "answer": "It’s ten o’clock.",
+         "explanation": "What time…? → It’s + heure."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w5",
+   "title": "Le café du géant",
+   "region": "Royaume d’Albion",
+   "description": "Commander au café, faire ses courses et parler des prix : some / any, can I have…, how much.",
+   "boss": {
+    "name": "Cormoran, le géant de Cornouailles",
+    "glyph": "G",
+    "intro": "Le géant affamé a pris le café du coin et réclame des montagnes de nourriture. Commande poliment et compte juste pour qu’il rende les clés au patron."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w5-c1",
+     "title": "Commander",
+     "lessons": [
+      {
+       "slug": "en-can-i-have",
+       "title": "Je voudrais… : Can I have…? I’d like…",
+       "objective": "Commander poliment au café ou au restaurant.",
+       "minutes": 9,
+       "explanation": [
+        "Pour commander : Can I have a tea, please? ou, plus poli, I’d like (I would like) a sandwich, please.",
+        "Le serveur dit : What would you like? / Anything else? / Here you are. Pour emporter : to take away ; sur place : to eat in.",
+        "Please (s’il vous plaît) et thank you sont indispensables : en anglais, une demande sans please paraît brusque."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-can-i-have",
+         "kind": "grammar",
+         "front": "Can I have…? / I’d like…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je voudrais… (commander poliment)"
+        },
+        {
+         "slug": "en-please",
+         "kind": "vocabulary",
+         "front": "please",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’il vous plaît"
+        },
+        {
+         "slug": "en-tea",
+         "kind": "vocabulary",
+         "front": "tea",
+         "reading": null,
+         "romaji": null,
+         "meaning": "thé"
+        },
+        {
+         "slug": "en-coffee",
+         "kind": "vocabulary",
+         "front": "coffee",
+         "reading": null,
+         "romaji": null,
+         "meaning": "café"
+        },
+        {
+         "slug": "en-water",
+         "kind": "vocabulary",
+         "front": "water",
+         "reading": null,
+         "romaji": null,
+         "meaning": "eau"
+        },
+        {
+         "slug": "en-sandwich",
+         "kind": "vocabulary",
+         "front": "sandwich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sandwich"
+        },
+        {
+         "slug": "en-cake",
+         "kind": "vocabulary",
+         "front": "cake",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gâteau"
+        },
+        {
+         "slug": "en-take-away",
+         "kind": "vocabulary",
+         "front": "to take away",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à emporter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Hi! Can I have a white coffee and a piece of cake, please? — Sure. To eat in or take away?",
+         "reading": null,
+         "fr": "Bonjour ! Je peux avoir un café au lait et une part de gâteau, s’il vous plaît ? — Bien sûr. Sur place ou à emporter ?"
+        },
+        {
+         "jp": "I’d like a glass of water, please.",
+         "reading": null,
+         "fr": "Je voudrais un verre d’eau, s’il vous plaît."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Can I ＿ a tea, please?",
+         "choices": [
+          "have",
+          "like",
+          "want to"
+         ],
+         "answer": "have",
+         "explanation": "Can I have… ? pour commander.",
+         "translation": "Je peux avoir un thé, s’il vous plaît ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "I’d ＿ a sandwich, please.",
+         "choices": [
+          "like",
+          "have",
+          "want"
+         ],
+         "answer": "like",
+         "explanation": "I’d like = je voudrais.",
+         "translation": "Je voudrais un sandwich, s’il vous plaît."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Waiter",
+           "jp": "What would you like?"
+          }
+         ],
+         "translation": "Le serveur prend ta commande.",
+         "choices": [
+          "A coffee, please.",
+          "I’m fine, thanks.",
+          "It’s on the table."
+         ],
+         "answer": "A coffee, please.",
+         "explanation": "What would you like? → ce que tu veux + please."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Waiter",
+           "jp": "Anything else?"
+          }
+         ],
+         "translation": "Le serveur demande si tu veux autre chose.",
+         "choices": [
+          "No, thank you.",
+          "Yes, I am.",
+          "Goodbye, see you."
+         ],
+         "answer": "No, thank you.",
+         "explanation": "Anything else? → No, thank you. / Yes, a…"
+        }
+       ]
+      },
+      {
+       "slug": "en-some-any",
+       "title": "Du, des : some, any",
+       "objective": "Distinguer les noms comptables et indénombrables avec some et any.",
+       "minutes": 9,
+       "explanation": [
+        "some (du, des) dans les phrases affirmatives : There’s some milk. I’ve got some apples.",
+        "any dans les questions et les négations : Is there any sugar? There aren’t any eggs.",
+        "Indénombrables (pas de pluriel) : milk, water, bread, sugar, money, information. On ne dit pas « an information »."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-some-any",
+         "kind": "grammar",
+         "front": "some / any",
+         "reading": null,
+         "romaji": null,
+         "meaning": "du, des (some : affirmation ; any : question, négation)"
+        },
+        {
+         "slug": "en-milk",
+         "kind": "vocabulary",
+         "front": "milk",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lait"
+        },
+        {
+         "slug": "en-bread",
+         "kind": "vocabulary",
+         "front": "bread",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pain"
+        },
+        {
+         "slug": "en-sugar",
+         "kind": "vocabulary",
+         "front": "sugar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sucre"
+        },
+        {
+         "slug": "en-apple",
+         "kind": "vocabulary",
+         "front": "apple",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pomme"
+        },
+        {
+         "slug": "en-egg",
+         "kind": "vocabulary",
+         "front": "egg",
+         "reading": null,
+         "romaji": null,
+         "meaning": "œuf"
+        },
+        {
+         "slug": "en-money",
+         "kind": "vocabulary",
+         "front": "money",
+         "reading": null,
+         "romaji": null,
+         "meaning": "argent"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Is there any milk in the fridge? — No, there isn’t any. But there’s some juice.",
+         "reading": null,
+         "fr": "Il y a du lait dans le frigo ? — Non, il n’y en a pas. Mais il y a du jus."
+        },
+        {
+         "jp": "I need some bread and some eggs.",
+         "reading": null,
+         "fr": "J’ai besoin de pain et d’œufs."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "There’s ＿ sugar on the table.",
+         "choices": [
+          "some",
+          "any",
+          "a"
+         ],
+         "answer": "some",
+         "explanation": "Phrase affirmative : some.",
+         "translation": "Il y a du sucre sur la table."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Are there ＿ eggs?",
+         "choices": [
+          "any",
+          "some",
+          "a"
+         ],
+         "answer": "any",
+         "explanation": "Question : any.",
+         "translation": "Il y a des œufs ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We haven’t got ＿ bread.",
+         "choices": [
+          "any",
+          "some",
+          "a"
+         ],
+         "answer": "any",
+         "explanation": "Négation : any.",
+         "translation": "Nous n’avons pas de pain."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "There isn’t any milk.",
+         "translation": "Il reste du lait.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "isn’t any = il n’y en a pas."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w5-c2",
+     "title": "Payer",
+     "lessons": [
+      {
+       "slug": "en-how-much",
+       "title": "C’est combien ? Les prix",
+       "objective": "Demander et comprendre un prix, compter par dizaines.",
+       "minutes": 9,
+       "explanation": [
+        "How much is this? (singulier) / How much are these? (pluriel). It’s £4.50 se dit « four pounds fifty ».",
+        "Les dizaines : thirty (30), forty (40), fifty (50), sixty, seventy, eighty, ninety, a hundred (100). Attention : thirteen (13) / thirty (30).",
+        "Pour payer : Can I pay by card? — Yes, of course. / Cash only, sorry."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-how-much",
+         "kind": "grammar",
+         "front": "How much is / are…?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "combien coûte(nt)… ?"
+        },
+        {
+         "slug": "en-price",
+         "kind": "vocabulary",
+         "front": "price",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prix"
+        },
+        {
+         "slug": "en-pound",
+         "kind": "vocabulary",
+         "front": "pound (£)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "livre sterling"
+        },
+        {
+         "slug": "en-thirty",
+         "kind": "vocabulary",
+         "front": "thirty",
+         "reading": null,
+         "romaji": null,
+         "meaning": "trente (30)"
+        },
+        {
+         "slug": "en-fifty",
+         "kind": "vocabulary",
+         "front": "fifty",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cinquante (50)"
+        },
+        {
+         "slug": "en-hundred",
+         "kind": "vocabulary",
+         "front": "a hundred",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cent (100)"
+        },
+        {
+         "slug": "en-card",
+         "kind": "vocabulary",
+         "front": "card",
+         "reading": null,
+         "romaji": null,
+         "meaning": "carte (bancaire)"
+        },
+        {
+         "slug": "en-cheap",
+         "kind": "vocabulary",
+         "front": "cheap",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bon marché"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "How much are these sandwiches? — They’re three pounds fifty each.",
+         "reading": null,
+         "fr": "Combien coûtent ces sandwichs ? — 3,50 £ chacun."
+        },
+        {
+         "jp": "That’s twelve pounds, please. — Can I pay by card? — Of course.",
+         "reading": null,
+         "fr": "Ça fait 12 livres, s’il vous plaît. — Je peux payer par carte ? — Bien sûr."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "How much ＿ these apples?",
+         "choices": [
+          "are",
+          "is",
+          "do"
+         ],
+         "answer": "are",
+         "explanation": "Pluriel : How much are… ?",
+         "translation": "Combien coûtent ces pommes ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Fifty + fifty = a ＿",
+         "choices": [
+          "hundred",
+          "thirty",
+          "fifty"
+         ],
+         "answer": "hundred",
+         "explanation": "50 + 50 = 100 : a hundred.",
+         "translation": "Cinquante plus cinquante égale cent."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Cashier",
+           "jp": "That’s eight pounds, please."
+          }
+         ],
+         "translation": "La caissière t’annonce le total.",
+         "choices": [
+          "Can I pay by card?",
+          "I’m eight.",
+          "Good evening."
+         ],
+         "answer": "Can I pay by card?",
+         "explanation": "Pour payer : Can I pay by card?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "It’s thirty pounds.",
+         "translation": "C’est 13 £.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "thirty = 30 ; 13 = thirteen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w6",
+   "title": "Le grand voyage vers le nord",
+   "region": "Royaume d’Albion",
+   "description": "Demander et indiquer son chemin, prendre les transports et dire ce que l’on sait faire : l’impératif, can / can’t.",
+   "boss": {
+    "name": "Nessie, le monstre du loch",
+    "glyph": "N",
+    "intro": "Au bord du loch Ness, le monstre fait chavirer les bateaux des voyageurs perdus. Retrouve ton chemin et explique ce que tu sais faire pour qu’elle te laisse traverser."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w6-c1",
+     "title": "Trouver son chemin",
+     "lessons": [
+      {
+       "slug": "en-directions",
+       "title": "Le chemin : turn left, go straight on",
+       "objective": "Demander son chemin et le comprendre, à l’impératif.",
+       "minutes": 9,
+       "explanation": [
+        "Demander : Excuse me, where’s the station? / How do I get to the museum?",
+        "L’impératif = la base verbale, sans sujet : Turn left (tournez à gauche), Turn right, Go straight on (allez tout droit), Take the second street.",
+        "Négation : Don’t turn left! Pour finir : It’s on your left / on your right / opposite the bank (en face de)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-imperative",
+         "kind": "grammar",
+         "front": "imperative (Turn left!)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impératif (ordre, consigne)"
+        },
+        {
+         "slug": "en-excuse-me",
+         "kind": "vocabulary",
+         "front": "excuse me",
+         "reading": null,
+         "romaji": null,
+         "meaning": "excusez-moi"
+        },
+        {
+         "slug": "en-left",
+         "kind": "vocabulary",
+         "front": "left",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gauche"
+        },
+        {
+         "slug": "en-right",
+         "kind": "vocabulary",
+         "front": "right",
+         "reading": null,
+         "romaji": null,
+         "meaning": "droite"
+        },
+        {
+         "slug": "en-straight-on",
+         "kind": "vocabulary",
+         "front": "straight on",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout droit"
+        },
+        {
+         "slug": "en-station",
+         "kind": "vocabulary",
+         "front": "station",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gare"
+        },
+        {
+         "slug": "en-street",
+         "kind": "vocabulary",
+         "front": "street",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rue"
+        },
+        {
+         "slug": "en-opposite",
+         "kind": "vocabulary",
+         "front": "opposite",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en face de"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Excuse me, how do I get to King’s Cross station? — Go straight on, then turn left. It’s on your right.",
+         "reading": null,
+         "fr": "Excusez-moi, comment aller à la gare de King’s Cross ? — Allez tout droit, puis tournez à gauche. C’est sur votre droite."
+        },
+        {
+         "jp": "The café is opposite the bank.",
+         "reading": null,
+         "fr": "Le café est en face de la banque."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿ left at the bank.",
+         "choices": [
+          "Turn",
+          "Turns",
+          "You turning"
+         ],
+         "answer": "Turn",
+         "explanation": "Impératif : verbe seul.",
+         "translation": "Tournez à gauche à la banque."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Go ＿ on, then take the first street.",
+         "choices": [
+          "straight",
+          "right",
+          "left"
+         ],
+         "answer": "straight",
+         "explanation": "tout droit = straight on.",
+         "translation": "Allez tout droit, puis prenez la première rue."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Tourist",
+           "jp": "Excuse me, where’s the station?"
+          }
+         ],
+         "translation": "Une touriste te demande la gare.",
+         "choices": [
+          "Turn right, it’s on your left.",
+          "It’s ten pounds.",
+          "Yes, I can."
+         ],
+         "answer": "Turn right, it’s on your left.",
+         "explanation": "Where’s…? → on indique le chemin."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The museum is on your left.",
+         "translation": "Le musée est sur ta droite.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "left = gauche."
+        }
+       ]
+      },
+      {
+       "slug": "en-transport",
+       "title": "Les transports : by bus, on foot",
+       "objective": "Dire comment on se déplace et acheter un billet.",
+       "minutes": 8,
+       "explanation": [
+        "by + moyen de transport : by bus, by train, by car, by plane. Mais : on foot (à pied).",
+        "Au guichet : A single / A return ticket to Edinburgh, please. (aller simple / aller-retour). What time does the next train leave?",
+        "Le métro de Londres s’appelle the Underground ou the Tube."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-by-transport",
+         "kind": "grammar",
+         "front": "by bus / by train / on foot",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en bus / en train / à pied"
+        },
+        {
+         "slug": "en-bus",
+         "kind": "vocabulary",
+         "front": "bus",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bus"
+        },
+        {
+         "slug": "en-train",
+         "kind": "vocabulary",
+         "front": "train",
+         "reading": null,
+         "romaji": null,
+         "meaning": "train"
+        },
+        {
+         "slug": "en-ticket",
+         "kind": "vocabulary",
+         "front": "ticket",
+         "reading": null,
+         "romaji": null,
+         "meaning": "billet, ticket"
+        },
+        {
+         "slug": "en-return-ticket",
+         "kind": "vocabulary",
+         "front": "return ticket",
+         "reading": null,
+         "romaji": null,
+         "meaning": "billet aller-retour"
+        },
+        {
+         "slug": "en-platform",
+         "kind": "vocabulary",
+         "front": "platform",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quai"
+        },
+        {
+         "slug": "en-airport",
+         "kind": "vocabulary",
+         "front": "airport",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aéroport"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I go to work by bus, but on Fridays I go on foot.",
+         "reading": null,
+         "fr": "Je vais au travail en bus, mais le vendredi j’y vais à pied."
+        },
+        {
+         "jp": "A return ticket to Inverness, please. — That’s forty pounds. The train leaves from platform four.",
+         "reading": null,
+         "fr": "Un aller-retour pour Inverness, s’il vous plaît. — Ça fait 40 livres. Le train part du quai 4."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I go to work ＿ train.",
+         "choices": [
+          "by",
+          "on",
+          "in"
+         ],
+         "answer": "by",
+         "explanation": "Moyen de transport : by.",
+         "translation": "Je vais au travail en train."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She walks to school. She goes on ＿.",
+         "choices": [
+          "foot",
+          "feet",
+          "walk"
+         ],
+         "answer": "foot",
+         "explanation": "à pied = on foot.",
+         "translation": "Elle va à l’école à pied."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Ticket office",
+           "jp": "Single or return?"
+          }
+         ],
+         "translation": "Au guichet, on te demande quel billet tu veux.",
+         "choices": [
+          "Return, please.",
+          "By bus, please.",
+          "Platform two."
+         ],
+         "answer": "Return, please.",
+         "explanation": "Single or return? → aller simple ou aller-retour."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The train leaves from platform four.",
+         "translation": "Le train part du quai 4.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "platform four = quai 4."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w6-c2",
+     "title": "Ce que je sais faire",
+     "lessons": [
+      {
+       "slug": "en-can",
+       "title": "Savoir, pouvoir : can, can’t",
+       "objective": "Dire ce que l’on sait ou peut faire, et demander une permission.",
+       "minutes": 9,
+       "explanation": [
+        "can + base verbale, sans -s ni to : I can swim, she can drive (pas « she cans », pas « can to »).",
+        "Négation : can’t (cannot). Question : Can you speak Spanish? — Yes, I can. / No, I can’t.",
+        "Can I…? sert aussi à demander la permission : Can I open the window?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-can",
+         "kind": "grammar",
+         "front": "can / can’t",
+         "reading": null,
+         "romaji": null,
+         "meaning": "savoir, pouvoir (capacité, permission)"
+        },
+        {
+         "slug": "en-swim",
+         "kind": "vocabulary",
+         "front": "to swim",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nager"
+        },
+        {
+         "slug": "en-drive",
+         "kind": "vocabulary",
+         "front": "to drive",
+         "reading": null,
+         "romaji": null,
+         "meaning": "conduire"
+        },
+        {
+         "slug": "en-cook",
+         "kind": "vocabulary",
+         "front": "to cook",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cuisiner"
+        },
+        {
+         "slug": "en-help",
+         "kind": "vocabulary",
+         "front": "to help",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aider"
+        },
+        {
+         "slug": "en-open",
+         "kind": "vocabulary",
+         "front": "to open",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ouvrir"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Can you drive? — Yes, I can, but I can’t drive on the left!",
+         "reading": null,
+         "fr": "Tu sais conduire ? — Oui, mais je ne sais pas conduire à gauche !"
+        },
+        {
+         "jp": "Can I help you? — Yes, please. Can you open the door?",
+         "reading": null,
+         "fr": "Je peux vous aider ? — Oui, s’il vous plaît. Vous pouvez ouvrir la porte ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She ＿ swim very well.",
+         "choices": [
+          "can",
+          "cans",
+          "can to"
+         ],
+         "answer": "can",
+         "explanation": "can ne prend jamais de -s.",
+         "translation": "Elle sait très bien nager."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I can ＿ Italian food.",
+         "choices": [
+          "cook",
+          "cooks",
+          "to cook"
+         ],
+         "answer": "cook",
+         "explanation": "Après can : base verbale.",
+         "translation": "Je sais cuisiner italien."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Nessie",
+           "jp": "Can you swim?"
+          }
+         ],
+         "translation": "Le monstre te demande si tu sais nager.",
+         "choices": [
+          "No, I can’t!",
+          "No, I don’t swim.",
+          "No, I’m not."
+         ],
+         "answer": "No, I can’t!",
+         "explanation": "Can you…? → Yes, I can. / No, I can’t."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je peux ouvrir la fenêtre ? »",
+         "answer": [
+          "Can",
+          "I",
+          "open",
+          "the",
+          "window?"
+         ],
+         "explanation": "Permission : Can I + verbe ?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w7",
+   "title": "Le chevalier vert",
+   "region": "Royaume d’Albion",
+   "description": "Décrire ce qui se passe en ce moment, la météo et les vêtements : le présent continu.",
+   "boss": {
+    "name": "Le Chevalier vert",
+    "glyph": "K",
+    "intro": "Le géant tout vert de la cour d’Arthur lance un défi : décris ce que chacun fait à l’instant, le temps qu’il fait et ce qu’il porte, sans une erreur."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w7-c1",
+     "title": "En ce moment",
+     "lessons": [
+      {
+       "slug": "en-present-continuous",
+       "title": "Le présent continu : I’m working",
+       "objective": "Dire ce que l’on fait en ce moment avec be + -ing.",
+       "minutes": 10,
+       "explanation": [
+        "be + verbe en -ing pour une action en cours : I’m working (je suis en train de travailler), she’s calling a client.",
+        "Orthographe : write → writing (e muet tombe), sit → sitting (consonne doublée), play → playing.",
+        "Comparaison : I usually take the bus, but today I’m walking. (présent simple = habitude ; présent continu = maintenant)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-present-continuous",
+         "kind": "grammar",
+         "front": "be + -ing (I’m working)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "présent continu (action en cours)"
+        },
+        {
+         "slug": "en-now",
+         "kind": "vocabulary",
+         "front": "now",
+         "reading": null,
+         "romaji": null,
+         "meaning": "maintenant"
+        },
+        {
+         "slug": "en-today",
+         "kind": "vocabulary",
+         "front": "today",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aujourd’hui"
+        },
+        {
+         "slug": "en-call",
+         "kind": "vocabulary",
+         "front": "to call",
+         "reading": null,
+         "romaji": null,
+         "meaning": "appeler (au téléphone)"
+        },
+        {
+         "slug": "en-write",
+         "kind": "vocabulary",
+         "front": "to write",
+         "reading": null,
+         "romaji": null,
+         "meaning": "écrire"
+        },
+        {
+         "slug": "en-wait",
+         "kind": "vocabulary",
+         "front": "to wait",
+         "reading": null,
+         "romaji": null,
+         "meaning": "attendre"
+        },
+        {
+         "slug": "en-read",
+         "kind": "vocabulary",
+         "front": "to read",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lire"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Where’s Tom? — He’s in the meeting room. He’s calling a client.",
+         "reading": null,
+         "fr": "Où est Tom ? — Dans la salle de réunion. Il est en train d’appeler un client."
+        },
+        {
+         "jp": "I usually drive, but today I’m taking the train.",
+         "reading": null,
+         "fr": "D’habitude je conduis, mais aujourd’hui je prends le train."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Shh! The manager ＿ on the phone.",
+         "choices": [
+          "is talking",
+          "talks",
+          "talking"
+         ],
+         "answer": "is talking",
+         "explanation": "Action en cours : is + -ing.",
+         "translation": "Chut ! Le responsable est au téléphone."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’m ＿ an email to the client.",
+         "choices": [
+          "writing",
+          "writeing",
+          "writting"
+         ],
+         "answer": "writing",
+         "explanation": "write → writing (le e tombe).",
+         "translation": "J’écris un e-mail au client."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She usually ＿ tea, but today she’s drinking coffee.",
+         "choices": [
+          "drinks",
+          "is drinking",
+          "drinking"
+         ],
+         "answer": "drinks",
+         "explanation": "Habitude (usually) : présent simple.",
+         "translation": "D’habitude elle boit du thé, mais aujourd’hui elle boit du café."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Kate",
+           "jp": "What are you doing?"
+          }
+         ],
+         "translation": "Kate te demande ce que tu fais.",
+         "choices": [
+          "I’m reading a report.",
+          "I read a report.",
+          "I’m a report."
+         ],
+         "answer": "I’m reading a report.",
+         "explanation": "What are you doing? → I’m + -ing."
+        }
+       ]
+      },
+      {
+       "slug": "en-weather",
+       "title": "Le temps qu’il fait",
+       "objective": "Parler de la météo et des saisons.",
+       "minutes": 8,
+       "explanation": [
+        "What’s the weather like? — It’s sunny (ensoleillé), cloudy (nuageux), windy (venteux), cold (froid), hot (chaud).",
+        "Pour la pluie et la neige en ce moment : It’s raining, it’s snowing (présent continu).",
+        "Les saisons : spring, summer, autumn (en américain : fall), winter."
+       ],
+       "items": [
+        {
+         "slug": "en-weather",
+         "kind": "vocabulary",
+         "front": "weather",
+         "reading": null,
+         "romaji": null,
+         "meaning": "temps (météo)"
+        },
+        {
+         "slug": "en-sunny",
+         "kind": "vocabulary",
+         "front": "sunny",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ensoleillé"
+        },
+        {
+         "slug": "en-cloudy",
+         "kind": "vocabulary",
+         "front": "cloudy",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nuageux"
+        },
+        {
+         "slug": "en-rain",
+         "kind": "vocabulary",
+         "front": "to rain",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pleuvoir"
+        },
+        {
+         "slug": "en-cold",
+         "kind": "vocabulary",
+         "front": "cold",
+         "reading": null,
+         "romaji": null,
+         "meaning": "froid"
+        },
+        {
+         "slug": "en-hot",
+         "kind": "vocabulary",
+         "front": "hot",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chaud"
+        },
+        {
+         "slug": "en-winter",
+         "kind": "vocabulary",
+         "front": "winter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hiver"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "What’s the weather like in Glasgow? — It’s cloudy and it’s raining. As usual!",
+         "reading": null,
+         "fr": "Quel temps fait-il à Glasgow ? — C’est nuageux et il pleut. Comme d’habitude !"
+        },
+        {
+         "jp": "In winter it’s cold, but in summer it’s sometimes hot.",
+         "reading": null,
+         "fr": "En hiver il fait froid, mais en été il fait parfois chaud."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Take an umbrella. It’s ＿.",
+         "choices": [
+          "raining",
+          "sunny",
+          "hot"
+         ],
+         "answer": "raining",
+         "explanation": "Parapluie → il pleut : raining.",
+         "translation": "Prends un parapluie. Il pleut."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It’s 30 °C. It’s very ＿ today!",
+         "choices": [
+          "hot",
+          "cold",
+          "cloudy"
+         ],
+         "answer": "hot",
+         "explanation": "30 °C : hot.",
+         "translation": "Il fait 30 °C. Il fait très chaud aujourd’hui !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Anna",
+           "jp": "What’s the weather like in Paris?"
+          }
+         ],
+         "translation": "Anna te demande le temps à Paris.",
+         "choices": [
+          "It’s sunny and warm.",
+          "It’s on Monday.",
+          "I like Paris."
+         ],
+         "answer": "It’s sunny and warm.",
+         "explanation": "What’s the weather like? → It’s + adjectif."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "It’s snowing in London.",
+         "translation": "Il neige à Londres.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "snowing = il neige."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w7-c2",
+     "title": "Les vêtements",
+     "lessons": [
+      {
+       "slug": "en-clothes",
+       "title": "Les vêtements et les couleurs",
+       "objective": "Décrire ce que quelqu’un porte : wear, les couleurs, la place de l’adjectif.",
+       "minutes": 9,
+       "explanation": [
+        "wear = porter (un vêtement) : She’s wearing a blue jacket. Au travail : What do you wear to work?",
+        "L’adjectif se place avant le nom et ne s’accorde jamais : a red dress, two red dresses (pas « reds »).",
+        "Couleurs : red, blue, green, yellow, black, white, grey (gray en américain), brown."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-adjective-order",
+         "kind": "grammar",
+         "front": "adjective + noun (a red dress)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "place de l’adjectif (avant le nom, invariable)"
+        },
+        {
+         "slug": "en-wear",
+         "kind": "vocabulary",
+         "front": "to wear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "porter (un vêtement)"
+        },
+        {
+         "slug": "en-jacket",
+         "kind": "vocabulary",
+         "front": "jacket",
+         "reading": null,
+         "romaji": null,
+         "meaning": "veste"
+        },
+        {
+         "slug": "en-shoes",
+         "kind": "vocabulary",
+         "front": "shoes",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chaussures"
+        },
+        {
+         "slug": "en-shirt",
+         "kind": "vocabulary",
+         "front": "shirt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chemise"
+        },
+        {
+         "slug": "en-green",
+         "kind": "vocabulary",
+         "front": "green",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vert"
+        },
+        {
+         "slug": "en-black",
+         "kind": "vocabulary",
+         "front": "black",
+         "reading": null,
+         "romaji": null,
+         "meaning": "noir"
+        },
+        {
+         "slug": "en-blue",
+         "kind": "vocabulary",
+         "front": "blue",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bleu"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The Green Knight is wearing green armour and green shoes!",
+         "reading": null,
+         "fr": "Le Chevalier vert porte une armure verte et des chaussures vertes !"
+        },
+        {
+         "jp": "For the interview, I’m wearing a white shirt and a black jacket.",
+         "reading": null,
+         "fr": "Pour l’entretien, je porte une chemise blanche et une veste noire."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She’s wearing ＿.",
+         "choices": [
+          "a blue jacket",
+          "a jacket blue",
+          "a jacket blues"
+         ],
+         "answer": "a blue jacket",
+         "explanation": "Adjectif avant le nom.",
+         "translation": "Elle porte une veste bleue."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’ve got two ＿ shirts.",
+         "choices": [
+          "white",
+          "whites",
+          "whiten"
+         ],
+         "answer": "white",
+         "explanation": "L’adjectif ne prend jamais de -s.",
+         "translation": "J’ai deux chemises blanches."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Tom is wearing black shoes.",
+         "translation": "Les chaussures de Tom sont noires.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "black = noir."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il porte une chemise verte. »",
+         "answer": [
+          "He",
+          "is",
+          "wearing",
+          "a",
+          "green",
+          "shirt."
+         ],
+         "explanation": "be + wearing + adjectif + nom."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-w8",
+   "title": "Le réveil du dragon rouge",
+   "region": "Royaume d’Albion",
+   "description": "Raconter son week-end au passé : was / were, le prétérit des verbes réguliers et des irréguliers les plus courants.",
+   "boss": {
+    "name": "Y Ddraig Goch, le dragon rouge",
+    "glyph": "D",
+    "intro": "Le dragon du pays de Galles se réveille sous la colline et veut savoir ce que tu as fait pour mériter l’épée. Raconte ton voyage au passé, sans faute."
+   },
+   "chapters": [
+    {
+     "slug": "a1-w8-c1",
+     "title": "Hier",
+     "lessons": [
+      {
+       "slug": "en-was-were",
+       "title": "Le passé de be : was, were",
+       "objective": "Dire où l’on était et comment c’était hier.",
+       "minutes": 9,
+       "explanation": [
+        "I / he / she / it was ; you / we / they were. Négation : wasn’t, weren’t.",
+        "Question : Were you at the office yesterday? — No, I wasn’t. I was at home.",
+        "Repères du passé : yesterday (hier), last week (la semaine dernière), last night (hier soir), two days ago (il y a deux jours)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-was-were",
+         "kind": "grammar",
+         "front": "was / were",
+         "reading": null,
+         "romaji": null,
+         "meaning": "était, étaient (passé de be)"
+        },
+        {
+         "slug": "en-yesterday",
+         "kind": "vocabulary",
+         "front": "yesterday",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hier"
+        },
+        {
+         "slug": "en-last-week",
+         "kind": "vocabulary",
+         "front": "last week",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la semaine dernière"
+        },
+        {
+         "slug": "en-ago",
+         "kind": "vocabulary",
+         "front": "ago",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il y a (temps écoulé)"
+        },
+        {
+         "slug": "en-tired",
+         "kind": "vocabulary",
+         "front": "tired",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fatigué"
+        },
+        {
+         "slug": "en-home",
+         "kind": "vocabulary",
+         "front": "home",
+         "reading": null,
+         "romaji": null,
+         "meaning": "maison, chez soi"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Where were you yesterday? — I was in Cardiff. It was great!",
+         "reading": null,
+         "fr": "Où étais-tu hier ? — J’étais à Cardiff. C’était génial !"
+        },
+        {
+         "jp": "We weren’t at the office last week. We were on holiday.",
+         "reading": null,
+         "fr": "Nous n’étions pas au bureau la semaine dernière. Nous étions en vacances."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ tired last night.",
+         "choices": [
+          "was",
+          "were",
+          "am"
+         ],
+         "answer": "was",
+         "explanation": "Passé avec I : was.",
+         "translation": "J’étais fatigué hier soir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "They ＿ at home yesterday.",
+         "choices": [
+          "were",
+          "was",
+          "are"
+         ],
+         "answer": "were",
+         "explanation": "Passé avec they : were.",
+         "translation": "Ils étaient à la maison hier."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Mr Ambrose",
+           "jp": "Were you at the office on Friday?"
+          }
+         ],
+         "translation": "M. Ambrose te demande si tu étais au bureau vendredi.",
+         "choices": [
+          "No, I wasn’t. I was ill.",
+          "No, I don’t.",
+          "No, I’m not."
+         ],
+         "answer": "No, I wasn’t. I was ill.",
+         "explanation": "Were you…? → Yes, I was. / No, I wasn’t."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "I was in Wales two days ago.",
+         "translation": "La personne est au pays de Galles en ce moment.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "two days ago = il y a deux jours : c’est passé."
+        }
+       ]
+      },
+      {
+       "slug": "en-past-regular",
+       "title": "Le prétérit régulier : worked, played",
+       "objective": "Raconter des actions passées avec les verbes réguliers en -ed.",
+       "minutes": 10,
+       "explanation": [
+        "Le prétérit (past simple) raconte une action terminée : I worked late yesterday. Les verbes réguliers prennent -ed à toutes les personnes.",
+        "Orthographe : like → liked, stop → stopped, study → studied. Prononciation : worked « t », played « d », visited « id ».",
+        "Question et négation avec did + base verbale : Did you visit the castle? I didn’t watch TV."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-past-ed",
+         "kind": "grammar",
+         "front": "regular past -ed (worked)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passé simple des verbes réguliers"
+        },
+        {
+         "slug": "gram-en-did",
+         "kind": "grammar",
+         "front": "did / didn’t",
+         "reading": null,
+         "romaji": null,
+         "meaning": "auxiliaire des questions et négations au passé"
+        },
+        {
+         "slug": "en-visit",
+         "kind": "vocabulary",
+         "front": "to visit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "visiter, rendre visite"
+        },
+        {
+         "slug": "en-watch",
+         "kind": "vocabulary",
+         "front": "to watch",
+         "reading": null,
+         "romaji": null,
+         "meaning": "regarder (un film, la télé)"
+        },
+        {
+         "slug": "en-play",
+         "kind": "vocabulary",
+         "front": "to play",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jouer"
+        },
+        {
+         "slug": "en-stay",
+         "kind": "vocabulary",
+         "front": "to stay",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rester, séjourner"
+        },
+        {
+         "slug": "en-castle",
+         "kind": "vocabulary",
+         "front": "castle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "château fort"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Last weekend we visited Conwy Castle and stayed in a small hotel.",
+         "reading": null,
+         "fr": "Le week-end dernier, nous avons visité le château de Conwy et séjourné dans un petit hôtel."
+        },
+        {
+         "jp": "Did you watch the match? — No, I didn’t. I worked late.",
+         "reading": null,
+         "fr": "Tu as regardé le match ? — Non. J’ai travaillé tard."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Yesterday I ＿ my grandmother.",
+         "choices": [
+          "visited",
+          "visit",
+          "visits"
+         ],
+         "answer": "visited",
+         "explanation": "yesterday → prétérit : visited.",
+         "translation": "Hier, j’ai rendu visite à ma grand-mère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We ＿ tennis last Sunday.",
+         "choices": [
+          "played",
+          "plaied",
+          "play"
+         ],
+         "answer": "played",
+         "explanation": "play → played (voyelle + y : on garde y).",
+         "translation": "Nous avons joué au tennis dimanche dernier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Did you ＿ the film?",
+         "choices": [
+          "watch",
+          "watched",
+          "watching"
+         ],
+         "answer": "watch",
+         "explanation": "Après did : base verbale.",
+         "translation": "Tu as regardé le film ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Kate",
+           "jp": "Did you stay in a hotel?"
+          }
+         ],
+         "translation": "Kate te pose une question sur ton voyage.",
+         "choices": [
+          "Yes, I did.",
+          "Yes, I was.",
+          "Yes, I stay."
+         ],
+         "answer": "Yes, I did.",
+         "explanation": "Did you…? → Yes, I did. / No, I didn’t."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "a1-w8-c2",
+     "title": "Un voyage inoubliable",
+     "lessons": [
+      {
+       "slug": "en-past-irregular",
+       "title": "Les irréguliers : went, had, saw",
+       "objective": "Utiliser les verbes irréguliers les plus fréquents au passé.",
+       "minutes": 10,
+       "explanation": [
+        "Les verbes les plus courants sont irréguliers et s’apprennent par cœur : go → went, have → had, see → saw, eat → ate, buy → bought, get → got, take → took.",
+        "Avec did, on revient à la base : Where did you go? (pas « did you went »)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-past-irregular",
+         "kind": "grammar",
+         "front": "irregular past (went, had)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passé simple des verbes irréguliers"
+        },
+        {
+         "slug": "en-went",
+         "kind": "vocabulary",
+         "front": "went",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suis allé (passé de go)"
+        },
+        {
+         "slug": "en-had",
+         "kind": "vocabulary",
+         "front": "had",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ai eu (passé de have)"
+        },
+        {
+         "slug": "en-saw",
+         "kind": "vocabulary",
+         "front": "saw",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ai vu (passé de see)"
+        },
+        {
+         "slug": "en-bought",
+         "kind": "vocabulary",
+         "front": "bought",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ai acheté (passé de buy)"
+        },
+        {
+         "slug": "en-took",
+         "kind": "vocabulary",
+         "front": "took",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ai pris (passé de take)"
+        },
+        {
+         "slug": "en-holiday",
+         "kind": "vocabulary",
+         "front": "holiday",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vacances"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Last summer I went to Wales. I saw a castle on a hill and I had fish and chips by the sea.",
+         "reading": null,
+         "fr": "L’été dernier, je suis allé au pays de Galles. J’ai vu un château sur une colline et j’ai mangé un fish and chips au bord de la mer."
+        },
+        {
+         "jp": "Where did you go on holiday? — We went to Scotland. We took the night train.",
+         "reading": null,
+         "fr": "Où êtes-vous partis en vacances ? — En Écosse. Nous avons pris le train de nuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Last year I ＿ to Edinburgh.",
+         "choices": [
+          "went",
+          "goed",
+          "go"
+         ],
+         "answer": "went",
+         "explanation": "go → went.",
+         "translation": "L’année dernière, je suis allé à Édimbourg."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She ＿ a new jacket on Saturday.",
+         "choices": [
+          "bought",
+          "buyed",
+          "buys"
+         ],
+         "answer": "bought",
+         "explanation": "buy → bought.",
+         "translation": "Elle a acheté une nouvelle veste samedi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Where did you ＿ on holiday?",
+         "choices": [
+          "go",
+          "went",
+          "going"
+         ],
+         "answer": "go",
+         "explanation": "Après did : base verbale.",
+         "translation": "Où es-tu allé en vacances ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "We saw the dragon yesterday.",
+         "translation": "Nous avons vu le dragon hier.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "saw = passé de see (voir)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "a1-final",
+   "title": "Simulation TOEIC A1 : l’épée dans le rocher",
+   "region": "Royaume d’Albion",
+   "description": "Examen blanc au format du TOEIC Listening & Reading, en anglais : questions-réponses, conversations et annonces, phrases et textes à compléter, compréhension écrite. Noté sur 990 ; objectif A1 à 120 points.",
+   "exam": "a1-toeic",
+   "chapters": []
+  }
+ ]
+}

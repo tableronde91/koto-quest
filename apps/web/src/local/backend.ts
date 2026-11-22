@@ -52,7 +52,7 @@ import {
   planPlacementBlock,
   BOSS_RULES,
   JLPT_DRILLS,
-  TOPIK_DRILLS,
+  drillsFor,
   JlptDrillPart,
   planJlptDrill,
   exampleIndex,
@@ -93,6 +93,7 @@ import {
   AchievementDef,
   AchievementStats,
   achievementProgress,
+  languageOfSlug,
   achievementReward,
   longestStreak,
   newlyUnlocked,
@@ -135,7 +136,7 @@ import type {
   ReadingLogRow,
   ReadingResultDto,
 } from '@koto/shared';
-import { ReadingError, applyStudyChoice, languageOfLevel, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type StudyChoice, type StudyLanguage } from '@koto/shared';
+import { ReadingError, applyStudyChoice, languageInfo, languageOfLevel, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type StudyChoice, type StudyLanguage } from '@koto/shared';
 import content from '../../../../content/n5/n5.json';
 import contentN4 from '../../../../content/n4/n4.json';
 import contentN3 from '../../../../content/n3/n3.json';
@@ -147,10 +148,12 @@ import contentTopik3 from '../../../../content/topik3/topik3.json';
 import contentTopik4 from '../../../../content/topik4/topik4.json';
 import contentTopik5 from '../../../../content/topik5/topik5.json';
 import contentTopik6 from '../../../../content/topik6/topik6.json';
+import contentA1 from '../../../../content/a1/a1.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import hangulContent from '../../../../content/characters/hangul.json';
 import expressionsContent from '../../../../content/expressions/expressions.json';
 import expressionsKoContent from '../../../../content/expressions/expressions-ko.json';
+import expressionsEnContent from '../../../../content/expressions/expressions-en.json';
 import readingContent from '../../../../content/reading/stories.json';
 import cosmeticsCatalog from '../../../../content/cosmetics/catalog.json';
 import bankN5 from '../../../../content/exams/n5-jlpt.json';
@@ -164,9 +167,10 @@ import bankTopik3 from '../../../../content/exams/topik3.json';
 import bankTopik4 from '../../../../content/exams/topik4.json';
 import bankTopik5 from '../../../../content/exams/topik5.json';
 import bankTopik6 from '../../../../content/exams/topik6.json';
+import bankA1 from '../../../../content/exams/a1-toeic.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -178,7 +182,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,
@@ -197,20 +201,21 @@ const ITEMS = new Map<string, ItemJson>();
 LESSONS.forEach((l) => l.items.forEach((it) => ITEMS.set(it.slug, it)));
 // Onglet Caractères : mêmes slugs que le parcours, donc maîtrise partagée.
 type CharactersJson = { notice?: string; sections: { slug: string; glyph?: string; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[] };
-const CHARACTERS_BY_LANG: Record<StudyLanguage, CharactersJson> = { ja: charactersContent as unknown as CharactersJson, ko: hangulContent as unknown as CharactersJson };
+const CHARACTERS_BY_LANG: Record<StudyLanguage, CharactersJson> = { ja: charactersContent as unknown as CharactersJson, ko: hangulContent as unknown as CharactersJson, en: { sections: [] } };
 /** Langue de chaque notion (les révisions, les jeux et les duels ne mélangent pas les langues). */
 const LANG_OF = new Map<string, StudyLanguage>();
 LESSONS.forEach((l) => l.items.forEach((it) => LANG_OF.set(it.slug, languageOfLevel(l.level))));
-for (const lang of ['ja', 'ko'] as const)
+for (const lang of ['ja', 'ko', 'en'] as const)
   CHARACTERS_BY_LANG[lang].sections.forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => { ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); })));
 type ExpressionJson = ItemJson & { note: string; register: ExpressionRegister; example?: { jp: string; fr: string } };
 type ExpressionsJson = { notice?: string; themes: { slug: string; glyph: string; title: string; description: string; expressions: ExpressionJson[] }[] };
-const EXPRESSIONS_BY_LANG: Record<StudyLanguage, ExpressionsJson> = { ja: expressionsContent as unknown as ExpressionsJson, ko: expressionsKoContent as unknown as ExpressionsJson };
-for (const lang of ['ja', 'ko'] as const)
+const EXPRESSIONS_BY_LANG: Record<StudyLanguage, ExpressionsJson> = { ja: expressionsContent as unknown as ExpressionsJson, ko: expressionsKoContent as unknown as ExpressionsJson, en: expressionsEnContent as unknown as ExpressionsJson };
+for (const lang of ['ja', 'ko', 'en'] as const)
   EXPRESSIONS_BY_LANG[lang].themes.forEach((t) => t.expressions.forEach((it) => { if (!ITEMS.has(it.slug)) ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); }));
 const POOL: EngineItem[] = [...ITEMS.values()].map(toEngine);
-/** Réserve de distracteurs par langue (jamais de choix japonais dans une question coréenne). */
-const POOL_BY_LANG: Record<StudyLanguage, EngineItem[]> = { ja: POOL.filter((i) => LANG_OF.get(i.id) !== 'ko'), ko: POOL.filter((i) => LANG_OF.get(i.id) === 'ko') };
+/** Réserve de distracteurs par langue (jamais de choix japonais dans une question coréenne ou anglaise). */
+const langOfItem = (id: string): StudyLanguage => LANG_OF.get(id) ?? 'ja';
+const POOL_BY_LANG: Record<StudyLanguage, EngineItem[]> = { ja: POOL.filter((i) => langOfItem(i.id) === 'ja'), ko: POOL.filter((i) => langOfItem(i.id) === 'ko'), en: POOL.filter((i) => langOfItem(i.id) === 'en') };
 /** Notion de la langue étudiée. */
 const inLang = (id: string) => ITEMS.has(id) && (LANG_OF.get(id) ?? 'ja') === studyLang();
 /** Distracteurs centrés sur le monde de la leçon (voir focusedPool). */
@@ -770,7 +775,7 @@ function dashboard(): DashboardDto {
   const s = load();
   const t = now();
   const st = statuses();
-  const targetLessons = lessonsOf(s.prefs.targetLevel).length ? lessonsOf(s.prefs.targetLevel) : lessonsOf(studyLang() === 'ko' ? 'TOPIK1' : 'N5');
+  const targetLessons = lessonsOf(s.prefs.targetLevel).length ? lessonsOf(s.prefs.targetLevel) : lessonsOf(languageInfo(studyLang()).firstLevel);
   const completed = targetLessons.filter((l) => st.get(l.slug) === 'completed').length;
   const key = todayKey();
   const today = s.daily[key];
@@ -1248,9 +1253,15 @@ function examSubmit(slug: string, sessionId: string, answers: Record<string, unk
   };
 }
 
-const PLACEMENT_WORLDS = N5_WORLDS.filter((w) => w.chapters.some((c) => c.lessons.length));
+/** Test de positionnement : mondes du niveau visé (N5, TOPIK 1, A1…), comme sur le serveur. */
+const placementWorlds = () => {
+  const target = load().prefs.targetLevel;
+  const own = WORLDS.filter((w) => w.level === target && w.chapters.some((c) => c.lessons.length));
+  return own.length ? own : N5_WORLDS.filter((w) => w.chapters.some((c) => c.lessons.length));
+};
 
 function placementBlock(sessionId: string, index: number): PlacementStepDto {
+  const PLACEMENT_WORLDS = placementWorlds();
   const w = PLACEMENT_WORLDS[index];
   const lessons = w.chapters.flatMap((c) => c.lessons);
   const items = [...new Map(lessons.flatMap((l) => l.items.map((it) => [it.slug, toEngine(it)]))).values()];
@@ -1282,6 +1293,7 @@ function placementAnswer(sessionId: string, answers: Record<string, unknown>): P
     q.answeredAt = t.toISOString();
     if (ok) correct++;
   }
+  const PLACEMENT_WORLDS = placementWorlds();
   const world = PLACEMENT_WORLDS[index];
   const ok = placementBlockPassed(correct);
   const nextPassed = ok ? [...passed, world.slug] : passed;
@@ -1319,7 +1331,7 @@ function jlptMaterial() {
   const lang = studyLang();
   const learned = Object.keys(s.cards).filter(inLang).map((id) => toEngine(ITEMS.get(id)!));
   const authored = LESSONS.filter((l) => languageOfLevel(l.level) === lang && s.progress[l.slug]?.status === 'completed').flatMap((l) => l.exercises);
-  return { learned, authored, lang, pool: POOL_BY_LANG[lang], drills: lang === 'ko' ? TOPIK_DRILLS : JLPT_DRILLS };
+  return { learned, authored, lang, pool: POOL_BY_LANG[lang], drills: drillsFor(lang) };
 }
 
 function jlptDrills(): JlptDrillsDto {
@@ -1379,18 +1391,22 @@ function achievementStats(): AchievementStats {
     itemsCollected: (s.inventory ?? []).length,
     placementDone: s.placementAt ? 1 : 0,
     masteredKana,
-    japaneseBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && !slug.startsWith('topik')).length,
-    jlptPassed: (s.exams ?? []).filter((e) => e.passed && !e.slug.startsWith('topik')).length,
+    japaneseBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && languageOfSlug(slug) === 'ja').length,
+    jlptPassed: (s.exams ?? []).filter((e) => e.passed && languageOfSlug(e.slug) === 'ja').length,
     japaneseChapters: (s.reading ?? []).filter((r) => JA_CHAPTERS.has(r.chapter)).length,
     masteredHangul,
     koreanBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && slug.startsWith('topik')).length,
     topikPassed: (s.exams ?? []).filter((e) => e.passed && e.slug.startsWith('topik')).length,
     koreanChapters: (s.reading ?? []).filter((r) => KO_CHAPTERS.has(r.chapter)).length,
+    englishBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && languageOfSlug(slug) === 'en').length,
+    toeicPassed: (s.exams ?? []).filter((e) => e.passed && languageOfSlug(e.slug) === 'en').length,
+    englishChapters: (s.reading ?? []).filter((r) => EN_CHAPTERS.has(r.chapter)).length,
   };
 }
 /** Chapitres des contes coréens (succès « contes coréens »). */
 const JA_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ja').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 const KO_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ko').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
+const EN_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'en').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 
 const achievementDto = (def: AchievementDef, value: number, unlocked: boolean, at: string | null): AchievementDto => ({
   slug: def.slug, title: def.title, description: def.description, glyph: def.glyph, category: def.category, rarity: def.rarity,
@@ -1432,7 +1448,8 @@ const duels = localDuels({
   },
   me: () => ({ displayName: load().user.displayName, avatar: normalizeAvatar(load().avatar) }),
   seenItems: () => seenItems(),
-  starterItems: () => [...(WORLD_POOL.get(studyLang() === 'ko' ? 'topik1-w1' : 'n5-w1') ?? [])].filter((i) => i.kind === 'kana'),
+  // Premier monde de la langue : les kana ou le hangeul ; en anglais, les premiers mots
+  starterItems: () => [...(WORLD_POOL.get(`${languageInfo(studyLang()).firstLevel.toLowerCase()}-w1`) ?? [])].filter((i) => i.kind === (studyLang() === 'en' ? 'vocabulary' : 'kana')),
   get pool() {
     return POOL_BY_LANG[studyLang()];
   },

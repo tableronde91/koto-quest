@@ -2,7 +2,7 @@ import { HttpException, Injectable } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { readingReward } from '@koto/learning-engine';
-import { ReadingError, languageOfLevel, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type ReadingCatalog, type ReadingChapterDto, type ReadingOverviewDto, type ReadingResultDto } from '@koto/shared';
+import { ReadingError, languageOfLevel, type StudyLanguage, readingCatalogFor, readingChapter, readingGrade, readingOverview, readingResult, type ReadingCatalog, type ReadingChapterDto, type ReadingOverviewDto, type ReadingResultDto } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ActivityService } from '../learning/activity.service';
 
@@ -21,7 +21,7 @@ export class ReadingService {
   }
 
   /** Chapitres des contes d'une langue (succès « contes coréens »). */
-  chapterSlugs(lang: 'ja' | 'ko'): Set<string> {
+  chapterSlugs(lang: StudyLanguage): Set<string> {
     return new Set(readingCatalogFor(this.load(), lang).stories.flatMap((st) => st.chapters.map((c) => c.slug)));
   }
 

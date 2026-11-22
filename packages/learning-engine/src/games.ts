@@ -5,7 +5,7 @@ import { Rng, shuffle } from './random';
  * Mini-jeux chronométrés (phase 2). Ils se jouent sur les notions déjà rencontrées :
  * c'est de l'entraînement, ils ne modifient pas la planification des révisions.
  */
-export type GameId = 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'speed' | 'listening';
+export type GameId = 'kana-rush' | 'kanji-rush' | 'hangul-rush' | 'word-rush' | 'speed' | 'listening';
 
 export interface GameDef {
   id: GameId;
@@ -20,6 +20,15 @@ export interface GameDef {
 }
 
 export const GAMES: Record<GameId, GameDef> = {
+  'word-rush': {
+    id: 'word-rush',
+    title: 'Word Rush',
+    description: 'Retrouve le sens d’un maximum de mots anglais en une minute.',
+    durationSec: 60,
+    minItems: 6,
+    kinds: ['vocabulary'],
+    questionTypes: ['meaning_choice', 'reverse_choice'],
+  },
   'kana-rush': {
     id: 'kana-rush',
     title: 'Kana Rush',
@@ -70,8 +79,9 @@ export const GAMES: Record<GameId, GameDef> = {
 
 export const GAME_IDS = Object.keys(GAMES) as GameId[];
 
-/** Mini-jeux proposés selon la langue étudiée : Kana Rush et Kanji Rush en japonais, Hangeul Rush en coréen. */
-export const gameIdsFor = (language: 'ja' | 'ko'): GameId[] => (language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening']);
+/** Mini-jeux proposés selon la langue étudiée : Kana Rush et Kanji Rush en japonais, Hangeul Rush en coréen, Word Rush en anglais. */
+export const gameIdsFor = (language: 'ja' | 'ko' | 'en'): GameId[] =>
+  language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : language === 'en' ? ['word-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening'];
 
 /** Marge accordée pour la latence réseau entre la fin du chrono et la dernière réponse. */
 export const GAME_GRACE_MS = 3000;

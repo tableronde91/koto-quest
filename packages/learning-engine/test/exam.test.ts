@@ -140,3 +140,20 @@ describe('examens blancs JLPT N4 à N1 au format officiel (abrégé)', () => {
     expect(gradeExam(EXAM_N1_JLPT, sheet(EXAM_N1_JLPT, { vocab: 8, grammar: 6, reading: 2, listening: 4 }).qs, sheet(EXAM_N1_JLPT, { vocab: 8, grammar: 6, reading: 2, listening: 4 }).answers)).toMatchObject({ passed: true, scaled: { total: 108 } });
   });
 });
+
+describe('TOEIC (anglais, niveaux du CECRL)', () => {
+  const q = (section: 'listening' | 'grammar' | 'reading') => ({ section, type: 'particle_choice', answer: 'a' });
+  const questions = [...Array(10).fill(q('listening')), ...Array(12).fill(q('grammar')), ...Array(6).fill(q('reading'))];
+
+  it('barème sur 990 : Listening et Reading de 5 à 495, objectif selon le niveau', () => {
+    expect(examScale(EXAMS['a1-toeic'])).toMatchObject({ system: 'toeic', listening: 495, language: 495, total: 990, passTotal: 120 });
+    const all = gradeExam(EXAMS['a1-toeic'], questions, questions.map(() => 'a'));
+    expect(all.scaled).toMatchObject({ listening: 495, language: 495, total: 990 });
+    const none = gradeExam(EXAMS['a1-toeic'], questions, questions.map(() => undefined));
+    expect(none).toMatchObject({ passed: false, scaled: { listening: 5, language: 5, total: 10 } });
+    // 3 bonnes réponses en écoute sur 10, rien en lecture : 5 + 147 → 150, + 5 = 155 ≥ 120
+    const some = gradeExam(EXAMS['a1-toeic'], questions, questions.map((x, i) => (i < 3 ? 'a' : undefined)));
+    expect(some.scaled!.total).toBe(155);
+    expect(some.passed).toBe(true);
+  });
+});

@@ -6,6 +6,7 @@ import {
   AchievementStats,
   achievementProgress,
   achievementReward,
+  languageOfSlug,
   longestStreak,
   masteryOf,
   newlyUnlocked,
@@ -52,9 +53,12 @@ export class AchievementsService implements OnModuleInit {
       this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null }, worldSlug: { startsWith: 'topik' } } }),
       this.prisma.examAttempt.count({ where: { userId, passed: true, exam: { slug: { startsWith: 'topik' } } } }),
       this.prisma.readingLog.findMany({ where: { userId }, select: { chapter: true } }),
-      this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null }, NOT: { worldSlug: { startsWith: 'topik' } } } }),
-      this.prisma.examAttempt.count({ where: { userId, passed: true, NOT: { exam: { slug: { startsWith: 'topik' } } } } }),
+      this.prisma.bossResult.findMany({ where: { userId, firstVictoryAt: { not: null } }, select: { worldSlug: true } }),
+      this.prisma.examAttempt.findMany({ where: { userId, passed: true }, select: { exam: { select: { slug: true } } } }),
     ]);
+    const bossesIn = (lang: 'ja' | 'en') => jaBosses.filter((b) => languageOfSlug(b.worldSlug) === lang).length;
+    const passedIn = (lang: 'ja' | 'en') => jlptPassed.filter((e) => languageOfSlug(e.exam.slug) === lang).length;
+    const enChapters = this.reading.chapterSlugs('en');
     const jaChapters = this.reading.chapterSlugs('ja');
     const koChapters = this.reading.chapterSlugs('ko');
     let masteredItems = 0;
@@ -85,13 +89,16 @@ export class AchievementsService implements OnModuleInit {
       itemsCollected: items,
       placementDone: placement > 0 ? 1 : 0,
       masteredKana,
-      japaneseBosses: jaBosses,
-      jlptPassed,
+      japaneseBosses: bossesIn('ja'),
+      jlptPassed: passedIn('ja'),
       japaneseChapters: chapters.filter((r) => jaChapters.has(r.chapter)).length,
       masteredHangul,
       koreanBosses: koBosses,
       topikPassed,
       koreanChapters: chapters.filter((r) => koChapters.has(r.chapter)).length,
+      englishBosses: bossesIn('en'),
+      toeicPassed: passedIn('en'),
+      englishChapters: chapters.filter((r) => enChapters.has(r.chapter)).length,
     };
   }
 

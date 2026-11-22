@@ -1,3 +1,4 @@
+import { studyWords } from '../components/StudyLanguage';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -5,7 +6,7 @@ import { levelFromXp } from '@koto/learning-engine';
 import { examLevelLabel, levelsOfLanguage, type DuelLobbyDto, type MeDto } from '@koto/shared';
 
 /** Niveaux dont le parcours est publié (les autres sont affichés « bientôt »). */
-const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6']);
+const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6', 'A1']);
 import { api } from '../api/client';
 import { useUpdatePrefs } from '../api/hooks';
 import { Avatar } from '../components/Avatar';
@@ -77,7 +78,7 @@ function GoalsSection({ me }: { me: MeDto }) {
   return (
     <section aria-labelledby="goals-title" className="flex flex-col gap-5">
       <h2 id="goals-title" className="text-2xl">{T("Identité et objectifs")}</h2>
-      <p className="-mt-3 text-sm text-ink-soft">{T("Tu étudies le {0}. Pour changer de langue, va dans les ", [(me.preferences.studyLanguage ?? 'ja') === 'ko' ? T('coréen') : T('japonais')])}<Link to="/settings" className="font-bold underline">{T("Réglages")}</Link>.</p>
+      <p className="-mt-3 text-sm text-ink-soft">{T("Tu étudies {0}. Pour changer de langue, va dans les ", [studyWords(me.preferences.studyLanguage ?? 'ja').theLanguage])}<Link to="/settings" className="font-bold underline">{T("Réglages")}</Link>.</p>
       <div className="flex flex-wrap gap-6">
         <label className="flex flex-col gap-1 font-bold">{T("Pseudo")}<input className="field w-60 font-normal" defaultValue={me.displayName} maxLength={40} onBlur={(e) => e.target.value.trim() && e.target.value !== me.displayName && update.mutate({ displayName: e.target.value })} />
         </label>

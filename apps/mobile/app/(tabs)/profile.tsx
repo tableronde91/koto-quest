@@ -12,6 +12,7 @@ import { RankBadge } from '../../src/RankBadge';
 import { Avatar } from '../../src/Avatar';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
+import { studyWords } from '../../src/study';
 import { T } from '../../src/i18n';
 
 const MINUTES = [10, 15, 20, 30, 45, 60, 90];
@@ -101,7 +102,7 @@ function Goals({ me }: { me: MeDto }) {
           style={inputStyle}
         />
       </Field>
-      <P soft style={{ fontSize: 13 }}>{T('Tu étudies le {0}. La langue se change dans les Réglages.', [(p.studyLanguage ?? 'ja') === 'ko' ? T('coréen') : T('japonais')])}</P>
+      <P soft style={{ fontSize: 13 }}>{T('Tu étudies {0}. La langue se change dans les Réglages.', [studyWords(p.studyLanguage ?? 'ja').theLanguage])}</P>
       <Field label={T('Niveau visé')}>
         <Chips label={T('Niveau visé')} options={levelsOfLanguage(p.studyLanguage ?? 'ja').map((l) => ({ value: l, label: levelLabel(l) }))} value={p.targetLevel} onChange={(v) => save({ targetLevel: v })} />
       </Field>

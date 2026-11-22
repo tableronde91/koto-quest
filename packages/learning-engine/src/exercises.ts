@@ -217,7 +217,7 @@ export function generateQuestion(
     case 'reverse_choice':
       return choiceQuestion(
         'front',
-        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
+        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : isEnglish(item.front) ? `Comment dit-on « ${item.meaning} » en anglais ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
         { text: item.meaning },
       );
     case 'reading_choice':
@@ -273,7 +273,7 @@ export function generateMatching(items: readonly EngineItem[], rng: Rng): Questi
   const chosen = shuffle(unique, rng).slice(0, 5);
   return {
     type: 'matching',
-    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : 'Associe chaque élément japonais à son sens.',
+    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : chosen.every((i) => isEnglish(i.front)) ? 'Associe chaque mot anglais à son sens.' : 'Associe chaque élément japonais à son sens.',
     pairs: { left: chosen.map((i) => i.front), right: shuffle(chosen.map((i) => i.meaning), rng) },
     answer: chosen.map((i) => i.meaning),
     explanation: chosen.map(describe).join(' '),
@@ -318,9 +318,17 @@ export function isKorean(s: string | null | undefined): boolean {
   return !!s && /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(s);
 }
 
-/** Recolle les segments d'une phrase : sans espace en japonais, avec des espaces en coréen (띄어쓰기). */
+/** Texte en kana ou en kanji (japonais). */
+const hasJapaneseScript = (s: string) => /[\u3040-\u30ff\u3400-\u9fff]/.test(s) && !isKorean(s);
+
+/** Texte anglais : des lettres latines, sans kana, kanji ni hangeul. */
+export function isEnglish(s: string | null | undefined): boolean {
+  return !!s && /[A-Za-z]/.test(s) && !isKorean(s) && !hasJapaneseScript(s);
+}
+
+/** Recolle les segments d'une phrase : sans espace en japonais, avec des espaces en coréen (띄어쓰기) et en anglais. */
 export function joinTokens(tokens: readonly string[]): string {
-  return tokens.some(isKorean) ? tokens.map((t) => t.trim()).join(' ') : tokens.join('');
+  return tokens.some(hasJapaneseScript) && !tokens.some(isKorean) ? tokens.join('') : tokens.map((t) => t.trim()).join(' ');
 }
 
 /** Marque du trou dans une phrase à compléter. */
@@ -343,7 +351,8 @@ export function authoredToQuestion(ex: AuthoredExercise, rng: Rng, itemId?: stri
     ? { lines: ex.lines, text: ex.translation }
     : { jp: ex.sentence?.replace(BLANK_RE, BLANK), reading: ex.reading?.replace(BLANK_RE, BLANK), text: ex.translation };
   const spoken = ex.sentence ? (ex.reading ?? ex.sentence).replace(BLANK_RE, BLANK) : undefined;
-  const answerIsJp = typeof ex.answer === 'string' && isJapanese(ex.answer);
+  // En anglais, la réponse se prononce aussi (ce n'est jamais du romaji).
+  const answerIsJp = typeof ex.answer === 'string' && (isJapanese(ex.answer) || (isEnglish(spoken) && isEnglish(ex.answer)));
   let answerAudio: string | undefined;
   if (ex.type === 'dialogue_choice') answerAudio = [...(ex.lines ?? []).map((l) => l.reading ?? l.jp), BLANK].join('　');
   else if (spoken && hasBlank(spoken)) answerAudio = answerIsJp ? spoken : spoken.replace(BLANK_RE, '');

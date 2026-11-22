@@ -313,11 +313,13 @@ test('hors ligne : pièces gagnées en leçon, achat en boutique, objet équipé
     }
     await expect(page.getByText(/\+15 pièces/)).toBeVisible();
   }
-  const coins = await page.evaluate(() => JSON.parse(localStorage.getItem('koto-quest-local-v1')!).coins);
-  expect(coins).toBeGreaterThanOrEqual(30);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('koto-quest-local-v1')!).coins)).toBeGreaterThanOrEqual(30);
 
   await page.goto(FILE + '#/avatar?t=boutique');
   await page.getByRole('group', { name: 'Catégorie' }).getByRole('button', { name: 'Accessoires' }).click();
+  // Les succès des leçons sont vérifiés (et récompensés) en arrivant sur la page : on compte les pièces après
+  await page.waitForTimeout(1500);
+  const coins = await page.evaluate(() => JSON.parse(localStorage.getItem('koto-quest-local-v1')!).coins);
   await page.getByRole('button', { name: 'Acheter Lunettes rondes pour 20 pièces' }).click();
   await expect(page.getByText('Lunettes rondes acheté.')).toBeVisible();
   // Les trophées restent verrouillés tant que le gardien n'est pas vaincu
@@ -326,7 +328,8 @@ test('hors ligne : pièces gagnées en leçon, achat en boutique, objet équipé
   await expect(page.getByText('Équipé')).toBeVisible();
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('koto-quest-local-v1')!));
   expect(saved.avatar.accessory).toBe('acc-glasses');
-  expect(saved.coins).toBe(coins - 20);
+  // − 20 pour l'achat (+ 10 si le succès « Collectionneur » du premier objet est déjà crédité)
+  expect([coins - 20, coins - 10]).toContain(saved.coins);
 
   // Apparence : changement de coiffure enregistré
   await page.getByRole('tab', { name: 'Apparence' }).click();
@@ -916,4 +919,58 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await page.goto(FILE + '#/path');
   await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
   await expect(page.getByText('1/4').first()).toBeVisible();
+});
+
+test('hors ligne : apprendre l’anglais pour le TOEIC (saga de Merlin, expressions, contes, examen sur 990)', async ({ page }) => {
+  await page.goto(FILE);
+  await page.getByRole('radio', { name: /Anglais/ }).click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en anglais ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Je pars de zéro ou presque/ }).click();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('heading', { name: 'Quel niveau TOEIC vises-tu ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
+  await expect(page.getByRole('radio', { name: /B1 — seuil/ })).toBeDisabled();
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  // Pas de kana ni de kanji parmi les difficultés proposées
+  await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Première leçon : saluer
+  await page.getByRole('link', { name: 'Commencer la leçon' }).click();
+  await expect(page.getByRole('heading', { name: 'Bonjour ! Saluer et prendre congé' })).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+
+  // Parcours : la saga de Merlin dans le royaume d'Albion
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: 'A1 : L’Épée dans le bureau' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Hello, London/ })).toBeVisible();
+  await expect(page.locator('[data-theme-map="albion"]')).toBeVisible();
+
+  // Pas d'onglet d'écriture : la page Caractères mène aux expressions
+  await page.goto(FILE + '#/characters');
+  await expect(page).toHaveURL(/#\/expressions/);
+  await page.getByRole('button', { name: /Idiomes imagés/ }).click();
+  await expect(page.getByText('a piece of cake', { exact: true })).toBeVisible();
+
+  // Mini-jeux : Word Rush
+  await page.goto(FILE + '#/games');
+  await expect(page.getByRole('heading', { name: 'Word Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toHaveCount(0);
+
+  // Lecture : les contes anglais
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('Goldilocks and the Three Bears').first()).toBeVisible();
+  await expect(page.getByText('The Sword in the Stone').first()).toBeVisible();
+  await expect(page.getByText('ももたろう')).toHaveCount(0);
+
+  // Atelier TOEIC et examen blanc noté sur 990
+  await page.goto(FILE + '#/prepa');
+  await expect(page.getByRole('heading', { name: 'Atelier TOEIC' })).toBeVisible();
+  await page.goto(FILE + '#/exam/a1-toeic');
+  await expect(page.getByRole('heading', { name: 'Examen blanc TOEIC A1 — format officiel (abrégé)' })).toBeVisible();
+  await expect(page.getByText('Barème du TOEIC')).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('Part 2 — Question-Response').first()).toBeVisible();
 });

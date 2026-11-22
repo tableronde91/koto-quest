@@ -1,3 +1,4 @@
+import { languageOfLevel } from '@koto/shared';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
@@ -28,6 +29,7 @@ export function ExamPage() {
   const qc = useQueryClient();
   const info = path?.worlds.find((w) => w.exam?.slug === slug)?.exam;
   const topik = (def?.level ?? '').startsWith('TOPIK');
+  const english = languageOfLevel(def?.level) === 'en';
 
   async function start() {
     setError(null);
@@ -63,9 +65,11 @@ export function ExamPage() {
   return (
     <div className="flex flex-col items-center gap-5 py-6 text-center">
       <Link to={`/path?niveau=${def?.level ?? 'N5'}`} className="self-start text-ink-soft underline">{T("← Parcours")}</Link>
-      <Stamp className="jp text-6xl font-black text-ko">{topik ? '모의고사' : '模試'}</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{english ? 'Mock test' : topik ? '모의고사' : '模試'}</Stamp>
       <h1 className="text-4xl">{def?.title ?? T("Examen blanc")}</h1>
-      {topik ? (
+      {english ? (
+        <p className="max-w-[52ch] text-lg">{def?.scoring === 'toeic' ? T("{0} questions en {1} minutes, réparties comme au TOEIC : écoute (questions-réponses, conversations, annonces), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin]) : T("{0} questions en {1} minutes sur les leçons du niveau : vocabulaire, grammaire et écoute. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25])}</p>
+      ) : topik ? (
         <p className="max-w-[52ch] text-lg">{T("{0} questions en {1} minutes, réparties comme au TOPIK : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25, def?.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ') ?? ''])}</p>
       ) : (
         <p className="max-w-[52ch] text-lg">{def?.scoring === 'jlpt3' ? T("{0} questions en {1} minutes, réparties comme au JLPT : connaissances de la langue (言語知識), lecture (読解) et écoute (聴解). Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin]) : T("{0} questions en {1} minutes, réparties comme au JLPT : vocabulaire et kanji (文字・語彙), grammaire (文法・読解) et écoute (聴解). Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [ def ? def.sections.reduce((n, x) => n + x.count, 0) : 30 , def?.durationMin ?? 25 ])}</p>
@@ -80,6 +84,16 @@ export function ExamPage() {
       {def?.scoring === 'topik' && (
         <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier TOPIK")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={def?.level === 'TOPIK6' ? '/exam/topik6-mock' : def?.level === 'TOPIK5' ? '/exam/topik5-mock' : def?.level === 'TOPIK4' ? '/exam/topik4-mock' : def?.level === 'TOPIK3' ? '/exam/topik3-mock' : def?.level === 'TOPIK2' ? '/exam/topik2-mock' : '/exam/topik1-mock'} className="underline">{T("version entraînement")}</Link>{' '}{T("(plus facile)")}</p>
       )}
+      {def?.scoring === 'toeic' && (
+        <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en anglais")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Écoute réelle")}</strong>{T("Dialogues et annonces à plusieurs voix, 2 écoutes au maximum.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Barème du TOEIC")}</strong>{T("Sur 990 : Listening et Reading de 5 à 495 chacun ; objectif {0} pour le niveau {1}.", [examScale(def)!.passTotal, def.level])}</li>
+        </ul>
+      )}
+      {english && (
+        <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier TOEIC")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={def?.scoring === 'toeic' ? `/exam/${def.level.toLowerCase()}-mock` : `/exam/${(def?.level ?? 'A1').toLowerCase()}-toeic`} className="underline">{def?.scoring === 'toeic' ? T("version entraînement") : T("examen au format TOEIC")}</Link>{' '}{def?.scoring === 'toeic' ? T("(plus facile)") : ''}</p>
+      )}
       {(def?.scoring === 'jlpt' || def?.scoring === 'jlpt3') && (
         <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
           <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en japonais")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
@@ -90,7 +104,7 @@ export function ExamPage() {
       {(def?.scoring === 'jlpt' || def?.scoring === 'jlpt3') && (
         <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier JLPT")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={`/exam/${def.level.toLowerCase()}-mock`} className="underline">{T("version entraînement")}</Link>{' '}{T("(plus facile)")}</p>
       )}
-      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{topik ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.") : T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
+      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{english ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le TOEIC d’ETS et son résultat n’en prédit pas le score.") : topik ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.") : T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
       {info && info.attempts > 0 && <p>{T("Meilleur score :")}{' '}<strong>{info.bestPercent} %</strong> ({info.attempts}{' '}{T("tentative")}{info.attempts > 1 ? 's' : ''})</p>}
       <button className="btn btn-gold min-h-14 px-10 text-lg" onClick={start}>{T("Commencer l’examen")}</button>
     </div>
@@ -180,12 +194,13 @@ function ExamRunner({ exam, onSubmit }: { exam: ExamStartDto; onSubmit: (a: Answ
 
 function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () => void }) {
   const topik = result.scaled?.max.system === 'topik';
+  const toeic = result.scaled?.max.system === 'toeic';
   return (
     <div className="flex flex-col gap-8">
       <header className="flex flex-col items-center gap-2 text-center">
         {result.passed && <Confetti count={60} />}
-        <Stamp className="jp text-5xl font-black text-ko">{topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? '合格' : '不合格'}</Stamp>
-        <h1 className="text-4xl">{topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
+        <Stamp className="jp text-5xl font-black text-ko">{toeic ? (result.passed ? 'Target reached' : 'Keep going') : topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? '合格' : '不合格'}</Stamp>
+        <h1 className="text-4xl">{toeic ? (result.passed ? T("Score visé atteint") : T("Pas encore le score visé ({0})", [result.scaled!.max.passTotal])) : topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
         {topik && !result.passed && (result.scaled!.level ?? 0) > 0 && <p className="font-bold text-ko">{T("Il faut le niveau {0} ({1} points) pour valider cet examen.", [result.scaled!.max.passLevel ?? 2, result.scaled!.max.levels?.find((l) => l.level === (result.scaled!.max.passLevel ?? 2))?.min ?? 140])}</p>}
         {result.scaled ? (
           <p className="font-display text-7xl tabular-nums"><CountUp value={result.scaled.total} /><span className="text-3xl text-ink-soft"> / {result.scaled.max.total}</span></p>
@@ -195,7 +210,9 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
         <p className="text-ink-soft">{T("{0} bonnes réponses sur {1}{2}", [result.correct , result.total, result.late ? T(" (copie rendue après le temps imparti)") : ''])}</p>
         <p className="flex items-center gap-3 font-bold text-gold-ink">+{result.xpGained}{' '}{T("XP")}{' '}{result.coinsGained > 0 && <Coins value={result.coinsGained} />}</p>
         <p className="max-w-[56ch] text-sm text-ink-soft">
-          {topik && result.scaled!.max.writing
+          {toeic
+            ? T("Barème du TOEIC Listening & Reading : écoute et lecture notées chacune de 5 à 495, soit 990 au total ; score visé {0}. Version abrégée, score converti de façon linéaire ; questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.passTotal])
+            : topik && result.scaled!.max.writing
             ? T("Barème du TOPIK II : écoute, écriture et lecture sur {0} points chacune, soit {1} ; niveau 3 à partir de {2}, 4 à {3}, 5 à {4}, 6 à {5}. Version abrégée, écriture adaptée en questions à choix ; questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.listening, result.scaled!.max.total, ...(result.scaled!.max.levels ?? []).map((l) => l.min)])
             : topik
             ? T("Barème du TOPIK I : écoute sur {0} et lecture sur {1}, soit {2} points ; niveau 1 à partir de {3}, niveau 2 à partir de {4}. Questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.listening, result.scaled!.max.language, result.scaled!.max.total, result.scaled!.max.levels?.[0]?.min ?? 80, result.scaled!.max.levels?.[1]?.min ?? 140])
@@ -210,7 +227,12 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
       {result.scaled && (
         <section aria-labelledby="jlpt-title" className={`grid gap-4 ${result.scaled.max.writing || result.scaled.max.reading ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
           <h2 id="jlpt-title" className="sr-only">{T("Score par partie (barème JLPT)")}</h2>
-          {(topik
+          {(toeic
+            ? [
+                { label: 'Listening', sub: T("Écoute"), v: result.scaled.listening, max: result.scaled.max.listening, min: 0 },
+                { label: 'Reading', sub: T("Lecture"), v: result.scaled.language, max: result.scaled.max.language, min: 0 },
+              ]
+            : topik
             ? [
                 { label: '듣기', sub: T("Écoute"), v: result.scaled.listening, max: result.scaled.max.listening, min: result.scaled.max.passListening },
                 ...(result.scaled.max.writing ? [{ label: '쓰기', sub: T("Écriture"), v: result.scaled.writing ?? 0, max: result.scaled.max.writing, min: 0 }] : []),

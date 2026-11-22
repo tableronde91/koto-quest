@@ -13,9 +13,10 @@ import { ReadingTodayCard } from './Reading';
 import { languageOfLevel, levelLabel } from '@koto/shared';
 import { studyWords } from '../components/StudyLanguage';
 
-function greeting(ko: boolean) {
+function greeting(lang: 'ja' | 'ko' | 'en') {
   const h = new Date().getHours();
-  if (ko) return '안녕하세요';
+  if (lang === 'ko') return '안녕하세요';
+  if (lang === 'en') return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
   return h < 11 ? 'おはよう' : h < 18 ? 'こんにちは' : 'こんばんは';
 }
 
@@ -31,7 +32,7 @@ export function DashboardPage() {
     <div className="flex flex-col gap-8">
       <header className="flex items-start gap-4">
         <div className="min-w-0 flex-1">
-        <p lang={words.htmlLang} className="jp text-xl text-ink-soft">{words.ko ? `${d.displayName} 님, ${greeting(true)}` : `${greeting(false)}、${d.displayName}`}</p>
+        <p lang={words.htmlLang} className="jp text-xl text-ink-soft">{words.pick(`${greeting('ja')}、${d.displayName}`, `${d.displayName} 님, ${greeting('ko')}`, `${greeting('en')}, ${d.displayName}!`)}</p>
         <h1 className="mt-1 text-3xl sm:text-4xl">
           {hasReviews ? T("{0} notion{1} à réviser", [d.reviews.due, d.reviews.due > 1 ? 's' : '']) : d.nextLesson ? T("Prêt·e pour la suite ?") : T("Tout est à jour")}
         </h1>
@@ -56,7 +57,7 @@ export function DashboardPage() {
             <Avatar config={d.avatar} size={76} />
           </motion.div>
         </Link>
-        <SpeechBubble>{companionLine(d, hasReviews, words.ko)}</SpeechBubble>
+        <SpeechBubble>{companionLine(d, hasReviews, words.lang)}</SpeechBubble>
       </section>
 
       {/* Action principale : une seule chose à faire maintenant */}
@@ -143,8 +144,8 @@ export function DashboardPage() {
           </div>
           <AchievementsStrip />
           <Link to="/prepa" className="flex items-center gap-4 rounded-2xl border border-line p-4 hover:border-ink-soft">
-            <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#8E1B26] text-xl font-black text-white">{words.ko ? '시' : '試'}</span>
-            <span><span className="block font-bold">{words.workshop}</span><span className="text-sm text-ink-soft">{words.ko ? T("Grammaire et écoute : au format du TOPIK, consignes en coréen.") : T("Kanji, orthographe, grammaire, ★, écoute : au format de l’examen.")}</span></span>
+            <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#8E1B26] text-xl font-black text-white">{words.examGlyph}</span>
+            <span><span className="block font-bold">{words.workshop}</span><span className="text-sm text-ink-soft">{words.pick(T("Kanji, orthographe, grammaire, ★, écoute : au format de l’examen."), T("Grammaire et écoute : au format du TOPIK, consignes en coréen."), T("Phrases à compléter et questions-réponses : au format du TOEIC, consignes en anglais."))}</span></span>
           </Link>
           <div>
             <h2 className="text-xl">{T("Parcours {0}", [ levelLabel(d.targetLevel)])}</h2>
@@ -153,7 +154,7 @@ export function DashboardPage() {
           </div>
           <div className="rounded-2xl border border-line p-4">
             <p className="font-bold">{T("Préparation estimée : {0} %", [ d.readiness.percent ])}</p>
-            <p className="text-sm text-ink-soft">{(words.ko ? T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au TOPIK officiel.", [d.readiness.label]) : T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au JLPT officiel.", [d.readiness.label ]))}</p>
+            <p className="text-sm text-ink-soft">{(words.en ? T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de score au TOEIC officiel.", [d.readiness.label]) : words.ko ? T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au TOPIK officiel.", [d.readiness.label]) : T("{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de réussite au JLPT officiel.", [d.readiness.label ]))}</p>
             {d.examDate && <p className="mt-1 text-sm">{T("Examen prévu le {0}.", [ new Date(d.examDate).toLocaleDateString(DATE_LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }) ])}</p>}
           </div>
           {!d.notifications.consent && (
@@ -195,10 +196,11 @@ function AchievementsStrip() {
 }
 
 type Dash = NonNullable<ReturnType<typeof useDashboard>['data']>;
-function companionLine(d: Dash, hasReviews: boolean, ko = false): string {
+function companionLine(d: Dash, hasReviews: boolean, lang: 'ja' | 'ko' | 'en' = 'ja'): string {
+  const ko = lang === 'ko';
   if (hasReviews) return T("Quelques notions commencent à s’effacer… On les revoit ensemble ?");
   if (!d.streak.todayDone && d.streak.current > 0) return T("Ta série de {0} jour{1} t’attend : une petite leçon suffit !", [d.streak.current, d.streak.current > 1 ? 's' : '']);
-  if (d.streak.todayDone && d.quests.every((q) => q.done)) return ko ? T("Toutes les quêtes du jour sont faites. 수고했어요!") : T("Toutes les quêtes du jour sont faites. お疲れさま！");
-  if (d.nextLesson) return ko ? T("Prochaine étape : « {0} ». 화이팅!", [d.nextLesson.title]) : T("Prochaine étape : « {0} ». がんばって！", [d.nextLesson.title]);
+  if (d.streak.todayDone && d.quests.every((q) => q.done)) return lang === 'en' ? T("Toutes les quêtes du jour sont faites. Well done!") : ko ? T("Toutes les quêtes du jour sont faites. 수고했어요!") : T("Toutes les quêtes du jour sont faites. お疲れさま！");
+  if (d.nextLesson) return lang === 'en' ? T("Prochaine étape : « {0} ». Keep going!", [d.nextLesson.title]) : ko ? T("Prochaine étape : « {0} ». 화이팅!", [d.nextLesson.title]) : T("Prochaine étape : « {0} ». がんばって！", [d.nextLesson.title]);
   return T("Tout est à jour. Un mini-jeu pour garder la main ?");
 }

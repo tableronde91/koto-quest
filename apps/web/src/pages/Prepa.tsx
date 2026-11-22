@@ -71,7 +71,7 @@ export function PrepaPage({ me }: { me: MeDto }) {
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
   return (
     <div className="flex flex-col gap-8">
-      <PageTitle sub={words.ko ? T("Les épreuves du TOPIK, consignes en coréen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.") : T("Chaque épreuve du JLPT, au format exact de l’examen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.")}>{words.workshop}</PageTitle>
+      <PageTitle sub={words.pick(T("Chaque épreuve du JLPT, au format exact de l’examen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série."), T("Les épreuves du TOPIK, consignes en coréen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série."), T("Les parties du TOEIC, consignes en anglais, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série."))}>{words.workshop}</PageTitle>
       {startError != null && <ErrorBox error={startError} />}
       <ul className="grid gap-4 sm:grid-cols-2">
         {data.drills.map((d, i) => {
@@ -79,7 +79,7 @@ export function PrepaPage({ me }: { me: MeDto }) {
           return (
             <motion.li key={d.part} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }} className="flex flex-col gap-3 rounded-3xl border border-line bg-surface p-5">
               <div className="flex items-center gap-4">
-                <span aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-3xl font-black text-white">{words.ko ? (d.part === 'listening' ? '듣' : '문') : GLYPH[d.part]}</span>
+                <span aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-3xl font-black text-white">{words.pick(GLYPH[d.part], d.part === 'listening' ? '듣' : '문', d.part === 'listening' ? 'L' : 'R')}</span>
                 <div>
                   <p lang={words.htmlLang} className="jp text-sm font-bold text-ink-soft">{d.jpTitle}</p>
                   <h2 className="text-xl">{d.title}</h2>
@@ -95,12 +95,12 @@ export function PrepaPage({ me }: { me: MeDto }) {
         })}
       </ul>
       <section className="flex flex-col items-start gap-3 rounded-3xl bg-ink p-6 text-paper sm:flex-row sm:items-center">
-        <span aria-hidden="true" className="jp text-5xl font-black">{words.ko ? '시' : '試'}</span>
+        <span aria-hidden="true" className="jp text-5xl font-black">{words.examGlyph}</span>
         <div className="flex-1">
           <p className="text-lg font-bold">{T("Prêt·e pour l’épreuve complète ?")}</p>
           <p className="opacity-80">{T("Examen blanc {0} : toutes les épreuves, chronométré, noté comme le vrai.", [ examLevelLabel(me.preferences.targetLevel) ])}</p>
         </div>
-        <Link to={me.preferences.targetLevel === 'TOPIK1' ? '/exam/topik1-official' : me.preferences.targetLevel === 'TOPIK2' ? '/exam/topik2-official' : me.preferences.targetLevel === 'TOPIK3' ? '/exam/topik3-official' : me.preferences.targetLevel === 'TOPIK4' ? '/exam/topik4-official' : me.preferences.targetLevel === 'TOPIK5' ? '/exam/topik5-official' : me.preferences.targetLevel.startsWith('TOPIK') ? '/exam/topik6-official' : me.preferences.targetLevel === 'N5' ? '/exam/n5-jlpt' : `/exam/${me.preferences.targetLevel.toLowerCase()}-jlpt`} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
+        <Link to={me.preferences.targetLevel === 'TOPIK1' ? '/exam/topik1-official' : me.preferences.targetLevel === 'TOPIK2' ? '/exam/topik2-official' : me.preferences.targetLevel === 'TOPIK3' ? '/exam/topik3-official' : me.preferences.targetLevel === 'TOPIK4' ? '/exam/topik4-official' : me.preferences.targetLevel === 'TOPIK5' ? '/exam/topik5-official' : me.preferences.targetLevel.startsWith('TOPIK') ? '/exam/topik6-official' : /^[ABC][12]$/.test(me.preferences.targetLevel) ? `/exam/${me.preferences.targetLevel.toLowerCase()}-toeic` : me.preferences.targetLevel === 'N5' ? '/exam/n5-jlpt' : `/exam/${me.preferences.targetLevel.toLowerCase()}-jlpt`} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
       </section>
     </div>
   );

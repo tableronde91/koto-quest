@@ -69,11 +69,11 @@ export function WelcomePage() {
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
           <p className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · {T("Préparation au JLPT et au TOPIK")}
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · {T("Préparation au JLPT, au TOPIK et au TOEIC")}
           </p>
-          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais ou le coréen, et réussis ton examen.")}</h1>
+          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen ou l’anglais, et réussis ton examen.")}</h1>
           <p className="mt-4 max-w-[54ch] text-lg text-ink-soft">
-            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue d’Asie et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen. Du premier caractère jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
+            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
           </p>
           <ul className="mt-5 flex flex-col gap-2">
             {[T("Un parcours aligné sur les niveaux officiels du JLPT et du TOPIK"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (

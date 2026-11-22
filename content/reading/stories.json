@@ -16544,12 +16544,1123 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "goldilocks",
+   "glyph": "G",
+   "level": "A1",
+   "color": "#D9A23B",
+   "title": {
+    "jp": "Goldilocks and the Three Bears",
+    "fr": "Boucle d’or et les trois ours",
+    "en": "Goldilocks and the Three Bears"
+   },
+   "summary": {
+    "fr": "Une petite fille entre dans une maison vide au milieu de la forêt. Tout y va par trois…",
+    "en": "A little girl walks into an empty house in the middle of the forest. Everything there comes in threes…"
+   },
+   "chapters": [
+    {
+     "slug": "goldilocks-1",
+     "title": {
+      "jp": "The house in the forest",
+      "fr": "La maison dans la forêt",
+      "en": "The house in the forest"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Once upon a time, there were three bears.",
+        "fr": "Il était une fois trois ours.",
+        "en": "Once upon a time, there were three bears.",
+        "kana": "Once upon a time, there were three bears."
+       },
+       {
+        "jp": "There was a big father bear, a mother bear and a little baby bear.",
+        "fr": "Il y avait un grand papa ours, une maman ours et un petit bébé ours.",
+        "en": "There was a big father bear, a mother bear and a little baby bear.",
+        "kana": "There was a big father bear, a mother bear and a little baby bear."
+       },
+       {
+        "jp": "They lived in a small house in the forest.",
+        "fr": "Ils vivaient dans une petite maison dans la forêt.",
+        "en": "They lived in a small house in the forest.",
+        "kana": "They lived in a small house in the forest."
+       }
+      ],
+      [
+       {
+        "jp": "One morning, the porridge was very hot.",
+        "fr": "Un matin, le porridge était très chaud.",
+        "en": "One morning, the porridge was very hot.",
+        "kana": "One morning, the porridge was very hot."
+       },
+       {
+        "jp": "“Let’s go for a walk,” said Mother Bear.",
+        "fr": "« Allons nous promener », dit maman ours.",
+        "en": "“Let’s go for a walk,” said Mother Bear.",
+        "kana": "“Let’s go for a walk,” said Mother Bear."
+       },
+       {
+        "jp": "The three bears went out, and the door was open.",
+        "fr": "Les trois ours sortirent, et la porte resta ouverte.",
+        "en": "The three bears went out, and the door was open.",
+        "kana": "The three bears went out, and the door was open."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "bear",
+       "reading": "/beə/",
+       "fr": "ours",
+       "en": "bear"
+      },
+      {
+       "jp": "forest",
+       "reading": "/ˈfɒrɪst/",
+       "fr": "forêt",
+       "en": "forest"
+      },
+      {
+       "jp": "house",
+       "reading": "/haʊs/",
+       "fr": "maison",
+       "en": "house"
+      },
+      {
+       "jp": "porridge",
+       "reading": "/ˈpɒrɪdʒ/",
+       "fr": "porridge, bouillie d’avoine",
+       "en": "porridge"
+      },
+      {
+       "jp": "walk",
+       "reading": "/wɔːk/",
+       "fr": "promenade ; marcher",
+       "en": "walk"
+      },
+      {
+       "jp": "open",
+       "reading": "/ˈəʊpən/",
+       "fr": "ouvert ; ouvrir",
+       "en": "open"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien d’ours y a-t-il ?",
+        "en": "How many bears are there?"
+       },
+       "choices": [
+        {
+         "fr": "Deux",
+         "en": "Two"
+        },
+        {
+         "fr": "Trois",
+         "en": "Three"
+        },
+        {
+         "fr": "Quatre",
+         "en": "Four"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Pourquoi les ours sortent-ils ?",
+        "en": "Why do the bears go out?"
+       },
+       "choices": [
+        {
+         "fr": "Le porridge est trop chaud",
+         "en": "The porridge is too hot"
+        },
+        {
+         "fr": "Ils ont faim",
+         "en": "They are hungry"
+        },
+        {
+         "fr": "Il pleut",
+         "en": "It is raining"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "goldilocks-2",
+     "title": {
+      "jp": "Too hot, too cold, just right",
+      "fr": "Trop chaud, trop froid, parfait",
+      "en": "Too hot, too cold, just right"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "A little girl came to the house. Her name was Goldilocks.",
+        "fr": "Une petite fille arriva à la maison. Elle s’appelait Boucle d’or.",
+        "en": "A little girl came to the house. Her name was Goldilocks.",
+        "kana": "A little girl came to the house. Her name was Goldilocks."
+       },
+       {
+        "jp": "She saw three bowls of porridge on the table.",
+        "fr": "Elle vit trois bols de porridge sur la table.",
+        "en": "She saw three bowls of porridge on the table.",
+        "kana": "She saw three bowls of porridge on the table."
+       },
+       {
+        "jp": "The big bowl was too hot. The middle bowl was too cold.",
+        "fr": "Le grand bol était trop chaud. Le bol moyen était trop froid.",
+        "en": "The big bowl was too hot. The middle bowl was too cold.",
+        "kana": "The big bowl was too hot. The middle bowl was too cold."
+       },
+       {
+        "jp": "The little bowl was just right, and she ate it all!",
+        "fr": "Le petit bol était parfait, et elle le mangea en entier !",
+        "en": "The little bowl was just right, and she ate it all!",
+        "kana": "The little bowl was just right, and she ate it all!"
+       }
+      ],
+      [
+       {
+        "jp": "Then she saw three chairs.",
+        "fr": "Puis elle vit trois chaises.",
+        "en": "Then she saw three chairs.",
+        "kana": "Then she saw three chairs."
+       },
+       {
+        "jp": "She sat on the little chair, but it broke!",
+        "fr": "Elle s’assit sur la petite chaise, mais elle se cassa !",
+        "en": "She sat on the little chair, but it broke!",
+        "kana": "She sat on the little chair, but it broke!"
+       },
+       {
+        "jp": "Goldilocks was tired, so she went upstairs.",
+        "fr": "Boucle d’or était fatiguée, alors elle monta à l’étage.",
+        "en": "Goldilocks was tired, so she went upstairs.",
+        "kana": "Goldilocks was tired, so she went upstairs."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "girl",
+       "reading": "/ɡɜːl/",
+       "fr": "fille",
+       "en": "girl"
+      },
+      {
+       "jp": "bowl",
+       "reading": "/bəʊl/",
+       "fr": "bol",
+       "en": "bowl"
+      },
+      {
+       "jp": "too",
+       "reading": "/tuː/",
+       "fr": "trop",
+       "en": "too"
+      },
+      {
+       "jp": "just right",
+       "reading": "/dʒʌst raɪt/",
+       "fr": "parfait, juste comme il faut",
+       "en": "just right"
+      },
+      {
+       "jp": "broke",
+       "reading": "/brəʊk/",
+       "fr": "cassa (passé de break)",
+       "en": "broke"
+      },
+      {
+       "jp": "upstairs",
+       "reading": "/ʌpˈsteəz/",
+       "fr": "à l’étage",
+       "en": "upstairs"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quel bol Boucle d’or mange-t-elle ?",
+        "en": "Which bowl does Goldilocks eat?"
+       },
+       "choices": [
+        {
+         "fr": "Le grand bol",
+         "en": "The big bowl"
+        },
+        {
+         "fr": "Le bol moyen",
+         "en": "The middle bowl"
+        },
+        {
+         "fr": "Le petit bol",
+         "en": "The little bowl"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que se passe-t-il avec la petite chaise ?",
+        "en": "What happens to the little chair?"
+       },
+       "choices": [
+        {
+         "fr": "Elle se casse",
+         "en": "It breaks"
+        },
+        {
+         "fr": "Elle disparaît",
+         "en": "It disappears"
+        },
+        {
+         "fr": "Elle est trop grande",
+         "en": "It is too big"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "goldilocks-3",
+     "title": {
+      "jp": "Someone is in my bed!",
+      "fr": "Quelqu’un dort dans mon lit !",
+      "en": "Someone is in my bed!"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Upstairs, there were three beds.",
+        "fr": "À l’étage, il y avait trois lits.",
+        "en": "Upstairs, there were three beds.",
+        "kana": "Upstairs, there were three beds."
+       },
+       {
+        "jp": "The little bed was just right, and Goldilocks fell asleep.",
+        "fr": "Le petit lit était parfait, et Boucle d’or s’endormit.",
+        "en": "The little bed was just right, and Goldilocks fell asleep.",
+        "kana": "The little bed was just right, and Goldilocks fell asleep."
+       },
+       {
+        "jp": "Then the three bears came home.",
+        "fr": "Puis les trois ours rentrèrent à la maison.",
+        "en": "Then the three bears came home.",
+        "kana": "Then the three bears came home."
+       }
+      ],
+      [
+       {
+        "jp": "“Someone ate my porridge!” cried Baby Bear.",
+        "fr": "« Quelqu’un a mangé mon porridge ! » cria bébé ours.",
+        "en": "“Someone ate my porridge!” cried Baby Bear.",
+        "kana": "“Someone ate my porridge!” cried Baby Bear."
+       },
+       {
+        "jp": "“And someone is sleeping in my bed!”",
+        "fr": "« Et quelqu’un dort dans mon lit ! »",
+        "en": "“And someone is sleeping in my bed!”",
+        "kana": "“And someone is sleeping in my bed!”"
+       },
+       {
+        "jp": "Goldilocks woke up, saw the bears and ran out of the house. She never came back!",
+        "fr": "Boucle d’or se réveilla, vit les ours et s’enfuit de la maison. Elle ne revint jamais !",
+        "en": "Goldilocks woke up, saw the bears and ran out of the house. She never came back!",
+        "kana": "Goldilocks woke up, saw the bears and ran out of the house. She never came back!"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "bed",
+       "reading": "/bed/",
+       "fr": "lit",
+       "en": "bed"
+      },
+      {
+       "jp": "fell asleep",
+       "reading": "/fel əˈsliːp/",
+       "fr": "s’endormit",
+       "en": "fell asleep"
+      },
+      {
+       "jp": "came home",
+       "reading": "/keɪm həʊm/",
+       "fr": "rentrèrent à la maison",
+       "en": "came home"
+      },
+      {
+       "jp": "someone",
+       "reading": "/ˈsʌmwʌn/",
+       "fr": "quelqu’un",
+       "en": "someone"
+      },
+      {
+       "jp": "woke up",
+       "reading": "/wəʊk ʌp/",
+       "fr": "se réveilla",
+       "en": "woke up"
+      },
+      {
+       "jp": "ran",
+       "reading": "/ræn/",
+       "fr": "courut (passé de run)",
+       "en": "ran"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où dort Boucle d’or ?",
+        "en": "Where does Goldilocks sleep?"
+       },
+       "choices": [
+        {
+         "fr": "Dans le grand lit",
+         "en": "In the big bed"
+        },
+        {
+         "fr": "Dans le petit lit",
+         "en": "In the little bed"
+        },
+        {
+         "fr": "Sur une chaise",
+         "en": "On a chair"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que fait Boucle d’or quand elle voit les ours ?",
+        "en": "What does Goldilocks do when she sees the bears?"
+       },
+       "choices": [
+        {
+         "fr": "Elle mange avec eux",
+         "en": "She eats with them"
+        },
+        {
+         "fr": "Elle s’enfuit",
+         "en": "She runs away"
+        },
+        {
+         "fr": "Elle se rendort",
+         "en": "She goes back to sleep"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dick-whittington",
+   "glyph": "L",
+   "level": "A1",
+   "color": "#3F6FB5",
+   "title": {
+    "jp": "Dick Whittington and his Cat",
+    "fr": "Dick Whittington et son chat",
+    "en": "Dick Whittington and his Cat"
+   },
+   "summary": {
+    "fr": "Un garçon pauvre part chercher fortune à Londres, où les rues seraient pavées d’or. Son seul trésor : un chat.",
+    "en": "A poor boy goes to seek his fortune in London, where the streets are said to be paved with gold. His only treasure: a cat."
+   },
+   "chapters": [
+    {
+     "slug": "whittington-1",
+     "title": {
+      "jp": "Streets of gold",
+      "fr": "Des rues pavées d’or",
+      "en": "Streets of gold"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Dick was a poor boy. He had no family and no money.",
+        "fr": "Dick était un garçon pauvre. Il n’avait ni famille ni argent.",
+        "en": "Dick was a poor boy. He had no family and no money.",
+        "kana": "Dick was a poor boy. He had no family and no money."
+       },
+       {
+        "jp": "People said: “In London, the streets are made of gold!”",
+        "fr": "Les gens disaient : « À Londres, les rues sont en or ! »",
+        "en": "People said: “In London, the streets are made of gold!”",
+        "kana": "People said: “In London, the streets are made of gold!”"
+       },
+       {
+        "jp": "So Dick walked to London. It was a very long way.",
+        "fr": "Alors Dick partit à pied pour Londres. C’était très loin.",
+        "en": "So Dick walked to London. It was a very long way.",
+        "kana": "So Dick walked to London. It was a very long way."
+       }
+      ],
+      [
+       {
+        "jp": "But the streets of London were not gold. They were dirty and grey.",
+        "fr": "Mais les rues de Londres n’étaient pas en or. Elles étaient sales et grises.",
+        "en": "But the streets of London were not gold. They were dirty and grey.",
+        "kana": "But the streets of London were not gold. They were dirty and grey."
+       },
+       {
+        "jp": "Dick was cold and hungry.",
+        "fr": "Dick avait froid et faim.",
+        "en": "Dick was cold and hungry.",
+        "kana": "Dick was cold and hungry."
+       },
+       {
+        "jp": "A kind merchant, Mr Fitzwarren, gave him a job in his kitchen.",
+        "fr": "Un marchand généreux, M. Fitzwarren, lui donna du travail dans sa cuisine.",
+        "en": "A kind merchant, Mr Fitzwarren, gave him a job in his kitchen.",
+        "kana": "A kind merchant, Mr Fitzwarren, gave him a job in his kitchen."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "poor",
+       "reading": "/pɔː/",
+       "fr": "pauvre",
+       "en": "poor"
+      },
+      {
+       "jp": "gold",
+       "reading": "/ɡəʊld/",
+       "fr": "or",
+       "en": "gold"
+      },
+      {
+       "jp": "long way",
+       "reading": "/lɒŋ weɪ/",
+       "fr": "long chemin, loin",
+       "en": "long way"
+      },
+      {
+       "jp": "dirty",
+       "reading": "/ˈdɜːti/",
+       "fr": "sale",
+       "en": "dirty"
+      },
+      {
+       "jp": "hungry",
+       "reading": "/ˈhʌŋɡri/",
+       "fr": "affamé, qui a faim",
+       "en": "hungry"
+      },
+      {
+       "jp": "merchant",
+       "reading": "/ˈmɜːtʃənt/",
+       "fr": "marchand",
+       "en": "merchant"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Dick va-t-il à Londres ?",
+        "en": "Why does Dick go to London?"
+       },
+       "choices": [
+        {
+         "fr": "Pour voir sa famille",
+         "en": "To see his family"
+        },
+        {
+         "fr": "Parce que les rues seraient en or",
+         "en": "Because the streets are said to be gold"
+        },
+        {
+         "fr": "Pour acheter un chat",
+         "en": "To buy a cat"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Qui donne du travail à Dick ?",
+        "en": "Who gives Dick a job?"
+       },
+       "choices": [
+        {
+         "fr": "Un marchand",
+         "en": "A merchant"
+        },
+        {
+         "fr": "Le roi",
+         "en": "The king"
+        },
+        {
+         "fr": "Un capitaine",
+         "en": "A captain"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "whittington-2",
+     "title": {
+      "jp": "The cat on the ship",
+      "fr": "Le chat sur le bateau",
+      "en": "The cat on the ship"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Dick slept in a small room with many mice.",
+        "fr": "Dick dormait dans une petite chambre pleine de souris.",
+        "en": "Dick slept in a small room with many mice.",
+        "kana": "Dick slept in a small room with many mice."
+       },
+       {
+        "jp": "He bought a cat for one penny. The cat caught all the mice!",
+        "fr": "Il acheta un chat pour un penny. Le chat attrapa toutes les souris !",
+        "en": "He bought a cat for one penny. The cat caught all the mice!",
+        "kana": "He bought a cat for one penny. The cat caught all the mice!"
+       },
+       {
+        "jp": "Dick loved his cat very much.",
+        "fr": "Dick aimait beaucoup son chat.",
+        "en": "Dick loved his cat very much.",
+        "kana": "Dick loved his cat very much."
+       }
+      ],
+      [
+       {
+        "jp": "One day, Mr Fitzwarren’s ship was ready to go to a far country.",
+        "fr": "Un jour, le bateau de M. Fitzwarren fut prêt à partir pour un pays lointain.",
+        "en": "One day, Mr Fitzwarren’s ship was ready to go to a far country.",
+        "kana": "One day, Mr Fitzwarren’s ship was ready to go to a far country."
+       },
+       {
+        "jp": "“Everyone can send something to sell,” he said.",
+        "fr": "« Chacun peut envoyer quelque chose à vendre », dit-il.",
+        "en": "“Everyone can send something to sell,” he said.",
+        "kana": "“Everyone can send something to sell,” he said."
+       },
+       {
+        "jp": "Dick had only his cat. Sadly, he sent the cat on the ship.",
+        "fr": "Dick n’avait que son chat. Tristement, il envoya le chat sur le bateau.",
+        "en": "Dick had only his cat. Sadly, he sent the cat on the ship.",
+        "kana": "Dick had only his cat. Sadly, he sent the cat on the ship."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "mice",
+       "reading": "/maɪs/",
+       "fr": "souris (pluriel de mouse)",
+       "en": "mice"
+      },
+      {
+       "jp": "penny",
+       "reading": "/ˈpeni/",
+       "fr": "penny (pièce de monnaie)",
+       "en": "penny"
+      },
+      {
+       "jp": "caught",
+       "reading": "/kɔːt/",
+       "fr": "attrapa (passé de catch)",
+       "en": "caught"
+      },
+      {
+       "jp": "ship",
+       "reading": "/ʃɪp/",
+       "fr": "navire, bateau",
+       "en": "ship"
+      },
+      {
+       "jp": "far",
+       "reading": "/fɑː/",
+       "fr": "lointain, loin",
+       "en": "far"
+      },
+      {
+       "jp": "sell",
+       "reading": "/sel/",
+       "fr": "vendre",
+       "en": "sell"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien coûte le chat ?",
+        "en": "How much does the cat cost?"
+       },
+       "choices": [
+        {
+         "fr": "Un penny",
+         "en": "One penny"
+        },
+        {
+         "fr": "Une livre",
+         "en": "One pound"
+        },
+        {
+         "fr": "Rien",
+         "en": "Nothing"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait Dick de son chat ?",
+        "en": "What does Dick do with his cat?"
+       },
+       "choices": [
+        {
+         "fr": "Il le garde dans sa chambre",
+         "en": "He keeps it in his room"
+        },
+        {
+         "fr": "Il l’envoie sur le bateau",
+         "en": "He sends it on the ship"
+        },
+        {
+         "fr": "Il le donne au roi",
+         "en": "He gives it to the king"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "whittington-3",
+     "title": {
+      "jp": "Turn again, Whittington",
+      "fr": "Fais demi-tour, Whittington",
+      "en": "Turn again, Whittington"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Dick was sad without his cat, so he left London.",
+        "fr": "Sans son chat, Dick était triste, alors il quitta Londres.",
+        "en": "Dick was sad without his cat, so he left London.",
+        "kana": "Dick was sad without his cat, so he left London."
+       },
+       {
+        "jp": "On the hill, he heard the bells of London.",
+        "fr": "Sur la colline, il entendit les cloches de Londres.",
+        "en": "On the hill, he heard the bells of London.",
+        "kana": "On the hill, he heard the bells of London."
+       },
+       {
+        "jp": "The bells sang: “Turn again, Whittington, Lord Mayor of London!”",
+        "fr": "Les cloches chantaient : « Fais demi-tour, Whittington, lord-maire de Londres ! »",
+        "en": "The bells sang: “Turn again, Whittington, Lord Mayor of London!”",
+        "kana": "The bells sang: “Turn again, Whittington, Lord Mayor of London!”"
+       }
+      ],
+      [
+       {
+        "jp": "Dick went back. The ship was home, and there was great news.",
+        "fr": "Dick revint. Le bateau était rentré, et il y avait une grande nouvelle.",
+        "en": "Dick went back. The ship was home, and there was great news.",
+        "kana": "Dick went back. The ship was home, and there was great news."
+       },
+       {
+        "jp": "In the far country, the king had too many rats. He paid a lot of gold for the cat!",
+        "fr": "Dans le pays lointain, le roi avait trop de rats. Il avait payé beaucoup d’or pour le chat !",
+        "en": "In the far country, the king had too many rats. He paid a lot of gold for the cat!",
+        "kana": "In the far country, the king had too many rats. He paid a lot of gold for the cat!"
+       },
+       {
+        "jp": "Dick was rich. Later, he became Lord Mayor of London three times.",
+        "fr": "Dick était riche. Plus tard, il devint trois fois lord-maire de Londres.",
+        "en": "Dick was rich. Later, he became Lord Mayor of London three times.",
+        "kana": "Dick was rich. Later, he became Lord Mayor of London three times."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "sad",
+       "reading": "/sæd/",
+       "fr": "triste",
+       "en": "sad"
+      },
+      {
+       "jp": "hill",
+       "reading": "/hɪl/",
+       "fr": "colline",
+       "en": "hill"
+      },
+      {
+       "jp": "bells",
+       "reading": "/belz/",
+       "fr": "cloches",
+       "en": "bells"
+      },
+      {
+       "jp": "news",
+       "reading": "/njuːz/",
+       "fr": "nouvelle(s)",
+       "en": "news"
+      },
+      {
+       "jp": "rich",
+       "reading": "/rɪtʃ/",
+       "fr": "riche",
+       "en": "rich"
+      },
+      {
+       "jp": "Lord Mayor",
+       "reading": "/lɔːd ˈmeə/",
+       "fr": "lord-maire (maire de la City de Londres)",
+       "en": "Lord Mayor"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que disent les cloches ?",
+        "en": "What do the bells say?"
+       },
+       "choices": [
+        {
+         "fr": "De rentrer à Londres",
+         "en": "To go back to London"
+        },
+        {
+         "fr": "De partir en bateau",
+         "en": "To take a ship"
+        },
+        {
+         "fr": "De chercher son chat",
+         "en": "To look for his cat"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Dick devient-il riche ?",
+        "en": "Why does Dick become rich?"
+       },
+       "choices": [
+        {
+         "fr": "Il trouve de l’or dans la rue",
+         "en": "He finds gold in the street"
+        },
+        {
+         "fr": "Le roi a payé son chat très cher",
+         "en": "The king paid a lot for his cat"
+        },
+        {
+         "fr": "Il gagne un concours",
+         "en": "He wins a contest"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "sword-in-the-stone",
+   "glyph": "A",
+   "level": "A1",
+   "color": "#2E6B4F",
+   "title": {
+    "jp": "The Sword in the Stone",
+    "fr": "L’Épée dans le rocher",
+    "en": "The Sword in the Stone"
+   },
+   "summary": {
+    "fr": "Le roi est mort sans héritier. Une épée plantée dans un rocher attend celui qui saura l’en tirer.",
+    "en": "The king is dead without an heir. A sword stuck in a stone waits for the one who can pull it out."
+   },
+   "chapters": [
+    {
+     "slug": "sword-1",
+     "title": {
+      "jp": "A sword in a stone",
+      "fr": "Une épée dans un rocher",
+      "en": "A sword in a stone"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Long ago, the King of England died. He had no son to be the new king.",
+        "fr": "Il y a très longtemps, le roi d’Angleterre mourut. Il n’avait pas de fils pour devenir le nouveau roi.",
+        "en": "Long ago, the King of England died. He had no son to be the new king.",
+        "kana": "Long ago, the King of England died. He had no son to be the new king."
+       },
+       {
+        "jp": "The knights were angry. They all wanted to be king.",
+        "fr": "Les chevaliers étaient en colère. Ils voulaient tous être roi.",
+        "en": "The knights were angry. They all wanted to be king.",
+        "kana": "The knights were angry. They all wanted to be king."
+       }
+      ],
+      [
+       {
+        "jp": "Merlin, a wise old wizard, had an idea.",
+        "fr": "Merlin, un vieux magicien sage, eut une idée.",
+        "en": "Merlin, a wise old wizard, had an idea.",
+        "kana": "Merlin, a wise old wizard, had an idea."
+       },
+       {
+        "jp": "In a churchyard in London, there was a big stone with a sword in it.",
+        "fr": "Dans un cimetière de Londres, il y avait un grand rocher avec une épée plantée dedans.",
+        "en": "In a churchyard in London, there was a big stone with a sword in it.",
+        "kana": "In a churchyard in London, there was a big stone with a sword in it."
+       },
+       {
+        "jp": "On the stone, there were these words: “Only the true king can pull out this sword.”",
+        "fr": "Sur le rocher, il y avait ces mots : « Seul le vrai roi peut retirer cette épée. »",
+        "en": "On the stone, there were these words: “Only the true king can pull out this sword.”",
+        "kana": "On the stone, there were these words: “Only the true king can pull out this sword.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "king",
+       "reading": "/kɪŋ/",
+       "fr": "roi",
+       "en": "king"
+      },
+      {
+       "jp": "died",
+       "reading": "/daɪd/",
+       "fr": "mourut (passé de die)",
+       "en": "died"
+      },
+      {
+       "jp": "knight",
+       "reading": "/naɪt/",
+       "fr": "chevalier",
+       "en": "knight"
+      },
+      {
+       "jp": "wizard",
+       "reading": "/ˈwɪzəd/",
+       "fr": "magicien, sorcier",
+       "en": "wizard"
+      },
+      {
+       "jp": "stone",
+       "reading": "/stəʊn/",
+       "fr": "pierre, rocher",
+       "en": "stone"
+      },
+      {
+       "jp": "sword",
+       "reading": "/sɔːd/",
+       "fr": "épée",
+       "en": "sword"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi les chevaliers sont-ils en colère ?",
+        "en": "Why are the knights angry?"
+       },
+       "choices": [
+        {
+         "fr": "Ils veulent tous être roi",
+         "en": "They all want to be king"
+        },
+        {
+         "fr": "Ils ont perdu une épée",
+         "en": "They lost a sword"
+        },
+        {
+         "fr": "Merlin est parti",
+         "en": "Merlin has left"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que dit l’inscription sur le rocher ?",
+        "en": "What do the words on the stone say?"
+       },
+       "choices": [
+        {
+         "fr": "Que l’épée est à vendre",
+         "en": "That the sword is for sale"
+        },
+        {
+         "fr": "Que seul le vrai roi peut retirer l’épée",
+         "en": "That only the true king can pull out the sword"
+        },
+        {
+         "fr": "Que Merlin est le roi",
+         "en": "That Merlin is the king"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "sword-2",
+     "title": {
+      "jp": "Arthur and the sword",
+      "fr": "Arthur et l’épée",
+      "en": "Arthur and the sword"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Many knights tried, but nobody could move the sword.",
+        "fr": "Beaucoup de chevaliers essayèrent, mais personne ne put bouger l’épée.",
+        "en": "Many knights tried, but nobody could move the sword.",
+        "kana": "Many knights tried, but nobody could move the sword."
+       },
+       {
+        "jp": "Years later, there was a big tournament in London.",
+        "fr": "Des années plus tard, il y eut un grand tournoi à Londres.",
+        "en": "Years later, there was a big tournament in London.",
+        "kana": "Years later, there was a big tournament in London."
+       },
+       {
+        "jp": "A young knight, Sir Kay, came with his little brother, Arthur.",
+        "fr": "Un jeune chevalier, sire Kay, vint avec son petit frère, Arthur.",
+        "en": "A young knight, Sir Kay, came with his little brother, Arthur.",
+        "kana": "A young knight, Sir Kay, came with his little brother, Arthur."
+       }
+      ],
+      [
+       {
+        "jp": "Kay forgot his sword at home! “Arthur, please find me a sword!”",
+        "fr": "Kay avait oublié son épée chez lui ! « Arthur, trouve-moi une épée, s’il te plaît ! »",
+        "en": "Kay forgot his sword at home! “Arthur, please find me a sword!”",
+        "kana": "Kay forgot his sword at home! “Arthur, please find me a sword!”"
+       },
+       {
+        "jp": "Arthur saw the sword in the stone and pulled it out. It was easy!",
+        "fr": "Arthur vit l’épée dans le rocher et la retira. C’était facile !",
+        "en": "Arthur saw the sword in the stone and pulled it out. It was easy!",
+        "kana": "Arthur saw the sword in the stone and pulled it out. It was easy!"
+       },
+       {
+        "jp": "Everyone was surprised. Arthur was the true king!",
+        "fr": "Tout le monde fut surpris. Arthur était le vrai roi !",
+        "en": "Everyone was surprised. Arthur was the true king!",
+        "kana": "Everyone was surprised. Arthur was the true king!"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "tried",
+       "reading": "/traɪd/",
+       "fr": "essayèrent (passé de try)",
+       "en": "tried"
+      },
+      {
+       "jp": "nobody",
+       "reading": "/ˈnəʊbədi/",
+       "fr": "personne (aucune personne)",
+       "en": "nobody"
+      },
+      {
+       "jp": "tournament",
+       "reading": "/ˈtʊənəmənt/",
+       "fr": "tournoi",
+       "en": "tournament"
+      },
+      {
+       "jp": "forgot",
+       "reading": "/fəˈɡɒt/",
+       "fr": "oublia (passé de forget)",
+       "en": "forgot"
+      },
+      {
+       "jp": "pulled out",
+       "reading": "/pʊld aʊt/",
+       "fr": "retira, arracha",
+       "en": "pulled out"
+      },
+      {
+       "jp": "surprised",
+       "reading": "/səˈpraɪzd/",
+       "fr": "surpris",
+       "en": "surprised"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Arthur cherche-t-il une épée ?",
+        "en": "Why does Arthur look for a sword?"
+       },
+       "choices": [
+        {
+         "fr": "Pour devenir roi",
+         "en": "To become king"
+        },
+        {
+         "fr": "Kay a oublié la sienne",
+         "en": "Kay forgot his"
+        },
+        {
+         "fr": "Pour le tournoi de Merlin",
+         "en": "For Merlin’s tournament"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Est-ce difficile pour Arthur de retirer l’épée ?",
+        "en": "Is it difficult for Arthur to pull out the sword?"
+       },
+       "choices": [
+        {
+         "fr": "Oui, très difficile",
+         "en": "Yes, very difficult"
+        },
+        {
+         "fr": "Non, c’est facile",
+         "en": "No, it is easy"
+        },
+        {
+         "fr": "Il n’y arrive pas",
+         "en": "He cannot do it"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
   "ko": {
    "fr": "Contes traditionnels coréens (domaine public), réécrits en coréen simple pour Koto Quest. La romanisation des mots aide à les prononcer.",
    "en": "Traditional Korean folk tales (public domain), retold in simple Korean for Koto Quest. The romanised words help you pronounce them."
+  },
+  "en": {
+   "fr": "Contes et légendes britanniques (domaine public), réécrits en anglais simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique.",
+   "en": "British folk tales and legends (public domain), retold in simple English for Koto Quest. Word pronunciation is shown in phonetic script."
   }
  }
 }

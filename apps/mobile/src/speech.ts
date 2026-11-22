@@ -1,5 +1,5 @@
 import * as Speech from 'expo-speech';
-import { hasHangul } from '@koto/shared';
+import { textLanguage } from '@koto/shared';
 
 /**
  * Prononciation japonaise ou coréenne par la synthèse vocale du téléphone.
@@ -7,7 +7,8 @@ import { hasHangul } from '@koto/shared';
  * un court délai quand une lecture était en cours (l'arrêt est asynchrone et coupait la phrase
  * suivante), et seule la dernière demande est jouée.
  */
-type Lang = 'ja' | 'ko';
+type Lang = 'ja' | 'ko' | 'en';
+const LOCALE: Record<Lang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB' };
 const voiceId: Partial<Record<Lang, string>> = {};
 let voiceLoad: Promise<void> | null = null;
 let speaking = false;
@@ -16,7 +17,7 @@ let request = 0;
 function loadVoice(): Promise<void> {
   voiceLoad ??= Speech.getAvailableVoicesAsync()
     .then((voices) => {
-      for (const lang of ['ja', 'ko'] as const) {
+      for (const lang of ['ja', 'ko', 'en'] as const) {
         const mine = voices.filter((v) => v.language.toLowerCase().replace('_', '-').startsWith(lang));
         const best = mine.sort((a, b) => (b.quality === Speech.VoiceQuality.Enhanced ? 1 : 0) - (a.quality === Speech.VoiceQuality.Enhanced ? 1 : 0))[0];
         voiceId[lang] = best?.identifier;
@@ -43,11 +44,11 @@ function say(parts: Part[], onEnd?: () => void) {
   const go = () => {
     if (my !== request) return;
     speaking = true;
-    // Le coréen se reconnaît au hangeul : la même phrase n'est jamais lue avec une voix japonaise.
-    const lang: Lang = list.some((p) => hasHangul(p.text)) ? 'ko' : 'ja';
+    // Langue reconnue à l'écriture : hangeul → coréen, kana et kanji → japonais, alphabet latin → anglais.
+    const lang: Lang = textLanguage(list.map((p) => p.text).join(' '));
     list.forEach((p, i) =>
       Speech.speak(p.text, {
-        language: lang === 'ko' ? 'ko-KR' : 'ja-JP',
+        language: LOCALE[lang],
         voice: voiceId[lang],
         rate: p.rate ?? 0.9,
         pitch: p.pitch ?? 1,

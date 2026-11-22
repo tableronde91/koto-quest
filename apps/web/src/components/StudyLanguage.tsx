@@ -8,25 +8,33 @@ import { T } from '../i18n';
 /** Mots qui changent selon la langue étudiée (japonais / coréen). */
 export function studyWords(lang: StudyLanguage) {
   const ko = lang === 'ko';
+  const en = lang === 'en';
+  /** Valeur selon la langue étudiée : japonais, coréen, anglais. */
+  const pick = <V,>(ja: V, kor: V, eng: V): V => (ko ? kor : en ? eng : ja);
   return {
     lang,
     ko,
+    en,
+    pick,
     info: languageInfo(lang),
-    /** Nom de l'examen : JLPT ou TOPIK */
-    exam: ko ? 'TOPIK' : 'JLPT',
-    /** « le japonais », « le coréen » */
-    theLanguage: ko ? T('le coréen') : T('le japonais'),
-    /** adjectif : « japonais », « coréen » */
-    adjective: ko ? T('coréen') : T('japonais'),
-    /** Nom de l'écriture à apprendre en premier */
-    script: ko ? T('le hangeul') : T('les kana'),
-    /** Onglet Caractères (libellé court et glyphe) */
-    charsShort: ko ? T('Hangeul') : T('Kana'),
-    charsGlyph: ko ? '한' : 'あ',
+    /** Nom de l'examen : JLPT, TOPIK ou TOEIC */
+    exam: languageInfo(lang).exam,
+    /** « le japonais », « le coréen », « l'anglais » */
+    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais')),
+    /** adjectif : « japonais », « coréen », « anglais » */
+    adjective: pick(T('japonais'), T('coréen'), T('anglais')),
+    /** Nom de l'écriture à apprendre en premier (l'anglais n'en a pas) */
+    script: pick(T('les kana'), T('le hangeul'), ''),
+    /** Onglet Caractères (libellé court et glyphe) ; l'anglais n'a pas d'onglet d'écriture */
+    charsShort: pick(T('Kana'), T('Hangeul'), ''),
+    charsGlyph: pick('あ', '한', ''),
+    hasCharacters: !en,
     /** Atelier d'entraînement */
-    workshop: ko ? T('Atelier TOPIK') : T('Atelier JLPT'),
+    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC')),
+    /** Glyphe des examens */
+    examGlyph: pick('試', '시', 'T'),
     /** Attribut lang des textes dans la langue étudiée */
-    htmlLang: ko ? 'ko' : 'ja',
+    htmlLang: lang as string,
     levelLabel: examLevelLabel,
   };
 }

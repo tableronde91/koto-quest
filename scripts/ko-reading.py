@@ -1021,9 +1021,9 @@ KO_STORIES = [HAENIM, HEUNGBU, GYEONU, GEUMDOKKI, TOKKI, SEONNYEO, HOKBURI, KONG
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('TOPIK')] + KO_STORIES
-data['notices'] = {
+data.setdefault('notices', {}).update({
   'ko': {'fr': 'Contes traditionnels coréens (domaine public), réécrits en coréen simple pour Koto Quest. La romanisation des mots aide à les prononcer.', 'en': 'Traditional Korean folk tales (public domain), retold in simple Korean for Koto Quest. The romanised words help you pronounce them.'},
-}
+})
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
 for s in KO_STORIES:

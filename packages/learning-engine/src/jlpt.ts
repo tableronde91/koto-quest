@@ -212,6 +212,31 @@ export function topikListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Ques
   return { ...q, type: 'listening_choice', prompt: TOPIK_PROMPTS.listening, display: { text: '이어지는 말은?', part: '듣기 — 이어지는 말' }, audio: script, answerAudio: undefined };
 }
 
+/** Consignes du TOEIC Listening & Reading, en anglais comme sur la copie. */
+export const TOEIC_PROMPTS = {
+  grammar: 'Select the best answer to complete the sentence.',
+  listening: 'Listen to the question or statement and select the best response.',
+  vocab: 'Select the word that best matches the meaning.',
+} as const;
+
+/** Partie 5 du TOEIC (Incomplete Sentences) à partir d'un exercice de grammaire rédigé. */
+export function toeicGrammarQuestion(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'particle_choice' && ex.type !== 'fill_blank') return null;
+  const q = authoredToQuestion(ex, rng);
+  return { ...q, prompt: TOEIC_PROMPTS.grammar, display: { ...q.display, reading: undefined, part: 'Part 5 — Incomplete Sentences' } };
+}
+
+/** Partie 2 du TOEIC (Question-Response) : la réplique est lue, on choisit la réponse. */
+export function toeicListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'dialogue_choice' || !ex.lines?.length) return null;
+  const q = authoredToQuestion(ex, rng);
+  const script = ex.lines.map((l, i) => `${i % 2 === 0 ? 'F' : 'M'}|${l.jp}`).join('\n');
+  return { ...q, type: 'listening_choice', prompt: TOEIC_PROMPTS.listening, display: { text: 'What is the best response?', part: 'Part 2 — Question-Response' }, audio: script, answerAudio: undefined };
+}
+
+/** Langue étudiée (même valeurs que StudyLanguage dans @koto/shared). */
+export type EngineLanguage = 'ja' | 'ko' | 'en';
+
 export type JlptDrillPart = 'kanji' | 'writing' | 'grammar' | 'star' | 'listening';
 
 /** Atelier TOPIK : épreuves proposées pour le coréen (pas de kanji ni de question ★). */
@@ -219,6 +244,15 @@ export const TOPIK_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitl
   grammar: { title: 'Grammaire', jpTitle: '문법', description: 'Complète la phrase avec la bonne particule ou terminaison, consigne en coréen comme au TOPIK.' },
   listening: { title: 'Écoute', jpTitle: '듣기', description: 'Écoute un court dialogue et choisis la réplique qui suit, sans texte à lire.' },
 };
+
+/** Atelier TOEIC : parties 5 (phrases à compléter) et 2 (questions-réponses) du TOEIC Listening & Reading. */
+export const TOEIC_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitle: string; description: string }>> = {
+  grammar: { title: 'Phrases à compléter', jpTitle: 'Part 5', description: 'Complète la phrase avec le bon mot ou la bonne forme, consigne en anglais comme au TOEIC.' },
+  listening: { title: 'Questions-réponses', jpTitle: 'Part 2', description: 'Écoute une question et choisis la réponse qui convient, sans texte à lire.' },
+};
+
+/** Épreuves de l'atelier selon la langue étudiée. */
+export const drillsFor = (lang: EngineLanguage) => (lang === 'ko' ? TOPIK_DRILLS : lang === 'en' ? TOEIC_DRILLS : JLPT_DRILLS);
 
 export const JLPT_DRILLS: Record<JlptDrillPart, { title: string; jpTitle: string; description: string }> = {
   kanji: { title: 'Lecture des kanji', jpTitle: '漢字読み', description: 'Lis le mot souligné. Attention aux pièges : voyelle longue, ten-ten, petit っ.' },
@@ -234,13 +268,15 @@ export const JLPT_DRILL_SIZE = 10;
  * Série d'entraînement pour une épreuve, uniquement avec ce que l'utilisateur a déjà appris
  * (notions vues, exercices des leçons terminées).
  */
-export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map(), lang: 'ja' | 'ko' = 'ja'): Question[] {
+export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map(), lang: EngineLanguage = 'ja'): Question[] {
   const n = JLPT_DRILL_SIZE;
   const fromItems = (make: (it: EngineItem) => Question | null) => shuffle(learned, rng).map(make).filter((q): q is Question => !!q).slice(0, n);
-  if (lang === 'ko') {
-    if (part === 'grammar') return shuffle(authored, rng).map((ex) => topikGrammarQuestion(ex, rng)).filter((q): q is Question => !!q).slice(0, n);
+  if (lang === 'ko' || lang === 'en') {
+    const grammarOf = lang === 'en' ? toeicGrammarQuestion : topikGrammarQuestion;
+    const listeningOf = lang === 'en' ? toeicListeningFromDialogue : topikListeningFromDialogue;
+    if (part === 'grammar') return shuffle(authored, rng).map((ex) => grammarOf(ex, rng)).filter((q): q is Question => !!q).slice(0, n);
     if (part === 'listening') {
-      const dialogues = shuffle(authored, rng).map((ex) => topikListeningFromDialogue(ex, rng)).filter((q): q is Question => !!q).slice(0, Math.ceil(n / 2));
+      const dialogues = shuffle(authored, rng).map((ex) => listeningOf(ex, rng)).filter((q): q is Question => !!q).slice(0, Math.ceil(n / 2));
       const words = shuffle(learned.filter((i) => i.kind === 'vocabulary'), rng)
         .map((it) => generateQuestion(it, pool, 'listening_choice', rng))
         .filter((q): q is Question => !!q)

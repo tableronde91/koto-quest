@@ -1,0 +1,369 @@
+{
+ "contentVersion": "2026.11.22",
+ "language": "en",
+ "notice": "Expressions anglaises courantes sélectionnées par Koto Quest ; le registre (poli, familier…) aide à choisir la bonne formule selon la situation, au bureau comme au TOEIC.",
+ "themes": [
+  {
+   "slug": "en-politeness",
+   "glyph": "☕",
+   "title": "Politesse britannique",
+   "description": "Les petits mots qui adoucissent tout : en anglais, on remercie et on s’excuse beaucoup.",
+   "expressions": [
+    {
+     "slug": "enx-sorry",
+     "kind": "vocabulary",
+     "front": "Sorry!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pardon ! désolé !",
+     "note": "Le réflexe britannique : on dit sorry quand on bouscule quelqu’un… et même quand c’est l’autre qui vous bouscule.",
+     "register": "neutral",
+     "example": {
+      "jp": "Oh, sorry! — No worries!",
+      "fr": "Oh, pardon ! — Pas de souci !"
+     }
+    },
+    {
+     "slug": "enx-no-worries",
+     "kind": "vocabulary",
+     "front": "No worries.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pas de souci",
+     "note": "Réponse décontractée à un merci ou à une excuse.",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-cheers",
+     "kind": "vocabulary",
+     "front": "Cheers!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "merci ! ; santé !",
+     "note": "Au Royaume-Uni, cheers veut souvent dire merci, en plus de « santé ! ».",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-you-are-welcome",
+     "kind": "vocabulary",
+     "front": "You’re welcome.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "de rien, je vous en prie",
+     "note": "La réponse standard à thank you. On entend aussi No problem.",
+     "register": "polite"
+    },
+    {
+     "slug": "enx-could-you",
+     "kind": "vocabulary",
+     "front": "Could you…, please?",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pourriez-vous…, s’il vous plaît ?",
+     "note": "Plus poli que Can you… ? : idéal avec un client ou un inconnu.",
+     "register": "polite",
+     "example": {
+      "jp": "Could you close the door, please?",
+      "fr": "Pourriez-vous fermer la porte, s’il vous plaît ?"
+     }
+    },
+    {
+     "slug": "enx-after-you",
+     "kind": "vocabulary",
+     "front": "After you.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "après vous (je vous en prie)",
+     "note": "Pour laisser passer quelqu’un devant soi, à une porte ou dans une file.",
+     "register": "polite"
+    }
+   ]
+  },
+  {
+   "slug": "en-office",
+   "glyph": "✉",
+   "title": "L’anglais du bureau",
+   "description": "Réunions, e-mails, délais : les formules qu’on retrouve partout au travail et au TOEIC.",
+   "expressions": [
+    {
+     "slug": "enx-please-find-attached",
+     "kind": "vocabulary",
+     "front": "Please find attached…",
+     "reading": null,
+     "romaji": null,
+     "meaning": "veuillez trouver ci-joint…",
+     "note": "Formule classique d’un e-mail professionnel avec une pièce jointe.",
+     "register": "formal",
+     "example": {
+      "jp": "Please find attached the report for Monday.",
+      "fr": "Veuillez trouver ci-joint le rapport pour lundi."
+     }
+    },
+    {
+     "slug": "enx-looking-forward",
+     "kind": "vocabulary",
+     "front": "I look forward to hearing from you.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "dans l’attente de votre réponse",
+     "note": "Pour terminer un e-mail formel. Attention : to + verbe en -ing.",
+     "register": "formal"
+    },
+    {
+     "slug": "enx-deadline",
+     "kind": "vocabulary",
+     "front": "deadline",
+     "reading": null,
+     "romaji": null,
+     "meaning": "date limite",
+     "note": "Mot clé du monde du travail : The deadline is Friday.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-on-time",
+     "kind": "vocabulary",
+     "front": "on time",
+     "reading": null,
+     "romaji": null,
+     "meaning": "à l’heure, dans les temps",
+     "note": "The train is on time. Attention : in time = à temps (assez tôt).",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-call-back",
+     "kind": "vocabulary",
+     "front": "to call someone back",
+     "reading": null,
+     "romaji": null,
+     "meaning": "rappeler quelqu’un (au téléphone)",
+     "note": "Can I call you back in ten minutes? = je te rappelle dans dix minutes ?",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-hold-on",
+     "kind": "vocabulary",
+     "front": "Hold on, please.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ne quittez pas",
+     "note": "Au téléphone, pour faire patienter quelqu’un.",
+     "register": "polite"
+    },
+    {
+     "slug": "enx-out-of-office",
+     "kind": "vocabulary",
+     "front": "out of the office",
+     "reading": null,
+     "romaji": null,
+     "meaning": "absent du bureau",
+     "note": "Le message automatique des absences : I’m out of the office until Monday.",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "en-phrasal",
+   "glyph": "↗",
+   "title": "Verbes à particule",
+   "description": "Un verbe + une petite particule = un nouveau sens. Les anglophones les utilisent sans arrêt.",
+   "expressions": [
+    {
+     "slug": "enx-get-on",
+     "kind": "vocabulary",
+     "front": "to get on (a bus)",
+     "reading": null,
+     "romaji": null,
+     "meaning": "monter (dans un bus, un train)",
+     "note": "get off = descendre. Get on the bus at Victoria, get off at Oxford Street.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-turn-on",
+     "kind": "vocabulary",
+     "front": "to turn on",
+     "reading": null,
+     "romaji": null,
+     "meaning": "allumer (un appareil)",
+     "note": "Contraire : turn off (éteindre). Turn off your phone, please.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-look-for",
+     "kind": "vocabulary",
+     "front": "to look for",
+     "reading": null,
+     "romaji": null,
+     "meaning": "chercher",
+     "note": "I’m looking for my keys. À ne pas confondre avec look at (regarder).",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-fill-in",
+     "kind": "vocabulary",
+     "front": "to fill in (a form)",
+     "reading": null,
+     "romaji": null,
+     "meaning": "remplir (un formulaire)",
+     "note": "Please fill in this form. Très fréquent à l’accueil et au TOEIC.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-find-out",
+     "kind": "vocabulary",
+     "front": "to find out",
+     "reading": null,
+     "romaji": null,
+     "meaning": "découvrir, se renseigner",
+     "note": "Can you find out the time of the meeting?",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-give-up",
+     "kind": "vocabulary",
+     "front": "to give up",
+     "reading": null,
+     "romaji": null,
+     "meaning": "abandonner, arrêter",
+     "note": "Don’t give up! = n’abandonne pas ! Aussi : give up smoking (arrêter de fumer).",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "en-idioms",
+   "glyph": "☂",
+   "title": "Idiomes imagés",
+   "description": "Des images surprenantes qu’il ne faut surtout pas traduire mot à mot.",
+   "expressions": [
+    {
+     "slug": "enx-cats-and-dogs",
+     "kind": "vocabulary",
+     "front": "It’s raining cats and dogs.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "il pleut des cordes",
+     "note": "Littéralement « il pleut des chats et des chiens » : très britannique… et très utile.",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-piece-of-cake",
+     "kind": "vocabulary",
+     "front": "a piece of cake",
+     "reading": null,
+     "romaji": null,
+     "meaning": "un jeu d’enfant, du gâteau",
+     "note": "The test was a piece of cake! = l’examen était super facile !",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-break-the-ice",
+     "kind": "vocabulary",
+     "front": "to break the ice",
+     "reading": null,
+     "romaji": null,
+     "meaning": "briser la glace",
+     "note": "Comme en français : détendre l’atmosphère au début d’une rencontre.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-under-the-weather",
+     "kind": "vocabulary",
+     "front": "under the weather",
+     "reading": null,
+     "romaji": null,
+     "meaning": "patraque, pas très en forme",
+     "note": "I’m feeling a bit under the weather today.",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-cup-of-tea",
+     "kind": "vocabulary",
+     "front": "not my cup of tea",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pas mon truc",
+     "note": "Football isn’t really my cup of tea. Une façon polie de dire qu’on n’aime pas.",
+     "register": "casual"
+    },
+    {
+     "slug": "enx-cost-an-arm",
+     "kind": "vocabulary",
+     "front": "to cost an arm and a leg",
+     "reading": null,
+     "romaji": null,
+     "meaning": "coûter les yeux de la tête",
+     "note": "En anglais, ça coûte « un bras et une jambe » plutôt que les yeux.",
+     "register": "casual"
+    }
+   ]
+  },
+  {
+   "slug": "en-proverbs",
+   "glyph": "❦",
+   "title": "Proverbes",
+   "description": "Des proverbes anglais et leur équivalent français, parfois très proche, parfois très différent.",
+   "expressions": [
+    {
+     "slug": "enx-practice-perfect",
+     "kind": "vocabulary",
+     "front": "Practice makes perfect.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "c’est en forgeant qu’on devient forgeron",
+     "note": "La devise de tout apprenant : un peu chaque jour !",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-early-bird",
+     "kind": "vocabulary",
+     "front": "The early bird catches the worm.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "l’avenir appartient à ceux qui se lèvent tôt",
+     "note": "Littéralement « l’oiseau matinal attrape le ver ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-when-in-rome",
+     "kind": "vocabulary",
+     "front": "When in Rome, do as the Romans do.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "à Rome, fais comme les Romains",
+     "note": "Le même proverbe existe en français.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-better-late",
+     "kind": "vocabulary",
+     "front": "Better late than never.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "mieux vaut tard que jamais",
+     "note": "Pour accueillir quelqu’un en retard… avec le sourire.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-actions-louder",
+     "kind": "vocabulary",
+     "front": "Actions speak louder than words.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "les actes valent mieux que les paroles",
+     "note": "Ce qu’on fait compte plus que ce qu’on promet.",
+     "register": "neutral"
+    },
+    {
+     "slug": "enx-dont-judge",
+     "kind": "vocabulary",
+     "front": "Don’t judge a book by its cover.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "l’habit ne fait pas le moine",
+     "note": "Littéralement « ne juge pas un livre à sa couverture ».",
+     "register": "neutral"
+    }
+   ]
+  }
+ ]
+}

@@ -50,7 +50,8 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
   const location = useLocation();
   // L'onglet Caractères suit la langue étudiée (kana ou hangeul).
   const words = studyWords(me.preferences.studyLanguage ?? 'ja');
-  const nav = NAV.map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : n));
+  // L'anglais n'a pas d'onglet d'écriture : seulement les expressions
+  const nav = NAV.filter((n) => n.to !== '/characters' || words.hasCharacters).map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : n));
   const immersive = /^\/(lesson|quiz|boss|games|exam|duel)\//.test(location.pathname) || location.pathname === '/placement' || location.pathname === '/reviews/session' || location.pathname.startsWith('/characters/practice') || location.pathname.startsWith('/expressions/practice');
 
   return (
@@ -62,7 +63,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
             <img src="/icons/icon.svg" alt="" className="h-10 w-10" />
             <div>
               <p className="font-display text-lg leading-tight">{T("Koto Quest")}</p>
-              <p className="jp text-sm text-ink-soft">{words.ko ? '말의 여행' : '言葉の旅'}</p>
+              <p className="jp text-sm text-ink-soft">{words.pick('言葉の旅', '말의 여행', 'A journey in words')}</p>
             </div>
           </div>
           {nav.map((n) => (

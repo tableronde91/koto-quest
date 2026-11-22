@@ -32,7 +32,7 @@ import type {
   DuelStateDto,
   DuelStatus,
 } from '@koto/shared';
-import { languageOfLevel, levelsOfLanguage } from '@koto/shared';
+import { languageInfo, languageOfLevel, levelsOfLanguage } from '@koto/shared';
 import { PrismaService } from '../common/prisma.service';
 import { ClockService } from '../common/clock.service';
 import { ContentService, toEngineItem } from '../content/content.service';
@@ -123,7 +123,7 @@ export class DuelService {
     let ids = common.length >= 8 ? common : union.length >= 8 ? union : [];
     let rows = ids.length ? await tx.learningItem.findMany({ where: { id: { in: ids } } }) : [];
     if (rows.length < 8) {
-      rows = await tx.learningItem.findMany({ where: { lessons: { some: { lesson: { chapter: { world: { slug: lang === 'ko' ? 'topik1-w1' : 'n5-w1' } } } } } } });
+      rows = await tx.learningItem.findMany({ where: { lessons: { some: { lesson: { chapter: { world: { slug: `${languageInfo(lang).firstLevel.toLowerCase()}-w1` } } } } } } });
       ids = rows.map((r) => r.id);
     }
     const items = rows.map(toEngineItem);

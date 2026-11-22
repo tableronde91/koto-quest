@@ -133,7 +133,9 @@ export class Translator {
     if (typeof value === 'string') {
       if (key && SKIP_KEYS.has(key)) return value as T;
       const out = this.tr(value);
-      if (out !== value && !this.shown.has(out)) this.shown.set(out, value);
+      // La dernière valeur affichée l'emporte : en anglais, « hello » peut être la traduction de « bonjour »
+      // (sens d'un mot japonais) puis, à la question suivante, un choix anglais à renvoyer tel quel.
+      if (out !== value || this.shown.has(out)) this.shown.set(out, value);
       return out as T;
     }
     if (Array.isArray(value)) return value.map((v) => this.deep(v, key)) as T;

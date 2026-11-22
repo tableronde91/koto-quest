@@ -22,6 +22,10 @@ const LEVELS: Record<StudyLanguage, { value: SelfLevel; label: string; hint: str
     { value: 'kana', label: T("Je lis le hangeul"), hint: T("On passe directement aux premières phrases.") },
     { value: 'basics', label: T("Je connais quelques bases de grammaire"), hint: T("Les îles du hangeul restent accessibles en révision.") },
   ],
+  en: [
+    { value: 'beginner', label: T("Je pars de zéro ou presque"), hint: T("On commence par les salutations et les phrases de tous les jours.") },
+    { value: 'basics', label: T("Je me débrouille dans les situations simples"), hint: T("Vise directement un niveau plus haut : tu pourras toujours revoir le A1.") },
+  ],
 };
 /** Niveaux visés : seuls les niveaux dont le parcours existe sont proposés comme disponibles. */
 const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: boolean }[]> = {
@@ -39,6 +43,13 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
     { value: 'TOPIK4', label: T("TOPIK 4 — intermédiaire avancé (TOPIK II)"), ready: true },
     { value: 'TOPIK5', label: T("TOPIK 5 — avancé (TOPIK II)"), ready: true },
     { value: 'TOPIK6', label: T("TOPIK 6 — maîtrise (TOPIK II)"), ready: true },
+  ],
+  en: [
+    { value: 'A1', label: T("A1 — découverte (TOEIC 120+)"), ready: true },
+    { value: 'A2', label: T("A2 — survie (TOEIC 225+)"), ready: false },
+    { value: 'B1', label: T("B1 — seuil (TOEIC 550+)"), ready: false },
+    { value: 'B2', label: T("B2 — avancé (TOEIC 785+)"), ready: false },
+    { value: 'C1', label: T("C1 — autonome (TOEIC 945+)"), ready: false },
   ],
 };
 const AREAS: { value: DifficultArea; label: string }[] = [
@@ -61,7 +72,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
   const [step, setStep] = useState(0);
   const [data, setData] = useState<OnboardingInput>({
     selfLevel: 'beginner',
-    targetLevel: me.preferences.studyLanguage === 'ko' ? 'TOPIK1' : 'N5',
+    targetLevel: languageInfo(me.preferences.studyLanguage ?? 'ja').firstLevel,
     studyLanguage: me.preferences.studyLanguage ?? 'ja',
     examDate: null,
     minutesPerDay: 20,
@@ -109,7 +120,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
                 <span lang={l.code} aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ink text-3xl font-black text-paper">{l.glyph}</span>
                 <span>
                   <span className="block text-lg font-bold">{T(l.name)} <span lang={l.code} className="jp font-normal text-ink-soft">{l.native}</span></span>
-                  <span className="text-sm text-ink-soft">{l.code === 'ko' ? T("Préparation au TOPIK, en commençant par le hangeul") : T("Préparation au JLPT, du N5 au N1")}</span>
+                  <span className="text-sm text-ink-soft">{l.code === 'ko' ? T("Préparation au TOPIK, en commençant par le hangeul") : l.code === 'en' ? T("Préparation au TOEIC, du niveau A1 au C1") : T("Préparation au JLPT, du N5 au N1")}</span>
                 </span>
               </button>
             ))}
@@ -134,6 +145,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
             onChange={(v) => set({ targetLevel: v as JlptCode })}
             options={TARGETS[lang].map((t) => ({ value: t.value, label: t.label, hint: t.ready ? T("Disponible") : T("En préparation"), disabled: !t.ready }))}
           />
+          {lang === 'en' && <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Le parcours A1 est prêt, les suivants arrivent.")}</p>}
           {lang === 'ko' && <p className="mt-3 text-sm text-ink-soft">{T("Le TOPIK I regroupe les niveaux 1 et 2 (parcours {0} et {1}), le TOPIK II les niveaux 3 à 6 (parcours {2}, {3}, {4} et {5}) : tous les parcours sont prêts.", [levelLabel('TOPIK1'), levelLabel('TOPIK2'), levelLabel('TOPIK3'), levelLabel('TOPIK4'), levelLabel('TOPIK5'), levelLabel('TOPIK6')])}</p>}
         </>
       ),
@@ -144,7 +156,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
         <div className="flex flex-col gap-3">
           <label className="flex flex-col gap-1 font-bold">{T("Date de l’examen (facultatif)")}<input type="date" className="field max-w-xs font-normal" value={data.examDate ?? ''} onChange={(e) => set({ examDate: e.target.value || null })} />
           </label>
-          <p className="text-sm text-ink-soft">{lang === 'ko' ? T("Le TOPIK est organisé plusieurs fois par an, à des dates qui varient selon les pays. Sans date, tu avances à ton rythme.") : T("Le JLPT a lieu en juillet et en décembre dans la plupart des pays. Sans date, tu avances à ton rythme.")}</p>
+          <p className="text-sm text-ink-soft">{lang === 'en' ? T("Le TOEIC se passe toute l’année, dans des centres agréés ou en ligne selon les pays. Sans date, tu avances à ton rythme.") : lang === 'ko' ? T("Le TOPIK est organisé plusieurs fois par an, à des dates qui varient selon les pays. Sans date, tu avances à ton rythme.") : T("Le JLPT a lieu en juillet et en décembre dans la plupart des pays. Sans date, tu avances à ton rythme.")}</p>
         </div>
       ),
     },
@@ -162,7 +174,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
       title: T("Qu’est-ce qui te semble difficile ?"),
       body: (
         <div className="flex flex-wrap gap-3">
-          {AREAS.filter((a) => lang !== 'ko' || a.value !== 'kanji').map((a) => {
+          {AREAS.filter((a) => (lang !== 'ko' || a.value !== 'kanji') && (lang !== 'en' || (a.value !== 'kanji' && a.value !== 'kana'))).map((a) => {
             const on = data.difficultAreas.includes(a.value);
             return (
               <button

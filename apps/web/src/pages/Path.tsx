@@ -80,7 +80,7 @@ export function PathPage() {
         </div>
       )}
       <Link to="/prepa" className="mb-6 flex items-center gap-4 rounded-3xl border-2 border-[#8E1B26] bg-surface p-4 hover:bg-surface-2">
-        <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-2xl font-black text-white">{words.ko ? '시' : '試'}</span>
+        <span aria-hidden="true" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#8E1B26] text-2xl font-black text-white">{words.examGlyph}</span>
         <span className="flex-1"><span className="block font-bold">{words.workshop}</span><span className="text-sm text-ink-soft">{T("Entraîne-toi épreuve par épreuve au format de l’examen, avec ce que tu as appris.")}</span></span>
         <span aria-hidden="true" className="text-xl">→</span>
       </Link>
@@ -173,7 +173,7 @@ function SagaBanner({ saga, code, region, notice, done }: { saga: Saga; code: st
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-wide opacity-90 sm:text-sm">{T("Mode histoire · {0}", [saga.hero])}</p>
           <h1 className="text-2xl text-white sm:text-4xl">{T("{0} : {1}", [levelLabel(code), saga.title])}</h1>
-          <p className="jp mt-0.5 text-sm opacity-90" lang={languageOfLevel(code) === 'ko' ? 'ko' : 'ja'}>{saga.jp}</p>
+          <p className="jp mt-0.5 text-sm opacity-90" lang={languageOfLevel(code)}>{saga.jp}</p>
         </div>
       </div>
       <div className="p-3 sm:p-5">

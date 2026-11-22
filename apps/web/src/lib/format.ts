@@ -1,3 +1,4 @@
+import { textLanguage } from '@koto/shared';
 import type { Mastery } from '@koto/shared';
 import { T } from '../i18n';
 
@@ -32,7 +33,7 @@ export function formatDuration(seconds: number) {
 
 export const KIND_LABEL: Record<string, string> = { kana: T("Kana"), vocabulary: T("Vocabulaire"), kanji: T("Kanji"), grammar: T("Grammaire") };
 
-/** Attribut lang d'un texte dans la langue étudiée : coréen s'il contient du hangeul, japonais sinon. */
-export function langOf(text: unknown): 'ja' | 'ko' {
-  return typeof text === 'string' && /[ᄀ-ᇿ㄰-㆏가-힯]/.test(text) ? 'ko' : 'ja';
+/** Attribut lang d'un texte dans la langue étudiée : coréen (hangeul), japonais (kana, kanji) ou anglais (alphabet latin). */
+export function langOf(text: unknown): 'ja' | 'ko' | 'en' {
+  return typeof text === 'string' ? textLanguage(text) : 'ja';
 }

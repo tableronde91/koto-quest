@@ -120,7 +120,15 @@ const MESSAGES_KO = [
   'Petit quiz express : tu te souviens ? 🍙',
 ];
 
-export function reminderMessage(seed: number, lang: 'ja' | 'ko' = 'ja'): string {
-  const list = lang === 'ko' ? MESSAGES_KO : MESSAGES;
+const MESSAGES_EN = [
+  'Un petit défi d’anglais t’attend ! 💂',
+  'Trente secondes pour réveiller ta mémoire ? 🧠',
+  'Un mot veut te dire bonjour… Hello! 👋',
+  'Ta prochaine révision est prête ☕',
+  'Petit quiz express : tu te souviens ? 📚',
+];
+
+export function reminderMessage(seed: number, lang: 'ja' | 'ko' | 'en' = 'ja'): string {
+  const list = lang === 'ko' ? MESSAGES_KO : lang === 'en' ? MESSAGES_EN : MESSAGES;
   return list[Math.abs(seed) % list.length];
 }

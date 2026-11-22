@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
+import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
 import type { CharacterDto, CharacterGroupDto, CharacterSectionDto, MeDto, SessionDto } from '@koto/shared';
 import { post } from '../api/client';
@@ -25,6 +25,8 @@ export function CharactersPage() {
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
 
+  // L'anglais n'a pas d'écriture à apprendre : on va directement aux expressions
+  if (!data.sections.length) return <Navigate to="/expressions" replace />;
   const current = (params.get('s') as SectionSlug) ?? 'hiragana';
   const section = data.sections.find((s) => s.slug === current) ?? data.sections[0];
   const practice = (scope: string) => navigate(`/characters/practice/${scope}`);

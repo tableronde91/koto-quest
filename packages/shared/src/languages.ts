@@ -1,22 +1,28 @@
-/** Langues étudiées et niveaux (JLPT, TOPIK). Sans dépendance : importé par index et reading. */
+/** Langues étudiées et niveaux (JLPT, TOPIK, TOEIC/CECRL). Sans dépendance : importé par index et reading. */
 
 // ───────────────────────── Langues étudiées ─────────────────────────
 
-/** Langue étudiée : japonais (JLPT) ou coréen (TOPIK). */
-export type StudyLanguage = 'ja' | 'ko';
+/** Langue étudiée : japonais (JLPT), coréen (TOPIK) ou anglais (TOEIC, niveaux du CECRL). */
+export type StudyLanguage = 'ja' | 'ko' | 'en';
 
 export type JlptLevelCode = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 export type TopikCode = 'TOPIK1' | 'TOPIK2' | 'TOPIK3' | 'TOPIK4' | 'TOPIK5' | 'TOPIK6';
+/** Niveaux du CECRL suivis pour l'anglais (préparation au TOEIC). */
+export type CefrCode = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 /** Code d'un niveau du parcours, toutes langues confondues (le nom est historique). */
-export type JlptCode = JlptLevelCode | TopikCode;
+export type JlptCode = JlptLevelCode | TopikCode | CefrCode;
 export type LevelCode = JlptCode;
 
 /** Niveaux du JLPT, du plus facile au plus difficile. */
 export const JLPT_ONLY_LEVELS: JlptLevelCode[] = ['N5', 'N4', 'N3', 'N2', 'N1'];
 /** Niveaux du TOPIK (TOPIK I : 1-2, TOPIK II : 3-6), du plus facile au plus difficile. */
 export const TOPIK_LEVELS: TopikCode[] = ['TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6'];
+/** Niveaux du CECRL pour l'anglais, du plus facile au plus difficile. */
+export const CEFR_LEVELS: CefrCode[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
+/** Score TOEIC Listening & Reading (sur 990) correspondant à chaque niveau du CECRL, d'après la table d'ETS. */
+export const TOEIC_SCORE_OF: Record<CefrCode, number> = { A1: 120, A2: 225, B1: 550, B2: 785, C1: 945 };
 /** Tous les niveaux acceptés par l'API (le nom est historique). */
-export const JLPT_LEVELS: JlptCode[] = [...JLPT_ONLY_LEVELS, ...TOPIK_LEVELS];
+export const JLPT_LEVELS: JlptCode[] = [...JLPT_ONLY_LEVELS, ...TOPIK_LEVELS, ...CEFR_LEVELS];
 export const ALL_LEVELS = JLPT_LEVELS;
 
 export interface StudyLanguageInfo {
@@ -28,7 +34,7 @@ export interface StudyLanguageInfo {
   /** Glyphe emblème */
   glyph: string;
   /** Examen préparé */
-  exam: 'JLPT' | 'TOPIK';
+  exam: 'JLPT' | 'TOPIK' | 'TOEIC';
   /** Code BCP 47 pour la synthèse vocale */
   speech: string;
   levels: JlptCode[];
@@ -39,6 +45,7 @@ export interface StudyLanguageInfo {
 export const STUDY_LANGUAGES: StudyLanguageInfo[] = [
   { code: 'ja', name: 'Japonais', native: '日本語', glyph: '言', exam: 'JLPT', speech: 'ja-JP', levels: JLPT_ONLY_LEVELS, firstLevel: 'N5' },
   { code: 'ko', name: 'Coréen', native: '한국어', glyph: '한', exam: 'TOPIK', speech: 'ko-KR', levels: TOPIK_LEVELS, firstLevel: 'TOPIK1' },
+  { code: 'en', name: 'Anglais', native: 'English', glyph: 'E', exam: 'TOEIC', speech: 'en-GB', levels: CEFR_LEVELS, firstLevel: 'A1' },
 ];
 export const STUDY_LANGUAGE_CODES: StudyLanguage[] = STUDY_LANGUAGES.map((l) => l.code);
 
@@ -46,24 +53,36 @@ export function languageInfo(lang: StudyLanguage): StudyLanguageInfo {
   return STUDY_LANGUAGES.find((l) => l.code === lang) ?? STUDY_LANGUAGES[0];
 }
 
-/** Langue d'un niveau : les codes TOPIK sont coréens, les autres japonais. */
+/** Vrai pour un niveau du CECRL (anglais) : A1, A2, B1, B2, C1. */
+export const isCefr = (code: string | null | undefined): code is CefrCode => !!code && /^[ABC][12]$/.test(code);
+
+/** Langue d'un niveau : TOPIK → coréen, A1…C1 → anglais, les autres (N5…N1) → japonais. */
 export function languageOfLevel(code: string | null | undefined): StudyLanguage {
-  return code && code.startsWith('TOPIK') ? 'ko' : 'ja';
+  if (code && code.startsWith('TOPIK')) return 'ko';
+  return isCefr(code) ? 'en' : 'ja';
 }
 
-/** Libellé court d'un niveau : « N5 », « TOPIK 1 ». */
+/** Libellé court d'un niveau : « N5 », « TOPIK 1 », « B1 ». */
 export function levelLabel(code: string): string {
   return code.startsWith('TOPIK') ? `TOPIK ${code.slice(5)}` : code;
 }
 
-/** Libellé d'un niveau avec son examen : « JLPT N5 », « TOPIK 1 ». */
+/** Libellé d'un niveau avec son examen : « JLPT N5 », « TOPIK 1 », « TOEIC B1 ». */
 export function examLevelLabel(code: string): string {
-  return code.startsWith('TOPIK') ? `TOPIK ${code.slice(5)}` : `JLPT ${code}`;
+  if (code.startsWith('TOPIK')) return `TOPIK ${code.slice(5)}`;
+  return isCefr(code) ? `TOEIC ${code}` : `JLPT ${code}`;
 }
 
 /** Vrai si le texte contient du hangeul (coréen). */
 export function hasHangul(s: string): boolean {
   return /[ᄀ-ᇿ㄰-㆏가-힯]/.test(s);
+}
+
+/** Langue d'un texte à lire à voix haute : hangeul → coréen, kana ou kanji → japonais, lettres latines seules → anglais. */
+export function textLanguage(s: string): StudyLanguage {
+  if (hasHangul(s)) return 'ko';
+  if (/[\u3040-\u30ff\u3400-\u9fff々〆]/.test(s)) return 'ja';
+  return /[A-Za-z]/.test(s) ? 'en' : 'ja';
 }
 
 // ───────── Changement de langue étudiée ─────────

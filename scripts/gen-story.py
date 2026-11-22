@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -555,6 +555,57 @@ story['levels']['TOPIK6'] = {
        'Before the altar of Heaven, you take the oath of the keepers of myths. Final trial: listen, write and read as in the TOPIK II, and reach level 6, the highest.'),
       ('Le Ciel s’illumine. Tu es gardien des mythes : ton voyage en coréen est complet.', 'The sky lights up. You are a keeper of myths: your journey in Korean is complete.')),
   },
+}
+
+story['levels']['A1'] = {
+   'glyph': 'M', 'jp': 'Merlin’s Apprentice', 'color': '#2E6B4F',
+   'saga': B('L’Épée dans le bureau', 'The Sword in the Office'),
+   'hero': B('Apprenti·e de Merlin', 'Merlin’s apprentice'),
+   'short': B('L’apprenti·e de Merlin', 'Merlin’s apprentice'),
+   'prologue': B(
+     'Ton premier stage à Londres, chez Avalon & Co. Le responsable, un certain M. Ambrose à la longue barbe grise, te tend un badge et murmure : « Je m’appelle en réalité Merlin. Les créatures des vieilles légendes se sont réveillées dans tout le royaume, et seule une personne qui parle leur langue pourra les apaiser. Apprends l’anglais, traverse Albion, et l’épée t’attendra dans le rocher. »',
+     'Your first internship in London, at Avalon & Co. The manager, a certain Mr Ambrose with a long grey beard, hands you a badge and whispers: “My real name is Merlin. The creatures of the old legends have woken all over the kingdom, and only someone who speaks their language can calm them. Learn English, cross Albion, and the sword will be waiting for you in the stone.”'),
+   'epilogue': B(
+     'Ta main se pose sur la garde, et l’épée glisse hors du rocher comme si elle t’attendait. Merlin sourit dans sa barbe : « Te voilà prêt·e pour la suite. Le royaume est vaste, et ses légendes sont nombreuses… »',
+     'Your hand closes on the hilt, and the sword slides out of the stone as if it had been waiting for you. Merlin smiles into his beard: “Now you are ready for what comes next. The kingdom is vast, and its legends are many…”'),
+   'chapters': {
+    'a1-w1': CHAP(('Le badge disparu', 'The missing badge'),
+      ('Premier matin chez Avalon & Co. : ton badge a disparu de l’accueil. Le Boggart, lutin farceur des maisons anglaises, l’a caché et mélange tous les noms. Salue, présente-toi et épelle ton nom pour le récupérer.',
+       'First morning at Avalon & Co.: your badge has vanished from reception. The Boggart, a prankster goblin of English homes, has hidden it and mixed up all the names. Greet people, introduce yourself and spell your name to get it back.'),
+      ('Le Boggart te rend ton badge avec une révérence. Tu fais désormais partie de l’équipe.', 'The Boggart gives your badge back with a bow. You are now part of the team.')),
+    'a1-w2': CHAP(('Les portraits échangés', 'The swapped portraits'),
+      ('Puck, le lutin malicieux de Shakespeare, a échangé toutes les photos de famille sur les bureaux. Pour remettre chaque cadre à sa place, il faut savoir dire qui est qui, quel métier fait chacun et ce qu’il possède.',
+       'Puck, Shakespeare’s mischievous sprite, has swapped all the family photos on the desks. To put every frame back, you must say who is who, what everyone does and what they own.'),
+      ('Puck éclate de rire et disparaît dans un bruissement de feuilles. Chaque collègue retrouve sa famille.', 'Puck bursts out laughing and vanishes in a rustle of leaves. Every colleague gets their family back.')),
+    'a1-w3': CHAP(('La flamme des couloirs', 'The flame in the corridors'),
+      ('Une petite flamme bleue danse dans les couloirs et égare tous les visiteurs : c’est le Feu follet. Décris précisément où se trouvent les objets et les salles pour qu’il te montre la bonne porte.',
+       'A little blue flame dances in the corridors and leads every visitor astray: it is the Will-o’-the-Wisp. Describe exactly where things and rooms are, and it will show you the right door.'),
+      ('Le Feu follet s’apaise et éclaire désormais le couloir de la salle de réunion.', 'The Will-o’-the-Wisp calms down and now lights the corridor to the meeting room.')),
+    'a1-w4': CHAP(('Les horloges déréglées', 'The broken clocks'),
+      ('À la tombée de la nuit, Black Shuck, le grand chien noir du Norfolk, rôde dans la City et dérègle toutes les horloges. Raconte ta journée et donne l’heure juste pour qu’il retourne dans la lande.',
+       'At nightfall, Black Shuck, the great black dog of Norfolk, prowls through the City and throws every clock out of time. Describe your day and give the right time, and he will go back to the moor.'),
+      ('Les horloges sonnent à nouveau à l’heure. Black Shuck s’éloigne dans la brume.', 'The clocks strike on time again. Black Shuck slips away into the mist.')),
+    'a1-w5': CHAP(('Le géant affamé', 'The hungry giant'),
+      ('Cormoran, le géant de Cornouailles, a pris le café du coin et réclame des montagnes de nourriture. Commande poliment, demande les prix et compte juste pour que le patron récupère ses clés.',
+       'Cormoran, the giant of Cornwall, has taken over the corner café and demands mountains of food. Order politely, ask the prices and count right so the owner gets his keys back.'),
+      ('Rassasié, Cormoran rend les clés et repart vers sa colline en sifflotant.', 'Full at last, Cormoran gives back the keys and heads home to his hill, whistling.')),
+    'a1-w6': CHAP(('Le loch des voyageurs perdus', 'The loch of lost travellers'),
+      ('Merlin t’envoie vers le nord. Au bord du loch Ness, Nessie, le monstre du loch, fait chavirer les barques de ceux qui ne savent pas où ils vont. Trouve ton chemin, prends le bon train et dis ce que tu sais faire.',
+       'Merlin sends you north. On the shores of Loch Ness, Nessie capsizes the boats of those who don’t know where they are going. Find your way, take the right train and say what you can do.'),
+      ('Nessie plonge en douceur et te laisse traverser le loch. Le chemin du sud est ouvert.', 'Nessie dives gently and lets you cross the loch. The road south is open.')),
+    'a1-w7': CHAP(('Le défi du chevalier', 'The knight’s challenge'),
+      ('Dans une salle froide apparaît le Chevalier vert, géant tout vert de la cour d’Arthur. Son défi : décrire ce que chacun fait à l’instant, le temps qu’il fait et ce qu’il porte, sans la moindre erreur.',
+       'In a cold hall appears the Green Knight, the all-green giant of Arthur’s court. His challenge: describe what everyone is doing right now, the weather and what they are wearing, without a single mistake.'),
+      ('Le Chevalier vert salue ton courage et t’indique la colline du dragon.', 'The Green Knight salutes your courage and points you to the dragon’s hill.')),
+    'a1-w8': CHAP(('Sous la colline du dragon', 'Under the dragon’s hill'),
+      ('Au pays de Galles, Y Ddraig Goch, le dragon rouge, se réveille sous la colline. Il veut savoir ce que tu as fait pour mériter l’épée : raconte tout ton voyage au passé.',
+       'In Wales, Y Ddraig Goch, the red dragon, wakes beneath the hill. He wants to know what you did to deserve the sword: tell the story of your whole journey in the past.'),
+      ('Le dragon rouge déploie ses ailes et s’envole vers les nuages. Au loin, une épée brille dans un rocher.', 'The red dragon spreads its wings and flies up into the clouds. In the distance, a sword gleams in a stone.')),
+    'a1-final': CHAP(('L’épée dans le rocher', 'The sword in the stone'),
+      ('Devant le rocher, Merlin t’attend avec ta dernière épreuve : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau A1 pour tirer l’épée.',
+       'In front of the stone, Merlin awaits you with your final trial: listen, read and answer as in the TOEIC. Reach the A1 score to draw the sword.'),
+      ('L’épée est à toi. Ton premier niveau d’anglais est validé !', 'The sword is yours. Your first level of English is complete!')),
+   },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
 json.dump(story, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

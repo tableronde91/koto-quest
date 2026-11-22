@@ -13,7 +13,7 @@ const en = new Translator(['ui', 'engine', 'api', 'content'].map((f) => json(`co
 const FRENCH = /[àâçéèêëîïôûùœ«»]|\b(le|la|les|des|du|une|est|et|pour|avec|ce|cette|signifie|quel|quelle|que|comment)\b/i;
 const JP_ONLY = /^[\s　-ヿ一-鿿＀-￯0-9０-９.,!?()「」『』…〜・ー/★＿:：;]+$/;
 
-const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json'].map(json);
+const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/a1/a1.json'].map(json);
 const items: EngineItem[] = [];
 const authored: AuthoredExercise[] = [];
 for (const lvl of levels)
@@ -23,7 +23,7 @@ for (const lvl of levels)
         for (const it of l.items) items.push({ id: it.slug, kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning });
         for (const ex of l.exercises ?? []) authored.push(ex);
       }
-for (const t of [...json('content/expressions/expressions.json').themes, ...json('content/expressions/expressions-ko.json').themes])
+for (const t of [...json('content/expressions/expressions.json').themes, ...json('content/expressions/expressions-ko.json').themes, ...json('content/expressions/expressions-en.json').themes])
   for (const it of t.expressions) items.push({ id: it.slug, kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning });
 
 const untranslated = (s: string) => !JP_ONLY.test(s) && FRENCH.test(s) && en.tr(s) === s;
@@ -37,7 +37,7 @@ describe('Traduction anglaise', () => {
       else if (o && typeof o === 'object') for (const [kk, v] of Object.entries(o)) !SKIP.has(kk) && walk(v, kk);
       else if (typeof o === 'string' && untranslated(o)) missing.add(o);
     };
-    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/exams/n5-jlpt.json', 'content/exams/n4-jlpt.json', 'content/exams/n3-jlpt.json', 'content/exams/n2-jlpt.json', 'content/exams/n1-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/exams/topik1.json', 'content/exams/topik2.json', 'content/exams/topik3.json', 'content/exams/topik4.json', 'content/exams/topik5.json', 'content/exams/topik6.json', 'content/characters/hangul.json', 'content/expressions/expressions-ko.json']) walk(json(f));
+    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/exams/n5-jlpt.json', 'content/exams/n4-jlpt.json', 'content/exams/n3-jlpt.json', 'content/exams/n2-jlpt.json', 'content/exams/n1-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/exams/topik1.json', 'content/exams/topik2.json', 'content/exams/topik3.json', 'content/exams/topik4.json', 'content/exams/topik5.json', 'content/exams/topik6.json', 'content/characters/hangul.json', 'content/expressions/expressions-ko.json', 'content/a1/a1.json', 'content/exams/a1-toeic.json', 'content/expressions/expressions-en.json']) walk(json(f));
     expect([...missing]).toEqual([]);
   });
 

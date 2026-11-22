@@ -13,6 +13,8 @@
  *   référence sur les phrases jusqu'à la fin ;
  * - deux lectures demandées coup sur coup se chevauchaient → seule la dernière demande est jouée.
  */
+import { textLanguage } from '@koto/shared';
+
 export const speechSupported = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
 
 export interface SpeechPart {
@@ -22,13 +24,13 @@ export interface SpeechPart {
   onStart?: () => void;
 }
 
-type VoiceLang = 'ja' | 'ko';
-const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR' };
+type VoiceLang = 'ja' | 'ko' | 'en';
+const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB' };
 const voices = new Map<VoiceLang, SpeechSynthesisVoice | null>();
 let voicesReady: Promise<void> | null = null;
 
-/** Langue d'un texte : coréen s'il contient du hangeul, japonais sinon. */
-export const voiceLangOf = (text: string): VoiceLang => (/[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(text) ? 'ko' : 'ja');
+/** Langue d'un texte : coréen (hangeul), japonais (kana, kanji) ou anglais (alphabet latin). */
+export const voiceLangOf = (text: string): VoiceLang => textLanguage(text);
 
 /** Meilleure voix pour la langue : installée sur l'appareil d'abord (démarrage immédiat), puis en ligne. */
 function chooseVoice(lang: VoiceLang): SpeechSynthesisVoice | null {

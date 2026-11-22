@@ -12,7 +12,7 @@ import { useStudyLang } from '../src/study';
 
 type Pane = string;
 // Libellés traduits à l'affichage avec T()
-const PANES: Record<'ja' | 'ko', { slug: Pane; glyph: string; label: string }[]> = {
+const PANES: Record<'ja' | 'ko' | 'en', { slug: Pane; glyph: string; label: string }[]> = {
   ja: [
     { slug: 'hiragana', glyph: 'あ', label: 'Hiragana' },
     { slug: 'katakana', glyph: 'ア', label: 'Katakana' },
@@ -25,6 +25,8 @@ const PANES: Record<'ja' | 'ko', { slug: Pane; glyph: string; label: string }[]>
     { slug: 'hangul-syllables', glyph: '가', label: 'Syllabes' },
     { slug: 'expressions', glyph: '말', label: 'Expressions' },
   ],
+  // Pas d'écriture à apprendre en anglais : seulement les expressions et idiomes
+  en: [{ slug: 'expressions', glyph: '“', label: 'Expressions' }],
 };
 
 // Traduits à l'affichage avec T()
@@ -44,8 +46,8 @@ export default function KanaTab() {
   const pane = panes.some((p) => p.slug === picked) ? picked : panes[0].slug;
   return (
     <Screen>
-      <TitleBar title={w.ko ? T('Hangeul') : T('Caractères')} fallback="/learn" />
-      <P soft>{w.ko ? T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.') : T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.')}</P>
+      <TitleBar title={w.pick(T('Caractères'), T('Hangeul'), T('Expressions'))} fallback="/learn" />
+      <P soft>{w.pick(T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.'), T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.'), T('Les expressions idiomatiques et les verbes à particule les plus utiles, accessibles à tout moment.'))}</P>
       <View accessibilityRole="tablist" accessibilityLabel={T('Écriture')} style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 16, padding: 4 }}>
         {panes.map((p) => {
           const on = p.slug === pane;

@@ -33,7 +33,16 @@ const RANKS_KO: [number, string][] = [
   [3, T("Voyageur·se des îles")],
   [1, T("Apprenti·e du dojo")],
 ];
-const rankFor = (level: number, ko = false) => (ko ? RANKS_KO : RANKS).find(([min]) => level >= min)![1];
+/** En anglais, les rangs suivent la légende arthurienne. */
+const RANKS_EN: [number, string][] = [
+  [16, T("Maître du Koto")],
+  [12, T("Chevalier·ère de la Table ronde")],
+  [8, T("Gardien·ne des légendes")],
+  [5, T("Écuyer·ère d’Albion")],
+  [3, T("Voyageur·se des îles")],
+  [1, T("Apprenti·e de Merlin")],
+];
+const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés. */
 const SKILL_STEP = 10;
@@ -48,6 +57,11 @@ const SKILLS_KO = [
   { kind: 'kana', glyph: '한', label: T("Hangeul"), color: '#E36A3A' },
   { kind: 'vocabulary', glyph: '말', label: T("Vocabulaire"), color: '#3F8F5B' },
   { kind: 'grammar', glyph: '문', label: T("Grammaire"), color: '#4F5DB8' },
+] as const;
+/** Compétences en anglais : pas d'écriture à apprendre, vocabulaire et grammaire. */
+const SKILLS_EN = [
+  { kind: 'vocabulary', glyph: 'W', label: T("Vocabulaire"), color: '#3F8F5B' },
+  { kind: 'grammar', glyph: 'G', label: T("Grammaire"), color: '#4F5DB8' },
 ] as const;
 
 const GARDEN: { m: Mastery; icon: string; label: string; hint: string }[] = [
@@ -92,9 +106,11 @@ export function StatsPage() {
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
   // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen.
-  const ko = useStudyLang().ko;
-  const { data: n5 } = usePath(ko ? 'TOPIK1' : 'N5');
-  const { data: n4 } = usePath(ko ? 'TOPIK2' : 'N4');
+  const words = useStudyLang();
+  const ko = words.ko;
+  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1'));
+  const { data: n4Raw } = usePath(ko ? 'TOPIK2' : 'N4');
+  const n4 = words.en ? undefined : n4Raw;
   const { data: topik3 } = usePath('TOPIK3');
   const { data: topik4 } = usePath('TOPIK4');
   const third = ko ? topik3 : undefined;
@@ -129,7 +145,7 @@ export function StatsPage() {
               <Avatar config={d.avatar} size={96} />
             </motion.div>
             <div className="order-last min-w-0 basis-full sm:order-none sm:basis-auto sm:flex-1">
-              <p className="text-sm font-bold uppercase tracking-wide text-[#FFD58A]">{rankFor(d.xp.level, ko)}</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-[#FFD58A]">{rankFor(d.xp.level, words.lang)}</p>
               <p className="font-display text-3xl leading-tight">{d.displayName}</p>
               <p className="mt-1 text-sm opacity-80">{T("{0} XP avant le niveau {1} · {2} XP au total", [d.xp.forNext - d.xp.intoLevel , d.xp.level + 1 , d.xp.total ])}</p>
             </div>
@@ -154,7 +170,7 @@ export function StatsPage() {
       {/* Compétences */}
       <Section title={T("Compétences")} glyph="技">
         <ul className="grid gap-3 sm:grid-cols-2">
-          {(ko ? SKILLS_KO : SKILLS).map((k, i) => {
+          {(words.en ? SKILLS_EN : ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
             const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
             const into = v.mastered % SKILL_STEP;

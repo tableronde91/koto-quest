@@ -4,8 +4,8 @@ import { stripRuby } from '@koto/learning-engine';
 import { Ctx, createTestApp, resetUsers, setNow, signUp } from './helpers';
 
 const all = JSON.parse(readFileSync(resolve(__dirname, '../../../content/reading/stories.json'), 'utf8'));
-// Contes japonais (les contes coréens sont réservés aux comptes qui étudient le coréen, voir korean.spec.ts).
-const catalog = { ...all, stories: all.stories.filter((s: any) => !s.level.startsWith('TOPIK')) };
+// Contes japonais (les contes coréens et anglais sont réservés aux comptes qui étudient ces langues, voir korean.spec.ts et english.spec.ts).
+const catalog = { ...all, stories: all.stories.filter((s: any) => /^N[1-5]$/.test(s.level)) };
 
 describe('Lecture quotidienne', () => {
   let ctx: Ctx;
