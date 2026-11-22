@@ -201,6 +201,7 @@ const STATUS_TEXT: Record<PathLessonDto['status'], string> = {
 function Stone({ lesson: l, offset }: { lesson: PathLessonDto; offset: number }) {
   const locked = l.status === 'locked';
   const done = l.status === 'completed';
+  const { en } = useStudyLang();
   const content = (
     <>
       <span
@@ -212,7 +213,7 @@ function Stone({ lesson: l, offset }: { lesson: PathLessonDto; offset: number })
           color: done ? 'var(--paper)' : locked ? 'var(--ink-soft)' : '#2a1a00',
         }}
       >
-        {done ? '✓' : locked ? '錠' : '道'}
+        {done ? '✓' : locked ? (en ? '⋯' : '錠') : en ? '▶' : '道'}
       </span>
       <span className="flex-1">
         <span className="jp block text-lg font-bold">{l.title}</span>

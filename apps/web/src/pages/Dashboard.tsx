@@ -22,7 +22,7 @@ function greeting(lang: 'ja' | 'ko' | 'en') {
 
 export function DashboardPage() {
   const { data: d, isLoading, error, refetch } = useDashboard();
-  const { ko } = useStudyLang();
+  const { ko, en } = useStudyLang();
   if (isLoading) return <Spinner />;
   if (error || !d) return <ErrorBox error={error} onRetry={refetch} />;
 
@@ -63,7 +63,7 @@ export function DashboardPage() {
       {/* Action principale : une seule chose à faire maintenant */}
       <section aria-label={T("Prochaine étape")} className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-8">
         <span aria-hidden="true" className="jp pointer-events-none absolute -right-4 -top-10 select-none text-[11rem] font-black leading-none opacity-10">
-          {hasReviews ? '復' : '学'}
+          {en ? (hasReviews ? '↺' : 'Aa') : hasReviews ? '復' : '学'}
         </span>
         {hasReviews ? (
           <>
@@ -105,6 +105,11 @@ export function DashboardPage() {
           <>
             <Stat label={T("Mots maîtrisés")} value={<CountUp value={d.mastered.words} />} note={T("{0} points de grammaire", [d.mastered.grammar])} />
             <Stat label={T("Hangeul maîtrisé")} value={<CountUp value={d.mastered.kana} />} note={d.reviews.learningSoon ? T("{0} révision(s) dans l’heure", [d.reviews.learningSoon]) : T("lettres et syllabes")} />
+          </>
+        ) : en ? (
+          <>
+            <Stat label={T("Mots maîtrisés")} value={<CountUp value={d.mastered.words} />} note={T("et expressions")} />
+            <Stat label={T("Grammaire maîtrisée")} value={<CountUp value={d.mastered.grammar} />} note={d.reviews.learningSoon ? T("{0} révision(s) dans l’heure", [d.reviews.learningSoon]) : T("points de grammaire")} />
           </>
         ) : (
           <>

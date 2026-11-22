@@ -18291,6 +18291,766 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "robin-hood",
+   "glyph": "R",
+   "level": "B1",
+   "color": "#2F6B3A",
+   "title": {
+    "jp": "Robin Hood and the Golden Arrow",
+    "fr": "Robin des Bois et la flèche d’or",
+    "en": "Robin Hood and the Golden Arrow"
+   },
+   "summary": {
+    "fr": "Le shérif de Nottingham organise un concours de tir à l’arc pour piéger Robin des Bois. Robin décide d’y aller quand même.",
+    "en": "The Sheriff of Nottingham organises an archery contest to trap Robin Hood. Robin decides to go anyway."
+   },
+   "chapters": [
+    {
+     "slug": "robin-1",
+     "title": {
+      "jp": "The Sheriff’s trap",
+      "fr": "Le piège du shérif",
+      "en": "The Sheriff’s trap"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "For years, Robin Hood had been living in Sherwood Forest with his band of outlaws.",
+        "fr": "Depuis des années, Robin des Bois vivait dans la forêt de Sherwood avec sa bande de hors-la-loi.",
+        "en": "For years, Robin Hood had been living in Sherwood Forest with his band of outlaws.",
+        "kana": "For years, Robin Hood had been living in Sherwood Forest with his band of outlaws."
+       },
+       {
+        "jp": "They took money from the rich and gave it to the poor, which made the Sheriff of Nottingham furious.",
+        "fr": "Ils prenaient l’argent des riches pour le donner aux pauvres, ce qui rendait furieux le shérif de Nottingham.",
+        "en": "They took money from the rich and gave it to the poor, which made the Sheriff of Nottingham furious.",
+        "kana": "They took money from the rich and gave it to the poor, which made the Sheriff of Nottingham furious."
+       }
+      ],
+      [
+       {
+        "jp": "One day, the Sheriff announced an archery contest. The prize would be an arrow made of gold.",
+        "fr": "Un jour, le shérif annonça un concours de tir à l’arc. Le prix serait une flèche en or.",
+        "en": "One day, the Sheriff announced an archery contest. The prize would be an arrow made of gold.",
+        "kana": "One day, the Sheriff announced an archery contest. The prize would be an arrow made of gold."
+       },
+       {
+        "jp": "“Robin is so proud that he will come,” the Sheriff thought. “And when he does, my soldiers will catch him.”",
+        "fr": "« Robin est si fier qu’il viendra, pensa le shérif. Et quand il viendra, mes soldats l’attraperont. »",
+        "en": "“Robin is so proud that he will come,” the Sheriff thought. “And when he does, my soldiers will catch him.”",
+        "kana": "“Robin is so proud that he will come,” the Sheriff thought. “And when he does, my soldiers will catch him.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "outlaws",
+       "reading": "/ˈaʊtlɔːz/",
+       "fr": "hors-la-loi",
+       "en": "outlaws"
+      },
+      {
+       "jp": "furious",
+       "reading": "/ˈfjʊəriəs/",
+       "fr": "furieux",
+       "en": "furious"
+      },
+      {
+       "jp": "announced",
+       "reading": "/əˈnaʊnst/",
+       "fr": "annonça",
+       "en": "announced"
+      },
+      {
+       "jp": "contest",
+       "reading": "/ˈkɒntest/",
+       "fr": "concours",
+       "en": "contest"
+      },
+      {
+       "jp": "prize",
+       "reading": "/praɪz/",
+       "fr": "prix, récompense",
+       "en": "prize"
+      },
+      {
+       "jp": "proud",
+       "reading": "/praʊd/",
+       "fr": "fier",
+       "en": "proud"
+      },
+      {
+       "jp": "catch",
+       "reading": "/kætʃ/",
+       "fr": "attraper",
+       "en": "catch"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le shérif est-il furieux ?",
+        "en": "Why is the Sheriff furious?"
+       },
+       "choices": [
+        {
+         "fr": "Robin vole les riches pour aider les pauvres",
+         "en": "Robin robs the rich to help the poor"
+        },
+        {
+         "fr": "Robin a gagné un concours",
+         "en": "Robin won a contest"
+        },
+        {
+         "fr": "Ses soldats sont partis",
+         "en": "His soldiers have left"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Quel est le vrai but du concours ?",
+        "en": "What is the real aim of the contest?"
+       },
+       "choices": [
+        {
+         "fr": "Trouver le meilleur archer",
+         "en": "To find the best archer"
+        },
+        {
+         "fr": "Attraper Robin",
+         "en": "To catch Robin"
+        },
+        {
+         "fr": "Gagner de l’argent",
+         "en": "To make money"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "robin-2",
+     "title": {
+      "jp": "The stranger in red",
+      "fr": "L’inconnu en rouge",
+      "en": "The stranger in red"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Robin’s friends begged him not to go. “It must be a trap,” said Little John.",
+        "fr": "Les amis de Robin le supplièrent de ne pas y aller. « Ce doit être un piège », dit Petit Jean.",
+        "en": "Robin’s friends begged him not to go. “It must be a trap,” said Little John.",
+        "kana": "Robin’s friends begged him not to go. “It must be a trap,” said Little John."
+       },
+       {
+        "jp": "But Robin had an idea. If he wore a disguise, nobody would recognise him.",
+        "fr": "Mais Robin eut une idée. S’il se déguisait, personne ne le reconnaîtrait.",
+        "en": "But Robin had an idea. If he wore a disguise, nobody would recognise him.",
+        "kana": "But Robin had an idea. If he wore a disguise, nobody would recognise him."
+       }
+      ],
+      [
+       {
+        "jp": "On the day of the contest, a stranger in a red cloak and a hood stepped forward.",
+        "fr": "Le jour du concours, un inconnu vêtu d’une cape rouge et d’un capuchon s’avança.",
+        "en": "On the day of the contest, a stranger in a red cloak and a hood stepped forward.",
+        "kana": "On the day of the contest, a stranger in a red cloak and a hood stepped forward."
+       },
+       {
+        "jp": "His arrows flew straight to the centre of the target, one after another. The crowd had never seen such an archer.",
+        "fr": "Ses flèches filaient droit au centre de la cible, l’une après l’autre. La foule n’avait jamais vu un tel archer.",
+        "en": "His arrows flew straight to the centre of the target, one after another. The crowd had never seen such an archer.",
+        "kana": "His arrows flew straight to the centre of the target, one after another. The crowd had never seen such an archer."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "begged",
+       "reading": "/beɡd/",
+       "fr": "supplièrent",
+       "en": "begged"
+      },
+      {
+       "jp": "trap",
+       "reading": "/træp/",
+       "fr": "piège",
+       "en": "trap"
+      },
+      {
+       "jp": "disguise",
+       "reading": "/dɪsˈɡaɪz/",
+       "fr": "déguisement",
+       "en": "disguise"
+      },
+      {
+       "jp": "recognise",
+       "reading": "/ˈrekəɡnaɪz/",
+       "fr": "reconnaître",
+       "en": "recognise"
+      },
+      {
+       "jp": "cloak",
+       "reading": "/kləʊk/",
+       "fr": "cape",
+       "en": "cloak"
+      },
+      {
+       "jp": "target",
+       "reading": "/ˈtɑːɡɪt/",
+       "fr": "cible",
+       "en": "target"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que pense Petit Jean du concours ?",
+        "en": "What does Little John think of the contest?"
+       },
+       "choices": [
+        {
+         "fr": "Que c’est sûrement un piège",
+         "en": "That it must be a trap"
+        },
+        {
+         "fr": "Que Robin va perdre",
+         "en": "That Robin will lose"
+        },
+        {
+         "fr": "Qu’il veut y participer",
+         "en": "That he wants to take part"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment Robin évite-t-il d’être reconnu ?",
+        "en": "How does Robin avoid being recognised?"
+       },
+       "choices": [
+        {
+         "fr": "Il arrive la nuit",
+         "en": "He arrives at night"
+        },
+        {
+         "fr": "Il porte un déguisement",
+         "en": "He wears a disguise"
+        },
+        {
+         "fr": "Il envoie Petit Jean",
+         "en": "He sends Little John"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "robin-3",
+     "title": {
+      "jp": "The golden arrow",
+      "fr": "La flèche d’or",
+      "en": "The golden arrow"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "The Sheriff gave the golden arrow to the stranger in red without realising who he was.",
+        "fr": "Le shérif remit la flèche d’or à l’inconnu en rouge sans se rendre compte de qui il était.",
+        "en": "The Sheriff gave the golden arrow to the stranger in red without realising who he was.",
+        "kana": "The Sheriff gave the golden arrow to the stranger in red without realising who he was."
+       },
+       {
+        "jp": "That evening, a letter was found on the Sheriff’s table: “Thank you for the prize. Robin Hood.”",
+        "fr": "Ce soir-là, on trouva une lettre sur la table du shérif : « Merci pour le prix. Robin des Bois. »",
+        "en": "That evening, a letter was found on the Sheriff’s table: “Thank you for the prize. Robin Hood.”",
+        "kana": "That evening, a letter was found on the Sheriff’s table: “Thank you for the prize. Robin Hood.”"
+       }
+      ],
+      [
+       {
+        "jp": "The Sheriff was so angry that he could not eat his dinner.",
+        "fr": "Le shérif était si furieux qu’il ne put manger son dîner.",
+        "en": "The Sheriff was so angry that he could not eat his dinner.",
+        "kana": "The Sheriff was so angry that he could not eat his dinner."
+       },
+       {
+        "jp": "Meanwhile, in Sherwood Forest, the outlaws were laughing and singing around the fire.",
+        "fr": "Pendant ce temps, dans la forêt de Sherwood, les hors-la-loi riaient et chantaient autour du feu.",
+        "en": "Meanwhile, in Sherwood Forest, the outlaws were laughing and singing around the fire.",
+        "kana": "Meanwhile, in Sherwood Forest, the outlaws were laughing and singing around the fire."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "golden",
+       "reading": "/ˈɡəʊldən/",
+       "fr": "en or, doré",
+       "en": "golden"
+      },
+      {
+       "jp": "stranger",
+       "reading": "/ˈstreɪndʒə/",
+       "fr": "inconnu",
+       "en": "stranger"
+      },
+      {
+       "jp": "realising",
+       "reading": "/ˈrɪəlaɪzɪŋ/",
+       "fr": "se rendre compte",
+       "en": "realising"
+      },
+      {
+       "jp": "letter",
+       "reading": "/ˈletə/",
+       "fr": "lettre",
+       "en": "letter"
+      },
+      {
+       "jp": "angry",
+       "reading": "/ˈæŋɡri/",
+       "fr": "en colère",
+       "en": "angry"
+      },
+      {
+       "jp": "meanwhile",
+       "reading": "/ˈmiːnwaɪl/",
+       "fr": "pendant ce temps",
+       "en": "meanwhile"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Comment le shérif apprend-il la vérité ?",
+        "en": "How does the Sheriff learn the truth?"
+       },
+       "choices": [
+        {
+         "fr": "Par une lettre",
+         "en": "From a letter"
+        },
+        {
+         "fr": "Par ses soldats",
+         "en": "From his soldiers"
+        },
+        {
+         "fr": "Robin le lui dit en face",
+         "en": "Robin tells him face to face"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que font les hors-la-loi ce soir-là ?",
+        "en": "What do the outlaws do that evening?"
+       },
+       "choices": [
+        {
+         "fr": "Ils s’enfuient",
+         "en": "They run away"
+        },
+        {
+         "fr": "Ils font la fête autour du feu",
+         "en": "They celebrate around the fire"
+        },
+        {
+         "fr": "Ils attaquent le château",
+         "en": "They attack the castle"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "pedlar-swaffham",
+   "glyph": "P",
+   "level": "B1",
+   "color": "#8A5A2B",
+   "title": {
+    "jp": "The Pedlar of Swaffham",
+    "fr": "Le colporteur de Swaffham",
+    "en": "The Pedlar of Swaffham"
+   },
+   "summary": {
+    "fr": "Un pauvre colporteur fait trois fois le même rêve : un trésor l’attend sur le pont de Londres. Il décide de partir.",
+    "en": "A poor pedlar has the same dream three times: a treasure awaits him on London Bridge. He decides to set off."
+   },
+   "chapters": [
+    {
+     "slug": "pedlar-1",
+     "title": {
+      "jp": "The dream",
+      "fr": "Le rêve",
+      "en": "The dream"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Long ago, in the little town of Swaffham, there lived a poor pedlar called John Chapman.",
+        "fr": "Il y a longtemps, dans la petite ville de Swaffham, vivait un pauvre colporteur nommé John Chapman.",
+        "en": "Long ago, in the little town of Swaffham, there lived a poor pedlar called John Chapman.",
+        "kana": "Long ago, in the little town of Swaffham, there lived a poor pedlar called John Chapman."
+       },
+       {
+        "jp": "One night he dreamt that if he went to London Bridge, he would hear some wonderful news.",
+        "fr": "Une nuit, il rêva que s’il allait au pont de Londres, il apprendrait une merveilleuse nouvelle.",
+        "en": "One night he dreamt that if he went to London Bridge, he would hear some wonderful news.",
+        "kana": "One night he dreamt that if he went to London Bridge, he would hear some wonderful news."
+       }
+      ],
+      [
+       {
+        "jp": "He had the same dream three nights in a row, so he decided to go.",
+        "fr": "Il fit le même rêve trois nuits de suite ; il décida donc de partir.",
+        "en": "He had the same dream three nights in a row, so he decided to go.",
+        "kana": "He had the same dream three nights in a row, so he decided to go."
+       },
+       {
+        "jp": "His wife thought he was mad. “It must be the cheese you ate before bed,” she said.",
+        "fr": "Sa femme le crut fou. « Ça doit être le fromage que tu as mangé avant de te coucher », dit-elle.",
+        "en": "His wife thought he was mad. “It must be the cheese you ate before bed,” she said.",
+        "kana": "His wife thought he was mad. “It must be the cheese you ate before bed,” she said."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "pedlar",
+       "reading": "/ˈpedlə/",
+       "fr": "colporteur",
+       "en": "pedlar"
+      },
+      {
+       "jp": "dreamt",
+       "reading": "/dremt/",
+       "fr": "rêva",
+       "en": "dreamt"
+      },
+      {
+       "jp": "wonderful",
+       "reading": "/ˈwʌndəfl/",
+       "fr": "merveilleux",
+       "en": "wonderful"
+      },
+      {
+       "jp": "in a row",
+       "reading": "/ɪn ə rəʊ/",
+       "fr": "de suite, d’affilée",
+       "en": "in a row"
+      },
+      {
+       "jp": "mad",
+       "reading": "/mæd/",
+       "fr": "fou",
+       "en": "mad"
+      },
+      {
+       "jp": "cheese",
+       "reading": "/tʃiːz/",
+       "fr": "fromage",
+       "en": "cheese"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de fois John fait-il le rêve ?",
+        "en": "How many times does John have the dream?"
+       },
+       "choices": [
+        {
+         "fr": "Une fois",
+         "en": "Once"
+        },
+        {
+         "fr": "Trois fois",
+         "en": "Three times"
+        },
+        {
+         "fr": "Chaque nuit depuis un an",
+         "en": "Every night for a year"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que pense sa femme ?",
+        "en": "What does his wife think?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il est fou",
+         "en": "That he is mad"
+        },
+        {
+         "fr": "Qu’il va devenir riche",
+         "en": "That he will become rich"
+        },
+        {
+         "fr": "Qu’elle doit venir aussi",
+         "en": "That she must come too"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "pedlar-2",
+     "title": {
+      "jp": "On London Bridge",
+      "fr": "Sur le pont de Londres",
+      "en": "On London Bridge"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "John walked for days until he reached London Bridge. He waited there from morning till night, but nothing happened.",
+        "fr": "John marcha des jours jusqu’au pont de Londres. Il y attendit du matin au soir, mais rien ne se passa.",
+        "en": "John walked for days until he reached London Bridge. He waited there from morning till night, but nothing happened.",
+        "kana": "John walked for days until he reached London Bridge. He waited there from morning till night, but nothing happened."
+       },
+       {
+        "jp": "On the third day, a shopkeeper asked him why he had been standing there for so long.",
+        "fr": "Le troisième jour, un commerçant lui demanda pourquoi il restait planté là depuis si longtemps.",
+        "en": "On the third day, a shopkeeper asked him why he had been standing there for so long.",
+        "kana": "On the third day, a shopkeeper asked him why he had been standing there for so long."
+       }
+      ],
+      [
+       {
+        "jp": "When John told him about his dream, the shopkeeper laughed. “I had a dream too,” he said.",
+        "fr": "Quand John lui parla de son rêve, le commerçant éclata de rire. « Moi aussi, j’ai fait un rêve », dit-il.",
+        "en": "When John told him about his dream, the shopkeeper laughed. “I had a dream too,” he said.",
+        "kana": "When John told him about his dream, the shopkeeper laughed. “I had a dream too,” he said."
+       },
+       {
+        "jp": "“I dreamt that a treasure was buried under a tree in the garden of a pedlar in Swaffham. But I would never be so foolish as to go there!”",
+        "fr": "« J’ai rêvé qu’un trésor était enterré sous un arbre, dans le jardin d’un colporteur de Swaffham. Mais je ne serais jamais assez sot pour y aller ! »",
+        "en": "“I dreamt that a treasure was buried under a tree in the garden of a pedlar in Swaffham. But I would never be so foolish as to go there!”",
+        "kana": "“I dreamt that a treasure was buried under a tree in the garden of a pedlar in Swaffham. But I would never be so foolish as to go there!”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "reached",
+       "reading": "/riːtʃt/",
+       "fr": "atteignit",
+       "en": "reached"
+      },
+      {
+       "jp": "shopkeeper",
+       "reading": "/ˈʃɒpkiːpə/",
+       "fr": "commerçant",
+       "en": "shopkeeper"
+      },
+      {
+       "jp": "laughed",
+       "reading": "/lɑːft/",
+       "fr": "rit",
+       "en": "laughed"
+      },
+      {
+       "jp": "treasure",
+       "reading": "/ˈtreʒə/",
+       "fr": "trésor",
+       "en": "treasure"
+      },
+      {
+       "jp": "buried",
+       "reading": "/ˈberid/",
+       "fr": "enterré",
+       "en": "buried"
+      },
+      {
+       "jp": "foolish",
+       "reading": "/ˈfuːlɪʃ/",
+       "fr": "sot, idiot",
+       "en": "foolish"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que demande le commerçant à John ?",
+        "en": "What does the shopkeeper ask John?"
+       },
+       "choices": [
+        {
+         "fr": "Pourquoi il attend là depuis si longtemps",
+         "en": "Why he has been waiting there so long"
+        },
+        {
+         "fr": "S’il veut acheter quelque chose",
+         "en": "If he wants to buy something"
+        },
+        {
+         "fr": "D’où vient son fromage",
+         "en": "Where his cheese comes from"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Où se trouve le trésor dans le rêve du commerçant ?",
+        "en": "Where is the treasure in the shopkeeper’s dream?"
+       },
+       "choices": [
+        {
+         "fr": "Sous le pont de Londres",
+         "en": "Under London Bridge"
+        },
+        {
+         "fr": "Dans le jardin d’un colporteur de Swaffham",
+         "en": "In a Swaffham pedlar’s garden"
+        },
+        {
+         "fr": "Dans sa boutique",
+         "en": "In his shop"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "pedlar-3",
+     "title": {
+      "jp": "The treasure",
+      "fr": "Le trésor",
+      "en": "The treasure"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "John said nothing and hurried home. As soon as he arrived, he started digging under the old oak tree in his garden.",
+        "fr": "John ne dit rien et rentra chez lui en hâte. Dès son arrivée, il se mit à creuser sous le vieux chêne de son jardin.",
+        "en": "John said nothing and hurried home. As soon as he arrived, he started digging under the old oak tree in his garden.",
+        "kana": "John said nothing and hurried home. As soon as he arrived, he started digging under the old oak tree in his garden."
+       },
+       {
+        "jp": "Soon his spade hit something hard: a pot full of gold coins.",
+        "fr": "Bientôt, sa bêche heurta quelque chose de dur : une marmite pleine de pièces d’or.",
+        "en": "Soon his spade hit something hard: a pot full of gold coins.",
+        "kana": "Soon his spade hit something hard: a pot full of gold coins."
+       }
+      ],
+      [
+       {
+        "jp": "John became a rich man, but he never forgot that he had once been poor.",
+        "fr": "John devint riche, mais il n’oublia jamais qu’il avait été pauvre.",
+        "en": "John became a rich man, but he never forgot that he had once been poor.",
+        "kana": "John became a rich man, but he never forgot that he had once been poor."
+       },
+       {
+        "jp": "He used some of his gold to rebuild the church of Swaffham, where you can still see his statue today.",
+        "fr": "Il utilisa une partie de son or pour reconstruire l’église de Swaffham, où l’on peut encore voir sa statue aujourd’hui.",
+        "en": "He used some of his gold to rebuild the church of Swaffham, where you can still see his statue today.",
+        "kana": "He used some of his gold to rebuild the church of Swaffham, where you can still see his statue today."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "hurried",
+       "reading": "/ˈhʌrid/",
+       "fr": "se dépêcha",
+       "en": "hurried"
+      },
+      {
+       "jp": "digging",
+       "reading": "/ˈdɪɡɪŋ/",
+       "fr": "creuser",
+       "en": "digging"
+      },
+      {
+       "jp": "oak",
+       "reading": "/əʊk/",
+       "fr": "chêne",
+       "en": "oak"
+      },
+      {
+       "jp": "spade",
+       "reading": "/speɪd/",
+       "fr": "bêche",
+       "en": "spade"
+      },
+      {
+       "jp": "coins",
+       "reading": "/kɔɪnz/",
+       "fr": "pièces de monnaie",
+       "en": "coins"
+      },
+      {
+       "jp": "rebuild",
+       "reading": "/ˌriːˈbɪld/",
+       "fr": "reconstruire",
+       "en": "rebuild"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où John trouve-t-il le trésor ?",
+        "en": "Where does John find the treasure?"
+       },
+       "choices": [
+        {
+         "fr": "Sous le chêne de son jardin",
+         "en": "Under the oak in his garden"
+        },
+        {
+         "fr": "Sur le pont de Londres",
+         "en": "On London Bridge"
+        },
+        {
+         "fr": "Dans l’église",
+         "en": "In the church"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait John avec une partie de son or ?",
+        "en": "What does John do with some of his gold?"
+       },
+       "choices": [
+        {
+         "fr": "Il achète un château",
+         "en": "He buys a castle"
+        },
+        {
+         "fr": "Il reconstruit l’église",
+         "en": "He rebuilds the church"
+        },
+        {
+         "fr": "Il le donne au commerçant",
+         "en": "He gives it to the shopkeeper"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

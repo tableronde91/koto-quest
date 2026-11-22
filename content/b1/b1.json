@@ -1,0 +1,3322 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "B1",
+  "title": "B1 : la quête du Graal",
+  "region": "Côtes de Cornouailles",
+  "order": 28
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau B1 du CECRL et préparent au TOEIC Listening & Reading, mais ne sont pas des listes officielles d’ETS.",
+ "worlds": [
+  {
+   "slug": "b1-w1",
+   "title": "Le lac de l’Afanc",
+   "region": "Côtes de Cornouailles",
+   "description": "Faire le point sur un projet en cours : le present perfect continu, et sa différence avec le present perfect simple.",
+   "boss": {
+    "name": "L’Afanc, monstre du lac",
+    "glyph": "A",
+    "intro": "Ce monstre gallois fait déborder les lacs dès qu’on l’agace. Il veut savoir depuis combien de temps tu travailles sur ton projet et ce que tu as déjà accompli."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w1-c1",
+     "title": "Où en est-on ?",
+     "lessons": [
+      {
+       "slug": "en-pp-continuous",
+       "title": "Le present perfect continu : I’ve been working",
+       "objective": "Parler d’une activité commencée dans le passé qui dure encore.",
+       "minutes": 10,
+       "explanation": [
+        "have / has been + verbe en -ing : action qui a commencé dans le passé et continue (ou vient de s’arrêter) : I’ve been working on this report all morning.",
+        "On insiste sur la durée : How long have you been waiting? — For twenty minutes.",
+        "Résultat visible : You look tired. — I’ve been running."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-pp-continuous",
+         "kind": "grammar",
+         "front": "have been + -ing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "present perfect continu (durée jusqu’à maintenant)"
+        },
+        {
+         "slug": "en-project",
+         "kind": "vocabulary",
+         "front": "project",
+         "reading": null,
+         "romaji": null,
+         "meaning": "projet"
+        },
+        {
+         "slug": "en-deadline-extend",
+         "kind": "vocabulary",
+         "front": "to extend",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prolonger, repousser (un délai)"
+        },
+        {
+         "slug": "en-progress",
+         "kind": "vocabulary",
+         "front": "progress",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avancement, progrès"
+        },
+        {
+         "slug": "en-update",
+         "kind": "vocabulary",
+         "front": "update",
+         "reading": null,
+         "romaji": null,
+         "meaning": "point d’étape, mise à jour"
+        },
+        {
+         "slug": "en-budget",
+         "kind": "vocabulary",
+         "front": "budget",
+         "reading": null,
+         "romaji": null,
+         "meaning": "budget"
+        },
+        {
+         "slug": "en-team",
+         "kind": "vocabulary",
+         "front": "team",
+         "reading": null,
+         "romaji": null,
+         "meaning": "équipe"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We’ve been working on the new website since January.",
+         "reading": null,
+         "fr": "Nous travaillons sur le nouveau site depuis janvier."
+        },
+        {
+         "jp": "How long have you been waiting? — For about twenty minutes. The client is late.",
+         "reading": null,
+         "fr": "Depuis combien de temps attends-tu ? — Environ vingt minutes. Le client est en retard."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’ve been ＿ on this report all morning.",
+         "choices": [
+          "working",
+          "worked",
+          "work"
+         ],
+         "answer": "working",
+         "explanation": "have been + -ing.",
+         "translation": "Je travaille sur ce rapport depuis ce matin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "How long ＿ you been learning English?",
+         "choices": [
+          "have",
+          "are",
+          "did"
+         ],
+         "answer": "have",
+         "explanation": "How long have you been + -ing ?",
+         "translation": "Depuis combien de temps apprends-tu l’anglais ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It ＿ been raining since this morning.",
+         "choices": [
+          "has",
+          "have",
+          "is"
+         ],
+         "answer": "has",
+         "explanation": "it → has been.",
+         "translation": "Il pleut depuis ce matin."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Afanc",
+           "jp": "You look exhausted. What have you been doing?"
+          }
+         ],
+         "translation": "Le monstre remarque ta fatigue.",
+         "choices": [
+          "I’ve been preparing the presentation.",
+          "I’ve prepared since the presentation.",
+          "I’m been preparing it."
+         ],
+         "answer": "I’ve been preparing the presentation.",
+         "explanation": "Résultat visible : I’ve been + -ing."
+        }
+       ]
+      },
+      {
+       "slug": "en-pp-simple-vs-cont",
+       "title": "Simple ou continu ?",
+       "objective": "Choisir entre « combien » (simple) et « depuis combien de temps » (continu).",
+       "minutes": 10,
+       "explanation": [
+        "Present perfect simple = résultat, quantité : I’ve written three emails. Present perfect continu = activité, durée : I’ve been writing emails all day.",
+        "Les verbes d’état (know, like, own, believe) ne se mettent pas au continu : I’ve known her for years."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-pp-simple-vs-cont",
+         "kind": "grammar",
+         "front": "I’ve done / I’ve been doing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "résultat (simple) / activité en cours (continu)"
+        },
+        {
+         "slug": "en-achieve",
+         "kind": "vocabulary",
+         "front": "to achieve",
+         "reading": null,
+         "romaji": null,
+         "meaning": "accomplir, atteindre (un objectif)"
+        },
+        {
+         "slug": "en-goal",
+         "kind": "vocabulary",
+         "front": "goal",
+         "reading": null,
+         "romaji": null,
+         "meaning": "objectif, but"
+        },
+        {
+         "slug": "en-so-far",
+         "kind": "vocabulary",
+         "front": "so far",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jusqu’ici, pour l’instant"
+        },
+        {
+         "slug": "en-complete",
+         "kind": "vocabulary",
+         "front": "to complete",
+         "reading": null,
+         "romaji": null,
+         "meaning": "terminer, achever"
+        },
+        {
+         "slug": "en-stage",
+         "kind": "vocabulary",
+         "front": "stage",
+         "reading": null,
+         "romaji": null,
+         "meaning": "étape, phase"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "So far we’ve completed two stages of the project.",
+         "reading": null,
+         "fr": "Jusqu’ici, nous avons terminé deux étapes du projet."
+        },
+        {
+         "jp": "She’s been calling clients all afternoon and she’s already signed four contracts.",
+         "reading": null,
+         "fr": "Elle appelle des clients depuis le début de l’après-midi et elle a déjà signé quatre contrats."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’ve ＿ five emails since lunch.",
+         "choices": [
+          "written",
+          "been writing",
+          "writing"
+         ],
+         "answer": "written",
+         "explanation": "Quantité (cinq) : present perfect simple.",
+         "translation": "J’ai écrit cinq e-mails depuis le déjeuner."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She’s ＿ the report for three hours and she still hasn’t finished.",
+         "choices": [
+          "been writing",
+          "written",
+          "wrote"
+         ],
+         "answer": "been writing",
+         "explanation": "Durée, activité pas finie : continu.",
+         "translation": "Elle rédige le rapport depuis trois heures et n’a toujours pas fini."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’ve ＿ Mark since university.",
+         "choices": [
+          "known",
+          "been knowing",
+          "knew"
+         ],
+         "answer": "known",
+         "explanation": "know est un verbe d’état : pas de continu.",
+         "translation": "Je connais Mark depuis l’université."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "So far we’ve achieved all our goals.",
+         "translation": "Tous les objectifs ont été atteints jusqu’à présent.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "so far = jusqu’ici."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w1-c2",
+     "title": "Les e-mails professionnels",
+     "lessons": [
+      {
+       "slug": "en-formal-email",
+       "title": "Écrire un e-mail professionnel",
+       "objective": "Ouvrir, structurer et conclure un e-mail formel.",
+       "minutes": 9,
+       "explanation": [
+        "Ouverture : Dear Ms Smith, (nom connu) / Dear Sir or Madam, (inconnu). Objet : I am writing to… (Je vous écris pour…).",
+        "Formules utiles : Further to our conversation… (suite à), I would be grateful if you could… (je vous serais reconnaissant de…), Please do not hesitate to contact me.",
+        "Clôture : Kind regards / Best regards ; Yours sincerely (avec un nom), Yours faithfully (avec Dear Sir or Madam)."
+       ],
+       "items": [
+        {
+         "slug": "en-dear",
+         "kind": "vocabulary",
+         "front": "Dear…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Cher…, Madame, Monsieur (début de lettre)"
+        },
+        {
+         "slug": "en-regards",
+         "kind": "vocabulary",
+         "front": "Kind regards",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Cordialement"
+        },
+        {
+         "slug": "en-grateful",
+         "kind": "vocabulary",
+         "front": "grateful",
+         "reading": null,
+         "romaji": null,
+         "meaning": "reconnaissant"
+        },
+        {
+         "slug": "en-further-to",
+         "kind": "vocabulary",
+         "front": "further to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suite à"
+        },
+        {
+         "slug": "en-attach",
+         "kind": "vocabulary",
+         "front": "to attach",
+         "reading": null,
+         "romaji": null,
+         "meaning": "joindre (un fichier)"
+        },
+        {
+         "slug": "en-confirm",
+         "kind": "vocabulary",
+         "front": "to confirm",
+         "reading": null,
+         "romaji": null,
+         "meaning": "confirmer"
+        },
+        {
+         "slug": "en-request",
+         "kind": "vocabulary",
+         "front": "request",
+         "reading": null,
+         "romaji": null,
+         "meaning": "demande"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Dear Ms Taylor, I am writing to confirm our meeting on 12 May.",
+         "reading": null,
+         "fr": "Madame Taylor, je vous écris pour confirmer notre rendez-vous du 12 mai."
+        },
+        {
+         "jp": "I would be grateful if you could send me the updated budget. Kind regards, Emma Martin",
+         "reading": null,
+         "fr": "Je vous serais reconnaissante de m’envoyer le budget mis à jour. Cordialement, Emma Martin"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "I am ＿ to confirm the date of the meeting.",
+         "choices": [
+          "writing",
+          "write",
+          "wrote"
+         ],
+         "answer": "writing",
+         "explanation": "I am writing to… = je vous écris pour…",
+         "translation": "Je vous écris pour confirmer la date de la réunion."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "I would be ＿ if you could reply by Friday.",
+         "choices": [
+          "grateful",
+          "great",
+          "thankful to"
+         ],
+         "answer": "grateful",
+         "explanation": "I would be grateful if you could… : formule polie.",
+         "translation": "Je vous serais reconnaissant de répondre d’ici vendredi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Dear Sir or Madam, … Yours ＿,",
+         "choices": [
+          "faithfully",
+          "sincerely",
+          "regards"
+         ],
+         "answer": "faithfully",
+         "explanation": "Destinataire inconnu : Yours faithfully.",
+         "translation": "Madame, Monsieur, … Veuillez agréer…"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Please find attached the updated budget.",
+         "translation": "Le budget est joint à l’e-mail.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "attached = en pièce jointe."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w2",
+   "title": "Le chat des fées",
+   "region": "Côtes de Cornouailles",
+   "description": "Raconter une histoire dans l’ordre et évoquer le passé : past perfect, used to, would.",
+   "boss": {
+    "name": "Le Cait Sìth, chat des fées",
+    "glyph": "C",
+    "intro": "Ce grand chat noir à tache blanche des Highlands vole les âmes de ceux qui racontent mal leur passé. Remets les événements dans le bon ordre pour qu’il te laisse tranquille."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w2-c1",
+     "title": "Avant cela",
+     "lessons": [
+      {
+       "slug": "en-past-perfect",
+       "title": "Le past perfect : I had already left",
+       "objective": "Situer une action antérieure à une autre dans le passé.",
+       "minutes": 10,
+       "explanation": [
+        "had + participe passé = action antérieure à un autre moment du passé : When I arrived, the meeting had already started.",
+        "Comparer : When I arrived, the meeting started (elle commence à mon arrivée) / had started (elle avait déjà commencé).",
+        "Avec before, after, by the time, already, never… before : I had never seen the sea before."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-past-perfect",
+         "kind": "grammar",
+         "front": "had + past participle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plus-que-parfait (action antérieure)"
+        },
+        {
+         "slug": "en-by-the-time",
+         "kind": "vocabulary",
+         "front": "by the time",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le temps que, au moment où"
+        },
+        {
+         "slug": "en-already",
+         "kind": "vocabulary",
+         "front": "already",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déjà"
+        },
+        {
+         "slug": "en-realise",
+         "kind": "vocabulary",
+         "front": "to realise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se rendre compte"
+        },
+        {
+         "slug": "en-forget",
+         "kind": "vocabulary",
+         "front": "to forget",
+         "reading": null,
+         "romaji": null,
+         "meaning": "oublier"
+        },
+        {
+         "slug": "en-ago-before",
+         "kind": "vocabulary",
+         "front": "before",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avant, auparavant"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "By the time we reached the station, the last train had left.",
+         "reading": null,
+         "fr": "Le temps que nous arrivions à la gare, le dernier train était parti."
+        },
+        {
+         "jp": "I realised I had forgotten my passport at the hotel.",
+         "reading": null,
+         "fr": "Je me suis rendu compte que j’avais oublié mon passeport à l’hôtel."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "When I arrived, the film ＿ already started.",
+         "choices": [
+          "had",
+          "has",
+          "was"
+         ],
+         "answer": "had",
+         "explanation": "Antérieur à un moment passé : had + participe.",
+         "translation": "Quand je suis arrivé, le film avait déjà commencé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She had never ＿ snow before she moved to Canada.",
+         "choices": [
+          "seen",
+          "saw",
+          "see"
+         ],
+         "answer": "seen",
+         "explanation": "had + participe : seen.",
+         "translation": "Elle n’avait jamais vu de neige avant de s’installer au Canada."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "By the time the police arrived, the thieves ＿.",
+         "choices": [
+          "had escaped",
+          "escaped already",
+          "have escaped"
+         ],
+         "answer": "had escaped",
+         "explanation": "Avant l’arrivée de la police : past perfect.",
+         "translation": "Le temps que la police arrive, les voleurs s’étaient échappés."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "When we got there, the shop had closed.",
+         "translation": "Le magasin était fermé à leur arrivée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "had closed = avait (déjà) fermé."
+        }
+       ]
+      },
+      {
+       "slug": "en-used-to",
+       "title": "Les habitudes passées : used to, would",
+       "objective": "Décrire ce qui était vrai autrefois et ne l’est plus.",
+       "minutes": 10,
+       "explanation": [
+        "used to + base verbale = habitude ou état passé révolu : I used to live in Leeds (j’habitais à Leeds, plus maintenant).",
+        "Négation : didn’t use to. Question : Did you use to…?",
+        "would pour une action répétée (pas un état) dans un récit : Every summer we would go to the seaside. Attention : be used to + -ing = être habitué à."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-used-to",
+         "kind": "grammar",
+         "front": "used to / would",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir l’habitude de (dans le passé)"
+        },
+        {
+         "slug": "gram-en-be-used-to",
+         "kind": "grammar",
+         "front": "be used to + -ing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être habitué à"
+        },
+        {
+         "slug": "en-childhood",
+         "kind": "vocabulary",
+         "front": "childhood",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enfance"
+        },
+        {
+         "slug": "en-seaside",
+         "kind": "vocabulary",
+         "front": "seaside",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bord de mer"
+        },
+        {
+         "slug": "en-anymore",
+         "kind": "vocabulary",
+         "front": "anymore",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ne… plus"
+        },
+        {
+         "slug": "en-village",
+         "kind": "vocabulary",
+         "front": "village",
+         "reading": null,
+         "romaji": null,
+         "meaning": "village"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I used to work in a bank, but I don’t anymore.",
+         "reading": null,
+         "fr": "Avant, je travaillais dans une banque, mais plus maintenant."
+        },
+        {
+         "jp": "During my childhood, we would spend every summer at the seaside in Cornwall.",
+         "reading": null,
+         "fr": "Pendant mon enfance, nous passions tous les étés au bord de la mer en Cornouailles."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ smoke, but I stopped five years ago.",
+         "choices": [
+          "used to",
+          "use to",
+          "was used to"
+         ],
+         "answer": "used to",
+         "explanation": "Habitude passée : used to.",
+         "translation": "Avant je fumais, mais j’ai arrêté il y a cinq ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Did you ＿ to live in London?",
+         "choices": [
+          "use",
+          "used",
+          "using"
+         ],
+         "answer": "use",
+         "explanation": "Question : Did you use to… ?",
+         "translation": "Tu habitais à Londres avant ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’m used to ＿ up early. It isn’t a problem.",
+         "choices": [
+          "getting",
+          "get",
+          "got"
+         ],
+         "answer": "getting",
+         "explanation": "be used to + -ing = être habitué à.",
+         "translation": "J’ai l’habitude de me lever tôt. Ce n’est pas un problème."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "She used to work in a bank.",
+         "translation": "Elle travaille toujours dans une banque.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "used to = autrefois, plus maintenant."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w2-c2",
+     "title": "Raconter",
+     "lessons": [
+      {
+       "slug": "en-narrative",
+       "title": "Raconter une histoire",
+       "objective": "Enchaîner un récit avec les bons temps et les mots de liaison.",
+       "minutes": 9,
+       "explanation": [
+        "Mots de liaison : first, then, after that, later, eventually (finalement), in the end, meanwhile (pendant ce temps).",
+        "Les temps du récit : prétérit pour les événements, progressif pour le décor, past perfect pour ce qui s’était passé avant.",
+        "Attention : eventually = finalement, au bout du compte (pas « éventuellement » = possibly)."
+       ],
+       "items": [
+        {
+         "slug": "en-eventually",
+         "kind": "vocabulary",
+         "front": "eventually",
+         "reading": null,
+         "romaji": null,
+         "meaning": "finalement, au bout du compte"
+        },
+        {
+         "slug": "en-meanwhile",
+         "kind": "vocabulary",
+         "front": "meanwhile",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pendant ce temps"
+        },
+        {
+         "slug": "en-afterwards",
+         "kind": "vocabulary",
+         "front": "afterwards",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ensuite, après"
+        },
+        {
+         "slug": "en-in-the-end",
+         "kind": "vocabulary",
+         "front": "in the end",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à la fin, en fin de compte"
+        },
+        {
+         "slug": "en-happen",
+         "kind": "vocabulary",
+         "front": "to happen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "arriver, se produire"
+        },
+        {
+         "slug": "en-story",
+         "kind": "vocabulary",
+         "front": "story",
+         "reading": null,
+         "romaji": null,
+         "meaning": "histoire, récit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "First, the flight was delayed. Then we lost our luggage. Eventually, we arrived at the hotel at 2 a.m.",
+         "reading": null,
+         "fr": "D’abord, le vol a été retardé. Ensuite, nous avons perdu nos bagages. Finalement, nous sommes arrivés à l’hôtel à 2 heures du matin."
+        },
+        {
+         "jp": "Meanwhile, the client had been waiting for us since midnight.",
+         "reading": null,
+         "fr": "Pendant ce temps, le client nous attendait depuis minuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "We waited for hours and ＿ the train arrived.",
+         "choices": [
+          "eventually",
+          "possibly",
+          "actually"
+         ],
+         "answer": "eventually",
+         "explanation": "Au bout du compte : eventually.",
+         "translation": "Nous avons attendu des heures et finalement le train est arrivé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I was cooking dinner. ＿, my husband was watching TV.",
+         "choices": [
+          "Meanwhile",
+          "Afterwards",
+          "Eventually"
+         ],
+         "answer": "Meanwhile",
+         "explanation": "Au même moment : meanwhile.",
+         "translation": "Je préparais le dîner. Pendant ce temps, mon mari regardait la télé."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Cait Sìth",
+           "jp": "What happened on your trip?"
+          }
+         ],
+         "translation": "Le chat te demande de raconter ton voyage.",
+         "choices": [
+          "First our flight was cancelled, and then we lost our bags.",
+          "First our flight cancels, and then we lose.",
+          "Our flight had been to cancel."
+         ],
+         "answer": "First our flight was cancelled, and then we lost our bags.",
+         "explanation": "Récit : prétérit et mots de liaison."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Eventually, we found the hotel.",
+         "translation": "Ils ont peut-être trouvé l’hôtel.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "eventually = finalement (ils l’ont trouvé)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w3",
+   "title": "Le ver de Lambton",
+   "region": "Côtes de Cornouailles",
+   "description": "Décrire des procédés, des fabrications et des décisions : la voix passive à tous les temps courants.",
+   "boss": {
+    "name": "Le ver de Lambton",
+    "glyph": "L",
+    "intro": "Ce serpent géant pêché par un jeune noble a grandi dans un puits et s’enroule autour de la colline. Explique comment les choses sont fabriquées et décidées, et il desserrera son étreinte."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w3-c1",
+     "title": "Comment c’est fait",
+     "lessons": [
+      {
+       "slug": "en-passive-present",
+       "title": "Le passif : is made, was built",
+       "objective": "Former le passif au présent et au passé.",
+       "minutes": 10,
+       "explanation": [
+        "be + participe passé : The cars are made in Sunderland. The bridge was built in 1890.",
+        "On utilise le passif quand l’action compte plus que l’auteur, ou qu’on ne le connaît pas. L’auteur s’introduit par by : The novel was written by Dickens.",
+        "Négation et question : The invoice wasn’t paid. Where are these phones made?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-passive",
+         "kind": "grammar",
+         "front": "be + past participle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "voix passive"
+        },
+        {
+         "slug": "en-made",
+         "kind": "vocabulary",
+         "front": "made",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fabriqué, fait (participe de make)"
+        },
+        {
+         "slug": "en-built",
+         "kind": "vocabulary",
+         "front": "built",
+         "reading": null,
+         "romaji": null,
+         "meaning": "construit (participe de build)"
+        },
+        {
+         "slug": "en-produce",
+         "kind": "vocabulary",
+         "front": "to produce",
+         "reading": null,
+         "romaji": null,
+         "meaning": "produire, fabriquer"
+        },
+        {
+         "slug": "en-deliver",
+         "kind": "vocabulary",
+         "front": "to deliver",
+         "reading": null,
+         "romaji": null,
+         "meaning": "livrer"
+        },
+        {
+         "slug": "en-goods",
+         "kind": "vocabulary",
+         "front": "goods",
+         "reading": null,
+         "romaji": null,
+         "meaning": "marchandises"
+        },
+        {
+         "slug": "en-warehouse",
+         "kind": "vocabulary",
+         "front": "warehouse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entrepôt"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Our tea is grown in India and packed in our factory in Bristol.",
+         "reading": null,
+         "fr": "Notre thé est cultivé en Inde et emballé dans notre usine de Bristol."
+        },
+        {
+         "jp": "The goods were delivered to the wrong warehouse.",
+         "reading": null,
+         "fr": "Les marchandises ont été livrées au mauvais entrepôt."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "These cars ＿ in Sunderland.",
+         "choices": [
+          "are made",
+          "make",
+          "are making"
+         ],
+         "answer": "are made",
+         "explanation": "Passif présent : are + participe.",
+         "translation": "Ces voitures sont fabriquées à Sunderland."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The castle ＿ in the 12th century.",
+         "choices": [
+          "was built",
+          "built",
+          "is building"
+         ],
+         "answer": "was built",
+         "explanation": "Passif passé : was + participe.",
+         "translation": "Le château a été construit au XIIe siècle."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The order ＿ delivered yesterday.",
+         "choices": [
+          "wasn’t",
+          "didn’t",
+          "hasn’t"
+         ],
+         "answer": "wasn’t",
+         "explanation": "Négation au passif passé : wasn’t + participe.",
+         "translation": "La commande n’a pas été livrée hier."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Le rapport a été écrit par Tom. »",
+         "answer": [
+          "The",
+          "report",
+          "was",
+          "written",
+          "by",
+          "Tom."
+         ],
+         "explanation": "be + participe + by + auteur."
+        }
+       ]
+      },
+      {
+       "slug": "en-passive-other",
+       "title": "Le passif aux autres temps",
+       "objective": "Passif au present perfect, au futur et avec les modaux.",
+       "minutes": 10,
+       "explanation": [
+        "Present perfect : has / have been + participe : The contract has been signed. Futur : will be + participe : The results will be announced on Monday.",
+        "Modaux : must / can / should be + participe : All forms must be completed in English.",
+        "Progressif : is being + participe : The office is being painted this week."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-passive-perfect-future",
+         "kind": "grammar",
+         "front": "has been done / will be done",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passif au present perfect et au futur"
+        },
+        {
+         "slug": "en-announce",
+         "kind": "vocabulary",
+         "front": "to announce",
+         "reading": null,
+         "romaji": null,
+         "meaning": "annoncer"
+        },
+        {
+         "slug": "en-cancel",
+         "kind": "vocabulary",
+         "front": "to cancel",
+         "reading": null,
+         "romaji": null,
+         "meaning": "annuler"
+        },
+        {
+         "slug": "en-postpone",
+         "kind": "vocabulary",
+         "front": "to postpone",
+         "reading": null,
+         "romaji": null,
+         "meaning": "reporter, différer"
+        },
+        {
+         "slug": "en-form",
+         "kind": "vocabulary",
+         "front": "form",
+         "reading": null,
+         "romaji": null,
+         "meaning": "formulaire"
+        },
+        {
+         "slug": "en-approve",
+         "kind": "vocabulary",
+         "front": "to approve",
+         "reading": null,
+         "romaji": null,
+         "meaning": "approuver, valider"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The meeting has been postponed until next week.",
+         "reading": null,
+         "fr": "La réunion a été reportée à la semaine prochaine."
+        },
+        {
+         "jp": "All expenses must be approved by your manager.",
+         "reading": null,
+         "fr": "Toutes les dépenses doivent être validées par votre responsable."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The flight has ＿ cancelled because of the storm.",
+         "choices": [
+          "been",
+          "be",
+          "being"
+         ],
+         "answer": "been",
+         "explanation": "has been + participe.",
+         "translation": "Le vol a été annulé à cause de la tempête."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The winners will ＿ announced tomorrow.",
+         "choices": [
+          "be",
+          "been",
+          "being"
+         ],
+         "answer": "be",
+         "explanation": "will be + participe.",
+         "translation": "Les gagnants seront annoncés demain."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "This form must be ＿ in black ink.",
+         "choices": [
+          "completed",
+          "complete",
+          "completing"
+         ],
+         "answer": "completed",
+         "explanation": "must be + participe.",
+         "translation": "Ce formulaire doit être rempli à l’encre noire."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The office is being painted this week.",
+         "translation": "Les travaux de peinture ont lieu cette semaine.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "is being painted = en train d’être repeint."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w3-c2",
+     "title": "Procédures",
+     "lessons": [
+      {
+       "slug": "en-process",
+       "title": "Décrire un procédé",
+       "objective": "Expliquer les étapes d’un processus de fabrication ou de commande.",
+       "minutes": 9,
+       "explanation": [
+        "Pour décrire un processus : First, the order is received. Next, it is checked. Then the goods are packed and finally they are shipped.",
+        "Vocabulaire du TOEIC : ship (expédier), stock (stock), supplier (fournisseur), invoice (facture), quality control (contrôle qualité)."
+       ],
+       "items": [
+        {
+         "slug": "en-ship",
+         "kind": "vocabulary",
+         "front": "to ship",
+         "reading": null,
+         "romaji": null,
+         "meaning": "expédier"
+        },
+        {
+         "slug": "en-supplier",
+         "kind": "vocabulary",
+         "front": "supplier",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fournisseur"
+        },
+        {
+         "slug": "en-invoice",
+         "kind": "vocabulary",
+         "front": "invoice",
+         "reading": null,
+         "romaji": null,
+         "meaning": "facture"
+        },
+        {
+         "slug": "en-stock",
+         "kind": "vocabulary",
+         "front": "stock",
+         "reading": null,
+         "romaji": null,
+         "meaning": "stock"
+        },
+        {
+         "slug": "en-check",
+         "kind": "vocabulary",
+         "front": "to check",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vérifier"
+        },
+        {
+         "slug": "en-pack",
+         "kind": "vocabulary",
+         "front": "to pack",
+         "reading": null,
+         "romaji": null,
+         "meaning": "emballer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Once the order is received, it is checked and packed within 24 hours.",
+         "reading": null,
+         "fr": "Une fois la commande reçue, elle est vérifiée et emballée dans les 24 heures."
+        },
+        {
+         "jp": "The invoice is sent to the customer when the goods are shipped.",
+         "reading": null,
+         "fr": "La facture est envoyée au client lorsque les marchandises sont expédiées."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "First, the orders are ＿ by our team.",
+         "choices": [
+          "checked",
+          "checking",
+          "check"
+         ],
+         "answer": "checked",
+         "explanation": "Passif : are + participe.",
+         "translation": "D’abord, les commandes sont vérifiées par notre équipe."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The goods are ＿ to customers all over Europe.",
+         "choices": [
+          "shipped",
+          "shipping",
+          "ship"
+         ],
+         "answer": "shipped",
+         "explanation": "ship → shipped (consonne doublée).",
+         "translation": "Les marchandises sont expédiées à des clients dans toute l’Europe."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Client",
+           "jp": "When will I receive the invoice?"
+          }
+         ],
+         "translation": "Un client demande quand il recevra la facture.",
+         "choices": [
+          "It will be sent when your order is shipped.",
+          "It sends when your order ships it.",
+          "It will send by shipped."
+         ],
+         "answer": "It will be sent when your order is shipped.",
+         "explanation": "Passif au futur : will be sent."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The product is out of stock.",
+         "translation": "Le produit est disponible immédiatement.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "out of stock = en rupture de stock."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w4",
+   "title": "Le nom secret",
+   "region": "Côtes de Cornouailles",
+   "description": "Rapporter ce que quelqu’un a dit, demandé ou ordonné : le discours indirect.",
+   "boss": {
+    "name": "Tom Tit Tot",
+    "glyph": "T",
+    "intro": "Ce petit diable du Suffolk file la laine contre un prix terrible : deviner son nom. Rapporte fidèlement ce que chacun a dit pour découvrir le nom secret."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w4-c1",
+     "title": "Il a dit que…",
+     "lessons": [
+      {
+       "slug": "en-reported-statements",
+       "title": "Rapporter une déclaration",
+       "objective": "Passer du discours direct au discours indirect.",
+       "minutes": 10,
+       "explanation": [
+        "say (something) / tell (someone) something : She said (that) she was tired. She told me (that) she was tired.",
+        "Les temps reculent d’un cran : am → was, will → would, can → could, has done → had done, did → had done.",
+        "Les repères changent aussi : today → that day, tomorrow → the next day, here → there."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-reported-speech",
+         "kind": "grammar",
+         "front": "He said (that)…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "discours rapporté"
+        },
+        {
+         "slug": "gram-en-say-tell",
+         "kind": "grammar",
+         "front": "say / tell",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dire (quelque chose) / dire (à quelqu’un)"
+        },
+        {
+         "slug": "en-explain",
+         "kind": "vocabulary",
+         "front": "to explain",
+         "reading": null,
+         "romaji": null,
+         "meaning": "expliquer"
+        },
+        {
+         "slug": "en-mention",
+         "kind": "vocabulary",
+         "front": "to mention",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mentionner, signaler"
+        },
+        {
+         "slug": "en-claim",
+         "kind": "vocabulary",
+         "front": "to claim",
+         "reading": null,
+         "romaji": null,
+         "meaning": "affirmer, prétendre"
+        },
+        {
+         "slug": "en-the-next-day",
+         "kind": "vocabulary",
+         "front": "the next day",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le lendemain"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "“I’m busy,” said Tom. → Tom said he was busy.",
+         "reading": null,
+         "fr": "« Je suis occupé », a dit Tom. → Tom a dit qu’il était occupé."
+        },
+        {
+         "jp": "She told me she would send the documents the next day.",
+         "reading": null,
+         "fr": "Elle m’a dit qu’elle enverrait les documents le lendemain."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "“I’m tired.” → She said she ＿ tired.",
+         "choices": [
+          "was",
+          "is",
+          "has been"
+         ],
+         "answer": "was",
+         "explanation": "am → was.",
+         "translation": "« Je suis fatiguée. » → Elle a dit qu’elle était fatiguée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "“I will call you.” → He said he ＿ call me.",
+         "choices": [
+          "would",
+          "will",
+          "can"
+         ],
+         "answer": "would",
+         "explanation": "will → would.",
+         "translation": "« Je t’appellerai. » → Il a dit qu’il m’appellerait."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She ＿ me that the meeting was cancelled.",
+         "choices": [
+          "told",
+          "said",
+          "spoke"
+         ],
+         "answer": "told",
+         "explanation": "tell + personne.",
+         "translation": "Elle m’a dit que la réunion était annulée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "“I can help.” → He said he ＿ help.",
+         "choices": [
+          "could",
+          "can",
+          "will"
+         ],
+         "answer": "could",
+         "explanation": "can → could.",
+         "translation": "« Je peux aider. » → Il a dit qu’il pouvait aider."
+        }
+       ]
+      },
+      {
+       "slug": "en-reported-questions",
+       "title": "Rapporter une question ou un ordre",
+       "objective": "Rapporter une question (asked if…) et une consigne (told me to…).",
+       "minutes": 10,
+       "explanation": [
+        "Questions oui/non : if / whether, sans inversion : “Are you ready?” → She asked if I was ready.",
+        "Questions ouvertes : mot interrogatif + sujet + verbe : “Where do you live?” → He asked where I lived.",
+        "Ordres et demandes : tell / ask someone (not) to do : The manager told us to wait. She asked me not to be late."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-reported-questions",
+         "kind": "grammar",
+         "front": "asked if… / asked where…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "question rapportée"
+        },
+        {
+         "slug": "gram-en-told-to",
+         "kind": "grammar",
+         "front": "told someone to…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "demander / ordonner de faire"
+        },
+        {
+         "slug": "en-whether",
+         "kind": "vocabulary",
+         "front": "whether",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si (alternative)"
+        },
+        {
+         "slug": "en-wonder",
+         "kind": "vocabulary",
+         "front": "to wonder",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se demander"
+        },
+        {
+         "slug": "en-remind",
+         "kind": "vocabulary",
+         "front": "to remind",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rappeler (à quelqu’un)"
+        },
+        {
+         "slug": "en-warn",
+         "kind": "vocabulary",
+         "front": "to warn",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avertir, mettre en garde"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The receptionist asked me if I had a reservation.",
+         "reading": null,
+         "fr": "La réceptionniste m’a demandé si j’avais une réservation."
+        },
+        {
+         "jp": "My manager reminded me to send the invoice and warned me not to be late again.",
+         "reading": null,
+         "fr": "Ma responsable m’a rappelé d’envoyer la facture et m’a averti de ne plus être en retard."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "“Are you coming?” → She asked ＿ I was coming.",
+         "choices": [
+          "if",
+          "that",
+          "what"
+         ],
+         "answer": "if",
+         "explanation": "Question oui/non : if.",
+         "translation": "« Tu viens ? » → Elle a demandé si je venais."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "“Where do you work?” → He asked where I ＿.",
+         "choices": [
+          "worked",
+          "did work",
+          "do work"
+         ],
+         "answer": "worked",
+         "explanation": "Pas d’inversion ni de do : where I worked.",
+         "translation": "« Où travailles-tu ? » → Il m’a demandé où je travaillais."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The doctor told me ＿ more water.",
+         "choices": [
+          "to drink",
+          "drink",
+          "drinking"
+         ],
+         "answer": "to drink",
+         "explanation": "tell someone to + verbe.",
+         "translation": "Le médecin m’a dit de boire plus d’eau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She asked me ＿ be late.",
+         "choices": [
+          "not to",
+          "to not to",
+          "don’t"
+         ],
+         "answer": "not to",
+         "explanation": "Ordre négatif : not to.",
+         "translation": "Elle m’a demandé de ne pas être en retard."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w4-c2",
+     "title": "Au téléphone",
+     "lessons": [
+      {
+       "slug": "en-phone-messages",
+       "title": "Prendre et laisser un message",
+       "objective": "Gérer un appel professionnel et transmettre un message.",
+       "minutes": 9,
+       "explanation": [
+        "Répondre : Good morning, Avalon & Co., Emma speaking. How can I help you?",
+        "Si la personne est absente : I’m afraid she’s in a meeting. Can I take a message? / Would you like to leave a message?",
+        "Transmettre : Mr Lee called. He said the delivery would be late and asked you to call him back."
+       ],
+       "items": [
+        {
+         "slug": "en-take-message",
+         "kind": "vocabulary",
+         "front": "to take a message",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre un message"
+        },
+        {
+         "slug": "en-leave-message",
+         "kind": "vocabulary",
+         "front": "to leave a message",
+         "reading": null,
+         "romaji": null,
+         "meaning": "laisser un message"
+        },
+        {
+         "slug": "en-speaking",
+         "kind": "vocabulary",
+         "front": "… speaking",
+         "reading": null,
+         "romaji": null,
+         "meaning": "… à l’appareil"
+        },
+        {
+         "slug": "en-put-through",
+         "kind": "vocabulary",
+         "front": "to put someone through",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passer quelqu’un (au téléphone)"
+        },
+        {
+         "slug": "en-extension",
+         "kind": "vocabulary",
+         "front": "extension",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poste (téléphonique)"
+        },
+        {
+         "slug": "en-available",
+         "kind": "vocabulary",
+         "front": "available",
+         "reading": null,
+         "romaji": null,
+         "meaning": "disponible"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I’m afraid Ms Hall isn’t available at the moment. Would you like to leave a message?",
+         "reading": null,
+         "fr": "Je suis désolé, Mme Hall n’est pas disponible pour le moment. Voulez-vous laisser un message ?"
+        },
+        {
+         "jp": "Could you put me through to extension 214, please?",
+         "reading": null,
+         "fr": "Pourriez-vous me passer le poste 214, s’il vous plaît ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Caller",
+           "jp": "Hello, could I speak to Mr Ambrose, please?"
+          }
+         ],
+         "translation": "M. Ambrose est en réunion.",
+         "choices": [
+          "I’m afraid he’s in a meeting. Can I take a message?",
+          "He is meeting. You take message.",
+          "No, you can’t speak."
+         ],
+         "answer": "I’m afraid he’s in a meeting. Can I take a message?",
+         "explanation": "Formule polie + proposition de message."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Good morning, Avalon & Co., Emma ＿.",
+         "choices": [
+          "speaking",
+          "talking",
+          "here is"
+         ],
+         "answer": "speaking",
+         "explanation": "Au téléphone : prénom + speaking.",
+         "translation": "Bonjour, Avalon & Co., Emma à l’appareil."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Tom",
+           "jp": "Did anyone call while I was out?"
+          }
+         ],
+         "translation": "Tom revient de déjeuner ; Mme Lee a appelé.",
+         "choices": [
+          "Yes, Ms Lee called. She asked you to call her back.",
+          "Yes, Ms Lee calls you back to her.",
+          "Yes, she said call."
+         ],
+         "answer": "Yes, Ms Lee called. She asked you to call her back.",
+         "explanation": "On rapporte la demande : asked you to…"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "She isn’t available at the moment.",
+         "translation": "Elle peut prendre l’appel maintenant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "isn’t available = pas disponible."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w5",
+   "title": "La licorne d’Écosse",
+   "region": "Côtes de Cornouailles",
+   "description": "Imaginer et regretter : le deuxième conditionnel, I wish, if I were you.",
+   "boss": {
+    "name": "La Licorne d’Écosse",
+    "glyph": "U",
+    "intro": "L’animal national de l’Écosse, fier et indomptable, ne se laisse approcher que par ceux qui savent rêver. Décris ce que tu ferais si tout était possible."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w5-c1",
+     "title": "Et si… ?",
+     "lessons": [
+      {
+       "slug": "en-second-conditional",
+       "title": "Le deuxième conditionnel : If I had…",
+       "objective": "Parler d’une situation imaginaire ou peu probable.",
+       "minutes": 10,
+       "explanation": [
+        "If + prétérit, would + base verbale : If I had more time, I would learn Italian. (situation imaginaire au présent)",
+        "Avec be, were est préféré à toutes les personnes : If I were rich, I’d travel the world. If I were you, I’d accept the offer (conseil).",
+        "Comparer : If it rains, I’ll stay (réel, probable) / If it rained, I’d stay (imaginaire)."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-second-conditional",
+         "kind": "grammar",
+         "front": "If + past, would…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "deuxième conditionnel (hypothèse)"
+        },
+        {
+         "slug": "gram-en-if-i-were-you",
+         "kind": "grammar",
+         "front": "If I were you, I’d…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "À ta place, je…"
+        },
+        {
+         "slug": "en-rich",
+         "kind": "vocabulary",
+         "front": "rich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "riche"
+        },
+        {
+         "slug": "en-win",
+         "kind": "vocabulary",
+         "front": "to win",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gagner"
+        },
+        {
+         "slug": "en-lottery",
+         "kind": "vocabulary",
+         "front": "lottery",
+         "reading": null,
+         "romaji": null,
+         "meaning": "loterie"
+        },
+        {
+         "slug": "en-imagine",
+         "kind": "vocabulary",
+         "front": "to imagine",
+         "reading": null,
+         "romaji": null,
+         "meaning": "imaginer"
+        },
+        {
+         "slug": "en-offer-accept",
+         "kind": "vocabulary",
+         "front": "to accept",
+         "reading": null,
+         "romaji": null,
+         "meaning": "accepter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "If I won the lottery, I would buy a castle in the Highlands.",
+         "reading": null,
+         "fr": "Si je gagnais au loto, j’achèterais un château dans les Highlands."
+        },
+        {
+         "jp": "If I were you, I’d accept the job offer.",
+         "reading": null,
+         "fr": "À ta place, j’accepterais l’offre d’emploi."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "If I ＿ more money, I would buy a new car.",
+         "choices": [
+          "had",
+          "have",
+          "would have"
+         ],
+         "answer": "had",
+         "explanation": "Hypothèse : If + prétérit.",
+         "translation": "Si j’avais plus d’argent, j’achèterais une nouvelle voiture."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "If she lived closer, she ＿ walk to work.",
+         "choices": [
+          "would",
+          "will",
+          "does"
+         ],
+         "answer": "would",
+         "explanation": "Conséquence imaginaire : would.",
+         "translation": "Si elle habitait plus près, elle irait au travail à pied."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "If I ＿ you, I’d talk to the manager.",
+         "choices": [
+          "were",
+          "am",
+          "would be"
+         ],
+         "answer": "were",
+         "explanation": "If I were you : conseil.",
+         "translation": "À ta place, je parlerais au responsable."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "If I had a car, I would drive to work.",
+         "translation": "La personne a une voiture.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Deuxième conditionnel : situation imaginaire, elle n’en a pas."
+        }
+       ]
+      },
+      {
+       "slug": "en-i-wish",
+       "title": "Les souhaits et regrets : I wish",
+       "objective": "Exprimer un souhait sur le présent avec I wish + prétérit.",
+       "minutes": 9,
+       "explanation": [
+        "I wish + prétérit = regret sur le présent : I wish I spoke Chinese (je regrette de ne pas parler chinois). I wish I were taller.",
+        "I wish + could : I wish I could come to the party.",
+        "If only… est plus fort : If only I had more time!"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-i-wish",
+         "kind": "grammar",
+         "front": "I wish + past simple",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aimerais que… / si seulement…"
+        },
+        {
+         "slug": "en-if-only",
+         "kind": "vocabulary",
+         "front": "If only…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Si seulement…"
+        },
+        {
+         "slug": "en-regret",
+         "kind": "vocabulary",
+         "front": "to regret",
+         "reading": null,
+         "romaji": null,
+         "meaning": "regretter"
+        },
+        {
+         "slug": "en-dream",
+         "kind": "vocabulary",
+         "front": "dream",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rêve"
+        },
+        {
+         "slug": "en-wish",
+         "kind": "vocabulary",
+         "front": "wish",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vœu, souhait"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I wish I could stay longer, but my flight leaves tonight.",
+         "reading": null,
+         "fr": "J’aimerais pouvoir rester plus longtemps, mais mon vol part ce soir."
+        },
+        {
+         "jp": "If only I knew the answer!",
+         "reading": null,
+         "fr": "Si seulement je connaissais la réponse !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I wish I ＿ French fluently.",
+         "choices": [
+          "spoke",
+          "speak",
+          "will speak"
+         ],
+         "answer": "spoke",
+         "explanation": "I wish + prétérit.",
+         "translation": "J’aimerais parler couramment français."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I wish I ＿ come to your wedding.",
+         "choices": [
+          "could",
+          "can",
+          "will"
+         ],
+         "answer": "could",
+         "explanation": "I wish + could.",
+         "translation": "J’aimerais pouvoir venir à ton mariage."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Unicorn",
+           "jp": "What is your dream?"
+          }
+         ],
+         "translation": "La licorne t’interroge sur ton rêve.",
+         "choices": [
+          "If I could, I’d travel around the world.",
+          "If I can, I travelled the world.",
+          "I will wish to travelled."
+         ],
+         "answer": "If I could, I’d travel around the world.",
+         "explanation": "Rêve : If I could, I’d…"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "I wish I had more time.",
+         "translation": "La personne a beaucoup de temps libre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "I wish I had… : elle n’en a pas assez."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w5-c2",
+     "title": "Le monde du travail",
+     "lessons": [
+      {
+       "slug": "en-job-interview",
+       "title": "L’entretien d’embauche",
+       "objective": "Répondre aux questions classiques d’un entretien.",
+       "minutes": 9,
+       "explanation": [
+        "Questions fréquentes : Tell me about yourself. Why do you want this job? What are your strengths and weaknesses? Where do you see yourself in five years?",
+        "Vocabulaire : apply for a job (postuler), a candidate, a CV (en américain : résumé), skills (compétences), salary, a position (un poste)."
+       ],
+       "items": [
+        {
+         "slug": "en-apply",
+         "kind": "vocabulary",
+         "front": "to apply for",
+         "reading": null,
+         "romaji": null,
+         "meaning": "postuler à, candidater"
+        },
+        {
+         "slug": "en-candidate",
+         "kind": "vocabulary",
+         "front": "candidate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "candidat, candidate"
+        },
+        {
+         "slug": "en-skills",
+         "kind": "vocabulary",
+         "front": "skills",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compétences"
+        },
+        {
+         "slug": "en-strength",
+         "kind": "vocabulary",
+         "front": "strength",
+         "reading": null,
+         "romaji": null,
+         "meaning": "point fort, force"
+        },
+        {
+         "slug": "en-weakness",
+         "kind": "vocabulary",
+         "front": "weakness",
+         "reading": null,
+         "romaji": null,
+         "meaning": "point faible, faiblesse"
+        },
+        {
+         "slug": "en-position",
+         "kind": "vocabulary",
+         "front": "position",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poste (emploi)"
+        },
+        {
+         "slug": "en-salary",
+         "kind": "vocabulary",
+         "front": "salary",
+         "reading": null,
+         "romaji": null,
+         "meaning": "salaire"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I’m applying for the position of sales manager.",
+         "reading": null,
+         "fr": "Je postule au poste de responsable des ventes."
+        },
+        {
+         "jp": "What are your main strengths? — I’m organised and I work well in a team.",
+         "reading": null,
+         "fr": "Quels sont vos principaux points forts ? — Je suis organisée et je travaille bien en équipe."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "I would like to apply ＿ the position of assistant.",
+         "choices": [
+          "for",
+          "to",
+          "at"
+         ],
+         "answer": "for",
+         "explanation": "apply for a job.",
+         "translation": "Je souhaite postuler au poste d’assistant."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Interviewer",
+           "jp": "Why do you want to work for us?"
+          }
+         ],
+         "translation": "Question d’entretien.",
+         "choices": [
+          "Because your company is a leader in its field.",
+          "Because I want salary.",
+          "Yes, I want."
+         ],
+         "answer": "Because your company is a leader in its field.",
+         "explanation": "Une réponse motivée et polie."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Interviewer",
+           "jp": "What is your biggest weakness?"
+          }
+         ],
+         "translation": "Question piège classique.",
+         "choices": [
+          "Sometimes I spend too long on details, but I’m working on it.",
+          "I don’t have weakness never.",
+          "My weakness is weak."
+         ],
+         "answer": "Sometimes I spend too long on details, but I’m working on it.",
+         "explanation": "Un vrai défaut, et ce qu’on fait pour progresser."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "She has the right skills for the position.",
+         "translation": "Elle a les compétences pour le poste.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "skills = compétences."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w6",
+   "title": "L’homme-hibou",
+   "region": "Côtes de Cornouailles",
+   "description": "Faire des déductions et parler de possibilités : must, might, may, could, can’t.",
+   "boss": {
+    "name": "L’Homme-hibou de Mawnan",
+    "glyph": "O",
+    "intro": "Cette créature mi-homme mi-hibou qui hante le clocher de Mawnan pose des énigmes. Déduis avec logique ce qui est certain, possible ou impossible."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w6-c1",
+     "title": "Certain ou possible ?",
+     "lessons": [
+      {
+       "slug": "en-deduction",
+       "title": "Les déductions : must, might, can’t",
+       "objective": "Exprimer la certitude ou le doute sur le présent.",
+       "minutes": 10,
+       "explanation": [
+        "must be = sûrement (presque certain) : She must be at home — her car is outside.",
+        "might / may / could be = peut-être : He might be in a meeting.",
+        "can’t be = impossible : That can’t be Tom — he’s in Paris today."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-deduction",
+         "kind": "grammar",
+         "front": "must be / might be / can’t be",
+         "reading": null,
+         "romaji": null,
+         "meaning": "doit être / est peut-être / ne peut pas être"
+        },
+        {
+         "slug": "en-might",
+         "kind": "vocabulary",
+         "front": "might",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pourrait (peut-être)"
+        },
+        {
+         "slug": "en-may",
+         "kind": "vocabulary",
+         "front": "may",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pourrait, peut (éventualité, permission)"
+        },
+        {
+         "slug": "en-certain",
+         "kind": "vocabulary",
+         "front": "certain",
+         "reading": null,
+         "romaji": null,
+         "meaning": "certain, sûr"
+        },
+        {
+         "slug": "en-perhaps",
+         "kind": "vocabulary",
+         "front": "perhaps",
+         "reading": null,
+         "romaji": null,
+         "meaning": "peut-être"
+        },
+        {
+         "slug": "en-impossible",
+         "kind": "vocabulary",
+         "front": "impossible",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impossible"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "The lights are off. They must be on holiday.",
+         "reading": null,
+         "fr": "Les lumières sont éteintes. Ils doivent être en vacances."
+        },
+        {
+         "jp": "That can’t be the right address. There’s no office here.",
+         "reading": null,
+         "fr": "Ça ne peut pas être la bonne adresse. Il n’y a aucun bureau ici."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He’s been working for twelve hours. He ＿ be exhausted.",
+         "choices": [
+          "must",
+          "can’t",
+          "mustn’t"
+         ],
+         "answer": "must",
+         "explanation": "Déduction logique : must.",
+         "translation": "Il travaille depuis douze heures. Il doit être épuisé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "That ＿ be Kate. She’s in Japan this week.",
+         "choices": [
+          "can’t",
+          "must",
+          "might"
+         ],
+         "answer": "can’t",
+         "explanation": "Impossible : can’t.",
+         "translation": "Ça ne peut pas être Kate. Elle est au Japon cette semaine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Take an umbrella. It ＿ rain later.",
+         "choices": [
+          "might",
+          "must",
+          "can’t"
+         ],
+         "answer": "might",
+         "explanation": "Possibilité : might.",
+         "translation": "Prends un parapluie. Il pourrait pleuvoir plus tard."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "She must be at home; her car is outside.",
+         "translation": "La personne en est presque sûre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "must be = presque certain."
+        }
+       ]
+      },
+      {
+       "slug": "en-deduction-past",
+       "title": "Déductions sur le passé : must have done",
+       "objective": "Faire une hypothèse sur ce qui s’est passé.",
+       "minutes": 10,
+       "explanation": [
+        "modal + have + participe passé : He must have missed the train (il a dû rater le train). She might have forgotten. They can’t have finished already.",
+        "should have done = aurait dû (reproche) : You should have told me!"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-must-have-done",
+         "kind": "grammar",
+         "front": "must / might / can’t have done",
+         "reading": null,
+         "romaji": null,
+         "meaning": "a dû / a peut-être / n’a pas pu (passé)"
+        },
+        {
+         "slug": "gram-en-should-have",
+         "kind": "grammar",
+         "front": "should have done",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aurait dû"
+        },
+        {
+         "slug": "en-mistake",
+         "kind": "vocabulary",
+         "front": "mistake",
+         "reading": null,
+         "romaji": null,
+         "meaning": "erreur"
+        },
+        {
+         "slug": "en-guess",
+         "kind": "vocabulary",
+         "front": "to guess",
+         "reading": null,
+         "romaji": null,
+         "meaning": "deviner"
+        },
+        {
+         "slug": "en-clue",
+         "kind": "vocabulary",
+         "front": "clue",
+         "reading": null,
+         "romaji": null,
+         "meaning": "indice"
+        },
+        {
+         "slug": "en-missing",
+         "kind": "vocabulary",
+         "front": "missing",
+         "reading": null,
+         "romaji": null,
+         "meaning": "manquant, disparu"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Mark isn’t here yet. He must have missed his train.",
+         "reading": null,
+         "fr": "Mark n’est pas encore là. Il a dû rater son train."
+        },
+        {
+         "jp": "You should have told me about the problem earlier.",
+         "reading": null,
+         "fr": "Tu aurais dû me parler du problème plus tôt."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The window is broken. Someone must have ＿ it.",
+         "choices": [
+          "broken",
+          "broke",
+          "break"
+         ],
+         "answer": "broken",
+         "explanation": "must have + participe.",
+         "translation": "La fenêtre est cassée. Quelqu’un a dû la casser."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She ＿ have finished already — she only started an hour ago.",
+         "choices": [
+          "can’t",
+          "must",
+          "should"
+         ],
+         "answer": "can’t",
+         "explanation": "Impossible dans le passé : can’t have.",
+         "translation": "Elle ne peut pas avoir déjà fini — elle a commencé il y a une heure."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "You ＿ have booked a table. The restaurant is full.",
+         "choices": [
+          "should",
+          "must",
+          "might"
+         ],
+         "answer": "should",
+         "explanation": "Reproche : should have.",
+         "translation": "Tu aurais dû réserver une table. Le restaurant est complet."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Owlman",
+           "jp": "The keys are missing. What happened?"
+          }
+         ],
+         "translation": "L’homme-hibou te pose une énigme.",
+         "choices": [
+          "Someone might have taken them.",
+          "Someone might took them.",
+          "Someone must taking them."
+         ],
+         "answer": "Someone might have taken them.",
+         "explanation": "might have + participe."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w6-c2",
+     "title": "Les problèmes",
+     "lessons": [
+      {
+       "slug": "en-complaints",
+       "title": "Se plaindre poliment",
+       "objective": "Formuler une réclamation et y répondre.",
+       "minutes": 9,
+       "explanation": [
+        "Se plaindre : I’m afraid there seems to be a problem with… / I’m not satisfied with… / I’d like to make a complaint.",
+        "Répondre : I’m very sorry about that. / I apologise for the inconvenience. / We’ll replace it immediately. / We’ll give you a full refund."
+       ],
+       "items": [
+        {
+         "slug": "en-complaint",
+         "kind": "vocabulary",
+         "front": "complaint",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plainte, reproche"
+        },
+        {
+         "slug": "en-apologise",
+         "kind": "vocabulary",
+         "front": "to apologise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’excuser"
+        },
+        {
+         "slug": "en-inconvenience",
+         "kind": "vocabulary",
+         "front": "inconvenience",
+         "reading": null,
+         "romaji": null,
+         "meaning": "désagrément, gêne"
+        },
+        {
+         "slug": "en-replace",
+         "kind": "vocabulary",
+         "front": "to replace",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remplacer"
+        },
+        {
+         "slug": "en-damaged",
+         "kind": "vocabulary",
+         "front": "damaged",
+         "reading": null,
+         "romaji": null,
+         "meaning": "endommagé, abîmé"
+        },
+        {
+         "slug": "en-satisfied",
+         "kind": "vocabulary",
+         "front": "satisfied",
+         "reading": null,
+         "romaji": null,
+         "meaning": "satisfait"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "I’m afraid the laptop I ordered arrived damaged.",
+         "reading": null,
+         "fr": "Je suis désolé, mais l’ordinateur portable que j’ai commandé est arrivé abîmé."
+        },
+        {
+         "jp": "We apologise for the inconvenience and will replace it free of charge.",
+         "reading": null,
+         "fr": "Nous vous prions de nous excuser pour ce désagrément et le remplacerons gratuitement."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Customer",
+           "jp": "The printer I bought last week doesn’t work."
+          }
+         ],
+         "translation": "Un client se plaint.",
+         "choices": [
+          "I’m very sorry. We’ll replace it immediately.",
+          "It’s not my printer.",
+          "You must have broken it, so no."
+         ],
+         "answer": "I’m very sorry. We’ll replace it immediately.",
+         "explanation": "S’excuser et proposer une solution."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "We apologise for the ＿ caused by the delay.",
+         "choices": [
+          "inconvenience",
+          "convenient",
+          "complain"
+         ],
+         "answer": "inconvenience",
+         "explanation": "apologise for the inconvenience.",
+         "translation": "Nous vous prions de nous excuser pour le désagrément causé par ce retard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "I’d like to make a ＿ about the service.",
+         "choices": [
+          "complaint",
+          "complain",
+          "complaining"
+         ],
+         "answer": "complaint",
+         "explanation": "Nom : complaint.",
+         "translation": "Je voudrais faire une réclamation concernant le service."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "The parcel arrived damaged.",
+         "translation": "Le colis est arrivé en bon état.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "damaged = abîmé."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w7",
+   "title": "Les dragons de Vortigern",
+   "region": "Côtes de Cornouailles",
+   "description": "Donner son avis, nuancer et relier ses idées : although, however, despite, so… that, in order to.",
+   "boss": {
+    "name": "Les dragons de Vortigern",
+    "glyph": "V",
+    "intro": "Sous la tour du roi Vortigern, un dragon rouge et un dragon blanc se battent sans fin. Argumente avec nuance pour mettre fin à leur querelle."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w7-c1",
+     "title": "En réunion",
+     "lessons": [
+      {
+       "slug": "en-opinions",
+       "title": "Donner son avis, être d’accord ou non",
+       "objective": "Participer à une discussion en réunion.",
+       "minutes": 9,
+       "explanation": [
+        "Donner son avis : In my opinion… / I think… / As far as I’m concerned… / If you ask me…",
+        "Être d’accord : I agree with you. / That’s a good point. / Exactly. Ne pas l’être, poliment : I see your point, but… / I’m not sure I agree.",
+        "Attention : I agree (pas « I am agree »)."
+       ],
+       "items": [
+        {
+         "slug": "en-opinion",
+         "kind": "vocabulary",
+         "front": "opinion",
+         "reading": null,
+         "romaji": null,
+         "meaning": "opinion, avis"
+        },
+        {
+         "slug": "en-agree-with",
+         "kind": "vocabulary",
+         "front": "to agree with",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être d’accord avec"
+        },
+        {
+         "slug": "en-disagree",
+         "kind": "vocabulary",
+         "front": "to disagree",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ne pas être d’accord"
+        },
+        {
+         "slug": "en-point",
+         "kind": "vocabulary",
+         "front": "point",
+         "reading": null,
+         "romaji": null,
+         "meaning": "argument, remarque"
+        },
+        {
+         "slug": "en-suggest",
+         "kind": "vocabulary",
+         "front": "to suggest",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suggérer, proposer"
+        },
+        {
+         "slug": "en-meeting-agenda",
+         "kind": "vocabulary",
+         "front": "agenda",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ordre du jour"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "In my opinion, we should launch the product in spring.",
+         "reading": null,
+         "fr": "À mon avis, nous devrions lancer le produit au printemps."
+        },
+        {
+         "jp": "I see your point, but I’m not sure the budget is big enough.",
+         "reading": null,
+         "fr": "Je comprends ton argument, mais je ne suis pas sûr que le budget soit suffisant."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I ＿ with you. It’s a great idea.",
+         "choices": [
+          "agree",
+          "am agree",
+          "agreeing"
+         ],
+         "answer": "agree",
+         "explanation": "I agree (verbe, sans am).",
+         "translation": "Je suis d’accord avec toi. C’est une excellente idée."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Red dragon",
+           "jp": "We should cut the budget by half."
+          }
+         ],
+         "translation": "Tu n’es pas d’accord, mais tu restes poli.",
+         "choices": [
+          "I see your point, but that might be too much.",
+          "You are wrong and stupid.",
+          "I am agree no."
+         ],
+         "answer": "I see your point, but that might be too much.",
+         "explanation": "Désaccord poli : I see your point, but…"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "The first item on the ＿ is the budget.",
+         "choices": [
+          "agenda",
+          "diary",
+          "calendar"
+         ],
+         "answer": "agenda",
+         "explanation": "Ordre du jour = agenda.",
+         "translation": "Le premier point à l’ordre du jour est le budget."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "In my opinion, the price is too high.",
+         "translation": "La personne donne son avis.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "In my opinion = à mon avis."
+        }
+       ]
+      },
+      {
+       "slug": "en-contrast",
+       "title": "Nuancer : although, however, despite",
+       "objective": "Opposer deux idées avec les connecteurs de contraste.",
+       "minutes": 10,
+       "explanation": [
+        "although / even though + sujet + verbe : Although it was raining, we went out.",
+        "despite / in spite of + nom ou -ing : Despite the rain, we went out. Despite being tired, she finished.",
+        "however en début de phrase, suivi d’une virgule : The product is good. However, it’s too expensive."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-although-despite",
+         "kind": "grammar",
+         "front": "although / despite / however",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que / malgré / cependant"
+        },
+        {
+         "slug": "en-although",
+         "kind": "vocabulary",
+         "front": "although",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que, même si"
+        },
+        {
+         "slug": "en-despite",
+         "kind": "vocabulary",
+         "front": "despite",
+         "reading": null,
+         "romaji": null,
+         "meaning": "malgré"
+        },
+        {
+         "slug": "en-however",
+         "kind": "vocabulary",
+         "front": "however",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cependant, toutefois"
+        },
+        {
+         "slug": "en-whereas",
+         "kind": "vocabulary",
+         "front": "whereas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "alors que, tandis que"
+        },
+        {
+         "slug": "en-advantage",
+         "kind": "vocabulary",
+         "front": "advantage",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avantage"
+        },
+        {
+         "slug": "en-drawback",
+         "kind": "vocabulary",
+         "front": "drawback",
+         "reading": null,
+         "romaji": null,
+         "meaning": "inconvénient"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Although the hotel was expensive, it was worth it.",
+         "reading": null,
+         "fr": "Bien que l’hôtel soit cher, il en valait la peine."
+        },
+        {
+         "jp": "Despite the delay, the project was a success. However, we went over budget.",
+         "reading": null,
+         "fr": "Malgré le retard, le projet a été un succès. Cependant, nous avons dépassé le budget."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ the bad weather, the event was a success.",
+         "choices": [
+          "Despite",
+          "Although",
+          "However"
+         ],
+         "answer": "Despite",
+         "explanation": "+ nom : despite.",
+         "translation": "Malgré le mauvais temps, l’événement a été un succès."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ she was tired, she finished the report.",
+         "choices": [
+          "Although",
+          "Despite",
+          "However"
+         ],
+         "answer": "Although",
+         "explanation": "+ sujet + verbe : although.",
+         "translation": "Bien qu’elle soit fatiguée, elle a terminé le rapport."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The plan is good. ＿, it’s very expensive.",
+         "choices": [
+          "However",
+          "Although",
+          "Despite"
+         ],
+         "answer": "However",
+         "explanation": "Début de phrase + virgule : however.",
+         "translation": "Le plan est bon. Cependant, il est très cher."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "One drawback of the plan is the cost.",
+         "translation": "Le coût est un inconvénient du plan.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "drawback = inconvénient."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w7-c2",
+     "title": "Le but et la conséquence",
+     "lessons": [
+      {
+       "slug": "en-purpose-result",
+       "title": "Pour, si… que : in order to, so that, so… that",
+       "objective": "Exprimer le but et la conséquence.",
+       "minutes": 10,
+       "explanation": [
+        "But : to / in order to + verbe : I called in order to confirm. so that + sujet + can/will : I left early so that I could catch the train.",
+        "Conséquence : so + adjectif + that / such + (a) + nom + that : It was so hot that we stayed inside. It was such a good offer that we accepted."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-purpose",
+         "kind": "grammar",
+         "front": "in order to / so that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pour, afin de / pour que"
+        },
+        {
+         "slug": "gram-en-so-such",
+         "kind": "grammar",
+         "front": "so… that / such… that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si… que / tellement… que"
+        },
+        {
+         "slug": "en-in-order-to",
+         "kind": "vocabulary",
+         "front": "in order to",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pour, afin de"
+        },
+        {
+         "slug": "en-therefore",
+         "kind": "vocabulary",
+         "front": "therefore",
+         "reading": null,
+         "romaji": null,
+         "meaning": "par conséquent"
+        },
+        {
+         "slug": "en-reduce",
+         "kind": "vocabulary",
+         "front": "to reduce",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réduire"
+        },
+        {
+         "slug": "en-increase",
+         "kind": "vocabulary",
+         "front": "to increase",
+         "reading": null,
+         "romaji": null,
+         "meaning": "augmenter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We changed suppliers in order to reduce costs.",
+         "reading": null,
+         "fr": "Nous avons changé de fournisseur afin de réduire les coûts."
+        },
+        {
+         "jp": "It was such a good presentation that the client signed immediately.",
+         "reading": null,
+         "fr": "La présentation était si bonne que le client a signé immédiatement."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I’m saving money ＿ buy a house.",
+         "choices": [
+          "in order to",
+          "so that",
+          "for"
+         ],
+         "answer": "in order to",
+         "explanation": "But + verbe : in order to.",
+         "translation": "J’économise pour acheter une maison."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "The film was ＿ boring that I fell asleep.",
+         "choices": [
+          "so",
+          "such",
+          "too"
+         ],
+         "answer": "so",
+         "explanation": "so + adjectif + that.",
+         "translation": "Le film était si ennuyeux que je me suis endormi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It was ＿ a long meeting that everyone was tired.",
+         "choices": [
+          "such",
+          "so",
+          "very"
+         ],
+         "answer": "such",
+         "explanation": "such + a + nom.",
+         "translation": "C’était une réunion si longue que tout le monde était fatigué."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sales fell. ＿, we must reduce costs.",
+         "choices": [
+          "Therefore",
+          "Although",
+          "Despite"
+         ],
+         "answer": "Therefore",
+         "explanation": "Conséquence : therefore.",
+         "translation": "Les ventes ont baissé. Par conséquent, nous devons réduire les coûts."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-w8",
+   "title": "Le roi des brumes",
+   "region": "Côtes de Cornouailles",
+   "description": "Être poli et précis dans les échanges professionnels : questions indirectes, question tags, demandes formelles.",
+   "boss": {
+    "name": "Y Brenin Llwyd, le roi gris",
+    "glyph": "Y",
+    "intro": "Le roi des brumes des montagnes galloises enveloppe les voyageurs impolis dans un brouillard éternel. Demande ton chemin vers le Graal avec la plus grande politesse."
+   },
+   "chapters": [
+    {
+     "slug": "b1-w8-c1",
+     "title": "Poliment",
+     "lessons": [
+      {
+       "slug": "en-indirect-questions",
+       "title": "Les questions indirectes",
+       "objective": "Poser une question de façon plus polie avec Could you tell me… ?",
+       "minutes": 10,
+       "explanation": [
+        "Formule d’introduction + ordre normal sujet-verbe : Where is the station? → Could you tell me where the station is?",
+        "Pas de do / does / did : What time does it open? → Do you know what time it opens?",
+        "Question oui/non : if / whether : Is it free? → I was wondering if it was free."
+       ],
+       "items": [
+        {
+         "slug": "gram-en-indirect-questions",
+         "kind": "grammar",
+         "front": "Could you tell me where… is?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "question indirecte (polie)"
+        },
+        {
+         "slug": "en-wondering",
+         "kind": "vocabulary",
+         "front": "I was wondering if…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Je me demandais si… (demande polie)"
+        },
+        {
+         "slug": "en-direction",
+         "kind": "vocabulary",
+         "front": "directions",
+         "reading": null,
+         "romaji": null,
+         "meaning": "indications (pour trouver un lieu)"
+        },
+        {
+         "slug": "en-open-hours",
+         "kind": "vocabulary",
+         "front": "opening hours",
+         "reading": null,
+         "romaji": null,
+         "meaning": "horaires d’ouverture"
+        },
+        {
+         "slug": "en-reception",
+         "kind": "vocabulary",
+         "front": "reception",
+         "reading": null,
+         "romaji": null,
+         "meaning": "accueil, réception"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Could you tell me where the conference room is?",
+         "reading": null,
+         "fr": "Pourriez-vous me dire où se trouve la salle de conférence ?"
+        },
+        {
+         "jp": "I was wondering if you could help me with this form.",
+         "reading": null,
+         "fr": "Je me demandais si vous pourriez m’aider avec ce formulaire."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Could you tell me where the toilets ＿?",
+         "choices": [
+          "are",
+          "are they",
+          "do"
+         ],
+         "answer": "are",
+         "explanation": "Question indirecte : ordre sujet + verbe.",
+         "translation": "Pourriez-vous me dire où sont les toilettes ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Do you know what time the shop ＿?",
+         "choices": [
+          "opens",
+          "does open",
+          "open"
+         ],
+         "answer": "opens",
+         "explanation": "Pas de does dans une question indirecte.",
+         "translation": "Savez-vous à quelle heure ouvre le magasin ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "I was wondering ＿ you could help me.",
+         "choices": [
+          "if",
+          "that",
+          "what"
+         ],
+         "answer": "if",
+         "explanation": "Question oui/non : if.",
+         "translation": "Je me demandais si vous pourriez m’aider."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Savez-vous où il habite ? »",
+         "answer": [
+          "Do",
+          "you",
+          "know",
+          "where",
+          "he",
+          "lives?"
+         ],
+         "explanation": "Question indirecte : sujet + verbe."
+        }
+       ]
+      },
+      {
+       "slug": "en-question-tags",
+       "title": "Les question tags : isn’t it?",
+       "objective": "Vérifier une information ou relancer la conversation.",
+       "minutes": 10,
+       "explanation": [
+        "Phrase affirmative → tag négatif : It’s cold, isn’t it? Phrase négative → tag affirmatif : You don’t eat meat, do you?",
+        "Le tag reprend l’auxiliaire : You’ve finished, haven’t you? She can swim, can’t she? He works here, doesn’t he?",
+        "Exception : I’m late, aren’t I?"
+       ],
+       "items": [
+        {
+         "slug": "gram-en-question-tags",
+         "kind": "grammar",
+         "front": "question tags (isn’t it?)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "n’est-ce pas ? (question tag)"
+        },
+        {
+         "slug": "en-isnt-it",
+         "kind": "vocabulary",
+         "front": "isn’t it?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "n’est-ce pas ?"
+        },
+        {
+         "slug": "en-lovely",
+         "kind": "vocabulary",
+         "front": "lovely",
+         "reading": null,
+         "romaji": null,
+         "meaning": "charmant, très agréable"
+        },
+        {
+         "slug": "en-weather-nice",
+         "kind": "vocabulary",
+         "front": "nice",
+         "reading": null,
+         "romaji": null,
+         "meaning": "agréable, sympa"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "It’s a lovely day, isn’t it? — Yes, it is!",
+         "reading": null,
+         "fr": "Il fait un temps magnifique, n’est-ce pas ? — Oui !"
+        },
+        {
+         "jp": "You haven’t seen my keys, have you?",
+         "reading": null,
+         "fr": "Tu n’aurais pas vu mes clés, par hasard ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "It’s cold today, ＿?",
+         "choices": [
+          "isn’t it",
+          "is it",
+          "doesn’t it"
+         ],
+         "answer": "isn’t it",
+         "explanation": "Affirmatif → tag négatif.",
+         "translation": "Il fait froid aujourd’hui, n’est-ce pas ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "You don’t like coffee, ＿?",
+         "choices": [
+          "do you",
+          "don’t you",
+          "are you"
+         ],
+         "answer": "do you",
+         "explanation": "Négatif → tag affirmatif.",
+         "translation": "Tu n’aimes pas le café, si ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "She works in marketing, ＿?",
+         "choices": [
+          "doesn’t she",
+          "isn’t she",
+          "don’t she"
+         ],
+         "answer": "doesn’t she",
+         "explanation": "Présent simple : doesn’t.",
+         "translation": "Elle travaille au marketing, n’est-ce pas ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "You’ve met Mr Ambrose, ＿?",
+         "choices": [
+          "haven’t you",
+          "didn’t you",
+          "don’t you"
+         ],
+         "answer": "haven’t you",
+         "explanation": "Present perfect : haven’t.",
+         "translation": "Tu as déjà rencontré M. Ambrose, n’est-ce pas ?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "b1-w8-c2",
+     "title": "La négociation",
+     "lessons": [
+      {
+       "slug": "en-negotiation",
+       "title": "Négocier",
+       "objective": "Proposer, faire une concession et conclure un accord.",
+       "minutes": 9,
+       "explanation": [
+        "Proposer : We’d be prepared to… / How about if we…? / What if we offered…?",
+        "Concéder sous condition : We could lower the price, provided that you order 500 units.",
+        "Conclure : I think we have a deal. / Let’s put that in writing."
+       ],
+       "items": [
+        {
+         "slug": "en-negotiate",
+         "kind": "vocabulary",
+         "front": "to negotiate",
+         "reading": null,
+         "romaji": null,
+         "meaning": "négocier"
+        },
+        {
+         "slug": "en-provided-that",
+         "kind": "vocabulary",
+         "front": "provided that",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à condition que"
+        },
+        {
+         "slug": "en-compromise",
+         "kind": "vocabulary",
+         "front": "compromise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compromis"
+        },
+        {
+         "slug": "en-units",
+         "kind": "vocabulary",
+         "front": "units",
+         "reading": null,
+         "romaji": null,
+         "meaning": "unités (de produit)"
+        },
+        {
+         "slug": "en-terms",
+         "kind": "vocabulary",
+         "front": "terms",
+         "reading": null,
+         "romaji": null,
+         "meaning": "conditions (d’un contrat)"
+        },
+        {
+         "slug": "en-contract",
+         "kind": "vocabulary",
+         "front": "contract",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contrat"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "We could offer a 5% discount, provided that you sign a two-year contract.",
+         "reading": null,
+         "fr": "Nous pourrions accorder une remise de 5 %, à condition que vous signiez un contrat de deux ans."
+        },
+        {
+         "jp": "I think we’ve reached a good compromise. Let’s put it in writing.",
+         "reading": null,
+         "fr": "Je pense que nous sommes parvenus à un bon compromis. Mettons-le par écrit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "We can lower the price, ＿ that you pay in advance.",
+         "choices": [
+          "provided",
+          "unless",
+          "despite"
+         ],
+         "answer": "provided",
+         "explanation": "à condition que = provided that.",
+         "translation": "Nous pouvons baisser le prix, à condition que vous payiez d’avance."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Supplier",
+           "jp": "We can offer 3% off if you order 1,000 units."
+          }
+         ],
+         "translation": "Le fournisseur fait une offre ; tu veux mieux.",
+         "choices": [
+          "How about 5% if we order 1,500?",
+          "No. Bye.",
+          "Yes, we agree with all, of course."
+         ],
+         "answer": "How about 5% if we order 1,500?",
+         "explanation": "Contre-proposition : How about… ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Both sides accepted the ＿ of the contract.",
+         "choices": [
+          "terms",
+          "times",
+          "units"
+         ],
+         "answer": "terms",
+         "explanation": "terms = conditions d’un contrat.",
+         "translation": "Les deux parties ont accepté les conditions du contrat."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "I think we have a deal.",
+         "translation": "La négociation a abouti.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "a deal = un accord conclu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "b1-final",
+   "title": "Simulation TOEIC B1 : la chapelle du Graal",
+   "region": "Côtes de Cornouailles",
+   "description": "Examen blanc au format du TOEIC Listening & Reading, en anglais : questions-réponses, conversations et annonces, phrases et textes à compléter, compréhension écrite. Noté sur 990 ; objectif B1 à 550 points.",
+   "exam": "b1-toeic",
+   "chapters": []
+  }
+ ]
+}

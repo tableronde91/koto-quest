@@ -1989,6 +1989,159 @@
      }
     }
    }
+  },
+  "B1": {
+   "glyph": "G",
+   "jp": "The Holy Grail",
+   "color": "#B8862B",
+   "saga": {
+    "fr": "La quête du Graal",
+    "en": "The Grail quest"
+   },
+   "hero": {
+    "fr": "Chevalier·ère errant·e",
+    "en": "Knight errant"
+   },
+   "short": {
+    "fr": "Le chevalier·ère",
+    "en": "The knight"
+   },
+   "prologue": {
+    "fr": "Assis·e à la Table ronde, tu vois apparaître une coupe de lumière qui s’évanouit aussitôt : le Graal. Arthur confie à Avalon & Co. un grand projet le long des côtes de Cornouailles, et à toi la quête. Pour la mener, il faudra raconter, rapporter, négocier et convaincre comme un·e vrai·e professionnel·le.",
+    "en": "Seated at the Round Table, you see a cup of light appear and fade at once: the Grail. Arthur entrusts Avalon & Co. with a great project along the Cornish coast, and the quest to you. To lead it, you will have to tell stories, report, negotiate and persuade like a true professional."
+   },
+   "epilogue": {
+    "fr": "Dans la chapelle, la coupe brille de nouveau, et cette fois elle ne disparaît pas. Le projet est livré, le Graal trouvé : la Table ronde t’acclame.",
+    "en": "In the chapel, the cup shines again, and this time it does not vanish. The project is delivered, the Grail found: the Round Table cheers you."
+   },
+   "chapters": {
+    "b1-w1": {
+     "title": {
+      "fr": "Le lac qui déborde",
+      "en": "The overflowing lake"
+     },
+     "intro": {
+      "fr": "Au bord du lac, l’Afanc, monstre du lac, fait monter les eaux sur le chantier d’Avalon & Co. Explique-lui depuis combien de temps vous travaillez et ce que vous avez déjà accompli.",
+      "en": "By the lake, the Afanc, the lake monster, makes the water rise over the Avalon & Co. site. Explain how long you have been working and what you have already achieved."
+     },
+     "outro": {
+      "fr": "Apaisé, l’Afanc replonge et le lac retrouve son calme.",
+      "en": "Calmed, the Afanc dives back and the lake grows still again."
+     }
+    },
+    "b1-w2": {
+     "title": {
+      "fr": "Le chat des Highlands",
+      "en": "The Highland cat"
+     },
+     "intro": {
+      "fr": "Sur la route, un grand chat noir t’attend : le Cait Sìth, qui vole les âmes des mauvais conteurs. Raconte ton passé dans le bon ordre pour garder la tienne.",
+      "en": "On the road, a big black cat awaits you: the Cait Sìth, who steals the souls of bad storytellers. Tell your past in the right order to keep yours."
+     },
+     "outro": {
+      "fr": "Le chat ronronne, satisfait, et disparaît dans la bruyère.",
+      "en": "The cat purrs, satisfied, and vanishes into the heather."
+     }
+    },
+    "b1-w3": {
+     "title": {
+      "fr": "La colline enroulée",
+      "en": "The coiled hill"
+     },
+     "intro": {
+      "fr": "Le ver de Lambton s’est enroulé autour de l’usine. Explique comment tout est fabriqué, contrôlé et expédié pour qu’il desserre son étreinte.",
+      "en": "The Lambton Worm has coiled itself around the factory. Explain how everything is made, checked and shipped so that it loosens its grip."
+     },
+     "outro": {
+      "fr": "Le ver se déroule lentement et retourne dans son puits.",
+      "en": "The worm slowly uncoils and goes back down its well."
+     }
+    },
+    "b1-w4": {
+     "title": {
+      "fr": "Le nom secret",
+      "en": "The secret name"
+     },
+     "intro": {
+      "fr": "Dans un moulin du Suffolk, Tom Tit Tot file la laine du projet et réclame son prix : deviner son nom. Rapporte fidèlement ce que chacun t’a dit pour le découvrir.",
+      "en": "In a Suffolk mill, Tom Tit Tot spins the project’s wool and demands his price: guess his name. Faithfully report what everyone told you to discover it."
+     },
+     "outro": {
+      "fr": "« Tom Tit Tot ! » Le petit diable hurle de rage et s’enfuit par la cheminée.",
+      "en": "“Tom Tit Tot!” The little imp howls with rage and flees up the chimney."
+     }
+    },
+    "b1-w5": {
+     "title": {
+      "fr": "La licorne enchaînée",
+      "en": "The chained unicorn"
+     },
+     "intro": {
+      "fr": "Dans les collines, la Licorne d’Écosse ne se laisse approcher que par les rêveurs. Dis-lui ce que tu ferais si tout était possible.",
+      "en": "In the hills, the Unicorn of Scotland only lets dreamers come near. Tell it what you would do if anything were possible."
+     },
+     "outro": {
+      "fr": "La licorne baisse la tête et te laisse caresser sa crinière.",
+      "en": "The unicorn lowers its head and lets you stroke its mane."
+     }
+    },
+    "b1-w6": {
+     "title": {
+      "fr": "Le clocher de Mawnan",
+      "en": "Mawnan church tower"
+     },
+     "intro": {
+      "fr": "Au sommet du clocher, l’Homme-hibou pose ses énigmes. Déduis ce qui est certain, possible ou impossible pour passer sans dommage.",
+      "en": "At the top of the tower, the Owlman asks his riddles. Deduce what is certain, possible or impossible to pass unharmed."
+     },
+     "outro": {
+      "fr": "L’Homme-hibou ouvre ses ailes et s’envole vers la lune.",
+      "en": "The Owlman spreads his wings and flies towards the moon."
+     }
+    },
+    "b1-w7": {
+     "title": {
+      "fr": "La tour qui s’effondre",
+      "en": "The collapsing tower"
+     },
+     "intro": {
+      "fr": "Sous la tour du roi Vortigern, deux dragons se battent et font trembler la réunion. Argumente avec nuance pour mettre fin à leur querelle.",
+      "en": "Beneath King Vortigern’s tower, two dragons fight and shake the meeting. Argue with nuance to end their quarrel."
+     },
+     "outro": {
+      "fr": "Les dragons rouge et blanc s’apaisent et la tour cesse de trembler.",
+      "en": "The red and white dragons calm down and the tower stops shaking."
+     }
+    },
+    "b1-w8": {
+     "title": {
+      "fr": "Le brouillard du roi gris",
+      "en": "The Grey King’s fog"
+     },
+     "intro": {
+      "fr": "Dans les montagnes galloises, Y Brenin Llwyd, le roi gris, enveloppe les voyageurs impolis de brume. Demande ton chemin avec la plus grande politesse.",
+      "en": "In the Welsh mountains, Y Brenin Llwyd, the Grey King, wraps rude travellers in mist. Ask your way with the utmost politeness."
+     },
+     "outro": {
+      "fr": "La brume se lève : la chapelle du Graal apparaît au bout du chemin.",
+      "en": "The mist lifts: the Grail chapel appears at the end of the path."
+     }
+    },
+    "b1-final": {
+     "title": {
+      "fr": "La chapelle du Graal",
+      "en": "The Grail chapel"
+     },
+     "intro": {
+      "fr": "Dans la chapelle, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B1 pour toucher le Graal.",
+      "en": "In the chapel, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B1 score to touch the Grail."
+     },
+     "outro": {
+      "fr": "Le Graal est à toi. Niveau B1 validé !",
+      "en": "The Grail is yours. B1 level complete!"
+     }
+    }
+   }
   }
  }
 }

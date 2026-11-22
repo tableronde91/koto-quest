@@ -238,6 +238,52 @@ function RoundTable({ ...p }: P) {
   );
 }
 
+// ───── Décors B1 : côtes de Cornouailles ─────
+function Lighthouse({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-6 0 L-4 -34 H4 L6 0Z" fill="#F4F1EA" stroke={STONE_DARK} strokeWidth="1" />
+      <path d="M-5.5 -10 H5.5 M-5 -22 H5" stroke={RED} strokeWidth="4" />
+      <rect x="-5" y="-40" width="10" height="6" fill={GOLD} />
+      <path d="M-6 -40 L0 -46 L6 -40Z" fill={RED} />
+    </g>
+  );
+}
+function Waves({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-30 0 Q-22 -6 -15 0 T0 0 T15 0 T30 0" stroke="#5E9FC4" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      <path d="M-24 6 Q-16 0 -9 6 T6 6 T21 6" stroke="#7FC4D9" strokeWidth="2" fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+function Mill({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-9 0 L-6 -24 H6 L9 0Z" fill={BRICK} />
+      <path d="M-7 -24 L0 -32 L7 -24Z" fill={ROOF} />
+      <g transform="translate(0 -24)">{[0, 90].map((a) => <path key={a} d="M-18 0 H18" stroke="#6A4428" strokeWidth="3" transform={`rotate(${a + 20})`} />)}</g>
+    </g>
+  );
+}
+function Grail({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <circle cx="0" cy="-14" r="12" fill={GOLD} opacity={0.25} />
+      <path d="M-7 -20 H7 Q7 -10 0 -8 Q-7 -10 -7 -20Z" fill={GOLD} stroke="#A57E22" strokeWidth="1" />
+      <path d="M0 -8 V-2 M-5 0 H5" stroke="#A57E22" strokeWidth="2" />
+    </g>
+  );
+}
+function Mist({ ...p }: P) {
+  return (
+    <g transform={at(p)} opacity={0.75}>
+      <ellipse cx="-12" cy="0" rx="16" ry="5" fill="#E4E8EC" />
+      <ellipse cx="10" cy="-4" rx="18" ry="6" fill="#D8DEE4" />
+    </g>
+  );
+}
+
 export const ENGLISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Le badge disparu : la tour de l'horloge et l'immeuble d'Avalon & Co.
   'a1-w1': () => (
@@ -311,4 +357,14 @@ export const ENGLISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'a2-w7': () => (<><FairyRing x={0} y={14} /><Wisp x={-18} y={-4} /><Wisp x={20} y={-8} /></>),
   'a2-w8': () => (<><Bridge x={0} y={14} /><Helm x={-24} y={8} s={0.8} /></>),
   'a2-final': () => (<><RoundTable x={0} y={14} s={1.2} /><Castle x={0} y={-6} s={0.7} /></>),
+  // ───── B1 : côtes de Cornouailles ─────
+  'b1-w1': () => (<><Waves x={0} y={16} /><Office x={-22} y={10} s={0.7} /></>),
+  'b1-w2': () => (<><Oak x={-18} y={14} s={0.9} /><Castle x={16} y={8} s={0.6} /></>),
+  'b1-w3': () => (<><Office x={0} y={14} /><Waves x={-24} y={18} s={0.6} /></>),
+  'b1-w4': () => (<><Mill x={0} y={14} /><Oak x={26} y={14} s={0.7} /></>),
+  'b1-w5': () => (<><Oak x={-20} y={14} /><Wisp x={14} y={-10} /></>),
+  'b1-w6': () => (<><Tower x={0} y={14} /><Wisp x={-18} y={-12} /></>),
+  'b1-w7': () => (<><Tower x={-10} y={14} /><Castle x={18} y={10} s={0.6} /></>),
+  'b1-w8': () => (<><Mist x={0} y={6} /><Castle x={0} y={14} s={0.6} /><Mist x={-10} y={14} /></>),
+  'b1-final': () => (<><Lighthouse x={-24} y={14} /><Grail x={8} y={6} s={1.3} /><Waves x={0} y={18} /></>),
 };

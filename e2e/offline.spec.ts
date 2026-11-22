@@ -929,7 +929,7 @@ test('hors ligne : apprendre l’anglais pour le TOEIC (saga de Merlin, expressi
   await page.getByRole('button', { name: 'Suivant' }).click();
   await expect(page.getByRole('heading', { name: 'Quel niveau TOEIC vises-tu ?' })).toBeVisible();
   await expect(page.getByRole('radio', { name: /A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
-  await expect(page.getByRole('radio', { name: /B1 — seuil/ })).toBeDisabled();
+  await expect(page.getByRole('radio', { name: /C1 — autonome/ })).toBeDisabled();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
   // Pas de kana ni de kanji parmi les difficultés proposées
   await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);

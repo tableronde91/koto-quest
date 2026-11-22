@@ -27,7 +27,7 @@ describe('Anglais : préparer le TOEIC', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'en', targetLevel: 'A1' });
     const path = (await agent.get('/api/path/A1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'A1', region: 'Royaume d’Albion' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['A1', 'A2']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['A1', 'A2', 'B1']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['B', 'P', 'W', 'S', 'G', 'N', 'K', 'D']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'a1-final', exam: { slug: 'a1-toeic' } });
@@ -47,7 +47,7 @@ describe('Anglais : préparer le TOEIC', () => {
     expect(s.questions.length).toBeGreaterThan(5);
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['goldilocks', 'dick-whittington', 'sword-in-the-stone', 'jack-beanstalk', 'king-canute']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['goldilocks', 'dick-whittington', 'sword-in-the-stone', 'jack-beanstalk', 'king-canute', 'robin-hood', 'pedlar-swaffham']);
     await agent.get('/api/reading/chapters/momotaro-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'goldilocks').chapters[0];
     const r = (await agent.post('/api/reading/chapters/goldilocks-1/complete').send({ answers: ch.questions.map((q: any) => q.answer) }).expect(201)).body;
@@ -90,6 +90,7 @@ describe('Anglais : préparer le TOEIC', () => {
 
   it.each([
     ['a2', 34, 12, 225],
+    ['b1', 40, 14, 550],
   ])('examen blanc TOEIC %s : nombre de questions, écoute et objectif', async (lvl, total, listening, target) => {
     const { agent } = await signUpEnglish(ctx);
     const exam = (await agent.post(`/api/exams/${lvl}-toeic/start`).expect(201)).body;

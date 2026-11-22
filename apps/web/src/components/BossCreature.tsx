@@ -35,6 +35,67 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens anglais (B1 — côtes de Cornouailles) ─────
+  // L'Afanc : monstre du lac, castor-crocodile écailleux, vagues
+  A: {
+    body: '#3E6A6E', belly: '#8FBFB8', head: '#5E8F88', eye: '#F2D94E',
+    back: <path d="M52 150 Q10 170 30 196 Q60 188 70 170Z" fill="#2E4F52" />,
+    top: <path d="M66 60 l8 -16 l8 14 l8 -16 l8 14 l8 -16 l8 14 l8 -16 l6 18" stroke="#2E4F52" strokeWidth="5" fill="none" strokeLinejoin="round" />,
+    face: <path d="M84 114 l6 6 l6 -6 l6 6 l6 -6 l6 6" stroke="#F6F3EC" strokeWidth="3" fill="none" />,
+    front: <path d="M20 186 Q40 174 60 186 T100 186 T140 186 T180 186" stroke="#7FC4D9" strokeWidth="5" fill="none" strokeLinecap="round" />,
+  },
+  // Cait Sìth : grand chat noir à tache blanche sur la poitrine
+  C: {
+    body: '#1E1E26', belly: '#F4F1EA', head: '#26262F', eye: '#7FD957',
+    top: <>{ear(58, false, '#26262F', '#5A4A5A')}{ear(142, true, '#26262F', '#5A4A5A')}</>,
+    face: <><path d="M94 104 L106 104 L100 110Z" fill="#E28A9A" /><path d="M70 108 H50 M70 114 H52 M130 108 H150 M130 114 H148" stroke="#C9C4BA" strokeWidth="2" /></>,
+    back: <path d="M150 170 Q196 150 180 100" stroke="#1E1E26" strokeWidth="12" fill="none" strokeLinecap="round" />,
+  },
+  // Le ver de Lambton : serpent géant enroulé, écailles, puits
+  L: {
+    body: '#6A7A3A', belly: '#C9C98A', head: '#7F8F48', eye: '#E2483B',
+    back: <><path d="M30 160 Q20 110 60 104 M170 160 Q180 110 140 104" stroke="#55652E" strokeWidth="22" fill="none" strokeLinecap="round" /></>,
+    face: <path d="M96 116 v12 l-5 6 M104 116 v12 l5 6" stroke="#C8323F" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(100 182)"><rect x="-26" y="-8" width="52" height="16" rx="3" fill="#8A8478" stroke="#5A564C" strokeWidth="2" /><path d="M-26 0 H26 M-10 -8 V8 M10 -8 V8" stroke="#5A564C" strokeWidth="2" /></g>,
+  },
+  // Tom Tit Tot : petit diable noir à longue queue, rouet
+  T: {
+    body: '#2A2228', belly: '#6A5A60', head: '#3A2E34', eye: '#F2A23B',
+    top: <path d="M66 58 Q60 34 74 26 Q72 44 80 52 M134 58 Q140 34 126 26 Q128 44 120 52" stroke="#1A1418" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    face: <path d="M82 112 Q100 126 118 112" stroke="#F2A23B" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    back: <path d="M140 170 Q190 170 178 120 l8 -6 l-14 0Z" stroke="#1A1418" strokeWidth="5" fill="#1A1418" />,
+    front: <g transform="translate(152 158)"><circle r="18" fill="none" stroke="#8C6A2A" strokeWidth="4" />{[0, 60, 120].map((a) => <path key={a} d="M-18 0 H18" stroke="#8C6A2A" strokeWidth="2" transform={`rotate(${a})`} />)}</g>,
+  },
+  // La Licorne d'Écosse : blanche, corne dorée, crinière, chaîne d'or
+  U: {
+    body: '#F4F1EA', belly: '#FFFFFF', head: '#FBF8F1', eye: '#3A4E8F',
+    top: <><path d="M92 46 L100 6 L108 46Z" fill="#E2B84A" stroke="#B08A2A" strokeWidth="2" /><path d="M58 72 Q50 40 80 36 Q66 56 70 72Z" fill="#B9C9E8" /></>,
+    face: <><ellipse cx="92" cy="112" rx="3" ry="2" fill="#B8A8A0" /><ellipse cx="108" cy="112" rx="3" ry="2" fill="#B8A8A0" /></>,
+    front: <path d="M56 166 q8 -8 16 0 q8 8 16 0 q8 -8 16 0 q8 8 16 0 q8 -8 16 0" stroke="#E2B84A" strokeWidth="4" fill="none" />,
+  },
+  // L'Homme-hibou : plumes grises, aigrettes, grands yeux rouges, bec
+  O: {
+    body: '#7A7468', belly: '#C9C0AE', head: '#8A8478', eye: '#E2483B',
+    top: <path d="M62 60 L58 26 L82 50 M138 60 L142 26 L118 50" stroke="#4A463E" strokeWidth="6" fill="#4A463E" strokeLinejoin="round" />,
+    under: <><circle cx="80" cy="88" r="15" fill="#F2E9D0" /><circle cx="120" cy="88" r="15" fill="#F2E9D0" /></>,
+    face: <path d="M92 102 L108 102 L100 120Z" fill="#2A2A2A" />,
+    back: <><path d="M58 110 Q6 90 20 160 Q40 140 62 150Z" fill="#5A564C" /><path d="M142 110 Q194 90 180 160 Q160 140 138 150Z" fill="#5A564C" /></>,
+  },
+  // Les dragons de Vortigern : rouge et blanc, tour qui tremble
+  V: {
+    body: '#B8322E', belly: '#F2E9E0', head: '#C84A3E', eye: '#F2D94E',
+    back: <><path d="M58 110 Q8 70 24 150 Q42 130 62 146Z" fill="#F4F1EA" stroke="#B9B1A0" strokeWidth="2" /><path d="M142 110 Q192 70 176 150 Q158 130 138 146Z" fill="#8E1B26" /></>,
+    top: <path d="M74 52 L68 28 L86 46 M126 52 L132 28 L114 46" stroke="#F2E9E0" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    face: <path d="M90 110 Q100 116 110 110 M94 100 h2 M104 100 h2" stroke="#5A1A10" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(152 150)"><rect x="-12" y="-26" width="24" height="50" fill="#8A8478" stroke="#5A564C" strokeWidth="2" /><path d="M-12 -26 v-6 h6 v6 h6 v-6 h6 v6 h6 v-6" stroke="#5A564C" strokeWidth="2" fill="#8A8478" /></g>,
+  },
+  // Y Brenin Llwyd, le roi gris : vieillard de brume, couronne de givre
+  Y: {
+    body: '#8E96A0', belly: '#C9D0D8', head: '#B9C0C8', eye: '#3A4A5A',
+    back: <><circle cx="40" cy="160" r="26" fill="#D8DEE4" opacity={0.8} /><circle cx="164" cy="164" r="30" fill="#D8DEE4" opacity={0.8} /><circle cx="100" cy="190" r="24" fill="#E4E8EC" opacity={0.8} /></>,
+    top: <path d="M70 52 L74 30 L86 44 L100 24 L114 44 L126 30 L130 52Z" fill="#DDEFF5" stroke="#9CC6D1" strokeWidth="2" />,
+    face: <path d="M74 112 Q100 160 126 112 Q112 124 100 122 Q88 124 74 112Z" fill="#E4E8EC" stroke="#B9C0C8" strokeWidth="2" />,
+  },
   // ───── Gardiens anglais (A2 — terres de Logres) ─────
   // Redcap : lutin trapu au bonnet rouge, bottes de fer, pique
   R: {

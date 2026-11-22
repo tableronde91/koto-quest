@@ -48,6 +48,7 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
   en: [
     { code: 'A1', hint: 'Découverte · TOEIC 120+' },
     { code: 'A2', hint: 'Survie · TOEIC 225+' },
+    { code: 'B1', hint: 'Seuil · TOEIC 550+' },
   ],
 };
 

@@ -658,6 +658,57 @@ story['levels']['A2'] = {
       ('Tu as gagné ta place à la Table ronde. Niveau A2 validé !', 'You have won your seat at the Round Table. A2 level complete!')),
    },
 }
+
+story['levels']['B1'] = {
+   'glyph': 'G', 'jp': 'The Holy Grail', 'color': '#B8862B',
+   'saga': B('La quête du Graal', 'The Grail quest'),
+   'hero': B('Chevalier·ère errant·e', 'Knight errant'),
+   'short': B('Le chevalier·ère', 'The knight'),
+   'prologue': B(
+     'Assis·e à la Table ronde, tu vois apparaître une coupe de lumière qui s’évanouit aussitôt : le Graal. Arthur confie à Avalon & Co. un grand projet le long des côtes de Cornouailles, et à toi la quête. Pour la mener, il faudra raconter, rapporter, négocier et convaincre comme un·e vrai·e professionnel·le.',
+     'Seated at the Round Table, you see a cup of light appear and fade at once: the Grail. Arthur entrusts Avalon & Co. with a great project along the Cornish coast, and the quest to you. To lead it, you will have to tell stories, report, negotiate and persuade like a true professional.'),
+   'epilogue': B(
+     'Dans la chapelle, la coupe brille de nouveau, et cette fois elle ne disparaît pas. Le projet est livré, le Graal trouvé : la Table ronde t’acclame.',
+     'In the chapel, the cup shines again, and this time it does not vanish. The project is delivered, the Grail found: the Round Table cheers you.'),
+   'chapters': {
+    'b1-w1': CHAP(('Le lac qui déborde', 'The overflowing lake'),
+      ('Au bord du lac, l’Afanc, monstre du lac, fait monter les eaux sur le chantier d’Avalon & Co. Explique-lui depuis combien de temps vous travaillez et ce que vous avez déjà accompli.',
+       'By the lake, the Afanc, the lake monster, makes the water rise over the Avalon & Co. site. Explain how long you have been working and what you have already achieved.'),
+      ('Apaisé, l’Afanc replonge et le lac retrouve son calme.', 'Calmed, the Afanc dives back and the lake grows still again.')),
+    'b1-w2': CHAP(('Le chat des Highlands', 'The Highland cat'),
+      ('Sur la route, un grand chat noir t’attend : le Cait Sìth, qui vole les âmes des mauvais conteurs. Raconte ton passé dans le bon ordre pour garder la tienne.',
+       'On the road, a big black cat awaits you: the Cait Sìth, who steals the souls of bad storytellers. Tell your past in the right order to keep yours.'),
+      ('Le chat ronronne, satisfait, et disparaît dans la bruyère.', 'The cat purrs, satisfied, and vanishes into the heather.')),
+    'b1-w3': CHAP(('La colline enroulée', 'The coiled hill'),
+      ('Le ver de Lambton s’est enroulé autour de l’usine. Explique comment tout est fabriqué, contrôlé et expédié pour qu’il desserre son étreinte.',
+       'The Lambton Worm has coiled itself around the factory. Explain how everything is made, checked and shipped so that it loosens its grip.'),
+      ('Le ver se déroule lentement et retourne dans son puits.', 'The worm slowly uncoils and goes back down its well.')),
+    'b1-w4': CHAP(('Le nom secret', 'The secret name'),
+      ('Dans un moulin du Suffolk, Tom Tit Tot file la laine du projet et réclame son prix : deviner son nom. Rapporte fidèlement ce que chacun t’a dit pour le découvrir.',
+       'In a Suffolk mill, Tom Tit Tot spins the project’s wool and demands his price: guess his name. Faithfully report what everyone told you to discover it.'),
+      ('« Tom Tit Tot ! » Le petit diable hurle de rage et s’enfuit par la cheminée.', '“Tom Tit Tot!” The little imp howls with rage and flees up the chimney.')),
+    'b1-w5': CHAP(('La licorne enchaînée', 'The chained unicorn'),
+      ('Dans les collines, la Licorne d’Écosse ne se laisse approcher que par les rêveurs. Dis-lui ce que tu ferais si tout était possible.',
+       'In the hills, the Unicorn of Scotland only lets dreamers come near. Tell it what you would do if anything were possible.'),
+      ('La licorne baisse la tête et te laisse caresser sa crinière.', 'The unicorn lowers its head and lets you stroke its mane.')),
+    'b1-w6': CHAP(('Le clocher de Mawnan', 'Mawnan church tower'),
+      ('Au sommet du clocher, l’Homme-hibou pose ses énigmes. Déduis ce qui est certain, possible ou impossible pour passer sans dommage.',
+       'At the top of the tower, the Owlman asks his riddles. Deduce what is certain, possible or impossible to pass unharmed.'),
+      ('L’Homme-hibou ouvre ses ailes et s’envole vers la lune.', 'The Owlman spreads his wings and flies towards the moon.')),
+    'b1-w7': CHAP(('La tour qui s’effondre', 'The collapsing tower'),
+      ('Sous la tour du roi Vortigern, deux dragons se battent et font trembler la réunion. Argumente avec nuance pour mettre fin à leur querelle.',
+       'Beneath King Vortigern’s tower, two dragons fight and shake the meeting. Argue with nuance to end their quarrel.'),
+      ('Les dragons rouge et blanc s’apaisent et la tour cesse de trembler.', 'The red and white dragons calm down and the tower stops shaking.')),
+    'b1-w8': CHAP(('Le brouillard du roi gris', 'The Grey King’s fog'),
+      ('Dans les montagnes galloises, Y Brenin Llwyd, le roi gris, enveloppe les voyageurs impolis de brume. Demande ton chemin avec la plus grande politesse.',
+       'In the Welsh mountains, Y Brenin Llwyd, the Grey King, wraps rude travellers in mist. Ask your way with the utmost politeness.'),
+      ('La brume se lève : la chapelle du Graal apparaît au bout du chemin.', 'The mist lifts: the Grail chapel appears at the end of the path.')),
+    'b1-final': CHAP(('La chapelle du Graal', 'The Grail chapel'),
+      ('Dans la chapelle, la dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau B1 pour toucher le Graal.',
+       'In the chapel, the last trial awaits you: listen, read and answer as in the TOEIC. Reach the B1 score to touch the Grail.'),
+      ('Le Graal est à toi. Niveau B1 validé !', 'The Grail is yours. B1 level complete!')),
+   },
+}
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
 json.dump(story, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(sum(len(l['chapters']) for l in story['levels'].values()), 'chapitres')
