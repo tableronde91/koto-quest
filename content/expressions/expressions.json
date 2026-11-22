@@ -1,5 +1,5 @@
 {
-  "contentVersion": "2026.11-expr1",
+  "contentVersion": "2026.11-expr2",
   "notice": "Expressions courantes sélectionnées par Koto Quest ; la lecture en kana et le registre (poli, familier…) aident à choisir la bonne formule selon la situation.",
   "themes": [
     {
@@ -1255,6 +1255,242 @@
             "jp": "部長、少しよろしいですか。",
             "fr": "Monsieur le directeur, auriez-vous un moment ?"
           }
+        }
+      ]
+    },
+    {
+      "slug": "kotowaza",
+      "glyph": "諺",
+      "title": "Proverbes (ことわざ)",
+      "description": "Les proverbes que les Japonais glissent dans la conversation : à réviser jusqu’à les reconnaître au vol.",
+      "expressions": [
+        {
+          "slug": "jprov-saru",
+          "kind": "vocabulary",
+          "front": "猿も木から落ちる",
+          "reading": "さるもきからおちる",
+          "romaji": "saru mo ki kara ochiru",
+          "meaning": "même les meilleurs se trompent",
+          "note": "« Même les singes tombent des arbres » : pour consoler un expert qui vient de se tromper.",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-ishi",
+          "kind": "vocabulary",
+          "front": "石の上にも三年",
+          "reading": "いしのうえにもさんねん",
+          "romaji": "ishi no ue ni mo sannen",
+          "meaning": "la persévérance finit par payer",
+          "note": "« Trois ans assis sur une pierre, et elle finit par chauffer. »",
+          "register": "neutral",
+          "example": {
+            "jp": "石の上にも三年だよ。毎日続けよう。",
+            "fr": "La persévérance paie : continue chaque jour."
+          }
+        },
+        {
+          "slug": "jprov-nanakorobi",
+          "kind": "vocabulary",
+          "front": "七転び八起き",
+          "reading": "ななころびやおき",
+          "romaji": "nanakorobi yaoki",
+          "meaning": "tomber sept fois, se relever huit",
+          "note": "Pour encourager quelqu’un après un échec : on se relève toujours.",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-isogaba",
+          "kind": "vocabulary",
+          "front": "急がば回れ",
+          "reading": "いそがばまわれ",
+          "romaji": "isogaba maware",
+          "meaning": "hâte-toi lentement",
+          "note": "« Si tu es pressé, fais le détour » : le chemin sûr est souvent le plus rapide.",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-hanayori",
+          "kind": "vocabulary",
+          "front": "花より団子",
+          "reading": "はなよりだんご",
+          "romaji": "hana yori dango",
+          "meaning": "le concret avant l’esthétique",
+          "note": "« Les dango plutôt que les fleurs » : se dit de celui qui préfère manger que contempler les cerisiers.",
+          "register": "casual",
+          "example": {
+            "jp": "お花見なのに、みんな花より団子だね。",
+            "fr": "C’est la fête des cerisiers, mais tout le monde ne pense qu’à manger !"
+          }
+        },
+        {
+          "slug": "jprov-neko",
+          "kind": "vocabulary",
+          "front": "猫に小判",
+          "reading": "ねこにこばん",
+          "romaji": "neko ni koban",
+          "meaning": "donner de la confiture aux cochons",
+          "note": "« Une pièce d’or à un chat » : un objet précieux offert à qui ne peut l’apprécier.",
+          "register": "casual"
+        },
+        {
+          "slug": "jprov-chiri",
+          "kind": "vocabulary",
+          "front": "塵も積もれば山となる",
+          "reading": "ちりもつもればやまとなる",
+          "romaji": "chiri mo tsumoreba yama to naru",
+          "meaning": "les petits ruisseaux font les grandes rivières",
+          "note": "« Même la poussière, accumulée, devient montagne » : parfait pour l’apprentissage des kanji !",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-kawazu",
+          "kind": "vocabulary",
+          "front": "井の中の蛙大海を知らず",
+          "reading": "いのなかのかわずたいかいをしらず",
+          "romaji": "i no naka no kawazu taikai o shirazu",
+          "meaning": "avoir une vision étroite du monde",
+          "note": "« La grenouille au fond du puits ne connaît pas l’océan » : le même proverbe existe en coréen (우물 안 개구리).",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-uwasa",
+          "kind": "vocabulary",
+          "front": "噂をすれば影",
+          "reading": "うわさをすればかげ",
+          "romaji": "uwasa o sureba kage",
+          "meaning": "quand on parle du loup, on en voit la queue",
+          "note": "« Parle de quelqu’un, et voici son ombre. »",
+          "register": "casual",
+          "example": {
+            "jp": "噂をすれば影だ。田中さんが来たよ。",
+            "fr": "Quand on parle du loup… voilà Tanaka."
+          }
+        },
+        {
+          "slug": "jprov-anzuru",
+          "kind": "vocabulary",
+          "front": "案ずるより産むが易し",
+          "reading": "あんずるよりうむがやすし",
+          "romaji": "anzuru yori umu ga yasushi",
+          "meaning": "c’est moins difficile qu’on ne le craint",
+          "note": "Pour rassurer quelqu’un avant une épreuve, comme le JLPT.",
+          "register": "neutral"
+        }
+      ]
+    },
+    {
+      "slug": "yojijukugo",
+      "glyph": "熟",
+      "title": "Expressions en quatre caractères (四字熟語)",
+      "description": "Les yojijukugo, venus du chinois classique, donnent du style à l’écrit et aux discours.",
+      "expressions": [
+        {
+          "slug": "jprov-isseki",
+          "kind": "vocabulary",
+          "front": "一石二鳥",
+          "reading": "いっせきにちょう",
+          "romaji": "isseki nichō",
+          "meaning": "faire d’une pierre deux coups",
+          "note": "Une pierre, deux oiseaux.",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-ichigo",
+          "kind": "vocabulary",
+          "front": "一期一会",
+          "reading": "いちごいちえ",
+          "romaji": "ichigo ichie",
+          "meaning": "chaque rencontre est unique",
+          "note": "Venu de la cérémonie du thé : chérir chaque rencontre, car elle ne se reproduira pas.",
+          "register": "formal",
+          "example": {
+            "jp": "一期一会を大切にしたい。",
+            "fr": "Je veux chérir chaque rencontre."
+          }
+        },
+        {
+          "slug": "jprov-junin",
+          "kind": "vocabulary",
+          "front": "十人十色",
+          "reading": "じゅうにんといろ",
+          "romaji": "jūnin toiro",
+          "meaning": "à chacun ses goûts",
+          "note": "« Dix personnes, dix couleurs. »",
+          "register": "neutral"
+        },
+        {
+          "slug": "jprov-jigo",
+          "kind": "vocabulary",
+          "front": "自業自得",
+          "reading": "じごうじとく",
+          "romaji": "jigō jitoku",
+          "meaning": "on récolte ce qu’on a semé",
+          "note": "Terme bouddhique : on reçoit le fruit de ses propres actes.",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-kishi",
+          "kind": "vocabulary",
+          "front": "起死回生",
+          "reading": "きしかいせい",
+          "romaji": "kishi kaisei",
+          "meaning": "retournement inespéré",
+          "note": "« Ressusciter le mourant » : un renversement de situation spectaculaire.",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-onko",
+          "kind": "vocabulary",
+          "front": "温故知新",
+          "reading": "おんこちしん",
+          "romaji": "onko chishin",
+          "meaning": "tirer des leçons du passé",
+          "note": "Confucius : réviser l’ancien pour comprendre le nouveau. La devise des révisions !",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-ishin",
+          "kind": "vocabulary",
+          "front": "以心伝心",
+          "reading": "いしんでんしん",
+          "romaji": "ishin denshin",
+          "meaning": "se comprendre sans un mot",
+          "note": "De cœur à cœur : le même idiome existe en coréen (이심전심).",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-taiki",
+          "kind": "vocabulary",
+          "front": "大器晩成",
+          "reading": "たいきばんせい",
+          "romaji": "taiki bansei",
+          "meaning": "les grands talents mûrissent lentement",
+          "note": "Les grands vases se font lentement : pour encourager qui progresse doucement.",
+          "register": "formal"
+        },
+        {
+          "slug": "jprov-mikka",
+          "kind": "vocabulary",
+          "front": "三日坊主",
+          "reading": "みっかぼうず",
+          "romaji": "mikka bōzu",
+          "meaning": "bonnes résolutions sans lendemain",
+          "note": "« Moine de trois jours » : qui abandonne vite ce qu’il commence.",
+          "register": "casual",
+          "example": {
+            "jp": "日記はいつも三日坊主だ。",
+            "fr": "Mon journal, je l’abandonne toujours au bout de trois jours."
+          }
+        },
+        {
+          "slug": "jprov-uo",
+          "kind": "vocabulary",
+          "front": "右往左往",
+          "reading": "うおうさおう",
+          "romaji": "uō saō",
+          "meaning": "aller dans tous les sens, s’affoler",
+          "note": "Aller à droite, aller à gauche.",
+          "register": "formal"
         }
       ]
     }

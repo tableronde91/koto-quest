@@ -1,4 +1,4 @@
-import { Ctx, completeFirstLesson, createTestApp, resetUsers, signUp } from './helpers';
+import { Ctx, completeFirstLesson, correctAnswer, createTestApp, resetUsers, signUp } from './helpers';
 
 describe('Niveaux : parcours N4', () => {
   let ctx: Ctx;
@@ -17,20 +17,20 @@ describe('Niveaux : parcours N4', () => {
     const n3 = (await agent.get('/api/path/N3').expect(200)).body;
     expect(n3.level).toMatchObject({ code: 'N3', region: 'Cimes enneigées' });
     expect(n3.worlds).toHaveLength(9);
-    expect(n3.worlds.at(-1)).toMatchObject({ slug: 'n3-final', exam: { slug: 'n3-mock' } });
+    expect(n3.worlds.at(-1)).toMatchObject({ slug: 'n3-final', exam: { slug: 'n3-jlpt' } });
     expect(n3.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n3-you-da', status: 'available' });
     // Le N2 s'ouvre de la même façon : 8 îles à gardien, puis l'examen blanc
     const n2 = (await agent.get('/api/path/N2').expect(200)).body;
     expect(n2.level).toMatchObject({ code: 'N2', region: 'Capitale d’été' });
     expect(n2.worlds).toHaveLength(9);
     expect(n2.worlds.slice(0, 8).every((w: any) => w.boss && !w.exam && !w.comingSoon && w.progress.total === 3)).toBe(true);
-    expect(n2.worlds.at(-1)).toMatchObject({ slug: 'n2-final', exam: { slug: 'n2-mock' } });
+    expect(n2.worlds.at(-1)).toMatchObject({ slug: 'n2-final', exam: { slug: 'n2-jlpt' } });
     // Le N1 : 8 îles à gardien, puis l'examen blanc
     const n1 = (await agent.get('/api/path/N1').expect(200)).body;
     expect(n1.level).toMatchObject({ code: 'N1', region: 'Domaine du shōgun' });
     expect(n1.worlds).toHaveLength(9);
     expect(n1.worlds.slice(0, 8).every((w: any) => w.boss && !w.exam && !w.comingSoon && w.progress.total === 3)).toBe(true);
-    expect(n1.worlds.at(-1)).toMatchObject({ slug: 'n1-final', exam: { slug: 'n1-mock' } });
+    expect(n1.worlds.at(-1)).toMatchObject({ slug: 'n1-final', exam: { slug: 'n1-jlpt' } });
     expect(n1.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n1-wo-motte', status: 'available' });
     expect(n2.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'n2-kara-suru-to', status: 'available' });
     expect(path.worlds.length).toBeGreaterThanOrEqual(3);
@@ -38,7 +38,7 @@ describe('Niveaux : parcours N4', () => {
     expect(lessons[0]).toMatchObject({ slug: 'n4-te-ru', status: 'available' });
     expect(lessons[1].status).toBe('locked');
     expect(path.worlds.filter((w: any) => !w.exam).every((w: any) => w.boss)).toBe(true);
-    expect(path.worlds.at(-1)).toMatchObject({ slug: 'n4-final', exam: { slug: 'n4-mock' } });
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'n4-final', exam: { slug: 'n4-jlpt' } });
   });
 
   it('les kana déjà connus (déclarés à l’onboarding) ne décalent pas le départ du N4', async () => {
@@ -126,6 +126,23 @@ describe('Niveaux : parcours N4', () => {
     const res = (await agent.post('/api/exams/n1-mock/submit').send({ sessionId: exam.body.sessionId, answers: {} }).expect(200)).body;
     expect(res).toMatchObject({ correct: 0, passed: false });
     expect(res.recommendations.join(' ')).toMatch(/N1/);
+  });
+
+  it.each([
+    ['n4', 40, 90],
+    ['n3', 40, 95],
+    ['n2', 40, 90],
+    ['n1', 35, 100],
+  ])('examen blanc %s au format officiel : barème du JLPT, réussite seulement au total et aux minimums', async (lv, n, pass) => {
+    const { agent } = await signUp(ctx.app);
+    const exam = (await agent.post(`/api/exams/${lv}-jlpt/start`).expect(201)).body;
+    expect(exam.questions).toHaveLength(n);
+    // Tout juste sauf l'écoute : le total est là, mais pas le minimum en écoute
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) if (q.section !== 'listening') answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const res = (await agent.post(`/api/exams/${lv}-jlpt/submit`).send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(res).toMatchObject({ passed: false, scaled: { listening: 0, max: { total: 180, passTotal: pass } } });
+    expect(res.scaled.total).toBe(120);
   });
 
   it('niveau JLPT inconnu : 400', async () => {

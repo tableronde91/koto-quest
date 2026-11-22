@@ -101,6 +101,11 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 - Écoute réaliste : dialogues à deux voix (hauteur de voix différente homme/femme), 2 écoutes au maximum, réponses à entendre pour 発話表現 et 即時応答 ; transcription donnée à la correction.
 - Barème du JLPT : langue et lecture sur 120, écoute sur 60 ; réussite à 80/180 avec au moins 38 et 19. L'ancien examen (généré à partir des leçons) reste disponible comme version d'entraînement (`/exam/n5-mock`).
 
+### Examens blancs JLPT N4 à N1 au format officiel (abrégé)
+- Banques `content/exams/n4-jlpt.json` … `n1-jlpt.json`, générées par `scripts/jlpt-exams.py` : 漢字読み (lectures voisines comme distracteurs), 表記 (sauf au N1), 文脈規定, 言い換え類義, 文法形式の判断, 文の組み立て (★), 読解, 聴解 (課題理解, ポイント理解, 即時応答). Le vocabulaire, la grammaire, la phrase à reconstituer et les réponses orales viennent des mots, exemples et exercices du niveau ; la reformulation, la lecture et l'écoute (tâche, points essentiels) sont rédigées à part.
+- 40 questions au N4, N3 et N2 (60, 70 et 75 minutes), 35 au N1 (80 minutes). C'est l'examen de l'île finale de chaque niveau ; l'ancien examen généré à partir des leçons reste la version d'entraînement (`/exam/nX-mock`).
+- Barème du JLPT : au N4, langue et lecture sur 120 et écoute sur 60, réussite à 90/180 (38 et 19 au minimum) ; du N3 au N1, connaissances de la langue, lecture et écoute sur 60 chacune, 19 au minimum dans chaque partie, réussite à 95 (N3), 90 (N2) ou 100 (N1).
+
 ### Préparation à l'examen : cours alignés et format JLPT
 - **Contenu aligné** : 16 leçons N5 ajoutées dans les îles existantes (famille, adjectifs en い et en な, calendrier, compteurs, forme en て de base, avant/après/pendant, gestes du quotidien, ville, points cardinaux, météo et santé, école, transports et téléphone, mots interrogatifs, invitations et comparaisons) : 43 leçons, 304 notions. Quelques mots de niveau N5 (電車, 電話, 借ります, 貸します, 開けます, 閉めます, 時計) sont passés du N4 au N5. Un test (`coverage.test.ts`) vérifie que chaque mot testé à l'examen blanc (lecture des kanji, orthographe, vocabulaire en contexte) est enseigné.
 - **Difficulté progressive au format de l'examen** (`packages/learning-engine/src/jlpt.ts`) : 漢字読み (mot souligné dans une phrase des leçons, pièges de lecture : voyelle longue, ten-ten, petit っ, ゃゅょ) et 表記 (kanji sosies, okurigana fautifs), consignes en japonais. Dès la leçon pour la lecture des mots en kanji ; en révision, de plus en plus souvent à mesure que la notion est maîtrisée (une fois sur deux quand elle est bien installée) ; aussi dans la dernière phase des combats.
@@ -111,8 +116,8 @@ docs/ARCHITECTURE.md     Architecture, écrans, modèle de données, API, plan p
 - Contrôle côté serveur : l'affichage de la question est enregistré (`POST /questions/:id/shown`) ; une réponse arrivée après la limite (+2,5 s de marge) compte comme une erreur. Sans déclaration d'affichage, le chrono part de la réponse précédente : impossible de gagner du temps en trichant.
 
 ### Succès
-- 35 succès en 5 catégories (étude, régularité, maîtrise, aventure, jeux et collection), de rareté courante, rare ou épique : 10, 25 ou 50 pièces et de l'XP, une seule fois.
-- Succès propres à une langue : les kanji pour le japonais ; pour le coréen, le hangeul (10 puis 40 lettres et syllabes), les gardiens coréens (8 puis 24), un examen blanc TOPIK validé et 10 chapitres de contes coréens. Chacun ne voit que ceux de sa langue (plus ceux déjà débloqués).
+- 41 succès en 5 catégories (étude, régularité, maîtrise, aventure, jeux et collection), de rareté courante, rare ou épique : 10, 25 ou 50 pièces et de l'XP, une seule fois.
+- Succès propres à une langue : pour le japonais, les kanji, les kana (20 puis 92), les gardiens japonais (8 puis 24), un examen blanc JLPT validé et 10 chapitres de contes japonais ; pour le coréen, le hangeul (10 puis 40 lettres et syllabes), les gardiens coréens (8 puis 24), un examen blanc TOPIK validé et 10 chapitres de contes coréens. Chacun ne voit que ceux de sa langue (plus ceux déjà débloqués).
 - Catalogue et règles dans le moteur (`packages/learning-engine/src/achievements.ts`), testés. Le serveur recalcule les statistiques depuis la base (`GET /api/achievements`, `POST /api/achievements/check`) ; la clé primaire (utilisateur, succès) empêche toute double récompense, même en appels simultanés.
 - L'application vérifie après chaque étape (fin de leçon, gardien, mini-jeu, examen, achat) et à chaque changement de page ; la notification attend la fin de l'exercice en cours. Collection dans « Succès » (depuis l'accueil ou Progrès).
 
@@ -155,7 +160,7 @@ Page **Duels** (`/duel`) : deux joueurs reçoivent la même question au même in
 
 ### Expressions utiles
 
-L'onglet **Expressions** (`/expressions`) rassemble 84 expressions courantes en 10 thèmes :
+L'onglet **Expressions** (`/expressions`) rassemble 104 expressions en 12 thèmes :
 
 - politesse ;
 - rencontres ;
@@ -166,7 +171,8 @@ L'onglet **Expressions** (`/expressions`) rassemble 84 expressions courantes en 
 - réactions ;
 - urgences et santé ;
 - entre amis (familier) ;
-- travail (formel).
+- travail (formel) ;
+- **révision des proverbes** : ことわざ (猿も木から落ちる, 石の上にも三年, 急がば回れ…) et 四字熟語 (一期一会, 温故知新, 三日坊主…), générés par `scripts/ja-proverbs.py`. Plusieurs ont leur jumeau coréen (우물 안 개구리, 이심전심, 대기만성…).
 
 Chaque fiche donne le japonais, la lecture en kana, le romaji, le sens et une note d'usage (quand et à qui le dire). Elle indique aussi le registre (poli, neutre, familier, formel) et propose un exemple, avec écoute de l'expression et de l'exemple.
 
@@ -202,7 +208,7 @@ L'application existe en **français** (langue source) et en **anglais**. On choi
 
 ## Lecture
 
-- Menu **Lecture** (`/lecture`) : huit contes traditionnels japonais réécrits en japonais simple — N5 (Momotarō, Kasa Jizō, la grue reconnaissante), N4 (Urashima Tarō, Issun-bōshi, Kaguya-hime) et N3 (Yuki-onna, Warashibe Chōja) — découpés en 37 chapitres de plus en plus longs (6 → 16 phrases).
+- Menu **Lecture** (`/lecture`) : douze contes traditionnels japonais réécrits en japonais simple, du N5 au N1 — N5 (Momotarō, Kasa Jizō, la grue reconnaissante, Hanasaka jiisan), N4 (Urashima Tarō, Issun-bōshi, Kaguya-hime, Shitakiri suzume), N3 (Yuki-onna, Warashibe Chōja), N2 (Mimi-nashi Hōichi) et N1 (Hachikazuki) — découpés en 51 chapitres de plus en plus longs (au N2 et au N1, des phrases plus longues et plus littéraires).
 - **Tout est ouvert dès le départ** : le lecteur lit le conte et le chapitre qu'il veut, dans l'ordre qu'il veut, autant de chapitres par jour qu'il veut. Le « chapitre du jour » n'est qu'un conseil (le premier pas encore lu) ; une fois la lecture du jour faite, « Continuer la lecture » propose la suite. Série de jours de lecture, caractères lus, carte « Lecture du jour » sur l'accueil.
 - Liseuse : furigana affichables, traduction FR/EN phrase par phrase (au toucher, tout, aucune), écoute phrase par phrase ou du chapitre entier, vocabulaire du chapitre, questions de compréhension (XP et pièces à la première lecture seulement).
 - Contenu : `content/reading/stories.json` (furigana notés `{漢字|かな}`) ; logique commune serveur / hors ligne dans `packages/shared/src/reading.ts` ; API `GET /reading`, `GET /reading/chapters/:slug`, `POST /reading/chapters/:slug/complete`.
@@ -260,7 +266,7 @@ Comptes, duels en ligne et classement nécessitent le serveur (API + PostgreSQL)
 - **Web Push sur iPhone** : nécessite d'installer l'application sur l'écran d'accueil (iOS 16.4 ou plus récent).
 - **Planificateur** : cron en mémoire dans le processus API (une seule instance). Passer à BullMQ + Redis avant de lancer plusieurs instances.
 - **E-mails** : envoyés par SMTP si `SMTP_URL` est renseigné ; sinon, les liens sont écrits dans la console de l'API.
-- **Contenu** : N5 complet (9 îles, 43 leçons) et N4 (9 îles, 39 leçons, 239 notions) ; N3 (9 îles, 24 leçons, 171 notions, examen blanc `n3-mock`, généré par `scripts/n3-level.py`) ; N2 (9 îles, 24 leçons, 192 notions, examen blanc `n2-mock`, généré par `scripts/n2-level.py`) ; N1 (9 îles, 24 leçons, 192 notions, examen blanc `n1-mock`, généré par `scripts/n1-level.py`). Le contenu N4 ajouté le 10/11/2026 est généré par `scripts/n4-extension.py` (français + anglais).
+- **Contenu** : N5 complet (9 îles, 43 leçons) et N4 (9 îles, 39 leçons, 239 notions) ; N3 (9 îles, 24 leçons, 171 notions, examens blancs `n3-jlpt` et `n3-mock`, généré par `scripts/n3-level.py`) ; N2 (9 îles, 24 leçons, 192 notions, examens blancs `n2-jlpt` et `n2-mock`, généré par `scripts/n2-level.py`) ; N1 (9 îles, 24 leçons, 192 notions, examens blancs `n1-jlpt` et `n1-mock`, généré par `scripts/n1-level.py`). Le contenu N4 ajouté le 10/11/2026 est généré par `scripts/n4-extension.py` (français + anglais).
 - **Migration initiale** : générée depuis le schéma Prisma dans un environnement sans accès aux moteurs Prisma. Après `npm run setup`, lancez `npm run db:migrate:dev -w @koto/api` une fois : si Prisma détecte un écart avec `schema.prisma`, il proposera une migration corrective.
 
 ## Variables d'environnement

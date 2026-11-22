@@ -596,7 +596,7 @@ FINAL = {
   'title': t(('Simulation JLPT N1', 'JLPT N1 simulation')),
   'region': REGION,
   'description': t(('Examen blanc non officiel du N1 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.', 'Unofficial N1 mock exam: vocabulary and kanji, grammar, listening. Timed, marked by skill.')),
-  'exam': 'n1-mock',
+  'exam': 'n1-jlpt',
   'chapters': [],
 }
 

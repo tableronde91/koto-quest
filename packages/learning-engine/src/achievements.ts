@@ -27,6 +27,14 @@ export interface AchievementStats {
   bestGameScore: number;
   itemsCollected: number;
   placementDone: number;
+  /** Kana (hiragana, katakana) maîtrisés */
+  masteredKana: number;
+  /** Gardiens japonais (îles du JLPT) vaincus */
+  japaneseBosses: number;
+  /** Examens blancs du JLPT validés */
+  jlptPassed: number;
+  /** Chapitres de contes japonais lus */
+  japaneseChapters: number;
   /** Lettres et syllabes du hangeul maîtrisées */
   masteredHangul: number;
   /** Gardiens coréens (îles du TOPIK) vaincus */
@@ -87,6 +95,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('mastered-300', '森', 'Forêt du savoir', 'Maîtriser 300 notions.', 'mastery', 'epic', 'masteredItems', 300),
   a('kanji-10', '字', 'Calligraphe', 'Maîtriser 10 kanji.', 'mastery', 'common', 'masteredKanji', 10, 'ja'),
   a('kanji-50', '書', 'Maître du pinceau', 'Maîtriser 50 kanji.', 'mastery', 'epic', 'masteredKanji', 50, 'ja'),
+  a('kana-20', 'あ', 'Premiers kana', 'Maîtriser 20 hiragana ou katakana.', 'mastery', 'common', 'masteredKana', 20, 'ja'),
+  a('kana-92', 'ア', 'Virtuose des kana', 'Maîtriser 92 kana (les hiragana et katakana de base).', 'mastery', 'epic', 'masteredKana', 92, 'ja'),
   a('hangul-10', '한', 'Premières lettres', 'Maîtriser 10 lettres ou syllabes du hangeul.', 'mastery', 'common', 'masteredHangul', 10, 'ko'),
   a('hangul-40', '글', 'Héritier·e du roi Sejong', 'Maîtriser 40 lettres et syllabes du hangeul.', 'mastery', 'epic', 'masteredHangul', 40, 'ko'),
   // Aventure
@@ -96,6 +106,10 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('placement', '診', 'Bilan fait', 'Passer le test de positionnement.', 'adventure', 'common', 'placementDone', 1),
   a('first-exam', '試', 'Premier examen blanc', 'Rendre un examen blanc complet.', 'adventure', 'common', 'examsTaken', 1),
   a('exam-passed', '合', 'Seuil atteint', 'Atteindre le seuil indicatif d’un examen blanc.', 'adventure', 'epic', 'examsPassed', 1),
+  a('ja-bosses-8', '鬼', 'Exorciste en herbe', 'Vaincre 8 gardiens japonais.', 'adventure', 'rare', 'japaneseBosses', 8, 'ja'),
+  a('ja-bosses-24', '侍', 'Shōgun des îles', 'Vaincre 24 gardiens japonais.', 'adventure', 'epic', 'japaneseBosses', 24, 'ja'),
+  a('jlpt-passed', '認', 'JLPT en poche', 'Valider un examen blanc du JLPT.', 'adventure', 'epic', 'jlptPassed', 1, 'ja'),
+  a('ja-tales-10', '読', 'Conteur·se du Japon', 'Lire 10 chapitres de contes japonais.', 'study', 'rare', 'japaneseChapters', 10, 'ja'),
   a('ko-bosses-8', '범', 'Ami·e des dokkaebi', 'Vaincre 8 gardiens coréens.', 'adventure', 'rare', 'koreanBosses', 8, 'ko'),
   a('ko-bosses-24', '용', 'Gardien·ne des mythes', 'Vaincre 24 gardiens coréens.', 'adventure', 'epic', 'koreanBosses', 24, 'ko'),
   a('topik-passed', '합', 'TOPIK en poche', 'Valider un examen blanc du TOPIK au niveau visé.', 'adventure', 'epic', 'topikPassed', 1, 'ko'),
@@ -156,5 +170,5 @@ export function longestStreak(dateKeys: Iterable<string>): number {
 export const EMPTY_ACHIEVEMENT_STATS: AchievementStats = {
   lessonsCompleted: 0, perfectLessons: 0, bestStreak: 0, correctAnswers: 0, reviewsDone: 0, bestCombo: 0,
   masteredItems: 0, masteredKanji: 0, bossesDefeated: 0, examsTaken: 0, examsPassed: 0, gamesPlayed: 0,
-  bestGameScore: 0, itemsCollected: 0, placementDone: 0, masteredHangul: 0, koreanBosses: 0, topikPassed: 0, koreanChapters: 0,
+  bestGameScore: 0, itemsCollected: 0, placementDone: 0, masteredKana: 0, japaneseBosses: 0, jlptPassed: 0, japaneseChapters: 0, masteredHangul: 0, koreanBosses: 0, topikPassed: 0, koreanChapters: 0,
 };

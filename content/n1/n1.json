@@ -3965,7 +3965,7 @@
    "title": "Simulation JLPT N1",
    "region": "Domaine du shōgun",
    "description": "Examen blanc non officiel du N1 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
-   "exam": "n1-mock",
+   "exam": "n1-jlpt",
    "chapters": []
   }
  ]

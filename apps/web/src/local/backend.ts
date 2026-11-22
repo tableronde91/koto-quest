@@ -154,6 +154,10 @@ import expressionsKoContent from '../../../../content/expressions/expressions-ko
 import readingContent from '../../../../content/reading/stories.json';
 import cosmeticsCatalog from '../../../../content/cosmetics/catalog.json';
 import bankN5 from '../../../../content/exams/n5-jlpt.json';
+import bankN4 from '../../../../content/exams/n4-jlpt.json';
+import bankN3 from '../../../../content/exams/n3-jlpt.json';
+import bankN2 from '../../../../content/exams/n2-jlpt.json';
+import bankN1 from '../../../../content/exams/n1-jlpt.json';
 import bankTopik1 from '../../../../content/exams/topik1.json';
 import bankTopik2 from '../../../../content/exams/topik2.json';
 import bankTopik3 from '../../../../content/exams/topik3.json';
@@ -162,7 +166,7 @@ import bankTopik5 from '../../../../content/exams/topik5.json';
 import bankTopik6 from '../../../../content/exams/topik6.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -1349,11 +1353,13 @@ function achievementStats(): AchievementStats {
   let masteredItems = 0;
   let masteredKanji = 0;
   let masteredHangul = 0;
+  let masteredKana = 0;
   for (const [id, c] of Object.entries(s.cards)) {
     if (masteryOf(toCard(c), t) !== 'mastered') continue;
     masteredItems++;
     if (ITEMS.get(id)?.kind === 'kanji') masteredKanji++;
     if (ITEMS.get(id)?.kind === 'kana' && LANG_OF.get(id) === 'ko') masteredHangul++;
+    else if (ITEMS.get(id)?.kind === 'kana') masteredKana++;
   }
   const games = Object.values(s.games ?? {});
   return {
@@ -1372,6 +1378,10 @@ function achievementStats(): AchievementStats {
     bestGameScore: games.reduce((n, g) => Math.max(n, g.bestScore), 0),
     itemsCollected: (s.inventory ?? []).length,
     placementDone: s.placementAt ? 1 : 0,
+    masteredKana,
+    japaneseBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && !slug.startsWith('topik')).length,
+    jlptPassed: (s.exams ?? []).filter((e) => e.passed && !e.slug.startsWith('topik')).length,
+    japaneseChapters: (s.reading ?? []).filter((r) => JA_CHAPTERS.has(r.chapter)).length,
     masteredHangul,
     koreanBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && slug.startsWith('topik')).length,
     topikPassed: (s.exams ?? []).filter((e) => e.passed && e.slug.startsWith('topik')).length,
@@ -1379,6 +1389,7 @@ function achievementStats(): AchievementStats {
   };
 }
 /** Chapitres des contes coréens (succès « contes coréens »). */
+const JA_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ja').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 const KO_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ko').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 
 const achievementDto = (def: AchievementDef, value: number, unlocked: boolean, at: string | null): AchievementDto => ({

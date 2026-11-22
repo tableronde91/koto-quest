@@ -5399,7 +5399,7 @@
    "title": "Simulation JLPT N4",
    "region": "Archipel des voyageurs",
    "description": "Examen blanc non officiel du N4 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
-   "exam": "n4-mock",
+   "exam": "n4-jlpt",
    "chapters": []
   }
  ]

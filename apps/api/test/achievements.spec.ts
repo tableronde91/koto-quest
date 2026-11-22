@@ -14,6 +14,10 @@ describe('Succès', () => {
     expect(list.unlocked).toBe(0);
     expect(list.total).toBeGreaterThan(20);
     expect(list.achievements.find((a: any) => a.slug === 'first-lesson')).toMatchObject({ unlocked: false, value: 0, target: 1 });
+    // En japonais : les succès des kana, des gardiens japonais, du JLPT et des contes japonais ; pas ceux du coréen
+    const slugs = list.achievements.map((a: any) => a.slug);
+    expect(slugs).toEqual(expect.arrayContaining(['kana-20', 'kana-92', 'ja-bosses-8', 'ja-bosses-24', 'jlpt-passed', 'ja-tales-10', 'kanji-10']));
+    expect(slugs).not.toContain('hangul-10');
     const check = (await agent.post('/api/achievements/check').expect(200)).body;
     expect(check).toEqual({ unlocked: [], coinsGained: 0, xpGained: 0 });
   });

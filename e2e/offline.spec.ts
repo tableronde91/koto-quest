@@ -584,6 +584,27 @@ test('hors ligne : examen blanc N5 au format officiel, en japonais, noté sur 18
   await expect(page.getByText(/Transcription|Phrase entendue|Situation/).first()).toBeVisible();
 });
 
+test('hors ligne : examens blancs N4 à N1 au format officiel, barème en trois parties à partir du N3', async ({ page }) => {
+  await page.goto(FILE);
+  for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+  await page.goto(FILE + '#/exam/n2-jlpt');
+  await expect(page.getByRole('heading', { name: 'Examen blanc JLPT N2 — format officiel (abrégé)' })).toBeVisible();
+  await expect(page.getByText(/40 questions en 75 minutes/)).toBeVisible();
+  await expect(page.getByText(/réussite à 90, avec au moins 19\/60 dans chacune des trois parties/)).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('問題１　漢字読み')).toBeVisible();
+  await expect(page.getByTestId('exam-question').locator('u')).toHaveCount(1);
+  await page.getByRole('button', { name: 'Rendre ma copie' }).first().click();
+  await page.getByRole('alertdialog').getByRole('button', { name: 'Rendre ma copie' }).click();
+  await expect(page.getByText('/ 180')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Pas encore le seuil' })).toBeVisible();
+  for (const part of ['言語知識', '読解', '聴解']) await expect(page.getByText(part, { exact: true }).first()).toBeVisible();
+  // Au N4, le barème reste en deux parties (langue et lecture sur 120, écoute sur 60), réussite à 90
+  await page.goto(FILE + '#/exam/n4-jlpt');
+  await expect(page.getByText(/réussite à 90, avec au moins 38\/120 et 19\/60/)).toBeVisible();
+});
+
 test('hors ligne : atelier JLPT et exercices de leçon au format de l’examen', async ({ page }) => {
   await page.goto(FILE);
   for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
@@ -730,6 +751,11 @@ test('hors ligne : expressions utiles par thème, recherche et entraînement', a
   await page.getByRole('link', { name: 'Expressions' }).first().click();
   await expect(page.getByRole('heading', { name: 'Expressions', level: 1 })).toBeVisible();
   await expect(page.getByText('よろしくお願いします', { exact: true })).toBeVisible();
+  // Révision des proverbes japonais
+  await page.getByRole('button', { name: /Expressions en quatre caractères/ }).click();
+  await expect(page.getByText('一期一会', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: /Proverbes/ }).click();
+  await expect(page.getByText('猿も木から落ちる', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: /Urgences et santé/ }).click();
   await expect(page.getByText('救急車を呼んでください', { exact: true })).toBeVisible();
   await expect(page.getByText(/119/)).toBeVisible();
@@ -866,6 +892,13 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   await page.goto(FILE + '#/path');
   await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /日本語/ }).click();
   await expect(page.getByRole('heading', { name: /N5 : La Voie du samouraï/ })).toBeVisible();
+  // Contes japonais du N5 au N1, dont les nouveaux
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('はなさかじいさん').first()).toBeVisible();
+  await expect(page.getByText('Hōichi sans oreilles').first()).toBeVisible();
+  await expect(page.getByText('La Jeune Fille au bol').first()).toBeVisible();
+  await expect(page.getByText('해님 달님')).toHaveCount(0);
+  await page.goto(FILE + '#/path');
   await page.getByTestId('study-language').filter({ visible: true }).first().getByRole('radio', { name: /한국어/ }).click();
   await expect(page.getByRole('heading', { name: 'TOPIK 1 : La Voie du hwarang' })).toBeVisible();
   await expect(page.getByText('1/4').first()).toBeVisible();

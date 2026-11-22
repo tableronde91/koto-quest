@@ -100,7 +100,7 @@ export function PrepaPage({ me }: { me: MeDto }) {
           <p className="text-lg font-bold">{T("Prêt·e pour l’épreuve complète ?")}</p>
           <p className="opacity-80">{T("Examen blanc {0} : toutes les épreuves, chronométré, noté comme le vrai.", [ examLevelLabel(me.preferences.targetLevel) ])}</p>
         </div>
-        <Link to={me.preferences.targetLevel === 'TOPIK1' ? '/exam/topik1-official' : me.preferences.targetLevel === 'TOPIK2' ? '/exam/topik2-official' : me.preferences.targetLevel === 'TOPIK3' ? '/exam/topik3-official' : me.preferences.targetLevel === 'TOPIK4' ? '/exam/topik4-official' : me.preferences.targetLevel === 'TOPIK5' ? '/exam/topik5-official' : me.preferences.targetLevel.startsWith('TOPIK') ? '/exam/topik6-official' : me.preferences.targetLevel === 'N5' ? '/exam/n5-jlpt' : me.preferences.targetLevel === 'N4' ? '/exam/n4-mock' : me.preferences.targetLevel === 'N3' ? '/exam/n3-mock' : me.preferences.targetLevel === 'N2' ? '/exam/n2-mock' : '/exam/n1-mock'} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
+        <Link to={me.preferences.targetLevel === 'TOPIK1' ? '/exam/topik1-official' : me.preferences.targetLevel === 'TOPIK2' ? '/exam/topik2-official' : me.preferences.targetLevel === 'TOPIK3' ? '/exam/topik3-official' : me.preferences.targetLevel === 'TOPIK4' ? '/exam/topik4-official' : me.preferences.targetLevel === 'TOPIK5' ? '/exam/topik5-official' : me.preferences.targetLevel.startsWith('TOPIK') ? '/exam/topik6-official' : me.preferences.targetLevel === 'N5' ? '/exam/n5-jlpt' : `/exam/${me.preferences.targetLevel.toLowerCase()}-jlpt`} className="btn btn-gold">{T("Passer l’examen blanc")}</Link>
       </section>
     </div>
   );

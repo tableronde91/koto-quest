@@ -40,6 +40,17 @@ describe('succès', () => {
     expect(newlyUnlocked(s, []).map((a) => a.slug)).toEqual(['hangul-10', 'ko-bosses-8', 'topik-passed', 'ko-tales-10']);
   });
 
+  it('succès propres au japonais : kana, gardiens japonais, JLPT et contes japonais', () => {
+    const ja = achievementProgress(EMPTY_ACHIEVEMENT_STATS, [], 'ja').map((p) => p.def.slug);
+    expect(ja).toEqual(expect.arrayContaining(['kana-20', 'kana-92', 'ja-bosses-8', 'ja-bosses-24', 'jlpt-passed', 'ja-tales-10', 'kanji-10']));
+    expect(achievementProgress(EMPTY_ACHIEVEMENT_STATS, [], 'ko').map((p) => p.def.slug)).not.toContain('kana-20');
+    // Autant de succès propres à chaque langue (équilibre japonais / coréen)
+    const own = (l: string) => ACHIEVEMENTS.filter((x) => x.language === l).length;
+    expect(Math.abs(own('ja') - own('ko'))).toBeLessThanOrEqual(2);
+    const s = { ...EMPTY_ACHIEVEMENT_STATS, masteredKana: 25, japaneseBosses: 8, jlptPassed: 1, japaneseChapters: 10 };
+    expect(newlyUnlocked(s, []).map((a) => a.slug)).toEqual(['kana-20', 'ja-bosses-8', 'jlpt-passed', 'ja-tales-10']);
+  });
+
   it('récompense selon la rareté', () => {
     const defs = ACHIEVEMENTS.filter((a) => ['first-lesson', 'ten-lessons', 'all-n5-lessons'].includes(a.slug));
     expect(achievementReward(defs)).toEqual({ coins: 10 + 25 + 50, xp: 10 + 30 + 60 });

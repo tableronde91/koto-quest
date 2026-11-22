@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { AuthoredExercise, EXAM_N5, EngineItem, createRng, examRecommendations, gradeExam, planExam, planPlacementBlock, placementBlockPassed } from '../src';
+import { AuthoredExercise, EXAMS, EXAM_N1_JLPT, EXAM_N2_JLPT, EXAM_N3_JLPT, EXAM_N4_JLPT, EXAM_N5, EngineItem, ExamDef, bankSections, createRng, examRecommendations, examScale, gradeExam, planBankExam, planExam, planPlacementBlock, placementBlockPassed } from '../src';
 
 const v = (id: string, front: string, reading: string, meaning: string, kind: EngineItem['kind'] = 'vocabulary'): EngineItem => ({ id, kind, front, reading, meaning });
 const ITEMS: EngineItem[] = [
@@ -91,5 +91,52 @@ describe('examen blanc N5 au format officiel (banque)', () => {
     // 40 % : sous les 80 points
     const g3 = gradeExam(EXAM_N5_JLPT, qs, qs.map((_, i) => (i % 5 < 2 ? 'a' : 'b')));
     expect(g3.passed).toBe(false);
+  });
+});
+
+describe('examens blancs JLPT N4 à N1 au format officiel (abrégé)', () => {
+  const bank = (lv: string) => JSON.parse(require('fs').readFileSync(require('path').resolve(__dirname, `../../../content/exams/${lv}-jlpt.json`), 'utf8'));
+  const defs = { n4: EXAM_N4_JLPT, n3: EXAM_N3_JLPT, n2: EXAM_N2_JLPT, n1: EXAM_N1_JLPT };
+
+  it.each(Object.entries(defs))('%s : sections de l’examen = épreuves de la banque, réponses parmi les choix', (lv, def) => {
+    const b = bank(lv);
+    const secs = Object.fromEntries(def.sections.map((s) => [s.id, s.count]));
+    expect(bankSections(b)).toEqual(secs);
+    for (const p of b.parts) {
+      expect(p.questions.length).toBeGreaterThanOrEqual(p.count);
+      for (const q of p.questions) {
+        expect(q.choices).toContain(q.answer);
+        expect(new Set(q.choices).size).toBe(q.choices.length);
+      }
+    }
+    expect(EXAMS[def.slug]).toBe(def);
+    expect(planBankExam(b, createRng(lv)).length).toBe(def.sections.reduce((n, s) => n + s.count, 0));
+  });
+
+  const sheet = (def: ExamDef, ok: Record<string, number>) => {
+    const qs = def.sections.flatMap((s) => Array.from({ length: s.count }, () => ({ section: s.id, type: 'particle_choice', answer: 'a' })));
+    const seen: Record<string, number> = {};
+    return { qs, answers: qs.map((q) => ((seen[q.section] = (seen[q.section] ?? 0) + 1) <= (ok[q.section] ?? 0) ? 'a' : 'b')) };
+  };
+
+  it('N4 : barème sur 120 + 60, réussite à 90 (et non 80 comme au N5)', () => {
+    const { qs, answers } = sheet(EXAM_N4_JLPT, { vocab: 12, grammar: 6, listening: 5 });
+    const r = gradeExam(EXAM_N4_JLPT, qs, answers);
+    expect(r.scaled).toMatchObject({ language: 68, listening: 38, total: 106 });
+    expect(r.passed).toBe(true);
+    expect(examScale(EXAM_N4_JLPT)).toMatchObject({ total: 180, passTotal: 90 });
+    const low = sheet(EXAM_N4_JLPT, { vocab: 9, grammar: 5, listening: 4 });
+    expect(gradeExam(EXAM_N4_JLPT, low.qs, low.answers)).toMatchObject({ passed: false, scaled: { total: 83 } });
+  });
+
+  it('N3 à N1 : trois parties sur 60, 19 minimum dans chacune, réussite à 95 / 90 / 100', () => {
+    expect([EXAM_N3_JLPT, EXAM_N2_JLPT, EXAM_N1_JLPT].map((d) => examScale(d)!.passTotal)).toEqual([95, 90, 100]);
+    expect(examScale(EXAM_N2_JLPT)).toMatchObject({ language: 60, reading: 60, listening: 60, total: 180, passReading: 19 });
+    // Langue et écoute excellentes, mais lecture nulle : échec malgré le total
+    const a = sheet(EXAM_N2_JLPT, { vocab: 18, grammar: 11, reading: 0, listening: 8 });
+    expect(gradeExam(EXAM_N2_JLPT, a.qs, a.answers)).toMatchObject({ passed: false, scaled: { language: 60, reading: 0, listening: 60, total: 120 } });
+    const b = sheet(EXAM_N2_JLPT, { vocab: 12, grammar: 6, reading: 2, listening: 5 });
+    expect(gradeExam(EXAM_N2_JLPT, b.qs, b.answers)).toMatchObject({ passed: true, scaled: { language: 37, reading: 40, listening: 38, total: 115 } });
+    expect(gradeExam(EXAM_N1_JLPT, sheet(EXAM_N1_JLPT, { vocab: 8, grammar: 6, reading: 2, listening: 4 }).qs, sheet(EXAM_N1_JLPT, { vocab: 8, grammar: 6, reading: 2, listening: 4 }).answers)).toMatchObject({ passed: true, scaled: { total: 108 } });
   });
 });

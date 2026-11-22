@@ -3861,7 +3861,7 @@
    "title": "Simulation JLPT N3",
    "region": "Cimes enneigées",
    "description": "Examen blanc non officiel du N3 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
-   "exam": "n3-mock",
+   "exam": "n3-jlpt",
    "chapters": []
   }
  ]

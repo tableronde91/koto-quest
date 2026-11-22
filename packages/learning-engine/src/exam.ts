@@ -26,13 +26,22 @@ export interface ExamDef {
   /** Banque de questions rédigées (format officiel) au lieu des notions du parcours */
   bank?: string;
   /** Notation : pourcentages (défaut), barème du JLPT (180 points) ou du TOPIK I (200 points) */
-  scoring?: 'percent' | 'jlpt' | 'topik' | 'topik2';
+  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2';
   /** TOPIK : niveau à obtenir pour réussir l'examen (1 par défaut) */
   passLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-/** Barème officiel N4/N5 : langue + lecture sur 120, écoute sur 60 ; réussite à 80/180 avec 38 et 19 minimum. */
+/** Barème officiel N4/N5 : langue + lecture sur 120, écoute sur 60 ; réussite à 80/180 (N5) ou 90/180 (N4), avec 38 et 19 minimum. */
 export const JLPT_SCALE = { language: 120, listening: 60, total: 180, passTotal: 80, passLanguage: 38, passListening: 19 } as const;
+
+/**
+ * Barème officiel N3 à N1 : connaissances de la langue (vocabulaire, grammaire), lecture et écoute,
+ * chacune sur 60, soit 180 ; au moins 19 dans chaque partie.
+ */
+export const JLPT3_SCALE = { language: 60, reading: 60, listening: 60, total: 180, passLanguage: 19, passReading: 19, passListening: 19 } as const;
+
+/** Total à atteindre au JLPT selon le niveau. */
+export const JLPT_PASS_TOTAL: Record<string, number> = { N5: 80, N4: 90, N3: 95, N2: 90, N1: 100 };
 
 /**
  * Barème du TOPIK I : écoute (듣기) sur 100 et lecture (읽기) sur 100. Pas de minimum par épreuve :
@@ -60,11 +69,15 @@ export interface ExamScale {
   passLevel?: number;
   /** TOPIK II : écriture (쓰기) */
   writing?: number;
+  /** JLPT N3 à N1 : lecture (読解), notée à part */
+  reading?: number;
+  passReading?: number;
 }
 
 /** Barème d'un examen noté sur points (JLPT ou TOPIK), ou null s'il est noté en pourcentage. */
 export function examScale(def: ExamDef): ExamScale | null {
-  if (def.scoring === 'jlpt') return { system: 'jlpt', ...JLPT_SCALE };
+  if (def.scoring === 'jlpt') return { system: 'jlpt', ...JLPT_SCALE, passTotal: JLPT_PASS_TOTAL[def.level] ?? JLPT_SCALE.passTotal };
+  if (def.scoring === 'jlpt3') return { system: 'jlpt', ...JLPT3_SCALE, passTotal: JLPT_PASS_TOTAL[def.level] ?? 95 };
   if (def.scoring === 'topik') {
     const { level2, ...rest } = TOPIK_I_SCALE;
     return { system: 'topik', ...rest, levels: [{ level: 1, min: TOPIK_I_SCALE.passTotal }, { level: 2, min: level2 }], passLevel: def.passLevel ?? 1 };
@@ -196,6 +209,36 @@ export const EXAM_N5_JLPT: ExamDef = {
   scoring: 'jlpt',
 };
 
+const JLPT_OFFICIAL = (level: 'N4' | 'N3' | 'N2' | 'N1', durationMin: number, vocab: number, grammar: number, reading: number, listening: number): ExamDef => ({
+  slug: `${level.toLowerCase()}-jlpt`,
+  level,
+  title: `Examen blanc JLPT ${level} — format officiel (abrégé)`,
+  durationMin,
+  sections:
+    level === 'N4'
+      ? [
+          { id: 'vocab', title: 'Vocabulaire et kanji', jpTitle: '言語知識（文字・語彙）', count: vocab },
+          { id: 'grammar', title: 'Grammaire et lecture', jpTitle: '言語知識（文法）・読解', count: grammar },
+          { id: 'listening', title: 'Compréhension orale', jpTitle: '聴解', count: listening },
+        ]
+      : [
+          { id: 'vocab', title: 'Vocabulaire et kanji', jpTitle: '言語知識（文字・語彙）', count: vocab },
+          { id: 'grammar', title: 'Grammaire', jpTitle: '言語知識（文法）', count: grammar },
+          { id: 'reading', title: 'Compréhension écrite', jpTitle: '読解', count: reading },
+          { id: 'listening', title: 'Compréhension orale', jpTitle: '聴解', count: listening },
+        ],
+  passPercent: 50,
+  sectionMinPercent: 32,
+  bank: `${level.toLowerCase()}-jlpt`,
+  scoring: level === 'N4' ? 'jlpt' : 'jlpt3',
+});
+
+/** Examens blancs N4 à N1 au format officiel (abrégé) : banques content/exams/nX-jlpt.json, barème du JLPT. */
+export const EXAM_N4_JLPT = JLPT_OFFICIAL('N4', 60, 18, 14, 0, 8);
+export const EXAM_N3_JLPT = JLPT_OFFICIAL('N3', 70, 18, 11, 3, 8);
+export const EXAM_N2_JLPT = JLPT_OFFICIAL('N2', 75, 18, 11, 3, 8);
+export const EXAM_N1_JLPT = JLPT_OFFICIAL('N1', 80, 14, 11, 3, 7);
+
 export const EXAM_N2: ExamDef = {
   slug: 'n2-mock',
   level: 'N2',
@@ -317,6 +360,10 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_N3.slug]: EXAM_N3,
   [EXAM_N2.slug]: EXAM_N2,
   [EXAM_N5_JLPT.slug]: EXAM_N5_JLPT,
+  [EXAM_N4_JLPT.slug]: EXAM_N4_JLPT,
+  [EXAM_N3_JLPT.slug]: EXAM_N3_JLPT,
+  [EXAM_N2_JLPT.slug]: EXAM_N2_JLPT,
+  [EXAM_N1_JLPT.slug]: EXAM_N1_JLPT,
   [EXAM_TOPIK1_MOCK.slug]: EXAM_TOPIK1_MOCK,
   [EXAM_TOPIK1.slug]: EXAM_TOPIK1,
   [EXAM_TOPIK2_MOCK.slug]: EXAM_TOPIK2_MOCK,
@@ -395,7 +442,7 @@ export interface ExamGrade {
   passed: boolean;
   weakest: ExamSectionId | null;
   /** Barème JLPT ou TOPIK (si l'examen l'utilise). TOPIK : `language` = lecture (읽기), `level` = niveau obtenu (0 = aucun). */
-  scaled?: { language: number; listening: number; total: number; level?: number; writing?: number };
+  scaled?: { language: number; listening: number; total: number; level?: number; writing?: number; reading?: number };
 }
 
 /** Corrige une copie : `answers` contient la réponse donnée (ou rien) pour chaque question. */
@@ -420,8 +467,24 @@ export function gradeExam(def: ExamDef, questions: { section: ExamSectionId; typ
       total: 0,
     };
     scaled.total = scaled.language + scaled.listening;
-    const passed = scaled.total >= JLPT_SCALE.passTotal && scaled.language >= JLPT_SCALE.passLanguage && scaled.listening >= JLPT_SCALE.passListening;
+    const passTotal = JLPT_PASS_TOTAL[def.level] ?? JLPT_SCALE.passTotal;
+    const passed = scaled.total >= passTotal && scaled.language >= JLPT_SCALE.passLanguage && scaled.listening >= JLPT_SCALE.passListening;
     return { sections, correct, total, percent: Math.round((scaled.total / JLPT_SCALE.total) * 100), passed, weakest, results, scaled };
+  }
+  if (def.scoring === 'jlpt3') {
+    const pts = (list: typeof sections, max: number) => {
+      const t = list.reduce((n, s) => n + s.total, 0);
+      return t ? Math.round((list.reduce((n, s) => n + s.correct, 0) / t) * max) : 0;
+    };
+    const scaled = {
+      language: pts(sections.filter((s) => s.id === 'vocab' || s.id === 'grammar'), JLPT3_SCALE.language),
+      reading: pts(sections.filter((s) => s.id === 'reading'), JLPT3_SCALE.reading),
+      listening: pts(sections.filter((s) => s.id === 'listening'), JLPT3_SCALE.listening),
+      total: 0,
+    };
+    scaled.total = scaled.language + scaled.reading + scaled.listening;
+    const passed = scaled.total >= (JLPT_PASS_TOTAL[def.level] ?? 95) && scaled.language >= JLPT3_SCALE.passLanguage && scaled.reading >= JLPT3_SCALE.passReading && scaled.listening >= JLPT3_SCALE.passListening;
+    return { sections, correct, total, percent: Math.round((scaled.total / JLPT3_SCALE.total) * 100), passed, weakest, results, scaled };
   }
   if (def.scoring === 'topik') {
     const lis = sections.filter((s) => s.id === 'listening');

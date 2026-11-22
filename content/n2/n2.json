@@ -3991,7 +3991,7 @@
    "title": "Simulation JLPT N2",
    "region": "Capitale d’été",
    "description": "Examen blanc non officiel du N2 : vocabulaire et kanji, grammaire, écoute. Chronométré, corrigé par compétence.",
-   "exam": "n2-mock",
+   "exam": "n2-jlpt",
    "chapters": []
   }
  ]

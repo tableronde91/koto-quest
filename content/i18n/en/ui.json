@@ -954,5 +954,11 @@
  "Hangeul maîtrisé": "Hangeul mastered",
  "lettres et syllabes": "letters and syllables",
  "Gardien·ne des contes": "Keeper of tales",
- "Pinceau du hangeul": "Hangeul brush"
+ "Pinceau du hangeul": "Hangeul brush",
+ "{0} questions en {1} minutes, réparties comme au JLPT : connaissances de la langue (言語知識), lecture (読解) et écoute (聴解). Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.": "{0} questions in {1} minutes, split as in the JLPT: language knowledge (言語知識), reading (読解) and listening (聴解). No marking during the test: you can go back over your answers before handing in your paper.",
+ "Sur 180 : réussite à {0}, avec au moins 19/60 dans chacune des trois parties.": "Out of 180: pass at {0}, with at least 19/60 in each of the three parts.",
+ "Sur 180 : réussite à {0}, avec au moins 38/120 et 19/60.": "Out of 180: pass at {0}, with at least 38/120 and 19/60.",
+ "Barème du JLPT : réussite à {0}/{1}, avec au moins {2}/{3} en connaissances de la langue, en lecture et en écoute. Version abrégée ; questions rédigées par Koto Quest, non officielles.": "JLPT scoring: pass at {0}/{1}, with at least {2}/{3} in language knowledge, reading and listening. Abridged version; questions written by Koto Quest, not official.",
+ "Langue (vocabulaire, grammaire)": "Language (vocabulary, grammar)",
+ "Barème du JLPT : réussite à {0}/{1}, avec un minimum dans chaque partie. Examen blanc non officiel.": "JLPT scoring: pass at {0}/{1}, with a minimum in each part. Unofficial mock exam."
 }

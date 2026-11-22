@@ -44,8 +44,11 @@ describe('Lecture quotidienne', () => {
       }
       expect(c.words.length).toBeGreaterThanOrEqual(6);
     }
-    const len = (c: any) => c.paragraphs.flat().length;
-    expect(len(chapters.at(-2))).toBeGreaterThan(len(chapters[0]) * 1.8);
+    // Les chapitres s'allongent avec le niveau (en caractères : au N2 et au N1, les phrases sont moins nombreuses mais bien plus longues)
+    const len = (c: any) => c.paragraphs.flat().reduce((n: number, s: any) => n + stripRuby(s.jp).length, 0);
+    expect(len(chapters.at(-2))).toBeGreaterThan(len(chapters[0]) * 1.5);
+    expect(catalog.stories.map((s: any) => s.level)).toEqual([...catalog.stories.map((s: any) => s.level)].sort((a: string, b: string) => ['N5', 'N4', 'N3', 'N2', 'N1'].indexOf(a) - ['N5', 'N4', 'N3', 'N2', 'N1'].indexOf(b)));
+    expect(new Set(catalog.stories.map((s: any) => s.level))).toEqual(new Set(['N5', 'N4', 'N3', 'N2', 'N1']));
   });
 
   it('tous les chapitres ouverts, chapitre conseillé, relecture libre, récompense unique, série de jours', async () => {

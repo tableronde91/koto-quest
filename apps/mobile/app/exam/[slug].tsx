@@ -162,6 +162,8 @@ function ExamResult({ result, onAgain, onBack }: { result: ExamResultDto; onAgai
             {result.scaled.level ? T('Niveau TOPIK obtenu : {0}.', [result.scaled.level]) : T('Aucun niveau TOPIK obtenu pour l’instant.')}{' '}
             {result.scaled.max.passLevel ? T('Cet examen se valide à partir du niveau {0}. Examen blanc non officiel.', [result.scaled.max.passLevel]) : T('Examen blanc non officiel.')}
           </P>
+        ) : result.scaled ? (
+          <P soft style={{ textAlign: 'center' }}>{T('Barème du JLPT : réussite à {0}/{1}, avec un minimum dans chaque partie. Examen blanc non officiel.', [result.scaled.max.passTotal, result.scaled.max.total])}</P>
         ) : (
           <P soft style={{ textAlign: 'center' }}>{T('Seuil Koto Quest : {0} % au total et au moins {1} % dans chaque section. Examen blanc non officiel.', [result.passPercent, result.sectionMinPercent])}</P>
         )}

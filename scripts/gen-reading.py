@@ -1,5 +1,5 @@
 # Génère content/reading/stories.json : contes traditionnels japonais (domaine public), réécrits
-# en japonais simple (N5, N4, N3), découpés en chapitres de plus en plus longs. Tous sont ouverts dès le départ.
+# en japonais simple (N5 à N1), découpés en chapitres de plus en plus longs. Tous sont ouverts dès le départ.
 # Notation des furigana : {漢字|かんじ}.
 import json, random, re, sys
 
@@ -730,6 +730,186 @@ stories.append({
     Q("Quelle est la leçon du conte ?", "What is the lesson of the tale?", [("Prendre soin des petites choses et aider les autres", "Treasure small things and help others"), ("Ne jamais rien échanger", "Never trade anything"), ("Toujours voyager à cheval", "Always travel on horseback")])]),
  ]})
 
+
+# ───────────────────────── 9. Hanasaka jiisan (N5) ─────────────────────────
+stories.append({
+ "slug": "hanasaka", "glyph": "花", "level": "N5", "color": "#F4A9C0",
+ "title": {"jp": "はなさかじいさん", "fr": "Le vieil homme qui faisait fleurir les arbres", "en": "The Old Man Who Made Trees Bloom"},
+ "summary": {"fr": "Un chien fidèle, un voisin jaloux et des cendres magiques qui font fleurir les cerisiers morts.",
+             "en": "A faithful dog, a jealous neighbour and magic ashes that make dead cherry trees bloom."},
+ "chapters": [
+  C("hanasaka-1", ("シロとたからもの", "Shiro et le trésor", "Shiro and the treasure"), [
+    [("むかしむかし、やさしいおじいさんとおばあさんが、{白|しろ}い{犬|いぬ}をかっていました。", "Il était une fois un gentil vieil homme et une vieille femme qui avaient un chien blanc.", "Once upon a time, a kind old man and old woman kept a white dog."),
+     ("{犬|いぬ}の{名前|なまえ}はシロです。", "Le chien s’appelait Shiro.", "The dog’s name was Shiro."),
+     ("ある{日|ひ}、シロが{畑|はたけ}で「ここほれ、ワンワン」となきました。", "Un jour, dans le champ, Shiro aboya : « Creuse ici, ouaf ouaf ! »", "One day in the field, Shiro barked: “Dig here, woof woof!”")],
+    [("おじいさんが{土|つち}をほると、{金|きん}や{銀|ぎん}がたくさん{出|で}てきました。", "Le vieil homme creusa la terre, et beaucoup d’or et d’argent en sortirent.", "When the old man dug the soil, lots of gold and silver came out."),
+     ("となりのいじわるなおじいさんが、それを{見|み}ていました。", "Le méchant vieil homme d’à côté avait tout vu.", "The nasty old man next door was watching.")],
+   ], [W("白い", "しろい", "blanc", "white"), W("畑", "はたけ", "champ", "field"), W("ほる", None, "creuser", "to dig"), W("土", "つち", "terre", "soil"),
+       W("金", "きん", "or", "gold"), W("銀", "ぎん", "argent (métal)", "silver"), W("となり", None, "voisin, d’à côté", "next door"), W("いじわる", None, "méchant", "mean, nasty")],
+   [Q("Que dit Shiro dans le champ ?", "What does Shiro say in the field?", [("« Creuse ici ! »", "“Dig here!”"), ("« J’ai faim ! »", "“I’m hungry!”"), ("« Viens jouer ! »", "“Come and play!”")]),
+    Q("Que trouve le vieil homme ?", "What does the old man find?", [("De l’or et de l’argent", "Gold and silver"), ("Des légumes", "Vegetables"), ("Un chat", "A cat")])]),
+  C("hanasaka-2", ("いじわるなおじいさん", "Le méchant voisin", "The nasty neighbour"), [
+    [("となりのおじいさんは、シロをむりやり{自分|じぶん}の{畑|はたけ}につれていきました。", "Le voisin emmena Shiro de force dans son propre champ.", "The neighbour dragged Shiro to his own field by force."),
+     ("でも、{土|つち}から{出|で}てきたのは、ごみばかりでした。", "Mais de la terre ne sortirent que des ordures.", "But nothing but rubbish came out of the ground."),
+     ("おこったおじいさんにたたかれて、シロはもう{動|うご}かなくなりました。", "Frappé par le vieil homme en colère, Shiro ne bougea plus.", "Beaten by the angry old man, Shiro moved no more.")],
+    [("やさしいおじいさんは{泣|な}いて、シロのために{小|ちい}さな{木|き}をうえました。", "Le gentil vieil homme pleura et planta un petit arbre pour Shiro.", "The kind old man wept and planted a little tree for Shiro."),
+     ("{木|き}はすぐに{大|おお}きくなりました。", "L’arbre devint vite très grand.", "The tree quickly grew tall."),
+     ("その{木|き}でうすを{作|つく}ると、おもちをつくたびに{金|きん}が{出|で}てきました。", "Avec son bois, il fit un mortier : chaque fois qu’il pilait du mochi, de l’or en sortait.", "He made a mortar from its wood, and every time he pounded mochi, gold came out.")],
+   ], [W("自分", "じぶん", "soi-même", "oneself"), W("むりやり", None, "de force", "by force"), W("ごみ", None, "ordures", "rubbish"), W("おこる", None, "se fâcher", "to get angry"),
+       W("動く", "うごく", "bouger", "to move"), W("木", "き", "arbre, bois", "tree, wood"), W("うえる", None, "planter", "to plant"), W("うす", None, "mortier", "mortar")],
+   [Q("Que trouve le voisin dans son champ ?", "What does the neighbour find in his field?", [("Des ordures", "Rubbish"), ("De l’or", "Gold"), ("De l’eau", "Water")]),
+    Q("Que plante le gentil vieil homme ?", "What does the kind old man plant?", [("Un petit arbre", "A little tree"), ("Des fleurs", "Flowers"), ("Du riz", "Rice")])]),
+  C("hanasaka-3", ("かれ{木|き}に{花|はな}を", "Des fleurs sur l’arbre mort", "Flowers on the dead tree"), [
+    [("となりのおじいさんは、うすをかりて、もやしてしまいました。", "Le voisin emprunta le mortier et le brûla.", "The neighbour borrowed the mortar and burned it."),
+     ("やさしいおじいさんは、のこったはいをかごに{入|い}れて{持|も}って{帰|かえ}りました。", "Le gentil vieil homme mit les cendres restantes dans un panier et les rapporta.", "The kind old man put the remaining ashes in a basket and took them home."),
+     ("はいがかれた{木|き}にかかると、さくらの{花|はな}がぱっとさきました。", "Quand la cendre tomba sur un arbre mort, des fleurs de cerisier éclatèrent aussitôt.", "When the ashes fell on a dead tree, cherry blossoms burst open at once.")],
+    [("そこへ、とのさまが{通|とお}りかかりました。", "C’est alors que le seigneur passa par là.", "Just then, the lord happened to pass by."),
+     ("「なんときれいな{花|はな}だ！」とのさまはよろこんで、たくさんのほうびをくれました。", "« Quelles belles fleurs ! » Ravi, le seigneur lui donna de nombreuses récompenses.", "“What beautiful blossoms!” Delighted, the lord gave him many rewards."),
+     ("まねをしたとなりのおじいさんは、はいがとのさまの{目|め}に{入|はい}って、しかられました。", "Le voisin, qui l’imita, envoya de la cendre dans les yeux du seigneur et fut puni.", "The neighbour who copied him got ash in the lord’s eyes and was scolded.")],
+   ], [W("もやす", None, "brûler", "to burn"), W("はい", None, "cendre", "ash"), W("かれる", None, "se dessécher, mourir (plante)", "to wither"), W("花", "はな", "fleur", "flower"),
+       W("さく", None, "fleurir", "to bloom"), W("とのさま", None, "seigneur", "lord"), W("ほうび", None, "récompense", "reward"), W("まね", None, "imitation", "imitation")],
+   [Q("Que fait la cendre sur l’arbre mort ?", "What do the ashes do to the dead tree?", [("Elle fait fleurir des cerisiers", "They make cherry blossoms bloom"), ("Elle l’éteint", "They put it out"), ("Elle le fait tomber", "They knock it down")]),
+    Q("Qui récompense le vieil homme ?", "Who rewards the old man?", [("Le seigneur", "The lord"), ("Le voisin", "The neighbour"), ("Shiro", "Shiro")])]),
+ ]})
+
+# ───────────────────────── 10. Shitakiri suzume (N4) ─────────────────────────
+stories.append({
+ "slug": "shitakiri", "glyph": "雀", "level": "N4", "color": "#B98A5E",
+ "title": {"jp": "したきりすずめ", "fr": "Le Moineau à la langue coupée", "en": "The Tongue-Cut Sparrow"},
+ "summary": {"fr": "Un vieil homme rend visite au moineau qu’il aimait. Petit panier ou grand panier : lequel choisir ?",
+             "en": "An old man visits the sparrow he loved. Small basket or big basket: which one to choose?"},
+ "chapters": [
+  C("shitakiri-1", ("のりをなめたすずめ", "Le moineau qui lécha l’amidon", "The sparrow that licked the starch"), [
+    [("むかし、あるところに、{心|こころ}のやさしいおじいさんと、よくばりなおばあさんが{住|す}んでいました。", "Il était une fois un vieil homme au grand cœur et une vieille femme avide.", "Long ago there lived a kind-hearted old man and a greedy old woman."),
+     ("おじいさんは、けがをした{小|ちい}さなすずめを{助|たす}けて、とてもかわいがっていました。", "Le vieil homme avait sauvé un petit moineau blessé et le chérissait beaucoup.", "The old man had rescued a small injured sparrow and loved it dearly.")],
+    [("ある{日|ひ}、おばあさんが{洗濯|せんたく}に{使|つか}うのりを{作|つく}っておきました。", "Un jour, la vieille femme prépara de l’amidon pour la lessive.", "One day the old woman made some starch for the washing."),
+     ("おなかがすいていたすずめは、そののりを{少|すこ}しなめてしまいました。", "Le moineau, qui avait faim, en lécha un peu.", "The hungry sparrow licked a little of the starch."),
+     ("{怒|おこ}ったおばあさんは、すずめの{舌|した}を{切|き}って、{追|お}い{出|だ}してしまいました。", "Furieuse, la vieille femme lui coupa la langue et le chassa.", "Furious, the old woman cut the sparrow’s tongue and drove it away.")],
+   ], [W("心", "こころ", "cœur", "heart"), W("よくばり", None, "avide", "greedy"), W("住む", "すむ", "habiter", "to live"), W("助ける", "たすける", "sauver, aider", "to save, to help"),
+       W("のり", None, "amidon", "starch"), W("なめる", None, "lécher", "to lick"), W("舌", "した", "langue (organe)", "tongue"), W("追い出す", "おいだす", "chasser", "to drive out")],
+   [Q("Qu’a fait le moineau ?", "What did the sparrow do?", [("Il a léché l’amidon", "It licked the starch"), ("Il a volé du riz", "It stole rice"), ("Il a cassé un bol", "It broke a bowl")]),
+    Q("Qui avait sauvé le moineau ?", "Who had rescued the sparrow?", [("Le vieil homme", "The old man"), ("La vieille femme", "The old woman"), ("Un enfant du village", "A village child")])]),
+  C("shitakiri-2", ("すずめのおやど", "La maison des moineaux", "The sparrows’ inn"), [
+    [("{帰|かえ}ってきたおじいさんは、とても{悲|かな}しみました。", "À son retour, le vieil homme fut très triste.", "When the old man came home, he was very sad."),
+     ("「すずめや、どこへ{行|い}ったのか。」おじいさんはすずめをさがして、{山|やま}の{奥|おく}まで{歩|ある}いて{行|い}きました。", "« Petit moineau, où es-tu ? » Il partit le chercher jusqu’au fond de la montagne.", "“Little sparrow, where have you gone?” He walked deep into the mountains looking for it.")],
+    [("やっと、{竹|たけ}やぶの{中|なか}に、すずめたちのおやどを{見|み}つけました。", "Enfin, il trouva la maison des moineaux au milieu d’une bambouseraie.", "At last he found the sparrows’ inn in a bamboo grove."),
+     ("すずめたちは{大喜|おおよろこ}びで、おいしいごちそうを{出|だ}し、おどりを{見|み}せてくれました。", "Fous de joie, les moineaux lui servirent un festin et dansèrent pour lui.", "Overjoyed, the sparrows served him a feast and danced for him."),
+     ("{帰|かえ}るとき、すずめは{大|おお}きいつづらと{小|ちい}さいつづらを{出|だ}して、「どちらか{一|ひと}つ{持|も}って{帰|かえ}ってください」と{言|い}いました。", "Au moment de partir, le moineau apporta un grand et un petit panier : « Emportez celui que vous voulez. »", "As he left, the sparrow brought out a big basket and a small one: “Please take one of them home.”")],
+   ], [W("悲しむ", "かなしむ", "être triste", "to be sad"), W("さがす", None, "chercher", "to look for"), W("奥", "おく", "fond, profondeur", "depths"), W("竹やぶ", "たけやぶ", "bambouseraie", "bamboo grove"),
+       W("やど", None, "auberge, demeure", "inn"), W("ごちそう", None, "festin", "feast"), W("つづら", None, "panier en osier", "wicker basket"), W("どちらか", None, "l’un ou l’autre", "either one")],
+   [Q("Où vivent les moineaux ?", "Where do the sparrows live?", [("Dans une bambouseraie", "In a bamboo grove"), ("Au bord de la mer", "By the sea"), ("Au village", "In the village")]),
+    Q("Que propose le moineau au départ ?", "What does the sparrow offer as he leaves?", [("De choisir un panier", "To choose a basket"), ("De rester vivre avec eux", "To stay and live with them"), ("D’emporter un moineau", "To take a sparrow home")])]),
+  C("shitakiri-3", ("{大|おお}きいつづらと{小|ちい}さいつづら", "Le grand panier et le petit panier", "The big basket and the small basket"), [
+    [("おじいさんは「{年|とし}よりなので、{小|ちい}さいほうでけっこうです」と{言|い}って、{小|ちい}さいつづらをもらいました。", "« Je suis vieux, le petit me suffira », dit le vieil homme, qui prit le petit panier.", "“I’m old, so the small one will do,” said the old man, and took the small basket."),
+     ("{家|いえ}であけてみると、{中|なか}には{金|きん}や{宝石|ほうせき}がいっぱい{入|はい}っていました。", "Chez lui, en l’ouvrant, il le trouva rempli d’or et de pierres précieuses.", "When he opened it at home, it was full of gold and jewels.")],
+    [("それを{見|み}たおばあさんは、すぐにすずめのおやどへ{出|で}かけ、{無理|むり}に{大|おお}きいつづらをもらって{帰|かえ}りました。", "Voyant cela, la vieille femme courut chez les moineaux et exigea le grand panier.", "Seeing this, the old woman went straight to the sparrows’ inn and forced them to give her the big basket."),
+     ("{重|おも}いつづらを{背負|せお}って{帰|かえ}る{途中|とちゅう}、がまんできずに、ふたをあけてしまいました。", "En chemin, le lourd panier sur le dos, elle ne put s’empêcher de l’ouvrir.", "On the way home with the heavy basket on her back, she could not resist opening the lid."),
+     ("すると、{中|なか}からおばけやへびがたくさん{飛|と}び{出|だ}してきて、おばあさんは{腰|こし}をぬかしてしまいました。", "Des fantômes et des serpents en jaillirent, et elle resta clouée de peur.", "Out jumped lots of ghosts and snakes, and the old woman was paralysed with fright."),
+     ("よくばってはいけない、というお{話|はなし}です。", "Morale : il ne faut pas être avide.", "The moral: don’t be greedy.")],
+   ], [W("年より", "としより", "personne âgée", "old person"), W("けっこう", None, "suffisant, très bien", "fine, enough"), W("宝石", "ほうせき", "pierre précieuse", "jewel"), W("無理に", "むりに", "de force", "by force"),
+       W("重い", "おもい", "lourd", "heavy"), W("背負う", "せおう", "porter sur le dos", "to carry on one’s back"), W("途中", "とちゅう", "en chemin", "on the way"), W("腰をぬかす", "こしをぬかす", "être paralysé de peur", "to be paralysed with fright")],
+   [Q("Quel panier choisit le vieil homme ?", "Which basket does the old man choose?", [("Le petit", "The small one"), ("Le grand", "The big one"), ("Aucun", "Neither")]),
+    Q("Que contient le grand panier ?", "What is in the big basket?", [("Des fantômes et des serpents", "Ghosts and snakes"), ("De l’or", "Gold"), ("Du riz", "Rice")])]),
+ ]})
+
+# ───────────────────────── 11. Mimi-nashi Hōichi (N2) ─────────────────────────
+stories.append({
+ "slug": "mimi-nashi-hoichi", "glyph": "耳", "level": "N2", "color": "#4B3A6B",
+ "title": {"jp": "{耳|みみ}なし{芳一|ほういち}", "fr": "Hōichi sans oreilles", "en": "Earless Hōichi"},
+ "summary": {"fr": "Un joueur de biwa aveugle est invité chaque nuit à chanter devant une cour mystérieuse… qui n’est pas de ce monde.",
+             "en": "A blind biwa player is invited every night to sing before a mysterious court… that is not of this world."},
+ "chapters": [
+  C("mimi-nashi-hoichi-1", ("{琵琶|びわ}{法師|ほうし}の{芳一|ほういち}", "Hōichi, le joueur de biwa", "Hōichi the biwa player"), [
+    [("{昔|むかし}、{下関|しものせき}の{阿弥陀寺|あみだじ}というお{寺|てら}に、{芳一|ほういち}という{目|め}の{見|み}えない{若|わか}い{琵琶|びわ}{法師|ほうし}が{住|す}んでいました。", "Autrefois, au temple Amida-ji de Shimonoseki, vivait un jeune bonze aveugle, joueur de biwa, nommé Hōichi.", "Long ago, at Amida-ji temple in Shimonoseki, there lived a young blind biwa priest named Hōichi."),
+     ("{芳一|ほういち}は{源氏|げんじ}と{平家|へいけ}の{戦|たたか}いを{語|かた}る「{平家|へいけ}{物語|ものがたり}」が{得意|とくい}で、とりわけ{壇|だん}ノ{浦|うら}の{合戦|かっせん}の{場面|ばめん}は、{聞|き}く{者|もの}が{涙|なみだ}を{流|なが}さずにはいられないほどでした。", "Il excellait dans le « Dit des Heike », qui raconte la guerre des Genji et des Heike ; la bataille de Dan-no-ura, surtout, arrachait des larmes à tous ceux qui l’écoutaient.", "He excelled at the Tale of the Heike, which recounts the war between the Genji and the Heike; the battle of Dan-no-ura in particular moved every listener to tears.")],
+    [("ある{夏|なつ}の{夜|よる}、{和尚|おしょう}さんが{法事|ほうじ}で{出|で}かけていたので、{芳一|ほういち}は{一人|ひとり}で{縁側|えんがわ}に{座|すわ}り、{琵琶|びわ}の{稽古|けいこ}をしていました。", "Un soir d’été, le supérieur étant sorti pour une cérémonie, Hōichi s’exerçait seul au biwa sur la véranda.", "One summer night, as the head priest was out for a memorial service, Hōichi sat alone on the veranda practising the biwa."),
+     ("すると、{足音|あしおと}が{近|ちか}づいてきて、「{芳一|ほういち}！」と{太|ふと}い{声|こえ}が{呼|よ}びました。", "Des pas s’approchèrent, et une voix grave appela : « Hōichi ! »", "Footsteps approached, and a deep voice called: “Hōichi!”"),
+     ("「わしの{殿|との}が、お{前|まえ}の{語|かた}りをお{聞|き}きになりたいとおっしゃっている。{一緒|いっしょ}に{来|く}るのだ。」", "« Mon seigneur souhaite entendre ton récit. Suis-moi. »", "“My lord wishes to hear your recital. Come with me.”")],
+   ], [W("琵琶", "びわ", "biwa (luth japonais)", "biwa (Japanese lute)"), W("法師", "ほうし", "bonze", "Buddhist priest"), W("語る", "かたる", "raconter, réciter", "to recite"), W("得意", "とくい", "doué, fort en", "good at"),
+       W("合戦", "かっせん", "bataille", "battle"), W("涙", "なみだ", "larme", "tear"), W("縁側", "えんがわ", "véranda", "veranda"), W("稽古", "けいこ", "entraînement, répétition", "practice"), W("足音", "あしおと", "bruit de pas", "footsteps")],
+   [Q("Qu’est-ce que Hōichi récite le mieux ?", "What does Hōichi recite best?", [("La guerre des Genji et des Heike", "The war of the Genji and the Heike"), ("Un conte de renard", "A fox tale"), ("L’histoire de Momotarō", "The story of Momotarō")]),
+    Q("Qui l’appelle cette nuit-là ?", "Who calls him that night?", [("Une voix d’homme inconnue", "An unknown man’s voice"), ("Le supérieur du temple", "The head priest"), ("Un enfant du village", "A village child")])]),
+  C("mimi-nashi-hoichi-2", ("{夜|よる}ごとの{語|かた}り", "Récits nocturnes", "Night after night"), [
+    [("{芳一|ほういち}は{断|ことわ}るわけにもいかず、{手|て}を{引|ひ}かれて{歩|ある}いていきました。", "Ne pouvant refuser, Hōichi se laissa conduire par la main.", "Unable to refuse, Hōichi let himself be led by the hand."),
+     ("{着|つ}いたところには{大|おお}きな{門|もん}があり、{大勢|おおぜい}の{人|ひと}の{気配|けはい}と、{女|おんな}たちのひそひそ{声|ごえ}が{聞|き}こえました。", "Là où ils arrivèrent, il y avait un grand portail ; il sentait la présence d’une foule et entendait des femmes chuchoter.", "Where they arrived there was a great gate; he sensed a crowd and heard women whispering."),
+     ("{芳一|ほういち}が{壇|だん}ノ{浦|うら}の{場面|ばめん}を{語|かた}り{始|はじ}めると、あちこちからすすり{泣|な}く{声|こえ}が{上|あ}がりました。", "Dès qu’il entama la bataille de Dan-no-ura, des sanglots s’élevèrent de toutes parts.", "As soon as he began the Dan-no-ura scene, sobbing rose on every side.")],
+    [("{語|かた}り{終|お}えると、{年|とし}を{取|と}った{女|おんな}が{言|い}いました。「これから{六日|むいか}の{間|あいだ}、{毎晩|まいばん}{来|き}てもらいたい。ただし、このことは{誰|だれ}にも{話|はな}してはならぬ。」", "Quand il eut fini, une vieille femme dit : « Pendant six jours, reviens chaque soir. Mais n’en parle à personne. »", "When he finished, an old woman said: “For the next six days, come every night. But you must tell no one.”"),
+     ("こうして{芳一|ほういち}は、{毎晩|まいばん}こっそり{寺|てら}を{抜|ぬ}け{出|だ}すようになりました。", "Dès lors, Hōichi s’éclipsa chaque soir du temple en secret.", "And so Hōichi began to slip out of the temple secretly every night.")],
+   ], [W("断る", "ことわる", "refuser", "to refuse"), W("引く", "ひく", "tirer, guider", "to lead, to pull"), W("大勢", "おおぜい", "foule, beaucoup de gens", "crowd"), W("気配", "けはい", "présence, signe", "presence, sign"),
+       W("すすり泣く", "すすりなく", "sangloter", "to sob"), W("毎晩", "まいばん", "chaque soir", "every night"), W("抜け出す", "ぬけだす", "s’éclipser", "to slip out")],
+   [Q("Comment réagit l’auditoire ?", "How does the audience react?", [("On sanglote", "They sob"), ("On rit", "They laugh"), ("On s’en va", "They leave")]),
+    Q("Que demande la vieille femme ?", "What does the old woman ask?", [("Revenir chaque soir en secret", "To come back every night in secret"), ("Partir loin d’ici", "To go far away"), ("Jouer au temple", "To play at the temple")])]),
+  C("mimi-nashi-hoichi-3", ("{墓場|はかば}の{琵琶|びわ}", "Le biwa du cimetière", "The biwa in the graveyard"), [
+    [("{芳一|ほういち}のようすがおかしいと{気|き}づいた{和尚|おしょう}さんは、{寺|てら}の{者|もの}に{後|あと}をつけさせました。", "Le supérieur, remarquant que Hōichi n’était pas dans son état normal, le fit suivre.", "Noticing that Hōichi was acting strangely, the head priest had him followed."),
+     ("{雨|あめ}の{降|ふ}る{夜|よる}、{寺男|てらおとこ}たちは{墓場|はかば}から{琵琶|びわ}の{音|おと}が{聞|き}こえてくるのに{気|き}づきました。", "Par une nuit de pluie, les serviteurs entendirent le son du biwa venir du cimetière.", "One rainy night, the temple servants noticed the sound of a biwa coming from the graveyard."),
+     ("{見|み}ると、{芳一|ほういち}は{安徳|あんとく}{天皇|てんのう}のお{墓|はか}の{前|まえ}で{一人|ひとり}{夢中|むちゅう}で{語|かた}っており、そのまわりには{無数|むすう}の{鬼火|おにび}が{燃|も}えていたのです。", "Hōichi récitait seul, absorbé, devant la tombe de l’empereur Antoku, entouré d’innombrables feux follets.", "There was Hōichi, alone and entranced, reciting before the tomb of Emperor Antoku, surrounded by countless will-o’-the-wisps.")],
+    [("{和尚|おしょう}さんは{言|い}いました。「お{前|まえ}を{呼|よ}んでいたのは、{壇|だん}ノ{浦|うら}で{滅|ほろ}びた{平家|へいけ}の{亡霊|ぼうれい}に{違|ちが}いない。このままでは{命|いのち}を{取|と}られてしまうぞ。」", "« Ceux qui t’appelaient sont sans aucun doute les spectres des Heike, anéantis à Dan-no-ura. Si cela continue, ils te prendront la vie. »", "“Those who summoned you must be the ghosts of the Heike, destroyed at Dan-no-ura. If this goes on, they will take your life.”"),
+     ("そこで{和尚|おしょう}さんは、{芳一|ほういち}の{体|からだ}じゅうにお{経|きょう}を{書|か}きつけました。", "Le supérieur couvrit alors tout le corps de Hōichi de sūtras.", "So the head priest wrote sutras all over Hōichi’s body.")],
+   ], [W("後をつける", "あとをつける", "suivre en secret", "to follow"), W("墓場", "はかば", "cimetière", "graveyard"), W("夢中", "むちゅう", "absorbé, captivé", "absorbed"), W("鬼火", "おにび", "feu follet", "will-o’-the-wisp"),
+       W("亡霊", "ぼうれい", "spectre", "ghost"), W("滅びる", "ほろびる", "périr, être anéanti", "to perish"), W("違いない", "ちがいない", "sans aucun doute", "must be, no doubt"), W("お経", "おきょう", "sūtra", "sutra")],
+   [Q("Où Hōichi joue-t-il en réalité ?", "Where is Hōichi really playing?", [("Au cimetière", "In the graveyard"), ("Dans un palais", "In a palace"), ("Au marché", "At the market")]),
+    Q("Que fait le supérieur pour le protéger ?", "What does the head priest do to protect him?", [("Il écrit des sūtras sur son corps", "He writes sutras on his body"), ("Il l’enferme", "He locks him up"), ("Il l’envoie au loin", "He sends him away")])]),
+  C("mimi-nashi-hoichi-4", ("{耳|みみ}なし{芳一|ほういち}", "Hōichi sans oreilles", "Earless Hōichi"), [
+    [("「{今夜|こんや}は{何|なに}があっても、{声|こえ}を{出|だ}したり{動|うご}いたりしてはならない。」{和尚|おしょう}さんはそう{言|い}い{残|のこ}して{出|で}かけました。", "« Ce soir, quoi qu’il arrive, ne fais pas un bruit, ne bouge pas. » Sur ces mots, le supérieur sortit.", "“Tonight, whatever happens, you must not make a sound or move.” With these words, the head priest went out."),
+     ("{真夜中|まよなか}、いつもの{足音|あしおと}が{近|ちか}づき、「{芳一|ほういち}！」と{呼|よ}ぶ{声|こえ}がしましたが、{芳一|ほういち}は{息|いき}を{殺|ころ}してじっとしていました。", "À minuit, les pas habituels approchèrent et la voix l’appela, mais Hōichi retint son souffle sans bouger.", "At midnight the familiar footsteps came and the voice called “Hōichi!”, but he held his breath and kept still."),
+     ("「{琵琶|びわ}はあるが、{芳一|ほういち}がおらぬ。{見|み}えるのは{耳|みみ}だけだ。」", "« Voici le biwa, mais pas de Hōichi. Je ne vois que ses oreilles. »", "“Here is the biwa, but no Hōichi. All I can see are his ears.”")],
+    [("お{経|きょう}を{書|か}き{忘|わす}れていたのは、{両方|りょうほう}の{耳|みみ}だけだったのです。", "On avait oublié d’écrire le sūtra sur ses deux oreilles, et seulement là.", "The only places where the sutra had been forgotten were his two ears."),
+     ("「せめて{耳|みみ}を{持|も}って{帰|かえ}り、{殿|との}にお{見|み}せしよう。」{亡霊|ぼうれい}は{芳一|ほういち}の{耳|みみ}を{引|ひ}きちぎって{去|さ}っていきました。", "« Rapportons au moins les oreilles à notre seigneur. » Le spectre les arracha et disparut.", "“At least I will take the ears back to show my lord.” The ghost tore off Hōichi’s ears and left."),
+     ("{芳一|ほういち}は{命|いのち}こそ{助|たす}かったものの、{両耳|りょうみみ}を{失|うしな}いました。", "Hōichi eut la vie sauve, mais perdit ses deux oreilles.", "Hōichi’s life was spared, but he lost both ears."),
+     ("やがてこの{話|はなし}は{広|ひろ}まり、{芳一|ほういち}は「{耳|みみ}なし{芳一|ほういち}」と{呼|よ}ばれる{名人|めいじん}として{知|し}られるようになったということです。", "L’histoire se répandit, et Hōichi devint un maître célèbre sous le nom de « Hōichi sans oreilles ».", "The story spread, and Hōichi became famous as a master known as “Earless Hōichi”.")],
+   ], [W("言い残す", "いいのこす", "laisser une consigne en partant", "to leave word"), W("真夜中", "まよなか", "minuit", "midnight"), W("息を殺す", "いきをころす", "retenir son souffle", "to hold one’s breath"), W("両方", "りょうほう", "les deux", "both"),
+       W("引きちぎる", "ひきちぎる", "arracher", "to tear off"), W("失う", "うしなう", "perdre", "to lose"), W("広まる", "ひろまる", "se répandre", "to spread"), W("名人", "めいじん", "maître, virtuose", "master, virtuoso")],
+   [Q("Pourquoi le spectre ne voit-il que les oreilles ?", "Why can the ghost see only the ears?", [("On avait oublié d’y écrire le sūtra", "The sutra had not been written on them"), ("Hōichi les avait cachées", "Hōichi had hidden them"), ("Elles brillaient dans le noir", "They glowed in the dark")]),
+    Q("Que devient Hōichi ensuite ?", "What becomes of Hōichi afterwards?", [("Un maître célèbre", "A famous master"), ("Un samouraï", "A samurai"), ("Un marchand", "A merchant")])]),
+ ]})
+
+# ───────────────────────── 12. Hachikazuki (N1) ─────────────────────────
+stories.append({
+ "slug": "hachikazuki", "glyph": "鉢", "level": "N1", "color": "#7A6A5A",
+ "title": {"jp": "{鉢|はち}かづき", "fr": "La Jeune Fille au bol", "en": "The Bowl-Bearing Maiden"},
+ "summary": {"fr": "Un bol posé par une mère mourante sur la tête de sa fille, impossible à retirer : malédiction ou protection ?",
+             "en": "A bowl placed on her daughter’s head by a dying mother, impossible to remove: a curse or a protection?"},
+ "chapters": [
+  C("hachikazuki-1", ("{母|はは}の{遺言|ゆいごん}", "Les dernières volontés d’une mère", "A mother’s last wish"), [
+    [("{昔|むかし}、{河内|かわち}の{国|くに}に{実高|さねたか}という{裕福|ゆうふく}な{武士|ぶし}がおり、{夫婦|ふうふ}は{長年|ながねん}{子|こ}に{恵|めぐ}まれなかったが、{観音|かんのん}{様|さま}に{祈|いの}り{続|つづ}けた{末|すえ}に、ようやく{美|うつく}しい{娘|むすめ}を{授|さず}かった。", "Jadis, dans la province de Kawachi, vivait un riche guerrier nommé Sanetaka ; longtemps privé d’enfant, le couple, à force de prier Kannon, reçut enfin une ravissante fille.", "Long ago in the province of Kawachi lived a wealthy warrior named Sanetaka; after years without children, he and his wife prayed tirelessly to Kannon and were at last blessed with a beautiful daughter."),
+     ("ところが{娘|むすめ}が{十三|じゅうさん}になった{年|とし}、{母|はは}は{重|おも}い{病|やまい}に{倒|たお}れ、{死|し}の{床|とこ}で{娘|むすめ}の{頭|あたま}に{大|おお}きな{鉢|はち}をかぶせると、「この{鉢|はち}があなたを{守|まも}るでしょう」と{言|い}い{残|のこ}して{息|いき}を{引|ひ}き{取|と}った。", "Mais l’année des treize ans de la fillette, la mère tomba gravement malade ; sur son lit de mort, elle posa un grand bol sur la tête de sa fille, murmura « Ce bol te protégera », puis rendit l’âme.", "But in the year the girl turned thirteen, her mother fell gravely ill; on her deathbed she placed a large bowl on her daughter’s head, whispered “This bowl will protect you,” and breathed her last.")],
+    [("{不思議|ふしぎ}なことに、その{鉢|はち}はどれほど{引|ひ}っ{張|ぱ}っても{娘|むすめ}の{頭|あたま}から{外|はず}れず、{人々|ひとびと}は{彼女|かのじょ}を「{鉢|はち}かづき」と{呼|よ}んで{気味悪|きみわる}がった。", "Chose étrange, on avait beau tirer, le bol ne se détachait pas ; les gens l’appelèrent « Hachikazuki », la porteuse de bol, et la trouvaient inquiétante.", "Strangely, no matter how hard anyone pulled, the bowl would not come off, and people called her “Hachikazuki” and found her unsettling."),
+     ("やがて{父|ちち}が{迎|むか}えた{後妻|ごさい}は{鉢|はち}かづきを{疎|うと}ましく{思|おも}い、{何|なに}かにつけて{父|ちち}に{悪口|わるぐち}を{吹|ふ}き{込|こ}んだ{挙句|あげく}、とうとう{家|いえ}から{追|お}い{出|だ}させてしまったのである。", "La seconde épouse que prit le père, l’ayant en aversion, ne cessa de la dénigrer auprès de lui, si bien qu’elle finit par la faire chasser de la maison.", "The second wife her father took resented her, slandered her to him at every turn, and in the end had her driven out of the house.")],
+   ], [W("遺言", "ゆいごん", "dernières volontés", "last will"), W("恵まれる", "めぐまれる", "être favorisé, béni", "to be blessed with"), W("授かる", "さずかる", "recevoir (un don du ciel)", "to be granted"), W("息を引き取る", "いきをひきとる", "rendre l’âme", "to breathe one’s last"),
+       W("外れる", "はずれる", "se détacher", "to come off"), W("気味悪がる", "きみわるがる", "trouver inquiétant", "to find creepy"), W("疎ましい", "うとましい", "importun, détesté", "disagreeable"), W("挙句", "あげく", "au bout du compte", "in the end")],
+   [Q("Que fait la mère avant de mourir ?", "What does the mother do before she dies?", [("Elle pose un bol sur la tête de sa fille", "She puts a bowl on her daughter’s head"), ("Elle lui donne un sabre", "She gives her a sword"), ("Elle l’envoie au temple", "She sends her to a temple")]),
+    Q("Pourquoi la jeune fille est-elle chassée ?", "Why is the girl driven out?", [("Sa belle-mère la calomnie", "Her stepmother slanders her"), ("Elle a volé", "She stole"), ("Elle veut voyager", "She wants to travel")])]),
+  C("hachikazuki-2", ("{川|かわ}に{身|み}を{投|な}げて", "Jetée dans la rivière", "Into the river"), [
+    [("{行|ゆ}くあてもなくさまよった{末|すえ}、{絶望|ぜつぼう}した{鉢|はち}かづきは{川|かわ}に{身|み}を{投|な}げたが、{頭|あたま}の{鉢|はち}が{浮|う}き{袋|ぶくろ}のように{水|みず}に{浮|う}かび、{沈|しず}むことすら{叶|かな}わなかった。", "Après avoir erré sans but, désespérée, Hachikazuki se jeta dans la rivière ; mais le bol flotta comme une bouée, et elle ne put même pas couler.", "After wandering with nowhere to go, the despairing Hachikazuki threw herself into the river, but the bowl floated like a buoy and she could not even sink."),
+     ("{岸|きし}に{打|う}ち{上|あ}げられた{彼女|かのじょ}を{見|み}つけたのは、{山蔭|やまかげ}の{中将|ちゅうじょう}という{身分|みぶん}の{高|たか}い{人|ひと}の{屋敷|やしき}に{仕|つか}える{者|もの}たちであった。", "Ce sont les serviteurs d’un grand seigneur, le chambellan Yamakage, qui la trouvèrent échouée sur la rive.", "Washed ashore, she was found by servants of a high-ranking man, Captain Yamakage.")],
+    [("{中将|ちゅうじょう}の{屋敷|やしき}で{風呂|ふろ}{焚|た}きとして{雇|やと}われた{鉢|はち}かづきは、{鉢|はち}のせいで{顔|かお}こそ{見|み}えないものの、{誰|だれ}よりも{早|はや}く{起|お}きて{黙々|もくもく}と{働|はたら}き、{不平|ふへい}ひとつ{言|い}わなかった。", "Engagée pour chauffer le bain dans la demeure, elle avait le visage caché par le bol, mais se levait avant tout le monde, travaillait en silence et ne se plaignait jamais.", "Hired to heat the bath water at the captain’s residence, her face hidden by the bowl, she rose before everyone, worked in silence and never once complained."),
+     ("{夜|よる}、{人目|ひとめ}を{忍|しの}んで{亡|な}き{母|はは}を{思|おも}い、{和歌|わか}を{口|くち}ずさむ{彼女|かのじょ}の{声|こえ}は、{屋敷|やしき}の{誰|だれ}もが{聞|き}き{惚|ほ}れるほど{美|うつく}しかった。", "La nuit, à l’abri des regards, elle fredonnait des poèmes en pensant à sa mère ; sa voix était si belle que toute la maison en était charmée.", "At night, away from prying eyes, she softly recited poems in memory of her mother, and her voice was so lovely that everyone in the house was enchanted.")],
+   ], [W("さまよう", None, "errer", "to wander"), W("絶望", "ぜつぼう", "désespoir", "despair"), W("叶う", "かなう", "se réaliser, être possible", "to be fulfilled"), W("屋敷", "やしき", "demeure, résidence", "mansion"),
+       W("仕える", "つかえる", "servir (un maître)", "to serve"), W("雇う", "やとう", "employer", "to hire"), W("黙々と", "もくもくと", "en silence, sans relâche", "silently"), W("聞き惚れる", "ききほれる", "écouter sous le charme", "to listen enraptured")],
+   [Q("Pourquoi ne coule-t-elle pas ?", "Why doesn’t she sink?", [("Le bol flotte", "The bowl floats"), ("On la sauve aussitôt", "She is rescued at once"), ("Elle sait nager", "She can swim")]),
+    Q("Quel travail fait-elle chez le chambellan ?", "What work does she do at the captain’s house?", [("Chauffer le bain", "Heating the bath"), ("Cuisiner", "Cooking"), ("Garder les chevaux", "Tending the horses")])]),
+  C("hachikazuki-3", ("{宰相|さいしょう}との{出会|であ}い", "La rencontre", "The encounter"), [
+    [("{中将|ちゅうじょう}の{四男|よなん}である{宰相|さいしょう}は、{夜|よる}ごとに{聞|き}こえる{歌声|うたごえ}の{主|ぬし}を{確|たし}かめずにはいられず、ある{晩|ばん}、{風呂場|ふろば}をそっとのぞいた。", "Le quatrième fils du chambellan, un jeune conseiller, ne put s’empêcher de chercher qui chantait chaque nuit, et un soir il jeta un œil discret vers la salle de bain.", "The captain’s fourth son, a young councillor, could not help wanting to know whose voice he heard each night, and one evening he quietly peeked into the bathhouse."),
+     ("{鉢|はち}の{下|した}からわずかにのぞく{横顔|よこがお}は{気品|きひん}に{満|み}ちており、{言葉|ことば}を{交|か}わすうちに、{宰相|さいしょう}はその{心|こころ}の{清|きよ}らかさにすっかり{惹|ひ}かれていった。", "Le profil à peine visible sous le bol respirait la distinction ; à mesure qu’ils parlaient, il fut entièrement séduit par la pureté de son cœur.", "The profile barely visible beneath the bowl was full of grace, and as they spoke, he was utterly drawn to the purity of her heart."),
+     ("しかし{鉢|はち}かづきは、{素性|すじょう}も{明|あ}かせない{自分|じぶん}が{宰相|さいしょう}の{将来|しょうらい}を{曇|くも}らせてはならないと、{幾度|いくど}となく{身|み}を{引|ひ}こうとした。", "Mais Hachikazuki, qui ne pouvait révéler ses origines, tenta maintes fois de s’effacer pour ne pas assombrir l’avenir du jeune conseiller.", "Yet Hachikazuki, unable to reveal who she was, tried time and again to step aside so as not to cloud the young councillor’s future.")],
+    [("ところが{身分|みぶん}の{違|ちが}いを{理由|りゆう}に、{母君|ははぎみ}をはじめ{一族|いちぞく}はこぞって{二人|ふたり}の{仲|なか}に{反対|はんたい}した。", "Mais, invoquant la différence de rang, toute la famille, à commencer par sa mère, s’opposa d’une seule voix à leur union.", "But citing the difference in rank, the whole clan, his mother first of all, opposed the couple as one."),
+     ("{母君|ははぎみ}は、{兄|あに}たちの{妻|つま}と{嫁|よめ}{比|くら}べをさせれば、{鉢|はち}かづきは{恥|はじ}をかいて{自|みずか}ら{身|み}を{引|ひ}くに{違|ちが}いないと{考|かんが}えたのである。", "Sa mère pensa qu’en la comparant publiquement aux épouses de ses frères aînés, Hachikazuki, humiliée, se retirerait d’elle-même.", "His mother reasoned that if she were set against the wives of his elder brothers in a contest of brides, Hachikazuki would be shamed into withdrawing of her own accord.")],
+   ], [W("確かめる", "たしかめる", "vérifier", "to make sure"), W("のぞく", None, "jeter un œil", "to peek"), W("気品", "きひん", "distinction, élégance", "grace, dignity"), W("交わす", "かわす", "échanger (des mots)", "to exchange"),
+       W("惹かれる", "ひかれる", "être attiré", "to be drawn to"), W("身分", "みぶん", "rang social", "social rank"), W("こぞって", None, "tous ensemble, unanimement", "all together"), W("身を引く", "みをひく", "se retirer", "to withdraw")],
+   [Q("Qu’est-ce qui attire le jeune conseiller ?", "What draws the young councillor to her?", [("Sa voix et la pureté de son cœur", "Her voice and the purity of her heart"), ("Sa richesse", "Her wealth"), ("Son bol étrange", "Her strange bowl")]),
+    Q("Pourquoi la famille s’oppose-t-elle ?", "Why does the family object?", [("La différence de rang", "The difference in rank"), ("Elle vient de l’étranger", "She is a foreigner"), ("Elle est malade", "She is ill")])]),
+  C("hachikazuki-4", ("{鉢|はち}が{割|わ}れるとき", "Quand le bol se brise", "When the bowl breaks"), [
+    [("{嫁|よめ}{比|くら}べの{前夜|ぜんや}、{恥|はじ}をかかせるくらいならと、{二人|ふたり}は{手|て}を{取|と}り{合|あ}って{屋敷|やしき}を{去|さ}ろうとした。", "La veille de l’épreuve, plutôt que de subir l’humiliation, ils décidèrent de quitter la demeure main dans la main.", "On the eve of the contest, rather than see her humiliated, the two resolved to leave the mansion hand in hand."),
+     ("その{時|とき}、{鉢|はち}かづきの{頭|あたま}の{鉢|はち}がひとりでに{音|おと}を{立|た}てて{割|わ}れ、{中|なか}からは{金銀|きんぎん}の{財宝|ざいほう}とともに、{見|み}る{者|もの}が{息|いき}をのむほど{美|うつく}しい{顔|かお}が{現|あらわ}れたのである。", "À cet instant, le bol se brisa de lui-même avec fracas : en tombèrent or et argent, et apparut un visage d’une beauté à couper le souffle.", "At that moment the bowl on her head cracked open of its own accord, and out came gold and silver treasures, together with a face so beautiful it took the breath away.")],
+    [("{翌日|よくじつ}の{嫁|よめ}{比|くら}べで、{鉢|はち}かづきは{和歌|わか}でも{琴|こと}でも{誰|だれ}にも{引|ひ}けを{取|と}らず、{一族|いちぞく}はかえって{己|おのれ}の{不明|ふめい}を{恥|は}じることとなった。", "Le lendemain, en poésie comme au koto, elle ne le céda à personne, et ce fut la famille qui eut honte de son manque de discernement.", "At the contest the next day she was second to none in poetry or on the koto, and it was the clan that ended up ashamed of its own blindness."),
+     ("{二人|ふたり}は{晴|は}れて{夫婦|ふうふ}となり、のちに{巡礼|じゅんれい}の{旅|たび}の{途中|とちゅう}で、{落|お}ちぶれた{父|ちち}とも{再会|さいかい}を{果|は}たした。", "Ils se marièrent au grand jour et, plus tard, au cours d’un pèlerinage, elle retrouva son père, tombé dans la misère.", "The two were married openly, and later, during a pilgrimage, she was reunited with her father, who had fallen on hard times."),
+     ("{母|はは}が{遺|のこ}した{鉢|はち}は、{娘|むすめ}の{苦難|くなん}の{日々|ひび}を{陰|かげ}ながら{守|まも}り{続|つづ}けていたのだと、{物語|ものがたり}は{結|むす}ばれている。", "Le récit conclut que le bol laissé par sa mère l’avait protégée en secret durant toutes ses épreuves.", "The tale concludes that the bowl her mother left had been quietly protecting her through all her days of hardship.")],
+   ], [W("前夜", "ぜんや", "veille", "eve, night before"), W("割れる", "われる", "se briser", "to crack, to break"), W("財宝", "ざいほう", "trésor", "treasure"), W("息をのむ", "いきをのむ", "avoir le souffle coupé", "to catch one’s breath"),
+       W("引けを取らない", "ひけをとらない", "ne le céder à personne", "to be second to none"), W("不明", "ふめい", "manque de discernement", "lack of insight"), W("再会", "さいかい", "retrouvailles", "reunion"), W("苦難", "くなん", "épreuves, souffrances", "hardship")],
+   [Q("Que se passe-t-il la veille de l’épreuve ?", "What happens on the eve of the contest?", [("Le bol se brise de lui-même", "The bowl breaks by itself"), ("Elle s’enfuit seule", "She runs away alone"), ("Le conseiller la quitte", "The councillor leaves her")]),
+    Q("Qui retrouve-t-elle pendant le pèlerinage ?", "Whom does she meet again on the pilgrimage?", [("Son père", "Her father"), ("Sa belle-mère", "Her stepmother"), ("Sa mère", "Her mother")])]),
+ ]})
+
 # ── Mélange des choix (déterministe) et contrôles ──
 rng = random.Random(20261110)
 RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]+)\}")
@@ -749,8 +929,12 @@ for s in stories:
                 sen["kana"] = RUBY.sub(lambda m: m.group(2), sen["jp"])
         assert RUBY.sub("", c["title"]["jp"]).count("{") == 0
 
+# Ordre de lecture : du N5 au N1 (les nouveaux contes rejoignent leur niveau)
+ORDER = {"N5": 0, "N4": 1, "N3": 2, "N2": 3, "N1": 4}
+stories.sort(key=lambda s: ORDER[s["level"]])
+
 data = {
-  "contentVersion": "2026.11.16",
+  "contentVersion": "2026.11.21",
   "notice": {"fr": "Contes traditionnels japonais (domaine public), réécrits en japonais simple pour Koto Quest.",
              "en": "Traditional Japanese folk tales (public domain), retold in simple Japanese for Koto Quest."},
   "stories": stories,

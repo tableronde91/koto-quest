@@ -365,7 +365,9 @@ export interface ExamResultDto {
     level?: number;
     /** TOPIK II : écriture (쓰기) */
     writing?: number;
-    max: { system?: 'jlpt' | 'topik'; language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number; levels?: { level: number; min: number }[]; passLevel?: number; writing?: number };
+    /** JLPT N3 à N1 : lecture (読解) */
+    reading?: number;
+    max: { system?: 'jlpt' | 'topik'; language: number; listening: number; total: number; passTotal: number; passLanguage: number; passListening: number; levels?: { level: number; min: number }[]; passLevel?: number; writing?: number; reading?: number; passReading?: number };
   } | null;
 }
 

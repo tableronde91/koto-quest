@@ -11,7 +11,12 @@ describe('Expressions', () => {
   it('recueil par thèmes, entraînement, maîtrise partagée avec les révisions', async () => {
     const { agent } = await signUp(ctx.app);
     const o = (await agent.get('/api/expressions').expect(200)).body;
-    expect(o.themes.length).toBe(10);
+    expect(o.themes.length).toBe(12);
+    // Révision des proverbes : ことわざ et 四字熟語, chacun avec son entraînement
+    expect(o.themes.slice(-2).map((t: any) => t.slug)).toEqual(['kotowaza', 'yojijukugo']);
+    expect(o.themes.find((t: any) => t.slug === 'yojijukugo').expressions.map((e: any) => e.front)).toContain('一期一会');
+    const prov = (await agent.post('/api/expressions/practice').send({ theme: 'kotowaza' }).expect(201)).body;
+    expect(prov.questions.length).toBeGreaterThan(5);
     const polite = o.themes.find((t: any) => t.slug === 'politesse');
     expect(polite).toMatchObject({ glyph: '礼', learned: 0, total: polite.expressions.length });
     const yoro = polite.expressions.find((e: any) => e.front === 'よろしくお願いします');

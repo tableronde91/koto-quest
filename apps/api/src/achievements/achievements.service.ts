@@ -39,7 +39,7 @@ export class AchievementsService implements OnModuleInit {
   /** Statistiques agrégées, toutes recalculées depuis la base (aucune valeur fournie par le client). */
   async stats(userId: string): Promise<AchievementStats> {
     const now = this.clock.now();
-    const [lessons, activity, cards, bosses, examsTaken, examsPassed, games, items, placement, koBosses, topikPassed, chapters] = await Promise.all([
+    const [lessons, activity, cards, bosses, examsTaken, examsPassed, games, items, placement, koBosses, topikPassed, chapters, jaBosses, jlptPassed] = await Promise.all([
       this.prisma.userLessonProgress.count({ where: { userId, status: 'completed' } }),
       this.prisma.dailyActivity.findMany({ where: { userId }, select: { dateKey: true, total: true, correct: true, reviews: true, bestCombo: true, perfectLessons: true } }),
       this.prisma.reviewCard.findMany({ where: { userId }, include: { item: { select: { kind: true, front: true } } } }),
@@ -52,16 +52,21 @@ export class AchievementsService implements OnModuleInit {
       this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null }, worldSlug: { startsWith: 'topik' } } }),
       this.prisma.examAttempt.count({ where: { userId, passed: true, exam: { slug: { startsWith: 'topik' } } } }),
       this.prisma.readingLog.findMany({ where: { userId }, select: { chapter: true } }),
+      this.prisma.bossResult.count({ where: { userId, firstVictoryAt: { not: null }, NOT: { worldSlug: { startsWith: 'topik' } } } }),
+      this.prisma.examAttempt.count({ where: { userId, passed: true, NOT: { exam: { slug: { startsWith: 'topik' } } } } }),
     ]);
+    const jaChapters = this.reading.chapterSlugs('ja');
     const koChapters = this.reading.chapterSlugs('ko');
     let masteredItems = 0;
     let masteredKanji = 0;
     let masteredHangul = 0;
+    let masteredKana = 0;
     for (const c of cards) {
       if (masteryOf(toCardState(c), now) !== 'mastered') continue;
       masteredItems++;
       if (c.item.kind === 'kanji') masteredKanji++;
       if (c.item.kind === 'kana' && hasHangul(c.item.front)) masteredHangul++;
+      else if (c.item.kind === 'kana') masteredKana++;
     }
     return {
       lessonsCompleted: lessons,
@@ -79,6 +84,10 @@ export class AchievementsService implements OnModuleInit {
       bestGameScore: games.reduce((n, g) => Math.max(n, g.bestScore), 0),
       itemsCollected: items,
       placementDone: placement > 0 ? 1 : 0,
+      masteredKana,
+      japaneseBosses: jaBosses,
+      jlptPassed,
+      japaneseChapters: chapters.filter((r) => jaChapters.has(r.chapter)).length,
       masteredHangul,
       koreanBosses: koBosses,
       topikPassed,
