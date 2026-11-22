@@ -995,7 +995,7 @@
  "Vise directement un niveau plus haut : tu pourras toujours revoir le A1.": "Aim straight for a higher level: you can always review A1.",
  "examen au format TOEIC": "exam in TOEIC format",
  "{0} questions en {1} minutes sur les leçons du niveau : vocabulaire, grammaire et écoute. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.": "{0} questions in {1} minutes on the level’s lessons: vocabulary, grammar and listening. No marking during the test: you can go back to your answers before handing in your paper.",
- "{0} questions en {1} minutes, réparties comme au TOEIC : écoute (questions-réponses, conversations, annonces), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.": "{0} questions in {1} minutes, split as in the TOEIC: listening (question-response, conversations, talks), incomplete sentences and texts, reading comprehension. No marking during the test: you can go back to your answers before handing in your paper.",
+ "{0} questions en {1} minutes, réparties comme au TOEIC : écoute (photos, questions-réponses, conversations, annonces, avec des accents américain, britannique, australien et canadien), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.": "{0} questions in {1} minutes, split as in the TOEIC: listening (photographs, question-response, conversations, talks, with American, British, Australian and Canadian accents), incomplete sentences and texts, reading comprehension. No marking during the test: you can go back to your answers before handing in your paper.",
  "{0}. Estimation volontairement prudente, calculée sur le contenu de Koto Quest ; ce n’est pas une prédiction de score au TOEIC officiel.": "{0}. A deliberately cautious estimate, based on Koto Quest content; it is not a prediction of your official TOEIC score.",
  "l’anglais": "English",
  "anglais": "English",
@@ -1028,5 +1028,6 @@
  "Survie · TOEIC 225+": "Survival · TOEIC 225+",
  "Seuil · TOEIC 550+": "Threshold · TOEIC 550+",
  "Avancé · TOEIC 785+": "Advanced · TOEIC 785+",
- "Autonome · TOEIC 945+": "Proficient · TOEIC 945+"
+ "Autonome · TOEIC 945+": "Proficient · TOEIC 945+",
+ "Photo de la question": "Question picture"
 }

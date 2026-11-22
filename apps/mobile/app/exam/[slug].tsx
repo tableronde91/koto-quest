@@ -68,7 +68,7 @@ export default function ExamScreen() {
       </View>
       {toeic ? (
         <>
-          <P>{T('Questions réparties comme au TOEIC : écoute (questions-réponses, conversations, annonces), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.')}</P>
+          <P>{T('Questions réparties comme au TOEIC : écoute (photos, questions-réponses, conversations, annonces, avec des accents américain, britannique, australien et canadien), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.')}</P>
           <Card><P soft>{T('Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le TOEIC d’ETS et son résultat n’en prédit pas le score.')}</P></Card>
         </>
       ) : topik ? (

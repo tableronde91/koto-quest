@@ -48,3 +48,38 @@ def write_bank(code, parts, expected):
             'parts': parts}
     json.dump(bank, open(os.path.join(ROOT, f'content/exams/{code.lower()}-toeic.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f"TOEIC {code} : {sum(len(p['questions']) for p in parts)} questions en banque ; examen de {lis} + {gra} + {rea} questions")
+
+# ── Partie 1 : photos (scènes dessinées, packages/shared/src/toeicScenes.ts) ──
+# Quatre phrases lues, une seule décrit la scène ; la première est la bonne.
+def PQ(scene, statements):
+    assert len(statements) == 4
+    return {'image': scene, 'audioChoices': True, 'choices': statements, 'answer': statements[0],
+            'explanation': 'Phrases entendues : ' + ' / '.join(statements)}
+
+def P1(count, qs): return part('p1', 'listening', 'Part 1 — Photographs', 'Photos', 'Look at the picture and listen to the four statements. Select the one that best describes the picture.', count, qs, True)
+
+PHOTOS_EASY = [
+    PQ('laptop-desk', ['A person is typing on a laptop.', 'A person is opening a window.', 'A person is watering a plant.', 'Two people are eating lunch.']),
+    PQ('meeting-chart', ['A woman is pointing at a chart.', 'Two people are standing at the door.', 'A man is writing on the board.', 'The room is empty.']),
+    PQ('warehouse-boxes', ['A man is carrying a box.', 'A man is driving a van.', 'Two men are lifting a table.', 'A woman is opening a box.']),
+    PQ('cafe-pouring', ['A waiter is pouring coffee.', 'A woman is paying the bill.', 'A man is cooking in the kitchen.', 'Two people are dancing.']),
+    PQ('station-platform', ['Two people are waiting on the platform.', 'The passengers are getting off a bus.', 'A woman is buying a ticket.', 'A man is running to the train.']),
+    PQ('handshake-entrance', ['Two people are shaking hands.', 'Two people are opening the door.', 'A man is reading a newspaper.', 'A woman is talking on the phone.']),
+    PQ('empty-conference', ['There are no people in the room.', 'All the chairs are taken.', 'A man is turning on the screen.', 'A woman is giving a talk.']),
+    PQ('park-cyclist', ['A man is riding a bicycle.', 'A man is sitting on a bench.', 'Two people are walking a dog.', 'A woman is cutting a tree.']),
+    PQ('shop-checkout', ['A woman is paying at the counter.', 'A man is putting food on the shelves.', 'A woman is trying on a coat.', 'The shop is empty.']),
+    PQ('ladder-painting', ['A man is standing on a ladder.', 'A man is washing a car.', 'A man is sitting on the floor.', 'Two people are painting a door.']),
+]
+
+PHOTOS_HARD = [
+    PQ('laptop-desk', ['Someone is seated in front of a laptop.', 'A window is being cleaned.', 'Some plants are being watered.', 'Documents have been stacked on the floor.']),
+    PQ('meeting-chart', ['A presenter is gesturing toward a graph.', 'The participants are leaving the room.', 'A screen is being installed on the wall.', 'Chairs have been stacked in a corner.']),
+    PQ('warehouse-boxes', ['A worker is holding a box.', 'A vehicle is being loaded onto a ship.', 'Boxes are being unpacked on a table.', 'The back doors of a van are open.']),
+    PQ('cafe-pouring', ['A drink is being poured into a cup.', 'A customer is reading a menu.', 'Chairs have been placed on the tables.', 'A waiter is clearing the table.']),
+    PQ('station-platform', ['Some travellers are standing beside their luggage.', 'Passengers are boarding a bus.', 'The platform is crowded with people.', 'Suitcases are being loaded onto a train.']),
+    PQ('handshake-entrance', ['Two people are greeting each other at an entrance.', 'A door is being repaired.', 'Some people are waiting in line.', 'A sign is being hung above the door.']),
+    PQ('empty-conference', ['Rows of chairs are facing a screen.', 'An audience has gathered in the room.', 'A projector is being carried out.', 'Chairs have been stacked against the wall.']),
+    PQ('park-cyclist', ['A cyclist is riding along a path.', 'Some benches are occupied.', 'Trees are being planted in the park.', 'A bicycle has been left by a bench.']),
+    PQ('shop-checkout', ['A customer is handing over a card.', 'Shelves are being stocked by an employee.', 'A cashier is wrapping a gift.', 'The store is closed for the day.']),
+    PQ('ladder-painting', ['A worker is reaching up toward the wall.', 'A ladder is lying on the ground.', 'Paint is being sprayed onto a window.', 'Tools have been left on a table.']),
+]

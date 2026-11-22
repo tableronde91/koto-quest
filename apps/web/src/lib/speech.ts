@@ -13,7 +13,7 @@
  *   référence sur les phrases jusqu'à la fin ;
  * - deux lectures demandées coup sur coup se chevauchaient → seule la dernière demande est jouée.
  */
-import { textLanguage } from '@koto/shared';
+import { scriptAccents, textLanguage } from '@koto/shared';
 
 export const speechSupported = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
 
@@ -21,6 +21,8 @@ export interface SpeechPart {
   text: string;
   rate?: number;
   pitch?: number;
+  /** Variante régionale (ex. en-US) : écoutes TOEIC aux accents variés */
+  locale?: string;
   onStart?: () => void;
 }
 
@@ -38,6 +40,19 @@ function chooseVoice(lang: VoiceLang): SpeechSynthesisVoice | null {
   if (!list.length) return null;
   const score = (v: SpeechSynthesisVoice) => (v.localService ? 4 : 0) + (v.lang.toLowerCase().replace('_', '-') === LOCALE[lang].toLowerCase() ? 2 : 0) + (v.default ? 1 : 0);
   return [...list].sort((a, b) => score(b) - score(a))[0];
+}
+
+/** Voix d'une variante régionale (en-US, en-AU…) ; à défaut, américaine pour le Canada, puis toute voix de la langue. */
+const localeVoices = new Map<string, SpeechSynthesisVoice | null>();
+function pickLocaleVoice(locale: string, lang: VoiceLang): SpeechSynthesisVoice | null {
+  if (!speechSupported()) return null;
+  if (!localeVoices.get(locale)) {
+    const norm = (v: SpeechSynthesisVoice) => v.lang.toLowerCase().replace('_', '-');
+    const all = speechSynthesis.getVoices();
+    const find = (l: string) => all.filter((v) => norm(v) === l.toLowerCase()).sort((a, b) => Number(b.localService) - Number(a.localService))[0];
+    localeVoices.set(locale, find(locale) ?? (locale === 'en-CA' ? find('en-US') : undefined) ?? null);
+  }
+  return localeVoices.get(locale) ?? pickVoice(lang);
 }
 
 function pickVoice(lang: VoiceLang = 'ja') {
@@ -65,6 +80,7 @@ function loadVoices(): Promise<void> {
 if (speechSupported()) {
   speechSynthesis.addEventListener?.('voiceschanged', () => {
     voices.clear();
+    localeVoices.clear();
   });
   // Charge la liste des voix dès le démarrage, pour que la première lecture parte tout de suite.
   speechSynthesis.getVoices();
@@ -89,9 +105,9 @@ export function say(parts: SpeechPart[], onEnd?: () => void): boolean {
     list.forEach((p, i) => {
       // Chaque phrase est lue par une voix de sa langue (japonais ou coréen).
       const lang = voiceLangOf(p.text);
-      const v = pickVoice(lang);
+      const v = p.locale && lang === 'en' ? pickLocaleVoice(p.locale, lang) : pickVoice(lang);
       const u = new SpeechSynthesisUtterance(p.text);
-      u.lang = v?.lang ?? LOCALE[lang];
+      u.lang = v?.lang ?? (p.locale && lang === 'en' ? p.locale : LOCALE[lang]);
       try {
         if (v) u.voice = v;
       } catch {
@@ -137,11 +153,14 @@ export const hasVoiceFor = (lang: VoiceLang) => !!pickVoice(lang);
 /**
  * Document d'écoute d'examen : lignes « N|… » (narrateur), « M|… » (homme), « F|… » (femme).
  * Une seule voix japonaise est souvent disponible : on distingue les rôles par la hauteur de voix.
+ * En anglais, comme au TOEIC, chaque rôle a son accent (américain, britannique, australien, canadien),
+ * qui change d'un document à l'autre ; faute de voix pour un accent, la voix anglaise habituelle le remplace.
  */
 export function speakScript(script: string, onEnd?: () => void) {
   if (!script) return false;
   const lines = script.split('\n').map((l) => (l[1] === '|' ? { who: l[0], text: l.slice(2) } : { who: 'N', text: l }));
-  return say(lines.map((l) => ({ text: l.text, rate: 0.9, pitch: l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1 })), onEnd);
+  const accents = voiceLangOf(scriptText(script)) === 'en' ? scriptAccents(script) : null;
+  return say(lines.map((l) => ({ text: l.text, rate: 0.9, pitch: l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1, locale: accents?.[l.who] })), onEnd);
 }
 
 /** Texte lisible d'un document d'écoute (sans les marques de rôle). */

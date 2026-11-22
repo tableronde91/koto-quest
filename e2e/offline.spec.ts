@@ -972,5 +972,12 @@ test('hors ligne : apprendre l’anglais pour le TOEIC (saga de Merlin, expressi
   await expect(page.getByRole('heading', { name: 'Examen blanc TOEIC A1 — format officiel (abrégé)' })).toBeVisible();
   await expect(page.getByText('Barème du TOEIC')).toBeVisible();
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  // Partie 1 : une photo, quatre phrases lues (pas de texte ni d'écoute séparée des réponses)
+  await expect(page.getByText('Part 1 — Photographs').first()).toBeVisible();
+  await expect(page.getByTestId('exam-photo')).toBeVisible();
+  await expect(page.getByRole('radio', { name: 'Réponse 4' })).toBeVisible();
+  await expect(page.getByRole('button', { name: /Écouter la réponse/ })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Suivante' }).click();
+  await page.getByRole('button', { name: 'Suivante' }).click();
   await expect(page.getByText('Part 2 — Question-Response').first()).toBeVisible();
 });

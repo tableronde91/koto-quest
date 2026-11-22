@@ -1,5 +1,5 @@
 import * as Speech from 'expo-speech';
-import { textLanguage } from '@koto/shared';
+import { scriptAccents, textLanguage } from '@koto/shared';
 
 /**
  * Prononciation japonaise ou coréenne par la synthèse vocale du téléphone.
@@ -10,6 +10,8 @@ import { textLanguage } from '@koto/shared';
 type Lang = 'ja' | 'ko' | 'en';
 const LOCALE: Record<Lang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB' };
 const voiceId: Partial<Record<Lang, string>> = {};
+/** Voix par variante régionale de l'anglais (en-US, en-GB, en-AU, en-CA) pour les écoutes TOEIC */
+const localeVoiceId: Record<string, string | undefined> = {};
 let voiceLoad: Promise<void> | null = null;
 let speaking = false;
 let request = 0;
@@ -22,6 +24,10 @@ function loadVoice(): Promise<void> {
         const best = mine.sort((a, b) => (b.quality === Speech.VoiceQuality.Enhanced ? 1 : 0) - (a.quality === Speech.VoiceQuality.Enhanced ? 1 : 0))[0];
         voiceId[lang] = best?.identifier;
       }
+      for (const v of voices) {
+        const l = v.language.replace('_', '-');
+        if (l.toLowerCase().startsWith('en-') && (!localeVoiceId[l] || v.quality === Speech.VoiceQuality.Enhanced)) localeVoiceId[l] = v.identifier;
+      }
     })
     .catch(() => undefined);
   return voiceLoad;
@@ -32,6 +38,7 @@ interface Part {
   text: string;
   rate?: number;
   pitch?: number;
+  locale?: string;
 }
 
 function say(parts: Part[], onEnd?: () => void) {
@@ -48,8 +55,8 @@ function say(parts: Part[], onEnd?: () => void) {
     const lang: Lang = textLanguage(list.map((p) => p.text).join(' '));
     list.forEach((p, i) =>
       Speech.speak(p.text, {
-        language: LOCALE[lang],
-        voice: voiceId[lang],
+        language: lang === 'en' && p.locale ? p.locale : LOCALE[lang],
+        voice: (lang === 'en' && p.locale && (localeVoiceId[p.locale] ?? (p.locale === 'en-CA' ? localeVoiceId['en-US'] : undefined))) || voiceId[lang],
         rate: p.rate ?? 0.9,
         pitch: p.pitch ?? 1,
         onDone: i === list.length - 1 ? () => { if (my === request) { speaking = false; onEnd?.(); } } : undefined,
@@ -71,7 +78,9 @@ export function speak(text: string, slow = false) {
  */
 export function speakScript(script: string, onEnd?: () => void) {
   const lines = script.split('\n').map((l) => (l[1] === '|' ? { who: l[0], text: l.slice(2) } : { who: 'N', text: l }));
-  say(lines.map((l) => ({ text: l.text, pitch: l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1 })), onEnd);
+  // En anglais, comme au TOEIC : un accent par rôle (américain, britannique, australien, canadien).
+  const accents = textLanguage(lines.map((l) => l.text).join(' ')) === 'en' ? scriptAccents(script) : null;
+  say(lines.map((l) => ({ text: l.text, pitch: l.who === 'M' ? 0.7 : l.who === 'F' ? 1.4 : 1, locale: accents?.[l.who] })), onEnd);
 }
 
 export function stopSpeech() {

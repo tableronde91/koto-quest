@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import type { IssuedQuestionDto } from '@koto/shared';
+import { SvgXml } from 'react-native-svg';
+import { TOEIC_SCENES, type IssuedQuestionDto } from '@koto/shared';
 import { speak, speakScript } from './speech';
 import { C } from './theme';
 import { Button, P } from './ui';
@@ -37,6 +38,11 @@ export function ExamQuestion({ q, number, value, onChange }: { q: IssuedQuestion
 
       {script ? (
         <View style={{ backgroundColor: C.surface2, borderRadius: 24, padding: 18, alignItems: 'center', gap: 8 }}>
+          {d.image && TOEIC_SCENES[d.image] && (
+            <View testID="exam-photo" accessibilityRole="image" accessibilityLabel={T('Photo de la question')} style={{ width: '100%', aspectRatio: 1.6, borderRadius: 16, overflow: 'hidden', borderWidth: 2, borderColor: C.line }}>
+              <SvgXml xml={TOEIC_SCENES[d.image]} width="100%" height="100%" />
+            </View>
+          )}
           <Button label={left <= 0 ? T('Plus d’écoute disponible') : `🔊  ${T('Écouter')}`} disabled={left <= 0} onPress={play} />
           {d.maxPlays !== undefined && <P soft>{plural(Math.max(0, left), '{0} écoute restante sur {1}', '{0} écoutes restantes sur {1}', [Math.max(0, left), d.maxPlays])}</P>}
           {d.text && <Text style={{ fontSize: 20, fontWeight: '800', color: C.ink, textAlign: 'center' }}>{d.text}</Text>}
@@ -79,7 +85,7 @@ export function ExamQuestion({ q, number, value, onChange }: { q: IssuedQuestion
                 {d.audioChoices ? (
                   <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Text style={{ fontSize: 20, fontWeight: '800', color: C.ink }}>{i + 1}</Text>
-                    <Pressable accessibilityRole="button" accessibilityLabel={T('Écouter la réponse {0}', [i + 1])} onPress={() => speak(c)} style={{ padding: 8 }}><Text>🔊</Text></Pressable>
+                    {!d.image && <Pressable accessibilityRole="button" accessibilityLabel={T('Écouter la réponse {0}', [i + 1])} onPress={() => speak(c)} style={{ padding: 8 }}><Text>🔊</Text></Pressable>}
                   </View>
                 ) : (
                   <Text style={{ flex: 1, fontSize: JP.test(c) ? 20 : 17, color: C.ink }}>{c}</Text>

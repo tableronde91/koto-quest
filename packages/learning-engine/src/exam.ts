@@ -109,6 +109,8 @@ export interface BankQuestion {
   /** Document sonore : lignes « N|… » (narrateur), « M|… » (homme), « F|… » (femme) */
   audio?: string;
   audioChoices?: boolean;
+  /** Partie 1 du TOEIC : scène illustrée (identifiant de TOEIC_SCENES) ; les phrases sont lues, pas écrites. */
+  image?: string;
   choices: string[];
   answer: string;
   explanation?: string;
@@ -137,19 +139,24 @@ export function planBankExam(bank: ExamBank, rng: Rng): PlannedExamQuestion[] {
   return bank.parts.flatMap((part) =>
     shuffle(part.questions, rng)
       .slice(0, part.count)
-      .map((bq) => ({
-        section: part.section,
-        question: {
-          type: (part.listening ? 'listening_choice' : 'particle_choice') as QuestionType,
-          prompt: part.prompt,
-          display: { jp: bq.jp, text: bq.text, passage: bq.passage, audioChoices: bq.audioChoices, part: part.jpTitle, maxPlays: part.listening ? 2 : undefined },
-          audio: bq.audio,
-          choices: shuffle(bq.choices, rng),
-          answer: bq.answer,
-          explanation: bq.explanation ?? `Réponse : ${bq.answer}`,
-          guessable: false,
-        },
-      })),
+      .map((bq) => {
+        const choices = shuffle(bq.choices, rng);
+        // Photo (partie 1 du TOEIC) : les quatre phrases sont lues dans l'ordre affiché, numérotées.
+        const audio = bq.image ? choices.map((c, i) => `N|${i + 1}. ${c}`).join('\n') : bq.audio;
+        return {
+          section: part.section,
+          question: {
+            type: (part.listening ? 'listening_choice' : 'particle_choice') as QuestionType,
+            prompt: part.prompt,
+            display: { jp: bq.jp, text: bq.text, passage: bq.passage, audioChoices: bq.audioChoices || !!bq.image, image: bq.image, part: part.jpTitle, maxPlays: part.listening ? 2 : undefined },
+            audio,
+            choices,
+            answer: bq.answer,
+            explanation: bq.explanation ?? `Réponse : ${bq.answer}`,
+            guessable: false,
+          },
+        };
+      }),
   );
 }
 
@@ -364,7 +371,7 @@ export const EXAM_TOPIK3_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik3-mo
 export const EXAM_TOPIK2_MOCK: ExamDef = { ...EXAM_TOPIK1_MOCK, slug: 'topik2-mock', level: 'TOPIK2', title: 'Entraînement TOPIK 2' };
 
 /**
- * Examen blanc TOEIC Listening & Reading (version abrégée) : parties 2 à 4 (écoute), 5 et 6 (phrases et
+ * Examen blanc TOEIC Listening & Reading (version abrégée) : parties 1 à 4 (écoute, dont des photos), 5 et 6 (phrases et
  * textes à compléter), 7 (compréhension écrite), noté sur 990. Banques content/exams/<niveau>-toeic.json.
  */
 const TOEIC_OFFICIAL = (level: string, durationMin: number, listening: number, grammar: number, reading: number): ExamDef => ({
@@ -373,7 +380,7 @@ const TOEIC_OFFICIAL = (level: string, durationMin: number, listening: number, g
   title: `Examen blanc TOEIC ${level} — format officiel (abrégé)`,
   durationMin,
   sections: [
-    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Listening (Parts 2–4)', count: listening },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Listening (Parts 1–4)', count: listening },
     { id: 'grammar', title: 'Phrases et textes à compléter', jpTitle: 'Reading (Parts 5–6)', count: grammar },
     { id: 'reading', title: 'Compréhension écrite', jpTitle: 'Reading (Part 7)', count: reading },
   ],
@@ -398,15 +405,15 @@ const TOEIC_MOCK = (level: string): ExamDef => ({
   sectionMinPercent: 40,
 });
 
-export const EXAM_A1_TOEIC = TOEIC_OFFICIAL('A1', 30, 10, 12, 6);
+export const EXAM_A1_TOEIC = TOEIC_OFFICIAL('A1', 30, 12, 12, 6);
 export const EXAM_A1_MOCK = TOEIC_MOCK('A1');
-export const EXAM_A2_TOEIC = TOEIC_OFFICIAL('A2', 35, 12, 14, 8);
+export const EXAM_A2_TOEIC = TOEIC_OFFICIAL('A2', 35, 14, 14, 8);
 export const EXAM_A2_MOCK = TOEIC_MOCK('A2');
-export const EXAM_B1_TOEIC = TOEIC_OFFICIAL('B1', 40, 14, 16, 10);
+export const EXAM_B1_TOEIC = TOEIC_OFFICIAL('B1', 40, 16, 16, 10);
 export const EXAM_B1_MOCK = TOEIC_MOCK('B1');
-export const EXAM_B2_TOEIC = TOEIC_OFFICIAL('B2', 45, 16, 18, 12);
+export const EXAM_B2_TOEIC = TOEIC_OFFICIAL('B2', 45, 18, 18, 12);
 export const EXAM_B2_MOCK = TOEIC_MOCK('B2');
-export const EXAM_C1_TOEIC = TOEIC_OFFICIAL('C1', 50, 18, 20, 14);
+export const EXAM_C1_TOEIC = TOEIC_OFFICIAL('C1', 50, 20, 20, 14);
 export const EXAM_C1_MOCK = TOEIC_MOCK('C1');
 
 export const EXAMS: Record<string, ExamDef> = {
@@ -664,7 +671,7 @@ const TIPS_N3: Partial<Record<ExamSectionId, string>> = {
 const TIPS_EN: Partial<Record<ExamSectionId, string>> = {
   vocab: 'Vocabulaire : refais les leçons du niveau et joue à Word Rush pour retrouver vite le sens des mots.',
   grammar: 'Phrases à compléter (parties 5 et 6) : reprends les leçons de grammaire du niveau et entraîne-toi dans l’atelier TOEIC.',
-  listening: 'Écoute (parties 2 à 4) : réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi aux questions-réponses de l’atelier TOEIC.',
+  listening: 'Écoute (parties 1 à 4) : décris les photos à voix haute, réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi aux questions-réponses de l’atelier TOEIC.',
   reading: 'Compréhension écrite (partie 7) : lis un chapitre de conte en anglais chaque jour et entraîne-toi à repérer l’essentiel d’un e-mail, d’une annonce ou d’un mémo.',
 };
 

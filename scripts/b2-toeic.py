@@ -1,5 +1,5 @@
 # Banque de l'examen blanc TOEIC B2 (content/exams/b2-toeic.json), format Listening & Reading abrégé.
-# Écoute 16 questions (parties 2 à 4), phrases et textes à compléter 18 (parties 5 et 6), compréhension écrite 12 (partie 7).
+# Écoute 18 questions (parties 1 à 4, dont 2 photos), phrases et textes à compléter 18 (parties 5 et 6), compréhension écrite 12 (partie 7).
 # Le premier choix est la bonne réponse. Usage : python3 scripts/b2-toeic.py
 from en_toeic import *
 
@@ -9,6 +9,7 @@ EMAIL = 'From: Gareth Lloyd\nTo: Marketing team\nSubject: Survey results\n\nHi a
 NOTICE = 'BRECON CONFERENCE CENTRE\nAnnual Sales Conference - 14 to 16 October\nParticipants wishing to attend the gala dinner on 15 October must register by 30 September. Accommodation has been reserved at the Castle Hotel, located five minutes from the centre. A shuttle bus will run between the station and the centre every 30 minutes. Please note that parking at the centre is limited and cannot be guaranteed.'
 
 PARTS = [
+  P1(2, PHOTOS_HARD),
   P2(6, [
     LQ('M|If you had known about the delay, would you have taken a later train?', ['Yes, I would have stayed for lunch.', 'I take the train every day.', 'It was delayed by an hour.']),
     LQ('F|Who was the report written by?', ['The finance team prepared it.', 'It’s about last year’s sales.', 'I wrote it down.']),
@@ -84,4 +85,4 @@ PARTS = [
     RQ(['Five minutes from the centre.', 'Next to the station.', 'In Cardiff.', 'Thirty minutes away.'], passage=NOTICE, text='Where is the Castle Hotel?'),
   ]),
 ]
-write_bank('B2', PARTS, (16, 18, 12))
+write_bank('B2', PARTS, (18, 18, 12))

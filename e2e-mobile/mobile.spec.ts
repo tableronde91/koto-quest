@@ -330,6 +330,7 @@ test('appli mobile en anglais : choix de la langue, parcours A1 à C1, examen bl
   await expect(page.getByText(/le TOEIC d’ETS/)).toBeVisible();
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByText(/30:00|29:5\d/)).toBeVisible(); // TOEIC A1 abrégé : 30 minutes
+  await expect(page.getByTestId('exam-photo')).toBeVisible(); // partie 1 : photo
   await page.getByTestId('exam-question').getByRole('radio').first().click();
-  await expect(page.getByText('1 réponse sur 28.')).toBeVisible();
+  await expect(page.getByText('1 réponse sur 30.')).toBeVisible();
 });

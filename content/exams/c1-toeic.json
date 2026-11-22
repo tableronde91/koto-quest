@@ -5,6 +5,137 @@
  "notice": "Questions rédigées par Koto Quest au format du TOEIC Listening & Reading (version abrégée : mêmes parties, consignes en anglais, notation sur 990). Ce ne sont pas des questions officielles d’ETS.",
  "parts": [
   {
+   "id": "p1",
+   "section": "listening",
+   "jpTitle": "Part 1 — Photographs",
+   "title": "Photos",
+   "prompt": "Look at the picture and listen to the four statements. Select the one that best describes the picture.",
+   "count": 2,
+   "questions": [
+    {
+     "image": "laptop-desk",
+     "audioChoices": true,
+     "choices": [
+      "Someone is seated in front of a laptop.",
+      "A window is being cleaned.",
+      "Some plants are being watered.",
+      "Documents have been stacked on the floor."
+     ],
+     "answer": "Someone is seated in front of a laptop.",
+     "explanation": "Phrases entendues : Someone is seated in front of a laptop. / A window is being cleaned. / Some plants are being watered. / Documents have been stacked on the floor."
+    },
+    {
+     "image": "meeting-chart",
+     "audioChoices": true,
+     "choices": [
+      "A presenter is gesturing toward a graph.",
+      "The participants are leaving the room.",
+      "A screen is being installed on the wall.",
+      "Chairs have been stacked in a corner."
+     ],
+     "answer": "A presenter is gesturing toward a graph.",
+     "explanation": "Phrases entendues : A presenter is gesturing toward a graph. / The participants are leaving the room. / A screen is being installed on the wall. / Chairs have been stacked in a corner."
+    },
+    {
+     "image": "warehouse-boxes",
+     "audioChoices": true,
+     "choices": [
+      "A worker is holding a box.",
+      "A vehicle is being loaded onto a ship.",
+      "Boxes are being unpacked on a table.",
+      "The back doors of a van are open."
+     ],
+     "answer": "A worker is holding a box.",
+     "explanation": "Phrases entendues : A worker is holding a box. / A vehicle is being loaded onto a ship. / Boxes are being unpacked on a table. / The back doors of a van are open."
+    },
+    {
+     "image": "cafe-pouring",
+     "audioChoices": true,
+     "choices": [
+      "A drink is being poured into a cup.",
+      "A customer is reading a menu.",
+      "Chairs have been placed on the tables.",
+      "A waiter is clearing the table."
+     ],
+     "answer": "A drink is being poured into a cup.",
+     "explanation": "Phrases entendues : A drink is being poured into a cup. / A customer is reading a menu. / Chairs have been placed on the tables. / A waiter is clearing the table."
+    },
+    {
+     "image": "station-platform",
+     "audioChoices": true,
+     "choices": [
+      "Some travellers are standing beside their luggage.",
+      "Passengers are boarding a bus.",
+      "The platform is crowded with people.",
+      "Suitcases are being loaded onto a train."
+     ],
+     "answer": "Some travellers are standing beside their luggage.",
+     "explanation": "Phrases entendues : Some travellers are standing beside their luggage. / Passengers are boarding a bus. / The platform is crowded with people. / Suitcases are being loaded onto a train."
+    },
+    {
+     "image": "handshake-entrance",
+     "audioChoices": true,
+     "choices": [
+      "Two people are greeting each other at an entrance.",
+      "A door is being repaired.",
+      "Some people are waiting in line.",
+      "A sign is being hung above the door."
+     ],
+     "answer": "Two people are greeting each other at an entrance.",
+     "explanation": "Phrases entendues : Two people are greeting each other at an entrance. / A door is being repaired. / Some people are waiting in line. / A sign is being hung above the door."
+    },
+    {
+     "image": "empty-conference",
+     "audioChoices": true,
+     "choices": [
+      "Rows of chairs are facing a screen.",
+      "An audience has gathered in the room.",
+      "A projector is being carried out.",
+      "Chairs have been stacked against the wall."
+     ],
+     "answer": "Rows of chairs are facing a screen.",
+     "explanation": "Phrases entendues : Rows of chairs are facing a screen. / An audience has gathered in the room. / A projector is being carried out. / Chairs have been stacked against the wall."
+    },
+    {
+     "image": "park-cyclist",
+     "audioChoices": true,
+     "choices": [
+      "A cyclist is riding along a path.",
+      "Some benches are occupied.",
+      "Trees are being planted in the park.",
+      "A bicycle has been left by a bench."
+     ],
+     "answer": "A cyclist is riding along a path.",
+     "explanation": "Phrases entendues : A cyclist is riding along a path. / Some benches are occupied. / Trees are being planted in the park. / A bicycle has been left by a bench."
+    },
+    {
+     "image": "shop-checkout",
+     "audioChoices": true,
+     "choices": [
+      "A customer is handing over a card.",
+      "Shelves are being stocked by an employee.",
+      "A cashier is wrapping a gift.",
+      "The store is closed for the day."
+     ],
+     "answer": "A customer is handing over a card.",
+     "explanation": "Phrases entendues : A customer is handing over a card. / Shelves are being stocked by an employee. / A cashier is wrapping a gift. / The store is closed for the day."
+    },
+    {
+     "image": "ladder-painting",
+     "audioChoices": true,
+     "choices": [
+      "A worker is reaching up toward the wall.",
+      "A ladder is lying on the ground.",
+      "Paint is being sprayed onto a window.",
+      "Tools have been left on a table."
+     ],
+     "answer": "A worker is reaching up toward the wall.",
+     "explanation": "Phrases entendues : A worker is reaching up toward the wall. / A ladder is lying on the ground. / Paint is being sprayed onto a window. / Tools have been left on a table."
+    }
+   ],
+   "listening": true
+  },
+  {
    "id": "p2",
    "section": "listening",
    "jpTitle": "Part 2 — Question-Response",
@@ -160,7 +291,7 @@
      "text": "What problem are the speakers discussing?"
     },
     {
-     "audio": "F|Our carbon emissions fell by 18%, albeit short of our target.\nM|Packaging waste went up, though, didn’t it?\nF|Yes, owing to online orders. We’re looking into reusable packaging.",
+     "audio": "F|Our carbon emissions fell by 18%, albeit short of our target.\nM|Packaging waste went up, though, didn’t it?\nF|Yes, owing to the growth in online orders. We’re looking into reusable packaging.",
      "choices": [
       "Online orders increased.",
       "A factory closed.",
@@ -168,7 +299,7 @@
       "Prices rose."
      ],
      "answer": "Online orders increased.",
-     "explanation": "Transcription : Femme : Our carbon emissions fell by 18%, albeit short of our target. / Homme : Packaging waste went up, though, didn’t it? / Femme : Yes, owing to online orders. We’re looking into reusable packaging.",
+     "explanation": "Transcription : Femme : Our carbon emissions fell by 18%, albeit short of our target. / Homme : Packaging waste went up, though, didn’t it? / Femme : Yes, owing to the growth in online orders. We’re looking into reusable packaging.",
      "text": "Why did packaging waste increase?"
     },
     {

@@ -75,8 +75,15 @@ describe('Anglais : préparer le TOEIC', () => {
   it('examen blanc TOEIC A1 : parties du TOEIC, notation sur 990, objectif 120', async () => {
     const { agent } = await signUpEnglish(ctx);
     const exam = (await agent.post('/api/exams/a1-toeic/start').expect(201)).body;
-    expect(exam.questions).toHaveLength(28);
-    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(10);
+    expect(exam.questions).toHaveLength(30);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(12);
+    // Partie 1 : deux photos, phrases lues (numérotées dans l'ordre affiché), sans texte à lire
+    const photos = exam.questions.filter((q: any) => q.display?.image);
+    expect(photos).toHaveLength(2);
+    for (const q of photos) {
+      expect(q.display.audioChoices).toBe(true);
+      expect(q.audio).toBe(q.choices.map((c: string, i: number) => `N|${i + 1}. ${c}`).join('\n'));
+    }
     expect(new Set(exam.questions.map((q: any) => q.display?.part))).toEqual(new Set(bank.parts.map((p: any) => p.jpTitle)));
     const answers: Record<string, unknown> = {};
     for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
@@ -89,10 +96,10 @@ describe('Anglais : préparer le TOEIC', () => {
   });
 
   it.each([
-    ['a2', 34, 12, 225],
-    ['b1', 40, 14, 550],
-    ['b2', 46, 16, 785],
-    ['c1', 52, 18, 945],
+    ['a2', 36, 14, 225],
+    ['b1', 42, 16, 550],
+    ['b2', 48, 18, 785],
+    ['c1', 54, 20, 945],
   ])('examen blanc TOEIC %s : nombre de questions, écoute et objectif', async (lvl, total, listening, target) => {
     const { agent } = await signUpEnglish(ctx);
     const exam = (await agent.post(`/api/exams/${lvl}-toeic/start`).expect(201)).body;

@@ -1,5 +1,5 @@
 # Banque de l'examen blanc TOEIC C1 (content/exams/c1-toeic.json), format Listening & Reading abrégé.
-# Écoute 18 questions (parties 2 à 4), phrases et textes à compléter 20 (parties 5 et 6), compréhension écrite 14 (partie 7).
+# Écoute 20 questions (parties 1 à 4, dont 2 photos), phrases et textes à compléter 20 (parties 5 et 6), compréhension écrite 14 (partie 7).
 # Le premier choix est la bonne réponse. Usage : python3 scripts/c1-toeic.py
 from en_toeic import *
 
@@ -9,6 +9,7 @@ LETTER = 'Dear Ms Campbell,\nFurther to our telephone conversation of 12 June, I
 EMAIL = 'From: Mairi Fraser\nTo: Alistair Reid\nSubject: RE: Contract\n\nAlistair,\nThank you for sending the contract so promptly. Having gone through it with our legal team, we are happy with the terms, with one exception: clause 9 states that either party may terminate the agreement with one month’s notice. Given the investment we will be making, we would rather the notice period were three months. Provided you can agree to this change, we will sign immediately.\nBest regards,\nMairi'
 
 PARTS = [
+  P1(2, PHOTOS_HARD),
   P2(6, [
     LQ('M|Should the client call while I’m out, could you take a message?', ['Of course, I’ll make a note of it.', 'Yes, he should call.', 'I was out yesterday.']),
     LQ('F|Had you heard about the merger before it was announced?', ['Only rumours, nothing official.', 'I hear it every day.', 'It will be announced soon.']),
@@ -25,7 +26,7 @@ PARTS = [
     LQ('M|Had we brought the launch forward, we would have beaten our competitors to market.\nF|True, but we couldn’t have guaranteed the quality. Cutting corners would have damaged our reputation.\nM|I suppose you’re right.', ['Protecting the company’s reputation.', 'Reducing costs.', 'Hiring more staff.', 'Changing suppliers.'], text='What is the woman most concerned about?'),
     LQ('F|I’ve gone through the contract and clause 9 is a problem. One month’s notice is far too short.\nM|Would they accept two months?\nF|Possibly, but I’d rather we asked for three and met them halfway if necessary.', ['Ask for three months’ notice.', 'Accept one month’s notice.', 'Cancel the contract.', 'Hire a new lawyer.'], text='What does the woman want to do?'),
     LQ('M|Morale has been low since the restructuring. People feel they’re not being consulted.\nF|Then it’s high time we involved them. Why don’t we hold a series of workshops?\nM|That’s a good idea. I’ll draw up a schedule.', ['Low staff morale.', 'A drop in sales.', 'A delayed project.', 'A shortage of equipment.'], text='What problem are the speakers discussing?'),
-    LQ('F|Our carbon emissions fell by 18%, albeit short of our target.\nM|Packaging waste went up, though, didn’t it?\nF|Yes, owing to online orders. We’re looking into reusable packaging.', ['Online orders increased.', 'A factory closed.', 'Suppliers changed.', 'Prices rose.'], text='Why did packaging waste increase?'),
+    LQ('F|Our carbon emissions fell by 18%, albeit short of our target.\nM|Packaging waste went up, though, didn’t it?\nF|Yes, owing to the growth in online orders. We’re looking into reusable packaging.', ['Online orders increased.', 'A factory closed.', 'Suppliers changed.', 'Prices rose.'], text='Why did packaging waste increase?'),
     LQ('M|Given the delays, it’s unlikely the new centre will open before March.\nF|In that case, we should warn our major clients now rather than later.\nM|Agreed. I’ll ask the communications team to draft a message.', ['Inform major clients.', 'Open the centre in January.', 'Hire extra staff.', 'Cancel the project.'], text='What do the speakers decide to do?'),
     LQ('F|I’m afraid the conference room is being renovated, so the workshop will have to take place elsewhere.\nM|What about the hotel next door? They have meeting facilities.\nF|Good thinking. I’ll inquire about availability.', ['Contact the hotel.', 'Postpone the workshop.', 'Renovate the room.', 'Hold the workshop online.'], text='What will the woman do next?'),
     LQ('M|So successful was the trial that the client wants to roll the system out across all its sites.\nF|That’s fantastic news. Do we have the capacity?\nM|Not yet. We’ll need to recruit at least five engineers.', ['Recruit more engineers.', 'Reduce the price.', 'Repeat the trial.', 'Find a new client.'], text='What will the company need to do?'),
@@ -86,4 +87,4 @@ PARTS = [
     RQ(['Two years.', 'One month.', 'Three months.', 'One year.'], passage=LETTER, text='How long is the initial period of the agreement?'),
   ]),
 ]
-write_bank('C1', PARTS, (18, 20, 14))
+write_bank('C1', PARTS, (20, 20, 14))

@@ -1,5 +1,5 @@
 # Banque de l'examen blanc TOEIC B1 (content/exams/b1-toeic.json), format Listening & Reading abrégé.
-# Écoute 14 questions (parties 2 à 4), phrases et textes à compléter 16 (parties 5 et 6), compréhension écrite 10 (partie 7).
+# Écoute 16 questions (parties 1 à 4, dont 2 photos), phrases et textes à compléter 16 (parties 5 et 6), compréhension écrite 10 (partie 7).
 # Le premier choix est la bonne réponse. Usage : python3 scripts/b1-toeic.py
 from en_toeic import *
 
@@ -9,6 +9,7 @@ REPLY = 'From: Priya Shah\nTo: Oliver Grant\nSubject: RE: Delivery problem\n\nDe
 JOB = 'JOB VACANCY: Marketing Assistant\nAvalon & Co. is looking for a marketing assistant to join its team in Truro. The successful candidate will help organise events and write content for our website. At least one year of experience is required. Applicants should be organised and able to work in a team. To apply, send your CV and a cover letter to jobs@avalon.co.uk by 30 April. Interviews will be held in the second week of May.'
 
 PARTS = [
+  P1(2, PHOTOS_HARD),
   P2(5, [
     LQ('M|How long have you been working on the report?', ['Since nine this morning.', 'It’s a long report.', 'I’ll work on it later.']),
     LQ('F|Has the contract been signed yet?', ['Yes, the client signed it yesterday.', 'I signed up for the gym.', 'It’s a two-year contract, isn’t it?']),
@@ -78,4 +79,4 @@ PARTS = [
     RQ(['In Truro.', 'In Plymouth.', 'In Bristol.', 'In London.'], passage=JOB, text='Where is the job?'),
   ]),
 ]
-write_bank('B1', PARTS, (14, 16, 10))
+write_bank('B1', PARTS, (16, 16, 10))

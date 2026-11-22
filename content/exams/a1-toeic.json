@@ -5,6 +5,137 @@
  "notice": "Questions rédigées par Koto Quest au format du TOEIC Listening & Reading (version abrégée : mêmes parties, consignes en anglais, notation sur 990). Ce ne sont pas des questions officielles d’ETS.",
  "parts": [
   {
+   "id": "p1",
+   "section": "listening",
+   "jpTitle": "Part 1 — Photographs",
+   "title": "Photos",
+   "prompt": "Look at the picture and listen to the four statements. Select the one that best describes the picture.",
+   "count": 2,
+   "questions": [
+    {
+     "image": "laptop-desk",
+     "audioChoices": true,
+     "choices": [
+      "A person is typing on a laptop.",
+      "A person is opening a window.",
+      "A person is watering a plant.",
+      "Two people are eating lunch."
+     ],
+     "answer": "A person is typing on a laptop.",
+     "explanation": "Phrases entendues : A person is typing on a laptop. / A person is opening a window. / A person is watering a plant. / Two people are eating lunch."
+    },
+    {
+     "image": "meeting-chart",
+     "audioChoices": true,
+     "choices": [
+      "A woman is pointing at a chart.",
+      "Two people are standing at the door.",
+      "A man is writing on the board.",
+      "The room is empty."
+     ],
+     "answer": "A woman is pointing at a chart.",
+     "explanation": "Phrases entendues : A woman is pointing at a chart. / Two people are standing at the door. / A man is writing on the board. / The room is empty."
+    },
+    {
+     "image": "warehouse-boxes",
+     "audioChoices": true,
+     "choices": [
+      "A man is carrying a box.",
+      "A man is driving a van.",
+      "Two men are lifting a table.",
+      "A woman is opening a box."
+     ],
+     "answer": "A man is carrying a box.",
+     "explanation": "Phrases entendues : A man is carrying a box. / A man is driving a van. / Two men are lifting a table. / A woman is opening a box."
+    },
+    {
+     "image": "cafe-pouring",
+     "audioChoices": true,
+     "choices": [
+      "A waiter is pouring coffee.",
+      "A woman is paying the bill.",
+      "A man is cooking in the kitchen.",
+      "Two people are dancing."
+     ],
+     "answer": "A waiter is pouring coffee.",
+     "explanation": "Phrases entendues : A waiter is pouring coffee. / A woman is paying the bill. / A man is cooking in the kitchen. / Two people are dancing."
+    },
+    {
+     "image": "station-platform",
+     "audioChoices": true,
+     "choices": [
+      "Two people are waiting on the platform.",
+      "The passengers are getting off a bus.",
+      "A woman is buying a ticket.",
+      "A man is running to the train."
+     ],
+     "answer": "Two people are waiting on the platform.",
+     "explanation": "Phrases entendues : Two people are waiting on the platform. / The passengers are getting off a bus. / A woman is buying a ticket. / A man is running to the train."
+    },
+    {
+     "image": "handshake-entrance",
+     "audioChoices": true,
+     "choices": [
+      "Two people are shaking hands.",
+      "Two people are opening the door.",
+      "A man is reading a newspaper.",
+      "A woman is talking on the phone."
+     ],
+     "answer": "Two people are shaking hands.",
+     "explanation": "Phrases entendues : Two people are shaking hands. / Two people are opening the door. / A man is reading a newspaper. / A woman is talking on the phone."
+    },
+    {
+     "image": "empty-conference",
+     "audioChoices": true,
+     "choices": [
+      "There are no people in the room.",
+      "All the chairs are taken.",
+      "A man is turning on the screen.",
+      "A woman is giving a talk."
+     ],
+     "answer": "There are no people in the room.",
+     "explanation": "Phrases entendues : There are no people in the room. / All the chairs are taken. / A man is turning on the screen. / A woman is giving a talk."
+    },
+    {
+     "image": "park-cyclist",
+     "audioChoices": true,
+     "choices": [
+      "A man is riding a bicycle.",
+      "A man is sitting on a bench.",
+      "Two people are walking a dog.",
+      "A woman is cutting a tree."
+     ],
+     "answer": "A man is riding a bicycle.",
+     "explanation": "Phrases entendues : A man is riding a bicycle. / A man is sitting on a bench. / Two people are walking a dog. / A woman is cutting a tree."
+    },
+    {
+     "image": "shop-checkout",
+     "audioChoices": true,
+     "choices": [
+      "A woman is paying at the counter.",
+      "A man is putting food on the shelves.",
+      "A woman is trying on a coat.",
+      "The shop is empty."
+     ],
+     "answer": "A woman is paying at the counter.",
+     "explanation": "Phrases entendues : A woman is paying at the counter. / A man is putting food on the shelves. / A woman is trying on a coat. / The shop is empty."
+    },
+    {
+     "image": "ladder-painting",
+     "audioChoices": true,
+     "choices": [
+      "A man is standing on a ladder.",
+      "A man is washing a car.",
+      "A man is sitting on the floor.",
+      "Two people are painting a door."
+     ],
+     "answer": "A man is standing on a ladder.",
+     "explanation": "Phrases entendues : A man is standing on a ladder. / A man is washing a car. / A man is sitting on the floor. / Two people are painting a door."
+    }
+   ],
+   "listening": true
+  },
+  {
    "id": "p2",
    "section": "listening",
    "jpTitle": "Part 2 — Question-Response",

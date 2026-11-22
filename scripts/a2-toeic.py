@@ -1,5 +1,5 @@
 # Banque de l'examen blanc TOEIC A2 (content/exams/a2-toeic.json), format Listening & Reading abrégé.
-# Écoute 12 questions (parties 2 à 4), phrases et textes à compléter 14 (parties 5 et 6), compréhension écrite 8 (partie 7).
+# Écoute 14 questions (parties 1 à 4, dont 2 photos), phrases et textes à compléter 14 (parties 5 et 6), compréhension écrite 8 (partie 7).
 # Le premier choix est la bonne réponse. Usage : python3 scripts/a2-toeic.py
 from en_toeic import *
 
@@ -8,6 +8,7 @@ EMAIL = 'From: Daniel Price\nTo: Laura Evans\nSubject: Visit to Leeds\n\nHi Laur
 AD = 'SPRING SALE at HOMESTYLE\nAll sofas: 30% off\nChairs and tables: buy two, get one free\nFree delivery on orders over £300\nSale ends Sunday 23 March. Not valid online.'
 
 PARTS = [
+  P1(2, PHOTOS_EASY),
   P2(5, [
     LQ('M|Have you finished the report yet?', ['Not yet, but I’ll send it tonight.', 'Yes, it’s a good report card.', 'I finish at six every day.']),
     LQ('F|How long have you worked here?', ['For about three years.', 'Since three hours ago.', 'It’s a long way.']),
@@ -70,4 +71,4 @@ PARTS = [
     RQ(['Orders over £300.', 'All orders.', 'Sofas only.', 'Online orders.'], passage=AD, text='Which orders get free delivery?'),
   ]),
 ]
-write_bank('A2', PARTS, (12, 14, 8))
+write_bank('A2', PARTS, (14, 14, 8))

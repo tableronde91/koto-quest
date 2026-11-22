@@ -1,9 +1,10 @@
 # Banque de questions de l'examen blanc TOEIC A1 (content/exams/a1-toeic.json), au format du TOEIC Listening & Reading
-# (version abrégée) : parties 2 à 4 (écoute, 10 questions tirées), 5 et 6 (phrases et textes à compléter, 12 questions),
+# (version abrégée) : parties 1 à 4 (écoute, dont 2 photos ; 12 questions tirées), 5 et 6 (phrases et textes à compléter, 12 questions),
 # 7 (compréhension écrite, 6 questions). Notation sur 990 (Listening et Reading de 5 à 495 chacun).
 # Dans chaque question, le premier choix est la bonne réponse (l'ordre est mélangé à chaque examen).
 # Usage : python3 scripts/a1-toeic.py
 import json, os
+from en_toeic import P1, PHOTOS_EASY
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 WHO = {'N': 'Narrateur', 'M': 'Homme', 'F': 'Femme'}
 
@@ -99,11 +100,11 @@ P7 = PART('p7', 'reading', 'Part 7 — Reading Comprehension', 'Compréhension �
   RQ(['Two.', 'One.', 'Three.', 'Four.'], passage='FOR SALE\nSmall flat in Camden: two bedrooms, one kitchen, one bathroom. Near the Underground station. £1,500 a month. Call 020 7946 0321.', text='How many bedrooms are there?'),
 ])
 
-PARTS = [P2, P3, P4, P5, P6, P7]
+PARTS = [P1(2, PHOTOS_EASY), P2, P3, P4, P5, P6, P7]
 lis = sum(p['count'] for p in PARTS if p['section'] == 'listening')
 gra = sum(p['count'] for p in PARTS if p['section'] == 'grammar')
 rea = sum(p['count'] for p in PARTS if p['section'] == 'reading')
-assert (lis, gra, rea) == (10, 12, 6), (lis, gra, rea)
+assert (lis, gra, rea) == (12, 12, 6), (lis, gra, rea)
 bank = {
   'slug': 'a1-toeic',
   'level': 'A1',
@@ -114,7 +115,7 @@ bank = {
 json.dump(bank, open(os.path.join(ROOT, 'content/exams/a1-toeic.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 EN = {
   bank['notice']: 'Questions written by Koto Quest in the format of the TOEIC Listening & Reading test (shortened version: same parts, instructions in English, scored out of 990). They are not official ETS questions.',
-  'Questions-réponses': 'Question-response', 'Conversations': 'Conversations', 'Annonces': 'Talks',
+  'Photos': 'Photographs', 'Questions-réponses': 'Question-response', 'Conversations': 'Conversations', 'Annonces': 'Talks',
   'Phrases à compléter': 'Incomplete sentences', 'Textes à compléter': 'Text completion', 'Compréhension écrite': 'Reading comprehension',
 }
 P_DICT = os.path.join(ROOT, 'content/i18n/en/content.json')

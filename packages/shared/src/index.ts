@@ -748,3 +748,4 @@ export interface ReadingResultDto {
   next: { slug: string; title: ReadingTitle; state: ReadingChapterState } | null;
 }
 
+export * from './toeicScenes';

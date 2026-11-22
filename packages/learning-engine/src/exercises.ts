@@ -48,6 +48,8 @@ export interface Question {
     passage?: string;
     /** Examen : les réponses s'écoutent au lieu de se lire */
     audioChoices?: boolean;
+    /** Examen : illustration de la question (partie 1 du TOEIC, identifiant de TOEIC_SCENES) */
+    image?: string;
     /** Examen : intitulé de l'épreuve (ex. « もんだい１　漢字読み ») */
     part?: string;
     /** Examen : nombre maximal d'écoutes du document */

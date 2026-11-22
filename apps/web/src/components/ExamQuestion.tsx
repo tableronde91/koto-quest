@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
-import type { IssuedQuestionDto } from '@koto/shared';
+import { toeicSceneUri, type IssuedQuestionDto } from '@koto/shared';
 import { scriptText, speak, speakScript, speechSupported, stopSpeech } from '../lib/speech';
 import { Jp } from './ui';
 import { T } from '../i18n';
@@ -83,7 +83,7 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
   const audioChoices = !!d.audioChoices;
   const compact = !audioChoices && q.choices?.every((c) => [...c].length <= 4);
   const grid = audioChoices
-    ? 'grid-cols-1 sm:grid-cols-3'
+    ? q.choices?.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-1 sm:grid-cols-3'
     : compact
       ? q.choices!.length === 3 ? 'grid-cols-3' : q.choices!.length === 2 ? 'grid-cols-2' : 'grid-cols-2 sm:grid-cols-4'
       : q.choices && q.choices.length % 2 === 0 && q.choices.every((c) => [...c].length <= 18) ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1';
@@ -98,6 +98,9 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
 
       {script ? (
         <div className="flex flex-col items-center gap-3 rounded-3xl bg-surface-2 p-5">
+          {d.image && toeicSceneUri(d.image) && (
+            <img src={toeicSceneUri(d.image)!} alt={T("Photo de la question")} data-testid="exam-photo" className="w-full max-w-md rounded-2xl border-2 border-line" />
+          )}
           {legacyListening ? (
             speechSupported() ? <button type="button" className="btn btn-quiet min-h-14 px-6 text-lg" onClick={() => q.audio && speak(q.audio)}>{T("Écouter")}</button> : <Jp text={q.audio ?? ''} furigana={false} className="text-3xl" />
           ) : (
@@ -143,7 +146,8 @@ export function ExamQuestion({ q, value, onChange, number }: { q: IssuedQuestion
                 {audioChoices ? (
                   <span className="flex flex-1 items-center justify-between gap-2">
                     <span className="font-display text-xl">{i + 1}</span>
-                    <button type="button" className="rounded-full bg-surface-2 px-3 py-1.5 text-sm font-bold" onClick={(e) => { e.preventDefault(); speak(c); }} aria-label={T("Écouter la réponse {0}", [i + 1])}>{T("🔊 Écouter")}</button>
+                    {/* Photos (TOEIC) : les phrases ne s'entendent que dans le document, deux fois au plus */}
+                    {!d.image && <button type="button" className="rounded-full bg-surface-2 px-3 py-1.5 text-sm font-bold" onClick={(e) => { e.preventDefault(); speak(c); }} aria-label={T("Écouter la réponse {0}", [i + 1])}>{T("🔊 Écouter")}</button>}
                   </span>
                 ) : (
                   <span lang={jp ? 'ja' : 'fr'} className={jp ? `jp ${compact ? 'text-2xl' : 'text-lg'}` : 'text-lg'}>{c}</span>
