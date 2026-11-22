@@ -55,7 +55,7 @@ PARTS = [
     RQ(['yet', 'already', 'ago', 'since'], passage=EMAIL.replace('badges yet', 'badges ＿'), text='Choose the word for the blank.'),
     RQ(['free', 'cheap', 'expensive', 'paid'], passage=AD.replace('Free delivery', '＿ delivery').replace('get one free', 'get one free'), text='Choose the word for the blank.'),
     RQ(['have been', 'was', 'am', 'went'], passage='Dear Mr Hall,\nThank you for your letter. I ＿ a customer of your bank for ten years, and I have never had a problem until now. Last week, my card stopped working while I was paying at a shop.\nYours sincerely,\nPeter Grant', text='Choose the words for the blank.'),
-    RQ(['while', 'when', 'during', 'since'], passage='Dear Mr Hall,\nThank you for your letter. I have been a customer of your bank for ten years, and I have never had a problem until now. Last week, my card stopped working ＿ I was paying at a shop.\nYours sincerely,\nPeter Grant', text='Choose the word for the blank.'),
+    RQ(['while', 'during', 'for', 'until'], passage='Dear Mr Hall,\nThank you for your letter. I have been a customer of your bank for ten years, and I have never had a problem until now. Last week, my card stopped working ＿ I was paying at a shop.\nYours sincerely,\nPeter Grant', text='Choose the word for the blank.'),
   ]),
   P7(8, [
     RQ(['Use the car park on King Street.', 'Stay at home.', 'Come by train.', 'Park in front of the office.'], passage=MEMO, text='What should staff who work on Saturday do?'),

@@ -482,7 +482,7 @@
       "comply",
       "respect",
       "agree",
-      "conform"
+      "obey"
      ],
      "answer": "comply",
      "explanation": "Réponse : comply",
@@ -525,7 +525,7 @@
      "choices": [
       "subject",
       "object",
-      "according",
+      "objective",
       "due"
      ],
      "answer": "subject",

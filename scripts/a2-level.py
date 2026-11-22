@@ -191,7 +191,7 @@ W3 = WORLD('a2-w3', ('La tour de la fée Morgane', 'Morgan le Fay’s tower'), R
         x('Are you free on Thursday? — Sorry, I’m flying to Dublin on Thursday. How about Friday?', 'Tu es libre jeudi ? — Désolé, je pars en avion pour Dublin jeudi. Et vendredi ?'),
         x('I have an appointment with the director at four.', 'J’ai rendez-vous avec la directrice à 16 heures.'),
       ], [
-        FB(CHOOSE, 'I ＿ the director tomorrow at 10. It’s in my calendar.', ['am meeting', 'meet', 'met'], 'am meeting', ('Rendez-vous fixé : présent progressif.', 'Fixed arrangement: present continuous.'), ('Je vois la directrice demain à 10 h. C’est dans mon agenda.', 'I am meeting the director tomorrow at 10. It’s in my calendar.')),
+        FB(CHOOSE, 'I ＿ the director tomorrow at 10. It’s in my calendar.', ['am meeting', 'have met', 'met'], 'am meeting', ('Rendez-vous fixé : présent progressif.', 'Fixed arrangement: present continuous.'), ('Je vois la directrice demain à 10 h. C’est dans mon agenda.', 'I am meeting the director tomorrow at 10. It’s in my calendar.')),
         FB(CHOOSE, 'The train ＿ at 7.15 tomorrow morning.', ['leaves', 'is leave', 'leaving'], 'leaves', ('Horaire officiel : présent simple.', 'Timetable: present simple.'), ('Le train part demain à 7 h 15.', 'The train leaves at 7.15 tomorrow morning.')),
         DC(ANSWER, [('Tom', 'Are you free on Monday afternoon?')], ('Tom veut te voir lundi après-midi.', 'Tom wants to meet on Monday afternoon.'), ['Sorry, I’m busy. How about Tuesday?', 'Sorry, I’m free busy.', 'Yes, I was free.'], 'Sorry, I’m busy. How about Tuesday?', ('Pour refuser et proposer : How about… ?', 'To decline and suggest: How about…?')),
         TF('I have an appointment with the doctor at five.', ('La personne voit le médecin à 17 h.', 'The person is seeing the doctor at 5 p.m.'), VRAI, ('appointment = rendez-vous.', 'appointment = a fixed meeting.')),
@@ -356,7 +356,7 @@ W5 = WORLD('a2-w5', ('Le gué du kelpie', 'The kelpie’s ford'), REGION,
       ], [
         DC(ANSWER, [('Doctor', 'What’s the matter?')], ('Le médecin te demande ce qui ne va pas.', 'The doctor asks what the problem is.'), ['I’ve got a headache.', 'I’ve got a doctor.', 'It matters a lot.'], 'I’ve got a headache.', ('What’s the matter? → on décrit le symptôme.', 'What’s the matter? → describe the symptom.')),
         FB(COMPLETE, 'My back ＿. I can’t sit for long.', ['hurts', 'hurt me', 'is hurting me pain'], 'hurts', ('Avoir mal : + hurts.', 'Pain: + hurts.'), ('J’ai mal au dos. Je ne peux pas rester assis longtemps.', 'My back hurts. I can’t sit for long.')),
-        FB(COMPLETE, 'Kate isn’t at work. She’s ＿ sick today.', ['off', 'out', 'on'], 'off', ('off sick = en arrêt maladie.', 'off sick = away from work because ill.'), ('Kate n’est pas au travail. Elle est en arrêt maladie aujourd’hui.', 'Kate isn’t at work. She’s off sick today.')),
+        FB(COMPLETE, 'Kate isn’t at work. She’s ＿ sick today.', ['off', 'in', 'on'], 'off', ('off sick = en arrêt maladie.', 'off sick = away from work because ill.'), ('Kate n’est pas au travail. Elle est en arrêt maladie aujourd’hui.', 'Kate isn’t at work. She’s off sick today.')),
         TF('You can buy medicine at the chemist’s.', ('On achète des médicaments à la pharmacie.', 'You buy medicine at the pharmacy.'), VRAI, ('chemist’s = pharmacie.', 'chemist’s = pharmacy.')),
       ]),
   ])])

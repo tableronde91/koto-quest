@@ -484,9 +484,9 @@
     {
      "choices": [
       "while",
-      "when",
       "during",
-      "since"
+      "for",
+      "until"
      ],
      "answer": "while",
      "explanation": "Réponse : while",

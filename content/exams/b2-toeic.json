@@ -447,9 +447,9 @@
     {
      "choices": [
       "should",
-      "would",
-      "must",
-      "can"
+      "are",
+      "have",
+      "being"
      ],
      "answer": "should",
      "explanation": "Réponse : should",
@@ -469,7 +469,7 @@
     {
      "choices": [
       "due",
-      "owing",
+      "since",
       "because",
       "thanks"
      ],

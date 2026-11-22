@@ -1131,7 +1131,7 @@
          "sentence": "I ＿ the director tomorrow at 10. It’s in my calendar.",
          "choices": [
           "am meeting",
-          "meet",
+          "have met",
           "met"
          ],
          "answer": "am meeting",
@@ -2153,7 +2153,7 @@
          "sentence": "Kate isn’t at work. She’s ＿ sick today.",
          "choices": [
           "off",
-          "out",
+          "in",
           "on"
          ],
          "answer": "off",

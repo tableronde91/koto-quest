@@ -396,7 +396,7 @@
          "choices": [
           "balance",
           "whole",
-          "average"
+          "weight"
          ],
          "answer": "balance",
          "explanation": "Tout bien considéré : on balance.",
@@ -526,7 +526,7 @@
          "sentence": "We’ve been working for ten hours. Let’s call it a ＿.",
          "choices": [
           "day",
-          "night",
+          "time",
           "job"
          ],
          "answer": "day",
@@ -2680,7 +2680,7 @@
          "sentence": "We’re over budget. In other ＿, we can’t hire anyone.",
          "choices": [
           "words",
-          "terms",
+          "sentences",
           "ways"
          ],
          "answer": "words",
@@ -2786,7 +2786,7 @@
          "choices": [
           "morale",
           "moral",
-          "mood"
+          "morality"
          ],
          "answer": "morale",
          "explanation": "Moral d’une équipe : morale.",
@@ -3096,15 +3096,15 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "She is ＿ working on a new project.",
+         "sentence": "The website is ＿ under maintenance and will be back online at 6 p.m.",
          "choices": [
           "currently",
-          "actually",
-          "eventually"
+          "eventually",
+          "lately"
          ],
          "answer": "currently",
-         "explanation": "Actuellement : currently.",
-         "translation": "Elle travaille actuellement sur un nouveau projet."
+         "explanation": "Actuellement : currently (actually = en fait).",
+         "translation": "Le site est actuellement en maintenance et sera de nouveau accessible à 18 h."
         }
        ]
       }
@@ -3206,7 +3206,7 @@
          "choices": [
           "subject",
           "object",
-          "submitted"
+          "subjective"
          ],
          "answer": "subject",
          "explanation": "Sous réserve de : subject to.",

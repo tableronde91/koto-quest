@@ -235,8 +235,8 @@ W3 = WORLD('a1-w3', ('Les couloirs d’Avalon & Co.', 'The corridors of Avalon &
         x('Where are my keys? — They’re in your bag, under the folder.', 'Où sont mes clés ? — Elles sont dans ton sac, sous le classeur.', 'Where are my keys? — They’re in your bag, under the folder.'),
         x('The coffee machine is between the kitchen and the meeting room.', 'La machine à café est entre la cuisine et la salle de réunion.', 'The coffee machine is between the kitchen and the meeting room.'),
       ], [
-        FB(CHOOSE, 'The phone is ＿ the desk.', ['on', 'in', 'under'], 'on', ('sur = on.', 'on top of something: on.'), ('Le téléphone est sur le bureau.', 'The phone is on the desk.')),
-        FB(CHOOSE, 'The keys are ＿ my bag.', ['in', 'on', 'between'], 'in', ('dans = in.', 'inside something: in.'), ('Les clés sont dans mon sac.', 'The keys are in my bag.')),
+        FB(CHOOSE, 'The phone is ＿ the desk.', ['on', 'at', 'between'], 'on', ('sur = on.', 'on top of something: on.'), ('Le téléphone est sur le bureau.', 'The phone is on the desk.')),
+        FB(CHOOSE, 'The keys are ＿ my bag.', ['in', 'at', 'between'], 'in', ('dans = in.', 'inside something: in.'), ('Les clés sont dans mon sac.', 'The keys are in my bag.')),
         DC(ANSWER, [('Tom', 'Where’s the meeting room?')], ('Tom cherche la salle de réunion.', 'Tom is looking for the meeting room.'), ['It’s next to the kitchen.', 'It’s ten o’clock.', 'Yes, there is.'], 'It’s next to the kitchen.', ('Where…? → on répond avec un lieu.', 'Where…? → answer with a place.')),
         TF('The cat is under the chair.', ('Le chat est sur la chaise.', 'The cat is on the chair.'), FAUX, ('under = sous.', 'under = below.')),
       ]),
@@ -287,7 +287,7 @@ W4 = WORLD('a1-w4', ('Une journée à Londres', 'A day in London'), REGION,
       ], [
         FB(CHOOSE, 'She ＿ in a bank.', ['works', 'work', 'working'], 'works', ('he / she / it : verbe + -s.', 'he / she / it: verb + -s.'), ('Elle travaille dans une banque.', 'She works in a bank.')),
         FB(CHOOSE, 'He ＿ to the gym on Mondays.', ['goes', 'gos', 'go'], 'goes', ('go → goes (après o : -es).', 'go → goes (-es after o).'), ('Il va à la salle de sport le lundi.', 'He goes to the gym on Mondays.')),
-        FB(CHOOSE, 'I ＿ drink coffee in the evening.', ['never', 'usually', 'always'], 'never', ('jamais = never.', 'not at any time: never.'), ('Je ne bois jamais de café le soir.', 'I never drink coffee in the evening.')),
+        FB(CHOOSE, 'I ＿ drink coffee in the evening because I can’t sleep after it.', ['never', 'usually', 'always'], 'never', ('jamais = never.', 'not at any time: never.'), ('Je ne bois jamais de café le soir, car je ne dors plus ensuite.', 'I never drink coffee in the evening because I can’t sleep after it.')),
         order(('Remets dans l’ordre : « Il habite à Londres. »', 'Put in order: “He lives in London.”'), ['He', 'lives', 'in', 'London.'], ('Sujet + verbe en -s + lieu.', 'Subject + verb with -s + place.')),
       ]),
     L('en-do-does', ('Questions et négations : do, does', 'Questions and negatives: do, does'), ('Poser des questions et dire non au présent simple.', 'Ask questions and make negatives in the present simple.'), 10, [

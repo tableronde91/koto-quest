@@ -1292,8 +1292,8 @@
          "sentence": "The phone is ＿ the desk.",
          "choices": [
           "on",
-          "in",
-          "under"
+          "at",
+          "between"
          ],
          "answer": "on",
          "explanation": "sur = on.",
@@ -1305,7 +1305,7 @@
          "sentence": "The keys are ＿ my bag.",
          "choices": [
           "in",
-          "on",
+          "at",
           "between"
          ],
          "answer": "in",
@@ -1616,7 +1616,7 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "I ＿ drink coffee in the evening.",
+         "sentence": "I ＿ drink coffee in the evening because I can’t sleep after it.",
          "choices": [
           "never",
           "usually",
@@ -1624,7 +1624,7 @@
          ],
          "answer": "never",
          "explanation": "jamais = never.",
-         "translation": "Je ne bois jamais de café le soir."
+         "translation": "Je ne bois jamais de café le soir, car je ne dors plus ensuite."
         },
         {
          "type": "sentence_order",

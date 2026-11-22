@@ -785,7 +785,7 @@
          "choices": [
           "eventually",
           "possibly",
-          "actually"
+          "lately"
          ],
          "answer": "eventually",
          "explanation": "Au bout du compte : eventually.",
@@ -1347,7 +1347,7 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "“I’m tired.” → She said she ＿ tired.",
+         "sentence": "“I’m tired,” she said yesterday. → She said she ＿ tired.",
          "choices": [
           "was",
           "is",
@@ -1360,7 +1360,7 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "“I will call you.” → He said he ＿ call me.",
+         "sentence": "“I will call you,” he said on Monday. → He said he ＿ call me.",
          "choices": [
           "would",
           "will",
@@ -1386,7 +1386,7 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "“I can help.” → He said he ＿ help.",
+         "sentence": "“I can help,” he said last week. → He said he ＿ help.",
          "choices": [
           "could",
           "can",
@@ -2342,7 +2342,7 @@
          "choices": [
           "should",
           "must",
-          "might"
+          "can"
          ],
          "answer": "should",
          "explanation": "Reproche : should have.",

@@ -370,7 +370,7 @@
          "sentence": "The project is two weeks behind ＿.",
          "choices": [
           "schedule",
-          "time",
+          "date",
           "agenda"
          ],
          "answer": "schedule",
@@ -644,15 +644,15 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "Applicants ＿ to apply should send a CV.",
+         "sentence": "Candidates ＿ to attend the interview should confirm by Friday.",
          "choices": [
           "wishing",
           "wished",
           "wish"
          ],
          "answer": "wishing",
-         "explanation": "Applicants wishing to… = qui souhaitent.",
-         "translation": "Les candidats souhaitant postuler doivent envoyer un CV."
+         "explanation": "Candidates wishing to… = qui souhaitent.",
+         "translation": "Les candidats souhaitant se présenter à l’entretien doivent confirmer d’ici vendredi."
         },
         {
          "type": "true_false",
@@ -766,8 +766,8 @@
          "sentence": "As you can see on this ＿, costs have fallen.",
          "choices": [
           "slide",
-          "page",
-          "board"
+          "deck",
+          "sliding"
          ],
          "answer": "slide",
          "explanation": "Diapositive = slide.",
@@ -1053,15 +1053,15 @@
         {
          "type": "fill_blank",
          "prompt": "Choisis la forme qui convient.",
-         "sentence": "We stopped ＿ some petrol on the way.",
+         "sentence": "We were exhausted, so we stopped ＿ a coffee at a service station.",
          "choices": [
-          "to buy",
-          "buying",
-          "buy"
+          "to have",
+          "having",
+          "have"
          ],
-         "answer": "to buy",
-         "explanation": "S’arrêter pour faire : stop to.",
-         "translation": "Nous nous sommes arrêtés pour prendre de l’essence en route."
+         "answer": "to have",
+         "explanation": "S’arrêter pour faire : stop to (stop having = ne plus en prendre).",
+         "translation": "Nous étions épuisés, alors nous nous sommes arrêtés prendre un café sur une aire d’autoroute."
         },
         {
          "type": "dialogue_choice",
@@ -1176,7 +1176,7 @@
          "choices": [
           "profit",
           "benefit",
-          "gain"
+          "winning"
          ],
          "answer": "profit",
          "explanation": "Bénéfice d’une entreprise : profit.",
@@ -1724,7 +1724,7 @@
          "choices": [
           "will be having",
           "will have had",
-          "have"
+          "had"
          ],
          "answer": "will be having",
          "explanation": "À 20 h, l’action sera en cours.",
@@ -1841,8 +1841,8 @@
          "sentence": "Hurry up! The train is ＿ to leave.",
          "choices": [
           "about",
-          "due",
-          "going"
+          "close",
+          "near"
          ],
          "answer": "about",
          "explanation": "Sur le point de : be about to.",
@@ -1854,7 +1854,7 @@
          "sentence": "The flight is ＿ to land at 10.40.",
          "choices": [
           "due",
-          "about",
+          "soon",
           "ready"
          ],
          "answer": "due",

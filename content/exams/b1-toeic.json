@@ -405,7 +405,7 @@
      "choices": [
       "must",
       "can’t",
-      "should",
+      "mustn’t",
       "would"
      ],
      "answer": "must",
@@ -505,8 +505,8 @@
     {
      "choices": [
       "grateful",
-      "thankful",
-      "happy",
+      "thanking",
+      "pleasant",
       "glad of"
      ],
      "answer": "grateful",

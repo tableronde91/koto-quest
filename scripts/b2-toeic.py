@@ -52,9 +52,9 @@ PARTS = [
     RQ(['by', 'to', 'at', 'of'], jp='Production costs rose ＿ 3% compared with last year.'),
     RQ(['Few', 'Little', 'A little', 'Much'], jp='＿ customers complained about the new design, so we will keep it.'),
     RQ(['did we', 'we did', 'we have', 'have we'], jp='Not only ＿ exceed our sales target, but we also reduced costs.'),
-    RQ(['should', 'would', 'must', 'can'], jp='Under no circumstances ＿ visitors enter the laboratory without a badge.'),
+    RQ(['should', 'are', 'have', 'being'], jp='Under no circumstances ＿ visitors enter the laboratory without a badge.'),
     RQ(['What', 'That', 'It', 'Which'], jp='＿ our clients value most is reliability.'),
-    RQ(['due', 'owing', 'because', 'thanks'], jp='The flight was diverted ＿ to fog at Cardiff airport.'),
+    RQ(['due', 'since', 'because', 'thanks'], jp='The flight was diverted ＿ to fog at Cardiff airport.'),
     RQ(['unable', 'impossible', 'incapable', 'not able of'], jp='Unfortunately, we are ＿ to offer refunds on sale items.'),
   ]),
   P6(5, [
