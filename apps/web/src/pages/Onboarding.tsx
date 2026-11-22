@@ -46,7 +46,7 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
   ],
   en: [
     { value: 'A1', label: T("A1 — découverte (TOEIC 120+)"), ready: true },
-    { value: 'A2', label: T("A2 — survie (TOEIC 225+)"), ready: false },
+    { value: 'A2', label: T("A2 — survie (TOEIC 225+)"), ready: true },
     { value: 'B1', label: T("B1 — seuil (TOEIC 550+)"), ready: false },
     { value: 'B2', label: T("B2 — avancé (TOEIC 785+)"), ready: false },
     { value: 'C1', label: T("C1 — autonome (TOEIC 945+)"), ready: false },

@@ -45,7 +45,10 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'TOPIK6', hint: 'Maîtrise' },
   ],
   // Anglais : seuls les niveaux dont le parcours est prêt (A1 pour l'instant)
-  en: [{ code: 'A1', hint: 'Découverte · TOEIC 120+' }],
+  en: [
+    { code: 'A1', hint: 'Découverte · TOEIC 120+' },
+    { code: 'A2', hint: 'Survie · TOEIC 225+' },
+  ],
 };
 
 function Choice({ selected, label, hint, glyph, onPress, testID }: { selected: boolean; label: string; hint?: string; glyph?: string; onPress: () => void; testID?: string }) {

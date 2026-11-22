@@ -161,6 +161,83 @@ function SwordInStone({ glow = false, ...p }: P & { glow?: boolean }) {
   );
 }
 
+
+/** Train à vapeur sur ses rails. */
+function Train({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-26 0 H26" stroke="#4A3424" strokeWidth="1.5" />
+      <rect x="-24" y="-12" width="16" height="10" rx="1" fill={GREEN} /><rect x="-6" y="-12" width="16" height="10" rx="1" fill={GREEN} />
+      <rect x="12" y="-14" width="12" height="12" rx="2" fill="#1F2433" /><rect x="15" y="-20" width="4" height="7" fill="#1F2433" />
+      {[-20, -12, -2, 6, 16, 22].map((x) => <circle key={x} cx={x} cy="-1" r="2" fill="#1F2433" />)}
+      {[-21, -3].map((x) => <rect key={x} x={x} y="-10" width="10" height="4" fill={WINDOW} />)}
+    </g>
+  );
+}
+
+/** Étal de marché sous une toile rayée. */
+function MarketStall({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-16 -18 H16 L14 -12 H-14Z" fill={RED} /><path d="M-8 -18 L-7 -12 M0 -18 V-12 M8 -18 L7 -12" stroke="#FFFFFF" strokeWidth="2" />
+      <path d="M-14 -12 V0 M14 -12 V0" stroke="#6A4428" strokeWidth="1.4" />
+      <rect x="-14" y="-6" width="28" height="4" fill="#A8794A" />
+      {[-10, -4, 2, 8].map((x, i) => <circle key={x} cx={x} cy="-8" r="2" fill={['#E2709A', GOLD, '#7FB84E', '#E2483B'][i]} />)}
+    </g>
+  );
+}
+
+/** Tour de la fée, fenêtre éclairée. */
+function Tower({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-7" y="-36" width="14" height="36" fill={STONE_DARK} />
+      <path d="M-9 -36 L0 -52 L9 -36Z" fill="#5A3E7A" />
+      <rect x="-2" y="-28" width="4" height="6" rx="2" fill="#E9C9FF" />
+    </g>
+  );
+}
+
+/** Arbre de forêt sombre. */
+function Oak({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 0 V-12" stroke="#5A3E28" strokeWidth="3" />
+      <circle cx="0" cy="-18" r="10" fill="#3E6B3A" /><circle cx="-7" cy="-14" r="6" fill="#4E7F46" /><circle cx="7" cy="-14" r="6" fill="#2E5A2A" />
+    </g>
+  );
+}
+
+/** Champignons et cercle de fées. */
+function FairyRing({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      {[-14, -6, 4, 12].map((x, i) => <g key={x} transform={`translate(${x} ${i % 2 ? 1 : -1})`}><rect x="-1" y="-4" width="2" height="4" fill="#F6F3EC" /><path d="M-4 -4 Q0 -10 4 -4Z" fill={i % 2 ? RED : '#E2709A'} /></g>)}
+      <circle cx="-2" cy="-14" r="1.2" fill={GOLD} /><circle cx="6" cy="-18" r="1" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Pont de pierre en arche. */
+function Bridge({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-24 0 V-8 Q0 -22 24 -8 V0 H14 Q0 -12 -14 0Z" fill={STONE} stroke={STONE_DARK} strokeWidth="1" />
+    </g>
+  );
+}
+
+/** Table ronde et chaises. */
+function RoundTable({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-6" rx="20" ry="7" fill="#8A5A34" stroke="#5A3A20" strokeWidth="1" />
+      {[-18, -6, 6, 18].map((x) => <rect key={x} x={x - 2} y="-16" width="4" height="8" fill="#5A3A20" />)}
+      <path d="M0 -6 V0" stroke="#5A3A20" strokeWidth="3" />
+    </g>
+  );
+}
+
 export const ENGLISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Le badge disparu : la tour de l'horloge et l'immeuble d'Avalon & Co.
   'a1-w1': () => (
@@ -224,4 +301,14 @@ export const ENGLISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   ),
   // L'épée dans le rocher.
   'a1-final': () => <SwordInStone x={0} y={14} s={1.3} glow />,
+  // ───── A2 : terres de Logres ─────
+  'a2-w1': () => (<><Train x={0} y={14} /><Castle x={-30} y={4} s={0.6} /></>),
+  'a2-w2': () => (<><MarketStall x={-14} y={14} /><MarketStall x={16} y={12} s={0.8} /></>),
+  'a2-w3': () => (<><Tower x={0} y={14} /><Wisp x={18} y={-14} /></>),
+  'a2-w4': () => (<><Oak x={-20} y={14} /><Oak x={4} y={12} s={1.2} /><Oak x={24} y={14} s={0.9} /></>),
+  'a2-w5': () => (<><Bridge x={0} y={14} /><Castle x={-26} y={4} s={0.6} /></>),
+  'a2-w6': () => (<><Oak x={-14} y={14} s={1.3} /><Oak x={14} y={12} /></>),
+  'a2-w7': () => (<><FairyRing x={0} y={14} /><Wisp x={-18} y={-4} /><Wisp x={20} y={-8} /></>),
+  'a2-w8': () => (<><Bridge x={0} y={14} /><Helm x={-24} y={8} s={0.8} /></>),
+  'a2-final': () => (<><RoundTable x={0} y={14} s={1.2} /><Castle x={0} y={-6} s={0.7} /></>),
 };

@@ -17651,6 +17651,646 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "jack-beanstalk",
+   "glyph": "J",
+   "level": "A2",
+   "color": "#4E8F3A",
+   "title": {
+    "jp": "Jack and the Beanstalk",
+    "fr": "Jack et le haricot magique",
+    "en": "Jack and the Beanstalk"
+   },
+   "summary": {
+    "fr": "Jack échange la vache de la famille contre cinq haricots. Sa mère est furieuse… jusqu’au lendemain matin.",
+    "en": "Jack swaps the family cow for five beans. His mother is furious… until the next morning."
+   },
+   "chapters": [
+    {
+     "slug": "jack-1",
+     "title": {
+      "jp": "Five magic beans",
+      "fr": "Cinq haricots magiques",
+      "en": "Five magic beans"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Jack and his mother were very poor. They had nothing left except an old cow.",
+        "fr": "Jack et sa mère étaient très pauvres. Il ne leur restait qu’une vieille vache.",
+        "en": "Jack and his mother were very poor. They had nothing left except an old cow.",
+        "kana": "Jack and his mother were very poor. They had nothing left except an old cow."
+       },
+       {
+        "jp": "“Take the cow to the market and sell it,” his mother said. “We need the money.”",
+        "fr": "« Emmène la vache au marché et vends-la, dit sa mère. Nous avons besoin de cet argent. »",
+        "en": "“Take the cow to the market and sell it,” his mother said. “We need the money.”",
+        "kana": "“Take the cow to the market and sell it,” his mother said. “We need the money.”"
+       }
+      ],
+      [
+       {
+        "jp": "While Jack was walking to town, he met a strange old man.",
+        "fr": "Pendant que Jack marchait vers la ville, il rencontra un vieil homme étrange.",
+        "en": "While Jack was walking to town, he met a strange old man.",
+        "kana": "While Jack was walking to town, he met a strange old man."
+       },
+       {
+        "jp": "“I’ll give you five magic beans for your cow,” the man said. Jack thought it was a great deal.",
+        "fr": "« Je te donne cinq haricots magiques pour ta vache », dit l’homme. Jack pensa que c’était une excellente affaire.",
+        "en": "“I’ll give you five magic beans for your cow,” the man said. Jack thought it was a great deal.",
+        "kana": "“I’ll give you five magic beans for your cow,” the man said. Jack thought it was a great deal."
+       },
+       {
+        "jp": "When he got home, his mother was furious. She threw the beans out of the window.",
+        "fr": "Quand il rentra, sa mère était furieuse. Elle jeta les haricots par la fenêtre.",
+        "en": "When he got home, his mother was furious. She threw the beans out of the window.",
+        "kana": "When he got home, his mother was furious. She threw the beans out of the window."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "poor",
+       "reading": "/pɔː/",
+       "fr": "pauvre",
+       "en": "poor"
+      },
+      {
+       "jp": "cow",
+       "reading": "/kaʊ/",
+       "fr": "vache",
+       "en": "cow"
+      },
+      {
+       "jp": "market",
+       "reading": "/ˈmɑːkɪt/",
+       "fr": "marché",
+       "en": "market"
+      },
+      {
+       "jp": "beans",
+       "reading": "/biːnz/",
+       "fr": "haricots",
+       "en": "beans"
+      },
+      {
+       "jp": "strange",
+       "reading": "/streɪndʒ/",
+       "fr": "étrange",
+       "en": "strange"
+      },
+      {
+       "jp": "threw",
+       "reading": "/θruː/",
+       "fr": "jeta (passé de throw)",
+       "en": "threw"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Jack va-t-il au marché ?",
+        "en": "Why does Jack go to the market?"
+       },
+       "choices": [
+        {
+         "fr": "Pour acheter des haricots",
+         "en": "To buy beans"
+        },
+        {
+         "fr": "Pour vendre la vache",
+         "en": "To sell the cow"
+        },
+        {
+         "fr": "Pour voir un vieil homme",
+         "en": "To see an old man"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que fait la mère de Jack des haricots ?",
+        "en": "What does Jack’s mother do with the beans?"
+       },
+       "choices": [
+        {
+         "fr": "Elle les cuisine",
+         "en": "She cooks them"
+        },
+        {
+         "fr": "Elle les jette par la fenêtre",
+         "en": "She throws them out of the window"
+        },
+        {
+         "fr": "Elle les vend",
+         "en": "She sells them"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "jack-2",
+     "title": {
+      "jp": "The giant’s castle",
+      "fr": "Le château du géant",
+      "en": "The giant’s castle"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "The next morning, an enormous beanstalk was growing outside the window. It went up into the clouds!",
+        "fr": "Le lendemain matin, un énorme haricot géant poussait devant la fenêtre. Il montait jusqu’aux nuages !",
+        "en": "The next morning, an enormous beanstalk was growing outside the window. It went up into the clouds!",
+        "kana": "The next morning, an enormous beanstalk was growing outside the window. It went up into the clouds!"
+       },
+       {
+        "jp": "Jack climbed up and found a huge castle. A giant lived there with his wife.",
+        "fr": "Jack grimpa et découvrit un immense château. Un géant y vivait avec sa femme.",
+        "en": "Jack climbed up and found a huge castle. A giant lived there with his wife.",
+        "kana": "Jack climbed up and found a huge castle. A giant lived there with his wife."
+       }
+      ],
+      [
+       {
+        "jp": "“Fee-fi-fo-fum!” shouted the giant. “I can smell a boy!”",
+        "fr": "« Fee-fi-fo-fum ! cria le géant. Je sens l’odeur d’un garçon ! »",
+        "en": "“Fee-fi-fo-fum!” shouted the giant. “I can smell a boy!”",
+        "kana": "“Fee-fi-fo-fum!” shouted the giant. “I can smell a boy!”"
+       },
+       {
+        "jp": "Jack hid in the kitchen. While the giant was sleeping, Jack took a bag of gold coins and ran away.",
+        "fr": "Jack se cacha dans la cuisine. Pendant que le géant dormait, Jack prit un sac de pièces d’or et s’enfuit.",
+        "en": "Jack hid in the kitchen. While the giant was sleeping, Jack took a bag of gold coins and ran away.",
+        "kana": "Jack hid in the kitchen. While the giant was sleeping, Jack took a bag of gold coins and ran away."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "beanstalk",
+       "reading": "/ˈbiːnstɔːk/",
+       "fr": "tige de haricot",
+       "en": "beanstalk"
+      },
+      {
+       "jp": "clouds",
+       "reading": "/klaʊdz/",
+       "fr": "nuages",
+       "en": "clouds"
+      },
+      {
+       "jp": "climbed",
+       "reading": "/klaɪmd/",
+       "fr": "grimpa",
+       "en": "climbed"
+      },
+      {
+       "jp": "huge",
+       "reading": "/hjuːdʒ/",
+       "fr": "immense",
+       "en": "huge"
+      },
+      {
+       "jp": "smell",
+       "reading": "/smel/",
+       "fr": "sentir (une odeur)",
+       "en": "smell"
+      },
+      {
+       "jp": "hid",
+       "reading": "/hɪd/",
+       "fr": "se cacha (passé de hide)",
+       "en": "hid"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Jusqu’où monte le haricot ?",
+        "en": "How high does the beanstalk go?"
+       },
+       "choices": [
+        {
+         "fr": "Jusqu’au toit",
+         "en": "To the roof"
+        },
+        {
+         "fr": "Jusqu’aux nuages",
+         "en": "Up into the clouds"
+        },
+        {
+         "fr": "Jusqu’à la forêt",
+         "en": "To the forest"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que prend Jack au géant ?",
+        "en": "What does Jack take from the giant?"
+       },
+       "choices": [
+        {
+         "fr": "Un sac de pièces d’or",
+         "en": "A bag of gold coins"
+        },
+        {
+         "fr": "Une poule",
+         "en": "A hen"
+        },
+        {
+         "fr": "Une harpe",
+         "en": "A harp"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "jack-3",
+     "title": {
+      "jp": "The golden hen",
+      "fr": "La poule aux œufs d’or",
+      "en": "The golden hen"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Jack went up the beanstalk again. This time, he took the giant’s hen, which laid golden eggs.",
+        "fr": "Jack remonta le long du haricot. Cette fois, il prit la poule du géant, qui pondait des œufs d’or.",
+        "en": "Jack went up the beanstalk again. This time, he took the giant’s hen, which laid golden eggs.",
+        "kana": "Jack went up the beanstalk again. This time, he took the giant’s hen, which laid golden eggs."
+       },
+       {
+        "jp": "But the third time, the giant woke up and ran after him.",
+        "fr": "Mais la troisième fois, le géant se réveilla et le poursuivit.",
+        "en": "But the third time, the giant woke up and ran after him.",
+        "kana": "But the third time, the giant woke up and ran after him."
+       }
+      ],
+      [
+       {
+        "jp": "Jack climbed down faster than ever. “Mother, bring me the axe!” he shouted.",
+        "fr": "Jack descendit plus vite que jamais. « Maman, apporte-moi la hache ! » cria-t-il.",
+        "en": "Jack climbed down faster than ever. “Mother, bring me the axe!” he shouted.",
+        "kana": "Jack climbed down faster than ever. “Mother, bring me the axe!” he shouted."
+       },
+       {
+        "jp": "He cut the beanstalk, and the giant fell. Jack and his mother were never poor again.",
+        "fr": "Il coupa le haricot, et le géant tomba. Jack et sa mère ne furent plus jamais pauvres.",
+        "en": "He cut the beanstalk, and the giant fell. Jack and his mother were never poor again.",
+        "kana": "He cut the beanstalk, and the giant fell. Jack and his mother were never poor again."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "hen",
+       "reading": "/hen/",
+       "fr": "poule",
+       "en": "hen"
+      },
+      {
+       "jp": "laid",
+       "reading": "/leɪd/",
+       "fr": "pondit (passé de lay)",
+       "en": "laid"
+      },
+      {
+       "jp": "golden",
+       "reading": "/ˈɡəʊldən/",
+       "fr": "en or, doré",
+       "en": "golden"
+      },
+      {
+       "jp": "woke up",
+       "reading": "/wəʊk ʌp/",
+       "fr": "se réveilla",
+       "en": "woke up"
+      },
+      {
+       "jp": "axe",
+       "reading": "/æks/",
+       "fr": "hache",
+       "en": "axe"
+      },
+      {
+       "jp": "fell",
+       "reading": "/fel/",
+       "fr": "tomba (passé de fall)",
+       "en": "fell"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait la poule du géant ?",
+        "en": "What does the giant’s hen do?"
+       },
+       "choices": [
+        {
+         "fr": "Elle chante",
+         "en": "It sings"
+        },
+        {
+         "fr": "Elle pond des œufs d’or",
+         "en": "It lays golden eggs"
+        },
+        {
+         "fr": "Elle parle",
+         "en": "It talks"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Comment Jack arrête-t-il le géant ?",
+        "en": "How does Jack stop the giant?"
+       },
+       "choices": [
+        {
+         "fr": "Il coupe le haricot",
+         "en": "He cuts the beanstalk"
+        },
+        {
+         "fr": "Il le cache",
+         "en": "He hides him"
+        },
+        {
+         "fr": "Il lui donne de l’or",
+         "en": "He gives him gold"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "king-canute",
+   "glyph": "C",
+   "level": "A2",
+   "color": "#3F6F9F",
+   "title": {
+    "jp": "King Canute and the Waves",
+    "fr": "Le roi Knut et les vagues",
+    "en": "King Canute and the Waves"
+   },
+   "summary": {
+    "fr": "Ses courtisans le disent plus puissant que la mer. Le roi Knut décide de leur donner une leçon sur la plage.",
+    "en": "His courtiers say he is more powerful than the sea. King Canute decides to teach them a lesson on the beach."
+   },
+   "chapters": [
+    {
+     "slug": "canute-1",
+     "title": {
+      "jp": "The most powerful king",
+      "fr": "Le roi le plus puissant",
+      "en": "The most powerful king"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "A thousand years ago, Canute was the king of England, Denmark and Norway.",
+        "fr": "Il y a mille ans, Knut était roi d’Angleterre, du Danemark et de Norvège.",
+        "en": "A thousand years ago, Canute was the king of England, Denmark and Norway.",
+        "kana": "A thousand years ago, Canute was the king of England, Denmark and Norway."
+       },
+       {
+        "jp": "His courtiers always told him how great he was. “You are the most powerful man in the world!” they said.",
+        "fr": "Ses courtisans lui répétaient sans cesse à quel point il était grand. « Vous êtes l’homme le plus puissant du monde ! » disaient-ils.",
+        "en": "His courtiers always told him how great he was. “You are the most powerful man in the world!” they said.",
+        "kana": "His courtiers always told him how great he was. “You are the most powerful man in the world!” they said."
+       }
+      ],
+      [
+       {
+        "jp": "“Even the sea will obey you,” said one courtier.",
+        "fr": "« Même la mer vous obéira », dit un courtisan.",
+        "en": "“Even the sea will obey you,” said one courtier.",
+        "kana": "“Even the sea will obey you,” said one courtier."
+       },
+       {
+        "jp": "Canute was tired of these silly words. He decided to show them the truth.",
+        "fr": "Knut était las de ces paroles stupides. Il décida de leur montrer la vérité.",
+        "en": "Canute was tired of these silly words. He decided to show them the truth.",
+        "kana": "Canute was tired of these silly words. He decided to show them the truth."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "thousand",
+       "reading": "/ˈθaʊznd/",
+       "fr": "mille",
+       "en": "thousand"
+      },
+      {
+       "jp": "courtiers",
+       "reading": "/ˈkɔːtiəz/",
+       "fr": "courtisans",
+       "en": "courtiers"
+      },
+      {
+       "jp": "powerful",
+       "reading": "/ˈpaʊəfl/",
+       "fr": "puissant",
+       "en": "powerful"
+      },
+      {
+       "jp": "obey",
+       "reading": "/əˈbeɪ/",
+       "fr": "obéir",
+       "en": "obey"
+      },
+      {
+       "jp": "silly",
+       "reading": "/ˈsɪli/",
+       "fr": "stupide, idiot",
+       "en": "silly"
+      },
+      {
+       "jp": "truth",
+       "reading": "/truːθ/",
+       "fr": "vérité",
+       "en": "truth"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que disent les courtisans au roi ?",
+        "en": "What do the courtiers tell the king?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il est le plus puissant du monde",
+         "en": "That he is the most powerful in the world"
+        },
+        {
+         "fr": "Qu’il doit partir",
+         "en": "That he must leave"
+        },
+        {
+         "fr": "Qu’il est malade",
+         "en": "That he is ill"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que pense Knut de ces paroles ?",
+        "en": "What does Canute think of these words?"
+       },
+       "choices": [
+        {
+         "fr": "Il les trouve vraies",
+         "en": "He thinks they are true"
+        },
+        {
+         "fr": "Il les trouve stupides",
+         "en": "He thinks they are silly"
+        },
+        {
+         "fr": "Il ne les entend pas",
+         "en": "He does not hear them"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "canute-2",
+     "title": {
+      "jp": "On the beach",
+      "fr": "Sur la plage",
+      "en": "On the beach"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Canute took his courtiers to the beach and sat on his throne near the water.",
+        "fr": "Knut emmena ses courtisans à la plage et s’assit sur son trône près de l’eau.",
+        "en": "Canute took his courtiers to the beach and sat on his throne near the water.",
+        "kana": "Canute took his courtiers to the beach and sat on his throne near the water."
+       },
+       {
+        "jp": "“Waves, I order you to stop!” he shouted. But the waves kept coming.",
+        "fr": "« Vagues, je vous ordonne de vous arrêter ! » cria-t-il. Mais les vagues continuèrent d’avancer.",
+        "en": "“Waves, I order you to stop!” he shouted. But the waves kept coming.",
+        "kana": "“Waves, I order you to stop!” he shouted. But the waves kept coming."
+       }
+      ],
+      [
+       {
+        "jp": "Soon the king’s feet were wet, and the courtiers looked very uncomfortable.",
+        "fr": "Bientôt, le roi eut les pieds mouillés, et les courtisans semblaient très mal à l’aise.",
+        "en": "Soon the king’s feet were wet, and the courtiers looked very uncomfortable.",
+        "kana": "Soon the king’s feet were wet, and the courtiers looked very uncomfortable."
+       },
+       {
+        "jp": "“You see?” said Canute. “A king is not stronger than the sea. Remember that.”",
+        "fr": "« Vous voyez ? dit Knut. Un roi n’est pas plus fort que la mer. Souvenez-vous-en. »",
+        "en": "“You see?” said Canute. “A king is not stronger than the sea. Remember that.”",
+        "kana": "“You see?” said Canute. “A king is not stronger than the sea. Remember that.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "beach",
+       "reading": "/biːtʃ/",
+       "fr": "plage",
+       "en": "beach"
+      },
+      {
+       "jp": "throne",
+       "reading": "/θrəʊn/",
+       "fr": "trône",
+       "en": "throne"
+      },
+      {
+       "jp": "waves",
+       "reading": "/weɪvz/",
+       "fr": "vagues",
+       "en": "waves"
+      },
+      {
+       "jp": "order",
+       "reading": "/ˈɔːdə/",
+       "fr": "ordonner",
+       "en": "order"
+      },
+      {
+       "jp": "wet",
+       "reading": "/wet/",
+       "fr": "mouillé",
+       "en": "wet"
+      },
+      {
+       "jp": "stronger",
+       "reading": "/ˈstrɒŋɡə/",
+       "fr": "plus fort",
+       "en": "stronger"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait le roi sur la plage ?",
+        "en": "What does the king do on the beach?"
+       },
+       "choices": [
+        {
+         "fr": "Il nage",
+         "en": "He swims"
+        },
+        {
+         "fr": "Il ordonne aux vagues de s’arrêter",
+         "en": "He orders the waves to stop"
+        },
+        {
+         "fr": "Il pêche",
+         "en": "He goes fishing"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Quelle leçon donne le roi ?",
+        "en": "What lesson does the king give?"
+       },
+       "choices": [
+        {
+         "fr": "Un roi n’est pas plus fort que la mer",
+         "en": "A king is not stronger than the sea"
+        },
+        {
+         "fr": "La mer obéit au roi",
+         "en": "The sea obeys the king"
+        },
+        {
+         "fr": "Il faut aimer la plage",
+         "en": "You must love the beach"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

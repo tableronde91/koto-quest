@@ -182,7 +182,99 @@ SWORD = STORY('sword-in-the-stone', 'A', 'A1', '#2E6B4F', ('The Sword in the Sto
   ]),
 ])
 
-EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD]
+
+# ═════════════════════════ A2 : Jack and the Beanstalk ═════════════════════════
+JACK = STORY('jack-beanstalk', 'J', 'A2', '#4E8F3A', ('Jack and the Beanstalk', 'Jack et le haricot magique'),
+  ('Jack échange la vache de la famille contre cinq haricots. Sa mère est furieuse… jusqu’au lendemain matin.', 'Jack swaps the family cow for five beans. His mother is furious… until the next morning.'), [
+  CH('jack-1', ('Five magic beans', 'Cinq haricots magiques'), [
+    [S('Jack and his mother were very poor. They had nothing left except an old cow.', 'Jack et sa mère étaient très pauvres. Il ne leur restait qu’une vieille vache.'),
+     S('“Take the cow to the market and sell it,” his mother said. “We need the money.”', '« Emmène la vache au marché et vends-la, dit sa mère. Nous avons besoin de cet argent. »')],
+    [S('While Jack was walking to town, he met a strange old man.', 'Pendant que Jack marchait vers la ville, il rencontra un vieil homme étrange.'),
+     S('“I’ll give you five magic beans for your cow,” the man said. Jack thought it was a great deal.', '« Je te donne cinq haricots magiques pour ta vache », dit l’homme. Jack pensa que c’était une excellente affaire.'),
+     S('When he got home, his mother was furious. She threw the beans out of the window.', 'Quand il rentra, sa mère était furieuse. Elle jeta les haricots par la fenêtre.')],
+  ], [
+    W('poor', '/pɔː/', 'pauvre', 'poor'),
+    W('cow', '/kaʊ/', 'vache', 'cow'),
+    W('market', '/ˈmɑːkɪt/', 'marché', 'market'),
+    W('beans', '/biːnz/', 'haricots', 'beans'),
+    W('strange', '/streɪndʒ/', 'étrange', 'strange'),
+    W('threw', '/θruː/', 'jeta (passé de throw)', 'threw'),
+  ], [
+    Q(('Pourquoi Jack va-t-il au marché ?', 'Why does Jack go to the market?'), [('Pour acheter des haricots', 'To buy beans'), ('Pour vendre la vache', 'To sell the cow'), ('Pour voir un vieil homme', 'To see an old man')], 1),
+    Q(('Que fait la mère de Jack des haricots ?', 'What does Jack’s mother do with the beans?'), [('Elle les cuisine', 'She cooks them'), ('Elle les jette par la fenêtre', 'She throws them out of the window'), ('Elle les vend', 'She sells them')], 1),
+  ]),
+  CH('jack-2', ('The giant’s castle', 'Le château du géant'), [
+    [S('The next morning, an enormous beanstalk was growing outside the window. It went up into the clouds!', 'Le lendemain matin, un énorme haricot géant poussait devant la fenêtre. Il montait jusqu’aux nuages !'),
+     S('Jack climbed up and found a huge castle. A giant lived there with his wife.', 'Jack grimpa et découvrit un immense château. Un géant y vivait avec sa femme.')],
+    [S('“Fee-fi-fo-fum!” shouted the giant. “I can smell a boy!”', '« Fee-fi-fo-fum ! cria le géant. Je sens l’odeur d’un garçon ! »'),
+     S('Jack hid in the kitchen. While the giant was sleeping, Jack took a bag of gold coins and ran away.', 'Jack se cacha dans la cuisine. Pendant que le géant dormait, Jack prit un sac de pièces d’or et s’enfuit.')],
+  ], [
+    W('beanstalk', '/ˈbiːnstɔːk/', 'tige de haricot', 'beanstalk'),
+    W('clouds', '/klaʊdz/', 'nuages', 'clouds'),
+    W('climbed', '/klaɪmd/', 'grimpa', 'climbed'),
+    W('huge', '/hjuːdʒ/', 'immense', 'huge'),
+    W('smell', '/smel/', 'sentir (une odeur)', 'smell'),
+    W('hid', '/hɪd/', 'se cacha (passé de hide)', 'hid'),
+  ], [
+    Q(('Jusqu’où monte le haricot ?', 'How high does the beanstalk go?'), [('Jusqu’au toit', 'To the roof'), ('Jusqu’aux nuages', 'Up into the clouds'), ('Jusqu’à la forêt', 'To the forest')], 1),
+    Q(('Que prend Jack au géant ?', 'What does Jack take from the giant?'), [('Un sac de pièces d’or', 'A bag of gold coins'), ('Une poule', 'A hen'), ('Une harpe', 'A harp')], 0),
+  ]),
+  CH('jack-3', ('The golden hen', 'La poule aux œufs d’or'), [
+    [S('Jack went up the beanstalk again. This time, he took the giant’s hen, which laid golden eggs.', 'Jack remonta le long du haricot. Cette fois, il prit la poule du géant, qui pondait des œufs d’or.'),
+     S('But the third time, the giant woke up and ran after him.', 'Mais la troisième fois, le géant se réveilla et le poursuivit.')],
+    [S('Jack climbed down faster than ever. “Mother, bring me the axe!” he shouted.', 'Jack descendit plus vite que jamais. « Maman, apporte-moi la hache ! » cria-t-il.'),
+     S('He cut the beanstalk, and the giant fell. Jack and his mother were never poor again.', 'Il coupa le haricot, et le géant tomba. Jack et sa mère ne furent plus jamais pauvres.')],
+  ], [
+    W('hen', '/hen/', 'poule', 'hen'),
+    W('laid', '/leɪd/', 'pondit (passé de lay)', 'laid'),
+    W('golden', '/ˈɡəʊldən/', 'en or, doré', 'golden'),
+    W('woke up', '/wəʊk ʌp/', 'se réveilla', 'woke up'),
+    W('axe', '/æks/', 'hache', 'axe'),
+    W('fell', '/fel/', 'tomba (passé de fall)', 'fell'),
+  ], [
+    Q(('Que fait la poule du géant ?', 'What does the giant’s hen do?'), [('Elle chante', 'It sings'), ('Elle pond des œufs d’or', 'It lays golden eggs'), ('Elle parle', 'It talks')], 1),
+    Q(('Comment Jack arrête-t-il le géant ?', 'How does Jack stop the giant?'), [('Il coupe le haricot', 'He cuts the beanstalk'), ('Il le cache', 'He hides him'), ('Il lui donne de l’or', 'He gives him gold')], 0),
+  ]),
+])
+
+# ═════════════════════════ A2 : King Canute and the Waves ═════════════════════════
+CANUTE = STORY('king-canute', 'C', 'A2', '#3F6F9F', ('King Canute and the Waves', 'Le roi Knut et les vagues'),
+  ('Ses courtisans le disent plus puissant que la mer. Le roi Knut décide de leur donner une leçon sur la plage.', 'His courtiers say he is more powerful than the sea. King Canute decides to teach them a lesson on the beach.'), [
+  CH('canute-1', ('The most powerful king', 'Le roi le plus puissant'), [
+    [S('A thousand years ago, Canute was the king of England, Denmark and Norway.', 'Il y a mille ans, Knut était roi d’Angleterre, du Danemark et de Norvège.'),
+     S('His courtiers always told him how great he was. “You are the most powerful man in the world!” they said.', 'Ses courtisans lui répétaient sans cesse à quel point il était grand. « Vous êtes l’homme le plus puissant du monde ! » disaient-ils.')],
+    [S('“Even the sea will obey you,” said one courtier.', '« Même la mer vous obéira », dit un courtisan.'),
+     S('Canute was tired of these silly words. He decided to show them the truth.', 'Knut était las de ces paroles stupides. Il décida de leur montrer la vérité.')],
+  ], [
+    W('thousand', '/ˈθaʊznd/', 'mille', 'thousand'),
+    W('courtiers', '/ˈkɔːtiəz/', 'courtisans', 'courtiers'),
+    W('powerful', '/ˈpaʊəfl/', 'puissant', 'powerful'),
+    W('obey', '/əˈbeɪ/', 'obéir', 'obey'),
+    W('silly', '/ˈsɪli/', 'stupide, idiot', 'silly'),
+    W('truth', '/truːθ/', 'vérité', 'truth'),
+  ], [
+    Q(('Que disent les courtisans au roi ?', 'What do the courtiers tell the king?'), [('Qu’il est le plus puissant du monde', 'That he is the most powerful in the world'), ('Qu’il doit partir', 'That he must leave'), ('Qu’il est malade', 'That he is ill')], 0),
+    Q(('Que pense Knut de ces paroles ?', 'What does Canute think of these words?'), [('Il les trouve vraies', 'He thinks they are true'), ('Il les trouve stupides', 'He thinks they are silly'), ('Il ne les entend pas', 'He does not hear them')], 1),
+  ]),
+  CH('canute-2', ('On the beach', 'Sur la plage'), [
+    [S('Canute took his courtiers to the beach and sat on his throne near the water.', 'Knut emmena ses courtisans à la plage et s’assit sur son trône près de l’eau.'),
+     S('“Waves, I order you to stop!” he shouted. But the waves kept coming.', '« Vagues, je vous ordonne de vous arrêter ! » cria-t-il. Mais les vagues continuèrent d’avancer.')],
+    [S('Soon the king’s feet were wet, and the courtiers looked very uncomfortable.', 'Bientôt, le roi eut les pieds mouillés, et les courtisans semblaient très mal à l’aise.'),
+     S('“You see?” said Canute. “A king is not stronger than the sea. Remember that.”', '« Vous voyez ? dit Knut. Un roi n’est pas plus fort que la mer. Souvenez-vous-en. »')],
+  ], [
+    W('beach', '/biːtʃ/', 'plage', 'beach'),
+    W('throne', '/θrəʊn/', 'trône', 'throne'),
+    W('waves', '/weɪvz/', 'vagues', 'waves'),
+    W('order', '/ˈɔːdə/', 'ordonner', 'order'),
+    W('wet', '/wet/', 'mouillé', 'wet'),
+    W('stronger', '/ˈstrɒŋɡə/', 'plus fort', 'stronger'),
+  ], [
+    Q(('Que fait le roi sur la plage ?', 'What does the king do on the beach?'), [('Il nage', 'He swims'), ('Il ordonne aux vagues de s’arrêter', 'He orders the waves to stop'), ('Il pêche', 'He goes fishing')], 1),
+    Q(('Quelle leçon donne le roi ?', 'What lesson does the king give?'), [('Un roi n’est pas plus fort que la mer', 'A king is not stronger than the sea'), ('La mer obéit au roi', 'The sea obeys the king'), ('Il faut aimer la plage', 'You must love the beach')], 0),
+  ]),
+])
+
+EN_STORIES = [GOLDILOCKS, WHITTINGTON, SWORD, JACK, CANUTE]
 EN_LEVELS = ('A1', 'A2', 'B1', 'B2', 'C1')
 
 data = json.load(open(P, encoding='utf-8'))

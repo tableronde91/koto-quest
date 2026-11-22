@@ -35,6 +35,64 @@ const ear = (x: number, flip: boolean, color: string, inner: string) => (
 );
 
 const SPECIES: Record<string, Species> = {
+  // ───── Gardiens anglais (A2 — terres de Logres) ─────
+  // Redcap : lutin trapu au bonnet rouge, bottes de fer, pique
+  R: {
+    body: '#6E6A5E', belly: '#B9B19A', head: '#C9A882', eye: '#E2483B',
+    top: <path d="M58 72 Q58 22 104 14 Q112 30 146 40 Q130 46 142 72Z" fill="#C8323F" />,
+    face: <path d="M86 116 l6 -6 l6 6 l6 -6 l6 6 l6 -6" stroke="#F6F3EC" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(160 150)"><path d="M0 40 V-46" stroke="#6A4428" strokeWidth="5" /><path d="M-6 -46 L0 -64 L6 -46Z" fill="#9AA0A8" /></g>,
+  },
+  // Jenny Greenteeth : sorcière des étangs, cheveux d'algues, dents vertes, lentilles d'eau
+  J: {
+    body: '#4E7F5E', belly: '#9CC4A2', head: '#8FB89A', eye: '#F2D94E',
+    back: <path d="M48 90 Q30 150 50 186 M152 90 Q170 150 150 186 M60 80 Q44 130 64 176 M140 80 Q156 130 136 176" stroke="#2F6B3E" strokeWidth="8" fill="none" strokeLinecap="round" />,
+    top: <path d="M56 80 Q60 30 100 26 Q140 30 144 80 Q130 56 100 54 Q70 56 56 80Z" fill="#2F6B3E" />,
+    face: <path d="M84 112 Q100 122 116 112 M88 113 v6 M96 115 v7 M104 115 v7 M112 113 v6" stroke="#3E8E3A" strokeWidth="3" fill="none" />,
+    front: <>{[[40, 186], [70, 192], [150, 188], [176, 182]].map(([cx, cy]) => <ellipse key={cx} cx={cx} cy={cy} rx="9" ry="4" fill="#7FB84E" />)}</>,
+  },
+  // Morgane la fée : couronne, longs cheveux noirs, miroir magique
+  M: {
+    body: '#5A3E7A', belly: '#B9A2D6', head: '#EAD2C0', eye: '#3E2A5E',
+    back: <path d="M54 70 Q30 140 56 180 L144 180 Q170 140 146 70Z" fill="#1F1A2E" />,
+    top: <path d="M70 46 L76 26 L88 40 L100 20 L112 40 L124 26 L130 46Z" fill="#E2B84A" stroke="#B08A2A" strokeWidth="2" />,
+    front: <g transform="translate(154 146)"><ellipse rx="14" ry="18" fill="#BFD6E8" stroke="#E2B84A" strokeWidth="4" /><path d="M0 18 V36" stroke="#E2B84A" strokeWidth="5" /><path d="M-6 -6 L4 4" stroke="#FFFFFF" strokeWidth="2" /></g>,
+  },
+  // Bête glatissante : corps tacheté de léopard, tête de serpent, queue de lion
+  Q: {
+    body: '#D9A23B', belly: '#F2D9A0', head: '#8A9A4A', eye: '#F2D94E',
+    back: <path d="M150 150 Q190 150 186 120 Q196 110 188 104 Q182 116 170 126 Q160 136 146 136Z" fill="#B87F2A" />,
+    under: <>{[[64, 130], [80, 152], [120, 156], [136, 132], [100, 170]].map(([cx, cy]) => <circle key={cx} cx={cx} cy={cy} r="6" fill="#7A4E1A" />)}</>,
+    face: <path d="M100 112 V122 M100 122 l-5 6 M100 122 l5 6" stroke="#C8323F" strokeWidth="2.5" fill="none" />,
+  },
+  // Kelpie : cheval des eaux, crinière d'algues, gouttes
+  H: {
+    body: '#D9E4EA', belly: '#F6F8FA', eye: '#1F3A5F',
+    top: <><path d="M68 66 L60 34 L84 52Z" fill="#D9E4EA" /><path d="M132 66 L140 34 L116 52Z" fill="#D9E4EA" /><path d="M86 40 Q100 20 116 40 Q124 60 140 70 Q120 66 112 52 Q100 60 86 40Z" fill="#3E7A6A" /></>,
+    face: <><ellipse cx="100" cy="112" rx="16" ry="10" fill="#C2D1DA" /><circle cx="94" cy="112" r="2" fill="#5E6E7A" /><circle cx="106" cy="112" r="2" fill="#5E6E7A" /></>,
+    front: <>{[[40, 160], [164, 150], [52, 190]].map(([cx, cy]) => <path key={cx} d={`M${cx} ${cy} q-6 8 0 12 q6 -4 0 -12Z`} fill="#7FB4E8" />)}</>,
+  },
+  // Herne le chasseur : bois de cerf, cape de feuilles, cor de chasse
+  E: {
+    body: '#6A5A3E', belly: '#A89A78', head: '#C9A882', eye: '#2E3A2A',
+    top: <path d="M74 50 L60 20 M66 34 L52 30 M64 26 L70 12 M126 50 L140 20 M134 34 L148 30 M136 26 L130 12" stroke="#8A6A44" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    back: <path d="M50 100 Q40 160 60 186 L140 186 Q160 160 150 100Z" fill="#3E6B3A" />,
+    front: <g transform="translate(150 150)"><path d="M-16 0 Q0 -18 16 -10 L18 2 Q2 -6 -12 8Z" fill="#E9DCC0" stroke="#A8946A" strokeWidth="2" /></g>,
+  },
+  // Reine Mab : minuscule fée aux ailes de libellule, couronne de fleurs
+  F: {
+    body: '#E7B7D6', belly: '#FBE6F2', head: '#F6DCC8', eye: '#5A3E7A',
+    back: <><ellipse cx="50" cy="96" rx="34" ry="18" fill="#CFE8FB" opacity={0.8} transform="rotate(-25 50 96)" /><ellipse cx="150" cy="96" rx="34" ry="18" fill="#CFE8FB" opacity={0.8} transform="rotate(25 150 96)" /></>,
+    top: <>{[74, 88, 100, 112, 126].map((x, i) => <circle key={x} cx={x} cy={i % 2 ? 44 : 48} r="5" fill={i % 2 ? '#F2D94E' : '#E2709A'} />)}</>,
+    front: <g transform="translate(158 140)"><path d="M0 30 V0" stroke="#C9A24A" strokeWidth="3" /><path d="M0 -8 l3 6 l6 1 l-5 4 l1 6 l-5 -3 l-5 3 l1 -6 l-5 -4 l6 -1Z" fill="#F2D94E" /></g>,
+  },
+  // Chevalier noir : armure sombre, heaume à fente, bouclier
+  X: {
+    body: '#2B2F38', belly: '#4A505C', head: '#3A404C', eye: '#E2483B',
+    top: <><path d="M62 84 Q60 30 100 26 Q140 30 138 84Z" fill="#3A404C" stroke="#1A1E26" strokeWidth="3" /><path d="M100 26 Q108 8 124 6" stroke="#1A1E26" strokeWidth="6" fill="none" strokeLinecap="round" /></>,
+    under: <path d="M74 96 H126" stroke="#111" strokeWidth="6" />,
+    front: <g transform="translate(152 150)"><path d="M-18 -22 H18 V4 Q18 22 0 30 Q-18 22 -18 4Z" fill="#1A1E26" stroke="#8A8E96" strokeWidth="3" /><path d="M0 -22 V30 M-18 0 H18" stroke="#8A8E96" strokeWidth="2" /></g>,
+  },
   // ───── Gardiens anglais (A1 — légendes britanniques) ─────
   // Boggart : lutin des maisons, nez crochu, bonnet mité, trousseau de badges volés
   B: {

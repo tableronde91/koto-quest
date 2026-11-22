@@ -234,5 +234,10 @@
  "Atelier TOEIC": "TOEIC workshop",
  "Questions réparties comme au TOEIC : écoute (questions-réponses, conversations, annonces), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : ta copie est corrigée à la fin. Le temps est limité.": "Questions split as in the TOEIC: listening (question-response, conversations, talks), incomplete sentences and texts, reading comprehension. No marking during the test: your paper is marked at the end. Time is limited.",
  "Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le TOEIC d’ETS et son résultat n’en prédit pas le score.": "Unofficial mock exam designed by Koto Quest: it does not replace the ETS TOEIC test and its result does not predict your score.",
- "Barème du TOEIC : Listening {0}/{1}, Reading {2}/{3} ; score visé {4}. Version abrégée, questions non officielles.": "TOEIC scoring: Listening {0}/{1}, Reading {2}/{3}; target score {4}. Shortened version, unofficial questions."
+ "Barème du TOEIC : Listening {0}/{1}, Reading {2}/{3} ; score visé {4}. Version abrégée, questions non officielles.": "TOEIC scoring: Listening {0}/{1}, Reading {2}/{3}; target score {4}. Shortened version, unofficial questions.",
+ "Découverte · TOEIC 120+": "Breakthrough · TOEIC 120+",
+ "Survie · TOEIC 225+": "Waystage · TOEIC 225+",
+ "Seuil · TOEIC 550+": "Threshold · TOEIC 550+",
+ "Avancé · TOEIC 785+": "Vantage · TOEIC 785+",
+ "Autonome · TOEIC 945+": "Effective proficiency · TOEIC 945+"
 }

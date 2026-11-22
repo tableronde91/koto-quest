@@ -12,4 +12,5 @@ export const MOCK_EXAM: Record<string, string> = {
   TOPIK5: 'topik5-official',
   TOPIK6: 'topik6-official',
   A1: 'a1-toeic',
+  A2: 'a2-toeic',
 };

@@ -607,6 +607,57 @@ story['levels']['A1'] = {
       ('L’épée est à toi. Ton premier niveau d’anglais est validé !', 'The sword is yours. Your first level of English is complete!')),
    },
 }
+
+story['levels']['A2'] = {
+   'glyph': 'R', 'jp': 'The Round Table', 'color': '#7A3B8F',
+   'saga': B('La Table ronde', 'The Round Table'),
+   'hero': B('Écuyer·ère de la Table ronde', 'Squire of the Round Table'),
+   'short': B('L’écuyer·ère', 'The squire'),
+   'prologue': B(
+     'L’épée t’a ouvert les portes de Camelot. Merlin t’envoie en mission sur les terres de Logres pour Avalon & Co. : visiter des usines, négocier, convaincre. Mais partout, les créatures des légendes guettent ceux qui parlent mal. Reviens avec assez d’anglais pour gagner ta place à la Table ronde.',
+     'The sword has opened the gates of Camelot for you. Merlin sends you on a mission across the lands of Logres for Avalon & Co.: visit factories, negotiate, persuade. But everywhere, the creatures of legend lie in wait for those who speak badly. Come back with enough English to win your seat at the Round Table.'),
+   'epilogue': B(
+     'Arthur se lève et te désigne une chaise de chêne : « Cette place est la tienne. » Autour de la table, les chevaliers frappent leurs coupes. Ta quête ne fait que commencer.',
+     'Arthur stands up and points to an oak chair: “This seat is yours.” Around the table, the knights raise their cups. Your quest has only just begun.'),
+   'chapters': {
+    'a2-w1': CHAP(('Le train de nuit', 'The night train'),
+      ('Ton premier déplacement pour Avalon & Co. tourne mal : dans le train de nuit vers York, Redcap, le lutin au bonnet rouge des tours en ruine, sème la pagaille. Raconte exactement ce qui se passait quand tout a déraillé.',
+       'Your first business trip for Avalon & Co. goes wrong: on the night train to York, Redcap, the red-capped goblin of the ruined towers, causes chaos. Tell exactly what was happening when everything went off the rails.'),
+      ('Redcap file entre les wagons et disparaît dans la nuit. Le train repart.', 'Redcap slips between the carriages and vanishes into the night. The train sets off again.')),
+    'a2-w2': CHAP(('Le marché aux merveilles', 'The market of wonders'),
+      ('Au marché de York, Jenny Greenteeth, la sorcière des étangs, vend toujours le pire article au prix le plus fort. Compare mieux qu’elle pour repartir avec la bonne affaire.',
+       'At York market, Jenny Greenteeth, the pond witch, always sells the worst item at the highest price. Compare better than her and leave with the right deal.'),
+      ('Furieuse d’avoir perdu, Jenny replonge sous les lentilles d’eau.', 'Furious at losing, Jenny dives back under the duckweed.')),
+    'a2-w3': CHAP(('Le miroir de la fée', 'The fairy’s mirror'),
+      ('Dans sa tour, Morgane la fée lit l’avenir dans un miroir et brouille l’agenda de toute l’équipe. Dis clairement ce qui est prévu, décidé ou probable pour déjouer ses prophéties.',
+       'In her tower, Morgan le Fay reads the future in a mirror and scrambles the whole team’s schedule. Say clearly what is planned, decided or likely to foil her prophecies.'),
+      ('Le miroir se fend : l’agenda d’Avalon & Co. est de nouveau en ordre.', 'The mirror cracks: Avalon & Co.’s schedule is back in order.')),
+    'a2-w4': CHAP(('La bête sans repos', 'The restless beast'),
+      ('Un bruit de meute résonne dans la forêt : c’est la Bête glatissante, que les chevaliers poursuivent depuis toujours. Elle demande à chacun ce qu’il a déjà fait dans sa vie.',
+       'The sound of a baying pack echoes through the forest: it is the Questing Beast, which knights have chased forever. It asks everyone what they have already done in their life.'),
+      ('Satisfaite de tes réponses, la Bête glatissante s’enfonce dans les fourrés.', 'Satisfied with your answers, the Questing Beast disappears into the thicket.')),
+    'a2-w5': CHAP(('Le gué interdit', 'The forbidden ford'),
+      ('Au bord d’une rivière écossaise, un magnifique cheval blanc t’invite à monter sur son dos : c’est le Kelpie, qui entraîne au fond de l’eau ceux qui ignorent les règles.',
+       'On the bank of a Scottish river, a magnificent white horse invites you to climb on its back: it is the Kelpie, which drags those who ignore the rules to the bottom of the water.'),
+      ('Le Kelpie hennit, déçu, et retourne dans les eaux sombres. Tu traverses le gué à pied sec.', 'The Kelpie neighs in disappointment and returns to the dark water. You cross the ford dry-shod.')),
+    'a2-w6': CHAP(('La nuit du chasseur', 'The hunter’s night'),
+      ('Dans la forêt de Windsor, Herne le chasseur aux bois de cerf compte ses proies à la lueur de la lune. Dis combien, à quelle fréquence et de quelle manière pour qu’il range son arc.',
+       'In Windsor Forest, Herne the antlered hunter counts his prey by moonlight. Say how many, how often and in what way, and he will put away his bow.'),
+      ('Herne baisse son arc et s’efface entre les chênes.', 'Herne lowers his bow and fades away among the oaks.')),
+    'a2-w7': CHAP(('Le marché des rêves', 'The bargain of dreams'),
+      ('À la cour des fées, la minuscule reine Mab propose des marchés pleins de conditions. Une parole mal choisie, et tu resteras prisonnier·ère d’un rêve.',
+       'At the fairy court, tiny Queen Mab offers deals full of conditions. One badly chosen word, and you will remain a prisoner of a dream.'),
+      ('La reine Mab éclate d’un rire de clochette et te laisse partir avant l’aube.', 'Queen Mab bursts into tinkling laughter and lets you go before dawn.')),
+    'a2-w8': CHAP(('Le pont gardé', 'The guarded bridge'),
+      ('Sur le dernier pont avant Camelot, le Chevalier noir barre la route. Il ne laisse passer que ceux qui décrivent exactement les gens, les objets et les lieux.',
+       'On the last bridge before Camelot, the Black Knight blocks the way. He only lets through those who describe people, things and places exactly.'),
+      ('Le Chevalier noir lève sa visière et s’incline : la route de Camelot est libre.', 'The Black Knight raises his visor and bows: the road to Camelot is clear.')),
+    'a2-final': CHAP(('L’épreuve de la Table ronde', 'The trial of the Round Table'),
+      ('Devant Arthur et ses chevaliers, une dernière épreuve t’attend : écouter, lire et répondre comme au TOEIC. Atteins le score du niveau A2 pour gagner ta place.',
+       'Before Arthur and his knights, one last trial awaits you: listen, read and answer as in the TOEIC. Reach the A2 score to win your seat.'),
+      ('Tu as gagné ta place à la Table ronde. Niveau A2 validé !', 'You have won your seat at the Round Table. A2 level complete!')),
+   },
+}
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
 json.dump(story, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(sum(len(l['chapters']) for l in story['levels'].values()), 'chapitres')
