@@ -26,7 +26,13 @@ describe('Atelier JLPT et exercices au format de l’examen', () => {
     for (const slug of ['n5-calendar', 'n5-city', 'n5-directions-2']) {
       const { start } = await completeFirstLesson(ctx, agent, slug);
       // Les mots en kanji se lisent au format 漢字読み dès la leçon
-      if (slug === 'n5-calendar') expect(start.questions.some((q: any) => q.type === 'jlpt_reading' && q.prompt.startsWith('＿＿の ことばは'))).toBe(true);
+      // (le tirage des formats est aléatoire : on relance la leçon quelques fois si besoin)
+      if (slug === 'n5-calendar') {
+        const reading = (qs: any[]) => qs.some((q: any) => q.type === 'jlpt_reading' && q.prompt.startsWith('＿＿の ことばは'));
+        let found = reading(start.questions);
+        for (let i = 0; i < 6 && !found; i++) found = reading((await agent.post(`/api/lessons/${slug}/start`).expect(201)).body.questions);
+        expect(found).toBe(true);
+      }
     }
     const list = (await agent.get('/api/jlpt/drills').expect(200)).body;
     const avail = Object.fromEntries(list.drills.map((d: any) => [d.part, d.available]));

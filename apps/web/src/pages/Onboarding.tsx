@@ -61,7 +61,7 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
     { value: 'HSK3', label: T("HSK 3 — intermédiaire (600 mots)"), ready: true },
     { value: 'HSK4', label: T("HSK 4 — intermédiaire avancé (1 200 mots)"), ready: true },
     { value: 'HSK5', label: T("HSK 5 — avancé (2 500 mots)"), ready: true },
-    { value: 'HSK6', label: T("HSK 6 — maîtrise (5 000 mots)"), ready: false },
+    { value: 'HSK6', label: T("HSK 6 — maîtrise (5 000 mots)"), ready: true },
   ],
 };
 const AREAS: { value: DifficultArea; label: string }[] = [

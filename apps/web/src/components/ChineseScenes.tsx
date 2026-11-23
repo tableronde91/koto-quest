@@ -224,6 +224,27 @@ function Bells({ ...p }: P) {
   );
 }
 
+/** Chameau de caravane (la route de la soie). */
+function Camel({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-10 0 V-8 M-6 0 V-8 M6 0 V-8 M10 0 V-8" stroke="#8A6A3A" strokeWidth="1.8" />
+      <path d="M-12 -8 Q-12 -14 -6 -14 Q-4 -22 0 -14 Q4 -22 8 -14 Q12 -14 12 -10 L16 -20 L20 -20 L18 -16 L12 -6 H-12Z" fill="#C9A26A" stroke="#8A6A3A" strokeWidth="0.8" />
+      <path d="M-6 -15 H8" stroke={RED} strokeWidth="1.4" />
+    </g>
+  );
+}
+
+/** Dune de sable. */
+function Dune({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-20 0 Q-6 -16 6 -10 Q14 -6 20 0Z" fill="#E8C88A" />
+      <path d="M-8 -9 Q0 -12 6 -10" stroke="#C9A26A" strokeWidth="0.8" fill="none" />
+    </g>
+  );
+}
+
 export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'école du maître : pavillon de Lu, pétards contre le Nian, prunier.
   'hsk1-w1': () => (<><Pavilion x={-14} y={12} /><Firecrackers x={14} y={8} /><Plum x={30} y={12} /></>),
@@ -283,4 +304,14 @@ export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'hsk5-w7': () => (<><Stall x={-14} y={12} /><Junk x={10} y={10} s={0.8} /><Lantern x={28} y={4} /></>),
   'hsk5-w8': () => (<><Pavilion x={-10} y={12} s={1.1} fill={GOLD} /><LuckyCloud x={18} y={-8} /><Plum x={28} y={12} /></>),
   'hsk5-final': () => (<><Tower x={-12} y={14} s={1.1} /><Pavilion x={14} y={12} fill={GOLD} /><LuckyCloud x={26} y={-12} /></>),
+  // HSK 6 — l'ambassade de Zhang Qian sur la route de la soie
+  'hsk6-w1': () => (<><Pavilion x={-12} y={12} s={1.1} fill={LACQUER} /><Scroll x={12} y={10} /><Bells x={28} y={12} s={0.7} /></>),
+  'hsk6-w2': () => (<><Wall x={-12} y={12} /><Tower x={10} y={14} s={0.8} /><Tent x={28} y={12} s={0.8} /></>),
+  'hsk6-w3': () => (<><Tent x={-14} y={12} /><Tent x={4} y={14} s={0.8} /><Drum x={24} y={12} s={0.8} /></>),
+  'hsk6-w4': () => (<><Dune x={-12} y={12} /><Camel x={10} y={12} /><Dune x={28} y={14} s={0.7} /></>),
+  'hsk6-w5': () => (<><Stall x={-12} y={14} /><Camel x={10} y={12} s={0.9} /><Lantern x={28} y={4} /></>),
+  'hsk6-w6': () => (<><Pavilion x={-10} y={12} fill={GOLD} /><Bells x={12} y={12} s={0.8} /><Plum x={28} y={12} /></>),
+  'hsk6-w7': () => (<><Pine x={-14} y={12} /><LuckyCloud x={6} y={-8} /><Pavilion x={24} y={12} s={0.7} fill={JADE} /></>),
+  'hsk6-w8': () => (<><Scroll x={-12} y={10} /><Ding x={8} y={12} /><Pavilion x={26} y={12} s={0.7} /></>),
+  'hsk6-final': () => (<><Tower x={-12} y={14} s={1.1} /><Pavilion x={14} y={12} s={1.1} fill={LACQUER} /><Camel x={30} y={12} s={0.7} /></>),
 };

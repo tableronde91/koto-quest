@@ -83,6 +83,7 @@ def roman_of(seg):
         out += ('' if not out or out.endswith(('“', ' ')) else ' ') + word + ' '
     out = ' '.join(out.split())
     out = out.replace('“ ', '“')
+    out = out.replace('yībèizi', 'yíbèizi').replace('xiàlái', 'xiàlai')
     return re.sub(r'(^“?|[.!?]\s+“?)(\w)', lambda m: m.group(1) + m.group(2).upper(), out)
 
 def S(seg, fr, en, annotate=lambda zh: True):
@@ -877,9 +878,132 @@ YUBANG = STORY('yu-bang-xiang-zheng', '蚌', 'HSK5', '#8A7A5A', ('鹬蚌相争',
   ]),
 ])
 
+# HSK 6 : seuls les mots qui dépassent le HSK 5 (et les noms propres) gardent leur pinyin.
+KNOWN_CHARS6 = _known_chars(6) | BASE_CHARS
+def S6(seg, fr, en):
+    return S3(seg, fr, en, KNOWN_CHARS6)
+
+# 苏武牧羊 (Livre des Han) — un envoyé des Han retenu dix-neuf ans chez les Xiongnu
+SUWU = STORY('su-wu-mu-yang', '羊', 'HSK6', '#8A6A3A', ('苏武牧羊', 'Su Wu, berger chez les Xiongnu', 'Su Wu, shepherd among the Xiongnu'),
+  ('Envoyé des Han chez les Xiongnu, Su Wu est retenu dix-neuf ans au bord d’un lac glacé. Il ne lâche jamais son insigne.', 'A Han envoy to the Xiongnu, Su Wu is held for nineteen years by a frozen lake. He never lets go of his tally.'), [
+  CH('su-wu-mu-yang-1', ('持节不降', 'Fidèle à son insigne', 'Faithful to his tally'), [
+    [S6('汉武帝:Hàn_Wǔdì 的 时候 ， 苏武:Sū_Wǔ 奉命:fèngmìng 出使 匈奴:Xiōngnú 。', 'Sous l’empereur Wu des Han, Su Wu reçut l’ordre de partir en ambassade chez les Xiongnu.', 'Under Emperor Wu of Han, Su Wu was ordered to go as an envoy to the Xiongnu.'),
+     S6('没想到 ， 匈奴:Xiōngnú 的 单于:chányú 把 他 扣留:kòuliú 了 下来 ， 一定 要 他 投降 。', 'Contre toute attente, le chanyu des Xiongnu le retint et exigea qu’il se rende.', 'Unexpectedly, the Xiongnu chanyu detained him and insisted that he surrender.'),
+     S6('苏武:Sū_Wǔ 说 ： “ 我 是 汉朝 的 使者 ， 宁可 死:sǐ ， 也 不 投降 ！ ”', 'Su Wu répondit : « Je suis l’envoyé des Han ; plutôt mourir que me rendre ! »', 'Su Wu said: “I am the envoy of the Han; I would rather die than surrender!”')],
+    [S6('单于:chányú 很 生气 ， 把 他 关 在 一个 大 地窖:dìjiào 里 ， 不 给 他 吃 ， 也 不 给 他 喝 。', 'Furieux, le chanyu l’enferma dans une grande cave, sans rien à manger ni à boire.', 'Furious, the chanyu shut him in a large cellar with nothing to eat or drink.'),
+     S6('下雪 的 时候 ， 苏武:Sū_Wǔ 就 吃 雪 ， 嚼:jiáo 身上 皮衣 的 毛 ， 顽强:wánqiáng 地 活 了 下来 。', 'Quand il neigeait, Su Wu mangeait la neige et mâchait les poils de sa pelisse : il survécut, tenace.', 'When it snowed, Su Wu ate snow and chewed the fur of his coat, and tenaciously survived.'),
+     S6('匈奴人:Xiōngnú_rén 以为 他 是 神 ， 不敢 杀:shā 他 。', 'Les Xiongnu le crurent protégé des dieux et n’osèrent pas le tuer.', 'The Xiongnu thought he was a god and did not dare kill him.')],
+  ], [
+    W('奉命', 'fèngmìng', 'recevoir un ordre', 'to receive orders'),
+    W('单于', 'chányú', 'chanyu (souverain des Xiongnu)', 'chanyu (Xiongnu ruler)'),
+    W('扣留', 'kòuliú', 'retenir, détenir', 'to detain'),
+    W('地窖', 'dìjiào', 'cave, cellier', 'cellar'),
+    W('嚼', 'jiáo', 'mâcher', 'to chew'),
+    W('顽强', 'wánqiáng', 'tenace', 'tenacious'),
+  ], [
+    Q(('Que demande le chanyu à Su Wu ?', 'What does the chanyu demand of Su Wu?'), [('De se rendre', 'To surrender'), ('De partir', 'To leave'), ('De lui apprendre le chinois', 'To teach him Chinese')], 0),
+    Q(('Comment Su Wu survit-il dans la cave ?', 'How does Su Wu survive in the cellar?'), [('Il mange la neige et la fourrure', 'He eats snow and fur'), ('Des amis lui apportent à manger', 'Friends bring him food'), ('Il s’échappe la nuit', 'He escapes at night')], 0),
+  ]),
+  CH('su-wu-mu-yang-2', ('北海牧羊', 'Berger au bord du lac du Nord', 'Shepherd by the Northern Lake'), [
+    [S6('单于:chányú 又 把 苏武:Sū_Wǔ 送 到 荒凉:huāngliáng 的 北海:Běihǎi 边 ， 让 他 放 公羊:gōngyáng ， 说 ： “ 等 公羊:gōngyáng 生 了 小羊 ， 你 才 能 回去 。 ”', 'Le chanyu envoya ensuite Su Wu au bord du désolé lac du Nord garder des béliers : « Tu rentreras quand tes béliers auront des agneaux. »', 'The chanyu then sent Su Wu to the desolate shore of the Northern Lake to herd rams: “You may go home when the rams bear lambs.”'),
+     S6('公羊:gōngyáng 怎么 可能 生 小羊 呢 ？ 这 分明:fēnmíng 是 要 他 一辈子 回 不 了 家 。', 'Comment des béliers pourraient-ils avoir des agneaux ? C’était clairement le condamner à ne jamais rentrer.', 'How could rams bear lambs? It plainly meant he would never go home.'),
+     S6('苏武:Sū_Wǔ 每天 拿着 汉朝 的 符节:fújié 放羊 ， 时间 长 了 ， 符节:fújié 上 的 毛 都 掉光:diàoguāng 了 。', 'Chaque jour, Su Wu gardait ses bêtes l’insigne des Han à la main ; avec le temps, les crins de l’insigne tombèrent tous.', 'Every day Su Wu herded with the Han tally in his hand; in time, all the tassels fell off it.')],
+    [S6('十九 年 过去 了 ， 汉朝 和 匈奴:Xiōngnú 终于 讲和:jiǎnghé ， 苏武:Sū_Wǔ 回到 了 长安:Cháng’ān 。', 'Dix-neuf ans passèrent ; les Han et les Xiongnu firent enfin la paix, et Su Wu revint à Chang’an.', 'Nineteen years passed; the Han and the Xiongnu finally made peace, and Su Wu returned to Chang’an.'),
+     S6('出发 的 时候 他 还 是 个 壮年:zhuàngnián ， 回来 的 时候 ， 头发 和 胡子:húzi 全 白 了 。', 'Parti dans la force de l’âge, il revint les cheveux et la barbe tout blancs.', 'He had left in the prime of life; he returned with hair and beard all white.'),
+     S6('人们 用 “ 苏武牧羊:Sū_Wǔ_mù_yáng ” 来 赞美:zànměi 坚贞不屈:jiānzhēn_bù_qū 的 精神 。', 'On dit « Su Wu garde ses moutons » pour louer une fidélité inflexible.', 'People say “Su Wu herding sheep” to praise steadfast, unyielding loyalty.')],
+  ], [
+    W('北海', 'Běihǎi', 'le lac du Nord (Baïkal)', 'the Northern Lake (Baikal)'),
+    W('公羊', 'gōngyáng', 'bélier', 'ram'),
+    W('分明', 'fēnmíng', 'clairement, manifestement', 'clearly, plainly'),
+    W('讲和', 'jiǎnghé', 'faire la paix', 'to make peace'),
+    W('壮年', 'zhuàngnián', 'force de l’âge', 'prime of life'),
+    W('坚贞不屈', 'jiānzhēn bù qū', 'fidèle et inflexible', 'steadfast and unyielding'),
+  ], [
+    Q(('Quand Su Wu pourra-t-il rentrer, selon le chanyu ?', 'When may Su Wu go home, according to the chanyu?'), [('Quand les béliers auront des agneaux', 'When the rams bear lambs'), ('Au printemps', 'In spring'), ('Après un an', 'After a year')], 0),
+    Q(('Combien de temps Su Wu reste-t-il chez les Xiongnu ?', 'How long does Su Wu stay with the Xiongnu?'), [('Dix-neuf ans', 'Nineteen years'), ('Trois ans', 'Three years'), ('Toute sa vie', 'All his life')], 0),
+  ]),
+])
+
+# 卧薪尝胆 (Mémoires historiques, Sima Qian) — Goujian, roi de Yue
+WOXIN = STORY('wo-xin-chang-dan', '胆', 'HSK6', '#5A6A3A', ('卧薪尝胆', 'Dormir sur des fagots, goûter le fiel', 'Sleeping on brushwood, tasting gall'),
+  ('Vaincu et humilié, le roi Goujian de Yue s’impose une vie de privations pour ne jamais oublier sa défaite.', 'Defeated and humiliated, King Goujian of Yue imposes a life of hardship on himself so as never to forget his defeat.'), [
+  CH('wo-xin-chang-dan-1', ('亡国之耻', 'La honte de la défaite', 'The shame of defeat'), [
+    [S6('春秋:Chūnqiū 时候 ， 越国:Yuè_guó 被 吴国:Wú_guó 打败 了 ， 越王:Yuè_wáng 勾践:Gōujiàn 成 了 俘虏:fúlǔ 。', 'À l’époque des Printemps et Automnes, le royaume de Yue fut vaincu par celui de Wu, et le roi Goujian fait prisonnier.', 'In the Spring and Autumn period, Yue was defeated by Wu, and King Goujian was taken prisoner.'),
+     S6('吴王:Wú_wáng 让 他 养马 ， 每次 出门 ， 还 让 勾践:Gōujiàn 给 他 牵马:qiān_mǎ 。', 'Le roi de Wu lui fit soigner ses chevaux et, à chaque sortie, lui faisait tenir la bride.', 'The king of Wu made him tend horses, and every time he went out he made Goujian lead his horse.'),
+     S6('勾践:Gōujiàn 心里 非常 痛苦:tòngkǔ ， 但是 表面 上 一直 很 恭敬:gōngjìng ， 从来 不 抱怨 。', 'Goujian souffrait intensément, mais restait en apparence toujours respectueux, sans jamais se plaindre.', 'Goujian suffered terribly but outwardly remained respectful, never complaining.')],
+    [S6('三 年 以后 ， 吴王:Wú_wáng 相信 他 已经 屈服 了 ， 就 放 他 回 了 越国:Yuè_guó 。', 'Au bout de trois ans, le roi de Wu, persuadé qu’il s’était soumis, le renvoya dans son pays.', 'After three years, the king of Wu, convinced he had submitted, let him go back to Yue.'),
+     S6('回国 以后 ， 勾践:Gōujiàn 下定决心 ： 一定 要 洗雪:xǐxuě 这个 耻辱:chǐrǔ 。', 'De retour chez lui, Goujian se jura de laver cet affront.', 'Back home, Goujian resolved to wipe out this disgrace.')],
+  ], [
+    W('勾践', 'Gōujiàn', 'Goujian (roi de Yue)', 'Goujian (king of Yue)'),
+    W('牵马', 'qiān mǎ', 'mener un cheval par la bride', 'to lead a horse'),
+    W('表面', 'biǎomiàn', 'surface, apparence', 'surface, appearance'),
+    W('屈服', 'qūfú', 'céder, se soumettre', 'to submit'),
+    W('洗雪', 'xǐxuě', 'laver (un affront)', 'to wipe out (a disgrace)'),
+    W('耻辱', 'chǐrǔ', 'honte, humiliation', 'disgrace, humiliation'),
+  ], [
+    Q(('Que fait Goujian chez le roi de Wu ?', 'What does Goujian do for the king of Wu?'), [('Il s’occupe des chevaux', 'He tends the horses'), ('Il commande l’armée', 'He commands the army'), ('Il écrit des poèmes', 'He writes poems')], 0),
+    Q(('Pourquoi le roi de Wu le libère-t-il ?', 'Why does the king of Wu release him?'), [('Il le croit soumis', 'He thinks he has submitted'), ('Goujian s’est échappé', 'Goujian escaped'), ('Il a payé une rançon', 'He paid a ransom')], 0),
+  ]),
+  CH('wo-xin-chang-dan-2', ('十年生聚', 'Dix ans de patience', 'Ten years of patience'), [
+    [S6('勾践:Gōujiàn 晚上 不 睡 床 ， 睡 在 柴草:cháicǎo 上 ； 屋里:wūli 挂:guà 着 一个 苦胆:kǔdǎn ， 每天 吃饭 以前 都 要 尝:cháng 一 尝 。', 'Goujian ne dormait plus dans un lit mais sur des fagots ; dans sa chambre pendait une vésicule de fiel qu’il goûtait avant chaque repas.', 'Goujian no longer slept in a bed but on brushwood; a gall bladder hung in his room, and he tasted it before every meal.'),
+     S6('他 问 自己 ： “ 你 忘 了 当 俘虏:fúlǔ 的 耻辱:chǐrǔ 了 吗:ma ？ ”', 'Il se demandait : « As-tu oublié la honte d’avoir été prisonnier ? »', 'He asked himself: “Have you forgotten the shame of being a prisoner?”'),
+     S6('他 和 百姓 一起 种地 ， 王后:wánghòu 亲自 织布:zhībù ， 越国:Yuè_guó 慢慢 富强:fùqiáng 起来 。', 'Il cultivait la terre avec le peuple, la reine tissait elle-même, et Yue devint peu à peu riche et puissant.', 'He farmed with the people, the queen wove cloth herself, and Yue slowly grew rich and strong.')],
+    [S6('十 年 以后 ， 越国:Yuè_guó 终于 打败 了 吴国:Wú_guó 。', 'Dix ans plus tard, Yue vainquit enfin Wu.', 'Ten years later, Yue finally defeated Wu.'),
+     S6('后来 ， 人们 用 “ 卧薪尝胆:wò_xīn_cháng_dǎn ” 形容:xíngróng 一个 人 不忘 失败 ， 刻苦:kèkǔ 努力 ， 发愤图强:fāfèn_tú_qiáng 。', 'Depuis, « dormir sur des fagots et goûter le fiel » décrit quelqu’un qui n’oublie pas son échec et redouble d’efforts pour se relever.', 'Since then, “sleeping on brushwood and tasting gall” describes someone who never forgets defeat and works hard to rise again.')],
+  ], [
+    W('柴草', 'cháicǎo', 'fagots, broussailles', 'brushwood'),
+    W('苦胆', 'kǔdǎn', 'vésicule de fiel', 'gall bladder'),
+    W('尝', 'cháng', 'goûter', 'to taste'),
+    W('织布', 'zhībù', 'tisser (de l’étoffe)', 'to weave cloth'),
+    W('富强', 'fùqiáng', 'riche et puissant', 'prosperous and strong'),
+    W('发愤图强', 'fāfèn tú qiáng', 'redoubler d’efforts pour se relever', 'to strive to rise again'),
+  ], [
+    Q(('Pourquoi Goujian goûte-t-il le fiel ?', 'Why does Goujian taste the gall?'), [('Pour ne pas oublier sa honte', 'So as not to forget his shame'), ('Pour se soigner', 'To cure himself'), ('Parce qu’il aime l’amertume', 'Because he likes bitterness')], 0),
+    Q(('Combien de temps faut-il à Yue pour vaincre Wu ?', 'How long does it take Yue to defeat Wu?'), [('Dix ans', 'Ten years'), ('Un an', 'One year'), ('Cent ans', 'A hundred years')], 0),
+  ]),
+])
+
+# 纸上谈兵 (Mémoires historiques, Sima Qian) — Zhao Kuo, le stratège des livres
+ZHIBING = STORY('zhi-shang-tan-bing', '兵', 'HSK6', '#6A4A3A', ('纸上谈兵', 'La guerre sur le papier', 'Waging war on paper'),
+  ('Zhao Kuo connaît par cœur tous les traités militaires. Mais une bataille ne se gagne pas dans les livres.', 'Zhao Kuo knows every military treatise by heart. But a battle is not won in books.'), [
+  CH('zhi-shang-tan-bing-1', ('熟读兵书', 'Un lecteur de traités', 'A reader of treatises'), [
+    [S6('战国:Zhànguó 时候 ， 赵国:Zhào_guó 有 一 位 名将:míngjiàng ， 叫 赵奢:Zhào_Shē 。', 'À l’époque des Royaumes combattants, le royaume de Zhao avait un général célèbre, Zhao She.', 'In the Warring States period, the state of Zhao had a famous general named Zhao She.'),
+     S6('他 的 儿子 赵括:Zhào_Kuò 从小 熟读:shúdú 兵书:bīngshū ， 谈起:tánqǐ 打仗:dǎzhàng 来 头头是道:tóutóu_shì_dào ， 连 父亲 都 说 不 过 他 。', 'Son fils Zhao Kuo connaissait depuis l’enfance les traités militaires par cœur et parlait de la guerre avec tant d’aisance que même son père n’avait pas le dernier mot.', 'His son Zhao Kuo had known the military treatises by heart since childhood and talked of war so fluently that even his father could not out-argue him.'),
+     S6('可是 赵奢:Zhào_Shē 并 不 高兴 ， 他 对 妻子 说 ： “ 打仗:dǎzhàng 是 关系 生死:shēngsǐ 的 事 ， 他 却:què 说 得 这么 轻松 。 ”', 'Mais Zhao She n’en était pas content ; il dit à sa femme : « La guerre est affaire de vie ou de mort, et il en parle si légèrement. »', 'But Zhao She was not pleased; he told his wife: “War is a matter of life and death, yet he speaks of it so lightly.”')],
+    [S6('他 还 说 ： “ 倘若:tǎngruò 将来 让 他 当 将军:jiāngjūn ， 赵国:Zhào_guó 的 军队:jūnduì 一定 会 被 他 毁:huǐ 掉:diào 。 ”', 'Il ajouta : « Si un jour on le fait général, il perdra l’armée de Zhao. »', 'He added: “If he is ever made general, he will surely destroy the army of Zhao.”')],
+  ], [
+    W('名将', 'míngjiàng', 'général célèbre', 'famous general'),
+    W('熟读', 'shúdú', 'lire et relire, connaître par cœur', 'to read thoroughly'),
+    W('兵书', 'bīngshū', 'traité militaire', 'military treatise'),
+    W('头头是道', 'tóutóu shì dào', 'avec aisance et logique', 'clearly and logically'),
+    W('倘若', 'tǎngruò', 'si jamais', 'if'),
+    W('毁', 'huǐ', 'détruire, ruiner', 'to destroy'),
+  ], [
+    Q(('Que sait faire Zhao Kuo ?', 'What is Zhao Kuo good at?'), [('Parler de stratégie', 'Talking about strategy'), ('Monter à cheval', 'Riding horses'), ('Soigner les blessés', 'Healing the wounded')], 0),
+    Q(('Pourquoi son père s’inquiète-t-il ?', 'Why is his father worried?'), [('Il parle de la guerre trop légèrement', 'He speaks of war too lightly'), ('Il ne lit jamais', 'He never reads'), ('Il est malade', 'He is ill')], 0),
+  ]),
+  CH('zhi-shang-tan-bing-2', ('长平之战', 'La bataille de Changping', 'The battle of Changping'), [
+    [S6('后来 ， 秦国:Qín_guó 进攻:jìngōng 赵国:Zhào_guó 。 赵王:Zhào_wáng 不 听 劝告:quàngào ， 让 赵括:Zhào_Kuò 当 了 大将:dàjiàng 。', 'Plus tard, Qin attaqua Zhao. Le roi de Zhao, sourd aux mises en garde, nomma Zhao Kuo commandant en chef.', 'Later Qin attacked Zhao. Ignoring all warnings, the king of Zhao made Zhao Kuo commander-in-chief.'),
+     S6('赵括:Zhào_Kuò 完全 按照 书 上 的 方法 指挥:zhǐhuī ， 不料 中:zhòng 了 秦军:Qín_jūn 的 埋伏:máifú ， 被 包围 了 四十多 天 。', 'Zhao Kuo commanda en suivant les livres à la lettre, mais tomba dans une embuscade de l’armée de Qin et fut encerclé plus de quarante jours.', 'Zhao Kuo commanded strictly by the book, but fell into a Qin ambush and was surrounded for more than forty days.'),
+     S6('最后 ， 他 被 乱箭:luànjiàn 射死:shèsǐ ， 四十万 赵军:Zhào_jūn 全部 投降 。', 'Il finit criblé de flèches, et les quatre cent mille soldats de Zhao se rendirent.', 'In the end he was shot down by a hail of arrows, and four hundred thousand Zhao soldiers surrendered.')],
+    [S6('“ 纸上谈兵:zhǐ_shàng_tán_bīng ” 这个 成语 就 来自 这个 故事 。', 'L’expression « faire la guerre sur le papier » vient de cette histoire.', 'The idiom “waging war on paper” comes from this story.'),
+     S6('它 比喻:bǐyù 只 会 讲 理论 ， 不 能 解决 实际 问题 。 由此可见 ， 知识 要 和 实践:shíjiàn 结合 起来 才 有 用 。', 'Elle désigne celui qui ne sait que théoriser sans résoudre les problèmes réels. On voit par là que le savoir n’est utile qu’uni à la pratique.', 'It describes someone who can only theorise and cannot solve real problems. From this we see that knowledge is only useful when combined with practice.')],
+  ], [
+    W('进攻', 'jìngōng', 'attaquer', 'to attack'),
+    W('劝告', 'quàngào', 'mise en garde, conseil', 'advice, warning'),
+    W('大将', 'dàjiàng', 'commandant en chef', 'commander-in-chief'),
+    W('指挥', 'zhǐhuī', 'commander, diriger', 'to command'),
+    W('乱箭', 'luànjiàn', 'pluie de flèches', 'hail of arrows'),
+    W('实践', 'shíjiàn', 'pratique', 'practice'),
+  ], [
+    Q(('Comment Zhao Kuo commande-t-il l’armée ?', 'How does Zhao Kuo command the army?'), [('En suivant les livres à la lettre', 'Strictly by the book'), ('En écoutant ses officiers', 'By listening to his officers'), ('En s’adaptant au terrain', 'By adapting to the terrain')], 0),
+    Q(('Que signifie « 纸上谈兵 » ?', 'What does “纸上谈兵” mean?'), [('Théoriser sans savoir agir', 'Theorising without being able to act'), ('Écrire de bons livres', 'Writing good books'), ('Gagner sans combattre', 'Winning without fighting')], 0),
+  ]),
+])
+
 if MISSING:
     raise SystemExit('\n'.join(MISSING))
-ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI, JINGWEI, YUGONG, YUBANG]
+ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI, JINGWEI, YUGONG, YUBANG, SUWU, WOXIN, ZHIBING]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES
@@ -895,6 +1019,6 @@ for s in ZH_STORIES:
             assert 0 <= q['answer'] < len(q['choices'])
         for para in c['paragraphs']:
             for sent in para:
-                assert (s['level'] in ('HSK3', 'HSK4', 'HSK5') or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
+                assert (s['level'] in ('HSK3', 'HSK4', 'HSK5', 'HSK6') or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
 json.dump(data, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"Contes chinois : {len(ZH_STORIES)} contes, {sum(len(s['chapters']) for s in ZH_STORIES)} chapitres")

@@ -267,7 +267,7 @@ const HSK_LEVELS = [
   { id: 'HSK 3', ready: true, name: () => T("Intermédiaire · 600 mots"), text: () => T("Se débrouiller en voyage, au travail et à l’école ; 把, 被, les compléments de direction ; premiers textes sans pinyin.") },
   { id: 'HSK 4', ready: true, name: () => T("Intermédiaire avancé · 1 200 mots"), text: () => T("Discuter de sujets variés avec des natifs, lire des textes courants et rédiger de courtes phrases.") },
   { id: 'HSK 5', ready: true, name: () => T("Avancé · 2 500 mots"), text: () => T("Lire journaux et magazines, suivre films et émissions, faire un exposé structuré.") },
-  { id: 'HSK 6', ready: false, name: () => T("Maîtrise · 5 000 mots"), text: () => T("Comprendre sans effort ce qu’on lit et entend, chengyu et langue écrite soutenue.") },
+  { id: 'HSK 6', ready: true, name: () => T("Maîtrise · 5 000 mots"), text: () => T("Comprendre sans effort ce qu’on lit et entend, chengyu et langue écrite soutenue.") },
 ];
 
 const FEATURES = [

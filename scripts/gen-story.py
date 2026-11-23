@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si, HSK 5 compagnon de Xu Fu), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si, HSK 5 compagnon de Xu Fu, HSK 6 interprète de Zhang Qian), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -1059,6 +1059,56 @@ story['levels']['HSK5'] = {
       ('Devant les sages de Penglai, passe l’épreuve : écoute, lis et écris comme au HSK 5. Atteins 180 points sur 300.',
        'Before the sages of Penglai, take the test: listen, read and write as in the HSK 5. Reach 180 points out of 300.'),
       ('Les sages s’inclinent. Niveau HSK 5 validé : tu as trouvé ce qui ne meurt jamais, la langue que l’on transmet !', 'The sages bow. HSK 5 level complete: you have found what never dies, the language that is passed on!')),
+   },
+}
+story['levels']['HSK6'] = {
+   'glyph': '丝', 'jp': '西域', 'color': '#B0652A',
+   'saga': B('La route de la soie', 'The Silk Road'),
+   'hero': B('Interprète de Zhang Qian', 'Zhang Qian’s interpreter'),
+   'short': B('L’interprète', 'The interpreter'),
+   'prologue': B(
+     'Au palais Weiyang, l’empereur Wu des Han cherche des alliés contre les Xiongnu, qui ravagent ses frontières. Un officier de la garde, Zhang Qian, se porte volontaire pour traverser les terres inconnues de l’Ouest. Il lui faut quelqu’un qui maîtrise toute la langue, du parler des marchés au style des annales : toi. « Là-bas, dit-il, chaque mot sera une arme ou un pont. »',
+     'At the Weiyang palace, Emperor Wu of Han seeks allies against the Xiongnu, who ravage his borders. A guard officer, Zhang Qian, volunteers to cross the unknown lands of the West. He needs someone who has mastered the whole language, from market talk to the style of the annals: you. “Out there,” he says, “every word will be a weapon or a bridge.”'),
+   'epilogue': B(
+     'Treize ans après le départ, vous n’êtes plus que deux à franchir les portes de Chang’an. L’alliance a échoué, mais vos récits ouvrent une route que suivront les caravanes de soie, de chevaux et d’idées pendant des siècles. Le Grand Historien Sima Qian te demande de tout lui raconter : ton voyage entrera dans les annales, écrit dans la langue que tu maîtrises désormais tout entière.',
+     'Thirteen years after setting out, only two of you pass through the gates of Chang’an. The alliance failed, but your accounts open a road that caravans of silk, horses and ideas will follow for centuries. The Grand Historian Sima Qian asks you to tell him everything: your journey will enter the annals, written in the language you now master in full.'),
+   'chapters': {
+    'hsk6-w1': CHAP(('La cour de Chang’an', 'The court of Chang’an'),
+      ('À la cour, le Paoxiao souffle l’avidité aux ministres, qui refusent de financer l’ambassade. Lois, arguments, rites de départ : convaincs la cour avec rigueur.',
+       'At court, the Paoxiao breathes greed into the ministers, who refuse to fund the embassy. Laws, arguments, departure rites: convince the court with rigour.'),
+      ('Le Paoxiao s’enfuit sous les tables du banquet. L’empereur remet à Zhang Qian l’insigne d’envoyé : l’ambassade part vers l’Ouest.', 'The Paoxiao flees under the banquet tables. The emperor hands Zhang Qian the envoy’s tally: the embassy sets out for the West.')),
+    'hsk6-w2': CHAP(('Le corridor du Hexi', 'The Hexi corridor'),
+      ('Dans le corridor du Hexi, l’Aoyin aux quatre cornes barre la route entre déserts et montagnes. Parle-lui de la frontière, de l’armée et de la guerre sans trembler.',
+       'In the Hexi corridor, the four-horned Aoyin bars the road between deserts and mountains. Speak to it of the frontier, the army and war without trembling.'),
+      ('L’Aoyin s’écarte… mais au-delà du col, les cavaliers xiongnu vous attendaient. Te voilà captif, avec Zhang Qian et Ganfu.', 'The Aoyin steps aside… but beyond the pass, Xiongnu horsemen were waiting. You are taken captive with Zhang Qian and Ganfu.')),
+    'hsk6-w3': CHAP(('La steppe des Xiongnu', 'The Xiongnu steppe'),
+      ('Dix ans sous la tente : le Bo, cheval cornu au grondement de tambour, surveille chaque captif. Comprends la vie des nomades, apprivoise ta nostalgie et prépare la fuite.',
+       'Ten years under the tent: the Bo, a horned horse with a drum-like rumble, watches every captive. Understand nomad life, tame your homesickness and plan the escape.'),
+      ('Une nuit sans lune, le Bo détourne la tête. Vous filez au galop vers l’ouest, l’insigne des Han caché sous ton manteau.', 'On a moonless night the Bo looks away. You gallop west, the Han tally hidden under your coat.')),
+    'hsk6-w4': CHAP(('Le désert de Loulan', 'The Loulan desert'),
+      ('Sous les dunes de Loulan rôde le Toulou, qui dévore ceux qui perdent courage. Comprends le désert, son eau rare et son équilibre fragile, et tiens jusqu’au bout.',
+       'Beneath the Loulan dunes prowls the Toulou, which devours those who lose heart. Understand the desert, its scarce water and fragile balance, and hold on to the end.'),
+      ('Le Toulou s’enfonce dans le sable. À l’horizon, les vergers d’une oasis : vous êtes sortis du désert.', 'The Toulou sinks into the sand. On the horizon, the orchards of an oasis: you are out of the desert.')),
+    'hsk6-w5': CHAP(('Le royaume de Dayuan', 'The kingdom of Dayuan'),
+      ('À Dayuan, le Jiao tacheté veille sur les haras des chevaux célestes. Négocie avec bonne foi, comprends l’économie des oasis et parle chevaux en connaisseur.',
+       'In Dayuan, the spotted Jiao watches over the stud farms of the heavenly horses. Negotiate in good faith, understand the oasis economy and talk horses like a connoisseur.'),
+      ('Le Jiao aboie trois fois : bon présage. Le roi de Dayuan vous donne des guides jusqu’au pays des Yuezhi.', 'The Jiao barks three times: a good omen. The king of Dayuan gives you guides as far as the Yuezhi land.')),
+    'hsk6-w6': CHAP(('La Bactriane des Yuezhi', 'Yuezhi Bactria'),
+      ('Chez les Yuezhi, le Jufu lance des pierres sur les temples et refuse toute alliance. Montre que tu comprends leurs arts et leurs croyances, puis présente l’offre de l’empereur.',
+       'Among the Yuezhi, the Jufu throws stones at the temples and refuses any alliance. Show that you understand their arts and beliefs, then present the emperor’s offer.'),
+      ('Le Jufu repose sa pierre. Le roi des Yuezhi vous reçoit avec honneur… mais refuse la guerre : son peuple veut la paix.', 'The Jufu puts down its stone. The Yuezhi king receives you with honour… but refuses war: his people want peace.')),
+    'hsk6-w7': CHAP(('Les monts Kunlun', 'The Kunlun mountains'),
+      ('Sur la route du retour, les monts Kunlun. Le Luwu aux neuf queues garde le jardin de la Reine Mère de l’Ouest : réponds à ses énigmes sur la raison, le ciel et le Tao.',
+       'On the way back, the Kunlun mountains. The nine-tailed Luwu guards the garden of the Queen Mother of the West: answer its riddles on reason, the sky and the Tao.'),
+      ('Le Luwu baisse la tête. Au bord de l’étang de jade, la Reine Mère te dit : « Ce que tu cherches n’est pas ici. Retourne raconter ce que tu as vu. »', 'The Luwu bows its head. By the jade pool, the Queen Mother tells you: “What you seek is not here. Go back and tell what you have seen.”')),
+    'hsk6-w8': CHAP(('Retour à Chang’an', 'Return to Chang’an'),
+      ('De retour à Chang’an, le Eshou menteur brouille les archives et réécrit ton voyage. Avec le Grand Historien, rétablis les faits, cite tes sources et résume fidèlement.',
+       'Back in Chang’an, the lying Eshou muddles the archives and rewrites your journey. With the Grand Historian, restore the facts, cite your sources and summarise faithfully.'),
+      ('Le Eshou se tait enfin. Sima Qian trempe son pinceau : « Ton récit sera la vérité que liront les siècles. »', 'The Eshou finally falls silent. Sima Qian dips his brush: “Your account will be the truth the centuries will read.”')),
+    'hsk6-final': CHAP(('Le palais Weiyang', 'The Weiyang palace'),
+      ('Devant l’empereur Wu et toute la cour, passe la dernière épreuve : écoute, lis et résume comme au HSK 6. Atteins 180 points sur 300.',
+       'Before Emperor Wu and the whole court, take the last test: listen, read and summarise as in the HSK 6. Reach 180 points out of 300.'),
+      ('L’empereur se lève et te salue. Niveau HSK 6 validé : tu maîtrises le chinois, des marchés de Dayuan aux annales de l’empire. Le parcours chinois est accompli !', 'The emperor rises and salutes you. HSK 6 level complete: you master Chinese, from the markets of Dayuan to the annals of the empire. The Chinese path is complete!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

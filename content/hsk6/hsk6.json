@@ -1,0 +1,6554 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "HSK6",
+  "title": "HSK 6 : la route de la soie",
+  "region": "Routes de l’Ouest",
+  "order": 41
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent le programme du HSK 6 (HSK 2.0, utilisé aux sessions de 2026) mais ne sont pas des listes officielles du Centre for Language Education and Cooperation (CLEC).",
+ "worlds": [
+  {
+   "slug": "hsk6-w1",
+   "title": "La cour de Chang’an",
+   "region": "Routes de l’Ouest",
+   "description": "Le pouvoir et l’administration (鉴于) ; argumenter devant la cour (固然…但) ; recevoir une mission (务必, 不至于).",
+   "boss": {
+    "name": "Le Paoxiao glouton",
+    "glyph": "狍",
+    "intro": "Le Paoxiao, corps de mouton, visage d’homme et yeux cachés sous les aisselles, dévore tout ce qu’il trouve. À la cour, il souffle l’avidité aux ministres, qui refusent de financer l’ambassade vers l’Ouest : convaincs-les avec des arguments solides."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w1-c1",
+     "title": "Le palais Weiyang",
+     "lessons": [
+      {
+       "slug": "zh-hz-court",
+       "title": "Les caractères de la cour : 宫 廷 臣 谏 奏 诏 策 吏",
+       "objective": "Reconnaître les caractères du palais et de l’administration.",
+       "minutes": 5,
+       "explanation": [
+        "宫 (gōng, palais) place un toit 宀 au-dessus de pièces en enfilade. 廷 (tíng, cour du palais) porte 廴, le pas qui s’allonge : l’allée qui mène au trône. 臣 (chén, sujet, ministre) dessine un œil baissé devant le souverain.",
+        "谏 (jiàn, remontrer) et 诏 (zhào, édit) portent la parole 讠 : le ministre conseille, l’empereur ordonne. 奏 (zòu) = présenter un rapport au trône, mais aussi jouer de la musique (演奏). 策 (cè) porte le bambou ⺮ : les plans s’écrivaient sur des lattes de bambou. 吏 (lì) = petit fonctionnaire."
+       ],
+       "items": [
+        {
+         "slug": "hz-gong-palace",
+         "kind": "kanji",
+         "front": "宫",
+         "reading": "gōng",
+         "romaji": null,
+         "meaning": "palais",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-ting-h6",
+         "kind": "kanji",
+         "front": "廷",
+         "reading": "tíng",
+         "romaji": null,
+         "meaning": "cour du palais",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-chen",
+         "kind": "kanji",
+         "front": "臣",
+         "reading": "chén",
+         "romaji": null,
+         "meaning": "sujet, ministre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-jian-remonstrate",
+         "kind": "kanji",
+         "front": "谏",
+         "reading": "jiàn",
+         "romaji": null,
+         "meaning": "remontrer, conseiller (un souverain)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-zou-h6",
+         "kind": "kanji",
+         "front": "奏",
+         "reading": "zòu",
+         "romaji": null,
+         "meaning": "présenter au trône ; jouer (musique)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-zhao-edict",
+         "kind": "kanji",
+         "front": "诏",
+         "reading": "zhào",
+         "romaji": null,
+         "meaning": "édit impérial",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-ce",
+         "kind": "kanji",
+         "front": "策",
+         "reading": "cè",
+         "romaji": null,
+         "meaning": "plan, stratégie",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-li-official",
+         "kind": "kanji",
+         "front": "吏",
+         "reading": "lì",
+         "romaji": null,
+         "meaning": "petit fonctionnaire",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-govern",
+       "title": "Gouverner : 鉴于",
+       "objective": "Parler du pouvoir, des lois et de l’administration.",
+       "minutes": 10,
+       "explanation": [
+        "鉴于 A，B = étant donné A, vu A (registre écrit) : 鉴于目前的情况，会议推迟举行 (vu la situation actuelle, la réunion est reportée).",
+        "Le pouvoir : 朝廷 (la cour impériale), 大臣 (grand ministre), 官员 (fonctionnaire), 君主 (souverain), 统治 (régner), 政权 (pouvoir politique), 权力 (pouvoir, autorité).",
+        "Administrer : 制定 (élaborer) une 政策 (politique), 颁布 (promulguer) un 法令 (décret), 执行 (appliquer), 监督 (contrôler), 机构 (institution), 改革 (réformer), 稳定 (stable)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-jianyu",
+         "kind": "grammar",
+         "front": "鉴于…，…",
+         "reading": "jiànyú",
+         "romaji": null,
+         "meaning": "étant donné…, vu…"
+        },
+        {
+         "slug": "zh-jianyu",
+         "kind": "vocabulary",
+         "front": "鉴于",
+         "reading": "jiànyú",
+         "romaji": null,
+         "meaning": "étant donné, vu"
+        },
+        {
+         "slug": "zh-chaoting",
+         "kind": "vocabulary",
+         "front": "朝廷",
+         "reading": "cháotíng",
+         "romaji": null,
+         "meaning": "cour impériale"
+        },
+        {
+         "slug": "zh-dachen",
+         "kind": "vocabulary",
+         "front": "大臣",
+         "reading": "dàchén",
+         "romaji": null,
+         "meaning": "grand ministre"
+        },
+        {
+         "slug": "zh-guanyuan",
+         "kind": "vocabulary",
+         "front": "官员",
+         "reading": "guānyuán",
+         "romaji": null,
+         "meaning": "fonctionnaire (de l’État)"
+        },
+        {
+         "slug": "zh-junzhu",
+         "kind": "vocabulary",
+         "front": "君主",
+         "reading": "jūnzhǔ",
+         "romaji": null,
+         "meaning": "souverain, monarque"
+        },
+        {
+         "slug": "zh-tongzhi-h6",
+         "kind": "vocabulary",
+         "front": "统治",
+         "reading": "tǒngzhì",
+         "romaji": null,
+         "meaning": "régner, gouverner"
+        },
+        {
+         "slug": "zh-zhengquan",
+         "kind": "vocabulary",
+         "front": "政权",
+         "reading": "zhèngquán",
+         "romaji": null,
+         "meaning": "pouvoir politique, régime"
+        },
+        {
+         "slug": "zh-quanli-power",
+         "kind": "vocabulary",
+         "front": "权力",
+         "reading": "quánlì",
+         "romaji": null,
+         "meaning": "pouvoir, autorité"
+        },
+        {
+         "slug": "zh-zhiding",
+         "kind": "vocabulary",
+         "front": "制定",
+         "reading": "zhìdìng",
+         "romaji": null,
+         "meaning": "élaborer, établir (un plan, une loi)"
+        },
+        {
+         "slug": "zh-zhengce",
+         "kind": "vocabulary",
+         "front": "政策",
+         "reading": "zhèngcè",
+         "romaji": null,
+         "meaning": "politique (ensemble de mesures)"
+        },
+        {
+         "slug": "zh-banbu",
+         "kind": "vocabulary",
+         "front": "颁布",
+         "reading": "bānbù",
+         "romaji": null,
+         "meaning": "promulguer"
+        },
+        {
+         "slug": "zh-faling",
+         "kind": "vocabulary",
+         "front": "法令",
+         "reading": "fǎlìng",
+         "romaji": null,
+         "meaning": "décret"
+        },
+        {
+         "slug": "zh-zhixing",
+         "kind": "vocabulary",
+         "front": "执行",
+         "reading": "zhíxíng",
+         "romaji": null,
+         "meaning": "appliquer, exécuter"
+        },
+        {
+         "slug": "zh-jiandu",
+         "kind": "vocabulary",
+         "front": "监督",
+         "reading": "jiāndū",
+         "romaji": null,
+         "meaning": "contrôler, superviser"
+        },
+        {
+         "slug": "zh-jigou",
+         "kind": "vocabulary",
+         "front": "机构",
+         "reading": "jīgòu",
+         "romaji": null,
+         "meaning": "institution, organisme"
+        },
+        {
+         "slug": "zh-gaige",
+         "kind": "vocabulary",
+         "front": "改革",
+         "reading": "gǎigé",
+         "romaji": null,
+         "meaning": "réformer ; réforme"
+        },
+        {
+         "slug": "zh-wending",
+         "kind": "vocabulary",
+         "front": "稳定",
+         "reading": "wěndìng",
+         "romaji": null,
+         "meaning": "stable ; stabiliser"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "鉴于匈奴经常侵犯边境，皇帝决定派人出使西域。",
+         "reading": "Jiànyú Xiōngnú jīngcháng qīnfàn biānjìng, huángdì juédìng pài rén chūshǐ Xīyù.",
+         "fr": "Vu que les Xiongnu attaquent souvent la frontière, l’empereur décide d’envoyer une ambassade dans les royaumes de l’Ouest."
+        },
+        {
+         "jp": "新的法令颁布以后，各地官员必须严格执行。",
+         "reading": "Xīn de fǎlìng bānbù yǐhòu, gè dì guānyuán bìxū yángé zhíxíng.",
+         "fr": "Une fois le nouveau décret promulgué, les fonctionnaires de chaque région doivent l’appliquer strictement."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿天气原因，今天的航班全部取消。",
+         "choices": [
+          "鉴于",
+          "至于",
+          "何况"
+         ],
+         "answer": "鉴于",
+         "explanation": "Étant donné : 鉴于 (écrit).",
+         "translation": "En raison de la météo, tous les vols d’aujourd’hui sont annulés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "政府正在＿新的环保政策。",
+         "choices": [
+          "制定",
+          "统治",
+          "监督"
+         ],
+         "answer": "制定",
+         "explanation": "Élaborer une politique : 制定政策.",
+         "translation": "Le gouvernement élabore une nouvelle politique environnementale."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大臣",
+           "jp": "这项改革会不会影响社会稳定？"
+          }
+         ],
+         "translation": "Un ministre craint que la réforme ne menace la stabilité (non, si on l’applique progressivement).",
+         "choices": [
+          "只要逐步执行，就不会。",
+          "君主已经统治了。",
+          "机构是一种法令。"
+         ],
+         "answer": "只要逐步执行，就不会。",
+         "explanation": "Rassurer : 只要…就不会."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这个机构负责监督各地官员。",
+         "translation": "Cet organisme contrôle les fonctionnaires.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "负责监督 = être chargé de contrôler."
+        }
+       ]
+      },
+      {
+       "slug": "zh-argue",
+       "title": "Plaider devant la cour : 固然…但",
+       "objective": "Concéder un point, puis défendre sa position avec des arguments.",
+       "minutes": 10,
+       "explanation": [
+        "固然 A，但 B = certes A, mais B (on concède avant d’objecter) : 这个办法固然好，但成本太高 (cette méthode est certes bonne, mais elle coûte trop cher).",
+        "Argumenter : 阐述 (exposer), 论证 (démontrer), 依据 (fondement), 论点 (thèse), 见解 (point de vue personnel), 立场 (position), 反驳 (réfuter), 澄清 (clarifier), 辩护 (défendre).",
+        "Le ton : 说服 (convaincre), 提倡 (promouvoir), 委婉 (avec tact) / 坦率 (franc), 含糊 (vague), 恰当 (approprié), 措辞 (formulation)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-guran-dan",
+         "kind": "grammar",
+         "front": "固然…，但…",
+         "reading": "gùrán…, dàn…",
+         "romaji": null,
+         "meaning": "certes…, mais…"
+        },
+        {
+         "slug": "zh-guran",
+         "kind": "vocabulary",
+         "front": "固然",
+         "reading": "gùrán",
+         "romaji": null,
+         "meaning": "certes, il faut l’admettre"
+        },
+        {
+         "slug": "zh-chanshu",
+         "kind": "vocabulary",
+         "front": "阐述",
+         "reading": "chǎnshù",
+         "romaji": null,
+         "meaning": "exposer, développer (une idée)"
+        },
+        {
+         "slug": "zh-lunzheng",
+         "kind": "vocabulary",
+         "front": "论证",
+         "reading": "lùnzhèng",
+         "romaji": null,
+         "meaning": "démontrer ; démonstration"
+        },
+        {
+         "slug": "zh-yiju",
+         "kind": "vocabulary",
+         "front": "依据",
+         "reading": "yījù",
+         "romaji": null,
+         "meaning": "fondement ; se fonder sur"
+        },
+        {
+         "slug": "zh-lundian",
+         "kind": "vocabulary",
+         "front": "论点",
+         "reading": "lùndiǎn",
+         "romaji": null,
+         "meaning": "thèse, argument principal"
+        },
+        {
+         "slug": "zh-jianjie",
+         "kind": "vocabulary",
+         "front": "见解",
+         "reading": "jiànjiě",
+         "romaji": null,
+         "meaning": "point de vue personnel"
+        },
+        {
+         "slug": "zh-lichang",
+         "kind": "vocabulary",
+         "front": "立场",
+         "reading": "lìchǎng",
+         "romaji": null,
+         "meaning": "position, prise de position"
+        },
+        {
+         "slug": "zh-fanbo",
+         "kind": "vocabulary",
+         "front": "反驳",
+         "reading": "fǎnbó",
+         "romaji": null,
+         "meaning": "réfuter"
+        },
+        {
+         "slug": "zh-chengqing",
+         "kind": "vocabulary",
+         "front": "澄清",
+         "reading": "chéngqīng",
+         "romaji": null,
+         "meaning": "clarifier, tirer au clair"
+        },
+        {
+         "slug": "zh-bianhu",
+         "kind": "vocabulary",
+         "front": "辩护",
+         "reading": "biànhù",
+         "romaji": null,
+         "meaning": "défendre (une cause, un accusé)"
+        },
+        {
+         "slug": "zh-shuofu",
+         "kind": "vocabulary",
+         "front": "说服",
+         "reading": "shuōfú",
+         "romaji": null,
+         "meaning": "persuader, convaincre"
+        },
+        {
+         "slug": "zh-tichang",
+         "kind": "vocabulary",
+         "front": "提倡",
+         "reading": "tíchàng",
+         "romaji": null,
+         "meaning": "promouvoir, prôner"
+        },
+        {
+         "slug": "zh-weiwan",
+         "kind": "vocabulary",
+         "front": "委婉",
+         "reading": "wěiwǎn",
+         "romaji": null,
+         "meaning": "avec tact, détourné"
+        },
+        {
+         "slug": "zh-tanshuai",
+         "kind": "vocabulary",
+         "front": "坦率",
+         "reading": "tǎnshuài",
+         "romaji": null,
+         "meaning": "franc, direct"
+        },
+        {
+         "slug": "zh-hanhu",
+         "kind": "vocabulary",
+         "front": "含糊",
+         "reading": "hánhu",
+         "romaji": null,
+         "meaning": "vague, ambigu"
+        },
+        {
+         "slug": "zh-qiadang",
+         "kind": "vocabulary",
+         "front": "恰当",
+         "reading": "qiàdàng",
+         "romaji": null,
+         "meaning": "approprié, juste"
+        },
+        {
+         "slug": "zh-cuoci",
+         "kind": "vocabulary",
+         "front": "措辞",
+         "reading": "cuòcí",
+         "romaji": null,
+         "meaning": "formulation, choix des mots"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "出使西域固然危险，但对国家的好处是长远的。",
+         "reading": "Chūshǐ Xīyù gùrán wēixiǎn, dàn duì guójiā de hǎochù shì chángyuǎn de.",
+         "fr": "Partir en ambassade dans l’Ouest est certes dangereux, mais les bénéfices pour le pays sont durables."
+        },
+        {
+         "jp": "他用大量事实论证了自己的观点，大臣们无法反驳。",
+         "reading": "Tā yòng dàliàng shìshí lùnzhèngle zìjǐ de guāndiǎn, dàchénmen wúfǎ fǎnbó.",
+         "fr": "Il a étayé son point de vue par une foule de faits, et les ministres n’ont rien pu réfuter."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这本书的内容＿丰富，但价格太贵了。",
+         "choices": [
+          "固然",
+          "鉴于",
+          "何必"
+         ],
+         "answer": "固然",
+         "explanation": "Certes… mais : 固然…但.",
+         "translation": "Ce livre est certes riche, mais il est beaucoup trop cher."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他说得很＿，大家都不明白他到底同不同意。",
+         "choices": [
+          "含糊",
+          "坦率",
+          "恰当"
+         ],
+         "answer": "含糊",
+         "explanation": "Vague : 含糊.",
+         "translation": "Il est resté si vague que personne ne sait s’il est d’accord ou non."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "拒绝别人的时候，说话要＿一点儿。",
+         "choices": [
+          "委婉",
+          "含糊",
+          "固然"
+         ],
+         "answer": "委婉",
+         "explanation": "Avec tact : 委婉.",
+         "translation": "Quand on refuse, il faut s’exprimer avec un peu de tact."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我想澄清一下：我从来没说过这句话。",
+         "translation": "Il précise qu’il n’a jamais dit cette phrase.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "澄清 = tirer au clair."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w1-c2",
+     "title": "L’ambassade vers l’Ouest",
+     "lessons": [
+      {
+       "slug": "zh-mission",
+       "title": "Recevoir une mission : 务必, 不至于",
+       "objective": "Donner et recevoir une mission officielle, insister et rassurer.",
+       "minutes": 10,
+       "explanation": [
+        "务必 + verbe = il faut absolument (consigne écrite, insistante) : 请务必按时到达 (veuillez impérativement arriver à l’heure).",
+        "不至于 = ce n’est pas au point de, on n’en arrivera pas à : 他虽然生气，但不至于不理你 (il est fâché, mais pas au point de t’ignorer).",
+        "La mission : 使命 (mission, vocation), 使者 (envoyé), 出使 (partir en ambassade), 派遣 (dépêcher), 任命 (nommer), 委托 (confier), 授权 (habiliter), 履行 (remplir un devoir), 嘱咐 (recommander), 隆重 (solennel), 启程 (se mettre en route), 随从 (suite, escorte), 向导 (guide)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-wubi",
+         "kind": "grammar",
+         "front": "务必 + 动词",
+         "reading": "wùbì",
+         "romaji": null,
+         "meaning": "il faut absolument…"
+        },
+        {
+         "slug": "gram-zh-buzhiyu",
+         "kind": "grammar",
+         "front": "不至于 + 动词",
+         "reading": "búzhìyú",
+         "romaji": null,
+         "meaning": "ce n’est pas au point de…"
+        },
+        {
+         "slug": "zh-wubi",
+         "kind": "vocabulary",
+         "front": "务必",
+         "reading": "wùbì",
+         "romaji": null,
+         "meaning": "impérativement"
+        },
+        {
+         "slug": "zh-buzhiyu",
+         "kind": "vocabulary",
+         "front": "不至于",
+         "reading": "búzhìyú",
+         "romaji": null,
+         "meaning": "pas au point de"
+        },
+        {
+         "slug": "zh-shiming",
+         "kind": "vocabulary",
+         "front": "使命",
+         "reading": "shǐmìng",
+         "romaji": null,
+         "meaning": "mission (devoir)"
+        },
+        {
+         "slug": "zh-shizhe",
+         "kind": "vocabulary",
+         "front": "使者",
+         "reading": "shǐzhě",
+         "romaji": null,
+         "meaning": "envoyé, émissaire"
+        },
+        {
+         "slug": "zh-chushi",
+         "kind": "vocabulary",
+         "front": "出使",
+         "reading": "chūshǐ",
+         "romaji": null,
+         "meaning": "partir en ambassade"
+        },
+        {
+         "slug": "zh-paiqian",
+         "kind": "vocabulary",
+         "front": "派遣",
+         "reading": "pàiqiǎn",
+         "romaji": null,
+         "meaning": "dépêcher, envoyer (en mission)"
+        },
+        {
+         "slug": "zh-renming",
+         "kind": "vocabulary",
+         "front": "任命",
+         "reading": "rènmìng",
+         "romaji": null,
+         "meaning": "nommer (à un poste)"
+        },
+        {
+         "slug": "zh-weituo",
+         "kind": "vocabulary",
+         "front": "委托",
+         "reading": "wěituō",
+         "romaji": null,
+         "meaning": "confier (une tâche)"
+        },
+        {
+         "slug": "zh-shouquan",
+         "kind": "vocabulary",
+         "front": "授权",
+         "reading": "shòuquán",
+         "romaji": null,
+         "meaning": "habiliter, autoriser"
+        },
+        {
+         "slug": "zh-lüxing-h6",
+         "kind": "vocabulary",
+         "front": "履行",
+         "reading": "lǚxíng",
+         "romaji": null,
+         "meaning": "remplir (un devoir, une promesse)"
+        },
+        {
+         "slug": "zh-zhufu-enjoin",
+         "kind": "vocabulary",
+         "front": "嘱咐",
+         "reading": "zhǔfù",
+         "romaji": null,
+         "meaning": "recommander, enjoindre"
+        },
+        {
+         "slug": "zh-longzhong",
+         "kind": "vocabulary",
+         "front": "隆重",
+         "reading": "lóngzhòng",
+         "romaji": null,
+         "meaning": "solennel"
+        },
+        {
+         "slug": "zh-qicheng",
+         "kind": "vocabulary",
+         "front": "启程",
+         "reading": "qǐchéng",
+         "romaji": null,
+         "meaning": "se mettre en route"
+        },
+        {
+         "slug": "zh-suicong",
+         "kind": "vocabulary",
+         "front": "随从",
+         "reading": "suícóng",
+         "romaji": null,
+         "meaning": "suite, escorte"
+        },
+        {
+         "slug": "zh-xiangdao",
+         "kind": "vocabulary",
+         "front": "向导",
+         "reading": "xiàngdǎo",
+         "romaji": null,
+         "meaning": "guide (personne)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "皇帝任命张骞为使者，派遣他出使大月氏。",
+         "reading": "Huángdì rènmìng Zhāng Qiān wéi shǐzhě, pàiqiǎn tā chūshǐ Dà Yuèzhī.",
+         "fr": "L’empereur nomme Zhang Qian envoyé et le dépêche en ambassade auprès des Grands Yuezhi."
+        },
+        {
+         "jp": "临行前，皇帝嘱咐他务必完成使命。",
+         "reading": "Lín xíng qián, huángdì zhǔfù tā wùbì wánchéng shǐmìng.",
+         "fr": "Avant le départ, l’empereur lui recommande d’accomplir sa mission coûte que coûte."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这份文件非常重要，请你＿亲手交给经理。",
+         "choices": [
+          "务必",
+          "不至于",
+          "固然"
+         ],
+         "answer": "务必",
+         "explanation": "Impérativement : 务必.",
+         "translation": "Ce document est très important : remets-le impérativement en main propre au directeur."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他只是有点儿感冒，＿住院吧。",
+         "choices": [
+          "不至于",
+          "务必",
+          "难怪"
+         ],
+         "answer": "不至于",
+         "explanation": "Pas au point de : 不至于.",
+         "translation": "Il a juste un petit rhume, ce n’est pas au point de l’hospitaliser."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "张骞",
+           "jp": "这一路上谁给我们当向导？"
+          }
+         ],
+         "translation": "Zhang Qian demande qui servira de guide (Ganfu, qui connaît la steppe).",
+         "choices": [
+          "甘父熟悉草原，让他带路吧。",
+          "典礼非常隆重。",
+          "我们已经授权了法令。"
+         ],
+         "answer": "甘父熟悉草原，让他带路吧。",
+         "explanation": "Guider : 带路."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "使团明天一早启程。",
+         "translation": "L’ambassade part demain matin.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "启程 = se mettre en route."
+        }
+       ]
+      },
+      {
+       "slug": "zh-ceremony",
+       "title": "Les rites de départ : 以便",
+       "objective": "Décrire une cérémonie officielle et dire dans quel but on agit.",
+       "minutes": 10,
+       "explanation": [
+        "…，以便 + but = …, afin de, pour que (registre soutenu) : 请提前把材料发给我，以便我做好准备 (envoie-moi les documents à l’avance, que je puisse me préparer).",
+        "La cérémonie : 典礼 (cérémonie), 仪式 (rite), 礼节 (étiquette), 庄严 (majestueux), 恭敬 (respectueux), 跪 (s’agenouiller), 鞠躬 (s’incliner), 致辞 (prononcer un discours).",
+        "Les présents : 赏赐 (récompense impériale), 珍宝 (trésors), 黄金 (or), 符节 (insigne d’envoyé), 告辞 (prendre congé)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yibian-h6",
+         "kind": "grammar",
+         "front": "…，以便…",
+         "reading": "yǐbiàn",
+         "romaji": null,
+         "meaning": "afin de, pour que"
+        },
+        {
+         "slug": "zh-yibian",
+         "kind": "vocabulary",
+         "front": "以便",
+         "reading": "yǐbiàn",
+         "romaji": null,
+         "meaning": "afin de, pour que"
+        },
+        {
+         "slug": "zh-dianli",
+         "kind": "vocabulary",
+         "front": "典礼",
+         "reading": "diǎnlǐ",
+         "romaji": null,
+         "meaning": "cérémonie"
+        },
+        {
+         "slug": "zh-yishi-h6",
+         "kind": "vocabulary",
+         "front": "仪式",
+         "reading": "yíshì",
+         "romaji": null,
+         "meaning": "rite, cérémonial"
+        },
+        {
+         "slug": "zh-lijie-h6",
+         "kind": "vocabulary",
+         "front": "礼节",
+         "reading": "lǐjié",
+         "romaji": null,
+         "meaning": "étiquette, politesse"
+        },
+        {
+         "slug": "zh-zhuangyan",
+         "kind": "vocabulary",
+         "front": "庄严",
+         "reading": "zhuāngyán",
+         "romaji": null,
+         "meaning": "majestueux, solennel"
+        },
+        {
+         "slug": "zh-gongjing",
+         "kind": "vocabulary",
+         "front": "恭敬",
+         "reading": "gōngjìng",
+         "romaji": null,
+         "meaning": "respectueux"
+        },
+        {
+         "slug": "zh-gui-h6",
+         "kind": "vocabulary",
+         "front": "跪",
+         "reading": "guì",
+         "romaji": null,
+         "meaning": "s’agenouiller"
+        },
+        {
+         "slug": "zh-jugong",
+         "kind": "vocabulary",
+         "front": "鞠躬",
+         "reading": "jūgōng",
+         "romaji": null,
+         "meaning": "s’incliner"
+        },
+        {
+         "slug": "zh-zhici",
+         "kind": "vocabulary",
+         "front": "致辞",
+         "reading": "zhìcí",
+         "romaji": null,
+         "meaning": "prononcer un discours"
+        },
+        {
+         "slug": "zh-shangci",
+         "kind": "vocabulary",
+         "front": "赏赐",
+         "reading": "shǎngcì",
+         "romaji": null,
+         "meaning": "récompenser (de la part d’un souverain)"
+        },
+        {
+         "slug": "zh-zhenbao",
+         "kind": "vocabulary",
+         "front": "珍宝",
+         "reading": "zhēnbǎo",
+         "romaji": null,
+         "meaning": "trésor, objets précieux"
+        },
+        {
+         "slug": "zh-huangjin",
+         "kind": "vocabulary",
+         "front": "黄金",
+         "reading": "huángjīn",
+         "romaji": null,
+         "meaning": "or (métal)"
+        },
+        {
+         "slug": "zh-fujie",
+         "kind": "vocabulary",
+         "front": "符节",
+         "reading": "fújié",
+         "romaji": null,
+         "meaning": "insigne d’envoyé"
+        },
+        {
+         "slug": "zh-gaoci",
+         "kind": "vocabulary",
+         "front": "告辞",
+         "reading": "gàocí",
+         "romaji": null,
+         "meaning": "prendre congé"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "典礼上，张骞恭敬地跪下，接过皇帝赏赐的符节。",
+         "reading": "Diǎnlǐ shang, Zhāng Qiān gōngjìng de guìxia, jiēguò huángdì shǎngcì de fújié.",
+         "fr": "Pendant la cérémonie, Zhang Qian s’agenouille avec respect et reçoit l’insigne d’envoyé offert par l’empereur."
+        },
+        {
+         "jp": "他们带了很多丝绸和黄金，以便送给西域各国的国王。",
+         "reading": "Tāmen dàile hěn duō sīchóu hé huángjīn, yǐbiàn sòng gěi Xīyù gè guó de guówáng.",
+         "fr": "Ils emportent beaucoup de soie et d’or pour les offrir aux rois des pays de l’Ouest."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "请把你的电话号码留下，＿我们联系你。",
+         "choices": [
+          "以便",
+          "鉴于",
+          "固然"
+         ],
+         "answer": "以便",
+         "explanation": "Afin que : 以便.",
+         "translation": "Laisse ton numéro de téléphone pour que nous puissions te contacter."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "毕业＿在大礼堂举行，校长会致辞。",
+         "choices": [
+          "典礼",
+          "符节",
+          "黄金"
+         ],
+         "answer": "典礼",
+         "explanation": "Cérémonie : 典礼.",
+         "translation": "La cérémonie de remise des diplômes a lieu dans le grand amphithéâtre ; le directeur fera un discours."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "主人",
+           "jp": "时间不早了，再坐一会儿吧。"
+          }
+         ],
+         "translation": "Ton hôte t’invite à rester encore un peu (tu prends poliment congé).",
+         "choices": [
+          "谢谢，不打扰了，我先告辞了。",
+          "我向你鞠躬赏赐。",
+          "丝绸非常庄严。"
+         ],
+         "answer": "谢谢，不打扰了，我先告辞了。",
+         "explanation": "Prendre congé : 告辞."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他向老师深深地鞠了一躬。",
+         "translation": "Il s’incline profondément devant son professeur.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "鞠了一躬 = s’incliner."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w2",
+   "title": "Le corridor du Hexi",
+   "region": "Routes de l’Ouest",
+   "description": "L’armée et la frontière (一向, 向来) ; traverser des terres rudes (乃至) ; tomber dans une embuscade (不料).",
+   "boss": {
+    "name": "L’Aoyin aux quatre cornes",
+    "glyph": "獓",
+    "intro": "L’Aoyin, bœuf blanc à quatre cornes dont le poil tombe comme un manteau de paille, garde les monts Sanwei et dévore les voyageurs. Il bloque le corridor du Hexi : parle-lui de la frontière et de la guerre sans trembler."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w2-c1",
+     "title": "Aux marches de l’empire",
+     "lessons": [
+      {
+       "slug": "zh-hz-frontier",
+       "title": "Les caractères de la frontière : 疆 域 驿 隘 戍 烽 塞 俘",
+       "objective": "Reconnaître les caractères des marches et de la guerre.",
+       "minutes": 5,
+       "explanation": [
+        "疆 (jiāng, frontière) aligne des champs 田 séparés par des traits : les limites de la terre. 域 (yù, territoire) porte la terre 土. 塞 (sài) = passe fortifiée ; lu sāi, « boucher ». 隘 (ài) porte la colline 阝 : un défilé étroit.",
+        "驿 (yì, relais de poste) porte le cheval 马 : on y changeait de monture. 烽 (fēng) porte le feu 火 : les feux d’alarme des tours. 戍 (shù, tenir garnison) montre un homme sous une hallebarde 戈. 俘 (fú, captif) porte la personne 亻."
+       ],
+       "items": [
+        {
+         "slug": "hz-jiang-border",
+         "kind": "kanji",
+         "front": "疆",
+         "reading": "jiāng",
+         "romaji": null,
+         "meaning": "frontière, confins",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 19
+         }
+        },
+        {
+         "slug": "hz-yu-domain",
+         "kind": "kanji",
+         "front": "域",
+         "reading": "yù",
+         "romaji": null,
+         "meaning": "territoire, domaine",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-yi-relay",
+         "kind": "kanji",
+         "front": "驿",
+         "reading": "yì",
+         "romaji": null,
+         "meaning": "relais de poste",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-ai-h6",
+         "kind": "kanji",
+         "front": "隘",
+         "reading": "ài",
+         "romaji": null,
+         "meaning": "défilé, passage étroit",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-shu-garrison",
+         "kind": "kanji",
+         "front": "戍",
+         "reading": "shù",
+         "romaji": null,
+         "meaning": "tenir garnison",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-feng-beacon",
+         "kind": "kanji",
+         "front": "烽",
+         "reading": "fēng",
+         "romaji": null,
+         "meaning": "feu d’alarme",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-sai",
+         "kind": "kanji",
+         "front": "塞",
+         "reading": "sài",
+         "romaji": null,
+         "meaning": "passe fortifiée ; boucher (sāi)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-fu-captive",
+         "kind": "kanji",
+         "front": "俘",
+         "reading": "fú",
+         "romaji": null,
+         "meaning": "captif, faire prisonnier",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-army",
+       "title": "Garder la frontière : 一向, 向来",
+       "objective": "Parler de l’armée, de la défense et de la guerre.",
+       "minutes": 10,
+       "explanation": [
+        "一向 / 向来 = depuis toujours, de tout temps (une habitude constante) : 他一向很守时 (il a toujours été ponctuel) ; 向来 est plus écrit.",
+        "L’armée : 军队 (armée), 将军 (général), 士兵 (soldat), 武器 (arme), 盔甲 (armure), 驻扎 (stationner), 兵力 (effectifs), 阵地 (position), 战略 (stratégie), 战役 (bataille, campagne).",
+        "Attaquer et défendre : 侵略 (envahir), 抵抗 (résister), 防守 (défendre), 撤退 (battre en retraite), 敌人 (ennemi), 边疆 (régions frontalières)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yixiang",
+         "kind": "grammar",
+         "front": "一向 / 向来 + 动词",
+         "reading": "yíxiàng / xiànglái",
+         "romaji": null,
+         "meaning": "depuis toujours…"
+        },
+        {
+         "slug": "zh-yixiang",
+         "kind": "vocabulary",
+         "front": "一向",
+         "reading": "yíxiàng",
+         "romaji": null,
+         "meaning": "depuis toujours"
+        },
+        {
+         "slug": "zh-xianglai",
+         "kind": "vocabulary",
+         "front": "向来",
+         "reading": "xiànglái",
+         "romaji": null,
+         "meaning": "de tout temps"
+        },
+        {
+         "slug": "zh-jundui",
+         "kind": "vocabulary",
+         "front": "军队",
+         "reading": "jūnduì",
+         "romaji": null,
+         "meaning": "armée"
+        },
+        {
+         "slug": "zh-jiangjun",
+         "kind": "vocabulary",
+         "front": "将军",
+         "reading": "jiāngjūn",
+         "romaji": null,
+         "meaning": "général (grade)"
+        },
+        {
+         "slug": "zh-shibing",
+         "kind": "vocabulary",
+         "front": "士兵",
+         "reading": "shìbīng",
+         "romaji": null,
+         "meaning": "soldat"
+        },
+        {
+         "slug": "zh-wuqi",
+         "kind": "vocabulary",
+         "front": "武器",
+         "reading": "wǔqì",
+         "romaji": null,
+         "meaning": "arme"
+        },
+        {
+         "slug": "zh-kuijia",
+         "kind": "vocabulary",
+         "front": "盔甲",
+         "reading": "kuījiǎ",
+         "romaji": null,
+         "meaning": "armure"
+        },
+        {
+         "slug": "zh-zhuzha",
+         "kind": "vocabulary",
+         "front": "驻扎",
+         "reading": "zhùzhā",
+         "romaji": null,
+         "meaning": "stationner (troupes)"
+        },
+        {
+         "slug": "zh-bingli",
+         "kind": "vocabulary",
+         "front": "兵力",
+         "reading": "bīnglì",
+         "romaji": null,
+         "meaning": "effectifs militaires"
+        },
+        {
+         "slug": "zh-zhendi",
+         "kind": "vocabulary",
+         "front": "阵地",
+         "reading": "zhèndì",
+         "romaji": null,
+         "meaning": "position (militaire)"
+        },
+        {
+         "slug": "zh-zhanlüe",
+         "kind": "vocabulary",
+         "front": "战略",
+         "reading": "zhànlüè",
+         "romaji": null,
+         "meaning": "stratégie"
+        },
+        {
+         "slug": "zh-zhanyi",
+         "kind": "vocabulary",
+         "front": "战役",
+         "reading": "zhànyì",
+         "romaji": null,
+         "meaning": "bataille, campagne militaire"
+        },
+        {
+         "slug": "zh-qinlüe",
+         "kind": "vocabulary",
+         "front": "侵略",
+         "reading": "qīnlüè",
+         "romaji": null,
+         "meaning": "envahir ; invasion"
+        },
+        {
+         "slug": "zh-dikang",
+         "kind": "vocabulary",
+         "front": "抵抗",
+         "reading": "dǐkàng",
+         "romaji": null,
+         "meaning": "résister"
+        },
+        {
+         "slug": "zh-fangshou",
+         "kind": "vocabulary",
+         "front": "防守",
+         "reading": "fángshǒu",
+         "romaji": null,
+         "meaning": "défendre (une position)"
+        },
+        {
+         "slug": "zh-chetui",
+         "kind": "vocabulary",
+         "front": "撤退",
+         "reading": "chètuì",
+         "romaji": null,
+         "meaning": "battre en retraite"
+        },
+        {
+         "slug": "zh-diren",
+         "kind": "vocabulary",
+         "front": "敌人",
+         "reading": "dírén",
+         "romaji": null,
+         "meaning": "ennemi"
+        },
+        {
+         "slug": "zh-bianjiang",
+         "kind": "vocabulary",
+         "front": "边疆",
+         "reading": "biānjiāng",
+         "romaji": null,
+         "meaning": "régions frontalières"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "匈奴的骑兵向来行动很快，常常突然侵略边疆。",
+         "reading": "Xiōngnú de qíbīng xiànglái xíngdòng hěn kuài, chángcháng tūrán qīnlüè biānjiāng.",
+         "fr": "Les cavaliers xiongnu se sont toujours déplacés très vite et envahissent souvent les marches par surprise."
+        },
+        {
+         "jp": "将军命令士兵在长城下驻扎，防守这个关口。",
+         "reading": "Jiāngjūn mìnglìng shìbīng zài Chángchéng xià zhùzhā, fángshǒu zhège guānkǒu.",
+         "fr": "Le général ordonne aux soldats de camper au pied de la Grande Muraille pour défendre ce passage."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我们老板＿很重视质量，从来不马虎。",
+         "choices": [
+          "一向",
+          "固然",
+          "以便"
+         ],
+         "answer": "一向",
+         "explanation": "Depuis toujours : 一向.",
+         "translation": "Notre patron a toujours attaché une grande importance à la qualité, il ne bâcle jamais rien."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "敌人的兵力太强，军队只好＿。",
+         "choices": [
+          "撤退",
+          "侵略",
+          "驻扎"
+         ],
+         "answer": "撤退",
+         "explanation": "Battre en retraite : 撤退.",
+         "translation": "L’ennemi est trop nombreux : l’armée doit battre en retraite."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "士兵",
+           "jp": "将军，敌人来了，我们怎么办？"
+          }
+         ],
+         "translation": "Un soldat demande quoi faire face à l’ennemi (tenir la position).",
+         "choices": [
+          "守住阵地，绝不后退！",
+          "我向来不吃盔甲。",
+          "战略是一种武器。"
+         ],
+         "answer": "守住阵地，绝不后退！",
+         "explanation": "Tenir la position : 守住阵地."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这场战役打了三天三夜。",
+         "translation": "La bataille a duré une heure.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "三天三夜 = trois jours et trois nuits."
+        }
+       ]
+      },
+      {
+       "slug": "zh-terrain",
+       "title": "Des terres rudes : 乃至",
+       "objective": "Décrire un itinéraire, le relief et la durée d’un voyage.",
+       "minutes": 10,
+       "explanation": [
+        "A、B，乃至 C = A, B et même C (gradation, registre écrit) : 这本书影响了中国乃至全世界 (ce livre a influencé la Chine et même le monde entier).",
+        "Le relief : 地形 (relief), 地势 (configuration du terrain), 山脉 (chaîne de montagnes), 峡谷 (gorge), 关口 (col, passage), 要塞 (forteresse), 辽阔 (immense), 荒凉 (désolé), 崎岖 (accidenté).",
+        "Voyager : 沿途 (en chemin), 途径 (voie, moyen), 驿站 (relais), 跋涉 (marcher péniblement), 行程 (itinéraire), 昼夜 (jour et nuit)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-naizhi",
+         "kind": "grammar",
+         "front": "A、B，乃至 C",
+         "reading": "nǎizhì",
+         "romaji": null,
+         "meaning": "…et même…"
+        },
+        {
+         "slug": "zh-naizhi",
+         "kind": "vocabulary",
+         "front": "乃至",
+         "reading": "nǎizhì",
+         "romaji": null,
+         "meaning": "et même, voire"
+        },
+        {
+         "slug": "zh-dixing",
+         "kind": "vocabulary",
+         "front": "地形",
+         "reading": "dìxíng",
+         "romaji": null,
+         "meaning": "relief, topographie"
+        },
+        {
+         "slug": "zh-dishi",
+         "kind": "vocabulary",
+         "front": "地势",
+         "reading": "dìshì",
+         "romaji": null,
+         "meaning": "configuration du terrain"
+        },
+        {
+         "slug": "zh-shanmai",
+         "kind": "vocabulary",
+         "front": "山脉",
+         "reading": "shānmài",
+         "romaji": null,
+         "meaning": "chaîne de montagnes"
+        },
+        {
+         "slug": "zh-xiagu",
+         "kind": "vocabulary",
+         "front": "峡谷",
+         "reading": "xiágǔ",
+         "romaji": null,
+         "meaning": "gorge, canyon"
+        },
+        {
+         "slug": "zh-guankou",
+         "kind": "vocabulary",
+         "front": "关口",
+         "reading": "guānkǒu",
+         "romaji": null,
+         "meaning": "col, passage stratégique"
+        },
+        {
+         "slug": "zh-yaosai",
+         "kind": "vocabulary",
+         "front": "要塞",
+         "reading": "yàosài",
+         "romaji": null,
+         "meaning": "forteresse"
+        },
+        {
+         "slug": "zh-liaokuo",
+         "kind": "vocabulary",
+         "front": "辽阔",
+         "reading": "liáokuò",
+         "romaji": null,
+         "meaning": "immense, vaste"
+        },
+        {
+         "slug": "zh-huangliang",
+         "kind": "vocabulary",
+         "front": "荒凉",
+         "reading": "huāngliáng",
+         "romaji": null,
+         "meaning": "désolé, désert"
+        },
+        {
+         "slug": "zh-qiqu",
+         "kind": "vocabulary",
+         "front": "崎岖",
+         "reading": "qíqū",
+         "romaji": null,
+         "meaning": "accidenté (chemin)"
+        },
+        {
+         "slug": "zh-yantu",
+         "kind": "vocabulary",
+         "front": "沿途",
+         "reading": "yántú",
+         "romaji": null,
+         "meaning": "en chemin, le long de la route"
+        },
+        {
+         "slug": "zh-tujing",
+         "kind": "vocabulary",
+         "front": "途径",
+         "reading": "tújìng",
+         "romaji": null,
+         "meaning": "voie, moyen"
+        },
+        {
+         "slug": "zh-yizhan",
+         "kind": "vocabulary",
+         "front": "驿站",
+         "reading": "yìzhàn",
+         "romaji": null,
+         "meaning": "relais de poste"
+        },
+        {
+         "slug": "zh-bashe",
+         "kind": "vocabulary",
+         "front": "跋涉",
+         "reading": "báshè",
+         "romaji": null,
+         "meaning": "marcher péniblement, crapahuter"
+        },
+        {
+         "slug": "zh-xingcheng",
+         "kind": "vocabulary",
+         "front": "行程",
+         "reading": "xíngchéng",
+         "romaji": null,
+         "meaning": "itinéraire, programme de voyage"
+        },
+        {
+         "slug": "zh-zhouye",
+         "kind": "vocabulary",
+         "front": "昼夜",
+         "reading": "zhòuyè",
+         "romaji": null,
+         "meaning": "jour et nuit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "河西走廊地形狭长，两边是辽阔的沙漠和高大的山脉。",
+         "reading": "Héxī zǒuláng dìxíng xiácháng, liǎngbiān shì liáokuò de shāmò hé gāodà de shānmài.",
+         "fr": "Le corridor du Hexi est une bande étroite et longue, bordée d’immenses déserts et de hautes montagnes."
+        },
+        {
+         "jp": "使团昼夜跋涉，沿途只看到荒凉的戈壁。",
+         "reading": "Shǐtuán zhòuyè báshè, yántú zhǐ kàndào huāngliáng de Gēbì.",
+         "fr": "L’ambassade marche jour et nuit et ne voit en chemin que le Gobi désolé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个发明改变了一个城市、一个国家，＿整个世界。",
+         "choices": [
+          "乃至",
+          "一向",
+          "以便"
+         ],
+         "answer": "乃至",
+         "explanation": "Et même : 乃至.",
+         "translation": "Cette invention a changé une ville, un pays, voire le monde entier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "山路很＿，开车一定要小心。",
+         "choices": [
+          "崎岖",
+          "辽阔",
+          "昼夜"
+         ],
+         "answer": "崎岖",
+         "explanation": "Accidenté : 崎岖.",
+         "translation": "La route de montagne est très accidentée : il faut conduire prudemment."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "向导",
+           "jp": "前面没有驿站了，我们今晚住哪儿？"
+          }
+         ],
+         "translation": "Le guide signale qu’il n’y a plus de relais (camper dans la gorge, à l’abri du vent).",
+         "choices": [
+          "在峡谷里扎营吧，那儿没有风。",
+          "行程是一种地势。",
+          "我们乃至要塞。"
+         ],
+         "answer": "在峡谷里扎营吧，那儿没有风。",
+         "explanation": "Camper : 扎营."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这次的行程一共要走两个月。",
+         "translation": "Le voyage dure deux semaines.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "两个月 = deux mois."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w2-c2",
+     "title": "Dans l’embuscade",
+     "lessons": [
+      {
+       "slug": "zh-ambush",
+       "title": "Pris au piège : 不料",
+       "objective": "Raconter un événement inattendu : attaque, capture, interrogatoire.",
+       "minutes": 10,
+       "explanation": [
+        "…，不料… = …, mais contre toute attente… (le récit bascule) : 我们以为很安全，不料遇到了埋伏 (nous nous croyions en sécurité, quand nous sommes tombés dans une embuscade).",
+        "L’attaque : 埋伏 (embuscade), 袭击 (attaquer par surprise), 包围 (encercler), 遭遇 (rencontrer, subir), 冲突 (conflit), 英勇 (héroïque), 牺牲 (se sacrifier, mourir au combat), 突破 (percer).",
+        "La captivité : 俘虏 (captif ; capturer), 押送 (escorter un prisonnier), 审问 (interroger), 看守 (garder ; gardien), 囚禁 (emprisonner), 投降 (se rendre), 屈服 (céder), 释放 (libérer), 逃脱 (s’échapper)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-buliao",
+         "kind": "grammar",
+         "front": "…，不料…",
+         "reading": "búliào",
+         "romaji": null,
+         "meaning": "…, mais contre toute attente…"
+        },
+        {
+         "slug": "zh-buliao",
+         "kind": "vocabulary",
+         "front": "不料",
+         "reading": "búliào",
+         "romaji": null,
+         "meaning": "contre toute attente"
+        },
+        {
+         "slug": "zh-maifu",
+         "kind": "vocabulary",
+         "front": "埋伏",
+         "reading": "máifú",
+         "romaji": null,
+         "meaning": "embuscade ; tendre une embuscade"
+        },
+        {
+         "slug": "zh-xiji",
+         "kind": "vocabulary",
+         "front": "袭击",
+         "reading": "xíjī",
+         "romaji": null,
+         "meaning": "attaquer par surprise ; raid"
+        },
+        {
+         "slug": "zh-baowei",
+         "kind": "vocabulary",
+         "front": "包围",
+         "reading": "bāowéi",
+         "romaji": null,
+         "meaning": "encercler"
+        },
+        {
+         "slug": "zh-zaoyu",
+         "kind": "vocabulary",
+         "front": "遭遇",
+         "reading": "zāoyù",
+         "romaji": null,
+         "meaning": "subir, se heurter à"
+        },
+        {
+         "slug": "zh-chongtu",
+         "kind": "vocabulary",
+         "front": "冲突",
+         "reading": "chōngtū",
+         "romaji": null,
+         "meaning": "conflit, heurt"
+        },
+        {
+         "slug": "zh-yingyong",
+         "kind": "vocabulary",
+         "front": "英勇",
+         "reading": "yīngyǒng",
+         "romaji": null,
+         "meaning": "héroïque"
+        },
+        {
+         "slug": "zh-xisheng",
+         "kind": "vocabulary",
+         "front": "牺牲",
+         "reading": "xīshēng",
+         "romaji": null,
+         "meaning": "se sacrifier ; tomber au combat"
+        },
+        {
+         "slug": "zh-tupo",
+         "kind": "vocabulary",
+         "front": "突破",
+         "reading": "tūpò",
+         "romaji": null,
+         "meaning": "percer, franchir"
+        },
+        {
+         "slug": "zh-fulu",
+         "kind": "vocabulary",
+         "front": "俘虏",
+         "reading": "fúlǔ",
+         "romaji": null,
+         "meaning": "captif ; faire prisonnier"
+        },
+        {
+         "slug": "zh-yasong",
+         "kind": "vocabulary",
+         "front": "押送",
+         "reading": "yāsòng",
+         "romaji": null,
+         "meaning": "escorter (un prisonnier)"
+        },
+        {
+         "slug": "zh-shenwen",
+         "kind": "vocabulary",
+         "front": "审问",
+         "reading": "shěnwèn",
+         "romaji": null,
+         "meaning": "interroger (un suspect)"
+        },
+        {
+         "slug": "zh-kanshou",
+         "kind": "vocabulary",
+         "front": "看守",
+         "reading": "kānshǒu",
+         "romaji": null,
+         "meaning": "garder ; gardien"
+        },
+        {
+         "slug": "zh-qiujin",
+         "kind": "vocabulary",
+         "front": "囚禁",
+         "reading": "qiújìn",
+         "romaji": null,
+         "meaning": "emprisonner, séquestrer"
+        },
+        {
+         "slug": "zh-touxiang",
+         "kind": "vocabulary",
+         "front": "投降",
+         "reading": "tóuxiáng",
+         "romaji": null,
+         "meaning": "se rendre, capituler"
+        },
+        {
+         "slug": "zh-qufu",
+         "kind": "vocabulary",
+         "front": "屈服",
+         "reading": "qūfú",
+         "romaji": null,
+         "meaning": "céder, plier"
+        },
+        {
+         "slug": "zh-shifang",
+         "kind": "vocabulary",
+         "front": "释放",
+         "reading": "shìfàng",
+         "romaji": null,
+         "meaning": "libérer, relâcher"
+        },
+        {
+         "slug": "zh-taotuo",
+         "kind": "vocabulary",
+         "front": "逃脱",
+         "reading": "táotuō",
+         "romaji": null,
+         "meaning": "s’échapper"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "使团刚走出关口，不料遭遇了匈奴骑兵的埋伏。",
+         "reading": "Shǐtuán gāng zǒuchū guānkǒu, búliào zāoyùle Xiōngnú qíbīng de máifú.",
+         "fr": "L’ambassade vient de franchir le col quand, contre toute attente, elle tombe dans une embuscade des cavaliers xiongnu."
+        },
+        {
+         "jp": "张骞被俘虏以后，宁死也不屈服，一直保留着汉朝的符节。",
+         "reading": "Zhāng Qiān bèi fúlǔ yǐhòu, nìng sǐ yě bù qūfú, yìzhí bǎoliúzhe Hàncháo de fújié.",
+         "fr": "Fait prisonnier, Zhang Qian préfère mourir que céder, et garde toujours l’insigne d’envoyé des Han."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我本来想出去散步，＿下起了大雨。",
+         "choices": [
+          "不料",
+          "一向",
+          "乃至"
+         ],
+         "answer": "不料",
+         "explanation": "Contre toute attente : 不料.",
+         "translation": "Je voulais aller me promener, mais il s’est mis à pleuvoir à verse."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "警察把小偷＿了起来，他跑不掉了。",
+         "choices": [
+          "包围",
+          "释放",
+          "投降"
+         ],
+         "answer": "包围",
+         "explanation": "Encercler : 包围.",
+         "translation": "La police a encerclé le voleur : il ne peut plus s’enfuir."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "匈奴首领",
+           "jp": "你投降吧，我可以放你回去。"
+          }
+         ],
+         "translation": "Le chef xiongnu te propose de te rendre (tu refuses fièrement).",
+         "choices": [
+          "我是汉朝的使者，绝不投降。",
+          "我已经逃脱了看守。",
+          "冲突非常英勇。"
+         ],
+         "answer": "我是汉朝的使者，绝不投降。",
+         "explanation": "Refuser de se rendre : 绝不投降."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "那些俘虏后来都被释放了。",
+         "translation": "Les prisonniers ont été exécutés.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "被释放 = être libéré."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w3",
+   "title": "La steppe des Xiongnu",
+   "region": "Routes de l’Ouest",
+   "description": "La vie des nomades (以至于) ; l’exil et le mal du pays (不免, 未免) ; préparer une évasion (趁).",
+   "boss": {
+    "name": "Le Bo à la voix de tambour",
+    "glyph": "驳",
+    "intro": "Le Bo, cheval blanc à queue noire, une corne au front et des griffes de tigre, dévore les tigres et gronde comme un tambour. Il garde les troupeaux du chanyu et surveille chaque captif : gagne sa confiance en comprenant la vie de la steppe."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w3-c1",
+     "title": "Dix ans sous la tente",
+     "lessons": [
+      {
+       "slug": "zh-hz-steppe",
+       "title": "Les caractères de la steppe : 帐 牧 畜 驯 鞍 酪 裘 胡",
+       "objective": "Reconnaître les caractères de la vie nomade.",
+       "minutes": 5,
+       "explanation": [
+        "帐 (zhàng, tente) porte le tissu 巾. 牧 (mù, faire paître) associe le bœuf 牛 et la main qui tient un bâton 攵. 畜 (chù, bétail) pose le champ 田 sous un fil : les bêtes qu’on attache. 驯 (xùn, dompter) porte le cheval 马.",
+        "鞍 (ān, selle) porte le cuir 革. 酪 (lào, laitage fermenté) porte la jarre 酉, signe des boissons fermentées. 裘 (qiú, fourrure) porte le vêtement 衣. 胡 (hú) désignait les peuples du Nord et de l’Ouest : 胡琴, 胡萝卜, 胡椒 viennent « de chez les Hu »."
+       ],
+       "items": [
+        {
+         "slug": "hz-zhang-tent",
+         "kind": "kanji",
+         "front": "帐",
+         "reading": "zhàng",
+         "romaji": null,
+         "meaning": "tente ; compte",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-mu-herd",
+         "kind": "kanji",
+         "front": "牧",
+         "reading": "mù",
+         "romaji": null,
+         "meaning": "faire paître",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-chu-h6",
+         "kind": "kanji",
+         "front": "畜",
+         "reading": "chù",
+         "romaji": null,
+         "meaning": "bétail",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-xun-tame",
+         "kind": "kanji",
+         "front": "驯",
+         "reading": "xùn",
+         "romaji": null,
+         "meaning": "dompter, apprivoiser",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-an-saddle",
+         "kind": "kanji",
+         "front": "鞍",
+         "reading": "ān",
+         "romaji": null,
+         "meaning": "selle",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 15
+         }
+        },
+        {
+         "slug": "hz-lao",
+         "kind": "kanji",
+         "front": "酪",
+         "reading": "lào",
+         "romaji": null,
+         "meaning": "laitage fermenté",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-qiu-fur",
+         "kind": "kanji",
+         "front": "裘",
+         "reading": "qiú",
+         "romaji": null,
+         "meaning": "manteau de fourrure",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-hu",
+         "kind": "kanji",
+         "front": "胡",
+         "reading": "hú",
+         "romaji": null,
+         "meaning": "les Hu (peuples du Nord et de l’Ouest)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-nomads",
+       "title": "La vie nomade : 以至于",
+       "objective": "Décrire des coutumes et une conséquence poussée à l’extrême.",
+       "minutes": 10,
+       "explanation": [
+        "A，以至于 B = A, si bien que B (conséquence forte, souvent imprévue) : 他太专心了，以至于没听见有人敲门 (il était si concentré qu’il n’a pas entendu frapper).",
+        "La steppe : 游牧 (nomadisme), 放牧 (faire paître), 牲畜 (bétail), 部落 (tribu), 首领 (chef), 迁徙 (migrer), 帐篷 (tente), 皮毛 (fourrure, peaux), 奶酪 (fromage).",
+        "Le caractère et l’accueil : 习俗 (coutume), 豪爽 (généreux et franc), 粗犷 (rude, brut), 款待 (régaler un hôte), 宴席 (banquet), 娶 (épouser, pour un homme)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yizhiyu",
+         "kind": "grammar",
+         "front": "…，以至于…",
+         "reading": "yǐzhìyú",
+         "romaji": null,
+         "meaning": "…, si bien que…"
+        },
+        {
+         "slug": "zh-yizhiyu",
+         "kind": "vocabulary",
+         "front": "以至于",
+         "reading": "yǐzhìyú",
+         "romaji": null,
+         "meaning": "si bien que"
+        },
+        {
+         "slug": "zh-youmu",
+         "kind": "vocabulary",
+         "front": "游牧",
+         "reading": "yóumù",
+         "romaji": null,
+         "meaning": "nomadisme ; nomadiser"
+        },
+        {
+         "slug": "zh-fangmu",
+         "kind": "vocabulary",
+         "front": "放牧",
+         "reading": "fàngmù",
+         "romaji": null,
+         "meaning": "faire paître"
+        },
+        {
+         "slug": "zh-shengchu",
+         "kind": "vocabulary",
+         "front": "牲畜",
+         "reading": "shēngchù",
+         "romaji": null,
+         "meaning": "bétail"
+        },
+        {
+         "slug": "zh-buluo",
+         "kind": "vocabulary",
+         "front": "部落",
+         "reading": "bùluò",
+         "romaji": null,
+         "meaning": "tribu"
+        },
+        {
+         "slug": "zh-shouling",
+         "kind": "vocabulary",
+         "front": "首领",
+         "reading": "shǒulǐng",
+         "romaji": null,
+         "meaning": "chef (de clan)"
+        },
+        {
+         "slug": "zh-qianxi",
+         "kind": "vocabulary",
+         "front": "迁徙",
+         "reading": "qiānxǐ",
+         "romaji": null,
+         "meaning": "migrer"
+        },
+        {
+         "slug": "zh-zhangpeng",
+         "kind": "vocabulary",
+         "front": "帐篷",
+         "reading": "zhàngpeng",
+         "romaji": null,
+         "meaning": "tente"
+        },
+        {
+         "slug": "zh-pimao",
+         "kind": "vocabulary",
+         "front": "皮毛",
+         "reading": "pímáo",
+         "romaji": null,
+         "meaning": "fourrure, peaux"
+        },
+        {
+         "slug": "zh-nailao",
+         "kind": "vocabulary",
+         "front": "奶酪",
+         "reading": "nǎilào",
+         "romaji": null,
+         "meaning": "fromage"
+        },
+        {
+         "slug": "zh-xisu",
+         "kind": "vocabulary",
+         "front": "习俗",
+         "reading": "xísú",
+         "romaji": null,
+         "meaning": "coutume, usage"
+        },
+        {
+         "slug": "zh-haoshuang",
+         "kind": "vocabulary",
+         "front": "豪爽",
+         "reading": "háoshuǎng",
+         "romaji": null,
+         "meaning": "généreux et franc"
+        },
+        {
+         "slug": "zh-cuguang",
+         "kind": "vocabulary",
+         "front": "粗犷",
+         "reading": "cūguǎng",
+         "romaji": null,
+         "meaning": "rude, brut"
+        },
+        {
+         "slug": "zh-kuandai",
+         "kind": "vocabulary",
+         "front": "款待",
+         "reading": "kuǎndài",
+         "romaji": null,
+         "meaning": "régaler (un hôte)"
+        },
+        {
+         "slug": "zh-yanxi",
+         "kind": "vocabulary",
+         "front": "宴席",
+         "reading": "yànxí",
+         "romaji": null,
+         "meaning": "banquet"
+        },
+        {
+         "slug": "zh-qu-marry",
+         "kind": "vocabulary",
+         "front": "娶",
+         "reading": "qǔ",
+         "romaji": null,
+         "meaning": "épouser (pour un homme)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "匈奴人随着季节迁徙，哪里有水草，就在哪里放牧。",
+         "reading": "Xiōngnúrén suízhe jìjié qiānxǐ, nǎlǐ yǒu shuǐcǎo, jiù zài nǎlǐ fàngmù.",
+         "fr": "Les Xiongnu migrent au fil des saisons et font paître leurs bêtes là où il y a de l’eau et de l’herbe."
+        },
+        {
+         "jp": "张骞在匈奴住了十年，还娶了妻子，以至于大家都以为他不会走了。",
+         "reading": "Zhāng Qiān zài Xiōngnú zhùle shí nián, hái qǔle qīzi, yǐzhìyú dàjiā dōu yǐwéi tā bú huì zǒu le.",
+         "fr": "Zhang Qian vit dix ans chez les Xiongnu et s’y marie, si bien que tout le monde le croit installé pour de bon."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他工作太忙了，＿连女儿的生日都忘了。",
+         "choices": [
+          "以至于",
+          "以便",
+          "不料"
+         ],
+         "answer": "以至于",
+         "explanation": "Si bien que : 以至于.",
+         "translation": "Il était tellement débordé qu’il en a oublié l’anniversaire de sa fille."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "每到冬天，这个部落就向南＿。",
+         "choices": [
+          "迁徙",
+          "款待",
+          "娶"
+         ],
+         "answer": "迁徙",
+         "explanation": "Migrer : 迁徙.",
+         "translation": "Chaque hiver, cette tribu migre vers le sud."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "首领",
+           "jp": "今晚我们摆宴席款待客人，你也来吧！"
+          }
+         ],
+         "translation": "Le chef t’invite au banquet (tu acceptes avec plaisir).",
+         "choices": [
+          "太好了，谢谢您的款待！",
+          "我已经迁徙了奶酪。",
+          "帐篷非常粗犷。"
+         ],
+         "answer": "太好了，谢谢您的款待！",
+         "explanation": "Remercier de l’accueil : 谢谢您的款待."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "草原上的人性格豪爽，非常好客。",
+         "translation": "Les gens de la steppe sont accueillants.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "好客 = hospitalier."
+        }
+       ]
+      },
+      {
+       "slug": "zh-exile",
+       "title": "Le mal du pays : 不免, 未免",
+       "objective": "Exprimer des émotions nuancées et une critique adoucie.",
+       "minutes": 10,
+       "explanation": [
+        "不免 = inévitablement, forcément (conséquence naturelle) : 第一次离家，不免有点儿想家 (la première fois qu’on quitte la maison, on a forcément le mal du pays).",
+        "未免 = un peu trop, quand même (critique polie) : 你这样说未免太过分了 (tu vas quand même un peu loin en disant ça).",
+        "Les émotions : 思念 (penser avec nostalgie à), 惆怅 (mélancolique), 忧郁 (morose), 焦虑 (anxieux), 沮丧 (abattu), 恐惧 (effroi), 悲哀 (triste), 感慨 (être ému, soupirer), 惭愧 (avoir honte), 欣慰 (soulagé, réconforté), 忍耐 (endurer), 煎熬 (tourment)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-bumian",
+         "kind": "grammar",
+         "front": "不免 + 动词",
+         "reading": "bùmiǎn",
+         "romaji": null,
+         "meaning": "forcément, inévitablement"
+        },
+        {
+         "slug": "gram-zh-weimian",
+         "kind": "grammar",
+         "front": "未免 + 太… / 有点儿…",
+         "reading": "wèimiǎn",
+         "romaji": null,
+         "meaning": "un peu trop, quand même"
+        },
+        {
+         "slug": "zh-bumian",
+         "kind": "vocabulary",
+         "front": "不免",
+         "reading": "bùmiǎn",
+         "romaji": null,
+         "meaning": "inévitablement"
+        },
+        {
+         "slug": "zh-weimian",
+         "kind": "vocabulary",
+         "front": "未免",
+         "reading": "wèimiǎn",
+         "romaji": null,
+         "meaning": "un peu trop, tout de même"
+        },
+        {
+         "slug": "zh-sinian",
+         "kind": "vocabulary",
+         "front": "思念",
+         "reading": "sīniàn",
+         "romaji": null,
+         "meaning": "penser avec nostalgie à"
+        },
+        {
+         "slug": "zh-chouchang",
+         "kind": "vocabulary",
+         "front": "惆怅",
+         "reading": "chóuchàng",
+         "romaji": null,
+         "meaning": "mélancolique"
+        },
+        {
+         "slug": "zh-youyu-gloomy",
+         "kind": "vocabulary",
+         "front": "忧郁",
+         "reading": "yōuyù",
+         "romaji": null,
+         "meaning": "morose, mélancolique (durablement)"
+        },
+        {
+         "slug": "zh-jiaolü",
+         "kind": "vocabulary",
+         "front": "焦虑",
+         "reading": "jiāolǜ",
+         "romaji": null,
+         "meaning": "anxieux ; anxiété"
+        },
+        {
+         "slug": "zh-jusang",
+         "kind": "vocabulary",
+         "front": "沮丧",
+         "reading": "jǔsàng",
+         "romaji": null,
+         "meaning": "abattu, découragé"
+        },
+        {
+         "slug": "zh-kongju",
+         "kind": "vocabulary",
+         "front": "恐惧",
+         "reading": "kǒngjù",
+         "romaji": null,
+         "meaning": "effroi, peur"
+        },
+        {
+         "slug": "zh-beiai",
+         "kind": "vocabulary",
+         "front": "悲哀",
+         "reading": "bēi’āi",
+         "romaji": null,
+         "meaning": "triste, affligé"
+        },
+        {
+         "slug": "zh-gankai",
+         "kind": "vocabulary",
+         "front": "感慨",
+         "reading": "gǎnkǎi",
+         "romaji": null,
+         "meaning": "être ému, soupirer (devant la vie)"
+        },
+        {
+         "slug": "zh-cankui",
+         "kind": "vocabulary",
+         "front": "惭愧",
+         "reading": "cánkuì",
+         "romaji": null,
+         "meaning": "avoir honte"
+        },
+        {
+         "slug": "zh-xinwei",
+         "kind": "vocabulary",
+         "front": "欣慰",
+         "reading": "xīnwèi",
+         "romaji": null,
+         "meaning": "réconforté, soulagé"
+        },
+        {
+         "slug": "zh-rennai",
+         "kind": "vocabulary",
+         "front": "忍耐",
+         "reading": "rěnnài",
+         "romaji": null,
+         "meaning": "endurer, patienter"
+        },
+        {
+         "slug": "zh-jianao",
+         "kind": "vocabulary",
+         "front": "煎熬",
+         "reading": "jiān’áo",
+         "romaji": null,
+         "meaning": "tourment, supplice"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "每当看到南飞的大雁，张骞不免思念起长安来。",
+         "reading": "Měi dāng kàndào nán fēi de dàyàn, Zhāng Qiān bùmiǎn sīniàn qǐ Cháng’ān lái.",
+         "fr": "Chaque fois qu’il voit les oies sauvages filer vers le sud, Zhang Qian ne peut s’empêcher de penser à Chang’an."
+        },
+        {
+         "jp": "十年的等待是一种煎熬，但他一直忍耐着。",
+         "reading": "Shí nián de děngdài shì yì zhǒng jiān’áo, dàn tā yìzhí rěnnàizhe.",
+         "fr": "Dix ans d’attente sont un supplice, mais il endure sans faiblir."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "一个人在国外过春节，心里＿有些孤单。",
+         "choices": [
+          "不免",
+          "未免",
+          "以至于"
+         ],
+         "answer": "不免",
+         "explanation": "Forcément : 不免.",
+         "translation": "Passer le Nouvel An seul à l’étranger, on se sent forcément un peu seul."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "为这么小的事生气，你＿太小气了吧。",
+         "choices": [
+          "未免",
+          "不免",
+          "一向"
+         ],
+         "answer": "未免",
+         "explanation": "Un peu trop : 未免太….",
+         "translation": "Te fâcher pour si peu, c’est quand même un peu mesquin."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "听说你的孩子考上了大学，你一定很欣慰吧？"
+          }
+         ],
+         "translation": "Un ami pense que tu es réconforté par la réussite de ton enfant (oui, tous ces efforts ont payé).",
+         "choices": [
+          "是啊，这么多年的努力没有白费。",
+          "我非常恐惧奶酪。",
+          "惭愧是一种习俗。"
+         ],
+         "answer": "是啊，这么多年的努力没有白费。",
+         "explanation": "Pas en vain : 没有白费."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "考试没考好，他感到很沮丧。",
+         "translation": "Il est ravi de son examen.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "沮丧 = abattu."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w3-c2",
+     "title": "La nuit de l’évasion",
+     "lessons": [
+      {
+       "slug": "zh-escape",
+       "title": "Saisir l’occasion : 趁",
+       "objective": "Planifier en secret et profiter d’un moment favorable.",
+       "minutes": 10,
+       "explanation": [
+        "趁 + moment, + verbe = profiter de… pour… : 趁天还没亮，我们快走 (profitons de ce qu’il fait encore nuit pour partir vite) ; 趁机 = saisir l’occasion.",
+        "Préparer : 时机 (moment propice), 谋划 (comploter, planifier), 策略 (tactique), 周密 (minutieux), 机智 (ingénieux), 侥幸 (par chance, coup de chance).",
+        "Agir en secret : 隐瞒 (dissimuler), 暴露 (se trahir, exposer), 警惕 (vigilant), 察觉 (s’apercevoir), 伪装 (déguiser), 冒充 (se faire passer pour), 潜伏 (se tapir), 逃亡 (fuir, s’enfuir)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-chen",
+         "kind": "grammar",
+         "front": "趁 + 时机，…",
+         "reading": "chèn",
+         "romaji": null,
+         "meaning": "profiter de… pour…"
+        },
+        {
+         "slug": "zh-chen",
+         "kind": "vocabulary",
+         "front": "趁",
+         "reading": "chèn",
+         "romaji": null,
+         "meaning": "profiter de (un moment)"
+        },
+        {
+         "slug": "zh-chenji",
+         "kind": "vocabulary",
+         "front": "趁机",
+         "reading": "chènjī",
+         "romaji": null,
+         "meaning": "saisir l’occasion"
+        },
+        {
+         "slug": "zh-shiji-h6",
+         "kind": "vocabulary",
+         "front": "时机",
+         "reading": "shíjī",
+         "romaji": null,
+         "meaning": "moment propice"
+        },
+        {
+         "slug": "zh-mouhua",
+         "kind": "vocabulary",
+         "front": "谋划",
+         "reading": "móuhuà",
+         "romaji": null,
+         "meaning": "comploter, planifier"
+        },
+        {
+         "slug": "zh-celüe",
+         "kind": "vocabulary",
+         "front": "策略",
+         "reading": "cèlüè",
+         "romaji": null,
+         "meaning": "tactique"
+        },
+        {
+         "slug": "zh-zhoumi",
+         "kind": "vocabulary",
+         "front": "周密",
+         "reading": "zhōumì",
+         "romaji": null,
+         "meaning": "minutieux, soigneusement pensé"
+        },
+        {
+         "slug": "zh-jizhi",
+         "kind": "vocabulary",
+         "front": "机智",
+         "reading": "jīzhì",
+         "romaji": null,
+         "meaning": "ingénieux, plein de ressources"
+        },
+        {
+         "slug": "zh-jiaoxing",
+         "kind": "vocabulary",
+         "front": "侥幸",
+         "reading": "jiǎoxìng",
+         "romaji": null,
+         "meaning": "par chance, coup de chance"
+        },
+        {
+         "slug": "zh-yinman",
+         "kind": "vocabulary",
+         "front": "隐瞒",
+         "reading": "yǐnmán",
+         "romaji": null,
+         "meaning": "dissimuler"
+        },
+        {
+         "slug": "zh-baolu",
+         "kind": "vocabulary",
+         "front": "暴露",
+         "reading": "bàolù",
+         "romaji": null,
+         "meaning": "exposer, se trahir"
+        },
+        {
+         "slug": "zh-jingti",
+         "kind": "vocabulary",
+         "front": "警惕",
+         "reading": "jǐngtì",
+         "romaji": null,
+         "meaning": "vigilant ; vigilance"
+        },
+        {
+         "slug": "zh-chajue",
+         "kind": "vocabulary",
+         "front": "察觉",
+         "reading": "chájué",
+         "romaji": null,
+         "meaning": "s’apercevoir de"
+        },
+        {
+         "slug": "zh-weizhuang",
+         "kind": "vocabulary",
+         "front": "伪装",
+         "reading": "wěizhuāng",
+         "romaji": null,
+         "meaning": "déguiser, camoufler"
+        },
+        {
+         "slug": "zh-maochong",
+         "kind": "vocabulary",
+         "front": "冒充",
+         "reading": "màochōng",
+         "romaji": null,
+         "meaning": "se faire passer pour"
+        },
+        {
+         "slug": "zh-qianfu",
+         "kind": "vocabulary",
+         "front": "潜伏",
+         "reading": "qiánfú",
+         "romaji": null,
+         "meaning": "se tapir, rester caché"
+        },
+        {
+         "slug": "zh-taowang",
+         "kind": "vocabulary",
+         "front": "逃亡",
+         "reading": "táowáng",
+         "romaji": null,
+         "meaning": "s’enfuir"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "趁看守喝醉了，张骞和甘父悄悄骑马逃出了营地。",
+         "reading": "Chèn kānshǒu hēzuì le, Zhāng Qiān hé Gānfù qiāoqiāo qí mǎ táochūle yíngdì.",
+         "fr": "Profitant de l’ivresse des gardes, Zhang Qian et Ganfu s’enfuient du camp à cheval sans bruit."
+        },
+        {
+         "jp": "他们的计划非常周密，一直到第二天早上才被察觉。",
+         "reading": "Tāmen de jìhuà fēicháng zhōumì, yìzhí dào dì-èr tiān zǎoshang cái bèi chájué.",
+         "fr": "Leur plan est si minutieux qu’on ne s’en aperçoit que le lendemain matin."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿年轻，多学一点儿东西吧。",
+         "choices": [
+          "趁",
+          "鉴于",
+          "固然"
+         ],
+         "answer": "趁",
+         "explanation": "Profiter de : 趁.",
+         "translation": "Profite de ta jeunesse pour apprendre le plus de choses possible."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他把真实的情况＿了起来，谁也没告诉。",
+         "choices": [
+          "隐瞒",
+          "暴露",
+          "察觉"
+         ],
+         "answer": "隐瞒",
+         "explanation": "Dissimuler : 隐瞒.",
+         "translation": "Il a caché la vérité et n’en a parlé à personne."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "甘父",
+           "jp": "今晚月亮太亮了，我们还走吗？"
+          }
+         ],
+         "translation": "Ganfu s’inquiète de la pleine lune (attendre un meilleur moment).",
+         "choices": [
+          "时机还不成熟，再等几天吧。",
+          "我们已经冒充了奶酪。",
+          "警惕是一种逃亡。"
+         ],
+         "answer": "时机还不成熟，再等几天吧。",
+         "explanation": "Le moment n’est pas mûr : 时机不成熟."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他冒充警察骗了很多人的钱。",
+         "translation": "Il se faisait passer pour un policier.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "冒充警察 = se faire passer pour un policier."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w4",
+   "title": "Le désert de Loulan",
+   "region": "Routes de l’Ouest",
+   "description": "Traverser le désert (倘若) ; un milieu fragile (致使) ; tenir jusqu’au bout (凭).",
+   "boss": {
+    "name": "Le Toulou des sables",
+    "glyph": "蝼",
+    "intro": "Le Toulou, mouton à quatre cornes qui se tapit sous les dunes, surgit quand les voyageurs s’égarent et dévore ceux qui perdent courage. Pour traverser le désert de Loulan, garde ton sang-froid et comprends la terre que tu foules."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w4-c1",
+     "title": "La mer de sable",
+     "lessons": [
+      {
+       "slug": "zh-hz-desert",
+       "title": "Les caractères du désert : 丘 涸 枯 旱 驼 泉 荒 尘",
+       "objective": "Reconnaître les caractères de la sécheresse et des dunes.",
+       "minutes": 5,
+       "explanation": [
+        "丘 (qiū, butte) dessine deux sommets arrondis : 沙丘 = dune. 旱 (hàn, sécheresse) met le soleil 日 au-dessus de 干 (sec). 枯 (kū, desséché) porte l’arbre 木 ; 涸 (hé, à sec) porte l’eau 氵 qui a disparu.",
+        "泉 (quán, source) montre l’eau 水 qui jaillit sous le blanc 白. 驼 (tuó, chameau) porte le cheval 马. 荒 (huāng, inculte) met l’herbe 艹 sur une terre abandonnée. 尘 (chén, poussière) = le petit 小 sur la terre 土."
+       ],
+       "items": [
+        {
+         "slug": "hz-qiu-mound",
+         "kind": "kanji",
+         "front": "丘",
+         "reading": "qiū",
+         "romaji": null,
+         "meaning": "butte, colline",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-he-dry",
+         "kind": "kanji",
+         "front": "涸",
+         "reading": "hé",
+         "romaji": null,
+         "meaning": "à sec, tari",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-ku-h6",
+         "kind": "kanji",
+         "front": "枯",
+         "reading": "kū",
+         "romaji": null,
+         "meaning": "desséché, flétri",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-han-drought",
+         "kind": "kanji",
+         "front": "旱",
+         "reading": "hàn",
+         "romaji": null,
+         "meaning": "sécheresse",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-tuo",
+         "kind": "kanji",
+         "front": "驼",
+         "reading": "tuó",
+         "romaji": null,
+         "meaning": "chameau ; voûté",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-quan",
+         "kind": "kanji",
+         "front": "泉",
+         "reading": "quán",
+         "romaji": null,
+         "meaning": "source",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-huang",
+         "kind": "kanji",
+         "front": "荒",
+         "reading": "huāng",
+         "romaji": null,
+         "meaning": "inculte, désolé",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-chen-dust",
+         "kind": "kanji",
+         "front": "尘",
+         "reading": "chén",
+         "romaji": null,
+         "meaning": "poussière",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-desert6",
+       "title": "Si le vent se lève : 倘若",
+       "objective": "Décrire le désert et faire des hypothèses (registre soutenu).",
+       "minutes": 10,
+       "explanation": [
+        "倘若 A，就 / 便 B = si jamais A, (alors) B : plus écrit que 如果 / 假如 : 倘若迷失了方向，后果不堪设想 (si l’on perdait le cap, les conséquences seraient inimaginables).",
+        "Le désert : 荒漠 (étendue désertique), 沙丘 (dune), 绿洲 (oasis), 水源 (point d’eau), 干旱 (aride, sécheresse), 枯竭 (tarir), 蒸发 (s’évaporer), 风沙 (vent de sable), 尘土 (poussière).",
+        "S’orienter : 骆驼 (chameau), 酷热 (chaleur torride), 严寒 (froid glacial), 迷失 (perdre son chemin), 方位 (orientation, position), 指南针 (boussole)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-tangruo",
+         "kind": "grammar",
+         "front": "倘若…，就 / 便…",
+         "reading": "tǎngruò",
+         "romaji": null,
+         "meaning": "si jamais…, (alors)…"
+        },
+        {
+         "slug": "zh-tangruo",
+         "kind": "vocabulary",
+         "front": "倘若",
+         "reading": "tǎngruò",
+         "romaji": null,
+         "meaning": "si jamais (écrit)"
+        },
+        {
+         "slug": "zh-huangmo",
+         "kind": "vocabulary",
+         "front": "荒漠",
+         "reading": "huāngmò",
+         "romaji": null,
+         "meaning": "étendue désertique"
+        },
+        {
+         "slug": "zh-shaqiu",
+         "kind": "vocabulary",
+         "front": "沙丘",
+         "reading": "shāqiū",
+         "romaji": null,
+         "meaning": "dune"
+        },
+        {
+         "slug": "zh-lüzhou",
+         "kind": "vocabulary",
+         "front": "绿洲",
+         "reading": "lǜzhōu",
+         "romaji": null,
+         "meaning": "oasis"
+        },
+        {
+         "slug": "zh-shuiyuan",
+         "kind": "vocabulary",
+         "front": "水源",
+         "reading": "shuǐyuán",
+         "romaji": null,
+         "meaning": "point d’eau, source"
+        },
+        {
+         "slug": "zh-ganhan",
+         "kind": "vocabulary",
+         "front": "干旱",
+         "reading": "gānhàn",
+         "romaji": null,
+         "meaning": "aride ; sécheresse"
+        },
+        {
+         "slug": "zh-kujie",
+         "kind": "vocabulary",
+         "front": "枯竭",
+         "reading": "kūjié",
+         "romaji": null,
+         "meaning": "tarir, s’épuiser"
+        },
+        {
+         "slug": "zh-zhengfa",
+         "kind": "vocabulary",
+         "front": "蒸发",
+         "reading": "zhēngfā",
+         "romaji": null,
+         "meaning": "s’évaporer"
+        },
+        {
+         "slug": "zh-fengsha",
+         "kind": "vocabulary",
+         "front": "风沙",
+         "reading": "fēngshā",
+         "romaji": null,
+         "meaning": "vent de sable"
+        },
+        {
+         "slug": "zh-chentu",
+         "kind": "vocabulary",
+         "front": "尘土",
+         "reading": "chéntǔ",
+         "romaji": null,
+         "meaning": "poussière"
+        },
+        {
+         "slug": "zh-luotuo",
+         "kind": "vocabulary",
+         "front": "骆驼",
+         "reading": "luòtuo",
+         "romaji": null,
+         "meaning": "chameau"
+        },
+        {
+         "slug": "zh-kure",
+         "kind": "vocabulary",
+         "front": "酷热",
+         "reading": "kùrè",
+         "romaji": null,
+         "meaning": "chaleur torride"
+        },
+        {
+         "slug": "zh-yanhan",
+         "kind": "vocabulary",
+         "front": "严寒",
+         "reading": "yánhán",
+         "romaji": null,
+         "meaning": "froid glacial"
+        },
+        {
+         "slug": "zh-mishi",
+         "kind": "vocabulary",
+         "front": "迷失",
+         "reading": "míshī",
+         "romaji": null,
+         "meaning": "s’égarer, perdre (son chemin)"
+        },
+        {
+         "slug": "zh-fangwei",
+         "kind": "vocabulary",
+         "front": "方位",
+         "reading": "fāngwèi",
+         "romaji": null,
+         "meaning": "orientation, position"
+        },
+        {
+         "slug": "zh-zhinanzhen",
+         "kind": "vocabulary",
+         "front": "指南针",
+         "reading": "zhǐnánzhēn",
+         "romaji": null,
+         "meaning": "boussole"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "倘若找不到水源，我们和骆驼都活不过三天。",
+         "reading": "Tǎngruò zhǎo bu dào shuǐyuán, wǒmen hé luòtuo dōu huó bu guò sān tiān.",
+         "fr": "Si nous ne trouvons pas de point d’eau, ni nous ni les chameaux ne tiendrons trois jours."
+        },
+        {
+         "jp": "白天酷热，夜里严寒，风沙一来，什么方位都看不清。",
+         "reading": "Báitiān kùrè, yèli yánhán, fēngshā yì lái, shénme fāngwèi dōu kàn bu qīng.",
+         "fr": "Chaleur torride le jour, froid glacial la nuit : quand le vent de sable se lève, on ne distingue plus aucune direction."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿明天下雨，比赛就改到下周。",
+         "choices": [
+          "倘若",
+          "趁",
+          "固然"
+         ],
+         "answer": "倘若",
+         "explanation": "Si jamais : 倘若.",
+         "translation": "S’il pleut demain, le match sera reporté à la semaine prochaine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "在沙漠里走了几天，终于看到了一片＿。",
+         "choices": [
+          "绿洲",
+          "尘土",
+          "严寒"
+         ],
+         "answer": "绿洲",
+         "explanation": "Oasis : 绿洲.",
+         "translation": "Après des jours de marche dans le désert, ils aperçoivent enfin une oasis."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "向导",
+           "jp": "风沙太大了，我们迷失方向了！"
+          }
+         ],
+         "translation": "Le guide dit qu’ils sont perdus (sortir la boussole).",
+         "choices": [
+          "别慌，我带了指南针。",
+          "骆驼已经蒸发了。",
+          "我们倘若绿洲。"
+         ],
+         "answer": "别慌，我带了指南针。",
+         "explanation": "Rassurer : 别慌."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这条河的水已经枯竭了。",
+         "translation": "La rivière a encore beaucoup d’eau.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "枯竭 = tari."
+        }
+       ]
+      },
+      {
+       "slug": "zh-ecology",
+       "title": "Un milieu fragile : 致使",
+       "objective": "Expliquer les causes et les effets d’un problème écologique.",
+       "minutes": 10,
+       "explanation": [
+        "A，致使 B = A, ce qui a entraîné B (cause → résultat négatif, écrit) : 长期干旱，致使大片草原沙化 (une longue sécheresse a entraîné la désertification de vastes prairies).",
+        "L’écologie : 生态 (écologie), 植被 (couverture végétale), 物种 (espèce), 灭绝 (s’éteindre), 繁殖 (se reproduire), 栖息 (habiter, pour un animal), 恶化 (se dégrader), 沙化 (désertification).",
+        "Les solutions : 治理 (remédier, gérer), 排放 (émettre, rejeter), 循环 (cycle ; recycler), 可持续 (durable), 措施 → 采取 (prendre des mesures)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zhishi",
+         "kind": "grammar",
+         "front": "…，致使…",
+         "reading": "zhìshǐ",
+         "romaji": null,
+         "meaning": "…, ce qui a entraîné…"
+        },
+        {
+         "slug": "zh-zhishi-h6",
+         "kind": "vocabulary",
+         "front": "致使",
+         "reading": "zhìshǐ",
+         "romaji": null,
+         "meaning": "entraîner, causer (un mal)"
+        },
+        {
+         "slug": "zh-shengtai",
+         "kind": "vocabulary",
+         "front": "生态",
+         "reading": "shēngtài",
+         "romaji": null,
+         "meaning": "écologie, écosystème"
+        },
+        {
+         "slug": "zh-zhibei",
+         "kind": "vocabulary",
+         "front": "植被",
+         "reading": "zhíbèi",
+         "romaji": null,
+         "meaning": "couverture végétale"
+        },
+        {
+         "slug": "zh-wuzhong",
+         "kind": "vocabulary",
+         "front": "物种",
+         "reading": "wùzhǒng",
+         "romaji": null,
+         "meaning": "espèce (biologique)"
+        },
+        {
+         "slug": "zh-miejue",
+         "kind": "vocabulary",
+         "front": "灭绝",
+         "reading": "mièjué",
+         "romaji": null,
+         "meaning": "s’éteindre (espèce)"
+        },
+        {
+         "slug": "zh-fanzhi",
+         "kind": "vocabulary",
+         "front": "繁殖",
+         "reading": "fánzhí",
+         "romaji": null,
+         "meaning": "se reproduire"
+        },
+        {
+         "slug": "zh-qixi",
+         "kind": "vocabulary",
+         "front": "栖息",
+         "reading": "qīxī",
+         "romaji": null,
+         "meaning": "habiter, nicher (animal)"
+        },
+        {
+         "slug": "zh-ehua",
+         "kind": "vocabulary",
+         "front": "恶化",
+         "reading": "èhuà",
+         "romaji": null,
+         "meaning": "se dégrader, empirer"
+        },
+        {
+         "slug": "zh-shahua",
+         "kind": "vocabulary",
+         "front": "沙化",
+         "reading": "shāhuà",
+         "romaji": null,
+         "meaning": "désertification"
+        },
+        {
+         "slug": "zh-zhili",
+         "kind": "vocabulary",
+         "front": "治理",
+         "reading": "zhìlǐ",
+         "romaji": null,
+         "meaning": "remédier, gérer (un problème)"
+        },
+        {
+         "slug": "zh-paifang",
+         "kind": "vocabulary",
+         "front": "排放",
+         "reading": "páifàng",
+         "romaji": null,
+         "meaning": "émettre, rejeter"
+        },
+        {
+         "slug": "zh-xunhuan",
+         "kind": "vocabulary",
+         "front": "循环",
+         "reading": "xúnhuán",
+         "romaji": null,
+         "meaning": "cycle ; circuler"
+        },
+        {
+         "slug": "zh-kechixu",
+         "kind": "vocabulary",
+         "front": "可持续",
+         "reading": "kě chíxù",
+         "romaji": null,
+         "meaning": "durable (écologique)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "河流改道，致使楼兰古城慢慢被沙漠吞没了。",
+         "reading": "Héliú gǎi dào, zhìshǐ Lóulán gǔchéng mànmàn bèi shāmò tūnmò le.",
+         "fr": "Le fleuve a changé de cours, si bien que l’ancienne cité de Loulan a peu à peu été engloutie par le désert."
+        },
+        {
+         "jp": "植被一旦被破坏，生态就很难恢复。",
+         "reading": "Zhíbèi yídàn bèi pòhuài, shēngtài jiù hěn nán huīfù.",
+         "fr": "Une fois la végétation détruite, l’écosystème a beaucoup de mal à se rétablir."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "司机开车时打电话，＿发生了严重的交通事故。",
+         "choices": [
+          "致使",
+          "以便",
+          "倘若"
+         ],
+         "answer": "致使",
+         "explanation": "Ce qui a entraîné : 致使.",
+         "translation": "Le conducteur téléphonait au volant, ce qui a provoqué un grave accident."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "如果不保护，这种动物很快就会＿。",
+         "choices": [
+          "灭绝",
+          "繁殖",
+          "循环"
+         ],
+         "answer": "灭绝",
+         "explanation": "S’éteindre : 灭绝.",
+         "translation": "Si on ne la protège pas, cette espèce s’éteindra bientôt."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "记者",
+           "jp": "怎样才能治理沙化？"
+          }
+         ],
+         "translation": "Un journaliste demande comment lutter contre la désertification (planter des arbres et de l’herbe).",
+         "choices": [
+          "最有效的办法是种树种草。",
+          "沙化是一种物种。",
+          "生态已经排放了。"
+         ],
+         "answer": "最有效的办法是种树种草。",
+         "explanation": "La solution : 种树种草."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "工厂排放的废水使河里的鱼都死了。",
+         "translation": "Les eaux usées ont tué les poissons.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "鱼都死了 = tous les poissons sont morts."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w4-c2",
+     "title": "Tenir bon",
+     "lessons": [
+      {
+       "slug": "zh-endure",
+       "title": "Tenir par la volonté : 凭",
+       "objective": "Parler d’endurance, d’épuisement et de courage.",
+       "minutes": 10,
+       "explanation": [
+        "凭 + moyen = grâce à, en s’appuyant sur : 凭着坚强的意志，他们走出了沙漠 (grâce à leur volonté de fer, ils sont sortis du désert) ; 凭什么…？= de quel droit… ?",
+        "L’endurance : 生存 (survivre), 耐力 (endurance), 毅力 (persévérance), 意志 (volonté), 顽强 (tenace), 坚韧 (résistant, coriace), 极限 (limite), 依靠 (compter sur).",
+        "L’épuisement : 疲惫 (épuisé), 精疲力竭 (à bout de forces), 饥饿 (faim), 挣扎 (se débattre), 崩溃 (s’effondrer), 振作 (se ressaisir), 鼓舞 (encourager, galvaniser)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-ping",
+         "kind": "grammar",
+         "front": "凭（着）+ 方式，…",
+         "reading": "píng(zhe)",
+         "romaji": null,
+         "meaning": "grâce à, en s’appuyant sur…"
+        },
+        {
+         "slug": "zh-ping",
+         "kind": "vocabulary",
+         "front": "凭",
+         "reading": "píng",
+         "romaji": null,
+         "meaning": "grâce à, en vertu de"
+        },
+        {
+         "slug": "zh-shengcun",
+         "kind": "vocabulary",
+         "front": "生存",
+         "reading": "shēngcún",
+         "romaji": null,
+         "meaning": "survivre ; survie"
+        },
+        {
+         "slug": "zh-naili",
+         "kind": "vocabulary",
+         "front": "耐力",
+         "reading": "nàilì",
+         "romaji": null,
+         "meaning": "endurance"
+        },
+        {
+         "slug": "zh-yili",
+         "kind": "vocabulary",
+         "front": "毅力",
+         "reading": "yìlì",
+         "romaji": null,
+         "meaning": "persévérance"
+        },
+        {
+         "slug": "zh-yizhi-h6",
+         "kind": "vocabulary",
+         "front": "意志",
+         "reading": "yìzhì",
+         "romaji": null,
+         "meaning": "volonté"
+        },
+        {
+         "slug": "zh-wanqiang",
+         "kind": "vocabulary",
+         "front": "顽强",
+         "reading": "wánqiáng",
+         "romaji": null,
+         "meaning": "tenace"
+        },
+        {
+         "slug": "zh-jianren",
+         "kind": "vocabulary",
+         "front": "坚韧",
+         "reading": "jiānrèn",
+         "romaji": null,
+         "meaning": "résistant, coriace"
+        },
+        {
+         "slug": "zh-jixian",
+         "kind": "vocabulary",
+         "front": "极限",
+         "reading": "jíxiàn",
+         "romaji": null,
+         "meaning": "limite (extrême)"
+        },
+        {
+         "slug": "zh-yikao",
+         "kind": "vocabulary",
+         "front": "依靠",
+         "reading": "yīkào",
+         "romaji": null,
+         "meaning": "compter sur ; appui"
+        },
+        {
+         "slug": "zh-pibei",
+         "kind": "vocabulary",
+         "front": "疲惫",
+         "reading": "píbèi",
+         "romaji": null,
+         "meaning": "épuisé, harassé"
+        },
+        {
+         "slug": "zh-jingpilijie",
+         "kind": "vocabulary",
+         "front": "精疲力竭",
+         "reading": "jīng pí lì jié",
+         "romaji": null,
+         "meaning": "à bout de forces"
+        },
+        {
+         "slug": "zh-ji-e",
+         "kind": "vocabulary",
+         "front": "饥饿",
+         "reading": "jī’è",
+         "romaji": null,
+         "meaning": "faim (famine)"
+        },
+        {
+         "slug": "zh-zhengzha",
+         "kind": "vocabulary",
+         "front": "挣扎",
+         "reading": "zhēngzhá",
+         "romaji": null,
+         "meaning": "se débattre, lutter"
+        },
+        {
+         "slug": "zh-bengkui",
+         "kind": "vocabulary",
+         "front": "崩溃",
+         "reading": "bēngkuì",
+         "romaji": null,
+         "meaning": "s’effondrer"
+        },
+        {
+         "slug": "zh-zhenzuo",
+         "kind": "vocabulary",
+         "front": "振作",
+         "reading": "zhènzuò",
+         "romaji": null,
+         "meaning": "se ressaisir"
+        },
+        {
+         "slug": "zh-guwu",
+         "kind": "vocabulary",
+         "front": "鼓舞",
+         "reading": "gǔwǔ",
+         "romaji": null,
+         "meaning": "encourager, galvaniser"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "大家都精疲力竭了，张骞却凭着顽强的意志鼓舞所有人继续前进。",
+         "reading": "Dàjiā dōu jīng pí lì jié le, Zhāng Qiān què píngzhe wánqiáng de yìzhì gǔwǔ suǒyǒu rén jìxù qiánjìn.",
+         "fr": "Tous sont à bout de forces, mais Zhang Qian, par sa volonté tenace, galvanise chacun pour continuer."
+        },
+        {
+         "jp": "在沙漠中生存，最重要的不是体力，而是毅力。",
+         "reading": "Zài shāmò zhōng shēngcún, zuì zhòngyào de bú shì tǐlì, ér shì yìlì.",
+         "fr": "Pour survivre dans le désert, le plus important n’est pas la force physique mais la persévérance."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他＿自己的努力，考上了最好的大学。",
+         "choices": [
+          "凭",
+          "趁",
+          "致使"
+         ],
+         "answer": "凭",
+         "explanation": "Grâce à : 凭.",
+         "translation": "C’est grâce à ses propres efforts qu’il est entré dans la meilleure université."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "跑完马拉松，他已经＿，一步也走不动了。",
+         "choices": [
+          "精疲力竭",
+          "顽强",
+          "鼓舞"
+         ],
+         "answer": "精疲力竭",
+         "explanation": "À bout de forces : 精疲力竭.",
+         "translation": "Après le marathon, il est à bout de forces et ne peut plus faire un pas."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "同伴",
+           "jp": "我真的走不动了，你们别管我了。"
+          }
+         ],
+         "translation": "Un compagnon veut abandonner (tu l’encourages à se ressaisir).",
+         "choices": [
+          "振作起来！绿洲就在前面了。",
+          "你的极限是骆驼。",
+          "我凭饥饿。"
+         ],
+         "answer": "振作起来！绿洲就在前面了。",
+         "explanation": "Se ressaisir : 振作起来."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "失败了好几次，他的精神几乎崩溃了。",
+         "translation": "Il est resté parfaitement serein.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "几乎崩溃 = presque effondré."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w5",
+   "title": "Le royaume de Dayuan",
+   "region": "Routes de l’Ouest",
+   "description": "Négocier pied à pied (就…而言) ; l’économie des oasis (与此同时) ; les chevaux célestes (何尝).",
+   "boss": {
+    "name": "Le Jiao tacheté",
+    "glyph": "狡",
+    "intro": "Le Jiao, chien tacheté comme un léopard et coiffé de cornes de bœuf, aboie comme un chien et annonce les années d’abondance. Il veille sur les haras de Dayuan et ne laisse approcher que les marchands honnêtes : négocie avec habileté et bonne foi."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w5-c1",
+     "title": "Les marchés de Dayuan",
+     "lessons": [
+      {
+       "slug": "zh-hz-market",
+       "title": "Les caractères du marché : 骏 驹 缰 蹄 贾 赊 债 契",
+       "objective": "Reconnaître les caractères des chevaux et du négoce.",
+       "minutes": 5,
+       "explanation": [
+        "骏 (jùn, coursier) et 驹 (jū, poulain) portent le cheval 马. 缰 (jiāng, rêne) porte le fil 纟 ; 蹄 (tí, sabot) porte le pied 足. 千里驹 = un « poulain de mille li », un jeune talent prometteur.",
+        "贾 (gǔ, marchand ; aussi nom de famille Jiǎ) et 赊 (shē, acheter à crédit) gardent le coquillage-monnaie 贝, comme 债 (zhài, dette), qui porte la personne 亻 et 责 (responsabilité). 契 (qì, contrat) : des entailles 丯 faites au couteau 刀 sur une planchette."
+       ],
+       "items": [
+        {
+         "slug": "hz-jun",
+         "kind": "kanji",
+         "front": "骏",
+         "reading": "jùn",
+         "romaji": null,
+         "meaning": "coursier, beau cheval",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-ju-foal",
+         "kind": "kanji",
+         "front": "驹",
+         "reading": "jū",
+         "romaji": null,
+         "meaning": "poulain",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-jiang-rein",
+         "kind": "kanji",
+         "front": "缰",
+         "reading": "jiāng",
+         "romaji": null,
+         "meaning": "rêne, bride",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 16
+         }
+        },
+        {
+         "slug": "hz-ti-hoof",
+         "kind": "kanji",
+         "front": "蹄",
+         "reading": "tí",
+         "romaji": null,
+         "meaning": "sabot",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 16
+         }
+        },
+        {
+         "slug": "hz-gu-merchant",
+         "kind": "kanji",
+         "front": "贾",
+         "reading": "gǔ",
+         "romaji": null,
+         "meaning": "marchand ; Jiǎ (nom)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-she-h6",
+         "kind": "kanji",
+         "front": "赊",
+         "reading": "shē",
+         "romaji": null,
+         "meaning": "acheter à crédit",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-zhai",
+         "kind": "kanji",
+         "front": "债",
+         "reading": "zhài",
+         "romaji": null,
+         "meaning": "dette",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-qi-contract",
+         "kind": "kanji",
+         "front": "契",
+         "reading": "qì",
+         "romaji": null,
+         "meaning": "contrat, pacte",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-negotiate",
+       "title": "Négocier : 就…而言",
+       "objective": "Mener une négociation : conditions, concessions, accord.",
+       "minutes": 10,
+       "explanation": [
+        "就 A 而言 = pour ce qui est de A, du point de vue de A : 就价格而言，这个方案更合适 (pour ce qui est du prix, cette offre convient mieux) ; à l’oral : 对…来说.",
+        "Négocier : 谈判 (négocier), 磋商 (se concerter), 条件 (conditions), 条款 (clause), 筹码 (monnaie d’échange), 底线 (limite à ne pas franchir), 分歧 (divergence), 争议 (litige), 共识 (consensus).",
+        "Conclure : 让步 (faire une concession), 妥协 (compromis), 诚意 (bonne foi), 互惠 (réciproque), 双赢 (gagnant-gagnant), 签署 (signer), 协议 (accord)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-jiu-eryan",
+         "kind": "grammar",
+         "front": "就…而言",
+         "reading": "jiù… ér yán",
+         "romaji": null,
+         "meaning": "en ce qui concerne…"
+        },
+        {
+         "slug": "zh-tanpan",
+         "kind": "vocabulary",
+         "front": "谈判",
+         "reading": "tánpàn",
+         "romaji": null,
+         "meaning": "négocier ; négociation"
+        },
+        {
+         "slug": "zh-cuoshang",
+         "kind": "vocabulary",
+         "front": "磋商",
+         "reading": "cuōshāng",
+         "romaji": null,
+         "meaning": "se concerter, discuter (officiellement)"
+        },
+        {
+         "slug": "zh-tiaojian",
+         "kind": "vocabulary",
+         "front": "条件",
+         "reading": "tiáojiàn",
+         "romaji": null,
+         "meaning": "condition"
+        },
+        {
+         "slug": "zh-tiaokuan",
+         "kind": "vocabulary",
+         "front": "条款",
+         "reading": "tiáokuǎn",
+         "romaji": null,
+         "meaning": "clause"
+        },
+        {
+         "slug": "zh-chouma",
+         "kind": "vocabulary",
+         "front": "筹码",
+         "reading": "chóumǎ",
+         "romaji": null,
+         "meaning": "monnaie d’échange, atout"
+        },
+        {
+         "slug": "zh-dixian",
+         "kind": "vocabulary",
+         "front": "底线",
+         "reading": "dǐxiàn",
+         "romaji": null,
+         "meaning": "limite à ne pas franchir"
+        },
+        {
+         "slug": "zh-fenqi",
+         "kind": "vocabulary",
+         "front": "分歧",
+         "reading": "fēnqí",
+         "romaji": null,
+         "meaning": "divergence"
+        },
+        {
+         "slug": "zh-zhengyi",
+         "kind": "vocabulary",
+         "front": "争议",
+         "reading": "zhēngyì",
+         "romaji": null,
+         "meaning": "litige, controverse"
+        },
+        {
+         "slug": "zh-gongshi-h6",
+         "kind": "vocabulary",
+         "front": "共识",
+         "reading": "gòngshí",
+         "romaji": null,
+         "meaning": "consensus"
+        },
+        {
+         "slug": "zh-rangbu",
+         "kind": "vocabulary",
+         "front": "让步",
+         "reading": "ràngbù",
+         "romaji": null,
+         "meaning": "faire une concession"
+        },
+        {
+         "slug": "zh-tuoxie",
+         "kind": "vocabulary",
+         "front": "妥协",
+         "reading": "tuǒxié",
+         "romaji": null,
+         "meaning": "compromis ; transiger"
+        },
+        {
+         "slug": "zh-chengyi",
+         "kind": "vocabulary",
+         "front": "诚意",
+         "reading": "chéngyì",
+         "romaji": null,
+         "meaning": "bonne foi, sincérité"
+        },
+        {
+         "slug": "zh-huhui",
+         "kind": "vocabulary",
+         "front": "互惠",
+         "reading": "hùhuì",
+         "romaji": null,
+         "meaning": "mutuellement avantageux"
+        },
+        {
+         "slug": "zh-shuangying",
+         "kind": "vocabulary",
+         "front": "双赢",
+         "reading": "shuāngyíng",
+         "romaji": null,
+         "meaning": "gagnant-gagnant"
+        },
+        {
+         "slug": "zh-qianshu",
+         "kind": "vocabulary",
+         "front": "签署",
+         "reading": "qiānshǔ",
+         "romaji": null,
+         "meaning": "signer (officiellement)"
+        },
+        {
+         "slug": "zh-xieyi",
+         "kind": "vocabulary",
+         "front": "协议",
+         "reading": "xiéyì",
+         "romaji": null,
+         "meaning": "accord"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "就价格而言，双方还有很大的分歧。",
+         "reading": "Jiù jiàgé ér yán, shuāngfāng hái yǒu hěn dà de fēnqí.",
+         "fr": "Sur la question du prix, les deux parties divergent encore beaucoup."
+        },
+        {
+         "jp": "经过三天的谈判，两国终于达成共识，签署了互惠的协议。",
+         "reading": "Jīngguò sān tiān de tánpàn, liǎng guó zhōngyú dáchéng gòngshí, qiānshǔle hùhuì de xiéyì.",
+         "fr": "Après trois jours de négociations, les deux pays parviennent enfin à un consensus et signent un accord avantageux pour chacun."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿交通而言，住在市中心最方便。",
+         "choices": [
+          "就",
+          "趁",
+          "凭"
+         ],
+         "answer": "就",
+         "explanation": "Pour ce qui est de : 就…而言.",
+         "translation": "Pour ce qui est des transports, habiter en centre-ville est le plus pratique."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "双方都做了一些＿，问题终于解决了。",
+         "choices": [
+          "让步",
+          "底线",
+          "争议"
+         ],
+         "answer": "让步",
+         "explanation": "Concession : 让步.",
+         "translation": "Chaque partie a fait quelques concessions, et le problème est enfin réglé."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大宛商人",
+           "jp": "这是我们的最低价，不能再便宜了。"
+          }
+         ],
+         "translation": "Le marchand dit que c’est son dernier prix (tu proposes d’acheter davantage pour obtenir mieux).",
+         "choices": [
+          "如果我们多买一些，能不能再让一点儿？",
+          "我们的底线是骆驼。",
+          "双赢是一种条款。"
+         ],
+         "answer": "如果我们多买一些，能不能再让一点儿？",
+         "explanation": "Négocier : 能不能再让一点儿？"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "合同里的这一条款还有争议。",
+         "translation": "Cette clause fait l’unanimité.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "有争议 = contesté."
+        }
+       ]
+      },
+      {
+       "slug": "zh-economy6",
+       "title": "L’économie des oasis : 与此同时",
+       "objective": "Décrire une situation économique et des évolutions simultanées.",
+       "minutes": 10,
+       "explanation": [
+        "与此同时 = au même moment, parallèlement (relie deux phrases) : 出口增加了，与此同时，进口也在增长 (les exportations ont augmenté ; dans le même temps, les importations progressent aussi).",
+        "Les échanges : 进口 / 出口 (importer / exporter), 关税 (droits de douane), 供应 (offre, approvisionner), 需求 (demande), 垄断 (monopole), 货币 (monnaie), 汇率 (taux de change).",
+        "La conjoncture : 繁荣 (prospère), 衰退 (récession), 物价 (prix), 通货膨胀 (inflation), 消费 (consommer), 储蓄 (épargne), 利息 (intérêts), 债务 (dette)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yucitongshi",
+         "kind": "grammar",
+         "front": "…，与此同时，…",
+         "reading": "yǔ cǐ tóngshí",
+         "romaji": null,
+         "meaning": "au même moment, parallèlement"
+        },
+        {
+         "slug": "zh-yucitongshi",
+         "kind": "vocabulary",
+         "front": "与此同时",
+         "reading": "yǔ cǐ tóngshí",
+         "romaji": null,
+         "meaning": "pendant ce temps"
+        },
+        {
+         "slug": "zh-jinkou",
+         "kind": "vocabulary",
+         "front": "进口",
+         "reading": "jìnkǒu",
+         "romaji": null,
+         "meaning": "importer ; importation"
+        },
+        {
+         "slug": "zh-chukou-export",
+         "kind": "vocabulary",
+         "front": "出口",
+         "reading": "chūkǒu",
+         "romaji": null,
+         "meaning": "exporter ; sortie"
+        },
+        {
+         "slug": "zh-guanshui",
+         "kind": "vocabulary",
+         "front": "关税",
+         "reading": "guānshuì",
+         "romaji": null,
+         "meaning": "droits de douane"
+        },
+        {
+         "slug": "zh-gongying",
+         "kind": "vocabulary",
+         "front": "供应",
+         "reading": "gōngyìng",
+         "romaji": null,
+         "meaning": "approvisionner ; offre"
+        },
+        {
+         "slug": "zh-xuqiu",
+         "kind": "vocabulary",
+         "front": "需求",
+         "reading": "xūqiú",
+         "romaji": null,
+         "meaning": "demande, besoin"
+        },
+        {
+         "slug": "zh-longduan",
+         "kind": "vocabulary",
+         "front": "垄断",
+         "reading": "lǒngduàn",
+         "romaji": null,
+         "meaning": "monopole ; monopoliser"
+        },
+        {
+         "slug": "zh-huobi",
+         "kind": "vocabulary",
+         "front": "货币",
+         "reading": "huòbì",
+         "romaji": null,
+         "meaning": "monnaie (devise)"
+        },
+        {
+         "slug": "zh-huilü",
+         "kind": "vocabulary",
+         "front": "汇率",
+         "reading": "huìlǜ",
+         "romaji": null,
+         "meaning": "taux de change"
+        },
+        {
+         "slug": "zh-fanrong",
+         "kind": "vocabulary",
+         "front": "繁荣",
+         "reading": "fánróng",
+         "romaji": null,
+         "meaning": "prospère ; prospérité"
+        },
+        {
+         "slug": "zh-shuaitui",
+         "kind": "vocabulary",
+         "front": "衰退",
+         "reading": "shuāituì",
+         "romaji": null,
+         "meaning": "récession ; décliner"
+        },
+        {
+         "slug": "zh-wujia",
+         "kind": "vocabulary",
+         "front": "物价",
+         "reading": "wùjià",
+         "romaji": null,
+         "meaning": "prix (niveau général)"
+        },
+        {
+         "slug": "zh-tonghuopengzhang",
+         "kind": "vocabulary",
+         "front": "通货膨胀",
+         "reading": "tōnghuò péngzhàng",
+         "romaji": null,
+         "meaning": "inflation"
+        },
+        {
+         "slug": "zh-xiaofei",
+         "kind": "vocabulary",
+         "front": "消费",
+         "reading": "xiāofèi",
+         "romaji": null,
+         "meaning": "consommer ; consommation"
+        },
+        {
+         "slug": "zh-chuxu",
+         "kind": "vocabulary",
+         "front": "储蓄",
+         "reading": "chǔxù",
+         "romaji": null,
+         "meaning": "épargne ; épargner"
+        },
+        {
+         "slug": "zh-lixi",
+         "kind": "vocabulary",
+         "front": "利息",
+         "reading": "lìxī",
+         "romaji": null,
+         "meaning": "intérêts (financiers)"
+        },
+        {
+         "slug": "zh-zhaiwu",
+         "kind": "vocabulary",
+         "front": "债务",
+         "reading": "zhàiwù",
+         "romaji": null,
+         "meaning": "dette"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "丝绸之路开通以后，沿途的城市越来越繁荣。",
+         "reading": "Sīchóu zhī lù kāitōng yǐhòu, yántú de chéngshì yuè lái yuè fánróng.",
+         "fr": "Après l’ouverture de la route de la soie, les villes qui la jalonnent deviennent de plus en plus prospères."
+        },
+        {
+         "jp": "中原的丝绸大量出口到西域，与此同时，西域的葡萄和骏马也进入了中原。",
+         "reading": "Zhōngyuán de sīchóu dàliàng chūkǒu dào Xīyù, yǔ cǐ tóngshí, Xīyù de pútao hé jùnmǎ yě jìnrùle Zhōngyuán.",
+         "fr": "La soie de la plaine Centrale s’exporte en masse vers l’Ouest ; dans le même temps, raisins et chevaux de l’Ouest arrivent en Chine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他每天上班，＿还在读研究生。",
+         "choices": [
+          "与此同时",
+          "固然",
+          "以至于"
+         ],
+         "answer": "与此同时",
+         "explanation": "Parallèlement : 与此同时.",
+         "translation": "Il travaille tous les jours et, parallèlement, il fait un master."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "最近物价上涨得很快，出现了＿。",
+         "choices": [
+          "通货膨胀",
+          "储蓄",
+          "垄断"
+         ],
+         "answer": "通货膨胀",
+         "explanation": "Inflation : 通货膨胀.",
+         "translation": "Les prix augmentent très vite ces derniers temps : c’est de l’inflation."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "商人",
+           "jp": "为什么丝绸在这儿这么贵？"
+          }
+         ],
+         "translation": "Un marchand demande pourquoi la soie est si chère ici (la demande dépasse l’offre).",
+         "choices": [
+          "因为需求大，供应少。",
+          "因为利息是货币。",
+          "因为汇率很繁荣。"
+         ],
+         "answer": "因为需求大，供应少。",
+         "explanation": "Offre et demande : 需求、供应."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他借了很多钱，现在债务很重。",
+         "translation": "Il a beaucoup de dettes.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "债务很重 = lourdement endetté."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w5-c2",
+     "title": "Les chevaux célestes",
+     "lessons": [
+      {
+       "slug": "zh-horses",
+       "title": "Les chevaux qui suent le sang : 何尝",
+       "objective": "Parler d’animaux précieux et contester avec une question rhétorique.",
+       "minutes": 10,
+       "explanation": [
+        "何尝 + 不 / 没 = n’est-ce pas aussi… ? (question rhétorique : affirme) : 我何尝不想去？只是没时间 (crois-tu que je n’ai pas envie d’y aller ? je n’ai juste pas le temps). Sans négation, 何尝 nie : 我何尝说过这句话？(quand ai-je jamais dit cela ?)",
+        "Les chevaux : 骏马 (coursier), 马匹 (chevaux, collectif), 汗血马 (cheval qui sue le sang), 品种 (race), 饲养 (élever), 驯养 (domestiquer), 缰绳 (rênes), 马蹄 (sabot), 奔驰 (galoper), 驾驭 (maîtriser, mener).",
+        "Le prix des choses rares : 稀有 (rare), 罕见 (rarement vu), 宝物 (trésor), 赠送 (offrir officiellement)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-hechang",
+         "kind": "grammar",
+         "front": "何尝 + 不 / 没…？",
+         "reading": "hécháng",
+         "romaji": null,
+         "meaning": "n’est-ce pas aussi… ? (rhétorique)"
+        },
+        {
+         "slug": "zh-hechang",
+         "kind": "vocabulary",
+         "front": "何尝",
+         "reading": "hécháng",
+         "romaji": null,
+         "meaning": "quand donc… ? (rhétorique)"
+        },
+        {
+         "slug": "zh-junma",
+         "kind": "vocabulary",
+         "front": "骏马",
+         "reading": "jùnmǎ",
+         "romaji": null,
+         "meaning": "coursier, beau cheval"
+        },
+        {
+         "slug": "zh-mapi",
+         "kind": "vocabulary",
+         "front": "马匹",
+         "reading": "mǎpǐ",
+         "romaji": null,
+         "meaning": "chevaux (collectif)"
+        },
+        {
+         "slug": "zh-hanxuema",
+         "kind": "vocabulary",
+         "front": "汗血马",
+         "reading": "hànxuèmǎ",
+         "romaji": null,
+         "meaning": "cheval qui sue le sang"
+        },
+        {
+         "slug": "zh-pinzhong",
+         "kind": "vocabulary",
+         "front": "品种",
+         "reading": "pǐnzhǒng",
+         "romaji": null,
+         "meaning": "race, variété"
+        },
+        {
+         "slug": "zh-siyang",
+         "kind": "vocabulary",
+         "front": "饲养",
+         "reading": "sìyǎng",
+         "romaji": null,
+         "meaning": "élever (des animaux)"
+        },
+        {
+         "slug": "zh-xunyang",
+         "kind": "vocabulary",
+         "front": "驯养",
+         "reading": "xùnyǎng",
+         "romaji": null,
+         "meaning": "domestiquer"
+        },
+        {
+         "slug": "zh-jiangsheng",
+         "kind": "vocabulary",
+         "front": "缰绳",
+         "reading": "jiāngsheng",
+         "romaji": null,
+         "meaning": "rênes"
+        },
+        {
+         "slug": "zh-mati",
+         "kind": "vocabulary",
+         "front": "马蹄",
+         "reading": "mǎtí",
+         "romaji": null,
+         "meaning": "sabot de cheval"
+        },
+        {
+         "slug": "zh-benchi",
+         "kind": "vocabulary",
+         "front": "奔驰",
+         "reading": "bēnchí",
+         "romaji": null,
+         "meaning": "galoper, foncer"
+        },
+        {
+         "slug": "zh-jiayu",
+         "kind": "vocabulary",
+         "front": "驾驭",
+         "reading": "jiàyù",
+         "romaji": null,
+         "meaning": "mener, maîtriser"
+        },
+        {
+         "slug": "zh-xiyou",
+         "kind": "vocabulary",
+         "front": "稀有",
+         "reading": "xīyǒu",
+         "romaji": null,
+         "meaning": "rare"
+        },
+        {
+         "slug": "zh-hanjian",
+         "kind": "vocabulary",
+         "front": "罕见",
+         "reading": "hǎnjiàn",
+         "romaji": null,
+         "meaning": "rarement vu, exceptionnel"
+        },
+        {
+         "slug": "zh-baowu",
+         "kind": "vocabulary",
+         "front": "宝物",
+         "reading": "bǎowù",
+         "romaji": null,
+         "meaning": "trésor, objet précieux"
+        },
+        {
+         "slug": "zh-zengsong",
+         "kind": "vocabulary",
+         "front": "赠送",
+         "reading": "zèngsòng",
+         "romaji": null,
+         "meaning": "offrir (officiellement)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "大宛的汗血马是罕见的骏马，跑起来像飞一样。",
+         "reading": "Dàyuān de hànxuèmǎ shì hǎnjiàn de jùnmǎ, pǎo qǐlai xiàng fēi yíyàng.",
+         "fr": "Les chevaux qui suent le sang de Dayuan sont des coursiers exceptionnels : au galop, on dirait qu’ils volent."
+        },
+        {
+         "jp": "国王何尝不想和汉朝交朋友？只是担心匈奴报复。",
+         "reading": "Guówáng hécháng bù xiǎng hé Hàncháo jiāo péngyou? Zhǐshì dānxīn Xiōngnú bàofù.",
+         "fr": "Le roi ne demanderait pas mieux que de se lier d’amitié avec les Han ; il craint simplement les représailles des Xiongnu."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿不想帮你？可是我真的没有办法。",
+         "choices": [
+          "何尝",
+          "与此同时",
+          "倘若"
+         ],
+         "answer": "何尝",
+         "explanation": "Question rhétorique : 何尝不….",
+         "translation": "Crois-tu que je ne veux pas t’aider ? Mais je n’ai vraiment aucun moyen."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这种花非常＿，全世界只有几百棵。",
+         "choices": [
+          "稀有",
+          "奔驰",
+          "驯养"
+         ],
+         "answer": "稀有",
+         "explanation": "Rare : 稀有.",
+         "translation": "Cette fleur est très rare : il n’en reste que quelques centaines dans le monde."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "国王",
+           "jp": "你们想用什么交换我们的汗血马？"
+          }
+         ],
+         "translation": "Le roi demande ce que vous proposez en échange (de l’or et une statue de cheval en or).",
+         "choices": [
+          "我们带来了黄金和一匹金马。",
+          "我们何尝骑过骆驼？",
+          "缰绳在马蹄上。"
+         ],
+         "answer": "我们带来了黄金和一匹金马。",
+         "explanation": "Proposer : 带来了…."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这匹马脾气很大，一般人很难驾驭。",
+         "translation": "Le cheval est facile à mener.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "很难驾驭 = difficile à maîtriser."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w6",
+   "title": "La Bactriane des Yuezhi",
+   "region": "Routes de l’Ouest",
+   "description": "Les arts venus d’ailleurs (莫非) ; croyances et rites (岂) ; proposer une alliance (予以, 加以).",
+   "boss": {
+    "name": "Le Jufu lanceur de pierres",
+    "glyph": "举",
+    "intro": "Le Jufu, singe aux bras tigrés, aime lancer des pierres sur les passants. Il saccage les temples et les ateliers de Bactriane et refuse toute alliance : montre-lui que tu comprends les arts et les croyances de ce pays."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w6-c1",
+     "title": "Temples et ateliers",
+     "lessons": [
+      {
+       "slug": "zh-hz-arts",
+       "title": "Les caractères des arts : 寺 庙 塑 雕 琴 弦 舞 盟",
+       "objective": "Reconnaître les caractères des temples, des arts et des alliances.",
+       "minutes": 5,
+       "explanation": [
+        "寺 (sì, monastère) était d’abord un bureau officiel ; il désigne ensuite les temples bouddhiques. 庙 (miào, temple des ancêtres) porte le toit en appentis 广. 塑 (sù, modeler) porte la terre 土 ; 雕 (diāo, sculpter, graver) porte l’oiseau 隹 : à l’origine l’aigle.",
+        "琴 (qín, cithare) montre deux 王 au-dessus de 今 : les chevalets d’un instrument. 弦 (xián, corde) porte l’arc 弓. 舞 (wǔ, danser) dessine une personne aux manches agitées. 盟 (méng, alliance) porte le récipient 皿 : on scellait les serments en partageant le sang d’une coupe."
+       ],
+       "items": [
+        {
+         "slug": "hz-si-temple",
+         "kind": "kanji",
+         "front": "寺",
+         "reading": "sì",
+         "romaji": null,
+         "meaning": "monastère (bouddhique)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-miao",
+         "kind": "kanji",
+         "front": "庙",
+         "reading": "miào",
+         "romaji": null,
+         "meaning": "temple",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-su-h6",
+         "kind": "kanji",
+         "front": "塑",
+         "reading": "sù",
+         "romaji": null,
+         "meaning": "modeler",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-diao",
+         "kind": "kanji",
+         "front": "雕",
+         "reading": "diāo",
+         "romaji": null,
+         "meaning": "sculpter, graver",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 16
+         }
+        },
+        {
+         "slug": "hz-qin",
+         "kind": "kanji",
+         "front": "琴",
+         "reading": "qín",
+         "romaji": null,
+         "meaning": "cithare ; instrument à cordes",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-xian-string",
+         "kind": "kanji",
+         "front": "弦",
+         "reading": "xián",
+         "romaji": null,
+         "meaning": "corde (d’instrument)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-wu-dance",
+         "kind": "kanji",
+         "front": "舞",
+         "reading": "wǔ",
+         "romaji": null,
+         "meaning": "danser",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "hz-meng-h6",
+         "kind": "kanji",
+         "front": "盟",
+         "reading": "méng",
+         "romaji": null,
+         "meaning": "alliance, serment",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-arts6",
+       "title": "Des arts venus d’ailleurs : 莫非",
+       "objective": "Parler de création artistique et formuler une supposition étonnée.",
+       "minutes": 10,
+       "explanation": [
+        "莫非 + supposition（不成）？= serait-ce que… ? (on devine, étonné) : 他今天没来，莫非生病了？(il n’est pas venu aujourd’hui : serait-il malade ?)",
+        "Les arts : 雕塑 (sculpture), 壁画 (fresque), 工艺 (artisanat d’art), 精湛 (consommé, virtuose), 杰作 (chef-d’œuvre), 创作 (créer ; création), 灵感 (inspiration), 鉴赏 (apprécier en connaisseur).",
+        "La musique et la danse : 乐器 (instrument), 琵琶 (pipa, luth), 旋律 (mélodie), 节奏 (rythme), 舞蹈 (danse)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-mofei",
+         "kind": "grammar",
+         "front": "莫非…（不成）？",
+         "reading": "mòfēi",
+         "romaji": null,
+         "meaning": "serait-ce que… ?"
+        },
+        {
+         "slug": "zh-mofei",
+         "kind": "vocabulary",
+         "front": "莫非",
+         "reading": "mòfēi",
+         "romaji": null,
+         "meaning": "se pourrait-il que"
+        },
+        {
+         "slug": "zh-diaosu",
+         "kind": "vocabulary",
+         "front": "雕塑",
+         "reading": "diāosù",
+         "romaji": null,
+         "meaning": "sculpture"
+        },
+        {
+         "slug": "zh-bihua",
+         "kind": "vocabulary",
+         "front": "壁画",
+         "reading": "bìhuà",
+         "romaji": null,
+         "meaning": "fresque, peinture murale"
+        },
+        {
+         "slug": "zh-gongyi",
+         "kind": "vocabulary",
+         "front": "工艺",
+         "reading": "gōngyì",
+         "romaji": null,
+         "meaning": "artisanat d’art, savoir-faire"
+        },
+        {
+         "slug": "zh-jingzhan",
+         "kind": "vocabulary",
+         "front": "精湛",
+         "reading": "jīngzhàn",
+         "romaji": null,
+         "meaning": "consommé, virtuose"
+        },
+        {
+         "slug": "zh-jiezuo",
+         "kind": "vocabulary",
+         "front": "杰作",
+         "reading": "jiézuò",
+         "romaji": null,
+         "meaning": "chef-d’œuvre"
+        },
+        {
+         "slug": "zh-chuangzuo",
+         "kind": "vocabulary",
+         "front": "创作",
+         "reading": "chuàngzuò",
+         "romaji": null,
+         "meaning": "créer (une œuvre) ; création"
+        },
+        {
+         "slug": "zh-linggan",
+         "kind": "vocabulary",
+         "front": "灵感",
+         "reading": "línggǎn",
+         "romaji": null,
+         "meaning": "inspiration"
+        },
+        {
+         "slug": "zh-jianshang",
+         "kind": "vocabulary",
+         "front": "鉴赏",
+         "reading": "jiànshǎng",
+         "romaji": null,
+         "meaning": "apprécier en connaisseur"
+        },
+        {
+         "slug": "zh-yueqi",
+         "kind": "vocabulary",
+         "front": "乐器",
+         "reading": "yuèqì",
+         "romaji": null,
+         "meaning": "instrument de musique"
+        },
+        {
+         "slug": "zh-pipa",
+         "kind": "vocabulary",
+         "front": "琵琶",
+         "reading": "pípa",
+         "romaji": null,
+         "meaning": "pipa (luth chinois)"
+        },
+        {
+         "slug": "zh-xuanlü",
+         "kind": "vocabulary",
+         "front": "旋律",
+         "reading": "xuánlǜ",
+         "romaji": null,
+         "meaning": "mélodie"
+        },
+        {
+         "slug": "zh-jiezou",
+         "kind": "vocabulary",
+         "front": "节奏",
+         "reading": "jiézòu",
+         "romaji": null,
+         "meaning": "rythme"
+        },
+        {
+         "slug": "zh-wudao",
+         "kind": "vocabulary",
+         "front": "舞蹈",
+         "reading": "wǔdǎo",
+         "romaji": null,
+         "meaning": "danse"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "寺庙的墙上画满了精美的壁画，每一幅都是杰作。",
+         "reading": "Sìmiào de qiáng shang huàmǎnle jīngměi de bìhuà, měi yì fú dōu shì jiézuò.",
+         "fr": "Les murs du temple sont couverts de fresques raffinées : chacune est un chef-d’œuvre."
+        },
+        {
+         "jp": "这种乐器的旋律这么熟悉，莫非是从中原传来的？",
+         "reading": "Zhè zhǒng yuèqì de xuánlǜ zhème shúxī, mòfēi shì cóng Zhōngyuán chuánlái de?",
+         "fr": "La mélodie de cet instrument est si familière : viendrait-il de la plaine Centrale ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "门开着，灯也亮着，＿家里有人？",
+         "choices": [
+          "莫非",
+          "何尝",
+          "凭"
+         ],
+         "answer": "莫非",
+         "explanation": "Serait-ce que : 莫非.",
+         "translation": "La porte est ouverte et la lumière allumée : y aurait-il quelqu’un à la maison ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这位作家的＿来自他童年的经历。",
+         "choices": [
+          "灵感",
+          "节奏",
+          "琵琶"
+         ],
+         "answer": "灵感",
+         "explanation": "Inspiration : 灵感.",
+         "translation": "L’inspiration de cet écrivain vient de son enfance."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "导游",
+           "jp": "你觉得这座雕塑怎么样？"
+          }
+         ],
+         "translation": "Le guide demande ton avis sur la sculpture (le savoir-faire est remarquable).",
+         "choices": [
+          "工艺非常精湛，真是一件杰作。",
+          "雕塑是一种节奏。",
+          "莫非我是琵琶？"
+         ],
+         "answer": "工艺非常精湛，真是一件杰作。",
+         "explanation": "Éloge : 工艺精湛."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这首曲子节奏很快，适合跳舞。",
+         "translation": "La musique est lente.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "节奏很快 = rythme rapide."
+        }
+       ]
+      },
+      {
+       "slug": "zh-beliefs",
+       "title": "Croyances et rites : 岂",
+       "objective": "Parler de religion avec respect et contester avec une question rhétorique écrite.",
+       "minutes": 10,
+       "explanation": [
+        "岂 + verbe = comment pourrait-on… ? (question rhétorique écrite, sens négatif) : 这样做岂不是浪费时间？(n’est-ce pas une perte de temps ?) ; 岂有此理 = c’est inadmissible !",
+        "Croire : 宗教 (religion), 信仰 (foi, croyance), 佛教 (bouddhisme), 神灵 (divinités), 崇拜 (vénérer), 虔诚 (pieux, fervent), 迷信 (superstition).",
+        "Les rites : 祭祀 (offrir un sacrifice), 祈祷 (prier), 僧人 (moine), 修行 (pratique spirituelle), 经书 (texte sacré), 灵魂 (âme)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-qi",
+         "kind": "grammar",
+         "front": "岂 + 动词…？",
+         "reading": "qǐ",
+         "romaji": null,
+         "meaning": "comment pourrait-on… ? (rhétorique)"
+        },
+        {
+         "slug": "zh-qi-how",
+         "kind": "vocabulary",
+         "front": "岂",
+         "reading": "qǐ",
+         "romaji": null,
+         "meaning": "comment… ? (rhétorique, écrit)"
+        },
+        {
+         "slug": "zh-qiyoucili",
+         "kind": "vocabulary",
+         "front": "岂有此理",
+         "reading": "qǐ yǒu cǐ lǐ",
+         "romaji": null,
+         "meaning": "c’est inadmissible !"
+        },
+        {
+         "slug": "zh-zongjiao",
+         "kind": "vocabulary",
+         "front": "宗教",
+         "reading": "zōngjiào",
+         "romaji": null,
+         "meaning": "religion"
+        },
+        {
+         "slug": "zh-xinyang",
+         "kind": "vocabulary",
+         "front": "信仰",
+         "reading": "xìnyǎng",
+         "romaji": null,
+         "meaning": "foi, croyance"
+        },
+        {
+         "slug": "zh-fojiao",
+         "kind": "vocabulary",
+         "front": "佛教",
+         "reading": "Fójiào",
+         "romaji": null,
+         "meaning": "bouddhisme"
+        },
+        {
+         "slug": "zh-shenling",
+         "kind": "vocabulary",
+         "front": "神灵",
+         "reading": "shénlíng",
+         "romaji": null,
+         "meaning": "divinités"
+        },
+        {
+         "slug": "zh-chongbai",
+         "kind": "vocabulary",
+         "front": "崇拜",
+         "reading": "chóngbài",
+         "romaji": null,
+         "meaning": "vénérer, adorer"
+        },
+        {
+         "slug": "zh-qiancheng",
+         "kind": "vocabulary",
+         "front": "虔诚",
+         "reading": "qiánchéng",
+         "romaji": null,
+         "meaning": "pieux, fervent"
+        },
+        {
+         "slug": "zh-mixin",
+         "kind": "vocabulary",
+         "front": "迷信",
+         "reading": "míxìn",
+         "romaji": null,
+         "meaning": "superstition ; superstitieux"
+        },
+        {
+         "slug": "zh-jisi",
+         "kind": "vocabulary",
+         "front": "祭祀",
+         "reading": "jìsì",
+         "romaji": null,
+         "meaning": "offrir un sacrifice (rituel)"
+        },
+        {
+         "slug": "zh-qidao",
+         "kind": "vocabulary",
+         "front": "祈祷",
+         "reading": "qídǎo",
+         "romaji": null,
+         "meaning": "prier"
+        },
+        {
+         "slug": "zh-sengren",
+         "kind": "vocabulary",
+         "front": "僧人",
+         "reading": "sēngrén",
+         "romaji": null,
+         "meaning": "moine (bouddhiste)"
+        },
+        {
+         "slug": "zh-xiuxing",
+         "kind": "vocabulary",
+         "front": "修行",
+         "reading": "xiūxíng",
+         "romaji": null,
+         "meaning": "pratique spirituelle"
+        },
+        {
+         "slug": "zh-jingshu",
+         "kind": "vocabulary",
+         "front": "经书",
+         "reading": "jīngshū",
+         "romaji": null,
+         "meaning": "texte sacré, écritures"
+        },
+        {
+         "slug": "zh-linghun",
+         "kind": "vocabulary",
+         "front": "灵魂",
+         "reading": "línghún",
+         "romaji": null,
+         "meaning": "âme"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "大月氏的人们很虔诚，每天都去寺庙祈祷。",
+         "reading": "Dà Yuèzhī de rénmen hěn qiánchéng, měi tiān dōu qù sìmiào qídǎo.",
+         "fr": "Les Yuezhi sont très pieux : chaque jour, ils vont prier au temple."
+        },
+        {
+         "jp": "尊重别人的信仰，岂不是最基本的礼貌？",
+         "reading": "Zūnzhòng biérén de xìnyǎng, qǐ bú shì zuì jīběn de lǐmào?",
+         "fr": "Respecter la foi des autres, n’est-ce pas la politesse la plus élémentaire ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你连他的名字都不知道，＿能说他是坏人？",
+         "choices": [
+          "岂",
+          "莫非",
+          "何尝"
+         ],
+         "answer": "岂",
+         "explanation": "Comment pourrait-on : 岂.",
+         "translation": "Tu ne connais même pas son nom : comment peux-tu dire que c’est quelqu’un de mauvais ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "僧人每天早上都在寺里＿经书。",
+         "choices": [
+          "念",
+          "崇拜",
+          "迷信"
+         ],
+         "answer": "念",
+         "explanation": "Réciter : 念经.",
+         "translation": "Chaque matin, les moines récitent les écritures au monastère."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "他说下雨天出门会倒霉，你信吗？"
+          }
+         ],
+         "translation": "Un ami demande si tu crois à une superstition (non).",
+         "choices": [
+          "我不信，那只是迷信。",
+          "我非常虔诚地祭祀雨。",
+          "灵魂是一种宗教。"
+         ],
+         "answer": "我不信，那只是迷信。",
+         "explanation": "Rejeter : 那只是迷信."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "佛教是从印度传到中国的。",
+         "translation": "Le bouddhisme est venu d’Inde.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "从印度传到中国 = venu d’Inde en Chine."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w6-c2",
+     "title": "Une alliance contre les Xiongnu",
+     "lessons": [
+      {
+       "slug": "zh-alliance",
+       "title": "Proposer une alliance : 予以, 加以",
+       "objective": "Mener une démarche diplomatique en registre officiel.",
+       "minutes": 10,
+       "explanation": [
+        "予以 + nom verbal = accorder, apporter (officiel) : 对困难的家庭予以帮助 (apporter de l’aide aux familles en difficulté). 加以 + verbe de deux syllabes = soumettre à, procéder à : 对问题加以分析 (analyser le problème).",
+        "La diplomatie : 外交 (diplomatie), 使节 (diplomate envoyé), 国书 (lettres de créance), 联盟 (alliance), 结盟 (s’allier), 盟友 (allié), 联合 (s’unir), 中立 (neutre), 敌对 (hostile).",
+        "L’équilibre des forces : 势力 (force, influence), 对抗 (s’opposer), 牵制 (tenir en échec), 制约 (contraindre, limiter), 调解 (servir de médiateur)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yuyi-jiayi",
+         "kind": "grammar",
+         "front": "予以 / 加以 + 动词",
+         "reading": "yǔyǐ / jiāyǐ",
+         "romaji": null,
+         "meaning": "accorder / procéder à…"
+        },
+        {
+         "slug": "zh-yuyi",
+         "kind": "vocabulary",
+         "front": "予以",
+         "reading": "yǔyǐ",
+         "romaji": null,
+         "meaning": "accorder, apporter (officiel)"
+        },
+        {
+         "slug": "zh-jiayi",
+         "kind": "vocabulary",
+         "front": "加以",
+         "reading": "jiāyǐ",
+         "romaji": null,
+         "meaning": "procéder à, soumettre à"
+        },
+        {
+         "slug": "zh-waijiao",
+         "kind": "vocabulary",
+         "front": "外交",
+         "reading": "wàijiāo",
+         "romaji": null,
+         "meaning": "diplomatie"
+        },
+        {
+         "slug": "zh-shijie-h6",
+         "kind": "vocabulary",
+         "front": "使节",
+         "reading": "shǐjié",
+         "romaji": null,
+         "meaning": "diplomate, envoyé officiel"
+        },
+        {
+         "slug": "zh-guoshu",
+         "kind": "vocabulary",
+         "front": "国书",
+         "reading": "guóshū",
+         "romaji": null,
+         "meaning": "lettres de créance"
+        },
+        {
+         "slug": "zh-lianmeng",
+         "kind": "vocabulary",
+         "front": "联盟",
+         "reading": "liánméng",
+         "romaji": null,
+         "meaning": "alliance"
+        },
+        {
+         "slug": "zh-jiemeng",
+         "kind": "vocabulary",
+         "front": "结盟",
+         "reading": "jiéméng",
+         "romaji": null,
+         "meaning": "s’allier"
+        },
+        {
+         "slug": "zh-mengyou",
+         "kind": "vocabulary",
+         "front": "盟友",
+         "reading": "méngyǒu",
+         "romaji": null,
+         "meaning": "allié"
+        },
+        {
+         "slug": "zh-lianhe",
+         "kind": "vocabulary",
+         "front": "联合",
+         "reading": "liánhé",
+         "romaji": null,
+         "meaning": "s’unir ; uni"
+        },
+        {
+         "slug": "zh-zhongli",
+         "kind": "vocabulary",
+         "front": "中立",
+         "reading": "zhōnglì",
+         "romaji": null,
+         "meaning": "neutre"
+        },
+        {
+         "slug": "zh-didui",
+         "kind": "vocabulary",
+         "front": "敌对",
+         "reading": "díduì",
+         "romaji": null,
+         "meaning": "hostile"
+        },
+        {
+         "slug": "zh-shili",
+         "kind": "vocabulary",
+         "front": "势力",
+         "reading": "shìlì",
+         "romaji": null,
+         "meaning": "force, influence (politique)"
+        },
+        {
+         "slug": "zh-duikang",
+         "kind": "vocabulary",
+         "front": "对抗",
+         "reading": "duìkàng",
+         "romaji": null,
+         "meaning": "s’opposer, affronter"
+        },
+        {
+         "slug": "zh-qianzhi",
+         "kind": "vocabulary",
+         "front": "牵制",
+         "reading": "qiānzhì",
+         "romaji": null,
+         "meaning": "tenir en échec"
+        },
+        {
+         "slug": "zh-zhiyue",
+         "kind": "vocabulary",
+         "front": "制约",
+         "reading": "zhìyuē",
+         "romaji": null,
+         "meaning": "contraindre, limiter"
+        },
+        {
+         "slug": "zh-tiaojie",
+         "kind": "vocabulary",
+         "front": "调解",
+         "reading": "tiáojiě",
+         "romaji": null,
+         "meaning": "servir de médiateur"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "张骞向大月氏国王递上国书，希望两国结盟，联合对抗匈奴。",
+         "reading": "Zhāng Qiān xiàng Dà Yuèzhī guówáng dìshàng guóshū, xīwàng liǎng guó jiéméng, liánhé duìkàng Xiōngnú.",
+         "fr": "Zhang Qian remet ses lettres de créance au roi des Yuezhi et propose que les deux pays s’allient contre les Xiongnu."
+        },
+        {
+         "jp": "国王对汉朝的建议没有予以答复，他只想保持中立。",
+         "reading": "Guówáng duì Hàncháo de jiànyì méiyǒu yǔyǐ dáfù, tā zhǐ xiǎng bǎochí zhōnglì.",
+         "fr": "Le roi ne donne aucune réponse à la proposition des Han : il veut seulement rester neutre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "对于大家提出的意见，我们会认真＿研究。",
+         "choices": [
+          "加以",
+          "予以",
+          "岂"
+         ],
+         "answer": "加以",
+         "explanation": "Procéder à + verbe : 加以研究.",
+         "translation": "Nous examinerons sérieusement les avis que vous avez exprimés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "对表现突出的员工，公司将＿奖励。",
+         "choices": [
+          "予以",
+          "加以",
+          "莫非"
+         ],
+         "answer": "予以",
+         "explanation": "Accorder : 予以奖励.",
+         "translation": "L’entreprise récompensera les employés les plus remarquables."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "大臣",
+           "jp": "如果我们和汉朝结盟，匈奴会不会报复？"
+          }
+         ],
+         "translation": "Un ministre yuezhi craint les représailles (unis, nous serons plus forts).",
+         "choices": [
+          "只要我们联合起来，匈奴就不敢来。",
+          "国书是一种中立。",
+          "我们调解了骆驼。"
+         ],
+         "answer": "只要我们联合起来，匈奴就不敢来。",
+         "explanation": "S’unir : 联合起来."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "两国一直是盟友，关系很好。",
+         "translation": "Les deux pays sont ennemis.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "盟友 = alliés."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w7",
+   "title": "Les monts Kunlun",
+   "region": "Routes de l’Ouest",
+   "description": "Raisonner avec rigueur (由此可见) ; observer le ciel (便) ; le Tao et l’univers (亦, 皆).",
+   "boss": {
+    "name": "Le Luwu aux neuf queues",
+    "glyph": "陆",
+    "intro": "Le Luwu, corps de tigre, neuf queues et visage d’homme, garde le jardin de la Reine Mère de l’Ouest sur les monts Kunlun. Il ne laisse passer que ceux qui raisonnent juste : réponds à ses énigmes sur le ciel et la pensée."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w7-c1",
+     "title": "Le jardin de la Reine Mère",
+     "lessons": [
+      {
+       "slug": "zh-hz-kunlun",
+       "title": "Les caractères de Kunlun : 玄 奥 测 瑶 昆 仑 恒 智",
+       "objective": "Reconnaître les caractères du mystère et de la sagesse.",
+       "minutes": 5,
+       "explanation": [
+        "玄 (xuán, sombre, mystérieux) dessine un fil tordu qui se perd dans le noir. 奥 (ào, profond, abscons) : 奥秘 = mystère. 测 (cè, mesurer) porte l’eau 氵 : on sondait la profondeur des fleuves. 恒 (héng, constant) porte le cœur 忄 : 永恒 = éternel.",
+        "昆 (kūn) et 仑 (lún) forment 昆仑, la montagne sacrée de l’Ouest. 瑶 (yáo, jade précieux) porte le jade 王 : 瑶池, l’étang de jade de la Reine Mère. 智 (zhì, sagesse) met le soleil 日 sous 知 (savoir) : un savoir qui éclaire."
+       ],
+       "items": [
+        {
+         "slug": "hz-xuan",
+         "kind": "kanji",
+         "front": "玄",
+         "reading": "xuán",
+         "romaji": null,
+         "meaning": "mystérieux, profond",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-ao-deep",
+         "kind": "kanji",
+         "front": "奥",
+         "reading": "ào",
+         "romaji": null,
+         "meaning": "profond, abscons",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-ce-measure",
+         "kind": "kanji",
+         "front": "测",
+         "reading": "cè",
+         "romaji": null,
+         "meaning": "mesurer, sonder",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-yao",
+         "kind": "kanji",
+         "front": "瑶",
+         "reading": "yáo",
+         "romaji": null,
+         "meaning": "jade précieux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "hz-kun",
+         "kind": "kanji",
+         "front": "昆",
+         "reading": "kūn",
+         "romaji": null,
+         "meaning": "Kun (de Kunlun) ; aîné",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-lun-h6",
+         "kind": "kanji",
+         "front": "仑",
+         "reading": "lún",
+         "romaji": null,
+         "meaning": "Lun (de Kunlun)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-heng",
+         "kind": "kanji",
+         "front": "恒",
+         "reading": "héng",
+         "romaji": null,
+         "meaning": "constant, permanent",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-zhi-wisdom",
+         "kind": "kanji",
+         "front": "智",
+         "reading": "zhì",
+         "romaji": null,
+         "meaning": "sagesse",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-reason",
+       "title": "Raisonner : 由此可见",
+       "objective": "Construire un raisonnement : hypothèse, preuve et conclusion.",
+       "minutes": 10,
+       "explanation": [
+        "由此可见 = on voit par là que, il en ressort que (conclusion tirée de ce qui précède, plus écrit que 可见) : 他十年没有放弃，由此可见他的毅力 (il n’a pas renoncé en dix ans : cela montre sa persévérance).",
+        "Raisonner : 假设 (hypothèse ; supposer), 前提 (prémisse, condition préalable), 推理 (raisonner, déduction), 推断 (inférer), 验证 (vérifier), 因果 (cause et effet), 定义 (définition), 范畴 (catégorie).",
+        "Penser : 抽象 (abstrait) / 具体 (concret), 辩证 (dialectique), 片面 (partial) / 全面 (complet), 客观 (objectif) / 主观 (subjectif)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-youcikejian",
+         "kind": "grammar",
+         "front": "…，由此可见…",
+         "reading": "yóu cǐ kě jiàn",
+         "romaji": null,
+         "meaning": "on voit par là que…"
+        },
+        {
+         "slug": "zh-youcikejian",
+         "kind": "vocabulary",
+         "front": "由此可见",
+         "reading": "yóu cǐ kě jiàn",
+         "romaji": null,
+         "meaning": "il en ressort que"
+        },
+        {
+         "slug": "zh-jiashe",
+         "kind": "vocabulary",
+         "front": "假设",
+         "reading": "jiǎshè",
+         "romaji": null,
+         "meaning": "hypothèse ; supposer"
+        },
+        {
+         "slug": "zh-qianti",
+         "kind": "vocabulary",
+         "front": "前提",
+         "reading": "qiántí",
+         "romaji": null,
+         "meaning": "prémisse, condition préalable"
+        },
+        {
+         "slug": "zh-tuili",
+         "kind": "vocabulary",
+         "front": "推理",
+         "reading": "tuīlǐ",
+         "romaji": null,
+         "meaning": "raisonner ; raisonnement"
+        },
+        {
+         "slug": "zh-tuiduan",
+         "kind": "vocabulary",
+         "front": "推断",
+         "reading": "tuīduàn",
+         "romaji": null,
+         "meaning": "inférer, déduire"
+        },
+        {
+         "slug": "zh-yanzheng",
+         "kind": "vocabulary",
+         "front": "验证",
+         "reading": "yànzhèng",
+         "romaji": null,
+         "meaning": "vérifier, valider"
+        },
+        {
+         "slug": "zh-yinguo",
+         "kind": "vocabulary",
+         "front": "因果",
+         "reading": "yīnguǒ",
+         "romaji": null,
+         "meaning": "cause et effet"
+        },
+        {
+         "slug": "zh-dingyi",
+         "kind": "vocabulary",
+         "front": "定义",
+         "reading": "dìngyì",
+         "romaji": null,
+         "meaning": "définition ; définir"
+        },
+        {
+         "slug": "zh-fanchou",
+         "kind": "vocabulary",
+         "front": "范畴",
+         "reading": "fànchóu",
+         "romaji": null,
+         "meaning": "catégorie, domaine"
+        },
+        {
+         "slug": "zh-chouxiang",
+         "kind": "vocabulary",
+         "front": "抽象",
+         "reading": "chōuxiàng",
+         "romaji": null,
+         "meaning": "abstrait"
+        },
+        {
+         "slug": "zh-juti",
+         "kind": "vocabulary",
+         "front": "具体",
+         "reading": "jùtǐ",
+         "romaji": null,
+         "meaning": "concret, précis"
+        },
+        {
+         "slug": "zh-bianzheng",
+         "kind": "vocabulary",
+         "front": "辩证",
+         "reading": "biànzhèng",
+         "romaji": null,
+         "meaning": "dialectique"
+        },
+        {
+         "slug": "zh-pianmian",
+         "kind": "vocabulary",
+         "front": "片面",
+         "reading": "piànmiàn",
+         "romaji": null,
+         "meaning": "partial, unilatéral"
+        },
+        {
+         "slug": "zh-quanmian",
+         "kind": "vocabulary",
+         "front": "全面",
+         "reading": "quánmiàn",
+         "romaji": null,
+         "meaning": "complet, global"
+        },
+        {
+         "slug": "zh-keguan",
+         "kind": "vocabulary",
+         "front": "客观",
+         "reading": "kèguān",
+         "romaji": null,
+         "meaning": "objectif"
+        },
+        {
+         "slug": "zh-zhuguan",
+         "kind": "vocabulary",
+         "front": "主观",
+         "reading": "zhǔguān",
+         "romaji": null,
+         "meaning": "subjectif"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "这个推理的前提是错的，由此可见，结论也不可靠。",
+         "reading": "Zhège tuīlǐ de qiántí shì cuò de, yóu cǐ kě jiàn, jiélùn yě bù kěkào.",
+         "fr": "La prémisse de ce raisonnement est fausse : il en ressort que la conclusion n’est pas fiable non plus."
+        },
+        {
+         "jp": "看问题要全面、客观，不能只看一个方面。",
+         "reading": "Kàn wèntí yào quánmiàn, kèguān, bù néng zhǐ kàn yí ge fāngmiàn.",
+         "fr": "Il faut examiner un problème de façon globale et objective, sans en regarder qu’un aspect."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他每天练习八个小时，＿，成功不是偶然的。",
+         "choices": [
+          "由此可见",
+          "与此同时",
+          "何尝"
+         ],
+         "answer": "由此可见",
+         "explanation": "On voit par là que : 由此可见.",
+         "translation": "Il s’entraîne huit heures par jour : on voit bien que son succès n’a rien d’un hasard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这只是一个＿，还需要通过实验来验证。",
+         "choices": [
+          "假设",
+          "因果",
+          "范畴"
+         ],
+         "answer": "假设",
+         "explanation": "Hypothèse : 假设.",
+         "translation": "Ce n’est qu’une hypothèse : il faut encore la vérifier par l’expérience."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "老师",
+           "jp": "你能举一个具体的例子吗？"
+          }
+         ],
+         "translation": "Le professeur te demande un exemple concret (tu en donnes un).",
+         "choices": [
+          "比如说，水到一百度就会变成气。",
+          "抽象是一种主观。",
+          "我验证了前提的范畴。"
+         ],
+         "answer": "比如说，水到一百度就会变成气。",
+         "explanation": "Donner un exemple : 比如说…."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他的看法太片面了。",
+         "translation": "Son avis tient compte de tout.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "片面 = partial, unilatéral."
+        }
+       ]
+      },
+      {
+       "slug": "zh-astronomy",
+       "title": "Observer le ciel : 便",
+       "objective": "Parler d’astronomie, de mesure et de découverte.",
+       "minutes": 10,
+       "explanation": [
+        "便 = 就 en registre écrit : 只要天晴，他便上山观测星辰 (dès que le ciel est dégagé, il monte observer les étoiles) ; 一…便… = dès que… aussitôt.",
+        "Le ciel : 天文 (astronomie), 星辰 (les astres), 星座 (constellation), 日食 / 月食 (éclipse de soleil / de lune), 历法 (calendrier), 轨道 (orbite).",
+        "La recherche : 观测 (observer), 仪器 (instrument), 测量 (mesurer), 精确 (précis), 误差 (marge d’erreur), 推算 (calculer), 原理 (principe), 探索 (explorer), 揭示 (révéler)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-bian-then",
+         "kind": "grammar",
+         "front": "…便…（= 就）",
+         "reading": "biàn",
+         "romaji": null,
+         "meaning": "alors, aussitôt (écrit)"
+        },
+        {
+         "slug": "zh-bian-then",
+         "kind": "vocabulary",
+         "front": "便",
+         "reading": "biàn",
+         "romaji": null,
+         "meaning": "alors, aussitôt (= 就, écrit)"
+        },
+        {
+         "slug": "zh-tianwen",
+         "kind": "vocabulary",
+         "front": "天文",
+         "reading": "tiānwén",
+         "romaji": null,
+         "meaning": "astronomie"
+        },
+        {
+         "slug": "zh-xingchen",
+         "kind": "vocabulary",
+         "front": "星辰",
+         "reading": "xīngchén",
+         "romaji": null,
+         "meaning": "les astres"
+        },
+        {
+         "slug": "zh-xingzuo",
+         "kind": "vocabulary",
+         "front": "星座",
+         "reading": "xīngzuò",
+         "romaji": null,
+         "meaning": "constellation"
+        },
+        {
+         "slug": "zh-rishi",
+         "kind": "vocabulary",
+         "front": "日食",
+         "reading": "rìshí",
+         "romaji": null,
+         "meaning": "éclipse de soleil"
+        },
+        {
+         "slug": "zh-lifa",
+         "kind": "vocabulary",
+         "front": "历法",
+         "reading": "lìfǎ",
+         "romaji": null,
+         "meaning": "calendrier (système)"
+        },
+        {
+         "slug": "zh-guidao",
+         "kind": "vocabulary",
+         "front": "轨道",
+         "reading": "guǐdào",
+         "romaji": null,
+         "meaning": "orbite ; voie (ferrée)"
+        },
+        {
+         "slug": "zh-guance",
+         "kind": "vocabulary",
+         "front": "观测",
+         "reading": "guāncè",
+         "romaji": null,
+         "meaning": "observer (scientifiquement)"
+        },
+        {
+         "slug": "zh-yiqi-h6",
+         "kind": "vocabulary",
+         "front": "仪器",
+         "reading": "yíqì",
+         "romaji": null,
+         "meaning": "instrument (scientifique)"
+        },
+        {
+         "slug": "zh-celiang",
+         "kind": "vocabulary",
+         "front": "测量",
+         "reading": "cèliáng",
+         "romaji": null,
+         "meaning": "mesurer ; mesure"
+        },
+        {
+         "slug": "zh-jingque",
+         "kind": "vocabulary",
+         "front": "精确",
+         "reading": "jīngquè",
+         "romaji": null,
+         "meaning": "précis, exact"
+        },
+        {
+         "slug": "zh-wucha",
+         "kind": "vocabulary",
+         "front": "误差",
+         "reading": "wùchā",
+         "romaji": null,
+         "meaning": "marge d’erreur"
+        },
+        {
+         "slug": "zh-tuisuan",
+         "kind": "vocabulary",
+         "front": "推算",
+         "reading": "tuīsuàn",
+         "romaji": null,
+         "meaning": "calculer, estimer (par le calcul)"
+        },
+        {
+         "slug": "zh-yuanli",
+         "kind": "vocabulary",
+         "front": "原理",
+         "reading": "yuánlǐ",
+         "romaji": null,
+         "meaning": "principe"
+        },
+        {
+         "slug": "zh-tansuo",
+         "kind": "vocabulary",
+         "front": "探索",
+         "reading": "tànsuǒ",
+         "romaji": null,
+         "meaning": "explorer, rechercher"
+        },
+        {
+         "slug": "zh-jieshi-h6",
+         "kind": "vocabulary",
+         "front": "揭示",
+         "reading": "jiēshì",
+         "romaji": null,
+         "meaning": "révéler, mettre au jour"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "古人很早便开始观测星辰，制定了自己的历法。",
+         "reading": "Gǔrén hěn zǎo biàn kāishǐ guāncè xīngchén, zhìdìngle zìjǐ de lìfǎ.",
+         "fr": "Les Anciens ont très tôt observé les astres et établi leur propre calendrier."
+        },
+        {
+         "jp": "这台仪器测量得非常精确，误差不到一毫米。",
+         "reading": "Zhè tái yíqì cèliáng de fēicháng jīngquè, wùchā bú dào yì háomǐ.",
+         "fr": "Cet instrument mesure avec une grande précision : la marge d’erreur est inférieure à un millimètre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他一到家＿给妈妈打了电话。",
+         "choices": [
+          "便",
+          "岂",
+          "凭"
+         ],
+         "answer": "便",
+         "explanation": "Aussitôt (écrit) : 一…便….",
+         "translation": "Dès qu’il est rentré, il a appelé sa mère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这项研究＿了气候变化的原因。",
+         "choices": [
+          "揭示",
+          "测量",
+          "观测"
+         ],
+         "answer": "揭示",
+         "explanation": "Révéler : 揭示.",
+         "translation": "Cette étude a mis au jour les causes du changement climatique."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "学生",
+           "jp": "为什么会发生日食？"
+          }
+         ],
+         "translation": "Un élève demande pourquoi il y a des éclipses de soleil (la Lune passe entre la Terre et le Soleil).",
+         "choices": [
+          "因为月亮走到了地球和太阳中间。",
+          "因为星座的误差很大。",
+          "因为历法是一种轨道。"
+         ],
+         "answer": "因为月亮走到了地球和太阳中间。",
+         "explanation": "Expliquer : 因为…."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这些数据还需要进一步分析。",
+         "translation": "Les données doivent encore être analysées.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "进一步分析 = analyser plus avant."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w7-c2",
+     "title": "L’étang de jade",
+     "lessons": [
+      {
+       "slug": "zh-tao",
+       "title": "Le Tao et l’univers : 亦, 皆",
+       "objective": "Lire des phrases de style classique sur la nature et l’univers.",
+       "minutes": 10,
+       "explanation": [
+        "Mots classiques encore vivants à l’écrit : 亦 = 也 (aussi), 皆 = 都 (tous), 乃 = 是 (être), 其 = 他的 / 它的 (son, leur) : 人皆有之 (tout le monde en a), 此亦一是非 (ceci aussi a son vrai et son faux).",
+        "L’univers : 天地 (le Ciel et la Terre), 万物 (les dix mille êtres), 阴阳 (yin et yang), 五行 (les cinq éléments), 混沌 (chaos originel), 无限 (infini), 永恒 (éternel), 虚无 (néant).",
+        "La sagesse : 哲理 (vérité philosophique), 领悟 (saisir, comprendre en profondeur), 境界 (niveau, état d’esprit), 奥秘 (mystère), 顺其自然 (laisser faire la nature)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yi-jie",
+         "kind": "grammar",
+         "front": "亦 / 皆 / 乃 / 其（文言）",
+         "reading": "yì / jiē / nǎi / qí",
+         "romaji": null,
+         "meaning": "mots classiques : aussi / tous / être / son"
+        },
+        {
+         "slug": "zh-yi-also",
+         "kind": "vocabulary",
+         "front": "亦",
+         "reading": "yì",
+         "romaji": null,
+         "meaning": "aussi (= 也, écrit)"
+        },
+        {
+         "slug": "zh-jie-all",
+         "kind": "vocabulary",
+         "front": "皆",
+         "reading": "jiē",
+         "romaji": null,
+         "meaning": "tous (= 都, écrit)"
+        },
+        {
+         "slug": "zh-nai",
+         "kind": "vocabulary",
+         "front": "乃",
+         "reading": "nǎi",
+         "romaji": null,
+         "meaning": "être, c’est (= 是, écrit)"
+        },
+        {
+         "slug": "zh-tiandi",
+         "kind": "vocabulary",
+         "front": "天地",
+         "reading": "tiāndì",
+         "romaji": null,
+         "meaning": "le Ciel et la Terre"
+        },
+        {
+         "slug": "zh-wanwu",
+         "kind": "vocabulary",
+         "front": "万物",
+         "reading": "wànwù",
+         "romaji": null,
+         "meaning": "tous les êtres, toutes choses"
+        },
+        {
+         "slug": "zh-yinyang",
+         "kind": "vocabulary",
+         "front": "阴阳",
+         "reading": "yīnyáng",
+         "romaji": null,
+         "meaning": "yin et yang"
+        },
+        {
+         "slug": "zh-wuxing",
+         "kind": "vocabulary",
+         "front": "五行",
+         "reading": "wǔxíng",
+         "romaji": null,
+         "meaning": "les cinq éléments"
+        },
+        {
+         "slug": "zh-hundun",
+         "kind": "vocabulary",
+         "front": "混沌",
+         "reading": "hùndùn",
+         "romaji": null,
+         "meaning": "chaos originel"
+        },
+        {
+         "slug": "zh-wuxian",
+         "kind": "vocabulary",
+         "front": "无限",
+         "reading": "wúxiàn",
+         "romaji": null,
+         "meaning": "infini, illimité"
+        },
+        {
+         "slug": "zh-yongheng",
+         "kind": "vocabulary",
+         "front": "永恒",
+         "reading": "yǒnghéng",
+         "romaji": null,
+         "meaning": "éternel"
+        },
+        {
+         "slug": "zh-xuwu",
+         "kind": "vocabulary",
+         "front": "虚无",
+         "reading": "xūwú",
+         "romaji": null,
+         "meaning": "néant"
+        },
+        {
+         "slug": "zh-zheli",
+         "kind": "vocabulary",
+         "front": "哲理",
+         "reading": "zhélǐ",
+         "romaji": null,
+         "meaning": "vérité philosophique"
+        },
+        {
+         "slug": "zh-lingwu",
+         "kind": "vocabulary",
+         "front": "领悟",
+         "reading": "lǐngwù",
+         "romaji": null,
+         "meaning": "saisir, comprendre en profondeur"
+        },
+        {
+         "slug": "zh-jingjie",
+         "kind": "vocabulary",
+         "front": "境界",
+         "reading": "jìngjiè",
+         "romaji": null,
+         "meaning": "niveau (spirituel), état d’esprit"
+        },
+        {
+         "slug": "zh-aomi",
+         "kind": "vocabulary",
+         "front": "奥秘",
+         "reading": "àomì",
+         "romaji": null,
+         "meaning": "mystère"
+        },
+        {
+         "slug": "zh-shunqiziran",
+         "kind": "vocabulary",
+         "front": "顺其自然",
+         "reading": "shùn qí zìrán",
+         "romaji": null,
+         "meaning": "laisser faire la nature"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "西王母说：「天地万物皆有始终，人亦如此。」",
+         "reading": "Xīwángmǔ shuō: “Tiāndì wànwù jiē yǒu shǐ zhōng, rén yì rúcǐ.”",
+         "fr": "La Reine Mère de l’Ouest dit : « Le Ciel, la Terre et tous les êtres ont un début et une fin ; l’homme aussi. »"
+        },
+        {
+         "jp": "他终于领悟了：生命的意义不在长短，乃在其价值。",
+         "reading": "Tā zhōngyú lǐngwùle: shēngmìng de yìyì bú zài cháng duǎn, nǎi zài qí jiàzhí.",
+         "fr": "Il comprend enfin : le sens d’une vie n’est pas dans sa durée, mais dans sa valeur."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "此事人人＿知，不必再说。",
+         "choices": [
+          "皆",
+          "亦",
+          "乃"
+         ],
+         "answer": "皆",
+         "explanation": "Tous (écrit) : 皆 = 都.",
+         "translation": "Tout le monde est au courant de cette affaire : inutile d’en reparler."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他是作家，＿是画家。",
+         "choices": [
+          "亦",
+          "皆",
+          "其"
+         ],
+         "answer": "亦",
+         "explanation": "Aussi (écrit) : 亦 = 也.",
+         "translation": "Il est écrivain, et aussi peintre."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "面试结果还没出来，我好紧张。"
+          }
+         ],
+         "translation": "Un ami stresse en attendant un résultat (tu lui conseilles de laisser venir).",
+         "choices": [
+          "你已经尽力了，顺其自然吧。",
+          "你的境界是五行。",
+          "混沌亦皆乃。"
+         ],
+         "answer": "你已经尽力了，顺其自然吧。",
+         "explanation": "Laisser faire : 顺其自然."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "科学家们还在探索宇宙的奥秘。",
+         "translation": "Le mystère de l’univers est entièrement résolu.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "还在探索 = cherchent encore."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-w8",
+   "title": "Retour à Chang’an",
+   "region": "Routes de l’Ouest",
+   "description": "Écrire l’histoire (据…记载) ; les chengyu et leurs sources (非…不可) ; résumer un texte comme au HSK 6 (综上所述).",
+   "boss": {
+    "name": "Le Eshou menteur",
+    "glyph": "讹",
+    "intro": "Le Eshou, lièvre à visage d’homme, parle toutes les langues et ne dit jamais la vérité. Il brouille les archives de la cour et réécrit le récit de ton voyage : rétablis les faits avec précision et résume-les fidèlement."
+   },
+   "chapters": [
+    {
+     "slug": "hsk6-w8-c1",
+     "title": "Les annales du Grand Historien",
+     "lessons": [
+      {
+       "slug": "zh-hz-annals",
+       "title": "Les caractères des annales : 史 迁 撰 篇 卷 纪 之 乎",
+       "objective": "Reconnaître les caractères de l’histoire écrite et du chinois classique.",
+       "minutes": 5,
+       "explanation": [
+        "史 (shǐ, histoire) montre une main qui tient un registre. 迁 (qiān, déplacer) porte la marche 辶 : 司马迁, Sima Qian, l’auteur des Mémoires historiques. 撰 (zhuàn, rédiger) porte la main 扌. 篇 (piān, chapitre) et 卷 (juàn, rouleau, volume) rappellent les livres de bambou qu’on enroulait.",
+        "纪 (jì, annales, consigner) porte le fil 纟 : 纪律 (discipline), 世纪 (siècle). 之 (zhī) et 乎 (hū) sont des mots grammaticaux du chinois classique : 之 relie comme 的 (丝绸之路, la route de la soie), 乎 marque la question ou l’exclamation (不亦乐乎, n’est-ce pas une joie ?)."
+       ],
+       "items": [
+        {
+         "slug": "hz-shi-history",
+         "kind": "kanji",
+         "front": "史",
+         "reading": "shǐ",
+         "romaji": null,
+         "meaning": "histoire (discipline)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-qian-move",
+         "kind": "kanji",
+         "front": "迁",
+         "reading": "qiān",
+         "romaji": null,
+         "meaning": "déplacer, migrer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-zhuan",
+         "kind": "kanji",
+         "front": "撰",
+         "reading": "zhuàn",
+         "romaji": null,
+         "meaning": "rédiger, composer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 15
+         }
+        },
+        {
+         "slug": "hz-pian",
+         "kind": "kanji",
+         "front": "篇",
+         "reading": "piān",
+         "romaji": null,
+         "meaning": "chapitre, texte (classificateur)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 15
+         }
+        },
+        {
+         "slug": "hz-juan",
+         "kind": "kanji",
+         "front": "卷",
+         "reading": "juàn",
+         "romaji": null,
+         "meaning": "rouleau, volume",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-ji-annals",
+         "kind": "kanji",
+         "front": "纪",
+         "reading": "jì",
+         "romaji": null,
+         "meaning": "annales ; consigner",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-zhi-classical",
+         "kind": "kanji",
+         "front": "之",
+         "reading": "zhī",
+         "romaji": null,
+         "meaning": "de (relie, classique) ; le, la",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-hu-particle",
+         "kind": "kanji",
+         "front": "乎",
+         "reading": "hū",
+         "romaji": null,
+         "meaning": "particule de question (classique)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-annals",
+       "title": "Écrire l’histoire : 据…记载",
+       "objective": "Citer une source historique et parler du travail de l’historien.",
+       "minutes": 10,
+       "explanation": [
+        "据 + source + 记载 / 报道 / 统计，… = selon les écrits de / d’après… : 据《史记》记载，张骞两次出使西域 (selon les Mémoires historiques, Zhang Qian partit deux fois en mission dans l’Ouest).",
+        "L’historien : 史书 (livre d’histoire), 史料 (sources historiques), 文献 (documents, littérature), 记载 (consigner ; écrit), 编撰 (compiler), 考证 (vérifier par la recherche), 传记 (biographie).",
+        "La vérité : 真相 (la vérité des faits), 公正 (impartial), 秉笔直书 (écrire sans détour la vérité), 后世 (la postérité), 流传 (se transmettre), 篇章 (chapitres, pages)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-ju-jizai",
+         "kind": "grammar",
+         "front": "据 + 来源 + 记载，…",
+         "reading": "jù… jìzǎi",
+         "romaji": null,
+         "meaning": "selon les écrits de…"
+        },
+        {
+         "slug": "zh-jizai",
+         "kind": "vocabulary",
+         "front": "记载",
+         "reading": "jìzǎi",
+         "romaji": null,
+         "meaning": "consigner ; écrit, mention"
+        },
+        {
+         "slug": "zh-shishu",
+         "kind": "vocabulary",
+         "front": "史书",
+         "reading": "shǐshū",
+         "romaji": null,
+         "meaning": "livre d’histoire, annales"
+        },
+        {
+         "slug": "zh-shiliao",
+         "kind": "vocabulary",
+         "front": "史料",
+         "reading": "shǐliào",
+         "romaji": null,
+         "meaning": "sources historiques"
+        },
+        {
+         "slug": "zh-wenxian",
+         "kind": "vocabulary",
+         "front": "文献",
+         "reading": "wénxiàn",
+         "romaji": null,
+         "meaning": "documents, littérature (de référence)"
+        },
+        {
+         "slug": "zh-bianzhuan",
+         "kind": "vocabulary",
+         "front": "编撰",
+         "reading": "biānzhuàn",
+         "romaji": null,
+         "meaning": "compiler, rédiger"
+        },
+        {
+         "slug": "zh-kaozheng",
+         "kind": "vocabulary",
+         "front": "考证",
+         "reading": "kǎozhèng",
+         "romaji": null,
+         "meaning": "vérifier par la recherche"
+        },
+        {
+         "slug": "zh-zhuanji",
+         "kind": "vocabulary",
+         "front": "传记",
+         "reading": "zhuànjì",
+         "romaji": null,
+         "meaning": "biographie"
+        },
+        {
+         "slug": "zh-zhenxiang",
+         "kind": "vocabulary",
+         "front": "真相",
+         "reading": "zhēnxiàng",
+         "romaji": null,
+         "meaning": "la vérité (des faits)"
+        },
+        {
+         "slug": "zh-gongzheng",
+         "kind": "vocabulary",
+         "front": "公正",
+         "reading": "gōngzhèng",
+         "romaji": null,
+         "meaning": "impartial, équitable"
+        },
+        {
+         "slug": "zh-bingbizhishu",
+         "kind": "vocabulary",
+         "front": "秉笔直书",
+         "reading": "bǐng bǐ zhí shū",
+         "romaji": null,
+         "meaning": "écrire la vérité sans détour"
+        },
+        {
+         "slug": "zh-houshi",
+         "kind": "vocabulary",
+         "front": "后世",
+         "reading": "hòushì",
+         "romaji": null,
+         "meaning": "la postérité"
+        },
+        {
+         "slug": "zh-liuchuan",
+         "kind": "vocabulary",
+         "front": "流传",
+         "reading": "liúchuán",
+         "romaji": null,
+         "meaning": "se transmettre, circuler"
+        },
+        {
+         "slug": "zh-pianzhang",
+         "kind": "vocabulary",
+         "front": "篇章",
+         "reading": "piānzhāng",
+         "romaji": null,
+         "meaning": "chapitres, pages (d’un écrit)"
+        },
+        {
+         "slug": "zh-shiji-century",
+         "kind": "vocabulary",
+         "front": "世纪",
+         "reading": "shìjì",
+         "romaji": null,
+         "meaning": "siècle"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "司马迁秉笔直书，把张骞的故事记载在《史记》里，流传至今。",
+         "reading": "Sīmǎ Qiān bǐng bǐ zhí shū, bǎ Zhāng Qiān de gùshi jìzǎi zài “Shǐjì” li, liúchuán zhì jīn.",
+         "fr": "Sima Qian, écrivant la vérité sans détour, consigne l’histoire de Zhang Qian dans les Mémoires historiques, qui se transmettent jusqu’à nos jours."
+        },
+        {
+         "jp": "历史学家通过考证大量文献，还原了事情的真相。",
+         "reading": "Lìshǐ xuéjiā tōngguò kǎozhèng dàliàng wénxiàn, huányuánle shìqing de zhēnxiàng.",
+         "fr": "En examinant de nombreux documents, les historiens ont reconstitué la vérité des faits."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿史书记载，这座城已经有两千多年的历史了。",
+         "choices": [
+          "据",
+          "凭",
+          "趁"
+         ],
+         "answer": "据",
+         "explanation": "Selon : 据…记载.",
+         "translation": "D’après les livres d’histoire, cette ville a plus de deux mille ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个故事在民间＿了几百年。",
+         "choices": [
+          "流传",
+          "考证",
+          "编撰"
+         ],
+         "answer": "流传",
+         "explanation": "Se transmettre : 流传.",
+         "translation": "Ce conte se transmet dans le peuple depuis des siècles."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "太史令",
+           "jp": "这些说法都有依据吗？"
+          }
+         ],
+         "translation": "Le Grand Historien demande si ces affirmations sont fondées (oui, vérifiées dans les archives).",
+         "choices": [
+          "都经过考证，史料里有记载。",
+          "真相是一种传记。",
+          "后世已经编撰了世纪。"
+         ],
+         "answer": "都经过考证，史料里有记载。",
+         "explanation": "Fonder : 经过考证."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "写历史应该公正客观。",
+         "translation": "L’histoire doit être écrite avec impartialité.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "公正客观 = impartial et objectif."
+        }
+       ]
+      },
+      {
+       "slug": "zh-chengyu6",
+       "title": "Les chengyu et leurs sources : 非…不可",
+       "objective": "Comprendre l’origine d’un chengyu et exprimer une nécessité absolue.",
+       "minutes": 10,
+       "explanation": [
+        "非 A 不可 = il faut absolument A, A est indispensable : 这件事非你去不可 (il faut absolument que ce soit toi qui y ailles) ; aussi : volonté obstinée (他非要去 = il tient à y aller).",
+        "Les sources : 典故 (allusion littéraire), 寓言 (fable), 出处 (source d’une citation), 含义 (sens, signification implicite), 比喻 (métaphore ; comparer à), 引用 (citer), 精炼 (concis), 修辞 (rhétorique).",
+        "Quelques chengyu : 半途而废 (abandonner à mi-chemin), 画蛇添足 (ajouter des pattes au serpent : en faire trop), 刻舟求剑 (marquer la barque pour retrouver l’épée : s’entêter sans voir que tout a changé), 卧薪尝胆 (dormir sur des fagots, goûter le fiel : endurer pour se venger), 破釜沉舟 (casser les marmites, couler les barques : se couper toute retraite)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-fei-buke",
+         "kind": "grammar",
+         "front": "非…不可",
+         "reading": "fēi… bùkě",
+         "romaji": null,
+         "meaning": "il faut absolument…"
+        },
+        {
+         "slug": "zh-diangu",
+         "kind": "vocabulary",
+         "front": "典故",
+         "reading": "diǎngù",
+         "romaji": null,
+         "meaning": "allusion littéraire"
+        },
+        {
+         "slug": "zh-yuyan-fable",
+         "kind": "vocabulary",
+         "front": "寓言",
+         "reading": "yùyán",
+         "romaji": null,
+         "meaning": "fable"
+        },
+        {
+         "slug": "zh-chuchu",
+         "kind": "vocabulary",
+         "front": "出处",
+         "reading": "chūchù",
+         "romaji": null,
+         "meaning": "source (d’une citation)"
+        },
+        {
+         "slug": "zh-hanyi",
+         "kind": "vocabulary",
+         "front": "含义",
+         "reading": "hányì",
+         "romaji": null,
+         "meaning": "sens implicite, signification"
+        },
+        {
+         "slug": "zh-biyu",
+         "kind": "vocabulary",
+         "front": "比喻",
+         "reading": "bǐyù",
+         "romaji": null,
+         "meaning": "métaphore ; comparer à"
+        },
+        {
+         "slug": "zh-yinyong",
+         "kind": "vocabulary",
+         "front": "引用",
+         "reading": "yǐnyòng",
+         "romaji": null,
+         "meaning": "citer"
+        },
+        {
+         "slug": "zh-jinglian",
+         "kind": "vocabulary",
+         "front": "精炼",
+         "reading": "jīngliàn",
+         "romaji": null,
+         "meaning": "concis, ramassé"
+        },
+        {
+         "slug": "zh-xiuci",
+         "kind": "vocabulary",
+         "front": "修辞",
+         "reading": "xiūcí",
+         "romaji": null,
+         "meaning": "rhétorique, style"
+        },
+        {
+         "slug": "zh-bantuerfei",
+         "kind": "vocabulary",
+         "front": "半途而废",
+         "reading": "bàn tú ér fèi",
+         "romaji": null,
+         "meaning": "abandonner à mi-chemin"
+        },
+        {
+         "slug": "zh-huashetianzu",
+         "kind": "vocabulary",
+         "front": "画蛇添足",
+         "reading": "huà shé tiān zú",
+         "romaji": null,
+         "meaning": "en faire trop, gâcher par un ajout"
+        },
+        {
+         "slug": "zh-kezhouqiujian",
+         "kind": "vocabulary",
+         "front": "刻舟求剑",
+         "reading": "kè zhōu qiú jiàn",
+         "romaji": null,
+         "meaning": "s’entêter sans voir que tout a changé"
+        },
+        {
+         "slug": "zh-woxinchangdan",
+         "kind": "vocabulary",
+         "front": "卧薪尝胆",
+         "reading": "wò xīn cháng dǎn",
+         "romaji": null,
+         "meaning": "endurer en silence pour sa revanche"
+        },
+        {
+         "slug": "zh-pofuchenzhou",
+         "kind": "vocabulary",
+         "front": "破釜沉舟",
+         "reading": "pò fǔ chén zhōu",
+         "romaji": null,
+         "meaning": "se couper toute retraite"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "「刻舟求剑」出自一个寓言，比喻做事死板，不懂变通。",
+         "reading": "“Kè zhōu qiú jiàn” chūzì yí ge yùyán, bǐyù zuò shì sǐbǎn, bù dǒng biàntōng.",
+         "fr": "« Marquer la barque pour retrouver l’épée » vient d’une fable : il désigne quelqu’un de rigide qui ne sait pas s’adapter."
+        },
+        {
+         "jp": "这次谈判非成功不可，我们已经没有退路了。",
+         "reading": "Zhè cì tánpàn fēi chénggōng bùkě, wǒmen yǐjīng méiyǒu tuìlù le.",
+         "fr": "Cette négociation doit absolument réussir : nous n’avons plus de porte de sortie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个病非做手术＿，吃药没有用。",
+         "choices": [
+          "不可",
+          "不料",
+          "不免"
+         ],
+         "answer": "不可",
+         "explanation": "Il faut absolument : 非…不可.",
+         "translation": "Cette maladie exige absolument une opération : les médicaments ne servent à rien."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "学外语最怕＿，一定要坚持下去。",
+         "choices": [
+          "半途而废",
+          "破釜沉舟",
+          "画蛇添足"
+         ],
+         "answer": "半途而废",
+         "explanation": "Abandonner à mi-chemin : 半途而废.",
+         "translation": "En langues étrangères, le pire est d’abandonner à mi-chemin : il faut persévérer."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "学生",
+           "jp": "这句话的出处是哪儿？"
+          }
+         ],
+         "translation": "Un élève demande d’où vient la citation (des Mémoires historiques de Sima Qian).",
+         "choices": [
+          "它出自司马迁的《史记》。",
+          "它比喻修辞的含义。",
+          "它非精炼不可。"
+         ],
+         "answer": "它出自司马迁的《史记》。",
+         "explanation": "La source : 出自…."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "文章已经写得很好了，再加这一段就是画蛇添足。",
+         "translation": "Ajouter ce paragraphe gâcherait le texte.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "画蛇添足 = gâcher par un ajout inutile."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk6-w8-c2",
+     "title": "Le rapport à l’empereur",
+     "lessons": [
+      {
+       "slug": "zh-summary",
+       "title": "Résumer : 综上所述",
+       "objective": "Résumer un long récit en gardant l’essentiel, comme à l’épreuve d’écriture du HSK 6.",
+       "minutes": 10,
+       "explanation": [
+        "综上所述 = en résumé de tout ce qui précède, pour conclure (début de conclusion écrite) ; 总而言之 = bref, en un mot.",
+        "L’épreuve d’écriture du HSK 6 (缩写) : on lit un récit d’environ 1 000 caractères en 10 minutes, puis on le réécrit de mémoire en 400 caractères environ, avec un titre, en 35 minutes.",
+        "Résumer : 缩写 (abréger), 概括 (résumer, synthétiser), 归纳 (dégager), 要点 (points essentiels), 主旨 (idée maîtresse), 摘要 (résumé, extrait), 删减 (couper), 篇幅 (longueur d’un texte), 简明扼要 (bref et concis), 复述 (raconter à nouveau), 改写 (réécrire), 段落 (paragraphe)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-zongshangsuoshu",
+         "kind": "grammar",
+         "front": "综上所述，…",
+         "reading": "zōng shàng suǒ shù",
+         "romaji": null,
+         "meaning": "en résumé de ce qui précède…"
+        },
+        {
+         "slug": "zh-zongshangsuoshu",
+         "kind": "vocabulary",
+         "front": "综上所述",
+         "reading": "zōng shàng suǒ shù",
+         "romaji": null,
+         "meaning": "pour résumer ce qui précède"
+        },
+        {
+         "slug": "zh-zongeryanzhi",
+         "kind": "vocabulary",
+         "front": "总而言之",
+         "reading": "zǒng ér yán zhī",
+         "romaji": null,
+         "meaning": "bref, en un mot"
+        },
+        {
+         "slug": "zh-suoxie",
+         "kind": "vocabulary",
+         "front": "缩写",
+         "reading": "suōxiě",
+         "romaji": null,
+         "meaning": "abréger ; abréviation"
+        },
+        {
+         "slug": "zh-gaikuo",
+         "kind": "vocabulary",
+         "front": "概括",
+         "reading": "gàikuò",
+         "romaji": null,
+         "meaning": "résumer, synthétiser"
+        },
+        {
+         "slug": "zh-guina",
+         "kind": "vocabulary",
+         "front": "归纳",
+         "reading": "guīnà",
+         "romaji": null,
+         "meaning": "dégager (l’essentiel), induire"
+        },
+        {
+         "slug": "zh-yaodian",
+         "kind": "vocabulary",
+         "front": "要点",
+         "reading": "yàodiǎn",
+         "romaji": null,
+         "meaning": "points essentiels"
+        },
+        {
+         "slug": "zh-zhuzhi",
+         "kind": "vocabulary",
+         "front": "主旨",
+         "reading": "zhǔzhǐ",
+         "romaji": null,
+         "meaning": "idée maîtresse"
+        },
+        {
+         "slug": "zh-zhaiyao",
+         "kind": "vocabulary",
+         "front": "摘要",
+         "reading": "zhāiyào",
+         "romaji": null,
+         "meaning": "résumé (d’un article)"
+        },
+        {
+         "slug": "zh-shanjian",
+         "kind": "vocabulary",
+         "front": "删减",
+         "reading": "shānjiǎn",
+         "romaji": null,
+         "meaning": "couper, élaguer"
+        },
+        {
+         "slug": "zh-pianfu",
+         "kind": "vocabulary",
+         "front": "篇幅",
+         "reading": "piānfú",
+         "romaji": null,
+         "meaning": "longueur (d’un texte)"
+        },
+        {
+         "slug": "zh-jianmingeyao",
+         "kind": "vocabulary",
+         "front": "简明扼要",
+         "reading": "jiǎnmíng èyào",
+         "romaji": null,
+         "meaning": "bref et concis"
+        },
+        {
+         "slug": "zh-fushu",
+         "kind": "vocabulary",
+         "front": "复述",
+         "reading": "fùshù",
+         "romaji": null,
+         "meaning": "raconter à nouveau"
+        },
+        {
+         "slug": "zh-gaixie",
+         "kind": "vocabulary",
+         "front": "改写",
+         "reading": "gǎixiě",
+         "romaji": null,
+         "meaning": "réécrire, adapter"
+        },
+        {
+         "slug": "zh-duanluo",
+         "kind": "vocabulary",
+         "front": "段落",
+         "reading": "duànluò",
+         "romaji": null,
+         "meaning": "paragraphe"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "请把这篇一千字的文章缩写成四百字，要点不能少。",
+         "reading": "Qǐng bǎ zhè piān yìqiān zì de wénzhāng suōxiě chéng sìbǎi zì, yàodiǎn bù néng shǎo.",
+         "fr": "Abrège cet article de mille caractères en quatre cents, sans perdre aucun point essentiel."
+        },
+        {
+         "jp": "综上所述，张骞虽然没有说服大月氏，却打通了通往西域的道路。",
+         "reading": "Zōng shàng suǒ shù, Zhāng Qiān suīrán méiyǒu shuōfú Dà Yuèzhī, què dǎtōngle tōngwǎng Xīyù de dàolù.",
+         "fr": "En résumé, si Zhang Qian n’a pas convaincu les Yuezhi, il a ouvert la route vers les royaumes de l’Ouest."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿，这个方案既省钱又省时间，值得采用。",
+         "choices": [
+          "综上所述",
+          "与此同时",
+          "由于"
+         ],
+         "answer": "综上所述",
+         "explanation": "Pour conclure : 综上所述.",
+         "translation": "En résumé, ce plan économise à la fois de l’argent et du temps : il mérite d’être adopté."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "报告的篇幅有限，不重要的内容可以＿。",
+         "choices": [
+          "删减",
+          "复述",
+          "引用"
+         ],
+         "answer": "删减",
+         "explanation": "Couper : 删减.",
+         "translation": "Le rapport a une longueur limitée : on peut couper ce qui n’est pas important."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "皇帝",
+           "jp": "你用几句话概括一下这次出使的经过。"
+          }
+         ],
+         "translation": "L’empereur te demande de résumer le voyage en quelques phrases (tu le fais).",
+         "choices": [
+          "我们被俘十年，逃出后到了大宛和大月氏，最后回到长安。",
+          "这次出使非常精炼。",
+          "总而言之是一个段落。"
+         ],
+         "answer": "我们被俘十年，逃出后到了大宛和大月氏，最后回到长安。",
+         "explanation": "Résumer dans l’ordre : capture, fuite, retour."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "缩写的时候要写出文章的主旨。",
+         "translation": "Un résumé doit garder l’idée maîtresse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "主旨 = idée maîtresse."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk6-final",
+   "title": "Simulation HSK 6 : le palais Weiyang",
+   "region": "Routes de l’Ouest",
+   "description": "Examen blanc au format du HSK 6, en chinois : écoute (听力), lecture (阅读) et écriture (书写). Noté sur 300 ; réussite à 180 points.",
+   "exam": "hsk6-official",
+   "chapters": []
+  }
+ ]
+}

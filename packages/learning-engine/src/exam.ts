@@ -472,6 +472,8 @@ export const EXAM_HSK4 = HSK_OFFICIAL(4, 100, 45, 40, 15);
 export const EXAM_HSK4_MOCK = HSK_MOCK(4);
 export const EXAM_HSK5 = HSK_OFFICIAL(5, 120, 45, 45, 10);
 export const EXAM_HSK5_MOCK = HSK_MOCK(5);
+export const EXAM_HSK6 = HSK_OFFICIAL(6, 135, 50, 50, 3);
+export const EXAM_HSK6_MOCK = HSK_MOCK(6);
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
@@ -484,6 +486,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK4.slug]: EXAM_HSK4,
   [EXAM_HSK5_MOCK.slug]: EXAM_HSK5_MOCK,
   [EXAM_HSK5.slug]: EXAM_HSK5,
+  [EXAM_HSK6_MOCK.slug]: EXAM_HSK6_MOCK,
+  [EXAM_HSK6.slug]: EXAM_HSK6,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,

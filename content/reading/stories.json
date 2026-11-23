@@ -26607,6 +26607,850 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "su-wu-mu-yang",
+   "glyph": "羊",
+   "level": "HSK6",
+   "color": "#8A6A3A",
+   "title": {
+    "jp": "苏武牧羊",
+    "fr": "Su Wu, berger chez les Xiongnu",
+    "en": "Su Wu, shepherd among the Xiongnu"
+   },
+   "summary": {
+    "fr": "Envoyé des Han chez les Xiongnu, Su Wu est retenu dix-neuf ans au bord d’un lac glacé. Il ne lâche jamais son insigne.",
+    "en": "A Han envoy to the Xiongnu, Su Wu is held for nineteen years by a frozen lake. He never lets go of his tally."
+   },
+   "chapters": [
+    {
+     "slug": "su-wu-mu-yang-1",
+     "title": {
+      "jp": "持节不降",
+      "fr": "Fidèle à son insigne",
+      "en": "Faithful to his tally"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{汉武帝|Hàn Wǔdì}的时候，{苏武|Sū Wǔ}{奉命|fèngmìng}出使{匈奴|Xiōngnú}。",
+        "fr": "Sous l’empereur Wu des Han, Su Wu reçut l’ordre de partir en ambassade chez les Xiongnu.",
+        "en": "Under Emperor Wu of Han, Su Wu was ordered to go as an envoy to the Xiongnu.",
+        "kana": "汉武帝的时候，苏武奉命出使匈奴。",
+        "roman": "Hàn Wǔdì de shíhou, Sū Wǔ fèngmìng chūshǐ Xiōngnú."
+       },
+       {
+        "jp": "没想到，{匈奴|Xiōngnú}的{单于|chányú}把他{扣留|kòuliú}了下来，一定要他投降。",
+        "fr": "Contre toute attente, le chanyu des Xiongnu le retint et exigea qu’il se rende.",
+        "en": "Unexpectedly, the Xiongnu chanyu detained him and insisted that he surrender.",
+        "kana": "没想到，匈奴的单于把他扣留了下来，一定要他投降。",
+        "roman": "Méixiǎngdào, Xiōngnú de chányú bǎ tā kòuliú le xiàlai, yídìng yào tā tóuxiáng."
+       },
+       {
+        "jp": "{苏武|Sū Wǔ}说：“我是汉朝的使者，宁可{死|sǐ}，也不投降！”",
+        "fr": "Su Wu répondit : « Je suis l’envoyé des Han ; plutôt mourir que me rendre ! »",
+        "en": "Su Wu said: “I am the envoy of the Han; I would rather die than surrender!”",
+        "kana": "苏武说：“我是汉朝的使者，宁可死，也不投降！”",
+        "roman": "Sū Wǔ shuō: “wǒ shì hàncháo de shǐzhě, nìngkě sǐ, yě bù tóuxiáng!”"
+       }
+      ],
+      [
+       {
+        "jp": "{单于|chányú}很生气，把他关在一个大{地窖|dìjiào}里，不给他吃，也不给他喝。",
+        "fr": "Furieux, le chanyu l’enferma dans une grande cave, sans rien à manger ni à boire.",
+        "en": "Furious, the chanyu shut him in a large cellar with nothing to eat or drink.",
+        "kana": "单于很生气，把他关在一个大地窖里，不给他吃，也不给他喝。",
+        "roman": "Chányú hěn shēngqì, bǎ tā guān zài yí ge dà dìjiào li, bù gěi tā chī, yě bù gěi tā hē."
+       },
+       {
+        "jp": "下雪的时候，{苏武|Sū Wǔ}就吃雪，{嚼|jiáo}身上皮衣的毛，{顽强|wánqiáng}地活了下来。",
+        "fr": "Quand il neigeait, Su Wu mangeait la neige et mâchait les poils de sa pelisse : il survécut, tenace.",
+        "en": "When it snowed, Su Wu ate snow and chewed the fur of his coat, and tenaciously survived.",
+        "kana": "下雪的时候，苏武就吃雪，嚼身上皮衣的毛，顽强地活了下来。",
+        "roman": "Xiàxuě de shíhou, Sū Wǔ jiù chī xuě, jiáo shēnshàng píyī de máo, wánqiáng dì huó le xiàlai."
+       },
+       {
+        "jp": "{匈奴人|Xiōngnú rén}以为他是神，不敢{杀|shā}他。",
+        "fr": "Les Xiongnu le crurent protégé des dieux et n’osèrent pas le tuer.",
+        "en": "The Xiongnu thought he was a god and did not dare kill him.",
+        "kana": "匈奴人以为他是神，不敢杀他。",
+        "roman": "Xiōngnú rén yǐwéi tā shì shén, bùgǎn shā tā."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "奉命",
+       "reading": "fèngmìng",
+       "fr": "recevoir un ordre",
+       "en": "to receive orders"
+      },
+      {
+       "jp": "单于",
+       "reading": "chányú",
+       "fr": "chanyu (souverain des Xiongnu)",
+       "en": "chanyu (Xiongnu ruler)"
+      },
+      {
+       "jp": "扣留",
+       "reading": "kòuliú",
+       "fr": "retenir, détenir",
+       "en": "to detain"
+      },
+      {
+       "jp": "地窖",
+       "reading": "dìjiào",
+       "fr": "cave, cellier",
+       "en": "cellar"
+      },
+      {
+       "jp": "嚼",
+       "reading": "jiáo",
+       "fr": "mâcher",
+       "en": "to chew"
+      },
+      {
+       "jp": "顽强",
+       "reading": "wánqiáng",
+       "fr": "tenace",
+       "en": "tenacious"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que demande le chanyu à Su Wu ?",
+        "en": "What does the chanyu demand of Su Wu?"
+       },
+       "choices": [
+        {
+         "fr": "De se rendre",
+         "en": "To surrender"
+        },
+        {
+         "fr": "De partir",
+         "en": "To leave"
+        },
+        {
+         "fr": "De lui apprendre le chinois",
+         "en": "To teach him Chinese"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment Su Wu survit-il dans la cave ?",
+        "en": "How does Su Wu survive in the cellar?"
+       },
+       "choices": [
+        {
+         "fr": "Il mange la neige et la fourrure",
+         "en": "He eats snow and fur"
+        },
+        {
+         "fr": "Des amis lui apportent à manger",
+         "en": "Friends bring him food"
+        },
+        {
+         "fr": "Il s’échappe la nuit",
+         "en": "He escapes at night"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "su-wu-mu-yang-2",
+     "title": {
+      "jp": "北海牧羊",
+      "fr": "Berger au bord du lac du Nord",
+      "en": "Shepherd by the Northern Lake"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{单于|chányú}又把{苏武|Sū Wǔ}送到{荒凉|huāngliáng}的{北海|Běihǎi}边，让他放{公羊|gōngyáng}，说：“等{公羊|gōngyáng}生了小羊，你才能回去。”",
+        "fr": "Le chanyu envoya ensuite Su Wu au bord du désolé lac du Nord garder des béliers : « Tu rentreras quand tes béliers auront des agneaux. »",
+        "en": "The chanyu then sent Su Wu to the desolate shore of the Northern Lake to herd rams: “You may go home when the rams bear lambs.”",
+        "kana": "单于又把苏武送到荒凉的北海边，让他放公羊，说：“等公羊生了小羊，你才能回去。”",
+        "roman": "Chányú yòu bǎ Sū Wǔ sòng dào huāngliáng de Běihǎi biān, ràng tā fàng gōngyáng, shuō: “děng gōngyáng shēng le xiǎoyáng, nǐ cái néng huíqù.”"
+       },
+       {
+        "jp": "{公羊|gōngyáng}怎么可能生小羊呢？这{分明|fēnmíng}是要他一辈子回不了家。",
+        "fr": "Comment des béliers pourraient-ils avoir des agneaux ? C’était clairement le condamner à ne jamais rentrer.",
+        "en": "How could rams bear lambs? It plainly meant he would never go home.",
+        "kana": "公羊怎么可能生小羊呢？这分明是要他一辈子回不了家。",
+        "roman": "Gōngyáng zěnme kěnéng shēng xiǎoyáng ne? Zhè fēnmíng shì yào tā yíbèizi huí bú le jiā."
+       },
+       {
+        "jp": "{苏武|Sū Wǔ}每天拿着汉朝的{符节|fújié}放羊，时间长了，{符节|fújié}上的毛都{掉光|diàoguāng}了。",
+        "fr": "Chaque jour, Su Wu gardait ses bêtes l’insigne des Han à la main ; avec le temps, les crins de l’insigne tombèrent tous.",
+        "en": "Every day Su Wu herded with the Han tally in his hand; in time, all the tassels fell off it.",
+        "kana": "苏武每天拿着汉朝的符节放羊，时间长了，符节上的毛都掉光了。",
+        "roman": "Sū Wǔ měitiān názhe hàncháo de fújié fàngyáng, shíjiān cháng le, fújié shàng de máo dōu diàoguāng le."
+       }
+      ],
+      [
+       {
+        "jp": "十九年过去了，汉朝和{匈奴|Xiōngnú}终于{讲和|jiǎnghé}，{苏武|Sū Wǔ}回到了{长安|Cháng’ān}。",
+        "fr": "Dix-neuf ans passèrent ; les Han et les Xiongnu firent enfin la paix, et Su Wu revint à Chang’an.",
+        "en": "Nineteen years passed; the Han and the Xiongnu finally made peace, and Su Wu returned to Chang’an.",
+        "kana": "十九年过去了，汉朝和匈奴终于讲和，苏武回到了长安。",
+        "roman": "Shíjiǔ nián guòqù le, hàncháo hé Xiōngnú zhōngyú jiǎnghé, Sū Wǔ huídào le Cháng’ān."
+       },
+       {
+        "jp": "出发的时候他还是个{壮年|zhuàngnián}，回来的时候，头发和{胡子|húzi}全白了。",
+        "fr": "Parti dans la force de l’âge, il revint les cheveux et la barbe tout blancs.",
+        "en": "He had left in the prime of life; he returned with hair and beard all white.",
+        "kana": "出发的时候他还是个壮年，回来的时候，头发和胡子全白了。",
+        "roman": "Chūfā de shíhou tā hái shì ge zhuàngnián, huílái de shíhou, tóufa hé húzi quán bái le."
+       },
+       {
+        "jp": "人们用“{苏武牧羊|Sū Wǔ mù yáng}”来{赞美|zànměi}{坚贞不屈|jiānzhēn bù qū}的精神。",
+        "fr": "On dit « Su Wu garde ses moutons » pour louer une fidélité inflexible.",
+        "en": "People say “Su Wu herding sheep” to praise steadfast, unyielding loyalty.",
+        "kana": "人们用“苏武牧羊”来赞美坚贞不屈的精神。",
+        "roman": "Rénmen yòng “Sū Wǔ mù yáng” lái zànměi jiānzhēn bù qū de jīngshen."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "北海",
+       "reading": "Běihǎi",
+       "fr": "le lac du Nord (Baïkal)",
+       "en": "the Northern Lake (Baikal)"
+      },
+      {
+       "jp": "公羊",
+       "reading": "gōngyáng",
+       "fr": "bélier",
+       "en": "ram"
+      },
+      {
+       "jp": "分明",
+       "reading": "fēnmíng",
+       "fr": "clairement, manifestement",
+       "en": "clearly, plainly"
+      },
+      {
+       "jp": "讲和",
+       "reading": "jiǎnghé",
+       "fr": "faire la paix",
+       "en": "to make peace"
+      },
+      {
+       "jp": "壮年",
+       "reading": "zhuàngnián",
+       "fr": "force de l’âge",
+       "en": "prime of life"
+      },
+      {
+       "jp": "坚贞不屈",
+       "reading": "jiānzhēn bù qū",
+       "fr": "fidèle et inflexible",
+       "en": "steadfast and unyielding"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quand Su Wu pourra-t-il rentrer, selon le chanyu ?",
+        "en": "When may Su Wu go home, according to the chanyu?"
+       },
+       "choices": [
+        {
+         "fr": "Quand les béliers auront des agneaux",
+         "en": "When the rams bear lambs"
+        },
+        {
+         "fr": "Au printemps",
+         "en": "In spring"
+        },
+        {
+         "fr": "Après un an",
+         "en": "After a year"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Combien de temps Su Wu reste-t-il chez les Xiongnu ?",
+        "en": "How long does Su Wu stay with the Xiongnu?"
+       },
+       "choices": [
+        {
+         "fr": "Dix-neuf ans",
+         "en": "Nineteen years"
+        },
+        {
+         "fr": "Trois ans",
+         "en": "Three years"
+        },
+        {
+         "fr": "Toute sa vie",
+         "en": "All his life"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "wo-xin-chang-dan",
+   "glyph": "胆",
+   "level": "HSK6",
+   "color": "#5A6A3A",
+   "title": {
+    "jp": "卧薪尝胆",
+    "fr": "Dormir sur des fagots, goûter le fiel",
+    "en": "Sleeping on brushwood, tasting gall"
+   },
+   "summary": {
+    "fr": "Vaincu et humilié, le roi Goujian de Yue s’impose une vie de privations pour ne jamais oublier sa défaite.",
+    "en": "Defeated and humiliated, King Goujian of Yue imposes a life of hardship on himself so as never to forget his defeat."
+   },
+   "chapters": [
+    {
+     "slug": "wo-xin-chang-dan-1",
+     "title": {
+      "jp": "亡国之耻",
+      "fr": "La honte de la défaite",
+      "en": "The shame of defeat"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{春秋|Chūnqiū}时候，{越国|Yuè guó}被{吴国|Wú guó}打败了，{越王|Yuè wáng}{勾践|Gōujiàn}成了{俘虏|fúlǔ}。",
+        "fr": "À l’époque des Printemps et Automnes, le royaume de Yue fut vaincu par celui de Wu, et le roi Goujian fait prisonnier.",
+        "en": "In the Spring and Autumn period, Yue was defeated by Wu, and King Goujian was taken prisoner.",
+        "kana": "春秋时候，越国被吴国打败了，越王勾践成了俘虏。",
+        "roman": "Chūnqiū shíhou, Yuè guó bèi Wú guó dǎbài le, Yuè wáng Gōujiàn chéng le fúlǔ."
+       },
+       {
+        "jp": "{吴王|Wú wáng}让他养马，每次出门，还让{勾践|Gōujiàn}给他{牵马|qiān mǎ}。",
+        "fr": "Le roi de Wu lui fit soigner ses chevaux et, à chaque sortie, lui faisait tenir la bride.",
+        "en": "The king of Wu made him tend horses, and every time he went out he made Goujian lead his horse.",
+        "kana": "吴王让他养马，每次出门，还让勾践给他牵马。",
+        "roman": "Wú wáng ràng tā yǎngmǎ, měicì chūmén, hái ràng Gōujiàn gěi tā qiān mǎ."
+       },
+       {
+        "jp": "{勾践|Gōujiàn}心里非常{痛苦|tòngkǔ}，但是表面上一直很{恭敬|gōngjìng}，从来不抱怨。",
+        "fr": "Goujian souffrait intensément, mais restait en apparence toujours respectueux, sans jamais se plaindre.",
+        "en": "Goujian suffered terribly but outwardly remained respectful, never complaining.",
+        "kana": "勾践心里非常痛苦，但是表面上一直很恭敬，从来不抱怨。",
+        "roman": "Gōujiàn xīnlǐ fēicháng tòngkǔ, dànshì biǎomiàn shàng yìzhí hěn gōngjìng, cónglái bú bàoyuàn."
+       }
+      ],
+      [
+       {
+        "jp": "三年以后，{吴王|Wú wáng}相信他已经屈服了，就放他回了{越国|Yuè guó}。",
+        "fr": "Au bout de trois ans, le roi de Wu, persuadé qu’il s’était soumis, le renvoya dans son pays.",
+        "en": "After three years, the king of Wu, convinced he had submitted, let him go back to Yue.",
+        "kana": "三年以后，吴王相信他已经屈服了，就放他回了越国。",
+        "roman": "Sān nián yǐhòu, Wú wáng xiāngxìn tā yǐjīng qūfú le, jiù fàng tā huí le Yuè guó."
+       },
+       {
+        "jp": "回国以后，{勾践|Gōujiàn}下定决心：一定要{洗雪|xǐxuě}这个{耻辱|chǐrǔ}。",
+        "fr": "De retour chez lui, Goujian se jura de laver cet affront.",
+        "en": "Back home, Goujian resolved to wipe out this disgrace.",
+        "kana": "回国以后，勾践下定决心：一定要洗雪这个耻辱。",
+        "roman": "Huíguó yǐhòu, Gōujiàn xiàdìngjuéxīn: yídìng yào xǐxuě zhè ge chǐrǔ."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "勾践",
+       "reading": "Gōujiàn",
+       "fr": "Goujian (roi de Yue)",
+       "en": "Goujian (king of Yue)"
+      },
+      {
+       "jp": "牵马",
+       "reading": "qiān mǎ",
+       "fr": "mener un cheval par la bride",
+       "en": "to lead a horse"
+      },
+      {
+       "jp": "表面",
+       "reading": "biǎomiàn",
+       "fr": "surface, apparence",
+       "en": "surface, appearance"
+      },
+      {
+       "jp": "屈服",
+       "reading": "qūfú",
+       "fr": "céder, se soumettre",
+       "en": "to submit"
+      },
+      {
+       "jp": "洗雪",
+       "reading": "xǐxuě",
+       "fr": "laver (un affront)",
+       "en": "to wipe out (a disgrace)"
+      },
+      {
+       "jp": "耻辱",
+       "reading": "chǐrǔ",
+       "fr": "honte, humiliation",
+       "en": "disgrace, humiliation"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait Goujian chez le roi de Wu ?",
+        "en": "What does Goujian do for the king of Wu?"
+       },
+       "choices": [
+        {
+         "fr": "Il s’occupe des chevaux",
+         "en": "He tends the horses"
+        },
+        {
+         "fr": "Il commande l’armée",
+         "en": "He commands the army"
+        },
+        {
+         "fr": "Il écrit des poèmes",
+         "en": "He writes poems"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi le roi de Wu le libère-t-il ?",
+        "en": "Why does the king of Wu release him?"
+       },
+       "choices": [
+        {
+         "fr": "Il le croit soumis",
+         "en": "He thinks he has submitted"
+        },
+        {
+         "fr": "Goujian s’est échappé",
+         "en": "Goujian escaped"
+        },
+        {
+         "fr": "Il a payé une rançon",
+         "en": "He paid a ransom"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "wo-xin-chang-dan-2",
+     "title": {
+      "jp": "十年生聚",
+      "fr": "Dix ans de patience",
+      "en": "Ten years of patience"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{勾践|Gōujiàn}晚上不睡床，睡在{柴草|cháicǎo}上；{屋里|wūli}{挂|guà}着一个{苦胆|kǔdǎn}，每天吃饭以前都要{尝|cháng}一尝。",
+        "fr": "Goujian ne dormait plus dans un lit mais sur des fagots ; dans sa chambre pendait une vésicule de fiel qu’il goûtait avant chaque repas.",
+        "en": "Goujian no longer slept in a bed but on brushwood; a gall bladder hung in his room, and he tasted it before every meal.",
+        "kana": "勾践晚上不睡床，睡在柴草上；屋里挂着一个苦胆，每天吃饭以前都要尝一尝。",
+        "roman": "Gōujiàn wǎnshàng bú shuì chuáng, shuì zài cháicǎo shàng; wūli guà zhe yí ge kǔdǎn, měitiān chīfàn yǐqián dōu yào cháng yì cháng."
+       },
+       {
+        "jp": "他问自己：“你忘了当{俘虏|fúlǔ}的{耻辱|chǐrǔ}了{吗|ma}？”",
+        "fr": "Il se demandait : « As-tu oublié la honte d’avoir été prisonnier ? »",
+        "en": "He asked himself: “Have you forgotten the shame of being a prisoner?”",
+        "kana": "他问自己：“你忘了当俘虏的耻辱了吗？”",
+        "roman": "Tā wèn zìjǐ: “nǐ wàng le dāng fúlǔ de chǐrǔ le ma?”"
+       },
+       {
+        "jp": "他和百姓一起种地，{王后|wánghòu}亲自{织布|zhībù}，{越国|Yuè guó}慢慢{富强|fùqiáng}起来。",
+        "fr": "Il cultivait la terre avec le peuple, la reine tissait elle-même, et Yue devint peu à peu riche et puissant.",
+        "en": "He farmed with the people, the queen wove cloth herself, and Yue slowly grew rich and strong.",
+        "kana": "他和百姓一起种地，王后亲自织布，越国慢慢富强起来。",
+        "roman": "Tā hé bǎixìng yìqǐ zhòngdì, wánghòu qīnzì zhībù, Yuè guó mànmàn fùqiáng qǐlái."
+       }
+      ],
+      [
+       {
+        "jp": "十年以后，{越国|Yuè guó}终于打败了{吴国|Wú guó}。",
+        "fr": "Dix ans plus tard, Yue vainquit enfin Wu.",
+        "en": "Ten years later, Yue finally defeated Wu.",
+        "kana": "十年以后，越国终于打败了吴国。",
+        "roman": "Shí nián yǐhòu, Yuè guó zhōngyú dǎbài le Wú guó."
+       },
+       {
+        "jp": "后来，人们用“{卧薪尝胆|wò xīn cháng dǎn}”{形容|xíngróng}一个人不忘失败，{刻苦|kèkǔ}努力，{发愤图强|fāfèn tú qiáng}。",
+        "fr": "Depuis, « dormir sur des fagots et goûter le fiel » décrit quelqu’un qui n’oublie pas son échec et redouble d’efforts pour se relever.",
+        "en": "Since then, “sleeping on brushwood and tasting gall” describes someone who never forgets defeat and works hard to rise again.",
+        "kana": "后来，人们用“卧薪尝胆”形容一个人不忘失败，刻苦努力，发愤图强。",
+        "roman": "Hòulái, rénmen yòng “wò xīn cháng dǎn” xíngróng yí ge rén bùwàng shībài, kèkǔ nǔlì, fāfèn tú qiáng."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "柴草",
+       "reading": "cháicǎo",
+       "fr": "fagots, broussailles",
+       "en": "brushwood"
+      },
+      {
+       "jp": "苦胆",
+       "reading": "kǔdǎn",
+       "fr": "vésicule de fiel",
+       "en": "gall bladder"
+      },
+      {
+       "jp": "尝",
+       "reading": "cháng",
+       "fr": "goûter",
+       "en": "to taste"
+      },
+      {
+       "jp": "织布",
+       "reading": "zhībù",
+       "fr": "tisser (de l’étoffe)",
+       "en": "to weave cloth"
+      },
+      {
+       "jp": "富强",
+       "reading": "fùqiáng",
+       "fr": "riche et puissant",
+       "en": "prosperous and strong"
+      },
+      {
+       "jp": "发愤图强",
+       "reading": "fāfèn tú qiáng",
+       "fr": "redoubler d’efforts pour se relever",
+       "en": "to strive to rise again"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Goujian goûte-t-il le fiel ?",
+        "en": "Why does Goujian taste the gall?"
+       },
+       "choices": [
+        {
+         "fr": "Pour ne pas oublier sa honte",
+         "en": "So as not to forget his shame"
+        },
+        {
+         "fr": "Pour se soigner",
+         "en": "To cure himself"
+        },
+        {
+         "fr": "Parce qu’il aime l’amertume",
+         "en": "Because he likes bitterness"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Combien de temps faut-il à Yue pour vaincre Wu ?",
+        "en": "How long does it take Yue to defeat Wu?"
+       },
+       "choices": [
+        {
+         "fr": "Dix ans",
+         "en": "Ten years"
+        },
+        {
+         "fr": "Un an",
+         "en": "One year"
+        },
+        {
+         "fr": "Cent ans",
+         "en": "A hundred years"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "zhi-shang-tan-bing",
+   "glyph": "兵",
+   "level": "HSK6",
+   "color": "#6A4A3A",
+   "title": {
+    "jp": "纸上谈兵",
+    "fr": "La guerre sur le papier",
+    "en": "Waging war on paper"
+   },
+   "summary": {
+    "fr": "Zhao Kuo connaît par cœur tous les traités militaires. Mais une bataille ne se gagne pas dans les livres.",
+    "en": "Zhao Kuo knows every military treatise by heart. But a battle is not won in books."
+   },
+   "chapters": [
+    {
+     "slug": "zhi-shang-tan-bing-1",
+     "title": {
+      "jp": "熟读兵书",
+      "fr": "Un lecteur de traités",
+      "en": "A reader of treatises"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{战国|Zhànguó}时候，{赵国|Zhào guó}有一位{名将|míngjiàng}，叫{赵奢|Zhào Shē}。",
+        "fr": "À l’époque des Royaumes combattants, le royaume de Zhao avait un général célèbre, Zhao She.",
+        "en": "In the Warring States period, the state of Zhao had a famous general named Zhao She.",
+        "kana": "战国时候，赵国有一位名将，叫赵奢。",
+        "roman": "Zhànguó shíhou, Zhào guó yǒu yí wèi míngjiàng, jiào Zhào Shē."
+       },
+       {
+        "jp": "他的儿子{赵括|Zhào Kuò}从小{熟读|shúdú}{兵书|bīngshū}，{谈起|tánqǐ}{打仗|dǎzhàng}来{头头是道|tóutóu shì dào}，连父亲都说不过他。",
+        "fr": "Son fils Zhao Kuo connaissait depuis l’enfance les traités militaires par cœur et parlait de la guerre avec tant d’aisance que même son père n’avait pas le dernier mot.",
+        "en": "His son Zhao Kuo had known the military treatises by heart since childhood and talked of war so fluently that even his father could not out-argue him.",
+        "kana": "他的儿子赵括从小熟读兵书，谈起打仗来头头是道，连父亲都说不过他。",
+        "roman": "Tā de érzi Zhào Kuò cóngxiǎo shúdú bīngshū, tánqǐ dǎzhàng lái tóutóu shì dào, lián fùqīn dōu shuō bú guò tā."
+       },
+       {
+        "jp": "可是{赵奢|Zhào Shē}并不高兴，他对妻子说：“{打仗|dǎzhàng}是关系{生死|shēngsǐ}的事，他{却|què}说得这么轻松。”",
+        "fr": "Mais Zhao She n’en était pas content ; il dit à sa femme : « La guerre est affaire de vie ou de mort, et il en parle si légèrement. »",
+        "en": "But Zhao She was not pleased; he told his wife: “War is a matter of life and death, yet he speaks of it so lightly.”",
+        "kana": "可是赵奢并不高兴，他对妻子说：“打仗是关系生死的事，他却说得这么轻松。”",
+        "roman": "Kěshì Zhào Shē bìng bú gāoxìng, tā duì qīzi shuō: “dǎzhàng shì guānxi shēngsǐ de shì, tā què shuō de zhème qīngsōng.”"
+       }
+      ],
+      [
+       {
+        "jp": "他还说：“{倘若|tǎngruò}将来让他当{将军|jiāngjūn}，{赵国|Zhào guó}的{军队|jūnduì}一定会被他{毁|huǐ}{掉|diào}。”",
+        "fr": "Il ajouta : « Si un jour on le fait général, il perdra l’armée de Zhao. »",
+        "en": "He added: “If he is ever made general, he will surely destroy the army of Zhao.”",
+        "kana": "他还说：“倘若将来让他当将军，赵国的军队一定会被他毁掉。”",
+        "roman": "Tā hái shuō: “tǎngruò jiānglái ràng tā dāng jiāngjūn, Zhào guó de jūnduì yídìng huì bèi tā huǐ diào.”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "名将",
+       "reading": "míngjiàng",
+       "fr": "général célèbre",
+       "en": "famous general"
+      },
+      {
+       "jp": "熟读",
+       "reading": "shúdú",
+       "fr": "lire et relire, connaître par cœur",
+       "en": "to read thoroughly"
+      },
+      {
+       "jp": "兵书",
+       "reading": "bīngshū",
+       "fr": "traité militaire",
+       "en": "military treatise"
+      },
+      {
+       "jp": "头头是道",
+       "reading": "tóutóu shì dào",
+       "fr": "avec aisance et logique",
+       "en": "clearly and logically"
+      },
+      {
+       "jp": "倘若",
+       "reading": "tǎngruò",
+       "fr": "si jamais",
+       "en": "if"
+      },
+      {
+       "jp": "毁",
+       "reading": "huǐ",
+       "fr": "détruire, ruiner",
+       "en": "to destroy"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que sait faire Zhao Kuo ?",
+        "en": "What is Zhao Kuo good at?"
+       },
+       "choices": [
+        {
+         "fr": "Parler de stratégie",
+         "en": "Talking about strategy"
+        },
+        {
+         "fr": "Monter à cheval",
+         "en": "Riding horses"
+        },
+        {
+         "fr": "Soigner les blessés",
+         "en": "Healing the wounded"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi son père s’inquiète-t-il ?",
+        "en": "Why is his father worried?"
+       },
+       "choices": [
+        {
+         "fr": "Il parle de la guerre trop légèrement",
+         "en": "He speaks of war too lightly"
+        },
+        {
+         "fr": "Il ne lit jamais",
+         "en": "He never reads"
+        },
+        {
+         "fr": "Il est malade",
+         "en": "He is ill"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "zhi-shang-tan-bing-2",
+     "title": {
+      "jp": "长平之战",
+      "fr": "La bataille de Changping",
+      "en": "The battle of Changping"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "后来，{秦国|Qín guó}{进攻|jìngōng}{赵国|Zhào guó}。{赵王|Zhào wáng}不听{劝告|quàngào}，让{赵括|Zhào Kuò}当了{大将|dàjiàng}。",
+        "fr": "Plus tard, Qin attaqua Zhao. Le roi de Zhao, sourd aux mises en garde, nomma Zhao Kuo commandant en chef.",
+        "en": "Later Qin attacked Zhao. Ignoring all warnings, the king of Zhao made Zhao Kuo commander-in-chief.",
+        "kana": "后来，秦国进攻赵国。赵王不听劝告，让赵括当了大将。",
+        "roman": "Hòulái, Qín guó jìngōng Zhào guó. Zhào wáng bù tīng quàngào, ràng Zhào Kuò dāng le dàjiàng."
+       },
+       {
+        "jp": "{赵括|Zhào Kuò}完全按照书上的方法{指挥|zhǐhuī}，不料{中|zhòng}了{秦军|Qín jūn}的{埋伏|máifú}，被包围了四十多天。",
+        "fr": "Zhao Kuo commanda en suivant les livres à la lettre, mais tomba dans une embuscade de l’armée de Qin et fut encerclé plus de quarante jours.",
+        "en": "Zhao Kuo commanded strictly by the book, but fell into a Qin ambush and was surrounded for more than forty days.",
+        "kana": "赵括完全按照书上的方法指挥，不料中了秦军的埋伏，被包围了四十多天。",
+        "roman": "Zhào Kuò wánquán ànzhào shū shàng de fāngfǎ zhǐhuī, búliào zhòng le Qín jūn de máifú, bèi bāowéi le sìshíduō tiān."
+       },
+       {
+        "jp": "最后，他被{乱箭|luànjiàn}{射死|shèsǐ}，四十万{赵军|Zhào jūn}全部投降。",
+        "fr": "Il finit criblé de flèches, et les quatre cent mille soldats de Zhao se rendirent.",
+        "en": "In the end he was shot down by a hail of arrows, and four hundred thousand Zhao soldiers surrendered.",
+        "kana": "最后，他被乱箭射死，四十万赵军全部投降。",
+        "roman": "Zuìhòu, tā bèi luànjiàn shèsǐ, sìshíwàn Zhào jūn quánbù tóuxiáng."
+       }
+      ],
+      [
+       {
+        "jp": "“{纸上谈兵|zhǐ shàng tán bīng}”这个成语就来自这个故事。",
+        "fr": "L’expression « faire la guerre sur le papier » vient de cette histoire.",
+        "en": "The idiom “waging war on paper” comes from this story.",
+        "kana": "“纸上谈兵”这个成语就来自这个故事。",
+        "roman": "“Zhǐ shàng tán bīng” zhè ge chéngyǔ jiù láizì zhè ge gùshi."
+       },
+       {
+        "jp": "它{比喻|bǐyù}只会讲理论，不能解决实际问题。由此可见，知识要和{实践|shíjiàn}结合起来才有用。",
+        "fr": "Elle désigne celui qui ne sait que théoriser sans résoudre les problèmes réels. On voit par là que le savoir n’est utile qu’uni à la pratique.",
+        "en": "It describes someone who can only theorise and cannot solve real problems. From this we see that knowledge is only useful when combined with practice.",
+        "kana": "它比喻只会讲理论，不能解决实际问题。由此可见，知识要和实践结合起来才有用。",
+        "roman": "Tā bǐyù zhǐ huì jiǎng lǐlùn, bù néng jiějué shíjì wèntí. Yóu cǐ kě jiàn, zhīshi yào hé shíjiàn jiéhé qǐlái cái yǒu yòng."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "进攻",
+       "reading": "jìngōng",
+       "fr": "attaquer",
+       "en": "to attack"
+      },
+      {
+       "jp": "劝告",
+       "reading": "quàngào",
+       "fr": "mise en garde, conseil",
+       "en": "advice, warning"
+      },
+      {
+       "jp": "大将",
+       "reading": "dàjiàng",
+       "fr": "commandant en chef",
+       "en": "commander-in-chief"
+      },
+      {
+       "jp": "指挥",
+       "reading": "zhǐhuī",
+       "fr": "commander, diriger",
+       "en": "to command"
+      },
+      {
+       "jp": "乱箭",
+       "reading": "luànjiàn",
+       "fr": "pluie de flèches",
+       "en": "hail of arrows"
+      },
+      {
+       "jp": "实践",
+       "reading": "shíjiàn",
+       "fr": "pratique",
+       "en": "practice"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Comment Zhao Kuo commande-t-il l’armée ?",
+        "en": "How does Zhao Kuo command the army?"
+       },
+       "choices": [
+        {
+         "fr": "En suivant les livres à la lettre",
+         "en": "Strictly by the book"
+        },
+        {
+         "fr": "En écoutant ses officiers",
+         "en": "By listening to his officers"
+        },
+        {
+         "fr": "En s’adaptant au terrain",
+         "en": "By adapting to the terrain"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que signifie « 纸上谈兵 » ?",
+        "en": "What does “纸上谈兵” mean?"
+       },
+       "choices": [
+        {
+         "fr": "Théoriser sans savoir agir",
+         "en": "Theorising without being able to act"
+        },
+        {
+         "fr": "Écrire de bons livres",
+         "en": "Writing good books"
+        },
+        {
+         "fr": "Gagner sans combattre",
+         "en": "Winning without fighting"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

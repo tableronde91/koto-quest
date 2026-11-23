@@ -342,6 +342,69 @@ const SPECIES: Record<string, Species> = {
     face: <path d="M96 120 l4 10 l4 -10" stroke="#C8323F" strokeWidth="2.5" fill="none" />,
     front: <g fill="#3A2A4A">{[56, 74, 92, 108, 126, 144].map((x) => <rect key={x} x={x - 3} y="182" width="6" height="12" rx="2" />)}</g>,
   },
+  // ───── Gardiens chinois (HSK 6 — la route de la soie) ─────
+  // Paoxiao : corps de mouton, visage d'homme, yeux sous les aisselles, glouton
+  狍: {
+    body: '#E8E0CC', belly: '#FFFFFF', head: '#E8C8A8', eye: '#2A1A10',
+    back: <g fill="#F6F0E0" stroke="#C9BFA6" strokeWidth="2">{[[40, 120], [58, 100], [142, 100], [160, 120], [100, 92]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="20" />)}</g>,
+    top: <path d="M64 70 Q44 60 50 40 Q60 54 74 58 M136 70 Q156 60 150 40 Q140 54 126 58" stroke="#8A7A5A" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    face: <path d="M84 114 Q100 132 116 114 Z" fill="#8E1B26" />,
+    front: <g fill="#F2D94E" stroke="#2A1A10" strokeWidth="1.5"><circle cx="40" cy="150" r="5" /><circle cx="160" cy="150" r="5" /></g>,
+  },
+  // Aoyin : bœuf blanc à quatre cornes, poil tombant comme un manteau de paille
+  獓: {
+    body: '#F2EEE6', belly: '#FFFFFF', head: '#F6F3EC', eye: '#2A1A10',
+    back: <path d="M40 120 L30 186 M56 116 L50 190 M144 116 L150 190 M160 120 L170 186" stroke="#C9B88A" strokeWidth="6" strokeLinecap="round" />,
+    top: <path d="M66 64 Q44 44 48 24 M80 54 Q70 34 78 18 M120 54 Q130 34 122 18 M134 64 Q156 44 152 24" stroke="#8A7A5A" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    face: <path d="M88 118 Q100 126 112 118" stroke="#4A2A1A" strokeWidth="3" fill="none" />,
+  },
+  // Bo : cheval blanc à queue noire, une corne, griffes de tigre
+  驳: {
+    body: '#F6F3EC', belly: '#FFFFFF', head: '#F2EEE6', eye: '#2A1A10',
+    back: <path d="M150 160 Q190 150 192 110 Q196 140 180 170" fill="#1F2433" />,
+    top: <><path d="M100 46 L94 8 L108 44Z" fill="#C9A24A" stroke="#8A6A2A" strokeWidth="2" /><path d="M70 60 Q80 40 100 46 Q120 40 130 60" stroke="#1F2433" strokeWidth="8" fill="none" /></>,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+    front: <g stroke="#1F2433" strokeWidth="2.5" fill="none">{[56, 140].map((x) => <path key={x} d={`M${x} 186 l-5 8 M${x + 6} 186 l0 9 M${x + 12} 186 l5 8`} />)}</g>,
+  },
+  // Toulou : mouton à quatre cornes tapi sous les dunes
+  蝼: {
+    body: '#D9B07A', belly: '#F2DEB8', head: '#E2BC88', eye: '#2A1A10',
+    top: <path d="M66 64 Q50 40 62 30 Q66 46 78 50 M82 56 Q78 36 88 28 M118 56 Q122 36 112 28 M134 64 Q150 40 138 30 Q134 46 122 50" stroke="#6E5A3A" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    face: <path d="M88 116 Q100 112 112 116" stroke="#5A3A24" strokeWidth="2.5" fill="none" />,
+    front: <path d="M10 196 Q50 170 100 192 Q150 172 190 196Z" fill="#E8C88A" />,
+  },
+  // Jiao : chien tacheté comme un léopard, cornes de bœuf
+  狡: {
+    body: '#E2A24A', belly: '#F6E0B8', head: '#E8AE5A', eye: '#2A1A10',
+    back: <path d="M150 160 Q188 150 186 118" stroke="#E2A24A" strokeWidth="10" fill="none" strokeLinecap="round" />,
+    top: <><path d="M62 64 Q42 52 44 34 Q56 48 72 52 M138 64 Q158 52 156 34 Q144 48 128 52" stroke="#6E5A3A" strokeWidth="7" fill="none" strokeLinecap="round" />{ear(70, false, '#E8AE5A', '#7A4A1A')}{ear(130, true, '#E8AE5A', '#7A4A1A')}</>,
+    under: <g fill="#5A3A1A">{[[60, 150], [80, 168], [120, 166], [140, 150], [100, 156]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="4.5" />)}</g>,
+    face: <path d="M92 118 Q100 124 108 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+  },
+  // Jufu : singe aux bras tigrés qui lance des pierres
+  举: {
+    body: '#8A6A4A', belly: '#D8C0A0', head: '#C9A27A', eye: '#2A1A10',
+    back: <path d="M150 160 Q194 150 186 106 Q180 86 194 76" stroke="#8A6A4A" strokeWidth="8" fill="none" strokeLinecap="round" />,
+    top: <>{ear(66, false, '#8A6A4A', '#D8C0A0')}{ear(134, true, '#8A6A4A', '#D8C0A0')}</>,
+    under: <path d="M30 150 l10 -6 M34 160 l10 -6 M156 144 l10 6 M152 154 l10 6" stroke="#2A1A10" strokeWidth="3" />,
+    face: <path d="M88 120 Q100 112 112 120" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+    front: <ellipse cx="172" cy="40" rx="12" ry="10" fill="#8A8A8A" stroke="#4A4A4A" strokeWidth="2" />,
+  },
+  // Luwu : corps de tigre, neuf queues, visage d'homme, gardien de Kunlun
+  陆: {
+    body: '#E8A23A', belly: '#F6E0B8', head: '#E8C8A8', eye: '#2A1A10',
+    back: <g stroke="#E8A23A" strokeWidth="7" fill="none" strokeLinecap="round">{[-56, -42, -28, -14, 0, 14, 28, 42, 56].map((a) => <path key={a} d="M100 150 Q104 110 100 76" transform={`rotate(${a} 100 150)`} />)}</g>,
+    top: <path d="M64 80 Q60 48 84 52 Q100 38 116 52 Q140 48 136 80" fill="#3A2A1A" />,
+    under: <path d="M52 140 l14 4 M50 156 l14 2 M148 140 l-14 4 M150 156 l-14 2" stroke="#2A1A10" strokeWidth="3.5" strokeLinecap="round" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#5A3A24" strokeWidth="2.5" fill="none" />,
+  },
+  // Eshou : lièvre à visage d'homme, menteur
+  讹: {
+    body: '#C9C0B0', belly: '#F2EEE6', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M78 56 Q66 6 82 4 Q92 20 90 52 M122 56 Q134 6 118 4 Q108 20 110 52" fill="#C9C0B0" stroke="#8A8070" strokeWidth="2" />,
+    face: <path d="M88 116 Q96 124 104 116 Q110 112 114 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(156 140)"><rect x="-14" y="-18" width="28" height="36" rx="3" fill="#F6EBD3" stroke="#8A6A3A" strokeWidth="2" /><path d="M-8 -8 H8 M-8 0 H8 M-8 8 H4" stroke="#8A6A3A" strokeWidth="2" /></g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {
