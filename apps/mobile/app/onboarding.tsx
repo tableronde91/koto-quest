@@ -63,6 +63,7 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'HSK2', hint: 'Élémentaire · 300 mots' },
     { code: 'HSK3', hint: 'Intermédiaire · 600 mots' },
     { code: 'HSK4', hint: 'Intermédiaire avancé · 1 200 mots' },
+    { code: 'HSK5', hint: 'Avancé · 2 500 mots' },
   ],
 };
 

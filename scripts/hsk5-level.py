@@ -1,0 +1,885 @@
+# Niveau HSK 5 (chinois, HSK 2.0 niveau 5) : 8 étapes vers les mers de l'Est, leçons et examen blanc (français + anglais).
+# Mode histoire : compagnon de Xu Fu, parti chercher l'élixir d'immortalité pour le Premier Empereur (voir gen-story.py).
+# Écrit aussi la section HSK 5 de l'onglet Hanzi.
+# Usage : python3 scripts/hsk5-level.py   (après les niveaux HSK 1 à 4)
+from zh_common import *
+
+# Slugs déjà pris par un autre niveau : suffixe « -h5 » (le même mot peut exister en japonais, coréen…).
+_TAKEN = set()
+for _p in ALL_LEVELS + HSK_PATHS[:4]:
+    for _it in items_of(json.load(open(os.path.join(ROOT, _p), encoding='utf-8'))):
+        _TAKEN.add(_it['slug'])
+for _th in json.load(open(os.path.join(ROOT, 'content/expressions/expressions.json'), encoding='utf-8'))['themes']:
+    _TAKEN.update(_e['slug'] for _e in _th['expressions'])
+def _free(full):
+    return full + '-h5' if full in _TAKEN else full
+_Z, _ZG, _H = Z, ZG, H
+def Z(slug, *a): return {**_Z(slug, *a), 'slug': _free('zh-' + slug)}
+def ZG(slug, *a): return {**_ZG(slug, *a), 'slug': _free('gram-zh-' + slug)}
+def H(slug, *a): return {**_H(slug, *a), 'slug': _free('hz-' + slug)}
+
+
+REGION = 'Mers de l’Est'
+
+# ═════════════════════════ 1 : le port de Langya — commerce, préparatifs, décisions ═════════════════════════
+W1 = WORLD('hsk5-w1', ('Le port de Langya', 'The port of Langya'), REGION,
+  ('Commerce, investissement et contrats (一旦…就) ; préparer un grand départ (宁可…也不) ; peser une décision et en assumer les suites (与其…不如).', 'Trade, investment and contracts (一旦…就); preparing a great departure (宁可…也不); weighing a decision and bearing its consequences (与其…不如).'),
+  (('Yuqiang le souffleur de tempêtes', 'Yuqiang the Storm-Blower'), '禺', ('Yuqiang, dieu à visage d’homme et à corps d’oiseau, deux serpents verts aux oreilles, souffle la tempête sur le port de Langya. La flotte de Xu Fu ne peut pas partir : prépare l’expédition avec méthode pour le calmer.', 'Yuqiang, a god with a human face and a bird’s body, two green snakes at his ears, blows a storm over the port of Langya. Xu Fu’s fleet cannot leave: prepare the expedition methodically to calm him.')),
+  [CH('hsk5-w1-c1', ('Armer la flotte', 'Fitting out the fleet'), [
+    HL('zh-hz-trade', ('Les caractères du commerce : 营 贸 易 资 投 润 险 港', 'Trade characters: 营 贸 易 资 投 润 险 港'), ('Reconnaître les caractères de l’économie et du port.', 'Recognise the characters of the economy and the port.'), [
+      ('贸 (mào, commerce) et 资 (zī, capital) gardent le coquillage 贝, l’ancienne monnaie. 易 (yì) veut dire « facile » mais aussi « échanger » : 贸易 = le commerce.', '贸 (mào, trade) and 资 (zī, capital) keep the shell 贝, the old currency. 易 (yì) means “easy” but also “to exchange”: 贸易 = trade.'),
+      ('润 (rùn, humide, profit) et 港 (gǎng, port) portent l’eau 氵 ; 险 (xiǎn, danger) porte la colline 阝 : un passage escarpé. 投 (tóu) = jeter de la main 扌, d’où « investir ».', '润 (rùn, moist, profit) and 港 (gǎng, port) carry water 氵; 险 (xiǎn, danger) carries the hill 阝: a steep pass. 投 (tóu) = to throw by hand 扌, hence “to invest”.'),
+    ], [
+      H('ying-run', '营', 'yíng', ('gérer, camp', 'to run, camp'), 11), H('mao', '贸', 'mào', ('commerce', 'trade'), 9),
+      H('yi-exchange', '易', 'yì', ('échanger ; facile', 'to exchange; easy'), 8), H('zi-capital', '资', 'zī', ('capital, ressources', 'capital, resources'), 10),
+      H('tou', '投', 'tóu', ('jeter ; investir', 'to throw; to invest'), 7), H('run', '润', 'rùn', ('humide ; profit', 'moist; profit'), 10),
+      H('xian-danger', '险', 'xiǎn', ('danger, risque', 'danger, risk'), 9), H('gang', '港', 'gǎng', ('port', 'harbour'), 12),
+    ]),
+    L('zh-trade', ('Commerce et contrats : 一旦…就', 'Trade and contracts: 一旦…就'), ('Parler d’affaires, d’investissement et de risques.', 'Talk about business, investment and risk.'), 10, [
+        ('一旦 A，就 B = dès lors que A (une fois que, si jamais), B : 一旦签了合同，就不能改了 (une fois le contrat signé, on ne peut plus le modifier).', '一旦 A，就 B = once A (if ever), B: 一旦签了合同，就不能改了 (once the contract is signed, it can’t be changed).'),
+        ('L’entreprise : 经营 (gérer, exploiter), 投资 (investir), 资金 (fonds), 成本 (coût de revient), 利润 (bénéfice), 损失 (perte), 风险 (risque).', 'Business: 经营 (to run, to operate), 投资 (to invest), 资金 (funds), 成本 (cost), 利润 (profit), 损失 (loss), 风险 (risk).'),
+        ('Le marché : 贸易 (commerce), 市场 (marché), 产品 / 商品 (produit / marchandise), 生产 (produire), 客户 (client), 合同 (contrat), 合作 (coopérer).', 'The market: 贸易 (trade), 市场 (market), 产品 / 商品 (product / goods), 生产 (to produce), 客户 (client), 合同 (contract), 合作 (to cooperate).'),
+      ], [
+        ZG('yidan-jiu', '一旦…，就…', 'yídàn…, jiù…', ('une fois que…, (alors)…', 'once…, (then)…')),
+        Z('yidan', '一旦', 'yídàn', ('une fois que, si jamais', 'once, in case')),
+        Z('maoyi', '贸易', 'màoyì', ('commerce', 'trade')),
+        Z('jingying', '经营', 'jīngyíng', ('gérer, exploiter', 'to run, to operate')),
+        Z('touzi', '投资', 'tóuzī', ('investir ; investissement', 'to invest; investment')),
+        Z('zijin', '资金', 'zījīn', ('fonds, capitaux', 'funds')),
+        Z('chengben', '成本', 'chéngběn', ('coût de revient', 'cost')),
+        Z('lirun', '利润', 'lìrùn', ('bénéfice', 'profit')),
+        Z('sunshi', '损失', 'sǔnshī', ('perte ; perdre', 'loss; to lose')),
+        Z('fengxian', '风险', 'fēngxiǎn', ('risque', 'risk')),
+        Z('shichang', '市场', 'shìchǎng', ('marché', 'market')),
+        Z('chanpin', '产品', 'chǎnpǐn', ('produit', 'product')),
+        Z('shangpin', '商品', 'shāngpǐn', ('marchandise', 'goods, commodity')),
+        Z('shengchan', '生产', 'shēngchǎn', ('produire, fabriquer', 'to produce')),
+        Z('kehu', '客户', 'kèhù', ('client (entreprise)', 'client')),
+        Z('hetong', '合同', 'hétong', ('contrat', 'contract')),
+        Z('hezuo', '合作', 'hézuò', ('coopérer ; coopération', 'to cooperate; cooperation')),
+      ], [
+        x('一旦投资失败，公司的损失会很大。', 'Yídàn tóuzī shībài, gōngsī de sǔnshī huì hěn dà.', 'Si jamais l’investissement échoue, l’entreprise subira de lourdes pertes.', 'If the investment ever fails, the company’s losses will be huge.'),
+        x('这家公司经营海上贸易，利润很高，但风险也不小。', 'Zhè jiā gōngsī jīngyíng hǎishang màoyì, lìrùn hěn gāo, dàn fēngxiǎn yě bù xiǎo.', 'Cette entreprise fait du commerce maritime : les bénéfices sont élevés, mais les risques aussi.', 'This company runs maritime trade: profits are high, but so are the risks.'),
+      ], [
+        FB(COMPLETE, '＿出了问题，就马上给我打电话。', ['一旦', '尽管', '何况'], '一旦', ('Si jamais : 一旦…就.', 'If ever: 一旦…就.'), ('S’il y a le moindre problème, appelle-moi tout de suite.', 'If anything goes wrong, call me straight away.')),
+        FB(COMPLETE, '双方已经在＿上签了字。', ['合同', '利润', '成本'], '合同', ('On signe un contrat : 合同.', 'You sign a contract: 合同.'), ('Les deux parties ont déjà signé le contrat.', 'Both parties have already signed the contract.')),
+        DC(ANSWER, [('经理', '这个项目的风险大吗？')], ('Le directeur demande si le projet est risqué (oui, mais les bénéfices aussi sont élevés).', 'The manager asks if the project is risky (yes, but profits are high too).'), ['风险不小，不过利润也很高。', '我们已经签了客户。', '成本是一种产品。'], '风险不小，不过利润也很高。', ('Risque et bénéfice : 风险, 利润.', 'Risk and profit: 风险, 利润.')),
+        TF('这批商品是去年生产的。', ('La marchandise a été produite l’an dernier.', 'The goods were produced last year.'), VRAI, ('是去年生产的 = produit l’an dernier.', '是去年生产的 = produced last year.')),
+      ]),
+    L('zh-departure', ('Le grand départ : 宁可…也不', 'The great departure: 宁可…也不'), ('Préparer un voyage et exprimer un choix ferme.', 'Prepare a journey and express a firm choice.'), 10, [
+        ('宁可 A，也不 B = plutôt A que B (même si A coûte) : 我宁可走路，也不坐他的车 (je préfère marcher plutôt que monter dans sa voiture).', '宁可 A，也不 B = would rather A than B (even if A is costly): 我宁可走路，也不坐他的车 (I’d rather walk than ride in his car).'),
+        ('Au port : 港口 (port), 码头 (quai), 仓库 (entrepôt), 装 (charger), 运输 (transporter), 设备 (équipement), 工具 (outil), 零件 (pièce détachée), 绳子 (corde).', 'At the port: 港口 (harbour), 码头 (wharf), 仓库 (warehouse), 装 (to load), 运输 (to transport), 设备 (equipment), 工具 (tool), 零件 (spare part), 绳子 (rope).'),
+        ('Les adieux : 告别 (dire adieu), 舍不得 (avoir du mal à quitter), 期待 / 盼望 (attendre avec impatience), 祝福 (bénir, vœux), 临时 (provisoire, de dernière minute).', 'Farewells: 告别 (to bid farewell), 舍不得 (to hate to part with), 期待 / 盼望 (to look forward to), 祝福 (blessing, good wishes), 临时 (temporary, last-minute).'),
+      ], [
+        ZG('ningke-yebu', '宁可…，也不…', 'nìngkě…, yě bù…', ('plutôt…, que de…', 'would rather…, than…')),
+        Z('ningke', '宁可', 'nìngkě', ('plutôt (préférer)', 'would rather')),
+        Z('gangkou', '港口', 'gǎngkǒu', ('port', 'harbour')),
+        Z('matou', '码头', 'mǎtou', ('quai, embarcadère', 'wharf, pier')),
+        Z('cangku', '仓库', 'cāngkù', ('entrepôt', 'warehouse')),
+        Z('zhuang', '装', 'zhuāng', ('charger ; installer ; faire semblant', 'to load; to install; to pretend')),
+        Z('yunshu', '运输', 'yùnshū', ('transporter ; transport', 'to transport; transport')),
+        Z('shebei', '设备', 'shèbèi', ('équipement', 'equipment')),
+        Z('gongju', '工具', 'gōngjù', ('outil', 'tool')),
+        Z('lingjian', '零件', 'língjiàn', ('pièce détachée', 'spare part')),
+        Z('shengzi', '绳子', 'shéngzi', ('corde', 'rope')),
+        Z('gaobie', '告别', 'gàobié', ('dire adieu', 'to bid farewell')),
+        Z('shebude', '舍不得', 'shěbude', ('avoir du mal à quitter, ne pas se résoudre à', 'to hate to part with')),
+        Z('qidai', '期待', 'qīdài', ('avoir hâte de, se réjouir de', 'to look forward to')),
+        Z('panwang', '盼望', 'pànwàng', ('espérer ardemment', 'to long for')),
+        Z('zhufu', '祝福', 'zhùfú', ('vœux, bénédiction', 'blessing, good wishes')),
+        Z('linshi', '临时', 'línshí', ('provisoire, de dernière minute', 'temporary, last-minute')),
+      ], [
+        x('码头上，水手们正在把粮食装上船。', 'Mǎtou shang, shuǐshǒumen zhèngzài bǎ liángshi zhuāng shàng chuán.', 'Sur le quai, les marins chargent les vivres sur les navires.', 'On the wharf, the sailors are loading the provisions onto the ships.'),
+        x('他宁可晚一天出发，也不愿意冒着暴风雨上船。', 'Tā nìngkě wǎn yì tiān chūfā, yě bú yuànyì màozhe bàofēngyǔ shàng chuán.', 'Il préfère partir un jour plus tard plutôt que d’embarquer en pleine tempête.', 'He’d rather leave a day later than board in the middle of a storm.'),
+      ], [
+        FB(COMPLETE, '我宁可少赚一点儿，＿不做违法的事。', ['也', '就', '才'], '也', ('宁可…也不….', '宁可…也不….'), ('Je préfère gagner un peu moins plutôt que de faire quelque chose d’illégal.', 'I’d rather earn a bit less than do anything illegal.')),
+        FB(COMPLETE, '要离开家乡了，他心里很＿。', ['舍不得', '期待', '临时'], '舍不得', ('Avoir du mal à partir : 舍不得.', 'Hating to leave: 舍不得.'), ('Il va quitter son pays natal, et il a le cœur serré.', 'He’s about to leave his hometown and hates to go.')),
+        DC(ANSWER, [('船长', '这些货什么时候运到仓库？')], ('Le capitaine demande quand la marchandise ira à l’entrepôt (cet après-midi).', 'The captain asks when the goods will go to the warehouse (this afternoon).'), ['今天下午就运过去。', '我很舍不得。', '绳子在码头。'], '今天下午就运过去。', ('Transporter : 运过去.', 'Transport over: 运过去.')),
+        TF('会议是临时决定的。', ('La réunion était prévue depuis longtemps.', 'The meeting was planned long ago.'), FAUX, ('临时 = de dernière minute.', '临时 = last-minute.')),
+      ]),
+  ]),
+  CH('hsk5-w1-c2', ('La décision de Xu Fu', 'Xu Fu’s decision'), [
+    L('zh-decide', ('Plutôt partir que rester : 与其…不如', 'Better to leave than stay: 与其…不如'), ('Comparer deux options et assumer un choix.', 'Compare two options and stand by a choice.'), 10, [
+        ('与其 A，不如 B = plutôt que A, mieux vaut B : 与其在这儿等，不如我们先出发 (plutôt que d’attendre ici, partons d’abord).', '与其 A，不如 B = rather than A, better B: 与其在这儿等，不如我们先出发 (rather than wait here, let’s set off first).'),
+        ('Décider : 犹豫 (hésiter) / 果断 (résolu), 考虑 (envisager), 冒险 (prendre un risque), 后果 (conséquence), 采取 (adopter) des 措施 (mesures), un 方案 (plan, projet), un 程序 (procédure).', 'Deciding: 犹豫 (to hesitate) / 果断 (decisive), 考虑 (to consider), 冒险 (to take a risk), 后果 (consequence), 采取 (to adopt) 措施 (measures), a 方案 (scheme, plan), a 程序 (procedure).'),
+        ('Assumer : 承担 (assumer), 权利 / 义务 (droit / devoir), 主张 (préconiser), 目标 (objectif), 实现 (réaliser).', 'Taking it on: 承担 (to bear, to undertake), 权利 / 义务 (right / duty), 主张 (to advocate), 目标 (goal), 实现 (to achieve).'),
+      ], [
+        ZG('yuqi-buru', '与其…，不如…', 'yǔqí…, bùrú…', ('plutôt que…, mieux vaut…', 'rather than…, better…')),
+        Z('yuqi', '与其', 'yǔqí', ('plutôt que', 'rather than')),
+        Z('buru', '不如', 'bùrú', ('ne pas valoir ; mieux vaut', 'not as good as; better to')),
+        Z('youyu-hesitate', '犹豫', 'yóuyù', ('hésiter', 'to hesitate')),
+        Z('guoduan', '果断', 'guǒduàn', ('résolu, décidé', 'decisive')),
+        Z('kaolü', '考虑', 'kǎolǜ', ('envisager, considérer', 'to consider')),
+        Z('maoxian', '冒险', 'màoxiǎn', ('prendre un risque', 'to take a risk')),
+        Z('houguo', '后果', 'hòuguǒ', ('conséquence', 'consequence')),
+        Z('caiqu', '采取', 'cǎiqǔ', ('adopter (une mesure)', 'to adopt, to take (measures)')),
+        Z('cuoshi', '措施', 'cuòshī', ('mesure', 'measure (action)')),
+        Z('fangan', '方案', 'fāng’àn', ('plan, projet', 'scheme, plan')),
+        Z('chengxu', '程序', 'chéngxù', ('procédure ; programme', 'procedure; program')),
+        Z('chengdan', '承担', 'chéngdān', ('assumer, prendre en charge', 'to bear, to undertake')),
+        Z('quanli', '权利', 'quánlì', ('droit', 'right (legal)')),
+        Z('yiwu', '义务', 'yìwù', ('devoir, obligation', 'duty, obligation')),
+        Z('zhuzhang', '主张', 'zhǔzhāng', ('préconiser ; position', 'to advocate; stance')),
+        Z('mubiao', '目标', 'mùbiāo', ('objectif, but', 'goal, target')),
+        Z('shixian', '实现', 'shíxiàn', ('réaliser, concrétiser', 'to achieve, to realise')),
+      ], [
+        x('与其犹豫不决，不如果断地做出决定。', 'Yǔqí yóuyù bù jué, bùrú guǒduàn de zuòchū juédìng.', 'Plutôt que d’hésiter sans fin, mieux vaut trancher avec fermeté.', 'Rather than dither, it’s better to make a firm decision.'),
+        x('如果出了问题，后果由我来承担。', 'Rúguǒ chūle wèntí, hòuguǒ yóu wǒ lái chéngdān.', 'S’il y a un problème, j’en assumerai les conséquences.', 'If anything goes wrong, I’ll bear the consequences.'),
+      ], [
+        FB(COMPLETE, '与其坐出租车，＿坐地铁，又快又便宜。', ['不如', '而且', '何况'], '不如', ('与其…不如….', '与其…不如….'), ('Plutôt que de prendre un taxi, autant prendre le métro : c’est rapide et bon marché.', 'Rather than a taxi, take the underground: it’s quick and cheap.')),
+        FB(COMPLETE, '政府已经＿了措施保护环境。', ['采取', '承担', '实现'], '采取', ('Prendre des mesures : 采取措施.', 'Take measures: 采取措施.'), ('Le gouvernement a déjà pris des mesures pour protéger l’environnement.', 'The government has already taken measures to protect the environment.')),
+        FB(COMPLETE, '每个公民都有受教育的权利和＿。', ['义务', '后果', '程序'], '义务', ('Droits et devoirs : 权利和义务.', 'Rights and duties: 权利和义务.'), ('Chaque citoyen a le droit et le devoir de s’instruire.', 'Every citizen has the right and the duty to be educated.')),
+        TF('经过多年的努力，他终于实现了自己的目标。', ('Il a fini par atteindre son objectif.', 'He finally reached his goal.'), VRAI, ('实现了目标 = a atteint son objectif.', '实现了目标 = achieved the goal.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 2 : les mirages — apparences, doutes, esprit ═════════════════════════
+W2 = WORLD('hsk5-w2', ('La mer des mirages', 'The sea of mirages'), REGION,
+  ('Apparences et faux-semblants (仿佛…似的) ; douter, admettre, deviner (未必, 不见得) ; l’esprit et les émotions (何况).', 'Appearances and pretence (仿佛…似的); doubting, admitting, guessing (未必, 不见得); the mind and emotions (何况).'),
+  (('Le Shen des mirages', 'The Shen of Mirages'), '蜃', ('Le Shen, palourde géante, souffle une vapeur où naissent des palais et des villes qui n’existent pas. Les marins veulent accoster sur ces mirages : aide-les à démêler le vrai du faux.', 'The Shen, a giant clam, breathes a vapour in which palaces and cities that do not exist appear. The sailors want to land on these mirages: help them tell true from false.')),
+  [CH('hsk5-w2-c1', ('Des palais sur la mer', 'Palaces on the sea'), [
+    HL('zh-hz-mirage', ('Les caractères du mirage : 仿 佛 似 怀 疑 承 幻 梦', 'Mirage characters: 仿 佛 似 怀 疑 承 幻 梦'), ('Reconnaître les caractères de l’apparence et du doute.', 'Recognise the characters of appearance and doubt.'), [
+      ('仿 (fǎng), 佛 (fó) et 似 (sì) portent tous la personne 亻 : « ressembler à quelqu’un ». 佛 se lit aussi fó, le Bouddha, mais dans 仿佛 c’est fú.', '仿 (fǎng), 佛 (fó) and 似 (sì) all carry the person 亻: “to look like someone”. 佛 is also read fó, the Buddha, but in 仿佛 it is fú.'),
+      ('怀 (huái) porte le cœur 忄 : ce qu’on garde en soi, d’où 怀疑 (douter). 梦 (mèng, rêve) met le soir 夕 sous deux arbres 林 : rêver à la tombée de la nuit.', '怀 (huái) carries the heart 忄: what you hold inside, hence 怀疑 (to doubt). 梦 (mèng, dream) puts evening 夕 under two trees 林: dreaming at nightfall.'),
+    ], [
+      H('fang-imitate', '仿', 'fǎng', ('imiter', 'to imitate'), 6), H('fu-seem', '佛', 'fú', ('comme si (dans 仿佛) ; Bouddha (fó)', 'as if (in 仿佛); Buddha (fó)'), 7),
+      H('si', '似', 'sì', ('sembler, ressembler', 'to seem, to resemble'), 6), H('huai', '怀', 'huái', ('cœur, sein ; nourrir (un sentiment)', 'bosom; to cherish (a feeling)'), 7),
+      H('yi-doubt', '疑', 'yí', ('douter', 'to doubt'), 14), H('cheng', '承', 'chéng', ('porter, reconnaître', 'to bear, to acknowledge'), 8),
+      H('huan', '幻', 'huàn', ('illusion', 'illusion'), 4), H('meng', '梦', 'mèng', ('rêve', 'dream'), 11),
+    ]),
+    L('zh-seem', ('On dirait un palais : 仿佛…似的', 'It looks like a palace: 仿佛…似的'), ('Décrire une apparence trompeuse et réagir à une surprise.', 'Describe a deceptive appearance and react to a surprise.'), 10, [
+        ('仿佛 / 好像 A（似的）= comme si A, on dirait A : 远处仿佛有一座城市似的. 似乎 (sìhū) = il semble que (plus neutre) ; 显得 (xiǎnde) = paraître.', '仿佛 / 好像 A（似的）= as if A, it looks like A: 远处仿佛有一座城市似的. 似乎 (sìhū) = it seems that (more neutral); 显得 (xiǎnde) = to appear, to look.'),
+        ('Réagir : 居然 (contre toute attente, plus fort que 竟然), 显然 (de toute évidence), 难怪 (pas étonnant que) : 难怪你这么累，原来你一夜没睡.', 'Reacting: 居然 (to one’s surprise, stronger than 竟然), 显然 (obviously), 难怪 (no wonder): 难怪你这么累，原来你一夜没睡.'),
+        ('Le vrai et le faux : 表面 (surface) / 本质 (nature profonde), 现象 (phénomène), 真实 (réel), 假装 (faire semblant), 幻想 (illusion, rêverie), 梦想 (rêve, aspiration).', 'True and false: 表面 (surface) / 本质 (essence), 现象 (phenomenon), 真实 (real), 假装 (to pretend), 幻想 (illusion, fantasy), 梦想 (dream, aspiration).'),
+      ], [
+        ZG('fangfu-shide', '仿佛 / 好像…（似的）', 'fǎngfú… (shìde)', ('comme si…, on dirait…', 'as if…, it looks like…')),
+        Z('fangfu', '仿佛', 'fǎngfú', ('comme si', 'as if')),
+        Z('sihu', '似乎', 'sìhū', ('il semble que', 'it seems')),
+        Z('shide', '似的', 'shìde', ('comme, tel que (fin de comparaison)', 'like, as if (end of comparison)')),
+        Z('xiande', '显得', 'xiǎnde', ('paraître, sembler', 'to appear, to look')),
+        Z('juran', '居然', 'jūrán', ('contre toute attente (forte surprise)', 'to one’s surprise')),
+        Z('xianran', '显然', 'xiǎnrán', ('de toute évidence', 'obviously')),
+        Z('nanguai', '难怪', 'nánguài', ('pas étonnant que', 'no wonder')),
+        Z('biaomian', '表面', 'biǎomiàn', ('surface, apparence', 'surface')),
+        Z('benzhi', '本质', 'běnzhì', ('nature profonde, essence', 'essence, nature')),
+        Z('xianxiang', '现象', 'xiànxiàng', ('phénomène', 'phenomenon')),
+        Z('zhenshi', '真实', 'zhēnshí', ('réel, véridique', 'real, true')),
+        Z('jiazhuang', '假装', 'jiǎzhuāng', ('faire semblant', 'to pretend')),
+        Z('huanxiang', '幻想', 'huànxiǎng', ('illusion, rêverie', 'fantasy, illusion')),
+        Z('mengxiang', '梦想', 'mèngxiǎng', ('rêve, aspiration', 'dream, aspiration')),
+      ], [
+        x('海上仿佛出现了一座城市似的，其实只是一种自然现象。', 'Hǎi shang fǎngfú chūxiànle yí zuò chéngshì shìde, qíshí zhǐ shì yì zhǒng zìrán xiànxiàng.', 'On aurait dit qu’une ville était apparue sur la mer : ce n’était en fait qu’un phénomène naturel.', 'It looked as if a city had appeared on the sea; it was actually just a natural phenomenon.'),
+        x('难怪他看起来那么高兴，原来他实现了自己的梦想。', 'Nánguài tā kàn qǐlai nàme gāoxìng, yuánlái tā shíxiànle zìjǐ de mèngxiǎng.', 'Pas étonnant qu’il ait l’air si heureux : il a réalisé son rêve.', 'No wonder he looks so happy: he has made his dream come true.'),
+      ], [
+        FB(COMPLETE, '她笑得那么开心，＿什么都没发生过似的。', ['仿佛', '显然', '难怪'], '仿佛', ('Comme si : 仿佛…似的.', 'As if: 仿佛…似的.'), ('Elle riait de si bon cœur, comme si rien ne s’était passé.', 'She was laughing so happily, as if nothing had happened.')),
+        FB(COMPLETE, '外面下雪了，＿这么冷。', ['难怪', '居然', '似乎'], '难怪', ('Pas étonnant : 难怪.', 'No wonder: 难怪.'), ('Il neige dehors : pas étonnant qu’il fasse si froid.', 'It’s snowing outside; no wonder it’s so cold.')),
+        FB(COMPLETE, '他明明听见了，却＿没听见。', ['假装', '显得', '幻想'], '假装', ('Faire semblant : 假装.', 'Pretend: 假装.'), ('Il a très bien entendu, mais il fait semblant de rien.', 'He clearly heard, but he’s pretending he didn’t.')),
+        TF('他穿上西装，显得很成熟。', ('Il a l’air mûr en costume.', 'He looks mature in a suit.'), VRAI, ('显得成熟 = paraître mûr.', '显得成熟 = to look mature.')),
+      ]),
+    L('zh-doubt', ('Douter, admettre, deviner : 未必, 不见得', 'Doubting, admitting, guessing: 未必, 不见得'), ('Exprimer un doute nuancé et reconnaître ce qui est vrai.', 'Express a nuanced doubt and acknowledge what is true.'), 10, [
+        ('未必 (wèibì) / 不见得 (bújiàndé) = pas forcément : 贵的东西未必好 (ce qui est cher n’est pas forcément bon). 说不定 (shuōbudìng) = peut-être bien.', '未必 (wèibì) / 不见得 (bújiàndé) = not necessarily: 贵的东西未必好 (expensive things aren’t necessarily good). 说不定 (shuōbudìng) = perhaps, maybe.'),
+        ('Douter et admettre : 怀疑 (douter, soupçonner), 承认 (reconnaître) / 否认 (nier), 肯定 (certain ; affirmer), 确定 (s’assurer, sûr), 猜 (deviner).', 'Doubting and admitting: 怀疑 (to doubt, to suspect), 承认 (to admit) / 否认 (to deny), 肯定 (sure; to affirm), 确定 (to make sure, certain), 猜 (to guess).'),
+        ('L’esprit embrouillé : 糊涂 (confus, étourdi) / 清醒 (lucide) ; 秘密 (secret).', 'A muddled mind: 糊涂 (muddled, confused) / 清醒 (clear-headed); 秘密 (secret).'),
+      ], [
+        ZG('weibi', '未必 / 不见得 + 动词 / 形容词', 'wèibì / bújiàndé', ('pas forcément', 'not necessarily')),
+        Z('weibi', '未必', 'wèibì', ('pas forcément', 'not necessarily')),
+        Z('bujiande', '不见得', 'bújiàndé', ('pas forcément (oral)', 'not necessarily (spoken)')),
+        Z('shuobuding', '说不定', 'shuōbudìng', ('peut-être bien', 'perhaps, maybe')),
+        Z('huaiyi', '怀疑', 'huáiyí', ('douter, soupçonner', 'to doubt, to suspect')),
+        Z('chengren', '承认', 'chéngrèn', ('reconnaître, admettre', 'to admit')),
+        Z('fouren', '否认', 'fǒurèn', ('nier', 'to deny')),
+        Z('kending', '肯定', 'kěndìng', ('certain ; affirmer', 'sure; to affirm')),
+        Z('queding', '确定', 'quèdìng', ('s’assurer ; certain', 'to make sure; certain')),
+        Z('cai-guess', '猜', 'cāi', ('deviner', 'to guess')),
+        Z('hutu', '糊涂', 'hútu', ('confus, étourdi', 'muddled, confused')),
+        Z('qingxing', '清醒', 'qīngxǐng', ('lucide, éveillé', 'clear-headed, awake')),
+        Z('mimi', '秘密', 'mìmì', ('secret', 'secret')),
+      ], [
+        x('大家都怀疑那座岛是假的，可是没有人敢说出来。', 'Dàjiā dōu huáiyí nà zuò dǎo shì jiǎ de, kěshì méiyǒu rén gǎn shuō chūlai.', 'Tout le monde soupçonnait que l’île était fausse, mais personne n’osait le dire.', 'Everyone suspected the island was fake, but no one dared say so.'),
+        x('有名的医生不见得都能治好这种病。', 'Yǒumíng de yīshēng bújiàndé dōu néng zhìhǎo zhè zhǒng bìng.', 'Les médecins célèbres ne savent pas forcément tous guérir cette maladie.', 'Famous doctors can’t necessarily all cure this disease.'),
+      ], [
+        FB(COMPLETE, '价格高的东西，质量＿好。', ['未必', '肯定', '确定'], '未必', ('Pas forcément : 未必.', 'Not necessarily: 未必.'), ('Ce qui coûte cher n’est pas forcément de bonne qualité.', 'Expensive things aren’t necessarily good quality.')),
+        FB(COMPLETE, '他终于＿了自己的错误。', ['承认', '否认', '怀疑'], '承认', ('Admettre une erreur : 承认.', 'Admit a mistake: 承认.'), ('Il a fini par reconnaître son erreur.', 'He finally admitted his mistake.')),
+        DC(ANSWER, [('同事', '小王今天会来开会吗？')], ('Un collègue demande si Xiao Wang viendra à la réunion (peut-être bien, il a dit qu’il essaierait).', 'A colleague asks if Xiao Wang will come to the meeting (maybe, he said he’d try).'), ['说不定会来，他说会尽量。', '他很糊涂。', '这是一个秘密的会。'], '说不定会来，他说会尽量。', ('Peut-être : 说不定.', 'Maybe: 说不定.')),
+        TF('你猜得对，我真的是法国人。', ('La personne a deviné juste.', 'The guess was right.'), VRAI, ('猜得对 = deviner juste.', '猜得对 = guessed right.')),
+      ]),
+  ]),
+  CH('hsk5-w2-c2', ('Le calme du navigateur', 'The navigator’s calm'), [
+    L('zh-mind', ('Garder la tête froide : 何况', 'Keeping a cool head: 何况'), ('Parler de l’esprit, des émotions et ajouter un argument décisif.', 'Talk about the mind and emotions, and add a clinching argument.'), 10, [
+        ('A，何况 B = A, à plus forte raison B : 这个问题连老师都不会，何况我们呢 ? (même le maître ne sait pas, alors nous, encore moins).', 'A，何况 B = A, let alone B: 这个问题连老师都不会，何况我们呢? (even the teacher can’t do it, let alone us).'),
+        ('L’esprit : 心理 (psychologie), 情绪 (humeur, émotion), 心情 (état d’âme), 想象 (imaginer), 记忆 (mémoire), 意识 (conscience, prendre conscience), 思考 (réfléchir), 智慧 (sagesse).', 'The mind: 心理 (psychology), 情绪 (mood, emotion), 心情 (frame of mind), 想象 (to imagine), 记忆 (memory), 意识 (consciousness, to realise), 思考 (to think deeply), 智慧 (wisdom).'),
+        ('Le tempérament : 冷静 (calme), 耐心 (patient), 专心 (concentré), 灵活 (souple, agile), 敏感 (sensible) ; 安慰 (consoler), 委屈 (vexé, injustement traité).', 'Temperament: 冷静 (calm), 耐心 (patient), 专心 (focused), 灵活 (flexible, nimble), 敏感 (sensitive); 安慰 (to comfort), 委屈 (aggrieved, wronged).'),
+      ], [
+        ZG('hekuang', '…，何况…', 'hékuàng', ('…, à plus forte raison…', '…, let alone…')),
+        Z('hekuang', '何况', 'hékuàng', ('à plus forte raison', 'let alone')),
+        Z('xinli', '心理', 'xīnlǐ', ('psychologie ; mental', 'psychology; mental')),
+        Z('qingxu', '情绪', 'qíngxù', ('humeur, émotion', 'mood, emotion')),
+        Z('xinqing', '心情', 'xīnqíng', ('état d’âme, humeur', 'frame of mind')),
+        Z('xiangxiang', '想象', 'xiǎngxiàng', ('imaginer ; imagination', 'to imagine; imagination')),
+        Z('jiyi', '记忆', 'jìyì', ('mémoire, souvenir', 'memory')),
+        Z('yishi', '意识', 'yìshi', ('conscience ; prendre conscience', 'consciousness; to realise')),
+        Z('sikao', '思考', 'sīkǎo', ('réfléchir', 'to think deeply')),
+        Z('zhihui', '智慧', 'zhìhuì', ('sagesse', 'wisdom')),
+        Z('lengjing', '冷静', 'lěngjìng', ('calme, posé', 'calm, composed')),
+        Z('naixin', '耐心', 'nàixīn', ('patient ; patience', 'patient; patience')),
+        Z('zhuanxin', '专心', 'zhuānxīn', ('concentré', 'focused')),
+        Z('linghuo', '灵活', 'línghuó', ('souple, agile', 'flexible, nimble')),
+        Z('mingan', '敏感', 'mǐngǎn', ('sensible, susceptible', 'sensitive')),
+        Z('anwei', '安慰', 'ānwèi', ('consoler', 'to comfort')),
+        Z('weiqu', '委屈', 'wěiqu', ('vexé, injustement traité', 'aggrieved, wronged')),
+      ], [
+        x('遇到风暴的时候，船长总是保持冷静。', 'Yùdào fēngbào de shíhou, chuánzhǎng zǒngshì bǎochí lěngjìng.', 'Face à la tempête, le capitaine garde toujours son calme.', 'In a storm, the captain always stays calm.'),
+        x('这条路白天都不好走，何况是晚上呢？', 'Zhè tiáo lù báitiān dōu bù hǎo zǒu, hékuàng shì wǎnshang ne?', 'Ce chemin est déjà difficile de jour, alors de nuit…', 'This road is hard going even by day, let alone at night.'),
+      ], [
+        FB(COMPLETE, '这件事大人都做不到，＿孩子呢？', ['何况', '难怪', '与其'], '何况', ('À plus forte raison : 何况.', 'Let alone: 何况.'), ('Même les adultes n’y arrivent pas, alors un enfant…', 'Even adults can’t do it, let alone a child.')),
+        FB(COMPLETE, '他今天＿不太好，别惹他生气。', ['情绪', '记忆', '智慧'], '情绪', ('L’humeur : 情绪.', 'Mood: 情绪.'), ('Il n’est pas de très bonne humeur aujourd’hui, ne l’énerve pas.', 'He’s not in a great mood today; don’t make him angry.')),
+        DC(ANSWER, [('朋友', '我考试没通过，太难过了。')], ('Un ami a raté son examen et il est triste ; console-le.', 'A friend failed an exam and is sad; comfort them.'), ['别难过，下次一定可以的。', '你太敏感了，走吧。', '我想象不到。'], '别难过，下次一定可以的。', ('Consoler : 别难过.', 'Comfort: 别难过.')),
+        TF('学习的时候要专心。', ('Il faut se concentrer quand on étudie.', 'You must concentrate when studying.'), VRAI, ('专心 = concentré.', '专心 = focused.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 3 : l'île des Jiaoren — artisanat, mode, fabrication ═════════════════════════
+W3 = WORLD('hsk5-w3', ('L’île des tisserandes', 'The weavers’ island'), REGION,
+  ('Soie, matières et savoir-faire (以…为…) ; s’habiller et se parer (除非…否则) ; fabriquer, améliorer, inventer (把…当作).', 'Silk, materials and craftsmanship (以…为…); dressing and adorning oneself (除非…否则); making, improving, inventing (把…当作).'),
+  (('Les Jiaoren tisserandes', 'The Jiaoren Weavers'), '鲛', ('Les Jiaoren, gens de la mer à queue de poisson, tissent une soie que l’eau ne mouille pas et pleurent des perles. Pour obtenir leurs voiles, montre que tu sais parler de leur art.', 'The Jiaoren, sea folk with fish tails, weave a silk that water cannot wet, and their tears turn into pearls. To get their sails, show that you can talk about their craft.')),
+  [CH('hsk5-w3-c1', ('Les métiers à tisser', 'The looms'), [
+    HL('zh-hz-silk', ('Les caractères de la soie : 丝 绸 纺 织 针 线 设 饰', 'Silk characters: 丝 绸 纺 织 针 线 设 饰'), ('Reconnaître les caractères du tissage et de la parure.', 'Recognise the characters of weaving and adornment.'), [
+      ('丝 (sī) dessinait deux écheveaux de soie. On retrouve la clé de la soie 纟 dans 绸 (chóu, soierie), 纺 (fǎng, filer), 织 (zhī, tisser) et 线 (xiàn, fil) : tout ce qui se tisse.', '丝 (sī) drew two skeins of silk. The silk radical 纟 appears in 绸 (chóu, silk fabric), 纺 (fǎng, to spin), 织 (zhī, to weave) and 线 (xiàn, thread): everything woven.'),
+      ('针 (zhēn, aiguille) porte le métal 钅 ; 饰 (shì, parure) porte la nourriture 饣 et le tissu 巾 : se préparer pour un banquet. 设 (shè) = disposer par la parole 讠, d’où 设计 (concevoir).', '针 (zhēn, needle) carries metal 钅; 饰 (shì, ornament) carries food 饣 and cloth 巾: getting ready for a banquet. 设 (shè) = to arrange by speech 讠, hence 设计 (to design).'),
+    ], [
+      H('si-silk', '丝', 'sī', ('soie, fil fin', 'silk, thread'), 5), H('chou', '绸', 'chóu', ('soierie', 'silk fabric'), 11),
+      H('fang-spin', '纺', 'fǎng', ('filer', 'to spin'), 7), H('zhi-weave', '织', 'zhī', ('tisser', 'to weave'), 8),
+      H('zhen', '针', 'zhēn', ('aiguille', 'needle'), 7), H('xian-thread', '线', 'xiàn', ('fil, ligne', 'thread, line'), 8),
+      H('she-set', '设', 'shè', ('disposer, établir', 'to set up'), 6), H('shi-adorn', '饰', 'shì', ('parure, orner', 'ornament, to adorn'), 8),
+    ]),
+    L('zh-craft', ('Soie et savoir-faire : 以…为…', 'Silk and craftsmanship: 以…为…'), ('Décrire des matières, leurs qualités et ce qui compte le plus.', 'Describe materials, their qualities and what matters most.'), 10, [
+        ('以 A 为 B = considérer A comme B, prendre A pour B (écrit) : 这个地方以丝绸为主要产品 (la soie est le principal produit de la région). 以…为主 = surtout, principalement.', '以 A 为 B = to take A as B (written): 这个地方以丝绸为主要产品 (silk is the region’s main product). 以…为主 = mainly.'),
+        ('Les matières : 丝绸 (soie), 布 (tissu), 针 (aiguille), 线 (fil) ; 结实 (solide), 软 / 硬 (mou / dur), 粗 / 细 (épais / fin), 光滑 (lisse), 精致 (raffiné).', 'Materials: 丝绸 (silk), 布 (cloth), 针 (needle), 线 (thread); 结实 (sturdy), 软 / 硬 (soft / hard), 粗 / 细 (coarse / fine), 光滑 (smooth), 精致 (exquisite).'),
+        ('Le savoir-faire : 手工 (fait main), 设计 (concevoir), 装饰 (décorer), 质量 (qualité).', 'Craftsmanship: 手工 (handmade), 设计 (to design), 装饰 (to decorate), 质量 (quality).'),
+      ], [
+        ZG('yi-wei', '以 A 为 B', 'yǐ… wéi…', ('considérer A comme B, prendre A pour B', 'to take A as B')),
+        Z('sichou', '丝绸', 'sīchóu', ('soie', 'silk')),
+        Z('bu-cloth', '布', 'bù', ('tissu', 'cloth')),
+        Z('zhen', '针', 'zhēn', ('aiguille', 'needle')),
+        Z('xian-thread', '线', 'xiàn', ('fil, ligne', 'thread, line')),
+        Z('sheji', '设计', 'shèjì', ('concevoir ; design', 'to design; design')),
+        Z('zhuangshi', '装饰', 'zhuāngshì', ('décorer ; décoration', 'to decorate; decoration')),
+        Z('shougong', '手工', 'shǒugōng', ('fait main, travail manuel', 'handmade, handicraft')),
+        Z('zhiliang', '质量', 'zhìliàng', ('qualité', 'quality')),
+        Z('jieshi', '结实', 'jiēshi', ('solide, robuste', 'sturdy')),
+        Z('jingzhi', '精致', 'jīngzhì', ('raffiné, délicat', 'exquisite')),
+        Z('guanghua', '光滑', 'guānghuá', ('lisse', 'smooth')),
+        Z('ruan', '软', 'ruǎn', ('mou, doux', 'soft')),
+        Z('ying-hard', '硬', 'yìng', ('dur', 'hard (not soft)')),
+        Z('cu', '粗', 'cū', ('épais, grossier', 'thick, coarse')),
+        Z('xi-fine', '细', 'xì', ('fin, mince', 'thin, fine')),
+      ], [
+        x('这种丝绸又细又光滑，是手工做的。', 'Zhè zhǒng sīchóu yòu xì yòu guānghuá, shì shǒugōng zuò de.', 'Cette soie est fine et lisse : elle est faite à la main.', 'This silk is fine and smooth; it’s handmade.'),
+        x('这家工厂以质量为第一，所以产品卖得很好。', 'Zhè jiā gōngchǎng yǐ zhìliàng wéi dì-yī, suǒyǐ chǎnpǐn mài de hěn hǎo.', 'Cette usine place la qualité avant tout, c’est pourquoi ses produits se vendent bien.', 'This factory puts quality first, so its products sell well.'),
+      ], [
+        FB(COMPLETE, '这个城市＿旅游业为主要经济来源。', ['以', '把', '被'], '以', ('以…为….', '以…为….'), ('Cette ville tire l’essentiel de ses revenus du tourisme.', 'This city relies mainly on tourism for its income.')),
+        FB(COMPLETE, '这把椅子很＿，坐不坏。', ['结实', '光滑', '精致'], '结实', ('Solide : 结实.', 'Sturdy: 结实.'), ('Cette chaise est solide, on ne la casse pas en s’asseyant.', 'This chair is sturdy; you won’t break it by sitting on it.')),
+        FB(COMPLETE, '面包放了三天，变得很＿。', ['硬', '软', '细'], '硬', ('Du pain rassis : 硬.', 'Stale bread: 硬.'), ('Le pain est resté trois jours et il est devenu dur.', 'The bread has been sitting for three days and has gone hard.')),
+        TF('这件衣服是她自己设计的。', ('C’est elle qui a dessiné ce vêtement.', 'She designed this garment herself.'), VRAI, ('自己设计 = conçu elle-même.', '自己设计 = designed herself.')),
+      ]),
+    L('zh-fashion', ('S’habiller et se parer : 除非…否则', 'Dressing and adorning oneself: 除非…否则'), ('Parler de style et poser une condition indispensable.', 'Talk about style and set an essential condition.'), 10, [
+        ('除非 A，否则 / 不然 B = à moins que A, B : 除非下大雨，否则我们明天一定出发. Ou 除非 A，才 B = il faut A pour que B.', '除非 A，否则 / 不然 B = unless A, B: 除非下大雨，否则我们明天一定出发. Or 除非 A，才 B = only if A, B.'),
+        ('Les accessoires : 戴 (porter : chapeau, bijou, lunettes), 系 (jì, nouer : cravate, ceinture), 围巾 (écharpe), 手套 (gants), 袜子 (chaussettes), 项链 (collier), 戒指 (bague), 耳环 (boucle d’oreille).', 'Accessories: 戴 (to wear: hat, jewellery, glasses), 系 (jì, to tie: tie, belt), 围巾 (scarf), 手套 (gloves), 袜子 (socks), 项链 (necklace), 戒指 (ring), 耳环 (earring).'),
+        ('Le style : 时尚 (à la mode), 打扮 (se préparer, s’habiller), 风格 (style), 整齐 (soigné), 朴素 (simple, sobre), 讲究 (soigné, exigeant).', 'Style: 时尚 (fashionable), 打扮 (to dress up), 风格 (style), 整齐 (neat), 朴素 (plain, simple), 讲究 (particular, refined).'),
+      ], [
+        ZG('chufei', '除非…，否则 / 不然…', 'chúfēi…, fǒuzé…', ('à moins que…, (sinon)…', 'unless…, (otherwise)…')),
+        Z('chufei', '除非', 'chúfēi', ('à moins que, sauf si', 'unless')),
+        Z('shishang', '时尚', 'shíshàng', ('à la mode ; mode', 'fashionable; fashion')),
+        Z('daban', '打扮', 'dǎban', ('s’habiller, se pomponner', 'to dress up')),
+        Z('dai-wear', '戴', 'dài', ('porter (chapeau, bijou)', 'to wear (hat, jewellery)')),
+        Z('ji-tie', '系', 'jì', ('nouer, attacher', 'to tie')),
+        Z('weijin', '围巾', 'wéijīn', ('écharpe', 'scarf')),
+        Z('shoutao', '手套', 'shǒutào', ('gants', 'gloves')),
+        Z('wazi', '袜子', 'wàzi', ('chaussettes', 'socks')),
+        Z('xianglian', '项链', 'xiàngliàn', ('collier', 'necklace')),
+        Z('jiezhi', '戒指', 'jièzhi', ('bague', 'ring')),
+        Z('erhuan', '耳环', 'ěrhuán', ('boucle d’oreille', 'earring')),
+        Z('fengge', '风格', 'fēnggé', ('style', 'style')),
+        Z('zhengqi', '整齐', 'zhěngqí', ('soigné, bien rangé', 'neat, tidy')),
+        Z('pusu', '朴素', 'pǔsù', ('simple, sobre', 'plain, simple')),
+        Z('jiangjiu', '讲究', 'jiǎngjiu', ('soigné ; être exigeant sur', 'refined; to be particular about')),
+      ], [
+        x('除非你戴上手套和围巾，否则别出门，外面太冷了。', 'Chúfēi nǐ dàishang shǒutào hé wéijīn, fǒuzé bié chūmén, wàimiàn tài lěng le.', 'À moins de mettre des gants et une écharpe, ne sors pas : il fait trop froid.', 'Don’t go out unless you put on gloves and a scarf; it’s too cold.'),
+        x('她打扮得很朴素，可是很有自己的风格。', 'Tā dǎban de hěn pǔsù, kěshì hěn yǒu zìjǐ de fēnggé.', 'Elle s’habille très simplement, mais elle a un vrai style.', 'She dresses very plainly but has a style all her own.'),
+      ], [
+        FB(COMPLETE, '除非你亲自去，＿他不会同意的。', ['否则', '于是', '而且'], '否则', ('除非…否则….', '除非…否则….'), ('À moins que tu y ailles toi-même, il n’acceptera pas.', 'Unless you go in person, he won’t agree.')),
+        FB(COMPLETE, '他＿着一副眼镜，看起来很有学问。', ['戴', '穿', '系'], '戴', ('Des lunettes : 戴.', 'Glasses: 戴.'), ('Il porte des lunettes et a l’air très savant.', 'He wears glasses and looks very learned.')),
+        DC(ANSWER, [('朋友', '你今天怎么打扮得这么漂亮？')], ('Une amie remarque que tu es très élégant(e) (tu vas à un mariage).', 'A friend notices you look very smart (you’re going to a wedding).'), ['我要去参加婚礼。', '我买了一双袜子。', '这条围巾很朴素。'], '我要去参加婚礼。', ('Expliquer : un mariage, 婚礼.', 'Explain: a wedding, 婚礼.')),
+        TF('他对吃的东西很讲究。', ('Il mange n’importe quoi.', 'He’ll eat anything.'), FAUX, ('讲究 = exigeant.', '讲究 = particular.')),
+      ]),
+  ]),
+  CH('hsk5-w3-c2', ('Les voiles imperméables', 'The waterproof sails'), [
+    L('zh-making', ('Fabriquer et améliorer : 把…当作', 'Making and improving: 把…当作'), ('Parler de fabrication, d’amélioration et d’invention.', 'Talk about manufacturing, improvement and invention.'), 10, [
+        ('把 A 当作 / 当成 B = considérer A comme B, traiter A en B : 她把这些丝线当作宝贝 (elle traite ces fils de soie comme un trésor).', '把 A 当作 / 当成 B = to treat A as B, to regard A as B: 她把这些丝线当作宝贝 (she treats these silk threads like treasure).'),
+        ('Fabriquer : 制造 (fabriquer), 加工 (transformer), 工厂 (usine), 行业 (secteur), 专家 (expert), 熟练 (habile), 本领 (talent, compétence).', 'Making: 制造 (to manufacture), 加工 (to process), 工厂 (factory), 行业 (industry, trade), 专家 (expert), 熟练 (skilled), 本领 (skill, ability).'),
+        ('Améliorer : 修改 (corriger), 改进 (perfectionner), 改善 (améliorer), 完善 (parfaire), 尝试 (essayer), 发明 (inventer), 创造 (créer), 模仿 (imiter).', 'Improving: 修改 (to revise), 改进 (to improve on), 改善 (to improve), 完善 (to perfect), 尝试 (to try), 发明 (to invent), 创造 (to create), 模仿 (to imitate).'),
+      ], [
+        ZG('ba-dangzuo', '把 A 当作 / 当成 B', 'bǎ… dàngzuò…', ('considérer A comme B', 'to treat A as B')),
+        Z('dangzuo', '当作', 'dàngzuò', ('considérer comme', 'to treat as')),
+        Z('zhizao', '制造', 'zhìzào', ('fabriquer', 'to manufacture')),
+        Z('jiagong', '加工', 'jiāgōng', ('transformer, traiter (matière)', 'to process')),
+        Z('gongchang', '工厂', 'gōngchǎng', ('usine', 'factory')),
+        Z('hangye', '行业', 'hángyè', ('secteur, branche', 'industry, trade')),
+        Z('zhuanjia', '专家', 'zhuānjiā', ('expert', 'expert')),
+        Z('shulian', '熟练', 'shúliàn', ('habile, expérimenté', 'skilled, practised')),
+        Z('benling', '本领', 'běnlǐng', ('talent, compétence', 'skill, ability')),
+        Z('xiugai', '修改', 'xiūgǎi', ('corriger, réviser', 'to revise, to amend')),
+        Z('gaijin', '改进', 'gǎijìn', ('perfectionner', 'to improve on')),
+        Z('gaishan', '改善', 'gǎishàn', ('améliorer', 'to improve')),
+        Z('wanshan', '完善', 'wánshàn', ('parfaire ; parfait', 'to perfect; complete')),
+        Z('changshi', '尝试', 'chángshì', ('essayer, tenter', 'to try, to attempt')),
+        Z('faming', '发明', 'fāmíng', ('inventer ; invention', 'to invent; invention')),
+        Z('chuangzao', '创造', 'chuàngzào', ('créer', 'to create')),
+        Z('mofang', '模仿', 'mófǎng', ('imiter', 'to imitate')),
+      ], [
+        x('造纸术是中国古代的一项重要发明。', 'Zàozhǐshù shì Zhōngguó gǔdài de yí xiàng zhòngyào fāmíng.', 'La fabrication du papier est une invention majeure de la Chine ancienne.', 'Papermaking is an important invention of ancient China.'),
+        x('师傅把我当作自己的孩子，教了我很多本领。', 'Shīfu bǎ wǒ dàngzuò zìjǐ de háizi, jiāole wǒ hěn duō běnlǐng.', 'Mon maître m’a traité comme son propre enfant et m’a appris beaucoup de savoir-faire.', 'My master treated me like his own child and taught me many skills.'),
+      ], [
+        FB(COMPLETE, '她一直把这位老师＿自己的母亲。', ['当作', '以为', '作为'], '当作', ('Considérer comme : 把…当作.', 'Treat as: 把…当作.'), ('Elle a toujours considéré cette enseignante comme sa propre mère.', 'She has always regarded this teacher as her own mother.')),
+        FB(COMPLETE, '这篇文章还需要＿一下。', ['修改', '发明', '模仿'], '修改', ('Retoucher un texte : 修改.', 'Revise a text: 修改.'), ('Cet article doit encore être retouché.', 'This article still needs revising.')),
+        FB(COMPLETE, '他做这个工作十年了，技术非常＿。', ['熟练', '完善', '创造'], '熟练', ('Habile : 熟练.', 'Skilled: 熟练.'), ('Il fait ce travail depuis dix ans : il est très habile.', 'He’s been doing this job for ten years and is very skilled.')),
+        TF('孩子们喜欢模仿大人说话。', ('Les enfants aiment imiter la façon de parler des adultes.', 'Children like imitating how adults talk.'), VRAI, ('模仿 = imiter.', '模仿 = to imitate.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 4 : la tortue Ao — géographie, catastrophes, temps qui passe ═════════════════════════
+W4 = WORLD('hsk5-w4', ('Les îles de la tortue', 'The turtle’s islands'), REGION,
+  ('Îles, rivages et étendues (凡是…都) ; séismes et secours (哪怕…也, 万一, 幸亏) ; le temps qui passe (自从…以来, 逐渐, 始终).', 'Islands, shores and expanses (凡是…都); earthquakes and rescue (哪怕…也, 万一, 幸亏); time passing (自从…以来, 逐渐, 始终).'),
+  (('La tortue géante Ao', 'The Giant Turtle Ao'), '鳌', ('Ao, tortue colossale qui porte sur son dos les îles des immortels, s’est réveillée : à chacun de ses mouvements, la terre tremble. Guide la flotte d’île en île sans te perdre.', 'Ao, a colossal turtle that carries the islands of the immortals on its back, has woken up: with each move it makes, the earth quakes. Guide the fleet from island to island without getting lost.')),
+  [CH('hsk5-w4-c1', ('Des îles qui bougent', 'Moving islands'), [
+    HL('zh-hz-isles', ('Les caractères des îles : 岛 屿 震 灾 湾 峡 沙 漠', 'Island characters: 岛 屿 震 灾 湾 峡 沙 漠'), ('Reconnaître les caractères des paysages et des catastrophes.', 'Recognise the characters of landscapes and disasters.'), [
+      ('岛 (dǎo, île) met un oiseau 鸟 sur une montagne 山 : là où les oiseaux se posent en mer. 屿 (yǔ) = petite île ; 峡 (xiá, gorge) porte aussi la montagne 山.', '岛 (dǎo, island) puts a bird 鸟 on a mountain 山: where birds land at sea. 屿 (yǔ) = islet; 峡 (xiá, gorge) also carries the mountain 山.'),
+      ('震 (zhèn, trembler) porte la pluie 雨 : l’orage qui ébranle. 灾 (zāi, catastrophe) met le feu 火 sous un toit 宀. 沙 (shā, sable) = l’eau 氵 qui devient « peu » 少 ; 漠 (mò, désert) = sans eau.', '震 (zhèn, to shake) carries rain 雨: the storm that shakes. 灾 (zāi, disaster) puts fire 火 under a roof 宀. 沙 (shā, sand) = water 氵 becoming “little” 少; 漠 (mò, desert) = without water.'),
+    ], [
+      H('dao-island', '岛', 'dǎo', ('île', 'island'), 7), H('yu-islet', '屿', 'yǔ', ('îlot', 'islet'), 6),
+      H('zhen-quake', '震', 'zhèn', ('trembler, secousse', 'to shake, quake'), 15), H('zai', '灾', 'zāi', ('catastrophe', 'disaster'), 7),
+      H('wan', '湾', 'wān', ('baie', 'bay'), 12), H('xia', '峡', 'xiá', ('gorge, détroit', 'gorge, strait'), 9),
+      H('sha', '沙', 'shā', ('sable', 'sand'), 7), H('mo', '漠', 'mò', ('désert', 'desert'), 13),
+    ]),
+    L('zh-geo', ('Îles, rivages et étendues : 凡是…都', 'Islands, shores and expanses: 凡是…都'), ('Décrire des lieux, leur taille et leur position.', 'Describe places, their size and position.'), 10, [
+        ('凡是 A，都 B = tout ce qui est A, sans exception, B : 凡是来过这个岛的人，都说这里很美.', '凡是 A，都 B = everything / everyone that is A, without exception, B: 凡是来过这个岛的人，都说这里很美.'),
+        ('Les lieux : 岛屿 (îles), 大陆 (continent), 沙漠 (désert), 沙滩 (plage de sable), 岸 (rive), 池塘 (étang), 地区 (région), 位置 (position).', 'Places: 岛屿 (islands), 大陆 (mainland, continent), 沙漠 (desert), 沙滩 (sandy beach), 岸 (bank, shore), 池塘 (pond), 地区 (region), 位置 (position).'),
+        ('Mesurer : 面积 (superficie), 范围 (étendue, portée), 角度 (angle), 宽 / 窄 (large / étroit), 深 (profond).', 'Measuring: 面积 (area), 范围 (scope, range), 角度 (angle), 宽 / 窄 (wide / narrow), 深 (deep).'),
+      ], [
+        ZG('fanshi-dou', '凡是…，都…', 'fánshì…, dōu…', ('tout ce qui…, sans exception…', 'all that…, without exception…')),
+        Z('fanshi', '凡是', 'fánshì', ('tout ce qui, quiconque', 'every, all that')),
+        Z('daoyu', '岛屿', 'dǎoyǔ', ('îles', 'islands')),
+        Z('dalu', '大陆', 'dàlù', ('continent', 'mainland, continent')),
+        Z('shamo', '沙漠', 'shāmò', ('désert', 'desert')),
+        Z('shatan', '沙滩', 'shātān', ('plage de sable', 'sandy beach')),
+        Z('an', '岸', 'àn', ('rive, côte', 'bank, shore')),
+        Z('chitang', '池塘', 'chítáng', ('étang', 'pond')),
+        Z('diqu', '地区', 'dìqū', ('région', 'region, area')),
+        Z('weizhi', '位置', 'wèizhi', ('position, emplacement', 'position, location')),
+        Z('mianji', '面积', 'miànjī', ('superficie', 'area (surface)')),
+        Z('fanwei', '范围', 'fànwéi', ('étendue, portée', 'scope, range')),
+        Z('jiaodu', '角度', 'jiǎodù', ('angle, point de vue', 'angle, perspective')),
+        Z('kuan', '宽', 'kuān', ('large', 'wide')),
+        Z('zhai', '窄', 'zhǎi', ('étroit', 'narrow')),
+        Z('shen-deep', '深', 'shēn', ('profond', 'deep')),
+      ], [
+        x('这个地区有几百个大大小小的岛屿，面积都不大。', 'Zhè ge dìqū yǒu jǐ bǎi ge dàdàxiǎoxiǎo de dǎoyǔ, miànjī dōu bú dà.', 'Cette région compte des centaines d’îles grandes et petites, toutes de faible superficie.', 'This region has hundreds of islands, large and small, none of them very big.'),
+        x('凡是在这个沙滩上看过日出的人，都忘不了那种美。', 'Fánshì zài zhè ge shātān shang kànguo rìchū de rén, dōu wàng bu liǎo nà zhǒng měi.', 'Quiconque a vu le lever du soleil sur cette plage n’en oublie jamais la beauté.', 'Anyone who has seen the sunrise on this beach never forgets its beauty.'),
+      ], [
+        FB(COMPLETE, '凡是参加比赛的人，＿能得到一份礼物。', ['都', '就', '才'], '都', ('凡是…都….', '凡是…都….'), ('Tous les participants recevront un cadeau.', 'Everyone who takes part will get a gift.')),
+        FB(COMPLETE, '这条河很＿，别在这儿游泳。', ['深', '窄', '宽'], '深', ('Danger : profond, 深.', 'Danger: deep, 深.'), ('Cette rivière est profonde, ne nage pas ici.', 'This river is deep; don’t swim here.')),
+        DC(ANSWER, [('船长', '那个岛的位置在哪儿？')], ('Le capitaine demande où se trouve l’île (à l’est, près du continent).', 'The captain asks where the island is (to the east, near the mainland).'), ['在东边，离大陆不远。', '面积很宽。', '那儿有一个池塘。'], '在东边，离大陆不远。', ('Situer : 在东边，离…不远.', 'Locate: 在东边，离…不远.')),
+        TF('这条路太窄了，两辆车过不去。', ('La route est très large.', 'The road is very wide.'), FAUX, ('太窄 = trop étroit.', '太窄 = too narrow.')),
+      ]),
+    L('zh-disaster', ('Séismes et secours : 哪怕…也', 'Earthquakes and rescue: 哪怕…也'), ('Parler de catastrophes, de dangers évités et de secours.', 'Talk about disasters, dangers avoided and rescue.'), 10, [
+        ('哪怕 A，也 B = même si A (cas extrême), B : 哪怕再危险，我也要去救他. Plus fort que 即使.', '哪怕 A，也 B = even if A (extreme case), B: 哪怕再危险，我也要去救他. Stronger than 即使.'),
+        ('Les catastrophes : 地震 (séisme), 灾害 (catastrophe naturelle), 着火 (prendre feu), 危害 (nuire), 伤害 (blesser, nuire), 受伤 (être blessé), 破坏 (détruire).', 'Disasters: 地震 (earthquake), 灾害 (natural disaster), 着火 (to catch fire), 危害 (to harm), 伤害 (to hurt, to harm), 受伤 (to be injured), 破坏 (to destroy).'),
+        ('Réagir : 救 (sauver), 逃 (s’enfuir), 躲 (se cacher, éviter), 避免 (éviter), 紧急 (urgent), 恢复 (se rétablir, reprendre). 万一 (au cas où) ; 幸亏 (heureusement que).', 'Reacting: 救 (to save), 逃 (to flee), 躲 (to hide, to dodge), 避免 (to avoid), 紧急 (urgent), 恢复 (to recover, to restore). 万一 (in case); 幸亏 (luckily).'),
+      ], [
+        ZG('napa-ye', '哪怕…，也…', 'nǎpà…, yě…', ('même si…, (quand même)…', 'even if…, (still)…')),
+        Z('napa', '哪怕', 'nǎpà', ('même si', 'even if')),
+        Z('dizhen', '地震', 'dìzhèn', ('séisme', 'earthquake')),
+        Z('zaihai', '灾害', 'zāihài', ('catastrophe naturelle', 'natural disaster')),
+        Z('zhaohuo', '着火', 'zháohuǒ', ('prendre feu', 'to catch fire')),
+        Z('weihai', '危害', 'wēihài', ('nuire ; danger', 'to harm; hazard')),
+        Z('shanghai', '伤害', 'shānghài', ('blesser, nuire à', 'to hurt, to harm')),
+        Z('shoushang', '受伤', 'shòushāng', ('être blessé', 'to be injured')),
+        Z('pohuai', '破坏', 'pòhuài', ('détruire, endommager', 'to destroy, to damage')),
+        Z('jiu-save', '救', 'jiù', ('sauver, secourir', 'to save, to rescue')),
+        Z('tao', '逃', 'táo', ('s’enfuir', 'to flee')),
+        Z('duo', '躲', 'duǒ', ('se cacher, esquiver', 'to hide, to dodge')),
+        Z('bimian', '避免', 'bìmiǎn', ('éviter', 'to avoid')),
+        Z('jinji', '紧急', 'jǐnjí', ('urgent', 'urgent')),
+        Z('huifu', '恢复', 'huīfù', ('se rétablir, rétablir', 'to recover, to restore')),
+        Z('wanyi', '万一', 'wànyī', ('au cas où, si jamais', 'in case, just in case')),
+        Z('xingkui', '幸亏', 'xìngkuī', ('heureusement que', 'luckily')),
+      ], [
+        x('幸亏地震发生的时候大家都在外面，没有人受伤。', 'Xìngkuī dìzhèn fāshēng de shíhou dàjiā dōu zài wàimiàn, méiyǒu rén shòushāng.', 'Heureusement, au moment du séisme tout le monde était dehors : personne n’a été blessé.', 'Luckily everyone was outside when the earthquake struck, and no one was hurt.'),
+        x('哪怕只有一点儿希望，我们也不能放弃救人。', 'Nǎpà zhǐ yǒu yìdiǎnr xīwàng, wǒmen yě bù néng fàngqì jiù rén.', 'Même s’il reste à peine un espoir, nous ne pouvons pas renoncer à secourir les gens.', 'Even if there’s only a little hope, we can’t give up rescuing people.'),
+      ], [
+        FB(COMPLETE, '哪怕明天下大雨，我们＿要出海。', ['也', '就', '才'], '也', ('哪怕…也….', '哪怕…也….'), ('Même s’il pleut des cordes demain, nous prendrons la mer.', 'Even if it pours tomorrow, we’ll put out to sea.')),
+        FB(COMPLETE, '带上伞吧，＿下雨呢？', ['万一', '幸亏', '哪怕'], '万一', ('Au cas où : 万一.', 'In case: 万一.'), ('Prends un parapluie, et s’il pleuvait ?', 'Take an umbrella, just in case it rains.')),
+        FB(COMPLETE, '＿你提醒我，否则我就忘了。', ['幸亏', '万一', '避免'], '幸亏', ('Heureusement que : 幸亏.', 'Luckily: 幸亏.'), ('Heureusement que tu me l’as rappelé, sinon j’aurais oublié.', 'Luckily you reminded me, otherwise I’d have forgotten.')),
+        TF('经过一个月的休息，他的身体已经恢复了。', ('Il ne s’est pas encore remis.', 'He has not recovered yet.'), FAUX, ('已经恢复了 = déjà rétabli.', '已经恢复了 = has already recovered.')),
+      ]),
+  ]),
+  CH('hsk5-w4-c2', ('Le journal de bord', 'The logbook'), [
+    L('zh-time5', ('Depuis le départ : 自从…以来', 'Since we set off: 自从…以来'), ('Raconter une évolution dans le temps avec précision.', 'Describe a change over time precisely.'), 10, [
+        ('自从 A（以来），B = depuis A, B : 自从出海以来，我们已经看到了十几个岛 (depuis que nous avons pris la mer, nous avons vu une dizaine d’îles).', '自从 A（以来），B = since A, B: 自从出海以来，我们已经看到了十几个岛 (since we put to sea, we’ve seen over a dozen islands).'),
+        ('Peu à peu ou d’un coup : 逐渐 (progressivement), 陆续 (les uns après les autres), 立刻 (aussitôt), 忽然 (tout à coup), 偶然 (par hasard).', 'Gradually or suddenly: 逐渐 (gradually), 陆续 (one after another), 立刻 (at once), 忽然 (all of a sudden), 偶然 (by chance).'),
+        ('Durer et revenir : 始终 (du début à la fin), 依然 (toujours, encore), 一再 / 再三 (à plusieurs reprises), 暂时 (pour le moment), 曾经 (autrefois, déjà), 至今 (jusqu’à aujourd’hui), 将来 / 未来 (l’avenir), 时代 (époque).', 'Lasting and repeating: 始终 (from start to finish), 依然 (still), 一再 / 再三 (repeatedly), 暂时 (for the moment), 曾经 (once, ever), 至今 (to this day), 将来 / 未来 (the future), 时代 (era).'),
+      ], [
+        ZG('zicong-yilai', '自从…（以来），…', 'zìcóng… (yǐlái)', ('depuis…', 'since…')),
+        Z('zicong', '自从', 'zìcóng', ('depuis', 'since')),
+        Z('zhujian', '逐渐', 'zhújiàn', ('progressivement', 'gradually')),
+        Z('luxu', '陆续', 'lùxù', ('les uns après les autres', 'one after another')),
+        Z('like', '立刻', 'lìkè', ('aussitôt', 'at once')),
+        Z('huran', '忽然', 'hūrán', ('tout d’un coup', 'all of a sudden')),
+        Z('ouran', '偶然', 'ǒurán', ('par hasard ; fortuit', 'by chance; accidental')),
+        Z('shizhong', '始终', 'shǐzhōng', ('du début à la fin, toujours', 'from start to finish')),
+        Z('yiran', '依然', 'yīrán', ('toujours, encore', 'still, as before')),
+        Z('yizai', '一再', 'yízài', ('à plusieurs reprises', 'repeatedly')),
+        Z('zaisan', '再三', 'zàisān', ('maintes fois', 'over and over')),
+        Z('zanshi', '暂时', 'zànshí', ('pour le moment, provisoire', 'for the time being')),
+        Z('cengjing', '曾经', 'céngjīng', ('autrefois, avoir déjà', 'once, ever')),
+        Z('zhijin', '至今', 'zhìjīn', ('jusqu’à aujourd’hui', 'to this day')),
+        Z('jianglai', '将来', 'jiānglái', ('l’avenir, plus tard', 'the future')),
+        Z('weilai', '未来', 'wèilái', ('l’avenir ; futur', 'the future; future')),
+        Z('shidai', '时代', 'shídài', ('époque', 'era, age')),
+      ], [
+        x('自从离开港口以来，天气逐渐变冷了。', 'Zìcóng líkāi gǎngkǒu yǐlái, tiānqì zhújiàn biàn lěng le.', 'Depuis que nous avons quitté le port, le temps s’est peu à peu refroidi.', 'Since we left the harbour, the weather has gradually turned colder.'),
+        x('他曾经去过那个岛，至今依然记得那里的风景。', 'Tā céngjīng qùguo nà ge dǎo, zhìjīn yīrán jìde nàli de fēngjǐng.', 'Il est allé autrefois sur cette île, et il s’en rappelle encore les paysages.', 'He once went to that island and still remembers the scenery today.'),
+      ], [
+        FB(COMPLETE, '＿搬到海边以来，他每天早上都去跑步。', ['自从', '凡是', '哪怕'], '自从', ('Depuis : 自从…以来.', 'Since: 自从…以来.'), ('Depuis qu’il s’est installé au bord de la mer, il court tous les matins.', 'Since moving to the seaside, he goes running every morning.')),
+        FB(COMPLETE, '客人们＿到了，晚会马上开始。', ['陆续', '暂时', '曾经'], '陆续', ('Les uns après les autres : 陆续.', 'One after another: 陆续.'), ('Les invités arrivent les uns après les autres, la soirée va commencer.', 'The guests are arriving one after another; the party is about to begin.')),
+        FB(COMPLETE, '老师＿提醒我们，考试时不要紧张。', ['再三', '偶然', '立刻'], '再三', ('Maintes fois : 再三.', 'Over and over: 再三.'), ('Le maître nous a répété plusieurs fois de ne pas stresser à l’examen.', 'The teacher reminded us over and over not to be nervous in the exam.')),
+        TF('这个问题暂时还没有解决。', ('Le problème est résolu.', 'The problem is solved.'), FAUX, ('暂时还没有解决 = pas encore résolu.', '暂时还没有解决 = not solved yet.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 5 : le royaume des orages — météo, énergie, science ═════════════════════════
+W5 = WORLD('hsk5-w5', ('Le royaume des orages', 'The realm of storms'), REGION,
+  ('Orages, typhons et températures (既然…就) ; énergie et machines (之所以…是因为) ; l’univers et la démarche scientifique (何必).', 'Thunderstorms, typhoons and temperatures (既然…就); energy and machines (之所以…是因为); the universe and the scientific method (何必).'),
+  (('Le Jiaolong des crues', 'The Flood Dragon Jiaolong'), '蛟', ('Le Jiaolong, dragon sans cornes des eaux troubles, soulève les vagues et appelle la foudre sur la flotte. Pour le comprendre, il faut parler de météo, d’énergie et de science.', 'The Jiaolong, a hornless dragon of troubled waters, raises the waves and calls lightning down on the fleet. To understand it, you must talk about weather, energy and science.')),
+  [CH('hsk5-w5-c1', ('La tempête', 'The storm'), [
+    HL('zh-hz-storm', ('Les caractères de l’orage : 雷 闪 烈 暴 燥 源 宇 宙', 'Storm characters: 雷 闪 烈 暴 燥 源 宇 宙'), ('Reconnaître les caractères du temps violent et de l’univers.', 'Recognise the characters of violent weather and the universe.'), [
+      ('雷 (léi, tonnerre) met la pluie 雨 sur un champ 田 ; 闪 (shǎn, éclair) montre une personne 人 qui passe vite dans une porte 门. 烈 (liè, violent) porte le feu 灬.', '雷 (léi, thunder) puts rain 雨 over a field 田; 闪 (shǎn, lightning) shows a person 人 darting through a door 门. 烈 (liè, fierce) carries fire 灬.'),
+      ('宇 (yǔ) et 宙 (zhòu) portent le toit 宀 : 宇 l’espace, 宙 le temps ; 宇宙 = l’univers. 源 (yuán, source) porte l’eau 氵 : la source d’une rivière.', '宇 (yǔ) and 宙 (zhòu) carry the roof 宀: 宇 space, 宙 time; 宇宙 = the universe. 源 (yuán, source) carries water 氵: a river’s source.'),
+    ], [
+      H('lei', '雷', 'léi', ('tonnerre', 'thunder'), 13), H('shan', '闪', 'shǎn', ('éclair ; esquiver', 'flash; to dodge'), 5),
+      H('lie', '烈', 'liè', ('violent, ardent', 'fierce, intense'), 10), H('bao-violent', '暴', 'bào', ('violent, brutal', 'violent, sudden'), 15),
+      H('zao', '燥', 'zào', ('sec', 'dry'), 17), H('yuan-source', '源', 'yuán', ('source', 'source'), 13),
+      H('yu-space', '宇', 'yǔ', ('espace', 'space'), 6), H('zhou-time', '宙', 'zhòu', ('temps (infini)', 'time (infinite)'), 8),
+    ]),
+    L('zh-weather5', ('Typhons et orages : 既然…就', 'Typhoons and thunderstorms: 既然…就'), ('Décrire un temps extrême et en tirer une conclusion.', 'Describe extreme weather and draw a conclusion.'), 10, [
+        ('既然 A，就 B = puisque A, alors B : 既然台风要来了，我们就别出海了 (puisque le typhon arrive, ne prenons pas la mer).', '既然 A，就 B = since A, then B: 既然台风要来了，我们就别出海了 (since the typhoon is coming, let’s not put to sea).'),
+        ('Le temps violent : 打雷 (tonner), 闪电 (éclair), 暴雨 (averse violente), 台风 (typhon), 雾 (brouillard), 潮湿 (humide), 寒冷 (froid glacial), 冻 (geler).', 'Violent weather: 打雷 (to thunder), 闪电 (lightning), 暴雨 (rainstorm), 台风 (typhoon), 雾 (fog), 潮湿 (damp), 寒冷 (cold, frigid), 冻 (to freeze).'),
+        ('Les prévisions : 预报 (prévoir, prévision), 气温 (température de l’air), 零下 (en dessous de zéro), 度过 (passer, traverser une période).', 'Forecasts: 预报 (to forecast, forecast), 气温 (air temperature), 零下 (below zero), 度过 (to spend, to get through).'),
+      ], [
+        ZG('jiran-jiu', '既然…，就…', 'jìrán…, jiù…', ('puisque…, alors…', 'since…, then…')),
+        Z('jiran', '既然', 'jìrán', ('puisque', 'since, now that')),
+        Z('dalei', '打雷', 'dǎléi', ('tonner', 'to thunder')),
+        Z('shandian', '闪电', 'shǎndiàn', ('éclair', 'lightning')),
+        Z('baoyu', '暴雨', 'bàoyǔ', ('averse violente', 'rainstorm')),
+        Z('taifeng', '台风', 'táifēng', ('typhon', 'typhoon')),
+        Z('wu', '雾', 'wù', ('brouillard', 'fog')),
+        Z('chaoshi', '潮湿', 'cháoshī', ('humide', 'damp, humid')),
+        Z('hanleng', '寒冷', 'hánlěng', ('froid glacial', 'cold, frigid')),
+        Z('dong-freeze', '冻', 'dòng', ('geler', 'to freeze')),
+        Z('yubao', '预报', 'yùbào', ('prévoir ; prévision', 'to forecast; forecast')),
+        Z('qiwen', '气温', 'qìwēn', ('température (de l’air)', 'air temperature')),
+        Z('lingxia', '零下', 'língxià', ('en dessous de zéro', 'below zero')),
+        Z('duguo', '度过', 'dùguò', ('passer (une période)', 'to spend, to get through')),
+      ], [
+        x('天气预报说今晚有台风，还会打雷闪电。', 'Tiānqì yùbào shuō jīnwǎn yǒu táifēng, hái huì dǎléi shǎndiàn.', 'La météo annonce un typhon ce soir, avec du tonnerre et des éclairs.', 'The forecast says there’s a typhoon tonight, with thunder and lightning.'),
+        x('既然雾这么大，我们就等明天再出发吧。', 'Jìrán wù zhème dà, wǒmen jiù děng míngtiān zài chūfā ba.', 'Puisque le brouillard est si épais, attendons demain pour partir.', 'Since the fog is so thick, let’s wait until tomorrow to leave.'),
+      ], [
+        FB(COMPLETE, '既然你已经决定了，我＿不说什么了。', ['就', '才', '还'], '就', ('既然…就….', '既然…就….'), ('Puisque tu as déjà décidé, je ne dirai plus rien.', 'Since you’ve already decided, I won’t say anything more.')),
+        FB(COMPLETE, '北方的冬天很＿，气温常在零下。', ['寒冷', '潮湿', '暴雨'], '寒冷', ('Hiver du Nord : 寒冷.', 'Northern winter: 寒冷.'), ('L’hiver est rigoureux dans le Nord : il fait souvent moins de zéro.', 'Winters in the north are bitterly cold, often below zero.')),
+        DC(ANSWER, [('水手', '天气预报怎么说？')], ('Un marin demande ce que dit la météo (un orage cet après-midi).', 'A sailor asks what the forecast says (a storm this afternoon).'), ['下午有暴雨，还会打雷。', '气温是一个温度。', '我们度过了。'], '下午有暴雨，还会打雷。', ('Annoncer : 下午有暴雨.', 'Announce: 下午有暴雨.')),
+        TF('南方的春天很潮湿。', ('Au printemps, le Sud est humide.', 'Spring in the south is humid.'), VRAI, ('潮湿 = humide.', '潮湿 = humid.')),
+      ]),
+    L('zh-energy', ('Énergie et machines : 之所以…是因为', 'Energy and machines: 之所以…是因为'), ('Parler d’énergie, de ressources et expliquer une cause après coup.', 'Talk about energy and resources, and explain a cause after the fact.'), 10, [
+        ('之所以 A，是因为 B = si A, c’est parce que B (on part de l’effet) : 他之所以成功，是因为他从不放弃.', '之所以 A，是因为 B = the reason A is that B (starting from the effect): 他之所以成功，是因为他从不放弃.'),
+        ('L’énergie : 能源 (énergie), 资源 (ressources), 煤炭 (charbon), 石头 (pierre), 金属 (métal), 电池 (pile, batterie), 燃烧 (brûler), 动力 (force motrice).', 'Energy: 能源 (energy source), 资源 (resources), 煤炭 (coal), 石头 (stone), 金属 (metal), 电池 (battery), 燃烧 (to burn), 动力 (motive power).'),
+        ('Utiliser : 利用 (utiliser, exploiter), 开发 (développer, mettre en valeur), 消耗 (consommer), 节省 (économiser), 产生 (produire, engendrer), 机器 (machine), 系统 (système).', 'Using: 利用 (to make use of), 开发 (to develop, to exploit), 消耗 (to consume), 节省 (to save), 产生 (to produce, to give rise to), 机器 (machine), 系统 (system).'),
+      ], [
+        ZG('zhisuoyi', '之所以…，是因为…', 'zhīsuǒyǐ…, shì yīnwèi…', ('si…, c’est parce que…', 'the reason… is that…')),
+        Z('zhisuoyi', '之所以', 'zhīsuǒyǐ', ('la raison pour laquelle', 'the reason why')),
+        Z('nengyuan', '能源', 'néngyuán', ('énergie, source d’énergie', 'energy source')),
+        Z('ziyuan', '资源', 'zīyuán', ('ressources', 'resources')),
+        Z('meitan', '煤炭', 'méitàn', ('charbon', 'coal')),
+        Z('shitou', '石头', 'shítou', ('pierre', 'stone')),
+        Z('jinshu', '金属', 'jīnshǔ', ('métal', 'metal')),
+        Z('dianchi', '电池', 'diànchí', ('pile, batterie', 'battery')),
+        Z('ranshao', '燃烧', 'ránshāo', ('brûler', 'to burn')),
+        Z('dongli', '动力', 'dònglì', ('force motrice, moteur', 'motive power, drive')),
+        Z('liyong', '利用', 'lìyòng', ('utiliser, exploiter', 'to make use of')),
+        Z('kaifa', '开发', 'kāifā', ('développer, mettre en valeur', 'to develop, to exploit')),
+        Z('xiaohao', '消耗', 'xiāohào', ('consommer, dépenser', 'to consume')),
+        Z('jiesheng', '节省', 'jiéshěng', ('économiser', 'to save')),
+        Z('chansheng', '产生', 'chǎnshēng', ('produire, engendrer', 'to produce, to give rise to')),
+        Z('jiqi', '机器', 'jīqì', ('machine', 'machine')),
+        Z('xitong', '系统', 'xìtǒng', ('système', 'system')),
+      ], [
+        x('这些船之所以跑得快，是因为它们利用了风的力量。', 'Zhèxiē chuán zhīsuǒyǐ pǎo de kuài, shì yīnwèi tāmen lìyòngle fēng de lìliang.', 'Si ces navires vont vite, c’est parce qu’ils utilisent la force du vent.', 'The reason these ships are fast is that they use the power of the wind.'),
+        x('开发新能源，可以节省资源，减少污染。', 'Kāifā xīn néngyuán, kěyǐ jiéshěng zīyuán, jiǎnshǎo wūrǎn.', 'Développer de nouvelles énergies permet d’économiser les ressources et de réduire la pollution.', 'Developing new energy sources saves resources and reduces pollution.'),
+      ], [
+        FB(COMPLETE, '他之所以迟到，＿路上堵车了。', ['是因为', '所以', '因此'], '是因为', ('之所以…是因为….', '之所以…是因为….'), ('S’il est arrivé en retard, c’est parce qu’il y avait des bouchons.', 'The reason he was late is that there was traffic.')),
+        FB(COMPLETE, '手机没电了，我要换一下＿。', ['电池', '金属', '煤炭'], '电池', ('Plus de batterie : 电池.', 'Battery dead: 电池.'), ('Mon portable n’a plus de batterie, je dois la changer.', 'My phone is out of power; I need to change the battery.')),
+        FB(COMPLETE, '这台机器每小时＿很多电。', ['消耗', '节省', '开发'], '消耗', ('Consommer : 消耗.', 'Consume: 消耗.'), ('Cette machine consomme beaucoup d’électricité par heure.', 'This machine uses a lot of electricity every hour.')),
+        TF('煤炭燃烧会产生污染。', ('Brûler du charbon pollue.', 'Burning coal causes pollution.'), VRAI, ('产生污染 = produire de la pollution.', '产生污染 = to produce pollution.')),
+      ]),
+  ]),
+  CH('hsk5-w5-c2', ('Lire le ciel', 'Reading the sky'), [
+    L('zh-science', ('L’univers et la méthode : 何必', 'The universe and the method: 何必'), ('Parler de science, d’observation et de conclusions.', 'Talk about science, observation and conclusions.'), 10, [
+        ('何必 + verbe（呢）? = à quoi bon… ?, pourquoi se donner la peine de… : 这么近，何必坐车呢 ? (c’est si près, pourquoi prendre la voiture ?).', '何必 + verb (呢)? = why bother…?: 这么近，何必坐车呢? (it’s so close, why take the car?).'),
+        ('L’univers : 宇宙 (univers), 太空 (espace), 月球 (la Lune, astre), 光 (lumière), 影子 (ombre).', 'The universe: 宇宙 (universe), 太空 (outer space), 月球 (the Moon, as a body), 光 (light), 影子 (shadow).'),
+        ('La méthode : 观察 (observer), 实验 (expérience), 数据 (données), 统计 (statistiques), 理论 (théorie), 概念 (concept), 规律 (loi, régularité), 公式 (formule), 结论 (conclusion).', 'The method: 观察 (to observe), 实验 (experiment), 数据 (data), 统计 (statistics), 理论 (theory), 概念 (concept), 规律 (law, pattern), 公式 (formula), 结论 (conclusion).'),
+      ], [
+        ZG('hebi', '何必 + 动词（呢）？', 'hébì… (ne)?', ('à quoi bon… ?, pourquoi se donner la peine de… ?', 'why bother…?')),
+        Z('hebi', '何必', 'hébì', ('à quoi bon', 'why bother')),
+        Z('yuzhou', '宇宙', 'yǔzhòu', ('univers', 'universe')),
+        Z('taikong', '太空', 'tàikōng', ('espace (cosmos)', 'outer space')),
+        Z('yueqiu', '月球', 'yuèqiú', ('la Lune (astre)', 'the Moon (celestial body)')),
+        Z('guang', '光', 'guāng', ('lumière ; épuisé (fini)', 'light; used up')),
+        Z('yingzi', '影子', 'yǐngzi', ('ombre', 'shadow')),
+        Z('guancha', '观察', 'guānchá', ('observer', 'to observe')),
+        Z('shiyan', '实验', 'shíyàn', ('expérience (scientifique)', 'experiment')),
+        Z('shuju', '数据', 'shùjù', ('données', 'data')),
+        Z('tongji', '统计', 'tǒngjì', ('statistiques ; recenser', 'statistics; to count')),
+        Z('lilun', '理论', 'lǐlùn', ('théorie', 'theory')),
+        Z('gainian', '概念', 'gàiniàn', ('concept', 'concept')),
+        Z('guilü', '规律', 'guīlǜ', ('loi, régularité', 'law, pattern')),
+        Z('gongshi', '公式', 'gōngshì', ('formule', 'formula')),
+        Z('jielun', '结论', 'jiélùn', ('conclusion', 'conclusion')),
+      ], [
+        x('古代的人通过观察月亮，发现了潮水的规律。', 'Gǔdài de rén tōngguò guānchá yuèliang, fāxiànle cháoshuǐ de guīlǜ.', 'Les anciens ont découvert le rythme des marées en observant la lune.', 'People in ancient times discovered the pattern of the tides by observing the moon.'),
+        x('数据还不够，现在下结论太早了，何必着急呢？', 'Shùjù hái bú gòu, xiànzài xià jiélùn tài zǎo le, hébì zháojí ne?', 'Il n’y a pas encore assez de données : il est trop tôt pour conclure, pourquoi se presser ?', 'There isn’t enough data yet; it’s too early to draw conclusions, so why rush?'),
+      ], [
+        FB(COMPLETE, '只是一点儿小事，＿生这么大的气呢？', ['何必', '何况', '难怪'], '何必', ('À quoi bon : 何必.', 'Why bother: 何必.'), ('Ce n’est qu’un détail, pourquoi te mettre dans une telle colère ?', 'It’s only a small thing; why get so angry?')),
+        FB(COMPLETE, '做了三次＿，结果都一样。', ['实验', '理论', '概念'], '实验', ('Une expérience : 实验.', 'An experiment: 实验.'), ('Trois expériences ont été faites, avec le même résultat.', 'The experiment was done three times with the same result.')),
+        FB(COMPLETE, '太阳下山了，树的＿越来越长。', ['影子', '光', '月球'], '影子', ('L’ombre : 影子.', 'Shadow: 影子.'), ('Le soleil se couche, l’ombre des arbres s’allonge.', 'The sun is setting and the trees’ shadows are getting longer.')),
+        TF('根据统计，参加比赛的人比去年多。', ('Les statistiques montrent une hausse des participants.', 'Statistics show more participants.'), VRAI, ('比去年多 = plus que l’an dernier.', '比去年多 = more than last year.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 6 : l'île des simples — médecine, longévité, cuisine ═════════════════════════
+W6 = WORLD('hsk5-w6', ('L’île des simples', 'The island of herbs'), REGION,
+  ('Le corps et les soins (以免, 免得) ; la longévité et l’équilibre (不然) ; cuisiner et bien manger (尽量).', 'The body and care (以免, 免得); longevity and balance (不然); cooking and eating well (尽量).'),
+  (('Le poisson Heluo aux dix corps', 'The Ten-Bodied Heluo Fish'), '何', ('Le Heluo, poisson à une tête et dix corps, garde l’île où poussent les herbes de longue vie. On dit que le manger guérit les abcès : prouve que tu connais assez la médecine pour mériter ses herbes.', 'The Heluo, a fish with one head and ten bodies, guards the island where the herbs of long life grow. They say eating it cures abscesses: prove you know enough medicine to deserve its herbs.')),
+  [CH('hsk5-w6-c1', ('Le dispensaire', 'The dispensary'), [
+    HL('zh-hz-healing', ('Les caractères des soins : 疫 诊 治 疗 脉 灸 寿 龄', 'Healing characters: 疫 诊 治 疗 脉 灸 寿 龄'), ('Reconnaître les caractères de la médecine et de l’âge.', 'Recognise the characters of medicine and age.'), [
+      ('疫 (yì, épidémie) et 疗 (liáo, soigner) portent la clé de la maladie 疒. 诊 (zhěn, examiner) porte la parole 讠 : le médecin interroge. 治 (zhì) porte l’eau 氵 : maîtriser les fleuves, puis guérir.', '疫 (yì, epidemic) and 疗 (liáo, to treat) carry the illness radical 疒. 诊 (zhěn, to examine) carries speech 讠: the doctor asks questions. 治 (zhì) carries water 氵: taming rivers, then healing.'),
+      ('脉 (mài, pouls) porte la chair 月 : le médecin chinois prend le pouls au poignet. 灸 (jiǔ, moxibustion) met le feu 火 sous 久 (longtemps). 寿 (shòu) = longévité ; 龄 (líng, âge) porte les dents 齿.', '脉 (mài, pulse) carries flesh 月: Chinese doctors take the pulse at the wrist. 灸 (jiǔ, moxibustion) puts fire 火 under 久 (long time). 寿 (shòu) = longevity; 龄 (líng, age) carries teeth 齿.'),
+    ], [
+      H('yi-epidemic', '疫', 'yì', ('épidémie', 'epidemic'), 9), H('zhen-examine', '诊', 'zhěn', ('examiner (un malade)', 'to examine (a patient)'), 7),
+      H('zhi-cure', '治', 'zhì', ('soigner, gouverner', 'to treat, to govern'), 8), H('liao', '疗', 'liáo', ('soigner', 'to cure'), 7),
+      H('mai', '脉', 'mài', ('pouls, veine', 'pulse, vein'), 9), H('jiu-moxa', '灸', 'jiǔ', ('moxibustion', 'moxibustion'), 7),
+      H('shou-life', '寿', 'shòu', ('longévité', 'longevity'), 7), H('ling', '龄', 'líng', ('âge', 'age'), 13),
+    ]),
+    L('zh-medicine', ('Soigner sans tarder : 以免, 免得', 'Treat it promptly: 以免, 免得'), ('Parler du corps et des soins, et dire ce qu’on veut éviter.', 'Talk about the body and treatment, and say what you want to avoid.'), 10, [
+        ('A，以免 / 免得 B = A, pour éviter B : 多穿点儿衣服，以免感冒 (couvre-toi, pour ne pas t’enrhumer). 免得 est plus oral.', 'A，以免 / 免得 B = A, so as to avoid B: 多穿点儿衣服，以免感冒 (wrap up so you don’t catch a cold). 免得 is more colloquial.'),
+        ('Les soins : 治疗 (soigner), 手术 (opération), 病人 (malade), 病毒 (virus), 传染 (contaminer), 预防 (prévenir), 失眠 (insomnie), 过敏 (allergie).', 'Treatment: 治疗 (to treat), 手术 (operation), 病人 (patient), 病毒 (virus), 传染 (to infect), 预防 (to prevent), 失眠 (insomnia), 过敏 (allergy).'),
+        ('Le corps : 肌肉 (muscle), 心脏 (cœur, organe), 肺 (poumon), 胃 (estomac), 骨头 (os), 血 (sang), 呼吸 (respirer).', 'The body: 肌肉 (muscle), 心脏 (heart, organ), 肺 (lung), 胃 (stomach), 骨头 (bone), 血 (blood), 呼吸 (to breathe).'),
+      ], [
+        ZG('yimian', '…，以免 / 免得…', 'yǐmiǎn / miǎnde', ('…, pour éviter que…', '…, so as to avoid…')),
+        Z('yimian', '以免', 'yǐmiǎn', ('pour éviter que', 'so as to avoid')),
+        Z('miande', '免得', 'miǎnde', ('pour ne pas (oral)', 'so as not to (spoken)')),
+        Z('zhiliao', '治疗', 'zhìliáo', ('soigner ; traitement', 'to treat; treatment')),
+        Z('shoushu', '手术', 'shǒushù', ('opération (chirurgicale)', 'surgery')),
+        Z('bingren', '病人', 'bìngrén', ('malade, patient', 'patient')),
+        Z('bingdu', '病毒', 'bìngdú', ('virus', 'virus')),
+        Z('chuanran', '传染', 'chuánrǎn', ('contaminer, être contagieux', 'to infect')),
+        Z('yufang', '预防', 'yùfáng', ('prévenir', 'to prevent')),
+        Z('shimian', '失眠', 'shīmián', ('insomnie ; ne pas dormir', 'insomnia')),
+        Z('guomin', '过敏', 'guòmǐn', ('allergie ; être allergique', 'allergy; to be allergic')),
+        Z('jirou', '肌肉', 'jīròu', ('muscle', 'muscle')),
+        Z('xinzang', '心脏', 'xīnzàng', ('cœur (organe)', 'heart (organ)')),
+        Z('fei-lung', '肺', 'fèi', ('poumon', 'lung')),
+        Z('wei-stomach', '胃', 'wèi', ('estomac', 'stomach')),
+        Z('gutou', '骨头', 'gǔtou', ('os', 'bone')),
+        Z('xie-blood', '血', 'xiě', ('sang', 'blood')),
+        Z('huxi', '呼吸', 'hūxī', ('respirer', 'to breathe')),
+      ], [
+        x('这种病毒传染得很快，出门要戴口罩，以免被传染。', 'Zhè zhǒng bìngdú chuánrǎn de hěn kuài, chūmén yào dài kǒuzhào, yǐmiǎn bèi chuánrǎn.', 'Ce virus se transmet très vite : il faut porter un masque en sortant pour ne pas être contaminé.', 'This virus spreads very fast; wear a mask when you go out so as not to get infected.'),
+        x('医生说他的心脏没问题，只是胃不太好。', 'Yīshēng shuō tā de xīnzàng méi wèntí, zhǐ shì wèi bú tài hǎo.', 'Le médecin dit que son cœur va bien ; c’est seulement l’estomac qui est fragile.', 'The doctor says his heart is fine; it’s just his stomach that isn’t great.'),
+      ], [
+        FB(COMPLETE, '把药放在高处，＿孩子拿到。', ['以免', '既然', '何必'], '以免', ('Pour éviter : 以免.', 'To avoid: 以免.'), ('Range les médicaments en hauteur, pour que les enfants ne les attrapent pas.', 'Keep the medicine up high so the children can’t reach it.')),
+        FB(COMPLETE, '我对花粉＿，春天经常打喷嚏。', ['过敏', '失眠', '传染'], '过敏', ('Allergie : 过敏.', 'Allergy: 过敏.'), ('Je suis allergique au pollen : au printemps j’éternue souvent.', 'I’m allergic to pollen and sneeze a lot in spring.')),
+        DC(ANSWER, [('医生', '你最近睡得好吗？')], ('Le médecin demande si tu dors bien (non, tu fais de l’insomnie).', 'The doctor asks if you sleep well (no, you have insomnia).'), ['不太好，经常失眠。', '我的骨头很硬。', '我在预防病人。'], '不太好，经常失眠。', ('Insomnie : 失眠.', 'Insomnia: 失眠.')),
+        TF('预防比治疗更重要。', ('Prévenir est plus important que guérir.', 'Prevention is more important than cure.'), VRAI, ('预防比治疗更重要 = prévenir vaut mieux que guérir.', '预防比治疗更重要 = prevention is better than cure.')),
+      ]),
+    L('zh-longevity', ('Vivre longtemps : 不然', 'Living long: 不然'), ('Parler d’âge, d’équilibre de vie et donner un conseil avec une mise en garde.', 'Talk about age and life balance, and give advice with a warning.'), 10, [
+        ('A，不然 B = A, sinon B (plus oral que 否则) : 你得早点儿休息，不然明天会很累.', 'A，不然 B = A, otherwise B (more colloquial than 否则): 你得早点儿休息，不然明天会很累.'),
+        ('L’âge : 寿命 (durée de vie), 年龄 (âge), 老年 (vieillesse), 青少年 (adolescents), 青春 (jeunesse), 成熟 (mûr).', 'Age: 寿命 (lifespan), 年龄 (age), 老年 (old age), 青少年 (teenagers), 青春 (youth), 成熟 (mature).'),
+        ('L’équilibre : 健身 (faire de la musculation), 保持 (maintenir), 平衡 (équilibre), 压力 (pression, stress), 疲劳 (fatigue), 缓解 (soulager), 放松 (se détendre).', 'Balance: 健身 (to work out), 保持 (to maintain), 平衡 (balance), 压力 (pressure, stress), 疲劳 (fatigue), 缓解 (to relieve), 放松 (to relax).'),
+      ], [
+        ZG('buran', '…，不然…', 'bùrán', ('…, sinon…', '…, otherwise…')),
+        Z('buran', '不然', 'bùrán', ('sinon, autrement', 'otherwise')),
+        Z('shouming', '寿命', 'shòumìng', ('durée de vie', 'lifespan')),
+        Z('nianling', '年龄', 'niánlíng', ('âge', 'age')),
+        Z('laonian', '老年', 'lǎonián', ('vieillesse', 'old age')),
+        Z('qingshaonian', '青少年', 'qīngshàonián', ('adolescents', 'teenagers')),
+        Z('qingchun', '青春', 'qīngchūn', ('jeunesse', 'youth')),
+        Z('chengshu', '成熟', 'chéngshú', ('mûr', 'mature')),
+        Z('jianshen', '健身', 'jiànshēn', ('faire de la musculation, se maintenir en forme', 'to work out')),
+        Z('baochi', '保持', 'bǎochí', ('maintenir, garder', 'to maintain')),
+        Z('pingheng', '平衡', 'pínghéng', ('équilibre ; équilibré', 'balance; balanced')),
+        Z('yali', '压力', 'yālì', ('pression, stress', 'pressure, stress')),
+        Z('pilao', '疲劳', 'píláo', ('fatigue ; fatigué', 'fatigue; tired')),
+        Z('huanjie', '缓解', 'huǎnjiě', ('soulager, atténuer', 'to relieve')),
+        Z('fangsong', '放松', 'fàngsōng', ('se détendre', 'to relax')),
+      ], [
+        x('人们的寿命越来越长，可是年轻人的压力也越来越大。', 'Rénmen de shòumìng yuè lái yuè cháng, kěshì niánqīngrén de yālì yě yuè lái yuè dà.', 'L’espérance de vie s’allonge, mais les jeunes subissent de plus en plus de pression.', 'People are living longer and longer, but young people are under more and more pressure.'),
+        x('工作再忙也要放松一下，不然身体会受不了的。', 'Gōngzuò zài máng yě yào fàngsōng yíxià, bùrán shēntǐ huì shòu bu liǎo de.', 'Même débordé, il faut se détendre un peu, sinon le corps ne tiendra pas.', 'However busy you are, you need to relax a bit, or your body won’t cope.'),
+      ], [
+        FB(COMPLETE, '快走吧，＿就赶不上船了。', ['不然', '以免', '既然'], '不然', ('Sinon : 不然.', 'Otherwise: 不然.'), ('Dépêchons-nous, sinon nous allons rater le bateau.', 'Let’s hurry, or we’ll miss the boat.')),
+        FB(COMPLETE, '散步可以＿工作带来的疲劳。', ['缓解', '保持', '健身'], '缓解', ('Soulager : 缓解.', 'Relieve: 缓解.'), ('La marche aide à soulager la fatigue due au travail.', 'Walking can relieve work fatigue.')),
+        DC(ANSWER, [('朋友', '你怎么保持身体健康？')], ('Un ami demande comment tu restes en forme (tu fais de la musculation deux fois par semaine).', 'A friend asks how you stay healthy (you work out twice a week).'), ['我每周健身两次。', '我的青春很成熟。', '我的寿命是年龄。'], '我每周健身两次。', ('Se maintenir en forme : 健身.', 'Work out: 健身.')),
+        TF('她年龄不大，但是很成熟。', ('Elle est jeune mais mûre.', 'She is young but mature.'), VRAI, ('年龄不大 / 成熟 = jeune / mûre.', '年龄不大 / 成熟 = young / mature.')),
+      ]),
+  ]),
+  CH('hsk5-w6-c2', ('La cuisine de l’île', 'The island kitchen'), [
+    L('zh-cooking', ('Bien manger : 尽量', 'Eating well: 尽量'), ('Cuisiner, assaisonner et donner des conseils alimentaires.', 'Cook, season and give dietary advice.'), 9, [
+        ('尽量 + verbe = autant que possible : 尽量少吃辣的 (mange le moins épicé possible). On dit aussi 尽可能.', '尽量 + verb = as much as possible: 尽量少吃辣的 (eat as little spicy food as possible). You can also say 尽可能.'),
+        ('Les aliments : 食物 (nourriture), 粮食 (céréales, vivres), 蔬菜 (légumes), 豆腐 (tofu), 辣椒 (piment), 酱油 (sauce soja), 醋 (vinaigre).', 'Food: 食物 (food), 粮食 (grain, provisions), 蔬菜 (vegetables), 豆腐 (tofu), 辣椒 (chilli), 酱油 (soy sauce), 醋 (vinegar).'),
+        ('Cuisiner : 切 (couper), 炒 (sauter), 煮 (bouillir), 锅 (marmite, wok) ; 胃口 (appétit).', 'Cooking: 切 (to cut), 炒 (to stir-fry), 煮 (to boil), 锅 (pot, wok); 胃口 (appetite).'),
+      ], [
+        ZG('jinliang', '尽量 + 动词', 'jǐnliàng', ('autant que possible', 'as much as possible')),
+        Z('jinliang', '尽量', 'jǐnliàng', ('autant que possible', 'as far as possible')),
+        Z('shiwu', '食物', 'shíwù', ('nourriture, aliment', 'food')),
+        Z('liangshi', '粮食', 'liángshi', ('céréales, vivres', 'grain, provisions')),
+        Z('shucai', '蔬菜', 'shūcài', ('légumes', 'vegetables')),
+        Z('doufu', '豆腐', 'dòufu', ('tofu', 'tofu')),
+        Z('lajiao', '辣椒', 'làjiāo', ('piment', 'chilli')),
+        Z('jiangyou', '酱油', 'jiàngyóu', ('sauce soja', 'soy sauce')),
+        Z('cu-vinegar', '醋', 'cù', ('vinaigre', 'vinegar')),
+        Z('qie', '切', 'qiē', ('couper', 'to cut')),
+        Z('chao', '炒', 'chǎo', ('faire sauter', 'to stir-fry')),
+        Z('zhu-boil', '煮', 'zhǔ', ('faire bouillir', 'to boil')),
+        Z('guo', '锅', 'guō', ('marmite, wok', 'pot, wok')),
+        Z('weikou', '胃口', 'wèikǒu', ('appétit', 'appetite')),
+      ], [
+        x('先把蔬菜切好，再放进锅里炒两分钟。', 'Xiān bǎ shūcài qiēhǎo, zài fàngjìn guō li chǎo liǎng fēnzhōng.', 'Coupe d’abord les légumes, puis fais-les sauter deux minutes au wok.', 'First cut the vegetables, then stir-fry them in the wok for two minutes.'),
+        x('医生让我尽量少吃咸的，多吃蔬菜。', 'Yīshēng ràng wǒ jǐnliàng shǎo chī xián de, duō chī shūcài.', 'Le médecin me dit de manger le moins salé possible et beaucoup de légumes.', 'The doctor told me to eat as little salty food as possible and lots of vegetables.'),
+      ], [
+        FB(COMPLETE, '明天的会很重要，大家＿准时到。', ['尽量', '何必', '幸亏'], '尽量', ('Autant que possible : 尽量.', 'As far as possible: 尽量.'), ('La réunion de demain est importante : soyez à l’heure autant que possible.', 'Tomorrow’s meeting is important; please try to be on time.')),
+        FB(COMPLETE, '饺子要在水里＿十分钟。', ['煮', '炒', '切'], '煮', ('Dans l’eau : 煮.', 'In water: 煮.'), ('Les raviolis doivent bouillir dix minutes.', 'The dumplings need to boil for ten minutes.')),
+        DC(ANSWER, [('妈妈', '你怎么不吃了？')], ('Ta mère demande pourquoi tu ne manges plus (tu n’as pas d’appétit aujourd’hui).', 'Your mother asks why you’ve stopped eating (you’ve no appetite today).'), ['今天没什么胃口。', '我在切豆腐。', '辣椒是红色的。'], '今天没什么胃口。', ('Pas d’appétit : 没胃口.', 'No appetite: 没胃口.')),
+        TF('这个菜里放了很多醋，有点儿酸。', ('Le plat est un peu acide.', 'The dish is a bit sour.'), VRAI, ('醋 → 酸.', '醋 → sour.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 7 : le village des poissons-hommes — famille, société, relations ═════════════════════════
+W7 = WORLD('hsk5-w7', ('Le village des poissons-hommes', 'The village of the fish people'), REGION,
+  ('Générations, mariage et éducation (不是…而是) ; traditions et valeurs (不是…就是) ; se parler, se disputer, se réconcilier (难免).', 'Generations, marriage and education (不是…而是); traditions and values (不是…就是); talking, quarrelling, making up (难免).'),
+  (('Le Chiru à visage humain', 'The Human-Faced Chiru'), '鱬', ('Le Chiru, poisson rouge à visage humain dont la voix ressemble à celle d’un canard, règne sur un village de pêcheurs où les anciens et les jeunes ne se comprennent plus. Rétablis le dialogue pour qu’il te laisse repartir.', 'The Chiru, a red fish with a human face and a voice like a duck’s, rules a fishing village where old and young no longer understand each other. Restore the dialogue so that it lets you leave.')),
+  [CH('hsk5-w7-c1', ('Les anciens et les jeunes', 'The elders and the young'), [
+    HL('zh-hz-family5', ('Les caractères de la famille : 辈 族 尊 敬 孝 伦 育 婚', 'Family characters: 辈 族 尊 敬 孝 伦 育 婚'), ('Reconnaître les caractères des générations et des valeurs.', 'Recognise the characters of generations and values.'), [
+      ('孝 (xiào, piété filiale) met un vieillard 老 au-dessus d’un enfant 子 : l’enfant qui porte ses parents. 尊 (zūn) dessinait des mains qui lèvent une coupe en offrande : respecter.', '孝 (xiào, filial piety) puts an old man 老 above a child 子: the child carrying the parents. 尊 (zūn) drew hands raising a cup as an offering: to respect.'),
+      ('辈 (bèi, génération) porte le char 车 : les rangées de chars, puis les rangs d’une famille. 婚 (hūn, mariage) porte la femme 女 et le soir 昏 : autrefois, on se mariait au crépuscule.', '辈 (bèi, generation) carries the chariot 车: rows of chariots, then the ranks of a family. 婚 (hūn, marriage) carries woman 女 and dusk 昏: weddings were once held at twilight.'),
+    ], [
+      H('bei-gen', '辈', 'bèi', ('génération', 'generation'), 12), H('zu', '族', 'zú', ('clan, ethnie', 'clan, ethnic group'), 11),
+      H('zun', '尊', 'zūn', ('respecter, vénérable', 'to respect, venerable'), 12), H('jing', '敬', 'jìng', ('respect, honorer', 'respect, to honour'), 12),
+      H('xiao-filial', '孝', 'xiào', ('piété filiale', 'filial piety'), 7), H('lun', '伦', 'lún', ('ordre (des relations humaines)', 'order (of human relations)'), 6),
+      H('yu-raise', '育', 'yù', ('élever, éduquer', 'to raise, to educate'), 8), H('hun', '婚', 'hūn', ('mariage', 'marriage'), 11),
+    ]),
+    L('zh-generations', ('Ce n’est pas A, c’est B : 不是…而是', 'It isn’t A, it’s B: 不是…而是'), ('Parler de la famille, de l’éducation et rectifier une idée.', 'Talk about family and upbringing, and correct an idea.'), 10, [
+        ('不是 A，而是 B = ce n’est pas A, mais B : 他不是不想回家，而是太忙了 (ce n’est pas qu’il ne veut pas rentrer, c’est qu’il est trop occupé).', '不是 A，而是 B = not A, but B: 他不是不想回家，而是太忙了 (it’s not that he doesn’t want to come home, it’s that he’s too busy).'),
+        ('La famille : 家庭 (famille, foyer), 长辈 (aînés), 婚姻 (mariage, union), 夫妻 (mari et femme), 老婆 (épouse, familier), 亲爱 (cher), 孝顺 (respectueux envers ses parents), 尊敬 (respecter).', 'Family: 家庭 (family, household), 长辈 (elders), 婚姻 (marriage), 夫妻 (husband and wife), 老婆 (wife, colloquial), 亲爱 (dear), 孝顺 (dutiful to one’s parents), 尊敬 (to respect).'),
+        ('Grandir : 成长 (grandir), 教育 (éduquer), 培养 (former, cultiver), 独立 (indépendant).', 'Growing up: 成长 (to grow up), 教育 (to educate), 培养 (to cultivate, to train), 独立 (independent).'),
+      ], [
+        ZG('bushi-ershi', '不是…，而是…', 'búshì…, érshì…', ('ce n’est pas…, mais…', 'not…, but…')),
+        Z('jiating', '家庭', 'jiātíng', ('famille, foyer', 'family, household')),
+        Z('zhangbei', '长辈', 'zhǎngbèi', ('aînés, ancienne génération', 'elders')),
+        Z('hunyin', '婚姻', 'hūnyīn', ('mariage, union', 'marriage (union)')),
+        Z('fuqi', '夫妻', 'fūqī', ('mari et femme, couple', 'husband and wife')),
+        Z('laopo', '老婆', 'lǎopo', ('épouse (familier)', 'wife (colloquial)')),
+        Z('qinai', '亲爱', 'qīn’ài', ('cher, bien-aimé', 'dear, beloved')),
+        Z('xiaoshun', '孝顺', 'xiàoshùn', ('respectueux envers ses parents', 'dutiful to one’s parents')),
+        Z('zunjing', '尊敬', 'zūnjìng', ('respecter', 'to respect')),
+        Z('chengzhang', '成长', 'chéngzhǎng', ('grandir', 'to grow up')),
+        Z('jiaoyu', '教育', 'jiàoyù', ('éduquer ; éducation', 'to educate; education')),
+        Z('peiyang', '培养', 'péiyǎng', ('former, cultiver', 'to cultivate, to train')),
+        Z('duli', '独立', 'dúlì', ('indépendant', 'independent')),
+      ], [
+        x('父母最大的希望不是孩子赚很多钱，而是孩子健康快乐地成长。', 'Fùmǔ zuì dà de xīwàng búshì háizi zhuàn hěn duō qián, érshì háizi jiànkāng kuàilè de chéngzhǎng.', 'Le plus grand souhait des parents n’est pas que leur enfant gagne beaucoup d’argent, mais qu’il grandisse heureux et en bonne santé.', 'Parents’ greatest wish isn’t for their child to earn lots of money, but to grow up healthy and happy.'),
+        x('在中国文化里，孝顺父母、尊敬长辈非常重要。', 'Zài Zhōngguó wénhuà li, xiàoshùn fùmǔ, zūnjìng zhǎngbèi fēicháng zhòngyào.', 'Dans la culture chinoise, être dévoué à ses parents et respecter ses aînés est essentiel.', 'In Chinese culture, being dutiful to one’s parents and respecting one’s elders is very important.'),
+      ], [
+        FB(COMPLETE, '他不是不喜欢你，＿太害羞了。', ['而是', '而且', '就是'], '而是', ('不是…而是….', '不是…而是….'), ('Ce n’est pas qu’il ne t’aime pas, c’est qu’il est trop timide.', 'It’s not that he doesn’t like you; he’s just too shy.')),
+        FB(COMPLETE, '父母应该从小＿孩子独立生活的能力。', ['培养', '尊敬', '孝顺'], '培养', ('Développer une capacité : 培养.', 'Develop a skill: 培养.'), ('Les parents doivent développer très tôt l’autonomie de leurs enfants.', 'Parents should develop their children’s independence from an early age.')),
+        DC(ANSWER, [('长辈', '你们结婚几年了？')], ('Un aîné demande depuis combien de temps vous êtes mariés (cinq ans).', 'An elder asks how long you’ve been married (five years).'), ['我们结婚五年了。', '我们很独立。', '我们在教育。'], '我们结婚五年了。', ('Durée : 结婚五年了.', 'Duration: 结婚五年了.')),
+        TF('他们夫妻俩关系很好。', ('Le couple s’entend bien.', 'The couple get on well.'), VRAI, ('关系很好 = bonne entente.', '关系很好 = good relationship.')),
+      ]),
+    L('zh-society5', ('Traditions et valeurs : 不是…就是', 'Traditions and values: 不是…就是'), ('Parler de société, de traditions et d’alternatives.', 'Talk about society, traditions and alternatives.'), 10, [
+        ('不是 A，就是 B = soit A, soit B (l’un ou l’autre) : 周末他不是在钓鱼，就是在修船.', '不是 A，就是 B = either A or B: 周末他不是在钓鱼，就是在修船.'),
+        ('Les traditions : 传统 (tradition), 风俗 (coutume), 文明 (civilisation ; civilisé), 道德 (morale).', 'Traditions: 传统 (tradition), 风俗 (custom), 文明 (civilisation; civilised), 道德 (morality).'),
+        ('Les valeurs : 公平 (juste), 平等 (égal), 自由 (liberté), 集体 (collectif), 个人 (individu), 公共 (public), 志愿者 (bénévole), 贡献 (contribuer, contribution).', 'Values: 公平 (fair), 平等 (equal), 自由 (freedom), 集体 (collective), 个人 (individual), 公共 (public), 志愿者 (volunteer), 贡献 (to contribute, contribution).'),
+      ], [
+        ZG('bushi-jiushi', '不是…，就是…', 'búshì…, jiùshì…', ('soit…, soit…', 'either…, or…')),
+        Z('chuantong', '传统', 'chuántǒng', ('tradition ; traditionnel', 'tradition; traditional')),
+        Z('fengsu', '风俗', 'fēngsú', ('coutume', 'custom')),
+        Z('wenming', '文明', 'wénmíng', ('civilisation ; civilisé', 'civilisation; civilised')),
+        Z('daode', '道德', 'dàodé', ('morale, éthique', 'morality')),
+        Z('gongping', '公平', 'gōngpíng', ('juste, équitable', 'fair')),
+        Z('pingdeng', '平等', 'píngděng', ('égal ; égalité', 'equal; equality')),
+        Z('ziyou', '自由', 'zìyóu', ('liberté ; libre', 'freedom; free')),
+        Z('jiti', '集体', 'jítǐ', ('collectif', 'collective')),
+        Z('geren', '个人', 'gèrén', ('individu ; personnel', 'individual; personal')),
+        Z('gonggong', '公共', 'gōnggòng', ('public', 'public')),
+        Z('zhiyuanzhe', '志愿者', 'zhìyuànzhě', ('bénévole', 'volunteer')),
+        Z('gongxian', '贡献', 'gòngxiàn', ('contribuer ; contribution', 'to contribute; contribution')),
+      ], [
+        x('这个村子还保留着很多传统风俗。', 'Zhè ge cūnzi hái bǎoliúzhe hěn duō chuántǒng fēngsú.', 'Ce village conserve encore beaucoup de coutumes traditionnelles.', 'This village still keeps many traditional customs.'),
+        x('周末他不是去做志愿者，就是在家看书。', 'Zhōumò tā búshì qù zuò zhìyuànzhě, jiùshì zài jiā kàn shū.', 'Le week-end, soit il fait du bénévolat, soit il lit à la maison.', 'At weekends he either does volunteer work or reads at home.'),
+      ], [
+        FB(COMPLETE, '这几天不是刮风，＿下雨。', ['就是', '而是', '还是'], '就是', ('Soit… soit… : 不是…就是.', 'Either… or…: 不是…就是.'), ('Ces jours-ci, soit il vente, soit il pleut.', 'These days it’s either windy or rainy.')),
+        FB(COMPLETE, '在法律面前，人人＿。', ['平等', '自由', '集体'], '平等', ('Égalité devant la loi : 平等.', 'Equality before the law: 平等.'), ('Tout le monde est égal devant la loi.', 'Everyone is equal before the law.')),
+        FB(COMPLETE, '在＿场所不能抽烟。', ['公共', '个人', '传统'], '公共', ('Lieu public : 公共场所.', 'Public place: 公共场所.'), ('Il est interdit de fumer dans les lieux publics.', 'Smoking is not allowed in public places.')),
+        TF('他为社会做出了很大的贡献。', ('Il n’a rien apporté à la société.', 'He contributed nothing to society.'), FAUX, ('很大的贡献 = une grande contribution.', '很大的贡献 = a great contribution.')),
+      ]),
+  ]),
+  CH('hsk5-w7-c2', ('La réconciliation', 'The reconciliation'), [
+    L('zh-relations5', ('Se disputer et se réconcilier : 难免', 'Quarrelling and making up: 难免'), ('Parler des relations, des conflits et des qualités humaines.', 'Talk about relationships, conflicts and human qualities.'), 10, [
+        ('难免 = difficile à éviter, inévitable : 一家人住在一起，难免会有矛盾 (une famille qui vit ensemble a forcément des désaccords).', '难免 = hard to avoid, inevitable: 一家人住在一起，难免会有矛盾 (a family living together is bound to have disagreements).'),
+        ('Les relations : 交往 (fréquenter), 沟通 (communiquer), 矛盾 (contradiction, désaccord), 吵架 (se disputer), 抱怨 (se plaindre), 团结 (union, solidaire), 和平 (paix), 欣赏 (apprécier), 称赞 (louer).', 'Relationships: 交往 (to associate with), 沟通 (to communicate), 矛盾 (contradiction, conflict), 吵架 (to quarrel), 抱怨 (to complain), 团结 (unity, united), 和平 (peace), 欣赏 (to appreciate), 称赞 (to praise).'),
+        ('Les qualités : 谦虚 (modeste), 善良 (bon, bienveillant), 热心 (serviable), 大方 (généreux) / 小气 (radin).', 'Qualities: 谦虚 (modest), 善良 (kind-hearted), 热心 (warm-hearted, helpful), 大方 (generous) / 小气 (stingy).'),
+      ], [
+        ZG('nanmian', '难免 + 会…', 'nánmiǎn', ('il est inévitable que', 'it is inevitable that')),
+        Z('nanmian', '难免', 'nánmiǎn', ('inévitable, difficile à éviter', 'hard to avoid')),
+        Z('jiaowang', '交往', 'jiāowǎng', ('fréquenter ; relations', 'to associate with; contact')),
+        Z('goutong', '沟通', 'gōutōng', ('communiquer', 'to communicate')),
+        Z('maodun', '矛盾', 'máodùn', ('contradiction, désaccord', 'contradiction, conflict')),
+        Z('chaojia', '吵架', 'chǎojià', ('se disputer', 'to quarrel')),
+        Z('baoyuan', '抱怨', 'bàoyuàn', ('se plaindre', 'to complain')),
+        Z('tuanjie', '团结', 'tuánjié', ('s’unir ; solidaire', 'to unite; united')),
+        Z('heping', '和平', 'hépíng', ('paix', 'peace')),
+        Z('xinshang', '欣赏', 'xīnshǎng', ('apprécier, admirer', 'to appreciate, to admire')),
+        Z('chengzan', '称赞', 'chēngzàn', ('féliciter, complimenter', 'to praise')),
+        Z('qianxu', '谦虚', 'qiānxū', ('modeste', 'modest')),
+        Z('shanliang', '善良', 'shànliáng', ('bon, bienveillant', 'kind-hearted')),
+        Z('rexin', '热心', 'rèxīn', ('serviable, chaleureux', 'warm-hearted, helpful')),
+        Z('dafang', '大方', 'dàfang', ('généreux', 'generous')),
+        Z('xiaoqi', '小气', 'xiǎoqi', ('radin, mesquin', 'stingy')),
+      ], [
+        x('两代人的想法不同，难免会有矛盾，重要的是多沟通。', 'Liǎng dài rén de xiǎngfǎ bù tóng, nánmiǎn huì yǒu máodùn, zhòngyào de shì duō gōutōng.', 'Deux générations ne pensent pas pareil : les désaccords sont inévitables, l’important est de se parler.', 'Two generations think differently, so conflicts are inevitable; what matters is to talk more.'),
+        x('她既善良又热心，村里的人都很欣赏她。', 'Tā jì shànliáng yòu rèxīn, cūn li de rén dōu hěn xīnshǎng tā.', 'Elle est bonne et serviable : tout le village l’apprécie.', 'She’s kind and helpful, and everyone in the village admires her.'),
+      ], [
+        FB(COMPLETE, '第一次做这个工作，＿会出一些错。', ['难免', '何必', '幸亏'], '难免', ('Inévitable : 难免.', 'Inevitable: 难免.'), ('C’est la première fois qu’on fait ce travail : quelques erreurs sont inévitables.', 'It’s the first time doing this job, so some mistakes are inevitable.')),
+        FB(COMPLETE, '他们俩又＿了，谁也不理谁。', ['吵架', '沟通', '团结'], '吵架', ('Se disputer : 吵架.', 'Quarrel: 吵架.'), ('Ils se sont encore disputés et ne se parlent plus.', 'They’ve quarrelled again and aren’t speaking to each other.')),
+        FB(COMPLETE, '他取得了好成绩，但还是很＿。', ['谦虚', '小气', '抱怨'], '谦虚', ('Rester modeste : 谦虚.', 'Stay modest: 谦虚.'), ('Il a obtenu d’excellents résultats, mais reste très modeste.', 'He got great results but is still very modest.')),
+        TF('他总是抱怨工作太累。', ('Il ne se plaint jamais.', 'He never complains.'), FAUX, ('总是抱怨 = se plaint toujours.', '总是抱怨 = always complains.')),
+      ]),
+  ])])
+
+# ═════════════════════════ 8 : Penglai — philosophie, histoire, conclure ═════════════════════════
+W8 = WORLD('hsk5-w8', ('Penglai, l’île des immortels', 'Penglai, island of the immortals'), REGION,
+  ('Le sens de la vie et les valeurs (毕竟) ; histoire, dynasties et littérature (至于) ; conclure un raisonnement (总之, 可见, 反而).', 'The meaning of life and values (毕竟); history, dynasties and literature (至于); concluding an argument (总之, 可见, 反而).'),
+  (('Le poisson Ranyi', 'The Ranyi Fish'), '冉', ('Le Ranyi, poisson à tête de serpent et à six pieds, garde la porte de Penglai. On dit que qui le voit ne fait plus jamais de cauchemars. Il ne laisse entrer que ceux qui savent raisonner sur la vie et la mort.', 'The Ranyi, a fish with a snake’s head and six feet, guards the gate of Penglai. They say whoever sees it never has nightmares again. It only lets in those who can reason about life and death.')),
+  [CH('hsk5-w8-c1', ('Les sages de Penglai', 'The sages of Penglai'), [
+    HL('zh-hz-sages', ('Les caractères des sages : 哲 思 维 辩 逻 辑 仙 祥', 'Sage characters: 哲 思 维 辩 逻 辑 仙 祥'), ('Reconnaître les caractères de la pensée et des immortels.', 'Recognise the characters of thought and the immortals.'), [
+      ('仙 (xiān, immortel) met une personne 亻 à côté d’une montagne 山 : l’ermite qui vit dans les monts. 祥 (xiáng, de bon augure) porte l’autel 礻 et le mouton 羊, symbole de chance.', '仙 (xiān, immortal) puts a person 亻 beside a mountain 山: the hermit living in the mountains. 祥 (xiáng, auspicious) carries the altar 礻 and the sheep 羊, a symbol of luck.'),
+      ('辩 (biàn, débattre) met la parole 讠 entre deux 辛 : deux adversaires qui argumentent. 逻辑 (luójí) transcrit le mot « logique » : on ne lit que le son.', '辩 (biàn, to debate) puts speech 讠 between two 辛: two opponents arguing. 逻辑 (luójí) transcribes the word “logic”: only the sound is read.'),
+    ], [
+      H('zhe', '哲', 'zhé', ('sage, philosophie', 'wise, philosophy'), 10), H('si-think', '思', 'sī', ('penser', 'to think'), 9),
+      H('wei-keep', '维', 'wéi', ('maintenir ; penser', 'to maintain; thought'), 11), H('bian', '辩', 'biàn', ('débattre', 'to debate'), 16),
+      H('luo', '逻', 'luó', ('patrouiller (logique)', 'to patrol (logic)'), 11), H('ji-collect', '辑', 'jí', ('rassembler, éditer', 'to collect, to edit'), 13),
+      H('xian-immortal', '仙', 'xiān', ('immortel', 'immortal'), 5), H('xiang-lucky', '祥', 'xiáng', ('de bon augure', 'auspicious'), 10),
+    ]),
+    L('zh-thought', ('Le sens de la vie : 毕竟', 'The meaning of life: 毕竟'), ('Réfléchir sur la vie, les valeurs et la destinée.', 'Reflect on life, values and destiny.'), 10, [
+        ('毕竟 = après tout, quand même (rappelle un fait décisif) : 别生他的气，他毕竟还是个孩子 (ne lui en veux pas, ce n’est après tout qu’un enfant).', '毕竟 = after all (recalls a decisive fact): 别生他的气，他毕竟还是个孩子 (don’t be angry with him; he’s only a child after all).'),
+        ('La pensée : 哲学 (philosophie), 思想 (pensée, idées), 观念 (conception), 逻辑 (logique), 道理 (raison, ce qui est sensé), 意义 (sens), 价值 (valeur).', 'Thought: 哲学 (philosophy), 思想 (thought, ideas), 观念 (notion, mindset), 逻辑 (logic), 道理 (reason, sense), 意义 (meaning), 价值 (value).'),
+        ('La vie : 人生 (vie humaine), 生命 (vie), 命运 (destin), 幸福 (bonheur), 理想 (idéal), 追求 (poursuivre), 神话 (mythe), 传说 (légende).', 'Life: 人生 (human life), 生命 (life), 命运 (fate), 幸福 (happiness), 理想 (ideal), 追求 (to pursue), 神话 (myth), 传说 (legend).'),
+      ], [
+        ZG('bijing', '毕竟…', 'bìjìng', ('après tout…', 'after all…')),
+        Z('bijing', '毕竟', 'bìjìng', ('après tout', 'after all')),
+        Z('zhexue', '哲学', 'zhéxué', ('philosophie', 'philosophy')),
+        Z('sixiang', '思想', 'sīxiǎng', ('pensée, idées', 'thought, ideology')),
+        Z('guannian', '观念', 'guānniàn', ('conception, mentalité', 'notion, mindset')),
+        Z('luoji', '逻辑', 'luójí', ('logique', 'logic')),
+        Z('daoli', '道理', 'dàolǐ', ('raison, ce qui est sensé', 'reason, sense')),
+        Z('yiyi', '意义', 'yìyì', ('sens, signification', 'meaning, significance')),
+        Z('jiazhi', '价值', 'jiàzhí', ('valeur', 'value')),
+        Z('rensheng', '人生', 'rénshēng', ('la vie (humaine)', 'life (human)')),
+        Z('shengming', '生命', 'shēngmìng', ('vie', 'life')),
+        Z('mingyun', '命运', 'mìngyùn', ('destin', 'fate, destiny')),
+        Z('xingfu', '幸福', 'xìngfú', ('bonheur ; heureux', 'happiness; happy')),
+        Z('lixiang', '理想', 'lǐxiǎng', ('idéal', 'ideal')),
+        Z('zhuiqiu', '追求', 'zhuīqiú', ('poursuivre, rechercher', 'to pursue')),
+        Z('shenhua', '神话', 'shénhuà', ('mythe', 'myth')),
+        Z('chuanshuo', '传说', 'chuánshuō', ('légende', 'legend')),
+      ], [
+        x('传说蓬莱岛上住着仙人，他们有长生不老的药。', 'Chuánshuō Pénglái dǎo shang zhùzhe xiānrén, tāmen yǒu chángshēng bù lǎo de yào.', 'La légende dit que des immortels vivent sur l’île de Penglai et possèdent l’élixir de longue vie.', 'Legend has it that immortals live on Penglai Island and possess the elixir of eternal life.'),
+        x('生命毕竟是有限的，重要的是活得有意义。', 'Shēngmìng bìjìng shì yǒuxiàn de, zhòngyào de shì huó de yǒu yìyì.', 'La vie est limitée, après tout : l’important est de lui donner un sens.', 'Life is limited after all; what matters is to live meaningfully.'),
+      ], [
+        FB(COMPLETE, '他＿刚来不久，对这儿还不熟悉。', ['毕竟', '反而', '可见'], '毕竟', ('Après tout : 毕竟.', 'After all: 毕竟.'), ('Après tout, il vient d’arriver : il ne connaît pas encore les lieux.', 'He’s only just arrived after all, so he doesn’t know the place yet.')),
+        FB(COMPLETE, '你说的话很有＿，我同意。', ['道理', '命运', '神话'], '道理', ('Sensé : 有道理.', 'Makes sense: 有道理.'), ('Ce que tu dis est très sensé, je suis d’accord.', 'What you say makes a lot of sense; I agree.')),
+        DC(ANSWER, [('老人', '你觉得什么是幸福？')], ('Un vieil homme te demande ce qu’est le bonheur pour toi (vivre avec ceux qu’on aime).', 'An old man asks what happiness is to you (living with those you love).'), ['和爱的人在一起就是幸福。', '幸福是一个神话。', '我追求逻辑。'], '和爱的人在一起就是幸福。', ('Définir : …就是幸福.', 'Define: …就是幸福.')),
+        TF('每个人都有自己的理想。', ('Chacun a son idéal.', 'Everyone has their own ideal.'), VRAI, ('自己的理想 = son propre idéal.', '自己的理想 = one’s own ideal.')),
+      ]),
+    L('zh-history5', ('Dynasties et lettres : 至于', 'Dynasties and letters: 至于'), ('Parler d’histoire et de littérature, et passer à un autre point.', 'Talk about history and literature, and move on to another point.'), 10, [
+        ('至于 A，… = quant à A : 我们先出发，至于什么时候回来，以后再说 (partons d’abord ; quant au retour, on verra plus tard).', '至于 A，… = as for A: 我们先出发，至于什么时候回来，以后再说 (let’s set off; as for when we come back, we’ll see later).'),
+        ('L’histoire : 古代 (Antiquité), 朝代 (dynastie), 皇帝 (empereur), 王子 / 公主 (prince / princesse), 统一 (unifier), 战争 (guerre), 革命 (révolution), 记录 (consigner, archive), 资料 (documentation).', 'History: 古代 (ancient times), 朝代 (dynasty), 皇帝 (emperor), 王子 / 公主 (prince / princess), 统一 (to unify), 战争 (war), 革命 (revolution), 记录 (to record, record), 资料 (material, data).'),
+        ('Les lettres : 文学 (littérature), 古典 (classique), 诗 (poème), 成语 (expression figée en quatre caractères) ; 遗憾 (regret).', 'Letters: 文学 (literature), 古典 (classical), 诗 (poem), 成语 (four-character idiom); 遗憾 (regret).'),
+      ], [
+        ZG('zhiyu', '至于…，…', 'zhìyú', ('quant à…', 'as for…')),
+        Z('zhiyu', '至于', 'zhìyú', ('quant à', 'as for')),
+        Z('gudai', '古代', 'gǔdài', ('Antiquité, temps anciens', 'ancient times')),
+        Z('chaodai', '朝代', 'cháodài', ('dynastie', 'dynasty')),
+        Z('huangdi', '皇帝', 'huángdì', ('empereur', 'emperor')),
+        Z('wangzi', '王子', 'wángzǐ', ('prince', 'prince')),
+        Z('gongzhu', '公主', 'gōngzhǔ', ('princesse', 'princess')),
+        Z('tongyi', '统一', 'tǒngyī', ('unifier ; unifié', 'to unify; unified')),
+        Z('zhanzheng', '战争', 'zhànzhēng', ('guerre', 'war')),
+        Z('geming', '革命', 'gémìng', ('révolution', 'revolution')),
+        Z('jilu', '记录', 'jìlù', ('consigner ; archive', 'to record; record')),
+        Z('ziliao', '资料', 'zīliào', ('documentation, données', 'material, data')),
+        Z('wenxue', '文学', 'wénxué', ('littérature', 'literature')),
+        Z('gudian', '古典', 'gǔdiǎn', ('classique', 'classical')),
+        Z('shi-poem', '诗', 'shī', ('poème', 'poem')),
+        Z('chengyu', '成语', 'chéngyǔ', ('expression en quatre caractères', 'four-character idiom')),
+        Z('yihan', '遗憾', 'yíhàn', ('regret ; regrettable', 'regret; regrettable')),
+      ], [
+        x('秦始皇是中国历史上第一个统一全国的皇帝。', 'Qín Shǐhuáng shì Zhōngguó lìshǐ shang dì-yī ge tǒngyī quánguó de huángdì.', 'Qin Shi Huang est le premier empereur de l’histoire chinoise à avoir unifié tout le pays.', 'Qin Shi Huang was the first emperor in Chinese history to unify the whole country.'),
+        x('很多成语都来自古代的故事，至于它们的意思，要看具体的历史。', 'Hěn duō chéngyǔ dōu láizì gǔdài de gùshi, zhìyú tāmen de yìsi, yào kàn jùtǐ de lìshǐ.', 'Beaucoup de chengyu viennent d’histoires anciennes ; quant à leur sens, il faut connaître l’histoire précise.', 'Many chengyu come from ancient stories; as for their meaning, you need to know the specific history.'),
+      ], [
+        FB(COMPLETE, '我只负责准备材料，＿谁去开会，由经理决定。', ['至于', '关于', '对于'], '至于', ('Quant à : 至于.', 'As for: 至于.'), ('Je m’occupe seulement des documents ; quant à savoir qui va à la réunion, c’est le directeur qui décide.', 'I’m only in charge of the materials; as for who goes to the meeting, the manager decides.')),
+        FB(COMPLETE, '李白是唐朝最有名的＿人之一。', ['诗', '战争', '朝代'], '诗', ('Un poète : 诗人.', 'A poet: 诗人.'), ('Li Bai est l’un des plus grands poètes de la dynastie Tang.', 'Li Bai is one of the most famous poets of the Tang dynasty.')),
+        FB(COMPLETE, '没能见到你，真＿。', ['遗憾', '古典', '统一'], '遗憾', ('Regret : 遗憾.', 'Regret: 遗憾.'), ('Quel dommage de ne pas avoir pu te voir.', 'It’s a real pity I couldn’t see you.')),
+        TF('这些历史资料都是古代的记录。', ('Ce sont des documents modernes.', 'These are modern documents.'), FAUX, ('古代的记录 = archives anciennes.', '古代的记录 = ancient records.')),
+      ]),
+  ]),
+  CH('hsk5-w8-c2', ('L’élixir introuvable', 'The elusive elixir'), [
+    L('zh-conclude', ('Conclure : 总之, 可见, 反而', 'Concluding: 总之, 可见, 反而'), ('Tirer une conclusion, retourner un argument et prendre position.', 'Draw a conclusion, turn an argument around and take a stand.'), 10, [
+        ('总之 (en somme), 可见 (on voit donc que), 因而 / 从而 (par conséquent / ce qui permet de) : 他每天练习，可见他很努力.', '总之 (in short), 可见 (it can be seen that), 因而 / 从而 (consequently / thereby): 他每天练习，可见他很努力.'),
+        ('反而 = au contraire, contre toute attente : 吃了药，病反而更重了 (après le médicament, la maladie a même empiré). 反正 = de toute façon ; 简直 = vraiment, carrément.', '反而 = on the contrary, instead: 吃了药，病反而更重了 (after the medicine, the illness got worse instead). 反正 = anyway; 简直 = simply, downright.'),
+        ('Débattre : 辩论 (débattre), 赞成 (approuver) / 否定 (nier, rejeter), 假如 (si, supposons), 以及 (ainsi que).', 'Debating: 辩论 (to debate), 赞成 (to approve) / 否定 (to negate, to reject), 假如 (if, suppose), 以及 (as well as).'),
+      ], [
+        ZG('zongzhi-kejian', '总之 / 可见…', 'zǒngzhī / kějiàn', ('en somme / on voit donc que…', 'in short / it can be seen that…')),
+        ZG('faner', '…，反而…', 'fǎn’ér', ('au contraire, contre toute attente', 'on the contrary, instead')),
+        Z('zongzhi', '总之', 'zǒngzhī', ('en somme, bref', 'in short')),
+        Z('kejian', '可见', 'kějiàn', ('on voit donc que', 'it can be seen that')),
+        Z('faner', '反而', 'fǎn’ér', ('au contraire', 'on the contrary')),
+        Z('yiner', '因而', 'yīn’ér', ('par conséquent', 'consequently')),
+        Z('conger', '从而', 'cóng’ér', ('de ce fait, ainsi', 'thereby')),
+        Z('fanzheng', '反正', 'fǎnzhèng', ('de toute façon', 'anyway')),
+        Z('jianzhi', '简直', 'jiǎnzhí', ('vraiment, carrément', 'simply, downright')),
+        Z('bianlun', '辩论', 'biànlùn', ('débattre ; débat', 'to debate; debate')),
+        Z('zancheng', '赞成', 'zànchéng', ('approuver', 'to approve, to agree with')),
+        Z('fouding', '否定', 'fǒudìng', ('nier, rejeter', 'to negate, to reject')),
+        Z('jiaru', '假如', 'jiǎrú', ('si, supposons que', 'if, supposing')),
+        Z('yiji', '以及', 'yǐjí', ('ainsi que', 'as well as')),
+      ], [
+        x('他们找了三年，也没找到仙药，可见长生不老只是一个传说。', 'Tāmen zhǎole sān nián, yě méi zhǎodào xiānyào, kějiàn chángshēng bù lǎo zhǐ shì yí ge chuánshuō.', 'Ils ont cherché trois ans sans trouver l’élixir : on voit bien que l’immortalité n’est qu’une légende.', 'They searched for three years without finding the elixir, which shows that immortality is just a legend.'),
+        x('休息了一天，他不但没好，反而更累了。', 'Xiūxile yì tiān, tā búdàn méi hǎo, fǎn’ér gèng lèi le.', 'Après une journée de repos, loin d’aller mieux, il était encore plus fatigué.', 'After a day’s rest, far from feeling better, he was even more tired.'),
+      ], [
+        FB(COMPLETE, '他每天学习到深夜，＿他非常重视这次考试。', ['可见', '反而', '假如'], '可见', ('On voit donc que : 可见.', 'It can be seen that: 可见.'), ('Il étudie tous les soirs tard dans la nuit : on voit qu’il prend cet examen très au sérieux.', 'He studies late into the night every day, which shows how seriously he takes this exam.')),
+        FB(COMPLETE, '雨不但没停，＿越下越大了。', ['反而', '总之', '以及'], '反而', ('Au contraire : 反而.', 'Instead: 反而.'), ('Loin de s’arrêter, la pluie est devenue de plus en plus forte.', 'Far from stopping, the rain got heavier and heavier.')),
+        DC(ANSWER, [('同学', '你赞成这个观点吗？')], ('Un camarade demande si tu approuves ce point de vue (oui, avec quelques réserves).', 'A classmate asks if you agree with this view (yes, with some reservations).'), ['基本赞成，不过有几点我想补充。', '反正我是皇帝。', '总之是一个成语。'], '基本赞成，不过有几点我想补充。', ('Approuver avec nuance : 基本赞成，不过….', 'Agree with nuance: 基本赞成，不过….')),
+        TF('总之，这次旅行非常成功。', ('Le voyage a été un échec.', 'The trip was a failure.'), FAUX, ('非常成功 = une grande réussite.', '非常成功 = very successful.')),
+      ]),
+  ])])
+
+write_level(5, ('HSK 5 : la quête de l’immortalité', 'HSK 5: the quest for immortality'), REGION, 'Eastern Seas',
+  [W1, W2, W3, W4, W5, W6, W7, W8, FINAL(5, REGION, ('Simulation HSK 5 : le palais de Penglai', 'HSK 5 simulation: the palace of Penglai'), 300, 180, 'écoute (听力), lecture (阅读) et écriture (书写)', 'listening (听力), reading (阅读) and writing (书写)')])

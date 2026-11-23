@@ -1057,4 +1057,12 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await page.goto(FILE + '#/exam/hsk4-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc HSK 4 — format officiel' })).toBeVisible();
   await expect(page.getByText(/100 questions en 100 minutes/)).toBeVisible();
+
+  // HSK 5 : la quête de l'immortalité, 100 questions en 120 minutes
+  await page.goto(FILE + '#/path');
+  await page.getByRole('tab', { name: /HSK 5/ }).click();
+  await expect(page.getByRole('heading', { name: 'HSK 5 : la quête de l’immortalité' })).toBeVisible();
+  await page.goto(FILE + '#/exam/hsk5-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 5 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/100 questions en 120 minutes/)).toBeVisible();
 });

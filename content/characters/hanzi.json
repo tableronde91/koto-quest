@@ -3702,6 +3702,894 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "hanzi-hsk5",
+   "glyph": "字",
+   "title": "HSK 5",
+   "description": "Les caractères du HSK 5 vus dans le parcours, avec leur pinyin et leur sens. Même caractère, même maîtrise que dans les leçons.",
+   "groups": [
+    {
+     "slug": "hzg-zh-hz-trade",
+     "title": "Les caractères du commerce : 营 贸 易 资 投 润 险 港",
+     "items": [
+      {
+       "slug": "hz-ying-run",
+       "kind": "kanji",
+       "front": "营",
+       "reading": "yíng",
+       "romaji": null,
+       "meaning": "gérer, camp",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-mao",
+       "kind": "kanji",
+       "front": "贸",
+       "reading": "mào",
+       "romaji": null,
+       "meaning": "commerce",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-yi-exchange",
+       "kind": "kanji",
+       "front": "易",
+       "reading": "yì",
+       "romaji": null,
+       "meaning": "échanger ; facile",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-zi-capital",
+       "kind": "kanji",
+       "front": "资",
+       "reading": "zī",
+       "romaji": null,
+       "meaning": "capital, ressources",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-tou-h5",
+       "kind": "kanji",
+       "front": "投",
+       "reading": "tóu",
+       "romaji": null,
+       "meaning": "jeter ; investir",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-run",
+       "kind": "kanji",
+       "front": "润",
+       "reading": "rùn",
+       "romaji": null,
+       "meaning": "humide ; profit",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-xian-danger",
+       "kind": "kanji",
+       "front": "险",
+       "reading": "xiǎn",
+       "romaji": null,
+       "meaning": "danger, risque",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-gang",
+       "kind": "kanji",
+       "front": "港",
+       "reading": "gǎng",
+       "romaji": null,
+       "meaning": "port",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-mirage",
+     "title": "Les caractères du mirage : 仿 佛 似 怀 疑 承 幻 梦",
+     "items": [
+      {
+       "slug": "hz-fang-imitate",
+       "kind": "kanji",
+       "front": "仿",
+       "reading": "fǎng",
+       "romaji": null,
+       "meaning": "imiter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-fu-seem",
+       "kind": "kanji",
+       "front": "佛",
+       "reading": "fú",
+       "romaji": null,
+       "meaning": "comme si (dans 仿佛) ; Bouddha (fó)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-si",
+       "kind": "kanji",
+       "front": "似",
+       "reading": "sì",
+       "romaji": null,
+       "meaning": "sembler, ressembler",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-huai",
+       "kind": "kanji",
+       "front": "怀",
+       "reading": "huái",
+       "romaji": null,
+       "meaning": "cœur, sein ; nourrir (un sentiment)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-yi-doubt",
+       "kind": "kanji",
+       "front": "疑",
+       "reading": "yí",
+       "romaji": null,
+       "meaning": "douter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 14
+       }
+      },
+      {
+       "slug": "hz-cheng-h5",
+       "kind": "kanji",
+       "front": "承",
+       "reading": "chéng",
+       "romaji": null,
+       "meaning": "porter, reconnaître",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-huan-h5",
+       "kind": "kanji",
+       "front": "幻",
+       "reading": "huàn",
+       "romaji": null,
+       "meaning": "illusion",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-meng",
+       "kind": "kanji",
+       "front": "梦",
+       "reading": "mèng",
+       "romaji": null,
+       "meaning": "rêve",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-silk",
+     "title": "Les caractères de la soie : 丝 绸 纺 织 针 线 设 饰",
+     "items": [
+      {
+       "slug": "hz-si-silk",
+       "kind": "kanji",
+       "front": "丝",
+       "reading": "sī",
+       "romaji": null,
+       "meaning": "soie, fil fin",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-chou",
+       "kind": "kanji",
+       "front": "绸",
+       "reading": "chóu",
+       "romaji": null,
+       "meaning": "soierie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-fang-spin",
+       "kind": "kanji",
+       "front": "纺",
+       "reading": "fǎng",
+       "romaji": null,
+       "meaning": "filer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-zhi-weave",
+       "kind": "kanji",
+       "front": "织",
+       "reading": "zhī",
+       "romaji": null,
+       "meaning": "tisser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-zhen-h5",
+       "kind": "kanji",
+       "front": "针",
+       "reading": "zhēn",
+       "romaji": null,
+       "meaning": "aiguille",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-xian-thread",
+       "kind": "kanji",
+       "front": "线",
+       "reading": "xiàn",
+       "romaji": null,
+       "meaning": "fil, ligne",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-she-set",
+       "kind": "kanji",
+       "front": "设",
+       "reading": "shè",
+       "romaji": null,
+       "meaning": "disposer, établir",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-shi-adorn",
+       "kind": "kanji",
+       "front": "饰",
+       "reading": "shì",
+       "romaji": null,
+       "meaning": "parure, orner",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-isles",
+     "title": "Les caractères des îles : 岛 屿 震 灾 湾 峡 沙 漠",
+     "items": [
+      {
+       "slug": "hz-dao-island",
+       "kind": "kanji",
+       "front": "岛",
+       "reading": "dǎo",
+       "romaji": null,
+       "meaning": "île",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-yu-islet",
+       "kind": "kanji",
+       "front": "屿",
+       "reading": "yǔ",
+       "romaji": null,
+       "meaning": "îlot",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-zhen-quake",
+       "kind": "kanji",
+       "front": "震",
+       "reading": "zhèn",
+       "romaji": null,
+       "meaning": "trembler, secousse",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 15
+       }
+      },
+      {
+       "slug": "hz-zai-h5",
+       "kind": "kanji",
+       "front": "灾",
+       "reading": "zāi",
+       "romaji": null,
+       "meaning": "catastrophe",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-wan-h5",
+       "kind": "kanji",
+       "front": "湾",
+       "reading": "wān",
+       "romaji": null,
+       "meaning": "baie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-xia-h5",
+       "kind": "kanji",
+       "front": "峡",
+       "reading": "xiá",
+       "romaji": null,
+       "meaning": "gorge, détroit",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-sha",
+       "kind": "kanji",
+       "front": "沙",
+       "reading": "shā",
+       "romaji": null,
+       "meaning": "sable",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-mo",
+       "kind": "kanji",
+       "front": "漠",
+       "reading": "mò",
+       "romaji": null,
+       "meaning": "désert",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-storm",
+     "title": "Les caractères de l’orage : 雷 闪 烈 暴 燥 源 宇 宙",
+     "items": [
+      {
+       "slug": "hz-lei-h5",
+       "kind": "kanji",
+       "front": "雷",
+       "reading": "léi",
+       "romaji": null,
+       "meaning": "tonnerre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-shan",
+       "kind": "kanji",
+       "front": "闪",
+       "reading": "shǎn",
+       "romaji": null,
+       "meaning": "éclair ; esquiver",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-lie",
+       "kind": "kanji",
+       "front": "烈",
+       "reading": "liè",
+       "romaji": null,
+       "meaning": "violent, ardent",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-bao-violent",
+       "kind": "kanji",
+       "front": "暴",
+       "reading": "bào",
+       "romaji": null,
+       "meaning": "violent, brutal",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 15
+       }
+      },
+      {
+       "slug": "hz-zao",
+       "kind": "kanji",
+       "front": "燥",
+       "reading": "zào",
+       "romaji": null,
+       "meaning": "sec",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 17
+       }
+      },
+      {
+       "slug": "hz-yuan-source",
+       "kind": "kanji",
+       "front": "源",
+       "reading": "yuán",
+       "romaji": null,
+       "meaning": "source",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-yu-space",
+       "kind": "kanji",
+       "front": "宇",
+       "reading": "yǔ",
+       "romaji": null,
+       "meaning": "espace",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-zhou-time",
+       "kind": "kanji",
+       "front": "宙",
+       "reading": "zhòu",
+       "romaji": null,
+       "meaning": "temps (infini)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-healing",
+     "title": "Les caractères des soins : 疫 诊 治 疗 脉 灸 寿 龄",
+     "items": [
+      {
+       "slug": "hz-yi-epidemic",
+       "kind": "kanji",
+       "front": "疫",
+       "reading": "yì",
+       "romaji": null,
+       "meaning": "épidémie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-zhen-examine",
+       "kind": "kanji",
+       "front": "诊",
+       "reading": "zhěn",
+       "romaji": null,
+       "meaning": "examiner (un malade)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-zhi-cure",
+       "kind": "kanji",
+       "front": "治",
+       "reading": "zhì",
+       "romaji": null,
+       "meaning": "soigner, gouverner",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-liao",
+       "kind": "kanji",
+       "front": "疗",
+       "reading": "liáo",
+       "romaji": null,
+       "meaning": "soigner",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-mai-h5",
+       "kind": "kanji",
+       "front": "脉",
+       "reading": "mài",
+       "romaji": null,
+       "meaning": "pouls, veine",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-jiu-moxa",
+       "kind": "kanji",
+       "front": "灸",
+       "reading": "jiǔ",
+       "romaji": null,
+       "meaning": "moxibustion",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-shou-life",
+       "kind": "kanji",
+       "front": "寿",
+       "reading": "shòu",
+       "romaji": null,
+       "meaning": "longévité",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-ling",
+       "kind": "kanji",
+       "front": "龄",
+       "reading": "líng",
+       "romaji": null,
+       "meaning": "âge",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-family5",
+     "title": "Les caractères de la famille : 辈 族 尊 敬 孝 伦 育 婚",
+     "items": [
+      {
+       "slug": "hz-bei-gen",
+       "kind": "kanji",
+       "front": "辈",
+       "reading": "bèi",
+       "romaji": null,
+       "meaning": "génération",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-zu",
+       "kind": "kanji",
+       "front": "族",
+       "reading": "zú",
+       "romaji": null,
+       "meaning": "clan, ethnie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-zun",
+       "kind": "kanji",
+       "front": "尊",
+       "reading": "zūn",
+       "romaji": null,
+       "meaning": "respecter, vénérable",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-jing-h5",
+       "kind": "kanji",
+       "front": "敬",
+       "reading": "jìng",
+       "romaji": null,
+       "meaning": "respect, honorer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-xiao-filial",
+       "kind": "kanji",
+       "front": "孝",
+       "reading": "xiào",
+       "romaji": null,
+       "meaning": "piété filiale",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-lun",
+       "kind": "kanji",
+       "front": "伦",
+       "reading": "lún",
+       "romaji": null,
+       "meaning": "ordre (des relations humaines)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-yu-raise",
+       "kind": "kanji",
+       "front": "育",
+       "reading": "yù",
+       "romaji": null,
+       "meaning": "élever, éduquer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-hun",
+       "kind": "kanji",
+       "front": "婚",
+       "reading": "hūn",
+       "romaji": null,
+       "meaning": "mariage",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-sages",
+     "title": "Les caractères des sages : 哲 思 维 辩 逻 辑 仙 祥",
+     "items": [
+      {
+       "slug": "hz-zhe-h5",
+       "kind": "kanji",
+       "front": "哲",
+       "reading": "zhé",
+       "romaji": null,
+       "meaning": "sage, philosophie",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-si-think",
+       "kind": "kanji",
+       "front": "思",
+       "reading": "sī",
+       "romaji": null,
+       "meaning": "penser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-wei-keep",
+       "kind": "kanji",
+       "front": "维",
+       "reading": "wéi",
+       "romaji": null,
+       "meaning": "maintenir ; penser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-bian",
+       "kind": "kanji",
+       "front": "辩",
+       "reading": "biàn",
+       "romaji": null,
+       "meaning": "débattre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 16
+       }
+      },
+      {
+       "slug": "hz-luo",
+       "kind": "kanji",
+       "front": "逻",
+       "reading": "luó",
+       "romaji": null,
+       "meaning": "patrouiller (logique)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-ji-collect",
+       "kind": "kanji",
+       "front": "辑",
+       "reading": "jí",
+       "romaji": null,
+       "meaning": "rassembler, éditer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-xian-immortal",
+       "kind": "kanji",
+       "front": "仙",
+       "reading": "xiān",
+       "romaji": null,
+       "meaning": "immortel",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-xiang-lucky",
+       "kind": "kanji",
+       "front": "祥",
+       "reading": "xiáng",
+       "romaji": null,
+       "meaning": "de bon augure",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      }
+     ]
+    }
+   ]
   }
  ],
  "notice": "Pinyin avec les tons (ā á ǎ à). Les caractères sont présentés en écriture simplifiée, celle du HSK et de la Chine continentale."

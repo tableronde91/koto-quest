@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si, HSK 5 compagnon de Xu Fu), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -1009,6 +1009,56 @@ story['levels']['HSK4'] = {
       ('Devant le Premier Empereur et le chancelier Li Si, passe l’épreuve des scribes : écoute, lis et écris comme au HSK 4. Atteins 180 points sur 300.',
        'Before the First Emperor and Chancellor Li Si, take the scribes’ test: listen, read and write as in the HSK 4. Reach 180 points out of 300.'),
       ('Li Si appose son sceau sur ta tablette. Niveau HSK 4 validé : te voilà grand scribe de l’empire !', 'Li Si stamps your tablet with his seal. HSK 4 level complete: you are now a grand scribe of the empire!')),
+   },
+}
+story['levels']['HSK5'] = {
+   'glyph': '仙', 'jp': '蓬莱', 'color': '#2E5A92',
+   'saga': B('La quête de l’immortalité', 'The quest for immortality'),
+   'hero': B('Compagnon de Xu Fu', 'Companion of Xu Fu'),
+   'short': B('Le compagnon', 'The companion'),
+   'prologue': B(
+     'Le Premier Empereur veut vivre éternellement. Le magicien Xu Fu affirme que trois îles d’immortels se cachent dans la mer de l’Est, et que l’on y trouve l’élixir de longue vie. L’empereur lui confie une flotte, des milliers de jeunes gens… et toi. « Tu sais lire, compter et convaincre, dit Xu Fu. Là où nous allons, il faudra parler aux dieux de la mer. »',
+     'The First Emperor wants to live forever. The magician Xu Fu claims that three islands of the immortals lie hidden in the Eastern Sea, where the elixir of long life can be found. The emperor entrusts him with a fleet, thousands of young people… and you. “You can read, count and persuade,” says Xu Fu. “Where we are going, we will have to talk to the gods of the sea.”'),
+   'epilogue': B(
+     'À Penglai, les sages t’accueillent mais n’ont pas d’élixir à t’offrir : « La seule immortalité, c’est ce que tu laisses aux autres. » Xu Fu décide de ne jamais rentrer. Toi, tu reprends la mer avec un rouleau de poèmes et de chengyu. Au port de Langya, on t’attend : les lettrés de la nouvelle dynastie Han ont besoin de quelqu’un qui maîtrise toute la langue…',
+     'In Penglai the sages welcome you but have no elixir to give: “The only immortality is what you leave to others.” Xu Fu decides never to return. You set sail again with a scroll of poems and chengyu. At the port of Langya, people are waiting: the scholars of the new Han dynasty need someone who has mastered the whole language…'),
+   'chapters': {
+    'hsk5-w1': CHAP(('Le port de Langya', 'The port of Langya'),
+      ('Au port de Langya, Yuqiang souffle la tempête et la flotte reste à quai. Commerce, chargements, contrats : prépare l’expédition avec méthode pour l’apaiser.',
+       'At the port of Langya, Yuqiang blows a storm and the fleet stays moored. Trade, loading, contracts: prepare the expedition methodically to calm him.'),
+      ('Yuqiang replie ses ailes et le vent tourne à l’est. Les voiles se gonflent : la flotte de Xu Fu prend la mer.', 'Yuqiang folds his wings and the wind turns east. The sails fill: Xu Fu’s fleet puts to sea.')),
+    'hsk5-w2': CHAP(('La mer des mirages', 'The sea of mirages'),
+      ('Au large, le Shen souffle des palais et des villes qui n’existent pas. Les marins veulent y accoster : aide-les à démêler le vrai du faux.',
+       'Out at sea, the Shen breathes out palaces and cities that do not exist. The sailors want to land: help them tell true from false.'),
+      ('Le Shen se referme et les mirages s’évanouissent. Devant la flotte, une vraie île apparaît.', 'The Shen closes up and the mirages vanish. Ahead of the fleet, a real island appears.')),
+    'hsk5-w3': CHAP(('L’île des tisserandes', 'The weavers’ island'),
+      ('Les Jiaoren tissent une soie que l’eau ne mouille pas. Pour obtenir des voiles neuves, parle-leur de leur art avec précision.',
+       'The Jiaoren weave a silk that water cannot wet. To get new sails, talk to them about their craft with precision.'),
+      ('Les Jiaoren te remettent des voiles brillantes et quelques perles nées de leurs larmes.', 'The Jiaoren hand you shimmering sails and a few pearls born of their tears.')),
+    'hsk5-w4': CHAP(('Les îles de la tortue', 'The turtle’s islands'),
+      ('Les îles bougent : la tortue géante Ao s’est réveillée et la terre tremble. Guide la flotte d’île en île et tiens le journal de bord.',
+       'The islands are moving: the giant turtle Ao has woken and the earth is shaking. Guide the fleet from island to island and keep the logbook.'),
+      ('Ao se rendort, les îles s’immobilisent. Ton journal de bord deviendra la première carte de ces mers.', 'Ao falls asleep again and the islands stand still. Your logbook will become the first map of these seas.')),
+    'hsk5-w5': CHAP(('Le royaume des orages', 'The realm of storms'),
+      ('Le Jiaolong appelle la foudre sur la flotte. Pour comprendre les orages et réparer les navires, il faut parler de météo, d’énergie et de science.',
+       'The Jiaolong calls lightning down on the fleet. To understand the storms and repair the ships, you must talk about weather, energy and science.'),
+      ('Le Jiaolong plonge dans les profondeurs. Le ciel s’éclaircit, et les étoiles guident à nouveau la flotte.', 'The Jiaolong dives into the depths. The sky clears and the stars guide the fleet once more.')),
+    'hsk5-w6': CHAP(('L’île des simples', 'The island of herbs'),
+      ('Les marins tombent malades. Sur l’île gardée par le poisson Heluo poussent des herbes de longue vie : prouve que tu connais assez la médecine pour les mériter.',
+       'The sailors are falling ill. On the island guarded by the Heluo fish grow herbs of long life: prove you know enough medicine to deserve them.'),
+      ('Le Heluo te laisse cueillir les herbes. Les malades se rétablissent… mais aucune plante ne rend immortel.', 'The Heluo lets you gather the herbs. The sick recover… but no plant makes anyone immortal.')),
+    'hsk5-w7': CHAP(('Le village des poissons-hommes', 'The village of the fish people'),
+      ('Dans un village de pêcheurs, le Chiru règne sur des anciens et des jeunes qui ne se comprennent plus. Rétablis le dialogue pour qu’il te laisse repartir.',
+       'In a fishing village, the Chiru rules over elders and young people who no longer understand each other. Restore the dialogue so that it lets you leave.'),
+      ('Le Chiru s’apaise. Les villageois t’indiquent la route de Penglai, à trois jours de mer vers le soleil levant.', 'The Chiru calms down. The villagers show you the way to Penglai, three days’ sail towards the rising sun.')),
+    'hsk5-w8': CHAP(('Penglai, l’île des immortels', 'Penglai, island of the immortals'),
+      ('Le poisson Ranyi garde la porte de Penglai. Il ne laisse entrer que ceux qui savent raisonner sur la vie, l’histoire et la mort.',
+       'The Ranyi fish guards the gate of Penglai. It only lets in those who can reason about life, history and death.'),
+      ('Le Ranyi s’écarte. Les portes de jade de Penglai s’ouvrent devant toi.', 'The Ranyi moves aside. The jade gates of Penglai open before you.')),
+    'hsk5-final': CHAP(('Le palais de Penglai', 'The palace of Penglai'),
+      ('Devant les sages de Penglai, passe l’épreuve : écoute, lis et écris comme au HSK 5. Atteins 180 points sur 300.',
+       'Before the sages of Penglai, take the test: listen, read and write as in the HSK 5. Reach 180 points out of 300.'),
+      ('Les sages s’inclinent. Niveau HSK 5 validé : tu as trouvé ce qui ne meurt jamais, la langue que l’on transmet !', 'The sages bow. HSK 5 level complete: you have found what never dies, the language that is passed on!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

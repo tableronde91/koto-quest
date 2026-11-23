@@ -280,6 +280,68 @@ const SPECIES: Record<string, Species> = {
     under: <path d="M150 170 Q190 160 186 128" stroke="#E2B06A" strokeWidth="12" fill="none" strokeLinecap="round" />,
     face: <path d="M92 118 Q100 124 108 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
   },
+  // ───── Gardiens chinois (HSK 5 — les mers de l'Est) ─────
+  // Yuqiang : dieu des vents marins, corps d'oiseau, serpents verts aux oreilles
+  禺: {
+    body: '#2A2A3A', belly: '#6A6A8A', head: '#C9A27A', eye: '#2A1A10',
+    back: <path d="M50 116 Q8 84 22 46 Q40 80 62 94 M150 116 Q192 84 178 46 Q160 80 138 94" fill="#3A3A4E" stroke="#1A1A28" strokeWidth="2" />,
+    top: <path d="M58 92 Q40 80 48 62 Q56 74 66 78 M142 92 Q160 80 152 62 Q144 74 134 78" stroke="#3E8A4A" strokeWidth="5" fill="none" strokeLinecap="round" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+    front: <path d="M30 60 q14 -8 28 0 M142 50 q14 -8 28 0" stroke="#9CC4E4" strokeWidth="3" fill="none" strokeLinecap="round" />,
+  },
+  // Shen : palourde géante qui souffle des mirages
+  蜃: {
+    body: '#C9B8D8', belly: '#F2E8F6', head: '#D8C8E4', eye: '#3A2A4A',
+    back: <path d="M24 150 Q100 70 176 150 Q100 190 24 150Z" fill="#B8A2C9" stroke="#7A5A8A" strokeWidth="3" />,
+    under: <path d="M40 150 Q100 100 160 150" stroke="#7A5A8A" strokeWidth="2" fill="none" />,
+    face: <path d="M92 118 Q100 124 108 118" stroke="#3A2A4A" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#F2E8F6" opacity="0.8"><rect x="146" y="28" width="10" height="20" /><path d="M140 30 L151 18 L162 30Z" /><rect x="164" y="36" width="8" height="12" /></g>,
+  },
+  // Jiaoren : gens de la mer à queue de poisson, perles
+  鲛: {
+    body: '#3E8A8A', belly: '#BFE4E0', head: '#E8C8A8', eye: '#2A1A10',
+    back: <path d="M150 170 Q190 160 186 130 L196 120 L176 128 Q172 150 150 156" fill="#2F7A6E" />,
+    top: <path d="M62 80 Q58 44 84 48 Q94 30 106 40 Q126 34 132 56 Q146 66 138 92" fill="#2A4A5A" />,
+    face: <path d="M92 118 Q100 124 108 118" stroke="#8A3A2A" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#F6F3EC" stroke="#C9C4BA" strokeWidth="1">{[[64, 186], [76, 192], [124, 190]].map(([x, y]) => <circle key={x} cx={x} cy={y} r="4" />)}</g>,
+  },
+  // Ao : tortue colossale portant des îles sur son dos
+  鳌: {
+    body: '#4E6A4A', belly: '#9AB08A', head: '#5E7A5A', eye: '#F2D94E',
+    back: <><ellipse cx="100" cy="150" rx="76" ry="44" fill="#6E5A3A" stroke="#3A2A1A" strokeWidth="3" /><path d="M56 112 L68 92 L80 112Z M118 108 L132 84 L146 108Z" fill="#5E8C3A" /></>,
+    under: <path d="M56 150 L76 136 L100 150 L124 136 L144 150" stroke="#3A2A1A" strokeWidth="2.5" fill="none" />,
+    face: <path d="M88 118 Q100 126 112 118" stroke="#1F3A1A" strokeWidth="3" fill="none" />,
+  },
+  // Jiaolong : dragon sans cornes des crues, écailles, éclairs
+  蛟: {
+    body: '#2E5A7A', belly: '#9CC4E4', head: '#3E6A8A', eye: '#F2D94E',
+    back: <path d="M150 160 Q194 140 184 100 Q176 72 196 56" stroke="#2E5A7A" strokeWidth="12" fill="none" strokeLinecap="round" />,
+    under: <g fill="none" stroke="#1E4A6A" strokeWidth="2">{[0, 1].map((r) => [0, 1, 2, 3].map((c) => <path key={`${r}${c}`} d={`M${66 + c * 18 + (r % 2) * 9} ${140 + r * 12} q9 8 18 0`} />))}</g>,
+    face: <><path d="M86 118 Q100 126 114 118" stroke="#1A2A40" strokeWidth="3" fill="none" /><path d="M80 112 Q64 108 56 116 M120 112 Q136 108 144 116" stroke="#1A2A40" strokeWidth="2" fill="none" /></>,
+    front: <path d="M30 40 L40 58 L34 58 L44 78" stroke="#F2D94E" strokeWidth="3" fill="none" strokeLinejoin="round" />,
+  },
+  // Heluo : poisson à une tête et dix corps
+  何: {
+    body: '#6A8AAA', belly: '#C8D8E8', head: '#7A9ABA', eye: '#2A1A10',
+    back: <g fill="#5A7A9A" stroke="#3A5A7A" strokeWidth="2">{[-50, -30, -10, 10, 30, 50].map((a) => <path key={a} d="M100 150 L100 92 L92 80 L108 80 L100 92Z" transform={`rotate(${a + 180} 100 150)`} />)}</g>,
+    face: <path d="M90 120 Q100 116 110 120" stroke="#1A2A40" strokeWidth="2.5" fill="none" />,
+  },
+  // Chiru : poisson rouge à visage humain
+  鱬: {
+    body: '#D9483B', belly: '#F2B8A0', head: '#E8C8A8', eye: '#2A1A10',
+    back: <path d="M150 160 Q186 150 190 120 L200 140 L190 160 L200 180 L186 170 Q170 172 150 166" fill="#C8323F" />,
+    top: <path d="M64 80 Q60 50 84 54 Q100 40 116 54 Q140 50 136 80" fill="#3A2A1A" />,
+    under: <path d="M62 140 q8 -6 16 0 M122 140 q8 -6 16 0" stroke="#8E1B26" strokeWidth="2.5" fill="none" />,
+    face: <path d="M88 118 Q100 112 112 118" stroke="#5A1A10" strokeWidth="2.5" fill="none" />,
+  },
+  // Ranyi : poisson à tête de serpent et à six pieds
+  冉: {
+    body: '#4A3A5A', belly: '#9A8AAA', head: '#5A4A6A', eye: '#F2D94E',
+    back: <path d="M150 160 Q186 150 190 120 L200 140 L190 160 L200 180 L186 170 Q170 172 150 166" fill="#3A2A4A" />,
+    top: <path d="M78 52 Q100 36 122 52" stroke="#2A1A3A" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    face: <path d="M96 120 l4 10 l4 -10" stroke="#C8323F" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#3A2A4A">{[56, 74, 92, 108, 126, 144].map((x) => <rect key={x} x={x - 3} y="182" width="6" height="12" rx="2" />)}</g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

@@ -24687,6 +24687,955 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "jing-wei-tian-hai",
+   "glyph": "卫",
+   "level": "HSK5",
+   "color": "#3A6AA8",
+   "title": {
+    "jp": "精卫填海",
+    "fr": "Jingwei veut combler la mer",
+    "en": "Jingwei fills the sea"
+   },
+   "summary": {
+    "fr": "La fille de l’empereur Yan se noie dans la mer de l’Est. Devenue oiseau, elle jure de la combler, caillou après caillou.",
+    "en": "Emperor Yan’s daughter drowns in the Eastern Sea. Turned into a bird, she vows to fill it in, pebble by pebble."
+   },
+   "chapters": [
+    {
+     "slug": "jing-wei-tian-hai-1",
+     "title": {
+      "jp": "女娃",
+      "fr": "Nüwa, la fille de l’empereur",
+      "en": "Nüwa, the emperor’s daughter"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "传说，{炎帝|Yándì}有一个小女儿，名字叫{女娃|Nǚwá}。",
+        "fr": "La légende raconte que l’empereur Yan avait une petite fille nommée Nüwa.",
+        "en": "Legend has it that Emperor Yan had a young daughter called Nüwa.",
+        "kana": "传说，炎帝有一个小女儿，名字叫女娃。"
+       },
+       {
+        "jp": "她非常喜欢大海，常常一个人{划|huá}着小船去东海玩儿。",
+        "fr": "Elle adorait la mer et partait souvent seule en barque jouer sur la mer de l’Est.",
+        "en": "She loved the sea and often rowed out alone to play on the Eastern Sea.",
+        "kana": "她非常喜欢大海，常常一个人划着小船去东海玩儿。"
+       },
+       {
+        "jp": "有一天，海上{忽然|hūrán}刮起了大风，一个{巨大|jùdà}的{浪|làng}把小船{打翻|dǎfān}了。",
+        "fr": "Un jour, un grand vent se leva soudain et une vague énorme fit chavirer la barque.",
+        "en": "One day a great wind suddenly rose and a huge wave capsized the boat.",
+        "kana": "有一天，海上忽然刮起了大风，一个巨大的浪把小船打翻了。"
+       }
+      ],
+      [
+       {
+        "jp": "{女娃|Nǚwá}再也没有回来。",
+        "fr": "Nüwa ne revint jamais.",
+        "en": "Nüwa never came back.",
+        "kana": "女娃再也没有回来。"
+       },
+       {
+        "jp": "她的{灵魂|línghún}变成了一只小鸟，头上有{花纹|huāwén}，{嘴|zuǐ}是白色的，脚是红色的。",
+        "fr": "Son âme devint un petit oiseau à la tête tachetée, au bec blanc et aux pattes rouges.",
+        "en": "Her soul became a little bird with a patterned head, a white beak and red feet.",
+        "kana": "她的灵魂变成了一只小鸟，头上有花纹，嘴是白色的，脚是红色的。"
+       },
+       {
+        "jp": "它总是“{精卫|jīngwèi}，{精卫|jīngwèi}”地叫，所以人们叫它{精卫|Jīngwèi}。",
+        "fr": "Comme il criait sans cesse « jingwei, jingwei », on l’appela Jingwei.",
+        "en": "Because it kept crying “jingwei, jingwei”, people called it Jingwei.",
+        "kana": "它总是“精卫，精卫”地叫，所以人们叫它精卫。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "炎帝",
+       "reading": "Yándì",
+       "fr": "l’empereur Yan (souverain mythique)",
+       "en": "Emperor Yan (mythical ruler)"
+      },
+      {
+       "jp": "划",
+       "reading": "huá",
+       "fr": "ramer",
+       "en": "to row"
+      },
+      {
+       "jp": "巨大",
+       "reading": "jùdà",
+       "fr": "énorme",
+       "en": "huge"
+      },
+      {
+       "jp": "浪",
+       "reading": "làng",
+       "fr": "vague",
+       "en": "wave"
+      },
+      {
+       "jp": "打翻",
+       "reading": "dǎfān",
+       "fr": "renverser, faire chavirer",
+       "en": "to capsize"
+      },
+      {
+       "jp": "灵魂",
+       "reading": "línghún",
+       "fr": "âme",
+       "en": "soul"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’arrive-t-il à Nüwa ?",
+        "en": "What happens to Nüwa?"
+       },
+       "choices": [
+        {
+         "fr": "Elle se noie en mer",
+         "en": "She drowns at sea"
+        },
+        {
+         "fr": "Elle se perd en montagne",
+         "en": "She gets lost in the mountains"
+        },
+        {
+         "fr": "Elle part vivre ailleurs",
+         "en": "She goes to live elsewhere"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi l’oiseau s’appelle-t-il Jingwei ?",
+        "en": "Why is the bird called Jingwei?"
+       },
+       "choices": [
+        {
+         "fr": "À cause de son cri",
+         "en": "Because of its cry"
+        },
+        {
+         "fr": "À cause de sa couleur",
+         "en": "Because of its colour"
+        },
+        {
+         "fr": "C’est le nom de son père",
+         "en": "It is its father’s name"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "jing-wei-tian-hai-2",
+     "title": {
+      "jp": "填海",
+      "fr": "Combler la mer",
+      "en": "Filling the sea"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{精卫|Jīngwèi}{恨|hèn}大海{夺走|duózǒu}了自己的{生命|shēngmìng}，决定把大海{填平|tiánpíng}。",
+        "fr": "Jingwei en voulait à la mer de lui avoir pris la vie et décida de la combler.",
+        "en": "Jingwei hated the sea for taking her life and decided to fill it in.",
+        "kana": "精卫恨大海夺走了自己的生命，决定把大海填平。"
+       },
+       {
+        "jp": "它每天从西山{叼|diāo}来小{石头|shítou}和{树枝|shùzhī}，扔进东海里。",
+        "fr": "Chaque jour, elle rapportait dans son bec des cailloux et des brindilles des monts de l’Ouest et les jetait dans la mer de l’Est.",
+        "en": "Every day she carried pebbles and twigs in her beak from the western hills and dropped them into the Eastern Sea.",
+        "kana": "它每天从西山叼来小石头和树枝，扔进东海里。"
+       },
+       {
+        "jp": "大海笑它：“小鸟，你就是{填|tián}一百万年，也{填|tián}不平我！”",
+        "fr": "La mer se moquait d’elle : « Petit oiseau, même en un million d’années tu ne me combleras pas ! »",
+        "en": "The sea laughed at her: “Little bird, even in a million years you won’t fill me in!”",
+        "kana": "大海笑它：“小鸟，你就是填一百万年，也填不平我！”"
+       }
+      ],
+      [
+       {
+        "jp": "{精卫|Jīngwèi}回答：“哪怕{填|tián}一千万年、一万万年，我也要把你{填|tián}平！”",
+        "fr": "Jingwei répondit : « Même s’il me faut dix millions, cent millions d’années, je te comblerai ! »",
+        "en": "Jingwei answered: “Even if it takes ten million, a hundred million years, I will fill you in!”",
+        "kana": "精卫回答：“哪怕填一千万年、一万万年，我也要把你填平！”"
+       },
+       {
+        "jp": "就这样，它一直飞来飞去，从来没有{停止|tíngzhǐ}过。",
+        "fr": "Et elle continua ainsi ses allers-retours, sans jamais s’arrêter.",
+        "en": "And so she kept flying back and forth, never once stopping.",
+        "kana": "就这样，它一直飞来飞去，从来没有停止过。"
+       },
+       {
+        "jp": "后来，人们用“{精卫填海|Jīngwèi tián hǎi}”来{形容|xíngróng}{意志|yìzhì}{坚定|jiāndìng}、不怕困难的精神。",
+        "fr": "Depuis, « Jingwei comble la mer » désigne une volonté inébranlable qui ne recule devant aucune difficulté.",
+        "en": "Since then, “Jingwei filling the sea” describes an unshakeable will that fears no difficulty.",
+        "kana": "后来，人们用“精卫填海”来形容意志坚定、不怕困难的精神。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "恨",
+       "reading": "hèn",
+       "fr": "haïr, en vouloir à",
+       "en": "to hate"
+      },
+      {
+       "jp": "夺走",
+       "reading": "duózǒu",
+       "fr": "enlever, ravir",
+       "en": "to take away"
+      },
+      {
+       "jp": "填",
+       "reading": "tián",
+       "fr": "combler, remplir",
+       "en": "to fill"
+      },
+      {
+       "jp": "叼",
+       "reading": "diāo",
+       "fr": "tenir dans le bec",
+       "en": "to hold in the beak"
+      },
+      {
+       "jp": "停止",
+       "reading": "tíngzhǐ",
+       "fr": "cesser, s’arrêter",
+       "en": "to stop"
+      },
+      {
+       "jp": "坚定",
+       "reading": "jiāndìng",
+       "fr": "ferme, inébranlable",
+       "en": "firm, steadfast"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que jette Jingwei dans la mer ?",
+        "en": "What does Jingwei drop into the sea?"
+       },
+       "choices": [
+        {
+         "fr": "Des cailloux et des brindilles",
+         "en": "Pebbles and twigs"
+        },
+        {
+         "fr": "Des fleurs",
+         "en": "Flowers"
+        },
+        {
+         "fr": "Du sable",
+         "en": "Sand"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que représente « 精卫填海 » ?",
+        "en": "What does “精卫填海” stand for?"
+       },
+       "choices": [
+        {
+         "fr": "Une volonté inébranlable",
+         "en": "An unshakeable will"
+        },
+        {
+         "fr": "Une colère inutile",
+         "en": "Useless anger"
+        },
+        {
+         "fr": "L’amour de la mer",
+         "en": "Love of the sea"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "yu-gong-yi-shan",
+   "glyph": "山",
+   "level": "HSK5",
+   "color": "#6E5A3A",
+   "title": {
+    "jp": "愚公移山",
+    "fr": "Le vieux fou qui déplaça les montagnes",
+    "en": "The foolish old man who moved the mountains"
+   },
+   "summary": {
+    "fr": "Deux montagnes barrent la porte du vieux Yugong. À quatre-vingt-dix ans, il décide de les déplacer.",
+    "en": "Two mountains block old Yugong’s door. At ninety, he decides to move them."
+   },
+   "chapters": [
+    {
+     "slug": "yu-gong-yi-shan-1",
+     "title": {
+      "jp": "两座大山",
+      "fr": "Deux grandes montagnes",
+      "en": "Two great mountains"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "很久以前，有一个快九十岁的老人，叫{愚公|Yúgōng}。",
+        "fr": "Il y a très longtemps vivait un vieil homme de près de quatre-vingt-dix ans, nommé Yugong.",
+        "en": "Long ago there lived an old man of nearly ninety called Yugong.",
+        "kana": "很久以前，有一个快九十岁的老人，叫愚公。"
+       },
+       {
+        "jp": "他家门前有两座大山，一座叫{太行山|Tàiháng shān}，一座叫{王屋山|Wángwū shān}。",
+        "fr": "Devant sa porte se dressaient deux grandes montagnes, le Taihang et le Wangwu.",
+        "en": "In front of his door stood two great mountains, Mount Taihang and Mount Wangwu.",
+        "kana": "他家门前有两座大山，一座叫太行山，一座叫王屋山。"
+       },
+       {
+        "jp": "每次出门，都要{绕|rào}很远的路，非常不方便。",
+        "fr": "Chaque fois qu’il sortait, il devait faire un long détour : c’était très peu pratique.",
+        "en": "Every time he went out he had to make a long detour, which was very inconvenient.",
+        "kana": "每次出门，都要绕很远的路，非常不方便。"
+       }
+      ],
+      [
+       {
+        "jp": "一天，{愚公|Yúgōng}把全家人叫到一起，说：“我们一起把这两座山搬走，好不好？”",
+        "fr": "Un jour, Yugong réunit toute sa famille : « Et si nous déplacions ensemble ces deux montagnes ? »",
+        "en": "One day Yugong gathered his whole family: “Shall we move these two mountains together?”",
+        "kana": "一天，愚公把全家人叫到一起，说：“我们一起把这两座山搬走，好不好？”"
+       },
+       {
+        "jp": "家里人都{赞成|zànchéng}，只有他的妻子有点儿{怀疑|huáiyí}：“你连一座小山都搬不动，{何况|hékuàng}这么大的山呢？”",
+        "fr": "Tous approuvèrent, sauf sa femme, qui doutait : « Tu ne pourrais même pas déplacer une colline, alors des montagnes pareilles… »",
+        "en": "Everyone agreed except his wife, who had doubts: “You couldn’t even move a hill, let alone mountains this size.”",
+        "kana": "家里人都赞成，只有他的妻子有点儿怀疑：“你连一座小山都搬不动，何况这么大的山呢？”"
+       },
+       {
+        "jp": "{愚公|Yúgōng}说：“只要我们坚持，就一定能成功。”",
+        "fr": "Yugong répondit : « Du moment que nous persévérons, nous réussirons. »",
+        "en": "Yugong said: “As long as we persevere, we will succeed.”",
+        "kana": "愚公说：“只要我们坚持，就一定能成功。”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "愚公",
+       "reading": "Yúgōng",
+       "fr": "Yugong (« le vieux sot »)",
+       "en": "Yugong (“the foolish old man”)"
+      },
+      {
+       "jp": "座",
+       "reading": "zuò",
+       "fr": "classificateur des montagnes",
+       "en": "measure word for mountains"
+      },
+      {
+       "jp": "绕",
+       "reading": "rào",
+       "fr": "contourner, faire un détour",
+       "en": "to go around"
+      },
+      {
+       "jp": "赞成",
+       "reading": "zànchéng",
+       "fr": "approuver",
+       "en": "to approve"
+      },
+      {
+       "jp": "怀疑",
+       "reading": "huáiyí",
+       "fr": "douter",
+       "en": "to doubt"
+      },
+      {
+       "jp": "何况",
+       "reading": "hékuàng",
+       "fr": "à plus forte raison",
+       "en": "let alone"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Yugong veut-il déplacer les montagnes ?",
+        "en": "Why does Yugong want to move the mountains?"
+       },
+       "choices": [
+        {
+         "fr": "Elles l’obligent à faire de longs détours",
+         "en": "They force him to make long detours"
+        },
+        {
+         "fr": "Il veut construire une maison",
+         "en": "He wants to build a house"
+        },
+        {
+         "fr": "Il cherche de l’or",
+         "en": "He is looking for gold"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qui doute du projet ?",
+        "en": "Who doubts the plan?"
+       },
+       "choices": [
+        {
+         "fr": "Sa femme",
+         "en": "His wife"
+        },
+        {
+         "fr": "Ses fils",
+         "en": "His sons"
+        },
+        {
+         "fr": "Ses voisins",
+         "en": "His neighbours"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "yu-gong-yi-shan-2",
+     "title": {
+      "jp": "智叟的笑话",
+      "fr": "Les moqueries du vieux malin",
+      "en": "The wise old man’s mockery"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "第二天，{愚公|Yúgōng}带着儿子和孙子开始{挖|wā}山，把{石头|shítou}和{土|tǔ}运到海边去。",
+        "fr": "Dès le lendemain, Yugong se mit à creuser la montagne avec ses fils et ses petits-fils et transporta pierres et terre jusqu’à la mer.",
+        "en": "The next day Yugong began digging with his sons and grandsons, carrying rocks and earth to the sea.",
+        "kana": "第二天，愚公带着儿子和孙子开始挖山，把石头和土运到海边去。"
+       },
+       {
+        "jp": "来回一次，要{整整|zhěngzhěng}一年。",
+        "fr": "Un aller-retour prenait une année entière.",
+        "en": "A round trip took a whole year.",
+        "kana": "来回一次，要整整一年。"
+       },
+       {
+        "jp": "有一个叫{智叟|Zhìsǒu}的老人笑他：“你太{糊涂|hútu}了！你已经这么老了，怎么搬得动这么大的山？”",
+        "fr": "Un vieil homme nommé Zhisou se moqua de lui : « Tu es bien sot ! À ton âge, comment pourrais-tu déplacer de telles montagnes ? »",
+        "en": "An old man called Zhisou laughed at him: “How foolish you are! At your age, how could you move mountains like these?”",
+        "kana": "有一个叫智叟的老人笑他：“你太糊涂了！你已经这么老了，怎么搬得动这么大的山？”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "挖",
+       "reading": "wā",
+       "fr": "creuser",
+       "en": "to dig"
+      },
+      {
+       "jp": "土",
+       "reading": "tǔ",
+       "fr": "terre",
+       "en": "earth, soil"
+      },
+      {
+       "jp": "整整",
+       "reading": "zhěngzhěng",
+       "fr": "tout entier, pas moins de",
+       "en": "whole, fully"
+      },
+      {
+       "jp": "智叟",
+       "reading": "Zhìsǒu",
+       "fr": "Zhisou (« le vieux malin »)",
+       "en": "Zhisou (“the wise old man”)"
+      },
+      {
+       "jp": "糊涂",
+       "reading": "hútu",
+       "fr": "sot, confus",
+       "en": "muddle-headed"
+      },
+      {
+       "jp": "来回",
+       "reading": "láihuí",
+       "fr": "aller-retour",
+       "en": "round trip"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où emporte-t-on la terre ?",
+        "en": "Where is the earth taken?"
+       },
+       "choices": [
+        {
+         "fr": "Jusqu’à la mer",
+         "en": "To the sea"
+        },
+        {
+         "fr": "Dans la forêt",
+         "en": "Into the forest"
+        },
+        {
+         "fr": "Au marché",
+         "en": "To the market"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que pense Zhisou de Yugong ?",
+        "en": "What does Zhisou think of Yugong?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il est sot",
+         "en": "That he is foolish"
+        },
+        {
+         "fr": "Qu’il est courageux",
+         "en": "That he is brave"
+        },
+        {
+         "fr": "Qu’il est riche",
+         "en": "That he is rich"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "yu-gong-yi-shan-3",
+     "title": {
+      "jp": "子子孙孙",
+      "fr": "De génération en génération",
+      "en": "Generation after generation"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{愚公|Yúgōng}回答：“我{死|sǐ}了，还有儿子；儿子{死|sǐ}了，还有孙子。",
+        "fr": "Yugong répondit : « Quand je mourrai, il restera mes fils ; quand ils mourront, il restera mes petits-fils.",
+        "en": "Yugong replied: “When I die, there will be my sons; when they die, there will be my grandsons.",
+        "kana": "愚公回答：“我死了，还有儿子；儿子死了，还有孙子。"
+       },
+       {
+        "jp": "{子子孙孙|zǐzǐsūnsūn}是没有{穷尽|qióngjìn}的，可是山不会再{长|zhǎng}高了，为什么搬不走呢？”",
+        "fr": "Les descendants n’auront pas de fin, mais la montagne ne grandira plus : pourquoi ne pourrions-nous pas la déplacer ? »",
+        "en": "Descendants never run out, but the mountains won’t grow any higher, so why couldn’t we move them?”",
+        "kana": "子子孙孙是没有穷尽的，可是山不会再长高了，为什么搬不走呢？”"
+       },
+       {
+        "jp": "{智叟|Zhìsǒu}听了，一句话也说不出来。",
+        "fr": "Zhisou ne trouva rien à répondre.",
+        "en": "Zhisou was left speechless.",
+        "kana": "智叟听了，一句话也说不出来。"
+       }
+      ],
+      [
+       {
+        "jp": "{天帝|Tiāndì}被{愚公|Yúgōng}的精神感动了，{派|pài}两个{神仙|shénxiān}把两座山{背|bēi}走了。",
+        "fr": "Ému par la ténacité de Yugong, l’Empereur céleste envoya deux divinités emporter les montagnes sur leur dos.",
+        "en": "Moved by Yugong’s spirit, the Heavenly Emperor sent two gods to carry the mountains away on their backs.",
+        "kana": "天帝被愚公的精神感动了，派两个神仙把两座山背走了。"
+       },
+       {
+        "jp": "从此，{愚公|Yúgōng}家门前再也没有大山{挡|dǎng}路了。",
+        "fr": "Depuis, plus aucune montagne ne barre la porte de Yugong.",
+        "en": "From then on no mountain blocked Yugong’s door.",
+        "kana": "从此，愚公家门前再也没有大山挡路了。"
+       },
+       {
+        "jp": "“{愚公移山|Yúgōng yí shān}”告诉我们：只要有{决心|juéxīn}，再难的事情也能做到。",
+        "fr": "« Yugong déplace les montagnes » nous enseigne qu’avec de la détermination, on accomplit les tâches les plus difficiles.",
+        "en": "“Yugong moving the mountains” teaches us that with determination, even the hardest things can be done.",
+        "kana": "“愚公移山”告诉我们：只要有决心，再难的事情也能做到。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "子子孙孙",
+       "reading": "zǐzǐsūnsūn",
+       "fr": "les descendants, de génération en génération",
+       "en": "descendants, generation after generation"
+      },
+      {
+       "jp": "穷尽",
+       "reading": "qióngjìn",
+       "fr": "fin, épuisement",
+       "en": "end, exhaustion"
+      },
+      {
+       "jp": "天帝",
+       "reading": "Tiāndì",
+       "fr": "l’Empereur céleste",
+       "en": "the Heavenly Emperor"
+      },
+      {
+       "jp": "神仙",
+       "reading": "shénxiān",
+       "fr": "divinité, immortel",
+       "en": "god, immortal"
+      },
+      {
+       "jp": "挡",
+       "reading": "dǎng",
+       "fr": "barrer, bloquer",
+       "en": "to block"
+      },
+      {
+       "jp": "决心",
+       "reading": "juéxīn",
+       "fr": "détermination",
+       "en": "determination"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quel est l’argument de Yugong ?",
+        "en": "What is Yugong’s argument?"
+       },
+       "choices": [
+        {
+         "fr": "Ses descendants continueront",
+         "en": "His descendants will carry on"
+        },
+        {
+         "fr": "Il est très fort",
+         "en": "He is very strong"
+        },
+        {
+         "fr": "Les montagnes sont petites",
+         "en": "The mountains are small"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qui finit par déplacer les montagnes ?",
+        "en": "Who finally moves the mountains?"
+       },
+       "choices": [
+        {
+         "fr": "Deux divinités",
+         "en": "Two gods"
+        },
+        {
+         "fr": "Zhisou",
+         "en": "Zhisou"
+        },
+        {
+         "fr": "Les voisins",
+         "en": "The neighbours"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "yu-bang-xiang-zheng",
+   "glyph": "蚌",
+   "level": "HSK5",
+   "color": "#8A7A5A",
+   "title": {
+    "jp": "鹬蚌相争",
+    "fr": "Le héron et la moule",
+    "en": "The snipe and the clam"
+   },
+   "summary": {
+    "fr": "Un héron et une moule se disputent sur la plage, et c’est le pêcheur qui en profite.",
+    "en": "A snipe and a clam quarrel on the beach, and it is the fisherman who benefits."
+   },
+   "chapters": [
+    {
+     "slug": "yu-bang-xiang-zheng-1",
+     "title": {
+      "jp": "谁也不让谁",
+      "fr": "Aucun ne cède",
+      "en": "Neither gives way"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "一个{晴朗|qínglǎng}的日子，一只{河蚌|hébàng}{张开|zhāngkāi}{壳|ké}，躺在{沙滩|shātān}上{晒太阳|shài tàiyáng}。",
+        "fr": "Par une belle journée, une moule avait ouvert sa coquille et se chauffait au soleil sur la plage.",
+        "en": "One fine day a clam had opened its shell and was basking in the sun on the beach.",
+        "kana": "一个晴朗的日子，一只河蚌张开壳，躺在沙滩上晒太阳。"
+       },
+       {
+        "jp": "一只{鹬|yù}飞过来，用长长的{嘴|zuǐ}去{啄|zhuó}{河蚌|hébàng}的肉。",
+        "fr": "Un héron arriva et piqua de son long bec la chair de la moule.",
+        "en": "A snipe flew over and pecked at the clam’s flesh with its long beak.",
+        "kana": "一只鹬飞过来，用长长的嘴去啄河蚌的肉。"
+       },
+       {
+        "jp": "{河蚌|hébàng}马上把{壳|ké}合上，紧紧地{夹住|jiāzhù}了{鹬|yù}的{嘴|zuǐ}。",
+        "fr": "La moule referma aussitôt sa coquille et lui serra fermement le bec.",
+        "en": "The clam immediately closed its shell and clamped the snipe’s beak tight.",
+        "kana": "河蚌马上把壳合上，紧紧地夹住了鹬的嘴。"
+       }
+      ],
+      [
+       {
+        "jp": "{鹬|yù}说：“今天不下雨，明天不下雨，你就会{干死|gānsǐ}在这儿！”",
+        "fr": "Le héron dit : « S’il ne pleut ni aujourd’hui ni demain, tu mourras desséchée ici ! »",
+        "en": "The snipe said: “If it doesn’t rain today or tomorrow, you’ll dry up and die here!”",
+        "kana": "鹬说：“今天不下雨，明天不下雨，你就会干死在这儿！”"
+       },
+       {
+        "jp": "{河蚌|hébàng}说：“今天不放你，明天不放你，你就会{饿死|èsǐ}在这儿！”",
+        "fr": "La moule répliqua : « Si je ne te lâche ni aujourd’hui ni demain, tu mourras de faim ici ! »",
+        "en": "The clam retorted: “If I don’t let you go today or tomorrow, you’ll starve to death here!”",
+        "kana": "河蚌说：“今天不放你，明天不放你，你就会饿死在这儿！”"
+       },
+       {
+        "jp": "它们谁也不让谁，一直{争|zhēng}到了下午。",
+        "fr": "Aucun ne voulait céder, et ils se disputèrent jusqu’à l’après-midi.",
+        "en": "Neither would give way, and they argued until the afternoon.",
+        "kana": "它们谁也不让谁，一直争到了下午。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "河蚌",
+       "reading": "hébàng",
+       "fr": "moule d’eau douce",
+       "en": "freshwater clam"
+      },
+      {
+       "jp": "壳",
+       "reading": "ké",
+       "fr": "coquille",
+       "en": "shell"
+      },
+      {
+       "jp": "鹬",
+       "reading": "yù",
+       "fr": "héron, bécasseau",
+       "en": "snipe"
+      },
+      {
+       "jp": "啄",
+       "reading": "zhuó",
+       "fr": "piquer du bec",
+       "en": "to peck"
+      },
+      {
+       "jp": "夹住",
+       "reading": "jiāzhù",
+       "fr": "pincer, serrer",
+       "en": "to clamp"
+      },
+      {
+       "jp": "争",
+       "reading": "zhēng",
+       "fr": "se disputer",
+       "en": "to argue, to fight over"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait la moule quand le héron la pique ?",
+        "en": "What does the clam do when the snipe pecks it?"
+       },
+       "choices": [
+        {
+         "fr": "Elle lui serre le bec",
+         "en": "It clamps its beak"
+        },
+        {
+         "fr": "Elle s’enfuit",
+         "en": "It runs away"
+        },
+        {
+         "fr": "Elle appelle le pêcheur",
+         "en": "It calls the fisherman"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que menace le héron ?",
+        "en": "What does the snipe threaten?"
+       },
+       "choices": [
+        {
+         "fr": "La moule séchera sans pluie",
+         "en": "The clam will dry up without rain"
+        },
+        {
+         "fr": "Il appellera ses amis",
+         "en": "He will call his friends"
+        },
+        {
+         "fr": "Il la mangera tout de suite",
+         "en": "He will eat it at once"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "yu-bang-xiang-zheng-2",
+     "title": {
+      "jp": "渔翁得利",
+      "fr": "Le pêcheur en profite",
+      "en": "The fisherman profits"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "这时，一个{渔夫|yúfū}走过来。",
+        "fr": "C’est alors qu’un pêcheur passa par là.",
+        "en": "Just then a fisherman came by.",
+        "kana": "这时，一个渔夫走过来。"
+       },
+       {
+        "jp": "他看见{鹬|yù}和{河蚌|hébàng}争得那么{厉害|lìhai}，谁也跑不了，就很轻松地把它们都{抓|zhuā}走了。",
+        "fr": "Voyant le héron et la moule si occupés à se disputer qu’aucun ne pouvait s’enfuir, il les attrapa tous deux sans peine.",
+        "en": "Seeing the snipe and the clam fighting so fiercely that neither could escape, he easily caught them both.",
+        "kana": "他看见鹬和河蚌争得那么厉害，谁也跑不了，就很轻松地把它们都抓走了。"
+       }
+      ],
+      [
+       {
+        "jp": "后来，人们用“{鹬蚌相争|yù bàng xiāng zhēng}，{渔翁得利|yúwēng dé lì}”来说明一个道理：",
+        "fr": "Depuis, on dit « quand le héron et la moule se battent, c’est le pêcheur qui profite » pour exprimer cette idée :",
+        "en": "Since then people say “when the snipe and the clam fight, the fisherman profits” to express this idea:",
+        "kana": "后来，人们用“鹬蚌相争，渔翁得利”来说明一个道理："
+       },
+       {
+        "jp": "{双方|shuāngfāng}只{顾|gù}着争，结果让第三{方|fāng}得到了好处。",
+        "fr": "quand deux parties ne pensent qu’à se quereller, c’est un tiers qui en tire avantage.",
+        "en": "when two sides think only of fighting, a third party reaps the benefit.",
+        "kana": "双方只顾着争，结果让第三方得到了好处。"
+       },
+       {
+        "jp": "{据说|jùshuō}，{古代|gǔdài}有一个{谋士|móushì}就是用这个故事，{劝|quàn}{赵王|Zhào wáng}不要去打{燕国|Yān guó}的。",
+        "fr": "On raconte qu’un conseiller de l’Antiquité se servit de cette histoire pour dissuader le roi de Zhao d’attaquer le royaume de Yan.",
+        "en": "It is said that an ancient adviser used this story to persuade the king of Zhao not to attack Yan.",
+        "kana": "据说，古代有一个谋士就是用这个故事，劝赵王不要去打燕国的。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "渔夫",
+       "reading": "yúfū",
+       "fr": "pêcheur",
+       "en": "fisherman"
+      },
+      {
+       "jp": "厉害",
+       "reading": "lìhai",
+       "fr": "violent, terrible",
+       "en": "fierce, severe"
+      },
+      {
+       "jp": "抓",
+       "reading": "zhuā",
+       "fr": "attraper",
+       "en": "to catch"
+      },
+      {
+       "jp": "双方",
+       "reading": "shuāngfāng",
+       "fr": "les deux parties",
+       "en": "both sides"
+      },
+      {
+       "jp": "谋士",
+       "reading": "móushì",
+       "fr": "conseiller, stratège",
+       "en": "adviser, strategist"
+      },
+      {
+       "jp": "劝",
+       "reading": "quàn",
+       "fr": "persuader, conseiller",
+       "en": "to persuade"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui tire profit de la dispute ?",
+        "en": "Who profits from the quarrel?"
+       },
+       "choices": [
+        {
+         "fr": "Le pêcheur",
+         "en": "The fisherman"
+        },
+        {
+         "fr": "Le héron",
+         "en": "The snipe"
+        },
+        {
+         "fr": "La moule",
+         "en": "The clam"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "À quoi servait cette histoire dans l’Antiquité ?",
+        "en": "What was this story used for in ancient times?"
+       },
+       "choices": [
+        {
+         "fr": "À dissuader un roi d’attaquer",
+         "en": "To dissuade a king from attacking"
+        },
+        {
+         "fr": "À apprendre à pêcher",
+         "en": "To teach fishing"
+        },
+        {
+         "fr": "À expliquer les marées",
+         "en": "To explain the tides"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

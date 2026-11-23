@@ -27,7 +27,7 @@ describe('Chinois : préparer le HSK', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'zh', targetLevel: 'HSK1' });
     const path = (await agent.get('/api/path/HSK1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'HSK1', region: 'Plaine du Fleuve Jaune' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['HSK1', 'HSK2', 'HSK3', 'HSK4']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['HSK1', 'HSK2', 'HSK3', 'HSK4', 'HSK5']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['年', '饕', '尾', '夔', '貔', '毕', '柳', '烛']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'hsk1-final', exam: { slug: 'hsk1-official' } });
@@ -43,7 +43,7 @@ describe('Chinois : préparer le HSK', () => {
   it('hanzi lus en pinyin, expressions, fables, jeux et atelier en chinois', async () => {
     const { agent } = await signUpChinese(ctx);
     const chars = (await agent.get('/api/characters').expect(200)).body;
-    expect(chars.sections.map((s: any) => s.slug)).toEqual(['hanzi-hsk1', 'hanzi-hsk2', 'hanzi-hsk3', 'hanzi-hsk4']);
+    expect(chars.sections.map((s: any) => s.slug)).toEqual(['hanzi-hsk1', 'hanzi-hsk2', 'hanzi-hsk3', 'hanzi-hsk4', 'hanzi-hsk5']);
     const ren = chars.sections[0].groups.flatMap((g: any) => g.items).find((c: any) => c.front === '人');
     expect(ren).toMatchObject({ kind: 'kanji', reading: 'rén', kanji: { onyomi: [], kunyomi: [], strokes: 2 } });
 
@@ -52,7 +52,7 @@ describe('Chinois : préparer le HSK', () => {
     expect(expr.themes[0].expressions[0]).toMatchObject({ front: '你好', reading: 'nǐ hǎo' });
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['shou-zhu-dai-tu', 'hua-she-tian-zu', 'zi-xiang-mao-dun', 'sunzi-lian-bing', 'hu-jia-hu-wei', 'sai-weng-shi-ma', 'meng-mu-san-qian', 'ya-miao-zhu-zhang', 'zhuang-zhou-meng-die', 'yi-zi-qian-jin', 'zhi-lu-wei-ma', 'wan-bi-gui-zhao']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['shou-zhu-dai-tu', 'hua-she-tian-zu', 'zi-xiang-mao-dun', 'sunzi-lian-bing', 'hu-jia-hu-wei', 'sai-weng-shi-ma', 'meng-mu-san-qian', 'ya-miao-zhu-zhang', 'zhuang-zhou-meng-die', 'yi-zi-qian-jin', 'zhi-lu-wei-ma', 'wan-bi-gui-zhao', 'jing-wei-tian-hai', 'yu-gong-yi-shan', 'yu-bang-xiang-zheng']);
     await agent.get('/api/reading/chapters/momotaro-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'shou-zhu-dai-tu').chapters[0];
     // Pinyin au-dessus de chaque mot ({汉字|pinyin}) ; le texte prononcé ne garde que les caractères
@@ -152,6 +152,26 @@ describe('Chinois : préparer le HSK', () => {
     // Contes du HSK 4 : pinyin seulement au-dessus des mots qui dépassent le HSK 3
     const ch = (await agent.get('/api/reading/chapters/zhi-lu-wei-ma-2').expect(200)).body;
     expect(ch.chapter.paragraphs[0][1].jp).toBe('有的{大臣|dàchén}害怕{赵高|Zhào Gāo}，不说话；');
+  });
+
+  it('HSK 5 : les mers de l’Est, examen de 45 + 45 + 10 questions en 120 minutes, sur 300', async () => {
+    const { agent } = await signUpChinese(ctx);
+    await agent.put('/api/me/preferences').send({ targetLevel: 'HSK5' }).expect(200);
+    const path = (await agent.get('/api/path/HSK5').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'HSK5', region: 'Mers de l’Est' });
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['禺', '蜃', '鲛', '鳌', '蛟', '何', '鱬', '冉']);
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'hsk5-final', exam: { slug: 'hsk5-official' } });
+    const exam = (await agent.post('/api/exams/hsk5-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(100);
+    expect(exam.exam.durationMin).toBe(120);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(45);
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const result = (await agent.post('/api/exams/hsk5-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(result).toMatchObject({ passed: true, scaled: { total: 300, writing: 100, max: { system: 'hsk', passTotal: 180 } } });
+    // Contes du HSK 5 : pinyin seulement au-dessus des mots qui dépassent le HSK 4
+    const ch = (await agent.get('/api/reading/chapters/yu-gong-yi-shan-1').expect(200)).body;
+    expect(ch.chapter.paragraphs[0][2].jp).toBe('每次出门，都要{绕|rào}很远的路，非常不方便。');
   });
 
   it('succès propres au chinois, cachés aux autres langues', async () => {

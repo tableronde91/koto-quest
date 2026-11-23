@@ -273,4 +273,14 @@ export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'hsk4-w7': () => (<><Pine x={-14} y={12} /><Tent x={8} y={12} /><Drum x={26} y={12} s={0.8} /></>),
   'hsk4-w8': () => (<><Tower x={-10} y={14} s={1.1} /><Scroll x={18} y={10} /></>),
   'hsk4-final': () => (<><Wall x={-8} y={12} /><Tower x={18} y={14} s={0.9} /><LuckyCloud x={28} y={-12} /></>),
+  // HSK 5 — l'expédition de Xu Fu vers les mers de l'Est
+  'hsk5-w1': () => (<><Junk x={-12} y={10} /><Junk x={12} y={12} s={0.8} /><Stall x={30} y={14} s={0.7} /></>),
+  'hsk5-w2': () => (<><Pavilion x={-10} y={10} s={0.9} fill={STONE} /><LuckyCloud x={14} y={-6} /><Junk x={26} y={12} s={0.7} /></>),
+  'hsk5-w3': () => (<><Tent x={-14} y={12} /><Scroll x={8} y={10} /><Bamboo x={26} y={12} /></>),
+  'hsk5-w4': () => (<><Pine x={-14} y={12} /><Pine x={6} y={14} s={0.7} /><Junk x={24} y={12} s={0.7} /></>),
+  'hsk5-w5': () => (<><Tower x={-12} y={14} s={0.9} /><LuckyCloud x={10} y={-10} /><Drum x={26} y={12} s={0.8} /></>),
+  'hsk5-w6': () => (<><Ding x={-14} y={12} /><Plum x={6} y={12} /><Pavilion x={24} y={12} s={0.7} fill={JADE} /></>),
+  'hsk5-w7': () => (<><Stall x={-14} y={12} /><Junk x={10} y={10} s={0.8} /><Lantern x={28} y={4} /></>),
+  'hsk5-w8': () => (<><Pavilion x={-10} y={12} s={1.1} fill={GOLD} /><LuckyCloud x={18} y={-8} /><Plum x={28} y={12} /></>),
+  'hsk5-final': () => (<><Tower x={-12} y={14} s={1.1} /><Pavilion x={14} y={12} fill={GOLD} /><LuckyCloud x={26} y={-12} /></>),
 };

@@ -368,7 +368,7 @@ def _known_chars(upto):
                             chars.update(it['front'])
     return chars
 MISSING = []
-BASE_CHARS = set('了的着过得地也都和就还很在是不没一个们里两晚吧用')
+BASE_CHARS = set('了的着过得地也都和就还很在是不没一个们里两晚吧用呢')
 KNOWN_CHARS = _known_chars(3) | BASE_CHARS
 
 def S3(seg, fr, en, known=None):
@@ -665,9 +665,151 @@ WANBI = STORY('wan-bi-gui-zhao', '璧', 'HSK4', '#2F7A6E', ('完璧归赵', 'Le 
   ]),
 ])
 
+# HSK 5 : seuls les mots qui dépassent le HSK 4 (et les noms propres) gardent leur pinyin.
+KNOWN_CHARS5 = _known_chars(5) | BASE_CHARS
+def S5(seg, fr, en):
+    return S3(seg, fr, en, KNOWN_CHARS5)
+
+# 精卫填海 (Classique des monts et des mers)
+JINGWEI = STORY('jing-wei-tian-hai', '卫', 'HSK5', '#3A6AA8', ('精卫填海', 'Jingwei veut combler la mer', 'Jingwei fills the sea'),
+  ('La fille de l’empereur Yan se noie dans la mer de l’Est. Devenue oiseau, elle jure de la combler, caillou après caillou.', 'Emperor Yan’s daughter drowns in the Eastern Sea. Turned into a bird, she vows to fill it in, pebble by pebble.'), [
+  CH('jing-wei-tian-hai-1', ('女娃', 'Nüwa, la fille de l’empereur', 'Nüwa, the emperor’s daughter'), [
+    [S5('传说 ， 炎帝:Yándì 有 一个 小 女儿 ， 名字 叫 女娃:Nǚwá 。', 'La légende raconte que l’empereur Yan avait une petite fille nommée Nüwa.', 'Legend has it that Emperor Yan had a young daughter called Nüwa.'),
+     S5('她 非常 喜欢 大海 ， 常常 一个 人 划:huá 着 小船 去 东海 玩儿 。', 'Elle adorait la mer et partait souvent seule en barque jouer sur la mer de l’Est.', 'She loved the sea and often rowed out alone to play on the Eastern Sea.'),
+     S5('有 一 天 ， 海 上 忽然:hūrán 刮 起 了 大风 ， 一个 巨大:jùdà 的 浪:làng 把 小船 打翻:dǎfān 了 。', 'Un jour, un grand vent se leva soudain et une vague énorme fit chavirer la barque.', 'One day a great wind suddenly rose and a huge wave capsized the boat.')],
+    [S5('女娃:Nǚwá 再 也 没有 回来 。', 'Nüwa ne revint jamais.', 'Nüwa never came back.'),
+     S5('她 的 灵魂:línghún 变成 了 一 只 小鸟 ， 头 上 有 花纹:huāwén ， 嘴:zuǐ 是 白色 的 ， 脚 是 红色 的 。', 'Son âme devint un petit oiseau à la tête tachetée, au bec blanc et aux pattes rouges.', 'Her soul became a little bird with a patterned head, a white beak and red feet.'),
+     S5('它 总是 “ 精卫:jīngwèi ， 精卫:jīngwèi ” 地 叫 ， 所以 人们 叫 它 精卫:Jīngwèi 。', 'Comme il criait sans cesse « jingwei, jingwei », on l’appela Jingwei.', 'Because it kept crying “jingwei, jingwei”, people called it Jingwei.')],
+  ], [
+    W('炎帝', 'Yándì', 'l’empereur Yan (souverain mythique)', 'Emperor Yan (mythical ruler)'),
+    W('划', 'huá', 'ramer', 'to row'),
+    W('巨大', 'jùdà', 'énorme', 'huge'),
+    W('浪', 'làng', 'vague', 'wave'),
+    W('打翻', 'dǎfān', 'renverser, faire chavirer', 'to capsize'),
+    W('灵魂', 'línghún', 'âme', 'soul'),
+  ], [
+    Q(('Qu’arrive-t-il à Nüwa ?', 'What happens to Nüwa?'), [('Elle se noie en mer', 'She drowns at sea'), ('Elle se perd en montagne', 'She gets lost in the mountains'), ('Elle part vivre ailleurs', 'She goes to live elsewhere')], 0),
+    Q(('Pourquoi l’oiseau s’appelle-t-il Jingwei ?', 'Why is the bird called Jingwei?'), [('À cause de son cri', 'Because of its cry'), ('À cause de sa couleur', 'Because of its colour'), ('C’est le nom de son père', 'It is its father’s name')], 0),
+  ]),
+  CH('jing-wei-tian-hai-2', ('填海', 'Combler la mer', 'Filling the sea'), [
+    [S5('精卫:Jīngwèi 恨:hèn 大海 夺走:duózǒu 了 自己 的 生命:shēngmìng ， 决定 把 大海 填平:tiánpíng 。', 'Jingwei en voulait à la mer de lui avoir pris la vie et décida de la combler.', 'Jingwei hated the sea for taking her life and decided to fill it in.'),
+     S5('它 每天 从 西山 叼:diāo 来 小 石头:shítou 和 树枝:shùzhī ， 扔 进 东海 里 。', 'Chaque jour, elle rapportait dans son bec des cailloux et des brindilles des monts de l’Ouest et les jetait dans la mer de l’Est.', 'Every day she carried pebbles and twigs in her beak from the western hills and dropped them into the Eastern Sea.'),
+     S5('大海 笑 它 ： “ 小鸟 ， 你 就是 填:tián 一百万 年 ， 也 填:tián 不 平 我 ！ ”', 'La mer se moquait d’elle : « Petit oiseau, même en un million d’années tu ne me combleras pas ! »', 'The sea laughed at her: “Little bird, even in a million years you won’t fill me in!”')],
+    [S5('精卫:Jīngwèi 回答 ： “ 哪怕 填:tián 一千万 年 、 一万万 年 ， 我 也 要 把 你 填:tián 平 ！ ”', 'Jingwei répondit : « Même s’il me faut dix millions, cent millions d’années, je te comblerai ! »', 'Jingwei answered: “Even if it takes ten million, a hundred million years, I will fill you in!”'),
+     S5('就 这样 ， 它 一直 飞 来 飞 去 ， 从来 没有 停止:tíngzhǐ 过 。', 'Et elle continua ainsi ses allers-retours, sans jamais s’arrêter.', 'And so she kept flying back and forth, never once stopping.'),
+     S5('后来 ， 人们 用 “ 精卫填海:Jīngwèi_tián_hǎi ” 来 形容:xíngróng 意志:yìzhì 坚定:jiāndìng 、 不怕 困难 的 精神 。', 'Depuis, « Jingwei comble la mer » désigne une volonté inébranlable qui ne recule devant aucune difficulté.', 'Since then, “Jingwei filling the sea” describes an unshakeable will that fears no difficulty.')],
+  ], [
+    W('恨', 'hèn', 'haïr, en vouloir à', 'to hate'),
+    W('夺走', 'duózǒu', 'enlever, ravir', 'to take away'),
+    W('填', 'tián', 'combler, remplir', 'to fill'),
+    W('叼', 'diāo', 'tenir dans le bec', 'to hold in the beak'),
+    W('停止', 'tíngzhǐ', 'cesser, s’arrêter', 'to stop'),
+    W('坚定', 'jiāndìng', 'ferme, inébranlable', 'firm, steadfast'),
+  ], [
+    Q(('Que jette Jingwei dans la mer ?', 'What does Jingwei drop into the sea?'), [('Des cailloux et des brindilles', 'Pebbles and twigs'), ('Des fleurs', 'Flowers'), ('Du sable', 'Sand')], 0),
+    Q(('Que représente « 精卫填海 » ?', 'What does “精卫填海” stand for?'), [('Une volonté inébranlable', 'An unshakeable will'), ('Une colère inutile', 'Useless anger'), ('L’amour de la mer', 'Love of the sea')], 0),
+  ]),
+])
+
+# 愚公移山 (Liezi)
+YUGONG = STORY('yu-gong-yi-shan', '山', 'HSK5', '#6E5A3A', ('愚公移山', 'Le vieux fou qui déplaça les montagnes', 'The foolish old man who moved the mountains'),
+  ('Deux montagnes barrent la porte du vieux Yugong. À quatre-vingt-dix ans, il décide de les déplacer.', 'Two mountains block old Yugong’s door. At ninety, he decides to move them.'), [
+  CH('yu-gong-yi-shan-1', ('两座大山', 'Deux grandes montagnes', 'Two great mountains'), [
+    [S5('很 久 以前 ， 有 一个 快 九十 岁 的 老人 ， 叫 愚公:Yúgōng 。', 'Il y a très longtemps vivait un vieil homme de près de quatre-vingt-dix ans, nommé Yugong.', 'Long ago there lived an old man of nearly ninety called Yugong.'),
+     S5('他 家 门前 有 两 座 大山 ， 一 座 叫 太行山:Tàiháng_shān ， 一 座 叫 王屋山:Wángwū_shān 。', 'Devant sa porte se dressaient deux grandes montagnes, le Taihang et le Wangwu.', 'In front of his door stood two great mountains, Mount Taihang and Mount Wangwu.'),
+     S5('每 次 出门 ， 都 要 绕:rào 很 远 的 路 ， 非常 不 方便 。', 'Chaque fois qu’il sortait, il devait faire un long détour : c’était très peu pratique.', 'Every time he went out he had to make a long detour, which was very inconvenient.')],
+    [S5('一 天 ， 愚公:Yúgōng 把 全家人 叫 到 一起 ， 说 ： “ 我们 一起 把 这 两 座 山 搬走 ， 好不好 ？ ”', 'Un jour, Yugong réunit toute sa famille : « Et si nous déplacions ensemble ces deux montagnes ? »', 'One day Yugong gathered his whole family: “Shall we move these two mountains together?”'),
+     S5('家里 人 都 赞成:zànchéng ， 只有 他 的 妻子 有点儿 怀疑:huáiyí ： “ 你 连 一 座 小山 都 搬 不 动 ， 何况:hékuàng 这么 大 的 山 呢 ？ ”', 'Tous approuvèrent, sauf sa femme, qui doutait : « Tu ne pourrais même pas déplacer une colline, alors des montagnes pareilles… »', 'Everyone agreed except his wife, who had doubts: “You couldn’t even move a hill, let alone mountains this size.”'),
+     S5('愚公:Yúgōng 说 ： “ 只要 我们 坚持 ， 就 一定 能 成功 。 ”', 'Yugong répondit : « Du moment que nous persévérons, nous réussirons. »', 'Yugong said: “As long as we persevere, we will succeed.”')],
+  ], [
+    W('愚公', 'Yúgōng', 'Yugong (« le vieux sot »)', 'Yugong (“the foolish old man”)'),
+    W('座', 'zuò', 'classificateur des montagnes', 'measure word for mountains'),
+    W('绕', 'rào', 'contourner, faire un détour', 'to go around'),
+    W('赞成', 'zànchéng', 'approuver', 'to approve'),
+    W('怀疑', 'huáiyí', 'douter', 'to doubt'),
+    W('何况', 'hékuàng', 'à plus forte raison', 'let alone'),
+  ], [
+    Q(('Pourquoi Yugong veut-il déplacer les montagnes ?', 'Why does Yugong want to move the mountains?'), [('Elles l’obligent à faire de longs détours', 'They force him to make long detours'), ('Il veut construire une maison', 'He wants to build a house'), ('Il cherche de l’or', 'He is looking for gold')], 0),
+    Q(('Qui doute du projet ?', 'Who doubts the plan?'), [('Sa femme', 'His wife'), ('Ses fils', 'His sons'), ('Ses voisins', 'His neighbours')], 0),
+  ]),
+  CH('yu-gong-yi-shan-2', ('智叟的笑话', 'Les moqueries du vieux malin', 'The wise old man’s mockery'), [
+    [S5('第二 天 ， 愚公:Yúgōng 带 着 儿子 和 孙子 开始 挖:wā 山 ， 把 石头:shítou 和 土:tǔ 运 到 海边 去 。', 'Dès le lendemain, Yugong se mit à creuser la montagne avec ses fils et ses petits-fils et transporta pierres et terre jusqu’à la mer.', 'The next day Yugong began digging with his sons and grandsons, carrying rocks and earth to the sea.'),
+     S5('来回 一 次 ， 要 整整:zhěngzhěng 一 年 。', 'Un aller-retour prenait une année entière.', 'A round trip took a whole year.'),
+     S5('有 一个 叫 智叟:Zhìsǒu 的 老人 笑 他 ： “ 你 太 糊涂:hútu 了 ！ 你 已经 这么 老 了 ， 怎么 搬 得 动 这么 大 的 山 ？ ”', 'Un vieil homme nommé Zhisou se moqua de lui : « Tu es bien sot ! À ton âge, comment pourrais-tu déplacer de telles montagnes ? »', 'An old man called Zhisou laughed at him: “How foolish you are! At your age, how could you move mountains like these?”')],
+  ], [
+    W('挖', 'wā', 'creuser', 'to dig'),
+    W('土', 'tǔ', 'terre', 'earth, soil'),
+    W('整整', 'zhěngzhěng', 'tout entier, pas moins de', 'whole, fully'),
+    W('智叟', 'Zhìsǒu', 'Zhisou (« le vieux malin »)', 'Zhisou (“the wise old man”)'),
+    W('糊涂', 'hútu', 'sot, confus', 'muddle-headed'),
+    W('来回', 'láihuí', 'aller-retour', 'round trip'),
+  ], [
+    Q(('Où emporte-t-on la terre ?', 'Where is the earth taken?'), [('Jusqu’à la mer', 'To the sea'), ('Dans la forêt', 'Into the forest'), ('Au marché', 'To the market')], 0),
+    Q(('Que pense Zhisou de Yugong ?', 'What does Zhisou think of Yugong?'), [('Qu’il est sot', 'That he is foolish'), ('Qu’il est courageux', 'That he is brave'), ('Qu’il est riche', 'That he is rich')], 0),
+  ]),
+  CH('yu-gong-yi-shan-3', ('子子孙孙', 'De génération en génération', 'Generation after generation'), [
+    [S5('愚公:Yúgōng 回答 ： “ 我 死:sǐ 了 ， 还有 儿子 ； 儿子 死:sǐ 了 ， 还有 孙子 。', 'Yugong répondit : « Quand je mourrai, il restera mes fils ; quand ils mourront, il restera mes petits-fils.', 'Yugong replied: “When I die, there will be my sons; when they die, there will be my grandsons.'),
+     S5('子子孙孙:zǐzǐsūnsūn 是 没有 穷尽:qióngjìn 的 ， 可是 山 不会 再 长:zhǎng 高 了 ， 为什么 搬 不 走 呢 ？ ”', 'Les descendants n’auront pas de fin, mais la montagne ne grandira plus : pourquoi ne pourrions-nous pas la déplacer ? »', 'Descendants never run out, but the mountains won’t grow any higher, so why couldn’t we move them?”'),
+     S5('智叟:Zhìsǒu 听 了 ， 一 句 话 也 说 不 出来 。', 'Zhisou ne trouva rien à répondre.', 'Zhisou was left speechless.')],
+    [S5('天帝:Tiāndì 被 愚公:Yúgōng 的 精神 感动 了 ， 派:pài 两 个 神仙:shénxiān 把 两 座 山 背:bēi 走 了 。', 'Ému par la ténacité de Yugong, l’Empereur céleste envoya deux divinités emporter les montagnes sur leur dos.', 'Moved by Yugong’s spirit, the Heavenly Emperor sent two gods to carry the mountains away on their backs.'),
+     S5('从此 ， 愚公:Yúgōng 家 门前 再 也 没有 大山 挡:dǎng 路 了 。', 'Depuis, plus aucune montagne ne barre la porte de Yugong.', 'From then on no mountain blocked Yugong’s door.'),
+     S5('“ 愚公移山:Yúgōng_yí_shān ” 告诉 我们 ： 只要 有 决心:juéxīn ， 再 难 的 事情 也 能 做到 。', '« Yugong déplace les montagnes » nous enseigne qu’avec de la détermination, on accomplit les tâches les plus difficiles.', '“Yugong moving the mountains” teaches us that with determination, even the hardest things can be done.')],
+  ], [
+    W('子子孙孙', 'zǐzǐsūnsūn', 'les descendants, de génération en génération', 'descendants, generation after generation'),
+    W('穷尽', 'qióngjìn', 'fin, épuisement', 'end, exhaustion'),
+    W('天帝', 'Tiāndì', 'l’Empereur céleste', 'the Heavenly Emperor'),
+    W('神仙', 'shénxiān', 'divinité, immortel', 'god, immortal'),
+    W('挡', 'dǎng', 'barrer, bloquer', 'to block'),
+    W('决心', 'juéxīn', 'détermination', 'determination'),
+  ], [
+    Q(('Quel est l’argument de Yugong ?', 'What is Yugong’s argument?'), [('Ses descendants continueront', 'His descendants will carry on'), ('Il est très fort', 'He is very strong'), ('Les montagnes sont petites', 'The mountains are small')], 0),
+    Q(('Qui finit par déplacer les montagnes ?', 'Who finally moves the mountains?'), [('Deux divinités', 'Two gods'), ('Zhisou', 'Zhisou'), ('Les voisins', 'The neighbours')], 0),
+  ]),
+])
+
+# 鹬蚌相争 (Stratagèmes des Royaumes combattants)
+YUBANG = STORY('yu-bang-xiang-zheng', '蚌', 'HSK5', '#8A7A5A', ('鹬蚌相争', 'Le héron et la moule', 'The snipe and the clam'),
+  ('Un héron et une moule se disputent sur la plage, et c’est le pêcheur qui en profite.', 'A snipe and a clam quarrel on the beach, and it is the fisherman who benefits.'), [
+  CH('yu-bang-xiang-zheng-1', ('谁也不让谁', 'Aucun ne cède', 'Neither gives way'), [
+    [S5('一个 晴朗:qínglǎng 的 日子 ， 一 只 河蚌:hébàng 张开:zhāngkāi 壳:ké ， 躺 在 沙滩:shātān 上 晒太阳:shài_tàiyáng 。', 'Par une belle journée, une moule avait ouvert sa coquille et se chauffait au soleil sur la plage.', 'One fine day a clam had opened its shell and was basking in the sun on the beach.'),
+     S5('一 只 鹬:yù 飞 过来 ， 用 长长 的 嘴:zuǐ 去 啄:zhuó 河蚌:hébàng 的 肉 。', 'Un héron arriva et piqua de son long bec la chair de la moule.', 'A snipe flew over and pecked at the clam’s flesh with its long beak.'),
+     S5('河蚌:hébàng 马上 把 壳:ké 合上 ， 紧紧 地 夹住:jiāzhù 了 鹬:yù 的 嘴:zuǐ 。', 'La moule referma aussitôt sa coquille et lui serra fermement le bec.', 'The clam immediately closed its shell and clamped the snipe’s beak tight.')],
+    [S5('鹬:yù 说 ： “ 今天 不 下雨 ， 明天 不 下雨 ， 你 就 会 干死:gānsǐ 在 这儿 ！ ”', 'Le héron dit : « S’il ne pleut ni aujourd’hui ni demain, tu mourras desséchée ici ! »', 'The snipe said: “If it doesn’t rain today or tomorrow, you’ll dry up and die here!”'),
+     S5('河蚌:hébàng 说 ： “ 今天 不 放 你 ， 明天 不 放 你 ， 你 就 会 饿死:èsǐ 在 这儿 ！ ”', 'La moule répliqua : « Si je ne te lâche ni aujourd’hui ni demain, tu mourras de faim ici ! »', 'The clam retorted: “If I don’t let you go today or tomorrow, you’ll starve to death here!”'),
+     S5('它们 谁 也 不 让 谁 ， 一直 争:zhēng 到 了 下午 。', 'Aucun ne voulait céder, et ils se disputèrent jusqu’à l’après-midi.', 'Neither would give way, and they argued until the afternoon.')],
+  ], [
+    W('河蚌', 'hébàng', 'moule d’eau douce', 'freshwater clam'),
+    W('壳', 'ké', 'coquille', 'shell'),
+    W('鹬', 'yù', 'héron, bécasseau', 'snipe'),
+    W('啄', 'zhuó', 'piquer du bec', 'to peck'),
+    W('夹住', 'jiāzhù', 'pincer, serrer', 'to clamp'),
+    W('争', 'zhēng', 'se disputer', 'to argue, to fight over'),
+  ], [
+    Q(('Que fait la moule quand le héron la pique ?', 'What does the clam do when the snipe pecks it?'), [('Elle lui serre le bec', 'It clamps its beak'), ('Elle s’enfuit', 'It runs away'), ('Elle appelle le pêcheur', 'It calls the fisherman')], 0),
+    Q(('Que menace le héron ?', 'What does the snipe threaten?'), [('La moule séchera sans pluie', 'The clam will dry up without rain'), ('Il appellera ses amis', 'He will call his friends'), ('Il la mangera tout de suite', 'He will eat it at once')], 0),
+  ]),
+  CH('yu-bang-xiang-zheng-2', ('渔翁得利', 'Le pêcheur en profite', 'The fisherman profits'), [
+    [S5('这时 ， 一个 渔夫:yúfū 走 过来 。', 'C’est alors qu’un pêcheur passa par là.', 'Just then a fisherman came by.'),
+     S5('他 看见 鹬:yù 和 河蚌:hébàng 争 得 那么 厉害:lìhai ， 谁 也 跑 不 了 ， 就 很 轻松 地 把 它们 都 抓:zhuā 走 了 。', 'Voyant le héron et la moule si occupés à se disputer qu’aucun ne pouvait s’enfuir, il les attrapa tous deux sans peine.', 'Seeing the snipe and the clam fighting so fiercely that neither could escape, he easily caught them both.')],
+    [S5('后来 ， 人们 用 “ 鹬蚌相争:yù_bàng_xiāng_zhēng ， 渔翁得利:yúwēng_dé_lì ” 来 说明 一个 道理 ：', 'Depuis, on dit « quand le héron et la moule se battent, c’est le pêcheur qui profite » pour exprimer cette idée :', 'Since then people say “when the snipe and the clam fight, the fisherman profits” to express this idea:'),
+     S5('双方:shuāngfāng 只 顾:gù 着 争 ， 结果 让 第三 方:fāng 得到 了 好处 。', 'quand deux parties ne pensent qu’à se quereller, c’est un tiers qui en tire avantage.', 'when two sides think only of fighting, a third party reaps the benefit.'),
+     S5('据说:jùshuō ， 古代:gǔdài 有 一个 谋士:móushì 就是 用 这个 故事 ， 劝:quàn 赵王:Zhào_wáng 不要 去 打 燕国:Yān_guó 的 。', 'On raconte qu’un conseiller de l’Antiquité se servit de cette histoire pour dissuader le roi de Zhao d’attaquer le royaume de Yan.', 'It is said that an ancient adviser used this story to persuade the king of Zhao not to attack Yan.')],
+  ], [
+    W('渔夫', 'yúfū', 'pêcheur', 'fisherman'),
+    W('厉害', 'lìhai', 'violent, terrible', 'fierce, severe'),
+    W('抓', 'zhuā', 'attraper', 'to catch'),
+    W('双方', 'shuāngfāng', 'les deux parties', 'both sides'),
+    W('谋士', 'móushì', 'conseiller, stratège', 'adviser, strategist'),
+    W('劝', 'quàn', 'persuader, conseiller', 'to persuade'),
+  ], [
+    Q(('Qui tire profit de la dispute ?', 'Who profits from the quarrel?'), [('Le pêcheur', 'The fisherman'), ('Le héron', 'The snipe'), ('La moule', 'The clam')], 0),
+    Q(('À quoi servait cette histoire dans l’Antiquité ?', 'What was this story used for in ancient times?'), [('À dissuader un roi d’attaquer', 'To dissuade a king from attacking'), ('À apprendre à pêcher', 'To teach fishing'), ('À expliquer les marées', 'To explain the tides')], 0),
+  ]),
+])
+
 if MISSING:
     raise SystemExit('\n'.join(MISSING))
-ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI]
+ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI, JINGWEI, YUGONG, YUBANG]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES
@@ -683,6 +825,6 @@ for s in ZH_STORIES:
             assert 0 <= q['answer'] < len(q['choices'])
         for para in c['paragraphs']:
             for sent in para:
-                assert (s['level'] in ('HSK3', 'HSK4') or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
+                assert (s['level'] in ('HSK3', 'HSK4', 'HSK5') or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
 json.dump(data, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"Contes chinois : {len(ZH_STORIES)} contes, {sum(len(s['chapters']) for s in ZH_STORIES)} chapitres")
