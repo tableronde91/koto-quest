@@ -353,12 +353,180 @@ SAIWENG = STORY('sai-weng-shi-ma', '马', 'HSK2', '#7A5A3A', ('塞翁失马', 'L
   ]),
 ])
 
-ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG]
+# ═════════════════════════ HSK 3 : moins de pinyin ═════════════════════════
+# À partir du HSK 3, seuls les mots qui dépassent le HSK 2 (et les noms propres) gardent leur pinyin : les mots
+# écrits sans pinyin doivent n'utiliser que des caractères déjà vus dans les mots du HSK 1 et du HSK 2.
+def _known_chars():
+    chars = set('，。！？：“”《》、')
+    for n in (1, 2):
+        lv = json.load(open(os.path.join(ROOT, f'content/hsk{n}/hsk{n}.json'), encoding='utf-8'))
+        for w in lv['worlds']:
+            for c in w['chapters']:
+                for l in c['lessons']:
+                    for it in l['items']:
+                        if it['kind'] == 'vocabulary':
+                            chars.update(it['front'])
+    return chars
+MISSING = []
+KNOWN_CHARS = _known_chars() | set('了的着过得地也都和就还很在是不没一个们里两晚')
+
+def S3(seg, fr, en):
+    for zh, py in tokens(seg):
+        if py is None:
+            unknown = [c for c in zh if c not in KNOWN_CHARS]
+            if unknown:
+                MISSING.append(f'pinyin manquant pour {zh} ({"".join(unknown)}) dans : {seg}')
+    return S(seg, fr, en)
+
+# 孟母三迁 (Biographies des femmes exemplaires, Liu Xiang) — Mencius, maître de Qi et de l'académie Jixia
+MENGMU = STORY('meng-mu-san-qian', '迁', 'HSK3', '#5E6E3A', ('孟母三迁', 'Les trois déménagements de la mère de Mencius', 'Mencius’s mother moves three times'),
+  ('Pour que son fils grandisse au bon endroit, la mère de Mencius n’hésite pas à déménager encore et encore.', 'So that her son grows up in the right place, Mencius’s mother doesn’t hesitate to move again and again.'), [
+  CH('meng-mu-san-qian-1', ('住在墓地旁边', 'À côté du cimetière', 'Next to the cemetery'), [
+    [S3('孟子:Mèngzǐ 小 的 时候 ， 父亲:fùqin 就 去世:qùshì 了 。', 'Mencius était petit quand son père mourut.', 'Mencius was little when his father died.'),
+     S3('他 和 妈妈 住 在 一个 墓地:mùdì 旁边 。', 'Il habitait avec sa mère à côté d’un cimetière.', 'He lived with his mother next to a cemetery.'),
+     S3('每天 都 有 人 来 这儿 哭:kū 。', 'Tous les jours, des gens venaient y pleurer.', 'Every day people came there to weep.')],
+    [S3('孟子:Mèngzǐ 觉得 很 有意思 ， 就 跟:gēn 别的:biéde 孩子 一起 学 他们 哭:kū 。', 'Mencius trouvait cela amusant et, avec d’autres enfants, il imitait les pleureurs.', 'Mencius found it amusing and, with other children, he imitated the mourners.'),
+     S3('孟母:Mèng_mǔ 看见 了 ， 很 担心:dānxīn ： “ 我 的 孩子 不 应该:yīnggāi 住 在 这儿 。 ”', 'Sa mère le vit et s’inquiéta : « Mon enfant ne devrait pas vivre ici. »', 'His mother saw it and worried: “My child shouldn’t live here.”'),
+     S3('她 决定:juédìng 搬家:bānjiā 。', 'Elle décida de déménager.', 'She decided to move.')],
+  ], [
+    W('去世', 'qùshì', 'mourir, décéder', 'to pass away'),
+    W('墓地', 'mùdì', 'cimetière', 'cemetery'),
+    W('哭', 'kū', 'pleurer', 'to cry'),
+    W('担心', 'dānxīn', 's’inquiéter', 'to worry'),
+    W('决定', 'juédìng', 'décider', 'to decide'),
+    W('搬家', 'bānjiā', 'déménager', 'to move house'),
+  ], [
+    Q(('Où habitent-ils au début ?', 'Where do they live at first?'), [('À côté d’un cimetière', 'Next to a cemetery'), ('À côté d’un marché', 'Next to a market'), ('À côté d’une école', 'Next to a school')], 0),
+    Q(('Que fait le petit Mencius ?', 'What does little Mencius do?'), [('Il imite ceux qui pleurent', 'He imitates the mourners'), ('Il lit des livres', 'He reads books'), ('Il vend des légumes', 'He sells vegetables')], 0),
+  ]),
+  CH('meng-mu-san-qian-2', ('市场旁边', 'À côté du marché', 'Next to the market'), [
+    [S3('他们 搬:bān 到:dào 了 一个 市场:shìchǎng 旁边 。', 'Ils s’installèrent à côté d’un marché.', 'They moved next to a market.'),
+     S3('市场:shìchǎng 里 人 很 多 ， 非常 热闹:rènao 。', 'Le marché était plein de monde, très animé.', 'The market was crowded and very lively.'),
+     S3('卖 东西 的 人 都 大声:dàshēng 地 说话 。', 'Les marchands parlaient tous à voix haute.', 'The traders all spoke loudly.')],
+    [S3('没 过 多久:duō_jiǔ ， 孟子:Mèngzǐ 又:yòu 开始 学 他们 ， 每天 大声:dàshēng 地 卖 东西 。', 'Peu de temps après, Mencius se mit à les imiter, criant chaque jour comme un marchand.', 'Before long Mencius began to imitate them, loudly selling things every day.'),
+     S3('孟母:Mèng_mǔ 又:yòu 着急:zháojí 了 ： “ 这儿 也 不 适合:shìhé 我 的 孩子 。 ”', 'Sa mère s’inquiéta de nouveau : « Cet endroit ne convient pas non plus à mon enfant. »', 'His mother grew anxious again: “This place doesn’t suit my child either.”'),
+     S3('于是:yúshì ， 他们 又:yòu 搬家:bānjiā 了 。', 'Alors, ils déménagèrent encore.', 'So they moved again.')],
+  ], [
+    W('市场', 'shìchǎng', 'marché', 'market'),
+    W('热闹', 'rènao', 'animé', 'lively'),
+    W('大声', 'dàshēng', 'à voix haute', 'loudly'),
+    W('适合', 'shìhé', 'convenir à', 'to suit'),
+    W('于是', 'yúshì', 'alors, c’est pourquoi', 'so, thereupon'),
+    W('着急', 'zháojí', 'inquiet, pressé', 'anxious'),
+  ], [
+    Q(('Qu’imite Mencius au marché ?', 'What does Mencius imitate at the market?'), [('Les marchands', 'The traders'), ('Les maîtres', 'The teachers'), ('Les soldats', 'The soldiers')], 0),
+    Q(('Que fait sa mère ensuite ?', 'What does his mother do next?'), [('Elle déménage encore', 'She moves again'), ('Elle ouvre une boutique', 'She opens a shop'), ('Elle le punit', 'She punishes him')], 0),
+  ]),
+  CH('meng-mu-san-qian-3', ('学校旁边', 'À côté de l’école', 'Next to the school'), [
+    [S3('这 一 次 ， 他们 搬:bān 到:dào 了 一个 学校 旁边 。', 'Cette fois, ils s’installèrent à côté d’une école.', 'This time they moved next to a school.'),
+     S3('学校 里 的 老师 每天 给 学生 讲:jiǎng 礼:lǐ ， 学生 们 认真:rènzhēn 地 读书 。', 'Chaque jour, le maître y enseignait les rites et les élèves étudiaient avec sérieux.', 'Every day the teacher taught the rites and the pupils studied conscientiously.'),
+     S3('孟子:Mèngzǐ 也 跟:gēn 着 他们 学习 ， 变得:biàn_de 很 有 礼貌:lǐmào 。', 'Mencius étudia avec eux et devint très poli.', 'Mencius studied with them and became very polite.')],
+    [S3('孟母:Mèng_mǔ 终于:zhōngyú 放心:fàngxīn 了 ： “ 这儿 才:cái 是 我 的 孩子 应该:yīnggāi 住 的 地方:dìfang 。 ”', 'Sa mère fut enfin rassurée : « Voilà l’endroit où mon enfant doit vivre. »', 'His mother was finally at ease: “This is where my child should live.”'),
+     S3('后来:hòulái ， 孟子:Mèngzǐ 成为:chéngwéi 了 一个 有名:yǒumíng 的 思想家:sīxiǎngjiā 。', 'Plus tard, Mencius devint un penseur célèbre.', 'Later Mencius became a famous thinker.'),
+     S3('这 就是 “ 孟母三迁:Mèng_mǔ_sān_qiān ” 的 故事:gùshi 。', 'C’est l’histoire des « trois déménagements de la mère de Mencius ».', 'This is the story of “Mencius’s mother moving three times”.')],
+  ], [
+    W('礼', 'lǐ', 'les rites', 'the rites'),
+    W('礼貌', 'lǐmào', 'politesse ; poli', 'politeness; polite'),
+    W('放心', 'fàngxīn', 'être rassuré', 'to be at ease'),
+    W('成为', 'chéngwéi', 'devenir', 'to become'),
+    W('思想家', 'sīxiǎngjiā', 'penseur', 'thinker'),
+    W('终于', 'zhōngyú', 'enfin', 'at last'),
+  ], [
+    Q(('Que fait-on à l’école voisine ?', 'What happens at the nearby school?'), [('On y étudie les rites', 'People study the rites'), ('On y vend des livres', 'People sell books'), ('On y pleure', 'People weep')], 0),
+    Q(('Que devient Mencius ?', 'What does Mencius become?'), [('Un penseur célèbre', 'A famous thinker'), ('Un riche marchand', 'A rich merchant'), ('Un général', 'A general')], 0),
+  ]),
+])
+
+# 揠苗助长 (Mencius, Gongsun Chou I)
+YAMIAO = STORY('ya-miao-zhu-zhang', '苗', 'HSK3', '#6E9A3A', ('揠苗助长', 'Le paysan qui tirait sur ses pousses', 'The farmer who pulled his shoots'),
+  ('Un paysan pressé veut aider son riz à pousser plus vite… à sa manière.', 'An impatient farmer wants to help his rice grow faster… in his own way.'), [
+  CH('ya-miao-zhu-zhang-1', ('着急的农民', 'Le paysan impatient', 'The impatient farmer'), [
+    [S3('宋国:Sòng_guó 有 一个 农民:nóngmín ， 他 种:zhòng 了 很 多 禾苗:hémiáo 。', 'Au pays de Song, un paysan avait planté beaucoup de jeunes pousses.', 'In the state of Song, a farmer had planted many young shoots.'),
+     S3('他 每天 都 去 田:tián 里 看 ， 希望 禾苗:hémiáo 快 一点儿 长:zhǎng 高 。', 'Il allait chaque jour au champ, espérant qu’elles pousseraient plus vite.', 'Every day he went to the field, hoping they would grow faster.'),
+     S3('可是:kěshì 禾苗:hémiáo 长:zhǎng 得 太 慢 了 ， 他 越:yuè 看 越:yuè 着急:zháojí 。', 'Mais elles poussaient trop lentement, et plus il les regardait, plus il s’impatientait.', 'But they grew too slowly, and the more he looked, the more impatient he became.')],
+    [S3('一 天 ， 他 突然:tūrán 想 到 了 一个 办法:bànfǎ 。', 'Un jour, une idée lui vint soudain.', 'One day an idea suddenly came to him.'),
+     S3('他 走 进 田:tián 里 ， 把:bǎ 每 一 棵:kē 禾苗:hémiáo 都 往 上 拔:bá 了 一点儿 。', 'Il entra dans le champ et tira chaque pousse un peu vers le haut.', 'He went into the field and pulled every shoot up a little.'),
+     S3('他 从 早上 一直:yìzhí 拔:bá 到 晚上 ， 累 极了:jí_le 。', 'Il tira du matin au soir et fut épuisé.', 'He pulled from morning till night and was exhausted.')],
+  ], [
+    W('农民', 'nóngmín', 'paysan', 'farmer'),
+    W('种', 'zhòng', 'planter', 'to plant'),
+    W('禾苗', 'hémiáo', 'jeune pousse (de céréale)', 'young shoot (of grain)'),
+    W('田', 'tián', 'champ', 'field'),
+    W('长', 'zhǎng', 'pousser, grandir', 'to grow'),
+    W('拔', 'bá', 'tirer, arracher', 'to pull up'),
+  ], [
+    Q(('Pourquoi le paysan s’impatiente-t-il ?', 'Why does the farmer grow impatient?'), [('Les pousses grandissent trop lentement', 'The shoots grow too slowly'), ('Il pleut trop', 'It rains too much'), ('Les oiseaux mangent tout', 'Birds eat everything')], 0),
+    Q(('Que fait-il dans le champ ?', 'What does he do in the field?'), [('Il tire les pousses vers le haut', 'He pulls the shoots upwards'), ('Il arrose', 'He waters them'), ('Il plante encore', 'He plants more')], 0),
+  ]),
+  CH('ya-miao-zhu-zhang-2', ('禾苗都死了', 'Toutes les pousses meurent', 'All the shoots die'), [
+    [S3('回 到 家 ， 他 高兴 地 对 家 里 人 说 ： “ 今天 我 累 坏:huài 了 ！ 我 帮助 禾苗:hémiáo 长:zhǎng 高 了 。 ”', 'Rentré chez lui, il dit tout joyeux à sa famille : « Je suis mort de fatigue ! J’ai aidé les pousses à grandir. »', 'Back home, he happily told his family: “I’m worn out! I helped the shoots grow.”'),
+     S3('他 的 儿子 觉得 很 奇怪:qíguài ， 马上:mǎshàng 跑 到 田:tián 里 去 看 。', 'Son fils, intrigué, courut aussitôt au champ.', 'His son, puzzled, ran straight to the field.'),
+     S3('他 发现:fāxiàn 禾苗:hémiáo 都 已经 死:sǐ 了 。', 'Il découvrit que toutes les pousses étaient mortes.', 'He found that all the shoots had died.')],
+    [S3('孟子:Mèngzǐ 用:yòng 这个 故事:gùshi 告诉 我们 ： 做 事情 不 能 太 着急:zháojí 。', 'Mencius se sert de cette histoire pour nous dire qu’il ne faut pas trop se presser.', 'Mencius uses this story to tell us not to be in too much of a hurry.'),
+     S3('如果:rúguǒ 想 快 一点儿 ， 反而:fǎn’ér 会 把:bǎ 事情 做 坏:huài 。', 'À vouloir aller trop vite, on gâche tout au contraire.', 'If you try to go faster, you end up spoiling things.'),
+     S3('这 就是 “ 揠苗助长:yà_miáo_zhù_zhǎng ” 。', 'C’est ce qu’on appelle « tirer sur les pousses pour les aider à grandir ».', 'This is “pulling up shoots to help them grow”.')],
+  ], [
+    W('坏', 'huài', 'abîmé ; terriblement', 'broken; terribly'),
+    W('奇怪', 'qíguài', 'étrange', 'strange'),
+    W('马上', 'mǎshàng', 'tout de suite', 'right away'),
+    W('死', 'sǐ', 'mourir', 'to die'),
+    W('反而', 'fǎn’ér', 'au contraire', 'on the contrary'),
+    W('揠苗助长', 'yà miáo zhù zhǎng', 'vouloir hâter les choses et tout gâcher', 'to spoil things by being too hasty'),
+  ], [
+    Q(('Que découvre le fils ?', 'What does the son discover?'), [('Les pousses sont mortes', 'The shoots are dead'), ('Les pousses ont grandi', 'The shoots have grown'), ('Le champ a été volé', 'The field was stolen')], 0),
+    Q(('Quelle est la leçon de Mencius ?', 'What is Mencius’s lesson?'), [('Il ne faut pas trop se presser', 'Don’t be in too much of a hurry'), ('Il faut travailler la nuit', 'Work at night'), ('Il faut planter plus', 'Plant more')], 0),
+  ]),
+])
+
+# 庄周梦蝶 (Zhuangzi, De l'égalité des choses)
+ZHUANGZI = STORY('zhuang-zhou-meng-die', '蝶', 'HSK3', '#7B5BD6', ('庄周梦蝶', 'Zhuangzi rêve qu’il est un papillon', 'Zhuangzi dreams he is a butterfly'),
+  ('Zhuangzi s’endort et devient papillon. À son réveil, une question le trouble : qui rêve de qui ?', 'Zhuangzi falls asleep and becomes a butterfly. When he wakes up, a question troubles him: who is dreaming of whom?'), [
+  CH('zhuang-zhou-meng-die-1', ('一个梦', 'Un rêve', 'A dream'), [
+    [S3('庄子:Zhuāngzǐ 是 战国:Zhànguó 时候 一个 很 有名:yǒumíng 的 思想家:sīxiǎngjiā 。', 'Zhuangzi était un penseur célèbre de l’époque des Royaumes combattants.', 'Zhuangzi was a famous thinker of the Warring States period.'),
+     S3('一 天 下午 ， 他 在 树:shù 下面 睡着:shuìzháo 了 ， 做 了 一个 梦:mèng 。', 'Un après-midi, il s’endormit sous un arbre et fit un rêve.', 'One afternoon he fell asleep under a tree and had a dream.'),
+     S3('在 梦:mèng 里 ， 他 变成:biànchéng 了 一 只:zhī 蝴蝶:húdié 。', 'En rêve, il se changea en papillon.', 'In the dream he turned into a butterfly.')],
+    [S3('蝴蝶:húdié 在 花:huā 和 草:cǎo 中间:zhōngjiān 飞:fēi 来 飞:fēi 去 ， 快乐 极了:jí_le 。', 'Le papillon voletait parmi les fleurs et les herbes, merveilleusement heureux.', 'The butterfly flitted among the flowers and grass, blissfully happy.'),
+     S3('它 一点儿 也 不 记得:jìde 自己:zìjǐ 是 庄子:Zhuāngzǐ 。', 'Il ne se souvenait pas du tout d’être Zhuangzi.', 'It didn’t remember at all that it was Zhuangzi.'),
+     S3('太阳:tàiyáng 很 暖和:nuǎnhuo ， 风:fēng 也 很 舒服:shūfu 。', 'Le soleil était doux, le vent agréable.', 'The sun was warm and the breeze pleasant.')],
+  ], [
+    W('战国', 'Zhànguó', 'les Royaumes combattants', 'the Warring States'),
+    W('睡着', 'shuìzháo', 's’endormir', 'to fall asleep'),
+    W('梦', 'mèng', 'rêve', 'dream'),
+    W('变成', 'biànchéng', 'devenir, se changer en', 'to turn into'),
+    W('蝴蝶', 'húdié', 'papillon', 'butterfly'),
+    W('暖和', 'nuǎnhuo', 'doux, tiède', 'warm'),
+  ], [
+    Q(('Où Zhuangzi s’endort-il ?', 'Where does Zhuangzi fall asleep?'), [('Sous un arbre', 'Under a tree'), ('Dans un bateau', 'In a boat'), ('À l’école', 'At school')], 0),
+    Q(('En quoi se change-t-il en rêve ?', 'What does he turn into in the dream?'), [('En papillon', 'A butterfly'), ('En oiseau', 'A bird'), ('En poisson', 'A fish')], 0),
+  ]),
+  CH('zhuang-zhou-meng-die-2', ('我是谁？', 'Qui suis-je ?', 'Who am I?'), [
+    [S3('突然:tūrán ， 庄子:Zhuāngzǐ 醒:xǐng 了 。', 'Soudain, Zhuangzi se réveilla.', 'Suddenly Zhuangzi woke up.'),
+     S3('他 看 看 自己:zìjǐ 的 手 和 脚:jiǎo ， 发现:fāxiàn 自己:zìjǐ 还是 庄子:Zhuāngzǐ 。', 'Il regarda ses mains et ses pieds : il était toujours Zhuangzi.', 'He looked at his hands and feet: he was still Zhuangzi.'),
+     S3('可是 他 不 明白:míngbai 了 ： 是 庄子:Zhuāngzǐ 在 梦:mèng 里 变成:biànchéng 了 蝴蝶:húdié ， 还是 蝴蝶:húdié 在 梦:mèng 里 变成:biànchéng 了 庄子:Zhuāngzǐ ？', 'Mais il ne comprenait plus : était-ce Zhuangzi qui avait rêvé d’être un papillon, ou un papillon qui rêvait d’être Zhuangzi ?', 'But now he didn’t understand: had Zhuangzi dreamt he was a butterfly, or was a butterfly dreaming it was Zhuangzi?')],
+    [S3('这个 问题 很 简单:jiǎndān ， 也 很 难:nán 。', 'La question est simple, et pourtant très difficile.', 'The question is simple, and also very hard.'),
+     S3('庄子:Zhuāngzǐ 认为:rènwéi ， 世界:shìjiè 上 的 东西 一直:yìzhí 在 变化:biànhuà ， 人 和 蝴蝶:húdié 也 没有 那么 不 一样:yíyàng 。', 'Pour Zhuangzi, tout dans le monde change sans cesse, et l’homme n’est pas si différent du papillon.', 'Zhuangzi held that everything in the world keeps changing, and people are not so different from butterflies.'),
+     S3('两千:liǎngqiān 多 年 以后:yǐhòu ， 人们:rénmen 还 在 讲:jiǎng 这个 故事:gùshi 。', 'Plus de deux mille ans plus tard, on raconte encore cette histoire.', 'More than two thousand years later, people still tell this story.')],
+  ], [
+    W('醒', 'xǐng', 'se réveiller', 'to wake up'),
+    W('明白', 'míngbai', 'comprendre', 'to understand'),
+    W('认为', 'rènwéi', 'estimer, considérer', 'to consider'),
+    W('变化', 'biànhuà', 'changer ; changement', 'to change; change'),
+    W('一样', 'yíyàng', 'pareil', 'the same'),
+    W('人们', 'rénmen', 'les gens', 'people'),
+  ], [
+    Q(('Que se demande Zhuangzi à son réveil ?', 'What does Zhuangzi wonder when he wakes?'), [('S’il est un homme ou un papillon', 'Whether he is a man or a butterfly'), ('Quelle heure il est', 'What time it is'), ('Où est sa maison', 'Where his house is')], 0),
+    Q(('Selon Zhuangzi, le monde…', 'According to Zhuangzi, the world…'), [('change sans cesse', 'keeps changing'), ('ne change jamais', 'never changes'), ('est un mauvais rêve', 'is a bad dream')], 0),
+  ]),
+])
+
+if MISSING:
+    raise SystemExit('\n'.join(MISSING))
+ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES
 data.setdefault('notices', {}).update({
-  'zh': {'fr': 'Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots ; touche une phrase pour l’entendre et la traduire.', 'en': 'Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words; tap a sentence to hear and translate it.'},
+  'zh': {'fr': 'Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux) ; touche une phrase pour l’entendre et la traduire.', 'en': 'Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above new words); tap a sentence to hear and translate it.'},
 })
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
@@ -369,6 +537,6 @@ for s in ZH_STORIES:
             assert 0 <= q['answer'] < len(q['choices'])
         for para in c['paragraphs']:
             for sent in para:
-                assert '{' in sent['jp'] and ':' not in sent['kana'], sent['kana']
+                assert (s['level'] == 'HSK3' or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
 json.dump(data, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"Contes chinois : {len(ZH_STORIES)} contes, {sum(len(s['chapters']) for s in ZH_STORIES)} chapitres")

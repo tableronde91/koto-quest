@@ -193,6 +193,37 @@ function Junk({ ...p }: P) {
   );
 }
 
+/** Pin sur un rocher (les monts de Zhuangzi). */
+function Pine({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-10 0 Q-8 -6 0 -5 Q8 -7 10 0Z" fill={STONE} />
+      <path d="M0 -4 Q-2 -14 2 -26" stroke={WOOD} strokeWidth="2" fill="none" />
+      <path d="M-12 -14 Q0 -22 12 -15 Q2 -12 -12 -14Z M-8 -22 Q2 -29 10 -23 Q2 -20 -8 -22Z" fill={JADE} />
+    </g>
+  );
+}
+
+/** Touffe de bambous (l'école des lettrés). */
+function Bamboo({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      {[-6, 0, 6].map((x, i) => <path key={x} d={`M${x} 0 V${-22 - i * 4}`} stroke="#5E8C3A" strokeWidth="2" strokeDasharray="6 1" />)}
+      <path d="M0 -18 q6 -2 10 -6 M-6 -14 q-6 -1 -9 -5 M6 -24 q5 0 8 -3" stroke="#5E8C3A" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+
+/** Carillon de cloches de bronze (le débat de l'académie). */
+function Bells({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 V-24 M14 0 V-24 M-16 -24 H16" stroke={WOOD} strokeWidth="1.6" />
+      {[-8, 0, 8].map((x, i) => <path key={x} d={`M${x - 3 + i * 0.3} -22 V${-16 + i} Q${x} ${-13 + i} ${x + 3 - i * 0.3} ${-16 + i} V-22Z`} fill={BRONZE} stroke={GOLD} strokeWidth="0.6" />)}
+    </g>
+  );
+}
+
 export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'école du maître : pavillon de Lu, pétards contre le Nian, prunier.
   'hsk1-w1': () => (<><Pavilion x={-14} y={12} /><Firecrackers x={14} y={8} /><Plum x={30} y={12} /></>),
@@ -222,4 +253,14 @@ export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'hsk2-w7': () => (<><Tent x={-16} y={12} /><Drum x={4} y={12} /><Tent x={22} y={14} s={0.8} /></>),
   'hsk2-w8': () => (<><Pavilion x={-8} y={12} s={1.1} /><Scroll x={20} y={10} /></>),
   'hsk2-final': () => (<><Tower x={-12} y={14} s={1.1} /><Junk x={16} y={12} s={0.8} /></>),
+  // HSK 3 — les Cent Écoles au royaume de Qi
+  'hsk3-w1': () => (<><Pavilion x={-12} y={12} fill={WOOD} /><Lantern x={14} y={4} /><Lantern x={26} y={6} s={0.8} /></>),
+  'hsk3-w2': () => (<><Stall x={-16} y={12} /><Stall x={8} y={14} s={0.9} /><Junk x={28} y={10} s={0.6} /></>),
+  'hsk3-w3': () => (<><Pavilion x={-10} y={12} /><Scroll x={14} y={10} /><Bamboo x={28} y={12} /></>),
+  'hsk3-w4': () => (<><Pine x={-14} y={12} /><Pine x={10} y={14} s={0.8} /><LuckyCloud x={24} y={-10} /></>),
+  'hsk3-w5': () => (<><Tower x={-12} y={14} /><Drum x={12} y={12} /><Ding x={28} y={12} s={0.7} /></>),
+  'hsk3-w6': () => (<><Chariot x={-14} y={12} /><Junk x={12} y={10} /><Wall x={30} y={12} s={0.5} /></>),
+  'hsk3-w7': () => (<><Pavilion x={-12} y={12} fill={JADE} /><Ding x={12} y={12} s={0.8} /><Pine x={28} y={12} s={0.7} /></>),
+  'hsk3-w8': () => (<><Pavilion x={-10} y={12} s={1.1} /><Bells x={18} y={12} /></>),
+  'hsk3-final': () => (<><Tower x={-12} y={14} s={1.1} /><Bells x={14} y={12} s={0.9} /><LuckyCloud x={26} y={-10} /></>),
 };

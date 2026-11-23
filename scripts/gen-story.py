@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -909,6 +909,56 @@ story['levels']['HSK2'] = {
       ('Dans le palais de Gusu, le roi Helü met le traité à l’épreuve : écoute et lis comme au HSK 2. Atteins 120 points sur 200.',
        'In the palace of Gusu, King Helü puts the treatise to the test: listen and read as in the HSK 2. Reach 120 points out of 200.'),
       ('Le roi Helü sourit. Niveau HSK 2 validé : l’art de la guerre est entre de bonnes mains !', 'King Helü smiles. HSK 2 level complete: the art of war is in good hands!')),
+   },
+}
+story['levels']['HSK3'] = {
+   'glyph': '学', 'jp': '稷下学宫', 'color': '#5E6E3A',
+   'saga': B('Les Cent Écoles', 'The Hundred Schools'),
+   'hero': B('Disciple de l’académie Jixia', 'Disciple of the Jixia Academy'),
+   'short': B('Le disciple', 'The disciple'),
+   'prologue': B(
+     'À Linzi, capitale du royaume de Qi, le roi Xuan a ouvert l’académie Jixia, au pied de la porte Ji. Les maîtres des Cent Écoles y débattent jour et nuit : disciples de Confucius, taoïstes, légistes, médecins. Le vieux lettré t’y conduit : « Pour entrer, il faut prendre part au grand débat de printemps. D’ici là, apprends à vivre, à étudier et à raisonner en chinois. »',
+     'In Linzi, capital of the state of Qi, King Xuan has opened the Jixia Academy at the foot of the Ji Gate. Masters of the Hundred Schools debate there day and night: followers of Confucius, Daoists, Legalists, physicians. The old scholar leads you there: “To be admitted, you must take part in the great spring debate. Until then, learn to live, study and reason in Chinese.”'),
+   'epilogue': B(
+     'Au terme du débat, le roi Xuan te remet une tablette de bambou gravée à ton nom : te voilà lettré de Jixia. Mencius te salue, Zhuangzi te sourit, Han Fei hoche la tête. Dehors, un messager attend, couvert de poussière : « Le roi de Qin veut unifier tous les royaumes… »',
+     'At the end of the debate, King Xuan hands you a bamboo tablet carved with your name: you are now a scholar of Jixia. Mencius greets you, Zhuangzi smiles, Han Fei nods. Outside, a dust-covered messenger is waiting: “The king of Qin wants to unite all the kingdoms…”'),
+   'chapters': {
+    'hsk3-w1': CHAP(('L’auberge de Linzi', 'The inn at Linzi'),
+      ('Tu loges dans une auberge près de l’académie, mais le Taowu s’y est couché en travers de la salle et refuse de bouger quoi que ce soit. Dis précisément où mettre chaque chose.',
+       'You are lodging at an inn near the academy, but the Taowu has lain down across the hall and refuses to move anything. Say exactly where to put each thing.'),
+      ('Le Taowu grogne, se lève et va bouder dans la cour. L’aubergiste te remercie : « Tu ranges mieux que mes propres enfants ! »', 'The Taowu grunts, gets up and goes to sulk in the courtyard. The innkeeper thanks you: “You tidy better than my own children!”')),
+    'hsk3-w2': CHAP(('Les cailloux de Jingwei', 'Jingwei’s pebbles'),
+      ('Au marché de Linzi, l’oiseau Jingwei jette des cailloux dans les paniers des marchands. Commande, compte et paie sans te tromper pour l’apaiser.',
+       'At the Linzi market, the Jingwei bird is dropping pebbles into the merchants’ baskets. Order, count and pay without a mistake to calm her.'),
+      ('Jingwei repart vers la mer, un caillou dans le bec. Les marchands t’offrent un bol de nouilles.', 'Jingwei flies back to the sea, a pebble in her beak. The merchants treat you to a bowl of noodles.')),
+    'hsk3-w3': CHAP(('Le vacarme du Zheng', 'The Zheng’s din'),
+      ('Dans l’école des disciples de Confucius, le Zheng fait un bruit de pierres entrechoquées : plus personne n’entend le maître. Montre que tu comprends et que tu progresses.',
+       'In the school of Confucius’s disciples, the Zheng makes a noise like clashing stones: no one can hear the master any more. Show that you understand and that you are making progress.'),
+      ('Le Zheng se tait et se couche aux pieds du maître, qui te prête un rouleau des Entretiens.', 'The Zheng falls silent and lies down at the master’s feet, who lends you a scroll of the Analects.')),
+    'hsk3-w4': CHAP(('La course du soleil', 'The race of the sun'),
+      ('Dans les monts où rêve Zhuangzi, le géant Kuafu poursuit le soleil et assèche les rivières. Raconte-lui les saisons, dans l’ordre, pour qu’il s’arrête enfin.',
+       'In the mountains where Zhuangzi dreams, the giant Kuafu chases the sun and drinks the rivers dry. Tell him about the seasons, in order, so that he finally stops.'),
+      ('Kuafu s’assoit au bord du fleuve Jaune et plante son bâton : il devient une forêt de pêchers.', 'Kuafu sits down by the Yellow River and plants his staff: it becomes a forest of peach trees.')),
+    'hsk3-w5': CHAP(('La corne du Xiezhi', 'The Xiezhi’s horn'),
+      ('Au tribunal du légiste Han Fei, on juge une affaire de vol au marché. Le Xiezhi frappe de sa corne celui qui ment : dis exactement ce qui s’est passé et ce qu’il faut faire.',
+       'At the legalist Han Fei’s court, a theft at the market is being judged. The Xiezhi strikes liars with its horn: say exactly what happened and what must be done.'),
+      ('Le Xiezhi baisse la corne devant toi. Han Fei note ton témoignage : « Clair, précis, juste. »', 'The Xiezhi lowers its horn before you. Han Fei records your testimony: “Clear, precise, fair.”')),
+    'hsk3-w6': CHAP(('Le carrefour du Sud', 'The southern crossroads'),
+      ('Le roi t’envoie chercher un maître de Chu. Au carrefour des routes du Sud, le Hou, bête de flamme, barre le passage : indique chaque direction et chaque horaire.',
+       'The king sends you to fetch a master from Chu. At the crossroads of the southern roads, the Hou, a beast of flame, bars the way: give every direction and every timetable.'),
+      ('Le Hou s’écarte en grondant. Le maître de Chu monte dans ta barque : « Tu connais mieux les routes que les cochers ! »', 'The Hou steps aside with a growl. The master from Chu climbs into your boat: “You know the roads better than the coachmen!”')),
+    'hsk3-w7': CHAP(('L’orage de Yinglong', 'Yinglong’s storm'),
+      ('Au sanctuaire du médecin Bian Que, le dragon Yinglong a déchaîné l’orage et les pèlerins tombent malades. Dis où ils ont mal et aide-les à se rétablir.',
+       'At the sanctuary of the physician Bian Que, the dragon Yinglong has unleashed a storm and the pilgrims are falling ill. Say where it hurts and help them recover.'),
+      ('Yinglong replie ses ailes et la pluie s’arrête. Bian Que te confie : « Un bon médecin écoute avant de soigner. »', 'Yinglong folds his wings and the rain stops. Bian Que tells you: “A good physician listens before he treats.”')),
+    'hsk3-w8': CHAP(('Le grand débat', 'The great debate'),
+      ('Le grand débat de printemps commence. Gonggong, le dieu des eaux qui brisa le pilier du ciel, veut tout interrompre : défends tes idées avec ordre et raison.',
+       'The great spring debate begins. Gonggong, the water god who broke the pillar of the sky, wants to stop everything: defend your ideas with order and reason.'),
+      ('Gonggong retourne à ses eaux en grondant. Dans la salle, les maîtres frappent leurs tablettes en signe d’approbation.', 'Gonggong returns to his waters, rumbling. In the hall, the masters tap their tablets in approval.')),
+    'hsk3-final': CHAP(('L’académie Jixia', 'The Jixia Academy'),
+      ('Devant le roi Xuan et les maîtres des Cent Écoles, passe l’épreuve d’entrée : écoute, lis et écris comme au HSK 3. Atteins 180 points sur 300.',
+       'Before King Xuan and the masters of the Hundred Schools, take the entrance test: listen, read and write as in the HSK 3. Reach 180 points out of 300.'),
+      ('Le roi Xuan se lève. Niveau HSK 3 validé : te voilà lettré de l’académie Jixia !', 'King Xuan rises. HSK 3 level complete: you are now a scholar of the Jixia Academy!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

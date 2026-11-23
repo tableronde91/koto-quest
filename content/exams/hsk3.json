@@ -1,0 +1,1156 @@
+{
+ "slug": "hsk3",
+ "level": "HSK3",
+ "contentVersion": "2026.11.23",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel du HSK 3 (HSK 2.0 : types d’épreuves, consignes en chinois, notation sur 300). Les images sont remplacées par des pictogrammes et l’écriture se fait par choix multiple. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "l-dialogue-picture",
+   "section": "listening",
+   "jpTitle": "听力 第一部分（1～10）",
+   "title": "Dialogue et image",
+   "prompt": "听对话，选择对应的图片。",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "M|你把伞放在哪儿了？\nF|在门旁边，外面还在下雨呢。",
+     "choices": [
+      "☔",
+      "🎒",
+      "📷",
+      "👓"
+     ],
+     "answer": "☔",
+     "explanation": "Transcription : Homme : 你把伞放在哪儿了？ / Femme : 在门旁边，外面还在下雨呢。"
+    },
+    {
+     "audio": "F|你怎么了？脸这么红。\nM|我感冒了，有点儿发烧。",
+     "choices": [
+      "🤒",
+      "😂",
+      "🏃",
+      "🍺"
+     ],
+     "answer": "🤒",
+     "explanation": "Transcription : Femme : 你怎么了？脸这么红。 / Homme : 我感冒了，有点儿发烧。"
+    },
+    {
+     "audio": "M|周末我们去爬山吧！\nF|好啊，我带照相机。",
+     "choices": [
+      "⛰️",
+      "🏊",
+      "🎤",
+      "📚"
+     ],
+     "answer": "⛰️",
+     "explanation": "Transcription : Homme : 周末我们去爬山吧！ / Femme : 好啊，我带照相机。"
+    },
+    {
+     "audio": "F|这双皮鞋怎么样？\nM|很好看，就是有点儿贵。",
+     "choices": [
+      "👞",
+      "👗",
+      "🎩",
+      "👖"
+     ],
+     "answer": "👞",
+     "explanation": "Transcription : Femme : 这双皮鞋怎么样？ / Homme : 很好看，就是有点儿贵。"
+    },
+    {
+     "audio": "M|你在看什么呢？\nF|一个关于熊猫的节目，太可爱了。",
+     "choices": [
+      "🐼",
+      "🐎",
+      "🐦",
+      "🐟"
+     ],
+     "answer": "🐼",
+     "explanation": "Transcription : Homme : 你在看什么呢？ / Femme : 一个关于熊猫的节目，太可爱了。"
+    },
+    {
+     "audio": "F|我们坐地铁还是骑自行车？\nM|骑自行车吧，天气这么好。",
+     "choices": [
+      "🚲",
+      "🚇",
+      "🚢",
+      "✈️"
+     ],
+     "answer": "🚲",
+     "explanation": "Transcription : Femme : 我们坐地铁还是骑自行车？ / Homme : 骑自行车吧，天气这么好。"
+    },
+    {
+     "audio": "M|服务员，给我们拿两双筷子。\nF|好的，马上来。",
+     "choices": [
+      "🥢",
+      "🍽️",
+      "🥣",
+      "🍾"
+     ],
+     "answer": "🥢",
+     "explanation": "Transcription : Homme : 服务员，给我们拿两双筷子。 / Femme : 好的，马上来。"
+    },
+    {
+     "audio": "F|你的行李箱太重了，我帮你拿吧。\nM|谢谢，我们坐电梯上去。",
+     "choices": [
+      "🧳",
+      "🎁",
+      "💼",
+      "☂️"
+     ],
+     "answer": "🧳",
+     "explanation": "Transcription : Femme : 你的行李箱太重了，我帮你拿吧。 / Homme : 谢谢，我们坐电梯上去。"
+    },
+    {
+     "audio": "M|生日快乐！这是送给你的礼物。\nF|谢谢！是什么？我能打开吗？",
+     "choices": [
+      "🎁",
+      "🎂",
+      "💐",
+      "✉️"
+     ],
+     "answer": "🎁",
+     "explanation": "Transcription : Homme : 生日快乐！这是送给你的礼物。 / Femme : 谢谢！是什么？我能打开吗？"
+    },
+    {
+     "audio": "F|你每天早上做什么运动？\nM|我在公园里跑步，跑半个小时。",
+     "choices": [
+      "🏃",
+      "🚴",
+      "🏊",
+      "⚽"
+     ],
+     "answer": "🏃",
+     "explanation": "Transcription : Femme : 你每天早上做什么运动？ / Homme : 我在公园里跑步，跑半个小时。"
+    },
+    {
+     "audio": "M|冰箱里还有牛奶吗？\nF|没有了，只有几瓶啤酒。",
+     "choices": [
+      "🍺",
+      "🥛",
+      "🧃",
+      "☕"
+     ],
+     "answer": "🍺",
+     "explanation": "Transcription : Homme : 冰箱里还有牛奶吗？ / Femme : 没有了，只有几瓶啤酒。"
+    },
+    {
+     "audio": "F|别玩儿游戏了，快去刷牙睡觉！\nM|好，马上就去。",
+     "choices": [
+      "🪥",
+      "🎮",
+      "🛁",
+      "📺"
+     ],
+     "answer": "🪥",
+     "explanation": "Transcription : Femme : 别玩儿游戏了，快去刷牙睡觉！ / Homme : 好，马上就去。"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-judge",
+   "section": "listening",
+   "jpTitle": "听力 第二部分（11～20）",
+   "title": "Phrase et affirmation",
+   "prompt": "听句子，判断对错。",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "N|我以前不喜欢吃面条，后来去了一次北方，就爱上了。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 我以前不喜欢吃面条，后来去了一次北方，就爱上了。",
+     "text": "★ 他现在喜欢吃面条。"
+    },
+    {
+     "audio": "N|这个房间又干净又安静，离地铁站也很近，就是有点儿小。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 这个房间又干净又安静，离地铁站也很近，就是有点儿小。",
+     "text": "★ 这个房间很大。"
+    },
+    {
+     "audio": "N|为了提高汉语水平，小王每天晚上都看一个小时中文节目。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 为了提高汉语水平，小王每天晚上都看一个小时中文节目。",
+     "text": "★ 小王想提高汉语水平。"
+    },
+    {
+     "audio": "N|会议本来九点开始，可是经理九点半才到。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 会议本来九点开始，可是经理九点半才到。",
+     "text": "★ 经理迟到了。"
+    },
+    {
+     "audio": "N|我把护照忘在宾馆里了，只好坐出租车回去拿。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 我把护照忘在宾馆里了，只好坐出租车回去拿。",
+     "text": "★ 他的护照在包里。"
+    },
+    {
+     "audio": "N|妹妹不但数学成绩好，而且历史也学得很好。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 妹妹不但数学成绩好，而且历史也学得很好。",
+     "text": "★ 妹妹只是数学好。"
+    },
+    {
+     "audio": "N|奶奶年纪大了，除了周末，叔叔每天都去照顾她。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 奶奶年纪大了，除了周末，叔叔每天都去照顾她。",
+     "text": "★ 叔叔周末不去照顾奶奶。"
+    },
+    {
+     "audio": "N|今天风刮得特别大，我们别去公园了，在家看电影吧。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 今天风刮得特别大，我们别去公园了，在家看电影吧。",
+     "text": "★ 他们打算去公园。"
+    },
+    {
+     "audio": "N|我的自行车被邻居借走了，所以今天坐公共汽车上班。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 我的自行车被邻居借走了，所以今天坐公共汽车上班。",
+     "text": "★ 他今天骑自行车上班。"
+    },
+    {
+     "audio": "N|这家超市的水果很新鲜，我一般周末来这儿买。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 这家超市的水果很新鲜，我一般周末来这儿买。",
+     "text": "★ 他经常在周末来这家超市。"
+    },
+    {
+     "audio": "N|他越说越生气，最后一句话也没说就离开了。",
+     "choices": [
+      "✗ 错",
+      "✓ 对"
+     ],
+     "answer": "✗ 错",
+     "explanation": "Transcription : Narrateur : 他越说越生气，最后一句话也没说就离开了。",
+     "text": "★ 他最后很高兴。"
+    },
+    {
+     "audio": "N|飞机晚上八点起飞，我们最好六点就到机场。",
+     "choices": [
+      "✓ 对",
+      "✗ 错"
+     ],
+     "answer": "✓ 对",
+     "explanation": "Transcription : Narrateur : 飞机晚上八点起飞，我们最好六点就到机场。",
+     "text": "★ 飞机八点起飞。"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-dialogue-question",
+   "section": "listening",
+   "jpTitle": "听力 第三部分（21～30）",
+   "title": "Dialogue et question",
+   "prompt": "听对话，选择正确答案。",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "M|你的作业做完了吗？\nF|还没有，数学题太难了。\nN|问：女的为什么还没做完作业？",
+     "choices": [
+      "题太难",
+      "没有时间",
+      "她生病了"
+     ],
+     "answer": "题太难",
+     "explanation": "Transcription : Homme : 你的作业做完了吗？ / Femme : 还没有，数学题太难了。 / Narrateur : 问：女的为什么还没做完作业？"
+    },
+    {
+     "audio": "F|你看见我的眼镜了吗？\nM|在电脑旁边，你刚才放在那儿了。\nN|问：眼镜在哪儿？",
+     "choices": [
+      "电脑旁边",
+      "包里",
+      "桌子下面"
+     ],
+     "answer": "电脑旁边",
+     "explanation": "Transcription : Femme : 你看见我的眼镜了吗？ / Homme : 在电脑旁边，你刚才放在那儿了。 / Narrateur : 问：眼镜在哪儿？"
+    },
+    {
+     "audio": "M|这条裤子有点儿长，有短一点儿的吗？\nF|有，您试试这条。\nN|问：他们最可能在哪儿？",
+     "choices": [
+      "商店",
+      "医院",
+      "图书馆"
+     ],
+     "answer": "商店",
+     "explanation": "Transcription : Homme : 这条裤子有点儿长，有短一点儿的吗？ / Femme : 有，您试试这条。 / Narrateur : 问：他们最可能在哪儿？"
+    },
+    {
+     "audio": "F|你最近怎么总是迟到？\nM|对不起，我搬家了，现在住得比较远。\nN|问：男的为什么迟到？",
+     "choices": [
+      "住得远",
+      "起床晚了",
+      "车坏了"
+     ],
+     "answer": "住得远",
+     "explanation": "Transcription : Femme : 你最近怎么总是迟到？ / Homme : 对不起，我搬家了，现在住得比较远。 / Narrateur : 问：男的为什么迟到？"
+    },
+    {
+     "audio": "M|下个月你去中国旅游吗？\nF|我打算去，但是还没决定去南方还是去北方。\nN|问：女的还没决定什么？",
+     "choices": [
+      "去哪儿",
+      "什么时候去",
+      "和谁去"
+     ],
+     "answer": "去哪儿",
+     "explanation": "Transcription : Homme : 下个月你去中国旅游吗？ / Femme : 我打算去，但是还没决定去南方还是去北方。 / Narrateur : 问：女的还没决定什么？"
+    },
+    {
+     "audio": "F|这个故事你听过吗？\nM|听过，我小时候奶奶给我讲过很多次。\nN|问：谁给男的讲过这个故事？",
+     "choices": [
+      "奶奶",
+      "老师",
+      "爸爸"
+     ],
+     "answer": "奶奶",
+     "explanation": "Transcription : Femme : 这个故事你听过吗？ / Homme : 听过，我小时候奶奶给我讲过很多次。 / Narrateur : 问：谁给男的讲过这个故事？"
+    },
+    {
+     "audio": "M|喂，你到了吗？\nF|快了，再过一刻钟就到。\nN|问：女的多长时间以后到？",
+     "choices": [
+      "十五分钟",
+      "一个小时",
+      "五分钟"
+     ],
+     "answer": "十五分钟",
+     "explanation": "Transcription : Homme : 喂，你到了吗？ / Femme : 快了，再过一刻钟就到。 / Narrateur : 问：女的多长时间以后到？"
+    },
+    {
+     "audio": "F|我想买一个新的冰箱，你有什么好的选择吗？\nM|你可以先上网看看，再去商店。\nN|问：男的让女的先做什么？",
+     "choices": [
+      "上网看看",
+      "去商店",
+      "问朋友"
+     ],
+     "answer": "上网看看",
+     "explanation": "Transcription : Femme : 我想买一个新的冰箱，你有什么好的选择吗？ / Homme : 你可以先上网看看，再去商店。 / Narrateur : 问：男的让女的先做什么？"
+    },
+    {
+     "audio": "M|你怎么不吃了？\nF|我已经吃饱了，这个蛋糕太甜了。\nN|问：女的觉得蛋糕怎么样？",
+     "choices": [
+      "太甜了",
+      "不新鲜",
+      "太贵了"
+     ],
+     "answer": "太甜了",
+     "explanation": "Transcription : Homme : 你怎么不吃了？ / Femme : 我已经吃饱了，这个蛋糕太甜了。 / Narrateur : 问：女的觉得蛋糕怎么样？"
+    },
+    {
+     "audio": "F|您好，请问校长办公室在几层？\nM|在五层，你可以坐电梯上去。\nN|问：校长办公室在几层？",
+     "choices": [
+      "五层",
+      "三层",
+      "一层"
+     ],
+     "answer": "五层",
+     "explanation": "Transcription : Femme : 您好，请问校长办公室在几层？ / Homme : 在五层，你可以坐电梯上去。 / Narrateur : 问：校长办公室在几层？"
+    },
+    {
+     "audio": "M|你怎么这么高兴？\nF|我参加的比赛结束了，我拿了第一！\nN|问：女的为什么高兴？",
+     "choices": [
+      "比赛拿了第一",
+      "买了礼物",
+      "要结婚了"
+     ],
+     "answer": "比赛拿了第一",
+     "explanation": "Transcription : Homme : 你怎么这么高兴？ / Femme : 我参加的比赛结束了，我拿了第一！ / Narrateur : 问：女的为什么高兴？"
+    },
+    {
+     "audio": "F|你对中国文化感兴趣吗？\nM|很感兴趣，特别是中国音乐。\nN|问：男的对什么特别感兴趣？",
+     "choices": [
+      "中国音乐",
+      "中国菜",
+      "中国历史"
+     ],
+     "answer": "中国音乐",
+     "explanation": "Transcription : Femme : 你对中国文化感兴趣吗？ / Homme : 很感兴趣，特别是中国音乐。 / Narrateur : 问：男的对什么特别感兴趣？"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-long-dialogue",
+   "section": "listening",
+   "jpTitle": "听力 第四部分（31～40）",
+   "title": "Dialogue long et question",
+   "prompt": "听对话，选择正确答案。",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "M|你好，我想借这本书。\nF|好的，请给我看一下你的学生证。\nM|给您。我可以借多长时间？\nF|两个星期，别忘了按时还。\nN|问：这本书可以借多长时间？",
+     "choices": [
+      "两个星期",
+      "一个星期",
+      "一个月"
+     ],
+     "answer": "两个星期",
+     "explanation": "Transcription : Homme : 你好，我想借这本书。 / Femme : 好的，请给我看一下你的学生证。 / Homme : 给您。我可以借多长时间？ / Femme : 两个星期，别忘了按时还。 / Narrateur : 问：这本书可以借多长时间？"
+    },
+    {
+     "audio": "F|你的腿怎么了？\nM|昨天踢足球的时候被别人踢了一下。\nF|疼吗？去医院检查了吗？\nM|还有点儿疼，医生说没什么问题。\nN|问：男的腿为什么疼？",
+     "choices": [
+      "踢足球时被踢了",
+      "爬山时摔了",
+      "骑车撞了"
+     ],
+     "answer": "踢足球时被踢了",
+     "explanation": "Transcription : Femme : 你的腿怎么了？ / Homme : 昨天踢足球的时候被别人踢了一下。 / Femme : 疼吗？去医院检查了吗？ / Homme : 还有点儿疼，医生说没什么问题。 / Narrateur : 问：男的腿为什么疼？"
+    },
+    {
+     "audio": "M|这个周末你有什么打算？\nF|我想去看电影，你呢？\nM|我要在家打扫房间，我妈妈下周来。\nF|那我们下个周末一起去吧。\nN|问：男的这个周末要做什么？",
+     "choices": [
+      "打扫房间",
+      "看电影",
+      "去接妈妈"
+     ],
+     "answer": "打扫房间",
+     "explanation": "Transcription : Homme : 这个周末你有什么打算？ / Femme : 我想去看电影，你呢？ / Homme : 我要在家打扫房间，我妈妈下周来。 / Femme : 那我们下个周末一起去吧。 / Narrateur : 问：男的这个周末要做什么？"
+    },
+    {
+     "audio": "F|先生，您要喝点儿什么？\nM|有果汁吗？\nF|有，苹果汁和西瓜汁。\nM|那给我一杯西瓜汁吧，不要太冰的。\nN|问：男的要喝什么？",
+     "choices": [
+      "西瓜汁",
+      "苹果汁",
+      "啤酒"
+     ],
+     "answer": "西瓜汁",
+     "explanation": "Transcription : Femme : 先生，您要喝点儿什么？ / Homme : 有果汁吗？ / Femme : 有，苹果汁和西瓜汁。 / Homme : 那给我一杯西瓜汁吧，不要太冰的。 / Narrateur : 问：男的要喝什么？"
+    },
+    {
+     "audio": "M|听说你要搬家了？\nF|是啊，新房子离公司很近，走路十分钟。\nM|那太方便了！需要帮忙吗？\nF|太好了，星期六你有空吗？\nN|问：女的为什么搬家？",
+     "choices": [
+      "新家离公司近",
+      "房子太小",
+      "邻居太吵"
+     ],
+     "answer": "新家离公司近",
+     "explanation": "Transcription : Homme : 听说你要搬家了？ / Femme : 是啊，新房子离公司很近，走路十分钟。 / Homme : 那太方便了！需要帮忙吗？ / Femme : 太好了，星期六你有空吗？ / Narrateur : 问：女的为什么搬家？"
+    },
+    {
+     "audio": "F|你的汉语越来越好了！\nM|谢谢，我每天都跟中国同事说汉语。\nF|你们说什么？\nM|什么都说，工作、生活、电影。\nN|问：男的汉语为什么越来越好？",
+     "choices": [
+      "每天跟中国同事说汉语",
+      "每天看中文书",
+      "在中国上学"
+     ],
+     "answer": "每天跟中国同事说汉语",
+     "explanation": "Transcription : Femme : 你的汉语越来越好了！ / Homme : 谢谢，我每天都跟中国同事说汉语。 / Femme : 你们说什么？ / Homme : 什么都说，工作、生活、电影。 / Narrateur : 问：男的汉语为什么越来越好？"
+    },
+    {
+     "audio": "M|请问，去火车站怎么走？\nF|一直往前走，到了第二个路口向右。\nM|远吗？要坐车吗？\nF|不远，走过去也就十分钟。\nN|问：到火车站要多长时间？",
+     "choices": [
+      "走路十分钟",
+      "坐车十分钟",
+      "走路半个小时"
+     ],
+     "answer": "走路十分钟",
+     "explanation": "Transcription : Homme : 请问，去火车站怎么走？ / Femme : 一直往前走，到了第二个路口向右。 / Homme : 远吗？要坐车吗？ / Femme : 不远，走过去也就十分钟。 / Narrateur : 问：到火车站要多长时间？"
+    },
+    {
+     "audio": "F|小李，你的照片拍得真好！\nM|谢谢，这是我在黄河边上拍的。\nF|你用什么照相机？\nM|就是我的手机，那天的太阳特别好。\nN|问：照片是用什么拍的？",
+     "choices": [
+      "手机",
+      "新照相机",
+      "朋友的照相机"
+     ],
+     "answer": "手机",
+     "explanation": "Transcription : Femme : 小李，你的照片拍得真好！ / Homme : 谢谢，这是我在黄河边上拍的。 / Femme : 你用什么照相机？ / Homme : 就是我的手机，那天的太阳特别好。 / Narrateur : 问：照片是用什么拍的？"
+    },
+    {
+     "audio": "M|妈妈，我饿了，有什么吃的？\nF|冰箱里有面包和鸡蛋。\nM|我想吃面条。\nF|那你先把作业做完，我一会儿给你做。\nN|问：妈妈让儿子先做什么？",
+     "choices": [
+      "做作业",
+      "吃面包",
+      "去买面条"
+     ],
+     "answer": "做作业",
+     "explanation": "Transcription : Homme : 妈妈，我饿了，有什么吃的？ / Femme : 冰箱里有面包和鸡蛋。 / Homme : 我想吃面条。 / Femme : 那你先把作业做完，我一会儿给你做。 / Narrateur : 问：妈妈让儿子先做什么？"
+    },
+    {
+     "audio": "F|经理，会议几点开始？\nM|本来是三点，现在改到四点了。\nF|那我还有时间把材料准备好。\nM|好，别忘了告诉其他同事。\nN|问：会议现在几点开始？",
+     "choices": [
+      "四点",
+      "三点",
+      "两点"
+     ],
+     "answer": "四点",
+     "explanation": "Transcription : Femme : 经理，会议几点开始？ / Homme : 本来是三点，现在改到四点了。 / Femme : 那我还有时间把材料准备好。 / Homme : 好，别忘了告诉其他同事。 / Narrateur : 问：会议现在几点开始？"
+    },
+    {
+     "audio": "M|你的新邻居怎么样？\nF|很热情，常常请我去他家吃饭。\nM|他是做什么的？\nF|是一位老师，教历史的。\nN|问：新邻居教什么？",
+     "choices": [
+      "历史",
+      "数学",
+      "音乐"
+     ],
+     "answer": "历史",
+     "explanation": "Transcription : Homme : 你的新邻居怎么样？ / Femme : 很热情，常常请我去他家吃饭。 / Homme : 他是做什么的？ / Femme : 是一位老师，教历史的。 / Narrateur : 问：新邻居教什么？"
+    },
+    {
+     "audio": "F|明天你几点到机场？\nM|飞机十点起飞，我八点到。\nF|我开车送你吧。\nM|太好了，谢谢你！\nN|问：女的明天要做什么？",
+     "choices": [
+      "开车送男的",
+      "坐飞机",
+      "去机场接人"
+     ],
+     "answer": "开车送男的",
+     "explanation": "Transcription : Femme : 明天你几点到机场？ / Homme : 飞机十点起飞，我八点到。 / Femme : 我开车送你吧。 / Homme : 太好了，谢谢你！ / Narrateur : 问：女的明天要做什么？"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "r-match",
+   "section": "reading",
+   "jpTitle": "阅读 第一部分（41～50）",
+   "title": "Question et réponse",
+   "prompt": "选择正确的回答。",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "还没有，我一会儿就去。",
+      "我已经吃饱了。",
+      "在电梯旁边。",
+      "我很喜欢那个节目。"
+     ],
+     "answer": "还没有，我一会儿就去。",
+     "explanation": "Réponse : 还没有，我一会儿就去。",
+     "jp": "你给奶奶打电话了吗？"
+    },
+    {
+     "choices": [
+      "不用了，我自己能拿。",
+      "没关系，下次吧。",
+      "对，是我的。",
+      "我也不知道。"
+     ],
+     "answer": "不用了，我自己能拿。",
+     "explanation": "Réponse : 不用了，我自己能拿。",
+     "jp": "你的行李箱太重了，我帮你吧。"
+    },
+    {
+     "choices": [
+      "小心点儿，别感冒了。",
+      "祝你生日快乐！",
+      "欢迎欢迎！",
+      "你说得对。"
+     ],
+     "answer": "小心点儿，别感冒了。",
+     "explanation": "Réponse : 小心点儿，别感冒了。",
+     "jp": "外面刮大风了，我还想出去跑步。"
+    },
+    {
+     "choices": [
+      "当然了，我从小就学。",
+      "没问题，我借给你。",
+      "是的，在三层。",
+      "他是我叔叔。"
+     ],
+     "answer": "当然了，我从小就学。",
+     "explanation": "Réponse : 当然了，我从小就学。",
+     "jp": "你的音乐水平这么高，学了很久吧？"
+    },
+    {
+     "choices": [
+      "太好了，祝你们幸福！",
+      "别着急，慢慢来。",
+      "我也觉得很难。",
+      "他还没决定。"
+     ],
+     "answer": "太好了，祝你们幸福！",
+     "explanation": "Réponse : 太好了，祝你们幸福！",
+     "jp": "我和小王下个月结婚。"
+    },
+    {
+     "choices": [
+      "我以为是星期五。",
+      "我决定去北方。",
+      "我把它关了。",
+      "我们先吃饭吧。"
+     ],
+     "answer": "我以为是星期五。",
+     "explanation": "Réponse : 我以为是星期五。",
+     "jp": "今天是星期四，你怎么穿得这么随便？"
+    },
+    {
+     "choices": [
+      "我把它放进冰箱了。",
+      "在桌子上写作业。",
+      "我们一起去吧。",
+      "已经十点一刻了。"
+     ],
+     "answer": "我把它放进冰箱了。",
+     "explanation": "Réponse : 我把它放进冰箱了。",
+     "jp": "刚才买的西瓜呢？"
+    },
+    {
+     "choices": [
+      "我对中国历史很感兴趣。",
+      "这本书很便宜。",
+      "图书馆八点开门。",
+      "我借了两本。"
+     ],
+     "answer": "我对中国历史很感兴趣。",
+     "explanation": "Réponse : 我对中国历史很感兴趣。",
+     "jp": "你为什么选择这本书？"
+    },
+    {
+     "choices": [
+      "还可以，就是比较远。",
+      "他个子很高。",
+      "对，我很满意你。",
+      "我饿了。"
+     ],
+     "answer": "还可以，就是比较远。",
+     "explanation": "Réponse : 还可以，就是比较远。",
+     "jp": "你的新家怎么样？"
+    },
+    {
+     "choices": [
+      "不客气，这是我应该做的。",
+      "没关系，我不生气。",
+      "我也不明白。",
+      "好的，我马上去。"
+     ],
+     "answer": "不客气，这是我应该做的。",
+     "explanation": "Réponse : 不客气，这是我应该做的。",
+     "jp": "谢谢你照顾我的猫！"
+    },
+    {
+     "choices": [
+      "越来越好了，谢谢关心。",
+      "他是一位医生。",
+      "我不同意。",
+      "一共五十块。"
+     ],
+     "answer": "越来越好了，谢谢关心。",
+     "explanation": "Réponse : 越来越好了，谢谢关心。",
+     "jp": "你爷爷的身体最近怎么样？"
+    },
+    {
+     "choices": [
+      "我更喜欢坐地铁。",
+      "我已经到了。",
+      "路上车很多。",
+      "我没有护照。"
+     ],
+     "answer": "我更喜欢坐地铁。",
+     "explanation": "Réponse : 我更喜欢坐地铁。",
+     "jp": "你骑车去还是坐地铁去？"
+    }
+   ]
+  },
+  {
+   "id": "r-blank",
+   "section": "reading",
+   "jpTitle": "阅读 第二部分（51～60）",
+   "title": "Choisir le mot",
+   "prompt": "选词填空。",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "把",
+      "被",
+      "给",
+      "跟"
+     ],
+     "answer": "把",
+     "explanation": "Réponse : 把",
+     "jp": "请＿＿门关上，外面太吵了。"
+    },
+    {
+     "choices": [
+      "被",
+      "把",
+      "让",
+      "对"
+     ],
+     "answer": "被",
+     "explanation": "Réponse : 被",
+     "jp": "我的蛋糕＿＿弟弟吃完了。"
+    },
+    {
+     "choices": [
+      "越来越",
+      "一边",
+      "一共",
+      "一直"
+     ],
+     "answer": "越来越",
+     "explanation": "Réponse : 越来越",
+     "jp": "天气＿＿热了，我们去游泳吧。"
+    },
+    {
+     "choices": [
+      "而且",
+      "但是",
+      "所以",
+      "然后"
+     ],
+     "answer": "而且",
+     "explanation": "Réponse : 而且",
+     "jp": "这家饭馆的菜不但好吃，＿＿很便宜。"
+    },
+    {
+     "choices": [
+      "就",
+      "才",
+      "再",
+      "还"
+     ],
+     "answer": "就",
+     "explanation": "Réponse : 就",
+     "jp": "如果你明天有时间，＿＿来我家玩儿吧。"
+    },
+    {
+     "choices": [
+      "才",
+      "就",
+      "又",
+      "都"
+     ],
+     "answer": "才",
+     "explanation": "Réponse : 才",
+     "jp": "电影七点开始，他七点半＿＿到。"
+    },
+    {
+     "choices": [
+      "对",
+      "跟",
+      "给",
+      "为"
+     ],
+     "answer": "对",
+     "explanation": "Réponse : 对",
+     "jp": "我＿＿中国音乐很感兴趣。"
+    },
+    {
+     "choices": [
+      "为了",
+      "因为",
+      "虽然",
+      "如果"
+     ],
+     "answer": "为了",
+     "explanation": "Réponse : 为了",
+     "jp": "＿＿身体健康，他每天早上都去锻炼。"
+    },
+    {
+     "choices": [
+      "除了",
+      "关于",
+      "根据",
+      "为了"
+     ],
+     "answer": "除了",
+     "explanation": "Réponse : 除了",
+     "jp": "＿＿星期天，我每天都上班。"
+    },
+    {
+     "choices": [
+      "以为",
+      "认为",
+      "同意",
+      "决定"
+     ],
+     "answer": "以为",
+     "explanation": "Réponse : 以为",
+     "jp": "我＿＿你已经回家了，原来你还在办公室！"
+    },
+    {
+     "choices": [
+      "得",
+      "的",
+      "地",
+      "了"
+     ],
+     "answer": "得",
+     "explanation": "Réponse : 得",
+     "jp": "这个字太小了，我看不清楚，你写＿＿大一点儿。"
+    },
+    {
+     "choices": [
+      "终于",
+      "突然",
+      "一直",
+      "已经"
+     ],
+     "answer": "终于",
+     "explanation": "Réponse : 终于",
+     "jp": "等了一个小时，公共汽车＿＿来了。"
+    }
+   ]
+  },
+  {
+   "id": "r-passage",
+   "section": "reading",
+   "jpTitle": "阅读 第三部分（61～70）",
+   "title": "Texte et question",
+   "prompt": "阅读短文，选择正确答案。",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "去公园锻炼",
+      "吃早饭",
+      "去上班",
+      "看报纸"
+     ],
+     "answer": "去公园锻炼",
+     "explanation": "Réponse : 去公园锻炼",
+     "text": "★ 爷爷每天早上先做什么？",
+     "passage": "我爷爷今年八十岁了，身体还非常健康。他每天早上六点起床，先在公园里锻炼一个小时，然后回家吃早饭。"
+    },
+    {
+     "choices": [
+      "想看懂中文书",
+      "想借音乐",
+      "在那儿工作",
+      "去见朋友"
+     ],
+     "answer": "想看懂中文书",
+     "explanation": "Réponse : 想看懂中文书",
+     "text": "★ 小张为什么每天去图书馆？",
+     "passage": "小张对中国文化很感兴趣，特别喜欢中国历史。为了看懂中文书，他每天晚上都去图书馆学习两个小时。"
+    },
+    {
+     "choices": [
+      "东西新鲜便宜",
+      "有比赛",
+      "离地铁站近",
+      "周末不开门"
+     ],
+     "answer": "东西新鲜便宜",
+     "explanation": "Réponse : 东西新鲜便宜",
+     "text": "★ 为什么周末超市人多？",
+     "passage": "这家超市的东西又新鲜又便宜，所以周末人特别多。如果你不想等太久，最好早上八点就来。"
+    },
+    {
+     "choices": [
+      "坐火车",
+      "坐飞机",
+      "坐船",
+      "开车"
+     ],
+     "answer": "坐火车",
+     "explanation": "Réponse : 坐火车",
+     "text": "★ 他最后怎么去上海？",
+     "passage": "我本来打算坐飞机去上海，但是飞机票太贵了，所以我决定坐火车。火车虽然慢一点儿，但是很舒服。"
+    },
+    {
+     "choices": [
+      "告诉她眼镜在哪儿",
+      "借她的眼镜",
+      "让她去图书馆",
+      "请她看电视"
+     ],
+     "answer": "告诉她眼镜在哪儿",
+     "explanation": "Réponse : 告诉她眼镜在哪儿",
+     "text": "★ 小明给妈妈写这个是为了什么？",
+     "passage": "妈妈，我刚才把您的眼镜放在电视旁边了，您找不到的话就去那儿看看。我去图书馆了，晚上回来。小明"
+    },
+    {
+     "choices": [
+      "新老师讲得清楚",
+      "作业越来越少",
+      "考试很容易",
+      "学生都很聪明"
+     ],
+     "answer": "新老师讲得清楚",
+     "explanation": "Réponse : 新老师讲得清楚",
+     "text": "★ 大家的数学成绩为什么越来越好？",
+     "passage": "我们班上个月来了一位新老师，她教我们数学。她讲得非常清楚，也很关心学生，所以大家的数学成绩越来越好了。"
+    },
+    {
+     "choices": [
+      "不冷也不热",
+      "经常下雨",
+      "特别冷",
+      "风很大"
+     ],
+     "answer": "不冷也不热",
+     "explanation": "Réponse : 不冷也不热",
+     "text": "★ 北京的秋天怎么样？",
+     "passage": "北京的秋天是最好的季节，不冷也不热，很少刮风下雨。很多人选择这个时候去北京旅游。"
+    },
+    {
+     "choices": [
+      "很方便",
+      "没有电梯",
+      "离地铁站远",
+      "在一层"
+     ],
+     "answer": "很方便",
+     "explanation": "Réponse : 很方便",
+     "text": "★ 小王的新家怎么样？",
+     "passage": "小王的新家在十二层，楼里有电梯，上下很方便。他家附近有地铁站，还有一个很大的公园。"
+    },
+    {
+     "choices": [
+      "胖了很多",
+      "瘦了很多",
+      "个子高了",
+      "戴眼镜了"
+     ],
+     "answer": "胖了很多",
+     "explanation": "Réponse : 胖了很多",
+     "text": "★ 老同学有什么变化？",
+     "passage": "昨天我在路上遇到了一位老同学，我们已经十年没见面了。他变化很大，以前很瘦，现在胖了很多，我差点儿没认出来。"
+    },
+    {
+     "choices": [
+      "机场",
+      "火车站",
+      "银行",
+      "饭馆"
+     ],
+     "answer": "机场",
+     "explanation": "Réponse : 机场",
+     "text": "★ 这段话最可能在哪儿听到？",
+     "passage": "各位客人，飞往广州的飞机还有二十分钟就要起飞了，请大家带好护照和行李，到八号门上飞机。"
+    },
+    {
+     "choices": [
+      "头发很长",
+      "个子很高",
+      "不喜欢裙子",
+      "最喜欢绿色"
+     ],
+     "answer": "头发很长",
+     "explanation": "Réponse : 头发很长",
+     "text": "★ 关于妹妹，下面哪个是对的？",
+     "passage": "我妹妹很可爱，个子不高，头发很长，眼睛很大。她喜欢穿裙子，最喜欢的颜色是蓝色。"
+    },
+    {
+     "choices": [
+      "工作太忙了",
+      "眼睛不舒服",
+      "书太难了",
+      "没有书"
+     ],
+     "answer": "工作太忙了",
+     "explanation": "Réponse : 工作太忙了",
+     "text": "★ 他最近为什么不看书？",
+     "passage": "我习惯每天晚上睡觉以前看半个小时书。可是最近工作太忙了，回家就很累，几乎没有时间看书。"
+    }
+   ]
+  },
+  {
+   "id": "w-order",
+   "section": "writing",
+   "jpTitle": "书写 第一部分（71～75）",
+   "title": "Remettre dans l’ordre",
+   "prompt": "完成句子。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "我把书放在桌子上了。",
+      "我把桌子上放在书了。",
+      "书把我放在桌子上了。",
+      "我放在把书桌子上了。"
+     ],
+     "answer": "我把书放在桌子上了。",
+     "explanation": "Réponse : 我把书放在桌子上了。",
+     "jp": "把 ／ 桌子上 ／ 我 ／ 放在 ／ 书 ／ 了"
+    },
+    {
+     "choices": [
+      "我的自行车被弟弟骑走了。",
+      "弟弟被我的自行车骑走了。",
+      "我的弟弟被自行车骑走了。",
+      "被弟弟我的自行车骑走了。"
+     ],
+     "answer": "我的自行车被弟弟骑走了。",
+     "explanation": "Réponse : 我的自行车被弟弟骑走了。",
+     "jp": "被 ／ 我的 ／ 自行车 ／ 弟弟 ／ 骑走了"
+    },
+    {
+     "choices": [
+      "他的汉语越来越好了。",
+      "他的越来越汉语好了。",
+      "汉语他的越来越好了。",
+      "他的汉语好了越来越。"
+     ],
+     "answer": "他的汉语越来越好了。",
+     "explanation": "Réponse : 他的汉语越来越好了。",
+     "jp": "越来越 ／ 他的 ／ 好了 ／ 汉语"
+    },
+    {
+     "choices": [
+      "我对中国历史很感兴趣。",
+      "我很对中国历史感兴趣。",
+      "中国历史对我很感兴趣。",
+      "我对很中国历史感兴趣。"
+     ],
+     "answer": "我对中国历史很感兴趣。",
+     "explanation": "Réponse : 我对中国历史很感兴趣。",
+     "jp": "感兴趣 ／ 我 ／ 对 ／ 中国历史 ／ 很"
+    },
+    {
+     "choices": [
+      "他一边听音乐一边跑步。",
+      "一边他听音乐一边跑步。",
+      "他听音乐一边一边跑步。",
+      "他一边一边听音乐跑步。"
+     ],
+     "answer": "他一边听音乐一边跑步。",
+     "explanation": "Réponse : 他一边听音乐一边跑步。",
+     "jp": "一边 ／ 他 ／ 听音乐 ／ 一边 ／ 跑步"
+    },
+    {
+     "choices": [
+      "今天比昨天冷一点儿。",
+      "今天冷比昨天一点儿。",
+      "今天比昨天一点儿冷。",
+      "比今天昨天冷一点儿。"
+     ],
+     "answer": "今天比昨天冷一点儿。",
+     "explanation": "Réponse : 今天比昨天冷一点儿。",
+     "jp": "比 ／ 今天 ／ 昨天 ／ 冷 ／ 一点儿"
+    },
+    {
+     "choices": [
+      "公共汽车终于来了。",
+      "终于公共汽车了来。",
+      "公共汽车来了终于。",
+      "来了公共汽车终于。"
+     ],
+     "answer": "公共汽车终于来了。",
+     "explanation": "Réponse : 公共汽车终于来了。",
+     "jp": "终于 ／ 公共汽车 ／ 来了"
+    }
+   ]
+  },
+  {
+   "id": "w-char",
+   "section": "writing",
+   "jpTitle": "书写 第二部分（76～80）",
+   "title": "Écrire le caractère",
+   "prompt": "看拼音，写汉字。",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "爬",
+      "怕",
+      "把",
+      "吧"
+     ],
+     "answer": "爬",
+     "explanation": "Réponse : 今天天气很好，我们去爬山吧。",
+     "jp": "今天天气很好，我们去（pá）山吧。"
+    },
+    {
+     "choices": [
+      "面",
+      "而",
+      "画",
+      "间"
+     ],
+     "answer": "面",
+     "explanation": "Réponse : 我饿了，想吃一碗面条。",
+     "jp": "我饿了，想吃一碗（miàn）条。"
+    },
+    {
+     "choices": [
+      "伞",
+      "半",
+      "平",
+      "三"
+     ],
+     "answer": "伞",
+     "explanation": "Réponse : 外面下雨了，别忘了带伞。",
+     "jp": "外面下雨了，别忘了带（sǎn）。"
+    },
+    {
+     "choices": [
+      "感",
+      "赶",
+      "敢",
+      "干"
+     ],
+     "answer": "感",
+     "explanation": "Réponse : 我感冒了，今天不能去上课。",
+     "jp": "我（gǎn）冒了，今天不能去上课。"
+    },
+    {
+     "choices": [
+      "车",
+      "东",
+      "年",
+      "牛"
+     ],
+     "answer": "车",
+     "explanation": "Réponse : 他每天骑自行车去上班。",
+     "jp": "他每天骑自行（chē）去上班。"
+    },
+    {
+     "choices": [
+      "懂",
+      "动",
+      "冬",
+      "董"
+     ],
+     "answer": "懂",
+     "explanation": "Réponse : 这个句子太难了，我看不懂。",
+     "jp": "这个句子太难了，我看不（dǒng）。"
+    },
+    {
+     "choices": [
+      "对",
+      "队",
+      "才",
+      "又"
+     ],
+     "answer": "对",
+     "explanation": "Réponse : 我对中国音乐很感兴趣。",
+     "jp": "我（duì）中国音乐很感兴趣。"
+    }
+   ]
+  }
+ ]
+}

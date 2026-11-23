@@ -27,7 +27,7 @@ describe('Chinois : préparer le HSK', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'zh', targetLevel: 'HSK1' });
     const path = (await agent.get('/api/path/HSK1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'HSK1', region: 'Plaine du Fleuve Jaune' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['HSK1', 'HSK2']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['HSK1', 'HSK2', 'HSK3']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['年', '饕', '尾', '夔', '貔', '毕', '柳', '烛']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'hsk1-final', exam: { slug: 'hsk1-official' } });
@@ -43,7 +43,7 @@ describe('Chinois : préparer le HSK', () => {
   it('hanzi lus en pinyin, expressions, fables, jeux et atelier en chinois', async () => {
     const { agent } = await signUpChinese(ctx);
     const chars = (await agent.get('/api/characters').expect(200)).body;
-    expect(chars.sections.map((s: any) => s.slug)).toEqual(['hanzi-hsk1', 'hanzi-hsk2']);
+    expect(chars.sections.map((s: any) => s.slug)).toEqual(['hanzi-hsk1', 'hanzi-hsk2', 'hanzi-hsk3']);
     const ren = chars.sections[0].groups.flatMap((g: any) => g.items).find((c: any) => c.front === '人');
     expect(ren).toMatchObject({ kind: 'kanji', reading: 'rén', kanji: { onyomi: [], kunyomi: [], strokes: 2 } });
 
@@ -52,7 +52,7 @@ describe('Chinois : préparer le HSK', () => {
     expect(expr.themes[0].expressions[0]).toMatchObject({ front: '你好', reading: 'nǐ hǎo' });
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['shou-zhu-dai-tu', 'hua-she-tian-zu', 'zi-xiang-mao-dun', 'sunzi-lian-bing', 'hu-jia-hu-wei', 'sai-weng-shi-ma']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['shou-zhu-dai-tu', 'hua-she-tian-zu', 'zi-xiang-mao-dun', 'sunzi-lian-bing', 'hu-jia-hu-wei', 'sai-weng-shi-ma', 'meng-mu-san-qian', 'ya-miao-zhu-zhang', 'zhuang-zhou-meng-die']);
     await agent.get('/api/reading/chapters/momotaro-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'shou-zhu-dai-tu').chapters[0];
     // Pinyin au-dessus de chaque mot ({汉字|pinyin}) ; le texte prononcé ne garde que les caractères
@@ -108,6 +108,30 @@ describe('Chinois : préparer le HSK', () => {
     for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
     const result = (await agent.post('/api/exams/hsk2-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
     expect(result).toMatchObject({ passed: true, scaled: { total: 200, max: { system: 'hsk', passTotal: 120 } } });
+  });
+
+  it('HSK 3 : les Cent Écoles au royaume de Qi, examen de 40 + 30 + 10 questions en 90 minutes, sur 300', async () => {
+    const { agent } = await signUpChinese(ctx);
+    await agent.put('/api/me/preferences').send({ targetLevel: 'HSK3' }).expect(200);
+    const path = (await agent.get('/api/path/HSK3').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'HSK3', region: 'Côtes de Qi' });
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['梼', '精', '狰', '夸', '獬', '犼', '应', '共']);
+    expect(path.worlds[0].chapters[0].lessons.map((l: any) => l.slug)).toEqual(['zh-hz-ba', 'zh-ba', 'zh-building']);
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'hsk3-final', exam: { slug: 'hsk3-official' } });
+    const exam = (await agent.post('/api/exams/hsk3-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(80);
+    expect(exam.exam.durationMin).toBe(90);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(40);
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const result = (await agent.post('/api/exams/hsk3-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(result).toMatchObject({ passed: true, scaled: { total: 300, listening: 100, language: 100, writing: 100, max: { system: 'hsk', passTotal: 180 } } });
+    // Contes du HSK 3 : le pinyin ne reste qu'au-dessus des mots nouveaux
+    const reading = (await agent.get('/api/reading').expect(200)).body;
+    const mengmu = reading.stories.find((x: any) => x.slug === 'meng-mu-san-qian');
+    expect(mengmu.level).toBe('HSK3');
+    const ch = (await agent.get('/api/reading/chapters/meng-mu-san-qian-1').expect(200)).body;
+    expect(ch.chapter.paragraphs[0][1].jp).toBe('他和妈妈住在一个{墓地|mùdì}旁边。');
   });
 
   it('succès propres au chinois, cachés aux autres langues', async () => {

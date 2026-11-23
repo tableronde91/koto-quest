@@ -159,6 +159,65 @@ const SPECIES: Record<string, Species> = {
     face: <path d="M84 116 L92 124 L100 116 L108 124 L116 116" stroke="#F6EBD3" strokeWidth="3" fill="none" strokeLinejoin="round" />,
     front: <g transform="translate(154 150)"><path d="M0 -36 V20" stroke="#5A3A24" strokeWidth="4" /><path d="M0 -36 L-10 -22 H10Z" fill="#B9AE98" /></g>,
   },
+  // ───── Gardiens chinois (HSK 3 — les Cent Écoles au royaume de Qi) ─────
+  // Taowu : bête têtue à visage d'homme, longs poils gris, défenses de sanglier, queue immense
+  梼: {
+    body: '#6E6A62', belly: '#A39C8E', head: '#C9A27A', eye: '#2A2A2A',
+    back: <path d="M40 160 Q0 150 10 110 Q20 140 46 140" fill="#5A564E" />,
+    top: <path d="M62 74 Q56 40 80 46 Q86 28 100 38 Q114 28 120 46 Q144 40 138 74" fill="#8A847A" />,
+    face: <><path d="M88 116 Q100 122 112 116" stroke="#4A2A1A" strokeWidth="3" fill="none" /><path d="M86 118 Q80 104 84 96 M114 118 Q120 104 116 96" stroke="#F6EBD3" strokeWidth="4" fill="none" strokeLinecap="round" /></>,
+  },
+  // Jingwei : petit oiseau à tête tachetée, bec blanc, pattes rouges, caillou dans le bec
+  精: {
+    body: '#3A3A44', belly: '#D9D4C8', head: '#4A4A56', eye: '#F6EBD3',
+    back: <path d="M48 120 Q10 100 20 70 Q36 96 58 104 M152 120 Q190 100 180 70 Q164 96 142 104" fill="#2A2A34" />,
+    under: <g fill="#E2D9C4">{[[78, 70], [96, 62], [116, 68], [88, 80], [110, 82]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="3.4" />)}</g>,
+    face: <><path d="M92 114 L100 132 L108 114Z" fill="#F6F3EC" stroke="#B9AE98" strokeWidth="1" /><circle cx="100" cy="134" r="5" fill="#8A847A" /></>,
+    front: <path d="M80 184 v10 M120 184 v10" stroke="#C8323F" strokeWidth="4" strokeLinecap="round" />,
+  },
+  // Zheng : léopard rouge à cinq queues et à une corne
+  狰: {
+    body: '#C8423A', belly: '#F2C8A0', head: '#D9524A', eye: '#F2D94E',
+    back: <g stroke="#A8322A" strokeWidth="6" fill="none" strokeLinecap="round">{[-40, -20, 0, 20, 40].map((a) => <path key={a} d="M150 160 Q178 140 186 112" transform={`rotate(${a} 150 160)`} />)}</g>,
+    top: <><path d="M100 46 L94 14 L106 14Z" fill="#E2D9C4" stroke="#9A8452" strokeWidth="1.5" />{ear(64, false, '#D9524A', '#3A1A1A')}{ear(136, true, '#D9524A', '#3A1A1A')}</>,
+    under: <g fill="#7A1A14">{[[70, 140], [90, 150], [116, 146], [134, 136], [80, 70], [122, 72]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="4" />)}</g>,
+    face: <path d="M88 118 Q100 126 112 118 M94 118 v5 M106 118 v5" stroke="#3A1A1A" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+  },
+  // Kuafu : géant qui poursuit le soleil, serpents jaunes aux oreilles, bâton
+  夸: {
+    body: '#8A5A3A', belly: '#D9B08A', head: '#C9925A', eye: '#2A1A10',
+    top: <><path d="M58 70 Q40 56 52 40 Q60 56 66 60 M142 70 Q160 56 148 40 Q140 56 134 60" stroke="#E2B84A" strokeWidth="5" fill="none" strokeLinecap="round" /><path d="M66 64 Q100 36 134 64" fill="#3A2A1A" /></>,
+    face: <path d="M86 116 Q100 128 114 116" stroke="#5A1A10" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(158 150)"><path d="M0 -46 V30" stroke="#5A3A24" strokeWidth="4" /><circle cy="-52" r="9" fill="#F2A93B" /></g>,
+  },
+  // Xiezhi : licorne noire des juges, une corne, crinière
+  獬: {
+    body: '#2A2A30', belly: '#5A5A64', head: '#34343C', eye: '#F2D94E',
+    top: <><path d="M100 48 Q96 20 104 6 Q106 26 108 48Z" fill="#E2B84A" stroke="#9A8452" strokeWidth="1.5" /><path d="M62 72 Q56 50 72 50 Q76 38 88 46" fill="#1A1A20" /></>,
+    under: <path d="M66 140 q8 -8 16 0 M118 140 q8 -8 16 0" stroke="#E2B84A" strokeWidth="2.4" fill="none" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#E2B84A" strokeWidth="2.4" fill="none" />,
+  },
+  // Hou : bête au poil de flamme qui dévore les dragons
+  犼: {
+    body: '#D9632E', belly: '#F2B84A', head: '#E2733A', eye: '#2A1A10',
+    back: <path d="M44 120 Q20 96 32 70 Q40 96 56 104 Q36 84 46 60 Q56 88 66 96" fill="#C8323F" />,
+    top: <><path d="M62 70 Q66 40 80 50 Q88 26 100 42 Q112 26 120 50 Q134 40 138 70" fill="#C8323F" />{ear(70, false, '#E2733A', '#7A2A14')}{ear(130, true, '#E2733A', '#7A2A14')}</>,
+    face: <path d="M84 116 L92 124 L100 116 L108 124 L116 116" stroke="#3A1A10" strokeWidth="3" fill="none" strokeLinejoin="round" />,
+  },
+  // Yinglong : dragon ailé des pluies, ailes, cornes, nuages
+  应: {
+    body: '#2F7A6E', belly: '#E2D9A4', head: '#3A8A7C', eye: '#F2D94E',
+    back: <path d="M50 116 Q6 78 24 40 Q40 76 60 90 Q36 66 48 34 Q60 70 70 82 M150 116 Q194 78 176 40 Q160 76 140 90 Q164 66 152 34 Q140 70 130 82" fill="#5FA89A" stroke="#1F5A50" strokeWidth="2" />,
+    top: <path d="M80 52 Q70 30 80 18 Q82 34 88 46 M120 52 Q130 30 120 18 Q118 34 112 46" stroke="#E2B84A" strokeWidth="5" fill="none" strokeLinecap="round" />,
+    face: <><path d="M88 118 Q100 126 112 118" stroke="#1F4A40" strokeWidth="3" fill="none" /><path d="M80 114 Q64 112 58 120 M120 114 Q136 112 142 120" stroke="#1F4A40" strokeWidth="2" fill="none" /></>,
+  },
+  // Gonggong : dieu des eaux furieux, cheveux rouges, corps de serpent, vagues
+  共: {
+    body: '#2E5A92', belly: '#9CC4E4', head: '#4A7AA8', eye: '#F2D94E',
+    top: <path d="M60 72 Q52 36 72 42 Q76 20 92 34 Q100 14 108 34 Q124 20 128 42 Q148 36 140 72" fill="#C8323F" />,
+    face: <path d="M86 120 Q100 112 114 120" stroke="#1A2A40" strokeWidth="3" fill="none" />,
+    front: <path d="M20 190 q12 -10 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#9CC4E4" strokeWidth="4" fill="none" />,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

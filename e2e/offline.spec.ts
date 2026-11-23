@@ -1039,4 +1039,14 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await page.goto(FILE + '#/exam/hsk2-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc HSK 2 — format officiel' })).toBeVisible();
   await expect(page.getByText(/60 questions en 55 minutes/)).toBeVisible();
+
+  // HSK 3 : les Cent Écoles, examen avec écriture (书写) sur 300 points
+  await page.goto(FILE + '#/path');
+  await page.getByRole('tab', { name: /HSK 3/ }).click();
+  await expect(page.getByRole('heading', { name: 'HSK 3 : les Cent Écoles' })).toBeVisible();
+  await page.goto(FILE + '#/exam/hsk3-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 3 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/80 questions en 90 minutes/)).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('听力 第一部分（1～10）').first()).toBeVisible();
 });

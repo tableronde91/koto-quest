@@ -22749,6 +22749,981 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "meng-mu-san-qian",
+   "glyph": "迁",
+   "level": "HSK3",
+   "color": "#5E6E3A",
+   "title": {
+    "jp": "孟母三迁",
+    "fr": "Les trois déménagements de la mère de Mencius",
+    "en": "Mencius’s mother moves three times"
+   },
+   "summary": {
+    "fr": "Pour que son fils grandisse au bon endroit, la mère de Mencius n’hésite pas à déménager encore et encore.",
+    "en": "So that her son grows up in the right place, Mencius’s mother doesn’t hesitate to move again and again."
+   },
+   "chapters": [
+    {
+     "slug": "meng-mu-san-qian-1",
+     "title": {
+      "jp": "住在墓地旁边",
+      "fr": "À côté du cimetière",
+      "en": "Next to the cemetery"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{孟子|Mèngzǐ}小的时候，{父亲|fùqin}就{去世|qùshì}了。",
+        "fr": "Mencius était petit quand son père mourut.",
+        "en": "Mencius was little when his father died.",
+        "kana": "孟子小的时候，父亲就去世了。"
+       },
+       {
+        "jp": "他和妈妈住在一个{墓地|mùdì}旁边。",
+        "fr": "Il habitait avec sa mère à côté d’un cimetière.",
+        "en": "He lived with his mother next to a cemetery.",
+        "kana": "他和妈妈住在一个墓地旁边。"
+       },
+       {
+        "jp": "每天都有人来这儿{哭|kū}。",
+        "fr": "Tous les jours, des gens venaient y pleurer.",
+        "en": "Every day people came there to weep.",
+        "kana": "每天都有人来这儿哭。"
+       }
+      ],
+      [
+       {
+        "jp": "{孟子|Mèngzǐ}觉得很有意思，就{跟|gēn}{别的|biéde}孩子一起学他们{哭|kū}。",
+        "fr": "Mencius trouvait cela amusant et, avec d’autres enfants, il imitait les pleureurs.",
+        "en": "Mencius found it amusing and, with other children, he imitated the mourners.",
+        "kana": "孟子觉得很有意思，就跟别的孩子一起学他们哭。"
+       },
+       {
+        "jp": "{孟母|Mèng mǔ}看见了，很{担心|dānxīn}：“我的孩子不{应该|yīnggāi}住在这儿。”",
+        "fr": "Sa mère le vit et s’inquiéta : « Mon enfant ne devrait pas vivre ici. »",
+        "en": "His mother saw it and worried: “My child shouldn’t live here.”",
+        "kana": "孟母看见了，很担心：“我的孩子不应该住在这儿。”"
+       },
+       {
+        "jp": "她{决定|juédìng}{搬家|bānjiā}。",
+        "fr": "Elle décida de déménager.",
+        "en": "She decided to move.",
+        "kana": "她决定搬家。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "去世",
+       "reading": "qùshì",
+       "fr": "mourir, décéder",
+       "en": "to pass away"
+      },
+      {
+       "jp": "墓地",
+       "reading": "mùdì",
+       "fr": "cimetière",
+       "en": "cemetery"
+      },
+      {
+       "jp": "哭",
+       "reading": "kū",
+       "fr": "pleurer",
+       "en": "to cry"
+      },
+      {
+       "jp": "担心",
+       "reading": "dānxīn",
+       "fr": "s’inquiéter",
+       "en": "to worry"
+      },
+      {
+       "jp": "决定",
+       "reading": "juédìng",
+       "fr": "décider",
+       "en": "to decide"
+      },
+      {
+       "jp": "搬家",
+       "reading": "bānjiā",
+       "fr": "déménager",
+       "en": "to move house"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où habitent-ils au début ?",
+        "en": "Where do they live at first?"
+       },
+       "choices": [
+        {
+         "fr": "À côté d’un cimetière",
+         "en": "Next to a cemetery"
+        },
+        {
+         "fr": "À côté d’un marché",
+         "en": "Next to a market"
+        },
+        {
+         "fr": "À côté d’une école",
+         "en": "Next to a school"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait le petit Mencius ?",
+        "en": "What does little Mencius do?"
+       },
+       "choices": [
+        {
+         "fr": "Il imite ceux qui pleurent",
+         "en": "He imitates the mourners"
+        },
+        {
+         "fr": "Il lit des livres",
+         "en": "He reads books"
+        },
+        {
+         "fr": "Il vend des légumes",
+         "en": "He sells vegetables"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "meng-mu-san-qian-2",
+     "title": {
+      "jp": "市场旁边",
+      "fr": "À côté du marché",
+      "en": "Next to the market"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "他们{搬|bān}{到|dào}了一个{市场|shìchǎng}旁边。",
+        "fr": "Ils s’installèrent à côté d’un marché.",
+        "en": "They moved next to a market.",
+        "kana": "他们搬到了一个市场旁边。"
+       },
+       {
+        "jp": "{市场|shìchǎng}里人很多，非常{热闹|rènao}。",
+        "fr": "Le marché était plein de monde, très animé.",
+        "en": "The market was crowded and very lively.",
+        "kana": "市场里人很多，非常热闹。"
+       },
+       {
+        "jp": "卖东西的人都{大声|dàshēng}地说话。",
+        "fr": "Les marchands parlaient tous à voix haute.",
+        "en": "The traders all spoke loudly.",
+        "kana": "卖东西的人都大声地说话。"
+       }
+      ],
+      [
+       {
+        "jp": "没过{多久|duō jiǔ}，{孟子|Mèngzǐ}{又|yòu}开始学他们，每天{大声|dàshēng}地卖东西。",
+        "fr": "Peu de temps après, Mencius se mit à les imiter, criant chaque jour comme un marchand.",
+        "en": "Before long Mencius began to imitate them, loudly selling things every day.",
+        "kana": "没过多久，孟子又开始学他们，每天大声地卖东西。"
+       },
+       {
+        "jp": "{孟母|Mèng mǔ}{又|yòu}{着急|zháojí}了：“这儿也不{适合|shìhé}我的孩子。”",
+        "fr": "Sa mère s’inquiéta de nouveau : « Cet endroit ne convient pas non plus à mon enfant. »",
+        "en": "His mother grew anxious again: “This place doesn’t suit my child either.”",
+        "kana": "孟母又着急了：“这儿也不适合我的孩子。”"
+       },
+       {
+        "jp": "{于是|yúshì}，他们{又|yòu}{搬家|bānjiā}了。",
+        "fr": "Alors, ils déménagèrent encore.",
+        "en": "So they moved again.",
+        "kana": "于是，他们又搬家了。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "市场",
+       "reading": "shìchǎng",
+       "fr": "marché",
+       "en": "market"
+      },
+      {
+       "jp": "热闹",
+       "reading": "rènao",
+       "fr": "animé",
+       "en": "lively"
+      },
+      {
+       "jp": "大声",
+       "reading": "dàshēng",
+       "fr": "à voix haute",
+       "en": "loudly"
+      },
+      {
+       "jp": "适合",
+       "reading": "shìhé",
+       "fr": "convenir à",
+       "en": "to suit"
+      },
+      {
+       "jp": "于是",
+       "reading": "yúshì",
+       "fr": "alors, c’est pourquoi",
+       "en": "so, thereupon"
+      },
+      {
+       "jp": "着急",
+       "reading": "zháojí",
+       "fr": "inquiet, pressé",
+       "en": "anxious"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’imite Mencius au marché ?",
+        "en": "What does Mencius imitate at the market?"
+       },
+       "choices": [
+        {
+         "fr": "Les marchands",
+         "en": "The traders"
+        },
+        {
+         "fr": "Les maîtres",
+         "en": "The teachers"
+        },
+        {
+         "fr": "Les soldats",
+         "en": "The soldiers"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait sa mère ensuite ?",
+        "en": "What does his mother do next?"
+       },
+       "choices": [
+        {
+         "fr": "Elle déménage encore",
+         "en": "She moves again"
+        },
+        {
+         "fr": "Elle ouvre une boutique",
+         "en": "She opens a shop"
+        },
+        {
+         "fr": "Elle le punit",
+         "en": "She punishes him"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "meng-mu-san-qian-3",
+     "title": {
+      "jp": "学校旁边",
+      "fr": "À côté de l’école",
+      "en": "Next to the school"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "这一次，他们{搬|bān}{到|dào}了一个学校旁边。",
+        "fr": "Cette fois, ils s’installèrent à côté d’une école.",
+        "en": "This time they moved next to a school.",
+        "kana": "这一次，他们搬到了一个学校旁边。"
+       },
+       {
+        "jp": "学校里的老师每天给学生{讲|jiǎng}{礼|lǐ}，学生们{认真|rènzhēn}地读书。",
+        "fr": "Chaque jour, le maître y enseignait les rites et les élèves étudiaient avec sérieux.",
+        "en": "Every day the teacher taught the rites and the pupils studied conscientiously.",
+        "kana": "学校里的老师每天给学生讲礼，学生们认真地读书。"
+       },
+       {
+        "jp": "{孟子|Mèngzǐ}也{跟|gēn}着他们学习，{变得|biàn de}很有{礼貌|lǐmào}。",
+        "fr": "Mencius étudia avec eux et devint très poli.",
+        "en": "Mencius studied with them and became very polite.",
+        "kana": "孟子也跟着他们学习，变得很有礼貌。"
+       }
+      ],
+      [
+       {
+        "jp": "{孟母|Mèng mǔ}{终于|zhōngyú}{放心|fàngxīn}了：“这儿{才|cái}是我的孩子{应该|yīnggāi}住的{地方|dìfang}。”",
+        "fr": "Sa mère fut enfin rassurée : « Voilà l’endroit où mon enfant doit vivre. »",
+        "en": "His mother was finally at ease: “This is where my child should live.”",
+        "kana": "孟母终于放心了：“这儿才是我的孩子应该住的地方。”"
+       },
+       {
+        "jp": "{后来|hòulái}，{孟子|Mèngzǐ}{成为|chéngwéi}了一个{有名|yǒumíng}的{思想家|sīxiǎngjiā}。",
+        "fr": "Plus tard, Mencius devint un penseur célèbre.",
+        "en": "Later Mencius became a famous thinker.",
+        "kana": "后来，孟子成为了一个有名的思想家。"
+       },
+       {
+        "jp": "这就是“{孟母三迁|Mèng mǔ sān qiān}”的{故事|gùshi}。",
+        "fr": "C’est l’histoire des « trois déménagements de la mère de Mencius ».",
+        "en": "This is the story of “Mencius’s mother moving three times”.",
+        "kana": "这就是“孟母三迁”的故事。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "礼",
+       "reading": "lǐ",
+       "fr": "les rites",
+       "en": "the rites"
+      },
+      {
+       "jp": "礼貌",
+       "reading": "lǐmào",
+       "fr": "politesse ; poli",
+       "en": "politeness; polite"
+      },
+      {
+       "jp": "放心",
+       "reading": "fàngxīn",
+       "fr": "être rassuré",
+       "en": "to be at ease"
+      },
+      {
+       "jp": "成为",
+       "reading": "chéngwéi",
+       "fr": "devenir",
+       "en": "to become"
+      },
+      {
+       "jp": "思想家",
+       "reading": "sīxiǎngjiā",
+       "fr": "penseur",
+       "en": "thinker"
+      },
+      {
+       "jp": "终于",
+       "reading": "zhōngyú",
+       "fr": "enfin",
+       "en": "at last"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait-on à l’école voisine ?",
+        "en": "What happens at the nearby school?"
+       },
+       "choices": [
+        {
+         "fr": "On y étudie les rites",
+         "en": "People study the rites"
+        },
+        {
+         "fr": "On y vend des livres",
+         "en": "People sell books"
+        },
+        {
+         "fr": "On y pleure",
+         "en": "People weep"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que devient Mencius ?",
+        "en": "What does Mencius become?"
+       },
+       "choices": [
+        {
+         "fr": "Un penseur célèbre",
+         "en": "A famous thinker"
+        },
+        {
+         "fr": "Un riche marchand",
+         "en": "A rich merchant"
+        },
+        {
+         "fr": "Un général",
+         "en": "A general"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ya-miao-zhu-zhang",
+   "glyph": "苗",
+   "level": "HSK3",
+   "color": "#6E9A3A",
+   "title": {
+    "jp": "揠苗助长",
+    "fr": "Le paysan qui tirait sur ses pousses",
+    "en": "The farmer who pulled his shoots"
+   },
+   "summary": {
+    "fr": "Un paysan pressé veut aider son riz à pousser plus vite… à sa manière.",
+    "en": "An impatient farmer wants to help his rice grow faster… in his own way."
+   },
+   "chapters": [
+    {
+     "slug": "ya-miao-zhu-zhang-1",
+     "title": {
+      "jp": "着急的农民",
+      "fr": "Le paysan impatient",
+      "en": "The impatient farmer"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{宋国|Sòng guó}有一个{农民|nóngmín}，他{种|zhòng}了很多{禾苗|hémiáo}。",
+        "fr": "Au pays de Song, un paysan avait planté beaucoup de jeunes pousses.",
+        "en": "In the state of Song, a farmer had planted many young shoots.",
+        "kana": "宋国有一个农民，他种了很多禾苗。"
+       },
+       {
+        "jp": "他每天都去{田|tián}里看，希望{禾苗|hémiáo}快一点儿{长|zhǎng}高。",
+        "fr": "Il allait chaque jour au champ, espérant qu’elles pousseraient plus vite.",
+        "en": "Every day he went to the field, hoping they would grow faster.",
+        "kana": "他每天都去田里看，希望禾苗快一点儿长高。"
+       },
+       {
+        "jp": "{可是|kěshì}{禾苗|hémiáo}{长|zhǎng}得太慢了，他{越|yuè}看{越|yuè}{着急|zháojí}。",
+        "fr": "Mais elles poussaient trop lentement, et plus il les regardait, plus il s’impatientait.",
+        "en": "But they grew too slowly, and the more he looked, the more impatient he became.",
+        "kana": "可是禾苗长得太慢了，他越看越着急。"
+       }
+      ],
+      [
+       {
+        "jp": "一天，他{突然|tūrán}想到了一个{办法|bànfǎ}。",
+        "fr": "Un jour, une idée lui vint soudain.",
+        "en": "One day an idea suddenly came to him.",
+        "kana": "一天，他突然想到了一个办法。"
+       },
+       {
+        "jp": "他走进{田|tián}里，{把|bǎ}每一{棵|kē}{禾苗|hémiáo}都往上{拔|bá}了一点儿。",
+        "fr": "Il entra dans le champ et tira chaque pousse un peu vers le haut.",
+        "en": "He went into the field and pulled every shoot up a little.",
+        "kana": "他走进田里，把每一棵禾苗都往上拔了一点儿。"
+       },
+       {
+        "jp": "他从早上{一直|yìzhí}{拔|bá}到晚上，累{极了|jí le}。",
+        "fr": "Il tira du matin au soir et fut épuisé.",
+        "en": "He pulled from morning till night and was exhausted.",
+        "kana": "他从早上一直拔到晚上，累极了。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "农民",
+       "reading": "nóngmín",
+       "fr": "paysan",
+       "en": "farmer"
+      },
+      {
+       "jp": "种",
+       "reading": "zhòng",
+       "fr": "planter",
+       "en": "to plant"
+      },
+      {
+       "jp": "禾苗",
+       "reading": "hémiáo",
+       "fr": "jeune pousse (de céréale)",
+       "en": "young shoot (of grain)"
+      },
+      {
+       "jp": "田",
+       "reading": "tián",
+       "fr": "champ",
+       "en": "field"
+      },
+      {
+       "jp": "长",
+       "reading": "zhǎng",
+       "fr": "pousser, grandir",
+       "en": "to grow"
+      },
+      {
+       "jp": "拔",
+       "reading": "bá",
+       "fr": "tirer, arracher",
+       "en": "to pull up"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le paysan s’impatiente-t-il ?",
+        "en": "Why does the farmer grow impatient?"
+       },
+       "choices": [
+        {
+         "fr": "Les pousses grandissent trop lentement",
+         "en": "The shoots grow too slowly"
+        },
+        {
+         "fr": "Il pleut trop",
+         "en": "It rains too much"
+        },
+        {
+         "fr": "Les oiseaux mangent tout",
+         "en": "Birds eat everything"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait-il dans le champ ?",
+        "en": "What does he do in the field?"
+       },
+       "choices": [
+        {
+         "fr": "Il tire les pousses vers le haut",
+         "en": "He pulls the shoots upwards"
+        },
+        {
+         "fr": "Il arrose",
+         "en": "He waters them"
+        },
+        {
+         "fr": "Il plante encore",
+         "en": "He plants more"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "ya-miao-zhu-zhang-2",
+     "title": {
+      "jp": "禾苗都死了",
+      "fr": "Toutes les pousses meurent",
+      "en": "All the shoots die"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "回到家，他高兴地对家里人说：“今天我累{坏|huài}了！我帮助{禾苗|hémiáo}{长|zhǎng}高了。”",
+        "fr": "Rentré chez lui, il dit tout joyeux à sa famille : « Je suis mort de fatigue ! J’ai aidé les pousses à grandir. »",
+        "en": "Back home, he happily told his family: “I’m worn out! I helped the shoots grow.”",
+        "kana": "回到家，他高兴地对家里人说：“今天我累坏了！我帮助禾苗长高了。”"
+       },
+       {
+        "jp": "他的儿子觉得很{奇怪|qíguài}，{马上|mǎshàng}跑到{田|tián}里去看。",
+        "fr": "Son fils, intrigué, courut aussitôt au champ.",
+        "en": "His son, puzzled, ran straight to the field.",
+        "kana": "他的儿子觉得很奇怪，马上跑到田里去看。"
+       },
+       {
+        "jp": "他{发现|fāxiàn}{禾苗|hémiáo}都已经{死|sǐ}了。",
+        "fr": "Il découvrit que toutes les pousses étaient mortes.",
+        "en": "He found that all the shoots had died.",
+        "kana": "他发现禾苗都已经死了。"
+       }
+      ],
+      [
+       {
+        "jp": "{孟子|Mèngzǐ}{用|yòng}这个{故事|gùshi}告诉我们：做事情不能太{着急|zháojí}。",
+        "fr": "Mencius se sert de cette histoire pour nous dire qu’il ne faut pas trop se presser.",
+        "en": "Mencius uses this story to tell us not to be in too much of a hurry.",
+        "kana": "孟子用这个故事告诉我们：做事情不能太着急。"
+       },
+       {
+        "jp": "{如果|rúguǒ}想快一点儿，{反而|fǎn’ér}会{把|bǎ}事情做{坏|huài}。",
+        "fr": "À vouloir aller trop vite, on gâche tout au contraire.",
+        "en": "If you try to go faster, you end up spoiling things.",
+        "kana": "如果想快一点儿，反而会把事情做坏。"
+       },
+       {
+        "jp": "这就是“{揠苗助长|yà miáo zhù zhǎng}”。",
+        "fr": "C’est ce qu’on appelle « tirer sur les pousses pour les aider à grandir ».",
+        "en": "This is “pulling up shoots to help them grow”.",
+        "kana": "这就是“揠苗助长”。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "坏",
+       "reading": "huài",
+       "fr": "abîmé ; terriblement",
+       "en": "broken; terribly"
+      },
+      {
+       "jp": "奇怪",
+       "reading": "qíguài",
+       "fr": "étrange",
+       "en": "strange"
+      },
+      {
+       "jp": "马上",
+       "reading": "mǎshàng",
+       "fr": "tout de suite",
+       "en": "right away"
+      },
+      {
+       "jp": "死",
+       "reading": "sǐ",
+       "fr": "mourir",
+       "en": "to die"
+      },
+      {
+       "jp": "反而",
+       "reading": "fǎn’ér",
+       "fr": "au contraire",
+       "en": "on the contrary"
+      },
+      {
+       "jp": "揠苗助长",
+       "reading": "yà miáo zhù zhǎng",
+       "fr": "vouloir hâter les choses et tout gâcher",
+       "en": "to spoil things by being too hasty"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que découvre le fils ?",
+        "en": "What does the son discover?"
+       },
+       "choices": [
+        {
+         "fr": "Les pousses sont mortes",
+         "en": "The shoots are dead"
+        },
+        {
+         "fr": "Les pousses ont grandi",
+         "en": "The shoots have grown"
+        },
+        {
+         "fr": "Le champ a été volé",
+         "en": "The field was stolen"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Quelle est la leçon de Mencius ?",
+        "en": "What is Mencius’s lesson?"
+       },
+       "choices": [
+        {
+         "fr": "Il ne faut pas trop se presser",
+         "en": "Don’t be in too much of a hurry"
+        },
+        {
+         "fr": "Il faut travailler la nuit",
+         "en": "Work at night"
+        },
+        {
+         "fr": "Il faut planter plus",
+         "en": "Plant more"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "zhuang-zhou-meng-die",
+   "glyph": "蝶",
+   "level": "HSK3",
+   "color": "#7B5BD6",
+   "title": {
+    "jp": "庄周梦蝶",
+    "fr": "Zhuangzi rêve qu’il est un papillon",
+    "en": "Zhuangzi dreams he is a butterfly"
+   },
+   "summary": {
+    "fr": "Zhuangzi s’endort et devient papillon. À son réveil, une question le trouble : qui rêve de qui ?",
+    "en": "Zhuangzi falls asleep and becomes a butterfly. When he wakes up, a question troubles him: who is dreaming of whom?"
+   },
+   "chapters": [
+    {
+     "slug": "zhuang-zhou-meng-die-1",
+     "title": {
+      "jp": "一个梦",
+      "fr": "Un rêve",
+      "en": "A dream"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{庄子|Zhuāngzǐ}是{战国|Zhànguó}时候一个很{有名|yǒumíng}的{思想家|sīxiǎngjiā}。",
+        "fr": "Zhuangzi était un penseur célèbre de l’époque des Royaumes combattants.",
+        "en": "Zhuangzi was a famous thinker of the Warring States period.",
+        "kana": "庄子是战国时候一个很有名的思想家。"
+       },
+       {
+        "jp": "一天下午，他在{树|shù}下面{睡着|shuìzháo}了，做了一个{梦|mèng}。",
+        "fr": "Un après-midi, il s’endormit sous un arbre et fit un rêve.",
+        "en": "One afternoon he fell asleep under a tree and had a dream.",
+        "kana": "一天下午，他在树下面睡着了，做了一个梦。"
+       },
+       {
+        "jp": "在{梦|mèng}里，他{变成|biànchéng}了一{只|zhī}{蝴蝶|húdié}。",
+        "fr": "En rêve, il se changea en papillon.",
+        "en": "In the dream he turned into a butterfly.",
+        "kana": "在梦里，他变成了一只蝴蝶。"
+       }
+      ],
+      [
+       {
+        "jp": "{蝴蝶|húdié}在{花|huā}和{草|cǎo}{中间|zhōngjiān}{飞|fēi}来{飞|fēi}去，快乐{极了|jí le}。",
+        "fr": "Le papillon voletait parmi les fleurs et les herbes, merveilleusement heureux.",
+        "en": "The butterfly flitted among the flowers and grass, blissfully happy.",
+        "kana": "蝴蝶在花和草中间飞来飞去，快乐极了。"
+       },
+       {
+        "jp": "它一点儿也不{记得|jìde}{自己|zìjǐ}是{庄子|Zhuāngzǐ}。",
+        "fr": "Il ne se souvenait pas du tout d’être Zhuangzi.",
+        "en": "It didn’t remember at all that it was Zhuangzi.",
+        "kana": "它一点儿也不记得自己是庄子。"
+       },
+       {
+        "jp": "{太阳|tàiyáng}很{暖和|nuǎnhuo}，{风|fēng}也很{舒服|shūfu}。",
+        "fr": "Le soleil était doux, le vent agréable.",
+        "en": "The sun was warm and the breeze pleasant.",
+        "kana": "太阳很暖和，风也很舒服。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "战国",
+       "reading": "Zhànguó",
+       "fr": "les Royaumes combattants",
+       "en": "the Warring States"
+      },
+      {
+       "jp": "睡着",
+       "reading": "shuìzháo",
+       "fr": "s’endormir",
+       "en": "to fall asleep"
+      },
+      {
+       "jp": "梦",
+       "reading": "mèng",
+       "fr": "rêve",
+       "en": "dream"
+      },
+      {
+       "jp": "变成",
+       "reading": "biànchéng",
+       "fr": "devenir, se changer en",
+       "en": "to turn into"
+      },
+      {
+       "jp": "蝴蝶",
+       "reading": "húdié",
+       "fr": "papillon",
+       "en": "butterfly"
+      },
+      {
+       "jp": "暖和",
+       "reading": "nuǎnhuo",
+       "fr": "doux, tiède",
+       "en": "warm"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Où Zhuangzi s’endort-il ?",
+        "en": "Where does Zhuangzi fall asleep?"
+       },
+       "choices": [
+        {
+         "fr": "Sous un arbre",
+         "en": "Under a tree"
+        },
+        {
+         "fr": "Dans un bateau",
+         "en": "In a boat"
+        },
+        {
+         "fr": "À l’école",
+         "en": "At school"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "En quoi se change-t-il en rêve ?",
+        "en": "What does he turn into in the dream?"
+       },
+       "choices": [
+        {
+         "fr": "En papillon",
+         "en": "A butterfly"
+        },
+        {
+         "fr": "En oiseau",
+         "en": "A bird"
+        },
+        {
+         "fr": "En poisson",
+         "en": "A fish"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "zhuang-zhou-meng-die-2",
+     "title": {
+      "jp": "我是谁？",
+      "fr": "Qui suis-je ?",
+      "en": "Who am I?"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{突然|tūrán}，{庄子|Zhuāngzǐ}{醒|xǐng}了。",
+        "fr": "Soudain, Zhuangzi se réveilla.",
+        "en": "Suddenly Zhuangzi woke up.",
+        "kana": "突然，庄子醒了。"
+       },
+       {
+        "jp": "他看看{自己|zìjǐ}的手和{脚|jiǎo}，{发现|fāxiàn}{自己|zìjǐ}还是{庄子|Zhuāngzǐ}。",
+        "fr": "Il regarda ses mains et ses pieds : il était toujours Zhuangzi.",
+        "en": "He looked at his hands and feet: he was still Zhuangzi.",
+        "kana": "他看看自己的手和脚，发现自己还是庄子。"
+       },
+       {
+        "jp": "可是他不{明白|míngbai}了：是{庄子|Zhuāngzǐ}在{梦|mèng}里{变成|biànchéng}了{蝴蝶|húdié}，还是{蝴蝶|húdié}在{梦|mèng}里{变成|biànchéng}了{庄子|Zhuāngzǐ}？",
+        "fr": "Mais il ne comprenait plus : était-ce Zhuangzi qui avait rêvé d’être un papillon, ou un papillon qui rêvait d’être Zhuangzi ?",
+        "en": "But now he didn’t understand: had Zhuangzi dreamt he was a butterfly, or was a butterfly dreaming it was Zhuangzi?",
+        "kana": "可是他不明白了：是庄子在梦里变成了蝴蝶，还是蝴蝶在梦里变成了庄子？"
+       }
+      ],
+      [
+       {
+        "jp": "这个问题很{简单|jiǎndān}，也很{难|nán}。",
+        "fr": "La question est simple, et pourtant très difficile.",
+        "en": "The question is simple, and also very hard.",
+        "kana": "这个问题很简单，也很难。"
+       },
+       {
+        "jp": "{庄子|Zhuāngzǐ}{认为|rènwéi}，{世界|shìjiè}上的东西{一直|yìzhí}在{变化|biànhuà}，人和{蝴蝶|húdié}也没有那么不{一样|yíyàng}。",
+        "fr": "Pour Zhuangzi, tout dans le monde change sans cesse, et l’homme n’est pas si différent du papillon.",
+        "en": "Zhuangzi held that everything in the world keeps changing, and people are not so different from butterflies.",
+        "kana": "庄子认为，世界上的东西一直在变化，人和蝴蝶也没有那么不一样。"
+       },
+       {
+        "jp": "{两千|liǎngqiān}多年{以后|yǐhòu}，{人们|rénmen}还在{讲|jiǎng}这个{故事|gùshi}。",
+        "fr": "Plus de deux mille ans plus tard, on raconte encore cette histoire.",
+        "en": "More than two thousand years later, people still tell this story.",
+        "kana": "两千多年以后，人们还在讲这个故事。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "醒",
+       "reading": "xǐng",
+       "fr": "se réveiller",
+       "en": "to wake up"
+      },
+      {
+       "jp": "明白",
+       "reading": "míngbai",
+       "fr": "comprendre",
+       "en": "to understand"
+      },
+      {
+       "jp": "认为",
+       "reading": "rènwéi",
+       "fr": "estimer, considérer",
+       "en": "to consider"
+      },
+      {
+       "jp": "变化",
+       "reading": "biànhuà",
+       "fr": "changer ; changement",
+       "en": "to change; change"
+      },
+      {
+       "jp": "一样",
+       "reading": "yíyàng",
+       "fr": "pareil",
+       "en": "the same"
+      },
+      {
+       "jp": "人们",
+       "reading": "rénmen",
+       "fr": "les gens",
+       "en": "people"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que se demande Zhuangzi à son réveil ?",
+        "en": "What does Zhuangzi wonder when he wakes?"
+       },
+       "choices": [
+        {
+         "fr": "S’il est un homme ou un papillon",
+         "en": "Whether he is a man or a butterfly"
+        },
+        {
+         "fr": "Quelle heure il est",
+         "en": "What time it is"
+        },
+        {
+         "fr": "Où est sa maison",
+         "en": "Where his house is"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Selon Zhuangzi, le monde…",
+        "en": "According to Zhuangzi, the world…"
+       },
+       "choices": [
+        {
+         "fr": "change sans cesse",
+         "en": "keeps changing"
+        },
+        {
+         "fr": "ne change jamais",
+         "en": "never changes"
+        },
+        {
+         "fr": "est un mauvais rêve",
+         "en": "is a bad dream"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -22761,8 +23736,8 @@
    "en": "British folk tales and legends (public domain), retold in simple English for Koto Quest. Word pronunciation is shown in phonetic script."
   },
   "zh": {
-   "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots ; touche une phrase pour l’entendre et la traduire.",
-   "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words; tap a sentence to hear and translate it."
+   "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux) ; touche une phrase pour l’entendre et la traduire.",
+   "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above new words); tap a sentence to hear and translate it."
   }
  }
 }

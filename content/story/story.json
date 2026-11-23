@@ -2754,6 +2754,159 @@
      }
     }
    }
+  },
+  "HSK3": {
+   "glyph": "学",
+   "jp": "稷下学宫",
+   "color": "#5E6E3A",
+   "saga": {
+    "fr": "Les Cent Écoles",
+    "en": "The Hundred Schools"
+   },
+   "hero": {
+    "fr": "Disciple de l’académie Jixia",
+    "en": "Disciple of the Jixia Academy"
+   },
+   "short": {
+    "fr": "Le disciple",
+    "en": "The disciple"
+   },
+   "prologue": {
+    "fr": "À Linzi, capitale du royaume de Qi, le roi Xuan a ouvert l’académie Jixia, au pied de la porte Ji. Les maîtres des Cent Écoles y débattent jour et nuit : disciples de Confucius, taoïstes, légistes, médecins. Le vieux lettré t’y conduit : « Pour entrer, il faut prendre part au grand débat de printemps. D’ici là, apprends à vivre, à étudier et à raisonner en chinois. »",
+    "en": "In Linzi, capital of the state of Qi, King Xuan has opened the Jixia Academy at the foot of the Ji Gate. Masters of the Hundred Schools debate there day and night: followers of Confucius, Daoists, Legalists, physicians. The old scholar leads you there: “To be admitted, you must take part in the great spring debate. Until then, learn to live, study and reason in Chinese.”"
+   },
+   "epilogue": {
+    "fr": "Au terme du débat, le roi Xuan te remet une tablette de bambou gravée à ton nom : te voilà lettré de Jixia. Mencius te salue, Zhuangzi te sourit, Han Fei hoche la tête. Dehors, un messager attend, couvert de poussière : « Le roi de Qin veut unifier tous les royaumes… »",
+    "en": "At the end of the debate, King Xuan hands you a bamboo tablet carved with your name: you are now a scholar of Jixia. Mencius greets you, Zhuangzi smiles, Han Fei nods. Outside, a dust-covered messenger is waiting: “The king of Qin wants to unite all the kingdoms…”"
+   },
+   "chapters": {
+    "hsk3-w1": {
+     "title": {
+      "fr": "L’auberge de Linzi",
+      "en": "The inn at Linzi"
+     },
+     "intro": {
+      "fr": "Tu loges dans une auberge près de l’académie, mais le Taowu s’y est couché en travers de la salle et refuse de bouger quoi que ce soit. Dis précisément où mettre chaque chose.",
+      "en": "You are lodging at an inn near the academy, but the Taowu has lain down across the hall and refuses to move anything. Say exactly where to put each thing."
+     },
+     "outro": {
+      "fr": "Le Taowu grogne, se lève et va bouder dans la cour. L’aubergiste te remercie : « Tu ranges mieux que mes propres enfants ! »",
+      "en": "The Taowu grunts, gets up and goes to sulk in the courtyard. The innkeeper thanks you: “You tidy better than my own children!”"
+     }
+    },
+    "hsk3-w2": {
+     "title": {
+      "fr": "Les cailloux de Jingwei",
+      "en": "Jingwei’s pebbles"
+     },
+     "intro": {
+      "fr": "Au marché de Linzi, l’oiseau Jingwei jette des cailloux dans les paniers des marchands. Commande, compte et paie sans te tromper pour l’apaiser.",
+      "en": "At the Linzi market, the Jingwei bird is dropping pebbles into the merchants’ baskets. Order, count and pay without a mistake to calm her."
+     },
+     "outro": {
+      "fr": "Jingwei repart vers la mer, un caillou dans le bec. Les marchands t’offrent un bol de nouilles.",
+      "en": "Jingwei flies back to the sea, a pebble in her beak. The merchants treat you to a bowl of noodles."
+     }
+    },
+    "hsk3-w3": {
+     "title": {
+      "fr": "Le vacarme du Zheng",
+      "en": "The Zheng’s din"
+     },
+     "intro": {
+      "fr": "Dans l’école des disciples de Confucius, le Zheng fait un bruit de pierres entrechoquées : plus personne n’entend le maître. Montre que tu comprends et que tu progresses.",
+      "en": "In the school of Confucius’s disciples, the Zheng makes a noise like clashing stones: no one can hear the master any more. Show that you understand and that you are making progress."
+     },
+     "outro": {
+      "fr": "Le Zheng se tait et se couche aux pieds du maître, qui te prête un rouleau des Entretiens.",
+      "en": "The Zheng falls silent and lies down at the master’s feet, who lends you a scroll of the Analects."
+     }
+    },
+    "hsk3-w4": {
+     "title": {
+      "fr": "La course du soleil",
+      "en": "The race of the sun"
+     },
+     "intro": {
+      "fr": "Dans les monts où rêve Zhuangzi, le géant Kuafu poursuit le soleil et assèche les rivières. Raconte-lui les saisons, dans l’ordre, pour qu’il s’arrête enfin.",
+      "en": "In the mountains where Zhuangzi dreams, the giant Kuafu chases the sun and drinks the rivers dry. Tell him about the seasons, in order, so that he finally stops."
+     },
+     "outro": {
+      "fr": "Kuafu s’assoit au bord du fleuve Jaune et plante son bâton : il devient une forêt de pêchers.",
+      "en": "Kuafu sits down by the Yellow River and plants his staff: it becomes a forest of peach trees."
+     }
+    },
+    "hsk3-w5": {
+     "title": {
+      "fr": "La corne du Xiezhi",
+      "en": "The Xiezhi’s horn"
+     },
+     "intro": {
+      "fr": "Au tribunal du légiste Han Fei, on juge une affaire de vol au marché. Le Xiezhi frappe de sa corne celui qui ment : dis exactement ce qui s’est passé et ce qu’il faut faire.",
+      "en": "At the legalist Han Fei’s court, a theft at the market is being judged. The Xiezhi strikes liars with its horn: say exactly what happened and what must be done."
+     },
+     "outro": {
+      "fr": "Le Xiezhi baisse la corne devant toi. Han Fei note ton témoignage : « Clair, précis, juste. »",
+      "en": "The Xiezhi lowers its horn before you. Han Fei records your testimony: “Clear, precise, fair.”"
+     }
+    },
+    "hsk3-w6": {
+     "title": {
+      "fr": "Le carrefour du Sud",
+      "en": "The southern crossroads"
+     },
+     "intro": {
+      "fr": "Le roi t’envoie chercher un maître de Chu. Au carrefour des routes du Sud, le Hou, bête de flamme, barre le passage : indique chaque direction et chaque horaire.",
+      "en": "The king sends you to fetch a master from Chu. At the crossroads of the southern roads, the Hou, a beast of flame, bars the way: give every direction and every timetable."
+     },
+     "outro": {
+      "fr": "Le Hou s’écarte en grondant. Le maître de Chu monte dans ta barque : « Tu connais mieux les routes que les cochers ! »",
+      "en": "The Hou steps aside with a growl. The master from Chu climbs into your boat: “You know the roads better than the coachmen!”"
+     }
+    },
+    "hsk3-w7": {
+     "title": {
+      "fr": "L’orage de Yinglong",
+      "en": "Yinglong’s storm"
+     },
+     "intro": {
+      "fr": "Au sanctuaire du médecin Bian Que, le dragon Yinglong a déchaîné l’orage et les pèlerins tombent malades. Dis où ils ont mal et aide-les à se rétablir.",
+      "en": "At the sanctuary of the physician Bian Que, the dragon Yinglong has unleashed a storm and the pilgrims are falling ill. Say where it hurts and help them recover."
+     },
+     "outro": {
+      "fr": "Yinglong replie ses ailes et la pluie s’arrête. Bian Que te confie : « Un bon médecin écoute avant de soigner. »",
+      "en": "Yinglong folds his wings and the rain stops. Bian Que tells you: “A good physician listens before he treats.”"
+     }
+    },
+    "hsk3-w8": {
+     "title": {
+      "fr": "Le grand débat",
+      "en": "The great debate"
+     },
+     "intro": {
+      "fr": "Le grand débat de printemps commence. Gonggong, le dieu des eaux qui brisa le pilier du ciel, veut tout interrompre : défends tes idées avec ordre et raison.",
+      "en": "The great spring debate begins. Gonggong, the water god who broke the pillar of the sky, wants to stop everything: defend your ideas with order and reason."
+     },
+     "outro": {
+      "fr": "Gonggong retourne à ses eaux en grondant. Dans la salle, les maîtres frappent leurs tablettes en signe d’approbation.",
+      "en": "Gonggong returns to his waters, rumbling. In the hall, the masters tap their tablets in approval."
+     }
+    },
+    "hsk3-final": {
+     "title": {
+      "fr": "L’académie Jixia",
+      "en": "The Jixia Academy"
+     },
+     "intro": {
+      "fr": "Devant le roi Xuan et les maîtres des Cent Écoles, passe l’épreuve d’entrée : écoute, lis et écris comme au HSK 3. Atteins 180 points sur 300.",
+      "en": "Before King Xuan and the masters of the Hundred Schools, take the entrance test: listen, read and write as in the HSK 3. Reach 180 points out of 300."
+     },
+     "outro": {
+      "fr": "Le roi Xuan se lève. Niveau HSK 3 validé : te voilà lettré de l’académie Jixia !",
+      "en": "King Xuan rises. HSK 3 level complete: you are now a scholar of the Jixia Academy!"
+     }
+    }
+   }
   }
  }
 }

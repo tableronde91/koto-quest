@@ -1,0 +1,5363 @@
+{
+ "contentVersion": "2026.11.22",
+ "level": {
+  "code": "HSK3",
+  "title": "HSK 3 : les Cent Écoles",
+  "region": "Côtes de Qi",
+  "order": 44
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent le programme du HSK 3 (HSK 2.0, utilisé aux sessions de 2026) mais ne sont pas des listes officielles du Centre for Language Education and Cooperation (CLEC).",
+ "worlds": [
+  {
+   "slug": "hsk3-w1",
+   "title": "L’auberge de Linzi",
+   "region": "Côtes de Qi",
+   "description": "Ranger, déplacer, nettoyer avec 把 ; la maison, les étages et les voisins ; toute la famille, et dire qui ressemble à qui (跟…一样, 像).",
+   "boss": {
+    "name": "Le Taowu têtu",
+    "glyph": "梼",
+    "intro": "Le Taowu, bête à visage d’homme et à crocs de sanglier, s’est couché dans l’auberge où tu loges et refuse de bouger quoi que ce soit. Dis précisément où mettre chaque chose pour le déloger."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w1-c1",
+     "title": "Ranger l’auberge",
+     "lessons": [
+      {
+       "slug": "zh-hz-ba",
+       "title": "Les caractères du rangement : 把 搬 放 拿 带 换 关 楼",
+       "objective": "Reconnaître les caractères pour déplacer et ranger.",
+       "minutes": 5,
+       "explanation": [
+        "把 (bǎ), 搬 (bān), 拿 (ná) et 换 (huàn) portent tous la clé de la main 扌 (ou 手 sous 拿, « réunir les mains ») : ce sont des gestes.",
+        "楼 (lóu, immeuble) porte la clé du bois 木 : les premiers étages chinois étaient des pavillons en bois. 关 (guān) dessinait la barre qui ferme un portail."
+       ],
+       "items": [
+        {
+         "slug": "hz-ba-h3",
+         "kind": "kanji",
+         "front": "把",
+         "reading": "bǎ",
+         "romaji": null,
+         "meaning": "(marque l’objet que l’on déplace ou traite)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-ban-move",
+         "kind": "kanji",
+         "front": "搬",
+         "reading": "bān",
+         "romaji": null,
+         "meaning": "déménager, transporter",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-fang-h3",
+         "kind": "kanji",
+         "front": "放",
+         "reading": "fàng",
+         "romaji": null,
+         "meaning": "poser, mettre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-na",
+         "kind": "kanji",
+         "front": "拿",
+         "reading": "ná",
+         "romaji": null,
+         "meaning": "prendre (en main)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-dai",
+         "kind": "kanji",
+         "front": "带",
+         "reading": "dài",
+         "romaji": null,
+         "meaning": "emporter, emmener",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-huan-h3",
+         "kind": "kanji",
+         "front": "换",
+         "reading": "huàn",
+         "romaji": null,
+         "meaning": "changer, échanger",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-guan",
+         "kind": "kanji",
+         "front": "关",
+         "reading": "guān",
+         "romaji": null,
+         "meaning": "fermer, éteindre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-lou",
+         "kind": "kanji",
+         "front": "楼",
+         "reading": "lóu",
+         "romaji": null,
+         "meaning": "immeuble, bâtiment à étages",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-ba",
+       "title": "Mettre la tasse sur la table : la phrase avec 把",
+       "objective": "Dire ce qu’on fait d’un objet précis.",
+       "minutes": 10,
+       "explanation": [
+        "Sujet + 把 + objet + verbe + suite : 我把杯子放在桌子上 (je pose la tasse sur la table). 把 avance l’objet devant le verbe pour dire ce qu’il devient.",
+        "Le verbe ne reste jamais seul après 把 : il faut un résultat, un lieu ou 了. On dit 把门关上 ou 把门关了, pas « 把门关 ». L’objet est connu : « la » porte, « ce » livre.",
+        "La négation se place avant 把 : 我没把手机带来 (je n’ai pas apporté mon portable)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-ba",
+         "kind": "grammar",
+         "front": "主语 + 把 + 宾语 + 动词 + 其他",
+         "reading": "bǎ",
+         "romaji": null,
+         "meaning": "faire quelque chose à un objet précis (phrase en 把)"
+        },
+        {
+         "slug": "zh-ba-h3",
+         "kind": "vocabulary",
+         "front": "把",
+         "reading": "bǎ",
+         "romaji": null,
+         "meaning": "(marque l’objet que l’on déplace ou traite)"
+        },
+        {
+         "slug": "zh-fang",
+         "kind": "vocabulary",
+         "front": "放",
+         "reading": "fàng",
+         "romaji": null,
+         "meaning": "poser, mettre"
+        },
+        {
+         "slug": "zh-na",
+         "kind": "vocabulary",
+         "front": "拿",
+         "reading": "ná",
+         "romaji": null,
+         "meaning": "prendre (en main)"
+        },
+        {
+         "slug": "zh-dai",
+         "kind": "vocabulary",
+         "front": "带",
+         "reading": "dài",
+         "romaji": null,
+         "meaning": "emporter, emmener"
+        },
+        {
+         "slug": "zh-ban",
+         "kind": "vocabulary",
+         "front": "搬",
+         "reading": "bān",
+         "romaji": null,
+         "meaning": "déménager, transporter"
+        },
+        {
+         "slug": "zh-huan",
+         "kind": "vocabulary",
+         "front": "换",
+         "reading": "huàn",
+         "romaji": null,
+         "meaning": "changer, échanger"
+        },
+        {
+         "slug": "zh-guan",
+         "kind": "vocabulary",
+         "front": "关",
+         "reading": "guān",
+         "romaji": null,
+         "meaning": "fermer, éteindre"
+        },
+        {
+         "slug": "zh-deng-h3",
+         "kind": "vocabulary",
+         "front": "灯",
+         "reading": "dēng",
+         "romaji": null,
+         "meaning": "lampe, lumière"
+        },
+        {
+         "slug": "zh-ganjing",
+         "kind": "vocabulary",
+         "front": "干净",
+         "reading": "gānjìng",
+         "romaji": null,
+         "meaning": "propre"
+        },
+        {
+         "slug": "zh-dasao",
+         "kind": "vocabulary",
+         "front": "打扫",
+         "reading": "dǎsǎo",
+         "romaji": null,
+         "meaning": "faire le ménage, nettoyer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "请把门关上，外面很冷。",
+         "reading": "Qǐng bǎ mén guānshang, wàimiàn hěn lěng.",
+         "fr": "Ferme la porte, s’il te plaît, il fait froid dehors."
+        },
+        {
+         "jp": "我已经把房间打扫干净了。",
+         "reading": "Wǒ yǐjīng bǎ fángjiān dǎsǎo gānjìng le.",
+         "fr": "J’ai déjà fait le ménage dans la chambre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你＿书放在哪儿了？",
+         "choices": [
+          "把",
+          "被",
+          "给"
+         ],
+         "answer": "把",
+         "explanation": "Ce qu’on fait d’un objet connu : 把 + objet + verbe.",
+         "translation": "Où as-tu mis le livre ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "睡觉以前，请把灯＿了。",
+         "choices": [
+          "关",
+          "放",
+          "拿"
+         ],
+         "answer": "关",
+         "explanation": "Éteindre la lumière : 关灯.",
+         "translation": "Avant de dormir, éteins la lumière, s’il te plaît."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il a mis la valise dans la voiture. »",
+         "answer": [
+          "他",
+          "把",
+          "箱子",
+          "放在",
+          "车里",
+          "了。"
+         ],
+         "explanation": "Sujet + 把 + objet + verbe + lieu."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我没把手机带来。",
+         "translation": "La personne a apporté son portable.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "没把…带来 = ne pas avoir apporté."
+        }
+       ]
+      },
+      {
+       "slug": "zh-building",
+       "title": "Étages, ascenseur, voisins : la vie dans l’immeuble",
+       "objective": "Décrire son logement et ses habitudes à la maison.",
+       "minutes": 9,
+       "explanation": [
+        "楼 (lóu) = immeuble : 那栋楼很高 ; on habite au 三楼 (troisième étage). 层 (céng) compte les étages : 这个楼有二十层. 电梯 (diàntī) = ascenseur.",
+        "À la maison : 冰箱 (réfrigérateur), 空调 (climatisation), 洗手间 (toilettes). Le soir, on 刷牙 (se brosse les dents) et on 洗澡 (prend une douche).",
+        "一边…一边… = faire deux choses en même temps : 他一边吃饭，一边看电视."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yibian",
+         "kind": "grammar",
+         "front": "一边…，一边…",
+         "reading": "yìbiān…, yìbiān…",
+         "romaji": null,
+         "meaning": "faire deux choses à la fois"
+        },
+        {
+         "slug": "zh-lou",
+         "kind": "vocabulary",
+         "front": "楼",
+         "reading": "lóu",
+         "romaji": null,
+         "meaning": "immeuble, bâtiment à étages"
+        },
+        {
+         "slug": "zh-ceng",
+         "kind": "vocabulary",
+         "front": "层",
+         "reading": "céng",
+         "romaji": null,
+         "meaning": "étage (classificateur)"
+        },
+        {
+         "slug": "zh-dianti",
+         "kind": "vocabulary",
+         "front": "电梯",
+         "reading": "diàntī",
+         "romaji": null,
+         "meaning": "ascenseur"
+        },
+        {
+         "slug": "zh-linju",
+         "kind": "vocabulary",
+         "front": "邻居",
+         "reading": "línjū",
+         "romaji": null,
+         "meaning": "voisin"
+        },
+        {
+         "slug": "zh-bingxiang",
+         "kind": "vocabulary",
+         "front": "冰箱",
+         "reading": "bīngxiāng",
+         "romaji": null,
+         "meaning": "réfrigérateur"
+        },
+        {
+         "slug": "zh-kongtiao",
+         "kind": "vocabulary",
+         "front": "空调",
+         "reading": "kōngtiáo",
+         "romaji": null,
+         "meaning": "climatisation"
+        },
+        {
+         "slug": "zh-xishoujian",
+         "kind": "vocabulary",
+         "front": "洗手间",
+         "reading": "xǐshǒujiān",
+         "romaji": null,
+         "meaning": "toilettes"
+        },
+        {
+         "slug": "zh-xizao",
+         "kind": "vocabulary",
+         "front": "洗澡",
+         "reading": "xǐzǎo",
+         "romaji": null,
+         "meaning": "prendre une douche, un bain"
+        },
+        {
+         "slug": "zh-shuaya",
+         "kind": "vocabulary",
+         "front": "刷牙",
+         "reading": "shuāyá",
+         "romaji": null,
+         "meaning": "se brosser les dents"
+        },
+        {
+         "slug": "zh-anjing",
+         "kind": "vocabulary",
+         "front": "安静",
+         "reading": "ānjìng",
+         "romaji": null,
+         "meaning": "calme, silencieux"
+        },
+        {
+         "slug": "zh-fangbian",
+         "kind": "vocabulary",
+         "front": "方便",
+         "reading": "fāngbiàn",
+         "romaji": null,
+         "meaning": "pratique, commode"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我住在十二楼，每天坐电梯上下。",
+         "reading": "Wǒ zhù zài shí’èr lóu, měi tiān zuò diàntī shàngxià.",
+         "fr": "J’habite au douzième étage, je prends l’ascenseur tous les jours."
+        },
+        {
+         "jp": "我的邻居一边洗澡，一边唱歌。",
+         "reading": "Wǒ de línjū yìbiān xǐzǎo, yìbiān chànggē.",
+         "fr": "Mon voisin chante sous la douche."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个楼有三十＿，我们坐电梯吧。",
+         "choices": [
+          "层",
+          "楼",
+          "个"
+         ],
+         "answer": "层",
+         "explanation": "Compter les étages : 层.",
+         "translation": "Cet immeuble a trente étages, prenons l’ascenseur."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "牛奶在＿里。",
+         "choices": [
+          "冰箱",
+          "空调",
+          "电梯"
+         ],
+         "answer": "冰箱",
+         "explanation": "Le lait se garde au réfrigérateur : 冰箱.",
+         "translation": "Le lait est dans le réfrigérateur."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Elle écoute de la musique en faisant ses devoirs. »",
+         "answer": [
+          "她",
+          "一边",
+          "听歌，",
+          "一边",
+          "做作业。"
+         ],
+         "explanation": "一边 A，一边 B."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这儿很安静，住在这儿很方便。",
+         "translation": "L’endroit est bruyant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "安静 = calme."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w1-c2",
+     "title": "La famille de l’aubergiste",
+     "lessons": [
+      {
+       "slug": "zh-family3",
+       "title": "Grands-parents, oncles, tantes : 跟…一样 et 像",
+       "objective": "Présenter la famille élargie et comparer les ressemblances.",
+       "minutes": 10,
+       "explanation": [
+        "爷爷 / 奶奶 = grand-père / grand-mère (côté du père). 叔叔 = oncle, et 阿姨 = tante ; les enfants appellent aussi ainsi tous les adultes amis de la famille.",
+        "A 跟 B 一样 (+ adjectif) = A est pareil que B : 我跟哥哥一样高. A 像 B = A ressemble à B : 你很像你妈妈.",
+        "照顾 (zhàogù) = s’occuper de quelqu’un ; 关心 (guānxīn) = se soucier de. 自己 (zìjǐ) = soi-même ; 别人 (biérén) = les autres."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-gen-yiyang",
+         "kind": "grammar",
+         "front": "A 跟 B 一样 (+ 形容词)",
+         "reading": "gēn… yíyàng",
+         "romaji": null,
+         "meaning": "A est pareil que B"
+        },
+        {
+         "slug": "zh-yeye",
+         "kind": "vocabulary",
+         "front": "爷爷",
+         "reading": "yéye",
+         "romaji": null,
+         "meaning": "grand-père (paternel)"
+        },
+        {
+         "slug": "zh-nainai",
+         "kind": "vocabulary",
+         "front": "奶奶",
+         "reading": "nǎinai",
+         "romaji": null,
+         "meaning": "grand-mère (paternelle)"
+        },
+        {
+         "slug": "zh-shushu",
+         "kind": "vocabulary",
+         "front": "叔叔",
+         "reading": "shūshu",
+         "romaji": null,
+         "meaning": "oncle"
+        },
+        {
+         "slug": "zh-ayi",
+         "kind": "vocabulary",
+         "front": "阿姨",
+         "reading": "āyí",
+         "romaji": null,
+         "meaning": "tante, madame"
+        },
+        {
+         "slug": "zh-gen",
+         "kind": "vocabulary",
+         "front": "跟",
+         "reading": "gēn",
+         "romaji": null,
+         "meaning": "avec ; suivre"
+        },
+        {
+         "slug": "zh-yiyang",
+         "kind": "vocabulary",
+         "front": "一样",
+         "reading": "yíyàng",
+         "romaji": null,
+         "meaning": "la même chose, pareil"
+        },
+        {
+         "slug": "zh-xiang-h3",
+         "kind": "vocabulary",
+         "front": "像",
+         "reading": "xiàng",
+         "romaji": null,
+         "meaning": "ressembler à ; comme"
+        },
+        {
+         "slug": "zh-zhaogu",
+         "kind": "vocabulary",
+         "front": "照顾",
+         "reading": "zhàogù",
+         "romaji": null,
+         "meaning": "s’occuper de, prendre soin de"
+        },
+        {
+         "slug": "zh-guanxin",
+         "kind": "vocabulary",
+         "front": "关心",
+         "reading": "guānxīn",
+         "romaji": null,
+         "meaning": "se soucier de"
+        },
+        {
+         "slug": "zh-nianqing",
+         "kind": "vocabulary",
+         "front": "年轻",
+         "reading": "niánqīng",
+         "romaji": null,
+         "meaning": "jeune"
+        },
+        {
+         "slug": "zh-lao",
+         "kind": "vocabulary",
+         "front": "老",
+         "reading": "lǎo",
+         "romaji": null,
+         "meaning": "vieux ; âgé (âge)"
+        },
+        {
+         "slug": "zh-ziji",
+         "kind": "vocabulary",
+         "front": "自己",
+         "reading": "zìjǐ",
+         "romaji": null,
+         "meaning": "soi-même"
+        },
+        {
+         "slug": "zh-bieren",
+         "kind": "vocabulary",
+         "front": "别人",
+         "reading": "biérén",
+         "romaji": null,
+         "meaning": "les autres, autrui"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "奶奶年纪大了，妈妈每天照顾她。",
+         "reading": "Nǎinai niánjì dà le, māma měi tiān zhàogù tā.",
+         "fr": "Grand-mère est âgée, maman s’occupe d’elle tous les jours."
+        },
+        {
+         "jp": "你跟你爸爸一样高，也很像他。",
+         "reading": "Nǐ gēn nǐ bàba yíyàng gāo, yě hěn xiàng tā.",
+         "fr": "Tu es aussi grand que ton père, et tu lui ressembles beaucoup."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我的衣服跟你的＿。",
+         "choices": [
+          "一样",
+          "比",
+          "像"
+         ],
+         "answer": "一样",
+         "explanation": "Pareil : A 跟 B 一样.",
+         "translation": "Mes vêtements sont pareils que les tiens."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他长得很＿他爷爷。",
+         "choices": [
+          "像",
+          "跟",
+          "一样"
+         ],
+         "answer": "像",
+         "explanation": "Ressembler à : 像.",
+         "translation": "Il ressemble beaucoup à son grand-père."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "阿姨",
+           "jp": "你妈妈的身体怎么样？"
+          }
+         ],
+         "translation": "Une amie de la famille demande des nouvelles de ta mère (elle va bien, merci).",
+         "choices": [
+          "她很好，谢谢阿姨关心。",
+          "她很好，阿姨很年轻。",
+          "她跟阿姨一样。"
+         ],
+         "answer": "她很好，谢谢阿姨关心。",
+         "explanation": "Remercier de l’attention : 谢谢…关心."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "别人的东西不能随便拿。",
+         "translation": "On peut prendre les affaires des autres.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "不能随便拿 = ne pas prendre sans demander."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w2",
+   "title": "Le marché de Linzi",
+   "region": "Côtes de Qi",
+   "description": "Avoir faim, soif, être rassasié ; commander au restaurant, payer en tout ; 又…又 et 除了…以外.",
+   "boss": {
+    "name": "L’oiseau Jingwei",
+    "glyph": "精",
+    "intro": "Jingwei, la princesse noyée devenue oiseau, jette sans relâche des cailloux dans la mer… et dans les paniers des marchands de Linzi. Commande, compte et paie sans erreur pour l’apaiser."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w2-c1",
+     "title": "Les étals",
+     "lessons": [
+      {
+       "slug": "zh-hz-food",
+       "title": "Les caractères du repas : 饿 饱 渴 甜 鲜 面 包 碗",
+       "objective": "Reconnaître les caractères de la faim et de la nourriture.",
+       "minutes": 5,
+       "explanation": [
+        "饿 (è, avoir faim) et 饱 (bǎo, rassasié) portent la clé de la nourriture 饣 ; 渴 (kě, avoir soif) celle de l’eau 氵.",
+        "鲜 (xiān, frais) réunit le poisson 鱼 et le mouton 羊 : les deux mets les plus savoureux. 甜 (tián, sucré) met la langue 舌 à côté de 甘 (doux)."
+       ],
+       "items": [
+        {
+         "slug": "hz-e",
+         "kind": "kanji",
+         "front": "饿",
+         "reading": "è",
+         "romaji": null,
+         "meaning": "avoir faim",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-bao-full",
+         "kind": "kanji",
+         "front": "饱",
+         "reading": "bǎo",
+         "romaji": null,
+         "meaning": "rassasié",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-ke-thirsty",
+         "kind": "kanji",
+         "front": "渴",
+         "reading": "kě",
+         "romaji": null,
+         "meaning": "avoir soif",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-tian-h3",
+         "kind": "kanji",
+         "front": "甜",
+         "reading": "tián",
+         "romaji": null,
+         "meaning": "doux, sucré",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-xian-h3",
+         "kind": "kanji",
+         "front": "鲜",
+         "reading": "xiān",
+         "romaji": null,
+         "meaning": "frais",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 14
+         }
+        },
+        {
+         "slug": "hz-mian",
+         "kind": "kanji",
+         "front": "面",
+         "reading": "miàn",
+         "romaji": null,
+         "meaning": "farine, nouilles ; face",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-bao-bag",
+         "kind": "kanji",
+         "front": "包",
+         "reading": "bāo",
+         "romaji": null,
+         "meaning": "sac ; envelopper",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-wan-h3",
+         "kind": "kanji",
+         "front": "碗",
+         "reading": "wǎn",
+         "romaji": null,
+         "meaning": "bol",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-hungry",
+       "title": "J’ai faim ! 饿、饱、渴 et 又…又",
+       "objective": "Dire si l’on a faim ou soif et décrire ce qu’on mange.",
+       "minutes": 9,
+       "explanation": [
+        "饿 (è) = avoir faim, 渴 (kě) = avoir soif, 饱 (bǎo) = être rassasié. Ce sont des adjectifs : 我饿了 (j’ai faim, maintenant), 我吃饱了 (j’ai assez mangé).",
+        "又 A 又 B = à la fois A et B : 这个蛋糕又甜又好吃 (ce gâteau est à la fois sucré et bon).",
+        "Au marché : 面包 (pain), 面条 (nouilles), 蛋糕 (gâteau), 香蕉 (banane), 果汁 (jus de fruits), 啤酒 (bière), 饮料 (boisson)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-you-you",
+         "kind": "grammar",
+         "front": "又 + 形容词 + 又 + 形容词",
+         "reading": "yòu… yòu…",
+         "romaji": null,
+         "meaning": "à la fois… et…"
+        },
+        {
+         "slug": "zh-e",
+         "kind": "vocabulary",
+         "front": "饿",
+         "reading": "è",
+         "romaji": null,
+         "meaning": "avoir faim"
+        },
+        {
+         "slug": "zh-bao",
+         "kind": "vocabulary",
+         "front": "饱",
+         "reading": "bǎo",
+         "romaji": null,
+         "meaning": "rassasié"
+        },
+        {
+         "slug": "zh-ke-thirsty",
+         "kind": "vocabulary",
+         "front": "渴",
+         "reading": "kě",
+         "romaji": null,
+         "meaning": "avoir soif"
+        },
+        {
+         "slug": "zh-tian",
+         "kind": "vocabulary",
+         "front": "甜",
+         "reading": "tián",
+         "romaji": null,
+         "meaning": "doux, sucré"
+        },
+        {
+         "slug": "zh-xinxian",
+         "kind": "vocabulary",
+         "front": "新鲜",
+         "reading": "xīnxiān",
+         "romaji": null,
+         "meaning": "frais"
+        },
+        {
+         "slug": "zh-you-again",
+         "kind": "vocabulary",
+         "front": "又",
+         "reading": "yòu",
+         "romaji": null,
+         "meaning": "de nouveau (déjà fait) ; à la fois"
+        },
+        {
+         "slug": "zh-mianbao",
+         "kind": "vocabulary",
+         "front": "面包",
+         "reading": "miànbāo",
+         "romaji": null,
+         "meaning": "pain"
+        },
+        {
+         "slug": "zh-miantiao",
+         "kind": "vocabulary",
+         "front": "面条",
+         "reading": "miàntiáo",
+         "romaji": null,
+         "meaning": "nouilles"
+        },
+        {
+         "slug": "zh-dangao",
+         "kind": "vocabulary",
+         "front": "蛋糕",
+         "reading": "dàngāo",
+         "romaji": null,
+         "meaning": "gâteau"
+        },
+        {
+         "slug": "zh-xiangjiao",
+         "kind": "vocabulary",
+         "front": "香蕉",
+         "reading": "xiāngjiāo",
+         "romaji": null,
+         "meaning": "banane"
+        },
+        {
+         "slug": "zh-guozhi",
+         "kind": "vocabulary",
+         "front": "果汁",
+         "reading": "guǒzhī",
+         "romaji": null,
+         "meaning": "jus de fruits"
+        },
+        {
+         "slug": "zh-pijiu",
+         "kind": "vocabulary",
+         "front": "啤酒",
+         "reading": "píjiǔ",
+         "romaji": null,
+         "meaning": "bière"
+        },
+        {
+         "slug": "zh-yinliao",
+         "kind": "vocabulary",
+         "front": "饮料",
+         "reading": "yǐnliào",
+         "romaji": null,
+         "meaning": "boisson"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我饿了，我们去吃面条吧。",
+         "reading": "Wǒ è le, wǒmen qù chī miàntiáo ba.",
+         "fr": "J’ai faim, allons manger des nouilles."
+        },
+        {
+         "jp": "这儿的水果又新鲜又便宜。",
+         "reading": "Zhèr de shuǐguǒ yòu xīnxiān yòu piányi.",
+         "fr": "Ici, les fruits sont à la fois frais et bon marché."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我吃＿了，不要了，谢谢。",
+         "choices": [
+          "饱",
+          "饿",
+          "渴"
+         ],
+         "answer": "饱",
+         "explanation": "Assez mangé : 吃饱了.",
+         "translation": "J’ai assez mangé, je n’en veux plus, merci."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "跑了一个小时，我很＿，想喝水。",
+         "choices": [
+          "渴",
+          "饱",
+          "甜"
+         ],
+         "answer": "渴",
+         "explanation": "Envie de boire : 渴.",
+         "translation": "Après une heure de course, j’ai très soif et je veux boire de l’eau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个蛋糕＿甜＿好吃。",
+         "choices": [
+          "又…又",
+          "一边…一边",
+          "因为…所以"
+         ],
+         "answer": "又…又",
+         "explanation": "Deux qualités : 又 A 又 B.",
+         "translation": "Ce gâteau est sucré et délicieux."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他不喝啤酒，他喝果汁。",
+         "translation": "Il boit de la bière.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "不喝啤酒 = il ne boit pas de bière."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w2-c2",
+     "title": "À la table du marché",
+     "lessons": [
+      {
+       "slug": "zh-restaurant",
+       "title": "Au restaurant : la carte, les bols, l’addition",
+       "objective": "Commander, demander ce qu’il faut et payer.",
+       "minutes": 10,
+       "explanation": [
+        "菜单 (càidān) = la carte. On demande : 服务员，请给我们菜单. Sur la table : 碗 (bol), 盘子 (assiette), 筷子 (baguettes), 瓶子 (bouteille).",
+        "L’argent : 一共 (en tout), 角 (jiǎo, un dixième de yuan, à l’oral 毛), 万 (dix mille) : 一万元. 花 (huā) = dépenser : 我花了一百块.",
+        "除了 A (以外)，都 / 还 … = à part A, … : 除了鱼以外，我什么都吃 (je mange tout sauf le poisson) ; 除了茶，我还喝咖啡 (en plus du thé, je bois aussi du café)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-chule",
+         "kind": "grammar",
+         "front": "除了…（以外），都 / 还…",
+         "reading": "chúle… (yǐwài)",
+         "romaji": null,
+         "meaning": "à part…, en plus de…"
+        },
+        {
+         "slug": "zh-caidan",
+         "kind": "vocabulary",
+         "front": "菜单",
+         "reading": "càidān",
+         "romaji": null,
+         "meaning": "menu, carte"
+        },
+        {
+         "slug": "zh-wan-h3",
+         "kind": "vocabulary",
+         "front": "碗",
+         "reading": "wǎn",
+         "romaji": null,
+         "meaning": "bol"
+        },
+        {
+         "slug": "zh-panzi",
+         "kind": "vocabulary",
+         "front": "盘子",
+         "reading": "pánzi",
+         "romaji": null,
+         "meaning": "assiette"
+        },
+        {
+         "slug": "zh-kuaizi",
+         "kind": "vocabulary",
+         "front": "筷子",
+         "reading": "kuàizi",
+         "romaji": null,
+         "meaning": "baguettes"
+        },
+        {
+         "slug": "zh-pingzi",
+         "kind": "vocabulary",
+         "front": "瓶子",
+         "reading": "píngzi",
+         "romaji": null,
+         "meaning": "bouteille"
+        },
+        {
+         "slug": "zh-keren",
+         "kind": "vocabulary",
+         "front": "客人",
+         "reading": "kèrén",
+         "romaji": null,
+         "meaning": "invité, client"
+        },
+        {
+         "slug": "zh-reqing",
+         "kind": "vocabulary",
+         "front": "热情",
+         "reading": "rèqíng",
+         "romaji": null,
+         "meaning": "chaleureux, accueillant"
+        },
+        {
+         "slug": "zh-yigong",
+         "kind": "vocabulary",
+         "front": "一共",
+         "reading": "yígòng",
+         "romaji": null,
+         "meaning": "en tout, au total"
+        },
+        {
+         "slug": "zh-jiao-h3",
+         "kind": "vocabulary",
+         "front": "角",
+         "reading": "jiǎo",
+         "romaji": null,
+         "meaning": "jiao (dixième de yuan) ; corne, angle"
+        },
+        {
+         "slug": "zh-wan-tenk",
+         "kind": "vocabulary",
+         "front": "万",
+         "reading": "wàn",
+         "romaji": null,
+         "meaning": "dix mille"
+        },
+        {
+         "slug": "zh-chaoshi",
+         "kind": "vocabulary",
+         "front": "超市",
+         "reading": "chāoshì",
+         "romaji": null,
+         "meaning": "supermarché"
+        },
+        {
+         "slug": "zh-chule",
+         "kind": "vocabulary",
+         "front": "除了",
+         "reading": "chúle",
+         "romaji": null,
+         "meaning": "à part, sauf"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "服务员，我们要两碗米饭，一共多少钱？",
+         "reading": "Fúwùyuán, wǒmen yào liǎng wǎn mǐfàn, yígòng duōshao qián?",
+         "fr": "S’il vous plaît, deux bols de riz. Ça fait combien en tout ?"
+        },
+        {
+         "jp": "除了筷子以外，我们还需要两个盘子。",
+         "reading": "Chúle kuàizi yǐwài, wǒmen hái xūyào liǎng ge pánzi.",
+         "fr": "En plus des baguettes, il nous faut aussi deux assiettes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "一＿面条十五块。",
+         "choices": [
+          "碗",
+          "个",
+          "张"
+         ],
+         "answer": "碗",
+         "explanation": "Un bol de nouilles : 一碗面条.",
+         "translation": "Un bol de nouilles coûte quinze yuans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这些东西＿一百二十块。",
+         "choices": [
+          "一共",
+          "一起",
+          "一样"
+         ],
+         "answer": "一共",
+         "explanation": "Le total : 一共.",
+         "translation": "Tout cela fait cent vingt yuans en tout."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿星期天，我每天都上班。",
+         "choices": [
+          "除了",
+          "因为",
+          "虽然"
+         ],
+         "answer": "除了",
+         "explanation": "Sauf le dimanche : 除了星期天.",
+         "translation": "Je travaille tous les jours sauf le dimanche."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "服务员",
+           "jp": "您好，几位？"
+          }
+         ],
+         "translation": "Le serveur demande combien vous êtes (trois).",
+         "choices": [
+          "三位，请给我们菜单。",
+          "三碗，谢谢。",
+          "三块钱。"
+         ],
+         "answer": "三位，请给我们菜单。",
+         "explanation": "Compter poliment les personnes : 位."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w3",
+   "title": "L’école de Confucius",
+   "region": "Côtes de Qi",
+   "description": "Réviser, s’exercer, progresser (越来越) ; dire si l’on peut comprendre (看得懂, 听不清楚) ; emprunter à la bibliothèque, se souvenir, oublier.",
+   "boss": {
+    "name": "Le Zheng aux cinq queues",
+    "glyph": "狰",
+    "intro": "Le Zheng, léopard rouge à cinq queues et à une corne, fait un bruit de pierres qui s’entrechoquent : plus personne n’entend le maître. Montre que tu comprends malgré le vacarme."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w3-c1",
+     "title": "Les élèves du maître",
+     "lessons": [
+      {
+       "slug": "zh-hz-study",
+       "title": "Les caractères de l’étude : 复 习 练 作 业 级 努 力",
+       "objective": "Reconnaître les caractères de l’étude et de l’effort.",
+       "minutes": 5,
+       "explanation": [
+        "习 (xí) montrait un oisillon qui bat des ailes encore et encore : apprendre, c’est répéter. Confucius commence ses Entretiens par 学而时习之 (apprendre et réviser sans cesse).",
+        "努 (nǔ) et 力 (lì) : 力 dessine une charrue ou un bras musclé ; 努 ajoute l’esclave 奴 au-dessus : faire un effort de toutes ses forces."
+       ],
+       "items": [
+        {
+         "slug": "hz-fu",
+         "kind": "kanji",
+         "front": "复",
+         "reading": "fù",
+         "romaji": null,
+         "meaning": "répéter, revenir",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-xi-practice",
+         "kind": "kanji",
+         "front": "习",
+         "reading": "xí",
+         "romaji": null,
+         "meaning": "s’exercer, habitude",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 3
+         }
+        },
+        {
+         "slug": "hz-lian",
+         "kind": "kanji",
+         "front": "练",
+         "reading": "liàn",
+         "romaji": null,
+         "meaning": "s’entraîner",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-zuo-make",
+         "kind": "kanji",
+         "front": "作",
+         "reading": "zuò",
+         "romaji": null,
+         "meaning": "faire, œuvre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-ye",
+         "kind": "kanji",
+         "front": "业",
+         "reading": "yè",
+         "romaji": null,
+         "meaning": "métier, études",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-ji-grade",
+         "kind": "kanji",
+         "front": "级",
+         "reading": "jí",
+         "romaji": null,
+         "meaning": "degré, année (scolaire)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-nu",
+         "kind": "kanji",
+         "front": "努",
+         "reading": "nǔ",
+         "romaji": null,
+         "meaning": "faire un effort",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-li-h3",
+         "kind": "kanji",
+         "front": "力",
+         "reading": "lì",
+         "romaji": null,
+         "meaning": "force",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 2
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-study",
+       "title": "Réviser et progresser : 复习、练习、越来越",
+       "objective": "Parler de ses études et de ses progrès.",
+       "minutes": 10,
+       "explanation": [
+        "复习 (fùxí) = réviser ; 练习 (liànxí) = s’exercer, un exercice ; 作业 (zuòyè) = les devoirs ; 成绩 (chéngjì) = les résultats ; 水平 (shuǐpíng) = le niveau.",
+        "越来越 + adjectif = de plus en plus : 你的汉语越来越好了 (ton chinois est de mieux en mieux).",
+        "提高 (tígāo) = améliorer : 提高水平. 努力 (nǔlì) = faire des efforts ; 认真 (rènzhēn) = sérieux ; 聪明 (cōngming) = intelligent."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yuelaiyue",
+         "kind": "grammar",
+         "front": "越来越 + 形容词",
+         "reading": "yuè lái yuè",
+         "romaji": null,
+         "meaning": "de plus en plus"
+        },
+        {
+         "slug": "zh-fuxi",
+         "kind": "vocabulary",
+         "front": "复习",
+         "reading": "fùxí",
+         "romaji": null,
+         "meaning": "réviser"
+        },
+        {
+         "slug": "zh-lianxi",
+         "kind": "vocabulary",
+         "front": "练习",
+         "reading": "liànxí",
+         "romaji": null,
+         "meaning": "s’exercer ; exercice"
+        },
+        {
+         "slug": "zh-zuoye",
+         "kind": "vocabulary",
+         "front": "作业",
+         "reading": "zuòyè",
+         "romaji": null,
+         "meaning": "devoirs"
+        },
+        {
+         "slug": "zh-nianji",
+         "kind": "vocabulary",
+         "front": "年级",
+         "reading": "niánjí",
+         "romaji": null,
+         "meaning": "année (scolaire)"
+        },
+        {
+         "slug": "zh-shuxue",
+         "kind": "vocabulary",
+         "front": "数学",
+         "reading": "shùxué",
+         "romaji": null,
+         "meaning": "mathématiques"
+        },
+        {
+         "slug": "zh-lishi",
+         "kind": "vocabulary",
+         "front": "历史",
+         "reading": "lìshǐ",
+         "romaji": null,
+         "meaning": "histoire (du passé)"
+        },
+        {
+         "slug": "zh-chengji",
+         "kind": "vocabulary",
+         "front": "成绩",
+         "reading": "chéngjì",
+         "romaji": null,
+         "meaning": "résultats (scolaires), notes"
+        },
+        {
+         "slug": "zh-shuiping",
+         "kind": "vocabulary",
+         "front": "水平",
+         "reading": "shuǐpíng",
+         "romaji": null,
+         "meaning": "niveau"
+        },
+        {
+         "slug": "zh-tigao",
+         "kind": "vocabulary",
+         "front": "提高",
+         "reading": "tígāo",
+         "romaji": null,
+         "meaning": "améliorer, élever"
+        },
+        {
+         "slug": "zh-nuli",
+         "kind": "vocabulary",
+         "front": "努力",
+         "reading": "nǔlì",
+         "romaji": null,
+         "meaning": "faire des efforts"
+        },
+        {
+         "slug": "zh-renzhen",
+         "kind": "vocabulary",
+         "front": "认真",
+         "reading": "rènzhēn",
+         "romaji": null,
+         "meaning": "sérieux, consciencieux"
+        },
+        {
+         "slug": "zh-congming",
+         "kind": "vocabulary",
+         "front": "聪明",
+         "reading": "cōngming",
+         "romaji": null,
+         "meaning": "intelligent"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我每天晚上复习一个小时，成绩越来越好了。",
+         "reading": "Wǒ měi tiān wǎnshang fùxí yí ge xiǎoshí, chéngjì yuè lái yuè hǎo le.",
+         "fr": "Je révise une heure chaque soir : mes notes sont de mieux en mieux."
+        },
+        {
+         "jp": "他是三年级的学生，学习非常认真。",
+         "reading": "Tā shì sān niánjí de xuésheng, xuéxí fēicháng rènzhēn.",
+         "fr": "Il est en troisième année et étudie très sérieusement."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "天气＿冷了。",
+         "choices": [
+          "越来越",
+          "一边",
+          "又"
+         ],
+         "answer": "越来越",
+         "explanation": "De plus en plus : 越来越.",
+         "translation": "Il fait de plus en plus froid."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "要＿汉语水平，就要多听多说。",
+         "choices": [
+          "提高",
+          "复习",
+          "努力"
+         ],
+         "answer": "提高",
+         "explanation": "Améliorer le niveau : 提高水平.",
+         "translation": "Pour améliorer son niveau de chinois, il faut beaucoup écouter et parler."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "老师",
+           "jp": "作业做完了吗？"
+          }
+         ],
+         "translation": "Le maître demande si tu as fini tes devoirs (oui, depuis longtemps).",
+         "choices": [
+          "早就做完了。",
+          "我很聪明。",
+          "我在三年级。"
+         ],
+         "answer": "早就做完了。",
+         "explanation": "Fini depuis longtemps : 早就做完了."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "她数学成绩很好，历史成绩不太好。",
+         "translation": "Elle est forte en histoire.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "历史成绩不太好 = pas très bonne en histoire."
+        }
+       ]
+      },
+      {
+       "slug": "zh-potential",
+       "title": "Je comprends, je ne vois pas : 看得懂、听不清楚",
+       "objective": "Dire si l’on peut, ou non, arriver au résultat.",
+       "minutes": 10,
+       "explanation": [
+        "Verbe + 得 + résultat = pouvoir y arriver ; verbe + 不 + résultat = ne pas y arriver : 看得懂 (je comprends en lisant), 听不清楚 (je n’entends pas bien), 做不完 (je ne pourrai pas finir).",
+        "清楚 (qīngchu) = clair ; 明白 (míngbai) = comprendre, clair ; 了解 (liǎojiě) = bien connaître, se renseigner sur.",
+        "简单 / 容易 = simple / facile ; 难 = difficile. 讲 (jiǎng) = expliquer, raconter ; 教 (jiāo) = enseigner : 他教我们历史."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-kede",
+         "kind": "grammar",
+         "front": "动词 + 得 / 不 + 结果",
+         "reading": "de / bu",
+         "romaji": null,
+         "meaning": "pouvoir / ne pas pouvoir (complément de potentiel)"
+        },
+        {
+         "slug": "zh-qingchu",
+         "kind": "vocabulary",
+         "front": "清楚",
+         "reading": "qīngchu",
+         "romaji": null,
+         "meaning": "clair"
+        },
+        {
+         "slug": "zh-mingbai",
+         "kind": "vocabulary",
+         "front": "明白",
+         "reading": "míngbai",
+         "romaji": null,
+         "meaning": "comprendre ; clair"
+        },
+        {
+         "slug": "zh-liaojie",
+         "kind": "vocabulary",
+         "front": "了解",
+         "reading": "liǎojiě",
+         "romaji": null,
+         "meaning": "bien connaître, se renseigner"
+        },
+        {
+         "slug": "zh-jiandan",
+         "kind": "vocabulary",
+         "front": "简单",
+         "reading": "jiǎndān",
+         "romaji": null,
+         "meaning": "simple"
+        },
+        {
+         "slug": "zh-rongyi",
+         "kind": "vocabulary",
+         "front": "容易",
+         "reading": "róngyì",
+         "romaji": null,
+         "meaning": "facile"
+        },
+        {
+         "slug": "zh-nan",
+         "kind": "vocabulary",
+         "front": "难",
+         "reading": "nán",
+         "romaji": null,
+         "meaning": "difficile"
+        },
+        {
+         "slug": "zh-juzi",
+         "kind": "vocabulary",
+         "front": "句子",
+         "reading": "jùzi",
+         "romaji": null,
+         "meaning": "phrase"
+        },
+        {
+         "slug": "zh-cidian",
+         "kind": "vocabulary",
+         "front": "词典",
+         "reading": "cídiǎn",
+         "romaji": null,
+         "meaning": "dictionnaire"
+        },
+        {
+         "slug": "zh-heiban",
+         "kind": "vocabulary",
+         "front": "黑板",
+         "reading": "hēibǎn",
+         "romaji": null,
+         "meaning": "tableau noir"
+        },
+        {
+         "slug": "zh-jiang",
+         "kind": "vocabulary",
+         "front": "讲",
+         "reading": "jiǎng",
+         "romaji": null,
+         "meaning": "expliquer, raconter"
+        },
+        {
+         "slug": "zh-jiao-teach",
+         "kind": "vocabulary",
+         "front": "教",
+         "reading": "jiāo",
+         "romaji": null,
+         "meaning": "enseigner"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "老师写在黑板上的字，你看得清楚吗？",
+         "reading": "Lǎoshī xiě zài hēibǎn shang de zì, nǐ kàn de qīngchu ma?",
+         "fr": "Tu arrives à lire les caractères que le maître écrit au tableau ?"
+        },
+        {
+         "jp": "这个句子太难了，我看不懂。",
+         "reading": "Zhè ge jùzi tài nán le, wǒ kàn bu dǒng.",
+         "fr": "Cette phrase est trop difficile, je ne la comprends pas."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他说得太快了，我听不＿。",
+         "choices": [
+          "清楚",
+          "容易",
+          "简单"
+         ],
+         "answer": "清楚",
+         "explanation": "Ne pas entendre clairement : 听不清楚.",
+         "translation": "Il parle trop vite, je n’entends pas bien."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这本书很简单，我看＿懂。",
+         "choices": [
+          "得",
+          "不",
+          "了"
+         ],
+         "answer": "得",
+         "explanation": "Pouvoir comprendre : 看得懂.",
+         "translation": "Ce livre est simple, je le comprends."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Cette question est facile, je peux y répondre. »",
+         "answer": [
+          "这个",
+          "问题",
+          "很容易，",
+          "我",
+          "回答得了。"
+         ],
+         "explanation": "Verbe + 得 + 了 = pouvoir le faire."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我不明白这个字的意思。",
+         "translation": "La personne comprend ce caractère.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "不明白 = ne pas comprendre."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w3-c2",
+     "title": "La salle des rouleaux",
+     "lessons": [
+      {
+       "slug": "zh-library",
+       "title": "À la bibliothèque : emprunter, se souvenir, oublier",
+       "objective": "Emprunter un livre et parler du temps qui vient de passer.",
+       "minutes": 9,
+       "explanation": [
+        "借 (jiè) = emprunter ou prêter : 我借了一本书 (j’ai emprunté) ; 借给你 (je te prête). On le fait au 图书馆 (bibliothèque).",
+        "记得 (jìde) = se souvenir ; 忘记 (wàngjì) = oublier : 别忘记带书. 检查 (jiǎnchá) = vérifier, examiner.",
+        "刚才 (gāngcái) = il y a un instant ; 一会儿 (yíhuìr) = un moment : 等一会儿 (attends un moment), 一会儿见 (à tout à l’heure)."
+       ],
+       "items": [
+        {
+         "slug": "zh-tushuguan",
+         "kind": "vocabulary",
+         "front": "图书馆",
+         "reading": "túshūguǎn",
+         "romaji": null,
+         "meaning": "bibliothèque"
+        },
+        {
+         "slug": "zh-jie",
+         "kind": "vocabulary",
+         "front": "借",
+         "reading": "jiè",
+         "romaji": null,
+         "meaning": "emprunter, prêter"
+        },
+        {
+         "slug": "zh-bijiben",
+         "kind": "vocabulary",
+         "front": "笔记本",
+         "reading": "bǐjìběn",
+         "romaji": null,
+         "meaning": "carnet ; ordinateur portable"
+        },
+        {
+         "slug": "zh-xiaozhang",
+         "kind": "vocabulary",
+         "front": "校长",
+         "reading": "xiàozhǎng",
+         "romaji": null,
+         "meaning": "directeur d’école"
+        },
+        {
+         "slug": "zh-ban-class",
+         "kind": "vocabulary",
+         "front": "班",
+         "reading": "bān",
+         "romaji": null,
+         "meaning": "classe (groupe d’élèves)"
+        },
+        {
+         "slug": "zh-jide",
+         "kind": "vocabulary",
+         "front": "记得",
+         "reading": "jìde",
+         "romaji": null,
+         "meaning": "se souvenir"
+        },
+        {
+         "slug": "zh-wangji",
+         "kind": "vocabulary",
+         "front": "忘记",
+         "reading": "wàngjì",
+         "romaji": null,
+         "meaning": "oublier"
+        },
+        {
+         "slug": "zh-jiancha",
+         "kind": "vocabulary",
+         "front": "检查",
+         "reading": "jiǎnchá",
+         "romaji": null,
+         "meaning": "vérifier, examiner"
+        },
+        {
+         "slug": "zh-gangcai",
+         "kind": "vocabulary",
+         "front": "刚才",
+         "reading": "gāngcái",
+         "romaji": null,
+         "meaning": "il y a un instant"
+        },
+        {
+         "slug": "zh-yihuir",
+         "kind": "vocabulary",
+         "front": "一会儿",
+         "reading": "yíhuìr",
+         "romaji": null,
+         "meaning": "un moment"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我刚才在图书馆借了两本历史书。",
+         "reading": "Wǒ gāngcái zài túshūguǎn jièle liǎng běn lìshǐ shū.",
+         "fr": "Je viens d’emprunter deux livres d’histoire à la bibliothèque."
+        },
+        {
+         "jp": "你还记得我们的校长吗？",
+         "reading": "Nǐ hái jìde wǒmen de xiàozhǎng ma?",
+         "fr": "Tu te souviens encore de notre directeur ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我忘记带笔了，你能＿我一支吗？",
+         "choices": [
+          "借给",
+          "借了",
+          "还给"
+         ],
+         "answer": "借给",
+         "explanation": "Prêter à quelqu’un : 借给 + personne.",
+         "translation": "J’ai oublié mon stylo, tu peux m’en prêter un ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "考试以前，要再＿一下。",
+         "choices": [
+          "检查",
+          "忘记",
+          "记得"
+         ],
+         "answer": "检查",
+         "explanation": "Vérifier sa copie : 检查.",
+         "translation": "Avant de rendre, il faut encore vérifier."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "小李",
+           "jp": "你什么时候去图书馆？"
+          }
+         ],
+         "translation": "Xiao Li te demande quand tu vas à la bibliothèque (dans un moment).",
+         "choices": [
+          "一会儿就去。",
+          "刚才就去。",
+          "我忘记了图书馆。"
+         ],
+         "answer": "一会儿就去。",
+         "explanation": "Bientôt : 一会儿就…."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他记得老师的名字。",
+         "translation": "Il a oublié le nom du maître.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "记得 = se souvenir."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w4",
+   "title": "Les monts de Zhuangzi",
+   "region": "Côtes de Qi",
+   "description": "Saisons, vent, nuages et soleil ; plantes, animaux et paysages ; raconter dans l’ordre (先…然后, 后来, 终于) et indiquer la direction d’un mouvement (走上去, 跑回来).",
+   "boss": {
+    "name": "Le géant Kuafu",
+    "glyph": "夸",
+    "intro": "Kuafu, le géant qui voulut rattraper le soleil, court à travers les monts et assèche les rivières sur son passage. Raconte-lui les saisons et le chemin, pour qu’il s’arrête enfin."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w4-c1",
+     "title": "Le papillon de Zhuangzi",
+     "lessons": [
+      {
+       "slug": "zh-hz-seasons",
+       "title": "Les caractères des saisons : 春 夏 秋 冬 季 节 草 鸟",
+       "objective": "Reconnaître les caractères des saisons et de la nature.",
+       "minutes": 5,
+       "explanation": [
+        "春 (chūn) montrait des pousses sous le soleil 日 ; 秋 (qiū) réunit la céréale 禾 et le feu 火 : la saison où l’on brûle les chaumes après la moisson.",
+        "草 (cǎo, herbe) et 节 (jié) portent la clé des plantes 艹 : 节 était le nœud du bambou, d’où « fête », « saison »."
+       ],
+       "items": [
+        {
+         "slug": "hz-chun",
+         "kind": "kanji",
+         "front": "春",
+         "reading": "chūn",
+         "romaji": null,
+         "meaning": "printemps",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-xia-summer",
+         "kind": "kanji",
+         "front": "夏",
+         "reading": "xià",
+         "romaji": null,
+         "meaning": "été",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-qiu-autumn",
+         "kind": "kanji",
+         "front": "秋",
+         "reading": "qiū",
+         "romaji": null,
+         "meaning": "automne",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-dong-winter",
+         "kind": "kanji",
+         "front": "冬",
+         "reading": "dōng",
+         "romaji": null,
+         "meaning": "hiver",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-ji-season",
+         "kind": "kanji",
+         "front": "季",
+         "reading": "jì",
+         "romaji": null,
+         "meaning": "saison",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-jie",
+         "kind": "kanji",
+         "front": "节",
+         "reading": "jié",
+         "romaji": null,
+         "meaning": "fête ; nœud",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-cao",
+         "kind": "kanji",
+         "front": "草",
+         "reading": "cǎo",
+         "romaji": null,
+         "meaning": "herbe",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-niao",
+         "kind": "kanji",
+         "front": "鸟",
+         "reading": "niǎo",
+         "romaji": null,
+         "meaning": "oiseau",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-seasons",
+       "title": "Les quatre saisons : 春夏秋冬 et 越…越",
+       "objective": "Décrire les saisons et le temps qu’il fait.",
+       "minutes": 9,
+       "explanation": [
+        "春天、夏天、秋天、冬天 : les quatre 季节 (saisons). Le temps : 刮风 (il y a du vent), 云 (nuage), 太阳 (soleil), 月亮 (lune).",
+        "越 A 越 B = plus A, plus B : 雨越下越大 (la pluie tombe de plus en plus fort), 你越说我越不明白.",
+        "变化 (biànhuà) = changement, changer : 天气变化很大."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yue-yue",
+         "kind": "grammar",
+         "front": "越 A 越 B",
+         "reading": "yuè… yuè…",
+         "romaji": null,
+         "meaning": "plus…, plus…"
+        },
+        {
+         "slug": "zh-chun",
+         "kind": "vocabulary",
+         "front": "春",
+         "reading": "chūn",
+         "romaji": null,
+         "meaning": "printemps"
+        },
+        {
+         "slug": "zh-xia",
+         "kind": "vocabulary",
+         "front": "夏",
+         "reading": "xià",
+         "romaji": null,
+         "meaning": "été"
+        },
+        {
+         "slug": "zh-qiu",
+         "kind": "vocabulary",
+         "front": "秋",
+         "reading": "qiū",
+         "romaji": null,
+         "meaning": "automne"
+        },
+        {
+         "slug": "zh-dong-winter",
+         "kind": "vocabulary",
+         "front": "冬",
+         "reading": "dōng",
+         "romaji": null,
+         "meaning": "hiver"
+        },
+        {
+         "slug": "zh-jijie",
+         "kind": "vocabulary",
+         "front": "季节",
+         "reading": "jìjié",
+         "romaji": null,
+         "meaning": "saison"
+        },
+        {
+         "slug": "zh-guafeng",
+         "kind": "vocabulary",
+         "front": "刮风",
+         "reading": "guāfēng",
+         "romaji": null,
+         "meaning": "faire du vent"
+        },
+        {
+         "slug": "zh-yun",
+         "kind": "vocabulary",
+         "front": "云",
+         "reading": "yún",
+         "romaji": null,
+         "meaning": "nuage"
+        },
+        {
+         "slug": "zh-taiyang",
+         "kind": "vocabulary",
+         "front": "太阳",
+         "reading": "tàiyáng",
+         "romaji": null,
+         "meaning": "soleil"
+        },
+        {
+         "slug": "zh-yueliang",
+         "kind": "vocabulary",
+         "front": "月亮",
+         "reading": "yuèliang",
+         "romaji": null,
+         "meaning": "lune"
+        },
+        {
+         "slug": "zh-bianhua",
+         "kind": "vocabulary",
+         "front": "变化",
+         "reading": "biànhuà",
+         "romaji": null,
+         "meaning": "changement ; changer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "秋天是北京最好的季节，不冷也不热。",
+         "reading": "Qiūtiān shì Běijīng zuì hǎo de jìjié, bù lěng yě bú rè.",
+         "fr": "L’automne est la plus belle saison à Pékin : ni froid ni chaud."
+        },
+        {
+         "jp": "风越刮越大，太阳也看不见了。",
+         "reading": "Fēng yuè guā yuè dà, tàiyáng yě kàn bu jiàn le.",
+         "fr": "Le vent souffle de plus en plus fort, on ne voit même plus le soleil."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "一年有四个＿。",
+         "choices": [
+          "季节",
+          "节日",
+          "变化"
+         ],
+         "answer": "季节",
+         "explanation": "Les saisons : 季节.",
+         "translation": "Une année a quatre saisons."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他＿跑越快。",
+         "choices": [
+          "越",
+          "又",
+          "更"
+         ],
+         "answer": "越",
+         "explanation": "越 A 越 B.",
+         "translation": "Il court de plus en plus vite."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "你最喜欢哪个季节？"
+          }
+         ],
+         "translation": "Un ami te demande ta saison préférée (le printemps, pour les fleurs).",
+         "choices": [
+          "春天，因为有很多花。",
+          "月亮，因为很漂亮。",
+          "刮风，因为很冷。"
+         ],
+         "answer": "春天，因为有很多花。",
+         "explanation": "Une saison : 春天."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "今天晚上没有云，月亮很亮。",
+         "translation": "Ce soir, le ciel est couvert.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "没有云 = pas de nuages."
+        }
+       ]
+      },
+      {
+       "slug": "zh-nature",
+       "title": "Herbe, arbres et pandas : la nature et les directions",
+       "objective": "Décrire un paysage et dire dans quel sens on se déplace.",
+       "minutes": 10,
+       "explanation": [
+        "La nature : 草 (herbe), 树 (arbre), 花 (fleur ; aussi « dépenser »), 鸟 (oiseau), 动物 (animal), 马 (cheval), 熊猫 (panda), 河 (rivière) ; 黄河 = le fleuve Jaune.",
+        "Direction du mouvement : verbe + 上 / 下 / 进 / 出 / 回 / 过 / 起 + 来 (vers moi) ou 去 (loin de moi) : 他跑上来了 (il est monté en courant jusqu’ici), 鸟飞过去了 (l’oiseau est passé en volant).",
+        "爬山 (páshān) = faire de la montagne ; 公园 (gōngyuán) = parc ; 环境 (huánjìng) = environnement."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-quxiang",
+         "kind": "grammar",
+         "front": "动词 + 上 / 下 / 进 / 出 / 回 / 过 / 起 + 来 / 去",
+         "reading": "lai / qu",
+         "romaji": null,
+         "meaning": "direction du mouvement (vers moi / loin de moi)"
+        },
+        {
+         "slug": "zh-cao",
+         "kind": "vocabulary",
+         "front": "草",
+         "reading": "cǎo",
+         "romaji": null,
+         "meaning": "herbe"
+        },
+        {
+         "slug": "zh-shu-h3",
+         "kind": "vocabulary",
+         "front": "树",
+         "reading": "shù",
+         "romaji": null,
+         "meaning": "arbre"
+        },
+        {
+         "slug": "zh-hua",
+         "kind": "vocabulary",
+         "front": "花",
+         "reading": "huā",
+         "romaji": null,
+         "meaning": "fleur ; dépenser"
+        },
+        {
+         "slug": "zh-niao",
+         "kind": "vocabulary",
+         "front": "鸟",
+         "reading": "niǎo",
+         "romaji": null,
+         "meaning": "oiseau"
+        },
+        {
+         "slug": "zh-dongwu",
+         "kind": "vocabulary",
+         "front": "动物",
+         "reading": "dòngwù",
+         "romaji": null,
+         "meaning": "animal"
+        },
+        {
+         "slug": "zh-ma",
+         "kind": "vocabulary",
+         "front": "马",
+         "reading": "mǎ",
+         "romaji": null,
+         "meaning": "cheval"
+        },
+        {
+         "slug": "zh-xiongmao",
+         "kind": "vocabulary",
+         "front": "熊猫",
+         "reading": "xióngmāo",
+         "romaji": null,
+         "meaning": "panda"
+        },
+        {
+         "slug": "zh-he-h3",
+         "kind": "vocabulary",
+         "front": "河",
+         "reading": "hé",
+         "romaji": null,
+         "meaning": "rivière, fleuve"
+        },
+        {
+         "slug": "zh-huanghe",
+         "kind": "vocabulary",
+         "front": "黄河",
+         "reading": "Huáng Hé",
+         "romaji": null,
+         "meaning": "le fleuve Jaune"
+        },
+        {
+         "slug": "zh-pashan",
+         "kind": "vocabulary",
+         "front": "爬山",
+         "reading": "páshān",
+         "romaji": null,
+         "meaning": "faire de la montagne, grimper"
+        },
+        {
+         "slug": "zh-gongyuan",
+         "kind": "vocabulary",
+         "front": "公园",
+         "reading": "gōngyuán",
+         "romaji": null,
+         "meaning": "parc"
+        },
+        {
+         "slug": "zh-huanjing",
+         "kind": "vocabulary",
+         "front": "环境",
+         "reading": "huánjìng",
+         "romaji": null,
+         "meaning": "environnement"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "周末我们去爬山吧，山上有很多树和鸟。",
+         "reading": "Zhōumò wǒmen qù páshān ba, shān shang yǒu hěn duō shù hé niǎo.",
+         "fr": "Ce week-end, allons en montagne : il y a plein d’arbres et d’oiseaux là-haut."
+        },
+        {
+         "jp": "小狗从公园里跑出来了。",
+         "reading": "Xiǎo gǒu cóng gōngyuán li pǎo chūlai le.",
+         "fr": "Le petit chien est sorti du parc en courant."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "熊猫是中国最有名的＿。",
+         "choices": [
+          "动物",
+          "环境",
+          "公园"
+         ],
+         "answer": "动物",
+         "explanation": "Un animal : 动物.",
+         "translation": "Le panda est l’animal le plus célèbre de Chine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他在楼上，你快走＿去吧。",
+         "choices": [
+          "上",
+          "下",
+          "出"
+         ],
+         "answer": "上",
+         "explanation": "Monter (loin de moi) : 走上去.",
+         "translation": "Il est en haut, monte vite le rejoindre."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Le chat a couru dans la chambre. »",
+         "answer": [
+          "猫",
+          "跑",
+          "进",
+          "房间",
+          "去了。"
+         ],
+         "explanation": "Verbe + 进 + lieu + 去."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这儿的环境很好，有很多树和花。",
+         "translation": "L’environnement est agréable.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "环境很好 = environnement agréable."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w4-c2",
+     "title": "La course du géant",
+     "lessons": [
+      {
+       "slug": "zh-time3",
+       "title": "D’abord, ensuite, enfin : raconter une histoire",
+       "objective": "Ordonner les événements d’un récit.",
+       "minutes": 10,
+       "explanation": [
+        "先 A，然后 B = d’abord A, ensuite B : 我们先吃饭，然后去看电影. 后来 (hòulái) = par la suite (seulement pour le passé) ; 最后 (zuìhòu) = à la fin.",
+        "突然 (tūrán) = soudain ; 终于 (zhōngyú) = enfin (après une longue attente) ; 一直 (yìzhí) = sans cesse, tout droit : 一直往前走.",
+        "以前 / 以后 = avant / après (ou autrefois / plus tard) : 吃饭以前洗手. 最近 (zuìjìn) = ces derniers temps ; 过去 (guòqù) = le passé, passer."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-xian-ranhou",
+         "kind": "grammar",
+         "front": "先…，然后…",
+         "reading": "xiān…, ránhòu…",
+         "romaji": null,
+         "meaning": "d’abord…, ensuite…"
+        },
+        {
+         "slug": "zh-xian",
+         "kind": "vocabulary",
+         "front": "先",
+         "reading": "xiān",
+         "romaji": null,
+         "meaning": "d’abord"
+        },
+        {
+         "slug": "zh-ranhou",
+         "kind": "vocabulary",
+         "front": "然后",
+         "reading": "ránhòu",
+         "romaji": null,
+         "meaning": "ensuite, puis"
+        },
+        {
+         "slug": "zh-houlai",
+         "kind": "vocabulary",
+         "front": "后来",
+         "reading": "hòulái",
+         "romaji": null,
+         "meaning": "par la suite (récit)"
+        },
+        {
+         "slug": "zh-zuihou",
+         "kind": "vocabulary",
+         "front": "最后",
+         "reading": "zuìhòu",
+         "romaji": null,
+         "meaning": "finalement, en dernier"
+        },
+        {
+         "slug": "zh-turan",
+         "kind": "vocabulary",
+         "front": "突然",
+         "reading": "tūrán",
+         "romaji": null,
+         "meaning": "soudain, tout à coup"
+        },
+        {
+         "slug": "zh-zhongyu",
+         "kind": "vocabulary",
+         "front": "终于",
+         "reading": "zhōngyú",
+         "romaji": null,
+         "meaning": "enfin"
+        },
+        {
+         "slug": "zh-yizhi",
+         "kind": "vocabulary",
+         "front": "一直",
+         "reading": "yìzhí",
+         "romaji": null,
+         "meaning": "sans cesse ; tout droit"
+        },
+        {
+         "slug": "zh-yiqian",
+         "kind": "vocabulary",
+         "front": "以前",
+         "reading": "yǐqián",
+         "romaji": null,
+         "meaning": "avant, autrefois"
+        },
+        {
+         "slug": "zh-yihou",
+         "kind": "vocabulary",
+         "front": "以后",
+         "reading": "yǐhòu",
+         "romaji": null,
+         "meaning": "après, plus tard"
+        },
+        {
+         "slug": "zh-zuijin",
+         "kind": "vocabulary",
+         "front": "最近",
+         "reading": "zuìjìn",
+         "romaji": null,
+         "meaning": "ces derniers temps"
+        },
+        {
+         "slug": "zh-guoqu",
+         "kind": "vocabulary",
+         "front": "过去",
+         "reading": "guòqù",
+         "romaji": null,
+         "meaning": "le passé ; passer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "夸父一直追太阳，后来他太渴了，最后死在了路上。",
+         "reading": "Kuāfù yìzhí zhuī tàiyáng, hòulái tā tài kě le, zuìhòu sǐ zài le lù shang.",
+         "fr": "Kuafu poursuivit sans cesse le soleil ; puis il eut trop soif, et mourut finalement en chemin."
+        },
+        {
+         "jp": "等了一个小时，公共汽车终于来了。",
+         "reading": "Děngle yí ge xiǎoshí, gōnggòng qìchē zhōngyú lái le.",
+         "fr": "Après une heure d’attente, le bus est enfin arrivé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我们先去买票，＿进去看电影。",
+         "choices": [
+          "然后",
+          "以前",
+          "最近"
+         ],
+         "answer": "然后",
+         "explanation": "D’abord… ensuite : 先…然后.",
+         "translation": "On achète d’abord les billets, puis on entre voir le film."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "找了很久，我＿找到了我的手机。",
+         "choices": [
+          "终于",
+          "突然",
+          "一直"
+         ],
+         "answer": "终于",
+         "explanation": "Après longtemps : 终于.",
+         "translation": "Après avoir longtemps cherché, j’ai enfin retrouvé mon portable."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我们在说话，他＿哭了。",
+         "choices": [
+          "突然",
+          "终于",
+          "最后"
+         ],
+         "answer": "突然",
+         "explanation": "Sans prévenir : 突然.",
+         "translation": "Nous parlions quand, soudain, il s’est mis à pleurer."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他以前住在北京，后来搬到了上海。",
+         "translation": "Il habite toujours à Pékin.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "后来搬到了上海 = il a ensuite déménagé à Shanghai."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w5",
+   "title": "Le tribunal de Han Fei",
+   "region": "Côtes de Qi",
+   "description": "Ce qui arrive à quelqu’un (被), les émotions ; devoir, falloir, décider, être d’accord ; hypothèses avec 如果…就 et nuances (其实, 只, 或者).",
+   "boss": {
+    "name": "Le Xiezhi justicier",
+    "glyph": "獬",
+    "intro": "Le Xiezhi, licorne noire des juges, frappe de sa corne celui qui ment. Au tribunal du légiste Han Fei, il te met à l’épreuve : dis exactement ce qui s’est passé, ce qu’il faut faire et à quelles conditions."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w5-c1",
+     "title": "L’affaire du marché",
+     "lessons": [
+      {
+       "slug": "zh-hz-rules",
+       "title": "Les caractères de la loi : 必 须 应 该 被 决 定 注",
+       "objective": "Reconnaître les caractères du devoir et de la décision.",
+       "minutes": 5,
+       "explanation": [
+        "应该 (yīnggāi) et 必须 (bìxū) disent ce qu’il faut faire : 必 (bì) est « sans faute », 须 (xū) portait autrefois la barbe 彡 du visage 页.",
+        "被 (bèi) porte la clé du vêtement 衤 : c’était la couverture qui « recouvre », d’où la voix passive, ce qu’on subit. 决定 (juédìng) : 决 ouvrir une digue, 定 fixer."
+       ],
+       "items": [
+        {
+         "slug": "hz-bi-must",
+         "kind": "kanji",
+         "front": "必",
+         "reading": "bì",
+         "romaji": null,
+         "meaning": "nécessairement",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-xu",
+         "kind": "kanji",
+         "front": "须",
+         "reading": "xū",
+         "romaji": null,
+         "meaning": "falloir",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-ying",
+         "kind": "kanji",
+         "front": "应",
+         "reading": "yīng",
+         "romaji": null,
+         "meaning": "devoir, répondre",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 7
+         }
+        },
+        {
+         "slug": "hz-gai",
+         "kind": "kanji",
+         "front": "该",
+         "reading": "gāi",
+         "romaji": null,
+         "meaning": "devoir, il faut",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-bei",
+         "kind": "kanji",
+         "front": "被",
+         "reading": "bèi",
+         "romaji": null,
+         "meaning": "(marque le passif)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-jue",
+         "kind": "kanji",
+         "front": "决",
+         "reading": "jué",
+         "romaji": null,
+         "meaning": "décider, fixer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 6
+         }
+        },
+        {
+         "slug": "hz-ding",
+         "kind": "kanji",
+         "front": "定",
+         "reading": "dìng",
+         "romaji": null,
+         "meaning": "fixer, sûr",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-zhu",
+         "kind": "kanji",
+         "front": "注",
+         "reading": "zhù",
+         "romaji": null,
+         "meaning": "verser ; faire attention",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-bei",
+       "title": "Mon vélo a été volé : la phrase passive avec 被",
+       "objective": "Raconter ce qui est arrivé à quelqu’un ou à quelque chose.",
+       "minutes": 10,
+       "explanation": [
+        "Sujet + 被 (+ auteur) + verbe + suite : 我的蛋糕被弟弟吃了 (mon gâteau a été mangé par mon petit frère). Comme avec 把, le verbe ne reste pas seul.",
+        "被 sert surtout pour ce qu’on subit, souvent une mauvaise surprise : 杯子被打坏了 (la tasse a été cassée). 坏 (huài) = cassé, mauvais.",
+        "Les émotions : 生气 (se fâcher), 害怕 (avoir peur), 担心 (s’inquiéter), 着急 (être pressé, inquiet), 难过 (être triste), 哭 (pleurer), 奇怪 (étrange)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-bei",
+         "kind": "grammar",
+         "front": "主语 + 被 (+ 人) + 动词 + 其他",
+         "reading": "bèi",
+         "romaji": null,
+         "meaning": "être …é (par quelqu’un), phrase passive"
+        },
+        {
+         "slug": "zh-bei",
+         "kind": "vocabulary",
+         "front": "被",
+         "reading": "bèi",
+         "romaji": null,
+         "meaning": "(marque le passif)"
+        },
+        {
+         "slug": "zh-huai",
+         "kind": "vocabulary",
+         "front": "坏",
+         "reading": "huài",
+         "romaji": null,
+         "meaning": "cassé, mauvais"
+        },
+        {
+         "slug": "zh-faxian",
+         "kind": "vocabulary",
+         "front": "发现",
+         "reading": "fāxiàn",
+         "romaji": null,
+         "meaning": "découvrir, s’apercevoir"
+        },
+        {
+         "slug": "zh-yudao",
+         "kind": "vocabulary",
+         "front": "遇到",
+         "reading": "yùdào",
+         "romaji": null,
+         "meaning": "rencontrer (par hasard)"
+        },
+        {
+         "slug": "zh-ku",
+         "kind": "vocabulary",
+         "front": "哭",
+         "reading": "kū",
+         "romaji": null,
+         "meaning": "pleurer"
+        },
+        {
+         "slug": "zh-shengqi",
+         "kind": "vocabulary",
+         "front": "生气",
+         "reading": "shēngqì",
+         "romaji": null,
+         "meaning": "se fâcher"
+        },
+        {
+         "slug": "zh-haipa",
+         "kind": "vocabulary",
+         "front": "害怕",
+         "reading": "hàipà",
+         "romaji": null,
+         "meaning": "avoir peur"
+        },
+        {
+         "slug": "zh-danxin",
+         "kind": "vocabulary",
+         "front": "担心",
+         "reading": "dānxīn",
+         "romaji": null,
+         "meaning": "s’inquiéter"
+        },
+        {
+         "slug": "zh-zhaoji",
+         "kind": "vocabulary",
+         "front": "着急",
+         "reading": "zháojí",
+         "romaji": null,
+         "meaning": "inquiet, pressé"
+        },
+        {
+         "slug": "zh-nanguo",
+         "kind": "vocabulary",
+         "front": "难过",
+         "reading": "nánguò",
+         "romaji": null,
+         "meaning": "triste"
+        },
+        {
+         "slug": "zh-qiguai",
+         "kind": "vocabulary",
+         "front": "奇怪",
+         "reading": "qíguài",
+         "romaji": null,
+         "meaning": "étrange"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我的自行车被人骑走了，我很着急。",
+         "reading": "Wǒ de zìxíngchē bèi rén qízǒu le, wǒ hěn zháojí.",
+         "fr": "Quelqu’un est parti avec mon vélo, je suis très inquiet."
+        },
+        {
+         "jp": "妈妈发现杯子被打坏了，可是她没有生气。",
+         "reading": "Māma fāxiàn bēizi bèi dǎhuài le, kěshì tā méiyǒu shēngqì.",
+         "fr": "Maman a vu que la tasse était cassée, mais elle ne s’est pas fâchée."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我的蛋糕＿弟弟吃完了。",
+         "choices": [
+          "被",
+          "把",
+          "给"
+         ],
+         "answer": "被",
+         "explanation": "Ce qu’on subit : 被 + auteur + verbe.",
+         "translation": "Mon gâteau a été entièrement mangé par mon petit frère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "别＿，医生说没问题。",
+         "choices": [
+          "担心",
+          "奇怪",
+          "发现"
+         ],
+         "answer": "担心",
+         "explanation": "Ne t’inquiète pas : 别担心.",
+         "translation": "Ne t’inquiète pas, le médecin dit que tout va bien."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Mon portable a été cassé par le chat. »",
+         "answer": [
+          "我的",
+          "手机",
+          "被",
+          "猫",
+          "弄坏了。"
+         ],
+         "explanation": "Sujet + 被 + auteur + verbe + résultat."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "昨天我在路上遇到了我的老师。",
+         "translation": "La rencontre était prévue.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "遇到 = rencontrer par hasard."
+        }
+       ]
+      },
+      {
+       "slug": "zh-must",
+       "title": "Il faut, tu devrais, je veux bien : 必须、应该、愿意",
+       "objective": "Exprimer l’obligation, le conseil, l’accord et la décision.",
+       "minutes": 10,
+       "explanation": [
+        "必须 (bìxū) = il faut absolument ; 应该 (yīnggāi) = on devrait ; 需要 (xūyào) = avoir besoin de. La négation de 必须 est 不用 (pas la peine) : 你不用来.",
+        "一定 (yídìng) = sans faute, certainement : 我一定来. 注意 (zhùyì) = faire attention ; 小心 (xiǎoxīn) = attention !, prudent.",
+        "决定 (juédìng) = décider ; 同意 (tóngyì) = être d’accord ; 相信 (xiāngxìn) = croire, faire confiance ; 满意 (mǎnyì) = satisfait ; 愿意 (yuànyì) = vouloir bien ; 要求 (yāoqiú) = exiger, exigence."
+       ],
+       "items": [
+        {
+         "slug": "zh-bixu",
+         "kind": "vocabulary",
+         "front": "必须",
+         "reading": "bìxū",
+         "romaji": null,
+         "meaning": "devoir absolument"
+        },
+        {
+         "slug": "zh-yinggai",
+         "kind": "vocabulary",
+         "front": "应该",
+         "reading": "yīnggāi",
+         "romaji": null,
+         "meaning": "devoir (il faudrait)"
+        },
+        {
+         "slug": "zh-xuyao",
+         "kind": "vocabulary",
+         "front": "需要",
+         "reading": "xūyào",
+         "romaji": null,
+         "meaning": "avoir besoin de"
+        },
+        {
+         "slug": "zh-yiding",
+         "kind": "vocabulary",
+         "front": "一定",
+         "reading": "yídìng",
+         "romaji": null,
+         "meaning": "certainement, sans faute"
+        },
+        {
+         "slug": "zh-zhuyi",
+         "kind": "vocabulary",
+         "front": "注意",
+         "reading": "zhùyì",
+         "romaji": null,
+         "meaning": "faire attention"
+        },
+        {
+         "slug": "zh-xiaoxin",
+         "kind": "vocabulary",
+         "front": "小心",
+         "reading": "xiǎoxīn",
+         "romaji": null,
+         "meaning": "prudent ; attention !"
+        },
+        {
+         "slug": "zh-jueding",
+         "kind": "vocabulary",
+         "front": "决定",
+         "reading": "juédìng",
+         "romaji": null,
+         "meaning": "décider ; décision"
+        },
+        {
+         "slug": "zh-yaoqiu",
+         "kind": "vocabulary",
+         "front": "要求",
+         "reading": "yāoqiú",
+         "romaji": null,
+         "meaning": "exiger ; exigence"
+        },
+        {
+         "slug": "zh-tongyi",
+         "kind": "vocabulary",
+         "front": "同意",
+         "reading": "tóngyì",
+         "romaji": null,
+         "meaning": "être d’accord ; accepter"
+        },
+        {
+         "slug": "zh-xiangxin",
+         "kind": "vocabulary",
+         "front": "相信",
+         "reading": "xiāngxìn",
+         "romaji": null,
+         "meaning": "croire, faire confiance"
+        },
+        {
+         "slug": "zh-manyi",
+         "kind": "vocabulary",
+         "front": "满意",
+         "reading": "mǎnyì",
+         "romaji": null,
+         "meaning": "satisfait"
+        },
+        {
+         "slug": "zh-yuanyi",
+         "kind": "vocabulary",
+         "front": "愿意",
+         "reading": "yuànyì",
+         "romaji": null,
+         "meaning": "vouloir bien"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "明天考试，你今天晚上必须早点儿睡觉。",
+         "reading": "Míngtiān kǎoshì, nǐ jīntiān wǎnshang bìxū zǎo diǎnr shuìjiào.",
+         "fr": "Tu as un examen demain, tu dois absolument te coucher tôt ce soir."
+        },
+        {
+         "jp": "法官决定相信他，大家都同意。",
+         "reading": "Fǎguān juédìng xiāngxìn tā, dàjiā dōu tóngyì.",
+         "fr": "Le juge a décidé de le croire, et tout le monde était d’accord."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "过马路的时候要＿车。",
+         "choices": [
+          "注意",
+          "同意",
+          "满意"
+         ],
+         "answer": "注意",
+         "explanation": "Faire attention à : 注意.",
+         "translation": "En traversant la rue, il faut faire attention aux voitures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你明天＿要来，我等你。",
+         "choices": [
+          "一定",
+          "一样",
+          "一共"
+         ],
+         "answer": "一定",
+         "explanation": "Sans faute : 一定.",
+         "translation": "Viens sans faute demain, je t’attends."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "经理",
+           "jp": "你愿意去北京工作吗？"
+          }
+         ],
+         "translation": "Le directeur te demande si tu veux bien travailler à Pékin (oui, volontiers).",
+         "choices": [
+          "我很愿意。",
+          "我很满意。",
+          "我很小心。"
+         ],
+         "answer": "我很愿意。",
+         "explanation": "Vouloir bien : 愿意."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "老师对他的作业很满意。",
+         "translation": "Le maître n’est pas content de ses devoirs.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "很满意 = très satisfait."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w5-c2",
+     "title": "Le jugement",
+     "lessons": [
+      {
+       "slug": "zh-ruguo",
+       "title": "Si… alors : 如果…就, 其实, 只, 或者",
+       "objective": "Poser une condition, nuancer et proposer une solution.",
+       "minutes": 10,
+       "explanation": [
+        "如果 A（的话），（主语）就 B = si A, alors B : 如果明天下雨，我们就不去了. 就 se place après le sujet de la seconde partie.",
+        "或者 (huòzhě) = ou, dans une affirmation : 星期六或者星期天都可以. Pour une question, on garde 还是. 只 (zhǐ) = seulement : 我只有十块钱.",
+        "其实 (qíshí) = en fait ; 当然 (dāngrán) = bien sûr ; 办法 (bànfǎ) = moyen, solution ; 解决 (jiějué) = résoudre ; 影响 (yǐngxiǎng) = influencer ; 根据 (gēnjù) = d’après."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-ruguo-jiu",
+         "kind": "grammar",
+         "front": "如果…（的话），就…",
+         "reading": "rúguǒ… (dehuà), jiù…",
+         "romaji": null,
+         "meaning": "si…, alors…"
+        },
+        {
+         "slug": "zh-ruguo",
+         "kind": "vocabulary",
+         "front": "如果",
+         "reading": "rúguǒ",
+         "romaji": null,
+         "meaning": "si"
+        },
+        {
+         "slug": "zh-huozhe",
+         "kind": "vocabulary",
+         "front": "或者",
+         "reading": "huòzhě",
+         "romaji": null,
+         "meaning": "ou (affirmation)"
+        },
+        {
+         "slug": "zh-zhi-only",
+         "kind": "vocabulary",
+         "front": "只",
+         "reading": "zhǐ",
+         "romaji": null,
+         "meaning": "seulement"
+        },
+        {
+         "slug": "zh-qishi",
+         "kind": "vocabulary",
+         "front": "其实",
+         "reading": "qíshí",
+         "romaji": null,
+         "meaning": "en fait"
+        },
+        {
+         "slug": "zh-dangran",
+         "kind": "vocabulary",
+         "front": "当然",
+         "reading": "dāngrán",
+         "romaji": null,
+         "meaning": "bien sûr"
+        },
+        {
+         "slug": "zh-banfa",
+         "kind": "vocabulary",
+         "front": "办法",
+         "reading": "bànfǎ",
+         "romaji": null,
+         "meaning": "moyen, solution"
+        },
+        {
+         "slug": "zh-jiejue",
+         "kind": "vocabulary",
+         "front": "解决",
+         "reading": "jiějué",
+         "romaji": null,
+         "meaning": "résoudre"
+        },
+        {
+         "slug": "zh-yingxiang",
+         "kind": "vocabulary",
+         "front": "影响",
+         "reading": "yǐngxiǎng",
+         "romaji": null,
+         "meaning": "influencer ; influence"
+        },
+        {
+         "slug": "zh-guanxi",
+         "kind": "vocabulary",
+         "front": "关系",
+         "reading": "guānxi",
+         "romaji": null,
+         "meaning": "relation, rapport"
+        },
+        {
+         "slug": "zh-genju",
+         "kind": "vocabulary",
+         "front": "根据",
+         "reading": "gēnjù",
+         "romaji": null,
+         "meaning": "d’après, selon"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "如果你有问题，就来办公室找我。",
+         "reading": "Rúguǒ nǐ yǒu wèntí, jiù lái bàngōngshì zhǎo wǒ.",
+         "fr": "Si tu as une question, viens me voir au bureau."
+        },
+        {
+         "jp": "其实这个问题很简单，只有一个办法。",
+         "reading": "Qíshí zhè ge wèntí hěn jiǎndān, zhǐ yǒu yí ge bànfǎ.",
+         "fr": "En fait, ce problème est simple : il n’y a qu’une solution."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "如果你累了，＿休息一下吧。",
+         "choices": [
+          "就",
+          "才",
+          "还"
+         ],
+         "answer": "就",
+         "explanation": "如果…就….",
+         "translation": "Si tu es fatigué, repose-toi un peu."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你可以坐地铁＿坐出租车。",
+         "choices": [
+          "或者",
+          "还是",
+          "但是"
+         ],
+         "answer": "或者",
+         "explanation": "« Ou » dans une affirmation : 或者.",
+         "translation": "Tu peux prendre le métro ou un taxi."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "你能帮我吗？"
+          }
+         ],
+         "translation": "Un ami te demande de l’aide (bien sûr).",
+         "choices": [
+          "当然可以！",
+          "其实不是。",
+          "只有一个。"
+         ],
+         "answer": "当然可以！",
+         "explanation": "Bien sûr : 当然."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "下雨对比赛没有影响。",
+         "translation": "La pluie gêne le match.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "没有影响 = aucune influence."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w6",
+   "title": "La route du Sud",
+   "region": "Côtes de Qi",
+   "description": "Métro, bateau, vélo et passeport ; s’orienter en ville (东西南北, 附近, 中间) ; dire quand (一…就, 才) et combien de fois (经常, 总是, 一般).",
+   "boss": {
+    "name": "Le Hou dévoreur de dragons",
+    "glyph": "犼",
+    "intro": "Le Hou, bête au poil de flamme qui dévore les dragons, a pris position au carrefour des routes du Sud. Pour passer, indique-lui chaque direction et chaque horaire sans te tromper."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w6-c1",
+     "title": "Le départ",
+     "lessons": [
+      {
+       "slug": "zh-hz-travel",
+       "title": "Les caractères du voyage : 船 骑 城 市 街 图 北 南",
+       "objective": "Reconnaître les caractères du voyage et de la ville.",
+       "minutes": 5,
+       "explanation": [
+        "船 (chuán, bateau) porte la clé du bateau 舟 ; 骑 (qí, monter) celle du cheval 马 : on monte un cheval avant de monter un vélo.",
+        "城 (chéng) est un rempart de terre 土 : 城市 = la ville fortifiée et son marché 市. 北 (běi) montre deux hommes dos à dos : le nord est le côté où l’on tourne le dos au soleil."
+       ],
+       "items": [
+        {
+         "slug": "hz-chuan",
+         "kind": "kanji",
+         "front": "船",
+         "reading": "chuán",
+         "romaji": null,
+         "meaning": "bateau",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-qi-ride",
+         "kind": "kanji",
+         "front": "骑",
+         "reading": "qí",
+         "romaji": null,
+         "meaning": "monter (à vélo, à cheval)",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-cheng",
+         "kind": "kanji",
+         "front": "城",
+         "reading": "chéng",
+         "romaji": null,
+         "meaning": "ville, remparts",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-shi-market",
+         "kind": "kanji",
+         "front": "市",
+         "reading": "shì",
+         "romaji": null,
+         "meaning": "marché, ville",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-jie-street",
+         "kind": "kanji",
+         "front": "街",
+         "reading": "jiē",
+         "romaji": null,
+         "meaning": "rue",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 12
+         }
+        },
+        {
+         "slug": "hz-tu",
+         "kind": "kanji",
+         "front": "图",
+         "reading": "tú",
+         "romaji": null,
+         "meaning": "dessin, plan",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-bei-north",
+         "kind": "kanji",
+         "front": "北",
+         "reading": "běi",
+         "romaji": null,
+         "meaning": "nord",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-nan-south",
+         "kind": "kanji",
+         "front": "南",
+         "reading": "nán",
+         "romaji": null,
+         "meaning": "sud",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-transport",
+       "title": "Métro, bateau, vélo : voyager et 一…就",
+       "objective": "Choisir son moyen de transport et enchaîner deux actions.",
+       "minutes": 10,
+       "explanation": [
+        "坐 se dit pour ce où l’on s’assoit : 坐地铁 (métro), 坐船 (bateau) ; 骑 (qí) pour ce qu’on enfourche : 骑自行车 (vélo), 骑马 (cheval).",
+        "一 A 就 B = dès que A, B : 我一到北京就给你打电话 (dès que j’arrive à Pékin, je t’appelle).",
+        "Au départ : 护照 (passeport), 行李箱 (valise), 起飞 (décoller), 司机 (chauffeur), 站 (arrêt, station), 迟到 (être en retard)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-yi-jiu",
+         "kind": "grammar",
+         "front": "一…就…",
+         "reading": "yī… jiù…",
+         "romaji": null,
+         "meaning": "dès que…"
+        },
+        {
+         "slug": "zh-ditie",
+         "kind": "vocabulary",
+         "front": "地铁",
+         "reading": "dìtiě",
+         "romaji": null,
+         "meaning": "métro"
+        },
+        {
+         "slug": "zh-chuan-h3",
+         "kind": "vocabulary",
+         "front": "船",
+         "reading": "chuán",
+         "romaji": null,
+         "meaning": "bateau"
+        },
+        {
+         "slug": "zh-qi-h3",
+         "kind": "vocabulary",
+         "front": "骑",
+         "reading": "qí",
+         "romaji": null,
+         "meaning": "monter (à vélo, à cheval)"
+        },
+        {
+         "slug": "zh-zixingche",
+         "kind": "vocabulary",
+         "front": "自行车",
+         "reading": "zìxíngchē",
+         "romaji": null,
+         "meaning": "vélo"
+        },
+        {
+         "slug": "zh-siji",
+         "kind": "vocabulary",
+         "front": "司机",
+         "reading": "sījī",
+         "romaji": null,
+         "meaning": "chauffeur"
+        },
+        {
+         "slug": "zh-huzhao",
+         "kind": "vocabulary",
+         "front": "护照",
+         "reading": "hùzhào",
+         "romaji": null,
+         "meaning": "passeport"
+        },
+        {
+         "slug": "zh-xinglixiang",
+         "kind": "vocabulary",
+         "front": "行李箱",
+         "reading": "xínglixiāng",
+         "romaji": null,
+         "meaning": "valise"
+        },
+        {
+         "slug": "zh-qifei",
+         "kind": "vocabulary",
+         "front": "起飞",
+         "reading": "qǐfēi",
+         "romaji": null,
+         "meaning": "décoller"
+        },
+        {
+         "slug": "zh-chidao",
+         "kind": "vocabulary",
+         "front": "迟到",
+         "reading": "chídào",
+         "romaji": null,
+         "meaning": "être en retard"
+        },
+        {
+         "slug": "zh-zhan",
+         "kind": "vocabulary",
+         "front": "站",
+         "reading": "zhàn",
+         "romaji": null,
+         "meaning": "station, arrêt ; se tenir debout"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "飞机一起飞，他就睡着了。",
+         "reading": "Fēijī yì qǐfēi, tā jiù shuìzháo le.",
+         "fr": "Dès que l’avion a décollé, il s’est endormi."
+        },
+        {
+         "jp": "我每天骑自行车去地铁站。",
+         "reading": "Wǒ měi tiān qí zìxíngchē qù dìtiězhàn.",
+         "fr": "Chaque jour, je vais à la station de métro à vélo."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他每天＿自行车上班。",
+         "choices": [
+          "骑",
+          "坐",
+          "开"
+         ],
+         "answer": "骑",
+         "explanation": "Un vélo s’enfourche : 骑.",
+         "translation": "Il va au travail à vélo tous les jours."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我一下课＿去图书馆。",
+         "choices": [
+          "就",
+          "才",
+          "再"
+         ],
+         "answer": "就",
+         "explanation": "一…就… = dès que.",
+         "translation": "Dès la fin du cours, je vais à la bibliothèque."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "机场工作人员",
+           "jp": "请给我看一下您的护照。"
+          }
+         ],
+         "translation": "Au contrôle, on te demande ton passeport.",
+         "choices": [
+          "好的，给您。",
+          "我迟到了。",
+          "飞机起飞了。"
+         ],
+         "answer": "好的，给您。",
+         "explanation": "Tendre quelque chose : 给您."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "快点儿，我们要迟到了！",
+         "translation": "Ils ont tout leur temps.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "要迟到了 = être sur le point d’être en retard."
+        }
+       ]
+      },
+      {
+       "slug": "zh-city",
+       "title": "Nord, sud, à côté, au milieu : s’orienter en ville",
+       "objective": "Situer un lieu et dire par où l’on passe.",
+       "minutes": 9,
+       "explanation": [
+        "Les points cardinaux : 东 (est), 西 (ouest), 南 (sud), 北 (nord). On dit 东边 (côté est), 北方 (le nord du pays) ; 东南 = sud-est (l’est d’abord !).",
+        "附近 (fùjìn) = à proximité ; 中间 (zhōngjiān) = au milieu, entre : 银行和超市中间. 向 (xiàng) + direction = vers : 向东走.",
+        "经过 (jīngguò) = passer par ; 离开 (líkāi) = quitter ; 地图 (dìtú) = carte, plan ; 街道 (jiēdào) = rue."
+       ],
+       "items": [
+        {
+         "slug": "zh-dong-east",
+         "kind": "vocabulary",
+         "front": "东",
+         "reading": "dōng",
+         "romaji": null,
+         "meaning": "est"
+        },
+        {
+         "slug": "zh-xi-west",
+         "kind": "vocabulary",
+         "front": "西",
+         "reading": "xī",
+         "romaji": null,
+         "meaning": "ouest"
+        },
+        {
+         "slug": "zh-nan-south",
+         "kind": "vocabulary",
+         "front": "南",
+         "reading": "nán",
+         "romaji": null,
+         "meaning": "sud"
+        },
+        {
+         "slug": "zh-beifang",
+         "kind": "vocabulary",
+         "front": "北方",
+         "reading": "běifāng",
+         "romaji": null,
+         "meaning": "le nord (région)"
+        },
+        {
+         "slug": "zh-xiang-towards",
+         "kind": "vocabulary",
+         "front": "向",
+         "reading": "xiàng",
+         "romaji": null,
+         "meaning": "vers, en direction de"
+        },
+        {
+         "slug": "zh-fujin",
+         "kind": "vocabulary",
+         "front": "附近",
+         "reading": "fùjìn",
+         "romaji": null,
+         "meaning": "à proximité"
+        },
+        {
+         "slug": "zh-zhongjian",
+         "kind": "vocabulary",
+         "front": "中间",
+         "reading": "zhōngjiān",
+         "romaji": null,
+         "meaning": "au milieu, entre"
+        },
+        {
+         "slug": "zh-chengshi",
+         "kind": "vocabulary",
+         "front": "城市",
+         "reading": "chéngshì",
+         "romaji": null,
+         "meaning": "ville"
+        },
+        {
+         "slug": "zh-jiedao",
+         "kind": "vocabulary",
+         "front": "街道",
+         "reading": "jiēdào",
+         "romaji": null,
+         "meaning": "rue"
+        },
+        {
+         "slug": "zh-ditu",
+         "kind": "vocabulary",
+         "front": "地图",
+         "reading": "dìtú",
+         "romaji": null,
+         "meaning": "carte, plan"
+        },
+        {
+         "slug": "zh-difang",
+         "kind": "vocabulary",
+         "front": "地方",
+         "reading": "dìfang",
+         "romaji": null,
+         "meaning": "endroit, lieu"
+        },
+        {
+         "slug": "zh-yinhang",
+         "kind": "vocabulary",
+         "front": "银行",
+         "reading": "yínháng",
+         "romaji": null,
+         "meaning": "banque"
+        },
+        {
+         "slug": "zh-jingguo",
+         "kind": "vocabulary",
+         "front": "经过",
+         "reading": "jīngguò",
+         "romaji": null,
+         "meaning": "passer par"
+        },
+        {
+         "slug": "zh-likai",
+         "kind": "vocabulary",
+         "front": "离开",
+         "reading": "líkāi",
+         "romaji": null,
+         "meaning": "partir, quitter"
+        },
+        {
+         "slug": "zh-guojia",
+         "kind": "vocabulary",
+         "front": "国家",
+         "reading": "guójiā",
+         "romaji": null,
+         "meaning": "pays"
+        },
+        {
+         "slug": "zh-shijie",
+         "kind": "vocabulary",
+         "front": "世界",
+         "reading": "shìjiè",
+         "romaji": null,
+         "meaning": "monde"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我家附近有一个银行，在超市和公园中间。",
+         "reading": "Wǒ jiā fùjìn yǒu yí ge yínháng, zài chāoshì hé gōngyuán zhōngjiān.",
+         "fr": "Près de chez moi, il y a une banque, entre le supermarché et le parc."
+        },
+        {
+         "jp": "一直向南走，经过两条街道就到了。",
+         "reading": "Yìzhí xiàng nán zǒu, jīngguò liǎng tiáo jiēdào jiù dào le.",
+         "fr": "Va tout droit vers le sud : deux rues plus loin, tu y es."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你看看＿，我们现在在哪儿？",
+         "choices": [
+          "地图",
+          "地方",
+          "城市"
+         ],
+         "answer": "地图",
+         "explanation": "Pour s’orienter : 地图.",
+         "translation": "Regarde le plan : où sommes-nous maintenant ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这个＿太漂亮了，我不想离开。",
+         "choices": [
+          "地方",
+          "中间",
+          "附近"
+         ],
+         "answer": "地方",
+         "explanation": "Un endroit : 地方.",
+         "translation": "Cet endroit est si beau que je ne veux pas partir."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Il y a un hôtel près de la gare. »",
+         "answer": [
+          "火车站",
+          "附近",
+          "有",
+          "一个",
+          "宾馆。"
+         ],
+         "explanation": "Lieu + 有 + chose."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "中国是世界上人最多的国家之一。",
+         "translation": "La Chine est l’un des pays les plus peuplés.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "人最多的国家之一 = l’un des pays les plus peuplés."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w6-c2",
+     "title": "Les horaires des relais",
+     "lessons": [
+      {
+       "slug": "zh-cai",
+       "title": "Tôt ou tard : 就 et 才 ; souvent, toujours, en général",
+       "objective": "Dire si quelque chose arrive tôt ou tard, et à quelle fréquence.",
+       "minutes": 10,
+       "explanation": [
+        "就 = déjà, tôt, facilement : 他七点就来了 (il était là dès sept heures). 才 = seulement alors, tard, difficilement : 他十点才来 (il n’est arrivé qu’à dix heures). Avec 才, pas de 了.",
+        "Fréquence : 经常 (souvent), 总是 (toujours), 一般 (en général), 几乎 (presque). 久 (jiǔ) = longtemps : 好久不见 !",
+        "L’heure : 半 (demi), 刻 (quart), 差 (moins) : 八点一刻 (8 h 15), 差五分九点 (9 h moins 5). 周末 = week-end ; 打算 = avoir l’intention de."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-cai-jiu",
+         "kind": "grammar",
+         "front": "时间 + 就…了 / 才…",
+         "reading": "jiù / cái",
+         "romaji": null,
+         "meaning": "tôt (就) ou tard (才)"
+        },
+        {
+         "slug": "zh-cai-h3",
+         "kind": "vocabulary",
+         "front": "才",
+         "reading": "cái",
+         "romaji": null,
+         "meaning": "seulement alors, pas avant"
+        },
+        {
+         "slug": "zh-jingchang",
+         "kind": "vocabulary",
+         "front": "经常",
+         "reading": "jīngcháng",
+         "romaji": null,
+         "meaning": "souvent"
+        },
+        {
+         "slug": "zh-zongshi",
+         "kind": "vocabulary",
+         "front": "总是",
+         "reading": "zǒngshì",
+         "romaji": null,
+         "meaning": "toujours"
+        },
+        {
+         "slug": "zh-yiban",
+         "kind": "vocabulary",
+         "front": "一般",
+         "reading": "yìbān",
+         "romaji": null,
+         "meaning": "en général ; ordinaire"
+        },
+        {
+         "slug": "zh-jihu",
+         "kind": "vocabulary",
+         "front": "几乎",
+         "reading": "jīhū",
+         "romaji": null,
+         "meaning": "presque"
+        },
+        {
+         "slug": "zh-jiu-long",
+         "kind": "vocabulary",
+         "front": "久",
+         "reading": "jiǔ",
+         "romaji": null,
+         "meaning": "longtemps"
+        },
+        {
+         "slug": "zh-ban-half",
+         "kind": "vocabulary",
+         "front": "半",
+         "reading": "bàn",
+         "romaji": null,
+         "meaning": "la moitié"
+        },
+        {
+         "slug": "zh-ke-quarter",
+         "kind": "vocabulary",
+         "front": "刻",
+         "reading": "kè",
+         "romaji": null,
+         "meaning": "quart d’heure"
+        },
+        {
+         "slug": "zh-cha-h3",
+         "kind": "vocabulary",
+         "front": "差",
+         "reading": "chà",
+         "romaji": null,
+         "meaning": "manquer ; moins (heure) ; mauvais"
+        },
+        {
+         "slug": "zh-zhoumo",
+         "kind": "vocabulary",
+         "front": "周末",
+         "reading": "zhōumò",
+         "romaji": null,
+         "meaning": "week-end"
+        },
+        {
+         "slug": "zh-dasuan",
+         "kind": "vocabulary",
+         "front": "打算",
+         "reading": "dǎsuàn",
+         "romaji": null,
+         "meaning": "avoir l’intention de"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "火车八点半开，他八点就到车站了。",
+         "reading": "Huǒchē bā diǎn bàn kāi, tā bā diǎn jiù dào chēzhàn le.",
+         "fr": "Le train partait à huit heures et demie ; il était à la gare dès huit heures."
+        },
+        {
+         "jp": "我周末一般在家休息，几乎不出门。",
+         "reading": "Wǒ zhōumò yìbān zài jiā xiūxi, jīhū bù chūmén.",
+         "fr": "Le week-end, je me repose en général chez moi, je ne sors presque pas."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "会议九点开始，他十点＿来。",
+         "choices": [
+          "才",
+          "就",
+          "再"
+         ],
+         "answer": "才",
+         "explanation": "En retard : 才 (sans 了).",
+         "translation": "La réunion commençait à neuf heures ; il n’est arrivé qu’à dix heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他＿迟到，老师很生气。",
+         "choices": [
+          "总是",
+          "一共",
+          "刚才"
+         ],
+         "answer": "总是",
+         "explanation": "Toujours : 总是.",
+         "translation": "Il est toujours en retard, le maître est fâché."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "同事",
+           "jp": "周末你打算做什么？"
+          }
+         ],
+         "translation": "Un collègue te demande tes projets du week-end (aller nager).",
+         "choices": [
+          "我打算去游泳。",
+          "我经常迟到。",
+          "现在差五分九点。"
+         ],
+         "answer": "我打算去游泳。",
+         "explanation": "Projet : 打算 + verbe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "现在八点一刻。",
+         "translation": "Il est huit heures et quart.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "一刻 = un quart d’heure."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w7",
+   "title": "Le sanctuaire de Bian Que",
+   "region": "Côtes de Qi",
+   "description": "Le corps, la fièvre et le rhume, garder la santé (极了) ; l’apparence, les vêtements et les classificateurs (双, 条, 种, 辆) ; s’exclamer avec 多么.",
+   "boss": {
+    "name": "Le dragon ailé Yinglong",
+    "glyph": "应",
+    "intro": "Yinglong, le dragon ailé des pluies, a déchaîné l’orage sur le sanctuaire du médecin Bian Que : les pèlerins tombent malades. Dis où ils ont mal et aide-les à se rétablir."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w7-c1",
+     "title": "Le médecin Bian Que",
+     "lessons": [
+      {
+       "slug": "zh-hz-body",
+       "title": "Les caractères du corps : 头 脸 脚 腿 疼 健 康 鞋",
+       "objective": "Reconnaître les caractères du corps et de la santé.",
+       "minutes": 5,
+       "explanation": [
+        "脸 (liǎn, visage), 脚 (jiǎo, pied) et 腿 (tuǐ, jambe) portent la clé de la chair 月 : sous cette forme, ce n’est pas la lune mais 肉, la viande.",
+        "疼 (téng, avoir mal) porte la clé de la maladie 疒 au-dessus de 冬 (l’hiver) : une douleur qui gèle. 鞋 (xié, chaussure) porte celle du cuir 革."
+       ],
+       "items": [
+        {
+         "slug": "hz-tou",
+         "kind": "kanji",
+         "front": "头",
+         "reading": "tóu",
+         "romaji": null,
+         "meaning": "tête",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-lian-face",
+         "kind": "kanji",
+         "front": "脸",
+         "reading": "liǎn",
+         "romaji": null,
+         "meaning": "visage",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-jiao-foot",
+         "kind": "kanji",
+         "front": "脚",
+         "reading": "jiǎo",
+         "romaji": null,
+         "meaning": "pied",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-tui",
+         "kind": "kanji",
+         "front": "腿",
+         "reading": "tuǐ",
+         "romaji": null,
+         "meaning": "jambe",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 13
+         }
+        },
+        {
+         "slug": "hz-teng",
+         "kind": "kanji",
+         "front": "疼",
+         "reading": "téng",
+         "romaji": null,
+         "meaning": "faire mal",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-jian-h3",
+         "kind": "kanji",
+         "front": "健",
+         "reading": "jiàn",
+         "romaji": null,
+         "meaning": "vigoureux",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 10
+         }
+        },
+        {
+         "slug": "hz-kang",
+         "kind": "kanji",
+         "front": "康",
+         "reading": "kāng",
+         "romaji": null,
+         "meaning": "en paix, sain",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 11
+         }
+        },
+        {
+         "slug": "hz-xie-h3",
+         "kind": "kanji",
+         "front": "鞋",
+         "reading": "xié",
+         "romaji": null,
+         "meaning": "chaussure",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 15
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-body",
+       "title": "J’ai mal à la tête : le corps et la santé",
+       "objective": "Dire où l’on a mal et parler de sa santé.",
+       "minutes": 10,
+       "explanation": [
+        "Le corps : 头 (tête) et 头发 (cheveux), 脸 (visage), 鼻子 (nez), 耳朵 (oreille), 腿 (jambe), 脚 (pied). Partie du corps + 疼 = avoir mal à : 我头疼.",
+        "发烧 (fāshāo) = avoir de la fièvre ; 感冒 (gǎnmào) = rhume, s’enrhumer. 健康 (jiànkāng) = en bonne santé ; 锻炼 (duànliàn) = faire de l’exercice ; 舒服 (shūfu) = se sentir bien.",
+        "Adjectif + 极了 = extrêmement : 好极了 (excellent !), 累极了 (épuisé)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-jile",
+         "kind": "grammar",
+         "front": "形容词 + 极了",
+         "reading": "jí le",
+         "romaji": null,
+         "meaning": "extrêmement"
+        },
+        {
+         "slug": "zh-tou",
+         "kind": "vocabulary",
+         "front": "头",
+         "reading": "tóu",
+         "romaji": null,
+         "meaning": "tête"
+        },
+        {
+         "slug": "zh-toufa",
+         "kind": "vocabulary",
+         "front": "头发",
+         "reading": "tóufa",
+         "romaji": null,
+         "meaning": "cheveux"
+        },
+        {
+         "slug": "zh-lian",
+         "kind": "vocabulary",
+         "front": "脸",
+         "reading": "liǎn",
+         "romaji": null,
+         "meaning": "visage"
+        },
+        {
+         "slug": "zh-bizi",
+         "kind": "vocabulary",
+         "front": "鼻子",
+         "reading": "bízi",
+         "romaji": null,
+         "meaning": "nez"
+        },
+        {
+         "slug": "zh-erduo",
+         "kind": "vocabulary",
+         "front": "耳朵",
+         "reading": "ěrduo",
+         "romaji": null,
+         "meaning": "oreille"
+        },
+        {
+         "slug": "zh-tui",
+         "kind": "vocabulary",
+         "front": "腿",
+         "reading": "tuǐ",
+         "romaji": null,
+         "meaning": "jambe"
+        },
+        {
+         "slug": "zh-jiao-foot",
+         "kind": "vocabulary",
+         "front": "脚",
+         "reading": "jiǎo",
+         "romaji": null,
+         "meaning": "pied"
+        },
+        {
+         "slug": "zh-teng",
+         "kind": "vocabulary",
+         "front": "疼",
+         "reading": "téng",
+         "romaji": null,
+         "meaning": "faire mal"
+        },
+        {
+         "slug": "zh-fashao",
+         "kind": "vocabulary",
+         "front": "发烧",
+         "reading": "fāshāo",
+         "romaji": null,
+         "meaning": "avoir de la fièvre"
+        },
+        {
+         "slug": "zh-ganmao",
+         "kind": "vocabulary",
+         "front": "感冒",
+         "reading": "gǎnmào",
+         "romaji": null,
+         "meaning": "rhume ; s’enrhumer"
+        },
+        {
+         "slug": "zh-jiankang",
+         "kind": "vocabulary",
+         "front": "健康",
+         "reading": "jiànkāng",
+         "romaji": null,
+         "meaning": "en bonne santé ; santé"
+        },
+        {
+         "slug": "zh-duanlian",
+         "kind": "vocabulary",
+         "front": "锻炼",
+         "reading": "duànliàn",
+         "romaji": null,
+         "meaning": "faire du sport"
+        },
+        {
+         "slug": "zh-shufu",
+         "kind": "vocabulary",
+         "front": "舒服",
+         "reading": "shūfu",
+         "romaji": null,
+         "meaning": "à l’aise, bien"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我感冒了，头疼，还有点儿发烧。",
+         "reading": "Wǒ gǎnmào le, tóu téng, hái yǒudiǎnr fāshāo.",
+         "fr": "J’ai attrapé un rhume : j’ai mal à la tête et un peu de fièvre."
+        },
+        {
+         "jp": "爷爷每天早上锻炼，身体健康极了。",
+         "reading": "Yéye měi tiān zǎoshang duànliàn, shēntǐ jiànkāng jí le.",
+         "fr": "Grand-père fait de l’exercice tous les matins, il est en pleine forme."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我走了三个小时，脚＿极了。",
+         "choices": [
+          "疼",
+          "舒服",
+          "健康"
+         ],
+         "answer": "疼",
+         "explanation": "Avoir mal : 疼.",
+         "translation": "J’ai marché trois heures, j’ai terriblement mal aux pieds."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "你脸很红，是不是＿了？",
+         "choices": [
+          "发烧",
+          "锻炼",
+          "洗澡"
+         ],
+         "answer": "发烧",
+         "explanation": "Un visage rouge : la fièvre, 发烧.",
+         "translation": "Tu as le visage tout rouge, tu as de la fièvre ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "医生",
+           "jp": "你哪儿不舒服？"
+          }
+         ],
+         "translation": "Le médecin te demande ce qui ne va pas (tu as mal à la gorge… ici, à l’oreille).",
+         "choices": [
+          "我耳朵疼。",
+          "我很健康。",
+          "我的头发很长。"
+         ],
+         "answer": "我耳朵疼。",
+         "explanation": "Partie du corps + 疼."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "他身体很健康，很少生病。",
+         "translation": "Il est souvent malade.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "很少生病 = rarement malade."
+        }
+       ]
+      },
+      {
+       "slug": "zh-looks",
+       "title": "Grand, mince, en chemise : décrire quelqu’un",
+       "objective": "Décrire l’apparence et les vêtements d’une personne.",
+       "minutes": 10,
+       "explanation": [
+        "个子 (gèzi) = la taille : 他个子很高. 矮 (ǎi) = petit de taille, 胖 (pàng) = gros, 瘦 (shòu) = mince, 可爱 (kě’ài) = mignon.",
+        "Les vêtements : 衬衫 (chemise), 裤子 (pantalon), 裙子 (jupe), 帽子 (chapeau), 皮鞋 (chaussures de cuir), 眼镜 (lunettes). On les compte avec 件 (haut), 条 (pantalon, jupe), 双 (paire), 顶 (chapeau).",
+        "比较 (bǐjiào) + adjectif = assez, plutôt : 这条裙子比较贵. 试 (shì) = essayer : 我可以试一下吗？"
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-bijiao",
+         "kind": "grammar",
+         "front": "比较 + 形容词",
+         "reading": "bǐjiào",
+         "romaji": null,
+         "meaning": "plutôt, assez"
+        },
+        {
+         "slug": "zh-gezi",
+         "kind": "vocabulary",
+         "front": "个子",
+         "reading": "gèzi",
+         "romaji": null,
+         "meaning": "taille (d’une personne)"
+        },
+        {
+         "slug": "zh-ai-h3",
+         "kind": "vocabulary",
+         "front": "矮",
+         "reading": "ǎi",
+         "romaji": null,
+         "meaning": "petit (de taille)"
+        },
+        {
+         "slug": "zh-pang",
+         "kind": "vocabulary",
+         "front": "胖",
+         "reading": "pàng",
+         "romaji": null,
+         "meaning": "gros"
+        },
+        {
+         "slug": "zh-shou",
+         "kind": "vocabulary",
+         "front": "瘦",
+         "reading": "shòu",
+         "romaji": null,
+         "meaning": "mince, maigre"
+        },
+        {
+         "slug": "zh-keai",
+         "kind": "vocabulary",
+         "front": "可爱",
+         "reading": "kě’ài",
+         "romaji": null,
+         "meaning": "mignon"
+        },
+        {
+         "slug": "zh-chenshan",
+         "kind": "vocabulary",
+         "front": "衬衫",
+         "reading": "chènshān",
+         "romaji": null,
+         "meaning": "chemise"
+        },
+        {
+         "slug": "zh-kuzi",
+         "kind": "vocabulary",
+         "front": "裤子",
+         "reading": "kùzi",
+         "romaji": null,
+         "meaning": "pantalon"
+        },
+        {
+         "slug": "zh-qunzi",
+         "kind": "vocabulary",
+         "front": "裙子",
+         "reading": "qúnzi",
+         "romaji": null,
+         "meaning": "jupe"
+        },
+        {
+         "slug": "zh-maozi",
+         "kind": "vocabulary",
+         "front": "帽子",
+         "reading": "màozi",
+         "romaji": null,
+         "meaning": "chapeau"
+        },
+        {
+         "slug": "zh-pixie",
+         "kind": "vocabulary",
+         "front": "皮鞋",
+         "reading": "píxié",
+         "romaji": null,
+         "meaning": "chaussures en cuir"
+        },
+        {
+         "slug": "zh-yanjing-glasses",
+         "kind": "vocabulary",
+         "front": "眼镜",
+         "reading": "yǎnjìng",
+         "romaji": null,
+         "meaning": "lunettes"
+        },
+        {
+         "slug": "zh-bijiao",
+         "kind": "vocabulary",
+         "front": "比较",
+         "reading": "bǐjiào",
+         "romaji": null,
+         "meaning": "plutôt ; comparer"
+        },
+        {
+         "slug": "zh-shi-try",
+         "kind": "vocabulary",
+         "front": "试",
+         "reading": "shì",
+         "romaji": null,
+         "meaning": "essayer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我哥哥个子很高，比较瘦，戴着眼镜。",
+         "reading": "Wǒ gēge gèzi hěn gāo, bǐjiào shòu, dàizhe yǎnjìng.",
+         "fr": "Mon grand frère est grand, plutôt mince, et porte des lunettes."
+        },
+        {
+         "jp": "这条裙子很漂亮，我可以试一下吗？",
+         "reading": "Zhè tiáo qúnzi hěn piàoliang, wǒ kěyǐ shì yíxià ma?",
+         "fr": "Cette jupe est très jolie, je peux l’essayer ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我想买一＿皮鞋。",
+         "choices": [
+          "双",
+          "条",
+          "件"
+         ],
+         "answer": "双",
+         "explanation": "Une paire : 双.",
+         "translation": "Je voudrais acheter une paire de chaussures en cuir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这＿裤子太长了。",
+         "choices": [
+          "条",
+          "件",
+          "双"
+         ],
+         "answer": "条",
+         "explanation": "Un pantalon : 一条裤子.",
+         "translation": "Ce pantalon est trop long."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "服务员",
+           "jp": "这件衬衫怎么样？"
+          }
+         ],
+         "translation": "La vendeuse te demande ton avis sur la chemise (tu veux l’essayer).",
+         "choices": [
+          "不错，我可以试试吗？",
+          "我个子很矮。",
+          "他很可爱。"
+         ],
+         "answer": "不错，我可以试试吗？",
+         "explanation": "Essayer : 试试."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "她又高又瘦。",
+         "translation": "Elle est petite et ronde.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "又高又瘦 = grande et mince."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w7-c2",
+     "title": "Les offrandes des pèlerins",
+     "lessons": [
+      {
+       "slug": "zh-things",
+       "title": "Parapluie, appareil photo, couleurs : 多么 et les classificateurs",
+       "objective": "Compter les objets et s’exclamer devant un spectacle.",
+       "minutes": 9,
+       "explanation": [
+        "Classificateurs : 种 (sorte), 辆 (véhicule), 位 (personne, poli), 段 (passage, période), 条 (chose longue : route, rivière, poisson), 米 (mètre).",
+        "多么 + adjectif + 啊 ! = comme c’est… ! : 这儿的花多么漂亮啊 ! 啊 en fin de phrase adoucit ou renforce une exclamation.",
+        "Les objets du pèlerin : 伞 (parapluie), 包 (sac), 照相机 (appareil photo), 照片 (photo), 画 (peindre, tableau). Couleurs : 蓝 (bleu), 绿 (vert)."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-duome",
+         "kind": "grammar",
+         "front": "多么 + 形容词 + 啊！",
+         "reading": "duōme… a",
+         "romaji": null,
+         "meaning": "comme c’est… ! (exclamation)"
+        },
+        {
+         "slug": "zh-zhong-kind",
+         "kind": "vocabulary",
+         "front": "种",
+         "reading": "zhǒng",
+         "romaji": null,
+         "meaning": "sorte, espèce"
+        },
+        {
+         "slug": "zh-liang-mw",
+         "kind": "vocabulary",
+         "front": "辆",
+         "reading": "liàng",
+         "romaji": null,
+         "meaning": "classificateur des véhicules"
+        },
+        {
+         "slug": "zh-wei-mw",
+         "kind": "vocabulary",
+         "front": "位",
+         "reading": "wèi",
+         "romaji": null,
+         "meaning": "classificateur poli des personnes"
+        },
+        {
+         "slug": "zh-duan",
+         "kind": "vocabulary",
+         "front": "段",
+         "reading": "duàn",
+         "romaji": null,
+         "meaning": "passage, période"
+        },
+        {
+         "slug": "zh-tiao",
+         "kind": "vocabulary",
+         "front": "条",
+         "reading": "tiáo",
+         "romaji": null,
+         "meaning": "classificateur des choses longues"
+        },
+        {
+         "slug": "zh-shuang",
+         "kind": "vocabulary",
+         "front": "双",
+         "reading": "shuāng",
+         "romaji": null,
+         "meaning": "paire"
+        },
+        {
+         "slug": "zh-mi-metre",
+         "kind": "vocabulary",
+         "front": "米",
+         "reading": "mǐ",
+         "romaji": null,
+         "meaning": "mètre ; riz"
+        },
+        {
+         "slug": "zh-duome",
+         "kind": "vocabulary",
+         "front": "多么",
+         "reading": "duōme",
+         "romaji": null,
+         "meaning": "comme, combien (exclamation)"
+        },
+        {
+         "slug": "zh-a",
+         "kind": "vocabulary",
+         "front": "啊",
+         "reading": "a",
+         "romaji": null,
+         "meaning": "(particule d’exclamation)"
+        },
+        {
+         "slug": "zh-san-h3",
+         "kind": "vocabulary",
+         "front": "伞",
+         "reading": "sǎn",
+         "romaji": null,
+         "meaning": "parapluie"
+        },
+        {
+         "slug": "zh-bao-bag",
+         "kind": "vocabulary",
+         "front": "包",
+         "reading": "bāo",
+         "romaji": null,
+         "meaning": "sac ; envelopper"
+        },
+        {
+         "slug": "zh-zhaoxiangji",
+         "kind": "vocabulary",
+         "front": "照相机",
+         "reading": "zhàoxiàngjī",
+         "romaji": null,
+         "meaning": "appareil photo"
+        },
+        {
+         "slug": "zh-zhaopian",
+         "kind": "vocabulary",
+         "front": "照片",
+         "reading": "zhàopiàn",
+         "romaji": null,
+         "meaning": "photo"
+        },
+        {
+         "slug": "zh-hua-paint",
+         "kind": "vocabulary",
+         "front": "画",
+         "reading": "huà",
+         "romaji": null,
+         "meaning": "peindre, dessiner ; tableau"
+        },
+        {
+         "slug": "zh-lan",
+         "kind": "vocabulary",
+         "front": "蓝",
+         "reading": "lán",
+         "romaji": null,
+         "meaning": "bleu"
+        },
+        {
+         "slug": "zh-lü",
+         "kind": "vocabulary",
+         "front": "绿",
+         "reading": "lǜ",
+         "romaji": null,
+         "meaning": "vert"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "天多么蓝啊！我们拍几张照片吧。",
+         "reading": "Tiān duōme lán a! Wǒmen pāi jǐ zhāng zhàopiàn ba.",
+         "fr": "Comme le ciel est bleu ! Prenons quelques photos."
+        },
+        {
+         "jp": "门口有两辆车，那位先生是我们的司机。",
+         "reading": "Ménkǒu yǒu liǎng liàng chē, nà wèi xiānsheng shì wǒmen de sījī.",
+         "fr": "Il y a deux voitures devant la porte ; ce monsieur est notre chauffeur."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "外面下雨了，带上＿吧。",
+         "choices": [
+          "伞",
+          "包",
+          "照片"
+         ],
+         "answer": "伞",
+         "explanation": "Contre la pluie : 伞.",
+         "translation": "Il pleut dehors, prends un parapluie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这＿河有五百米长。",
+         "choices": [
+          "条",
+          "辆",
+          "位"
+         ],
+         "answer": "条",
+         "explanation": "Une rivière : 一条河.",
+         "translation": "Cette rivière fait cinq cents mètres de long."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "请问，您要哪＿颜色？",
+         "choices": [
+          "种",
+          "段",
+          "双"
+         ],
+         "answer": "种",
+         "explanation": "Quelle sorte : 哪种.",
+         "translation": "Quelle couleur voulez-vous, s’il vous plaît ?"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这张画上有很多绿色的树。",
+         "translation": "Le tableau montre des arbres verts.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "绿色的树 = arbres verts."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-w8",
+   "title": "Le grand débat de Jixia",
+   "region": "Côtes de Qi",
+   "description": "Donner son avis (认为, 以为, 关于) et ajouter un argument (不但…而且) ; ses centres d’intérêt et les médias ; un but (为了), une fête, des vœux.",
+   "boss": {
+    "name": "Gonggong le briseur du ciel",
+    "glyph": "共",
+    "intro": "Gonggong, dieu des eaux furieux, a jadis brisé d’un coup de tête la montagne qui soutenait le ciel. Il veut interrompre le grand débat de l’académie : défends tes idées avec ordre et raison."
+   },
+   "chapters": [
+    {
+     "slug": "hsk3-w8-c1",
+     "title": "L’académie Jixia",
+     "lessons": [
+      {
+       "slug": "zh-hz-debate",
+       "title": "Les caractères du débat : 认 文 化 闻 音 乐 参 加",
+       "objective": "Reconnaître les caractères de la culture et des opinions.",
+       "minutes": 5,
+       "explanation": [
+        "文 (wén) montrait un homme au torse tatoué : les motifs, puis l’écriture. 文化 (wénhuà) = « transformer par l’écrit », la culture.",
+        "闻 (wén, entendre) met une oreille 耳 dans une porte 门 ; 音 (yīn, son) est une bouche d’où sort un trait. 乐 (yuè, musique) dessinait des cordes sur un support de bois."
+       ],
+       "items": [
+        {
+         "slug": "hz-ren-h3",
+         "kind": "kanji",
+         "front": "认",
+         "reading": "rèn",
+         "romaji": null,
+         "meaning": "reconnaître, estimer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-wen-script",
+         "kind": "kanji",
+         "front": "文",
+         "reading": "wén",
+         "romaji": null,
+         "meaning": "écrit, culture",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-hua-change",
+         "kind": "kanji",
+         "front": "化",
+         "reading": "huà",
+         "romaji": null,
+         "meaning": "transformer",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 4
+         }
+        },
+        {
+         "slug": "hz-wen-hear",
+         "kind": "kanji",
+         "front": "闻",
+         "reading": "wén",
+         "romaji": null,
+         "meaning": "entendre, nouvelle",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-yin-sound",
+         "kind": "kanji",
+         "front": "音",
+         "reading": "yīn",
+         "romaji": null,
+         "meaning": "son",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 9
+         }
+        },
+        {
+         "slug": "hz-yue-music",
+         "kind": "kanji",
+         "front": "乐",
+         "reading": "yuè",
+         "romaji": null,
+         "meaning": "musique",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        },
+        {
+         "slug": "hz-can",
+         "kind": "kanji",
+         "front": "参",
+         "reading": "cān",
+         "romaji": null,
+         "meaning": "prendre part",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 8
+         }
+        },
+        {
+         "slug": "hz-jia-h3",
+         "kind": "kanji",
+         "front": "加",
+         "reading": "jiā",
+         "romaji": null,
+         "meaning": "ajouter",
+         "kanji": {
+          "onyomi": [],
+          "kunyomi": [],
+          "strokes": 5
+         }
+        }
+       ],
+       "examples": [],
+       "exercises": []
+      },
+      {
+       "slug": "zh-opinion",
+       "title": "À mon avis : 认为, 以为, 不但…而且",
+       "objective": "Donner son opinion et accumuler les arguments.",
+       "minutes": 10,
+       "explanation": [
+        "认为 (rènwéi) = estimer, considérer (avis réfléchi) : 我认为他说得对. 以为 (yǐwéi) = croire à tort : 我以为你走了 (je croyais que tu étais parti… mais non).",
+        "不但 A，而且 B = non seulement A, mais aussi B : 他不但会说汉语，而且写得很好.",
+        "关于 (guānyú) = au sujet de : 关于这个问题. 特别 (tèbié) = particulièrement ; 重要 (zhòngyào) = important ; 主要 (zhǔyào) = principal ; 有名 (yǒumíng) = célèbre."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-budan-erqie",
+         "kind": "grammar",
+         "front": "不但…，而且…",
+         "reading": "búdàn…, érqiě…",
+         "romaji": null,
+         "meaning": "non seulement…, mais aussi…"
+        },
+        {
+         "slug": "zh-renwei",
+         "kind": "vocabulary",
+         "front": "认为",
+         "reading": "rènwéi",
+         "romaji": null,
+         "meaning": "estimer, considérer"
+        },
+        {
+         "slug": "zh-yiwei",
+         "kind": "vocabulary",
+         "front": "以为",
+         "reading": "yǐwéi",
+         "romaji": null,
+         "meaning": "croire (à tort)"
+        },
+        {
+         "slug": "zh-guanyu",
+         "kind": "vocabulary",
+         "front": "关于",
+         "reading": "guānyú",
+         "romaji": null,
+         "meaning": "au sujet de"
+        },
+        {
+         "slug": "zh-budan",
+         "kind": "vocabulary",
+         "front": "不但",
+         "reading": "búdàn",
+         "romaji": null,
+         "meaning": "non seulement"
+        },
+        {
+         "slug": "zh-erqie",
+         "kind": "vocabulary",
+         "front": "而且",
+         "reading": "érqiě",
+         "romaji": null,
+         "meaning": "de plus, et aussi"
+        },
+        {
+         "slug": "zh-wenhua",
+         "kind": "vocabulary",
+         "front": "文化",
+         "reading": "wénhuà",
+         "romaji": null,
+         "meaning": "culture"
+        },
+        {
+         "slug": "zh-gushi",
+         "kind": "vocabulary",
+         "front": "故事",
+         "reading": "gùshi",
+         "romaji": null,
+         "meaning": "histoire, récit"
+        },
+        {
+         "slug": "zh-youming",
+         "kind": "vocabulary",
+         "front": "有名",
+         "reading": "yǒumíng",
+         "romaji": null,
+         "meaning": "célèbre"
+        },
+        {
+         "slug": "zh-tebie",
+         "kind": "vocabulary",
+         "front": "特别",
+         "reading": "tèbié",
+         "romaji": null,
+         "meaning": "particulièrement ; spécial"
+        },
+        {
+         "slug": "zh-zhongyao",
+         "kind": "vocabulary",
+         "front": "重要",
+         "reading": "zhòngyào",
+         "romaji": null,
+         "meaning": "important"
+        },
+        {
+         "slug": "zh-zhuyao",
+         "kind": "vocabulary",
+         "front": "主要",
+         "reading": "zhǔyào",
+         "romaji": null,
+         "meaning": "principal"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我认为学习历史和文化非常重要。",
+         "reading": "Wǒ rènwéi xuéxí lìshǐ hé wénhuà fēicháng zhòngyào.",
+         "fr": "J’estime qu’étudier l’histoire et la culture est très important."
+        },
+        {
+         "jp": "我以为他是老师，其实他是学生。",
+         "reading": "Wǒ yǐwéi tā shì lǎoshī, qíshí tā shì xuésheng.",
+         "fr": "Je croyais que c’était un professeur ; en fait, c’est un étudiant."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我＿今天是星期六，原来是星期五！",
+         "choices": [
+          "以为",
+          "认为",
+          "决定"
+         ],
+         "answer": "以为",
+         "explanation": "Croire à tort : 以为.",
+         "translation": "Je croyais qu’on était samedi : en fait, c’est vendredi !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "这家饭馆不但便宜，＿很好吃。",
+         "choices": [
+          "而且",
+          "但是",
+          "所以"
+         ],
+         "answer": "而且",
+         "explanation": "不但…，而且….",
+         "translation": "Ce restaurant est non seulement bon marché, mais aussi délicieux."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "老师给我们讲了一个＿熊猫的故事。",
+         "choices": [
+          "关于",
+          "对于",
+          "根据"
+         ],
+         "answer": "关于",
+         "explanation": "Au sujet de : 关于.",
+         "translation": "Le maître nous a raconté une histoire sur les pandas."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "孔子是中国历史上很有名的人。",
+         "translation": "Confucius est un personnage célèbre de l’histoire chinoise.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "很有名 = très célèbre."
+        }
+       ]
+      },
+      {
+       "slug": "zh-interest",
+       "title": "Je m’intéresse à la musique : 对…感兴趣",
+       "objective": "Parler de ses intérêts, des médias et des concours.",
+       "minutes": 10,
+       "explanation": [
+        "对 A 感兴趣 = s’intéresser à A : 我对中国音乐很感兴趣. 兴趣 (xìngqù) = l’intérêt ; 爱好 (àihào) = le passe-temps.",
+        "Les médias : 新闻 (actualités), 节目 (émission), 游戏 (jeu), 上网 (aller sur Internet), 电子邮件 (e-mail), 信 (lettre), 声音 (son, voix).",
+        "参加 (cānjiā) = participer : 参加比赛 (participer à un concours). 机会 (jīhuì) = occasion ; 选择 (xuǎnzé) = choisir."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-gan-xingqu",
+         "kind": "grammar",
+         "front": "对 + 名词 + 感兴趣",
+         "reading": "duì… gǎn xìngqù",
+         "romaji": null,
+         "meaning": "s’intéresser à"
+        },
+        {
+         "slug": "zh-xingqu",
+         "kind": "vocabulary",
+         "front": "兴趣",
+         "reading": "xìngqù",
+         "romaji": null,
+         "meaning": "intérêt"
+        },
+        {
+         "slug": "zh-aihao",
+         "kind": "vocabulary",
+         "front": "爱好",
+         "reading": "àihào",
+         "romaji": null,
+         "meaning": "passe-temps, loisir"
+        },
+        {
+         "slug": "zh-yinyue",
+         "kind": "vocabulary",
+         "front": "音乐",
+         "reading": "yīnyuè",
+         "romaji": null,
+         "meaning": "musique"
+        },
+        {
+         "slug": "zh-xinwen",
+         "kind": "vocabulary",
+         "front": "新闻",
+         "reading": "xīnwén",
+         "romaji": null,
+         "meaning": "actualités, informations"
+        },
+        {
+         "slug": "zh-jiemu",
+         "kind": "vocabulary",
+         "front": "节目",
+         "reading": "jiémù",
+         "romaji": null,
+         "meaning": "émission, programme"
+        },
+        {
+         "slug": "zh-youxi",
+         "kind": "vocabulary",
+         "front": "游戏",
+         "reading": "yóuxì",
+         "romaji": null,
+         "meaning": "jeu"
+        },
+        {
+         "slug": "zh-shangwang",
+         "kind": "vocabulary",
+         "front": "上网",
+         "reading": "shàngwǎng",
+         "romaji": null,
+         "meaning": "aller sur Internet"
+        },
+        {
+         "slug": "zh-dianziyoujian",
+         "kind": "vocabulary",
+         "front": "电子邮件",
+         "reading": "diànzǐ yóujiàn",
+         "romaji": null,
+         "meaning": "e-mail"
+        },
+        {
+         "slug": "zh-xin-letter",
+         "kind": "vocabulary",
+         "front": "信",
+         "reading": "xìn",
+         "romaji": null,
+         "meaning": "lettre"
+        },
+        {
+         "slug": "zh-shengyin",
+         "kind": "vocabulary",
+         "front": "声音",
+         "reading": "shēngyīn",
+         "romaji": null,
+         "meaning": "son, voix"
+        },
+        {
+         "slug": "zh-canjia",
+         "kind": "vocabulary",
+         "front": "参加",
+         "reading": "cānjiā",
+         "romaji": null,
+         "meaning": "participer"
+        },
+        {
+         "slug": "zh-bisai",
+         "kind": "vocabulary",
+         "front": "比赛",
+         "reading": "bǐsài",
+         "romaji": null,
+         "meaning": "compétition, match"
+        },
+        {
+         "slug": "zh-jihui",
+         "kind": "vocabulary",
+         "front": "机会",
+         "reading": "jīhuì",
+         "romaji": null,
+         "meaning": "occasion, chance"
+        },
+        {
+         "slug": "zh-xuanze",
+         "kind": "vocabulary",
+         "front": "选择",
+         "reading": "xuǎnzé",
+         "romaji": null,
+         "meaning": "choisir ; choix"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "我对中国文化很感兴趣，经常上网看新闻。",
+         "reading": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù, jīngcháng shàngwǎng kàn xīnwén.",
+         "fr": "Je m’intéresse beaucoup à la culture chinoise et je lis souvent les actualités en ligne."
+        },
+        {
+         "jp": "这是一个很好的机会，你应该参加这次比赛。",
+         "reading": "Zhè shì yí ge hěn hǎo de jīhuì, nǐ yīnggāi cānjiā zhè cì bǐsài.",
+         "fr": "C’est une très bonne occasion : tu devrais participer à ce concours."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "他＿音乐很感兴趣。",
+         "choices": [
+          "对",
+          "跟",
+          "给"
+         ],
+         "answer": "对",
+         "explanation": "S’intéresser à : 对…感兴趣.",
+         "translation": "Il s’intéresse beaucoup à la musique."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "我给你发了一封＿，你看了吗？",
+         "choices": [
+          "电子邮件",
+          "节目",
+          "声音"
+         ],
+         "answer": "电子邮件",
+         "explanation": "Envoyer un message : 发电子邮件.",
+         "translation": "Je t’ai envoyé un e-mail, tu l’as lu ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "同学",
+           "jp": "你的爱好是什么？"
+          }
+         ],
+         "translation": "Un camarade te demande tes passe-temps (la musique et la natation).",
+         "choices": [
+          "我喜欢音乐和游泳。",
+          "我选择这个。",
+          "我参加了。"
+         ],
+         "answer": "我喜欢音乐和游泳。",
+         "explanation": "Un passe-temps : 喜欢 + activité."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "这个节目的声音太小了，我听不清楚。",
+         "translation": "Le son de l’émission est trop fort.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "声音太小 = son trop faible."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "hsk3-w8-c2",
+     "title": "La fin du débat",
+     "lessons": [
+      {
+       "slug": "zh-weile",
+       "title": "Pour réussir : 为了, fêtes et vœux",
+       "objective": "Exprimer un but, parler d’une fête et souhaiter quelque chose.",
+       "minutes": 10,
+       "explanation": [
+        "为了 (wèile) + but, … = pour, afin de : 为了学好汉语，他每天练习. 为 (wèi) + personne = pour quelqu’un : 我为你高兴 (je suis content pour toi).",
+        "结束 (jiéshù) = se terminer ; 完成 (wánchéng) = achever ; 习惯 (xíguàn) = habitude, s’habituer à ; 见面 (jiànmiàn) = se voir.",
+        "Les fêtes : 节日 (fête), 礼物 (cadeau), 结婚 (se marier), 祝 (souhaiter) : 祝你生日快乐 ! 发 (fā) = envoyer : 发信息."
+       ],
+       "items": [
+        {
+         "slug": "gram-zh-weile",
+         "kind": "grammar",
+         "front": "为了 + 目的，…",
+         "reading": "wèile",
+         "romaji": null,
+         "meaning": "pour, afin de (but)"
+        },
+        {
+         "slug": "zh-weile",
+         "kind": "vocabulary",
+         "front": "为了",
+         "reading": "wèile",
+         "romaji": null,
+         "meaning": "pour, afin de"
+        },
+        {
+         "slug": "zh-wei-for",
+         "kind": "vocabulary",
+         "front": "为",
+         "reading": "wèi",
+         "romaji": null,
+         "meaning": "pour (quelqu’un)"
+        },
+        {
+         "slug": "zh-jieshu",
+         "kind": "vocabulary",
+         "front": "结束",
+         "reading": "jiéshù",
+         "romaji": null,
+         "meaning": "se terminer, finir"
+        },
+        {
+         "slug": "zh-wancheng",
+         "kind": "vocabulary",
+         "front": "完成",
+         "reading": "wánchéng",
+         "romaji": null,
+         "meaning": "terminer, achever"
+        },
+        {
+         "slug": "zh-xiguan",
+         "kind": "vocabulary",
+         "front": "习惯",
+         "reading": "xíguàn",
+         "romaji": null,
+         "meaning": "habitude ; s’habituer"
+        },
+        {
+         "slug": "zh-jianmian",
+         "kind": "vocabulary",
+         "front": "见面",
+         "reading": "jiànmiàn",
+         "romaji": null,
+         "meaning": "se voir, se rencontrer"
+        },
+        {
+         "slug": "zh-jieri",
+         "kind": "vocabulary",
+         "front": "节日",
+         "reading": "jiérì",
+         "romaji": null,
+         "meaning": "fête"
+        },
+        {
+         "slug": "zh-liwu",
+         "kind": "vocabulary",
+         "front": "礼物",
+         "reading": "lǐwù",
+         "romaji": null,
+         "meaning": "cadeau"
+        },
+        {
+         "slug": "zh-jiehun",
+         "kind": "vocabulary",
+         "front": "结婚",
+         "reading": "jiéhūn",
+         "romaji": null,
+         "meaning": "se marier"
+        },
+        {
+         "slug": "zh-zhu-wish",
+         "kind": "vocabulary",
+         "front": "祝",
+         "reading": "zhù",
+         "romaji": null,
+         "meaning": "souhaiter"
+        },
+        {
+         "slug": "zh-fa",
+         "kind": "vocabulary",
+         "front": "发",
+         "reading": "fā",
+         "romaji": null,
+         "meaning": "envoyer ; émettre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "为了参加比赛，她每天练习三个小时。",
+         "reading": "Wèile cānjiā bǐsài, tā měi tiān liànxí sān ge xiǎoshí.",
+         "fr": "Pour participer au concours, elle s’entraîne trois heures par jour."
+        },
+        {
+         "jp": "祝你们新年快乐，我们节日以后见面吧！",
+         "reading": "Zhù nǐmen xīnnián kuàilè, wǒmen jiérì yǐhòu jiànmiàn ba!",
+         "fr": "Bonne année à vous ! Voyons-nous après les fêtes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "＿身体健康，爷爷每天去公园锻炼。",
+         "choices": [
+          "为了",
+          "因为",
+          "如果"
+         ],
+         "answer": "为了",
+         "explanation": "Un but : 为了.",
+         "translation": "Pour rester en bonne santé, grand-père va faire de l’exercice au parc tous les jours."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "会议几点＿？",
+         "choices": [
+          "结束",
+          "完成",
+          "习惯"
+         ],
+         "answer": "结束",
+         "explanation": "Une réunion se termine : 结束.",
+         "translation": "À quelle heure la réunion se termine-t-elle ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "朋友",
+           "jp": "我下个月结婚！"
+          }
+         ],
+         "translation": "Un ami t’annonce son mariage.",
+         "choices": [
+          "真的吗？祝你们幸福！",
+          "我习惯了。",
+          "会议结束了。"
+         ],
+         "answer": "真的吗？祝你们幸福！",
+         "explanation": "Féliciter : 祝你们幸福."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "我已经习惯了这儿的天气。",
+         "translation": "La personne ne supporte pas le climat.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "习惯了 = s’y être habitué."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hsk3-final",
+   "title": "Simulation HSK 3 : l’académie Jixia",
+   "region": "Côtes de Qi",
+   "description": "Examen blanc au format du HSK 3, en chinois : écoute (听力), lecture (阅读) et écriture (书写). Noté sur 300 ; réussite à 180 points.",
+   "exam": "hsk3-official",
+   "chapters": []
+  }
+ ]
+}
