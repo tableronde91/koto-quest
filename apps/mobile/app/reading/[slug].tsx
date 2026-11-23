@@ -19,8 +19,9 @@ export default function ReadingChapterScreen() {
   const router = useRouter();
   const qc = useQueryClient();
   const { data, isLoading, error, refetch } = useReadingChapter(slug);
-  const { zh } = useStudyLang();
+  const { zh, ko } = useStudyLang();
   const [furigana, setFurigana] = useState(true);
+  const [roman, setRoman] = useState(false);
   const [open, setOpen] = useState<string | null>(null);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<ReadingResultDto | null>(null);
@@ -59,8 +60,17 @@ export default function ReadingChapterScreen() {
       <Ruby text={chapter.title.jp} furigana={furigana} size={26} />
       <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{bi(chapter.title)}</Text>
 
-      <View style={{ flexDirection: 'row', gap: 8 }}>
-        <Button label={zh ? (furigana ? T('Masquer le pinyin') : T('Afficher le pinyin')) : furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />
+      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+        {!ko && <Button label={zh ? (furigana ? T('Masquer le pinyin') : T('Afficher le pinyin')) : furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />}
+        {chapter.paragraphs.some((p) => p.some((s) => s.roman)) && (
+          <Button
+            testID="roman-toggle"
+            label={zh ? (roman ? T('Masquer le pinyin complet') : T('Afficher le pinyin complet')) : ko ? (roman ? T('Masquer la romanisation') : T('Afficher la romanisation')) : roman ? T('Masquer le rōmaji') : T('Afficher le rōmaji')}
+            tone="quiet"
+            style={{ flex: 1 }}
+            onPress={() => setRoman(!roman)}
+          />
+        )}
       </View>
       <P soft>{T('Touche une phrase pour voir sa traduction et l’écouter.')}</P>
 
@@ -73,6 +83,7 @@ export default function ReadingChapterScreen() {
               return (
                 <Pressable key={id} accessibilityRole="button" accessibilityLabel={stripRuby(s.jp)} accessibilityState={{ expanded: on }} onPress={() => { setOpen(on ? null : id); if (!on) speak(s.kana); }} style={{ borderRadius: 10, padding: 6, backgroundColor: on ? '#FBEFD9' : 'transparent' }}>
                   <Ruby text={s.jp} furigana={furigana} />
+                  {roman && s.roman && <Text style={{ marginTop: 2, color: C.inkSoft, fontSize: 15, fontStyle: 'italic' }}>{s.roman}</Text>}
                   {on && <Text style={{ marginTop: 6, color: C.inkSoft, fontSize: 15 }}>{bi(s)}</Text>}
                 </Pressable>
               );

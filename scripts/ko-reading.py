@@ -1031,5 +1031,7 @@ for s in KO_STORIES:
         assert len(c['words']) >= 6, c['slug']
         for q in c['questions']:
             assert 0 <= q['answer'] < len(q['choices'])
+from reading_roman import add_roman  # rōmaji et romanisation des phrases
+add_roman(data)
 json.dump(data, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"Contes coréens : {len(KO_STORIES)} contes, {sum(len(s['chapters']) for s in KO_STORIES)} chapitres")

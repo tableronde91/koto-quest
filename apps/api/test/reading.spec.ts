@@ -51,6 +51,24 @@ describe('Lecture quotidienne', () => {
     expect(new Set(catalog.stories.map((s: any) => s.level))).toEqual(new Set(['N5', 'N4', 'N3', 'N2', 'N1']));
   });
 
+  it('option de lecture : chaque phrase japonaise, coréenne et chinoise a sa romanisation en lettres latines', () => {
+    for (const st of all.stories) {
+      const latin = /^(N[1-5]|TOPIK[1-6]|HSK[1-6])$/.test(st.level);
+      for (const s of st.chapters.flatMap((c: any) => c.paragraphs.flat())) {
+        if (!latin) {
+          expect(s.roman).toBeUndefined();
+          continue;
+        }
+        expect(s.roman).toMatch(/^[“"(]?[A-ZĀÁǍÀĒÉĚÈŌÓǑÒŪÚǓÙ]/);
+        expect(s.roman).not.toMatch(/[\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]/);
+      }
+    }
+    const first = (lv: string) => all.stories.find((s: any) => s.level === lv).chapters[0].paragraphs[0][0].roman;
+    expect(first('N5')).toBe('Mukashimukashi, aru mura ni, ojiisan to obaasan ga imashita.');
+    expect(first('TOPIK1')).toBe('Yennal yennare sansok jageun jibe eomeoniwa onuiga sarasseoyo.');
+    expect(first('HSK1')).toBe('Cóngqián, Sòngguó yǒu yí ge nóngmín.');
+  });
+
   it('tous les chapitres ouverts, chapitre conseillé, relecture libre, récompense unique, série de jours', async () => {
     setNow(ctx.clock, new Date('2026-11-10T09:00:00Z'));
     const { agent } = await signUp(ctx.app);

@@ -1120,5 +1120,12 @@
  "Seigneur": "Lord",
  "Général": "General",
  "Souverain": "Sovereign",
- "Afficher le pinyin": "Show pinyin"
+ "Afficher le pinyin": "Show pinyin",
+ "Afficher la prononciation en lettres latines sous chaque phrase": "Show the pronunciation in Latin letters under each sentence",
+ "Pinyin complet affiché": "Full pinyin shown",
+ "Pinyin complet masqué": "Full pinyin hidden",
+ "Romanisation affichée": "Romanization shown",
+ "Romanisation masquée": "Romanization hidden",
+ "Rōmaji affiché": "Rōmaji shown",
+ "Rōmaji masqué": "Rōmaji hidden"
 }

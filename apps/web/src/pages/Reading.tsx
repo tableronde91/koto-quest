@@ -174,6 +174,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
   const { slug = '' } = useParams();
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ['reading', slug], queryFn: () => api<ReadingChapterDto>(`/reading/chapters/${slug}`) });
   const [furigana, setFurigana] = useState(me.preferences.showFurigana);
+  const [roman, setRoman] = useState(readRomanPref);
   const [mode, setMode] = useState<TranslationMode>('tap');
   const [shown, setShown] = useState<Set<string>>(new Set());
   const [playing, setPlaying] = useState<string | null>(null);
@@ -251,9 +252,14 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
 
       {/* Réglages de lecture */}
       <div className="flex flex-wrap items-center gap-2 sm:sticky sm:top-0 sm:z-10 sm:rounded-2xl sm:border sm:border-line sm:bg-paper/95 sm:px-4 sm:py-2 sm:backdrop-blur">
-        {languageOfLevel(story.level) === 'ja' && (
+        {['ja', 'zh'].includes(languageOfLevel(story.level)) && (
           <button type="button" aria-pressed={furigana} onClick={() => setFurigana(!furigana)} className={`min-h-10 rounded-xl border-2 px-3 text-sm font-bold ${furigana ? 'border-ink bg-ink text-paper' : 'border-line'}`}>
             {langOf(chapter.title.jp) === 'zh' ? <span lang="zh" className="jp">拼音</span> : <span lang="ja" className="jp">ふりがな</span>} {furigana ? T('affichés') : T('masqués')}
+          </button>
+        )}
+        {sentences.some(({ s }) => s.roman) && (
+          <button type="button" aria-pressed={roman} onClick={() => { setRoman(!roman); writeRomanPref(!roman); }} title={T('Afficher la prononciation en lettres latines sous chaque phrase')} className={`min-h-10 rounded-xl border-2 px-3 text-sm font-bold ${roman ? 'border-ink bg-ink text-paper' : 'border-line'}`} data-testid="roman-toggle">
+            {romanLabel(languageOfLevel(story.level), roman)}
           </button>
         )}
         <div role="radiogroup" aria-label={T('Traduction')} className="flex items-center rounded-xl border-2 border-line p-0.5 text-sm">
@@ -283,6 +289,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
                   key={id}
                   s={s}
                   furigana={furigana}
+                  roman={roman}
                   translated={mode === 'all' || (mode === 'tap' && shown.has(id))}
                   tappable={mode === 'tap'}
                   active={playing === id}
@@ -389,7 +396,30 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
   );
 }
 
-function Sentence({ s, furigana, translated, tappable, active, onTap, onListen }: { s: ReadingSentenceDto; furigana: boolean; translated: boolean; tappable: boolean; active: boolean; onTap: () => void; onListen: () => void }) {
+/** Option de lecture : romanisation sous chaque phrase (mémorisée dans le navigateur). */
+const ROMAN_KEY = 'kq.reading.roman';
+function readRomanPref() {
+  try {
+    return localStorage.getItem(ROMAN_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+function writeRomanPref(on: boolean) {
+  try {
+    localStorage.setItem(ROMAN_KEY, on ? '1' : '0');
+  } catch {
+    /* stockage indisponible : l'option vaut pour cette page */
+  }
+}
+const romanLabel = (lang: string, on: boolean) =>
+  lang === 'zh'
+    ? on ? T('Pinyin complet affiché') : T('Pinyin complet masqué')
+    : lang === 'ko'
+      ? on ? T('Romanisation affichée') : T('Romanisation masquée')
+      : on ? T('Rōmaji affiché') : T('Rōmaji masqué');
+
+function Sentence({ s, furigana, roman, translated, tappable, active, onTap, onListen }: { s: ReadingSentenceDto; furigana: boolean; roman: boolean; translated: boolean; tappable: boolean; active: boolean; onTap: () => void; onListen: () => void }) {
   const text = <Ruby text={s.jp} furigana={furigana} className="text-xl leading-[2.2] sm:text-2xl sm:leading-[2.4]" />;
   return (
     <div className={`group flex items-start gap-2 rounded-2xl px-2 transition-colors ${active ? 'bg-gold/20' : ''}`} data-testid="sentence">
@@ -401,6 +431,7 @@ function Sentence({ s, furigana, translated, tappable, active, onTap, onListen }
         ) : (
           text
         )}
+        {roman && s.roman && <p className="pb-1 text-base italic text-ink-soft" lang="und-Latn" data-testid="roman">{s.roman}</p>}
         {translated && <p className="pb-1 text-ink-soft" data-testid="translation">{bi(s)}</p>}
       </div>
       {speechSupported() && (

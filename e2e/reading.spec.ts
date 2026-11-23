@@ -26,6 +26,12 @@ test('lecture : chapitre du jour, furigana, traduction au toucher, compréhensio
   await page.getByRole('button', { name: /ふりがな/ }).click();
   await expect(first.locator('rt')).toHaveCount(0);
 
+  // Rōmaji sous chaque phrase, à la demande (option mémorisée)
+  await expect(page.getByTestId('roman')).toHaveCount(0);
+  await page.getByTestId('roman-toggle').click();
+  await expect(first.getByTestId('roman')).toHaveText(/^Mukashi/);
+  expect(await page.getByTestId('roman').count()).toBe(await page.getByTestId('sentence').count());
+
   // Traduction au toucher
   await expect(page.getByTestId('translation')).toHaveCount(0);
   await first.getByRole('button').first().click();

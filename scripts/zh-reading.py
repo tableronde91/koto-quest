@@ -2,8 +2,9 @@
 # réécrites en chinois simple. Ajoute (ou remplace) les contes chinois dans content/reading/stories.json.
 # Les phrases s'écrivent mot à mot : « 农民:nóngmín » (mot et pinyin), la ponctuation seule. Le pinyin est affiché
 # au-dessus des mots (notation {汉字|pinyin}) : tous les mots au HSK 1 et 2, puis de moins en moins (voir PINYIN_FROM).
+# Le pinyin complet de chaque phrase (champ `roman`) sert à l'option de lecture « pinyin » ; il demande pypinyin.
 # Usage : python3 scripts/zh-reading.py
-import json, os
+import json, os, re
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 P = os.path.join(ROOT, 'content/reading/stories.json')
 
@@ -15,13 +16,82 @@ def tokens(seg):
         else:
             yield tok, None
 
+ZH_PUNCT = {'，': ',', '。': '.', '：': ':', '“': '“', '”': '”', '？': '?', '！': '!', '、': ',', '；': ';', '《': '“', '》': '”'}
+
+_VOCAB = None
+def _vocab():
+    """Lectures des mots des niveaux HSK (tons neutres compris) : priorité sur pypinyin."""
+    global _VOCAB
+    if _VOCAB is None:
+        _VOCAB = {}
+        for n in range(1, 7):
+            path = os.path.join(ROOT, f'content/hsk{n}/hsk{n}.json')
+            if not os.path.exists(path):
+                continue
+            for w in json.load(open(path, encoding='utf-8'))['worlds']:
+                for c in w['chapters']:
+                    for l in c['lessons']:
+                        for it in l['items']:
+                            if it['kind'] == 'vocabulary' and it['reading']:
+                                _VOCAB.setdefault(it['front'], it['reading'])
+    return _VOCAB
+
+_VOWEL_START = re.compile(r'^[aeoāáǎàēéěèōóǒò]')
+
+def _pinyin(zh):
+    """Pinyin d'un mot écrit sans pinyin dans le conte (mots déjà connus) : lecture du parcours HSK, sinon pypinyin
+    (tons en diacritiques, sandhi de 一 et 不), 个 au ton neutre après un nombre, 儿 final rattaché (玩儿 → wánr)."""
+    from pypinyin import lazy_pinyin, Style
+    v = _vocab()
+    if zh in v:
+        return v[zh]
+    if len(zh) > 1 and zh.endswith('个'):
+        return _pinyin(zh[:-1]) + ' ge'
+    if len(zh) > 1 and zh.endswith('儿') and zh[:-1] in ('玩', '点', '一点', '这', '那', '哪', '一会'):
+        return _pinyin(zh[:-1]) + 'r'
+    sylls = lazy_pinyin(zh, style=Style.TONE, tone_sandhi=True)
+    out = sylls[0]
+    for sy in sylls[1:]:
+        out += ("'" if _VOWEL_START.match(sy) else '') + sy
+    return out
+
+def roman_of(seg):
+    """Pinyin complet de la phrase, mot par mot (option de lecture « pinyin complet »)."""
+    toks = list(tokens(seg))
+    words = [None if zh in ZH_PUNCT else (py if py else _pinyin(zh)) for zh, py in toks]
+    for i, (zh, py) in enumerate(toks):
+        if zh in ZH_PUNCT or py:
+            continue
+        nxt = next((w for w in words[i + 1:] if w), '')
+        fourth = bool(re.search('[àèìòùǜ]', nxt.split(' ')[0])) or not re.search('[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]', nxt.split(' ')[0])
+        if zh == '一' and nxt:
+            words[i] = 'yí' if fourth else 'yì'
+        elif zh == '不' and nxt:
+            words[i] = 'bú' if fourth and nxt else 'bù'
+        elif zh == '个':
+            words[i] = 'ge'
+        elif zh == '里':
+            words[i] = 'li'
+        elif zh.endswith('个') and words[i].startswith('yī '):
+            words[i] = 'yí ge'
+    out = ''
+    for (zh, py), word in zip(toks, words):
+        if zh in ZH_PUNCT:
+            p = ZH_PUNCT[zh]
+            out = (out + (' ' if out and not out.endswith(' ') else '') + p) if p == '“' else (out.rstrip() + p + ' ')
+            continue
+        out += ('' if not out or out.endswith(('“', ' ')) else ' ') + word + ' '
+    out = ' '.join(out.split())
+    out = out.replace('“ ', '“')
+    return re.sub(r'(^“?|[.!?]\s+“?)(\w)', lambda m: m.group(1) + m.group(2).upper(), out)
+
 def S(seg, fr, en, annotate=lambda zh: True):
-    """Phrase : le texte avec pinyin {汉字|pinyin} et le texte à prononcer (caractères seuls)."""
+    """Phrase : le texte avec pinyin {汉字|pinyin}, le texte à prononcer (caractères seuls) et le pinyin complet."""
     jp, kana = '', ''
     for zh, py in tokens(seg):
         kana += zh
         jp += f'{{{zh}|{py}}}' if py and annotate(zh) else zh
-    return {'jp': jp, 'fr': fr, 'en': en, 'kana': kana}
+    return {'jp': jp, 'fr': fr, 'en': en, 'kana': kana, 'roman': roman_of(seg)}
 
 def W(zh, py, fr, en):
     return {'jp': zh, 'reading': py, 'fr': fr, 'en': en}

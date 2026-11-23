@@ -287,5 +287,11 @@
  "Japonais": "Japanese",
  "Intermédiaire · 600 mots": "Intermediate · 600 words",
  "Intermédiaire avancé · 1 200 mots": "Upper intermediate · 1,200 words",
- "Avancé · 2 500 mots": "Advanced · 2,500 words"
+ "Avancé · 2 500 mots": "Advanced · 2,500 words",
+ "Masquer le pinyin complet": "Hide full pinyin",
+ "Afficher le pinyin complet": "Show full pinyin",
+ "Masquer la romanisation": "Hide romanisation",
+ "Afficher la romanisation": "Show romanisation",
+ "Masquer le rōmaji": "Hide rōmaji",
+ "Afficher le rōmaji": "Show rōmaji"
 }

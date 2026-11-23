@@ -655,6 +655,8 @@ export interface ReadingSentenceDto {
   jp: string;
   /** Même phrase entièrement en kana (lecture à voix haute) */
   kana: string;
+  /** Romanisation de la phrase (rōmaji, romanisation révisée du coréen, pinyin complet) ; absente en anglais */
+  roman?: string;
   fr: string;
   en: string;
 }
