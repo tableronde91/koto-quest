@@ -356,9 +356,9 @@ SAIWENG = STORY('sai-weng-shi-ma', '马', 'HSK2', '#7A5A3A', ('塞翁失马', 'L
 # ═════════════════════════ HSK 3 : moins de pinyin ═════════════════════════
 # À partir du HSK 3, seuls les mots qui dépassent le HSK 2 (et les noms propres) gardent leur pinyin : les mots
 # écrits sans pinyin doivent n'utiliser que des caractères déjà vus dans les mots du HSK 1 et du HSK 2.
-def _known_chars():
-    chars = set('，。！？：“”《》、')
-    for n in (1, 2):
+def _known_chars(upto):
+    chars = set('，。！？：“”《》、；')
+    for n in range(1, upto):
         lv = json.load(open(os.path.join(ROOT, f'content/hsk{n}/hsk{n}.json'), encoding='utf-8'))
         for w in lv['worlds']:
             for c in w['chapters']:
@@ -368,12 +368,14 @@ def _known_chars():
                             chars.update(it['front'])
     return chars
 MISSING = []
-KNOWN_CHARS = _known_chars() | set('了的着过得地也都和就还很在是不没一个们里两晚')
+BASE_CHARS = set('了的着过得地也都和就还很在是不没一个们里两晚吧用')
+KNOWN_CHARS = _known_chars(3) | BASE_CHARS
 
-def S3(seg, fr, en):
+def S3(seg, fr, en, known=None):
+    known = known or KNOWN_CHARS
     for zh, py in tokens(seg):
         if py is None:
-            unknown = [c for c in zh if c not in KNOWN_CHARS]
+            unknown = [c for c in zh if c not in known]
             if unknown:
                 MISSING.append(f'pinyin manquant pour {zh} ({"".join(unknown)}) dans : {seg}')
     return S(seg, fr, en)
@@ -519,14 +521,158 @@ ZHUANGZI = STORY('zhuang-zhou-meng-die', '蝶', 'HSK3', '#7B5BD6', ('庄周梦�
   ]),
 ])
 
+# HSK 4 : seuls les mots qui dépassent le HSK 3 (et les noms propres) gardent leur pinyin.
+KNOWN_CHARS4 = _known_chars(4) | BASE_CHARS
+def S4(seg, fr, en):
+    return S3(seg, fr, en, KNOWN_CHARS4)
+
+# 一字千金 (Mémoires historiques, Sima Qian) — Lü Buwei, chancelier de Qin
+YIZI = STORY('yi-zi-qian-jin', '金', 'HSK4', '#B8962A', ('一字千金', 'Un caractère vaut mille pièces d’or', 'One character worth a thousand gold'),
+  ('Le chancelier Lü Buwei promet une fortune à qui saura corriger un seul caractère de son livre.', 'Chancellor Lü Buwei promises a fortune to anyone who can correct a single character in his book.'), [
+  CH('yi-zi-qian-jin-1', ('吕不韦的书', 'Le livre de Lü Buwei', 'Lü Buwei’s book'), [
+    [S4('秦国:Qín_guó 有 一个 丞相:chéngxiàng ， 叫 吕不韦:Lǚ_Bùwéi 。', 'Le royaume de Qin avait un chancelier nommé Lü Buwei.', 'The state of Qin had a chancellor called Lü Buwei.'),
+     S4('他 请 了 三千 个 有 学问:xuéwen 的 人 ， 一起 写 一 本 书 。', 'Il réunit trois mille savants pour écrire ensemble un livre.', 'He gathered three thousand learned men to write a book together.'),
+     S4('这 本 书 写 了 天文:tiānwén 、 地理:dìlǐ 、 历史 ， 内容:nèiróng 非常 丰富:fēngfù 。', 'Le livre traitait d’astronomie, de géographie et d’histoire : son contenu était d’une grande richesse.', 'The book covered astronomy, geography and history: its content was extremely rich.')],
+    [S4('书 写 完 以后 ， 吕不韦:Lǚ_Bùwéi 觉得 自己 的 书 是 世界 上 最 好 的 。', 'Une fois le livre achevé, Lü Buwei le jugea le meilleur du monde.', 'When the book was finished, Lü Buwei thought it was the best in the world.'),
+     S4('于是:yúshì ， 他 想 出 了 一个 办法 ， 让 所有:suǒyǒu 的 人 都 知道 这 本 书 。', 'Alors il eut une idée pour que tout le monde connaisse ce livre.', 'So he came up with a plan to make everyone know about the book.')],
+  ], [
+    W('丞相', 'chéngxiàng', 'chancelier', 'chancellor'),
+    W('学问', 'xuéwen', 'savoir, érudition', 'learning, scholarship'),
+    W('天文', 'tiānwén', 'astronomie', 'astronomy'),
+    W('地理', 'dìlǐ', 'géographie', 'geography'),
+    W('内容', 'nèiróng', 'contenu', 'content'),
+    W('丰富', 'fēngfù', 'riche, abondant', 'rich, abundant'),
+  ], [
+    Q(('Combien de savants écrivent le livre ?', 'How many scholars write the book?'), [('Trois mille', 'Three thousand'), ('Trois cents', 'Three hundred'), ('Trente', 'Thirty')], 0),
+    Q(('Que pense Lü Buwei de son livre ?', 'What does Lü Buwei think of his book?'), [('Que c’est le meilleur du monde', 'That it is the best in the world'), ('Qu’il est trop long', 'That it is too long'), ('Qu’il faut le brûler', 'That it should be burnt')], 0),
+  ]),
+  CH('yi-zi-qian-jin-2', ('一个字一千金', 'Mille pièces d’or par caractère', 'A thousand gold per character'), [
+    [S4('他 把 书 挂:guà 在 咸阳:Xiányáng 的 城门:chéngmén 上 。', 'Il fit suspendre le livre à la porte de Xianyang.', 'He had the book hung on the gate of Xianyang.'),
+     S4('旁边 还 放 了 一千 两:liǎng 黄金:huángjīn 。', 'À côté, il fit déposer mille onces d’or.', 'Beside it he placed a thousand taels of gold.'),
+     S4('他 说 ： “ 谁 能 在 书 里 改:gǎi 一个 字 ， 这些 黄金:huángjīn 就 给 谁 。 ”', 'Il déclara : « Celui qui pourra changer un seul caractère de ce livre recevra tout cet or. »', 'He announced: “Whoever can change a single character in this book will receive all this gold.”')],
+    [S4('很 多 人 来 看 ， 可是 一个 人 也 没有 改:gǎi 。', 'Beaucoup vinrent voir, mais personne ne changea rien.', 'Many came to look, but nobody changed anything.'),
+     S4('有 人 说 ， 这 是 因为 书 写 得 太 好 了 ； 也 有 人 说 ， 是 因为 大家 都 害怕 吕不韦:Lǚ_Bùwéi 。', 'Certains disent que le livre était trop bien écrit ; d’autres, que tout le monde avait peur de Lü Buwei.', 'Some say the book was too well written; others say everyone was afraid of Lü Buwei.'),
+     S4('后来 ， 人们 用 “ 一字千金:yí_zì_qiān_jīn ” 来 说 文章:wénzhāng 写 得 非常 好 。', 'Depuis, on dit « un caractère vaut mille pièces d’or » d’un texte remarquablement écrit.', 'Since then, people say “one character is worth a thousand gold” of a superbly written text.')],
+  ], [
+    W('挂', 'guà', 'accrocher, suspendre', 'to hang'),
+    W('城门', 'chéngmén', 'porte de la ville', 'city gate'),
+    W('黄金', 'huángjīn', 'or (métal)', 'gold'),
+    W('改', 'gǎi', 'modifier, corriger', 'to change, to correct'),
+    W('文章', 'wénzhāng', 'texte, article', 'essay, article'),
+    W('一字千金', 'yí zì qiān jīn', 'un texte d’une grande valeur', 'writing of great value'),
+  ], [
+    Q(('Que promet Lü Buwei ?', 'What does Lü Buwei promise?'), [('De l’or à qui change un caractère', 'Gold to anyone who changes a character'), ('Un poste de ministre', 'A minister’s post'), ('Un nouveau livre', 'A new book')], 0),
+    Q(('Que veut dire « 一字千金 » aujourd’hui ?', 'What does “一字千金” mean today?'), [('Un texte excellent', 'An excellent piece of writing'), ('Un livre très cher', 'A very expensive book'), ('Un caractère difficile', 'A difficult character')], 0),
+  ]),
+])
+
+# 指鹿为马 (Mémoires historiques) — Zhao Gao à la cour de Qin
+ZHILU = STORY('zhi-lu-wei-ma', '鹿', 'HSK4', '#8A5A3A', ('指鹿为马', 'Appeler un cerf un cheval', 'Calling a deer a horse'),
+  ('Pour savoir qui lui obéit, le puissant Zhao Gao présente un cerf à l’empereur… et l’appelle un cheval.', 'To find out who obeys him, the powerful Zhao Gao presents a deer to the emperor… and calls it a horse.'), [
+  CH('zhi-lu-wei-ma-1', ('一只鹿', 'Un cerf', 'A deer'), [
+    [S4('秦始皇:Qín_Shǐhuáng 死:sǐ 了 以后 ， 他 的 儿子 当:dāng 了 皇帝:huángdì 。', 'Après la mort du Premier Empereur, son fils devint empereur.', 'After the First Emperor died, his son became emperor.'),
+     S4('可是 真正:zhēnzhèng 有 权力:quánlì 的 人 ， 是 丞相:chéngxiàng 赵高:Zhào_Gāo 。', 'Mais celui qui détenait vraiment le pouvoir, c’était le chancelier Zhao Gao.', 'But the one who really held power was the chancellor Zhao Gao.'),
+     S4('赵高:Zhào_Gāo 想 知道 ， 大臣:dàchén 们 是不是 都 听 他 的 话 。', 'Zhao Gao voulait savoir si tous les ministres lui obéissaient.', 'Zhao Gao wanted to know whether all the ministers obeyed him.')],
+    [S4('一 天 ， 他 带 了 一 只:zhī 鹿:lù 来 到 皇帝:huángdì 面前:miànqián 。', 'Un jour, il amena un cerf devant l’empereur.', 'One day he brought a deer before the emperor.'),
+     S4('他 笑 着 说 ： “ 陛下:bìxià ， 我 送 您 一 匹:pǐ 好 马 。 ”', 'Il dit en souriant : « Majesté, je vous offre un beau cheval. »', 'He said with a smile: “Your Majesty, I present you with a fine horse.”'),
+     S4('皇帝:huángdì 笑 了 ： “ 丞相:chéngxiàng ， 你 弄:nòng 错 了 吧 ， 这 明明:míngmíng 是 一 只:zhī 鹿:lù 啊 ！ ”', 'L’empereur rit : « Chancelier, vous vous trompez, c’est de toute évidence un cerf ! »', 'The emperor laughed: “Chancellor, you’ve made a mistake; this is obviously a deer!”')],
+  ], [
+    W('皇帝', 'huángdì', 'empereur', 'emperor'),
+    W('权力', 'quánlì', 'pouvoir', 'power'),
+    W('大臣', 'dàchén', 'ministre (de cour)', 'minister (at court)'),
+    W('鹿', 'lù', 'cerf', 'deer'),
+    W('陛下', 'bìxià', 'Votre Majesté', 'Your Majesty'),
+    W('明明', 'míngmíng', 'de toute évidence', 'obviously'),
+  ], [
+    Q(('Qui a le vrai pouvoir à la cour ?', 'Who holds the real power at court?'), [('Zhao Gao', 'Zhao Gao'), ('L’empereur', 'The emperor'), ('Les soldats', 'The soldiers')], 0),
+    Q(('Qu’amène Zhao Gao devant l’empereur ?', 'What does Zhao Gao bring before the emperor?'), [('Un cerf', 'A deer'), ('Un cheval', 'A horse'), ('Un tigre', 'A tiger')], 0),
+  ]),
+  CH('zhi-lu-wei-ma-2', ('是马还是鹿？', 'Cheval ou cerf ?', 'Horse or deer?'), [
+    [S4('赵高:Zhào_Gāo 转:zhuǎn 过 身:shēn ， 问 大臣:dàchén 们 ： “ 你们 说 ， 这 是 马 还是 鹿:lù ？ ”', 'Zhao Gao se retourna et demanda aux ministres : « À votre avis, est-ce un cheval ou un cerf ? »', 'Zhao Gao turned round and asked the ministers: “Tell me, is this a horse or a deer?”'),
+     S4('有 的 大臣:dàchén 害怕 赵高:Zhào_Gāo ， 不 说话 ；', 'Certains ministres, qui le craignaient, se turent ;', 'Some ministers, afraid of Zhao Gao, said nothing;'),
+     S4('有 的 大臣:dàchén 想 让 赵高:Zhào_Gāo 高兴 ， 马上:mǎshàng 说 ： “ 是 马 ！ ”', 'd’autres, voulant lui plaire, répondirent aussitôt : « C’est un cheval ! »', 'others, wanting to please him, immediately said: “It’s a horse!”')],
+    [S4('只有 几 个 诚实:chéngshí 的 大臣:dàchén 说 ： “ 这 是 鹿:lù 。 ”', 'Seuls quelques ministres honnêtes dirent : « C’est un cerf. »', 'Only a few honest ministers said: “It’s a deer.”'),
+     S4('后来 ， 赵高:Zhào_Gāo 找 了 理由:lǐyóu ， 把 他们 都 杀:shā 了 。', 'Plus tard, Zhao Gao trouva des prétextes pour les faire tous exécuter.', 'Later, Zhao Gao found pretexts to have them all killed.'),
+     S4('从此:cóngcǐ ， 再 也 没有 人 敢:gǎn 反对:fǎnduì 赵高:Zhào_Gāo 了 。 人们 用 “ 指鹿为马:zhǐ_lù_wéi_mǎ ” 来 说 故意:gùyì 把 错 的 说 成 对 的 。', 'Dès lors, plus personne n’osa s’opposer à lui. « Appeler un cerf un cheval », c’est faire passer le faux pour le vrai.', 'From then on, nobody dared oppose him. “Calling a deer a horse” means deliberately passing off falsehood as truth.')],
+  ], [
+    W('转身', 'zhuǎn shēn', 'se retourner', 'to turn round'),
+    W('诚实', 'chéngshí', 'honnête', 'honest'),
+    W('理由', 'lǐyóu', 'raison, prétexte', 'reason, pretext'),
+    W('杀', 'shā', 'tuer', 'to kill'),
+    W('从此', 'cóngcǐ', 'dès lors', 'from then on'),
+    W('敢', 'gǎn', 'oser', 'to dare'),
+  ], [
+    Q(('Que répondent les ministres honnêtes ?', 'What do the honest ministers answer?'), [('Que c’est un cerf', 'That it is a deer'), ('Que c’est un cheval', 'That it is a horse'), ('Rien du tout', 'Nothing at all')], 0),
+    Q(('Que signifie « 指鹿为马 » ?', 'What does “指鹿为马” mean?'), [('Faire passer le faux pour le vrai', 'Passing off falsehood as truth'), ('Bien connaître les animaux', 'Knowing animals well'), ('Offrir un cadeau', 'Giving a present')], 0),
+  ]),
+])
+
+# 完璧归赵 (Mémoires historiques) — Lin Xiangru face au roi de Qin
+WANBI = STORY('wan-bi-gui-zhao', '璧', 'HSK4', '#2F7A6E', ('完璧归赵', 'Le jade rendu intact à Zhao', 'The jade returned intact to Zhao'),
+  ('Le roi de Qin propose quinze villes contre un jade célèbre. Lin Xiangru part à Qin… et compte bien le rapporter.', 'The king of Qin offers fifteen cities for a famous jade. Lin Xiangru sets off for Qin… intending to bring it back.'), [
+  CH('wan-bi-gui-zhao-1', ('和氏璧', 'Le jade de He', 'The jade of He'), [
+    [S4('赵国:Zhào_guó 有 一 块 非常 有名 的 玉:yù ， 叫 “ 和氏璧:Héshì_bì ” 。', 'Le royaume de Zhao possédait un jade célèbre, le « jade de He ».', 'The state of Zhao owned a famous jade called “He’s jade”.'),
+     S4('秦王:Qín_wáng 听说:tīngshuō 了 ， 写 信 给 赵王:Zhào_wáng ： “ 我 愿意 用 十五 座:zuò 城 换 你 的 玉:yù 。 ”', 'Le roi de Qin l’apprit et écrivit au roi de Zhao : « Je suis prêt à échanger quinze villes contre votre jade. »', 'The king of Qin heard of it and wrote to the king of Zhao: “I am willing to exchange fifteen cities for your jade.”'),
+     S4('赵王:Zhào_wáng 很 着急 ： 给 秦王:Qín_wáng ， 恐怕:kǒngpà 拿 不 到 城 ； 不 给 ， 又 怕:pà 秦国:Qín_guó 来 打 赵国:Zhào_guó 。', 'Le roi de Zhao était inquiet : s’il le donnait, il n’aurait sans doute jamais les villes ; s’il refusait, Qin risquait de l’attaquer.', 'The king of Zhao was worried: if he handed it over, he would probably never get the cities; if he refused, Qin might attack.')],
+    [S4('这 时 ， 一个 叫 蔺相如:Lìn_Xiàngrú 的 人 说 ： “ 我 愿意 带 着 玉:yù 去 秦国:Qín_guó 。', 'C’est alors qu’un homme nommé Lin Xiangru déclara : « J’irai à Qin avec le jade.', 'Then a man called Lin Xiangru said: “I will take the jade to Qin.'),
+     S4('如果 秦王:Qín_wáng 给 城 ， 我 就 把 玉:yù 留:liú 在 秦国:Qín_guó ； 如果 不 给 ， 我 一定 把 玉:yù 完整:wánzhěng 地 带 回来 。 ”', 'Si le roi de Qin donne les villes, je lui laisserai le jade ; sinon, je le rapporterai intact. »', 'If the king of Qin gives the cities, I will leave the jade there; if not, I will bring it back intact.”')],
+  ], [
+    W('玉', 'yù', 'jade', 'jade'),
+    W('座', 'zuò', 'classificateur (villes, montagnes)', 'measure word for cities, mountains'),
+    W('恐怕', 'kǒngpà', 'je crains que', 'I’m afraid that'),
+    W('留', 'liú', 'laisser', 'to leave'),
+    W('完整', 'wánzhěng', 'intact, entier', 'intact, whole'),
+    W('听说', 'tīngshuō', 'entendre dire', 'to hear that'),
+  ], [
+    Q(('Que propose le roi de Qin ?', 'What does the king of Qin offer?'), [('Quinze villes contre le jade', 'Fifteen cities for the jade'), ('De l’or contre le jade', 'Gold for the jade'), ('La paix', 'Peace')], 0),
+    Q(('Que promet Lin Xiangru ?', 'What does Lin Xiangru promise?'), [('Rapporter le jade intact si Qin ne donne rien', 'To bring back the jade intact if Qin gives nothing'), ('Vendre le jade', 'To sell the jade'), ('Rester à Qin', 'To stay in Qin')], 0),
+  ]),
+  CH('wan-bi-gui-zhao-2', ('在秦王面前', 'Devant le roi de Qin', 'Before the king of Qin'), [
+    [S4('蔺相如:Lìn_Xiàngrú 到 了 秦国:Qín_guó ， 把 玉:yù 送 给 秦王:Qín_wáng 。', 'Arrivé à Qin, Lin Xiangru remit le jade au roi.', 'Arriving in Qin, Lin Xiangru presented the jade to the king.'),
+     S4('秦王:Qín_wáng 非常 高兴 ， 把 玉:yù 给 身边:shēnbiān 的 人 一个 一个 地 看 ， 可是 一 句 也 不 提:tí 城 的 事 。', 'Ravi, le roi le fit passer de main en main parmi ses proches, mais ne dit pas un mot des villes.', 'Delighted, the king passed it round his courtiers one by one, but never said a word about the cities.'),
+     S4('蔺相如:Lìn_Xiàngrú 明白 了 ： 秦王:Qín_wáng 根本:gēnběn 不 想 给 城 。', 'Lin Xiangru comprit : le roi n’avait aucune intention de donner les villes.', 'Lin Xiangru understood: the king had no intention of giving the cities.')],
+    [S4('他 走 上前:shàngqián 说 ： “ 这 块 玉:yù 上 有 一个 小 问题 ， 我 指:zhǐ 给 您 看 。 ”', 'Il s’avança : « Ce jade a un petit défaut, je vais vous le montrer. »', 'He stepped forward: “This jade has a small flaw; let me show you.”'),
+     S4('秦王:Qín_wáng 把 玉:yù 还:huán 给 了 他 。', 'Le roi lui rendit le jade.', 'The king handed the jade back to him.'),
+     S4('蔺相如:Lìn_Xiàngrú 拿 着 玉:yù 站 到 柱子:zhùzi 旁边 ， 大声:dàshēng 说 ： “ 如果 您 要 抢:qiǎng ， 我 就 和 玉:yù 一起 撞:zhuàng 在 柱子:zhùzi 上 ！ ”', 'Le jade en main, Lin Xiangru se plaça près d’une colonne et s’écria : « Si vous voulez le prendre de force, je me fracasse contre cette colonne avec lui ! »', 'Holding the jade, Lin Xiangru stood by a pillar and cried: “If you try to seize it, I’ll smash myself and the jade against this pillar!”')],
+  ], [
+    W('身边', 'shēnbiān', 'à ses côtés', 'at one’s side'),
+    W('提', 'tí', 'mentionner', 'to mention'),
+    W('根本', 'gēnběn', 'absolument (pas)', '(not) at all'),
+    W('还', 'huán', 'rendre', 'to give back'),
+    W('柱子', 'zhùzi', 'colonne', 'pillar'),
+    W('抢', 'qiǎng', 's’emparer de force', 'to snatch'),
+  ], [
+    Q(('Pourquoi Lin Xiangru reprend-il le jade ?', 'Why does Lin Xiangru take the jade back?'), [('Le roi ne parle pas des villes', 'The king doesn’t mention the cities'), ('Le jade est cassé', 'The jade is broken'), ('Le roi le lui offre', 'The king gives it to him')], 0),
+    Q(('Que menace-t-il de faire ?', 'What does he threaten to do?'), [('Se jeter contre la colonne avec le jade', 'Smash himself and the jade against the pillar'), ('Partir en courant', 'Run away'), ('Appeler les soldats de Zhao', 'Call the Zhao soldiers')], 0),
+  ]),
+  CH('wan-bi-gui-zhao-3', ('完璧归赵', 'Retour à Zhao', 'Back to Zhao'), [
+    [S4('秦王:Qín_wáng 害怕 玉:yù 被 撞:zhuàng 坏 ， 只好:zhǐhǎo 说 ： “ 别 着急 ， 我 给 你 城 。 ”', 'Craignant que le jade soit brisé, le roi dut dire : « Calmez-vous, je vous donnerai les villes. »', 'Afraid the jade would be smashed, the king had to say: “Calm down, I’ll give you the cities.”'),
+     S4('蔺相如:Lìn_Xiàngrú 知道 秦王:Qín_wáng 是 在 骗:piàn 他 。', 'Lin Xiangru savait que le roi le trompait.', 'Lin Xiangru knew the king was deceiving him.'),
+     S4('晚上 ， 他 让 一个 手下:shǒuxià 穿 上 普通:pǔtōng 人 的 衣服 ， 偷偷:tōutōu 地 把 玉:yù 带 回 了 赵国:Zhào_guó 。', 'Le soir, il fit habiller un de ses hommes en simple paysan, qui rapporta le jade en secret à Zhao.', 'That night he had one of his men dress as an ordinary person and secretly carry the jade back to Zhao.')],
+    [S4('第二 天 ， 秦王:Qín_wáng 发现 玉:yù 已经 不 在 了 ， 非常 生气 。', 'Le lendemain, le roi découvrit que le jade avait disparu et entra dans une grande colère.', 'The next day the king found the jade gone and was furious.'),
+     S4('可是 蔺相如:Lìn_Xiàngrú 一点儿 也 不 害怕 ， 他 的 勇敢:yǒnggǎn 让 秦王:Qín_wáng 也 很 佩服:pèifu 。', 'Mais Lin Xiangru n’eut pas peur du tout, et son courage força l’admiration du roi lui-même.', 'But Lin Xiangru wasn’t afraid at all, and his courage won even the king’s admiration.'),
+     S4('这 就是 “ 完璧归赵:wán_bì_guī_Zhào ” 的 故事 。', 'C’est l’histoire du « jade rendu intact à Zhao ».', 'This is the story of “returning the jade intact to Zhao”.')],
+  ], [
+    W('骗', 'piàn', 'tromper', 'to deceive'),
+    W('手下', 'shǒuxià', 'homme de confiance, subordonné', 'subordinate'),
+    W('普通', 'pǔtōng', 'ordinaire', 'ordinary'),
+    W('偷偷', 'tōutōu', 'en cachette', 'secretly'),
+    W('勇敢', 'yǒnggǎn', 'courageux', 'brave'),
+    W('佩服', 'pèifu', 'admirer', 'to admire'),
+  ], [
+    Q(('Comment le jade revient-il à Zhao ?', 'How does the jade get back to Zhao?'), [('Un homme le rapporte en secret', 'A man secretly carries it back'), ('Le roi de Qin le rend', 'The king of Qin returns it'), ('Il est vendu', 'It is sold')], 0),
+    Q(('Que ressent le roi de Qin pour Lin Xiangru ?', 'What does the king of Qin feel about Lin Xiangru?'), [('De l’admiration', 'Admiration'), ('De l’amitié', 'Friendship'), ('De la pitié', 'Pity')], 0),
+  ]),
+])
+
 if MISSING:
     raise SystemExit('\n'.join(MISSING))
-ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI]
+ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES
 data.setdefault('notices', {}).update({
-  'zh': {'fr': 'Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux) ; touche une phrase pour l’entendre et la traduire.', 'en': 'Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above new words); tap a sentence to hear and translate it.'},
+  'zh': {'fr': 'Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux du niveau) ; touche une phrase pour l’entendre et la traduire.', 'en': 'Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above words new at that level); tap a sentence to hear and translate it.'},
 })
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
@@ -537,6 +683,6 @@ for s in ZH_STORIES:
             assert 0 <= q['answer'] < len(q['choices'])
         for para in c['paragraphs']:
             for sent in para:
-                assert (s['level'] == 'HSK3' or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
+                assert (s['level'] in ('HSK3', 'HSK4') or '{' in sent['jp']) and ':' not in sent['kana'], sent['kana']
 json.dump(data, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f"Contes chinois : {len(ZH_STORIES)} contes, {sum(len(s['chapters']) for s in ZH_STORIES)} chapitres")

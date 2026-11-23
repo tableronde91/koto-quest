@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -959,6 +959,56 @@ story['levels']['HSK3'] = {
       ('Devant le roi Xuan et les maîtres des Cent Écoles, passe l’épreuve d’entrée : écoute, lis et écris comme au HSK 3. Atteins 180 points sur 300.',
        'Before King Xuan and the masters of the Hundred Schools, take the entrance test: listen, read and write as in the HSK 3. Reach 180 points out of 300.'),
       ('Le roi Xuan se lève. Niveau HSK 3 validé : te voilà lettré de l’académie Jixia !', 'King Xuan rises. HSK 3 level complete: you are now a scholar of the Jixia Academy!')),
+   },
+}
+story['levels']['HSK4'] = {
+   'glyph': '秦', 'jp': '书同文', 'color': '#3A3F46',
+   'saga': B('L’empire unifié', 'The unified empire'),
+   'hero': B('Scribe du chancelier Li Si', 'Scribe to Chancellor Li Si'),
+   'short': B('Le scribe', 'The scribe'),
+   'prologue': B(
+     'Le roi de Qin a vaincu les six royaumes et s’est proclamé Premier Empereur. Dans chaque royaume, on écrivait les caractères à sa façon, on pesait et on comptait autrement. Le chancelier Li Si te fait appeler à Xianyang : « Tu as appris le chinois de Lu à Qi. Deviens mon scribe : aide-moi à donner à l’empire une seule écriture, une seule mesure, une seule loi. »',
+     'The king of Qin has conquered the six kingdoms and proclaimed himself First Emperor. In each kingdom people wrote characters their own way and weighed and counted differently. Chancellor Li Si summons you to Xianyang: “You have learnt Chinese from Lu to Qi. Become my scribe: help me give the empire one script, one measure, one law.”'),
+   'epilogue': B(
+     'Sur la stèle du mont Tai, les caractères gravés sont désormais les mêmes d’un bout à l’autre de l’empire : tu y as mis la main. Li Si roule ses tablettes : « Le Premier Empereur cherche l’élixir d’immortalité au-delà des mers. Il part vers l’est… et il veut que tu l’accompagnes. »',
+     'On the stele of Mount Tai, the carved characters are now the same from one end of the empire to the other: you had a hand in it. Li Si rolls up his tablets: “The First Emperor is seeking the elixir of immortality beyond the seas. He is heading east… and he wants you to come with him.”'),
+   'chapters': {
+    'hsk4-w1': CHAP(('Le bureau des scribes', 'The scribes’ office'),
+      ('Au bureau du chancelier, les rouleaux s’entassent et le Fei pestilentiel fait tout pourrir. Organise les tâches, trouve les bons scribes et tiens les délais.',
+       'In the chancellor’s office the scrolls pile up and the pestilent Fei makes everything rot. Organise the tasks, find the right scribes and meet the deadlines.'),
+      ('Le Fei s’éloigne en traînant sa queue de serpent. Li Si hoche la tête : « Voilà un bureau qui tourne. »', 'The Fei slinks away, dragging its snake’s tail. Li Si nods: “Now that’s an office that runs.”')),
+    'hsk4-w2': CHAP(('Les poids truqués', 'The rigged weights'),
+      ('Au marché de Xianyang, le Zhuyan mélange les poids et les monnaies des anciens royaumes. Prouve, chiffres en main, que les mesures de l’empire sont justes.',
+       'At the Xianyang market, the Zhuyan mixes up the weights and coins of the old kingdoms. Prove, figures in hand, that the empire’s measures are fair.'),
+      ('Le Zhuyan s’enfuit dans les monts. Les marchands adoptent les nouveaux poids de bronze.', 'The Zhuyan flees into the mountains. The merchants adopt the new bronze weights.')),
+    'hsk4-w3': CHAP(('La route impériale', 'The imperial road'),
+      ('Sur la grande route qui relie la capitale aux provinces, le Xiqu attaque les convois. Guide-les de relais en relais, quoi qu’il arrive.',
+       'On the great road linking the capital to the provinces, the Xiqu attacks the convoys. Guide them from post station to post station, whatever happens.'),
+      ('Le Xiqu recule devant les convois bien ordonnés. Les courriers arrivent à l’heure jusqu’à la Grande Muraille.', 'The Xiqu backs away from the orderly convoys. Couriers arrive on time all the way to the Great Wall.')),
+    'hsk4-w4': CHAP(('La table du chancelier', 'The chancellor’s table'),
+      ('Le Feiyi a asséché les cuisines du palais la veille d’un banquet. Goûte, assaisonne et organise le repas avec ce qui reste.',
+       'The Feiyi has dried up the palace kitchens on the eve of a banquet. Taste, season and organise the meal with what is left.'),
+      ('Le Feiyi s’envole et la pluie revient. Le banquet est un succès : même l’empereur redemande des raviolis.', 'The Feiyi flies off and the rain returns. The banquet is a success: even the emperor asks for more dumplings.')),
+    'hsk4-w5': CHAP(('Le palais d’Epang', 'The Epang Palace'),
+      ('Sur le chantier du palais d’Epang, la Xuangui trouble les cœurs : ouvriers et courtisans se disputent. Trouve les mots pour les réconcilier.',
+       'On the Epang Palace building site, the Xuangui troubles hearts: workers and courtiers quarrel. Find the words to reconcile them.'),
+      ('La Xuangui rentre dans sa carapace. Sur le chantier, on chante de nouveau en travaillant.', 'The Xuangui withdraws into its shell. On the building site, people sing again as they work.')),
+    'hsk4-w6': CHAP(('Les ateliers de l’empire', 'The empire’s workshops'),
+      ('Dans les fonderies où l’on coule les mesures de bronze, le Zouyu ne laisse passer que ceux qui savent expliquer leur travail. Décris les techniques, les recherches et les traductions.',
+       'In the foundries where bronze measures are cast, the Zouyu lets through only those who can explain their work. Describe the techniques, the research and the translations.'),
+      ('Le Zouyu se couche, ronronnant. Les artisans te confient le premier étalon de mesure de l’empire.', 'The Zouyu lies down, purring. The craftsmen entrust you with the empire’s first measuring standard.')),
+    'hsk4-w7': CHAP(('Les terres de l’Ouest', 'The western lands'),
+      ('À l’ouest, le Huashe a fait déborder le fleuve. Rassemble athlètes, musiciens et comédiens des peuples de la frontière pour lui tenir tête.',
+       'In the west, the Huashe has made the river burst its banks. Gather athletes, musicians and actors from the frontier peoples to stand up to it.'),
+      ('Le Huashe se tait, charmé par la musique. Les eaux se retirent et les fêtes de la frontière reprennent.', 'The Huashe falls silent, charmed by the music. The waters recede and the frontier festivals resume.')),
+    'hsk4-w8': CHAP(('La cour de Xianyang', 'The court of Xianyang'),
+      ('À la cour, le renard ailé Bibi souffle des rumeurs aux ministres. Devant le Premier Empereur, défends la loi commune avec des arguments clairs.',
+       'At court, the winged fox Bibi whispers rumours to the ministers. Before the First Emperor, defend the common law with clear arguments.'),
+      ('Le Bibi s’évanouit en fumée. L’empereur frappe le sol de son sceptre : la nouvelle écriture sera gravée sur les stèles.', 'The Bibi vanishes in smoke. The emperor strikes the floor with his sceptre: the new script will be carved on the steles.')),
+    'hsk4-final': CHAP(('Le palais de Xianyang', 'The Xianyang palace'),
+      ('Devant le Premier Empereur et le chancelier Li Si, passe l’épreuve des scribes : écoute, lis et écris comme au HSK 4. Atteins 180 points sur 300.',
+       'Before the First Emperor and Chancellor Li Si, take the scribes’ test: listen, read and write as in the HSK 4. Reach 180 points out of 300.'),
+      ('Li Si appose son sceau sur ta tablette. Niveau HSK 4 validé : te voilà grand scribe de l’empire !', 'Li Si stamps your tablet with his seal. HSK 4 level complete: you are now a grand scribe of the empire!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

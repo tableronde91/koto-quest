@@ -263,4 +263,14 @@ export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'hsk3-w7': () => (<><Pavilion x={-12} y={12} fill={JADE} /><Ding x={12} y={12} s={0.8} /><Pine x={28} y={12} s={0.7} /></>),
   'hsk3-w8': () => (<><Pavilion x={-10} y={12} s={1.1} /><Bells x={18} y={12} /></>),
   'hsk3-final': () => (<><Tower x={-12} y={14} s={1.1} /><Bells x={14} y={12} s={0.9} /><LuckyCloud x={26} y={-10} /></>),
+  // HSK 4 — l'empire unifié de Qin
+  'hsk4-w1': () => (<><Pavilion x={-12} y={12} fill={ROOF} /><Scroll x={12} y={10} /><Scroll x={26} y={12} s={0.8} /></>),
+  'hsk4-w2': () => (<><Stall x={-16} y={12} /><Ding x={8} y={12} s={0.8} /><Stall x={26} y={14} s={0.8} /></>),
+  'hsk4-w3': () => (<><Chariot x={-14} y={12} /><Wall x={14} y={12} s={0.7} /></>),
+  'hsk4-w4': () => (<><Pavilion x={-12} y={12} /><Ding x={12} y={12} /><Lantern x={28} y={4} /></>),
+  'hsk4-w5': () => (<><Tower x={-12} y={14} /><Pavilion x={14} y={12} s={0.9} /></>),
+  'hsk4-w6': () => (<><Ding x={-14} y={12} /><Bells x={8} y={12} s={0.9} /><Ding x={28} y={12} s={0.7} /></>),
+  'hsk4-w7': () => (<><Pine x={-14} y={12} /><Tent x={8} y={12} /><Drum x={26} y={12} s={0.8} /></>),
+  'hsk4-w8': () => (<><Tower x={-10} y={14} s={1.1} /><Scroll x={18} y={10} /></>),
+  'hsk4-final': () => (<><Wall x={-8} y={12} /><Tower x={18} y={14} s={0.9} /><LuckyCloud x={28} y={-12} /></>),
 };

@@ -2814,6 +2814,894 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "hanzi-hsk4",
+   "glyph": "字",
+   "title": "HSK 4",
+   "description": "Les caractères du HSK 4 vus dans le parcours, avec leur pinyin et leur sens. Même caractère, même maîtrise que dans les leçons.",
+   "groups": [
+    {
+     "slug": "hzg-zh-hz-work",
+     "title": "Les caractères du travail : 职 聘 简 任 负 责 计 划",
+     "items": [
+      {
+       "slug": "hz-zhi-post",
+       "kind": "kanji",
+       "front": "职",
+       "reading": "zhí",
+       "romaji": null,
+       "meaning": "fonction, poste",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-pin",
+       "kind": "kanji",
+       "front": "聘",
+       "reading": "pìn",
+       "romaji": null,
+       "meaning": "engager, recruter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-jian-simple",
+       "kind": "kanji",
+       "front": "简",
+       "reading": "jiǎn",
+       "romaji": null,
+       "meaning": "simple, fiche de bambou",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-ren-duty",
+       "kind": "kanji",
+       "front": "任",
+       "reading": "rèn",
+       "romaji": null,
+       "meaning": "charge, nommer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-fu-bear",
+       "kind": "kanji",
+       "front": "负",
+       "reading": "fù",
+       "romaji": null,
+       "meaning": "porter, assumer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-ze",
+       "kind": "kanji",
+       "front": "责",
+       "reading": "zé",
+       "romaji": null,
+       "meaning": "responsabilité",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-ji-count",
+       "kind": "kanji",
+       "front": "计",
+       "reading": "jì",
+       "romaji": null,
+       "meaning": "compter, calculer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-hua-plan",
+       "kind": "kanji",
+       "front": "划",
+       "reading": "huà",
+       "romaji": null,
+       "meaning": "tracer, planifier",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-money",
+     "title": "Les caractères du commerce : 价 格 折 免 费 付 收 量",
+     "items": [
+      {
+       "slug": "hz-jia-price",
+       "kind": "kanji",
+       "front": "价",
+       "reading": "jià",
+       "romaji": null,
+       "meaning": "prix",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-ge-h4",
+       "kind": "kanji",
+       "front": "格",
+       "reading": "gé",
+       "romaji": null,
+       "meaning": "case, norme",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-zhe-h4",
+       "kind": "kanji",
+       "front": "折",
+       "reading": "zhé",
+       "romaji": null,
+       "meaning": "casser ; réduction",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-mian-h4",
+       "kind": "kanji",
+       "front": "免",
+       "reading": "miǎn",
+       "romaji": null,
+       "meaning": "exempter, éviter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-fei",
+       "kind": "kanji",
+       "front": "费",
+       "reading": "fèi",
+       "romaji": null,
+       "meaning": "frais ; dépenser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-fu-pay",
+       "kind": "kanji",
+       "front": "付",
+       "reading": "fù",
+       "romaji": null,
+       "meaning": "payer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-shou",
+       "kind": "kanji",
+       "front": "收",
+       "reading": "shōu",
+       "romaji": null,
+       "meaning": "recevoir, encaisser",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-liang-amount",
+       "kind": "kanji",
+       "front": "量",
+       "reading": "liàng",
+       "romaji": null,
+       "meaning": "quantité, mesurer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-road",
+     "title": "Les caractères de la route : 交 通 堵 速 航 签 景 距",
+     "items": [
+      {
+       "slug": "hz-jiao-cross",
+       "kind": "kanji",
+       "front": "交",
+       "reading": "jiāo",
+       "romaji": null,
+       "meaning": "croiser, échanger",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-tong",
+       "kind": "kanji",
+       "front": "通",
+       "reading": "tōng",
+       "romaji": null,
+       "meaning": "passer, communiquer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-du",
+       "kind": "kanji",
+       "front": "堵",
+       "reading": "dǔ",
+       "romaji": null,
+       "meaning": "boucher, bloquer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-su-h4",
+       "kind": "kanji",
+       "front": "速",
+       "reading": "sù",
+       "romaji": null,
+       "meaning": "rapide ; vitesse",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-hang",
+       "kind": "kanji",
+       "front": "航",
+       "reading": "háng",
+       "romaji": null,
+       "meaning": "naviguer, voler",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-qian-h4",
+       "kind": "kanji",
+       "front": "签",
+       "reading": "qiān",
+       "romaji": null,
+       "meaning": "signer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-jing-view",
+       "kind": "kanji",
+       "front": "景",
+       "reading": "jǐng",
+       "romaji": null,
+       "meaning": "paysage, vue",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-ju",
+       "kind": "kanji",
+       "front": "距",
+       "reading": "jù",
+       "romaji": null,
+       "meaning": "distance",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-taste",
+     "title": "Les caractères du goût : 味 咸 酸 辣 苦 香 汤 盐",
+     "items": [
+      {
+       "slug": "hz-wei-taste",
+       "kind": "kanji",
+       "front": "味",
+       "reading": "wèi",
+       "romaji": null,
+       "meaning": "goût, saveur",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-xian-salty",
+       "kind": "kanji",
+       "front": "咸",
+       "reading": "xián",
+       "romaji": null,
+       "meaning": "salé",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-suan",
+       "kind": "kanji",
+       "front": "酸",
+       "reading": "suān",
+       "romaji": null,
+       "meaning": "acide, aigre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 14
+       }
+      },
+      {
+       "slug": "hz-la",
+       "kind": "kanji",
+       "front": "辣",
+       "reading": "là",
+       "romaji": null,
+       "meaning": "piquant, épicé",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 14
+       }
+      },
+      {
+       "slug": "hz-ku",
+       "kind": "kanji",
+       "front": "苦",
+       "reading": "kǔ",
+       "romaji": null,
+       "meaning": "amer ; pénible",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-xiang-fragrant",
+       "kind": "kanji",
+       "front": "香",
+       "reading": "xiāng",
+       "romaji": null,
+       "meaning": "parfumé, qui sent bon",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-tang",
+       "kind": "kanji",
+       "front": "汤",
+       "reading": "tāng",
+       "romaji": null,
+       "meaning": "soupe, bouillon",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-yan-h4",
+       "kind": "kanji",
+       "front": "盐",
+       "reading": "yán",
+       "romaji": null,
+       "meaning": "sel",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-feelings",
+     "title": "Les caractères des sentiments : 感 情 友 谊 悔 望 激 骄",
+     "items": [
+      {
+       "slug": "hz-gan-feel",
+       "kind": "kanji",
+       "front": "感",
+       "reading": "gǎn",
+       "romaji": null,
+       "meaning": "ressentir, être touché",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 13
+       }
+      },
+      {
+       "slug": "hz-qing-h4",
+       "kind": "kanji",
+       "front": "情",
+       "reading": "qíng",
+       "romaji": null,
+       "meaning": "sentiment",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-you-friend",
+       "kind": "kanji",
+       "front": "友",
+       "reading": "yǒu",
+       "romaji": null,
+       "meaning": "ami",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-yi-h4",
+       "kind": "kanji",
+       "front": "谊",
+       "reading": "yì",
+       "romaji": null,
+       "meaning": "amitié",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-hui-h4",
+       "kind": "kanji",
+       "front": "悔",
+       "reading": "huǐ",
+       "romaji": null,
+       "meaning": "regretter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 10
+       }
+      },
+      {
+       "slug": "hz-wang",
+       "kind": "kanji",
+       "front": "望",
+       "reading": "wàng",
+       "romaji": null,
+       "meaning": "regarder au loin, espérer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-ji-excite",
+       "kind": "kanji",
+       "front": "激",
+       "reading": "jī",
+       "romaji": null,
+       "meaning": "exciter, vif",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 16
+       }
+      },
+      {
+       "slug": "hz-jiao-proud",
+       "kind": "kanji",
+       "front": "骄",
+       "reading": "jiāo",
+       "romaji": null,
+       "meaning": "fier, orgueilleux",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-tech",
+     "title": "Les caractères des techniques : 技 术 科 网 密 码 污 保",
+     "items": [
+      {
+       "slug": "hz-ji-skill",
+       "kind": "kanji",
+       "front": "技",
+       "reading": "jì",
+       "romaji": null,
+       "meaning": "savoir-faire, technique",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-shu-art",
+       "kind": "kanji",
+       "front": "术",
+       "reading": "shù",
+       "romaji": null,
+       "meaning": "art, méthode",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 5
+       }
+      },
+      {
+       "slug": "hz-ke-branch",
+       "kind": "kanji",
+       "front": "科",
+       "reading": "kē",
+       "romaji": null,
+       "meaning": "discipline, science",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-wang-net",
+       "kind": "kanji",
+       "front": "网",
+       "reading": "wǎng",
+       "romaji": null,
+       "meaning": "filet ; Internet",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-mi",
+       "kind": "kanji",
+       "front": "密",
+       "reading": "mì",
+       "romaji": null,
+       "meaning": "secret, dense",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 11
+       }
+      },
+      {
+       "slug": "hz-ma-code",
+       "kind": "kanji",
+       "front": "码",
+       "reading": "mǎ",
+       "romaji": null,
+       "meaning": "code, chiffre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-wu-dirty",
+       "kind": "kanji",
+       "front": "污",
+       "reading": "wū",
+       "romaji": null,
+       "meaning": "sale, souillé",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-bao-protect",
+       "kind": "kanji",
+       "front": "保",
+       "reading": "bǎo",
+       "romaji": null,
+       "meaning": "protéger, garder",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-west",
+     "title": "Les caractères de l’Ouest : 森 林 植 物 江 艺 演 赢",
+     "items": [
+      {
+       "slug": "hz-sen",
+       "kind": "kanji",
+       "front": "森",
+       "reading": "sēn",
+       "romaji": null,
+       "meaning": "forêt dense",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-lin",
+       "kind": "kanji",
+       "front": "林",
+       "reading": "lín",
+       "romaji": null,
+       "meaning": "bois, forêt",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-zhi-plant",
+       "kind": "kanji",
+       "front": "植",
+       "reading": "zhí",
+       "romaji": null,
+       "meaning": "planter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 12
+       }
+      },
+      {
+       "slug": "hz-wu-thing",
+       "kind": "kanji",
+       "front": "物",
+       "reading": "wù",
+       "romaji": null,
+       "meaning": "chose, objet",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-jiang",
+       "kind": "kanji",
+       "front": "江",
+       "reading": "jiāng",
+       "romaji": null,
+       "meaning": "fleuve (le Yangzi)",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      },
+      {
+       "slug": "hz-yi-art",
+       "kind": "kanji",
+       "front": "艺",
+       "reading": "yì",
+       "romaji": null,
+       "meaning": "art, talent",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 4
+       }
+      },
+      {
+       "slug": "hz-yan-perform",
+       "kind": "kanji",
+       "front": "演",
+       "reading": "yǎn",
+       "romaji": null,
+       "meaning": "jouer (un rôle), représenter",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 14
+       }
+      },
+      {
+       "slug": "hz-ying-win",
+       "kind": "kanji",
+       "front": "赢",
+       "reading": "yíng",
+       "romaji": null,
+       "meaning": "gagner",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 17
+       }
+      }
+     ]
+    },
+    {
+     "slug": "hzg-zh-hz-law",
+     "title": "Les caractères de la loi : 法 律 社 规 证 际 判 观",
+     "items": [
+      {
+       "slug": "hz-fa-law",
+       "kind": "kanji",
+       "front": "法",
+       "reading": "fǎ",
+       "romaji": null,
+       "meaning": "loi, méthode",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-lü",
+       "kind": "kanji",
+       "front": "律",
+       "reading": "lǜ",
+       "romaji": null,
+       "meaning": "règle, loi",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 9
+       }
+      },
+      {
+       "slug": "hz-she",
+       "kind": "kanji",
+       "front": "社",
+       "reading": "shè",
+       "romaji": null,
+       "meaning": "société, association",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-gui",
+       "kind": "kanji",
+       "front": "规",
+       "reading": "guī",
+       "romaji": null,
+       "meaning": "règle, norme",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 8
+       }
+      },
+      {
+       "slug": "hz-zheng-proof",
+       "kind": "kanji",
+       "front": "证",
+       "reading": "zhèng",
+       "romaji": null,
+       "meaning": "preuve, certificat",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-ji-border",
+       "kind": "kanji",
+       "front": "际",
+       "reading": "jì",
+       "romaji": null,
+       "meaning": "bord, entre",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-pan",
+       "kind": "kanji",
+       "front": "判",
+       "reading": "pàn",
+       "romaji": null,
+       "meaning": "juger, estimer",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 7
+       }
+      },
+      {
+       "slug": "hz-guan-view",
+       "kind": "kanji",
+       "front": "观",
+       "reading": "guān",
+       "romaji": null,
+       "meaning": "observer, point de vue",
+       "kanji": {
+        "onyomi": [],
+        "kunyomi": [],
+        "strokes": 6
+       }
+      }
+     ]
+    }
+   ]
   }
  ],
  "notice": "Pinyin avec les tons (ā á ǎ à). Les caractères sont présentés en écriture simplifiée, celle du HSK et de la Chine continentale."

@@ -218,6 +218,68 @@ const SPECIES: Record<string, Species> = {
     face: <path d="M86 120 Q100 112 114 120" stroke="#1A2A40" strokeWidth="3" fill="none" />,
     front: <path d="M20 190 q12 -10 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#9CC4E4" strokeWidth="4" fill="none" />,
   },
+  // ───── Gardiens chinois (HSK 4 — l'empire de Qin) ─────
+  // Fei : bœuf blanc pestilentiel, queue de serpent
+  蜚: {
+    body: '#E8E4DA', belly: '#FFFFFF', head: '#F2EEE4', eye: '#2A2A2A',
+    back: <path d="M150 160 Q190 150 182 120 Q176 104 188 96" stroke="#6E8A4A" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    top: <path d="M70 58 Q54 40 60 26 Q70 42 82 50 M130 58 Q146 40 140 26 Q130 42 118 50" fill="#C9B08A" stroke="#9A8452" strokeWidth="2" />,
+    under: <ellipse cx="100" cy="86" rx="16" ry="14" fill="#F6EBD3" stroke="#B9AE98" strokeWidth="2" />,
+    face: <ellipse cx="100" cy="122" rx="14" ry="8" fill="#E2B0A0" />,
+  },
+  // Zhuyan : singe à tête blanche et aux pieds rouges
+  朱: {
+    body: '#8A6A4A', belly: '#C9A27A', head: '#F2EEE4', eye: '#2A1A10',
+    back: <path d="M150 150 Q190 120 170 80" stroke="#8A6A4A" strokeWidth="8" fill="none" strokeLinecap="round" />,
+    top: <><circle cx="56" cy="92" r="12" fill="#F2EEE4" /><circle cx="144" cy="92" r="12" fill="#F2EEE4" /></>,
+    face: <path d="M88 118 Q100 112 112 118" stroke="#5A1A10" strokeWidth="3" fill="none" />,
+    front: <g fill="#C8323F">{[84, 116].map((x) => <ellipse key={x} cx={x} cy="190" rx="12" ry="6" />)}</g>,
+  },
+  // Xiqu : bête cornue à corps de bœuf, cuir épais
+  犀: {
+    body: '#5A6A7A', belly: '#8A9AAA', head: '#6A7A8A', eye: '#F2D94E',
+    top: <path d="M100 50 L92 22 Q100 14 108 22Z M80 56 L74 40 L88 50Z" fill="#E2D9C4" stroke="#9A8452" strokeWidth="1.5" />,
+    under: <path d="M62 136 q10 -4 18 0 M120 136 q10 -4 18 0 M66 156 q14 -4 26 0" stroke="#3A4A5A" strokeWidth="3" fill="none" />,
+    face: <path d="M86 120 Q100 128 114 120" stroke="#2A3A4A" strokeWidth="3" fill="none" />,
+  },
+  // Feiyi : serpent à six pattes et quatre ailes, soleil de sécheresse
+  肥: {
+    body: '#B8962A', belly: '#F2D58A', head: '#C9A23A', eye: '#C8323F',
+    back: <path d="M52 108 Q12 88 22 58 Q38 84 60 96 M52 126 Q14 120 18 96 M148 108 Q188 88 178 58 Q162 84 140 96 M148 126 Q186 120 182 96" stroke="#8A6A1A" strokeWidth="3" fill="#E2C46A" />,
+    face: <path d="M96 120 l4 10 l4 -10" stroke="#C8323F" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#8A6A1A">{[60, 80, 120, 140].map((x) => <rect key={x} x={x - 4} y="180" width="8" height="12" rx="3" />)}</g>,
+  },
+  // Xuangui : tortue noire à tête d'oiseau et à queue de serpent
+  旋: {
+    body: '#2E3A30', belly: '#6E7A5A', head: '#3E4A40', eye: '#F2D94E',
+    back: <ellipse cx="100" cy="150" rx="70" ry="42" fill="#4E5A3A" stroke="#2A3220" strokeWidth="3" />,
+    under: <path d="M60 146 L80 132 L100 146 L120 132 L140 146" stroke="#2A3220" strokeWidth="2.5" fill="none" />,
+    face: <path d="M92 116 L100 132 L108 116Z" fill="#E2B84A" stroke="#9A8452" strokeWidth="1" />,
+  },
+  // Zouyu : grand tigre blanc à rayures sombres, queue immense
+  驺: {
+    body: '#F2EEE4', belly: '#FFFFFF', head: '#F6F3EC', eye: '#2F7A6E',
+    back: <path d="M150 170 Q200 160 196 110 Q194 70 170 60" stroke="#F2EEE4" strokeWidth="9" fill="none" strokeLinecap="round" />,
+    top: <>{ear(66, false, '#F6F3EC', '#2A2A2A')}{ear(134, true, '#F6F3EC', '#2A2A2A')}</>,
+    under: <path d="M76 66 l6 12 M100 60 v14 M124 66 l-6 12 M62 140 l12 -4 M138 140 l-12 -4 M70 160 l12 -2 M130 160 l-12 -2" stroke="#2A2A2A" strokeWidth="4" strokeLinecap="round" />,
+    face: <path d="M88 118 Q100 126 112 118 M94 118 v6 M106 118 v6" stroke="#2A2A2A" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+  },
+  // Huashe : serpent ailé à visage humain, appelle les eaux
+  化: {
+    body: '#4E7A9A', belly: '#BFD8E8', head: '#D9B08A', eye: '#2A1A10',
+    back: <path d="M50 116 Q8 84 22 50 Q40 80 62 94 M150 116 Q192 84 178 50 Q160 80 138 94" fill="#9CC4E4" stroke="#2E5A7A" strokeWidth="2" />,
+    top: <path d="M64 74 Q60 46 82 50 Q90 34 100 44 Q110 34 118 50 Q140 46 136 74" fill="#2A2A2A" />,
+    face: <path d="M90 120 Q100 116 110 120" stroke="#5A3A24" strokeWidth="2.5" fill="none" />,
+    front: <path d="M20 190 q12 -10 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#9CC4E4" strokeWidth="4" fill="none" />,
+  },
+  // Bibi : renard ailé couleur de sable
+  獙: {
+    body: '#D9A25A', belly: '#F6E3C8', head: '#E2B06A', eye: '#2A1A10',
+    back: <path d="M48 116 Q8 92 18 56 Q36 86 60 98 M152 116 Q192 92 182 56 Q164 86 140 98" fill="#F2D58A" stroke="#9A7A3A" strokeWidth="2" />,
+    top: <>{ear(66, false, '#E2B06A', '#7A4A1A')}{ear(134, true, '#E2B06A', '#7A4A1A')}</>,
+    under: <path d="M150 170 Q190 160 186 128" stroke="#E2B06A" strokeWidth="12" fill="none" strokeLinecap="round" />,
+    face: <path d="M92 118 Q100 124 108 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

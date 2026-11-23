@@ -1049,4 +1049,12 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await expect(page.getByText(/80 questions en 90 minutes/)).toBeVisible();
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByText('听力 第一部分（1～10）').first()).toBeVisible();
+
+  // HSK 4 : l'empire unifié, 100 questions en 100 minutes
+  await page.goto(FILE + '#/path');
+  await page.getByRole('tab', { name: /HSK 4/ }).click();
+  await expect(page.getByRole('heading', { name: 'HSK 4 : l’empire unifié' })).toBeVisible();
+  await page.goto(FILE + '#/exam/hsk4-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 4 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/100 questions en 100 minutes/)).toBeVisible();
 });

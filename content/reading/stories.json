@@ -23724,6 +23724,969 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "yi-zi-qian-jin",
+   "glyph": "金",
+   "level": "HSK4",
+   "color": "#B8962A",
+   "title": {
+    "jp": "一字千金",
+    "fr": "Un caractère vaut mille pièces d’or",
+    "en": "One character worth a thousand gold"
+   },
+   "summary": {
+    "fr": "Le chancelier Lü Buwei promet une fortune à qui saura corriger un seul caractère de son livre.",
+    "en": "Chancellor Lü Buwei promises a fortune to anyone who can correct a single character in his book."
+   },
+   "chapters": [
+    {
+     "slug": "yi-zi-qian-jin-1",
+     "title": {
+      "jp": "吕不韦的书",
+      "fr": "Le livre de Lü Buwei",
+      "en": "Lü Buwei’s book"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{秦国|Qín guó}有一个{丞相|chéngxiàng}，叫{吕不韦|Lǚ Bùwéi}。",
+        "fr": "Le royaume de Qin avait un chancelier nommé Lü Buwei.",
+        "en": "The state of Qin had a chancellor called Lü Buwei.",
+        "kana": "秦国有一个丞相，叫吕不韦。"
+       },
+       {
+        "jp": "他请了三千个有{学问|xuéwen}的人，一起写一本书。",
+        "fr": "Il réunit trois mille savants pour écrire ensemble un livre.",
+        "en": "He gathered three thousand learned men to write a book together.",
+        "kana": "他请了三千个有学问的人，一起写一本书。"
+       },
+       {
+        "jp": "这本书写了{天文|tiānwén}、{地理|dìlǐ}、历史，{内容|nèiróng}非常{丰富|fēngfù}。",
+        "fr": "Le livre traitait d’astronomie, de géographie et d’histoire : son contenu était d’une grande richesse.",
+        "en": "The book covered astronomy, geography and history: its content was extremely rich.",
+        "kana": "这本书写了天文、地理、历史，内容非常丰富。"
+       }
+      ],
+      [
+       {
+        "jp": "书写完以后，{吕不韦|Lǚ Bùwéi}觉得自己的书是世界上最好的。",
+        "fr": "Une fois le livre achevé, Lü Buwei le jugea le meilleur du monde.",
+        "en": "When the book was finished, Lü Buwei thought it was the best in the world.",
+        "kana": "书写完以后，吕不韦觉得自己的书是世界上最好的。"
+       },
+       {
+        "jp": "{于是|yúshì}，他想出了一个办法，让{所有|suǒyǒu}的人都知道这本书。",
+        "fr": "Alors il eut une idée pour que tout le monde connaisse ce livre.",
+        "en": "So he came up with a plan to make everyone know about the book.",
+        "kana": "于是，他想出了一个办法，让所有的人都知道这本书。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "丞相",
+       "reading": "chéngxiàng",
+       "fr": "chancelier",
+       "en": "chancellor"
+      },
+      {
+       "jp": "学问",
+       "reading": "xuéwen",
+       "fr": "savoir, érudition",
+       "en": "learning, scholarship"
+      },
+      {
+       "jp": "天文",
+       "reading": "tiānwén",
+       "fr": "astronomie",
+       "en": "astronomy"
+      },
+      {
+       "jp": "地理",
+       "reading": "dìlǐ",
+       "fr": "géographie",
+       "en": "geography"
+      },
+      {
+       "jp": "内容",
+       "reading": "nèiróng",
+       "fr": "contenu",
+       "en": "content"
+      },
+      {
+       "jp": "丰富",
+       "reading": "fēngfù",
+       "fr": "riche, abondant",
+       "en": "rich, abundant"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de savants écrivent le livre ?",
+        "en": "How many scholars write the book?"
+       },
+       "choices": [
+        {
+         "fr": "Trois mille",
+         "en": "Three thousand"
+        },
+        {
+         "fr": "Trois cents",
+         "en": "Three hundred"
+        },
+        {
+         "fr": "Trente",
+         "en": "Thirty"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que pense Lü Buwei de son livre ?",
+        "en": "What does Lü Buwei think of his book?"
+       },
+       "choices": [
+        {
+         "fr": "Que c’est le meilleur du monde",
+         "en": "That it is the best in the world"
+        },
+        {
+         "fr": "Qu’il est trop long",
+         "en": "That it is too long"
+        },
+        {
+         "fr": "Qu’il faut le brûler",
+         "en": "That it should be burnt"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "yi-zi-qian-jin-2",
+     "title": {
+      "jp": "一个字一千金",
+      "fr": "Mille pièces d’or par caractère",
+      "en": "A thousand gold per character"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "他把书{挂|guà}在{咸阳|Xiányáng}的{城门|chéngmén}上。",
+        "fr": "Il fit suspendre le livre à la porte de Xianyang.",
+        "en": "He had the book hung on the gate of Xianyang.",
+        "kana": "他把书挂在咸阳的城门上。"
+       },
+       {
+        "jp": "旁边还放了一千{两|liǎng}{黄金|huángjīn}。",
+        "fr": "À côté, il fit déposer mille onces d’or.",
+        "en": "Beside it he placed a thousand taels of gold.",
+        "kana": "旁边还放了一千两黄金。"
+       },
+       {
+        "jp": "他说：“谁能在书里{改|gǎi}一个字，这些{黄金|huángjīn}就给谁。”",
+        "fr": "Il déclara : « Celui qui pourra changer un seul caractère de ce livre recevra tout cet or. »",
+        "en": "He announced: “Whoever can change a single character in this book will receive all this gold.”",
+        "kana": "他说：“谁能在书里改一个字，这些黄金就给谁。”"
+       }
+      ],
+      [
+       {
+        "jp": "很多人来看，可是一个人也没有{改|gǎi}。",
+        "fr": "Beaucoup vinrent voir, mais personne ne changea rien.",
+        "en": "Many came to look, but nobody changed anything.",
+        "kana": "很多人来看，可是一个人也没有改。"
+       },
+       {
+        "jp": "有人说，这是因为书写得太好了；也有人说，是因为大家都害怕{吕不韦|Lǚ Bùwéi}。",
+        "fr": "Certains disent que le livre était trop bien écrit ; d’autres, que tout le monde avait peur de Lü Buwei.",
+        "en": "Some say the book was too well written; others say everyone was afraid of Lü Buwei.",
+        "kana": "有人说，这是因为书写得太好了；也有人说，是因为大家都害怕吕不韦。"
+       },
+       {
+        "jp": "后来，人们用“{一字千金|yí zì qiān jīn}”来说{文章|wénzhāng}写得非常好。",
+        "fr": "Depuis, on dit « un caractère vaut mille pièces d’or » d’un texte remarquablement écrit.",
+        "en": "Since then, people say “one character is worth a thousand gold” of a superbly written text.",
+        "kana": "后来，人们用“一字千金”来说文章写得非常好。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "挂",
+       "reading": "guà",
+       "fr": "accrocher, suspendre",
+       "en": "to hang"
+      },
+      {
+       "jp": "城门",
+       "reading": "chéngmén",
+       "fr": "porte de la ville",
+       "en": "city gate"
+      },
+      {
+       "jp": "黄金",
+       "reading": "huángjīn",
+       "fr": "or (métal)",
+       "en": "gold"
+      },
+      {
+       "jp": "改",
+       "reading": "gǎi",
+       "fr": "modifier, corriger",
+       "en": "to change, to correct"
+      },
+      {
+       "jp": "文章",
+       "reading": "wénzhāng",
+       "fr": "texte, article",
+       "en": "essay, article"
+      },
+      {
+       "jp": "一字千金",
+       "reading": "yí zì qiān jīn",
+       "fr": "un texte d’une grande valeur",
+       "en": "writing of great value"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que promet Lü Buwei ?",
+        "en": "What does Lü Buwei promise?"
+       },
+       "choices": [
+        {
+         "fr": "De l’or à qui change un caractère",
+         "en": "Gold to anyone who changes a character"
+        },
+        {
+         "fr": "Un poste de ministre",
+         "en": "A minister’s post"
+        },
+        {
+         "fr": "Un nouveau livre",
+         "en": "A new book"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que veut dire « 一字千金 » aujourd’hui ?",
+        "en": "What does “一字千金” mean today?"
+       },
+       "choices": [
+        {
+         "fr": "Un texte excellent",
+         "en": "An excellent piece of writing"
+        },
+        {
+         "fr": "Un livre très cher",
+         "en": "A very expensive book"
+        },
+        {
+         "fr": "Un caractère difficile",
+         "en": "A difficult character"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "zhi-lu-wei-ma",
+   "glyph": "鹿",
+   "level": "HSK4",
+   "color": "#8A5A3A",
+   "title": {
+    "jp": "指鹿为马",
+    "fr": "Appeler un cerf un cheval",
+    "en": "Calling a deer a horse"
+   },
+   "summary": {
+    "fr": "Pour savoir qui lui obéit, le puissant Zhao Gao présente un cerf à l’empereur… et l’appelle un cheval.",
+    "en": "To find out who obeys him, the powerful Zhao Gao presents a deer to the emperor… and calls it a horse."
+   },
+   "chapters": [
+    {
+     "slug": "zhi-lu-wei-ma-1",
+     "title": {
+      "jp": "一只鹿",
+      "fr": "Un cerf",
+      "en": "A deer"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{秦始皇|Qín Shǐhuáng}{死|sǐ}了以后，他的儿子{当|dāng}了{皇帝|huángdì}。",
+        "fr": "Après la mort du Premier Empereur, son fils devint empereur.",
+        "en": "After the First Emperor died, his son became emperor.",
+        "kana": "秦始皇死了以后，他的儿子当了皇帝。"
+       },
+       {
+        "jp": "可是{真正|zhēnzhèng}有{权力|quánlì}的人，是{丞相|chéngxiàng}{赵高|Zhào Gāo}。",
+        "fr": "Mais celui qui détenait vraiment le pouvoir, c’était le chancelier Zhao Gao.",
+        "en": "But the one who really held power was the chancellor Zhao Gao.",
+        "kana": "可是真正有权力的人，是丞相赵高。"
+       },
+       {
+        "jp": "{赵高|Zhào Gāo}想知道，{大臣|dàchén}们是不是都听他的话。",
+        "fr": "Zhao Gao voulait savoir si tous les ministres lui obéissaient.",
+        "en": "Zhao Gao wanted to know whether all the ministers obeyed him.",
+        "kana": "赵高想知道，大臣们是不是都听他的话。"
+       }
+      ],
+      [
+       {
+        "jp": "一天，他带了一{只|zhī}{鹿|lù}来到{皇帝|huángdì}{面前|miànqián}。",
+        "fr": "Un jour, il amena un cerf devant l’empereur.",
+        "en": "One day he brought a deer before the emperor.",
+        "kana": "一天，他带了一只鹿来到皇帝面前。"
+       },
+       {
+        "jp": "他笑着说：“{陛下|bìxià}，我送您一{匹|pǐ}好马。”",
+        "fr": "Il dit en souriant : « Majesté, je vous offre un beau cheval. »",
+        "en": "He said with a smile: “Your Majesty, I present you with a fine horse.”",
+        "kana": "他笑着说：“陛下，我送您一匹好马。”"
+       },
+       {
+        "jp": "{皇帝|huángdì}笑了：“{丞相|chéngxiàng}，你{弄|nòng}错了吧，这{明明|míngmíng}是一{只|zhī}{鹿|lù}啊！”",
+        "fr": "L’empereur rit : « Chancelier, vous vous trompez, c’est de toute évidence un cerf ! »",
+        "en": "The emperor laughed: “Chancellor, you’ve made a mistake; this is obviously a deer!”",
+        "kana": "皇帝笑了：“丞相，你弄错了吧，这明明是一只鹿啊！”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "皇帝",
+       "reading": "huángdì",
+       "fr": "empereur",
+       "en": "emperor"
+      },
+      {
+       "jp": "权力",
+       "reading": "quánlì",
+       "fr": "pouvoir",
+       "en": "power"
+      },
+      {
+       "jp": "大臣",
+       "reading": "dàchén",
+       "fr": "ministre (de cour)",
+       "en": "minister (at court)"
+      },
+      {
+       "jp": "鹿",
+       "reading": "lù",
+       "fr": "cerf",
+       "en": "deer"
+      },
+      {
+       "jp": "陛下",
+       "reading": "bìxià",
+       "fr": "Votre Majesté",
+       "en": "Your Majesty"
+      },
+      {
+       "jp": "明明",
+       "reading": "míngmíng",
+       "fr": "de toute évidence",
+       "en": "obviously"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui a le vrai pouvoir à la cour ?",
+        "en": "Who holds the real power at court?"
+       },
+       "choices": [
+        {
+         "fr": "Zhao Gao",
+         "en": "Zhao Gao"
+        },
+        {
+         "fr": "L’empereur",
+         "en": "The emperor"
+        },
+        {
+         "fr": "Les soldats",
+         "en": "The soldiers"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’amène Zhao Gao devant l’empereur ?",
+        "en": "What does Zhao Gao bring before the emperor?"
+       },
+       "choices": [
+        {
+         "fr": "Un cerf",
+         "en": "A deer"
+        },
+        {
+         "fr": "Un cheval",
+         "en": "A horse"
+        },
+        {
+         "fr": "Un tigre",
+         "en": "A tiger"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "zhi-lu-wei-ma-2",
+     "title": {
+      "jp": "是马还是鹿？",
+      "fr": "Cheval ou cerf ?",
+      "en": "Horse or deer?"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{赵高|Zhào Gāo}{转|zhuǎn}过{身|shēn}，问{大臣|dàchén}们：“你们说，这是马还是{鹿|lù}？”",
+        "fr": "Zhao Gao se retourna et demanda aux ministres : « À votre avis, est-ce un cheval ou un cerf ? »",
+        "en": "Zhao Gao turned round and asked the ministers: “Tell me, is this a horse or a deer?”",
+        "kana": "赵高转过身，问大臣们：“你们说，这是马还是鹿？”"
+       },
+       {
+        "jp": "有的{大臣|dàchén}害怕{赵高|Zhào Gāo}，不说话；",
+        "fr": "Certains ministres, qui le craignaient, se turent ;",
+        "en": "Some ministers, afraid of Zhao Gao, said nothing;",
+        "kana": "有的大臣害怕赵高，不说话；"
+       },
+       {
+        "jp": "有的{大臣|dàchén}想让{赵高|Zhào Gāo}高兴，{马上|mǎshàng}说：“是马！”",
+        "fr": "d’autres, voulant lui plaire, répondirent aussitôt : « C’est un cheval ! »",
+        "en": "others, wanting to please him, immediately said: “It’s a horse!”",
+        "kana": "有的大臣想让赵高高兴，马上说：“是马！”"
+       }
+      ],
+      [
+       {
+        "jp": "只有几个{诚实|chéngshí}的{大臣|dàchén}说：“这是{鹿|lù}。”",
+        "fr": "Seuls quelques ministres honnêtes dirent : « C’est un cerf. »",
+        "en": "Only a few honest ministers said: “It’s a deer.”",
+        "kana": "只有几个诚实的大臣说：“这是鹿。”"
+       },
+       {
+        "jp": "后来，{赵高|Zhào Gāo}找了{理由|lǐyóu}，把他们都{杀|shā}了。",
+        "fr": "Plus tard, Zhao Gao trouva des prétextes pour les faire tous exécuter.",
+        "en": "Later, Zhao Gao found pretexts to have them all killed.",
+        "kana": "后来，赵高找了理由，把他们都杀了。"
+       },
+       {
+        "jp": "{从此|cóngcǐ}，再也没有人{敢|gǎn}{反对|fǎnduì}{赵高|Zhào Gāo}了。人们用“{指鹿为马|zhǐ lù wéi mǎ}”来说{故意|gùyì}把错的说成对的。",
+        "fr": "Dès lors, plus personne n’osa s’opposer à lui. « Appeler un cerf un cheval », c’est faire passer le faux pour le vrai.",
+        "en": "From then on, nobody dared oppose him. “Calling a deer a horse” means deliberately passing off falsehood as truth.",
+        "kana": "从此，再也没有人敢反对赵高了。人们用“指鹿为马”来说故意把错的说成对的。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "转身",
+       "reading": "zhuǎn shēn",
+       "fr": "se retourner",
+       "en": "to turn round"
+      },
+      {
+       "jp": "诚实",
+       "reading": "chéngshí",
+       "fr": "honnête",
+       "en": "honest"
+      },
+      {
+       "jp": "理由",
+       "reading": "lǐyóu",
+       "fr": "raison, prétexte",
+       "en": "reason, pretext"
+      },
+      {
+       "jp": "杀",
+       "reading": "shā",
+       "fr": "tuer",
+       "en": "to kill"
+      },
+      {
+       "jp": "从此",
+       "reading": "cóngcǐ",
+       "fr": "dès lors",
+       "en": "from then on"
+      },
+      {
+       "jp": "敢",
+       "reading": "gǎn",
+       "fr": "oser",
+       "en": "to dare"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que répondent les ministres honnêtes ?",
+        "en": "What do the honest ministers answer?"
+       },
+       "choices": [
+        {
+         "fr": "Que c’est un cerf",
+         "en": "That it is a deer"
+        },
+        {
+         "fr": "Que c’est un cheval",
+         "en": "That it is a horse"
+        },
+        {
+         "fr": "Rien du tout",
+         "en": "Nothing at all"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que signifie « 指鹿为马 » ?",
+        "en": "What does “指鹿为马” mean?"
+       },
+       "choices": [
+        {
+         "fr": "Faire passer le faux pour le vrai",
+         "en": "Passing off falsehood as truth"
+        },
+        {
+         "fr": "Bien connaître les animaux",
+         "en": "Knowing animals well"
+        },
+        {
+         "fr": "Offrir un cadeau",
+         "en": "Giving a present"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "wan-bi-gui-zhao",
+   "glyph": "璧",
+   "level": "HSK4",
+   "color": "#2F7A6E",
+   "title": {
+    "jp": "完璧归赵",
+    "fr": "Le jade rendu intact à Zhao",
+    "en": "The jade returned intact to Zhao"
+   },
+   "summary": {
+    "fr": "Le roi de Qin propose quinze villes contre un jade célèbre. Lin Xiangru part à Qin… et compte bien le rapporter.",
+    "en": "The king of Qin offers fifteen cities for a famous jade. Lin Xiangru sets off for Qin… intending to bring it back."
+   },
+   "chapters": [
+    {
+     "slug": "wan-bi-gui-zhao-1",
+     "title": {
+      "jp": "和氏璧",
+      "fr": "Le jade de He",
+      "en": "The jade of He"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{赵国|Zhào guó}有一块非常有名的{玉|yù}，叫“{和氏璧|Héshì bì}”。",
+        "fr": "Le royaume de Zhao possédait un jade célèbre, le « jade de He ».",
+        "en": "The state of Zhao owned a famous jade called “He’s jade”.",
+        "kana": "赵国有一块非常有名的玉，叫“和氏璧”。"
+       },
+       {
+        "jp": "{秦王|Qín wáng}{听说|tīngshuō}了，写信给{赵王|Zhào wáng}：“我愿意用十五{座|zuò}城换你的{玉|yù}。”",
+        "fr": "Le roi de Qin l’apprit et écrivit au roi de Zhao : « Je suis prêt à échanger quinze villes contre votre jade. »",
+        "en": "The king of Qin heard of it and wrote to the king of Zhao: “I am willing to exchange fifteen cities for your jade.”",
+        "kana": "秦王听说了，写信给赵王：“我愿意用十五座城换你的玉。”"
+       },
+       {
+        "jp": "{赵王|Zhào wáng}很着急：给{秦王|Qín wáng}，{恐怕|kǒngpà}拿不到城；不给，又{怕|pà}{秦国|Qín guó}来打{赵国|Zhào guó}。",
+        "fr": "Le roi de Zhao était inquiet : s’il le donnait, il n’aurait sans doute jamais les villes ; s’il refusait, Qin risquait de l’attaquer.",
+        "en": "The king of Zhao was worried: if he handed it over, he would probably never get the cities; if he refused, Qin might attack.",
+        "kana": "赵王很着急：给秦王，恐怕拿不到城；不给，又怕秦国来打赵国。"
+       }
+      ],
+      [
+       {
+        "jp": "这时，一个叫{蔺相如|Lìn Xiàngrú}的人说：“我愿意带着{玉|yù}去{秦国|Qín guó}。",
+        "fr": "C’est alors qu’un homme nommé Lin Xiangru déclara : « J’irai à Qin avec le jade.",
+        "en": "Then a man called Lin Xiangru said: “I will take the jade to Qin.",
+        "kana": "这时，一个叫蔺相如的人说：“我愿意带着玉去秦国。"
+       },
+       {
+        "jp": "如果{秦王|Qín wáng}给城，我就把{玉|yù}{留|liú}在{秦国|Qín guó}；如果不给，我一定把{玉|yù}{完整|wánzhěng}地带回来。”",
+        "fr": "Si le roi de Qin donne les villes, je lui laisserai le jade ; sinon, je le rapporterai intact. »",
+        "en": "If the king of Qin gives the cities, I will leave the jade there; if not, I will bring it back intact.”",
+        "kana": "如果秦王给城，我就把玉留在秦国；如果不给，我一定把玉完整地带回来。”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "玉",
+       "reading": "yù",
+       "fr": "jade",
+       "en": "jade"
+      },
+      {
+       "jp": "座",
+       "reading": "zuò",
+       "fr": "classificateur (villes, montagnes)",
+       "en": "measure word for cities, mountains"
+      },
+      {
+       "jp": "恐怕",
+       "reading": "kǒngpà",
+       "fr": "je crains que",
+       "en": "I’m afraid that"
+      },
+      {
+       "jp": "留",
+       "reading": "liú",
+       "fr": "laisser",
+       "en": "to leave"
+      },
+      {
+       "jp": "完整",
+       "reading": "wánzhěng",
+       "fr": "intact, entier",
+       "en": "intact, whole"
+      },
+      {
+       "jp": "听说",
+       "reading": "tīngshuō",
+       "fr": "entendre dire",
+       "en": "to hear that"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que propose le roi de Qin ?",
+        "en": "What does the king of Qin offer?"
+       },
+       "choices": [
+        {
+         "fr": "Quinze villes contre le jade",
+         "en": "Fifteen cities for the jade"
+        },
+        {
+         "fr": "De l’or contre le jade",
+         "en": "Gold for the jade"
+        },
+        {
+         "fr": "La paix",
+         "en": "Peace"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que promet Lin Xiangru ?",
+        "en": "What does Lin Xiangru promise?"
+       },
+       "choices": [
+        {
+         "fr": "Rapporter le jade intact si Qin ne donne rien",
+         "en": "To bring back the jade intact if Qin gives nothing"
+        },
+        {
+         "fr": "Vendre le jade",
+         "en": "To sell the jade"
+        },
+        {
+         "fr": "Rester à Qin",
+         "en": "To stay in Qin"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "wan-bi-gui-zhao-2",
+     "title": {
+      "jp": "在秦王面前",
+      "fr": "Devant le roi de Qin",
+      "en": "Before the king of Qin"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{蔺相如|Lìn Xiàngrú}到了{秦国|Qín guó}，把{玉|yù}送给{秦王|Qín wáng}。",
+        "fr": "Arrivé à Qin, Lin Xiangru remit le jade au roi.",
+        "en": "Arriving in Qin, Lin Xiangru presented the jade to the king.",
+        "kana": "蔺相如到了秦国，把玉送给秦王。"
+       },
+       {
+        "jp": "{秦王|Qín wáng}非常高兴，把{玉|yù}给{身边|shēnbiān}的人一个一个地看，可是一句也不{提|tí}城的事。",
+        "fr": "Ravi, le roi le fit passer de main en main parmi ses proches, mais ne dit pas un mot des villes.",
+        "en": "Delighted, the king passed it round his courtiers one by one, but never said a word about the cities.",
+        "kana": "秦王非常高兴，把玉给身边的人一个一个地看，可是一句也不提城的事。"
+       },
+       {
+        "jp": "{蔺相如|Lìn Xiàngrú}明白了：{秦王|Qín wáng}{根本|gēnběn}不想给城。",
+        "fr": "Lin Xiangru comprit : le roi n’avait aucune intention de donner les villes.",
+        "en": "Lin Xiangru understood: the king had no intention of giving the cities.",
+        "kana": "蔺相如明白了：秦王根本不想给城。"
+       }
+      ],
+      [
+       {
+        "jp": "他走{上前|shàngqián}说：“这块{玉|yù}上有一个小问题，我{指|zhǐ}给您看。”",
+        "fr": "Il s’avança : « Ce jade a un petit défaut, je vais vous le montrer. »",
+        "en": "He stepped forward: “This jade has a small flaw; let me show you.”",
+        "kana": "他走上前说：“这块玉上有一个小问题，我指给您看。”"
+       },
+       {
+        "jp": "{秦王|Qín wáng}把{玉|yù}{还|huán}给了他。",
+        "fr": "Le roi lui rendit le jade.",
+        "en": "The king handed the jade back to him.",
+        "kana": "秦王把玉还给了他。"
+       },
+       {
+        "jp": "{蔺相如|Lìn Xiàngrú}拿着{玉|yù}站到{柱子|zhùzi}旁边，{大声|dàshēng}说：“如果您要{抢|qiǎng}，我就和{玉|yù}一起{撞|zhuàng}在{柱子|zhùzi}上！”",
+        "fr": "Le jade en main, Lin Xiangru se plaça près d’une colonne et s’écria : « Si vous voulez le prendre de force, je me fracasse contre cette colonne avec lui ! »",
+        "en": "Holding the jade, Lin Xiangru stood by a pillar and cried: “If you try to seize it, I’ll smash myself and the jade against this pillar!”",
+        "kana": "蔺相如拿着玉站到柱子旁边，大声说：“如果您要抢，我就和玉一起撞在柱子上！”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "身边",
+       "reading": "shēnbiān",
+       "fr": "à ses côtés",
+       "en": "at one’s side"
+      },
+      {
+       "jp": "提",
+       "reading": "tí",
+       "fr": "mentionner",
+       "en": "to mention"
+      },
+      {
+       "jp": "根本",
+       "reading": "gēnběn",
+       "fr": "absolument (pas)",
+       "en": "(not) at all"
+      },
+      {
+       "jp": "还",
+       "reading": "huán",
+       "fr": "rendre",
+       "en": "to give back"
+      },
+      {
+       "jp": "柱子",
+       "reading": "zhùzi",
+       "fr": "colonne",
+       "en": "pillar"
+      },
+      {
+       "jp": "抢",
+       "reading": "qiǎng",
+       "fr": "s’emparer de force",
+       "en": "to snatch"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Lin Xiangru reprend-il le jade ?",
+        "en": "Why does Lin Xiangru take the jade back?"
+       },
+       "choices": [
+        {
+         "fr": "Le roi ne parle pas des villes",
+         "en": "The king doesn’t mention the cities"
+        },
+        {
+         "fr": "Le jade est cassé",
+         "en": "The jade is broken"
+        },
+        {
+         "fr": "Le roi le lui offre",
+         "en": "The king gives it to him"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que menace-t-il de faire ?",
+        "en": "What does he threaten to do?"
+       },
+       "choices": [
+        {
+         "fr": "Se jeter contre la colonne avec le jade",
+         "en": "Smash himself and the jade against the pillar"
+        },
+        {
+         "fr": "Partir en courant",
+         "en": "Run away"
+        },
+        {
+         "fr": "Appeler les soldats de Zhao",
+         "en": "Call the Zhao soldiers"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "wan-bi-gui-zhao-3",
+     "title": {
+      "jp": "完璧归赵",
+      "fr": "Retour à Zhao",
+      "en": "Back to Zhao"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{秦王|Qín wáng}害怕{玉|yù}被{撞|zhuàng}坏，{只好|zhǐhǎo}说：“别着急，我给你城。”",
+        "fr": "Craignant que le jade soit brisé, le roi dut dire : « Calmez-vous, je vous donnerai les villes. »",
+        "en": "Afraid the jade would be smashed, the king had to say: “Calm down, I’ll give you the cities.”",
+        "kana": "秦王害怕玉被撞坏，只好说：“别着急，我给你城。”"
+       },
+       {
+        "jp": "{蔺相如|Lìn Xiàngrú}知道{秦王|Qín wáng}是在{骗|piàn}他。",
+        "fr": "Lin Xiangru savait que le roi le trompait.",
+        "en": "Lin Xiangru knew the king was deceiving him.",
+        "kana": "蔺相如知道秦王是在骗他。"
+       },
+       {
+        "jp": "晚上，他让一个{手下|shǒuxià}穿上{普通|pǔtōng}人的衣服，{偷偷|tōutōu}地把{玉|yù}带回了{赵国|Zhào guó}。",
+        "fr": "Le soir, il fit habiller un de ses hommes en simple paysan, qui rapporta le jade en secret à Zhao.",
+        "en": "That night he had one of his men dress as an ordinary person and secretly carry the jade back to Zhao.",
+        "kana": "晚上，他让一个手下穿上普通人的衣服，偷偷地把玉带回了赵国。"
+       }
+      ],
+      [
+       {
+        "jp": "第二天，{秦王|Qín wáng}发现{玉|yù}已经不在了，非常生气。",
+        "fr": "Le lendemain, le roi découvrit que le jade avait disparu et entra dans une grande colère.",
+        "en": "The next day the king found the jade gone and was furious.",
+        "kana": "第二天，秦王发现玉已经不在了，非常生气。"
+       },
+       {
+        "jp": "可是{蔺相如|Lìn Xiàngrú}一点儿也不害怕，他的{勇敢|yǒnggǎn}让{秦王|Qín wáng}也很{佩服|pèifu}。",
+        "fr": "Mais Lin Xiangru n’eut pas peur du tout, et son courage força l’admiration du roi lui-même.",
+        "en": "But Lin Xiangru wasn’t afraid at all, and his courage won even the king’s admiration.",
+        "kana": "可是蔺相如一点儿也不害怕，他的勇敢让秦王也很佩服。"
+       },
+       {
+        "jp": "这就是“{完璧归赵|wán bì guī Zhào}”的故事。",
+        "fr": "C’est l’histoire du « jade rendu intact à Zhao ».",
+        "en": "This is the story of “returning the jade intact to Zhao”.",
+        "kana": "这就是“完璧归赵”的故事。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "骗",
+       "reading": "piàn",
+       "fr": "tromper",
+       "en": "to deceive"
+      },
+      {
+       "jp": "手下",
+       "reading": "shǒuxià",
+       "fr": "homme de confiance, subordonné",
+       "en": "subordinate"
+      },
+      {
+       "jp": "普通",
+       "reading": "pǔtōng",
+       "fr": "ordinaire",
+       "en": "ordinary"
+      },
+      {
+       "jp": "偷偷",
+       "reading": "tōutōu",
+       "fr": "en cachette",
+       "en": "secretly"
+      },
+      {
+       "jp": "勇敢",
+       "reading": "yǒnggǎn",
+       "fr": "courageux",
+       "en": "brave"
+      },
+      {
+       "jp": "佩服",
+       "reading": "pèifu",
+       "fr": "admirer",
+       "en": "to admire"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Comment le jade revient-il à Zhao ?",
+        "en": "How does the jade get back to Zhao?"
+       },
+       "choices": [
+        {
+         "fr": "Un homme le rapporte en secret",
+         "en": "A man secretly carries it back"
+        },
+        {
+         "fr": "Le roi de Qin le rend",
+         "en": "The king of Qin returns it"
+        },
+        {
+         "fr": "Il est vendu",
+         "en": "It is sold"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que ressent le roi de Qin pour Lin Xiangru ?",
+        "en": "What does the king of Qin feel about Lin Xiangru?"
+       },
+       "choices": [
+        {
+         "fr": "De l’admiration",
+         "en": "Admiration"
+        },
+        {
+         "fr": "De l’amitié",
+         "en": "Friendship"
+        },
+        {
+         "fr": "De la pitié",
+         "en": "Pity"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -23736,8 +24699,8 @@
    "en": "British folk tales and legends (public domain), retold in simple English for Koto Quest. Word pronunciation is shown in phonetic script."
   },
   "zh": {
-   "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux) ; touche une phrase pour l’entendre et la traduire.",
-   "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above new words); tap a sentence to hear and translate it."
+   "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux du niveau) ; touche une phrase pour l’entendre et la traduire.",
+   "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above words new at that level); tap a sentence to hear and translate it."
   }
  }
 }
