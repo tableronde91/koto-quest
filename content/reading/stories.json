@@ -21660,6 +21660,1095 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "sunzi-lian-bing",
+   "glyph": "鼓",
+   "level": "HSK2",
+   "color": "#2F5E7A",
+   "title": {
+    "jp": "孙子练兵",
+    "fr": "Le général et les dames de la cour",
+    "en": "The general and the court ladies"
+   },
+   "summary": {
+    "fr": "Le roi de Wu met le général Sun à l’épreuve : saura-t-il faire de 180 dames de la cour une troupe disciplinée ?",
+    "en": "The king of Wu puts General Sun to the test: can he turn 180 court ladies into a disciplined troop?"
+   },
+   "chapters": [
+    {
+     "slug": "sunzi-lian-bing-1",
+     "title": {
+      "jp": "吴王的考试",
+      "fr": "L’épreuve du roi de Wu",
+      "en": "The king of Wu’s test"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{孙子|Sūnzǐ}{写|xiě}{了|le}{一|yì}{本|běn}{书|shū}，{叫|jiào}《{孙子兵法|Sūnzǐ Bīngfǎ}》。",
+        "fr": "Sunzi écrivit un livre intitulé « L’Art de la guerre de Sunzi ».",
+        "en": "Sunzi wrote a book called “Sunzi’s Art of War”.",
+        "kana": "孙子写了一本书，叫《孙子兵法》。"
+       },
+       {
+        "jp": "{吴王|Wú wáng}{看|kàn}{完|wán}{了|le}，{觉得|juéde}{很|hěn}{有意思|yǒu yìsi}。",
+        "fr": "Le roi de Wu le lut jusqu’au bout et le trouva très intéressant.",
+        "en": "The king of Wu read it to the end and found it very interesting.",
+        "kana": "吴王看完了，觉得很有意思。"
+       },
+       {
+        "jp": "{但是|dànshì}{他|tā}{想|xiǎng}：“{他|tā}{真|zhēn}{的|de}{会|huì}{带|dài}{兵|bīng}{吗|ma}？”",
+        "fr": "Mais il se demandait : « Sait-il vraiment commander des soldats ? »",
+        "en": "But he wondered: “Can he really lead soldiers?”",
+        "kana": "但是他想：“他真的会带兵吗？”"
+       }
+      ],
+      [
+       {
+        "jp": "{吴王|Wú wáng}{问|wèn}{孙子|Sūnzǐ}：“{你|nǐ}{可以|kěyǐ}{让|ràng}{宫|gōng}{里|li}{的|de}{女人|nǚrén}{当|dāng}{兵|bīng}{吗|ma}？”",
+        "fr": "Le roi demanda à Sunzi : « Peux-tu faire des soldats avec les femmes du palais ? »",
+        "en": "The king asked Sunzi: “Can you turn the women of the palace into soldiers?”",
+        "kana": "吴王问孙子：“你可以让宫里的女人当兵吗？”"
+       },
+       {
+        "jp": "{孙子|Sūnzǐ}{回答|huídá}：“{可以|kěyǐ}。”",
+        "fr": "Sunzi répondit : « Oui. »",
+        "en": "Sunzi answered: “I can.”",
+        "kana": "孙子回答：“可以。”"
+       },
+       {
+        "jp": "{吴王|Wú wáng}{就|jiù}{叫|jiào}{来|lái}{了|le}{一百八十|yìbǎi bāshí}{个|ge}{女人|nǚrén}。",
+        "fr": "Le roi fit aussitôt venir cent quatre-vingts femmes.",
+        "en": "The king immediately summoned a hundred and eighty women.",
+        "kana": "吴王就叫来了一百八十个女人。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "本",
+       "reading": "běn",
+       "fr": "classificateur des livres",
+       "en": "measure word for books"
+      },
+      {
+       "jp": "兵",
+       "reading": "bīng",
+       "fr": "soldat",
+       "en": "soldier"
+      },
+      {
+       "jp": "带",
+       "reading": "dài",
+       "fr": "mener, emmener",
+       "en": "to lead, to bring"
+      },
+      {
+       "jp": "宫",
+       "reading": "gōng",
+       "fr": "palais",
+       "en": "palace"
+      },
+      {
+       "jp": "当",
+       "reading": "dāng",
+       "fr": "servir de, devenir",
+       "en": "to serve as, to become"
+      },
+      {
+       "jp": "吴王",
+       "reading": "Wú wáng",
+       "fr": "le roi de Wu",
+       "en": "the king of Wu"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’a écrit Sunzi ?",
+        "en": "What did Sunzi write?"
+       },
+       "choices": [
+        {
+         "fr": "Un livre sur la guerre",
+         "en": "A book about war"
+        },
+        {
+         "fr": "Une lettre au roi",
+         "en": "A letter to the king"
+        },
+        {
+         "fr": "Un poème",
+         "en": "A poem"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Combien de femmes le roi fait-il venir ?",
+        "en": "How many women does the king summon?"
+       },
+       "choices": [
+        {
+         "fr": "Dix-huit",
+         "en": "Eighteen"
+        },
+        {
+         "fr": "Cent quatre-vingts",
+         "en": "A hundred and eighty"
+        },
+        {
+         "fr": "Cent",
+         "en": "A hundred"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "sunzi-lian-bing-2",
+     "title": {
+      "jp": "她们笑了",
+      "fr": "Elles rient",
+      "en": "They laugh"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{孙子|Sūnzǐ}{让|ràng}{她们|tāmen}{站|zhàn}{成|chéng}{两|liǎng}{队|duì}，{王|wáng}{最|zuì}{喜欢|xǐhuan}{的|de}{两个|liǎng ge}{女人|nǚrén}{当|dāng}{队长|duìzhǎng}。",
+        "fr": "Sunzi les mit en deux rangs, avec pour cheffes les deux favorites du roi.",
+        "en": "Sunzi lined them up in two ranks, with the king’s two favourites as leaders.",
+        "kana": "孙子让她们站成两队，王最喜欢的两个女人当队长。"
+       },
+       {
+        "jp": "{他|tā}{问|wèn}：“{你们|nǐmen}{知道|zhīdào}{左边|zuǒbian}、{右边|yòubian}、{前面|qiánmiàn}、{后面|hòumiàn}{吗|ma}？”",
+        "fr": "Il demanda : « Savez-vous où sont la gauche, la droite, l’avant et l’arrière ? »",
+        "en": "He asked: “Do you know left, right, front and back?”",
+        "kana": "他问：“你们知道左边、右边、前面、后面吗？”"
+       },
+       {
+        "jp": "{女人们|nǚrénmen}{说|shuō}：“{知道|zhīdào}！”",
+        "fr": "Les femmes répondirent : « Oui ! »",
+        "en": "The women said: “We do!”",
+        "kana": "女人们说：“知道！”"
+       }
+      ],
+      [
+       {
+        "jp": "{孙子|Sūnzǐ}{打|dǎ}{鼓|gǔ}，{说|shuō}：“{往|wǎng}{右|yòu}！”",
+        "fr": "Sunzi frappa le tambour et cria : « À droite ! »",
+        "en": "Sunzi beat the drum and called: “Right!”",
+        "kana": "孙子打鼓，说：“往右！”"
+       },
+       {
+        "jp": "{可是|kěshì}{女人们|nǚrénmen}{都|dōu}{笑|xiào}{了|le}，{没有|méiyǒu}{人|rén}{动|dòng}。",
+        "fr": "Mais toutes les femmes éclatèrent de rire, et personne ne bougea.",
+        "en": "But all the women laughed, and nobody moved.",
+        "kana": "可是女人们都笑了，没有人动。"
+       },
+       {
+        "jp": "{孙子|Sūnzǐ}{说|shuō}：“{我|wǒ}{没|méi}{说|shuō}{清楚|qīngchu}，{是|shì}{我的|wǒ de}{错|cuò}。”{他|tā}{又|yòu}{说|shuō}{了|le}{一次|yí cì}。",
+        "fr": "Sunzi dit : « Je n’ai pas été clair, c’est ma faute. » Et il répéta les ordres.",
+        "en": "Sunzi said: “I wasn’t clear; it’s my fault.” And he explained once more.",
+        "kana": "孙子说：“我没说清楚，是我的错。”他又说了一次。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "站",
+       "reading": "zhàn",
+       "fr": "se tenir debout",
+       "en": "to stand"
+      },
+      {
+       "jp": "队",
+       "reading": "duì",
+       "fr": "rang, file",
+       "en": "rank, line"
+      },
+      {
+       "jp": "队长",
+       "reading": "duìzhǎng",
+       "fr": "chef de file",
+       "en": "team leader"
+      },
+      {
+       "jp": "鼓",
+       "reading": "gǔ",
+       "fr": "tambour",
+       "en": "drum"
+      },
+      {
+       "jp": "动",
+       "reading": "dòng",
+       "fr": "bouger",
+       "en": "to move"
+      },
+      {
+       "jp": "清楚",
+       "reading": "qīngchu",
+       "fr": "clair",
+       "en": "clear"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que font les femmes au premier ordre ?",
+        "en": "What do the women do at the first order?"
+       },
+       "choices": [
+        {
+         "fr": "Elles tournent à droite",
+         "en": "They turn right"
+        },
+        {
+         "fr": "Elles rient sans bouger",
+         "en": "They laugh and don’t move"
+        },
+        {
+         "fr": "Elles s’en vont",
+         "en": "They leave"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "À qui Sunzi attribue-t-il la première erreur ?",
+        "en": "Whom does Sunzi blame for the first mistake?"
+       },
+       "choices": [
+        {
+         "fr": "À lui-même",
+         "en": "Himself"
+        },
+        {
+         "fr": "Aux femmes",
+         "en": "The women"
+        },
+        {
+         "fr": "Au roi",
+         "en": "The king"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "sunzi-lian-bing-3",
+     "title": {
+      "jp": "军令如山",
+      "fr": "Un ordre est un ordre",
+      "en": "An order is an order"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{孙子|Sūnzǐ}{再|zài}{打|dǎ}{鼓|gǔ}：“{往|wǎng}{左|zuǒ}！”",
+        "fr": "Sunzi frappa de nouveau le tambour : « À gauche ! »",
+        "en": "Sunzi beat the drum again: “Left!”",
+        "kana": "孙子再打鼓：“往左！”"
+       },
+       {
+        "jp": "{女人们|nǚrénmen}{还是|háishi}{笑|xiào}。",
+        "fr": "Les femmes riaient toujours.",
+        "en": "The women were still laughing.",
+        "kana": "女人们还是笑。"
+       },
+       {
+        "jp": "{孙子|Sūnzǐ}{说|shuō}：“{我|wǒ}{已经|yǐjīng}{说|shuō}{清楚|qīngchu}{了|le}，{你们|nǐmen}{不|bù}{听|tīng}，{是|shì}{队长|duìzhǎng}{的|de}{错|cuò}。”",
+        "fr": "Sunzi dit : « J’ai été clair cette fois. Si vous n’obéissez pas, c’est la faute des cheffes. »",
+        "en": "Sunzi said: “This time I was clear. If you don’t obey, it’s the leaders’ fault.”",
+        "kana": "孙子说：“我已经说清楚了，你们不听，是队长的错。”"
+       }
+      ],
+      [
+       {
+        "jp": "{吴王|Wú wáng}{很|hěn}{着急|zháojí}，{可是|kěshì}{孙子|Sūnzǐ}{没有|méiyǒu}{听|tīng}{他|tā}{的|de}。",
+        "fr": "Le roi s’inquiéta, mais Sunzi ne l’écouta pas.",
+        "en": "The king grew anxious, but Sunzi didn’t listen to him.",
+        "kana": "吴王很着急，可是孙子没有听他的。"
+       },
+       {
+        "jp": "{他|tā}{让|ràng}{别的|biéde}{女人|nǚrén}{当|dāng}{队长|duìzhǎng}，{又|yòu}{打|dǎ}{鼓|gǔ}。",
+        "fr": "Il nomma d’autres cheffes et frappa encore le tambour.",
+        "en": "He appointed other leaders and beat the drum once more.",
+        "kana": "他让别的女人当队长，又打鼓。"
+       },
+       {
+        "jp": "{这次|zhè cì}，{没有|méiyǒu}{人|rén}{笑|xiào}{了|le}，{大家|dàjiā}{走|zǒu}{得|de}{非常|fēicháng}{好|hǎo}。",
+        "fr": "Cette fois, personne ne rit : toutes marchèrent parfaitement.",
+        "en": "This time nobody laughed: they all marched perfectly.",
+        "kana": "这次，没有人笑了，大家走得非常好。"
+       },
+       {
+        "jp": "{吴王|Wú wáng}{知道|zhīdào}{了|le}：{孙子|Sūnzǐ}{真|zhēn}{会|huì}{带|dài}{兵|bīng}。",
+        "fr": "Le roi comprit alors que Sunzi savait vraiment commander.",
+        "en": "The king understood that Sunzi really knew how to lead troops.",
+        "kana": "吴王知道了：孙子真会带兵。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "还是",
+       "reading": "háishi",
+       "fr": "toujours, encore",
+       "en": "still"
+      },
+      {
+       "jp": "着急",
+       "reading": "zháojí",
+       "fr": "inquiet, pressé",
+       "en": "anxious"
+      },
+      {
+       "jp": "别的",
+       "reading": "biéde",
+       "fr": "autre",
+       "en": "other"
+      },
+      {
+       "jp": "这次",
+       "reading": "zhè cì",
+       "fr": "cette fois",
+       "en": "this time"
+      },
+      {
+       "jp": "非常",
+       "reading": "fēicháng",
+       "fr": "extrêmement",
+       "en": "extremely"
+      },
+      {
+       "jp": "军令如山",
+       "reading": "jūn lìng rú shān",
+       "fr": "un ordre militaire est inébranlable",
+       "en": "a military order is unshakeable"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait Sunzi des deux cheffes de file ?",
+        "en": "What does Sunzi do with the two leaders?"
+       },
+       "choices": [
+        {
+         "fr": "Il les remplace par d’autres",
+         "en": "He replaces them with others"
+        },
+        {
+         "fr": "Il les félicite",
+         "en": "He congratulates them"
+        },
+        {
+         "fr": "Il leur donne du vin",
+         "en": "He gives them wine"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que comprend le roi à la fin ?",
+        "en": "What does the king understand in the end?"
+       },
+       "choices": [
+        {
+         "fr": "Que Sunzi sait commander",
+         "en": "That Sunzi knows how to command"
+        },
+        {
+         "fr": "Que les femmes ne savent pas marcher",
+         "en": "That the women can’t march"
+        },
+        {
+         "fr": "Que le livre est mauvais",
+         "en": "That the book is bad"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hu-jia-hu-wei",
+   "glyph": "狐",
+   "level": "HSK2",
+   "color": "#E8772E",
+   "title": {
+    "jp": "狐假虎威",
+    "fr": "Le renard et le tigre",
+    "en": "The fox and the tiger"
+   },
+   "summary": {
+    "fr": "Un renard capturé par un tigre prétend être le roi des animaux… et le prouve.",
+    "en": "A fox caught by a tiger claims to be king of the animals… and proves it."
+   },
+   "chapters": [
+    {
+     "slug": "hu-jia-hu-wei-1",
+     "title": {
+      "jp": "老虎抓到了狐狸",
+      "fr": "Le tigre attrape le renard",
+      "en": "The tiger catches the fox"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{从前|cóngqián}，{山|shān}{里|li}{有|yǒu}{一只|yì zhī}{老虎|lǎohǔ}。",
+        "fr": "Autrefois, dans la montagne, vivait un tigre.",
+        "en": "Long ago, a tiger lived in the mountains.",
+        "kana": "从前，山里有一只老虎。"
+       },
+       {
+        "jp": "{一天|yì tiān}，{老虎|lǎohǔ}{饿|è}{了|le}，{它|tā}{出去|chūqu}{找|zhǎo}{东西|dōngxi}{吃|chī}。",
+        "fr": "Un jour, le tigre eut faim et sortit chercher à manger.",
+        "en": "One day the tiger was hungry and went out to find food.",
+        "kana": "一天，老虎饿了，它出去找东西吃。"
+       },
+       {
+        "jp": "{它|tā}{抓|zhuā}{到|dào}{了|le}{一只|yì zhī}{狐狸|húli}。",
+        "fr": "Il attrapa un renard.",
+        "en": "It caught a fox.",
+        "kana": "它抓到了一只狐狸。"
+       }
+      ],
+      [
+       {
+        "jp": "{狐狸|húli}{说|shuō}：“{你|nǐ}{不|bù}{能|néng}{吃|chī}{我|wǒ}！{天帝|Tiāndì}{让|ràng}{我|wǒ}{当|dāng}{所有|suǒyǒu}{动物|dòngwù}{的|de}{王|wáng}。”",
+        "fr": "Le renard dit : « Tu ne peux pas me manger ! L’Empereur du Ciel m’a fait roi de tous les animaux. »",
+        "en": "The fox said: “You can’t eat me! The Emperor of Heaven made me king of all the animals.”",
+        "kana": "狐狸说：“你不能吃我！天帝让我当所有动物的王。”"
+       },
+       {
+        "jp": "“{你|nǐ}{不|bù}{相信|xiāngxìn}？{你|nǐ}{跟|gēn}{我|wǒ}{走|zǒu}，{看看|kànkan}{动物们|dòngwùmen}{怕|pà}{不|bù}{怕|pà}{我|wǒ}。”",
+        "fr": "« Tu ne me crois pas ? Suis-moi et regarde si les animaux ont peur de moi. »",
+        "en": "“You don’t believe me? Follow me and see whether the animals are afraid of me.”",
+        "kana": "“你不相信？你跟我走，看看动物们怕不怕我。”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "老虎",
+       "reading": "lǎohǔ",
+       "fr": "tigre",
+       "en": "tiger"
+      },
+      {
+       "jp": "饿",
+       "reading": "è",
+       "fr": "avoir faim",
+       "en": "hungry"
+      },
+      {
+       "jp": "抓",
+       "reading": "zhuā",
+       "fr": "attraper",
+       "en": "to catch"
+      },
+      {
+       "jp": "狐狸",
+       "reading": "húli",
+       "fr": "renard",
+       "en": "fox"
+      },
+      {
+       "jp": "动物",
+       "reading": "dòngwù",
+       "fr": "animal",
+       "en": "animal"
+      },
+      {
+       "jp": "怕",
+       "reading": "pà",
+       "fr": "avoir peur",
+       "en": "to be afraid"
+      },
+      {
+       "jp": "相信",
+       "reading": "xiāngxìn",
+       "fr": "croire",
+       "en": "to believe"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le tigre sort-il ?",
+        "en": "Why does the tiger go out?"
+       },
+       "choices": [
+        {
+         "fr": "Il a faim",
+         "en": "It is hungry"
+        },
+        {
+         "fr": "Il est malade",
+         "en": "It is ill"
+        },
+        {
+         "fr": "Il cherche un ami",
+         "en": "It is looking for a friend"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que prétend le renard ?",
+        "en": "What does the fox claim?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’il est le roi des animaux",
+         "en": "That it is king of the animals"
+        },
+        {
+         "fr": "Qu’il est malade",
+         "en": "That it is ill"
+        },
+        {
+         "fr": "Qu’il court plus vite",
+         "en": "That it runs faster"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "hu-jia-hu-wei-2",
+     "title": {
+      "jp": "动物们都跑了",
+      "fr": "Tous les animaux s’enfuient",
+      "en": "All the animals run away"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{狐狸|húli}{走|zǒu}{在|zài}{前面|qiánmiàn}，{老虎|lǎohǔ}{走|zǒu}{在|zài}{后面|hòumiàn}。",
+        "fr": "Le renard marchait devant, le tigre derrière.",
+        "en": "The fox walked in front, the tiger behind.",
+        "kana": "狐狸走在前面，老虎走在后面。"
+       },
+       {
+        "jp": "{动物们|dòngwùmen}{看见|kànjiàn}{了|le}，{都|dōu}{很快|hěn kuài}{地|de}{跑|pǎo}{了|le}。",
+        "fr": "En les voyant, tous les animaux s’enfuirent à toute vitesse.",
+        "en": "When the animals saw them, they all ran away fast.",
+        "kana": "动物们看见了，都很快地跑了。"
+       },
+       {
+        "jp": "{狐狸|húli}{笑|xiào}{着|zhe}{说|shuō}：“{你|nǐ}{看|kàn}，{它们|tāmen}{都|dōu}{怕|pà}{我|wǒ}！”",
+        "fr": "Le renard dit en souriant : « Tu vois, ils ont tous peur de moi ! »",
+        "en": "The fox said with a smile: “You see, they’re all afraid of me!”",
+        "kana": "狐狸笑着说：“你看，它们都怕我！”"
+       }
+      ],
+      [
+       {
+        "jp": "{老虎|lǎohǔ}{不|bù}{知道|zhīdào}，{动物们|dòngwùmen}{怕|pà}{的|de}{是|shì}{它|tā}，{不是|bú shì}{狐狸|húli}。",
+        "fr": "Le tigre ne savait pas que c’était lui que les animaux craignaient, pas le renard.",
+        "en": "The tiger didn’t know that the animals were afraid of it, not of the fox.",
+        "kana": "老虎不知道，动物们怕的是它，不是狐狸。"
+       },
+       {
+        "jp": "{它|tā}{就|jiù}{让|ràng}{狐狸|húli}{走|zǒu}{了|le}。",
+        "fr": "Il laissa donc partir le renard.",
+        "en": "So it let the fox go.",
+        "kana": "它就让狐狸走了。"
+       },
+       {
+        "jp": "{这|zhè}{就是|jiù shì}“{狐假虎威|hú jiǎ hǔ wēi}”。",
+        "fr": "Voilà ce qu’on appelle « le renard qui emprunte la majesté du tigre ».",
+        "en": "This is what is called “the fox borrowing the tiger’s might”.",
+        "kana": "这就是“狐假虎威”。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "前面",
+       "reading": "qiánmiàn",
+       "fr": "devant",
+       "en": "in front"
+      },
+      {
+       "jp": "看见",
+       "reading": "kànjiàn",
+       "fr": "voir",
+       "en": "to see"
+      },
+      {
+       "jp": "地",
+       "reading": "de",
+       "fr": "particule adverbiale",
+       "en": "adverbial particle"
+      },
+      {
+       "jp": "它们",
+       "reading": "tāmen",
+       "fr": "ils, elles (animaux, choses)",
+       "en": "they (animals, things)"
+      },
+      {
+       "jp": "威",
+       "reading": "wēi",
+       "fr": "majesté, prestige",
+       "en": "might, prestige"
+      },
+      {
+       "jp": "狐假虎威",
+       "reading": "hú jiǎ hǔ wēi",
+       "fr": "se prévaloir de la puissance d’un autre",
+       "en": "to use someone else’s power to intimidate"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui marche devant ?",
+        "en": "Who walks in front?"
+       },
+       "choices": [
+        {
+         "fr": "Le renard",
+         "en": "The fox"
+        },
+        {
+         "fr": "Le tigre",
+         "en": "The tiger"
+        },
+        {
+         "fr": "Les autres animaux",
+         "en": "The other animals"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "De qui les animaux ont-ils vraiment peur ?",
+        "en": "Who are the animals really afraid of?"
+       },
+       "choices": [
+        {
+         "fr": "Du renard",
+         "en": "The fox"
+        },
+        {
+         "fr": "Du tigre",
+         "en": "The tiger"
+        },
+        {
+         "fr": "Des chasseurs",
+         "en": "The hunters"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "sai-weng-shi-ma",
+   "glyph": "马",
+   "level": "HSK2",
+   "color": "#7A5A3A",
+   "title": {
+    "jp": "塞翁失马",
+    "fr": "Le vieil homme de la frontière",
+    "en": "The old man of the frontier"
+   },
+   "summary": {
+    "fr": "Le cheval d’un vieil homme s’enfuit. Malheur ou chance ? Lui seul ne se presse pas de juger.",
+    "en": "An old man’s horse runs away. Misfortune or luck? He alone is in no hurry to judge."
+   },
+   "chapters": [
+    {
+     "slug": "sai-weng-shi-ma-1",
+     "title": {
+      "jp": "马跑了",
+      "fr": "Le cheval s’enfuit",
+      "en": "The horse runs away"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{从前|cóngqián}，{有|yǒu}{一个|yí ge}{老人|lǎorén}{住|zhù}{在|zài}{边境|biānjìng}。",
+        "fr": "Autrefois, un vieil homme vivait à la frontière.",
+        "en": "Long ago, an old man lived on the frontier.",
+        "kana": "从前，有一个老人住在边境。"
+       },
+       {
+        "jp": "{一天|yì tiān}，{他的|tā de}{马|mǎ}{跑|pǎo}{了|le}。",
+        "fr": "Un jour, son cheval s’enfuit.",
+        "en": "One day his horse ran away.",
+        "kana": "一天，他的马跑了。"
+       },
+       {
+        "jp": "{朋友们|péngyoumen}{都|dōu}{说|shuō}：“{真|zhēn}{可惜|kěxī}！”",
+        "fr": "Ses amis lui dirent tous : « Quel dommage ! »",
+        "en": "His friends all said: “What a pity!”",
+        "kana": "朋友们都说：“真可惜！”"
+       }
+      ],
+      [
+       {
+        "jp": "{老人|lǎorén}{笑|xiào}{着|zhe}{说|shuō}：“{没关系|méi guānxi}，{这|zhè}{可能|kěnéng}{是|shì}{好|hǎo}{事|shì}。”",
+        "fr": "Le vieil homme répondit en souriant : « Ce n’est pas grave, c’est peut-être une bonne chose. »",
+        "en": "The old man smiled and said: “It doesn’t matter; it may be a good thing.”",
+        "kana": "老人笑着说：“没关系，这可能是好事。”"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "老人",
+       "reading": "lǎorén",
+       "fr": "vieil homme, personne âgée",
+       "en": "old man, elderly person"
+      },
+      {
+       "jp": "边境",
+       "reading": "biānjìng",
+       "fr": "frontière",
+       "en": "border, frontier"
+      },
+      {
+       "jp": "马",
+       "reading": "mǎ",
+       "fr": "cheval",
+       "en": "horse"
+      },
+      {
+       "jp": "可惜",
+       "reading": "kěxī",
+       "fr": "dommage",
+       "en": "what a pity"
+      },
+      {
+       "jp": "事",
+       "reading": "shì",
+       "fr": "chose, affaire",
+       "en": "matter, thing"
+      },
+      {
+       "jp": "可能",
+       "reading": "kěnéng",
+       "fr": "peut-être",
+       "en": "maybe"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’arrive-t-il au cheval ?",
+        "en": "What happens to the horse?"
+       },
+       "choices": [
+        {
+         "fr": "Il s’enfuit",
+         "en": "It runs away"
+        },
+        {
+         "fr": "Il tombe malade",
+         "en": "It falls ill"
+        },
+        {
+         "fr": "Il est vendu",
+         "en": "It is sold"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment réagit le vieil homme ?",
+        "en": "How does the old man react?"
+       },
+       "choices": [
+        {
+         "fr": "Il pleure",
+         "en": "He cries"
+        },
+        {
+         "fr": "Il dit que c’est peut-être une bonne chose",
+         "en": "He says it may be a good thing"
+        },
+        {
+         "fr": "Il part le chercher",
+         "en": "He goes looking for it"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "sai-weng-shi-ma-2",
+     "title": {
+      "jp": "马回来了",
+      "fr": "Le cheval revient",
+      "en": "The horse comes back"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{几个|jǐ ge}{月|yuè}{以后|yǐhòu}，{他的|tā de}{马|mǎ}{回来|huílai}{了|le}，{还|hái}{带|dài}{来|lái}{了|le}{一|yì}{匹|pǐ}{好|hǎo}{马|mǎ}。",
+        "fr": "Quelques mois plus tard, son cheval revint, et ramena même un autre bon cheval.",
+        "en": "A few months later his horse came back, bringing another fine horse with it.",
+        "kana": "几个月以后，他的马回来了，还带来了一匹好马。"
+       },
+       {
+        "jp": "{朋友们|péngyoumen}{说|shuō}：“{太|tài}{好|hǎo}{了|le}！”",
+        "fr": "Ses amis s’écrièrent : « Formidable ! »",
+        "en": "His friends said: “Wonderful!”",
+        "kana": "朋友们说：“太好了！”"
+       },
+       {
+        "jp": "{老人|lǎorén}{说|shuō}：“{这|zhè}{可能|kěnéng}{是|shì}{坏|huài}{事|shì}。”",
+        "fr": "Le vieil homme dit : « C’est peut-être une mauvaise chose. »",
+        "en": "The old man said: “It may be a bad thing.”",
+        "kana": "老人说：“这可能是坏事。”"
+       }
+      ],
+      [
+       {
+        "jp": "{老人的|lǎorén de}{儿子|érzi}{非常|fēicháng}{喜欢|xǐhuan}{这|zhè}{匹|pǐ}{新|xīn}{马|mǎ}。",
+        "fr": "Le fils du vieil homme adorait ce nouveau cheval.",
+        "en": "The old man’s son loved the new horse.",
+        "kana": "老人的儿子非常喜欢这匹新马。"
+       },
+       {
+        "jp": "{他|tā}{每天|měi tiān}{骑|qí}{马|mǎ}。{有|yǒu}{一天|yì tiān}，{他|tā}{从|cóng}{马|mǎ}{上|shang}{掉|diào}{下来|xiàlai}，{腿|tuǐ}{断|duàn}{了|le}。",
+        "fr": "Il le montait tous les jours. Un jour, il tomba et se cassa la jambe.",
+        "en": "He rode it every day. One day he fell off and broke his leg.",
+        "kana": "他每天骑马。有一天，他从马上掉下来，腿断了。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "以后",
+       "reading": "yǐhòu",
+       "fr": "après, plus tard",
+       "en": "after, later"
+      },
+      {
+       "jp": "带",
+       "reading": "dài",
+       "fr": "amener, emporter",
+       "en": "to bring"
+      },
+      {
+       "jp": "匹",
+       "reading": "pǐ",
+       "fr": "classificateur des chevaux",
+       "en": "measure word for horses"
+      },
+      {
+       "jp": "坏",
+       "reading": "huài",
+       "fr": "mauvais",
+       "en": "bad"
+      },
+      {
+       "jp": "骑",
+       "reading": "qí",
+       "fr": "monter (à cheval)",
+       "en": "to ride"
+      },
+      {
+       "jp": "腿",
+       "reading": "tuǐ",
+       "fr": "jambe",
+       "en": "leg"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Avec quoi le cheval revient-il ?",
+        "en": "What does the horse come back with?"
+       },
+       "choices": [
+        {
+         "fr": "Avec un autre bon cheval",
+         "en": "With another fine horse"
+        },
+        {
+         "fr": "Avec de l’argent",
+         "en": "With money"
+        },
+        {
+         "fr": "Seul",
+         "en": "Alone"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’arrive-t-il au fils ?",
+        "en": "What happens to the son?"
+       },
+       "choices": [
+        {
+         "fr": "Il se casse la jambe",
+         "en": "He breaks his leg"
+        },
+        {
+         "fr": "Il part à la guerre",
+         "en": "He goes to war"
+        },
+        {
+         "fr": "Il vend le cheval",
+         "en": "He sells the horse"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "sai-weng-shi-ma-3",
+     "title": {
+      "jp": "好事还是坏事？",
+      "fr": "Bonne ou mauvaise chose ?",
+      "en": "Good thing or bad?"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "{朋友们|péngyoumen}{又|yòu}{说|shuō}：“{真|zhēn}{可惜|kěxī}！”",
+        "fr": "Ses amis dirent encore : « Quel dommage ! »",
+        "en": "His friends said again: “What a pity!”",
+        "kana": "朋友们又说：“真可惜！”"
+       },
+       {
+        "jp": "{老人|lǎorén}{还是|háishi}{说|shuō}：“{这|zhè}{可能|kěnéng}{是|shì}{好|hǎo}{事|shì}。”",
+        "fr": "Le vieil homme répéta : « C’est peut-être une bonne chose. »",
+        "en": "The old man still said: “It may be a good thing.”",
+        "kana": "老人还是说：“这可能是好事。”"
+       }
+      ],
+      [
+       {
+        "jp": "{第二年|dì-èr nián}，{打仗|dǎzhàng}{了|le}，{年轻人|niánqīngrén}{都|dōu}{要|yào}{去|qù}{当|dāng}{兵|bīng}。",
+        "fr": "L’année suivante, la guerre éclata : tous les jeunes durent partir comme soldats.",
+        "en": "The next year war broke out, and all the young men had to become soldiers.",
+        "kana": "第二年，打仗了，年轻人都要去当兵。"
+       },
+       {
+        "jp": "{老人的|lǎorén de}{儿子|érzi}{腿|tuǐ}{不|bù}{好|hǎo}，{不用|bú yòng}{去|qù}，{他|tā}{和|hé}{父亲|fùqin}{一起|yìqǐ}{留|liú}{在|zài}{了|le}{家|jiā}{里|li}。",
+        "fr": "Le fils, avec sa jambe blessée, n’eut pas à partir : il resta à la maison avec son père.",
+        "en": "With his bad leg, the son didn’t have to go: he stayed at home with his father.",
+        "kana": "老人的儿子腿不好，不用去，他和父亲一起留在了家里。"
+       },
+       {
+        "jp": "{这|zhè}{就是|jiù shì}“{塞翁失马|sài wēng shī mǎ}，{焉知非福|yān zhī fēi fú}”。",
+        "fr": "Voilà le proverbe : « Le vieil homme de la frontière perd son cheval : qui sait si ce n’est pas une chance ? »",
+        "en": "Hence the saying: “The old man of the frontier lost his horse: who knows if it wasn’t a blessing?”",
+        "kana": "这就是“塞翁失马，焉知非福”。"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "第二年",
+       "reading": "dì-èr nián",
+       "fr": "l’année suivante",
+       "en": "the next year"
+      },
+      {
+       "jp": "打仗",
+       "reading": "dǎzhàng",
+       "fr": "faire la guerre",
+       "en": "to go to war"
+      },
+      {
+       "jp": "年轻人",
+       "reading": "niánqīngrén",
+       "fr": "les jeunes",
+       "en": "young people"
+      },
+      {
+       "jp": "不用",
+       "reading": "bú yòng",
+       "fr": "ne pas avoir besoin de",
+       "en": "no need to"
+      },
+      {
+       "jp": "留",
+       "reading": "liú",
+       "fr": "rester",
+       "en": "to stay"
+      },
+      {
+       "jp": "父亲",
+       "reading": "fùqin",
+       "fr": "père",
+       "en": "father"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le fils ne part-il pas à la guerre ?",
+        "en": "Why doesn’t the son go to war?"
+       },
+       "choices": [
+        {
+         "fr": "À cause de sa jambe",
+         "en": "Because of his leg"
+        },
+        {
+         "fr": "Il est trop jeune",
+         "en": "He is too young"
+        },
+        {
+         "fr": "Il est malade",
+         "en": "He is ill"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que veut dire cette histoire ?",
+        "en": "What does this story mean?"
+       },
+       "choices": [
+        {
+         "fr": "Un malheur peut cacher une chance",
+         "en": "Misfortune can hide good luck"
+        },
+        {
+         "fr": "Il faut toujours garder ses chevaux",
+         "en": "You should always keep your horses"
+        },
+        {
+         "fr": "La guerre est toujours une bonne chose",
+         "en": "War is always a good thing"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

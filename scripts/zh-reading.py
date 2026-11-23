@@ -195,7 +195,165 @@ MAODUN = STORY('zi-xiang-mao-dun', '盾', 'HSK1', '#8E1B26', ('自相矛盾', 'L
   ]),
 ])
 
-ZH_STORIES = [SHOUZHU, HUASHE, MAODUN]
+
+# ═════════════════════════ HSK 2 ═════════════════════════
+# 孙子练兵 (Mémoires historiques, Sima Qian) — version adoucie : les chefs de file sont remplacés.
+SUNZI = STORY('sunzi-lian-bing', '鼓', 'HSK2', '#2F5E7A', ('孙子练兵', 'Le général et les dames de la cour', 'The general and the court ladies'),
+  ('Le roi de Wu met le général Sun à l’épreuve : saura-t-il faire de 180 dames de la cour une troupe disciplinée ?', 'The king of Wu puts General Sun to the test: can he turn 180 court ladies into a disciplined troop?'), [
+  CH('sunzi-lian-bing-1', ('吴王的考试', 'L’épreuve du roi de Wu', 'The king of Wu’s test'), [
+    [S('孙子:Sūnzǐ 写:xiě 了:le 一:yì 本:běn 书:shū ， 叫:jiào 《 孙子兵法:Sūnzǐ_Bīngfǎ 》 。', 'Sunzi écrivit un livre intitulé « L’Art de la guerre de Sunzi ».', 'Sunzi wrote a book called “Sunzi’s Art of War”.'),
+     S('吴王:Wú_wáng 看:kàn 完:wán 了:le ， 觉得:juéde 很:hěn 有意思:yǒu_yìsi 。', 'Le roi de Wu le lut jusqu’au bout et le trouva très intéressant.', 'The king of Wu read it to the end and found it very interesting.'),
+     S('但是:dànshì 他:tā 想:xiǎng ： “ 他:tā 真:zhēn 的:de 会:huì 带:dài 兵:bīng 吗:ma ？ ”', 'Mais il se demandait : « Sait-il vraiment commander des soldats ? »', 'But he wondered: “Can he really lead soldiers?”')],
+    [S('吴王:Wú_wáng 问:wèn 孙子:Sūnzǐ ： “ 你:nǐ 可以:kěyǐ 让:ràng 宫:gōng 里:li 的:de 女人:nǚrén 当:dāng 兵:bīng 吗:ma ？ ”', 'Le roi demanda à Sunzi : « Peux-tu faire des soldats avec les femmes du palais ? »', 'The king asked Sunzi: “Can you turn the women of the palace into soldiers?”'),
+     S('孙子:Sūnzǐ 回答:huídá ： “ 可以:kěyǐ 。 ”', 'Sunzi répondit : « Oui. »', 'Sunzi answered: “I can.”'),
+     S('吴王:Wú_wáng 就:jiù 叫:jiào 来:lái 了:le 一百八十:yìbǎi_bāshí 个:ge 女人:nǚrén 。', 'Le roi fit aussitôt venir cent quatre-vingts femmes.', 'The king immediately summoned a hundred and eighty women.')],
+  ], [
+    W('本', 'běn', 'classificateur des livres', 'measure word for books'),
+    W('兵', 'bīng', 'soldat', 'soldier'),
+    W('带', 'dài', 'mener, emmener', 'to lead, to bring'),
+    W('宫', 'gōng', 'palais', 'palace'),
+    W('当', 'dāng', 'servir de, devenir', 'to serve as, to become'),
+    W('吴王', 'Wú wáng', 'le roi de Wu', 'the king of Wu'),
+  ], [
+    Q(('Qu’a écrit Sunzi ?', 'What did Sunzi write?'), [('Un livre sur la guerre', 'A book about war'), ('Une lettre au roi', 'A letter to the king'), ('Un poème', 'A poem')], 0),
+    Q(('Combien de femmes le roi fait-il venir ?', 'How many women does the king summon?'), [('Dix-huit', 'Eighteen'), ('Cent quatre-vingts', 'A hundred and eighty'), ('Cent', 'A hundred')], 1),
+  ]),
+  CH('sunzi-lian-bing-2', ('她们笑了', 'Elles rient', 'They laugh'), [
+    [S('孙子:Sūnzǐ 让:ràng 她们:tāmen 站:zhàn 成:chéng 两:liǎng 队:duì ， 王:wáng 最:zuì 喜欢:xǐhuan 的:de 两个:liǎng_ge 女人:nǚrén 当:dāng 队长:duìzhǎng 。', 'Sunzi les mit en deux rangs, avec pour cheffes les deux favorites du roi.', 'Sunzi lined them up in two ranks, with the king’s two favourites as leaders.'),
+     S('他:tā 问:wèn ： “ 你们:nǐmen 知道:zhīdào 左边:zuǒbian 、 右边:yòubian 、 前面:qiánmiàn 、 后面:hòumiàn 吗:ma ？ ”', 'Il demanda : « Savez-vous où sont la gauche, la droite, l’avant et l’arrière ? »', 'He asked: “Do you know left, right, front and back?”'),
+     S('女人们:nǚrénmen 说:shuō ： “ 知道:zhīdào ！ ”', 'Les femmes répondirent : « Oui ! »', 'The women said: “We do!”')],
+    [S('孙子:Sūnzǐ 打:dǎ 鼓:gǔ ， 说:shuō ： “ 往:wǎng 右:yòu ！ ”', 'Sunzi frappa le tambour et cria : « À droite ! »', 'Sunzi beat the drum and called: “Right!”'),
+     S('可是:kěshì 女人们:nǚrénmen 都:dōu 笑:xiào 了:le ， 没有:méiyǒu 人:rén 动:dòng 。', 'Mais toutes les femmes éclatèrent de rire, et personne ne bougea.', 'But all the women laughed, and nobody moved.'),
+     S('孙子:Sūnzǐ 说:shuō ： “ 我:wǒ 没:méi 说:shuō 清楚:qīngchu ， 是:shì 我的:wǒ_de 错:cuò 。 ” 他:tā 又:yòu 说:shuō 了:le 一次:yí_cì 。', 'Sunzi dit : « Je n’ai pas été clair, c’est ma faute. » Et il répéta les ordres.', 'Sunzi said: “I wasn’t clear; it’s my fault.” And he explained once more.')],
+  ], [
+    W('站', 'zhàn', 'se tenir debout', 'to stand'),
+    W('队', 'duì', 'rang, file', 'rank, line'),
+    W('队长', 'duìzhǎng', 'chef de file', 'team leader'),
+    W('鼓', 'gǔ', 'tambour', 'drum'),
+    W('动', 'dòng', 'bouger', 'to move'),
+    W('清楚', 'qīngchu', 'clair', 'clear'),
+  ], [
+    Q(('Que font les femmes au premier ordre ?', 'What do the women do at the first order?'), [('Elles tournent à droite', 'They turn right'), ('Elles rient sans bouger', 'They laugh and don’t move'), ('Elles s’en vont', 'They leave')], 1),
+    Q(('À qui Sunzi attribue-t-il la première erreur ?', 'Whom does Sunzi blame for the first mistake?'), [('À lui-même', 'Himself'), ('Aux femmes', 'The women'), ('Au roi', 'The king')], 0),
+  ]),
+  CH('sunzi-lian-bing-3', ('军令如山', 'Un ordre est un ordre', 'An order is an order'), [
+    [S('孙子:Sūnzǐ 再:zài 打:dǎ 鼓:gǔ ： “ 往:wǎng 左:zuǒ ！ ”', 'Sunzi frappa de nouveau le tambour : « À gauche ! »', 'Sunzi beat the drum again: “Left!”'),
+     S('女人们:nǚrénmen 还是:háishi 笑:xiào 。', 'Les femmes riaient toujours.', 'The women were still laughing.'),
+     S('孙子:Sūnzǐ 说:shuō ： “ 我:wǒ 已经:yǐjīng 说:shuō 清楚:qīngchu 了:le ， 你们:nǐmen 不:bù 听:tīng ， 是:shì 队长:duìzhǎng 的:de 错:cuò 。 ”', 'Sunzi dit : « J’ai été clair cette fois. Si vous n’obéissez pas, c’est la faute des cheffes. »', 'Sunzi said: “This time I was clear. If you don’t obey, it’s the leaders’ fault.”')],
+    [S('吴王:Wú_wáng 很:hěn 着急:zháojí ， 可是:kěshì 孙子:Sūnzǐ 没有:méiyǒu 听:tīng 他:tā 的:de 。', 'Le roi s’inquiéta, mais Sunzi ne l’écouta pas.', 'The king grew anxious, but Sunzi didn’t listen to him.'),
+     S('他:tā 让:ràng 别的:biéde 女人:nǚrén 当:dāng 队长:duìzhǎng ， 又:yòu 打:dǎ 鼓:gǔ 。', 'Il nomma d’autres cheffes et frappa encore le tambour.', 'He appointed other leaders and beat the drum once more.'),
+     S('这次:zhè_cì ， 没有:méiyǒu 人:rén 笑:xiào 了:le ， 大家:dàjiā 走:zǒu 得:de 非常:fēicháng 好:hǎo 。', 'Cette fois, personne ne rit : toutes marchèrent parfaitement.', 'This time nobody laughed: they all marched perfectly.'),
+     S('吴王:Wú_wáng 知道:zhīdào 了:le ： 孙子:Sūnzǐ 真:zhēn 会:huì 带:dài 兵:bīng 。', 'Le roi comprit alors que Sunzi savait vraiment commander.', 'The king understood that Sunzi really knew how to lead troops.')],
+  ], [
+    W('还是', 'háishi', 'toujours, encore', 'still'),
+    W('着急', 'zháojí', 'inquiet, pressé', 'anxious'),
+    W('别的', 'biéde', 'autre', 'other'),
+    W('这次', 'zhè cì', 'cette fois', 'this time'),
+    W('非常', 'fēicháng', 'extrêmement', 'extremely'),
+    W('军令如山', 'jūn lìng rú shān', 'un ordre militaire est inébranlable', 'a military order is unshakeable'),
+  ], [
+    Q(('Que fait Sunzi des deux cheffes de file ?', 'What does Sunzi do with the two leaders?'), [('Il les remplace par d’autres', 'He replaces them with others'), ('Il les félicite', 'He congratulates them'), ('Il leur donne du vin', 'He gives them wine')], 0),
+    Q(('Que comprend le roi à la fin ?', 'What does the king understand in the end?'), [('Que Sunzi sait commander', 'That Sunzi knows how to command'), ('Que les femmes ne savent pas marcher', 'That the women can’t march'), ('Que le livre est mauvais', 'That the book is bad')], 0),
+  ]),
+])
+
+# 狐假虎威 (Stratagèmes des Royaumes combattants, royaume de Chu)
+HUJIA = STORY('hu-jia-hu-wei', '狐', 'HSK2', '#E8772E', ('狐假虎威', 'Le renard et le tigre', 'The fox and the tiger'),
+  ('Un renard capturé par un tigre prétend être le roi des animaux… et le prouve.', 'A fox caught by a tiger claims to be king of the animals… and proves it.'), [
+  CH('hu-jia-hu-wei-1', ('老虎抓到了狐狸', 'Le tigre attrape le renard', 'The tiger catches the fox'), [
+    [S('从前:cóngqián ， 山:shān 里:li 有:yǒu 一只:yì_zhī 老虎:lǎohǔ 。', 'Autrefois, dans la montagne, vivait un tigre.', 'Long ago, a tiger lived in the mountains.'),
+     S('一天:yì_tiān ， 老虎:lǎohǔ 饿:è 了:le ， 它:tā 出去:chūqu 找:zhǎo 东西:dōngxi 吃:chī 。', 'Un jour, le tigre eut faim et sortit chercher à manger.', 'One day the tiger was hungry and went out to find food.'),
+     S('它:tā 抓:zhuā 到:dào 了:le 一只:yì_zhī 狐狸:húli 。', 'Il attrapa un renard.', 'It caught a fox.')],
+    [S('狐狸:húli 说:shuō ： “ 你:nǐ 不:bù 能:néng 吃:chī 我:wǒ ！ 天帝:Tiāndì 让:ràng 我:wǒ 当:dāng 所有:suǒyǒu 动物:dòngwù 的:de 王:wáng 。 ”', 'Le renard dit : « Tu ne peux pas me manger ! L’Empereur du Ciel m’a fait roi de tous les animaux. »', 'The fox said: “You can’t eat me! The Emperor of Heaven made me king of all the animals.”'),
+     S('“ 你:nǐ 不:bù 相信:xiāngxìn ？ 你:nǐ 跟:gēn 我:wǒ 走:zǒu ， 看看:kànkan 动物们:dòngwùmen 怕:pà 不:bù 怕:pà 我:wǒ 。 ”', '« Tu ne me crois pas ? Suis-moi et regarde si les animaux ont peur de moi. »', '“You don’t believe me? Follow me and see whether the animals are afraid of me.”')],
+  ], [
+    W('老虎', 'lǎohǔ', 'tigre', 'tiger'),
+    W('饿', 'è', 'avoir faim', 'hungry'),
+    W('抓', 'zhuā', 'attraper', 'to catch'),
+    W('狐狸', 'húli', 'renard', 'fox'),
+    W('动物', 'dòngwù', 'animal', 'animal'),
+    W('怕', 'pà', 'avoir peur', 'to be afraid'),
+    W('相信', 'xiāngxìn', 'croire', 'to believe'),
+  ], [
+    Q(('Pourquoi le tigre sort-il ?', 'Why does the tiger go out?'), [('Il a faim', 'It is hungry'), ('Il est malade', 'It is ill'), ('Il cherche un ami', 'It is looking for a friend')], 0),
+    Q(('Que prétend le renard ?', 'What does the fox claim?'), [('Qu’il est le roi des animaux', 'That it is king of the animals'), ('Qu’il est malade', 'That it is ill'), ('Qu’il court plus vite', 'That it runs faster')], 0),
+  ]),
+  CH('hu-jia-hu-wei-2', ('动物们都跑了', 'Tous les animaux s’enfuient', 'All the animals run away'), [
+    [S('狐狸:húli 走:zǒu 在:zài 前面:qiánmiàn ， 老虎:lǎohǔ 走:zǒu 在:zài 后面:hòumiàn 。', 'Le renard marchait devant, le tigre derrière.', 'The fox walked in front, the tiger behind.'),
+     S('动物们:dòngwùmen 看见:kànjiàn 了:le ， 都:dōu 很快:hěn_kuài 地:de 跑:pǎo 了:le 。', 'En les voyant, tous les animaux s’enfuirent à toute vitesse.', 'When the animals saw them, they all ran away fast.'),
+     S('狐狸:húli 笑:xiào 着:zhe 说:shuō ： “ 你:nǐ 看:kàn ， 它们:tāmen 都:dōu 怕:pà 我:wǒ ！ ”', 'Le renard dit en souriant : « Tu vois, ils ont tous peur de moi ! »', 'The fox said with a smile: “You see, they’re all afraid of me!”')],
+    [S('老虎:lǎohǔ 不:bù 知道:zhīdào ， 动物们:dòngwùmen 怕:pà 的:de 是:shì 它:tā ， 不是:bú_shì 狐狸:húli 。', 'Le tigre ne savait pas que c’était lui que les animaux craignaient, pas le renard.', 'The tiger didn’t know that the animals were afraid of it, not of the fox.'),
+     S('它:tā 就:jiù 让:ràng 狐狸:húli 走:zǒu 了:le 。', 'Il laissa donc partir le renard.', 'So it let the fox go.'),
+     S('这:zhè 就是:jiù_shì “ 狐假虎威:hú_jiǎ_hǔ_wēi ” 。', 'Voilà ce qu’on appelle « le renard qui emprunte la majesté du tigre ».', 'This is what is called “the fox borrowing the tiger’s might”.')],
+  ], [
+    W('前面', 'qiánmiàn', 'devant', 'in front'),
+    W('看见', 'kànjiàn', 'voir', 'to see'),
+    W('地', 'de', 'particule adverbiale', 'adverbial particle'),
+    W('它们', 'tāmen', 'ils, elles (animaux, choses)', 'they (animals, things)'),
+    W('威', 'wēi', 'majesté, prestige', 'might, prestige'),
+    W('狐假虎威', 'hú jiǎ hǔ wēi', 'se prévaloir de la puissance d’un autre', 'to use someone else’s power to intimidate'),
+  ], [
+    Q(('Qui marche devant ?', 'Who walks in front?'), [('Le renard', 'The fox'), ('Le tigre', 'The tiger'), ('Les autres animaux', 'The other animals')], 0),
+    Q(('De qui les animaux ont-ils vraiment peur ?', 'Who are the animals really afraid of?'), [('Du renard', 'The fox'), ('Du tigre', 'The tiger'), ('Des chasseurs', 'The hunters')], 1),
+  ]),
+])
+
+# 塞翁失马 (Huainanzi)
+SAIWENG = STORY('sai-weng-shi-ma', '马', 'HSK2', '#7A5A3A', ('塞翁失马', 'Le vieil homme de la frontière', 'The old man of the frontier'),
+  ('Le cheval d’un vieil homme s’enfuit. Malheur ou chance ? Lui seul ne se presse pas de juger.', 'An old man’s horse runs away. Misfortune or luck? He alone is in no hurry to judge.'), [
+  CH('sai-weng-shi-ma-1', ('马跑了', 'Le cheval s’enfuit', 'The horse runs away'), [
+    [S('从前:cóngqián ， 有:yǒu 一个:yí_ge 老人:lǎorén 住:zhù 在:zài 边境:biānjìng 。', 'Autrefois, un vieil homme vivait à la frontière.', 'Long ago, an old man lived on the frontier.'),
+     S('一天:yì_tiān ， 他的:tā_de 马:mǎ 跑:pǎo 了:le 。', 'Un jour, son cheval s’enfuit.', 'One day his horse ran away.'),
+     S('朋友们:péngyoumen 都:dōu 说:shuō ： “ 真:zhēn 可惜:kěxī ！ ”', 'Ses amis lui dirent tous : « Quel dommage ! »', 'His friends all said: “What a pity!”')],
+    [S('老人:lǎorén 笑:xiào 着:zhe 说:shuō ： “ 没关系:méi_guānxi ， 这:zhè 可能:kěnéng 是:shì 好:hǎo 事:shì 。 ”', 'Le vieil homme répondit en souriant : « Ce n’est pas grave, c’est peut-être une bonne chose. »', 'The old man smiled and said: “It doesn’t matter; it may be a good thing.”')],
+  ], [
+    W('老人', 'lǎorén', 'vieil homme, personne âgée', 'old man, elderly person'),
+    W('边境', 'biānjìng', 'frontière', 'border, frontier'),
+    W('马', 'mǎ', 'cheval', 'horse'),
+    W('可惜', 'kěxī', 'dommage', 'what a pity'),
+    W('事', 'shì', 'chose, affaire', 'matter, thing'),
+    W('可能', 'kěnéng', 'peut-être', 'maybe'),
+  ], [
+    Q(('Qu’arrive-t-il au cheval ?', 'What happens to the horse?'), [('Il s’enfuit', 'It runs away'), ('Il tombe malade', 'It falls ill'), ('Il est vendu', 'It is sold')], 0),
+    Q(('Comment réagit le vieil homme ?', 'How does the old man react?'), [('Il pleure', 'He cries'), ('Il dit que c’est peut-être une bonne chose', 'He says it may be a good thing'), ('Il part le chercher', 'He goes looking for it')], 1),
+  ]),
+  CH('sai-weng-shi-ma-2', ('马回来了', 'Le cheval revient', 'The horse comes back'), [
+    [S('几个:jǐ_ge 月:yuè 以后:yǐhòu ， 他的:tā_de 马:mǎ 回来:huílai 了:le ， 还:hái 带:dài 来:lái 了:le 一:yì 匹:pǐ 好:hǎo 马:mǎ 。', 'Quelques mois plus tard, son cheval revint, et ramena même un autre bon cheval.', 'A few months later his horse came back, bringing another fine horse with it.'),
+     S('朋友们:péngyoumen 说:shuō ： “ 太:tài 好:hǎo 了:le ！ ”', 'Ses amis s’écrièrent : « Formidable ! »', 'His friends said: “Wonderful!”'),
+     S('老人:lǎorén 说:shuō ： “ 这:zhè 可能:kěnéng 是:shì 坏:huài 事:shì 。 ”', 'Le vieil homme dit : « C’est peut-être une mauvaise chose. »', 'The old man said: “It may be a bad thing.”')],
+    [S('老人的:lǎorén_de 儿子:érzi 非常:fēicháng 喜欢:xǐhuan 这:zhè 匹:pǐ 新:xīn 马:mǎ 。', 'Le fils du vieil homme adorait ce nouveau cheval.', 'The old man’s son loved the new horse.'),
+     S('他:tā 每天:měi_tiān 骑:qí 马:mǎ 。 有:yǒu 一天:yì_tiān ， 他:tā 从:cóng 马:mǎ 上:shang 掉:diào 下来:xiàlai ， 腿:tuǐ 断:duàn 了:le 。', 'Il le montait tous les jours. Un jour, il tomba et se cassa la jambe.', 'He rode it every day. One day he fell off and broke his leg.')],
+  ], [
+    W('以后', 'yǐhòu', 'après, plus tard', 'after, later'),
+    W('带', 'dài', 'amener, emporter', 'to bring'),
+    W('匹', 'pǐ', 'classificateur des chevaux', 'measure word for horses'),
+    W('坏', 'huài', 'mauvais', 'bad'),
+    W('骑', 'qí', 'monter (à cheval)', 'to ride'),
+    W('腿', 'tuǐ', 'jambe', 'leg'),
+  ], [
+    Q(('Avec quoi le cheval revient-il ?', 'What does the horse come back with?'), [('Avec un autre bon cheval', 'With another fine horse'), ('Avec de l’argent', 'With money'), ('Seul', 'Alone')], 0),
+    Q(('Qu’arrive-t-il au fils ?', 'What happens to the son?'), [('Il se casse la jambe', 'He breaks his leg'), ('Il part à la guerre', 'He goes to war'), ('Il vend le cheval', 'He sells the horse')], 0),
+  ]),
+  CH('sai-weng-shi-ma-3', ('好事还是坏事？', 'Bonne ou mauvaise chose ?', 'Good thing or bad?'), [
+    [S('朋友们:péngyoumen 又:yòu 说:shuō ： “ 真:zhēn 可惜:kěxī ！ ”', 'Ses amis dirent encore : « Quel dommage ! »', 'His friends said again: “What a pity!”'),
+     S('老人:lǎorén 还是:háishi 说:shuō ： “ 这:zhè 可能:kěnéng 是:shì 好:hǎo 事:shì 。 ”', 'Le vieil homme répéta : « C’est peut-être une bonne chose. »', 'The old man still said: “It may be a good thing.”')],
+    [S('第二年:dì-èr_nián ， 打仗:dǎzhàng 了:le ， 年轻人:niánqīngrén 都:dōu 要:yào 去:qù 当:dāng 兵:bīng 。', 'L’année suivante, la guerre éclata : tous les jeunes durent partir comme soldats.', 'The next year war broke out, and all the young men had to become soldiers.'),
+     S('老人的:lǎorén_de 儿子:érzi 腿:tuǐ 不:bù 好:hǎo ， 不用:bú_yòng 去:qù ， 他:tā 和:hé 父亲:fùqin 一起:yìqǐ 留:liú 在:zài 了:le 家:jiā 里:li 。', 'Le fils, avec sa jambe blessée, n’eut pas à partir : il resta à la maison avec son père.', 'With his bad leg, the son didn’t have to go: he stayed at home with his father.'),
+     S('这:zhè 就是:jiù_shì “ 塞翁失马:sài_wēng_shī_mǎ ， 焉知非福:yān_zhī_fēi_fú ” 。', 'Voilà le proverbe : « Le vieil homme de la frontière perd son cheval : qui sait si ce n’est pas une chance ? »', 'Hence the saying: “The old man of the frontier lost his horse: who knows if it wasn’t a blessing?”')],
+  ], [
+    W('第二年', 'dì-èr nián', 'l’année suivante', 'the next year'),
+    W('打仗', 'dǎzhàng', 'faire la guerre', 'to go to war'),
+    W('年轻人', 'niánqīngrén', 'les jeunes', 'young people'),
+    W('不用', 'bú yòng', 'ne pas avoir besoin de', 'no need to'),
+    W('留', 'liú', 'rester', 'to stay'),
+    W('父亲', 'fùqin', 'père', 'father'),
+  ], [
+    Q(('Pourquoi le fils ne part-il pas à la guerre ?', 'Why doesn’t the son go to war?'), [('À cause de sa jambe', 'Because of his leg'), ('Il est trop jeune', 'He is too young'), ('Il est malade', 'He is ill')], 0),
+    Q(('Que veut dire cette histoire ?', 'What does this story mean?'), [('Un malheur peut cacher une chance', 'Misfortune can hide good luck'), ('Il faut toujours garder ses chevaux', 'You should always keep your horses'), ('La guerre est toujours une bonne chose', 'War is always a good thing')], 0),
+  ]),
+])
+
+ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES

@@ -1031,4 +1031,12 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await expect(page.getByText('Tout en chinois')).toBeVisible();
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByText('听力 第一部分（1～5）').first()).toBeVisible();
+
+  // HSK 2 : la saga du général Sun et son examen de 55 minutes
+  await page.goto(FILE + '#/path');
+  await page.getByRole('tab', { name: /HSK 2/ }).click();
+  await expect(page.getByRole('heading', { name: 'HSK 2 : l’art de la guerre' })).toBeVisible();
+  await page.goto(FILE + '#/exam/hsk2-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc HSK 2 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/60 questions en 55 minutes/)).toBeVisible();
 });

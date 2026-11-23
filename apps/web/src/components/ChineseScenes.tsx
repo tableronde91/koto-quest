@@ -159,6 +159,40 @@ function LuckyCloud({ ...p }: P) {
   );
 }
 
+
+/** Tente de campagne et fanion. */
+function Tent({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 L0 -18 L14 0Z" fill="#D9C28A" stroke={WOOD} strokeWidth="1" />
+      <path d="M0 -18 L-4 0 H4Z" fill={WOOD} />
+      <path d="M0 -18 V-28 L8 -25 L0 -22" fill={RED} stroke={WOOD} strokeWidth="0.8" />
+    </g>
+  );
+}
+
+/** Tambour de guerre. */
+function Drum({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-8 -2 L-10 4 M8 -2 L10 4" stroke={WOOD} strokeWidth="1.6" />
+      <ellipse cx="0" cy="-10" rx="10" ry="9" fill={RED} stroke={GOLD} strokeWidth="1" />
+      <ellipse cx="0" cy="-10" rx="5" ry="7" fill={PAPER} />
+    </g>
+  );
+}
+
+/** Jonque sur le fleuve. */
+function Junk({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-16 -4 H16 L12 2 H-12Z" fill={WOOD} />
+      <path d="M-2 -4 V-26 M8 -4 V-20" stroke={WOOD} strokeWidth="1.2" />
+      <path d="M-2 -24 Q-12 -14 -2 -6Z M8 -18 Q2 -12 8 -6Z" fill="#E9CF9A" stroke="#9A8452" strokeWidth="0.6" />
+    </g>
+  );
+}
+
 export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'école du maître : pavillon de Lu, pétards contre le Nian, prunier.
   'hsk1-w1': () => (<><Pavilion x={-14} y={12} /><Firecrackers x={14} y={8} /><Plum x={30} y={12} /></>),
@@ -178,4 +212,14 @@ export const CHINESE_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'hsk1-w8': () => (<><Wall x={0} y={12} /><Lantern x={-30} y={2} /><Lantern x={30} y={2} /></>),
   // La cour de Luoyang : tour, rouleau, nuages de bon augure.
   'hsk1-final': () => (<><Tower x={-12} y={14} s={1.1} /><Scroll x={14} y={10} /><LuckyCloud x={24} y={-10} /></>),
+  // HSK 2 — l'art de la guerre au royaume de Wu
+  'hsk2-w1': () => (<><Tent x={-16} y={12} /><Tent x={6} y={14} s={0.8} /><Drum x={26} y={12} /></>),
+  'hsk2-w2': () => (<><Tent x={-14} y={12} /><Ding x={12} y={12} s={0.8} /><Lantern x={28} y={4} /></>),
+  'hsk2-w3': () => (<><Drum x={-14} y={12} /><Chariot x={14} y={12} /></>),
+  'hsk2-w4': () => (<><Junk x={-4} y={10} /><LuckyCloud x={22} y={-8} /></>),
+  'hsk2-w5': () => (<><Chariot x={-14} y={12} /><Wall x={16} y={12} s={0.6} /></>),
+  'hsk2-w6': () => (<><Stall x={-16} y={12} /><Stall x={12} y={14} s={0.9} /></>),
+  'hsk2-w7': () => (<><Tent x={-16} y={12} /><Drum x={4} y={12} /><Tent x={22} y={14} s={0.8} /></>),
+  'hsk2-w8': () => (<><Pavilion x={-8} y={12} s={1.1} /><Scroll x={20} y={10} /></>),
+  'hsk2-final': () => (<><Tower x={-12} y={14} s={1.1} /><Junk x={16} y={12} s={0.8} /></>),
 };

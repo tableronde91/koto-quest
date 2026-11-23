@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -859,6 +859,56 @@ story['levels']['HSK1'] = {
       ('À Luoyang, avant de remettre ta lettre, les lettrés du roi de Zhou te font passer l’épreuve : écouter et lire comme au HSK 1. Atteins 120 points sur 200.',
        'In Luoyang, before you hand over your letter, the scholars of the Zhou king put you to the test: listen and read as in the HSK 1. Reach 120 points out of 200.'),
       ('Les lettrés s’inclinent. Niveau HSK 1 validé : ta lettre est remise !', 'The scholars bow. HSK 1 level complete: your letter is delivered!')),
+   },
+}
+story['levels']['HSK2'] = {
+   'glyph': '兵', 'jp': '孙子兵法', 'color': '#2F5E7A',
+   'saga': B('L’art de la guerre', 'The art of war'),
+   'hero': B('Aide de camp du général Sun', 'Aide-de-camp to General Sun'),
+   'short': B('L’aide de camp', 'The aide-de-camp'),
+   'prologue': B(
+     'Au royaume de Wu, au bord du Yangzi, le général Sun écrit un traité en treize chapitres : l’art de la guerre. Le roi Helü doute encore de lui. « Tu as traversé les sept royaumes, messager. Sois mon aide de camp : apprends à comparer, à expliquer, à prévoir, et nous convaincrons le roi ensemble. »',
+     'In the state of Wu, on the banks of the Yangtze, General Sun is writing a treatise in thirteen chapters: the art of war. King Helü still doubts him. “You crossed the seven kingdoms, messenger. Be my aide-de-camp: learn to compare, to explain, to foresee, and together we will convince the king.”'),
+   'epilogue': B(
+     'Le roi Helü referme le traité et nomme Sun Wu général de Wu. « Celui qui connaît l’autre et se connaît lui-même ne sera jamais en péril », lit-il à voix haute. Un vieux lettré s’approche de toi : « Les cent écoles débattent à Linzi. Le chinois que tu parles maintenant t’y ouvrira les portes… »',
+     'King Helü closes the treatise and makes Sun Wu general of Wu. “Know the enemy and know yourself, and you will never be in peril,” he reads aloud. An old scholar comes up to you: “The Hundred Schools are debating in Linzi. The Chinese you now speak will open their doors to you…”'),
+   'chapters': {
+    'hsk2-w1': CHAP(('Qui est le plus fort ?', 'Who is the strongest?'),
+      ('Au camp de Gusu, les soldats se mesurent sans cesse. Le Xingtian, géant sans tête, les défie tous : apprends à comparer avec justesse pour le faire reculer.',
+       'At the Gusu camp, the soldiers are always measuring themselves against one another. The headless giant Xingtian challenges them all: learn to compare accurately to make him back down.'),
+      ('Le Xingtian brandit sa hache… puis la baisse : il n’est pas plus fort que toute l’armée de Wu.', 'The Xingtian raises his axe… then lowers it: he is not stronger than the whole army of Wu.')),
+    'hsk2-w2': CHAP(('Les cris dans la nuit', 'Cries in the night'),
+      ('Des cris de nourrisson résonnent la nuit et les soldats tombent malades : le Jiuying rôde autour de l’infirmerie. Soigne-les et comprends pourquoi.',
+       'A baby’s cries echo through the night and the soldiers are falling ill: the Jiuying is prowling around the infirmary. Treat them and understand why.'),
+      ('Le Jiuying se tait. Le médecin du camp te remercie : « Parce que tu as compris la cause, tu as trouvé le remède. »', 'The Jiuying falls silent. The camp doctor thanks you: “Because you understood the cause, you found the cure.”')),
+    'hsk2-w3': CHAP(('Le tigre ailé', 'The winged tiger'),
+      ('Sur le terrain d’exercice, le Qiongqi récompense les tricheurs. Juge chaque soldat honnêtement : qui court vite, qui nage bien, qui s’entraîne chaque jour ?',
+       'On the training ground, the Qiongqi rewards the cheats. Judge every soldier honestly: who runs fast, who swims well, who trains every day?'),
+      ('Le Qiongqi replie ses ailes : ici, seuls les efforts comptent.', 'The Qiongqi folds its wings: here, only effort counts.')),
+    'hsk2-w4': CHAP(('Le grand poisson', 'The great fish'),
+      ('Le général t’envoie chercher des cartes au-delà de la mer. Le Kun, poisson immense, garde la route : raconte-lui tous les voyages que tu as déjà faits.',
+       'The general sends you to fetch maps from beyond the sea. The Kun, an immense fish, guards the route: tell it about all the journeys you have already made.'),
+      ('Le Kun se change en oiseau Peng et te dépose au port de Wu, les cartes sous le bras.', 'The Kun turns into the Peng bird and sets you down at the port of Wu, maps under your arm.')),
+    'hsk2-w5': CHAP(('Le chaos des routes', 'The chaos of the roads'),
+      ('Les éclaireurs se perdent : le Hundun, chaos sans visage, a brouillé tous les chemins. Indique les distances et les directions pour remettre l’armée en route.',
+       'The scouts are lost: the Hundun, a faceless chaos, has scrambled every path. Give distances and directions to get the army moving again.'),
+      ('Le Hundun roule dans un fossé, perdu à son tour. Les routes de Wu sont de nouveau sûres.', 'The Hundun rolls into a ditch, lost in its turn. The roads of Wu are safe again.')),
+    'hsk2-w6': CHAP(('Le gardien du marché', 'The guardian of the market'),
+      ('Il faut équiper l’armée. Au marché de Gusu, le Baize, bête blanche qui sait tout, garde la porte : nomme chaque marchandise, sa couleur et son prix.',
+       'The army must be equipped. At the Gusu market, the Baize, a white beast that knows everything, guards the gate: name every item, its colour and its price.'),
+      ('Le Baize s’incline devant ton savoir et t’offre un rouleau où sont dessinés tous les monstres du monde.', 'The Baize bows to your knowledge and gives you a scroll showing every monster in the world.')),
+    'hsk2-w7': CHAP(('La sécheresse', 'The drought'),
+      ('La bataille approche, mais les puits sont à sec : la Hanba, démone de la sécheresse, rôde autour du camp. Annonce le temps et finis les préparatifs à temps.',
+       'The battle is near, but the wells are dry: the Hanba, demoness of drought, prowls around the camp. Announce the weather and finish the preparations in time.'),
+      ('La Hanba s’enfuit vers le nord. Les nuages arrivent, la pluie va tomber : l’armée est prête.', 'The Hanba flees north. Clouds roll in, rain is about to fall: the army is ready.')),
+    'hsk2-w8': CHAP(('Devant le roi', 'Before the king'),
+      ('À la cour du roi Helü, Chiyou, dieu de la guerre, se dresse entre toi et le trône. Pour présenter le traité du général, il faut savoir parler, expliquer et convaincre.',
+       'At King Helü’s court, Chiyou, the god of war, stands between you and the throne. To present the general’s treatise, you must know how to speak, explain and persuade.'),
+      ('Chiyou disparaît dans un brouillard rouge. Le roi te fait signe d’approcher.', 'Chiyou vanishes into a red mist. The king beckons you forward.')),
+    'hsk2-final': CHAP(('Le palais de Gusu', 'The palace of Gusu'),
+      ('Dans le palais de Gusu, le roi Helü met le traité à l’épreuve : écoute et lis comme au HSK 2. Atteins 120 points sur 200.',
+       'In the palace of Gusu, King Helü puts the treatise to the test: listen and read as in the HSK 2. Reach 120 points out of 200.'),
+      ('Le roi Helü sourit. Niveau HSK 2 validé : l’art de la guerre est entre de bonnes mains !', 'King Helü smiles. HSK 2 level complete: the art of war is in good hands!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

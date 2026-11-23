@@ -97,6 +97,68 @@ const SPECIES: Record<string, Species> = {
     back: <path d="M150 170 Q196 160 188 120 Q180 96 160 104" stroke="#B8322E" strokeWidth="14" fill="none" strokeLinecap="round" />,
     front: <g transform="translate(156 152)"><rect x="-5" y="-6" width="10" height="22" rx="2" fill="#FFF3DC" stroke="#C9A24A" strokeWidth="2" /><path d="M0 -8 Q-6 -16 0 -26 Q6 -16 0 -8Z" fill="#F2A93B" /></g>,
   },
+  // ───── Gardiens chinois (HSK 2 — royaume de Wu) ─────
+  // Xingtian : géant sans tête, yeux sur la poitrine, bouche au nombril, hache et bouclier
+  刑: {
+    body: '#7A5A3A', belly: '#C9A86A', head: '#7A5A3A', eye: '#F6EBD3',
+    top: <path d="M70 66 H130" stroke="#5A3A24" strokeWidth="6" strokeLinecap="round" />,
+    face: <path d="M86 122 Q100 132 114 122 Q100 126 86 122Z" fill="#5A1A10" />,
+    front: <g transform="translate(150 150)"><path d="M0 -30 V22" stroke="#5A3A24" strokeWidth="4" /><path d="M0 -30 Q20 -26 18 -10 Q8 -14 0 -12Z" fill="#B9AE98" stroke="#6A6458" strokeWidth="1.5" /></g>,
+    back: <ellipse cx="44" cy="140" rx="18" ry="24" fill="#8E1B26" stroke="#E2B84A" strokeWidth="3" />,
+  },
+  // Jiuying : monstre d'eau et de feu à neuf têtes (bleu et rouge)
+  婴: {
+    body: '#2E5A92', belly: '#E8772E', head: '#3A6AA8', eye: '#F2D94E',
+    back: <g strokeWidth="8" fill="none" strokeLinecap="round">{[-64, -44, -24, 24, 44, 64].map((a, i) => <path key={i} d="M100 130 Q100 90 100 48" stroke={i % 2 ? '#C8323F' : '#2E5A92'} transform={`rotate(${a} 100 130)`} />)}</g>,
+    under: <g>{[-64, -44, -24, 24, 44, 64].map((a, i) => <circle key={i} cx="100" cy="44" r="7" fill={i % 2 ? '#C8323F' : '#3A6AA8'} transform={`rotate(${a} 100 130)`} />)}</g>,
+    face: <ellipse cx="100" cy="120" rx="8" ry="6" fill="#1A2A40" />,
+  },
+  // Qiongqi : tigre ailé aux rayures sombres
+  穷: {
+    body: '#E8962E', belly: '#F6E3C8', head: '#F0A23A', eye: '#2A3A2A',
+    back: <path d="M48 116 Q4 84 18 52 Q36 80 60 96 M152 116 Q196 84 182 52 Q164 80 140 96" fill="#6A5A4A" stroke="#3A2A1A" strokeWidth="2" />,
+    top: <>{ear(62, false, '#F0A23A', '#3A2A1A')}{ear(138, true, '#F0A23A', '#3A2A1A')}</>,
+    under: <path d="M76 66 l6 12 M100 60 v14 M124 66 l-6 12 M64 140 l12 -4 M136 140 l-12 -4" stroke="#3A2A1A" strokeWidth="4" strokeLinecap="round" />,
+    face: <path d="M88 118 Q100 126 112 118 M94 118 v6 M106 118 v6" stroke="#3A2A1A" strokeWidth="2.6" fill="none" strokeLinecap="round" />,
+  },
+  // Kun : poisson géant des mers du Nord, nageoires, écailles
+  鲲: {
+    body: '#3E6A8A', belly: '#BFD8E8', head: '#4E7A9A', eye: '#F6EBD3',
+    back: <path d="M30 150 L6 120 L10 170Z M170 150 L194 120 L190 170Z" fill="#2E5A7A" />,
+    top: <path d="M82 54 Q100 18 118 54Z" fill="#2E5A7A" />,
+    under: <g fill="none" stroke="#2E5A7A" strokeWidth="2">{[0, 1, 2].map((r) => [0, 1, 2, 3].map((c) => <path key={`${r}${c}`} d={`M${66 + c * 18 + (r % 2) * 9} ${140 + r * 10} q9 8 18 0`} />))}</g>,
+    face: <path d="M86 118 Q100 124 114 118" stroke="#1A3A52" strokeWidth="3" fill="none" />,
+  },
+  // Hundun : chaos sans visage, sac jaune à six pattes et quatre ailes rouges
+  混: {
+    body: '#E2B84A', belly: '#F2D58A', head: '#E2B84A', eye: '#E2B84A',
+    back: <path d="M50 110 Q14 90 22 60 Q40 88 58 98 M150 110 Q186 90 178 60 Q160 88 142 98" fill="#C8323F" />,
+    face: <path d="M70 100 q10 -8 20 0 q10 8 20 0 q10 -8 20 0" stroke="#C9A24A" strokeWidth="2" fill="none" />,
+    front: <g fill="#C9A24A">{[64, 84, 116, 136].map((x) => <rect key={x} x={x - 4} y="182" width="8" height="10" rx="3" />)}</g>,
+  },
+  // Baize : bête blanche savante, cornes, barbiche, rouleau
+  泽: {
+    body: '#F2F0EA', belly: '#FFFFFF', head: '#F6F3EC', eye: '#2F7A6E',
+    top: <path d="M80 50 Q70 26 80 14 M120 50 Q130 26 120 14" stroke="#C9A24A" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    under: <path d="M66 140 q6 -6 12 0 M122 140 q6 -6 12 0 M94 72 q6 -6 12 0" stroke="#2F7A6E" strokeWidth="2.4" fill="none" />,
+    face: <path d="M96 124 Q100 140 104 124" fill="#E8E2D4" stroke="#C9C4BA" strokeWidth="1.5" />,
+    front: <g transform="translate(156 156)"><rect x="-12" y="-6" width="24" height="12" fill="#D9C28A" stroke="#9A8452" strokeWidth="1.5" /><path d="M-12 0 H12" stroke="#C8323F" strokeWidth="1.5" /></g>,
+  },
+  // Hanba : démone de la sécheresse en robe verte, soleil brûlant
+  魃: {
+    body: '#3E7A4A', belly: '#8FBF8A', head: '#C9B08A', eye: '#C8323F',
+    top: <path d="M64 70 Q60 40 80 48 Q84 30 100 40 Q116 30 120 48 Q140 40 136 70" fill="#2A2A2A" />,
+    face: <path d="M88 118 Q100 112 112 118" stroke="#5A3A24" strokeWidth="3" fill="none" />,
+    front: <g transform="translate(158 54)"><circle r="12" fill="#F2A93B" />{[0, 45, 90, 135, 180, 225, 270, 315].map((a) => <path key={a} d="M0 -16 V-22" stroke="#E8772E" strokeWidth="3" transform={`rotate(${a})`} />)}</g>,
+  },
+  // Chiyou : dieu de la guerre, front de bronze, cornes, huit bras
+  蚩: {
+    body: '#6A2A2A', belly: '#A86A4A', head: '#7A3A2A', eye: '#F2D94E',
+    back: <g stroke="#6A2A2A" strokeWidth="10" strokeLinecap="round">{[-50, -30, 30, 50].map((a, i) => <path key={i} d="M100 120 L100 46" transform={`rotate(${a} 100 120)`} />)}</g>,
+    top: <><rect x="70" y="56" width="60" height="12" rx="3" fill="#B8962A" /><path d="M74 58 Q60 30 70 18 M126 58 Q140 30 130 18" stroke="#E2D9C4" strokeWidth="7" fill="none" strokeLinecap="round" /></>,
+    face: <path d="M84 116 L92 124 L100 116 L108 124 L116 116" stroke="#F6EBD3" strokeWidth="3" fill="none" strokeLinejoin="round" />,
+    front: <g transform="translate(154 150)"><path d="M0 -36 V20" stroke="#5A3A24" strokeWidth="4" /><path d="M0 -36 L-10 -22 H10Z" fill="#B9AE98" /></g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

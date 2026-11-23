@@ -60,6 +60,7 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
   // Chinois : seuls les niveaux dont le parcours est prêt
   zh: [
     { code: 'HSK1', hint: 'Débutant · 150 mots' },
+    { code: 'HSK2', hint: 'Élémentaire · 300 mots' },
   ],
 };
 

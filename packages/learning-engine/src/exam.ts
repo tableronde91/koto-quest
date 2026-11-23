@@ -464,10 +464,14 @@ const HSK_MOCK = (n: number): ExamDef => ({
 
 export const EXAM_HSK1 = HSK_OFFICIAL(1, 40, 20, 20);
 export const EXAM_HSK1_MOCK = HSK_MOCK(1);
+export const EXAM_HSK2 = HSK_OFFICIAL(2, 55, 35, 25);
+export const EXAM_HSK2_MOCK = HSK_MOCK(2);
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
   [EXAM_HSK1.slug]: EXAM_HSK1,
+  [EXAM_HSK2_MOCK.slug]: EXAM_HSK2_MOCK,
+  [EXAM_HSK2.slug]: EXAM_HSK2,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
