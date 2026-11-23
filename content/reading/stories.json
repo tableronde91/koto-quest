@@ -28270,6 +28270,568 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "juan-sin-miedo",
+   "glyph": "j",
+   "level": "DELEA2",
+   "color": "#4A5A8A",
+   "title": {
+    "jp": "Juan sin Miedo",
+    "fr": "Jean sans Peur",
+    "en": "Fearless John"
+   },
+   "summary": {
+    "fr": "Un garçon qui n’a jamais eu peur part dans le monde pour apprendre ce qu’est la peur… et passe trois nuits dans un château hanté.",
+    "en": "A boy who has never been afraid sets out into the world to learn what fear is… and spends three nights in a haunted castle."
+   },
+   "chapters": [
+    {
+     "slug": "juan-sin-miedo-1",
+     "title": {
+      "jp": "Un chico valiente",
+      "fr": "Un garçon courageux",
+      "en": "A brave boy"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Hace muchos años, en un pueblo de Castilla, vivía un chico que se llamaba Juan.",
+        "fr": "Il y a bien longtemps, dans un village de Castille, vivait un garçon qui s’appelait Juan.",
+        "en": "Many years ago, in a village in Castile, there lived a boy called Juan.",
+        "kana": "Hace muchos años, en un pueblo de Castilla, vivía un chico que se llamaba Juan."
+       },
+       {
+        "jp": "Juan nunca tenía miedo: ni de la noche, ni de los lobos, ni de las historias de fantasmas.",
+        "fr": "Juan n’avait jamais peur : ni de la nuit, ni des loups, ni des histoires de fantômes.",
+        "en": "Juan was never afraid: not of the night, not of wolves, not of ghost stories.",
+        "kana": "Juan nunca tenía miedo: ni de la noche, ni de los lobos, ni de las historias de fantasmas."
+       },
+       {
+        "jp": "Por eso, en el pueblo todos lo llamaban Juan sin Miedo.",
+        "fr": "C’est pourquoi, au village, tout le monde l’appelait Juan sans Peur.",
+        "en": "That is why everyone in the village called him Fearless John.",
+        "kana": "Por eso, en el pueblo todos lo llamaban Juan sin Miedo."
+       }
+      ],
+      [
+       {
+        "jp": "Un día, Juan le dijo a su padre: «Quiero saber qué es el miedo. Me voy a buscarlo».",
+        "fr": "Un jour, Juan dit à son père : « Je veux savoir ce qu’est la peur. Je pars la chercher. »",
+        "en": "One day Juan said to his father: “I want to know what fear is. I’m going to look for it.”",
+        "kana": "Un día, Juan le dijo a su padre: «Quiero saber qué es el miedo. Me voy a buscarlo»."
+       },
+       {
+        "jp": "Su padre le dio un poco de dinero y un trozo de pan, y Juan salió del pueblo.",
+        "fr": "Son père lui donna un peu d’argent et un morceau de pain, et Juan quitta le village.",
+        "en": "His father gave him a little money and a piece of bread, and Juan left the village.",
+        "kana": "Su padre le dio un poco de dinero y un trozo de pan, y Juan salió del pueblo."
+       },
+       {
+        "jp": "Caminó durante tres días hasta que llegó a una ciudad con un castillo muy viejo.",
+        "fr": "Il marcha pendant trois jours jusqu’à une ville où se dressait un très vieux château.",
+        "en": "He walked for three days until he came to a town with a very old castle.",
+        "kana": "Caminó durante tres días hasta que llegó a una ciudad con un castillo muy viejo."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el miedo",
+       "reading": "/el ˈmjeðo/",
+       "fr": "la peur",
+       "en": "fear"
+      },
+      {
+       "jp": "el lobo",
+       "reading": "/el ˈloβo/",
+       "fr": "le loup",
+       "en": "the wolf"
+      },
+      {
+       "jp": "el fantasma",
+       "reading": "/el fanˈtasma/",
+       "fr": "le fantôme",
+       "en": "the ghost"
+      },
+      {
+       "jp": "buscar",
+       "reading": "/busˈkaɾ/",
+       "fr": "chercher",
+       "en": "to look for"
+      },
+      {
+       "jp": "el trozo",
+       "reading": "/el ˈtɾoθo/",
+       "fr": "le morceau",
+       "en": "the piece"
+      },
+      {
+       "jp": "el castillo",
+       "reading": "/el kasˈtiʎo/",
+       "fr": "le château fort",
+       "en": "the castle"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi appelait-on Juan « sans Peur » ?",
+        "en": "Why was Juan called “Fearless”?"
+       },
+       "choices": [
+        {
+         "fr": "Il n’avait jamais peur",
+         "en": "He was never afraid"
+        },
+        {
+         "fr": "Il était très fort",
+         "en": "He was very strong"
+        },
+        {
+         "fr": "Il était le fils du roi",
+         "en": "He was the king’s son"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que voulait apprendre Juan ?",
+        "en": "What did Juan want to learn?"
+       },
+       "choices": [
+        {
+         "fr": "Ce qu’est la peur",
+         "en": "What fear is"
+        },
+        {
+         "fr": "À lire",
+         "en": "To read"
+        },
+        {
+         "fr": "Un métier",
+         "en": "A trade"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "juan-sin-miedo-2",
+     "title": {
+      "jp": "Tres noches en el castillo",
+      "fr": "Trois nuits au château",
+      "en": "Three nights in the castle"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "El rey de la ciudad dijo: «Nadie puede dormir en ese castillo. Si pasas tres noches allí, te doy la mano de mi hija».",
+        "fr": "Le roi de la ville dit : « Personne ne peut dormir dans ce château. Si tu y passes trois nuits, je te donne la main de ma fille. »",
+        "en": "The king of the town said: “No one can sleep in that castle. If you spend three nights there, I will give you my daughter’s hand.”",
+        "kana": "El rey de la ciudad dijo: «Nadie puede dormir en ese castillo. Si pasas tres noches allí, te doy la mano de mi hija»."
+       },
+       {
+        "jp": "La primera noche, mientras Juan cenaba junto al fuego, unos gatos negros entraron por la ventana.",
+        "fr": "La première nuit, pendant que Juan dînait près du feu, des chats noirs entrèrent par la fenêtre.",
+        "en": "On the first night, while Juan was having dinner by the fire, some black cats came in through the window.",
+        "kana": "La primera noche, mientras Juan cenaba junto al fuego, unos gatos negros entraron por la ventana."
+       },
+       {
+        "jp": "La segunda noche, oyó ruidos de cadenas, pero se rió y siguió durmiendo.",
+        "fr": "La deuxième nuit, il entendit des bruits de chaînes, mais il rit et continua à dormir.",
+        "en": "On the second night, he heard the rattling of chains, but he laughed and went on sleeping.",
+        "kana": "La segunda noche, oyó ruidos de cadenas, pero se rió y siguió durmiendo."
+       }
+      ],
+      [
+       {
+        "jp": "La tercera noche, un fantasma le enseñó un tesoro escondido debajo del suelo.",
+        "fr": "La troisième nuit, un fantôme lui montra un trésor caché sous le plancher.",
+        "en": "On the third night, a ghost showed him a treasure hidden under the floor.",
+        "kana": "La tercera noche, un fantasma le enseñó un tesoro escondido debajo del suelo."
+       },
+       {
+        "jp": "Juan se casó con la princesa, pero seguía sin saber qué era el miedo.",
+        "fr": "Juan épousa la princesse, mais il ne savait toujours pas ce qu’était la peur.",
+        "en": "Juan married the princess, but he still did not know what fear was.",
+        "kana": "Juan se casó con la princesa, pero seguía sin saber qué era el miedo."
+       },
+       {
+        "jp": "Una mañana, mientras dormía, la princesa le echó un cubo de agua fría con peces… y por fin Juan gritó: «¡Ay, qué miedo!».",
+        "fr": "Un matin, pendant qu’il dormait, la princesse lui renversa un seau d’eau froide plein de poissons… et Juan cria enfin : « Aïe, quelle peur ! »",
+        "en": "One morning, while he was asleep, the princess poured a bucket of cold water full of fish over him… and at last Juan shouted: “Oh, how scary!”",
+        "kana": "Una mañana, mientras dormía, la princesa le echó un cubo de agua fría con peces… y por fin Juan gritó: «¡Ay, qué miedo!»."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la cadena",
+       "reading": "/la kaˈðena/",
+       "fr": "la chaîne",
+       "en": "the chain"
+      },
+      {
+       "jp": "reírse",
+       "reading": "/reˈiɾse/",
+       "fr": "rire",
+       "en": "to laugh"
+      },
+      {
+       "jp": "el tesoro",
+       "reading": "/el teˈsoɾo/",
+       "fr": "le trésor",
+       "en": "the treasure"
+      },
+      {
+       "jp": "esconder",
+       "reading": "/eskonˈdeɾ/",
+       "fr": "cacher",
+       "en": "to hide"
+      },
+      {
+       "jp": "el cubo",
+       "reading": "/el ˈkuβo/",
+       "fr": "le seau",
+       "en": "the bucket"
+      },
+      {
+       "jp": "gritar",
+       "reading": "/ɡɾiˈtaɾ/",
+       "fr": "crier",
+       "en": "to shout"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que montra le fantôme à Juan ?",
+        "en": "What did the ghost show Juan?"
+       },
+       "choices": [
+        {
+         "fr": "Un trésor caché",
+         "en": "A hidden treasure"
+        },
+        {
+         "fr": "Une porte secrète",
+         "en": "A secret door"
+        },
+        {
+         "fr": "Le chemin du village",
+         "en": "The way to the village"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment Juan apprit-il enfin la peur ?",
+        "en": "How did Juan finally learn fear?"
+       },
+       "choices": [
+        {
+         "fr": "Avec un seau d’eau froide et des poissons",
+         "en": "With a bucket of cold water and fish"
+        },
+        {
+         "fr": "Avec un loup",
+         "en": "With a wolf"
+        },
+        {
+         "fr": "Avec le roi",
+         "en": "With the king"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "blanca-luna",
+   "glyph": "l",
+   "level": "DELEA2",
+   "color": "#2E7DA8",
+   "title": {
+    "jp": "El Caballero de la Blanca Luna",
+    "fr": "Le chevalier de la Blanche Lune",
+    "en": "The Knight of the White Moon"
+   },
+   "summary": {
+    "fr": "À Barcelone, un mystérieux chevalier défie don Quichotte sur la plage. Le vaincu devra rentrer chez lui pour un an.",
+    "en": "In Barcelona, a mysterious knight challenges Don Quixote on the beach. The loser must go home for a year."
+   },
+   "chapters": [
+    {
+     "slug": "blanca-luna-1",
+     "title": {
+      "jp": "El desafío en la playa",
+      "fr": "Le défi sur la plage",
+      "en": "The challenge on the beach"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Una mañana, don Quijote paseaba por la playa de Barcelona con su armadura.",
+        "fr": "Un matin, don Quichotte se promenait sur la plage de Barcelone avec son armure.",
+        "en": "One morning, Don Quixote was walking along the beach in Barcelona in his armour.",
+        "kana": "Una mañana, don Quijote paseaba por la playa de Barcelona con su armadura."
+       },
+       {
+        "jp": "De repente, llegó un caballero con una luna blanca pintada en el escudo.",
+        "fr": "Soudain, arriva un chevalier avec une lune blanche peinte sur son bouclier.",
+        "en": "Suddenly a knight arrived with a white moon painted on his shield.",
+        "kana": "De repente, llegó un caballero con una luna blanca pintada en el escudo."
+       },
+       {
+        "jp": "«Soy el Caballero de la Blanca Luna —dijo—. Mi dama es más hermosa que Dulcinea».",
+        "fr": "« Je suis le chevalier de la Blanche Lune, dit-il. Ma dame est plus belle que Dulcinée. »",
+        "en": "“I am the Knight of the White Moon,” he said. “My lady is more beautiful than Dulcinea.”",
+        "kana": "«Soy el Caballero de la Blanca Luna —dijo—. Mi dama es más hermosa que Dulcinea»."
+       }
+      ],
+      [
+       {
+        "jp": "Don Quijote se enfadó mucho y aceptó el combate.",
+        "fr": "Don Quichotte se mit très en colère et accepta le combat.",
+        "en": "Don Quixote got very angry and accepted the duel.",
+        "kana": "Don Quijote se enfadó mucho y aceptó el combate."
+       },
+       {
+        "jp": "Las condiciones eran claras: si perdía don Quijote, tenía que volver a su pueblo y quedarse allí un año.",
+        "fr": "Les conditions étaient claires : si don Quichotte perdait, il devait rentrer dans son village et y rester un an.",
+        "en": "The terms were clear: if Don Quixote lost, he had to go back to his village and stay there for a year.",
+        "kana": "Las condiciones eran claras: si perdía don Quijote, tenía que volver a su pueblo y quedarse allí un año."
+       },
+       {
+        "jp": "Sancho estaba muy nervioso y miraba el mar sin decir nada.",
+        "fr": "Sancho était très nerveux et regardait la mer sans rien dire.",
+        "en": "Sancho was very nervous and stared at the sea without saying a word.",
+        "kana": "Sancho estaba muy nervioso y miraba el mar sin decir nada."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la armadura",
+       "reading": "/la aɾmaˈðuɾa/",
+       "fr": "l’armure",
+       "en": "the armour"
+      },
+      {
+       "jp": "el escudo",
+       "reading": "/el esˈkuðo/",
+       "fr": "le bouclier",
+       "en": "the shield"
+      },
+      {
+       "jp": "la dama",
+       "reading": "/la ˈdama/",
+       "fr": "la dame",
+       "en": "the lady"
+      },
+      {
+       "jp": "hermoso",
+       "reading": "/eɾˈmoso/",
+       "fr": "beau, magnifique",
+       "en": "beautiful"
+      },
+      {
+       "jp": "enfadarse",
+       "reading": "/enfaˈðaɾse/",
+       "fr": "se fâcher",
+       "en": "to get angry"
+      },
+      {
+       "jp": "aceptar",
+       "reading": "/aθepˈtaɾ/",
+       "fr": "accepter",
+       "en": "to accept"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’y avait-il sur le bouclier du chevalier ?",
+        "en": "What was on the knight’s shield?"
+       },
+       "choices": [
+        {
+         "fr": "Une lune blanche",
+         "en": "A white moon"
+        },
+        {
+         "fr": "Un soleil",
+         "en": "A sun"
+        },
+        {
+         "fr": "Un moulin",
+         "en": "A windmill"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que devait faire don Quichotte s’il perdait ?",
+        "en": "What did Don Quixote have to do if he lost?"
+       },
+       "choices": [
+        {
+         "fr": "Rentrer chez lui pour un an",
+         "en": "Go home for a year"
+        },
+        {
+         "fr": "Quitter l’Espagne",
+         "en": "Leave Spain"
+        },
+        {
+         "fr": "Donner son cheval",
+         "en": "Give up his horse"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "blanca-luna-2",
+     "title": {
+      "jp": "La vuelta a casa",
+      "fr": "Le retour à la maison",
+      "en": "The return home"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Los dos caballeros corrieron uno contra otro. El caballo del desconocido era más rápido y más fuerte que Rocinante.",
+        "fr": "Les deux chevaliers foncèrent l’un sur l’autre. Le cheval de l’inconnu était plus rapide et plus fort que Rossinante.",
+        "en": "The two knights charged at each other. The stranger’s horse was faster and stronger than Rocinante.",
+        "kana": "Los dos caballeros corrieron uno contra otro. El caballo del desconocido era más rápido y más fuerte que Rocinante."
+       },
+       {
+        "jp": "Don Quijote cayó al suelo, pero no quiso decir que su dama era menos hermosa.",
+        "fr": "Don Quichotte tomba par terre, mais il refusa de dire que sa dame était moins belle.",
+        "en": "Don Quixote fell to the ground, but he refused to say that his lady was less beautiful.",
+        "kana": "Don Quijote cayó al suelo, pero no quiso decir que su dama era menos hermosa."
+       },
+       {
+        "jp": "Entonces el caballero se quitó el casco: ¡era Sansón Carrasco, un vecino de su pueblo!",
+        "fr": "Alors le chevalier retira son casque : c’était Sansón Carrasco, un voisin de son village !",
+        "en": "Then the knight took off his helmet: it was Sansón Carrasco, a neighbour from his village!",
+        "kana": "Entonces el caballero se quitó el casco: ¡era Sansón Carrasco, un vecino de su pueblo!"
+       }
+      ],
+      [
+       {
+        "jp": "Sansón explicó: «Lo he hecho por su bien, señor. Su familia está preocupada».",
+        "fr": "Sansón expliqua : « Je l’ai fait pour votre bien, monsieur. Votre famille est inquiète. »",
+        "en": "Sansón explained: “I did it for your own good, sir. Your family is worried.”",
+        "kana": "Sansón explicó: «Lo he hecho por su bien, señor. Su familia está preocupada»."
+       },
+       {
+        "jp": "Don Quijote y Sancho volvieron a la Mancha despacio, tristes pero tranquilos.",
+        "fr": "Don Quichotte et Sancho rentrèrent lentement dans la Manche, tristes mais apaisés.",
+        "en": "Don Quixote and Sancho slowly returned to La Mancha, sad but at peace.",
+        "kana": "Don Quijote y Sancho volvieron a la Mancha despacio, tristes pero tranquilos."
+       },
+       {
+        "jp": "En el camino, don Quijote dijo: «Sancho, ha sido el viaje más bonito de mi vida».",
+        "fr": "En chemin, don Quichotte dit : « Sancho, ce fut le plus beau voyage de ma vie. »",
+        "en": "On the way, Don Quixote said: “Sancho, it has been the finest journey of my life.”",
+        "kana": "En el camino, don Quijote dijo: «Sancho, ha sido el viaje más bonito de mi vida»."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el desconocido",
+       "reading": "/el deskonoˈθiðo/",
+       "fr": "l’inconnu",
+       "en": "the stranger"
+      },
+      {
+       "jp": "fuerte",
+       "reading": "/ˈfweɾte/",
+       "fr": "fort",
+       "en": "strong"
+      },
+      {
+       "jp": "quitarse",
+       "reading": "/kiˈtaɾse/",
+       "fr": "enlever, retirer (un vêtement)",
+       "en": "to take off"
+      },
+      {
+       "jp": "el casco",
+       "reading": "/el ˈkasko/",
+       "fr": "le casque",
+       "en": "the helmet"
+      },
+      {
+       "jp": "preocupado",
+       "reading": "/pɾeokuˈpaðo/",
+       "fr": "inquiet",
+       "en": "worried"
+      },
+      {
+       "jp": "despacio",
+       "reading": "/desˈpaθjo/",
+       "fr": "lentement",
+       "en": "slowly"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui était le chevalier de la Blanche Lune ?",
+        "en": "Who was the Knight of the White Moon?"
+       },
+       "choices": [
+        {
+         "fr": "Sansón Carrasco, un voisin",
+         "en": "Sansón Carrasco, a neighbour"
+        },
+        {
+         "fr": "Le duc",
+         "en": "The duke"
+        },
+        {
+         "fr": "Un géant",
+         "en": "A giant"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Sansón a-t-il fait cela ?",
+        "en": "Why did Sansón do it?"
+       },
+       "choices": [
+        {
+         "fr": "Pour le bien de don Quichotte",
+         "en": "For Don Quixote’s own good"
+        },
+        {
+         "fr": "Pour gagner de l’argent",
+         "en": "To win money"
+        },
+        {
+         "fr": "Pour épouser Dulcinée",
+         "en": "To marry Dulcinea"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

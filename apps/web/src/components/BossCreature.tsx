@@ -463,6 +463,67 @@ const SPECIES: Record<string, Species> = {
     back: <path d="M30 190 Q40 120 60 80 Q100 20 140 80 Q160 120 170 190 Q150 176 135 190 Q118 176 100 190 Q82 176 65 190 Q50 176 30 190Z" fill="#1F1F2E" />,
     face: <path d="M86 118 L92 124 L100 118 L108 124 L114 118" stroke="#F2D94E" strokeWidth="2" fill="none" strokeLinejoin="round" />,
   },
+  // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
+  // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
+  ñ: {
+    body: '#5A8AA8', belly: '#BFDCEA', head: '#E8C8A8', eye: '#1F3A5A',
+    back: <path d="M54 70 Q34 140 50 186 L80 150 Q70 110 78 78Z M146 70 Q166 140 150 186 L120 150 Q130 110 122 78Z" fill="#E2B84A" />,
+    top: <path d="M60 84 Q58 40 100 36 Q142 40 140 84 Q124 58 100 56 Q76 58 60 84Z" fill="#E2B84A" />,
+    face: <path d="M90 116 Q100 124 110 116" stroke="#8A4A3A" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(158 146)"><rect x="-12" y="-4" width="24" height="7" rx="2" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1" /><path d="M-10 3 V12 M-5 3 V12 M0 3 V12 M5 3 V12 M10 3 V12" stroke="#E2B84A" strokeWidth="2" /></g>,
+  },
+  // Tragaldabas : ogre goinfre, gros ventre, serviette nouée, cuisse de poulet
+  á: {
+    body: '#B87A4A', belly: '#F2C89A', head: '#D9A07A', eye: '#2A1A10',
+    top: <path d="M70 60 Q80 40 100 46 Q120 40 130 60" stroke="#5A3A24" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    under: <path d="M74 132 L100 150 L126 132 L100 138Z" fill="#F6F1E6" stroke="#B9AE98" strokeWidth="1.5" />,
+    face: <><ellipse cx="100" cy="104" rx="8" ry="6" fill="#C8784A" /><path d="M82 120 Q100 134 118 120" stroke="#5A2A1A" strokeWidth="3" fill="#8E3A2A" /></>,
+    front: <g transform="translate(160 150) rotate(-20)"><ellipse cx="0" cy="-8" rx="9" ry="12" fill="#C8823A" /><rect x="-2.5" y="2" width="5" height="12" rx="2" fill="#F6F1E6" /></g>,
+  },
+  // Hombre del Saco : vieux vagabond en manteau, chapeau rabattu, sac sur l'épaule
+  é: {
+    body: '#4A4038', belly: '#6A5E50', head: '#C9A27A', eye: '#F2D94E',
+    top: <><ellipse cx="100" cy="54" rx="50" ry="8" fill="#2E2A26" /><path d="M72 54 Q74 30 100 28 Q126 30 128 54Z" fill="#2E2A26" /></>,
+    under: <path d="M76 110 Q100 140 124 110 Q112 124 100 124 Q88 124 76 110Z" fill="#8A8078" />,
+    back: <g transform="translate(150 70) rotate(18)"><ellipse cx="0" cy="20" rx="26" ry="30" fill="#A8925A" stroke="#6A5A3A" strokeWidth="2" /><path d="M-8 -8 Q0 -14 8 -8" stroke="#6A5A3A" strokeWidth="3" fill="none" /></g>,
+  },
+  // Encantada : demoiselle enchantée, voile d'eau, perles
+  í: {
+    body: '#7AA8C8', belly: '#DCEBF4', head: '#F0D2B8', eye: '#2A3A5A',
+    back: <path d="M40 186 Q50 100 100 60 Q150 100 160 186 Q130 170 100 186 Q70 170 40 186Z" fill="#BFDCEA" opacity="0.8" />,
+    top: <><path d="M62 82 Q60 42 100 38 Q140 42 138 82 Q120 62 100 60 Q80 62 62 82Z" fill="#2A2A3A" />{[76, 88, 100, 112, 124].map((x) => <circle key={x} cx={x} cy={46 - Math.abs(x - 100) / 6} r="3" fill="#FFFFFF" />)}</>,
+    face: <path d="M92 118 Q100 122 108 118" stroke="#A84A5A" strokeWidth="2.5" fill="none" />,
+  },
+  // Diablo Cojuelo : petit diable boiteux, cornes, béquille, tuile à la main
+  ó: {
+    body: '#A83A2E', belly: '#E27A5A', head: '#C84A3A', eye: '#F2D94E',
+    top: <path d="M74 58 Q60 34 70 22 Q74 40 86 50 M126 58 Q140 34 130 22 Q126 40 114 50" stroke="#2A1A10" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    face: <path d="M86 116 Q100 128 114 116 M94 120 L96 126 M104 120 L106 126" stroke="#2A1A10" strokeWidth="2.5" fill="none" />,
+    front: <><path d="M40 196 L46 120 Q46 112 38 112" stroke="#7A4A2A" strokeWidth="5" fill="none" strokeLinecap="round" /><path d="M150 130 L176 124 L178 138 L152 144Z" fill="#9A3E22" /></>,
+  },
+  // Mari : dame des montagnes basques, couronne de flammes, boule de feu
+  ú: {
+    body: '#6A4A7A', belly: '#B8A0C8', head: '#E8C8A8', eye: '#2A1A30',
+    top: <><path d="M62 84 Q58 42 100 38 Q142 42 138 84 Q122 60 100 58 Q78 60 62 84Z" fill="#3A2A2A" /><path d="M76 40 L82 22 L90 36 L100 16 L110 36 L118 22 L124 40Z" fill="#E2862A" /></>,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#8A3A4A" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(160 132)"><circle r="13" fill="#E2862A" /><circle r="7" fill="#F2D94E" /><path d="M-10 -10 Q-4 -24 0 -12 Q6 -26 10 -10" fill="#E2862A" /></g>,
+  },
+  // Mula Guita : mule de fête catalane, harnais rouge et or, étincelles
+  ü: {
+    body: '#3A3A3A', belly: '#6A6A6A', head: '#4A4A4A', eye: '#F2D94E',
+    top: <path d="M74 56 Q64 18 80 12 Q86 30 88 52 M126 56 Q136 18 120 12 Q114 30 112 52" fill="#3A3A3A" stroke="#1F1F1F" strokeWidth="2" />,
+    under: <path d="M58 136 H142 L136 150 H64Z" fill="#C8323F" stroke="#E2B84A" strokeWidth="2" />,
+    face: <><ellipse cx="100" cy="118" rx="18" ry="11" fill="#6A6A6A" /><circle cx="93" cy="118" r="2.5" fill="#1F1F1F" /><circle cx="107" cy="118" r="2.5" fill="#1F1F1F" /></>,
+    front: <g fill="#F2D94E">{[[150, 96], [164, 108], [172, 90], [40, 100], [30, 116]].map(([x, y]) => <path key={x} d={`M${x} ${y - 6} L${x + 2} ${y - 2} L${x + 6} ${y} L${x + 2} ${y + 2} L${x} ${y + 6} L${x - 2} ${y + 2} L${x - 6} ${y} L${x - 2} ${y - 2}Z`} />)}</g>,
+  },
+  // Drac : dragon de la légende de Sant Jordi, écailles vertes, ailes, rose
+  Ñ: {
+    body: '#3E8A5A', belly: '#C8E0A0', head: '#4E9A6A', eye: '#F2D94E',
+    back: <path d="M50 110 Q10 70 24 30 Q40 64 64 84 M150 110 Q190 70 176 30 Q160 64 136 84" fill="#2E6A4A" stroke="#1E4A2A" strokeWidth="2" />,
+    top: <path d="M78 56 L84 36 L92 52 L100 30 L108 52 L116 36 L122 56" fill="#E2B84A" />,
+    face: <><path d="M86 116 Q100 126 114 116" stroke="#1E3A20" strokeWidth="3" fill="none" /><circle cx="94" cy="106" r="2" fill="#1E3A20" /><circle cx="106" cy="106" r="2" fill="#1E3A20" /></>,
+    front: <g transform="translate(160 150)"><path d="M0 14 V-4" stroke="#3E7A3A" strokeWidth="2" /><circle cx="0" cy="-8" r="6" fill="#C8323F" /></g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

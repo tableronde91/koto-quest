@@ -142,7 +142,89 @@ MOLINOS = STORY('molinos-de-viento', 'q', 'DELEA1', '#6E5A3A', ('Los molinos de 
   ]),
 ])
 
-ES_STORIES = [POLLITO, RATITA, MOLINOS]
+# ═════════════════════════ Juan sin Miedo (DELE A2, au passé) ═════════════════════════
+JUAN = STORY('juan-sin-miedo', 'j', 'DELEA2', '#4A5A8A', ('Juan sin Miedo', 'Jean sans Peur', 'Fearless John'),
+  ('Un garçon qui n’a jamais eu peur part dans le monde pour apprendre ce qu’est la peur… et passe trois nuits dans un château hanté.', 'A boy who has never been afraid sets out into the world to learn what fear is… and spends three nights in a haunted castle.'), [
+  CH('juan-sin-miedo-1', ('Un chico valiente', 'Un garçon courageux', 'A brave boy'), [
+    [S('Hace muchos años, en un pueblo de Castilla, vivía un chico que se llamaba Juan.', 'Il y a bien longtemps, dans un village de Castille, vivait un garçon qui s’appelait Juan.', 'Many years ago, in a village in Castile, there lived a boy called Juan.'),
+     S('Juan nunca tenía miedo: ni de la noche, ni de los lobos, ni de las historias de fantasmas.', 'Juan n’avait jamais peur : ni de la nuit, ni des loups, ni des histoires de fantômes.', 'Juan was never afraid: not of the night, not of wolves, not of ghost stories.'),
+     S('Por eso, en el pueblo todos lo llamaban Juan sin Miedo.', 'C’est pourquoi, au village, tout le monde l’appelait Juan sans Peur.', 'That is why everyone in the village called him Fearless John.')],
+    [S('Un día, Juan le dijo a su padre: «Quiero saber qué es el miedo. Me voy a buscarlo».', 'Un jour, Juan dit à son père : « Je veux savoir ce qu’est la peur. Je pars la chercher. »', 'One day Juan said to his father: “I want to know what fear is. I’m going to look for it.”'),
+     S('Su padre le dio un poco de dinero y un trozo de pan, y Juan salió del pueblo.', 'Son père lui donna un peu d’argent et un morceau de pain, et Juan quitta le village.', 'His father gave him a little money and a piece of bread, and Juan left the village.'),
+     S('Caminó durante tres días hasta que llegó a una ciudad con un castillo muy viejo.', 'Il marcha pendant trois jours jusqu’à une ville où se dressait un très vieux château.', 'He walked for three days until he came to a town with a very old castle.')],
+  ], [
+    W('el miedo', '/el ˈmjeðo/', 'la peur', 'fear'),
+    W('el lobo', '/el ˈloβo/', 'le loup', 'the wolf'),
+    W('el fantasma', '/el fanˈtasma/', 'le fantôme', 'the ghost'),
+    W('buscar', '/busˈkaɾ/', 'chercher', 'to look for'),
+    W('el trozo', '/el ˈtɾoθo/', 'le morceau', 'the piece'),
+    W('el castillo', '/el kasˈtiʎo/', 'le château fort', 'the castle'),
+  ], [
+    Q(('Pourquoi appelait-on Juan « sans Peur » ?', 'Why was Juan called “Fearless”?'), [('Il n’avait jamais peur', 'He was never afraid'), ('Il était très fort', 'He was very strong'), ('Il était le fils du roi', 'He was the king’s son')], 0),
+    Q(('Que voulait apprendre Juan ?', 'What did Juan want to learn?'), [('Ce qu’est la peur', 'What fear is'), ('À lire', 'To read'), ('Un métier', 'A trade')], 0),
+  ]),
+  CH('juan-sin-miedo-2', ('Tres noches en el castillo', 'Trois nuits au château', 'Three nights in the castle'), [
+    [S('El rey de la ciudad dijo: «Nadie puede dormir en ese castillo. Si pasas tres noches allí, te doy la mano de mi hija».', 'Le roi de la ville dit : « Personne ne peut dormir dans ce château. Si tu y passes trois nuits, je te donne la main de ma fille. »', 'The king of the town said: “No one can sleep in that castle. If you spend three nights there, I will give you my daughter’s hand.”'),
+     S('La primera noche, mientras Juan cenaba junto al fuego, unos gatos negros entraron por la ventana.', 'La première nuit, pendant que Juan dînait près du feu, des chats noirs entrèrent par la fenêtre.', 'On the first night, while Juan was having dinner by the fire, some black cats came in through the window.'),
+     S('La segunda noche, oyó ruidos de cadenas, pero se rió y siguió durmiendo.', 'La deuxième nuit, il entendit des bruits de chaînes, mais il rit et continua à dormir.', 'On the second night, he heard the rattling of chains, but he laughed and went on sleeping.')],
+    [S('La tercera noche, un fantasma le enseñó un tesoro escondido debajo del suelo.', 'La troisième nuit, un fantôme lui montra un trésor caché sous le plancher.', 'On the third night, a ghost showed him a treasure hidden under the floor.'),
+     S('Juan se casó con la princesa, pero seguía sin saber qué era el miedo.', 'Juan épousa la princesse, mais il ne savait toujours pas ce qu’était la peur.', 'Juan married the princess, but he still did not know what fear was.'),
+     S('Una mañana, mientras dormía, la princesa le echó un cubo de agua fría con peces… y por fin Juan gritó: «¡Ay, qué miedo!».', 'Un matin, pendant qu’il dormait, la princesse lui renversa un seau d’eau froide plein de poissons… et Juan cria enfin : « Aïe, quelle peur ! »', 'One morning, while he was asleep, the princess poured a bucket of cold water full of fish over him… and at last Juan shouted: “Oh, how scary!”')],
+  ], [
+    W('la cadena', '/la kaˈðena/', 'la chaîne', 'the chain'),
+    W('reírse', '/reˈiɾse/', 'rire', 'to laugh'),
+    W('el tesoro', '/el teˈsoɾo/', 'le trésor', 'the treasure'),
+    W('esconder', '/eskonˈdeɾ/', 'cacher', 'to hide'),
+    W('el cubo', '/el ˈkuβo/', 'le seau', 'the bucket'),
+    W('gritar', '/ɡɾiˈtaɾ/', 'crier', 'to shout'),
+  ], [
+    Q(('Que montra le fantôme à Juan ?', 'What did the ghost show Juan?'), [('Un trésor caché', 'A hidden treasure'), ('Une porte secrète', 'A secret door'), ('Le chemin du village', 'The way to the village')], 0),
+    Q(('Comment Juan apprit-il enfin la peur ?', 'How did Juan finally learn fear?'), [('Avec un seau d’eau froide et des poissons', 'With a bucket of cold water and fish'), ('Avec un loup', 'With a wolf'), ('Avec le roi', 'With the king')], 0),
+  ]),
+])
+
+# ═════════════════════════ El Caballero de la Blanca Luna (Don Quichotte, IIe partie ; DELE A2) ═════════════════════════
+BLANCA = STORY('blanca-luna', 'l', 'DELEA2', '#2E7DA8', ('El Caballero de la Blanca Luna', 'Le chevalier de la Blanche Lune', 'The Knight of the White Moon'),
+  ('À Barcelone, un mystérieux chevalier défie don Quichotte sur la plage. Le vaincu devra rentrer chez lui pour un an.', 'In Barcelona, a mysterious knight challenges Don Quixote on the beach. The loser must go home for a year.'), [
+  CH('blanca-luna-1', ('El desafío en la playa', 'Le défi sur la plage', 'The challenge on the beach'), [
+    [S('Una mañana, don Quijote paseaba por la playa de Barcelona con su armadura.', 'Un matin, don Quichotte se promenait sur la plage de Barcelone avec son armure.', 'One morning, Don Quixote was walking along the beach in Barcelona in his armour.'),
+     S('De repente, llegó un caballero con una luna blanca pintada en el escudo.', 'Soudain, arriva un chevalier avec une lune blanche peinte sur son bouclier.', 'Suddenly a knight arrived with a white moon painted on his shield.'),
+     S('«Soy el Caballero de la Blanca Luna —dijo—. Mi dama es más hermosa que Dulcinea».', '« Je suis le chevalier de la Blanche Lune, dit-il. Ma dame est plus belle que Dulcinée. »', '“I am the Knight of the White Moon,” he said. “My lady is more beautiful than Dulcinea.”')],
+    [S('Don Quijote se enfadó mucho y aceptó el combate.', 'Don Quichotte se mit très en colère et accepta le combat.', 'Don Quixote got very angry and accepted the duel.'),
+     S('Las condiciones eran claras: si perdía don Quijote, tenía que volver a su pueblo y quedarse allí un año.', 'Les conditions étaient claires : si don Quichotte perdait, il devait rentrer dans son village et y rester un an.', 'The terms were clear: if Don Quixote lost, he had to go back to his village and stay there for a year.'),
+     S('Sancho estaba muy nervioso y miraba el mar sin decir nada.', 'Sancho était très nerveux et regardait la mer sans rien dire.', 'Sancho was very nervous and stared at the sea without saying a word.')],
+  ], [
+    W('la armadura', '/la aɾmaˈðuɾa/', 'l’armure', 'the armour'),
+    W('el escudo', '/el esˈkuðo/', 'le bouclier', 'the shield'),
+    W('la dama', '/la ˈdama/', 'la dame', 'the lady'),
+    W('hermoso', '/eɾˈmoso/', 'beau, magnifique', 'beautiful'),
+    W('enfadarse', '/enfaˈðaɾse/', 'se fâcher', 'to get angry'),
+    W('aceptar', '/aθepˈtaɾ/', 'accepter', 'to accept'),
+  ], [
+    Q(('Qu’y avait-il sur le bouclier du chevalier ?', 'What was on the knight’s shield?'), [('Une lune blanche', 'A white moon'), ('Un soleil', 'A sun'), ('Un moulin', 'A windmill')], 0),
+    Q(('Que devait faire don Quichotte s’il perdait ?', 'What did Don Quixote have to do if he lost?'), [('Rentrer chez lui pour un an', 'Go home for a year'), ('Quitter l’Espagne', 'Leave Spain'), ('Donner son cheval', 'Give up his horse')], 0),
+  ]),
+  CH('blanca-luna-2', ('La vuelta a casa', 'Le retour à la maison', 'The return home'), [
+    [S('Los dos caballeros corrieron uno contra otro. El caballo del desconocido era más rápido y más fuerte que Rocinante.', 'Les deux chevaliers foncèrent l’un sur l’autre. Le cheval de l’inconnu était plus rapide et plus fort que Rossinante.', 'The two knights charged at each other. The stranger’s horse was faster and stronger than Rocinante.'),
+     S('Don Quijote cayó al suelo, pero no quiso decir que su dama era menos hermosa.', 'Don Quichotte tomba par terre, mais il refusa de dire que sa dame était moins belle.', 'Don Quixote fell to the ground, but he refused to say that his lady was less beautiful.'),
+     S('Entonces el caballero se quitó el casco: ¡era Sansón Carrasco, un vecino de su pueblo!', 'Alors le chevalier retira son casque : c’était Sansón Carrasco, un voisin de son village !', 'Then the knight took off his helmet: it was Sansón Carrasco, a neighbour from his village!')],
+    [S('Sansón explicó: «Lo he hecho por su bien, señor. Su familia está preocupada».', 'Sansón expliqua : « Je l’ai fait pour votre bien, monsieur. Votre famille est inquiète. »', 'Sansón explained: “I did it for your own good, sir. Your family is worried.”'),
+     S('Don Quijote y Sancho volvieron a la Mancha despacio, tristes pero tranquilos.', 'Don Quichotte et Sancho rentrèrent lentement dans la Manche, tristes mais apaisés.', 'Don Quixote and Sancho slowly returned to La Mancha, sad but at peace.'),
+     S('En el camino, don Quijote dijo: «Sancho, ha sido el viaje más bonito de mi vida».', 'En chemin, don Quichotte dit : « Sancho, ce fut le plus beau voyage de ma vie. »', 'On the way, Don Quixote said: “Sancho, it has been the finest journey of my life.”')],
+  ], [
+    W('el desconocido', '/el deskonoˈθiðo/', 'l’inconnu', 'the stranger'),
+    W('fuerte', '/ˈfweɾte/', 'fort', 'strong'),
+    W('quitarse', '/kiˈtaɾse/', 'enlever, retirer (un vêtement)', 'to take off'),
+    W('el casco', '/el ˈkasko/', 'le casque', 'the helmet'),
+    W('preocupado', '/pɾeokuˈpaðo/', 'inquiet', 'worried'),
+    W('despacio', '/desˈpaθjo/', 'lentement', 'slowly'),
+  ], [
+    Q(('Qui était le chevalier de la Blanche Lune ?', 'Who was the Knight of the White Moon?'), [('Sansón Carrasco, un voisin', 'Sansón Carrasco, a neighbour'), ('Le duc', 'The duke'), ('Un géant', 'A giant')], 0),
+    Q(('Pourquoi Sansón a-t-il fait cela ?', 'Why did Sansón do it?'), [('Pour le bien de don Quichotte', 'For Don Quixote’s own good'), ('Pour gagner de l’argent', 'To win money'), ('Pour épouser Dulcinée', 'To marry Dulcinea')], 0),
+  ]),
+])
+
+ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES

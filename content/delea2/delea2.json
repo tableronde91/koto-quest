@@ -1,0 +1,3697 @@
+{
+ "contentVersion": "2026.11.23",
+ "level": {
+  "code": "DELEA2",
+  "title": "DELE A2 : la route de Barcelone",
+  "region": "Route de Barcelone",
+  "order": 55
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau A2 du CECRL et préparent au DELE A2, mais ne sont pas des listes officielles de l’Instituto Cervantes.",
+ "worlds": [
+  {
+   "slug": "delea2-w1",
+   "title": "La deuxième sortie",
+   "region": "Route de Barcelone",
+   "description": "Raconter ce qu’on a fait aujourd’hui ou cette semaine avec le pretérito perfecto (he hablado), les participes irréguliers, ya et todavía no.",
+   "boss": {
+    "name": "La Lamia du torrent",
+    "glyph": "ñ",
+    "intro": "Au bord de la rivière, la Lamia peigne ses cheveux avec un peigne d’or et ne laisse passer que ceux qui savent dire ce qu’ils ont déjà fait. Raconte ta journée sans te tromper de participe !"
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w1-c1",
+     "title": "Qu’as-tu fait aujourd’hui ?",
+     "lessons": [
+      {
+       "slug": "es-perfecto",
+       "title": "Le passé composé : he hablado",
+       "objective": "Former le pretérito perfecto et dire ce qu’on a fait aujourd’hui.",
+       "minutes": 9,
+       "explanation": [
+        "Le pretérito perfecto = haber au présent + participe : he, has, ha, hemos, habéis, han + hablado. He comido (j’ai mangé), ¿Has dormido bien? (as-tu bien dormi ?).",
+        "Le participe régulier : -ar → -ado (hablar → hablado), -er et -ir → -ido (comer → comido, vivir → vivido). Il ne s’accorde jamais avec haber.",
+        "On l’emploie pour un passé dans une période qui n’est pas finie : hoy (aujourd’hui), esta mañana (ce matin), esta semana (cette semaine), este año (cette année)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-perfecto",
+         "kind": "grammar",
+         "front": "he / has / ha + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’ai / tu as / il a + participe (passé composé)"
+        },
+        {
+         "slug": "gram-es-participio",
+         "kind": "grammar",
+         "front": "-ado / -ido",
+         "reading": null,
+         "romaji": null,
+         "meaning": "terminaisons du participe passé"
+        },
+        {
+         "slug": "es-esta-manana",
+         "kind": "vocabulary",
+         "front": "esta mañana",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce matin"
+        },
+        {
+         "slug": "es-esta-semana",
+         "kind": "vocabulary",
+         "front": "esta semana",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cette semaine"
+        },
+        {
+         "slug": "es-este-ano",
+         "kind": "vocabulary",
+         "front": "este año",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cette année"
+        },
+        {
+         "slug": "es-salir",
+         "kind": "vocabulary",
+         "front": "salir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sortir, partir"
+        },
+        {
+         "slug": "es-preparar",
+         "kind": "vocabulary",
+         "front": "preparar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "préparer"
+        },
+        {
+         "slug": "es-la-maleta",
+         "kind": "vocabulary",
+         "front": "la maleta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la valise"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Esta mañana hemos salido del pueblo muy temprano.",
+         "reading": null,
+         "fr": "Ce matin, nous sommes partis du village très tôt."
+        },
+        {
+         "jp": "¿Has preparado la maleta, Sancho? — Sí, ya la he preparado.",
+         "reading": null,
+         "fr": "As-tu préparé la valise, Sancho ? — Oui, je l’ai déjà préparée."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hoy ＿ comido en una venta.",
+         "choices": [
+          "hemos",
+          "somos",
+          "tenemos"
+         ],
+         "answer": "hemos",
+         "explanation": "Passé composé : haber (hemos) + participe.",
+         "translation": "Aujourd’hui, nous avons mangé dans une auberge."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿＿ dormido bien, señor?",
+         "choices": [
+          "Ha",
+          "Es",
+          "Está"
+         ],
+         "answer": "Ha",
+         "explanation": "Avec usted : ha + participe.",
+         "translation": "Avez-vous bien dormi, monsieur ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Esta semana he ＿ mucho.",
+         "choices": [
+          "trabajado",
+          "trabajo",
+          "trabajar"
+         ],
+         "answer": "trabajado",
+         "explanation": "Trabajar → trabajado.",
+         "translation": "Cette semaine, j’ai beaucoup travaillé."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Esta mañana he desayunado pan con aceite.",
+         "translation": "La personne n’a pas encore pris son petit-déjeuner.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "He desayunado = j’ai pris mon petit-déjeuner."
+        }
+       ]
+      },
+      {
+       "slug": "es-participios",
+       "title": "Hecho, dicho, visto : les participes irréguliers",
+       "objective": "Employer les participes irréguliers les plus courants.",
+       "minutes": 9,
+       "explanation": [
+        "Participes irréguliers à connaître : hacer → hecho, decir → dicho, ver → visto, escribir → escrito, volver → vuelto, poner → puesto, abrir → abierto, romper → roto, morir → muerto.",
+        "Les pronoms se placent avant haber : Lo he visto (je l’ai vu), Me he levantado tarde (je me suis levé tard).",
+        "Ya = déjà ; todavía no = pas encore. ¿Ya has comido? — No, todavía no."
+       ],
+       "items": [
+        {
+         "slug": "es-hecho",
+         "kind": "vocabulary",
+         "front": "hecho (hacer)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fait (participe de hacer)"
+        },
+        {
+         "slug": "es-dicho",
+         "kind": "vocabulary",
+         "front": "dicho (decir)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dit (participe de decir)"
+        },
+        {
+         "slug": "es-visto",
+         "kind": "vocabulary",
+         "front": "visto (ver)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vu (participe de ver)"
+        },
+        {
+         "slug": "es-escrito",
+         "kind": "vocabulary",
+         "front": "escrito (escribir)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "écrit (participe de escribir)"
+        },
+        {
+         "slug": "es-vuelto",
+         "kind": "vocabulary",
+         "front": "vuelto (volver)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "revenu (participe de volver)"
+        },
+        {
+         "slug": "es-roto",
+         "kind": "vocabulary",
+         "front": "roto (romper)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cassé (participe de romper)"
+        },
+        {
+         "slug": "es-ya",
+         "kind": "vocabulary",
+         "front": "ya",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déjà"
+        },
+        {
+         "slug": "es-todavia-no",
+         "kind": "vocabulary",
+         "front": "todavía no",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pas encore"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Don Quijote ha roto su lanza otra vez.",
+         "reading": null,
+         "fr": "Don Quichotte a encore cassé sa lance."
+        },
+        {
+         "jp": "¿Ya has escrito a Dulcinea? — No, todavía no le he escrito.",
+         "reading": null,
+         "fr": "As-tu déjà écrit à Dulcinée ? — Non, je ne lui ai pas encore écrit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Qué has ＿ hoy?",
+         "choices": [
+          "hecho",
+          "hacido",
+          "hacer"
+         ],
+         "answer": "hecho",
+         "explanation": "Hacer → hecho (irrégulier).",
+         "translation": "Qu’as-tu fait aujourd’hui ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Nunca he ＿ el mar.",
+         "choices": [
+          "visto",
+          "veído",
+          "vido"
+         ],
+         "answer": "visto",
+         "explanation": "Ver → visto.",
+         "translation": "Je n’ai jamais vu la mer."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sancho todavía no ha ＿ a casa.",
+         "choices": [
+          "vuelto",
+          "volvido",
+          "volvado"
+         ],
+         "answer": "vuelto",
+         "explanation": "Volver → vuelto.",
+         "translation": "Sancho n’est pas encore rentré à la maison."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Teresa",
+           "jp": "¿Ya habéis comido?"
+          }
+         ],
+         "translation": "Teresa demande si vous avez déjà mangé (ce n’est pas le cas).",
+         "choices": [
+          "No, todavía no.",
+          "Sí, mañana.",
+          "No, ya."
+         ],
+         "answer": "No, todavía no.",
+         "explanation": "Pas encore : todavía no."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w1-c2",
+     "title": "As-tu déjà… ?",
+     "lessons": [
+      {
+       "slug": "es-experiencias",
+       "title": "As-tu déjà été à Barcelone ? alguna vez, nunca",
+       "objective": "Parler de ses expériences de vie.",
+       "minutes": 9,
+       "explanation": [
+        "Pour une expérience : ¿Has estado alguna vez en…? (as-tu déjà été à… ?). Réponses : Sí, una vez / dos veces / muchas veces ; No, nunca (jamais).",
+        "Nunca avant le verbe se suffit : Nunca he montado a caballo. Après le verbe, il faut no : No he montado nunca a caballo.",
+        "Estar en un lugar (avoir été quelque part), probar (goûter), conocer (connaître une personne ou un lieu), montar a caballo (monter à cheval)."
+       ],
+       "items": [
+        {
+         "slug": "es-alguna-vez",
+         "kind": "vocabulary",
+         "front": "alguna vez",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déjà (une fois dans sa vie)"
+        },
+        {
+         "slug": "es-nunca",
+         "kind": "vocabulary",
+         "front": "nunca",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jamais"
+        },
+        {
+         "slug": "es-una-vez",
+         "kind": "vocabulary",
+         "front": "una vez / dos veces",
+         "reading": null,
+         "romaji": null,
+         "meaning": "une fois / deux fois"
+        },
+        {
+         "slug": "es-probar-gusto",
+         "kind": "vocabulary",
+         "front": "probar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "goûter, essayer"
+        },
+        {
+         "slug": "es-conocer",
+         "kind": "vocabulary",
+         "front": "conocer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "connaître"
+        },
+        {
+         "slug": "es-montar-a-caballo",
+         "kind": "vocabulary",
+         "front": "montar a caballo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "monter à cheval"
+        },
+        {
+         "slug": "es-el-mar",
+         "kind": "vocabulary",
+         "front": "el mar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la mer"
+        },
+        {
+         "slug": "es-el-caballo",
+         "kind": "vocabulary",
+         "front": "el caballo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cheval"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¿Has estado alguna vez en Barcelona? — No, nunca. ¡Vamos a conocerla!",
+         "reading": null,
+         "fr": "As-tu déjà été à Barcelone ? — Non, jamais. Allons la découvrir !"
+        },
+        {
+         "jp": "Rocinante es el caballo de don Quijote. Sancho nunca ha montado a caballo.",
+         "reading": null,
+         "fr": "Rossinante est le cheval de don Quichotte. Sancho n’est jamais monté à cheval."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Sancho",
+           "jp": "¿Has probado alguna vez el gazpacho?"
+          }
+         ],
+         "translation": "Sancho te demande si tu as déjà goûté le gazpacho (oui, deux fois).",
+         "choices": [
+          "Sí, dos veces.",
+          "Sí, mañana.",
+          "No, ya."
+         ],
+         "answer": "Sí, dos veces.",
+         "explanation": "Expérience : una vez, dos veces…"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No he estado ＿ en Italia.",
+         "choices": [
+          "nunca",
+          "ya",
+          "alguna"
+         ],
+         "answer": "nunca",
+         "explanation": "No + verbe + nunca.",
+         "translation": "Je n’ai jamais été en Italie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Has ＿ alguna vez a una persona famosa?",
+         "choices": [
+          "conocido",
+          "sabido",
+          "probado"
+         ],
+         "answer": "conocido",
+         "explanation": "Une personne : conocer.",
+         "translation": "As-tu déjà rencontré une personne célèbre ?"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je n’ai jamais vu la mer. »",
+         "answer": [
+          "Nunca",
+          "he",
+          "visto",
+          "el",
+          "mar."
+         ],
+         "explanation": "Nunca + haber + participe."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w2",
+   "title": "Le récit de Sancho",
+   "region": "Route de Barcelone",
+   "description": "Raconter des événements terminés avec le pretérito indefinido (hablé, comí), ses formes irrégulières (fui, tuve, hice) et retracer une biographie.",
+   "boss": {
+    "name": "Le Tragaldabas glouton",
+    "glyph": "á",
+    "intro": "Le Tragaldabas, ogre goinfre des contes espagnols, a vidé la cuisine de l’auberge pendant la nuit. Il n’écoute que les belles histoires : raconte-lui hier, l’an dernier et toute ta vie au passé !"
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w2-c1",
+     "title": "Hier, à l’auberge",
+     "lessons": [
+      {
+       "slug": "es-indefinido",
+       "title": "Le passé simple : hablé, comí, viví",
+       "objective": "Conjuguer les verbes réguliers au pretérito indefinido.",
+       "minutes": 9,
+       "explanation": [
+        "-ar : hablé, hablaste, habló, hablamos, hablasteis, hablaron. -er / -ir : comí, comiste, comió, comimos, comisteis, comieron (vivir : viví, viviste, vivió…).",
+        "L’indefinido raconte une action terminée dans un temps fini : ayer (hier), anoche (hier soir), la semana pasada, el año pasado, en 2010, hace dos días (il y a deux jours).",
+        "Attention à l’accent : hablo (je parle) ≠ habló (il a parlé). Et hablamos sert au présent comme au passé."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-indefinido",
+         "kind": "grammar",
+         "front": "hablé / comí / viví",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je parlai / je mangeai / je vécus (passé simple)"
+        },
+        {
+         "slug": "es-ayer",
+         "kind": "vocabulary",
+         "front": "ayer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hier"
+        },
+        {
+         "slug": "es-anoche",
+         "kind": "vocabulary",
+         "front": "anoche",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hier soir"
+        },
+        {
+         "slug": "es-el-ano-pasado",
+         "kind": "vocabulary",
+         "front": "el año pasado",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’année dernière"
+        },
+        {
+         "slug": "es-la-semana-pasada",
+         "kind": "vocabulary",
+         "front": "la semana pasada",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la semaine dernière"
+        },
+        {
+         "slug": "es-hace-dos-dias",
+         "kind": "vocabulary",
+         "front": "hace dos días",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il y a deux jours"
+        },
+        {
+         "slug": "es-llegar",
+         "kind": "vocabulary",
+         "front": "llegar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "arriver"
+        },
+        {
+         "slug": "es-cenar",
+         "kind": "vocabulary",
+         "front": "cenar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dîner"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Anoche cenamos en una venta y Sancho comió muchísimo.",
+         "reading": null,
+         "fr": "Hier soir, nous avons dîné dans une auberge et Sancho a énormément mangé."
+        },
+        {
+         "jp": "Llegamos a Zaragoza hace dos días.",
+         "reading": null,
+         "fr": "Nous sommes arrivés à Saragosse il y a deux jours."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ayer ＿ con Dulcinea por teléfono.",
+         "choices": [
+          "hablé",
+          "hablo",
+          "he hablado"
+         ],
+         "answer": "hablé",
+         "explanation": "Ayer (temps fini) : indefinido.",
+         "translation": "Hier, j’ai parlé avec Dulcinée au téléphone."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El año pasado mis padres ＿ en Sevilla.",
+         "choices": [
+          "vivieron",
+          "vivimos",
+          "vivió"
+         ],
+         "answer": "vivieron",
+         "explanation": "Ellos : -ieron.",
+         "translation": "L’an dernier, mes parents ont vécu à Séville."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Don Quijote ＿ a la venta por la noche.",
+         "choices": [
+          "llegó",
+          "llego",
+          "llegué"
+         ],
+         "answer": "llegó",
+         "explanation": "Él : -ó (avec accent).",
+         "translation": "Don Quichotte est arrivé à l’auberge la nuit."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Comimos en el restaurante hace tres días.",
+         "translation": "Le repas a eu lieu il y a trois jours.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Hace tres días = il y a trois jours."
+        }
+       ]
+      },
+      {
+       "slug": "es-indefinido-irregular",
+       "title": "Fui, tuve, hice : les passés irréguliers",
+       "objective": "Employer les indefinidos irréguliers les plus courants.",
+       "minutes": 10,
+       "explanation": [
+        "Ser et ir ont la même forme : fui, fuiste, fue, fuimos, fuisteis, fueron. Fui a Toledo (je suis allé à Tolède) ; Fue un día largo (ce fut une longue journée).",
+        "Radical irrégulier et terminaisons sans accent : tener → tuve, estar → estuve, hacer → hice (hizo), poder → pude, poner → puse, venir → vine, querer → quise.",
+        "Decir → dije, dijiste, dijo, dijimos, dijisteis, dijeron (pas de i à la 3e personne du pluriel). Dar → di, diste, dio. Ver → vi, viste, vio."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-fui",
+         "kind": "grammar",
+         "front": "fui / fuiste / fue",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’allai, je fus (ir et ser au passé simple)"
+        },
+        {
+         "slug": "gram-es-tuve",
+         "kind": "grammar",
+         "front": "tuve / estuve / hice",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’eus / je fus / je fis (passés irréguliers)"
+        },
+        {
+         "slug": "es-dije",
+         "kind": "vocabulary",
+         "front": "dije (decir)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je dis (passé simple de decir)"
+        },
+        {
+         "slug": "es-vine",
+         "kind": "vocabulary",
+         "front": "vine (venir)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je vins (passé simple de venir)"
+        },
+        {
+         "slug": "es-pude",
+         "kind": "vocabulary",
+         "front": "pude (poder)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je pus (passé simple de poder)"
+        },
+        {
+         "slug": "es-la-fiesta",
+         "kind": "vocabulary",
+         "front": "la fiesta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fête"
+        },
+        {
+         "slug": "es-el-viaje",
+         "kind": "vocabulary",
+         "front": "el viaje",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le voyage"
+        },
+        {
+         "slug": "es-el-pueblo",
+         "kind": "vocabulary",
+         "front": "el pueblo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le village"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El sábado fuimos a la fiesta del pueblo y estuvimos allí hasta las dos.",
+         "reading": null,
+         "fr": "Samedi, nous sommes allés à la fête du village et nous y sommes restés jusqu’à deux heures."
+        },
+        {
+         "jp": "Sancho no pudo dormir: hizo mucho calor.",
+         "reading": null,
+         "fr": "Sancho n’a pas pu dormir : il a fait très chaud."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ayer ＿ al mercado con mi madre.",
+         "choices": [
+          "fui",
+          "fue",
+          "iba"
+         ],
+         "answer": "fui",
+         "explanation": "Yo + ir au passé : fui.",
+         "translation": "Hier, je suis allé au marché avec ma mère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El viaje ＿ muy divertido.",
+         "choices": [
+          "fue",
+          "fui",
+          "estuvo de"
+         ],
+         "answer": "fue",
+         "explanation": "Ser, 3e personne : fue.",
+         "translation": "Le voyage a été très amusant."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El lunes ＿ que trabajar mucho.",
+         "choices": [
+          "tuve",
+          "tení",
+          "tuvé"
+         ],
+         "answer": "tuve",
+         "explanation": "Tener → tuve (sans accent).",
+         "translation": "Lundi, j’ai dû beaucoup travailler."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ellos me ＿ la verdad.",
+         "choices": [
+          "dijeron",
+          "dijieron",
+          "decieron"
+         ],
+         "answer": "dijeron",
+         "explanation": "Decir → dijeron (sans i).",
+         "translation": "Ils m’ont dit la vérité."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w2-c2",
+     "title": "La vie de Cervantes",
+     "lessons": [
+      {
+       "slug": "es-biografia",
+       "title": "Une biographie : nació, se casó, murió",
+       "objective": "Raconter les grandes étapes d’une vie.",
+       "minutes": 9,
+       "explanation": [
+        "Les verbes de la biographie : nacer (naître) → nació, estudiar → estudió, casarse (se marier) → se casó, tener hijos → tuvo, morir (mourir) → murió.",
+        "Les dates : en 1547, el 23 de abril de 1616 ; a los veinte años (à vingt ans) ; dos años después (deux ans plus tard) ; luego (ensuite) ; al final (à la fin).",
+        "Morir et dormir changent au passé à la 3e personne : murió, murieron ; durmió, durmieron."
+       ],
+       "items": [
+        {
+         "slug": "es-nacer",
+         "kind": "vocabulary",
+         "front": "nacer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "naître"
+        },
+        {
+         "slug": "es-casarse",
+         "kind": "vocabulary",
+         "front": "casarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se marier"
+        },
+        {
+         "slug": "es-morir",
+         "kind": "vocabulary",
+         "front": "morir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mourir"
+        },
+        {
+         "slug": "es-a-los-veinte",
+         "kind": "vocabulary",
+         "front": "a los veinte años",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à vingt ans"
+        },
+        {
+         "slug": "es-anos-despues",
+         "kind": "vocabulary",
+         "front": "dos años después",
+         "reading": null,
+         "romaji": null,
+         "meaning": "deux ans plus tard"
+        },
+        {
+         "slug": "es-luego",
+         "kind": "vocabulary",
+         "front": "luego",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ensuite, puis"
+        },
+        {
+         "slug": "es-el-escritor",
+         "kind": "vocabulary",
+         "front": "el escritor / la escritora",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’écrivain / l’écrivaine"
+        },
+        {
+         "slug": "es-la-novela",
+         "kind": "vocabulary",
+         "front": "la novela",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le roman"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Miguel de Cervantes nació en Alcalá de Henares en 1547.",
+         "reading": null,
+         "fr": "Miguel de Cervantes est né à Alcalá de Henares en 1547."
+        },
+        {
+         "jp": "Escribió la novela de don Quijote y murió en Madrid en 1616.",
+         "reading": null,
+         "fr": "Il a écrit le roman de don Quichotte et il est mort à Madrid en 1616."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Cervantes ＿ en 1547.",
+         "choices": [
+          "nació",
+          "nace",
+          "nacía"
+         ],
+         "answer": "nació",
+         "explanation": "Événement daté : indefinido.",
+         "translation": "Cervantes est né en 1547."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mis abuelos se ＿ en 1970.",
+         "choices": [
+          "casaron",
+          "casó",
+          "casamos"
+         ],
+         "answer": "casaron",
+         "explanation": "Ellos : se casaron.",
+         "translation": "Mes grands-parents se sont mariés en 1970."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El escritor ＿ en 1616.",
+         "choices": [
+          "murió",
+          "morió",
+          "muró"
+         ],
+         "answer": "murió",
+         "explanation": "Morir → murió.",
+         "translation": "L’écrivain est mort en 1616."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « À vingt ans, il est parti en Italie. »",
+         "answer": [
+          "A",
+          "los",
+          "veinte",
+          "años",
+          "se",
+          "fue",
+          "a",
+          "Italia."
+         ],
+         "explanation": "A los + âge + años, puis le verbe."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w3",
+   "title": "Les souvenirs d’Aragon",
+   "region": "Route de Barcelone",
+   "description": "Évoquer ses souvenirs et les habitudes passées avec l’imparfait (hablaba, comía, era, iba), décrire un lieu d’autrefois et l’opposer au passé simple.",
+   "boss": {
+    "name": "L’Homme du sac",
+    "glyph": "é",
+    "intro": "Dans les villages d’Aragon, on menaçait les enfants désobéissants de l’Homme du sac. Ce soir, il rôde dans la vieille ferme et vole les souvenirs des anciens : rends-les-leur en racontant comment c’était avant."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w3-c1",
+     "title": "Quand j’étais petit",
+     "lessons": [
+      {
+       "slug": "es-imperfecto",
+       "title": "L’imparfait : hablaba, comía",
+       "objective": "Raconter ses habitudes passées avec l’imparfait.",
+       "minutes": 9,
+       "explanation": [
+        "-ar : hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban. -er / -ir : comía, comías, comía, comíamos, comíais, comían.",
+        "Seulement trois verbes irréguliers : ser → era, ir → iba, ver → veía.",
+        "L’imparfait sert aux habitudes passées : de pequeño (enfant), antes (avant), todos los veranos (tous les étés), a menudo (souvent), cada día (chaque jour)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-imperfecto",
+         "kind": "grammar",
+         "front": "hablaba / comía / vivía",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je parlais / je mangeais / je vivais (imparfait)"
+        },
+        {
+         "slug": "gram-es-era-iba",
+         "kind": "grammar",
+         "front": "era / iba / veía",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’étais / j’allais / je voyais"
+        },
+        {
+         "slug": "es-de-pequeno",
+         "kind": "vocabulary",
+         "front": "de pequeño / de pequeña",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quand j’étais petit·e"
+        },
+        {
+         "slug": "es-antes",
+         "kind": "vocabulary",
+         "front": "antes",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avant, autrefois"
+        },
+        {
+         "slug": "es-a-menudo",
+         "kind": "vocabulary",
+         "front": "a menudo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "souvent"
+        },
+        {
+         "slug": "es-cada-dia",
+         "kind": "vocabulary",
+         "front": "cada día",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tous les jours"
+        },
+        {
+         "slug": "es-jugar",
+         "kind": "vocabulary",
+         "front": "jugar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jouer"
+        },
+        {
+         "slug": "es-el-campo",
+         "kind": "vocabulary",
+         "front": "el campo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la campagne"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "De pequeño, vivía en el campo y jugaba en el río cada día.",
+         "reading": null,
+         "fr": "Quand j’étais petit, je vivais à la campagne et je jouais dans la rivière chaque jour."
+        },
+        {
+         "jp": "Antes don Quijote leía libros de caballerías toda la noche.",
+         "reading": null,
+         "fr": "Avant, don Quichotte lisait des romans de chevalerie toute la nuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "De pequeña, ＿ al colegio a pie.",
+         "choices": [
+          "iba",
+          "fui",
+          "voy"
+         ],
+         "answer": "iba",
+         "explanation": "Habitude passée : imparfait (ir → iba).",
+         "translation": "Quand j’étais petite, j’allais à l’école à pied."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Antes mis abuelos ＿ en un pueblo pequeño.",
+         "choices": [
+          "vivían",
+          "vivieron",
+          "viven"
+         ],
+         "answer": "vivían",
+         "explanation": "Antes : imparfait.",
+         "translation": "Autrefois, mes grands-parents vivaient dans un petit village."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Cuando yo ＿ niño, no me gustaban las verduras.",
+         "choices": [
+          "era",
+          "fui",
+          "estaba"
+         ],
+         "answer": "era",
+         "explanation": "Ser à l’imparfait : era.",
+         "translation": "Quand j’étais enfant, je n’aimais pas les légumes."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "De pequeño, jugaba al fútbol todos los sábados.",
+         "translation": "C’était une habitude.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Todos los sábados + imparfait = habitude."
+        }
+       ]
+      },
+      {
+       "slug": "es-describir-pasado",
+       "title": "Comment c’était : había, era, estaba",
+       "objective": "Décrire un lieu, une personne ou une situation dans le passé.",
+       "minutes": 9,
+       "explanation": [
+        "Hay → había (il y avait) : En el pueblo había una plaza y dos fuentes. Avec un pluriel aussi : había.",
+        "Pour décrire au passé : era (c’était, il était — description durable), estaba (état ou lieu), tenía (il avait), llevaba (il portait).",
+        "Les objets d’autrefois : la radio, la carta (la lettre), la vela (la bougie), el pozo (le puits), la granja (la ferme)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-habia",
+         "kind": "grammar",
+         "front": "había",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il y avait"
+        },
+        {
+         "slug": "es-la-granja",
+         "kind": "vocabulary",
+         "front": "la granja",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la ferme"
+        },
+        {
+         "slug": "es-la-fuente",
+         "kind": "vocabulary",
+         "front": "la fuente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fontaine, la source"
+        },
+        {
+         "slug": "es-el-pozo",
+         "kind": "vocabulary",
+         "front": "el pozo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le puits"
+        },
+        {
+         "slug": "es-la-vela",
+         "kind": "vocabulary",
+         "front": "la vela",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la bougie"
+        },
+        {
+         "slug": "es-la-carta",
+         "kind": "vocabulary",
+         "front": "la carta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la lettre (courrier)"
+        },
+        {
+         "slug": "es-tranquilo",
+         "kind": "vocabulary",
+         "front": "tranquilo / tranquila",
+         "reading": null,
+         "romaji": null,
+         "meaning": "calme"
+        },
+        {
+         "slug": "es-la-luz",
+         "kind": "vocabulary",
+         "front": "la luz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la lumière, l’électricité"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En la granja no había luz: leíamos con una vela.",
+         "reading": null,
+         "fr": "À la ferme, il n’y avait pas d’électricité : nous lisions à la bougie."
+        },
+        {
+         "jp": "El pueblo era pequeño y muy tranquilo. En la plaza había una fuente.",
+         "reading": null,
+         "fr": "Le village était petit et très calme. Sur la place, il y avait une fontaine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "En mi calle ＿ dos panaderías.",
+         "choices": [
+          "había",
+          "habían",
+          "era"
+         ],
+         "answer": "había",
+         "explanation": "Había ne se met pas au pluriel.",
+         "translation": "Dans ma rue, il y avait deux boulangeries."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mi abuelo ＿ el pelo blanco y siempre llevaba sombrero.",
+         "choices": [
+          "tenía",
+          "tuvo",
+          "era"
+         ],
+         "answer": "tenía",
+         "explanation": "Description au passé : imparfait.",
+         "translation": "Mon grand-père avait les cheveux blancs et portait toujours un chapeau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La casa ＿ muy grande y tenía un pozo.",
+         "choices": [
+          "era",
+          "estaba",
+          "había"
+         ],
+         "answer": "era",
+         "explanation": "Description durable : ser → era.",
+         "translation": "La maison était très grande et avait un puits."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Nieta",
+           "jp": "Abuela, ¿cómo era el pueblo antes?"
+          }
+         ],
+         "translation": "La petite-fille demande comment était le village autrefois.",
+         "choices": [
+          "Era muy tranquilo y había pocos coches.",
+          "Fue muy tranquilo ayer.",
+          "Es tranquilo mañana."
+         ],
+         "answer": "Era muy tranquilo y había pocos coches.",
+         "explanation": "Description au passé : era, había."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w3-c2",
+     "title": "Ce soir-là…",
+     "lessons": [
+      {
+       "slug": "es-imperfecto-indefinido",
+       "title": "Je dormais quand… : imparfait ou passé simple",
+       "objective": "Raconter une histoire en distinguant le décor (imparfait) et les événements (passé simple).",
+       "minutes": 10,
+       "explanation": [
+        "L’imparfait pose le décor et ce qui était en cours ; l’indefinido raconte ce qui est arrivé. Dormía cuando llegó el Hombre del saco.",
+        "Mientras (pendant que) + imparfait : Mientras Sancho cenaba, don Quijote salió. De repente (soudain) introduit l’événement.",
+        "L’heure et l’âge au passé se disent à l’imparfait : Eran las diez. Tenía doce años."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-imp-ind",
+         "kind": "grammar",
+         "front": "dormía cuando llegó",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je dormais quand il est arrivé (imparfait + passé simple)"
+        },
+        {
+         "slug": "es-mientras",
+         "kind": "vocabulary",
+         "front": "mientras",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pendant que"
+        },
+        {
+         "slug": "es-de-repente",
+         "kind": "vocabulary",
+         "front": "de repente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "soudain, tout à coup"
+        },
+        {
+         "slug": "es-el-ruido",
+         "kind": "vocabulary",
+         "front": "el ruido",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bruit"
+        },
+        {
+         "slug": "es-oscuro",
+         "kind": "vocabulary",
+         "front": "oscuro / oscura",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sombre"
+        },
+        {
+         "slug": "es-asustarse",
+         "kind": "vocabulary",
+         "front": "asustarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir peur, s’effrayer"
+        },
+        {
+         "slug": "es-despertarse",
+         "kind": "vocabulary",
+         "front": "despertarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se réveiller"
+        },
+        {
+         "slug": "es-la-puerta",
+         "kind": "vocabulary",
+         "front": "la puerta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la porte"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Era de noche y todo estaba oscuro. De repente, oímos un ruido en la puerta.",
+         "reading": null,
+         "fr": "C’était la nuit et tout était sombre. Soudain, nous avons entendu un bruit à la porte."
+        },
+        {
+         "jp": "Mientras Sancho dormía, don Quijote se despertó y salió al patio.",
+         "reading": null,
+         "fr": "Pendant que Sancho dormait, don Quichotte s’est réveillé et est sorti dans la cour."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Yo ＿ la tele cuando sonó el teléfono.",
+         "choices": [
+          "veía",
+          "vi",
+          "veo"
+         ],
+         "answer": "veía",
+         "explanation": "Action en cours : imparfait.",
+         "translation": "Je regardais la télé quand le téléphone a sonné."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mientras cenábamos, de repente ＿ la luz.",
+         "choices": [
+          "se fue",
+          "se iba",
+          "se va"
+         ],
+         "answer": "se fue",
+         "explanation": "Événement soudain : indefinido.",
+         "translation": "Pendant que nous dînions, soudain l’électricité a été coupée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ las once de la noche cuando llegamos.",
+         "choices": [
+          "Eran",
+          "Fueron",
+          "Son"
+         ],
+         "answer": "Eran",
+         "explanation": "L’heure au passé : imparfait.",
+         "translation": "Il était onze heures du soir quand nous sommes arrivés."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Dormía cuando oí un ruido.",
+         "translation": "Le bruit a réveillé ou surpris la personne pendant son sommeil.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Dormía = action en cours ; oí = événement."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w4",
+   "title": "En route pour Saragosse",
+   "region": "Route de Barcelone",
+   "description": "Se débrouiller en voyage : acheter un billet, comprendre les horaires, réserver une chambre, se plaindre poliment et employer por et para.",
+   "boss": {
+    "name": "L’Encantada de la fontaine",
+    "glyph": "í",
+    "intro": "Près de Saragosse, l’Encantada, demoiselle enchantée des légendes aragonaises, apparaît à la fontaine la nuit de la Saint-Jean. Elle a embrouillé les horaires, les billets et les réservations : remets de l’ordre dans le voyage pour rompre le charme."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w4-c1",
+     "title": "À la gare",
+     "lessons": [
+      {
+       "slug": "es-transporte",
+       "title": "Un aller-retour, s’il vous plaît",
+       "objective": "Acheter un billet et comprendre les horaires et les retards.",
+       "minutes": 9,
+       "explanation": [
+        "Un billet : un billete de ida (aller simple), de ida y vuelta (aller-retour). ¿A qué hora sale el próximo tren para Zaragoza? ¿De qué andén sale?",
+        "Salir (partir) ≠ llegar (arriver). El tren sale a las 8:15 y llega a las 10:40. Tiene un retraso de veinte minutos (il a vingt minutes de retard).",
+        "Coger (prendre) le bus, le train ; perder el tren (rater le train) ; hacer transbordo (changer, faire une correspondance)."
+       ],
+       "items": [
+        {
+         "slug": "es-billete",
+         "kind": "vocabulary",
+         "front": "el billete",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le billet, le ticket"
+        },
+        {
+         "slug": "es-ida-y-vuelta",
+         "kind": "vocabulary",
+         "front": "de ida y vuelta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aller-retour"
+        },
+        {
+         "slug": "es-anden",
+         "kind": "vocabulary",
+         "front": "el andén",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le quai"
+        },
+        {
+         "slug": "es-retraso",
+         "kind": "vocabulary",
+         "front": "el retraso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le retard"
+        },
+        {
+         "slug": "es-proximo",
+         "kind": "vocabulary",
+         "front": "el próximo / la próxima",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le prochain / la prochaine"
+        },
+        {
+         "slug": "es-coger",
+         "kind": "vocabulary",
+         "front": "coger",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre (un transport)"
+        },
+        {
+         "slug": "es-perder-el-tren",
+         "kind": "vocabulary",
+         "front": "perder el tren",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rater le train"
+        },
+        {
+         "slug": "es-el-autobus",
+         "kind": "vocabulary",
+         "front": "el autobús",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bus, l’autocar"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Un billete de ida y vuelta para Zaragoza, por favor. — ¿Para qué día?",
+         "reading": null,
+         "fr": "Un aller-retour pour Saragosse, s’il vous plaît. — Pour quel jour ?"
+        },
+        {
+         "jp": "El próximo autobús sale del andén tres con diez minutos de retraso.",
+         "reading": null,
+         "fr": "Le prochain bus part du quai trois avec dix minutes de retard."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Taquillera",
+           "jp": "Buenos días, ¿qué desea?"
+          }
+         ],
+         "translation": "L’employée du guichet te demande ce que tu veux (un aller-retour pour Saragosse).",
+         "choices": [
+          "Un billete de ida y vuelta para Zaragoza.",
+          "Un andén para Zaragoza.",
+          "He perdido Zaragoza."
+         ],
+         "answer": "Un billete de ida y vuelta para Zaragoza.",
+         "explanation": "Un billete de ida y vuelta = un aller-retour."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "El tren ＿ de Madrid a las nueve y llega a Zaragoza a las once.",
+         "choices": [
+          "sale",
+          "llega",
+          "coge"
+         ],
+         "answer": "sale",
+         "explanation": "Partir : salir.",
+         "translation": "Le train part de Madrid à neuf heures et arrive à Saragosse à onze heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Me he levantado tarde y he ＿ el tren.",
+         "choices": [
+          "perdido",
+          "cogido",
+          "salido"
+         ],
+         "answer": "perdido",
+         "explanation": "Rater le train : perder el tren.",
+         "translation": "Je me suis levé tard et j’ai raté le train."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "El tren de las 10:15 tiene un retraso de quince minutos.",
+         "translation": "Le train partira vers 10 h 30.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "10 h 15 + 15 minutes de retard = 10 h 30."
+        }
+       ]
+      },
+      {
+       "slug": "es-por-para",
+       "title": "Por ou para ?",
+       "objective": "Distinguer por et para dans les situations courantes.",
+       "minutes": 10,
+       "explanation": [
+        "Para : la destination et le but. Un tren para Zaragoza. Estudio español para viajar (pour voyager). Este regalo es para ti.",
+        "Por : la cause, le lieu par où l’on passe, le moyen et le moment de la journée. Gracias por todo. Paseamos por el parque. Hablo por teléfono. Por la mañana.",
+        "Pour un prix : por diez euros (pour dix euros). Pour une date limite : para el lunes (pour lundi)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-para",
+         "kind": "grammar",
+         "front": "para",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pour (but, destination, destinataire)"
+        },
+        {
+         "slug": "gram-es-por",
+         "kind": "grammar",
+         "front": "por",
+         "reading": null,
+         "romaji": null,
+         "meaning": "par, pour (cause, passage, moyen)"
+        },
+        {
+         "slug": "es-el-regalo",
+         "kind": "vocabulary",
+         "front": "el regalo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cadeau"
+        },
+        {
+         "slug": "es-pasear",
+         "kind": "vocabulary",
+         "front": "pasear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se promener"
+        },
+        {
+         "slug": "es-gracias-por",
+         "kind": "vocabulary",
+         "front": "gracias por…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "merci pour…"
+        },
+        {
+         "slug": "es-el-parque",
+         "kind": "vocabulary",
+         "front": "el parque",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le parc"
+        },
+        {
+         "slug": "es-por-telefono",
+         "kind": "vocabulary",
+         "front": "por teléfono",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au téléphone"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Este tren va para Zaragoza, pero pasa por Calatayud.",
+         "reading": null,
+         "fr": "Ce train va à Saragosse, mais il passe par Calatayud."
+        },
+        {
+         "jp": "Gracias por el regalo. — Es para tu viaje.",
+         "reading": null,
+         "fr": "Merci pour le cadeau. — C’est pour ton voyage."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Estudio español ＿ trabajar en Madrid.",
+         "choices": [
+          "para",
+          "por",
+          "de"
+         ],
+         "answer": "para",
+         "explanation": "But : para + infinitif.",
+         "translation": "J’étudie l’espagnol pour travailler à Madrid."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Muchas gracias ＿ tu ayuda.",
+         "choices": [
+          "por",
+          "para",
+          "a"
+         ],
+         "answer": "por",
+         "explanation": "Gracias por…",
+         "translation": "Merci beaucoup pour ton aide."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Paseamos ＿ el centro de la ciudad.",
+         "choices": [
+          "por",
+          "para",
+          "en para"
+         ],
+         "answer": "por",
+         "explanation": "Passage dans un lieu : por.",
+         "translation": "Nous nous promenons dans le centre-ville."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Este regalo es ＿ Dulcinea.",
+         "choices": [
+          "para",
+          "por",
+          "con"
+         ],
+         "answer": "para",
+         "explanation": "Destinataire : para.",
+         "translation": "Ce cadeau est pour Dulcinée."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w4-c2",
+     "title": "À l’hôtel",
+     "lessons": [
+      {
+       "slug": "es-hotel",
+       "title": "Réserver une chambre et se plaindre",
+       "objective": "Réserver, s’enregistrer à l’hôtel et signaler un problème.",
+       "minutes": 9,
+       "explanation": [
+        "Réserver : Quería reservar una habitación doble / individual para dos noches. ¿El desayuno está incluido? L’imparfait quería rend la demande plus polie.",
+        "À l’arrivée : Tengo una reserva a nombre de… (j’ai une réservation au nom de…). On vous donne la llave (la clé) de la habitación.",
+        "Se plaindre poliment : Perdone, la ducha no funciona (la douche ne marche pas). Hay mucho ruido. ¿Me puede cambiar de habitación?"
+       ],
+       "items": [
+        {
+         "slug": "es-reservar",
+         "kind": "vocabulary",
+         "front": "reservar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réserver"
+        },
+        {
+         "slug": "es-la-reserva",
+         "kind": "vocabulary",
+         "front": "la reserva",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la réservation"
+        },
+        {
+         "slug": "es-habitacion-doble",
+         "kind": "vocabulary",
+         "front": "la habitación doble",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la chambre double"
+        },
+        {
+         "slug": "es-la-llave",
+         "kind": "vocabulary",
+         "front": "la llave",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la clé"
+        },
+        {
+         "slug": "es-incluido",
+         "kind": "vocabulary",
+         "front": "incluido / incluida",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compris, inclus"
+        },
+        {
+         "slug": "es-funcionar",
+         "kind": "vocabulary",
+         "front": "funcionar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fonctionner, marcher"
+        },
+        {
+         "slug": "es-la-ducha",
+         "kind": "vocabulary",
+         "front": "la ducha",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la douche"
+        },
+        {
+         "slug": "es-quejarse",
+         "kind": "vocabulary",
+         "front": "quejarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se plaindre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Quería reservar una habitación doble para el viernes y el sábado.",
+         "reading": null,
+         "fr": "Je voudrais réserver une chambre double pour vendredi et samedi."
+        },
+        {
+         "jp": "Perdone, el aire acondicionado no funciona. ¿Me puede cambiar de habitación?",
+         "reading": null,
+         "fr": "Excusez-moi, la climatisation ne marche pas. Pouvez-vous me changer de chambre ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Recepcionista",
+           "jp": "Buenas tardes, ¿tiene reserva?"
+          }
+         ],
+         "translation": "La réceptionniste te demande si tu as une réservation.",
+         "choices": [
+          "Sí, a nombre de Panza.",
+          "Sí, la llave es mía.",
+          "No, gracias, ya he comido."
+         ],
+         "answer": "Sí, a nombre de Panza.",
+         "explanation": "Une réservation au nom de… : a nombre de…"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "¿El desayuno está ＿ en el precio?",
+         "choices": [
+          "incluido",
+          "reservado",
+          "roto"
+         ],
+         "answer": "incluido",
+         "explanation": "Compris dans le prix : incluido.",
+         "translation": "Le petit-déjeuner est-il compris dans le prix ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Perdone, la ducha no ＿.",
+         "choices": [
+          "funciona",
+          "reserva",
+          "sale"
+         ],
+         "answer": "funciona",
+         "explanation": "Ne pas marcher : no funcionar.",
+         "translation": "Excusez-moi, la douche ne marche pas."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Quería una habitación individual para tres noches.",
+         "translation": "Le client veut une chambre pour deux personnes.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Individual = pour une personne."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w5",
+   "title": "La maison sans toit",
+   "region": "Route de Barcelone",
+   "description": "Décrire un logement, chercher un appartement à louer, éviter les répétitions avec lo, la, los, las et donner des consignes à l’impératif.",
+   "boss": {
+    "name": "Le Diablo Cojuelo",
+    "glyph": "ó",
+    "intro": "Le Diablo Cojuelo, diable boiteux des romans espagnols, soulève les toits des maisons pour espionner ceux qui y vivent… et met tout en désordre. Décris chaque pièce, range les meubles et donne-lui des ordres clairs pour qu’il repose les toits."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w5-c1",
+     "title": "Un appartement à louer",
+     "lessons": [
+      {
+       "slug": "es-vivienda",
+       "title": "Le logement : el piso, alquilar",
+       "objective": "Décrire un logement et comprendre une annonce de location.",
+       "minutes": 9,
+       "explanation": [
+        "Les pièces : el salón (le salon), la cocina (la cuisine), el dormitorio (la chambre), el baño (la salle de bains), la terraza (la terrasse), el pasillo (le couloir).",
+        "Une annonce : Se alquila piso (appartement à louer) : tres dormitorios, amueblado (meublé), exterior (sur rue), con ascensor (avec ascenseur), en el tercer piso (au troisième étage).",
+        "Los vecinos = les voisins. Vivir en un piso (en appartement) / en una casa (en maison) / en las afueras (en banlieue, à l’extérieur de la ville)."
+       ],
+       "items": [
+        {
+         "slug": "es-el-piso",
+         "kind": "vocabulary",
+         "front": "el piso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’appartement, l’étage"
+        },
+        {
+         "slug": "es-alquilar",
+         "kind": "vocabulary",
+         "front": "alquilar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "louer"
+        },
+        {
+         "slug": "es-el-salon",
+         "kind": "vocabulary",
+         "front": "el salón",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le salon"
+        },
+        {
+         "slug": "es-la-cocina",
+         "kind": "vocabulary",
+         "front": "la cocina",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la cuisine (pièce)"
+        },
+        {
+         "slug": "es-el-dormitorio",
+         "kind": "vocabulary",
+         "front": "el dormitorio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la chambre (à coucher)"
+        },
+        {
+         "slug": "es-el-bano",
+         "kind": "vocabulary",
+         "front": "el baño",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la salle de bains"
+        },
+        {
+         "slug": "es-el-ascensor",
+         "kind": "vocabulary",
+         "front": "el ascensor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’ascenseur"
+        },
+        {
+         "slug": "es-amueblado",
+         "kind": "vocabulary",
+         "front": "amueblado / amueblada",
+         "reading": null,
+         "romaji": null,
+         "meaning": "meublé / meublée"
+        },
+        {
+         "slug": "es-el-vecino",
+         "kind": "vocabulary",
+         "front": "el vecino / la vecina",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le voisin / la voisine"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Se alquila piso amueblado: dos dormitorios, salón, cocina y baño. Tercer piso con ascensor.",
+         "reading": null,
+         "fr": "Appartement meublé à louer : deux chambres, salon, cuisine et salle de bains. Troisième étage avec ascenseur."
+        },
+        {
+         "jp": "Mis vecinos son muy simpáticos, pero hacen mucho ruido por la noche.",
+         "reading": null,
+         "fr": "Mes voisins sont très sympathiques, mais ils font beaucoup de bruit la nuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Dormimos en el ＿ y cocinamos en la cocina.",
+         "choices": [
+          "dormitorio",
+          "salón",
+          "ascensor"
+         ],
+         "answer": "dormitorio",
+         "explanation": "Dormir : el dormitorio.",
+         "translation": "Nous dormons dans la chambre et nous cuisinons dans la cuisine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Vivo en un quinto piso y no hay ＿: ¡subo a pie!",
+         "choices": [
+          "ascensor",
+          "baño",
+          "vecino"
+         ],
+         "answer": "ascensor",
+         "explanation": "Monter sans ascenseur : no hay ascensor.",
+         "translation": "J’habite au cinquième étage et il n’y a pas d’ascenseur : je monte à pied !"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Se alquila piso amueblado.",
+         "translation": "L’appartement est à vendre, sans meubles.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Se alquila = à louer ; amueblado = meublé."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Agente",
+           "jp": "¿Cómo quiere el piso?"
+          }
+         ],
+         "translation": "L’agent immobilier te demande quel appartement tu cherches.",
+         "choices": [
+          "Con dos dormitorios y cerca del centro.",
+          "Con dos vecinos y un ascensor roto.",
+          "Lo quiero ayer."
+         ],
+         "answer": "Con dos dormitorios y cerca del centro.",
+         "explanation": "On décrit les pièces et le quartier."
+        }
+       ]
+      },
+      {
+       "slug": "es-pronombres-od",
+       "title": "Je la vois : lo, la, los, las",
+       "objective": "Remplacer un complément d’objet direct par un pronom.",
+       "minutes": 10,
+       "explanation": [
+        "Les pronoms compléments directs : me, te, lo (le), la (la), nos, os, los, las. Ils se placent avant le verbe conjugué : ¿La mesa? La pongo aquí.",
+        "Avec un infinitif ou un gérondif, on peut les accrocher à la fin : Voy a comprarlo = Lo voy a comprar.",
+        "Les meubles : la mesa (la table), la silla (la chaise), el sofá (le canapé), la cama (le lit), el armario (l’armoire, le placard), la estantería (l’étagère), la lámpara (la lampe)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-lo-la",
+         "kind": "grammar",
+         "front": "lo / la / los / las",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le / la / les (pronoms COD)"
+        },
+        {
+         "slug": "es-la-mesa",
+         "kind": "vocabulary",
+         "front": "la mesa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la table"
+        },
+        {
+         "slug": "es-la-silla",
+         "kind": "vocabulary",
+         "front": "la silla",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la chaise"
+        },
+        {
+         "slug": "es-el-sofa",
+         "kind": "vocabulary",
+         "front": "el sofá",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le canapé"
+        },
+        {
+         "slug": "es-la-cama",
+         "kind": "vocabulary",
+         "front": "la cama",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le lit"
+        },
+        {
+         "slug": "es-el-armario",
+         "kind": "vocabulary",
+         "front": "el armario",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’armoire, le placard"
+        },
+        {
+         "slug": "es-la-lampara",
+         "kind": "vocabulary",
+         "front": "la lámpara",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la lampe"
+        },
+        {
+         "slug": "es-poner",
+         "kind": "vocabulary",
+         "front": "poner",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mettre, poser"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¿Dónde pongo el sofá? — Ponlo en el salón, al lado de la ventana.",
+         "reading": null,
+         "fr": "Où est-ce que je mets le canapé ? — Mets-le dans le salon, à côté de la fenêtre."
+        },
+        {
+         "jp": "¿Has visto mis llaves? — Sí, las he visto en la mesa.",
+         "reading": null,
+         "fr": "As-tu vu mes clés ? — Oui, je les ai vues sur la table."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿La lámpara? ＿ he comprado en el mercado.",
+         "choices": [
+          "La",
+          "Lo",
+          "Le"
+         ],
+         "answer": "La",
+         "explanation": "La lámpara est féminin singulier : la.",
+         "translation": "La lampe ? Je l’ai achetée au marché."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Y los libros? — ＿ tengo en el armario.",
+         "choices": [
+          "Los",
+          "Las",
+          "Lo"
+         ],
+         "answer": "Los",
+         "explanation": "Los libros : los.",
+         "translation": "Et les livres ? — Je les ai dans le placard."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Esta silla es bonita. Voy a ＿.",
+         "choices": [
+          "comprarla",
+          "comprarlo",
+          "la comprar"
+         ],
+         "answer": "comprarla",
+         "explanation": "Infinitif + pronom attaché : comprarla.",
+         "translation": "Cette chaise est jolie. Je vais l’acheter."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je ne le connais pas. »",
+         "answer": [
+          "No",
+          "lo",
+          "conozco."
+         ],
+         "explanation": "No + pronom + verbe."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w5-c2",
+     "title": "Le grand rangement",
+     "lessons": [
+      {
+       "slug": "es-imperativo",
+       "title": "Range ta chambre ! l’impératif",
+       "objective": "Donner des ordres et des consignes avec l’impératif (tú et usted).",
+       "minutes": 10,
+       "explanation": [
+        "Impératif tú = 3e personne du présent : habla, come, escribe, limpia (nettoie), friega los platos (fais la vaisselle).",
+        "Huit impératifs irréguliers : pon (mets), haz (fais), di (dis), ven (viens), sal (sors), ten (tiens), ve (va), sé (sois). Haz la cama (fais le lit) !",
+        "Les pronoms s’accrochent à la fin : ¡Ponlo aquí! ¡Siéntate! Pour usted : hable, coma, pase (entrez), siéntese (asseyez-vous)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-imperativo",
+         "kind": "grammar",
+         "front": "habla / come / escribe",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parle / mange / écris (impératif)"
+        },
+        {
+         "slug": "gram-es-imperativo-irregular",
+         "kind": "grammar",
+         "front": "pon / haz / ven / sal",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mets / fais / viens / sors"
+        },
+        {
+         "slug": "es-limpiar",
+         "kind": "vocabulary",
+         "front": "limpiar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nettoyer"
+        },
+        {
+         "slug": "es-fregar",
+         "kind": "vocabulary",
+         "front": "fregar los platos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire la vaisselle"
+        },
+        {
+         "slug": "es-hacer-la-cama",
+         "kind": "vocabulary",
+         "front": "hacer la cama",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire le lit"
+        },
+        {
+         "slug": "es-ordenar",
+         "kind": "vocabulary",
+         "front": "ordenar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ranger"
+        },
+        {
+         "slug": "es-la-basura",
+         "kind": "vocabulary",
+         "front": "la basura",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les ordures, la poubelle"
+        },
+        {
+         "slug": "es-pase",
+         "kind": "vocabulary",
+         "front": "pase / siéntese",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entrez / asseyez-vous (vous de politesse)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Sancho, ordena tu habitación, haz la cama y saca la basura.",
+         "reading": null,
+         "fr": "Sancho, range ta chambre, fais le lit et sors la poubelle."
+        },
+        {
+         "jp": "Pase, señor, siéntese. ¿Quiere un café?",
+         "reading": null,
+         "fr": "Entrez, monsieur, asseyez-vous. Voulez-vous un café ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¡＿ la cama antes de salir!",
+         "choices": [
+          "Haz",
+          "Hace",
+          "Hacé"
+         ],
+         "answer": "Haz",
+         "explanation": "Hacer → haz (irrégulier).",
+         "translation": "Fais le lit avant de sortir !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ aquí, Sancho, rápido.",
+         "choices": [
+          "Ven",
+          "Viene",
+          "Vienes"
+         ],
+         "answer": "Ven",
+         "explanation": "Venir → ven.",
+         "translation": "Viens ici, Sancho, vite."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El libro está en la mesa: ＿ en la estantería.",
+         "choices": [
+          "ponlo",
+          "lo pon",
+          "pónelo"
+         ],
+         "answer": "ponlo",
+         "explanation": "Impératif + pronom attaché : ponlo.",
+         "translation": "Le livre est sur la table : mets-le sur l’étagère."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Duquesa",
+           "jp": "Buenas tardes, ¿se puede?"
+          }
+         ],
+         "translation": "La duchesse frappe et demande si elle peut entrer.",
+         "choices": [
+          "Sí, claro, pase y siéntese.",
+          "Sí, sal.",
+          "No, haz la cama."
+         ],
+         "answer": "Sí, claro, pase y siéntese.",
+         "explanation": "Avec usted : pase, siéntese."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w6",
+   "title": "Les montagnes de Mari",
+   "region": "Route de Barcelone",
+   "description": "Comparer des lieux et des personnes (más… que, tan… como), employer le superlatif et -ísimo, et décrire la nature et les paysages.",
+   "boss": {
+    "name": "Mari d’Amboto",
+    "glyph": "ú",
+    "intro": "Mari, la dame des montagnes basques, voyage dans le ciel en boule de feu et commande les orages. Elle méprise les vantards : compare avec justesse les sommets, les rivières et les villages, et elle laissera passer le chevalier."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w6-c1",
+     "title": "Plus haut que la Manche",
+     "lessons": [
+      {
+       "slug": "es-comparar",
+       "title": "Plus grand que… : más, menos, tan",
+       "objective": "Comparer avec más… que, menos… que et tan… como.",
+       "minutes": 9,
+       "explanation": [
+        "Más + adjectif + que (plus… que), menos + adjectif + que (moins… que), tan + adjectif + como (aussi… que). Sancho es más bajo que don Quijote.",
+        "Avec un nom : más / menos + nom + que ; tanto, tanta, tantos, tantas + nom + como (autant de… que). Tengo tantos libros como tú.",
+        "Comparatifs irréguliers : mejor (meilleur, mieux), peor (pire), mayor (plus âgé), menor (plus jeune). Mi hermano mayor."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-mas-que",
+         "kind": "grammar",
+         "front": "más… que / menos… que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plus… que / moins… que"
+        },
+        {
+         "slug": "gram-es-tan-como",
+         "kind": "grammar",
+         "front": "tan… como",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aussi… que"
+        },
+        {
+         "slug": "es-mejor",
+         "kind": "vocabulary",
+         "front": "mejor / peor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "meilleur, mieux / pire"
+        },
+        {
+         "slug": "es-mayor",
+         "kind": "vocabulary",
+         "front": "mayor / menor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plus âgé / plus jeune"
+        },
+        {
+         "slug": "es-la-montana",
+         "kind": "vocabulary",
+         "front": "la montaña",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la montagne"
+        },
+        {
+         "slug": "es-el-rio",
+         "kind": "vocabulary",
+         "front": "el río",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la rivière, le fleuve"
+        },
+        {
+         "slug": "es-ancho",
+         "kind": "vocabulary",
+         "front": "ancho / ancha",
+         "reading": null,
+         "romaji": null,
+         "meaning": "large"
+        },
+        {
+         "slug": "es-largo",
+         "kind": "vocabulary",
+         "front": "largo / larga",
+         "reading": null,
+         "romaji": null,
+         "meaning": "long"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Los Pirineos son más altos que las montañas de la Manche, pero el Ebro es menos largo que el Tajo.",
+         "reading": null,
+         "fr": "Les Pyrénées sont plus hautes que les montagnes de la Manche, mais l’Èbre est moins long que le Tage."
+        },
+        {
+         "jp": "Sancho no es tan valiente como su señor, pero es mucho más prudente.",
+         "reading": null,
+         "fr": "Sancho n’est pas aussi courageux que son maître, mais il est beaucoup plus prudent."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Madrid es más grande ＿ Toledo.",
+         "choices": [
+          "que",
+          "como",
+          "de"
+         ],
+         "answer": "que",
+         "explanation": "Comparaison : más… que.",
+         "translation": "Madrid est plus grande que Tolède."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mi hermana es tan alta ＿ yo.",
+         "choices": [
+          "como",
+          "que",
+          "de"
+         ],
+         "answer": "como",
+         "explanation": "Égalité : tan… como.",
+         "translation": "Ma sœur est aussi grande que moi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Este vino es ＿ que el otro.",
+         "choices": [
+          "mejor",
+          "más bueno de",
+          "tan mejor"
+         ],
+         "answer": "mejor",
+         "explanation": "Más bueno → mejor.",
+         "translation": "Ce vin est meilleur que l’autre."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Ana tiene 20 años y su hermano 15: él es su hermano menor.",
+         "translation": "Le frère est plus jeune qu’Ana.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Menor = plus jeune."
+        }
+       ]
+      },
+      {
+       "slug": "es-superlativo",
+       "title": "Le plus beau : el más, -ísimo",
+       "objective": "Exprimer le superlatif relatif et absolu.",
+       "minutes": 9,
+       "explanation": [
+        "Superlatif relatif : el / la / los / las + más + adjectif + de. El Aneto es la montaña más alta de los Pirineos.",
+        "Superlatif absolu : adjectif + -ísimo = très, très. Alto → altísimo, bonito → bonitísimo, fácil → facilísimo. Mucho → muchísimo.",
+        "Attention à l’orthographe : rico → riquísimo (c → qu), largo → larguísimo (g → gu)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-el-mas",
+         "kind": "grammar",
+         "front": "el más… de",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le plus… de (superlatif)"
+        },
+        {
+         "slug": "gram-es-isimo",
+         "kind": "grammar",
+         "front": "-ísimo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "très, extrêmement (suffixe)"
+        },
+        {
+         "slug": "es-bonito",
+         "kind": "vocabulary",
+         "front": "bonito / bonita",
+         "reading": null,
+         "romaji": null,
+         "meaning": "joli / jolie"
+        },
+        {
+         "slug": "es-rico",
+         "kind": "vocabulary",
+         "front": "rico / rica",
+         "reading": null,
+         "romaji": null,
+         "meaning": "délicieux (plat), riche"
+        },
+        {
+         "slug": "es-el-paisaje",
+         "kind": "vocabulary",
+         "front": "el paisaje",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le paysage"
+        },
+        {
+         "slug": "es-famoso",
+         "kind": "vocabulary",
+         "front": "famoso / famosa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "célèbre"
+        },
+        {
+         "slug": "es-el-mundo",
+         "kind": "vocabulary",
+         "front": "el mundo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le monde"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Este paisaje es bonitísimo: es el más bonito del viaje.",
+         "reading": null,
+         "fr": "Ce paysage est magnifique : c’est le plus beau du voyage."
+        },
+        {
+         "jp": "El queso de esta sierra está riquísimo.",
+         "reading": null,
+         "fr": "Le fromage de cette sierra est délicieux."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Es el río más largo ＿ España.",
+         "choices": [
+          "de",
+          "que",
+          "en"
+         ],
+         "answer": "de",
+         "explanation": "Superlatif : el más… de.",
+         "translation": "C’est le fleuve le plus long d’Espagne."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La paella está ＿.",
+         "choices": [
+          "riquísima",
+          "ricísima",
+          "muy riquísima"
+         ],
+         "answer": "riquísima",
+         "explanation": "Rico → riquísimo (c → qu).",
+         "translation": "La paella est délicieuse."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Es la novela más ＿ de Cervantes.",
+         "choices": [
+          "famosa",
+          "famosísima",
+          "famoso"
+         ],
+         "answer": "famosa",
+         "explanation": "El / la más + adjectif.",
+         "translation": "C’est le roman le plus célèbre de Cervantes."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « C’est la montagne la plus haute. »",
+         "answer": [
+          "Es",
+          "la",
+          "montaña",
+          "más",
+          "alta."
+         ],
+         "explanation": "La + nom + más + adjectif."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w6-c2",
+     "title": "Le chemin des crêtes",
+     "lessons": [
+      {
+       "slug": "es-naturaleza",
+       "title": "La nature : el bosque, el lago, la costa",
+       "objective": "Décrire un paysage et une excursion dans la nature.",
+       "minutes": 9,
+       "explanation": [
+        "Les paysages : el bosque (la forêt), el lago (le lac), la costa (la côte), la playa (la plage), la isla (l’île), el valle (la vallée), la cueva (la grotte).",
+        "Les animaux : la vaca (la vache), la oveja (la brebis), el pájaro (l’oiseau), el águila (l’aigle).",
+        "Une excursion : hacer senderismo (faire de la randonnée), subir (monter), bajar (descendre), la cima (le sommet), el camino (le chemin)."
+       ],
+       "items": [
+        {
+         "slug": "es-el-bosque",
+         "kind": "vocabulary",
+         "front": "el bosque",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la forêt, le bois"
+        },
+        {
+         "slug": "es-el-lago",
+         "kind": "vocabulary",
+         "front": "el lago",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le lac"
+        },
+        {
+         "slug": "es-la-costa",
+         "kind": "vocabulary",
+         "front": "la costa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la côte"
+        },
+        {
+         "slug": "es-la-cueva",
+         "kind": "vocabulary",
+         "front": "la cueva",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la grotte"
+        },
+        {
+         "slug": "es-el-pajaro",
+         "kind": "vocabulary",
+         "front": "el pájaro",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’oiseau"
+        },
+        {
+         "slug": "es-senderismo",
+         "kind": "vocabulary",
+         "front": "hacer senderismo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire de la randonnée"
+        },
+        {
+         "slug": "es-subir",
+         "kind": "vocabulary",
+         "front": "subir / bajar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "monter / descendre"
+        },
+        {
+         "slug": "es-el-camino",
+         "kind": "vocabulary",
+         "front": "el camino",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le chemin"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Subimos a la cima por un camino estrecho y vimos un lago azul y una cueva.",
+         "reading": null,
+         "fr": "Nous sommes montés au sommet par un chemin étroit et nous avons vu un lac bleu et une grotte."
+        },
+        {
+         "jp": "Según la leyenda, Mari vive en una cueva del monte Amboto.",
+         "reading": null,
+         "fr": "Selon la légende, Mari vit dans une grotte du mont Amboto."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En el ＿ hay muchos árboles y pájaros.",
+         "choices": [
+          "bosque",
+          "lago",
+          "mar"
+         ],
+         "answer": "bosque",
+         "explanation": "Beaucoup d’arbres : el bosque.",
+         "translation": "Dans la forêt, il y a beaucoup d’arbres et d’oiseaux."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Los fines de semana me gusta hacer ＿ en la montaña.",
+         "choices": [
+          "senderismo",
+          "camino",
+          "costa"
+         ],
+         "answer": "senderismo",
+         "explanation": "Randonnée : senderismo.",
+         "translation": "Le week-end, j’aime faire de la randonnée en montagne."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Bajamos de la montaña a las seis.",
+         "translation": "Ils sont montés au sommet à six heures.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Bajar = descendre."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Pastor",
+           "jp": "¿Qué camino vais a tomar?"
+          }
+         ],
+         "translation": "Le berger demande quel chemin vous allez prendre (celui de la côte).",
+         "choices": [
+          "El camino de la costa.",
+          "El camino de la cueva de ayer.",
+          "Vamos a subir el lago."
+         ],
+         "answer": "El camino de la costa.",
+         "explanation": "Le chemin de… : el camino de…"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w7",
+   "title": "Les fêtes du chemin",
+   "region": "Route de Barcelone",
+   "description": "Parler de ses loisirs et de ses sports, proposer une sortie, accepter ou refuser, fixer un rendez-vous et dire ce qu’on est en train de faire (estar + gérondif).",
+   "boss": {
+    "name": "La Mula Guita",
+    "glyph": "ü",
+    "intro": "Pendant la fête du village, la Mula Guita, mule de feu des fêtes catalanes, crache des étincelles et fait fuir les danseurs. Invite tout le monde, organise les rendez-vous et commente la fête en direct pour qu’elle rejoigne le cortège."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w7-c1",
+     "title": "Le temps libre",
+     "lessons": [
+      {
+       "slug": "es-ocio",
+       "title": "Les loisirs : jugar al fútbol, ir al cine",
+       "objective": "Parler de ses loisirs, de ses sports et de leur fréquence.",
+       "minutes": 9,
+       "explanation": [
+        "Jugar a + sport ou jeu : jugar al fútbol, al tenis, a las cartas. Mais : hacer deporte, nadar (nager), correr (courir), montar en bici (faire du vélo).",
+        "Sortir : ir al cine, al teatro, a un concierto, a un museo, de compras (faire les magasins), de tapas (aller manger des tapas).",
+        "La fréquence : una vez a la semana (une fois par semaine), dos veces al mes, casi nunca (presque jamais), a veces (parfois), en mi tiempo libre (pendant mon temps libre)."
+       ],
+       "items": [
+        {
+         "slug": "es-el-tiempo-libre",
+         "kind": "vocabulary",
+         "front": "el tiempo libre",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le temps libre"
+        },
+        {
+         "slug": "es-jugar-al-futbol",
+         "kind": "vocabulary",
+         "front": "jugar al fútbol",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jouer au football"
+        },
+        {
+         "slug": "es-nadar",
+         "kind": "vocabulary",
+         "front": "nadar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nager"
+        },
+        {
+         "slug": "es-correr",
+         "kind": "vocabulary",
+         "front": "correr",
+         "reading": null,
+         "romaji": null,
+         "meaning": "courir"
+        },
+        {
+         "slug": "es-el-cine",
+         "kind": "vocabulary",
+         "front": "el cine",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cinéma"
+        },
+        {
+         "slug": "es-el-concierto",
+         "kind": "vocabulary",
+         "front": "el concierto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le concert"
+        },
+        {
+         "slug": "es-a-veces",
+         "kind": "vocabulary",
+         "front": "a veces",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parfois"
+        },
+        {
+         "slug": "es-a-la-semana",
+         "kind": "vocabulary",
+         "front": "una vez a la semana",
+         "reading": null,
+         "romaji": null,
+         "meaning": "une fois par semaine"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En mi tiempo libre juego al fútbol y, a veces, voy al cine con mis amigos.",
+         "reading": null,
+         "fr": "Pendant mon temps libre, je joue au football et, parfois, je vais au cinéma avec mes amis."
+        },
+        {
+         "jp": "Sancho nada una vez a la semana, pero no corre nunca.",
+         "reading": null,
+         "fr": "Sancho nage une fois par semaine, mais il ne court jamais."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Los domingos juego ＿ tenis con mi padre.",
+         "choices": [
+          "al",
+          "el",
+          "a la"
+         ],
+         "answer": "al",
+         "explanation": "Jugar a + el → jugar al.",
+         "translation": "Le dimanche, je joue au tennis avec mon père."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Voy al gimnasio dos veces ＿ semana.",
+         "choices": [
+          "a la",
+          "en la",
+          "por"
+         ],
+         "answer": "a la",
+         "explanation": "Fréquence : dos veces a la semana.",
+         "translation": "Je vais à la salle de sport deux fois par semaine."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Casi nunca voy a conciertos.",
+         "translation": "La personne va souvent au concert.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Casi nunca = presque jamais."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Amiga",
+           "jp": "¿Qué haces en tu tiempo libre?"
+          }
+         ],
+         "translation": "Ton amie te demande ce que tu fais pendant ton temps libre.",
+         "choices": [
+          "Leo, nado y a veces voy al cine.",
+          "Tengo tiempo libre en la mesa.",
+          "Fui libre ayer."
+         ],
+         "answer": "Leo, nado y a veces voy al cine.",
+         "explanation": "On cite ses loisirs au présent."
+        }
+       ]
+      },
+      {
+       "slug": "es-quedar",
+       "title": "On se retrouve ? quedar, ¿te apetece…?",
+       "objective": "Proposer une sortie, accepter, refuser et fixer un rendez-vous.",
+       "minutes": 10,
+       "explanation": [
+        "Proposer : ¿Quieres venir al cine? ¿Te apetece tomar algo? (ça te dit de boire un verre ?) ¿Por qué no vamos a la playa? ¿Vamos a…?",
+        "Accepter : Vale, de acuerdo, ¡qué buena idea! Refuser : Lo siento, no puedo, es que tengo que trabajar (désolé, je ne peux pas, c’est que je dois travailler).",
+        "Quedar = se donner rendez-vous : ¿Dónde quedamos? — En la plaza. ¿A qué hora quedamos? — A las ocho. Poder et querer changent au présent : puedo, quiero."
+       ],
+       "items": [
+        {
+         "slug": "es-quedar",
+         "kind": "vocabulary",
+         "front": "quedar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se donner rendez-vous"
+        },
+        {
+         "slug": "es-te-apetece",
+         "kind": "vocabulary",
+         "front": "¿Te apetece…?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Ça te dit de… ?"
+        },
+        {
+         "slug": "es-vale",
+         "kind": "vocabulary",
+         "front": "vale",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’accord, OK"
+        },
+        {
+         "slug": "es-lo-siento",
+         "kind": "vocabulary",
+         "front": "lo siento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pardon, je suis désolé(e)"
+        },
+        {
+         "slug": "es-no-puedo",
+         "kind": "vocabulary",
+         "front": "no puedo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je ne peux pas"
+        },
+        {
+         "slug": "es-es-que",
+         "kind": "vocabulary",
+         "front": "es que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "c’est que…"
+        },
+        {
+         "slug": "es-que-buena-idea",
+         "kind": "vocabulary",
+         "front": "¡Qué buena idea!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Quelle bonne idée !"
+        },
+        {
+         "slug": "es-tomar-algo",
+         "kind": "vocabulary",
+         "front": "tomar algo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre un verre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¿Te apetece ir a la fiesta esta noche? — ¡Vale! ¿Dónde quedamos?",
+         "reading": null,
+         "fr": "Ça te dit d’aller à la fête ce soir ? — D’accord ! Où est-ce qu’on se retrouve ?"
+        },
+        {
+         "jp": "Lo siento, no puedo: es que mañana me levanto muy temprano.",
+         "reading": null,
+         "fr": "Désolé, je ne peux pas : c’est que demain je me lève très tôt."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Duque",
+           "jp": "¿Por qué no venís a cenar el sábado?"
+          }
+         ],
+         "translation": "Le duc vous invite à dîner samedi (tu acceptes).",
+         "choices": [
+          "¡Qué buena idea! ¿A qué hora?",
+          "Lo siento, es que sí.",
+          "No puedo, vale."
+         ],
+         "answer": "¡Qué buena idea! ¿A qué hora?",
+         "explanation": "Accepter : ¡qué buena idea!"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Amigo",
+           "jp": "¿Quieres jugar al fútbol mañana?"
+          }
+         ],
+         "translation": "Ton ami te propose un match demain, mais tu dois travailler.",
+         "choices": [
+          "Lo siento, no puedo: es que tengo que trabajar.",
+          "Vale, tengo que trabajar.",
+          "Sí, no puedo."
+         ],
+         "answer": "Lo siento, no puedo: es que tengo que trabajar.",
+         "explanation": "Refuser poliment : lo siento, no puedo, es que…"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿A qué hora ＿ ? — A las siete en la plaza.",
+         "choices": [
+          "quedamos",
+          "quedan",
+          "quedé"
+         ],
+         "answer": "quedamos",
+         "explanation": "Nous : quedamos.",
+         "translation": "À quelle heure on se retrouve ? — À sept heures sur la place."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hoy no ＿ salir: estoy enfermo.",
+         "choices": [
+          "puedo",
+          "podo",
+          "pudo"
+         ],
+         "answer": "puedo",
+         "explanation": "Poder → puedo (o → ue).",
+         "translation": "Aujourd’hui je ne peux pas sortir : je suis malade."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w7-c2",
+     "title": "En direct de la fête",
+     "lessons": [
+      {
+       "slug": "es-gerundio",
+       "title": "Je suis en train de danser : estar + gérondif",
+       "objective": "Dire ce qui se passe en ce moment avec estar + gérondif.",
+       "minutes": 9,
+       "explanation": [
+        "Estar + gérondif = être en train de : estoy bailando, estás comiendo, está escribiendo. -ar → -ando, -er / -ir → -iendo.",
+        "Gérondifs irréguliers : leer → leyendo, oír → oyendo, ir → yendo, dormir → durmiendo, pedir → pidiendo, decir → diciendo.",
+        "À la fête : bailar (danser), cantar (chanter), los fuegos artificiales (le feu d’artifice), el desfile (le défilé), la música, la gente (les gens)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-gerundio",
+         "kind": "grammar",
+         "front": "estoy + -ando / -iendo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je suis en train de… (gérondif)"
+        },
+        {
+         "slug": "es-leyendo",
+         "kind": "vocabulary",
+         "front": "leyendo (leer)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en lisant (gérondif de leer)"
+        },
+        {
+         "slug": "es-durmiendo",
+         "kind": "vocabulary",
+         "front": "durmiendo (dormir)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en dormant (gérondif de dormir)"
+        },
+        {
+         "slug": "es-bailar",
+         "kind": "vocabulary",
+         "front": "bailar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "danser"
+        },
+        {
+         "slug": "es-cantar",
+         "kind": "vocabulary",
+         "front": "cantar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chanter"
+        },
+        {
+         "slug": "es-fuegos",
+         "kind": "vocabulary",
+         "front": "los fuegos artificiales",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le feu d’artifice"
+        },
+        {
+         "slug": "es-el-desfile",
+         "kind": "vocabulary",
+         "front": "el desfile",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le défilé"
+        },
+        {
+         "slug": "es-la-gente",
+         "kind": "vocabulary",
+         "front": "la gente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gens, personnes"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¡Mira! La gente está bailando en la plaza y los niños están cantando.",
+         "reading": null,
+         "fr": "Regarde ! Les gens dansent sur la place et les enfants chantent."
+        },
+        {
+         "jp": "¿Dónde está Sancho? — Está durmiendo debajo de un árbol.",
+         "reading": null,
+         "fr": "Où est Sancho ? — Il est en train de dormir sous un arbre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ahora mismo estoy ＿ un libro.",
+         "choices": [
+          "leyendo",
+          "leiendo",
+          "leído"
+         ],
+         "answer": "leyendo",
+         "explanation": "Leer → leyendo.",
+         "translation": "En ce moment, je suis en train de lire un livre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Los músicos ＿ tocando en el desfile.",
+         "choices": [
+          "están",
+          "son",
+          "hay"
+         ],
+         "answer": "están",
+         "explanation": "Estar + gérondif.",
+         "translation": "Les musiciens jouent dans le défilé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No hagas ruido: el niño está ＿.",
+         "choices": [
+          "durmiendo",
+          "dormiendo",
+          "dormido"
+         ],
+         "answer": "durmiendo",
+         "explanation": "Dormir → durmiendo.",
+         "translation": "Ne fais pas de bruit : l’enfant dort."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Teresa",
+           "jp": "¿Qué estás haciendo?"
+          }
+         ],
+         "translation": "Teresa t’appelle et demande ce que tu fais (tu regardes le feu d’artifice).",
+         "choices": [
+          "Estoy viendo los fuegos artificiales.",
+          "Veo los fuegos ayer.",
+          "Estoy visto los fuegos."
+         ],
+         "answer": "Estoy viendo los fuegos artificiales.",
+         "explanation": "Action en cours : estoy + gérondif."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-w8",
+   "title": "La plage de Barcelone",
+   "region": "Route de Barcelone",
+   "description": "Parler de son travail et de ses études, écrire à quelqu’un avec les pronoms le et les, et donner des conseils et des obligations (hay que, deber, es mejor).",
+   "boss": {
+    "name": "Le Drac de Sant Jordi",
+    "glyph": "Ñ",
+    "intro": "Sur la plage de Barcelone, le Drac, dragon de la légende de Sant Jordi, surgit des vagues et réclame un tribut. Le chevalier de la Blanche Lune l’attend… Prouve au Drac que tu sais travailler, écrire et conseiller en espagnol, et il replongera dans la mer."
+   },
+   "chapters": [
+    {
+     "slug": "delea2-w8-c1",
+     "title": "Au port de Barcelone",
+     "lessons": [
+      {
+       "slug": "es-trabajo",
+       "title": "Le travail : la empresa, el horario",
+       "objective": "Parler de son métier, de son lieu et de ses horaires de travail.",
+       "minutes": 9,
+       "explanation": [
+        "Les métiers : el profesor / la profesora, el enfermero / la enfermera (infirmier), el cocinero (cuisinier), el abogado (avocat), el dependiente (vendeur), el ingeniero (ingénieur).",
+        "Trabajo en una empresa (dans une entreprise), en una oficina, en un hospital. Trabajo como cocinero (je travaille comme cuisinier). ¿A qué te dedicas? = que fais-tu dans la vie ?",
+        "Le travail au quotidien : el horario (les horaires), el jefe / la jefa (le chef), los compañeros (les collègues), buscar trabajo (chercher du travail), el currículum (le CV)."
+       ],
+       "items": [
+        {
+         "slug": "es-a-que-te-dedicas",
+         "kind": "vocabulary",
+         "front": "¿A qué te dedicas?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Que fais-tu dans la vie ?"
+        },
+        {
+         "slug": "es-la-empresa",
+         "kind": "vocabulary",
+         "front": "la empresa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’entreprise"
+        },
+        {
+         "slug": "es-la-oficina",
+         "kind": "vocabulary",
+         "front": "la oficina",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bureau (lieu)"
+        },
+        {
+         "slug": "es-el-horario",
+         "kind": "vocabulary",
+         "front": "el horario",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les horaires"
+        },
+        {
+         "slug": "es-el-jefe",
+         "kind": "vocabulary",
+         "front": "el jefe / la jefa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le chef / la cheffe"
+        },
+        {
+         "slug": "es-el-companero",
+         "kind": "vocabulary",
+         "front": "el compañero / la compañera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le collègue / la collègue, le camarade"
+        },
+        {
+         "slug": "es-el-enfermero",
+         "kind": "vocabulary",
+         "front": "el enfermero / la enfermera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’infirmier / l’infirmière"
+        },
+        {
+         "slug": "es-el-cocinero",
+         "kind": "vocabulary",
+         "front": "el cocinero / la cocinera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cuisinier / la cuisinière"
+        },
+        {
+         "slug": "es-buscar-trabajo",
+         "kind": "vocabulary",
+         "front": "buscar trabajo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chercher du travail"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¿A qué te dedicas? — Soy enfermera. Trabajo en un hospital de Barcelona.",
+         "reading": null,
+         "fr": "Que fais-tu dans la vie ? — Je suis infirmière. Je travaille dans un hôpital de Barcelone."
+        },
+        {
+         "jp": "Mi horario es de nueve a cinco y mis compañeros son muy simpáticos.",
+         "reading": null,
+         "fr": "Mes horaires sont de neuf heures à cinq heures et mes collègues sont très sympathiques."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Pescador",
+           "jp": "¿A qué te dedicas?"
+          }
+         ],
+         "translation": "Un pêcheur te demande ce que tu fais dans la vie (tu es cuisinier·ère).",
+         "choices": [
+          "Soy cocinero, trabajo en un restaurante.",
+          "Me dedico a las nueve.",
+          "Tengo un horario."
+         ],
+         "answer": "Soy cocinero, trabajo en un restaurante.",
+         "explanation": "Métier : soy + métier (sans article)."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Mi ＿ es muy flexible: empiezo a las diez.",
+         "choices": [
+          "horario",
+          "jefe",
+          "currículum"
+         ],
+         "answer": "horario",
+         "explanation": "Les horaires : el horario.",
+         "translation": "Mes horaires sont très souples : je commence à dix heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Estoy buscando ＿ y he enviado mi currículum a tres empresas.",
+         "choices": [
+          "trabajo",
+          "jefe",
+          "oficina"
+         ],
+         "answer": "trabajo",
+         "explanation": "Chercher du travail : buscar trabajo.",
+         "translation": "Je cherche du travail et j’ai envoyé mon CV à trois entreprises."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Trabaja como profesor en un colegio.",
+         "translation": "Il travaille dans une école.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Un colegio = une école."
+        }
+       ]
+      },
+      {
+       "slug": "es-pronombres-oi",
+       "title": "Je lui écris : le, les",
+       "objective": "Employer les pronoms compléments indirects avec dar, decir, escribir, regalar.",
+       "minutes": 10,
+       "explanation": [
+        "Pronoms COI : me, te, le (lui), nos, os, les (leur). Le escribo una carta a Dulcinea (j’écris une lettre à Dulcinée). On garde souvent le même si on nomme la personne.",
+        "Les verbes qui les appellent : dar (donner), decir (dire), regalar (offrir), enviar (envoyer), pedir (demander quelque chose), prestar (prêter), contar (raconter).",
+        "Comme lo et la, ils se placent avant le verbe conjugué ou s’accrochent à l’infinitif : Voy a regalarle un libro = Le voy a regalar un libro."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-le-les",
+         "kind": "grammar",
+         "front": "le / les",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lui / leur (pronoms COI)"
+        },
+        {
+         "slug": "es-dar",
+         "kind": "vocabulary",
+         "front": "dar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "donner"
+        },
+        {
+         "slug": "es-regalar",
+         "kind": "vocabulary",
+         "front": "regalar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "offrir (un cadeau)"
+        },
+        {
+         "slug": "es-enviar",
+         "kind": "vocabulary",
+         "front": "enviar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "envoyer"
+        },
+        {
+         "slug": "es-pedir",
+         "kind": "vocabulary",
+         "front": "pedir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "demander (quelque chose), commander"
+        },
+        {
+         "slug": "es-prestar",
+         "kind": "vocabulary",
+         "front": "prestar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prêter"
+        },
+        {
+         "slug": "es-contar",
+         "kind": "vocabulary",
+         "front": "contar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "raconter, compter"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Don Quijote le escribe una carta a Dulcinea y Sancho se la lleva.",
+         "reading": null,
+         "fr": "Don Quichotte écrit une lettre à Dulcinée et Sancho la lui porte."
+        },
+        {
+         "jp": "¿Qué les vas a regalar a tus padres? — Les voy a regalar un viaje.",
+         "reading": null,
+         "fr": "Qu’est-ce que tu vas offrir à tes parents ? — Je vais leur offrir un voyage."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mañana es el cumpleaños de Ana: ＿ voy a regalar flores.",
+         "choices": [
+          "le",
+          "la",
+          "les"
+         ],
+         "answer": "le",
+         "explanation": "À Ana (une personne) : le.",
+         "translation": "Demain, c’est l’anniversaire d’Ana : je vais lui offrir des fleurs."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "He visto a mis abuelos y ＿ he contado el viaje.",
+         "choices": [
+          "les",
+          "le",
+          "los"
+         ],
+         "answer": "les",
+         "explanation": "À mes grands-parents : les.",
+         "translation": "J’ai vu mes grands-parents et je leur ai raconté le voyage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Me ＿ tu bolígrafo, por favor?",
+         "choices": [
+          "prestas",
+          "pides",
+          "cuentas"
+         ],
+         "answer": "prestas",
+         "explanation": "Prêter : prestar.",
+         "translation": "Tu me prêtes ton stylo, s’il te plaît ?"
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je lui envoie un message. »",
+         "answer": [
+          "Le",
+          "envío",
+          "un",
+          "mensaje."
+         ],
+         "explanation": "Le + verbe + complément."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delea2-w8-c2",
+     "title": "La veille du combat",
+     "lessons": [
+      {
+       "slug": "es-consejos",
+       "title": "Il faut s’entraîner : hay que, deber, es mejor",
+       "objective": "Exprimer l’obligation et donner des conseils.",
+       "minutes": 10,
+       "explanation": [
+        "Obligation générale : hay que + infinitif (il faut). Hay que llevar el pasaporte. Obligation personnelle : tener que (A1) ou deber + infinitif (devoir) : Debes descansar.",
+        "Conseiller : Es mejor + infinitif (il vaut mieux), ¿Por qué no…? (pourquoi ne pas… ?), Si tienes tiempo, visita el puerto (si tu as le temps, visite le port).",
+        "Interdire : no se puede + infinitif (on ne peut pas), está prohibido (c’est interdit). No se puede fumar. Está prohibido bañarse."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-hay-que",
+         "kind": "grammar",
+         "front": "hay que + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il faut + infinitif"
+        },
+        {
+         "slug": "gram-es-deber",
+         "kind": "grammar",
+         "front": "deber + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devoir + infinitif"
+        },
+        {
+         "slug": "es-es-mejor",
+         "kind": "vocabulary",
+         "front": "es mejor + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il vaut mieux…"
+        },
+        {
+         "slug": "es-no-se-puede",
+         "kind": "vocabulary",
+         "front": "no se puede",
+         "reading": null,
+         "romaji": null,
+         "meaning": "on ne peut pas, il est interdit de"
+        },
+        {
+         "slug": "es-prohibido",
+         "kind": "vocabulary",
+         "front": "prohibido / prohibida",
+         "reading": null,
+         "romaji": null,
+         "meaning": "interdit / interdite"
+        },
+        {
+         "slug": "es-el-consejo",
+         "kind": "vocabulary",
+         "front": "el consejo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le conseil"
+        },
+        {
+         "slug": "es-entrenar",
+         "kind": "vocabulary",
+         "front": "entrenar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’entraîner"
+        },
+        {
+         "slug": "es-el-pasaporte",
+         "kind": "vocabulary",
+         "front": "el pasaporte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le passeport"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Mañana hay que levantarse pronto: debes entrenar antes del combate.",
+         "reading": null,
+         "fr": "Demain, il faut se lever tôt : tu dois t’entraîner avant le combat."
+        },
+        {
+         "jp": "Es mejor no bañarse aquí: está prohibido y hay mucho viento.",
+         "reading": null,
+         "fr": "Il vaut mieux ne pas se baigner ici : c’est interdit et il y a beaucoup de vent."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Para viajar a México ＿ llevar el pasaporte.",
+         "choices": [
+          "hay que",
+          "hay",
+          "debe que"
+         ],
+         "answer": "hay que",
+         "explanation": "Obligation générale : hay que + infinitif.",
+         "translation": "Pour aller au Mexique, il faut avoir son passeport."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Estás muy cansado: ＿ dormir más.",
+         "choices": [
+          "debes",
+          "hay",
+          "es"
+         ],
+         "answer": "debes",
+         "explanation": "Conseil personnel : deber + infinitif.",
+         "translation": "Tu es très fatigué : tu dois dormir davantage."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "En el museo no se puede hacer fotos.",
+         "translation": "On peut prendre des photos dans le musée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "No se puede = c’est interdit."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Turista",
+           "jp": "Quiero ver Barcelona en un día. ¿Qué me aconsejas?"
+          }
+         ],
+         "translation": "Un touriste te demande un conseil pour visiter Barcelone en un jour.",
+         "choices": [
+          "Es mejor ir a pie por el centro y visitar el puerto.",
+          "Hay que no Barcelona.",
+          "Debes visitado el puerto."
+         ],
+         "answer": "Es mejor ir a pie por el centro y visitar el puerto.",
+         "explanation": "Conseiller : es mejor + infinitif."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delea2-final",
+   "title": "Simulation DELE A2 : le chevalier de la Blanche Lune",
+   "region": "Route de Barcelone",
+   "description": "Examen blanc au format du DELE A2, en espagnol : compréhension écrite, compréhension auditive et expression écrite (l’oral n’est pas évalué). Noté sur 100 ; réussite avec au moins 30 points dans chacun des deux groupes d’épreuves.",
+   "exam": "delea2-official",
+   "chapters": []
+  }
+ ]
+}

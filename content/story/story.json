@@ -3519,6 +3519,159 @@
      }
     }
    }
+  },
+  "DELEA2": {
+   "glyph": "¡",
+   "jp": "Barcelona",
+   "color": "#2E7DA8",
+   "saga": {
+    "fr": "La route de Barcelone",
+    "en": "The road to Barcelona"
+   },
+   "hero": {
+    "fr": "Écuyer·ère de Don Quichotte",
+    "en": "Don Quixote’s squire"
+   },
+   "short": {
+    "fr": "L’écuyer·ère",
+    "en": "The squire"
+   },
+   "prologue": {
+    "fr": "Un mois a passé au village. Don Quichotte a retrouvé ses forces… et ses rêves : « Sancho, écuyer·ère, nous repartons ! Cette fois, nous irons jusqu’à Barcelone, où la mer touche le ciel. » Sancho soupire, Teresa prépare les provisions, et toi, tu apprends à raconter le passé : sur la route, chacun voudra savoir ce que vous avez vu, ce que vous avez fait et comment c’était avant.",
+    "en": "A month has passed in the village. Don Quixote has regained his strength… and his dreams: “Sancho, squire, we ride again! This time we shall go as far as Barcelona, where the sea touches the sky.” Sancho sighs, Teresa packs the provisions, and you learn to talk about the past: on the road, everyone will want to know what you have seen, what you did and what things used to be like."
+   },
+   "epilogue": {
+    "fr": "Sur la plage de Barcelone, le chevalier de la Blanche Lune abaisse sa lance : ce n’est autre que le bachelier Sansón Carrasco, venu ramener Don Quichotte chez lui. Ton chevalier rentre au village, un peu triste mais en paix, et te confie la chronique du voyage, écrite dans un espagnol vivant, au passé comme au présent. Ailleurs en Espagne, d’autres chemins t’attendent…",
+    "en": "On the beach of Barcelona, the Knight of the White Moon lowers his lance: he is none other than the bachelor Sansón Carrasco, come to take Don Quixote home. Your knight returns to the village, a little sad but at peace, and entrusts you with the chronicle of the journey, written in lively Spanish, in the past as in the present. Elsewhere in Spain, other roads await you…"
+   },
+   "chapters": {
+    "delea2-w1": {
+     "title": {
+      "fr": "La deuxième sortie",
+      "en": "The second sally"
+     },
+     "intro": {
+      "fr": "Au premier gué, la Lamia peigne ses cheveux d’or et barre la route. Elle ne laisse passer que ceux qui disent ce qu’ils ont déjà fait… et ce qu’ils n’ont pas encore fait.",
+      "en": "At the first ford, the Lamia combs her golden hair and blocks the way. She only lets through those who say what they have already done… and what they haven’t done yet."
+     },
+     "outro": {
+      "fr": "La Lamia sourit et tend son peigne d’or à Don Quichotte, qui jure de l’offrir à Dulcinée.",
+      "en": "The Lamia smiles and holds out her golden comb to Don Quixote, who swears to give it to Dulcinea."
+     }
+    },
+    "delea2-w2": {
+     "title": {
+      "fr": "Le récit de Sancho",
+      "en": "Sancho’s tale"
+     },
+     "intro": {
+      "fr": "À l’auberge, le Tragaldabas a tout mangé pendant la nuit. Il ne rendra les provisions qu’en échange de belles histoires racontées au passé.",
+      "en": "At the inn, the Tragaldabas ate everything during the night. It will only give the provisions back in exchange for good stories told in the past."
+     },
+     "outro": {
+      "fr": "Repu d’histoires, le Tragaldabas rend le jambon et s’endort en ronflant près de la cheminée.",
+      "en": "Full of stories, the Tragaldabas gives back the ham and falls asleep snoring by the fireplace."
+     }
+    },
+    "delea2-w3": {
+     "title": {
+      "fr": "Les souvenirs d’Aragon",
+      "en": "Memories of Aragon"
+     },
+     "intro": {
+      "fr": "Dans une vieille ferme d’Aragon, l’Homme du sac a volé les souvenirs des anciens. Aide-les à raconter comment c’était quand ils étaient petits.",
+      "en": "In an old farmhouse in Aragon, the Sack Man has stolen the elders’ memories. Help them tell what life was like when they were little."
+     },
+     "outro": {
+      "fr": "L’Homme du sac ouvre son sac : les souvenirs s’envolent comme des lucioles et rentrent chez eux.",
+      "en": "The Sack Man opens his sack: the memories fly out like fireflies and go home."
+     }
+    },
+    "delea2-w4": {
+     "title": {
+      "fr": "En route pour Saragosse",
+      "en": "On the way to Zaragoza"
+     },
+     "intro": {
+      "fr": "À la fontaine, l’Encantada a ensorcelé les horaires des diligences et les réservations des auberges. Remets de l’ordre dans le voyage pour rompre le charme.",
+      "en": "At the fountain, the Encantada has bewitched the coach timetables and the inn bookings. Put the trip back in order to break the spell."
+     },
+     "outro": {
+      "fr": "Le charme est rompu : l’Encantada disparaît dans l’eau claire et la diligence part enfin pour Saragosse.",
+      "en": "The spell is broken: the Encantada vanishes into the clear water and the coach finally leaves for Zaragoza."
+     }
+    },
+    "delea2-w5": {
+     "title": {
+      "fr": "La maison sans toit",
+      "en": "The roofless house"
+     },
+     "intro": {
+      "fr": "Chez un ami du duc, le Diablo Cojuelo a soulevé tous les toits et mis les meubles sens dessus dessous. Décris chaque pièce et donne-lui des ordres clairs.",
+      "en": "At a friend of the duke’s, the Diablo Cojuelo has lifted all the roofs and turned the furniture upside down. Describe every room and give it clear orders."
+     },
+     "outro": {
+      "fr": "Le Diablo Cojuelo repose les toits en boitant et s’envole par la cheminée en riant.",
+      "en": "The Diablo Cojuelo limps about putting the roofs back and flies off up the chimney, laughing."
+     }
+    },
+    "delea2-w6": {
+     "title": {
+      "fr": "Les montagnes de Mari",
+      "en": "Mari’s mountains"
+     },
+     "intro": {
+      "fr": "Sur les crêtes, Mari d’Amboto déchaîne l’orage contre les vantards. Compare avec justesse les sommets, les rivières et les villages pour obtenir le passage.",
+      "en": "On the ridges, Mari of Amboto unleashes the storm on braggarts. Compare peaks, rivers and villages fairly to be allowed through."
+     },
+     "outro": {
+      "fr": "Mari rappelle ses nuages et trace pour vous un arc-en-ciel jusqu’à la côte catalane.",
+      "en": "Mari calls back her clouds and draws you a rainbow all the way to the Catalan coast."
+     }
+    },
+    "delea2-w7": {
+     "title": {
+      "fr": "Les fêtes du chemin",
+      "en": "The festivals on the way"
+     },
+     "intro": {
+      "fr": "Au village en fête, la Mula Guita crache des étincelles sur les danseurs. Invite chacun, fixe les rendez-vous et raconte la fête en direct.",
+      "en": "In the festive village, the Mula Guita spits sparks at the dancers. Invite everyone, arrange the meetings and describe the festival live."
+     },
+     "outro": {
+      "fr": "La Mula Guita rejoint le cortège et danse avec Sancho jusqu’au feu d’artifice.",
+      "en": "The Mula Guita joins the procession and dances with Sancho until the fireworks."
+     }
+    },
+    "delea2-w8": {
+     "title": {
+      "fr": "La plage de Barcelone",
+      "en": "The beach of Barcelona"
+     },
+     "intro": {
+      "fr": "À Barcelone, le Drac de Sant Jordi surgit des vagues. Prouve que tu sais parler travail, écrire à chacun et donner de bons conseils au chevalier avant son combat.",
+      "en": "In Barcelona, the Drac of Sant Jordi rises from the waves. Prove that you can talk about work, write to everyone and give the knight good advice before his duel."
+     },
+     "outro": {
+      "fr": "Le Drac replonge dans la mer et laisse une rose sur le sable, comme le veut la légende.",
+      "en": "The Drac dives back into the sea and leaves a rose on the sand, as the legend says."
+     }
+    },
+    "delea2-final": {
+     "title": {
+      "fr": "Le chevalier de la Blanche Lune",
+      "en": "The Knight of the White Moon"
+     },
+     "intro": {
+      "fr": "Sur la plage, le chevalier de la Blanche Lune défie Don Quichotte. Pour l’arbitrer, passe l’épreuve : lis, écoute et écris comme au DELE A2. Il faut au moins 30 points sur 50 dans chaque groupe.",
+      "en": "On the beach, the Knight of the White Moon challenges Don Quixote. To referee the duel, take the test: read, listen and write as in the DELE A2. You need at least 30 points out of 50 in each group."
+     },
+     "outro": {
+      "fr": "Le combat est loyal et la chronique est écrite. Niveau DELE A2 validé : tu racontes le passé comme un·e vrai·e conteur·se !",
+      "en": "The duel is fair and the chronicle is written. DELE A2 level complete: you tell the past like a real storyteller!"
+     }
+    }
+   }
   }
  }
 }

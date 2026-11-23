@@ -67,7 +67,10 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'HSK6', hint: 'Maîtrise · 5 000 mots' },
   ],
   // Espagnol : seuls les niveaux dont le parcours est prêt
-  es: [{ code: 'DELEA1', hint: 'Découverte' }],
+  es: [
+    { code: 'DELEA1', hint: 'Découverte' },
+    { code: 'DELEA2', hint: 'Survie' },
+  ],
 };
 
 function Choice({ selected, label, hint, glyph, onPress, testID }: { selected: boolean; label: string; hint?: string; glyph?: string; onPress: () => void; testID?: string }) {

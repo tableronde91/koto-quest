@@ -1,8 +1,10 @@
 import type { ReactNode } from 'react';
 
 /**
- * Mode histoire espagnol (DELE A1, l'écuyer·ère de Don Quichotte) : le décor de chaque île raconte son chapitre.
- * La Manche : moulins à vent, maisons blanches, venta, oliviers, sierra et château des Ducs. Dessins originaux, centrés sur (0, 0).
+ * Mode histoire espagnol (l'écuyer·ère de Don Quichotte) : le décor de chaque île raconte son chapitre.
+ * DELE A1, la Manche : moulins à vent, maisons blanches, venta, oliviers, sierra et château des Ducs.
+ * DELE A2, la route de Barcelone : rivière, ferme d'Aragon, fontaine, diligence, toits envolés, crêtes, fête et port.
+ * Dessins originaux, centrés sur (0, 0).
  */
 const WHITE = '#F6F1E6';
 const OCHRE = '#C8923A';
@@ -168,6 +170,123 @@ function Lance({ ...p }: P) {
   );
 }
 
+const SEA = '#3A7FB0';
+
+/** Rivière qui serpente, avec un gué de pierres. */
+function River({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-26 0 Q-14 -6 -4 -2 Q8 3 18 -3 Q24 -6 28 -4 L28 2 Q22 0 16 4 Q6 9 -6 4 Q-16 0 -26 6Z" fill={SKY} stroke={SEA} strokeWidth="0.6" />
+      {[-12, -4, 4].map((x) => <ellipse key={x} cx={x} cy={1} rx="2.6" ry="1.4" fill={STONE} />)}
+    </g>
+  );
+}
+
+/** Fontaine de pierre et son jet d'eau. */
+function Fountain({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-2" rx="14" ry="4" fill={STONE} />
+      <rect x="-14" y="-6" width="28" height="4" fill={STONE} />
+      <ellipse cx="0" cy="-6" rx="12" ry="2.5" fill={SKY} />
+      <rect x="-1.5" y="-18" width="3" height="12" fill={STONE} />
+      <path d="M0 -18 Q-6 -24 -8 -12 M0 -18 Q6 -24 8 -12" stroke={SKY} strokeWidth="1.2" fill="none" />
+    </g>
+  );
+}
+
+/** Diligence : caisse, roues et timon. */
+function Coach({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-12" y="-18" width="22" height="12" rx="2" fill={ROOF} />
+      <rect x="-9" y="-16" width="6" height="5" fill={SKY} />
+      <rect x="1" y="-16" width="6" height="5" fill={SKY} />
+      <path d="M10 -8 L20 -4" stroke={WOOD} strokeWidth="1.4" />
+      {[-7, 6].map((x) => <g key={x}><circle cx={x} cy={-4} r="4" fill="none" stroke={WOOD} strokeWidth="1.4" /><path d={`M${x - 4} -4 H${x + 4} M${x} -8 V0`} stroke={WOOD} strokeWidth="0.6" /></g>)}
+    </g>
+  );
+}
+
+/** Maison dont le toit s'envole (le Diablo Cojuelo). */
+function RooflessHouse({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-12" y="-14" width="24" height="14" fill={WHITE} stroke={STONE} strokeWidth="0.6" />
+      <rect x="-3" y="-8" width="6" height="8" fill={WOOD} />
+      <rect x="-9" y="-11" width="4" height="4" fill="#3A6AA8" />
+      <rect x="5" y="-11" width="4" height="4" fill="#3A6AA8" />
+      <path d={calm ? 'M-14 -14 L0 -22 L14 -14Z' : 'M-10 -24 L4 -34 L18 -28Z'} fill={ROOF} transform={calm ? undefined : 'rotate(-12 4 -28)'} />
+    </g>
+  );
+}
+
+/** Crêtes montagneuses enneigées. */
+function Ridge({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-30 0 L-16 -26 L-6 -12 L6 -34 L22 -8 L30 0Z" fill="#7A8A9A" />
+      <path d="M-20 -18 L-16 -26 L-12 -20Z M2 -26 L6 -34 L10 -26 L6 -28Z" fill={WHITE} />
+    </g>
+  );
+}
+
+/** Guirlande de fête et lampions. */
+function Festoon({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-24 -24 Q0 -14 24 -24" stroke={WOOD} strokeWidth="0.6" fill="none" />
+      {[-18, -9, 0, 9, 18].map((x, i) => <path key={x} d={`M${x - 3} ${-21 + Math.abs(x) / 9} l3 6 l3 -6Z`} fill={[RED, GOLD, SEA, OLIVE, RED][i]} />)}
+      <path d="M-20 0 V-22 M20 0 V-22" stroke={WOOD} strokeWidth="1.2" />
+    </g>
+  );
+}
+
+/** Feux d'artifice (éteints quand l'île est apaisée). */
+function Fireworks({ calm = false, ...p }: P & { calm?: boolean }) {
+  if (calm) return null;
+  return (
+    <g transform={at(p)} stroke={GOLD} strokeWidth="1" strokeLinecap="round">
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => <path key={a} d="M0 -3 V-8" transform={`rotate(${a})`} />)}
+      <g transform="translate(14 6) scale(0.7)" stroke={RED}>{[0, 60, 120, 180, 240, 300].map((a) => <path key={a} d="M0 -3 V-8" transform={`rotate(${a})`} />)}</g>
+    </g>
+  );
+}
+
+/** La mer et un voilier. */
+function SeaBoat({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-30 0 Q-22 -4 -15 0 T0 0 T15 0 T30 0 V6 H-30Z" fill={SEA} />
+      <path d="M-6 -2 H10 L7 2 H-3Z" fill={WOOD} />
+      <path d="M2 -2 V-22 L12 -6Z" fill={WHITE} stroke={STONE} strokeWidth="0.5" />
+      <path d="M1 -2 V-18 L-6 -6Z" fill={WHITE} stroke={STONE} strokeWidth="0.5" />
+    </g>
+  );
+}
+
+/** Tours de cathédrale moderniste (silhouette générique). */
+function Spires({ ...p }: P) {
+  return (
+    <g transform={at(p)} fill={OCHRE}>
+      {[-9, -3, 3, 9].map((x, i) => <path key={x} d={`M${x - 2.5} 0 V${-26 - (i % 3) * 4} Q${x} ${-36 - (i % 3) * 4} ${x + 2.5} ${-26 - (i % 3) * 4} V0Z`} />)}
+      <rect x="-13" y="-10" width="26" height="10" fill="#B8823A" />
+    </g>
+  );
+}
+
+/** Rose de Sant Jordi. */
+function Rose({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 0 V-12" stroke={OLIVE} strokeWidth="1.2" />
+      <path d="M0 -6 Q4 -8 5 -5" fill={OLIVE} />
+      <circle cx="0" cy="-14" r="3.5" fill={RED} />
+      <path d="M-2 -15 Q0 -12 2 -15" stroke="#8E1B26" strokeWidth="0.6" fill="none" />
+    </g>
+  );
+}
+
 export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'auberge où Don Quichotte se fait adouber
   'delea1-w1': () => (<><Venta x={-10} y={12} /><Lance x={16} y={12} /><OliveTree x={30} y={12} s={0.7} /></>),
@@ -187,4 +306,22 @@ export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'delea1-w8': (calm) => (<><Windmill x={-14} y={12} spin={!calm} /><Windmill x={6} y={12} s={0.85} spin={!calm} /><Windmill x={24} y={12} s={0.7} spin={!calm} /></>),
   // Le palais des Ducs
   'delea1-final': () => (<><Palace x={-4} y={14} s={1.1} /><Windmill x={26} y={12} s={0.6} /></>),
+  // DELE A2 — la deuxième sortie : le gué de la Lamia
+  'delea2-w1': () => (<><River x={0} y={14} /><OliveTree x={-20} y={8} s={0.7} /><Lance x={22} y={8} s={0.8} /></>),
+  // L'auberge du Tragaldabas
+  'delea2-w2': () => (<><Venta x={-10} y={12} /><OliveTree x={18} y={12} s={0.8} /></>),
+  // La vieille ferme d'Aragon
+  'delea2-w3': () => (<><WhiteHouse x={-12} y={12} s={1.1} /><Sheep x={12} y={14} s={0.9} /><Church x={28} y={12} s={0.55} /></>),
+  // La fontaine de l'Encantada et la diligence pour Saragosse
+  'delea2-w4': () => (<><Fountain x={-12} y={12} /><Coach x={14} y={12} /></>),
+  // La maison sans toit du Diablo Cojuelo
+  'delea2-w5': (calm) => (<><RooflessHouse x={-8} y={12} s={1.1} calm={calm} /><WhiteHouse x={18} y={12} s={0.7} /></>),
+  // Les crêtes de Mari d'Amboto
+  'delea2-w6': (calm) => (<><Ridge x={0} y={12} /><Weather x={-22} y={-20} calm={calm} /></>),
+  // La fête du village et la Mula Guita
+  'delea2-w7': (calm) => (<><Festoon x={-4} y={12} /><Fireworks x={18} y={-22} calm={calm} /><Church x={26} y={12} s={0.55} /></>),
+  // La plage de Barcelone et le Drac
+  'delea2-w8': () => (<><SeaBoat x={-6} y={14} /><Rose x={24} y={12} /></>),
+  // Le duel sur la plage face au chevalier de la Blanche Lune
+  'delea2-final': () => (<><Spires x={-14} y={12} /><SeaBoat x={14} y={14} s={0.8} /><Lance x={30} y={10} s={0.7} /></>),
 };

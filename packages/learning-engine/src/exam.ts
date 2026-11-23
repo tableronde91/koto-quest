@@ -522,6 +522,8 @@ const DELE_MOCK = (level: string): ExamDef => ({
 
 export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
 export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
+export const EXAM_DELEA2 = DELE_OFFICIAL('DELEA2', 110, 25, 30, 5);
+export const EXAM_DELEA2_MOCK = DELE_MOCK('DELEA2');
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
@@ -538,6 +540,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK6.slug]: EXAM_HSK6,
   [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
   [EXAM_DELEA1.slug]: EXAM_DELEA1,
+  [EXAM_DELEA2_MOCK.slug]: EXAM_DELEA2_MOCK,
+  [EXAM_DELEA2.slug]: EXAM_DELEA2,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
@@ -838,11 +842,19 @@ const TIPS_DELE: Partial<Record<ExamSectionId, string>> = {
   writing: 'Expression écrite : reprends les leçons sur les présentations, les formulaires et les messages courts (saluer, remercier, donner des informations).',
 };
 
+/** Conseils propres au DELE A2 (et au-delà) : les temps du passé, les pronoms, le voyage. */
+const TIPS_DELE_A2: Partial<Record<ExamSectionId, string>> = {
+  grammar: 'Grammaire : reprends les leçons sur les temps du passé (passé composé, passé simple, imparfait), les pronoms lo, la, le, les et l’impératif, puis entraîne-toi dans l’atelier DELE.',
+  listening: 'Compréhension auditive : réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi à repérer les horaires, les retards et les raisons dans les annonces et les messages.',
+  writing: 'Expression écrite : reprends les leçons sur les temps du passé et les invitations ; vérifie que ta réponse traite chaque point demandé et que les verbes sont au bon temps.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^DELE[ABC][12]$/.test(level)) {
     const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakEs.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    return weakEs.map((s) => TIPS_DELE[s.id] ?? TIPS_DELE.grammar!).filter(Boolean);
+    const tips = level === 'DELEA1' ? TIPS_DELE : { ...TIPS_DELE, ...TIPS_DELE_A2 };
+    return weakEs.map((s) => tips[s.id] ?? tips.grammar!).filter(Boolean);
   }
   if (/^HSK[1-6]$/.test(level)) {
     const weakZh = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);

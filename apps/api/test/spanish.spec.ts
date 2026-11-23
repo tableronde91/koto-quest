@@ -26,7 +26,7 @@ describe('Espagnol : préparer le DELE', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'es', targetLevel: 'DELEA1' });
     const path = (await agent.get('/api/path/DELEA1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'DELEA1', region: 'Chemins de la Manche' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['DELEA1']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['DELEA1', 'DELEA2']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['Á', 'É', 'Í', 'Ó', 'Ü', 'Ú', '¿', '¡']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'delea1-final', exam: { slug: 'delea1-official' } });
@@ -50,7 +50,7 @@ describe('Espagnol : préparer le DELE', () => {
     expect(s.questions.length).toBeGreaterThan(5);
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['medio-pollito', 'ratita-presumida', 'molinos-de-viento']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['medio-pollito', 'ratita-presumida', 'molinos-de-viento', 'juan-sin-miedo', 'blanca-luna']);
     await agent.get('/api/reading/chapters/goldilocks-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'medio-pollito').chapters[0];
     const r = (await agent.post('/api/reading/chapters/medio-pollito-1/complete').send({ answers: ch.questions.map((q: any) => q.answer) }).expect(201)).body;
@@ -95,5 +95,25 @@ describe('Espagnol : préparer le DELE', () => {
     for (const q of exam2.questions) answers2[q.id] = q.type === 'listening_choice' ? '—' : await correctAnswer(ctx.prisma, q.id);
     const fail = (await agent.post('/api/exams/delea1-official/submit').send({ sessionId: exam2.sessionId, answers: answers2 }).expect(200)).body;
     expect(fail).toMatchObject({ passed: false, scaled: { language: 25, writing: 25, listening: 0 } });
+  });
+
+  it('DELE A2 : la route de Barcelone, ses gardiens, sa saga et son examen (25 + 30 + 5 questions)', async () => {
+    const { agent } = await signUpSpanish(ctx);
+    await agent.put('/api/me/preferences').send({ targetLevel: 'DELEA2' }).expect(200);
+    const path = (await agent.get('/api/path/DELEA2').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'DELEA2', region: 'Route de Barcelone' });
+    expect(path.worlds).toHaveLength(9);
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['ñ', 'á', 'é', 'í', 'ó', 'ú', 'ü', 'Ñ']);
+    expect(path.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'es-perfecto' });
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'delea2-final', exam: { slug: 'delea2-official' } });
+
+    const exam = (await agent.post('/api/exams/delea2-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(60);
+    expect(exam.exam.durationMin).toBe(110);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(30);
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const result = (await agent.post('/api/exams/delea2-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(result).toMatchObject({ passed: true, scaled: { total: 100, language: 25, writing: 25, listening: 50, max: { system: 'dele' } } });
   });
 });

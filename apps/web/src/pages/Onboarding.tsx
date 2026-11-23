@@ -69,7 +69,7 @@ const TARGETS: Record<StudyLanguage, { value: JlptCode; label: string; ready: bo
   ],
   es: [
     { value: 'DELEA1', label: T("DELE A1 — découverte"), ready: true },
-    { value: 'DELEA2', label: T("DELE A2 — survie"), ready: false },
+    { value: 'DELEA2', label: T("DELE A2 — survie"), ready: true },
     { value: 'DELEB1', label: T("DELE B1 — seuil"), ready: false },
     { value: 'DELEB2', label: T("DELE B2 — avancé"), ready: false },
     { value: 'DELEC1', label: T("DELE C1 — autonome"), ready: false },
@@ -171,7 +171,7 @@ export function OnboardingPage({ me }: { me: MeDto }) {
           />
           {lang === 'en' && <p className="mt-3 text-sm text-ink-soft">{T("Les niveaux suivent le cadre européen (CECRL) ; le score TOEIC indiqué est celui qui correspond à chaque niveau. Les cinq parcours, de A1 à C1, sont prêts.")}</p>}
           {lang === 'zh' && <p className="mt-3 text-sm text-ink-soft">{T("Le HSK compte six niveaux (format des sessions ordinaires de 2026) ; les six parcours, du HSK 1 au HSK 6, sont prêts.")}</p>}
-          {lang === 'es' && <p className="mt-3 text-sm text-ink-soft">{T("Le DELE compte six niveaux, du A1 au C2, comme le cadre européen (CECRL). Le parcours A1 est prêt, les suivants arrivent.")}</p>}
+          {lang === 'es' && <p className="mt-3 text-sm text-ink-soft">{T("Le DELE compte six niveaux, du A1 au C2, comme le cadre européen (CECRL). Les parcours A1 et A2 sont prêts, les suivants arrivent.")}</p>}
           {lang === 'ko' && <p className="mt-3 text-sm text-ink-soft">{T("Le TOPIK I regroupe les niveaux 1 et 2 (parcours {0} et {1}), le TOPIK II les niveaux 3 à 6 (parcours {2}, {3}, {4} et {5}) : tous les parcours sont prêts.", [levelLabel('TOPIK1'), levelLabel('TOPIK2'), levelLabel('TOPIK3'), levelLabel('TOPIK4'), levelLabel('TOPIK5'), levelLabel('TOPIK6')])}</p>}
         </>
       ),
