@@ -26,8 +26,8 @@ export interface SpeechPart {
   onStart?: () => void;
 }
 
-type VoiceLang = 'ja' | 'ko' | 'en' | 'zh';
-const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB', zh: 'zh-CN' };
+type VoiceLang = 'ja' | 'ko' | 'en' | 'zh' | 'es';
+const LOCALE: Record<VoiceLang, string> = { ja: 'ja-JP', ko: 'ko-KR', en: 'en-GB', zh: 'zh-CN', es: 'es-ES' };
 const voices = new Map<VoiceLang, SpeechSynthesisVoice | null>();
 let voicesReady: Promise<void> | null = null;
 

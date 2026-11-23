@@ -235,7 +235,7 @@ function Stage({ q, furigana, result, afterText }: { q: IssuedQuestionDto; furig
   if (q.type === 'listening_choice') {
     return (
       <div className="flex min-h-36 flex-col items-center justify-center gap-3 rounded-3xl bg-surface-2 p-6">
-        {speechSupported() ? <SpeakButtons text={q.audio ?? ''} size="lg" /> : <p className="text-center">{langOf(q.audio ?? '') === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Le mot était :") : langOf(q.audio ?? '') === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Le mot était :") : langOf(q.audio ?? '') === 'zh' ? T("Ce navigateur ne peut pas lire l’audio chinois. Le mot était :") : T("Ce navigateur ne peut pas lire l’audio japonais. Le mot était :")}{' '}<Jp text={q.audio ?? ''} furigana={false} className="text-3xl" /></p>}
+        {speechSupported() ? <SpeakButtons text={q.audio ?? ''} size="lg" /> : <p className="text-center">{langOf(q.audio ?? '') === 'en' ? T("Ce navigateur ne peut pas lire l’audio anglais. Le mot était :") : langOf(q.audio ?? '') === 'ko' ? T("Ce navigateur ne peut pas lire l’audio coréen. Le mot était :") : langOf(q.audio ?? '') === 'zh' ? T("Ce navigateur ne peut pas lire l’audio chinois. Le mot était :") : langOf(q.audio ?? '') === 'es' ? T("Ce navigateur ne peut pas lire l’audio espagnol. Le mot était :") : T("Ce navigateur ne peut pas lire l’audio japonais. Le mot était :")}{' '}<Jp text={q.audio ?? ''} furigana={false} className="text-3xl" /></p>}
       </div>
     );
   }
@@ -409,7 +409,7 @@ function Matching({ pairs, disabled, onSubmit, result }: { pairs: { left: string
   return (
     <div className="flex flex-col gap-4">
       <div className="grid grid-cols-2 gap-x-3 gap-y-2">
-        <p className="text-sm font-bold text-ink-soft" id="match-left">{{ ja: T("Japonais"), ko: T("Coréen"), en: T("Anglais"), zh: T("Chinois") }[langOf(pairs.left.join(''))]}</p>
+        <p className="text-sm font-bold text-ink-soft" id="match-left">{{ ja: T("Japonais"), ko: T("Coréen"), en: T("Anglais"), zh: T("Chinois"), es: T("Espagnol") }[langOf(pairs.left.join(''))]}</p>
         <p className="text-sm font-bold text-ink-soft" id="match-right">{T("Sens")}</p>
         {pairs.left.map((l, i) => {
           const r = pairs.right[i];

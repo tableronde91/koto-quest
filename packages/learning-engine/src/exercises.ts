@@ -229,7 +229,7 @@ export function generateQuestion(
     case 'reverse_choice':
       return choiceQuestion(
         'front',
-        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : isChineseItem(item) ? `Comment dit-on « ${item.meaning} » en chinois ?` : isEnglish(item.front) ? `Comment dit-on « ${item.meaning} » en anglais ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
+        item.kind === 'kana' ? `Quel caractère se lit « ${item.meaning} » ?` : isKorean(item.front) ? `Comment dit-on « ${item.meaning} » en coréen ?` : isChineseItem(item) ? `Comment dit-on « ${item.meaning} » en chinois ?` : isSpanishItem(item) ? `Comment dit-on « ${item.meaning} » en espagnol ?` : isEnglish(item.front) ? `Comment dit-on « ${item.meaning} » en anglais ?` : `Comment dit-on « ${item.meaning} » en japonais ?`,
         { text: item.meaning },
       );
     case 'reading_choice':
@@ -285,7 +285,7 @@ export function generateMatching(items: readonly EngineItem[], rng: Rng): Questi
   const chosen = shuffle(unique, rng).slice(0, 5);
   return {
     type: 'matching',
-    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : chosen.some(isChineseItem) ? 'Associe chaque élément chinois à son sens.' : chosen.every((i) => isEnglish(i.front)) ? 'Associe chaque mot anglais à son sens.' : 'Associe chaque élément japonais à son sens.',
+    prompt: chosen.some((i) => isKorean(i.front)) ? 'Associe chaque élément coréen à son sens.' : chosen.some(isChineseItem) ? 'Associe chaque élément chinois à son sens.' : chosen.some(isSpanishItem) ? 'Associe chaque mot espagnol à son sens.' : chosen.every((i) => isEnglish(i.front)) ? 'Associe chaque mot anglais à son sens.' : 'Associe chaque élément japonais à son sens.',
     pairs: { left: chosen.map((i) => i.front), right: shuffle(chosen.map((i) => i.meaning), rng) },
     answer: chosen.map((i) => i.meaning),
     explanation: chosen.map(describe).join(' '),
@@ -332,6 +332,11 @@ export function isKorean(s: string | null | undefined): boolean {
 
 /** Texte en kana ou en kanji (japonais). */
 const hasJapaneseScript = (s: string) => /[\u3040-\u30ff\u3400-\u9fff]/.test(s) && !isKorean(s);
+
+/** Notion espagnole (slugs es-…, gram-es-…, esx-…) : l'alphabet latin ne suffit pas à la distinguer de l'anglais. */
+export function isSpanishItem(item: Pick<EngineItem, 'id'>): boolean {
+  return /^(es-|gram-es-|esx-)/.test(item.id);
+}
 
 /** Texte anglais : des lettres latines, sans kana, kanji ni hangeul. */
 export function isEnglish(s: string | null | undefined): boolean {

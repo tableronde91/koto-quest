@@ -10,31 +10,33 @@ export function studyWords(lang: StudyLanguage) {
   const ko = lang === 'ko';
   const en = lang === 'en';
   const zh = lang === 'zh';
-  /** Valeur selon la langue étudiée : japonais, coréen, anglais, chinois. */
-  const pick = <V,>(ja: V, kor: V, eng: V, chi: V): V => (ko ? kor : en ? eng : zh ? chi : ja);
+  const es = lang === 'es';
+  /** Valeur selon la langue étudiée : japonais, coréen, anglais, chinois, espagnol. */
+  const pick = <V,>(ja: V, kor: V, eng: V, chi: V, esp: V): V => (ko ? kor : en ? eng : zh ? chi : es ? esp : ja);
   return {
     lang,
     ko,
     en,
     zh,
+    es,
     pick,
     info: languageInfo(lang),
     /** Nom de l'examen : JLPT, TOPIK, TOEIC ou HSK */
     exam: languageInfo(lang).exam,
     /** « le japonais », « le coréen », « l'anglais », « le chinois » */
-    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais'), T('le chinois')),
+    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais'), T('le chinois'), T('l’espagnol')),
     /** adjectif : « japonais », « coréen », « anglais », « chinois » */
-    adjective: pick(T('japonais'), T('coréen'), T('anglais'), T('chinois')),
+    adjective: pick(T('japonais'), T('coréen'), T('anglais'), T('chinois'), T('espagnol')),
     /** Nom de l'écriture à apprendre en premier (l'anglais n'en a pas) */
-    script: pick(T('les kana'), T('le hangeul'), '', T('les caractères')),
+    script: pick(T('les kana'), T('le hangeul'), '', T('les caractères'), ''),
     /** Onglet Caractères (libellé court et glyphe) ; l'anglais n'a pas d'onglet d'écriture */
-    charsShort: pick(T('Kana'), T('Hangeul'), '', T('Hanzi')),
-    charsGlyph: pick('あ', '한', '', '字'),
-    hasCharacters: !en,
+    charsShort: pick(T('Kana'), T('Hangeul'), '', T('Hanzi'), ''),
+    charsGlyph: pick('あ', '한', '', '字', ''),
+    hasCharacters: !en && !es,
     /** Atelier d'entraînement */
-    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC'), T('Atelier HSK')),
+    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC'), T('Atelier HSK'), T('Atelier DELE')),
     /** Glyphe des examens */
-    examGlyph: pick('試', '시', 'T', '考'),
+    examGlyph: pick('試', '시', 'T', '考', 'E'),
     /** Attribut lang des textes dans la langue étudiée */
     htmlLang: lang as string,
     levelLabel: examLevelLabel,
@@ -64,7 +66,7 @@ export async function switchStudyLanguage(lang: StudyLanguage, qc: ReturnType<ty
   return me;
 }
 
-/** Sélecteur de langue étudiée : 日本語 / 한국어 / English / 中文. */
+/** Sélecteur de langue étudiée : 日本語 / 한국어 / English / 中文 / Español. */
 export function StudyLanguageSwitch({ className = '', compact = false }: { className?: string; compact?: boolean }) {
   const { data: me } = useMe();
   const qc = useQueryClient();

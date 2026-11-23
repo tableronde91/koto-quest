@@ -1,4 +1,4 @@
-# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si, HSK 5 compagnon de Xu Fu, HSK 6 interprète de Zhang Qian), un chapitre par île.
+# Mode histoire : une saga par niveau (N5 samouraï, N4 ninja, N3 esprit, N2 onmyōji, N1 shōgun ; TOPIK 1 hwarang, TOPIK 2 conteur, TOPIK 3 inspecteur royal, TOPIK 4 historien, TOPIK 5 chanteur de mythes, TOPIK 6 gardien des mythes ; A1 apprenti·e de Merlin… ; HSK 1 messager des Royaumes, HSK 2 aide de camp du général Sun, HSK 3 disciple de l'académie Jixia, HSK 4 scribe du chancelier Li Si, HSK 5 compagnon de Xu Fu, HSK 6 interprète de Zhang Qian ; DELE A1 écuyer·ère de Don Quichotte), un chapitre par île.
 # Usage : python3 scripts/gen-story.py   (écrit content/story/story.json)
 import json, os
 
@@ -1109,6 +1109,56 @@ story['levels']['HSK6'] = {
       ('Devant l’empereur Wu et toute la cour, passe la dernière épreuve : écoute, lis et résume comme au HSK 6. Atteins 180 points sur 300.',
        'Before Emperor Wu and the whole court, take the last test: listen, read and summarise as in the HSK 6. Reach 180 points out of 300.'),
       ('L’empereur se lève et te salue. Niveau HSK 6 validé : tu maîtrises le chinois, des marchés de Dayuan aux annales de l’empire. Le parcours chinois est accompli !', 'The emperor rises and salutes you. HSK 6 level complete: you master Chinese, from the markets of Dayuan to the annals of the empire. The Chinese path is complete!')),
+   },
+}
+story['levels']['DELEA1'] = {
+   'glyph': 'Ñ', 'jp': 'La Mancha', 'color': '#C8623A',
+   'saga': B('Le chevalier de la Manche', 'The knight of La Mancha'),
+   'hero': B('Écuyer·ère de Don Quichotte', 'Don Quixote’s squire'),
+   'short': B('L’écuyer·ère', 'The squire'),
+   'prologue': B(
+     'Dans un village de la Manche, un vieil hidalgo a tant lu de romans de chevalerie qu’il se croit chevalier errant : il s’appelle désormais Don Quichotte. Son fidèle Sancho Panza le suit sur son âne… et cherche un second écuyer pour parler aux aubergistes, aux bergers et aux créatures des légendes. « Tu ne sais pas encore l’espagnol ? dit Sancho. Ça tombe bien : moi non plus, je ne sais pas lire ! »',
+     'In a village in La Mancha, an old hidalgo has read so many books of chivalry that he believes he is a knight errant: he now calls himself Don Quixote. His loyal Sancho Panza follows him on his donkey… and is looking for a second squire to talk to innkeepers, shepherds and the creatures of legend. “You don’t speak Spanish yet?” says Sancho. “Good: I can’t read either!”'),
+   'epilogue': B(
+     'Au palais des Ducs, on rit d’abord du chevalier à la triste figure, puis on écoute son écuyer raconter le voyage dans un espagnol clair et sûr. Don Quichotte te fait chevalier·ère « des mots et des chemins ». Mais la route continue : au-delà de la Manche, toute l’Espagne t’attend…',
+     'At the Dukes’ palace, people first laugh at the Knight of the Sorrowful Countenance, then listen as his squire tells of the journey in clear, confident Spanish. Don Quixote knights you “of words and roads”. But the road goes on: beyond La Mancha, all of Spain awaits…'),
+   'chapters': {
+    'delea1-w1': CHAP(('¡Hola! À l’auberge', '¡Hola! At the inn'),
+      ('À l’auberge où Don Quichotte se fait adouber, le Duende cache les clés et embrouille le registre. Salue, présente-toi et épelle ton nom.',
+       'At the inn where Don Quixote has himself knighted, the Duende hides the keys and muddles the register. Greet, introduce yourself and spell your name.'),
+      ('Le Duende éclate de rire et te rend ta clé. L’aubergiste inscrit ton nom sans faute.', 'The Duende bursts out laughing and gives your key back. The innkeeper writes your name without a mistake.')),
+    'delea1-w2': CHAP(('La maison de Sancho', 'Sancho’s house'),
+      ('Chez Sancho, le Trasgu renverse les casseroles et cache les photos de famille. Présente chacun, dis son âge et compte les moutons.',
+       'At Sancho’s house, the Trasgu knocks over the pans and hides the family photos. Introduce everyone, give their age and count the sheep.'),
+      ('Le Trasgu range enfin la cuisine. Teresa Panza te prépare un panier pour la route.', 'The Trasgu finally tidies the kitchen. Teresa Panza packs you a basket for the road.')),
+    'delea1-w3': CHAP(('Un village de la Manche', 'A village in La Mancha'),
+      ('Le Nuberu fait tomber la grêle et brouille les panneaux du village. Retrouve la place, l’église, la poste… et le chemin du moulin.',
+       'The Nuberu makes hail fall and scrambles the village signs. Find the square, the church, the post office… and the way to the mill.'),
+      ('Le Nuberu chasse l’orage vers la sierra. Le soleil revient sur les maisons blanches.', 'The Nuberu drives the storm towards the sierra. The sun returns to the white houses.')),
+    'delea1-w4': CHAP(('À table, à la venta', 'At the table, at the venta'),
+      ('À la venta, l’Ojáncanu dévore toutes les provisions. Commande-lui un vrai repas espagnol, avec politesse, et demande l’addition.',
+       'At the venta, the Ojáncanu devours all the provisions. Politely order him a real Spanish meal, and ask for the bill.'),
+      ('Rassasié de tortilla et de fromage manchego, l’Ojáncanu s’endort sous un olivier.', 'Full of tortilla and Manchego cheese, the Ojáncanu falls asleep under an olive tree.')),
+    'delea1-w5': CHAP(('Une journée de chevalier', 'A knight’s day'),
+      ('Dans la forêt, le Busgosu égare ceux qui ne savent plus quel jour ni quelle heure il est. Raconte ta journée, du lever au coucher.',
+       'In the forest, the Busgosu leads astray those who no longer know the day or the time. Tell it about your day, from getting up to bedtime.'),
+      ('Le Busgosu sourit dans sa barbe et t’ouvre le sentier jusqu’au Toboso.', 'The Busgosu smiles into its beard and opens the path to El Toboso.')),
+    'delea1-w6': CHAP(('Le marché de Toboso', 'The Toboso market'),
+      ('Don Quichotte veut un cadeau pour Dulcinée, mais le Cuélebre souffle sur les étals. Achète vêtements et couleurs sans te tromper.',
+       'Don Quixote wants a present for Dulcinea, but the Cuélebre blows on the stalls. Buy clothes and colours without a mistake.'),
+      ('Le Cuélebre retourne dormir sur son or. Le ruban rouge pour Dulcinée est enfin acheté.', 'The Cuélebre goes back to sleep on its gold. The red ribbon for Dulcinea is finally bought.')),
+    'delea1-w7': CHAP(('La sierra en toutes saisons', 'The sierra in every season'),
+      ('Pour franchir la sierra, il faut l’accord du Basajaun, qui sent venir l’orage. Parle-lui du temps, des saisons et de vos projets.',
+       'To cross the sierra you need the Basajaun’s consent; it senses the storm coming. Talk to it about the weather, the seasons and your plans.'),
+      ('Le Basajaun mène le troupeau à l’abri et vous montre le col. La plaine des moulins apparaît.', 'The Basajaun leads the flock to shelter and shows you the pass. The plain of windmills comes into view.')),
+    'delea1-w8': CHAP(('Les géants de la plaine', 'The giants of the plain'),
+      ('Don Quichotte voit des géants là où Sancho voit des moulins… et le Coco s’y cache vraiment. Décris-le, puis soigne ton chevalier.',
+       'Don Quixote sees giants where Sancho sees windmills… and the Coco really is hiding there. Describe it, then look after your knight.'),
+      ('Le Coco redevient une ombre. Don Quichotte, couvert de bleus, jure que c’était un enchanteur.', 'The Coco turns back into a shadow. Don Quixote, covered in bruises, swears it was an enchanter.')),
+    'delea1-final': CHAP(('Le palais des Ducs', 'The Dukes’ palace'),
+      ('Devant les Ducs et toute leur cour, passe l’épreuve : lis, écoute et écris comme au DELE A1. Il faut au moins 30 points sur 50 dans chaque groupe.',
+       'Before the Dukes and their whole court, take the test: read, listen and write as in the DELE A1. You need at least 30 points out of 50 in each group.'),
+      ('Les Ducs applaudissent. Niveau DELE A1 validé : te voilà écuyer·ère confirmé·e de Don Quichotte !', 'The Dukes applaud. DELE A1 level complete: you are now Don Quixote’s seasoned squire!')),
    },
 }
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')

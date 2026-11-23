@@ -3366,6 +3366,159 @@
      }
     }
    }
+  },
+  "DELEA1": {
+   "glyph": "Ñ",
+   "jp": "La Mancha",
+   "color": "#C8623A",
+   "saga": {
+    "fr": "Le chevalier de la Manche",
+    "en": "The knight of La Mancha"
+   },
+   "hero": {
+    "fr": "Écuyer·ère de Don Quichotte",
+    "en": "Don Quixote’s squire"
+   },
+   "short": {
+    "fr": "L’écuyer·ère",
+    "en": "The squire"
+   },
+   "prologue": {
+    "fr": "Dans un village de la Manche, un vieil hidalgo a tant lu de romans de chevalerie qu’il se croit chevalier errant : il s’appelle désormais Don Quichotte. Son fidèle Sancho Panza le suit sur son âne… et cherche un second écuyer pour parler aux aubergistes, aux bergers et aux créatures des légendes. « Tu ne sais pas encore l’espagnol ? dit Sancho. Ça tombe bien : moi non plus, je ne sais pas lire ! »",
+    "en": "In a village in La Mancha, an old hidalgo has read so many books of chivalry that he believes he is a knight errant: he now calls himself Don Quixote. His loyal Sancho Panza follows him on his donkey… and is looking for a second squire to talk to innkeepers, shepherds and the creatures of legend. “You don’t speak Spanish yet?” says Sancho. “Good: I can’t read either!”"
+   },
+   "epilogue": {
+    "fr": "Au palais des Ducs, on rit d’abord du chevalier à la triste figure, puis on écoute son écuyer raconter le voyage dans un espagnol clair et sûr. Don Quichotte te fait chevalier·ère « des mots et des chemins ». Mais la route continue : au-delà de la Manche, toute l’Espagne t’attend…",
+    "en": "At the Dukes’ palace, people first laugh at the Knight of the Sorrowful Countenance, then listen as his squire tells of the journey in clear, confident Spanish. Don Quixote knights you “of words and roads”. But the road goes on: beyond La Mancha, all of Spain awaits…"
+   },
+   "chapters": {
+    "delea1-w1": {
+     "title": {
+      "fr": "¡Hola! À l’auberge",
+      "en": "¡Hola! At the inn"
+     },
+     "intro": {
+      "fr": "À l’auberge où Don Quichotte se fait adouber, le Duende cache les clés et embrouille le registre. Salue, présente-toi et épelle ton nom.",
+      "en": "At the inn where Don Quixote has himself knighted, the Duende hides the keys and muddles the register. Greet, introduce yourself and spell your name."
+     },
+     "outro": {
+      "fr": "Le Duende éclate de rire et te rend ta clé. L’aubergiste inscrit ton nom sans faute.",
+      "en": "The Duende bursts out laughing and gives your key back. The innkeeper writes your name without a mistake."
+     }
+    },
+    "delea1-w2": {
+     "title": {
+      "fr": "La maison de Sancho",
+      "en": "Sancho’s house"
+     },
+     "intro": {
+      "fr": "Chez Sancho, le Trasgu renverse les casseroles et cache les photos de famille. Présente chacun, dis son âge et compte les moutons.",
+      "en": "At Sancho’s house, the Trasgu knocks over the pans and hides the family photos. Introduce everyone, give their age and count the sheep."
+     },
+     "outro": {
+      "fr": "Le Trasgu range enfin la cuisine. Teresa Panza te prépare un panier pour la route.",
+      "en": "The Trasgu finally tidies the kitchen. Teresa Panza packs you a basket for the road."
+     }
+    },
+    "delea1-w3": {
+     "title": {
+      "fr": "Un village de la Manche",
+      "en": "A village in La Mancha"
+     },
+     "intro": {
+      "fr": "Le Nuberu fait tomber la grêle et brouille les panneaux du village. Retrouve la place, l’église, la poste… et le chemin du moulin.",
+      "en": "The Nuberu makes hail fall and scrambles the village signs. Find the square, the church, the post office… and the way to the mill."
+     },
+     "outro": {
+      "fr": "Le Nuberu chasse l’orage vers la sierra. Le soleil revient sur les maisons blanches.",
+      "en": "The Nuberu drives the storm towards the sierra. The sun returns to the white houses."
+     }
+    },
+    "delea1-w4": {
+     "title": {
+      "fr": "À table, à la venta",
+      "en": "At the table, at the venta"
+     },
+     "intro": {
+      "fr": "À la venta, l’Ojáncanu dévore toutes les provisions. Commande-lui un vrai repas espagnol, avec politesse, et demande l’addition.",
+      "en": "At the venta, the Ojáncanu devours all the provisions. Politely order him a real Spanish meal, and ask for the bill."
+     },
+     "outro": {
+      "fr": "Rassasié de tortilla et de fromage manchego, l’Ojáncanu s’endort sous un olivier.",
+      "en": "Full of tortilla and Manchego cheese, the Ojáncanu falls asleep under an olive tree."
+     }
+    },
+    "delea1-w5": {
+     "title": {
+      "fr": "Une journée de chevalier",
+      "en": "A knight’s day"
+     },
+     "intro": {
+      "fr": "Dans la forêt, le Busgosu égare ceux qui ne savent plus quel jour ni quelle heure il est. Raconte ta journée, du lever au coucher.",
+      "en": "In the forest, the Busgosu leads astray those who no longer know the day or the time. Tell it about your day, from getting up to bedtime."
+     },
+     "outro": {
+      "fr": "Le Busgosu sourit dans sa barbe et t’ouvre le sentier jusqu’au Toboso.",
+      "en": "The Busgosu smiles into its beard and opens the path to El Toboso."
+     }
+    },
+    "delea1-w6": {
+     "title": {
+      "fr": "Le marché de Toboso",
+      "en": "The Toboso market"
+     },
+     "intro": {
+      "fr": "Don Quichotte veut un cadeau pour Dulcinée, mais le Cuélebre souffle sur les étals. Achète vêtements et couleurs sans te tromper.",
+      "en": "Don Quixote wants a present for Dulcinea, but the Cuélebre blows on the stalls. Buy clothes and colours without a mistake."
+     },
+     "outro": {
+      "fr": "Le Cuélebre retourne dormir sur son or. Le ruban rouge pour Dulcinée est enfin acheté.",
+      "en": "The Cuélebre goes back to sleep on its gold. The red ribbon for Dulcinea is finally bought."
+     }
+    },
+    "delea1-w7": {
+     "title": {
+      "fr": "La sierra en toutes saisons",
+      "en": "The sierra in every season"
+     },
+     "intro": {
+      "fr": "Pour franchir la sierra, il faut l’accord du Basajaun, qui sent venir l’orage. Parle-lui du temps, des saisons et de vos projets.",
+      "en": "To cross the sierra you need the Basajaun’s consent; it senses the storm coming. Talk to it about the weather, the seasons and your plans."
+     },
+     "outro": {
+      "fr": "Le Basajaun mène le troupeau à l’abri et vous montre le col. La plaine des moulins apparaît.",
+      "en": "The Basajaun leads the flock to shelter and shows you the pass. The plain of windmills comes into view."
+     }
+    },
+    "delea1-w8": {
+     "title": {
+      "fr": "Les géants de la plaine",
+      "en": "The giants of the plain"
+     },
+     "intro": {
+      "fr": "Don Quichotte voit des géants là où Sancho voit des moulins… et le Coco s’y cache vraiment. Décris-le, puis soigne ton chevalier.",
+      "en": "Don Quixote sees giants where Sancho sees windmills… and the Coco really is hiding there. Describe it, then look after your knight."
+     },
+     "outro": {
+      "fr": "Le Coco redevient une ombre. Don Quichotte, couvert de bleus, jure que c’était un enchanteur.",
+      "en": "The Coco turns back into a shadow. Don Quixote, covered in bruises, swears it was an enchanter."
+     }
+    },
+    "delea1-final": {
+     "title": {
+      "fr": "Le palais des Ducs",
+      "en": "The Dukes’ palace"
+     },
+     "intro": {
+      "fr": "Devant les Ducs et toute leur cour, passe l’épreuve : lis, écoute et écris comme au DELE A1. Il faut au moins 30 points sur 50 dans chaque groupe.",
+      "en": "Before the Dukes and their whole court, take the test: read, listen and write as in the DELE A1. You need at least 30 points out of 50 in each group."
+     },
+     "outro": {
+      "fr": "Les Ducs applaudissent. Niveau DELE A1 validé : te voilà écuyer·ère confirmé·e de Don Quichotte !",
+      "en": "The Dukes applaud. DELE A1 level complete: you are now Don Quixote’s seasoned squire!"
+     }
+    }
+   }
   }
  }
 }

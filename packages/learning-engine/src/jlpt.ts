@@ -256,8 +256,29 @@ export function hskListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Questi
   return { ...q, type: 'listening_choice', prompt: HSK_PROMPTS.listening, display: { text: '接下来说什么？', part: '听力 — 对话' }, audio: script, answerAudio: undefined };
 }
 
+/** Consignes du DELE (Instituto Cervantes), en espagnol comme sur la copie. */
+export const DELE_PROMPTS = {
+  grammar: 'Elija la opción correcta para completar la frase.',
+  listening: 'Escuche el diálogo y elija la respuesta correcta.',
+} as const;
+
+/** Comprensión de lectura du DELE : compléter la phrase à partir d'un exercice de grammaire rédigé. */
+export function deleGrammarQuestion(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'particle_choice' && ex.type !== 'fill_blank') return null;
+  const q = authoredToQuestion(ex, rng);
+  return { ...q, prompt: DELE_PROMPTS.grammar, display: { ...q.display, reading: undefined, part: 'Comprensión de lectura' } };
+}
+
+/** Comprensión auditiva du DELE : la réplique est lue, on choisit la réponse. */
+export function deleListeningFromDialogue(ex: AuthoredExercise, rng: Rng): Question | null {
+  if (ex.type !== 'dialogue_choice' || !ex.lines?.length) return null;
+  const q = authoredToQuestion(ex, rng);
+  const script = ex.lines.map((l, i) => `${i % 2 === 0 ? 'F' : 'M'}|${l.jp}`).join('\n');
+  return { ...q, type: 'listening_choice', prompt: DELE_PROMPTS.listening, display: { text: '¿Qué responde usted?', part: 'Comprensión auditiva' }, audio: script, answerAudio: undefined };
+}
+
 /** Langue étudiée (même valeurs que StudyLanguage dans @koto/shared). */
-export type EngineLanguage = 'ja' | 'ko' | 'en' | 'zh';
+export type EngineLanguage = 'ja' | 'ko' | 'en' | 'zh' | 'es';
 
 export type JlptDrillPart = 'kanji' | 'writing' | 'grammar' | 'star' | 'listening';
 
@@ -280,8 +301,14 @@ export const HSK_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitle:
   listening: { title: 'Écoute', jpTitle: '听力', description: 'Écoute un court dialogue et choisis la réplique qui suit, sans texte à lire.' },
 };
 
+/** Atelier DELE : compréhension écrite (phrases à compléter) et auditive, consignes en espagnol. */
+export const DELE_DRILLS: Partial<Record<JlptDrillPart, { title: string; jpTitle: string; description: string }>> = {
+  grammar: { title: 'Phrases à compléter', jpTitle: 'Comprensión de lectura', description: 'Complète la phrase avec le bon mot ou la bonne forme, consigne en espagnol comme au DELE.' },
+  listening: { title: 'Écoute', jpTitle: 'Comprensión auditiva', description: 'Écoute une réplique et choisis la réponse qui convient, sans texte à lire.' },
+};
+
 /** Épreuves de l'atelier selon la langue étudiée. */
-export const drillsFor = (lang: EngineLanguage) => (lang === 'ko' ? TOPIK_DRILLS : lang === 'en' ? TOEIC_DRILLS : lang === 'zh' ? HSK_DRILLS : JLPT_DRILLS);
+export const drillsFor = (lang: EngineLanguage) => (lang === 'ko' ? TOPIK_DRILLS : lang === 'en' ? TOEIC_DRILLS : lang === 'zh' ? HSK_DRILLS : lang === 'es' ? DELE_DRILLS : JLPT_DRILLS);
 
 export const JLPT_DRILLS: Record<JlptDrillPart, { title: string; jpTitle: string; description: string }> = {
   kanji: { title: 'Lecture des kanji', jpTitle: '漢字読み', description: 'Lis le mot souligné. Attention aux pièges : voyelle longue, ten-ten, petit っ.' },
@@ -300,9 +327,9 @@ export const JLPT_DRILL_SIZE = 10;
 export function planJlptDrill(part: JlptDrillPart, learned: EngineItem[], authored: AuthoredExercise[], pool: readonly EngineItem[], rng: Rng, examples: Map<string, string> = new Map(), lang: EngineLanguage = 'ja'): Question[] {
   const n = JLPT_DRILL_SIZE;
   const fromItems = (make: (it: EngineItem) => Question | null) => shuffle(learned, rng).map(make).filter((q): q is Question => !!q).slice(0, n);
-  if (lang === 'ko' || lang === 'en' || lang === 'zh') {
-    const grammarOf = lang === 'en' ? toeicGrammarQuestion : lang === 'zh' ? hskGrammarQuestion : topikGrammarQuestion;
-    const listeningOf = lang === 'en' ? toeicListeningFromDialogue : lang === 'zh' ? hskListeningFromDialogue : topikListeningFromDialogue;
+  if (lang === 'ko' || lang === 'en' || lang === 'zh' || lang === 'es') {
+    const grammarOf = lang === 'en' ? toeicGrammarQuestion : lang === 'zh' ? hskGrammarQuestion : lang === 'es' ? deleGrammarQuestion : topikGrammarQuestion;
+    const listeningOf = lang === 'en' ? toeicListeningFromDialogue : lang === 'zh' ? hskListeningFromDialogue : lang === 'es' ? deleListeningFromDialogue : topikListeningFromDialogue;
     if (lang === 'zh' && part === 'kanji')
       return fromItems((it) => {
         if (it.kind !== 'vocabulary' && it.kind !== 'kanji') return null;

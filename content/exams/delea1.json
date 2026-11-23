@@ -1,0 +1,756 @@
+{
+ "slug": "delea1",
+ "level": "DELEA1",
+ "contentVersion": "2026.11.23",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel du DELE A1 (Instituto Cervantes : types d’épreuves, consignes en espagnol, notation sur 100 en deux groupes). L’expression écrite se fait par choix multiple et l’expression orale n’est pas évaluée : le groupe 2 est noté sur l’écoute. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "r-correo",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 1",
+   "title": "Un courriel",
+   "prompt": "Lea el correo y conteste a las preguntas.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "Con su hermano.",
+      "Con Marta.",
+      "Con sus padres."
+     ],
+     "answer": "Con su hermano.",
+     "explanation": "Réponse : Con su hermano.",
+     "text": "★ ¿Con quién está Lucía en Toledo?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    },
+    {
+     "choices": [
+      "Al lado de la catedral.",
+      "Lejos del centro.",
+      "En la estación."
+     ],
+     "answer": "Al lado de la catedral.",
+     "explanation": "Réponse : Al lado de la catedral.",
+     "text": "★ ¿Dónde está el hotel?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    },
+    {
+     "choices": [
+      "Pasean por las calles.",
+      "Visitan museos.",
+      "Duermen en el hotel."
+     ],
+     "answer": "Pasean por las calles.",
+     "explanation": "Réponse : Pasean por las calles.",
+     "text": "★ ¿Qué hacen por la tarde?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    },
+    {
+     "choices": [
+      "Hace mucho calor.",
+      "Llueve mucho.",
+      "Hace frío."
+     ],
+     "answer": "Hace mucho calor.",
+     "explanation": "Réponse : Hace mucho calor.",
+     "text": "★ ¿Qué tiempo hace en Toledo?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    },
+    {
+     "choices": [
+      "Ver los molinos de Consuegra.",
+      "Volver a Madrid.",
+      "Comer en casa de Marta."
+     ],
+     "answer": "Ver los molinos de Consuegra.",
+     "explanation": "Réponse : Ver los molinos de Consuegra.",
+     "text": "★ ¿Qué van a hacer el sábado?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    },
+    {
+     "choices": [
+      "En tren.",
+      "En coche.",
+      "En autobús."
+     ],
+     "answer": "En tren.",
+     "explanation": "Réponse : En tren.",
+     "text": "★ ¿Cómo vuelven a Madrid?",
+     "passage": "¡Hola, Marta! Te escribo desde Toledo. Estoy aquí con mi hermano Pablo para las vacaciones. El hotel está en el centro, al lado de la catedral. Por la mañana visitamos museos y por la tarde paseamos por las calles. La comida es muy buena: me encanta el queso manchego. Hace mucho calor, ¡treinta y ocho grados! El sábado vamos a ir a Consuegra para ver los molinos. Volvemos a Madrid el domingo en tren. Un beso, Lucía."
+    }
+   ]
+  },
+  {
+   "id": "r-anuncios",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 2",
+   "title": "Panneaux et annonces",
+   "prompt": "Lea los textos y elija la opción correcta.",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "abre por la noche.",
+      "está cerrada hoy.",
+      "abre solo por la mañana."
+     ],
+     "answer": "abre por la noche.",
+     "explanation": "Réponse : abre por la noche.",
+     "text": "★ Esta farmacia…",
+     "passage": "FARMACIA DE GUARDIA\nAbierta hoy de 22:00 a 9:00."
+    },
+    {
+     "choices": [
+      "es gratis el domingo por la tarde.",
+      "abre todos los días.",
+      "cuesta tres euros el domingo por la tarde."
+     ],
+     "answer": "es gratis el domingo por la tarde.",
+     "explanation": "Réponse : es gratis el domingo por la tarde.",
+     "text": "★ El museo…",
+     "passage": "MUSEO DEL GRECO\nEntrada: 3 €. Domingos por la tarde: gratis.\nLunes cerrado."
+    },
+    {
+     "choices": [
+      "tiene dos habitaciones.",
+      "está lejos de la estación.",
+      "cuesta 500 € a la semana."
+     ],
+     "answer": "tiene dos habitaciones.",
+     "explanation": "Réponse : tiene dos habitaciones.",
+     "text": "★ El piso…",
+     "passage": "SE ALQUILA PISO\nDos habitaciones, cocina y baño. Cerca de la estación. 500 € al mes.\nTeléfono: 612 345 678"
+    },
+    {
+     "choices": [
+      "la bebida está incluida.",
+      "no hay postre.",
+      "el pan cuesta aparte."
+     ],
+     "answer": "la bebida está incluida.",
+     "explanation": "Réponse : la bebida está incluida.",
+     "text": "★ En el menú del día…",
+     "passage": "RESTAURANTE LA VENTA\nMenú del día: 12 €\nPrimer plato, segundo plato, postre, pan y bebida."
+    },
+    {
+     "choices": [
+      "no se puede fumar.",
+      "se puede fumar.",
+      "hay tabaco."
+     ],
+     "answer": "no se puede fumar.",
+     "explanation": "Réponse : no se puede fumar.",
+     "text": "★ Este cartel dice que…",
+     "passage": "PROHIBIDO FUMAR"
+    },
+    {
+     "choices": [
+      "abre el sábado por la mañana.",
+      "abre el domingo.",
+      "cierra a las dos todos los días."
+     ],
+     "answer": "abre el sábado por la mañana.",
+     "explanation": "Réponse : abre el sábado por la mañana.",
+     "text": "★ La biblioteca…",
+     "passage": "BIBLIOTECA MUNICIPAL\nHorario: de lunes a viernes, de 9:00 a 20:00.\nSábados: de 10:00 a 14:00."
+    },
+    {
+     "choices": [
+      "son dos días a la semana.",
+      "son solo para niños.",
+      "son por la mañana."
+     ],
+     "answer": "son dos días a la semana.",
+     "explanation": "Réponse : son dos días a la semana.",
+     "text": "★ Las clases de guitarra…",
+     "passage": "CLASES DE GUITARRA\nPara niños y adultos. Martes y jueves, a las 18:00.\nPrimera clase gratis."
+    },
+    {
+     "choices": [
+      "la ropa está más barata.",
+      "las camisas cuestan 50 €.",
+      "no hay camisas."
+     ],
+     "answer": "la ropa está más barata.",
+     "explanation": "Réponse : la ropa está más barata.",
+     "text": "★ En la tienda…",
+     "passage": "TIENDA DE ROPA SOL\n¡Rebajas! Todo al 50 %.\nCamisas desde 10 €."
+    },
+    {
+     "choices": [
+      "sale cada hora.",
+      "sale una vez al día.",
+      "no sale por la tarde."
+     ],
+     "answer": "sale cada hora.",
+     "explanation": "Réponse : sale cada hora.",
+     "text": "★ El autobús a Madrid…",
+     "passage": "ESTACIÓN DE AUTOBUSES\nAutobús a Madrid: cada hora, de 7:00 a 22:00."
+    },
+    {
+     "choices": [
+      "abre en verano.",
+      "abre todo el año.",
+      "es gratis para todos."
+     ],
+     "answer": "abre en verano.",
+     "explanation": "Réponse : abre en verano.",
+     "text": "★ La piscina…",
+     "passage": "PISCINA MUNICIPAL\nAbierta de junio a septiembre.\nNiños menores de 6 años: gratis."
+    },
+    {
+     "choices": [
+      "no abre el domingo.",
+      "solo vende pasteles.",
+      "abre por la noche."
+     ],
+     "answer": "no abre el domingo.",
+     "explanation": "Réponse : no abre el domingo.",
+     "text": "★ La panadería…",
+     "passage": "PANADERÍA EL MOLINO\nPan recién hecho todas las mañanas.\nCerrado los domingos."
+    }
+   ]
+  },
+  {
+   "id": "r-mensajes",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 3",
+   "title": "Messages courts",
+   "prompt": "Lea los mensajes y elija la opción correcta.",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "Que llega a las nueve.",
+      "Que no hay cena.",
+      "Que llega temprano."
+     ],
+     "answer": "Que llega a las nueve.",
+     "explanation": "Réponse : Que llega a las nueve.",
+     "text": "★ ¿Qué dice la madre?",
+     "passage": "Mamá: Hoy llego tarde, a las nueve. La cena está en la cocina. Besos."
+    },
+    {
+     "choices": [
+      "ir al cine.",
+      "cenar en casa.",
+      "ver la película mañana."
+     ],
+     "answer": "ir al cine.",
+     "explanation": "Réponse : ir al cine.",
+     "text": "★ Pedro quiere…",
+     "passage": "Pedro: ¿Vamos al cine esta noche? La película empieza a las diez."
+    },
+    {
+     "choices": [
+      "está enferma.",
+      "va a clase.",
+      "tiene los deberes."
+     ],
+     "answer": "está enferma.",
+     "explanation": "Réponse : está enferma.",
+     "text": "★ Ana…",
+     "passage": "Ana: No puedo ir a clase hoy, estoy enferma. ¿Me pasas los deberes?"
+    },
+    {
+     "choices": [
+      "el lunes.",
+      "el martes.",
+      "a las tres."
+     ],
+     "answer": "el lunes.",
+     "explanation": "Réponse : el lunes.",
+     "text": "★ La reunión es…",
+     "passage": "Señor Ruiz: La reunión es el lunes a las once en la sala 3, no el martes."
+    },
+    {
+     "choices": [
+      "invita a Elena a su casa.",
+      "tiene su cumpleaños.",
+      "no puede el sábado."
+     ],
+     "answer": "invita a Elena a su casa.",
+     "explanation": "Réponse : invita a Elena a su casa.",
+     "text": "★ Carlos…",
+     "passage": "Carlos: ¡Feliz cumpleaños, Elena! ¿Celebramos el sábado en mi casa?"
+    },
+    {
+     "choices": [
+      "delante del museo.",
+      "en casa.",
+      "en el tren."
+     ],
+     "answer": "delante del museo.",
+     "explanation": "Réponse : delante del museo.",
+     "text": "★ Laura está…",
+     "passage": "Laura: Estoy en la puerta del museo. ¿Dónde estás tú?"
+    },
+    {
+     "choices": [
+      "a las diez.",
+      "a las siete y media.",
+      "a las dos."
+     ],
+     "answer": "a las diez.",
+     "explanation": "Réponse : a las diez.",
+     "text": "★ El desayuno termina…",
+     "passage": "Hotel Sol: Su habitación es la 204, en el segundo piso. El desayuno es de 7:30 a 10:00."
+    },
+    {
+     "choices": [
+      "la fruta.",
+      "el pan.",
+      "la leche."
+     ],
+     "answer": "la fruta.",
+     "explanation": "Réponse : la fruta.",
+     "text": "★ Jorge compra…",
+     "passage": "Jorge: Compra pan y leche, por favor. Yo compro la fruta."
+    },
+    {
+     "choices": [
+      "el jueves.",
+      "mañana.",
+      "hoy."
+     ],
+     "answer": "el jueves.",
+     "explanation": "Réponse : el jueves.",
+     "text": "★ La próxima clase es…",
+     "passage": "Profesora: Mañana no hay clase. Nos vemos el jueves."
+    },
+    {
+     "choices": [
+      "el autobús no llega.",
+      "está enferma.",
+      "no tiene dinero."
+     ],
+     "answer": "el autobús no llega.",
+     "explanation": "Réponse : el autobús no llega.",
+     "text": "★ Marta va a llegar tarde porque…",
+     "passage": "Marta: El autobús no viene. Voy a llegar veinte minutos tarde. ¡Perdón!"
+    },
+    {
+     "choices": [
+      "el sábado.",
+      "el domingo.",
+      "a las nueve de la mañana."
+     ],
+     "answer": "el sábado.",
+     "explanation": "Réponse : el sábado.",
+     "text": "★ El cliente puede recoger el pedido…",
+     "passage": "Tienda: Su pedido está listo. Puede recogerlo de lunes a sábado, de 10:00 a 20:00."
+    }
+   ]
+  },
+  {
+   "id": "l-dialogos",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 1",
+   "title": "Dialogues courts",
+   "prompt": "Escuche el diálogo y conteste a la pregunta.",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "F|Hola, ¿qué quieres tomar?\nM|Un café con leche, por favor.\nN|Pregunta: ¿Qué quiere el hombre?",
+     "choices": [
+      "Un café con leche.",
+      "Un té.",
+      "Un zumo de naranja."
+     ],
+     "answer": "Un café con leche.",
+     "explanation": "Transcription : Femme : Hola, ¿qué quieres tomar? / Homme : Un café con leche, por favor. / Narrateur : Pregunta: ¿Qué quiere el hombre?"
+    },
+    {
+     "audio": "M|Perdone, ¿dónde está la estación?\nF|Siga todo recto y gire a la derecha.\nN|Pregunta: ¿Dónde está la estación?",
+     "choices": [
+      "Recto y a la derecha.",
+      "A la izquierda.",
+      "Detrás del hotel."
+     ],
+     "answer": "Recto y a la derecha.",
+     "explanation": "Transcription : Homme : Perdone, ¿dónde está la estación? / Femme : Siga todo recto y gire a la derecha. / Narrateur : Pregunta: ¿Dónde está la estación?"
+    },
+    {
+     "audio": "F|¿Cuánto cuestan estas naranjas?\nM|Dos euros el kilo.\nN|Pregunta: ¿Cuánto cuestan las naranjas?",
+     "choices": [
+      "Dos euros el kilo.",
+      "Doce euros el kilo.",
+      "Dos euros cada una."
+     ],
+     "answer": "Dos euros el kilo.",
+     "explanation": "Transcription : Femme : ¿Cuánto cuestan estas naranjas? / Homme : Dos euros el kilo. / Narrateur : Pregunta: ¿Cuánto cuestan las naranjas?"
+    },
+    {
+     "audio": "M|¿A qué hora empieza la película?\nF|A las nueve y media.\nN|Pregunta: ¿A qué hora empieza la película?",
+     "choices": [
+      "A las nueve y media.",
+      "A las nueve.",
+      "A las diez y media."
+     ],
+     "answer": "A las nueve y media.",
+     "explanation": "Transcription : Homme : ¿A qué hora empieza la película? / Femme : A las nueve y media. / Narrateur : Pregunta: ¿A qué hora empieza la película?"
+    },
+    {
+     "audio": "F|¿Tienes hermanos?\nM|Sí, tengo una hermana. Se llama Clara y tiene quince años.\nN|Pregunta: ¿Cuántos años tiene Clara?",
+     "choices": [
+      "Quince.",
+      "Cinco.",
+      "Cincuenta."
+     ],
+     "answer": "Quince.",
+     "explanation": "Transcription : Femme : ¿Tienes hermanos? / Homme : Sí, tengo una hermana. Se llama Clara y tiene quince años. / Narrateur : Pregunta: ¿Cuántos años tiene Clara?"
+    },
+    {
+     "audio": "M|¿Qué tiempo hace hoy en Madrid?\nF|Hace frío y llueve un poco.\nN|Pregunta: ¿Qué tiempo hace en Madrid?",
+     "choices": [
+      "Hace frío y llueve.",
+      "Hace sol y calor.",
+      "Nieva mucho."
+     ],
+     "answer": "Hace frío y llueve.",
+     "explanation": "Transcription : Homme : ¿Qué tiempo hace hoy en Madrid? / Femme : Hace frío y llueve un poco. / Narrateur : Pregunta: ¿Qué tiempo hace en Madrid?"
+    },
+    {
+     "audio": "F|¿Qué vas a hacer el domingo?\nM|Voy a visitar a mis abuelos en Segovia.\nN|Pregunta: ¿Qué va a hacer el hombre el domingo?",
+     "choices": [
+      "Visitar a sus abuelos.",
+      "Trabajar.",
+      "Ir al cine."
+     ],
+     "answer": "Visitar a sus abuelos.",
+     "explanation": "Transcription : Femme : ¿Qué vas a hacer el domingo? / Homme : Voy a visitar a mis abuelos en Segovia. / Narrateur : Pregunta: ¿Qué va a hacer el hombre el domingo?"
+    },
+    {
+     "audio": "M|Buenos días, ¿tiene esta camisa en talla grande?\nF|Sí, en azul y en blanco.\nN|Pregunta: ¿De qué colores tiene la camisa?",
+     "choices": [
+      "Azul y blanco.",
+      "Rojo y negro.",
+      "Verde."
+     ],
+     "answer": "Azul y blanco.",
+     "explanation": "Transcription : Homme : Buenos días, ¿tiene esta camisa en talla grande? / Femme : Sí, en azul y en blanco. / Narrateur : Pregunta: ¿De qué colores tiene la camisa?"
+    },
+    {
+     "audio": "F|¿Dónde vives?\nM|Vivo en Sevilla, cerca del río.\nN|Pregunta: ¿Dónde vive el hombre?",
+     "choices": [
+      "En Sevilla.",
+      "En Valencia.",
+      "En Madrid."
+     ],
+     "answer": "En Sevilla.",
+     "explanation": "Transcription : Femme : ¿Dónde vives? / Homme : Vivo en Sevilla, cerca del río. / Narrateur : Pregunta: ¿Dónde vive el hombre?"
+    },
+    {
+     "audio": "M|¿Qué te pasa?\nF|Me duele mucho la cabeza.\nN|Pregunta: ¿Qué le pasa a la mujer?",
+     "choices": [
+      "Le duele la cabeza.",
+      "Le duele la espalda.",
+      "Tiene hambre."
+     ],
+     "answer": "Le duele la cabeza.",
+     "explanation": "Transcription : Homme : ¿Qué te pasa? / Femme : Me duele mucho la cabeza. / Narrateur : Pregunta: ¿Qué le pasa a la mujer?"
+    },
+    {
+     "audio": "F|¿A qué te dedicas?\nM|Soy profesor en un colegio.\nN|Pregunta: ¿Cuál es la profesión del hombre?",
+     "choices": [
+      "Profesor.",
+      "Médico.",
+      "Camarero."
+     ],
+     "answer": "Profesor.",
+     "explanation": "Transcription : Femme : ¿A qué te dedicas? / Homme : Soy profesor en un colegio. / Narrateur : Pregunta: ¿Cuál es la profesión del hombre?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-avisos",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 2",
+   "title": "Annonces et messages",
+   "prompt": "Escuche el anuncio o el mensaje y elija la opción correcta.",
+   "count": 8,
+   "questions": [
+    {
+     "audio": "N|Atención, señores pasajeros: el tren con destino a Barcelona sale del andén número cuatro.\nN|Pregunta: ¿De qué andén sale el tren?",
+     "choices": [
+      "Del andén cuatro.",
+      "Del andén catorce.",
+      "Del andén dos."
+     ],
+     "answer": "Del andén cuatro.",
+     "explanation": "Transcription : Narrateur : Atención, señores pasajeros: el tren con destino a Barcelona sale del andén número cuatro. / Narrateur : Pregunta: ¿De qué andén sale el tren?"
+    },
+    {
+     "audio": "N|El supermercado cierra en diez minutos. Gracias por su visita.\nN|Pregunta: ¿Qué pasa en diez minutos?",
+     "choices": [
+      "Cierra el supermercado.",
+      "Abre el supermercado.",
+      "Empieza una oferta."
+     ],
+     "answer": "Cierra el supermercado.",
+     "explanation": "Transcription : Narrateur : El supermercado cierra en diez minutos. Gracias por su visita. / Narrateur : Pregunta: ¿Qué pasa en diez minutos?"
+    },
+    {
+     "audio": "F|Hola, Juan, soy Elena. Mañana no puedo ir a la reunión. ¿La cambiamos al jueves? Llámame.\nN|Pregunta: ¿Qué quiere Elena?",
+     "choices": [
+      "Cambiar la reunión al jueves.",
+      "Ir a la reunión mañana.",
+      "Cenar con Juan."
+     ],
+     "answer": "Cambiar la reunión al jueves.",
+     "explanation": "Transcription : Femme : Hola, Juan, soy Elena. Mañana no puedo ir a la reunión. ¿La cambiamos al jueves? Llámame. / Narrateur : Pregunta: ¿Qué quiere Elena?"
+    },
+    {
+     "audio": "N|Hoy, en el centro comercial, todos los zapatos tienen un treinta por ciento de descuento.\nN|Pregunta: ¿Qué tiene descuento?",
+     "choices": [
+      "Los zapatos.",
+      "Las camisas.",
+      "La comida."
+     ],
+     "answer": "Los zapatos.",
+     "explanation": "Transcription : Narrateur : Hoy, en el centro comercial, todos los zapatos tienen un treinta por ciento de descuento. / Narrateur : Pregunta: ¿Qué tiene descuento?"
+    },
+    {
+     "audio": "M|Buenas tardes, llamo del restaurante El Molino. Su mesa está reservada para las nueve, para cuatro personas.\nN|Pregunta: ¿Para cuántas personas es la mesa?",
+     "choices": [
+      "Para cuatro.",
+      "Para nueve.",
+      "Para dos."
+     ],
+     "answer": "Para cuatro.",
+     "explanation": "Transcription : Homme : Buenas tardes, llamo del restaurante El Molino. Su mesa está reservada para las nueve, para cuatro personas. / Narrateur : Pregunta: ¿Para cuántas personas es la mesa?"
+    },
+    {
+     "audio": "N|Mañana, en el norte de España, va a llover. En el sur va a hacer sol y calor.\nN|Pregunta: ¿Qué tiempo va a hacer en el sur?",
+     "choices": [
+      "Sol y calor.",
+      "Lluvia.",
+      "Nieve."
+     ],
+     "answer": "Sol y calor.",
+     "explanation": "Transcription : Narrateur : Mañana, en el norte de España, va a llover. En el sur va a hacer sol y calor. / Narrateur : Pregunta: ¿Qué tiempo va a hacer en el sur?"
+    },
+    {
+     "audio": "F|Bienvenidos al museo. La visita guiada empieza a las once en la puerta principal.\nN|Pregunta: ¿Dónde empieza la visita?",
+     "choices": [
+      "En la puerta principal.",
+      "En la cafetería.",
+      "En la tienda."
+     ],
+     "answer": "En la puerta principal.",
+     "explanation": "Transcription : Femme : Bienvenidos al museo. La visita guiada empieza a las once en la puerta principal. / Narrateur : Pregunta: ¿Dónde empieza la visita?"
+    },
+    {
+     "audio": "M|Hola, mamá. Llego a casa a las ocho. ¿Preparo yo la cena?\nN|Pregunta: ¿A qué hora llega el hijo?",
+     "choices": [
+      "A las ocho.",
+      "A las once.",
+      "A las cuatro."
+     ],
+     "answer": "A las ocho.",
+     "explanation": "Transcription : Homme : Hola, mamá. Llego a casa a las ocho. ¿Preparo yo la cena? / Narrateur : Pregunta: ¿A qué hora llega el hijo?"
+    },
+    {
+     "audio": "N|Información para los clientes: la piscina del hotel está abierta de diez de la mañana a ocho de la tarde.\nN|Pregunta: ¿Cuándo cierra la piscina?",
+     "choices": [
+      "A las ocho de la tarde.",
+      "A las diez de la mañana.",
+      "A medianoche."
+     ],
+     "answer": "A las ocho de la tarde.",
+     "explanation": "Transcription : Narrateur : Información para los clientes: la piscina del hotel está abierta de diez de la mañana a ocho de la tarde. / Narrateur : Pregunta: ¿Cuándo cierra la piscina?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-datos",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 3",
+   "title": "Nombres, heures et lieux",
+   "prompt": "Escuche y elija la información correcta.",
+   "count": 7,
+   "questions": [
+    {
+     "audio": "F|Mi número de teléfono es el seis, cuatro, ocho, veinte, treinta y uno, cincuenta.\nN|Pregunta: ¿Cuál es el número?",
+     "choices": [
+      "648 20 31 50",
+      "648 12 31 15",
+      "684 20 13 50"
+     ],
+     "answer": "648 20 31 50",
+     "explanation": "Transcription : Femme : Mi número de teléfono es el seis, cuatro, ocho, veinte, treinta y uno, cincuenta. / Narrateur : Pregunta: ¿Cuál es el número?"
+    },
+    {
+     "audio": "M|La clase de español es los martes y los jueves.\nN|Pregunta: ¿Qué días es la clase?",
+     "choices": [
+      "Martes y jueves.",
+      "Lunes y miércoles.",
+      "Sábados."
+     ],
+     "answer": "Martes y jueves.",
+     "explanation": "Transcription : Homme : La clase de español es los martes y los jueves. / Narrateur : Pregunta: ¿Qué días es la clase?"
+    },
+    {
+     "audio": "F|El cumpleaños de mi madre es el dieciséis de mayo.\nN|Pregunta: ¿Cuándo es el cumpleaños?",
+     "choices": [
+      "El 16 de mayo.",
+      "El 6 de mayo.",
+      "El 16 de marzo."
+     ],
+     "answer": "El 16 de mayo.",
+     "explanation": "Transcription : Femme : El cumpleaños de mi madre es el dieciséis de mayo. / Narrateur : Pregunta: ¿Cuándo es el cumpleaños?"
+    },
+    {
+     "audio": "M|Son las cinco menos cuarto.\nN|Pregunta: ¿Qué hora es?",
+     "choices": [
+      "4:45",
+      "5:15",
+      "5:45"
+     ],
+     "answer": "4:45",
+     "explanation": "Transcription : Homme : Son las cinco menos cuarto. / Narrateur : Pregunta: ¿Qué hora es?"
+    },
+    {
+     "audio": "F|Vivo en la calle Mayor, número setenta y dos.\nN|Pregunta: ¿En qué número vive?",
+     "choices": [
+      "72",
+      "62",
+      "27"
+     ],
+     "answer": "72",
+     "explanation": "Transcription : Femme : Vivo en la calle Mayor, número setenta y dos. / Narrateur : Pregunta: ¿En qué número vive?"
+    },
+    {
+     "audio": "M|El billete cuesta treinta y cinco euros.\nN|Pregunta: ¿Cuánto cuesta el billete?",
+     "choices": [
+      "35 €",
+      "25 €",
+      "53 €"
+     ],
+     "answer": "35 €",
+     "explanation": "Transcription : Homme : El billete cuesta treinta y cinco euros. / Narrateur : Pregunta: ¿Cuánto cuesta el billete?"
+    },
+    {
+     "audio": "F|Me llamo Begoña Jiménez. Jiménez: jota, i, eme, e, ene, e, zeta.\nN|Pregunta: ¿Cuál es el apellido?",
+     "choices": [
+      "Jiménez",
+      "Giménez",
+      "Ximénez"
+     ],
+     "answer": "Jiménez",
+     "explanation": "Transcription : Femme : Me llamo Begoña Jiménez. Jiménez: jota, i, eme, e, ene, e, zeta. / Narrateur : Pregunta: ¿Cuál es el apellido?"
+    },
+    {
+     "audio": "M|La farmacia está entre el banco y el supermercado.\nN|Pregunta: ¿Dónde está la farmacia?",
+     "choices": [
+      "Entre el banco y el supermercado.",
+      "Al lado de la iglesia.",
+      "Enfrente del hotel."
+     ],
+     "answer": "Entre el banco y el supermercado.",
+     "explanation": "Transcription : Homme : La farmacia está entre el banco y el supermercado. / Narrateur : Pregunta: ¿Dónde está la farmacia?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "w-formulario",
+   "section": "writing",
+   "jpTitle": "Expresión escrita — Tarea 1",
+   "title": "Remplir un formulaire",
+   "prompt": "Complete el formulario: elija la respuesta adecuada.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "Martín",
+      "28 años",
+      "francesa",
+      "Calle Sol, 5"
+     ],
+     "answer": "Martín",
+     "explanation": "Réponse : Martín",
+     "text": "Usted se llama Claire Martín, tiene 28 años, es francesa, vive en Lyon y quiere viajar por España.\nFORMULARIO DE INSCRIPCIÓN — Escuela de idiomas\n★ Apellido:"
+    },
+    {
+     "choices": [
+      "francesa",
+      "Lyon",
+      "28",
+      "Martín"
+     ],
+     "answer": "francesa",
+     "explanation": "Réponse : francesa",
+     "text": "Usted se llama Claire Martín, tiene 28 años, es francesa, vive en Lyon y quiere viajar por España.\nFORMULARIO DE INSCRIPCIÓN — Escuela de idiomas\n★ Nacionalidad:"
+    },
+    {
+     "choices": [
+      "28",
+      "veintiocho de mayo",
+      "mayo",
+      "Martín"
+     ],
+     "answer": "28",
+     "explanation": "Réponse : 28",
+     "text": "Usted se llama Claire Martín, tiene 28 años, es francesa, vive en Lyon y quiere viajar por España.\nFORMULARIO DE INSCRIPCIÓN — Escuela de idiomas\n★ Edad:"
+    },
+    {
+     "choices": [
+      "Porque quiero viajar por España.",
+      "Porque es martes.",
+      "Porque soy alta.",
+      "Porque tengo veintiocho."
+     ],
+     "answer": "Porque quiero viajar por España.",
+     "explanation": "Réponse : Porque quiero viajar por España.",
+     "text": "Usted se llama Claire Martín, tiene 28 años, es francesa, vive en Lyon y quiere viajar por España.\nFORMULARIO DE INSCRIPCIÓN — Escuela de idiomas\n★ ¿Por qué quiere estudiar español?"
+    }
+   ]
+  },
+  {
+   "id": "w-mensaje",
+   "section": "writing",
+   "jpTitle": "Expresión escrita — Tarea 2",
+   "title": "Un message court",
+   "prompt": "Lea la situación y elija el mensaje mejor escrito.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "¡Hola, Ana! Este sábado es mi cumpleaños. ¿Quieres venir a mi casa a las ocho? Vamos a cenar y bailar. ¡Un beso!",
+      "¡Hola, Ana! Este sábado son mi cumpleaños. ¿Quieres venir en mi casa a ocho? Vamos cenar y bailar.",
+      "Ana, sábado cumpleaños casa ocho cenar bailar.",
+      "¡Hola, Ana! El sábado es tu cumpleaños. ¿Vienes a tu casa? Yo no voy a ir."
+     ],
+     "answer": "¡Hola, Ana! Este sábado es mi cumpleaños. ¿Quieres venir a mi casa a las ocho? Vamos a cenar y bailar. ¡Un beso!",
+     "explanation": "Réponse : ¡Hola, Ana! Este sábado es mi cumpleaños. ¿Quieres venir a mi casa a las ocho? Vamos a cenar y bailar. ¡Un beso!",
+     "text": "★ Situación: invita a tu amiga Ana a tu cumpleaños (día, hora, lugar, actividad)."
+    },
+    {
+     "choices": [
+      "Querido Pablo: estoy en Granada con mi familia. El hotel es muy bonito y hace sol. Mañana vamos a visitar la Alhambra. Un abrazo, Sara.",
+      "Querido Pablo: soy en Granada con mi familia. El hotel está muy bonito y hace sol. Mañana vamos visitar la Alhambra.",
+      "Pablo: Granada. Familia. Hotel bonito. Sol. Alhambra.",
+      "Querido Pablo: estoy en Granada. Ayer voy a visitar la Alhambra mañana. El hotel es frío y hace nieve."
+     ],
+     "answer": "Querido Pablo: estoy en Granada con mi familia. El hotel es muy bonito y hace sol. Mañana vamos a visitar la Alhambra. Un abrazo, Sara.",
+     "explanation": "Réponse : Querido Pablo: estoy en Granada con mi familia. El hotel es muy bonito y hace sol. Mañana vamos a visitar la Alhambra. Un abrazo, Sara.",
+     "text": "★ Situación: escribe una postal a tu amigo Pablo desde tus vacaciones (dónde estás, con quién, el tiempo, un plan)."
+    },
+    {
+     "choices": [
+      "Buenos días: me llamo Hugo Leroy y quiero reservar una habitación doble para el 10 y el 11 de julio. Muchas gracias.",
+      "Buenos días: me llamo Hugo Leroy y quiero reservo una habitación doble para el 10 y el 11 de julio.",
+      "Hola, quiero habitación. Gracias.",
+      "Buenos días: me llamo Hugo Leroy y tengo una habitación doble en el 10 de julio. Adiós."
+     ],
+     "answer": "Buenos días: me llamo Hugo Leroy y quiero reservar una habitación doble para el 10 y el 11 de julio. Muchas gracias.",
+     "explanation": "Réponse : Buenos días: me llamo Hugo Leroy y quiero reservar una habitación doble para el 10 y el 11 de julio. Muchas gracias.",
+     "text": "★ Situación: escribe al hotel para reservar una habitación (nombre, tipo de habitación, fechas)."
+    }
+   ]
+  }
+ ]
+}

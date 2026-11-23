@@ -633,10 +633,12 @@ test('hors ligne : atelier JLPT et exercices de leçon au format de l’examen',
   }, before);
   await page.goto(FILE + '#/');
   await page.reload();
+  // Le tirage des formats est aléatoire : on rejoue la leçon (jusqu'à 3 fois) tant qu'aucune question 漢字読み n'est sortie
+  let sawJlpt = false;
+  for (let attempt = 0; attempt < 3 && !sawJlpt; attempt++) {
   await page.goto(FILE + '#/lesson/n5-calendar');
   await expect(page.getByRole('heading', { name: 'Chaque jour, la semaine prochaine' })).toBeVisible();
   await page.getByRole('button', { name: 'Passer aux exercices' }).click();
-  let sawJlpt = false;
   for (let k = 0; k < 40; k++) {
     if (await page.getByRole('heading', { name: /Sans faute|Leçon terminée/ }).isVisible().catch(() => false)) break;
     const q = page.getByTestId('question').last();
@@ -650,6 +652,7 @@ test('hors ligne : atelier JLPT et exercices de leçon au format de l’examen',
     await answerFromStore(page, true);
     await page.getByRole('button', { name: /^(Continuer|Terminer)$/ }).click();
     await expect(page.locator(`[data-qid="${qid}"]`)).toHaveCount(0);
+  }
   }
   expect(sawJlpt).toBe(true);
 
@@ -1073,4 +1076,58 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await page.goto(FILE + '#/exam/hsk6-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc HSK 6 — format officiel' })).toBeVisible();
   await expect(page.getByText(/103 questions en 135 minutes/)).toBeVisible();
+});
+
+test('hors ligne : apprendre l’espagnol pour le DELE (saga de Don Quichotte, expressions, contes, examen sur 100)', async ({ page }) => {
+  await page.goto(FILE);
+  await page.getByRole('radio', { name: /Espagnol/ }).click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en espagnol ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Je pars de zéro ou presque/ }).click();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('heading', { name: 'Quel niveau DELE vises-tu ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /DELE A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  // Pas de kana ni de kanji parmi les difficultés proposées
+  await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Première leçon : saluer
+  await page.getByRole('link', { name: 'Commencer la leçon' }).click();
+  await expect(page.getByRole('heading', { name: '¡Hola! Saluer et prendre congé' })).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+
+  // Parcours : la saga de Don Quichotte sur les chemins de la Manche, sans japonais
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: 'DELE A1 : Le chevalier de la Manche' })).toBeVisible();
+  await expect(page.locator('[data-theme-map="spain"]')).toBeVisible();
+  await expect(page.getByText(/[぀-ヿ一-鿿]/)).toHaveCount(0);
+
+  // Pas d'onglet d'écriture : la page Caractères mène aux expressions
+  await page.goto(FILE + '#/characters');
+  await expect(page).toHaveURL(/#\/expressions/);
+  await page.getByRole('button', { name: /Au quotidien/ }).click();
+  await expect(page.getByText('¡Vale!', { exact: true })).toBeVisible();
+
+  // Mini-jeux : Word Rush
+  await page.goto(FILE + '#/games');
+  await expect(page.getByRole('heading', { name: 'Word Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toHaveCount(0);
+
+  // Lecture : les contes espagnols
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('El medio pollito').first()).toBeVisible();
+  await expect(page.getByText('Los molinos de viento').first()).toBeVisible();
+  await expect(page.getByText('Goldilocks and the Three Bears')).toHaveCount(0);
+
+  // Atelier DELE et examen blanc noté sur 100
+  await page.goto(FILE + '#/prepa');
+  await expect(page.getByRole('heading', { name: 'Atelier DELE' })).toBeVisible();
+  await page.goto(FILE + '#/exam/delea1-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc DELE A1 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/55 questions en 90 minutes/)).toBeVisible();
+  await expect(page.getByText('Barème du DELE')).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('Comprensión de lectura — Tarea 1').first()).toBeVisible();
 });

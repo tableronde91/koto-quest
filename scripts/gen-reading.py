@@ -942,7 +942,7 @@ data = {
 # Les contes coréens (scripts/ko-reading.py), anglais (scripts/en-reading.py) et chinois (scripts/zh-reading.py) sont conservés tels quels.
 try:
     old = json.load(open(OUT, encoding="utf-8"))
-    data["stories"] += [s for s in old["stories"] if s["level"].startswith(("TOPIK", "HSK")) or s["level"] in ("A1", "A2", "B1", "B2", "C1")]
+    data["stories"] += [s for s in old["stories"] if s["level"].startswith(("TOPIK", "HSK", "DELE")) or s["level"] in ("A1", "A2", "B1", "B2", "C1")]
     if "notices" in old:
         data["notices"] = old["notices"]
 except FileNotFoundError:

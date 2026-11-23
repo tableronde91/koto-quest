@@ -19,7 +19,7 @@ export default function ReadingChapterScreen() {
   const router = useRouter();
   const qc = useQueryClient();
   const { data, isLoading, error, refetch } = useReadingChapter(slug);
-  const { zh, ko } = useStudyLang();
+  const { zh, ko, en, es } = useStudyLang();
   const [furigana, setFurigana] = useState(true);
   const [roman, setRoman] = useState(false);
   const [open, setOpen] = useState<string | null>(null);
@@ -61,7 +61,7 @@ export default function ReadingChapterScreen() {
       <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '800', color: C.ink }}>{bi(chapter.title)}</Text>
 
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
-        {!ko && <Button label={zh ? (furigana ? T('Masquer le pinyin') : T('Afficher le pinyin')) : furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />}
+        {!ko && !en && !es && <Button label={zh ? (furigana ? T('Masquer le pinyin') : T('Afficher le pinyin')) : furigana ? T('Masquer les furigana') : T('Afficher les furigana')} tone="quiet" style={{ flex: 1 }} onPress={() => setFurigana(!furigana)} />}
         {chapter.paragraphs.some((p) => p.some((s) => s.roman)) && (
           <Button
             testID="roman-toggle"

@@ -136,7 +136,15 @@ const MESSAGES_ZH = [
   'Quatre tons, un mot : viens les réviser ! 🎵',
 ];
 
-export function reminderMessage(seed: number, lang: 'ja' | 'ko' | 'en' | 'zh' = 'ja'): string {
-  const list = lang === 'ko' ? MESSAGES_KO : lang === 'en' ? MESSAGES_EN : lang === 'zh' ? MESSAGES_ZH : MESSAGES;
+const MESSAGES_ES = [
+  'Un petit défi d’espagnol t’attend ! 💃',
+  'Trente secondes pour réveiller ta mémoire ? 🧠',
+  'Un mot veut te dire bonjour… ¡Hola! 👋',
+  'Ta prochaine révision est prête ☕',
+  'Petit quiz express : ¿te acuerdas? 📚',
+];
+
+export function reminderMessage(seed: number, lang: 'ja' | 'ko' | 'en' | 'zh' | 'es' = 'ja'): string {
+  const list = lang === 'ko' ? MESSAGES_KO : lang === 'en' ? MESSAGES_EN : lang === 'zh' ? MESSAGES_ZH : lang === 'es' ? MESSAGES_ES : MESSAGES;
   return list[Math.abs(seed) % list.length];
 }

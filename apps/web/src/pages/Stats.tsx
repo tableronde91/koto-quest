@@ -51,7 +51,16 @@ const RANKS_ZH: [number, string][] = [
   [3, T("Voyageur·se des îles")],
   [1, T("Apprenti·e lettré·e")],
 ];
-const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' | 'zh' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'zh' ? RANKS_ZH : RANKS).find(([min]) => level >= min)![1];
+/** En espagnol, les rangs suivent Don Quichotte. */
+const RANKS_ES: [number, string][] = [
+  [16, T("Maître du Koto")],
+  [12, T("Chevalier·ère errant·e")],
+  [8, T("Gardien·ne des légendes")],
+  [5, T("Écuyer·ère de la Manche")],
+  [3, T("Voyageur·se des îles")],
+  [1, T("Apprenti·e de Sancho")],
+];
+const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' | 'zh' | 'es' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'zh' ? RANKS_ZH : lang === 'es' ? RANKS_ES : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés. */
 const SKILL_STEP = 10;
@@ -125,9 +134,9 @@ export function StatsPage() {
   const words = useStudyLang();
   const ko = words.ko;
   const zh = words.zh;
-  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1', 'HSK1'));
+  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1', 'HSK1', 'DELEA1'));
   const { data: n4Raw } = usePath(ko ? 'TOPIK2' : zh ? 'HSK2' : 'N4');
-  const n4 = words.en ? undefined : n4Raw;
+  const n4 = words.en || words.es ? undefined : n4Raw;
   const { data: topik3 } = usePath(zh ? 'HSK3' : 'TOPIK3');
   const { data: topik4 } = usePath(zh ? 'HSK4' : 'TOPIK4');
   const third = ko || zh ? topik3 : undefined;
@@ -187,7 +196,7 @@ export function StatsPage() {
       {/* Compétences */}
       <Section title={T("Compétences")} glyph={D('skills')}>
         <ul className="grid gap-3 sm:grid-cols-2">
-          {(words.en ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
+          {(words.en || words.es ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
             const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
             const into = v.mastered % SKILL_STEP;

@@ -26,7 +26,7 @@ export interface ExamDef {
   /** Banque de questions rédigées (format officiel) au lieu des notions du parcours */
   bank?: string;
   /** Notation : pourcentages (défaut), barème du JLPT (180 points) ou du TOPIK I (200 points) */
-  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2' | 'toeic' | 'hsk' | 'hsk3';
+  scoring?: 'percent' | 'jlpt' | 'jlpt3' | 'topik' | 'topik2' | 'toeic' | 'hsk' | 'hsk3' | 'dele';
   /** TOPIK : niveau à obtenir pour réussir l'examen (1 par défaut) */
   passLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
@@ -70,8 +70,16 @@ export const TOEIC_PASS_TOTAL: Record<string, number> = { A1: 120, A2: 225, B1: 
 export const HSK_SCALE = { listening: 100, reading: 100, writing: 100 } as const;
 export const HSK_PASS_TOTAL = { hsk: 120, hsk3: 180 } as const;
 
+/**
+ * Barème du DELE A1-A2 (Instituto Cervantes) : quatre épreuves sur 25 points, réparties en deux groupes de 50 ;
+ * il faut au moins 30 points dans chaque groupe. Groupe 1 : compréhension écrite (`language`) et expression écrite
+ * (`writing`) ; groupe 2 : compréhension auditive et expression orale. L'oral ne pouvant pas être évalué ici,
+ * le groupe 2 est noté sur l'écoute seule (`listening`, sur 50).
+ */
+export const DELE_SCALE = { language: 25, writing: 25, listening: 50, total: 100, passGroup: 30 } as const;
+
 export interface ExamScale {
-  system: 'jlpt' | 'topik' | 'toeic' | 'hsk';
+  system: 'jlpt' | 'topik' | 'toeic' | 'hsk' | 'dele';
   language: number;
   listening: number;
   total: number;
@@ -103,6 +111,8 @@ export function examScale(def: ExamDef): ExamScale | null {
     return { system: 'hsk', language: HSK_SCALE.reading, listening: HSK_SCALE.listening, total: 200, passTotal: HSK_PASS_TOTAL.hsk, passLanguage: 0, passListening: 0 };
   if (def.scoring === 'hsk3')
     return { system: 'hsk', language: HSK_SCALE.reading, listening: HSK_SCALE.listening, writing: HSK_SCALE.writing, total: 300, passTotal: HSK_PASS_TOTAL.hsk3, passLanguage: 0, passListening: 0 };
+  if (def.scoring === 'dele')
+    return { system: 'dele', language: DELE_SCALE.language, writing: DELE_SCALE.writing, listening: DELE_SCALE.listening, total: DELE_SCALE.total, passTotal: 2 * DELE_SCALE.passGroup, passLanguage: DELE_SCALE.passGroup, passListening: DELE_SCALE.passGroup };
   if (def.scoring === 'topik2') {
     const passLevel = def.passLevel ?? 3;
     return {
@@ -475,6 +485,44 @@ export const EXAM_HSK5_MOCK = HSK_MOCK(5);
 export const EXAM_HSK6 = HSK_OFFICIAL(6, 135, 50, 50, 3);
 export const EXAM_HSK6_MOCK = HSK_MOCK(6);
 
+/**
+ * Examen blanc DELE au format officiel : compréhension écrite, compréhension auditive et expression écrite
+ * (en format à choix adapté) ; l'expression orale n'est pas évaluée. Banques content/exams/<niveau>.json, en espagnol.
+ */
+const DELE_OFFICIAL = (level: string, durationMin: number, reading: number, listening: number, writing: number): ExamDef => ({
+  slug: `${level.toLowerCase()}-official`,
+  level,
+  title: `Examen blanc DELE ${level.slice(4)} — format officiel`,
+  durationMin,
+  sections: [
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: 'Comprensión de lectura', count: reading },
+    { id: 'listening', title: 'Compréhension auditive', jpTitle: 'Comprensión auditiva', count: listening },
+    { id: 'writing', title: 'Expression écrite', jpTitle: 'Expresión e interacción escritas', count: writing },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 0,
+  bank: level.toLowerCase(),
+  scoring: 'dele',
+});
+
+/** Entraînement généré à partir des leçons d'un niveau DELE. */
+const DELE_MOCK = (level: string): ExamDef => ({
+  slug: `${level.toLowerCase()}-mock`,
+  level,
+  title: `Entraînement DELE ${level.slice(4)}`,
+  durationMin: 25,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire', jpTitle: 'Vocabulario', count: 12 },
+    { id: 'grammar', title: 'Grammaire', jpTitle: 'Gramática', count: 10 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Comprensión auditiva', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+});
+
+export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
+export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
+
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
   [EXAM_HSK1.slug]: EXAM_HSK1,
@@ -488,6 +536,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK5.slug]: EXAM_HSK5,
   [EXAM_HSK6_MOCK.slug]: EXAM_HSK6_MOCK,
   [EXAM_HSK6.slug]: EXAM_HSK6,
+  [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
+  [EXAM_DELEA1.slug]: EXAM_DELEA1,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
@@ -665,6 +715,17 @@ export function gradeExam(def: ExamDef, questions: { section: ExamSectionId; typ
     const max = writing ? 300 : 200;
     return { sections, correct, total, percent: Math.round((scaled.total / max) * 100), passed: scaled.total >= HSK_PASS_TOTAL[def.scoring], weakest, results, scaled };
   }
+  if (def.scoring === 'dele') {
+    // Groupe 1 : lecture + écriture (25 + 25), au moins 30 ; groupe 2 : écoute (sur 50, l'oral n'étant pas évalué), au moins 30.
+    const pts = (id: ExamSectionId, max: number) => {
+      const x = sections.find((y) => y.id === id);
+      return x && x.total ? Math.round((x.correct / x.total) * max) : 0;
+    };
+    const scaled: NonNullable<ExamGrade['scaled']> = { language: pts('reading', DELE_SCALE.language), writing: pts('writing', DELE_SCALE.writing), listening: pts('listening', DELE_SCALE.listening), total: 0 };
+    scaled.total = scaled.language + scaled.writing! + scaled.listening;
+    const passed = scaled.language + scaled.writing! >= DELE_SCALE.passGroup && scaled.listening >= DELE_SCALE.passGroup;
+    return { sections, correct, total, percent: scaled.total, passed, weakest, results, scaled };
+  }
   if (def.scoring === 'toeic') {
     // Lecture = parties 5 à 7 (phrases et textes à compléter, compréhension écrite) ; chaque épreuve vaut de 5 à 495.
     const pts = (list: typeof sections) => {
@@ -768,7 +829,21 @@ const TIPS_HSK: Partial<Record<ExamSectionId, string>> = {
   writing: 'Écriture (书写) : remets des mots dans l’ordre pour former une phrase et entraîne-toi à reconnaître le bon caractère d’après son pinyin.',
 };
 
+/** Conseils DELE (communs aux niveaux : les leçons et contes du niveau étudié). */
+const TIPS_DELE: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons du niveau et joue à Word Rush pour retrouver vite le sens des mots espagnols.',
+  grammar: 'Grammaire : reprends les leçons sur ser et estar, les articles, l’accord des adjectifs et les verbes au présent, puis entraîne-toi dans l’atelier DELE.',
+  listening: 'Compréhension auditive : réécoute les dialogues des leçons, joue à Listening Ninja et entraîne-toi à repérer les nombres, les heures et les lieux.',
+  reading: 'Compréhension écrite : lis un chapitre de conte espagnol chaque jour et entraîne-toi à repérer l’essentiel d’un message, d’une annonce ou d’une affiche.',
+  writing: 'Expression écrite : reprends les leçons sur les présentations, les formulaires et les messages courts (saluer, remercier, donner des informations).',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
+  if (/^DELE[ABC][12]$/.test(level)) {
+    const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
+    if (!weakEs.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
+    return weakEs.map((s) => TIPS_DELE[s.id] ?? TIPS_DELE.grammar!).filter(Boolean);
+  }
   if (/^HSK[1-6]$/.test(level)) {
     const weakZh = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakZh.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];

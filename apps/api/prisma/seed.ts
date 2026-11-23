@@ -169,7 +169,7 @@ async function seedCharacters(prisma: PrismaClient, contentRoot: string) {
 }
 
 async function seedCharacterFile(prisma: PrismaClient, data: CharactersJson) {
-  const levelCode = data.language === 'ko' ? 'TOPIK1' : data.language === 'en' ? 'A1' : data.language === 'zh' ? 'HSK1' : 'N5';
+  const levelCode = data.language === 'ko' ? 'TOPIK1' : data.language === 'en' ? 'A1' : data.language === 'zh' ? 'HSK1' : data.language === 'es' ? 'DELEA1' : 'N5';
   const seen = new Set<string>();
   let n = 0;
   for (const s of data.sections)
@@ -197,14 +197,14 @@ export interface ExpressionsJson {
 
 /** Onglet Expressions : des notions de vocabulaire à part entière (révisions et maîtrise comprises). */
 async function seedExpressions(prisma: PrismaClient, contentRoot: string) {
-  for (const f of ['expressions.json', 'expressions-ko.json', 'expressions-en.json', 'expressions-zh.json']) {
+  for (const f of ['expressions.json', 'expressions-ko.json', 'expressions-en.json', 'expressions-zh.json', 'expressions-es.json']) {
     const file = join(contentRoot, 'expressions', f);
     if (existsSync(file)) await seedExpressionFile(prisma, JSON.parse(readFileSync(file, 'utf8')) as ExpressionsJson);
   }
 }
 
 async function seedExpressionFile(prisma: PrismaClient, data: ExpressionsJson) {
-  const levelCode = data.language === 'ko' ? 'TOPIK1' : data.language === 'en' ? 'A1' : data.language === 'zh' ? 'HSK1' : 'N5';
+  const levelCode = data.language === 'ko' ? 'TOPIK1' : data.language === 'en' ? 'A1' : data.language === 'zh' ? 'HSK1' : data.language === 'es' ? 'DELEA1' : 'N5';
   const seen = new Set<string>();
   let n = 0;
   for (const t of data.themes)

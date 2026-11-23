@@ -405,6 +405,64 @@ const SPECIES: Record<string, Species> = {
     face: <path d="M88 116 Q96 124 104 116 Q110 112 114 118" stroke="#4A2A1A" strokeWidth="2.5" fill="none" />,
     front: <g transform="translate(156 140)"><rect x="-14" y="-18" width="28" height="36" rx="3" fill="#F6EBD3" stroke="#8A6A3A" strokeWidth="2" /><path d="M-8 -8 H8 M-8 0 H8 M-8 8 H4" stroke="#8A6A3A" strokeWidth="2" /></g>,
   },
+  // ───── Gardiens espagnols (DELE A1 — les chemins de la Manche) ─────
+  // Duende : petit lutin des maisons, bonnet rouge pointu, clé dérobée
+  Á: {
+    body: '#6E8A4A', belly: '#C8D8A8', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M58 72 Q70 20 120 10 Q108 40 142 72Z" fill="#C8323F" stroke="#8E1B26" strokeWidth="2" />,
+    face: <path d="M90 116 Q100 124 110 116" stroke="#5A3A24" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(160 150) rotate(30)" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5"><circle cx="0" cy="-12" r="7" fill="none" strokeWidth="4" stroke="#E2B84A" /><rect x="-2" y="-5" width="4" height="22" /><rect x="2" y="10" width="7" height="3" /></g>,
+  },
+  // Trasgu : lutin asturien noiraud, petites cornes, bonnet rouge, une main percée
+  É: {
+    body: '#4A3A3A', belly: '#8A7A6A', head: '#6A5048', eye: '#F2D94E',
+    top: <><path d="M74 58 Q66 40 76 32 M126 58 Q134 40 124 32" stroke="#E8DCC0" strokeWidth="5" fill="none" strokeLinecap="round" /><path d="M66 60 Q100 24 134 60Z" fill="#C8323F" /></>,
+    face: <path d="M90 118 Q100 112 110 118" stroke="#F6E7C8" strokeWidth="2.5" fill="none" />,
+    front: <circle cx="146" cy="150" r="4" fill="#1F2433" />,
+  },
+  // Nuberu : vieux maître des nuages en peaux de chèvre, grand chapeau, grêle
+  Í: {
+    body: '#8A7A5A', belly: '#C9B88A', head: '#D8C0A0', eye: '#2A1A10',
+    top: <><ellipse cx="100" cy="52" rx="58" ry="10" fill="#3A3A4A" /><path d="M72 52 Q74 26 100 24 Q126 26 128 52Z" fill="#3A3A4A" /></>,
+    under: <path d="M70 108 Q100 150 130 108" fill="#E8E8E8" />,
+    front: <g fill="#B8C4D8"><ellipse cx="40" cy="36" rx="22" ry="12" /><ellipse cx="58" cy="30" rx="16" ry="11" /><circle cx="36" cy="56" r="3" fill="#FFFFFF" /><circle cx="48" cy="62" r="3" fill="#FFFFFF" /><circle cx="60" cy="54" r="3" fill="#FFFFFF" /></g>,
+  },
+  // Ojáncanu : géant cantabre à un seul œil et barbe rousse
+  Ó: {
+    body: '#A86A4A', belly: '#E2B48A', head: '#D9A07A', eye: '#2A1A10',
+    top: <path d="M62 78 Q58 46 82 48 Q100 34 118 48 Q142 46 138 78" fill="#C8562E" />,
+    under: <path d="M62 104 Q100 168 138 104 Q120 124 100 124 Q80 124 62 104Z" fill="#C8562E" />,
+    face: <><rect x="66" y="72" width="68" height="26" rx="12" fill="#D9A07A" /><circle cx="100" cy="84" r="13" fill="#FFFFFF" stroke="#5A3A24" strokeWidth="2" /><circle cx="100" cy="85" r="6" fill="#2A1A10" /></>,
+  },
+  // Busgosu : gardien des bois mi-homme mi-bouc, cornes, feuillage
+  Ü: {
+    body: '#6E5A3A', belly: '#B8A07A', head: '#C9A27A', eye: '#2A1A10',
+    top: <path d="M70 60 Q50 40 58 18 Q66 36 80 46 M130 60 Q150 40 142 18 Q134 36 120 46" stroke="#E8DCC0" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    under: <path d="M90 112 Q100 140 110 112" fill="#8A7A5A" />,
+    front: <g fill="#3E7A3A">{[[30, 120], [40, 104], [170, 116], [160, 100]].map(([x, y]) => <ellipse key={`${x}${y}`} cx={x} cy={y} rx="9" ry="5" transform={`rotate(-30 ${x} ${y})`} />)}</g>,
+  },
+  // Cuélebre : serpent ailé des Asturies couché sur son trésor
+  Ú: {
+    body: '#3E7A4A', belly: '#BFE0A0', head: '#4E8A5A', eye: '#F2D94E',
+    back: <path d="M50 116 Q6 86 18 46 Q38 80 62 94 M150 116 Q194 86 182 46 Q162 80 138 94" fill="#2E6A3A" stroke="#1E4A2A" strokeWidth="2" />,
+    under: <g fill="none" stroke="#2E6A3A" strokeWidth="2">{[0, 1, 2].map((c) => <path key={c} d={`M${70 + c * 20} 150 q10 8 20 0`} />)}</g>,
+    face: <path d="M88 116 Q100 124 112 116" stroke="#1E3A20" strokeWidth="3" fill="none" />,
+    front: <g fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1">{[[52, 190], [64, 194], [140, 192], [152, 188]].map(([x, y]) => <circle key={x} cx={x} cy={y} r="5" />)}</g>,
+  },
+  // Basajaun : géant velu des forêts basques, longue chevelure, bâton de berger
+  '¿': {
+    body: '#6A4A2A', belly: '#9A7A5A', head: '#C9A27A', eye: '#2A1A10',
+    back: <path d="M44 70 Q30 130 52 170 L148 170 Q170 130 156 70 Q100 30 44 70Z" fill="#5A3A1A" />,
+    top: <path d="M58 86 Q56 40 100 36 Q144 40 142 86 Q130 60 100 58 Q70 60 58 86Z" fill="#5A3A1A" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#3A2A1A" strokeWidth="2.5" fill="none" />,
+    front: <path d="M168 196 L176 70 Q178 58 168 56" stroke="#8A6A3A" strokeWidth="5" fill="none" strokeLinecap="round" />,
+  },
+  // Coco : croque-mitaine des berceuses, ombre drapée aux yeux luisants
+  '¡': {
+    body: '#2A2A3A', belly: '#3A3A4E', head: '#2E2E40', eye: '#F2D94E',
+    back: <path d="M30 190 Q40 120 60 80 Q100 20 140 80 Q160 120 170 190 Q150 176 135 190 Q118 176 100 190 Q82 176 65 190 Q50 176 30 190Z" fill="#1F1F2E" />,
+    face: <path d="M86 118 L92 124 L100 118 L108 124 L114 118" stroke="#F2D94E" strokeWidth="2" fill="none" strokeLinejoin="round" />,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {
@@ -1258,7 +1316,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

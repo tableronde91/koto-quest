@@ -34,6 +34,6 @@ export function formatDuration(seconds: number) {
 export const KIND_LABEL: Record<string, string> = { kana: T("Kana"), vocabulary: T("Vocabulaire"), kanji: T("Kanji"), grammar: T("Grammaire") };
 
 /** Attribut lang d'un texte dans la langue étudiée : coréen (hangeul), japonais (kana, kanji), chinois (caractères seuls, quand on étudie le chinois) ou anglais (alphabet latin). */
-export function langOf(text: unknown): 'ja' | 'ko' | 'en' | 'zh' {
+export function langOf(text: unknown): 'ja' | 'ko' | 'en' | 'zh' | 'es' {
   return typeof text === 'string' ? textLanguage(text) : 'ja';
 }

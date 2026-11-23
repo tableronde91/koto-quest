@@ -23,7 +23,7 @@ export const GAMES: Record<GameId, GameDef> = {
   'word-rush': {
     id: 'word-rush',
     title: 'Word Rush',
-    description: 'Retrouve le sens d’un maximum de mots anglais en une minute.',
+    description: 'Retrouve le sens d’un maximum de mots en une minute.',
     durationSec: 60,
     minItems: 6,
     kinds: ['vocabulary'],
@@ -89,8 +89,8 @@ export const GAMES: Record<GameId, GameDef> = {
 export const GAME_IDS = Object.keys(GAMES) as GameId[];
 
 /** Mini-jeux proposés selon la langue étudiée : Kana Rush et Kanji Rush en japonais, Hangeul Rush en coréen, Word Rush en anglais, Hanzi Rush en chinois. */
-export const gameIdsFor = (language: 'ja' | 'ko' | 'en' | 'zh'): GameId[] =>
-  language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : language === 'en' ? ['word-rush', 'speed', 'listening'] : language === 'zh' ? ['hanzi-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening'];
+export const gameIdsFor = (language: 'ja' | 'ko' | 'en' | 'zh' | 'es'): GameId[] =>
+  language === 'ko' ? ['hangul-rush', 'speed', 'listening'] : language === 'en' || language === 'es' ? ['word-rush', 'speed', 'listening'] : language === 'zh' ? ['hanzi-rush', 'speed', 'listening'] : ['kana-rush', 'kanji-rush', 'speed', 'listening'];
 
 /** Marge accordée pour la latence réseau entre la fin du chrono et la dernière réponse. */
 export const GAME_GRACE_MS = 3000;

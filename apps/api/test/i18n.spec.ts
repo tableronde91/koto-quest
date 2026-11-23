@@ -13,7 +13,7 @@ const en = new Translator(['ui', 'engine', 'api', 'content'].map((f) => json(`co
 const FRENCH = /[àâçéèêëîïôûùœ«»]|\b(le|la|les|des|du|une|est|et|pour|avec|ce|cette|signifie|quel|quelle|que|comment)\b/i;
 const JP_ONLY = /^[\s　-ヿ一-鿿＀-￯0-9０-９.,!?()「」『』…〜・ー/★＿:：;]+$/;
 
-const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/a1/a1.json', 'content/a2/a2.json', 'content/b1/b1.json', 'content/b2/b2.json', 'content/c1/c1.json', 'content/hsk1/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json'].map(json);
+const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/a1/a1.json', 'content/a2/a2.json', 'content/b1/b1.json', 'content/b2/b2.json', 'content/c1/c1.json', 'content/hsk1/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json', 'content/delea1/delea1.json'].map(json);
 const items: EngineItem[] = [];
 const authored: AuthoredExercise[] = [];
 for (const lvl of levels)
@@ -23,8 +23,14 @@ for (const lvl of levels)
         for (const it of l.items) items.push({ id: it.slug, kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning });
         for (const ex of l.exercises ?? []) authored.push(ex);
       }
-for (const t of [...json('content/expressions/expressions.json').themes, ...json('content/expressions/expressions-ko.json').themes, ...json('content/expressions/expressions-en.json').themes, ...json('content/expressions/expressions-zh.json').themes])
+for (const t of [...json('content/expressions/expressions.json').themes, ...json('content/expressions/expressions-ko.json').themes, ...json('content/expressions/expressions-en.json').themes, ...json('content/expressions/expressions-zh.json', 'content/expressions/expressions-es.json').themes])
   for (const it of t.expressions) items.push({ id: it.slug, kind: it.kind, front: it.front, reading: it.reading ?? null, romaji: it.romaji ?? null, meaning: it.meaning });
+
+// Espagnol : mots et choix des exercices du DELE, en espagnol (jamais traduits, même s'ils contiennent « la » ou « que »).
+const SPANISH = new Set<string>();
+for (const it of items) if (/^(es-|gram-es-|esx-)/.test(it.id)) SPANISH.add(it.front);
+for (const w of json('content/delea1/delea1.json').worlds)
+  for (const c of w.chapters) for (const l of c.lessons) for (const ex of l.exercises ?? []) [...(ex.choices ?? []), ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer])].forEach((x: string) => SPANISH.add(x));
 
 // Pinyin (chinois romanisé avec les tons) : jamais traduit, même s'il contient des voyelles accentuées.
 const SYL = '(?:[bpmfdtnlgkhjqxrzcsyw]|zh|ch|sh)?[aeiouüāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]{1,4}(?:ng|n)?r?';
@@ -42,7 +48,16 @@ describe('Traduction anglaise', () => {
       else if (o && typeof o === 'object') for (const [kk, v] of Object.entries(o)) !SKIP.has(kk) && walk(v, kk);
       else if (typeof o === 'string' && untranslated(o)) missing.add(o);
     };
-    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/exams/n5-jlpt.json', 'content/exams/n4-jlpt.json', 'content/exams/n3-jlpt.json', 'content/exams/n2-jlpt.json', 'content/exams/n1-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/exams/topik1.json', 'content/exams/topik2.json', 'content/exams/topik3.json', 'content/exams/topik4.json', 'content/exams/topik5.json', 'content/exams/topik6.json', 'content/characters/hangul.json', 'content/expressions/expressions-ko.json', 'content/a1/a1.json', 'content/exams/a1-toeic.json', 'content/a2/a2.json', 'content/exams/a2-toeic.json', 'content/b1/b1.json', 'content/exams/b1-toeic.json', 'content/b2/b2.json', 'content/exams/b2-toeic.json', 'content/c1/c1.json', 'content/exams/c1-toeic.json', 'content/expressions/expressions-en.json', 'content/hsk1/hsk1.json', 'content/exams/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json', 'content/exams/hsk2.json', 'content/exams/hsk3.json', 'content/exams/hsk4.json', 'content/exams/hsk5.json', 'content/exams/hsk6.json', 'content/characters/hanzi.json', 'content/expressions/expressions-zh.json']) walk(json(f));
+    for (const f of ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/exams/n5-jlpt.json', 'content/exams/n4-jlpt.json', 'content/exams/n3-jlpt.json', 'content/exams/n2-jlpt.json', 'content/exams/n1-jlpt.json', 'content/characters/characters.json', 'content/cosmetics/catalog.json', 'content/expressions/expressions.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/exams/topik1.json', 'content/exams/topik2.json', 'content/exams/topik3.json', 'content/exams/topik4.json', 'content/exams/topik5.json', 'content/exams/topik6.json', 'content/characters/hangul.json', 'content/expressions/expressions-ko.json', 'content/a1/a1.json', 'content/exams/a1-toeic.json', 'content/a2/a2.json', 'content/exams/a2-toeic.json', 'content/b1/b1.json', 'content/exams/b1-toeic.json', 'content/b2/b2.json', 'content/exams/b2-toeic.json', 'content/c1/c1.json', 'content/exams/c1-toeic.json', 'content/expressions/expressions-en.json', 'content/hsk1/hsk1.json', 'content/exams/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json', 'content/exams/hsk2.json', 'content/exams/hsk3.json', 'content/exams/hsk4.json', 'content/exams/hsk5.json', 'content/exams/hsk6.json', 'content/characters/hanzi.json', 'content/expressions/expressions-zh.json', 'content/expressions/expressions-es.json']) walk(json(f));
+    // Espagnol : les phrases, textes et consignes du DELE sont en espagnol (non traduits) ; seuls les textes français le sont.
+    const SKIP_ES = new Set([...SKIP, 'sentence', 'passage', 'text', 'glyph']);
+    const walkEs = (o: unknown, skip: Set<string>): void => {
+      if (Array.isArray(o)) o.forEach((v) => walkEs(v, skip));
+      else if (o && typeof o === 'object') for (const [kk, v] of Object.entries(o)) !skip.has(kk) && walkEs(v, skip);
+      else if (typeof o === 'string' && untranslated(o)) missing.add(o);
+    };
+    walkEs(json('content/delea1/delea1.json'), SKIP_ES);
+    walkEs(json('content/exams/delea1.json'), new Set([...SKIP_ES, 'prompt']));
     expect([...missing]).toEqual([]);
   });
 
@@ -64,7 +79,7 @@ describe('Traduction anglaise', () => {
     const check = (q: Question) => {
       const shown = en.deep(q);
       if (untranslated(q.prompt)) problems.push(`consigne : ${q.prompt}`);
-      for (const c of q.choices ?? []) if (untranslated(c)) problems.push(`choix : ${c}`);
+      for (const c of q.choices ?? []) if (untranslated(c) && !SPANISH.has(c)) problems.push(`choix : ${c}`);
       if (q.choices) {
         if (new Set(shown.choices).size !== q.choices.length) problems.push(`choix en double après traduction : ${shown.choices!.join(' / ')}`);
         const picked = shown.choices![q.choices.indexOf(String(q.answer))];

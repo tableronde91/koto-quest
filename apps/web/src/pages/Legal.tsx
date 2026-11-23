@@ -70,6 +70,7 @@ function notice(): Block[] {
           'TOPIK (Test of Proficiency in Korean) is run by the National Institute for International Education (NIIED) of the Republic of Korea. Koto Quest is not affiliated with it: its TOPIK mock exams and lists are unofficial and do not guarantee any result.',
           'TOEIC is a registered trademark of ETS. Koto Quest is not affiliated with ETS: its TOEIC-format mock exams are unofficial and do not predict any score.',
           'HSK (Hanyu Shuiping Kaoshi) is run by the Centre for Language Education and Cooperation (CLEC) and Chinese Testing International. Koto Quest is not affiliated with them: its HSK mock exams and lists are unofficial and do not guarantee any result.',
+          'DELE (Diplomas de Español como Lengua Extranjera) are awarded by the Instituto Cervantes on behalf of the Spanish Ministry of Education. Koto Quest is not affiliated with them: its DELE mock exams and lists are unofficial and do not guarantee any result.',
         ],
       },
     ];
@@ -108,6 +109,7 @@ function notice(): Block[] {
         'Le TOPIK (Test of Proficiency in Korean) est organisé par le National Institute for International Education (NIIED) de la République de Corée. Koto Quest n’est pas affilié à cet organisme : ses examens blancs TOPIK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
         'TOEIC est une marque déposée d’ETS. Koto Quest n’est pas affilié à ETS : ses examens blancs au format du TOEIC ne sont pas officiels et n’en prédisent pas le score.',
         'Le HSK (Hanyu Shuiping Kaoshi) est organisé par le Centre for Language Education and Cooperation (CLEC) et Chinese Testing International. Koto Quest n’est pas affilié à ces organismes : ses examens blancs HSK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
+        'Les DELE (Diplomas de Español como Lengua Extranjera) sont délivrés par l’Instituto Cervantes au nom du ministère espagnol de l’Éducation. Koto Quest n’est pas affilié à ces organismes : ses examens blancs DELE et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
       ],
     },
   ];

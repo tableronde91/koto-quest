@@ -24,6 +24,8 @@ const CATALOG_PATHS: Record<StudyLanguage, string | null> = {
   en: null,
   // Chinois : les caractères (hanzi) appris dans les niveaux du HSK, avec leur pinyin
   zh: resolve(__dirname, '../../../../content/characters/hanzi.json'),
+  // L'espagnol aussi : alphabet latin, pas d'onglet d'écriture
+  es: null,
 };
 
 @Injectable()

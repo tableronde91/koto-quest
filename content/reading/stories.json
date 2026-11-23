@@ -27451,6 +27451,825 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "medio-pollito",
+   "glyph": "m",
+   "level": "DELEA1",
+   "color": "#E2A23B",
+   "title": {
+    "jp": "El medio pollito",
+    "fr": "Le demi-poussin",
+    "en": "Half-Chick"
+   },
+   "summary": {
+    "fr": "Un petit poussin né avec une seule patte, une seule aile et un seul œil part voir le roi à Madrid.",
+    "en": "A little chick born with only one leg, one wing and one eye sets off to see the king in Madrid."
+   },
+   "chapters": [
+    {
+     "slug": "medio-pollito-1",
+     "title": {
+      "jp": "Un pollito diferente",
+      "fr": "Un poussin différent",
+      "en": "A different chick"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Había una vez una gallina con doce pollitos.",
+        "fr": "Il était une fois une poule qui avait douze poussins.",
+        "en": "Once upon a time there was a hen with twelve chicks.",
+        "kana": "Había una vez una gallina con doce pollitos."
+       },
+       {
+        "jp": "Once pollitos son normales, pero uno es diferente.",
+        "fr": "Onze poussins sont normaux, mais un est différent.",
+        "en": "Eleven chicks are normal, but one is different.",
+        "kana": "Once pollitos son normales, pero uno es diferente."
+       },
+       {
+        "jp": "Tiene una pata, un ala y un ojo: es medio pollito.",
+        "fr": "Il a une patte, une aile et un œil : c’est un demi-poussin.",
+        "en": "He has one leg, one wing and one eye: he is half a chick.",
+        "kana": "Tiene una pata, un ala y un ojo: es medio pollito."
+       }
+      ],
+      [
+       {
+        "jp": "Un día, el medio pollito dice: «Mamá, me voy a Madrid. Quiero ver al rey».",
+        "fr": "Un jour, le demi-poussin dit : « Maman, je m’en vais à Madrid. Je veux voir le roi. »",
+        "en": "One day, Half-Chick says: “Mum, I’m going to Madrid. I want to see the king.”",
+        "kana": "Un día, el medio pollito dice: «Mamá, me voy a Madrid. Quiero ver al rey»."
+       },
+       {
+        "jp": "La gallina está triste, pero el pollito sale de casa muy contento.",
+        "fr": "La poule est triste, mais le poussin quitte la maison très content.",
+        "en": "The hen is sad, but the chick leaves home very happy.",
+        "kana": "La gallina está triste, pero el pollito sale de casa muy contento."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la gallina",
+       "reading": "/la ɡaˈʎina/",
+       "fr": "la poule",
+       "en": "the hen"
+      },
+      {
+       "jp": "el pollito",
+       "reading": "/el poˈʎito/",
+       "fr": "le poussin",
+       "en": "the chick"
+      },
+      {
+       "jp": "la pata",
+       "reading": "/la ˈpata/",
+       "fr": "la patte",
+       "en": "the leg (of an animal)"
+      },
+      {
+       "jp": "el ala",
+       "reading": "/el ˈala/",
+       "fr": "l’aile",
+       "en": "the wing"
+      },
+      {
+       "jp": "el ojo",
+       "reading": "/el ˈoxo/",
+       "fr": "l’œil",
+       "en": "the eye"
+      },
+      {
+       "jp": "el rey",
+       "reading": "/el rei/",
+       "fr": "le roi",
+       "en": "the king"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Combien de poussins a la poule ?",
+        "en": "How many chicks does the hen have?"
+       },
+       "choices": [
+        {
+         "fr": "Douze",
+         "en": "Twelve"
+        },
+        {
+         "fr": "Deux",
+         "en": "Two"
+        },
+        {
+         "fr": "Onze",
+         "en": "Eleven"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Où veut aller le demi-poussin ?",
+        "en": "Where does Half-Chick want to go?"
+       },
+       "choices": [
+        {
+         "fr": "À Madrid",
+         "en": "To Madrid"
+        },
+        {
+         "fr": "À la rivière",
+         "en": "To the river"
+        },
+        {
+         "fr": "Chez sa grand-mère",
+         "en": "To his grandmother’s"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "medio-pollito-2",
+     "title": {
+      "jp": "El agua, el fuego y el viento",
+      "fr": "L’eau, le feu et le vent",
+      "en": "Water, fire and wind"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "En el camino, el agua del río le dice: «Pollito, ayúdame, por favor».",
+        "fr": "En chemin, l’eau de la rivière lui dit : « Petit poussin, aide-moi, s’il te plaît. »",
+        "en": "On the way, the river water says to him: “Little chick, help me, please.”",
+        "kana": "En el camino, el agua del río le dice: «Pollito, ayúdame, por favor»."
+       },
+       {
+        "jp": "El fuego y el viento también piden ayuda.",
+        "fr": "Le feu et le vent demandent aussi de l’aide.",
+        "en": "Fire and wind also ask for help.",
+        "kana": "El fuego y el viento también piden ayuda."
+       },
+       {
+        "jp": "Pero el pollito contesta: «No tengo tiempo, voy a ver al rey».",
+        "fr": "Mais le poussin répond : « Je n’ai pas le temps, je vais voir le roi. »",
+        "en": "But the chick answers: “I don’t have time, I’m going to see the king.”",
+        "kana": "Pero el pollito contesta: «No tengo tiempo, voy a ver al rey»."
+       }
+      ],
+      [
+       {
+        "jp": "En el palacio, el cocinero lo mete en una olla con agua.",
+        "fr": "Au palais, le cuisinier le met dans une marmite pleine d’eau.",
+        "en": "At the palace, the cook puts him in a pot of water.",
+        "kana": "En el palacio, el cocinero lo mete en una olla con agua."
+       },
+       {
+        "jp": "El agua y el fuego no lo ayudan, pero el viento sí: lo sube muy alto.",
+        "fr": "L’eau et le feu ne l’aident pas, mais le vent, si : il l’emporte très haut.",
+        "en": "The water and the fire don’t help him, but the wind does: it carries him up very high.",
+        "kana": "El agua y el fuego no lo ayudan, pero el viento sí: lo sube muy alto."
+       },
+       {
+        "jp": "Y desde entonces, el medio pollito vive en lo alto de las torres: es la veleta.",
+        "fr": "Et depuis, le demi-poussin vit en haut des tours : c’est la girouette.",
+        "en": "And since then, Half-Chick has lived at the top of towers: he is the weathervane.",
+        "kana": "Y desde entonces, el medio pollito vive en lo alto de las torres: es la veleta."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el camino",
+       "reading": "/el kaˈmino/",
+       "fr": "le chemin",
+       "en": "the way, the path"
+      },
+      {
+       "jp": "el río",
+       "reading": "/el ˈri.o/",
+       "fr": "la rivière",
+       "en": "the river"
+      },
+      {
+       "jp": "el fuego",
+       "reading": "/el ˈfweɣo/",
+       "fr": "le feu",
+       "en": "the fire"
+      },
+      {
+       "jp": "el viento",
+       "reading": "/el ˈbjento/",
+       "fr": "le vent",
+       "en": "the wind"
+      },
+      {
+       "jp": "la olla",
+       "reading": "/la ˈoʎa/",
+       "fr": "la marmite",
+       "en": "the pot"
+      },
+      {
+       "jp": "la veleta",
+       "reading": "/la beˈleta/",
+       "fr": "la girouette",
+       "en": "the weathervane"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le poussin n’aide-t-il personne ?",
+        "en": "Why doesn’t the chick help anyone?"
+       },
+       "choices": [
+        {
+         "fr": "Il n’a pas le temps",
+         "en": "He has no time"
+        },
+        {
+         "fr": "Il est malade",
+         "en": "He is ill"
+        },
+        {
+         "fr": "Il a peur",
+         "en": "He is afraid"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que devient le demi-poussin à la fin ?",
+        "en": "What does Half-Chick become in the end?"
+       },
+       "choices": [
+        {
+         "fr": "Une girouette",
+         "en": "A weathervane"
+        },
+        {
+         "fr": "Un roi",
+         "en": "A king"
+        },
+        {
+         "fr": "Un cuisinier",
+         "en": "A cook"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ratita-presumida",
+   "glyph": "r",
+   "level": "DELEA1",
+   "color": "#C8323F",
+   "title": {
+    "jp": "La ratita presumida",
+    "fr": "La petite souris coquette",
+    "en": "The vain little mouse"
+   },
+   "summary": {
+    "fr": "Une petite souris trouve une pièce d’or, s’achète un ruban rouge… et tous les animaux veulent l’épouser.",
+    "en": "A little mouse finds a gold coin, buys a red ribbon… and every animal wants to marry her."
+   },
+   "chapters": [
+    {
+     "slug": "ratita-presumida-1",
+     "title": {
+      "jp": "Una moneda de oro",
+      "fr": "Une pièce d’or",
+      "en": "A gold coin"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Había una vez una ratita muy limpia y muy presumida.",
+        "fr": "Il était une fois une petite souris très propre et très coquette.",
+        "en": "Once upon a time there was a very clean and very vain little mouse.",
+        "kana": "Había una vez una ratita muy limpia y muy presumida."
+       },
+       {
+        "jp": "Un día, barriendo la puerta de su casa, encuentra una moneda de oro.",
+        "fr": "Un jour, en balayant devant sa porte, elle trouve une pièce d’or.",
+        "en": "One day, sweeping in front of her door, she finds a gold coin.",
+        "kana": "Un día, barriendo la puerta de su casa, encuentra una moneda de oro."
+       },
+       {
+        "jp": "«¿Qué compro? ¿Caramelos? No. ¡Un lazo rojo para mi cola!»",
+        "fr": "« Qu’est-ce que j’achète ? Des bonbons ? Non. Un ruban rouge pour ma queue ! »",
+        "en": "“What shall I buy? Sweets? No. A red ribbon for my tail!”",
+        "kana": "«¿Qué compro? ¿Caramelos? No. ¡Un lazo rojo para mi cola!»"
+       }
+      ],
+      [
+       {
+        "jp": "La ratita se pone el lazo y se sienta en la ventana.",
+        "fr": "La petite souris met le ruban et s’assoit à la fenêtre.",
+        "en": "The little mouse puts on the ribbon and sits at the window.",
+        "kana": "La ratita se pone el lazo y se sienta en la ventana."
+       },
+       {
+        "jp": "Todos los animales del pueblo pasan y la miran.",
+        "fr": "Tous les animaux du village passent et la regardent.",
+        "en": "All the animals in the village walk by and look at her.",
+        "kana": "Todos los animales del pueblo pasan y la miran."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la ratita",
+       "reading": "/la raˈtita/",
+       "fr": "la petite souris",
+       "en": "the little mouse"
+      },
+      {
+       "jp": "presumida",
+       "reading": "/pɾesuˈmida/",
+       "fr": "coquette, vaniteuse",
+       "en": "vain"
+      },
+      {
+       "jp": "la moneda",
+       "reading": "/la moˈneða/",
+       "fr": "la pièce (de monnaie)",
+       "en": "the coin"
+      },
+      {
+       "jp": "el oro",
+       "reading": "/el ˈoɾo/",
+       "fr": "l’or",
+       "en": "gold"
+      },
+      {
+       "jp": "el lazo",
+       "reading": "/el ˈlaθo/",
+       "fr": "le ruban, le nœud",
+       "en": "the ribbon, the bow"
+      },
+      {
+       "jp": "la ventana",
+       "reading": "/la benˈtana/",
+       "fr": "la fenêtre",
+       "en": "the window"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que trouve la petite souris ?",
+        "en": "What does the little mouse find?"
+       },
+       "choices": [
+        {
+         "fr": "Une pièce d’or",
+         "en": "A gold coin"
+        },
+        {
+         "fr": "Un ruban",
+         "en": "A ribbon"
+        },
+        {
+         "fr": "Des bonbons",
+         "en": "Sweets"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’achète-t-elle ?",
+        "en": "What does she buy?"
+       },
+       "choices": [
+        {
+         "fr": "Un ruban rouge",
+         "en": "A red ribbon"
+        },
+        {
+         "fr": "Des bonbons",
+         "en": "Sweets"
+        },
+        {
+         "fr": "Une robe",
+         "en": "A dress"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "ratita-presumida-2",
+     "title": {
+      "jp": "¿Y por las noches, qué haces?",
+      "fr": "Et la nuit, que fais-tu ?",
+      "en": "And at night, what do you do?"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Llega el burro: «Ratita, ¿te quieres casar conmigo?». «¿Y por las noches, qué haces?» «¡Hiooo, hiooo!» «¡No, que me asustas!»",
+        "fr": "L’âne arrive : « Petite souris, veux-tu m’épouser ? » « Et la nuit, que fais-tu ? » « Hi-han, hi-han ! » « Non, tu me fais peur ! »",
+        "en": "The donkey comes: “Little mouse, will you marry me?” “And at night, what do you do?” “Hee-haw, hee-haw!” “No, you frighten me!”",
+        "kana": "Llega el burro: «Ratita, ¿te quieres casar conmigo?». «¿Y por las noches, qué haces?» «¡Hiooo, hiooo!» «¡No, que me asustas!»"
+       },
+       {
+        "jp": "El perro hace «guau, guau» y el gallo hace «quiquiriquí». La ratita dice que no a todos.",
+        "fr": "Le chien fait « ouaf, ouaf » et le coq fait « cocorico ». La petite souris dit non à tous.",
+        "en": "The dog goes “woof, woof” and the rooster goes “cock-a-doodle-doo”. The little mouse says no to them all.",
+        "kana": "El perro hace «guau, guau» y el gallo hace «quiquiriquí». La ratita dice que no a todos."
+       }
+      ],
+      [
+       {
+        "jp": "Por fin llega un gato muy elegante. «¿Y por las noches, qué haces?» «Dormir y callar».",
+        "fr": "Enfin arrive un chat très élégant. « Et la nuit, que fais-tu ? » « Dormir et me taire. »",
+        "en": "At last a very elegant cat arrives. “And at night, what do you do?” “Sleep and keep quiet.”",
+        "kana": "Por fin llega un gato muy elegante. «¿Y por las noches, qué haces?» «Dormir y callar»."
+       },
+       {
+        "jp": "La ratita se casa con el gato… pero por la noche el gato quiere comérsela.",
+        "fr": "La petite souris épouse le chat… mais la nuit, le chat veut la manger.",
+        "en": "The little mouse marries the cat… but at night the cat wants to eat her.",
+        "kana": "La ratita se casa con el gato… pero por la noche el gato quiere comérsela."
+       },
+       {
+        "jp": "Por suerte, su amigo el ratón la salva. Y la ratita aprende a no ser tan presumida.",
+        "fr": "Heureusement, son ami le souriceau la sauve. Et la petite souris apprend à ne plus être si coquette.",
+        "en": "Luckily, her friend the mouse saves her. And the little mouse learns not to be so vain.",
+        "kana": "Por suerte, su amigo el ratón la salva. Y la ratita aprende a no ser tan presumida."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "casarse",
+       "reading": "/kaˈsaɾse/",
+       "fr": "se marier",
+       "en": "to get married"
+      },
+      {
+       "jp": "el gallo",
+       "reading": "/el ˈɡaʎo/",
+       "fr": "le coq",
+       "en": "the rooster"
+      },
+      {
+       "jp": "asustar",
+       "reading": "/asusˈtaɾ/",
+       "fr": "faire peur",
+       "en": "to frighten"
+      },
+      {
+       "jp": "dormir",
+       "reading": "/doɾˈmiɾ/",
+       "fr": "dormir",
+       "en": "to sleep"
+      },
+      {
+       "jp": "callar",
+       "reading": "/kaˈʎaɾ/",
+       "fr": "se taire",
+       "en": "to keep quiet"
+      },
+      {
+       "jp": "por suerte",
+       "reading": "/poɾ ˈsweɾte/",
+       "fr": "heureusement",
+       "en": "luckily"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi la souris refuse-t-elle l’âne ?",
+        "en": "Why does the mouse refuse the donkey?"
+       },
+       "choices": [
+        {
+         "fr": "Il lui fait peur",
+         "en": "He frightens her"
+        },
+        {
+         "fr": "Il est trop vieux",
+         "en": "He is too old"
+        },
+        {
+         "fr": "Il est pauvre",
+         "en": "He is poor"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qui sauve la petite souris ?",
+        "en": "Who saves the little mouse?"
+       },
+       "choices": [
+        {
+         "fr": "Son ami le souriceau",
+         "en": "Her friend the mouse"
+        },
+        {
+         "fr": "Le coq",
+         "en": "The rooster"
+        },
+        {
+         "fr": "Le chat",
+         "en": "The cat"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "molinos-de-viento",
+   "glyph": "q",
+   "level": "DELEA1",
+   "color": "#6E5A3A",
+   "title": {
+    "jp": "Los molinos de viento",
+    "fr": "Les moulins à vent",
+    "en": "The windmills"
+   },
+   "summary": {
+    "fr": "Don Quichotte croit voir des géants dans la plaine. Sancho voit des moulins. Qui a raison ? D’après Cervantes.",
+    "en": "Don Quixote thinks he sees giants on the plain. Sancho sees windmills. Who is right? After Cervantes."
+   },
+   "chapters": [
+    {
+     "slug": "molinos-de-viento-1",
+     "title": {
+      "jp": "Gigantes en el campo",
+      "fr": "Des géants dans la campagne",
+      "en": "Giants in the countryside"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Don Quijote y Sancho Panza van por el campo de La Mancha.",
+        "fr": "Don Quichotte et Sancho Panza vont à travers la campagne de la Manche.",
+        "en": "Don Quixote and Sancho Panza ride across the countryside of La Mancha.",
+        "kana": "Don Quijote y Sancho Panza van por el campo de La Mancha."
+       },
+       {
+        "jp": "De pronto, don Quijote ve treinta o cuarenta molinos de viento.",
+        "fr": "Soudain, don Quichotte voit trente ou quarante moulins à vent.",
+        "en": "Suddenly, Don Quixote sees thirty or forty windmills.",
+        "kana": "De pronto, don Quijote ve treinta o cuarenta molinos de viento."
+       },
+       {
+        "jp": "«¡Mira, Sancho! Allí hay unos gigantes enormes. Voy a luchar contra ellos».",
+        "fr": "« Regarde, Sancho ! Là-bas, il y a des géants énormes. Je vais les combattre. »",
+        "en": "“Look, Sancho! Over there are some enormous giants. I am going to fight them.”",
+        "kana": "«¡Mira, Sancho! Allí hay unos gigantes enormes. Voy a luchar contra ellos»."
+       }
+      ],
+      [
+       {
+        "jp": "«¿Qué gigantes?», pregunta Sancho.",
+        "fr": "« Quels géants ? », demande Sancho.",
+        "en": "“What giants?” asks Sancho.",
+        "kana": "«¿Qué gigantes?», pregunta Sancho."
+       },
+       {
+        "jp": "«Esos de allí, con los brazos largos».",
+        "fr": "« Ceux-là, avec leurs longs bras. »",
+        "en": "“Those over there, with the long arms.”",
+        "kana": "«Esos de allí, con los brazos largos»."
+       },
+       {
+        "jp": "«Señor, no son gigantes, son molinos. Los brazos son las aspas».",
+        "fr": "« Monsieur, ce ne sont pas des géants, ce sont des moulins. Les bras, ce sont les ailes. »",
+        "en": "“Sir, they are not giants, they are windmills. The arms are the sails.”",
+        "kana": "«Señor, no son gigantes, son molinos. Los brazos son las aspas»."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el campo",
+       "reading": "/el ˈkampo/",
+       "fr": "la campagne, les champs",
+       "en": "the countryside, the fields"
+      },
+      {
+       "jp": "de pronto",
+       "reading": "/de ˈpɾonto/",
+       "fr": "soudain",
+       "en": "suddenly"
+      },
+      {
+       "jp": "el gigante",
+       "reading": "/el xiˈɣante/",
+       "fr": "le géant",
+       "en": "the giant"
+      },
+      {
+       "jp": "enorme",
+       "reading": "/eˈnoɾme/",
+       "fr": "énorme",
+       "en": "enormous"
+      },
+      {
+       "jp": "luchar",
+       "reading": "/luˈtʃaɾ/",
+       "fr": "combattre, lutter",
+       "en": "to fight"
+      },
+      {
+       "jp": "las aspas",
+       "reading": "/las ˈaspas/",
+       "fr": "les ailes (d’un moulin)",
+       "en": "the sails (of a windmill)"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que voit don Quichotte ?",
+        "en": "What does Don Quixote see?"
+       },
+       "choices": [
+        {
+         "fr": "Des géants",
+         "en": "Giants"
+        },
+        {
+         "fr": "Des moulins",
+         "en": "Windmills"
+        },
+        {
+         "fr": "Des soldats",
+         "en": "Soldiers"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Selon Sancho, que sont les « bras » ?",
+        "en": "According to Sancho, what are the “arms”?"
+       },
+       "choices": [
+        {
+         "fr": "Les ailes des moulins",
+         "en": "The windmills’ sails"
+        },
+        {
+         "fr": "Des arbres",
+         "en": "Trees"
+        },
+        {
+         "fr": "Des lances",
+         "en": "Spears"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "molinos-de-viento-2",
+     "title": {
+      "jp": "El caballero cae",
+      "fr": "Le chevalier tombe",
+      "en": "The knight falls"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Pero don Quijote no escucha. Corre con su caballo Rocinante contra el primer molino.",
+        "fr": "Mais don Quichotte n’écoute pas. Il fonce avec son cheval Rossinante contre le premier moulin.",
+        "en": "But Don Quixote does not listen. He charges on his horse Rocinante at the first windmill.",
+        "kana": "Pero don Quijote no escucha. Corre con su caballo Rocinante contra el primer molino."
+       },
+       {
+        "jp": "En ese momento hace mucho viento y las aspas giran.",
+        "fr": "À ce moment-là, il y a beaucoup de vent et les ailes tournent.",
+        "en": "At that moment the wind is strong and the sails turn.",
+        "kana": "En ese momento hace mucho viento y las aspas giran."
+       },
+       {
+        "jp": "La lanza se rompe y el caballero cae al suelo.",
+        "fr": "La lance se brise et le chevalier tombe par terre.",
+        "en": "The lance breaks and the knight falls to the ground.",
+        "kana": "La lanza se rompe y el caballero cae al suelo."
+       }
+      ],
+      [
+       {
+        "jp": "Sancho corre a ayudarlo: «¿No le digo, señor, que son molinos?».",
+        "fr": "Sancho court l’aider : « Je vous l’avais bien dit, monsieur, ce sont des moulins ! »",
+        "en": "Sancho runs to help him: “Didn’t I tell you, sir, that they are windmills?”",
+        "kana": "Sancho corre a ayudarlo: «¿No le digo, señor, que son molinos?»."
+       },
+       {
+        "jp": "Don Quijote está cansado y le duele todo el cuerpo, pero contesta: «Un mago malo convierte a los gigantes en molinos».",
+        "fr": "Don Quichotte est fatigué et a mal partout, mais il répond : « Un méchant magicien change les géants en moulins. »",
+        "en": "Don Quixote is tired and aches all over, but he answers: “An evil wizard turns the giants into windmills.”",
+        "kana": "Don Quijote está cansado y le duele todo el cuerpo, pero contesta: «Un mago malo convierte a los gigantes en molinos»."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el caballo",
+       "reading": "/el kaˈβaʎo/",
+       "fr": "le cheval",
+       "en": "the horse"
+      },
+      {
+       "jp": "girar",
+       "reading": "/xiˈɾaɾ/",
+       "fr": "tourner",
+       "en": "to turn, to spin"
+      },
+      {
+       "jp": "la lanza",
+       "reading": "/la ˈlanθa/",
+       "fr": "la lance",
+       "en": "the lance"
+      },
+      {
+       "jp": "romperse",
+       "reading": "/romˈpeɾse/",
+       "fr": "se briser, se casser",
+       "en": "to break"
+      },
+      {
+       "jp": "el suelo",
+       "reading": "/el ˈswelo/",
+       "fr": "le sol",
+       "en": "the ground"
+      },
+      {
+       "jp": "el mago",
+       "reading": "/el ˈmaɣo/",
+       "fr": "le magicien",
+       "en": "the wizard"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que se passe-t-il quand don Quichotte attaque ?",
+        "en": "What happens when Don Quixote attacks?"
+       },
+       "choices": [
+        {
+         "fr": "Sa lance se brise et il tombe",
+         "en": "His lance breaks and he falls"
+        },
+        {
+         "fr": "Il gagne",
+         "en": "He wins"
+        },
+        {
+         "fr": "Le moulin s’arrête",
+         "en": "The windmill stops"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment don Quichotte explique-t-il les moulins ?",
+        "en": "How does Don Quixote explain the windmills?"
+       },
+       "choices": [
+        {
+         "fr": "Un magicien a changé les géants",
+         "en": "A wizard changed the giants"
+        },
+        {
+         "fr": "Il s’est trompé",
+         "en": "He made a mistake"
+        },
+        {
+         "fr": "Sancho a menti",
+         "en": "Sancho lied"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -27465,6 +28284,10 @@
   "zh": {
    "fr": "Fables chinoises de l’époque des Royaumes combattants (domaine public), réécrites en chinois simple pour Koto Quest. Le pinyin s’affiche au-dessus des mots (à partir du HSK 3, seulement au-dessus des mots nouveaux du niveau) ; touche une phrase pour l’entendre et la traduire.",
    "en": "Chinese fables from the Warring States period (public domain), retold in simple Chinese for Koto Quest. Pinyin is shown above the words (from HSK 3 onwards, only above words new at that level); tap a sentence to hear and translate it."
+  },
+  "es": {
+   "fr": "Contes populaires d’Espagne et épisodes de Don Quichotte (domaine public), réécrits en espagnol simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (espagnol d’Espagne).",
+   "en": "Spanish folk tales and episodes from Don Quixote (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain)."
   }
  }
 }

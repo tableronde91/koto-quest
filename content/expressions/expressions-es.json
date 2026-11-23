@@ -1,0 +1,291 @@
+{
+ "contentVersion": "2026.11.23",
+ "language": "es",
+ "notice": "Expressions espagnoles courantes sélectionnées par Koto Quest (espagnol d’Espagne) ; le registre (poli, familier…) aide à choisir la bonne formule selon la situation.",
+ "themes": [
+  {
+   "slug": "es-cortesia",
+   "glyph": "¡",
+   "title": "Politesse et salutations",
+   "description": "Les formules qui ouvrent toutes les portes : en Espagne, on salue en entrant dans un magasin ou un ascenseur.",
+   "expressions": [
+    {
+     "slug": "esx-encantado",
+     "kind": "vocabulary",
+     "front": "¡Encantado! / ¡Encantada!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "enchanté·e !",
+     "note": "Accordé selon qui parle : encantado pour un homme, encantada pour une femme. En Espagne, on se fait souvent deux bises.",
+     "register": "neutral",
+     "example": {
+      "jp": "Hola, soy Marta. — ¡Encantado!",
+      "fr": "Bonjour, je suis Marta. — Enchanté !"
+     }
+    },
+    {
+     "slug": "esx-de-nada",
+     "kind": "vocabulary",
+     "front": "De nada.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "de rien",
+     "note": "La réponse standard à gracias. Plus soutenu : No hay de qué.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-perdon",
+     "kind": "vocabulary",
+     "front": "¡Perdón!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pardon !",
+     "note": "Pour s’excuser d’un petit faux pas. Lo siento (je suis désolé) exprime un regret plus fort.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-con-permiso",
+     "kind": "vocabulary",
+     "front": "Con permiso.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "pardon, vous permettez ?",
+     "note": "Pour passer devant quelqu’un ou entrer dans une pièce. On répond : Adelante (je vous en prie).",
+     "register": "polite"
+    },
+    {
+     "slug": "esx-que-aproveche",
+     "kind": "vocabulary",
+     "front": "¡Que aproveche!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "bon appétit !",
+     "note": "On le dit en passant près de quelqu’un qui mange, même un inconnu au restaurant. Aussi : ¡Buen provecho!",
+     "register": "polite"
+    },
+    {
+     "slug": "esx-salud",
+     "kind": "vocabulary",
+     "front": "¡Salud!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "santé ! ; à tes souhaits !",
+     "note": "Pour trinquer… et quand quelqu’un éternue.",
+     "register": "casual"
+    }
+   ]
+  },
+  {
+   "slug": "es-diario",
+   "glyph": "☀",
+   "title": "Au quotidien",
+   "description": "Les petits mots qu’on entend partout en Espagne, au bar comme dans la rue.",
+   "expressions": [
+    {
+     "slug": "esx-vale",
+     "kind": "vocabulary",
+     "front": "¡Vale!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "d’accord !",
+     "note": "Le « OK » espagnol, entendu cent fois par jour en Espagne. En Amérique latine, on dit plutôt dale ou está bien.",
+     "register": "casual",
+     "example": {
+      "jp": "¿Nos vemos a las ocho? — ¡Vale!",
+      "fr": "On se voit à huit heures ? — D’accord !"
+     }
+    },
+    {
+     "slug": "esx-venga",
+     "kind": "vocabulary",
+     "front": "¡Venga!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "allez ! vas-y !",
+     "note": "Pour encourager, presser… ou conclure une conversation : Venga, hasta luego.",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-que-guay",
+     "kind": "vocabulary",
+     "front": "¡Qué guay!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "trop bien ! génial !",
+     "note": "Très familier, surtout chez les jeunes en Espagne.",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-no-pasa-nada",
+     "kind": "vocabulary",
+     "front": "No pasa nada.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ce n’est rien, pas de souci",
+     "note": "Pour rassurer quelqu’un qui s’excuse.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-ir-de-tapas",
+     "kind": "vocabulary",
+     "front": "ir de tapas",
+     "reading": null,
+     "romaji": null,
+     "meaning": "aller manger des tapas",
+     "note": "On passe de bar en bar en goûtant de petites assiettes, debout au comptoir.",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-la-sobremesa",
+     "kind": "vocabulary",
+     "front": "la sobremesa",
+     "reading": null,
+     "romaji": null,
+     "meaning": "le moment passé à table après le repas",
+     "note": "Mot sans équivalent : on reste à table pour discuter, parfois des heures.",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "es-imagenes",
+   "glyph": "♥",
+   "title": "Expressions imagées",
+   "description": "Des images surprenantes qu’il ne faut surtout pas traduire mot à mot.",
+   "expressions": [
+    {
+     "slug": "esx-estar-en-las-nubes",
+     "kind": "vocabulary",
+     "front": "estar en las nubes",
+     "reading": null,
+     "romaji": null,
+     "meaning": "être dans la lune",
+     "note": "Littéralement « être dans les nuages ».",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-ser-pan-comido",
+     "kind": "vocabulary",
+     "front": "ser pan comido",
+     "reading": null,
+     "romaji": null,
+     "meaning": "être du gâteau, un jeu d’enfant",
+     "note": "Littéralement « être du pain mangé ».",
+     "register": "casual",
+     "example": {
+      "jp": "El examen es pan comido.",
+      "fr": "L’examen, c’est du gâteau."
+     }
+    },
+    {
+     "slug": "esx-costar-un-ojo",
+     "kind": "vocabulary",
+     "front": "costar un ojo de la cara",
+     "reading": null,
+     "romaji": null,
+     "meaning": "coûter les yeux de la tête",
+     "note": "En espagnol, ça ne coûte qu’un œil… du visage.",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-tomar-el-pelo",
+     "kind": "vocabulary",
+     "front": "tomar el pelo",
+     "reading": null,
+     "romaji": null,
+     "meaning": "se moquer de quelqu’un, le faire marcher",
+     "note": "Littéralement « prendre les cheveux ». ¿Me estás tomando el pelo? = tu te moques de moi ?",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-media-naranja",
+     "kind": "vocabulary",
+     "front": "mi media naranja",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ma moitié, l’âme sœur",
+     "note": "Littéralement « ma moitié d’orange ».",
+     "register": "casual"
+    },
+    {
+     "slug": "esx-meter-la-pata",
+     "kind": "vocabulary",
+     "front": "meter la pata",
+     "reading": null,
+     "romaji": null,
+     "meaning": "faire une gaffe",
+     "note": "Littéralement « mettre la patte ».",
+     "register": "casual"
+    }
+   ]
+  },
+  {
+   "slug": "es-refranes",
+   "glyph": "❦",
+   "title": "Proverbes (refranes)",
+   "description": "Les refranes rythment la conversation en Espagne ; Sancho Panza en cite sans arrêt dans Don Quichotte.",
+   "expressions": [
+    {
+     "slug": "esx-mas-vale-tarde",
+     "kind": "vocabulary",
+     "front": "Más vale tarde que nunca.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "mieux vaut tard que jamais",
+     "note": "Exactement comme en français.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-dime-con-quien",
+     "kind": "vocabulary",
+     "front": "Dime con quién andas y te diré quién eres.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "dis-moi qui tu fréquentes, je te dirai qui tu es",
+     "note": "Un refrán que Sancho aime citer.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-quien-madruga",
+     "kind": "vocabulary",
+     "front": "A quien madruga, Dios le ayuda.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "l’avenir appartient à ceux qui se lèvent tôt",
+     "note": "Littéralement « Dieu aide celui qui se lève tôt ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-perro-ladrador",
+     "kind": "vocabulary",
+     "front": "Perro ladrador, poco mordedor.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "chien qui aboie ne mord pas",
+     "note": "Ceux qui menacent le plus agissent rarement.",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-en-boca-cerrada",
+     "kind": "vocabulary",
+     "front": "En boca cerrada no entran moscas.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "la parole est d’argent, le silence est d’or",
+     "note": "Littéralement « dans une bouche fermée, les mouches n’entrent pas ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "esx-no-hay-mal",
+     "kind": "vocabulary",
+     "front": "No hay mal que por bien no venga.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "à quelque chose malheur est bon",
+     "note": "Même un malheur peut apporter du bon.",
+     "register": "neutral"
+    }
+   ]
+  }
+ ]
+}

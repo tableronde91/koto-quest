@@ -69,14 +69,14 @@ export function WelcomePage() {
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
           <p className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · {T("Préparation au JLPT, au TOPIK, au TOEIC et au HSK")}
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · <span lang="es">Español</span> · {T("Préparation au JLPT, au TOPIK, au TOEIC, au HSK et au DELE")}
           </p>
-          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen, l’anglais ou le chinois, et réussis ton examen.")}</h1>
+          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen, l’anglais, le chinois ou l’espagnol, et réussis ton examen.")}</h1>
           <p className="mt-4 max-w-[54ch] text-lg text-ink-soft">
             {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais, le HSK pour le chinois. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
           </p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK, du CECRL et du HSK"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK, du CECRL, du HSK et du DELE"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -205,6 +205,28 @@ export function WelcomePage() {
         </ol>
       </section>
 
+      {/* Le DELE, pour l'espagnol */}
+      <section aria-labelledby="dele-title" className="flex flex-col gap-5">
+        <div>
+          <h2 id="dele-title" className="text-3xl">{T("Et l’espagnol ? Le DELE")}</h2>
+          <p className="mt-2 max-w-[70ch] text-ink-soft">
+            {T("Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare sur les chemins de la Manche, aux côtés de Don Quichotte et de Sancho Panza.")}
+          </p>
+        </div>
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {DELE_LEVELS.map((l) => (
+            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line bg-surface-2'}`}>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-display text-2xl">{l.id}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface text-ink-soft'}`}>{l.ready ? T("Disponible") : T("Bientôt")}</span>
+              </div>
+              <p className="font-bold">{l.name()}</p>
+              <p className="text-sm text-ink-soft">{l.text()}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Comment Koto Quest prépare */}
       <section aria-labelledby="how-title" className="flex flex-col gap-5">
         <h2 id="how-title" className="text-3xl">{T("Comment Koto Quest te prépare")}</h2>
@@ -268,6 +290,15 @@ const HSK_LEVELS = [
   { id: 'HSK 4', ready: true, name: () => T("Intermédiaire avancé · 1 200 mots"), text: () => T("Discuter de sujets variés avec des natifs, lire des textes courants et rédiger de courtes phrases.") },
   { id: 'HSK 5', ready: true, name: () => T("Avancé · 2 500 mots"), text: () => T("Lire journaux et magazines, suivre films et émissions, faire un exposé structuré.") },
   { id: 'HSK 6', ready: true, name: () => T("Maîtrise · 5 000 mots"), text: () => T("Comprendre sans effort ce qu’on lit et entend, chengyu et langue écrite soutenue.") },
+];
+
+const DELE_LEVELS = [
+  { id: 'DELE A1', ready: true, name: () => T("Découverte"), text: () => T("Saluer, se présenter, la famille, les nombres, commander à table, demander son chemin, le présent, ser et estar.") },
+  { id: 'DELE A2', ready: false, name: () => T("Survie"), text: () => T("Raconter au passé, comparer, faire des projets, se débrouiller en voyage et dans les situations courantes.") },
+  { id: 'DELE B1', ready: false, name: () => T("Seuil"), text: () => T("Exprimer son opinion, raconter une expérience, le subjonctif présent, comprendre l’essentiel d’un texte courant.") },
+  { id: 'DELE B2', ready: false, name: () => T("Avancé"), text: () => T("Argumenter, débattre, comprendre la presse et des conférences, maîtriser les temps du subjonctif.") },
+  { id: 'DELE C1', ready: false, name: () => T("Autonome"), text: () => T("S’exprimer avec aisance et précision, comprendre des textes longs et exigeants, registre soutenu.") },
+  { id: 'DELE C2', ready: false, name: () => T("Maîtrise"), text: () => T("Tout comprendre sans effort, nuancer finement, jouer avec les registres et les expressions idiomatiques.") },
 ];
 
 const FEATURES = [
