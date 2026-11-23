@@ -1,3 +1,4 @@
+import { useDecor } from '../src/study';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -11,6 +12,7 @@ import { T } from '../src/i18n';
 
 /** Séance de pratique d'un ensemble de caractères (hiragana, groupe « ka »…) ou d'un thème d'expressions. */
 export default function Practice() {
+  const D = useDecor();
   const { kind = 'characters', scope = 'hiragana' } = useLocalSearchParams<{ kind: 'characters' | 'expressions'; scope: string }>();
   const router = useRouter();
   const qc = useQueryClient();
@@ -40,7 +42,7 @@ export default function Practice() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
-          <Text style={{ fontSize: 72, fontWeight: '900', color: C.ko }}>{summary ? '練習' : '空'}</Text>
+          <Text style={{ fontSize: 72, fontWeight: '900', color: C.ko }}>{summary ? D('practice') : D('empty')}</Text>
           <H1>{summary ? T('Séance terminée') : T('Rien à pratiquer ici')}</H1>
           {summary && <P>{T('{0}/{1} bonnes réponses · +{2} XP', [summary.correct, summary.total, summary.xp])}</P>}
         </View>

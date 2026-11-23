@@ -1,3 +1,4 @@
+import { useDecor } from './study';
 import { ReactNode, useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -53,6 +54,7 @@ function FriendRow({ f, children }: { f: FriendDto; children: ReactNode }) {
 
 /** Profil : code à partager, ajout par code, demandes, liste d'amis avec défi et retrait. */
 export function FriendsManager({ code }: { code: string }) {
+  const D = useDecor();
   const router = useRouter();
   const { data } = useFriends();
   const { err, msg, setMsg, refresh, act, challenge } = useFriendActions((id) => router.push(`/duel/${id}`));
@@ -64,7 +66,7 @@ export function FriendsManager({ code }: { code: string }) {
     <Card style={{ gap: 12 }} testID="friends">
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
         <View style={{ width: 52, height: 52, borderRadius: 14, backgroundColor: '#3FA7A0', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff' }}>友</Text>
+          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff' }}>{D('friend')}</Text>
         </View>
         <View style={{ flex: 1 }}>
           <H2>{T('Mes amis')}</H2>
@@ -140,6 +142,7 @@ export function FriendsManager({ code }: { code: string }) {
 
 /** Dojo : les amis à défier (en ligne d'abord) ; ajout et gestion dans le profil. */
 export function FriendsQuick({ onOpen }: { onOpen: (id: string) => void }) {
+  const D = useDecor();
   const router = useRouter();
   const { data } = useFriends();
   const { err, challenge } = useFriendActions(onOpen);
@@ -148,7 +151,7 @@ export function FriendsQuick({ onOpen }: { onOpen: (id: string) => void }) {
     <Card style={{ gap: 12 }} testID="duel-friends">
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
         <View style={{ width: 52, height: 52, borderRadius: 14, backgroundColor: '#3FA7A0', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff' }}>友</Text>
+          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff' }}>{D('friend')}</Text>
         </View>
         <View style={{ flex: 1 }}>
           <H2>{T('Défier un ami')}</H2>

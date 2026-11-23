@@ -9,7 +9,7 @@ import { useAuth } from '../../src/auth';
 import { speak, stopSpeech } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, ErrorBox, H1, Loading, P, Screen } from '../../src/ui';
-import { GAME_GLYPH, KIND_HINT } from '../../src/games';
+import { gameGlyph, KIND_HINT } from '../../src/games';
 import { T, plural } from '../../src/i18n';
 
 type Stage = { kind: 'intro' } | { kind: 'countdown'; game: GameStartDto } | { kind: 'play'; game: GameStartDto; startedAt: number } | { kind: 'finishing' } | { kind: 'done'; result: GameResultDto; info: GameInfoDto };
@@ -78,7 +78,7 @@ export default function GameScreen() {
       <Button label={T('← Mini-jeux')} tone="quiet" onPress={() => router.back()} style={{ alignSelf: 'flex-start' }} />
       <View style={{ alignItems: 'center', gap: 14 }}>
         <View style={{ width: 110, height: 110, borderRadius: 28, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 60, fontWeight: '900', color: C.paper }}>{GAME_GLYPH[info.id]}</Text>
+          <Text style={{ fontSize: 60, fontWeight: '900', color: C.paper }}>{gameGlyph(info.id, me?.preferences.studyLanguage ?? 'ja')}</Text>
         </View>
         <H1 style={{ textAlign: 'center' }}>{info.title}</H1>
         <P style={{ textAlign: 'center', fontSize: 17 }}>{info.description}</P>

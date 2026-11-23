@@ -1,3 +1,4 @@
+import { useDecor } from './StudyLanguage';
 import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { TIMEOUT_ANSWER, fillBlank, hasBlank } from '@koto/learning-engine';
@@ -67,6 +68,7 @@ const isJp = (s: string) => JP_RE.test(s);
 
 /** Sceau « hanko » apposé sur une bonne réponse : le moment signature de l'application. */
 function Hanko({ correct }: { correct: boolean }) {
+  const D = useDecor();
   return (
     <motion.div
       initial={{ scale: 2.2, opacity: 0, rotate: -18 }}
@@ -76,7 +78,7 @@ function Hanko({ correct }: { correct: boolean }) {
       className="jp pointer-events-none flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border-4 text-3xl font-black sm:h-20 sm:w-20 sm:text-4xl"
       style={{ borderColor: correct ? 'var(--ko)' : 'var(--ink-soft)', color: correct ? 'var(--ko)' : 'var(--ink-soft)' }}
     >
-      {correct ? '正' : '惜'}
+      {correct ? D('correct') : D('wrong')}
     </motion.div>
   );
 }
@@ -407,7 +409,7 @@ function Matching({ pairs, disabled, onSubmit, result }: { pairs: { left: string
   return (
     <div className="flex flex-col gap-4">
       <div className="grid grid-cols-2 gap-x-3 gap-y-2">
-        <p className="text-sm font-bold text-ink-soft" id="match-left">{T("Japonais")}</p>
+        <p className="text-sm font-bold text-ink-soft" id="match-left">{{ ja: T("Japonais"), ko: T("Coréen"), en: T("Anglais"), zh: T("Chinois") }[langOf(pairs.left.join(''))]}</p>
         <p className="text-sm font-bold text-ink-soft" id="match-right">{T("Sens")}</p>
         {pairs.left.map((l, i) => {
           const r = pairs.right[i];

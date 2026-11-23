@@ -1,3 +1,4 @@
+import { useDecor } from '../src/study';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -11,6 +12,7 @@ import { T } from '../src/i18n';
 
 /** Séance de révision (aussi ouverte en touchant une notification). */
 export default function ReviewSession() {
+  const D = useDecor();
   const router = useRouter();
   const qc = useQueryClient();
   const [session, setSession] = useState<SessionDto | null>(null);
@@ -30,7 +32,7 @@ export default function ReviewSession() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
-          <Text style={{ fontSize: 72, fontWeight: '900', color: C.ko }}>{summary ? '復習' : '😺'}</Text>
+          <Text style={{ fontSize: 72, fontWeight: '900', color: C.ko }}>{summary ? D('reviewStamp') : '😺'}</Text>
           <H1>{summary ? T('Révision terminée') : T('Aucune révision due')}</H1>
           {summary && <P>{T('{0}/{1} bonnes réponses · +{2} XP', [summary.correct, summary.total, summary.xp])}</P>}
         </View>

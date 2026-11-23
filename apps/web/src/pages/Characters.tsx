@@ -11,7 +11,7 @@ import { MASTERY_COLOR, MASTERY_LABEL } from '../lib/format';
 import { speak } from '../lib/speech';
 import { Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 import { langOf } from '../lib/format';
 
 type SectionSlug = CharacterSectionDto['slug'];
@@ -183,6 +183,7 @@ function CharacterSheet({ c, onClose }: { c: CharacterDto; onClose: () => void }
 
 /** Séance de pratique (/characters/practice/:scope). */
 export function CharacterPracticePage({ me }: { me: MeDto }) {
+  const D = useDecor();
   const { scope = 'hiragana' } = useParams();
   const [session, setSession] = useState<SessionDto | null>(null);
   const [error, setError] = useState<unknown>(null);
@@ -204,7 +205,7 @@ export function CharacterPracticePage({ me }: { me: MeDto }) {
   if (summary || session.questions.length === 0)
     return (
       <div className="flex flex-col items-start gap-5 py-6">
-        <Stamp className="jp text-8xl font-black text-ko">{summary ? '練習' : '空'}</Stamp>
+        <Stamp className="jp text-8xl font-black text-ko">{summary ? D('practice') : D('empty')}</Stamp>
         <h1 className="text-4xl">{summary ? T("Séance terminée") : T("Rien à pratiquer ici")}</h1>
         {summary && <p className="text-lg">{T("{0}/{1} bonnes réponses, +{2} XP", [summary.correct , summary.total , summary.xp ])}</p>}
         <div className="flex flex-wrap gap-3">

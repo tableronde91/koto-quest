@@ -8,7 +8,7 @@ import { speak, speechSupported } from '../lib/speech';
 import { Coins } from './Character';
 import { Confetti, CountUp, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 
 const GLYPH: Record<GameInfoDto['id'], string> = { 'word-rush': 'W', 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', 'hanzi-rush': '字', speed: '走', listening: '耳' };
 const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), 'hanzi-rush': T("caractères"), speed: 'notions', listening: T("kana ou mots") };
@@ -16,6 +16,8 @@ const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kan
 const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api<GamesDto>('/games') });
 
 export function GamesPage() {
+  const D = useDecor();
+  const glyphOf = (id: GameInfoDto['id']) => (id === 'speed' ? D('speed') : id === 'listening' ? D('listening') : GLYPH[id]);
   const { data, isLoading, error, refetch } = useGames();
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
@@ -26,7 +28,7 @@ export function GamesPage() {
         {data.games.map((g) => (
           <li key={g.id} className="flex flex-col gap-3 rounded-3xl border border-line bg-surface p-5">
             <span aria-hidden="true" className="jp flex h-14 w-14 items-center justify-center rounded-2xl text-3xl font-black" style={{ background: g.available ? 'var(--ink)' : 'var(--surface-2)', color: g.available ? 'var(--paper)' : 'var(--ink-soft)' }}>
-              {GLYPH[g.id]}
+              {glyphOf(g.id)}
             </span>
             <h2 className="text-xl">{g.title}</h2>
             <p className="flex-1 text-ink-soft">{g.description}</p>
@@ -50,6 +52,8 @@ export function GamesPage() {
 type Stage = { kind: 'intro' } | { kind: 'countdown'; game: GameStartDto } | { kind: 'play'; game: GameStartDto; startedAt: number } | { kind: 'finishing' } | { kind: 'done'; result: GameResultDto; info: GameInfoDto };
 
 export function GamePlayPage() {
+  const D = useDecor();
+  const glyphOf = (id: GameInfoDto['id']) => (id === 'speed' ? D('speed') : id === 'listening' ? D('listening') : GLYPH[id]);
   const { id = '' } = useParams();
   const { data, isLoading } = useGames();
   const [stage, setStage] = useState<Stage>({ kind: 'intro' });
@@ -98,7 +102,7 @@ export function GamePlayPage() {
   return (
     <div className="flex flex-col items-center gap-5 py-8 text-center">
       <Link to="/games" className="self-start text-ink-soft underline">{T("← Mini-jeux")}</Link>
-      <span aria-hidden="true" className="jp flex h-28 w-28 items-center justify-center rounded-3xl bg-ink text-6xl font-black text-paper">{GLYPH[info.id]}</span>
+      <span aria-hidden="true" className="jp flex h-28 w-28 items-center justify-center rounded-3xl bg-ink text-6xl font-black text-paper">{glyphOf(info.id)}</span>
       <h1 className="text-4xl">{info.title}</h1>
       <p className="max-w-[44ch] text-lg">{info.description}</p>
       <ul className="text-ink-soft">

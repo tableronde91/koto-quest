@@ -9,7 +9,7 @@ import { CountUp, Flame } from '../components/Celebrate';
 import { ErrorBox, PageTitle, Spinner } from '../components/ui';
 import { KIND_LABEL, MASTERY_COLOR, MASTERY_LABEL, formatDuration } from '../lib/format';
 import { Sprout } from '../components/Illustrations';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 import { T, DATE_LOCALE } from '../i18n';
 
 const shortDate = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString(DATE_LOCALE, { day: 'numeric', month: 'short' });
@@ -117,6 +117,7 @@ function Section({ title, glyph, children, id }: { title: string; glyph: string;
 }
 
 export function StatsPage() {
+  const D = useDecor();
   const { data: s, isLoading, error, refetch } = useStats();
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
@@ -155,7 +156,7 @@ export function StatsPage() {
       {/* Fiche du héros */}
       {d && (
         <section aria-label={T("Fiche du héros")} className="relative overflow-hidden rounded-3xl p-5 text-white sm:p-7" style={{ background: 'linear-gradient(135deg,#1F2B57 0%,#3B2F6B 55%,#8E1B26 120%)' }}>
-          <span aria-hidden="true" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[10rem] font-black leading-none opacity-10">冒険</span>
+          <span aria-hidden="true" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[10rem] font-black leading-none opacity-10">{D('adventure')}</span>
           <div className="relative flex flex-wrap items-center justify-between gap-4 sm:gap-5">
             <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} className="overflow-hidden rounded-2xl border-[3px] border-white/80 shadow-lg">
               <Avatar config={d.avatar} size={96} />
@@ -184,7 +185,7 @@ export function StatsPage() {
       )}
 
       {/* Compétences */}
-      <Section title={T("Compétences")} glyph="技">
+      <Section title={T("Compétences")} glyph={D('skills')}>
         <ul className="grid gap-3 sm:grid-cols-2">
           {(words.en ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
@@ -207,7 +208,7 @@ export function StatsPage() {
       </Section>
 
       {/* Jardin de la mémoire */}
-      <Section title={T("Jardin de la mémoire")} glyph="庭">
+      <Section title={T("Jardin de la mémoire")} glyph={D('garden')}>
         {totalCards === 0 ? (
           <div className="flex items-center gap-4 rounded-3xl border-2 border-dashed border-line p-5"><Sprout className="w-20 shrink-0" /><p className="text-ink-soft">{T("Termine une première leçon : chaque notion apprise sera plantée ici et fleurira à force de révisions.")}</p></div>
         ) : (
@@ -238,7 +239,7 @@ export function StatsPage() {
       </Section>
 
       {/* Carnet des 14 derniers jours */}
-      <Section title={T("Carnet de route")} glyph="暦">
+      <Section title={T("Carnet de route")} glyph={D('log')}>
         <p className="mb-3 text-ink-soft">{T("{0} jour{1} d’entraînement sur les 14 derniers{2}.", [activeDays , activeDays > 1 ? 's' : '' , s.accuracy !== null ? T(" · {0} % de bonnes réponses en moyenne", [s.accuracy]) : '' ])}</p>
         <ol className="grid grid-cols-7 gap-2">
           {last14.map((day, i) => {
@@ -260,7 +261,7 @@ export function StatsPage() {
       </Section>
 
       {/* Vitrine des gardiens */}
-      <Section title={T("Gardiens vaincus · {0}/{1}", [defeated, bosses.length])} glyph="勝">
+      <Section title={T("Gardiens vaincus · {0}/{1}", [defeated, bosses.length])} glyph={D('guardians')}>
         <ul className="grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-7">
           {bosses.map((b, i) => (
             <motion.li key={b.slug} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }} className={`flex flex-col items-center rounded-2xl p-2 text-center ${b.defeated ? 'bg-surface shadow-sm' : 'bg-surface-2'}`}>
@@ -277,7 +278,7 @@ export function StatsPage() {
       {/* Succès et tableau d'honneur */}
       <div className="grid gap-4 sm:grid-cols-2">
         <Link to="/achievements" className="flex items-center gap-4 rounded-3xl border border-line bg-surface p-4 hover:border-ink-soft">
-          <span aria-hidden="true" className="jp flex h-14 w-14 items-center justify-center rounded-full bg-gold text-3xl font-black text-[#2a1a00]">賞</span>
+          <span aria-hidden="true" className="jp flex h-14 w-14 items-center justify-center rounded-full bg-gold text-3xl font-black text-[#2a1a00]">{D('award')}</span>
           <span><span className="block text-lg font-bold">{T("Mes succès")}</span><span className="text-sm text-ink-soft">{ach ? T("{0} badge{1} sur {2}", [ach.unlocked, ach.unlocked > 1 ? 's' : '', ach.total]) : T("Badges à débloquer")}</span></span>
         </Link>
         <a href="#examens" className="flex items-center gap-4 rounded-3xl border border-line bg-surface p-4 hover:border-ink-soft">

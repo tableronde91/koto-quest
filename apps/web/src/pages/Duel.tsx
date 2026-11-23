@@ -1,3 +1,4 @@
+import { useDecor, useRankLabel } from '../components/StudyLanguage';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { AnimatePresence, motion, useAnimationControls } from 'motion/react';
@@ -20,6 +21,8 @@ const KIND_LABEL = { ranked: T("Classé"), friendly: T("Amical"), practice: T("E
 // ═══════════════════════════ Dojo (hall des duels) ═══════════════════════════
 
 export function DuelLobbyPage() {
+  const RL = useRankLabel();
+  const D = useDecor();
   const nav = useNavigate();
   const qc = useQueryClient();
   const [params, setParams] = useSearchParams();
@@ -114,7 +117,7 @@ export function DuelLobbyPage() {
           <RankBadge rank={p.rank} size={110} glow />
           <div className="flex w-full flex-1 flex-col gap-2 text-center sm:text-left">
             <p className="text-sm font-bold uppercase tracking-wider opacity-80">{T("Ton rang")}</p>
-            <h2 className="text-3xl leading-tight">{p.rank.label}</h2>
+            <h2 className="text-3xl leading-tight">{RL(p.rank)}</h2>
             <p className="text-lg">
               <span className="font-display text-2xl tabular-nums">{p.rating}</span>{' '}{T("points")}{played > 0 && <span className="opacity-80">{T("· {0}ᵉ sur {1}", [ p.position , p.players])}</span>}
             </p>
@@ -147,7 +150,7 @@ export function DuelLobbyPage() {
 
       {data.activeDuelId && (
         <Link to={`/duel/${data.activeDuelId}`} className="flex items-center gap-3 rounded-3xl border-2 border-ko bg-ko-bg p-4 font-bold">
-          <span aria-hidden="true" className="jp text-3xl text-ko">戦</span>
+          <span aria-hidden="true" className="jp text-3xl text-ko">{D('fight')}</span>
           <span className="flex-1">{T("Un duel est en cours : reviens vite, sinon il sera perdu par abandon.")}</span>
           <span className="btn btn-primary">{T("Reprendre")}</span>
         </Link>
@@ -159,9 +162,9 @@ export function DuelLobbyPage() {
 
       {/* Modes de jeu */}
       <section className="grid gap-4 md:grid-cols-3">
-        <ModeCard glyph="闘" color="#C8323F" title={T("Duel classé")} text={T("Un adversaire de ton niveau, au hasard. Gagne des points pour monter de rang.")} action={T("Trouver un adversaire")} onClick={startSearch} primary />
-        <ModeCard glyph="友" color="#3FA7A0" title={T("Défier un ami")} text={T("Ajoute tes amis, vois qui est en ligne et défie-les en un clic. Duel amical, sans effet sur le classement.")} action={T("Mes amis")} onClick={() => document.getElementById('amis')?.scrollIntoView({ behavior: 'smooth' })} />
-        <ModeCard glyph="浪" color="#7B5BD6" title={T("Entraînement")} text={T("Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.")} action={T("S’entraîner")} onClick={practice} />
+        <ModeCard glyph={D('duel')} color="#C8323F" title={T("Duel classé")} text={T("Un adversaire de ton niveau, au hasard. Gagne des points pour monter de rang.")} action={T("Trouver un adversaire")} onClick={startSearch} primary />
+        <ModeCard glyph={D('friend')} color="#3FA7A0" title={T("Défier un ami")} text={T("Ajoute tes amis, vois qui est en ligne et défie-les en un clic. Duel amical, sans effet sur le classement.")} action={T("Mes amis")} onClick={() => document.getElementById('amis')?.scrollIntoView({ behavior: 'smooth' })} />
+        <ModeCard glyph={D('training')} color="#7B5BD6" title={T("Entraînement")} text={T("Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.")} action={T("S’entraîner")} onClick={practice} />
       </section>
 
       <FriendsChallengeCard lobby={data} onChange={() => qc.invalidateQueries({ queryKey: ['duels'] })} />
@@ -223,6 +226,7 @@ function SearchingOverlay({ since, onCancel, onPractice }: { since: string; onCa
 }
 
 function InviteCard({ invite, onDone }: { invite: DuelLobbyDto['invites'][number]; onDone: () => void }) {
+  const RL = useRankLabel();
   const nav = useNavigate();
   const [err, setErr] = useState<unknown>(null);
   return (
@@ -230,7 +234,7 @@ function InviteCard({ invite, onDone }: { invite: DuelLobbyDto['invites'][number
       <div className="flex flex-1 items-center gap-3">
         <RankBadge rank={invite.player.rank} size={40} />
         <p>
-          <strong>{invite.player.name}</strong> ({invite.player.rank.label}{T(") te défie en duel !")}</p>
+          <strong>{invite.player.name}</strong> ({RL(invite.player.rank)}{T(") te défie en duel !")}</p>
       </div>
       {err != null && <ErrorBox error={err} />}
       <div className="flex gap-2">
@@ -242,6 +246,7 @@ function InviteCard({ invite, onDone }: { invite: DuelLobbyDto['invites'][number
 }
 
 function Leaderboard() {
+  const RL = useRankLabel();
   const [sort, setSort] = useState<'rating' | 'wins'>('rating');
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ['duel-board', sort], queryFn: () => api<DuelLeaderboardDto>(`/duels/leaderboard?sort=${sort}`) });
   return (
@@ -268,7 +273,7 @@ function Leaderboard() {
               <RankBadge rank={e.rank} size={30} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate font-bold">{e.name}{e.me ? ' (toi)' : ''}</span>
-                <span className={`block text-xs ${e.me ? '' : 'text-ink-soft'}`}>{e.rank.label}</span>
+                <span className={`block text-xs ${e.me ? '' : 'text-ink-soft'}`}>{RL(e.rank)}</span>
               </span>
               <span className="text-right text-sm tabular-nums">
                 <strong className="block">{sort === 'wins' ? `${e.wins} V` : T("{0} pts", [e.rating])}</strong>
@@ -284,12 +289,13 @@ function Leaderboard() {
 }
 
 function History({ lobby }: { lobby: DuelLobbyDto }) {
+  const D = useDecor();
   if (lobby.history.length === 0) return <p className="rounded-2xl bg-surface-2 p-4 text-ink-soft">{T("Aucun duel pour l’instant. Ton premier combat t’attend !")}</p>;
   return (
     <ul className="flex flex-col gap-2">
       {lobby.history.map((h) => (
         <li key={h.id} className="flex items-center gap-3 rounded-2xl border border-line bg-surface p-3">
-          <span aria-hidden="true" className={`jp flex h-10 w-10 items-center justify-center rounded-xl text-xl font-black text-white ${h.result === 'win' ? 'bg-ok' : h.result === 'loss' ? 'bg-ko' : 'bg-ink-soft'}`}>{h.result === 'win' ? '勝' : h.result === 'loss' ? '負' : '分'}</span>
+          <span aria-hidden="true" className={`jp flex h-10 w-10 items-center justify-center rounded-xl text-xl font-black text-white ${h.result === 'win' ? 'bg-ok' : h.result === 'loss' ? 'bg-ko' : 'bg-ink-soft'}`}>{h.result === 'win' ? D('win') : h.result === 'loss' ? D('loss') : D('draw')}</span>
           <span className="flex-1">
             <strong>{h.result === 'win' ? T("Victoire") : h.result === 'loss' ? T("Défaite") : T("Égalité")}</strong>{' '}{T("contre")}{' '}{h.opponent}
             <span className="block text-sm text-ink-soft">{T("{0} · {1} · PV {2} – {3}", [KIND_LABEL[h.kind] , h.endReason === 'ko' ? 'K.-O.' : h.endReason === 'forfeit' ? 'abandon' : 'aux points' , h.myHp , h.oppHp])}</span>
@@ -514,6 +520,7 @@ export function DuelArenaPage() {
 
 /** Scène du duel : les deux combattants face à face, leurs PV et les coups échangés. */
 function DuelStage({ s, clash, countdown, onQuit }: { s: DuelStateDto; clash: Clash | null; countdown: number | null; onQuit: () => void }) {
+  const D = useDecor();
   const calm = useCalm();
   const me = useAnimationControls();
   const opp = useAnimationControls();
@@ -608,7 +615,7 @@ function DuelStage({ s, clash, countdown, onQuit }: { s: DuelStateDto; clash: Cl
         {countdown !== null && (
           <motion.div key={countdown} className="absolute inset-0 flex items-center justify-center bg-[rgb(0_0_0/0.25)]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <motion.span initial={{ scale: 2.2, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 18 }} className="font-display text-8xl text-white [text-shadow:0_4px_0_#8E1B26]" aria-live="assertive">
-              {countdown > 0 ? countdown : '始め!'}
+              {countdown > 0 ? countdown : D('start')}
             </motion.span>
           </motion.div>
         )}
@@ -653,6 +660,7 @@ function RevealView({ s }: { s: DuelStateDto }) {
 }
 
 function PendingView({ s, now, onChange }: { s: DuelStateDto; now: number; onChange: () => void }) {
+  const RL = useRankLabel();
   const nav = useNavigate();
   const [err, setErr] = useState<unknown>(null);
   const left = s.expiresAt ? Math.max(0, Math.ceil((Date.parse(s.expiresAt) - now) / 1000)) : 0;
@@ -674,7 +682,7 @@ function PendingView({ s, now, onChange }: { s: DuelStateDto; now: number; onCha
       ) : (
         <>
           <h1 className="text-3xl">{T("{0} te défie !", [s.opponent.name ])}</h1>
-          <p className="text-ink-soft">{T("{0} · {1} points · duel amical", [s.opponent.rank.label , s.opponent.rating ])}</p>
+          <p className="text-ink-soft">{T("{0} · {1} points · duel amical", [RL(s.opponent.rank) , s.opponent.rating ])}</p>
           {err != null && <ErrorBox error={err} />}
           <div className="flex gap-3">
             <button className="btn btn-gold" onClick={async () => { try { await post(`/duels/${s.id}/accept`); onChange(); } catch (e) { setErr(e); } }}>{T("Accepter")}</button>
@@ -687,6 +695,7 @@ function PendingView({ s, now, onChange }: { s: DuelStateDto; now: number; onCha
 }
 
 function ResultView({ s }: { s: DuelStateDto }) {
+  const D = useDecor();
   const nav = useNavigate();
   const qc = useQueryClient();
   const [err, setErr] = useState<unknown>(null);
@@ -714,7 +723,7 @@ function ResultView({ s }: { s: DuelStateDto }) {
   return (
     <div className="flex flex-col items-center gap-5 py-6 text-center">
       {win && <Confetti />}
-      <Stamp className={`jp text-7xl font-black ${win ? 'text-gold' : r.outcome === 'loss' ? 'text-ko' : 'text-ink-soft'}`}>{win ? '勝' : r.outcome === 'loss' ? '負' : '分'}</Stamp>
+      <Stamp className={`jp text-7xl font-black ${win ? 'text-gold' : r.outcome === 'loss' ? 'text-ko' : 'text-ink-soft'}`}>{win ? D('win') : r.outcome === 'loss' ? D('loss') : D('draw')}</Stamp>
       <h1 className="text-4xl">{win ? T("Victoire !") : r.outcome === 'loss' ? T("Défaite") : T("Égalité")}</h1>
       <p className="text-lg text-ink-soft">
         {r.endReason === 'ko' ? (win ? `${s.opponent.name} est K.-O.` : T("Tu es K.-O.")) : r.endReason === 'forfeit' ? (win ? T("{0} a abandonné.", [s.opponent.name]) : T("Tu as abandonné.")) : T("Aux points : {0} PV contre {1}.", [s.me.hp, s.opponent.hp])}

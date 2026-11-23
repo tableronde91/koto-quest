@@ -1,3 +1,4 @@
+import { useDecor, useStudyLang } from '../components/StudyLanguage';
 import { spokenForm } from '@koto/shared';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
@@ -24,6 +25,7 @@ export const useExpressions = () => useQuery({ queryKey: ['expressions'], queryF
 
 /** Recueil d'expressions utiles, classées par thème, avec écoute, usage et entraînement. */
 export function ExpressionsPage() {
+  const words = useStudyLang();
   const { data, isLoading, error, refetch } = useExpressions();
   const [params, setParams] = useSearchParams();
   const [query, setQuery] = useState('');
@@ -44,12 +46,12 @@ export function ExpressionsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageTitle sub={T('Les phrases toutes faites qu’on entend partout au Japon : quand les dire, à qui, et comment les prononcer.')}>{T('Expressions')}</PageTitle>
+      <PageTitle sub={words.pick(T('Les phrases toutes faites qu’on entend partout au Japon : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Corée : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en anglais : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Chine : quand les dire, à qui, et comment les prononcer.'))}>{T('Expressions')}</PageTitle>
 
       <label className="flex items-center gap-3 rounded-2xl border-2 border-line bg-surface px-4 focus-within:border-ink">
         <span aria-hidden="true" className="text-xl">🔎</span>
         <span className="sr-only">{T('Rechercher une expression')}</span>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={T('Rechercher : merci, おねがい, sumimasen…')} className="min-h-12 flex-1 bg-transparent outline-none" />
+        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={words.pick(T('Rechercher : merci, おねがい, sumimasen…'), T('Rechercher : merci, 감사, gamsa…'), T('Rechercher : merci, thank you, sorry…'), T('Rechercher : merci, 谢谢, xièxie…'))} className="min-h-12 flex-1 bg-transparent outline-none" />
         {query && (
           <button type="button" className="text-ink-soft" onClick={() => setQuery('')} aria-label={T('Effacer la recherche')}>
             ✕
@@ -190,6 +192,7 @@ function ExpressionCard({ e, themeTitle }: { e: ExpressionDto; themeTitle?: stri
 
 /** Entraînement sur un thème (/expressions/practice/:theme). */
 export function ExpressionPracticePage({ me }: { me: MeDto }) {
+  const D = useDecor();
   const { theme = 'politesse' } = useParams();
   const [session, setSession] = useState<SessionDto | null>(null);
   const [error, setError] = useState<unknown>(null);
@@ -210,7 +213,7 @@ export function ExpressionPracticePage({ me }: { me: MeDto }) {
   if (summary || session.questions.length === 0)
     return (
       <div className="flex flex-col items-start gap-5 py-6">
-        <Stamp className="jp text-8xl font-black text-ko">{summary ? '会話' : '空'}</Stamp>
+        <Stamp className="jp text-8xl font-black text-ko">{summary ? D('talk') : D('empty')}</Stamp>
         <h1 className="text-4xl">{summary ? T('Séance terminée') : T('Rien à pratiquer ici')}</h1>
         {summary && <p className="text-lg">{T('{0}/{1} bonnes réponses, +{2} XP', [summary.correct, summary.total, summary.xp])}</p>}
         {summary && <p className="max-w-[52ch] text-ink-soft">{T('Ces expressions reviendront dans tes révisions, au moment où tu risques de les oublier.')}</p>}

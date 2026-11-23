@@ -1,3 +1,4 @@
+import { useDecor } from '../components/StudyLanguage';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -43,6 +44,7 @@ export function ReviewsPage() {
 }
 
 export function ReviewSessionPage({ me }: { me: MeDto }) {
+  const D = useDecor();
   const [session, setSession] = useState<SessionDto | null>(null);
   const [error, setError] = useState<unknown>(null);
   const [summary, setSummary] = useState<RunSummary | null>(null);
@@ -58,7 +60,7 @@ export function ReviewSessionPage({ me }: { me: MeDto }) {
   if (summary || session.questions.length === 0)
     return (
       <div className="flex flex-col items-start gap-5 py-6">
-        {summary ? <Stamp className="jp text-8xl font-black text-ko">復習</Stamp> : <SleepingCat className="w-52" />}
+        {summary ? <Stamp className="jp text-8xl font-black text-ko">{D('reviewStamp')}</Stamp> : <SleepingCat className="w-52" />}
         <h1 className="text-4xl">{summary ? T("Révision terminée") : T("Aucune révision due")}</h1>
         {summary && <p className="text-lg">{T("{0}/{1} bonnes réponses · +{2} XP", [summary.correct , summary.total , summary.xp ])}</p>}
         <div className="flex gap-3">

@@ -1,6 +1,7 @@
+import { useDecor, useStudyLang } from '../../src/study';
 import { Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { GAME_GLYPH, KIND_HINT } from '../../src/games';
+import { gameGlyph, KIND_HINT } from '../../src/games';
 import { useGames } from '../../src/hooks';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, Screen } from '../../src/ui';
@@ -9,6 +10,8 @@ import { T, plural } from '../../src/i18n';
 
 /** Mini-jeux : une minute chrono sur les notions déjà rencontrées, sans toucher aux révisions. */
 export default function GamesScreen() {
+  const D = useDecor();
+  const { lang } = useStudyLang();
   const router = useRouter();
   const { data, isLoading, error, refetch } = useGames();
   if (isLoading) return <Loading />;
@@ -19,7 +22,7 @@ export default function GamesScreen() {
       <Card style={{ gap: 10, backgroundColor: '#2A2858', borderColor: '#2A2858' }} testID="duel-card">
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <View style={{ width: 56, height: 56, borderRadius: 16, backgroundColor: C.ko, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 30, fontWeight: '900', color: '#fff' }}>闘</Text>
+            <Text style={{ fontSize: 30, fontWeight: '900', color: '#fff' }}>{D('duel')}</Text>
           </View>
           <View style={{ flex: 1 }}>
             <Text accessibilityRole="header" style={{ fontSize: 19, fontWeight: '800', color: '#fff' }}>{T('Duels')}</Text>
@@ -35,7 +38,7 @@ export default function GamesScreen() {
         <Card key={g.id} style={{ gap: 10 }} testID="game-card">
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
             <View style={{ width: 56, height: 56, borderRadius: 16, backgroundColor: g.available ? C.ink : C.surface2, alignItems: 'center', justifyContent: 'center' }}>
-              <Text style={{ fontSize: 30, fontWeight: '900', color: g.available ? C.paper : C.inkSoft }}>{GAME_GLYPH[g.id]}</Text>
+              <Text style={{ fontSize: 30, fontWeight: '900', color: g.available ? C.paper : C.inkSoft }}>{gameGlyph(g.id, lang)}</Text>
             </View>
             <View style={{ flex: 1 }}>
               <Text accessibilityRole="header" style={{ fontSize: 19, fontWeight: '800', color: C.ink }}>{g.title}</Text>

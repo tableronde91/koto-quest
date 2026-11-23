@@ -8,7 +8,7 @@ import { Medal } from '../components/Achievements';
 import { ErrorBox, ProgressBar, Spinner } from '../components/ui';
 import { formatDuration } from '../lib/format';
 import { T, DATE_LOCALE } from '../i18n';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 import { ReadingTodayCard } from './Reading';
 import { languageOfLevel, levelLabel } from '@koto/shared';
 import { studyWords } from '../components/StudyLanguage';
@@ -22,6 +22,7 @@ function greeting(lang: 'ja' | 'ko' | 'en' | 'zh') {
 }
 
 export function DashboardPage() {
+  const D = useDecor();
   const { data: d, isLoading, error, refetch } = useDashboard();
   const { ko, en, zh } = useStudyLang();
   if (isLoading) return <Spinner />;
@@ -43,7 +44,7 @@ export function DashboardPage() {
             <Coins value={d.coins} />
           </Link>
           <div className="flex items-center gap-1 md:hidden">
-          <Link to="/profile" className="jp rounded-full p-2 text-xl font-black leading-none text-ink-soft hover:bg-surface-2" aria-label={T("Profil")}>人</Link>
+          <Link to="/profile" className="jp rounded-full p-2 text-xl font-black leading-none text-ink-soft hover:bg-surface-2" aria-label={T("Profil")}>{D('me')}</Link>
           <Link to="/settings" className="rounded-full p-2 text-ink-soft hover:bg-surface-2" aria-label={T("Réglages")}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" /><path d="M19 12a7 7 0 00-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 00-2-1.2L14 3h-4l-.5 2.6a7 7 0 00-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 005 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 002 1.2L10 21h4l.5-2.6a7 7 0 002-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /></svg>
           </Link>
@@ -64,7 +65,7 @@ export function DashboardPage() {
       {/* Action principale : une seule chose à faire maintenant */}
       <section aria-label={T("Prochaine étape")} className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-8">
         <span aria-hidden="true" className="jp pointer-events-none absolute -right-4 -top-10 select-none text-[11rem] font-black leading-none opacity-10">
-          {en ? (hasReviews ? '↺' : 'Aa') : zh ? (hasReviews ? '复' : '学') : hasReviews ? '復' : '学'}
+          {hasReviews ? D('review') : D('learn')}
         </span>
         {hasReviews ? (
           <>
@@ -132,7 +133,7 @@ export function DashboardPage() {
             {d.quests.map((q) => (
               <li key={q.id} className="flex items-center gap-4 rounded-2xl border border-line bg-surface p-4">
                 <span aria-hidden="true" className="jp flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-bold" style={{ background: q.done ? 'var(--gold)' : 'var(--surface-2)', color: q.done ? '#2a1a00' : 'var(--ink-soft)' }}>
-                  {q.done ? '済' : '・'}
+                  {q.done ? D('questDone') : D('questTodo')}
                 </span>
                 <div className="flex-1">
                   <p className="font-bold">{q.title}</p>

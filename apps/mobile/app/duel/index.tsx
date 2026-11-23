@@ -1,3 +1,4 @@
+import { useDecor, useRankLabel } from '../../src/study';
 import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -18,6 +19,8 @@ const KIND = { ranked: 'Classé', friendly: 'Amical', practice: 'Entraînement' 
 
 /** Dojo des duels : rang, duel classé, entraînement contre un rōnin, amis, historique et classement. */
 export default function DuelLobbyScreen() {
+  const RL = useRankLabel();
+  const D = useDecor();
   const router = useRouter();
   const qc = useQueryClient();
   const { data, isLoading, error, refetch } = useDuelLobby();
@@ -110,7 +113,7 @@ export default function DuelLobbyScreen() {
           <RankBadge rank={p.rank} size={72} />
           <View style={{ flex: 1, gap: 4 }}>
             <Text style={{ color: '#ffffffbb', fontSize: 12, fontWeight: '800', letterSpacing: 1 }}>{T('Ton rang').toUpperCase()}</Text>
-            <Text style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{p.rank.label}</Text>
+            <Text style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{RL(p.rank)}</Text>
             <Text style={{ color: '#fff', fontSize: 15 }}>
               {p.rating} {T('points')}{played > 0 ? ' ' + T('· {0}ᵉ sur {1}', [p.position, p.players]) : ''}
             </Text>
@@ -155,8 +158,8 @@ export default function DuelLobbyScreen() {
         </Card>
       ) : (
         <>
-          <Mode glyph="闘" color={C.ko} title={T('Duel classé')} text={T('Un adversaire de ton niveau, au hasard. Gagne des points pour monter de rang.')} action={T('Trouver un adversaire')} onPress={startSearch} gold />
-          <Mode glyph="浪" color="#7B5BD6" title={T('Entraînement')} text={T('Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.')} action={T('S’entraîner')} onPress={practice} testID="duel-practice" />
+          <Mode glyph={D('duel')} color={C.ko} title={T('Duel classé')} text={T('Un adversaire de ton niveau, au hasard. Gagne des points pour monter de rang.')} action={T('Trouver un adversaire')} onPress={startSearch} gold />
+          <Mode glyph={D('training')} color="#7B5BD6" title={T('Entraînement')} text={T('Contre un rōnin (IA) de ton niveau. Idéal pour apprendre le rythme.')} action={T('S’entraîner')} onPress={practice} testID="duel-practice" />
         </>
       )}
 

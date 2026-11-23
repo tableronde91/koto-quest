@@ -1,3 +1,5 @@
+import { duelTierGlyph } from '@koto/shared';
+import { useStudyLang, useRankLabel } from './StudyLanguage';
 import { motion } from 'motion/react';
 import type { DuelRankDto } from '@koto/shared';
 import { useCalm } from './Celebrate';
@@ -5,16 +7,19 @@ import { T } from '../i18n';
 
 /** Écusson de rang : blason à la couleur du rang, idéogramme et division (I à III). */
 export function RankBadge({ rank, size = 64, glow = false }: { rank: DuelRankDto; size?: number; glow?: boolean }) {
+  const RL = useRankLabel();
+  const { lang } = useStudyLang();
+  const jp = duelTierGlyph(rank.tierId, rank.jp, lang);
   const calm = useCalm();
   const division = /\b(I{1,3})$/.exec(rank.label)?.[1] ?? '';
-  const jpSize = rank.jp.length >= 3 ? 20 : rank.jp.length === 2 ? 25 : 34;
+  const jpSize = jp.length >= 3 ? 20 : jp.length === 2 ? 25 : 34;
   return (
     <motion.svg
       viewBox="0 0 80 92"
       width={size}
       height={(size * 92) / 80}
       role="img"
-      aria-label={T("Rang {0}", [rank.label])}
+      aria-label={T("Rang {0}", [RL(rank)])}
       animate={glow && !calm ? { filter: [`drop-shadow(0 0 0px ${rank.color})`, `drop-shadow(0 0 10px ${rank.color})`, `drop-shadow(0 0 0px ${rank.color})`] } : undefined}
       transition={{ duration: 2.2, repeat: Infinity }}
     >
@@ -22,7 +27,7 @@ export function RankBadge({ rank, size = 64, glow = false }: { rank: DuelRankDto
       <path d="M40 9 L67 19 L65 51 Q60 70 40 82 Q20 70 15 51 L13 19Z" fill="none" stroke="#FFFFFF" strokeOpacity="0.55" strokeWidth="1.6" />
       {rank.tierId === 'tenka' && <path d="M24 6 L30 0 L36 6 L40 0 L44 6 L50 0 L56 6" fill="none" stroke="#F2C14E" strokeWidth="3" strokeLinejoin="round" />}
       <text x="40" y={division ? 48 : 54} textAnchor="middle" fontSize={jpSize} fontWeight="900" fontFamily="'Noto Sans JP', sans-serif" stroke="#1B2550" strokeWidth="3" strokeLinejoin="round" style={{ fill: '#FFFFFF', paintOrder: 'stroke' }}>
-        {rank.jp}
+        {jp}
       </text>
       {division && (
         <text x="40" y="70" textAnchor="middle" fontSize="13" fontWeight="900" fill="#FFFFFF" fontFamily="serif" letterSpacing="1">
@@ -54,6 +59,7 @@ export function CrossedSwords({ size = 96, spin = false }: { size?: number; spin
 
 /** Plaque de vie d'un duelliste. */
 export function HpPlate({ name, rank, hp, max, combo, align = 'left', answered }: { name: string; rank: DuelRankDto; hp: number; max: number; combo: number; align?: 'left' | 'right'; answered?: boolean }) {
+  const RL = useRankLabel();
   const pct = Math.max(0, Math.min(100, (hp / max) * 100));
   const tone = pct <= 25 ? 'var(--ko)' : pct <= 50 ? 'var(--gold)' : 'var(--ok)';
   return (
@@ -62,7 +68,7 @@ export function HpPlate({ name, rank, hp, max, combo, align = 'left', answered }
         <span className="hidden shrink-0 sm:block"><RankBadge rank={rank} size={26} /></span>
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-bold leading-tight">{name}</p>
-          <p className="truncate text-[11px] leading-tight opacity-75">{rank.label}</p>
+          <p className="truncate text-[11px] leading-tight opacity-75">{RL(rank)}</p>
         </div>
       </div>
       <div className="relative h-3 w-full overflow-hidden rounded-full bg-[#E3DED4]" role="progressbar" aria-label={T("Vie de {0}", [name])} aria-valuenow={hp} aria-valuemin={0} aria-valuemax={max}>

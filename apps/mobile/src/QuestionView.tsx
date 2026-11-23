@@ -1,3 +1,4 @@
+import { useDecor } from './study';
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import * as Haptics from 'expo-haptics';
@@ -27,6 +28,7 @@ function vibrate(ok: boolean) {
 
 /** Un exercice émis par le serveur : réponse envoyée, correction reçue (la bonne réponse n'est jamais connue avant). */
 export function QuestionView({ q, onDone, onResult, continueLabel = T('Continuer'), willRetry = false }: { q: IssuedQuestionDto; onDone: (r: AnswerResultDto) => void; onResult?: (r: AnswerResultDto) => void; continueLabel?: string | ((r: AnswerResultDto) => string); willRetry?: boolean }) {
+  const D = useDecor();
   const [result, setResult] = useState<AnswerResultDto | null>(null);
   const [given, setGiven] = useState<string | string[] | null>(null);
   const [pending, setPending] = useState(false);
@@ -147,7 +149,7 @@ export function QuestionView({ q, onDone, onResult, continueLabel = T('Continuer
         <View accessibilityLiveRegion="polite" style={{ backgroundColor: result.correct ? C.okBg : C.koBg, borderRadius: 18, padding: 16, gap: 8 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
             <View style={{ width: 52, height: 52, borderRadius: 10, borderWidth: 3, borderColor: result.correct ? C.ko : C.ink, alignItems: 'center', justifyContent: 'center', transform: [{ rotate: '-8deg' }] }}>
-              <Text style={{ fontSize: 26, fontWeight: '900', color: result.correct ? C.ko : C.ink }}>{result.correct ? '正' : '惜'}</Text>
+              <Text style={{ fontSize: 26, fontWeight: '900', color: result.correct ? C.ko : C.ink }}>{result.correct ? D('correct') : D('wrong')}</Text>
             </View>
             <View style={{ flex: 1 }}>
               <Text style={{ fontSize: 18, fontWeight: '800', color: C.ink }}>{result.correct ? T('Bonne réponse !') : T('Pas tout à fait.')}</Text>

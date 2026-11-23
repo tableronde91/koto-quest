@@ -1,3 +1,5 @@
+import type { DecorKey } from '@koto/shared';
+import { useDecor } from '../../src/study';
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -9,7 +11,7 @@ import { C } from '../../src/theme';
 import { ErrorBox, Loading, P, Screen, Seal } from '../../src/ui';
 import { T } from '../../src/i18n';
 
-const STATUS_GLYPH: Record<PathLessonDto['status'], string> = { completed: '済', in_progress: '進', available: '道', locked: '錠' };
+const STATUS_GLYPH: Record<PathLessonDto['status'], DecorKey> = { completed: 'completed', in_progress: 'inProgress', available: 'open', locked: 'locked' };
 
 const worldDone = (w: PathWorldDto) => (w.exam && w.progress.total === 0 ? w.exam.passed : w.boss ? w.boss.defeated : w.progress.total > 0 && w.progress.completed === w.progress.total);
 
@@ -80,6 +82,7 @@ export default function PathScreen() {
 }
 
 function Island({ w, color, onLesson, onBoss, onExam }: { w: PathWorldDto; color: string; onLesson: (slug: string) => void; onBoss: () => void; onExam: () => void }) {
+  const D = useDecor();
   const lessons = w.chapters.flatMap((c) => c.lessons);
   const ch = storyChapter(w.slug);
   const done = !w.comingSoon && worldDone(w);
@@ -96,7 +99,7 @@ function Island({ w, color, onLesson, onBoss, onExam }: { w: PathWorldDto; color
         {ch && (
           <View style={{ borderLeftWidth: 4, borderLeftColor: color, backgroundColor: C.surface2, borderRadius: 10, padding: 10, gap: 6, marginBottom: 6 }}>
             <P style={{ lineHeight: 23 }}>{ch.intro}</P>
-            {done && <P style={{ fontWeight: '800', color }}>済 {ch.outro}</P>}
+            {done && <P style={{ fontWeight: '800', color }}>{D('questDone')} {ch.outro}</P>}
           </View>
         )}
         <P soft>{w.description}</P>
@@ -106,7 +109,7 @@ function Island({ w, color, onLesson, onBoss, onExam }: { w: PathWorldDto; color
           return (
             <Pressable key={l.slug} accessibilityRole="button" accessibilityLabel={`${l.title}, ${locked ? T('verrouillée') : l.status === 'completed' ? T('terminée') : T('disponible')}`} disabled={locked} onPress={() => onLesson(l.slug)} style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 8, opacity: locked ? 0.55 : 1 }}>
               <View style={{ width: 44, height: 44, borderRadius: 22, borderWidth: 3, borderColor: locked ? C.line : C.ink, backgroundColor: l.status === 'completed' ? C.ok : l.status === 'available' || l.status === 'in_progress' ? C.gold : C.surface2, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontWeight: '900', color: l.status === 'completed' ? '#fff' : C.ink }}>{STATUS_GLYPH[l.status]}</Text>
+                <Text style={{ fontWeight: '900', color: l.status === 'completed' ? '#fff' : C.ink }}>{D(STATUS_GLYPH[l.status])}</Text>
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={{ fontWeight: '700', color: C.ink, fontSize: 16 }}>{l.title}</Text>
@@ -126,7 +129,7 @@ function Island({ w, color, onLesson, onBoss, onExam }: { w: PathWorldDto; color
         )}
         {w.exam && (
           <Pressable accessibilityRole="button" accessibilityLabel={T('Examen blanc : {0}', [w.title])} onPress={onExam} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 6, padding: 12, borderRadius: 14, backgroundColor: '#FBEFD9', borderWidth: 2, borderColor: C.gold }}>
-            <Text style={{ fontSize: 22, fontWeight: '900', color: C.ko }}>模試</Text>
+            <Text style={{ fontSize: 22, fontWeight: '900', color: C.ko }}>{D('mockExam')}</Text>
             <View style={{ flex: 1 }}>
               <Text style={{ color: C.ink, fontWeight: '800' }}>{T('Passer l’examen blanc')}</Text>
               <Text style={{ color: C.inkSoft, fontSize: 13 }}>{w.exam.attempts ? T('Meilleur score : {0} %', [w.exam.bestPercent]) + (w.exam.passed ? T(', seuil atteint') : '') : T('Chronométré, non officiel')}</Text>

@@ -1,3 +1,4 @@
+import { useDecor } from '../../src/study';
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -14,6 +15,7 @@ const KIND: Record<string, string> = { kana: 'Kana', vocabulary: 'Vocabulaire', 
 type Stage = 'intro' | 'quiz' | 'completing' | 'mini' | 'done';
 
 export default function LessonScreen() {
+  const D = useDecor();
   const { slug = '' } = useLocalSearchParams<{ slug: string }>();
   const router = useRouter();
   const qc = useQueryClient();
@@ -63,7 +65,7 @@ export default function LessonScreen() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
-          <Text style={{ fontSize: 80, fontWeight: '900', color: C.ko }}>{completion.perfect ? '満点' : '完了'}</Text>
+          <Text style={{ fontSize: 80, fontWeight: '900', color: C.ko }}>{completion.perfect ? D('perfect') : D('done')}</Text>
           <H1>{completion.perfect ? T('Sans faute !') : T('Leçon terminée')}</H1>
           <P style={{ textAlign: 'center' }}>{T('{0} : {1}/{2} bonnes réponses ({3} %)', [lesson.title, completion.correct, completion.total, completion.score])}{mini ? T(', mini-révision {0}/{1}', [mini.correct, mini.total]) : ''}.</P>
           <Text style={{ color: C.goldInk, fontWeight: '800', fontSize: 16, textAlign: 'center' }}>

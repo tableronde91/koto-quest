@@ -643,7 +643,7 @@ const SPECIES: Record<string, Species> = {
     back: <path d="M30 170 Q10 120 60 110 Q20 96 40 70" stroke="#B08A34" strokeWidth="22" fill="none" strokeLinecap="round" />,
     under: <>{[[72, 132], [100, 142], [128, 132], [86, 156], [114, 156]].map(([x, y], i) => <path key={i} d={`M${x - 8} ${y} q8 -6 16 0`} stroke="#A57E22" strokeWidth="3" fill="none" />)}</>,
     face: <path d="M100 110 v10 M100 120 l-6 6 M100 120 l6 6" stroke="#C8323F" strokeWidth="3" strokeLinecap="round" />,
-    front: <>{[[60, 176], [140, 176]].map(([x, y], i) => <g key={i} transform={`translate(${x} ${y})`}><path d="M-14 0 Q-16 -18 0 -20 Q16 -18 14 0Z" fill="#E9D9B0" stroke="#A8987A" strokeWidth="2" /><text x="0" y="-5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#8A3A2A">米</text></g>)}</>,
+    front: <>{[[60, 176], [140, 176]].map(([x, y], i) => <g key={i} transform={`translate(${x} ${y})`}><path d="M-14 0 Q-16 -18 0 -20 Q16 -18 14 0Z" fill="#E9D9B0" stroke="#A8987A" strokeWidth="2" /><text x="0" y="-5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#8A3A2A">쌀</text></g>)}</>,
   },
   // Yagwanggwi : petit fantôme du Nouvel An qui vole les souliers
   야: {

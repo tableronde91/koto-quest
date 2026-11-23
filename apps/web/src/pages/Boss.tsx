@@ -1,3 +1,4 @@
+import { useDecor } from '../components/StudyLanguage';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { storyChapter, type StoryChapter } from '../lib/story';
@@ -286,6 +287,7 @@ function Fight({ fight, furigana, avatar, onEnd }: { fight: BossFightDto; furiga
 }
 
 function Outcome({ boss, outcome, onRetry, chapter }: { boss: WorldBossDto; outcome: BossOutcomeDto; onRetry: () => void; chapter: StoryChapter | null }) {
+  const D = useDecor();
   const won = outcome.state === 'won';
   const calm = useCalm();
   return (
@@ -308,7 +310,7 @@ function Outcome({ boss, outcome, onRetry, chapter }: { boss: WorldBossDto; outc
           <motion.span aria-hidden="true" className="absolute right-0 top-2 text-3xl" animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}>💫</motion.span>
         )}
       </div>
-      <Stamp className="jp text-6xl font-black text-ko">{won ? '勝利' : '敗北'}</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{won ? D('victory') : D('defeat')}</Stamp>
       <h1 className="text-4xl">{won ? `${boss.name} est vaincu !` : T("Le gardien résiste…")}</h1>
       {won && chapter && <p className="max-w-[46ch] rounded-2xl border border-line bg-surface px-5 py-3 text-lg">{chapter.outro}</p>}
       <p className="text-lg">{T("{0} coup{1} porté{2}, {3} cœur{4} restant{5}.", [ outcome.hits , outcome.hits > 1 ? 's' : '' , outcome.hits > 1 ? 's' : '' , outcome.heartsLeft , outcome.heartsLeft > 1 ? 's' : '' , outcome.heartsLeft > 1 ? 's' : '' ])}</p>

@@ -1,3 +1,4 @@
+import { useDecor } from '../src/study';
 import { ReactNode } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -83,6 +84,7 @@ function duration(seconds: number) {
 
 /** Mon aventure : fiche du héros, compétences, jardin de la mémoire, carnet de route, examens. */
 export default function Progress() {
+  const D = useDecor();
   const { ko, en, zh } = useStudyLang();
   const router = useRouter();
   const stats = useQuery({ queryKey: ['stats'], queryFn: () => api<StatsDto>('/stats') });
@@ -109,7 +111,7 @@ export default function Progress() {
 
       {/* Fiche du héros */}
       <View testID="hero" style={{ backgroundColor: '#2A2858', borderRadius: 24, padding: 18, gap: 14, overflow: 'hidden' }}>
-        <Text style={{ position: 'absolute', right: -10, top: -30, fontSize: 120, fontWeight: '900', color: '#fff', opacity: 0.08 }}>冒険</Text>
+        <Text style={{ position: 'absolute', right: -10, top: -30, fontSize: 120, fontWeight: '900', color: '#fff', opacity: 0.08 }}>{D('adventure')}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
           <View style={{ borderRadius: 18, overflow: 'hidden', borderWidth: 3, borderColor: '#ffffffcc' }}>
             <Avatar config={d.avatar} size={80} />
@@ -143,7 +145,7 @@ export default function Progress() {
       </View>
 
       {/* Compétences */}
-      <Section glyph="技" title={T('Compétences')}>
+      <Section glyph={D('skills')} title={T('Compétences')}>
         {(en ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k) => {
           const v = s.byKind[k.kind];
           const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
@@ -167,7 +169,7 @@ export default function Progress() {
       </Section>
 
       {/* Jardin de la mémoire */}
-      <Section glyph="庭" title={T('Jardin de la mémoire')}>
+      <Section glyph={D('garden')} title={T('Jardin de la mémoire')}>
         {totalCards === 0 ? (
           <P soft>{T('Termine une première leçon : chaque notion apprise sera plantée ici et fleurira à force de révisions.')}</P>
         ) : (
@@ -199,7 +201,7 @@ export default function Progress() {
       </Section>
 
       {/* Carnet de route : 14 derniers jours */}
-      <Section glyph="暦" title={T('Carnet de route')}>
+      <Section glyph={D('log')} title={T('Carnet de route')}>
         <P soft style={{ fontSize: 14 }}>
           {T('{0} jour(s) d’entraînement sur les 14 derniers', [activeDays])}
           {s.accuracy !== null ? T(' · {0} % de bonnes réponses en moyenne', [s.accuracy]) : ''}
@@ -213,7 +215,7 @@ export default function Progress() {
                 <View accessibilityLabel={on ? T('{0} réponses, {1} XP', [day.answers, day.xp]) : T('pas d’entraînement')} style={{ alignItems: 'center', gap: 2, borderWidth: 2, borderColor: today ? C.ink : C.line, borderRadius: 12, paddingVertical: 6, backgroundColor: on ? C.surface : C.surface2 }}>
                   <Text style={{ fontSize: 9, color: C.inkSoft }}>{new Date(`${day.date}T12:00:00`).toLocaleDateString(dateLocale(), { weekday: 'short' }).replace('.', '')}</Text>
                   {on ? (
-                    <Text style={{ fontSize: 13, fontWeight: '900', color: C.ko, borderWidth: 2, borderColor: C.ko, borderRadius: 5, paddingHorizontal: 2, transform: [{ rotate: '-6deg' }] }}>済</Text>
+                    <Text style={{ fontSize: 13, fontWeight: '900', color: C.ko, borderWidth: 2, borderColor: C.ko, borderRadius: 5, paddingHorizontal: 2, transform: [{ rotate: '-6deg' }] }}>{D('completed')}</Text>
                   ) : (
                     <View style={{ width: 22, height: 22, borderRadius: 5, borderWidth: 2, borderStyle: 'dashed', borderColor: C.line }} />
                   )}
@@ -228,7 +230,7 @@ export default function Progress() {
       {/* Succès */}
       <Pressable accessibilityRole="button" accessibilityLabel={T('Mes succès')} onPress={() => router.push('/achievements')} style={{ flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: C.line, borderRadius: 20, backgroundColor: C.surface, padding: 12 }}>
         <View style={{ width: 52, height: 52, borderRadius: 26, backgroundColor: C.gold, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 28, fontWeight: '900', color: '#2a1a00' }}>賞</Text>
+          <Text style={{ fontSize: 28, fontWeight: '900', color: '#2a1a00' }}>{D('award')}</Text>
         </View>
         <View style={{ flex: 1 }}>
           <Text style={{ fontWeight: '800', fontSize: 17, color: C.ink }}>{T('Mes succès')}</Text>
@@ -238,7 +240,7 @@ export default function Progress() {
       </Pressable>
 
       {/* Examens blancs */}
-      <Section glyph="試" title={T('Examens blancs')}>
+      <Section glyph={D('exam')} title={T('Examens blancs')}>
         {s.exams.length === 0 ? (
           <P soft>{zh ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours HSK 1.') : en ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours A1.') : ko ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours TOPIK 1.') : T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.')}</P>
         ) : (

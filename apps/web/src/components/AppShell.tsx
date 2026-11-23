@@ -1,3 +1,4 @@
+import { decor, type DecorKey } from '@koto/shared';
 import { ReactNode, useEffect, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router';
 import { AnimatePresence, motion } from 'motion/react';
@@ -51,7 +52,8 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
   // L'onglet Caractères suit la langue étudiée (kana ou hangeul).
   const words = studyWords(me.preferences.studyLanguage ?? 'ja');
   // L'anglais n'a pas d'onglet d'écriture : seulement les expressions
-  const nav = NAV.filter((n) => n.to !== '/characters' || words.hasCharacters).map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : n));
+  const navGlyph: Record<string, DecorKey> = { '/expressions': 'phrases', '/lecture': 'read', '/duel': 'duel', '/profile': 'me' };
+  const nav = NAV.filter((n) => n.to !== '/characters' || words.hasCharacters).map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : navGlyph[n.to] ? { ...n, glyph: decor(navGlyph[n.to], words.lang) } : n));
   const immersive = /^\/(lesson|quiz|boss|games|exam|duel)\//.test(location.pathname) || location.pathname === '/placement' || location.pathname === '/reviews/session' || location.pathname.startsWith('/characters/practice') || location.pathname.startsWith('/expressions/practice');
 
   return (

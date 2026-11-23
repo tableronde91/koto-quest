@@ -6,13 +6,14 @@ import { C } from '../../src/theme';
 import { H1, P, Screen } from '../../src/ui';
 import { T, plural } from '../../src/i18n';
 import { MOCK_EXAM } from '../../src/exams';
-import { useStudyLang } from '../../src/study';
+import { useDecor, useStudyLang } from '../../src/study';
 import { examLevelLabel } from '@koto/shared';
 
 interface Tile { href: string; glyph: string; color: string; title: string; text: string; badge?: string | null; testID?: string }
 
 /** Apprendre : toutes les façons d'étudier, chacune expliquée en une phrase. */
 export default function Learn() {
+  const D = useDecor();
   const router = useRouter();
   const { me } = useAuth();
   const w = useStudyLang();
@@ -22,14 +23,14 @@ export default function Learn() {
   const level = me?.preferences.targetLevel ?? 'N5';
 
   const daily: Tile[] = [
-    { href: '/reviews', glyph: '復', color: C.gold, title: T('Révisions'), text: due ? T('Les notions que tu risques d’oublier, au bon moment.') : T('Rien à réviser pour l’instant : reviens plus tard.'), badge: due ? plural(due, '{0} à revoir', '{0} à revoir') : null, testID: 'learn-reviews' },
-    { href: '/reading', glyph: '読', color: '#3F8F5B', title: T('Lecture'), text: w.en ? T('Des contes et légendes en anglais simple, un chapitre par jour.') : w.zh ? T('Des contes chinois en chinois simple, un chapitre par jour.') : w.ko ? T('Des contes coréens en coréen simple, un chapitre par jour.') : T('Des contes japonais en japonais simple, un chapitre par jour.'), badge: reading?.today.state === 'new' ? T('Chapitre du jour') : null },
+    { href: '/reviews', glyph: D('review'), color: C.gold, title: T('Révisions'), text: due ? T('Les notions que tu risques d’oublier, au bon moment.') : T('Rien à réviser pour l’instant : reviens plus tard.'), badge: due ? plural(due, '{0} à revoir', '{0} à revoir') : null, testID: 'learn-reviews' },
+    { href: '/reading', glyph: D('read'), color: '#3F8F5B', title: T('Lecture'), text: w.en ? T('Des contes et légendes en anglais simple, un chapitre par jour.') : w.zh ? T('Des contes chinois en chinois simple, un chapitre par jour.') : w.ko ? T('Des contes coréens en coréen simple, un chapitre par jour.') : T('Des contes japonais en japonais simple, un chapitre par jour.'), badge: reading?.today.state === 'new' ? T('Chapitre du jour') : null },
   ];
   const study: Tile[] = [
     { href: '/kana', glyph: w.charsGlyph, color: '#E36A3A', title: w.charsTitle, text: w.en ? T('Les expressions idiomatiques et les verbes à particule du quotidien.') : w.zh ? T('Les caractères chinois et les expressions du quotidien.') : w.ko ? T('Le hangeul, les expressions du quotidien et les proverbes.') : T('Les grilles d’écriture et les expressions du quotidien.') },
-    { href: '/prepa', glyph: '試', color: C.seal, title: w.workshop, text: T('S’entraîner épreuve par épreuve, au format de l’examen.') },
-    { href: `/exam/${MOCK_EXAM[level] ?? 'n5-jlpt'}?title=${encodeURIComponent(T('Examen blanc {0}', [examLevelLabel(level)]))}`, glyph: '験', color: '#4F5DB8', title: T('Examen blanc {0}', [examLevelLabel(level)]), text: T('Toutes les épreuves, chronométrées, notées comme le vrai.') },
-    { href: '/placement', glyph: '診', color: '#7B5BD6', title: T('Test de niveau'), text: w.en ? T('Tu connais déjà un peu d’anglais ? Saute ce que tu sais.') : w.zh ? T('Tu connais déjà un peu de chinois ? Saute ce que tu sais.') : w.ko ? T('Tu connais déjà un peu de coréen ? Saute ce que tu sais.') : T('Tu connais déjà un peu de japonais ? Saute ce que tu sais.') },
+    { href: '/prepa', glyph: D('exam'), color: C.seal, title: w.workshop, text: T('S’entraîner épreuve par épreuve, au format de l’examen.') },
+    { href: `/exam/${MOCK_EXAM[level] ?? 'n5-jlpt'}?title=${encodeURIComponent(T('Examen blanc {0}', [examLevelLabel(level)]))}`, glyph: D('mockExam'), color: '#4F5DB8', title: T('Examen blanc {0}', [examLevelLabel(level)]), text: T('Toutes les épreuves, chronométrées, notées comme le vrai.') },
+    { href: '/placement', glyph: D('placement'), color: '#7B5BD6', title: T('Test de niveau'), text: w.en ? T('Tu connais déjà un peu d’anglais ? Saute ce que tu sais.') : w.zh ? T('Tu connais déjà un peu de chinois ? Saute ce que tu sais.') : w.ko ? T('Tu connais déjà un peu de coréen ? Saute ce que tu sais.') : T('Tu connais déjà un peu de japonais ? Saute ce que tu sais.') },
   ];
 
   return (

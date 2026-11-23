@@ -749,3 +749,4 @@ export interface ReadingResultDto {
 }
 
 export * from './toeicScenes';
+export * from './decor';

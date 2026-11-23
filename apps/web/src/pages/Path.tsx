@@ -13,7 +13,7 @@ import { EXAMS } from '@koto/learning-engine';
 import { T } from '../i18n';
 import { sagaFor, storyChapter, type Saga } from '../lib/story';
 import { languageInfo, languageOfLevel, levelLabel } from '@koto/shared';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 
 /** Parcours : chemin vertical de « pierres » (inspiré du sugoroku), une par leçon. */
 const LEVEL_KEY = 'koto-path-level';
@@ -26,6 +26,7 @@ function storedLevel(): string | null {
 }
 
 export function PathPage() {
+  const D = useDecor();
   const [params, setParams] = useSearchParams();
   const { data: me } = useMe();
   const words = useStudyLang();
@@ -117,7 +118,7 @@ export function PathPage() {
                 <p>{ch.intro}</p>
                 {done && (
                   <p className="mt-2 font-bold" style={{ color: saga.color }}>
-                    <span aria-hidden="true" className="jp mr-2">済</span>
+                    <span aria-hidden="true" className="jp mr-2">{D('questDone')}</span>
                     {ch.outro}
                   </p>
                 )}
@@ -140,7 +141,7 @@ export function PathPage() {
             {w.boss && <BossStone worldSlug={w.slug} boss={w.boss} />}
             {w.exam && (
               <Link to={`/exam/${w.exam.slug}`} className="mt-4 flex items-center gap-4 rounded-2xl border-2 border-dashed border-ink p-3 hover:bg-surface-2" aria-label={`${w.exam.title} : ${w.exam.attempts ? `meilleur score ${w.exam.bestPercent} %` : T("jamais passé")}`}>
-                <span aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ink text-2xl font-black text-paper">模</span>
+                <span aria-hidden="true" className="jp flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ink text-2xl font-black text-paper">{D('mock')}</span>
                 <span className="flex-1">
                   <span className="block text-lg font-bold">{w.exam.title}</span>
                   <span className="block text-sm text-ink-soft">
@@ -199,6 +200,7 @@ const STATUS_TEXT: Record<PathLessonDto['status'], string> = {
 };
 
 function Stone({ lesson: l, offset }: { lesson: PathLessonDto; offset: number }) {
+  const D = useDecor();
   const locked = l.status === 'locked';
   const done = l.status === 'completed';
   const { en } = useStudyLang();
@@ -213,7 +215,7 @@ function Stone({ lesson: l, offset }: { lesson: PathLessonDto; offset: number })
           color: done ? 'var(--paper)' : locked ? 'var(--ink-soft)' : '#2a1a00',
         }}
       >
-        {done ? '✓' : locked ? (en ? '⋯' : '錠') : en ? '▶' : '道'}
+        {done ? '✓' : locked ? D('locked') : D('open')}
       </span>
       <span className="flex-1">
         <span className="jp block text-lg font-bold">{l.title}</span>

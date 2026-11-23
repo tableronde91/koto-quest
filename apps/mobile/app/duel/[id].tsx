@@ -1,3 +1,4 @@
+import { useDecor, useRankLabel } from '../../src/study';
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -244,6 +245,7 @@ function RevealView({ s }: { s: DuelStateDto }) {
 }
 
 function PendingView({ s, now, onChange, onLeave }: { s: DuelStateDto; now: number; onChange: () => void; onLeave: () => void }) {
+  const RL = useRankLabel();
   const [err, setErr] = useState<unknown>(null);
   const left = s.expiresAt ? Math.max(0, Math.ceil((Date.parse(s.expiresAt) - now) / 1000)) : 0;
   const challenger = s.me.side === 1;
@@ -264,7 +266,7 @@ function PendingView({ s, now, onChange, onLeave }: { s: DuelStateDto; now: numb
         ) : (
           <>
             <H1 style={{ textAlign: 'center' }}>{T('{0} te défie !', [s.opponent.name])}</H1>
-            <P soft>{T('{0} · {1} points · duel amical', [s.opponent.rank.label, s.opponent.rating])}</P>
+            <P soft>{T('{0} · {1} points · duel amical', [RL(s.opponent.rank), s.opponent.rating])}</P>
             {err != null && <ErrorBox error={err} />}
             <Button label={T('Accepter')} tone="gold" style={{ alignSelf: 'stretch' }} onPress={async () => { try { await post(`/duels/${s.id}/accept`); onChange(); } catch (e) { setErr(e); } }} />
             <Button label={T('Refuser')} tone="quiet" style={{ alignSelf: 'stretch' }} onPress={async () => { await post(`/duels/${s.id}/decline`).catch(() => undefined); onLeave(); }} />
@@ -276,6 +278,7 @@ function PendingView({ s, now, onChange, onLeave }: { s: DuelStateDto; now: numb
 }
 
 function ResultView({ s, onLeave }: { s: DuelStateDto; onLeave: () => void }) {
+  const D = useDecor();
   const router = useRouter();
   const qc = useQueryClient();
   const [err, setErr] = useState<unknown>(null);
@@ -302,7 +305,7 @@ function ResultView({ s, onLeave }: { s: DuelStateDto; onLeave: () => void }) {
   return (
     <Screen>
       <View style={{ alignItems: 'center', gap: 14, paddingTop: 20 }} testID="duel-result">
-        <Text style={{ fontSize: 88, fontWeight: '900', color: win ? C.gold : r.outcome === 'loss' ? C.ko : C.inkSoft }}>{win ? '勝' : r.outcome === 'loss' ? '負' : '分'}</Text>
+        <Text style={{ fontSize: 88, fontWeight: '900', color: win ? C.gold : r.outcome === 'loss' ? C.ko : C.inkSoft }}>{win ? D('win') : r.outcome === 'loss' ? D('loss') : D('draw')}</Text>
         <H1>{win ? T('Victoire !') : r.outcome === 'loss' ? T('Défaite') : T('Égalité')}</H1>
         <P soft style={{ textAlign: 'center' }}>
           {r.endReason === 'ko'

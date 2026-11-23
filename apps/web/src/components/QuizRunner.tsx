@@ -1,3 +1,4 @@
+import { useDecor } from './StudyLanguage';
 import { useState } from 'react';
 import type { AnswerResultDto, IssuedQuestionDto } from '@koto/shared';
 import { post } from '../api/client';
@@ -20,6 +21,7 @@ export interface RunSummary {
  * Chaque exercice raté est ajouté à la fin de la file pour être refait (au plus deux reprises).
  */
 export function QuizRunner({ questions, furigana, onFinish, onQuit }: { questions: IssuedQuestionDto[]; furigana: boolean; onFinish: (s: RunSummary) => void; onQuit?: () => void }) {
+  const D = useDecor();
   const [queue, setQueue] = useState<IssuedQuestionDto[]>(questions);
   const [index, setIndex] = useState(0);
   const [summary, setSummary] = useState<RunSummary>({ correct: 0, total: 0, xp: 0, fixed: 0 });
@@ -78,7 +80,7 @@ export function QuizRunner({ questions, furigana, onFinish, onQuit }: { question
       </div>
       {q.retryOf && (
         <div className="flex items-center gap-3 rounded-2xl border-2 border-gold bg-surface px-4 py-3" role="note">
-          <span aria-hidden="true" className="jp text-2xl font-black text-gold-ink">復</span>
+          <span aria-hidden="true" className="jp text-2xl font-black text-gold-ink">{D('review')}</span>
           <p>
             <strong>{T("On reprend un exercice raté.")}</strong>
             {index === firstRetry && <span className="block text-sm text-ink-soft">{T("Les exercices ratés reviennent à la fin pour que tu les retravailles.")}</span>}

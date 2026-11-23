@@ -12,7 +12,7 @@ import { Confetti, CountUp, Stamp } from '../components/Celebrate';
 import { EXAMS, examScale } from '@koto/learning-engine';
 import { langOf } from '../lib/format';
 import { T } from '../i18n';
-import { useStudyLang } from '../components/StudyLanguage';
+import { useStudyLang, useDecor } from '../components/StudyLanguage';
 
 type Answers = Record<string, string | string[] | undefined>;
 // Une question sans réponse est simplement absente de la copie : elle compte comme fausse.
@@ -342,6 +342,7 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
 // ───────────────────────── Test de positionnement ─────────────────────────
 
 export function PlacementPage() {
+  const D = useDecor();
   const study = useStudyLang();
   const [step, setStep] = useState<PlacementStepDto | null>(null);
   const [answers, setAnswers] = useState<Answers>({});
@@ -394,7 +395,7 @@ export function PlacementPage() {
     return (
       <div className="flex flex-col items-center gap-5 py-6 text-center">
         {step.validated.length > 0 && <Confetti />}
-        <Stamp className="jp text-6xl font-black text-ko">完了</Stamp>
+        <Stamp className="jp text-6xl font-black text-ko">{D('done')}</Stamp>
         <h1 className="text-4xl">{step.validated.length ? T("{0} monde{1} validé{2}", [step.validated.length, step.validated.length > 1 ? 's' : '', step.validated.length > 1 ? 's' : '']) : T("On commence au début")}</h1>
         {step.validated.length > 0 && (
           <ul className="flex flex-col gap-1">

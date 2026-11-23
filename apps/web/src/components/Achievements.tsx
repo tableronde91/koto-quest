@@ -1,3 +1,5 @@
+import { achievementGlyph } from '@koto/shared';
+import { useStudyLang } from './StudyLanguage';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import { AnimatePresence, motion } from 'motion/react';
@@ -11,7 +13,8 @@ export const RARITY_LABEL: Record<AchievementDto['rarity'], string> = { common: 
 const RARITY_RING: Record<AchievementDto['rarity'], string> = { common: '#B9835A', rare: '#6E8FB5', epic: 'var(--gold)' };
 
 /** Médaille d'un succès : idéogramme au centre, anneau de rareté ; grisée avec jauge si verrouillée. */
-export function Medal({ a, size = 72 }: { a: Pick<AchievementDto, 'glyph' | 'rarity' | 'unlocked' | 'value' | 'target'>; size?: number }) {
+export function Medal({ a, size = 72 }: { a: Pick<AchievementDto, 'slug' | 'glyph' | 'rarity' | 'unlocked' | 'value' | 'target'>; size?: number }) {
+  const { lang } = useStudyLang();
   const ring = RARITY_RING[a.rarity];
   const r = 34;
   const c = 2 * Math.PI * r;
@@ -31,7 +34,7 @@ export function Medal({ a, size = 72 }: { a: Pick<AchievementDto, 'glyph' | 'rar
       )}
       <circle cx="40" cy="40" r="26" fill={a.unlocked ? ring : 'transparent'} opacity={a.unlocked ? 0.16 : 1} />
       <text x="40" y="51" textAnchor="middle" fontSize="30" fontWeight="900" className="jp" fill={a.unlocked ? 'var(--ink)' : 'var(--line)'}>
-        {a.glyph}
+        {achievementGlyph(a.slug, a.glyph, lang)}
       </text>
     </svg>
   );

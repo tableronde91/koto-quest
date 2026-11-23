@@ -1,3 +1,4 @@
+import { useDecor } from './StudyLanguage';
 import { createContext, useContext, useEffect, useMemo, useRef } from 'react';
 import { motion } from 'motion/react';
 import type { AvatarConfig, PathWorldDto } from '@koto/shared';
@@ -605,6 +606,7 @@ function Smoke({ x, y, delay = 0, calm }: { x: number; y: number; delay?: number
 
 /** Drapeau de victoire planté sur une île conquise. */
 function VictoryFlag({ x, y, calm }: { x: number; y: number; calm: boolean }) {
+  const D = useDecor();
   return (
     <g transform={`translate(${x} ${y})`}>
       <ellipse cx="0" cy="2" rx="6" ry="2" fill="#1E1915" opacity={0.5} />
@@ -612,7 +614,7 @@ function VictoryFlag({ x, y, calm }: { x: number; y: number; calm: boolean }) {
       <circle cx="0" cy="-45" r="2.4" fill="#F2C14E" />
       <motion.g style={{ transformOrigin: '1px -42px' }} animate={calm ? undefined : { skewY: [0, -6, 0, 5, 0], scaleX: [1, 0.94, 1, 0.97, 1] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}>
         <path d="M1 -42 L28 -38 Q24 -32 28 -26 L1 -24Z" fill={VERMILION} stroke="#8E1B26" strokeWidth="1" />
-        <text x="13" y="-28.5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#FFF6E0" fontFamily="'Noto Sans JP', sans-serif">勝</text>
+        <text x="13" y="-28.5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#FFF6E0" fontFamily="'Noto Sans JP', sans-serif">{D('win')}</text>
       </motion.g>
     </g>
   );

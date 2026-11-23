@@ -12,7 +12,7 @@ import { RankBadge } from '../../src/RankBadge';
 import { Avatar } from '../../src/Avatar';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, ProgressBar, Screen } from '../../src/ui';
-import { studyWords } from '../../src/study';
+import { studyWords, useDecor, useRankLabel } from '../../src/study';
 import { T } from '../../src/i18n';
 
 const MINUTES = [10, 15, 20, 30, 45, 60, 90];
@@ -20,6 +20,8 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 /** Profil : carte d'identité, objectifs et amis. Les réglages de l'appli s'ouvrent d'ici. */
 export default function Profile() {
+  const D = useDecor();
+  const RL = useRankLabel();
   const router = useRouter();
   const { me } = useAuth();
   const { data: lobby } = useDuelLobby();
@@ -31,14 +33,14 @@ export default function Profile() {
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
         <H1 style={{ flex: 1 }}>{T('Profil')}</H1>
         <Pressable accessibilityRole="button" accessibilityLabel={T('Réglages')} onPress={() => router.push('/settings')} style={{ flexDirection: 'row', alignItems: 'center', gap: 6, borderWidth: 2, borderColor: C.line, borderRadius: 99, paddingHorizontal: 12, minHeight: 40 }}>
-          <Text style={{ fontWeight: '900', color: C.ink }}>設</Text>
+          <Text style={{ fontWeight: '900', color: C.ink }}>{D('settings')}</Text>
           <Text style={{ fontWeight: '800', color: C.ink }}>{T('Réglages')}</Text>
         </Pressable>
       </View>
 
       {/* Carte d'identité */}
       <View testID="identity" style={{ backgroundColor: C.ink, borderRadius: 24, padding: 20, gap: 12, overflow: 'hidden' }}>
-        <Text style={{ position: 'absolute', right: -6, top: -26, fontSize: 140, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>人</Text>
+        <Text style={{ position: 'absolute', right: -6, top: -26, fontSize: 140, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>{D('me')}</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
           <Pressable accessibilityRole="button" accessibilityLabel={T('Mon personnage')} onPress={() => router.push('/character')} style={{ borderRadius: 20, overflow: 'hidden', borderWidth: 2, borderColor: '#ffffff44' }}>
             <Avatar config={me.avatar} size={72} />
@@ -50,7 +52,7 @@ export default function Profile() {
           {lobby && (
             <View style={{ alignItems: 'center', gap: 2 }}>
               <RankBadge rank={lobby.profile.rank} size={48} />
-              <Text style={{ color: C.paper, fontSize: 11, fontWeight: '700' }}>{lobby.profile.rank.label}</Text>
+              <Text style={{ color: C.paper, fontSize: 11, fontWeight: '700' }}>{RL(lobby.profile.rank)}</Text>
             </View>
           )}
         </View>

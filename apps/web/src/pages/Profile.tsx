@@ -1,4 +1,4 @@
-import { studyWords } from '../components/StudyLanguage';
+import { studyWords, useDecor, useRankLabel } from '../components/StudyLanguage';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -41,11 +41,13 @@ export function ProfilePage({ me }: { me: MeDto }) {
 }
 
 function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
+  const RL = useRankLabel();
+  const D = useDecor();
   const lv = levelFromXp(me.xp);
   const pct = Math.round((lv.intoLevel / Math.max(1, lv.forNext)) * 100);
   return (
     <section aria-label={T("Carte d’identité")} className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper">
-      <span aria-hidden="true" className="jp pointer-events-none absolute -right-2 -top-8 select-none text-[9rem] font-black leading-none opacity-10">人</span>
+      <span aria-hidden="true" className="jp pointer-events-none absolute -right-2 -top-8 select-none text-[9rem] font-black leading-none opacity-10">{D('me')}</span>
       <div className="flex flex-wrap items-center gap-5">
         <span className="overflow-hidden rounded-3xl border-2 border-[rgb(255_255_255/0.3)] bg-surface"><Avatar config={me.avatar} size={96} /></span>
         <div className="min-w-0 flex-1">
@@ -59,7 +61,7 @@ function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
         {lobby && (
           <div className="flex flex-col items-center gap-1 text-center">
             <RankBadge rank={lobby.profile.rank} size={56} />
-            <span className="text-sm font-bold">{lobby.profile.rank.label}</span>
+            <span className="text-sm font-bold">{RL(lobby.profile.rank)}</span>
             <span className="text-xs opacity-75">{T("{0} pts", [lobby.profile.rating])}</span>
           </div>
         )}

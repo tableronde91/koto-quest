@@ -1,3 +1,4 @@
+import { useDecor } from './study';
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import type { AnswerResultDto, IssuedQuestionDto } from '@koto/shared';
@@ -16,6 +17,7 @@ export interface RunSummary {
 
 /** Enchaîne les exercices ; un exercice raté revient en fin de séance (au plus deux reprises). */
 export function QuizRunner({ questions, onFinish, onQuit }: { questions: IssuedQuestionDto[]; onFinish: (s: RunSummary) => void; onQuit?: () => void }) {
+  const D = useDecor();
   const [queue, setQueue] = useState(questions);
   const [index, setIndex] = useState(0);
   const [summary, setSummary] = useState<RunSummary>({ correct: 0, total: 0, xp: 0, fixed: 0 });
@@ -69,7 +71,7 @@ export function QuizRunner({ questions, onFinish, onQuit }: { questions: IssuedQ
       </View>
       {q.retryOf && (
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center', borderWidth: 2, borderColor: C.gold, borderRadius: 14, padding: 10, backgroundColor: C.surface }}>
-          <Text style={{ fontSize: 22, fontWeight: '900', color: C.goldInk }}>復</Text>
+          <Text style={{ fontSize: 22, fontWeight: '900', color: C.goldInk }}>{D('review')}</Text>
           <Text style={{ flex: 1, fontWeight: '700', color: C.ink }}>{T('On reprend un exercice raté.')}</Text>
         </View>
       )}

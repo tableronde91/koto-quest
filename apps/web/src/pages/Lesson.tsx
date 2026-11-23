@@ -1,3 +1,4 @@
+import { useDecor } from '../components/StudyLanguage';
 import { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { useQueryClient } from '@tanstack/react-query';
@@ -83,10 +84,10 @@ export function LessonPage({ me }: { me: MeDto }) {
     <article className="flex flex-col gap-7">
       <div className="flex items-center justify-between gap-3">
         <Link to="/path" className="text-ink-soft underline">← {lesson.world.title}</Link>
-        {/* Pas de furigana en coréen : le hangeul se lit tel quel */}
-        {!lesson.items.some((i) => hasHangul(i.front)) && (
+        {/* Lecture au-dessus des caractères : furigana en japonais, pinyin en chinois ; rien en coréen ni en anglais */}
+        {lesson.items.some((i) => /[一-龯]/.test(i.front)) && !lesson.items.some((i) => hasHangul(i.front)) && (
           <label className="flex items-center gap-2 text-sm">
-            <input type="checkbox" checked={furigana} onChange={(e) => setFurigana(e.target.checked)} className="h-5 w-5 accent-[var(--ink)]" />{T("Afficher les furigana")}</label>
+            <input type="checkbox" checked={furigana} onChange={(e) => setFurigana(e.target.checked)} className="h-5 w-5 accent-[var(--ink)]" />{lesson.items.some((i) => langOf(i.front) === 'zh') ? T("Afficher le pinyin") : T("Afficher les furigana")}</label>
         )}
       </div>
       <header>
@@ -158,12 +159,13 @@ function ItemCard({ item, furigana, reserveRuby }: { item: LessonDto['items'][nu
 }
 
 function LessonDone({ lesson, completion, mini, avatar }: { lesson: LessonDto; completion: LessonCompletionDto; mini: RunSummary | null; avatar: MeDto['avatar'] }) {
+  const D = useDecor();
   return (
     <div className="flex flex-col items-start gap-6 py-6">
       <Confetti count={completion.perfect ? 60 : 36} />
       <div className="flex items-end gap-4">
         <Cheer><Avatar config={avatar} size={110} /></Cheer>
-      <Stamp className="jp text-8xl font-black text-ko">{completion.perfect ? '満点' : '完了'}</Stamp>
+      <Stamp className="jp text-8xl font-black text-ko">{completion.perfect ? D('perfect') : D('done')}</Stamp>
       </div>
       <h1 className="text-4xl">{completion.perfect ? T("Sans faute !") : T("Leçon terminée")}</h1>
       <p className="text-lg">

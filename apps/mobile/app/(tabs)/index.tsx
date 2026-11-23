@@ -5,14 +5,18 @@ import { useDashboard } from '../../src/hooks';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H2, Loading, P, ProgressBar } from '../../src/ui';
 import { T, plural } from '../../src/i18n';
-import { useStudyLang } from '../../src/study';
+import { useStudyLang, useDecor } from '../../src/study';
 
-function greeting() {
+function greeting(lang: 'ja' | 'ko' | 'en' | 'zh', name: string) {
   const h = new Date().getHours();
-  return h < 11 ? 'おはよう' : h < 18 ? 'こんにちは' : 'こんばんは';
+  if (lang === 'ko') return `${name} 님, 안녕하세요`;
+  if (lang === 'zh') return `${name}，${h < 11 ? '早上好' : h < 18 ? '你好' : '晚上好'}`;
+  if (lang === 'en') return `${h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'}, ${name}!`;
+  return `${h < 11 ? 'おはよう' : h < 18 ? 'こんにちは' : 'こんばんは'}、${name}`;
 }
 
 export default function Home() {
+  const D = useDecor();
   const w = useStudyLang();
   const router = useRouter();
   const { data: d, isLoading, error, refetch, isRefetching } = useDashboard();
@@ -24,7 +28,7 @@ export default function Home() {
       <ScrollView contentContainerStyle={{ padding: 18, gap: 18, paddingBottom: 40 }} refreshControl={<RefreshControl refreshing={isRefetching} onRefresh={() => { refetch(); }} />}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <View style={{ flex: 1 }}>
-            <Text style={{ color: C.inkSoft, fontSize: 18 }}>{greeting()}、{d.displayName}</Text>
+            <Text style={{ color: C.inkSoft, fontSize: 18 }}>{greeting(w.lang, d.displayName)}</Text>
             <Text accessibilityRole="header" style={{ fontSize: 26, fontWeight: '800', color: C.ink }}>{due ? plural(due, '{0} notion à réviser', '{0} notions à réviser') : d.nextLesson ? T('Prêt·e pour la suite ?') : T('Tout est à jour')}</Text>
           </View>
           <Pressable accessibilityRole="button" accessibilityLabel={T('{0} pièces, ouvrir la boutique', [d.coins])} onPress={() => router.push({ pathname: '/character', params: { t: 'boutique' } })} style={{ backgroundColor: C.surface, borderRadius: 99, paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderColor: C.line }}>
@@ -34,7 +38,7 @@ export default function Home() {
 
         {/* Action principale */}
         <View style={{ backgroundColor: C.ink, borderRadius: 24, padding: 20, gap: 12, overflow: 'hidden' }}>
-          <Text style={{ position: 'absolute', right: -10, top: -24, fontSize: 150, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>{due ? '復' : '学'}</Text>
+          <Text style={{ position: 'absolute', right: -10, top: -24, fontSize: 150, fontWeight: '900', color: '#ffffff', opacity: 0.08 }}>{due ? D('review') : D('learn')}</Text>
           {due > 0 ? (
             <>
               <Text style={{ color: C.paper, opacity: 0.85, fontSize: 16 }}>{T('Ces notions sont sur le point de t’échapper. Une révision maintenant les fixe pour plusieurs jours.')}</Text>
@@ -53,7 +57,7 @@ export default function Home() {
 
         {d.suggestPlacement && (
           <Card testID="placement-suggest" style={{ flexDirection: 'row', alignItems: 'center', gap: 12, borderColor: '#7B5BD6', borderWidth: 2 }}>
-            <Text style={{ fontSize: 30, fontWeight: '900', color: '#7B5BD6' }}>診</Text>
+            <Text style={{ fontSize: 30, fontWeight: '900', color: '#7B5BD6' }}>{D('placement')}</Text>
             <View style={{ flex: 1, gap: 6 }}>
               <Text style={{ fontWeight: '800', color: C.ink }}>{w.en ? T('Tu connais déjà un peu d’anglais ?') : w.zh ? T('Tu connais déjà un peu de chinois ?') : w.ko ? T('Tu connais déjà un peu de coréen ?') : T('Tu connais déjà un peu de japonais ?')}</Text>
               <Text style={{ color: C.inkSoft, fontSize: 13 }}>{T('Un test de quelques minutes valide ce que tu sais déjà, pour commencer au bon endroit.')}</Text>
@@ -66,9 +70,9 @@ export default function Home() {
           <Card testID="how-it-works" style={{ gap: 10 }}>
             <H2>{T('Comment ça marche ?')}</H2>
             {[
-              ['学', T('Une leçon de 5 à 10 minutes'), w.en ? T('Des mots, des phrases utiles ou de la grammaire, puis des exercices.') : w.zh ? T('Des caractères, des mots ou de la grammaire, puis des exercices.') : w.ko ? T('Du hangeul, des mots ou de la grammaire, puis des exercices.') : T('De nouveaux kana, mots ou kanji, puis des exercices.')],
-              ['復', T('Des révisions au bon moment'), T('Koto Quest te redemande chaque notion juste avant que tu l’oublies.')],
-              ['島', T('Une aventure à suivre'), T('Chaque île du parcours raconte un chapitre et se termine par un gardien à vaincre.')],
+              [D('learn'), T('Une leçon de 5 à 10 minutes'), w.en ? T('Des mots, des phrases utiles ou de la grammaire, puis des exercices.') : w.zh ? T('Des caractères, des mots ou de la grammaire, puis des exercices.') : w.ko ? T('Du hangeul, des mots ou de la grammaire, puis des exercices.') : T('De nouveaux kana, mots ou kanji, puis des exercices.')],
+              [D('review'), T('Des révisions au bon moment'), T('Koto Quest te redemande chaque notion juste avant que tu l’oublies.')],
+              [D('island'), T('Une aventure à suivre'), T('Chaque île du parcours raconte un chapitre et se termine par un gardien à vaincre.')],
             ].map(([g, t, x], i) => (
               <View key={g} style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
                 <View style={{ width: 36, height: 36, borderRadius: 12, backgroundColor: C.surface2, alignItems: 'center', justifyContent: 'center' }}>
@@ -106,10 +110,10 @@ export default function Home() {
 
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: -5 }}>
           {[
-            { href: '/learn', glyph: '学', label: T('Apprendre') },
-            { href: '/games', glyph: '遊', label: T('Jouer') },
-            { href: '/progress', glyph: '冒', label: T('Mon aventure') },
-            { href: '/character', glyph: '衣', label: T('Mon personnage') },
+            { href: '/learn', glyph: D('learn'), label: T('Apprendre') },
+            { href: '/games', glyph: D('play'), label: T('Jouer') },
+            { href: '/progress', glyph: [...D('adventure')][0], label: T('Mon aventure') },
+            { href: '/character', glyph: D('character'), label: T('Mon personnage') },
           ].map((x) => (
             <View key={x.href} style={{ width: '50%', padding: 5 }}>
               <Pressable accessibilityRole="button" accessibilityLabel={x.label} onPress={() => router.push(x.href as never)} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.surface, borderWidth: 1, borderColor: C.line, borderRadius: 16, padding: 12 }}>
@@ -125,7 +129,7 @@ export default function Home() {
           {d.quests.map((q) => (
             <Card key={q.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
               <View style={{ width: 36, height: 36, borderRadius: 18, backgroundColor: q.done ? C.gold : C.surface2, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontWeight: '900', color: q.done ? '#2a1a00' : C.inkSoft }}>{q.done ? '済' : '・'}</Text>
+                <Text style={{ fontWeight: '900', color: q.done ? '#2a1a00' : C.inkSoft }}>{q.done ? D('questDone') : D('questTodo')}</Text>
               </View>
               <View style={{ flex: 1, gap: 6 }}>
                 <Text style={{ fontWeight: '700', color: C.ink }}>{q.title}</Text>

@@ -1,3 +1,4 @@
+import { useDecor, useRankLabel } from './StudyLanguage';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AnimatePresence, motion } from 'motion/react';
@@ -40,6 +41,7 @@ function PlayerFace({ p, online }: { p: FriendPlayerDto; online?: boolean }) {
 
 /** Amis : code à partager, demandes, liste avec présence et défi en un clic. */
 export function FriendsPanel({ lobby, onChange }: { lobby: DuelLobbyDto; onChange: () => void }) {
+  const RL = useRankLabel();
   const nav = useNavigate();
   const qc = useQueryClient();
   const { data } = useFriends(lobby.online);
@@ -147,7 +149,7 @@ export function FriendsPanel({ lobby, onChange }: { lobby: DuelLobbyDto; onChang
               <motion.div key={r.id} layout initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex flex-wrap items-center gap-3 rounded-2xl border-2 border-gold p-3" data-testid="friend-request">
                 <PlayerFace p={r.player} />
                 <p className="min-w-0 flex-1">
-                  <strong>{r.player.name}</strong> <span className="text-ink-soft">({r.player.rank.label})</span> {T('veut devenir ton ami.')}
+                  <strong>{r.player.name}</strong> <span className="text-ink-soft">({RL(r.player.rank)})</span> {T('veut devenir ton ami.')}
                 </p>
                 <button className="btn btn-gold min-h-10 px-4" onClick={() => accept(r.id)}>{T('Accepter')}</button>
                 <button className="btn btn-quiet min-h-10 px-3" onClick={() => remove(r.id)}>{T('Refuser')}</button>
@@ -165,7 +167,7 @@ export function FriendsPanel({ lobby, onChange }: { lobby: DuelLobbyDto; onChang
                     <p className="truncate font-bold">{f.player.name}</p>
                     <p className="flex flex-wrap items-center gap-x-2 text-sm text-ink-soft">
                       <span className={f.online ? 'font-bold text-[#1F7A40]' : ''}>{seen(f)}</span>
-                      <span>· {f.player.rank.label}</span>
+                      <span>· {RL(f.player.rank)}</span>
                       {f.record.wins + f.record.losses + f.record.draws > 0 && (
                         <span title={T('Vos duels terminés')}>· {T('{0} V – {1} D', [f.record.wins, f.record.losses])}{f.record.draws ? ` – ${T('{0} N', [f.record.draws])}` : ''}</span>
                       )}
@@ -217,7 +219,7 @@ export function FriendsPanel({ lobby, onChange }: { lobby: DuelLobbyDto; onChang
                 {search.data.players.map((pl) => (
                   <li key={pl.userId} className="flex flex-wrap items-center gap-3 rounded-2xl border border-line p-2">
                     <RankBadge rank={pl.rank} size={32} />
-                    <span className="min-w-0 flex-1"><strong>{pl.name}</strong> <span className="text-sm text-ink-soft">· {pl.rank.label} · {pl.code}</span></span>
+                    <span className="min-w-0 flex-1"><strong>{pl.name}</strong> <span className="text-sm text-ink-soft">· {RL(pl.rank)} · {pl.code}</span></span>
                     {pl.relation === 'friend' ? (
                       <span className="text-sm font-bold text-ink-soft">{T('Ami ✓')}</span>
                     ) : pl.relation === 'outgoing' ? (
@@ -296,6 +298,7 @@ export function AddFriendButton({ userId, name }: { userId: string; name: string
 
 /** Alerte de demande d'ami, partout dans l'application. */
 export function FriendRequestWatcher({ path }: { path: string }) {
+  const D = useDecor();
   const qc = useQueryClient();
   const [dismissed, setDismissed] = useState<string[]>([]);
   const { data } = useQuery({
@@ -309,7 +312,7 @@ export function FriendRequestWatcher({ path }: { path: string }) {
   if (LOCAL || !req || path.startsWith('/duel')) return null;
   return (
     <motion.div role="status" initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="fixed inset-x-3 bottom-20 z-30 mx-auto flex max-w-md items-center gap-3 rounded-3xl border-2 border-[#3FA7A0] bg-surface p-3 shadow-xl md:bottom-6" data-testid="friend-toast">
-      <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#3FA7A0] text-2xl font-black text-white">友</span>
+      <span aria-hidden="true" className="jp flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#3FA7A0] text-2xl font-black text-white">{D('friend')}</span>
       <p className="flex-1 text-sm">
         <strong>{req.player.name}</strong> {T('veut devenir ton ami.')}
       </p>

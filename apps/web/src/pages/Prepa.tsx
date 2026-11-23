@@ -9,7 +9,7 @@ import { ErrorBox, PageTitle, Spinner } from '../components/ui';
 import { Confetti, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
 import { examLevelLabel } from '@koto/shared';
-import { studyWords } from '../components/StudyLanguage';
+import { studyWords, useDecor } from '../components/StudyLanguage';
 
 const GLYPH: Record<JlptDrillsDto['drills'][number]['part'], string> = { kanji: '読', writing: '書', grammar: '文', star: '★', listening: '聴' };
 
@@ -18,6 +18,7 @@ const GLYPH: Record<JlptDrillsDto['drills'][number]['part'], string> = { kanji: 
  * avec uniquement ce que l'on a déjà appris (correction immédiate, erreurs reprises en fin de série).
  */
 export function PrepaPage({ me }: { me: MeDto }) {
+  const D = useDecor();
   const words = studyWords(me.preferences.studyLanguage ?? 'ja');
   const qc = useQueryClient();
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ['jlpt-drills'], queryFn: () => api<JlptDrillsDto>('/jlpt/drills') });
@@ -55,7 +56,7 @@ export function PrepaPage({ me }: { me: MeDto }) {
     return (
       <div className="flex flex-col items-center gap-4 py-8 text-center">
         {pct >= 80 && <Confetti />}
-        <Stamp className="jp text-6xl font-black text-ko">{pct >= 80 ? '合格' : '練習'}</Stamp>
+        <Stamp className="jp text-6xl font-black text-ko">{pct >= 80 ? D('pass') : D('practice')}</Stamp>
         <h1 className="text-4xl">{T("{0} : {1} %", [summary.title, pct])}</h1>
         <p className="text-lg">{T("{0}/{1} bonnes réponses du premier coup{2} · +{3} XP", [summary.s.correct , summary.s.total , summary.s.fixed ? T(", {0} corrigée(s) en reprise", [summary.s.fixed]) : '' , summary.s.xp ])}</p>
         <p className="max-w-[50ch] text-ink-soft">{pct >= 80 ? T("Niveau examen atteint sur cette épreuve. Varie avec les autres épreuves.") : T("Les notions ratées reviendront dans tes révisions. Une autre série pour consolider ?")}</p>

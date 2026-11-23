@@ -11,7 +11,7 @@ import { say, speechSupported, stopSpeech } from '../lib/speech';
 import { T, locale } from '../i18n';
 import { langOf } from '../lib/format';
 import { languageOfLevel, levelLabel } from '@koto/shared';
-import { studyWords } from '../components/StudyLanguage';
+import { studyWords, useDecor } from '../components/StudyLanguage';
 
 /** Texte dans la langue de l'interface (les contes sont rédigés en français et en anglais). */
 const bi = (b: BiText) => (locale === 'en' ? b.en : b.fr);
@@ -54,6 +54,7 @@ function ChapterMeta({ c }: { c: ReadingChapterRefDto }) {
 
 /** Bibliothèque et chapitre du jour (/lecture). */
 export function ReadingPage() {
+  const D = useDecor();
   const { data, isLoading, error, refetch } = useReading();
   const navigate = useNavigate();
   if (isLoading) return <Spinner />;
@@ -69,7 +70,7 @@ export function ReadingPage() {
 
       {/* Chapitre du jour */}
       <section aria-label={T('Chapitre du jour')} className="relative overflow-hidden rounded-3xl bg-ink p-5 text-paper sm:p-7">
-        <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-4 -top-8 select-none text-[11rem] font-black leading-none opacity-[0.07]">読</span>
+        <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-4 -top-8 select-none text-[11rem] font-black leading-none opacity-[0.07]">{D('read')}</span>
         {today.chapter && today.story ? (
           <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center">
             <StoryGlyph story={today.story} size="lg" />
@@ -169,6 +170,7 @@ type TranslationMode = 'tap' | 'all' | 'none';
 
 /** Liseuse d'un chapitre (/lecture/:slug). */
 export function ReadingChapterPage({ me }: { me: MeDto }) {
+  const D = useDecor();
   const { slug = '' } = useParams();
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ['reading', slug], queryFn: () => api<ReadingChapterDto>(`/reading/chapters/${slug}`) });
   const [furigana, setFurigana] = useState(me.preferences.showFurigana);
@@ -356,7 +358,7 @@ export function ReadingChapterPage({ me }: { me: MeDto }) {
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="relative flex flex-col gap-3 overflow-hidden rounded-2xl bg-surface-2 p-5" role="status">
             {result.firstTime && result.correct === result.total && !calm && <Confetti count={24} origin="center" />}
             <div className="flex flex-wrap items-center gap-4">
-              <Stamp className="jp text-6xl font-black text-ko">{result.correct === result.total ? '読' : '頑'}</Stamp>
+              <Stamp className="jp text-6xl font-black text-ko">{result.correct === result.total ? D('read') : D('readRetry')}</Stamp>
               <div>
                 <p className="text-2xl font-bold">{T('{0}/{1} bonnes réponses', [result.correct, result.total])}</p>
                 {result.firstTime ? (

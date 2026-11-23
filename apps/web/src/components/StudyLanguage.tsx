@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { STUDY_LANGUAGES, examLevelLabel, languageInfo, setHanLanguage, type MeDto, type StudyLanguage } from '@koto/shared';
+import { DUEL_TIER_NAMES, STUDY_LANGUAGES, decor, examLevelLabel, languageInfo, setHanLanguage, type DecorKey, type MeDto, type StudyLanguage } from '@koto/shared';
 import { put } from '../api/client';
 import { useMe } from '../api/hooks';
 import { T } from '../i18n';
@@ -97,4 +97,19 @@ export function StudyLanguageSwitch({ className = '', compact = false }: { class
       ))}
     </div>
   );
+}
+
+/** Glyphes décoratifs (tampons, pictos) dans la langue étudiée : jamais de japonais en coréen, anglais ou chinois. */
+export function useDecor() {
+  const { lang } = useStudyLang();
+  return (key: DecorKey) => decor(key, lang);
+}
+
+/** Libellé d'un rang de duel dans la langue étudiée (« Ashigaru II » en japonais, « Fantassin II » sinon). */
+export function useRankLabel() {
+  const { lang } = useStudyLang();
+  return (rank: { tierId: string; label: string }) => {
+    const n = DUEL_TIER_NAMES[rank.tierId];
+    return lang === 'ja' || !n ? rank.label : rank.label.replace(n.ja, T(n.other));
+  };
 }
