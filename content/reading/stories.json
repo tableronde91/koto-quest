@@ -28832,6 +28832,550 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "gallo-santo-domingo",
+   "glyph": "g",
+   "level": "DELEB1",
+   "color": "#C8823A",
+   "title": {
+    "jp": "El gallo de Santo Domingo",
+    "fr": "Le coq de Santo Domingo",
+    "en": "The rooster of Santo Domingo"
+   },
+   "summary": {
+    "fr": "À Santo Domingo de la Calzada, un jeune pèlerin accusé à tort est sauvé par un miracle… et par un coq rôti qui se met à chanter.",
+    "en": "In Santo Domingo de la Calzada, a young pilgrim falsely accused is saved by a miracle… and by a roast rooster that starts to crow."
+   },
+   "chapters": [
+    {
+     "slug": "gallo-santo-domingo-1",
+     "title": {
+      "jp": "Una acusación injusta",
+      "fr": "Une accusation injuste",
+      "en": "An unfair accusation"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Hace muchos siglos, una familia alemana hacía el Camino de Santiago con su hijo, un chico de dieciocho años.",
+        "fr": "Il y a bien des siècles, une famille allemande faisait le chemin de Saint-Jacques avec son fils, un garçon de dix-huit ans.",
+        "en": "Many centuries ago, a German family was walking the Camino de Santiago with their son, a boy of eighteen.",
+        "kana": "Hace muchos siglos, una familia alemana hacía el Camino de Santiago con su hijo, un chico de dieciocho años."
+       },
+       {
+        "jp": "Una noche durmieron en una posada de Santo Domingo de la Calzada. La hija del posadero se enamoró del joven, pero él no le hizo caso.",
+        "fr": "Un soir, ils dormirent dans une auberge de Santo Domingo de la Calzada. La fille de l’aubergiste tomba amoureuse du jeune homme, mais il ne fit pas attention à elle.",
+        "en": "One night they slept at an inn in Santo Domingo de la Calzada. The innkeeper’s daughter fell in love with the young man, but he paid no attention to her.",
+        "kana": "Una noche durmieron en una posada de Santo Domingo de la Calzada. La hija del posadero se enamoró del joven, pero él no le hizo caso."
+       },
+       {
+        "jp": "Enfadada, la chica escondió una copa de plata en la mochila del peregrino y lo acusó de haberla robado.",
+        "fr": "Vexée, la jeune fille cacha une coupe en argent dans le sac du pèlerin et l’accusa de l’avoir volée.",
+        "en": "Offended, the girl hid a silver cup in the pilgrim’s bag and accused him of stealing it.",
+        "kana": "Enfadada, la chica escondió una copa de plata en la mochila del peregrino y lo acusó de haberla robado."
+       }
+      ],
+      [
+       {
+        "jp": "Los guardias encontraron la copa y el juez condenó al chico sin escucharlo.",
+        "fr": "Les gardes trouvèrent la coupe et le juge condamna le garçon sans l’écouter.",
+        "en": "The guards found the cup and the judge condemned the boy without listening to him.",
+        "kana": "Los guardias encontraron la copa y el juez condenó al chico sin escucharlo."
+       },
+       {
+        "jp": "Sus padres, muy tristes, siguieron el Camino hasta Santiago para rezar por él.",
+        "fr": "Ses parents, très tristes, continuèrent le Chemin jusqu’à Saint-Jacques pour prier pour lui.",
+        "en": "His parents, very sad, continued along the Camino to Santiago to pray for him.",
+        "kana": "Sus padres, muy tristes, siguieron el Camino hasta Santiago para rezar por él."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la posada",
+       "reading": "/la poˈsaða/",
+       "fr": "l’auberge",
+       "en": "the inn"
+      },
+      {
+       "jp": "enamorarse",
+       "reading": "/enamoˈɾaɾse/",
+       "fr": "tomber amoureux",
+       "en": "to fall in love"
+      },
+      {
+       "jp": "hacer caso",
+       "reading": "/aˈθeɾ ˈkaso/",
+       "fr": "faire attention, écouter",
+       "en": "to pay attention"
+      },
+      {
+       "jp": "la copa",
+       "reading": "/la ˈkopa/",
+       "fr": "la coupe, le verre à pied",
+       "en": "the cup, the goblet"
+      },
+      {
+       "jp": "acusar",
+       "reading": "/akuˈsaɾ/",
+       "fr": "accuser",
+       "en": "to accuse"
+      },
+      {
+       "jp": "el juez",
+       "reading": "/el xweθ/",
+       "fr": "le juge",
+       "en": "the judge"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi la fille de l’aubergiste accusa-t-elle le pèlerin ?",
+        "en": "Why did the innkeeper’s daughter accuse the pilgrim?"
+       },
+       "choices": [
+        {
+         "fr": "Il ne s’était pas intéressé à elle",
+         "en": "He had paid no attention to her"
+        },
+        {
+         "fr": "Il avait vraiment volé la coupe",
+         "en": "He had really stolen the cup"
+        },
+        {
+         "fr": "Il n’avait pas payé",
+         "en": "He had not paid"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que firent les parents ?",
+        "en": "What did the parents do?"
+       },
+       "choices": [
+        {
+         "fr": "Ils continuèrent jusqu’à Saint-Jacques",
+         "en": "They went on to Santiago"
+        },
+        {
+         "fr": "Ils rentrèrent en Allemagne",
+         "en": "They went back to Germany"
+        },
+        {
+         "fr": "Ils restèrent à l’auberge",
+         "en": "They stayed at the inn"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "gallo-santo-domingo-2",
+     "title": {
+      "jp": "El gallo que cantó",
+      "fr": "Le coq qui chanta",
+      "en": "The rooster that crowed"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "A la vuelta, los padres pasaron otra vez por Santo Domingo y, para su sorpresa, su hijo seguía vivo: el santo lo había protegido.",
+        "fr": "Au retour, les parents repassèrent par Santo Domingo et, à leur grande surprise, leur fils était toujours en vie : le saint l’avait protégé.",
+        "en": "On the way back, the parents passed through Santo Domingo again and, to their surprise, their son was still alive: the saint had protected him.",
+        "kana": "A la vuelta, los padres pasaron otra vez por Santo Domingo y, para su sorpresa, su hijo seguía vivo: el santo lo había protegido."
+       },
+       {
+        "jp": "Corrieron a casa del juez, que estaba a punto de cenar un gallo y una gallina asados.",
+        "fr": "Ils coururent chez le juge, qui s’apprêtait à dîner d’un coq et d’une poule rôtis.",
+        "en": "They ran to the judge’s house, as he was about to dine on a roast rooster and hen.",
+        "kana": "Corrieron a casa del juez, que estaba a punto de cenar un gallo y una gallina asados."
+       },
+       {
+        "jp": "«Su hijo está tan vivo como este gallo que voy a comer», se rio el juez.",
+        "fr": "« Votre fils est aussi vivant que ce coq que je vais manger », se moqua le juge.",
+        "en": "“Your son is as alive as this rooster I’m about to eat,” the judge laughed.",
+        "kana": "«Su hijo está tan vivo como este gallo que voy a comer», se rio el juez."
+       }
+      ],
+      [
+       {
+        "jp": "En ese momento, el gallo saltó del plato y se puso a cantar.",
+        "fr": "À ce moment-là, le coq sauta de l’assiette et se mit à chanter.",
+        "en": "At that moment, the rooster jumped off the plate and began to crow.",
+        "kana": "En ese momento, el gallo saltó del plato y se puso a cantar."
+       },
+       {
+        "jp": "El juez liberó al joven y, desde entonces, en la catedral de Santo Domingo viven un gallo y una gallina blancos.",
+        "fr": "Le juge libéra le jeune homme et, depuis, un coq et une poule blancs vivent dans la cathédrale de Santo Domingo.",
+        "en": "The judge set the young man free and, ever since, a white rooster and hen have lived in Santo Domingo cathedral.",
+        "kana": "El juez liberó al joven y, desde entonces, en la catedral de Santo Domingo viven un gallo y una gallina blancos."
+       },
+       {
+        "jp": "Por eso dice el refrán: «Santo Domingo de la Calzada, donde cantó la gallina después de asada».",
+        "fr": "C’est pourquoi le proverbe dit : « Santo Domingo de la Calzada, où la poule chanta après avoir été rôtie ».",
+        "en": "That is why the saying goes: “Santo Domingo de la Calzada, where the hen sang after being roasted”.",
+        "kana": "Por eso dice el refrán: «Santo Domingo de la Calzada, donde cantó la gallina después de asada»."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la vuelta",
+       "reading": "/la ˈbwelta/",
+       "fr": "le retour",
+       "en": "the return"
+      },
+      {
+       "jp": "a punto de",
+       "reading": "/a ˈpunto ðe/",
+       "fr": "sur le point de",
+       "en": "about to"
+      },
+      {
+       "jp": "asado",
+       "reading": "/aˈsaðo/",
+       "fr": "rôti",
+       "en": "roast, roasted"
+      },
+      {
+       "jp": "el gallo",
+       "reading": "/el ˈɡaʎo/",
+       "fr": "le coq",
+       "en": "the rooster"
+      },
+      {
+       "jp": "saltar",
+       "reading": "/salˈtaɾ/",
+       "fr": "sauter",
+       "en": "to jump"
+      },
+      {
+       "jp": "liberar",
+       "reading": "/liβeˈɾaɾ/",
+       "fr": "libérer",
+       "en": "to set free"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fit le coq rôti ?",
+        "en": "What did the roast rooster do?"
+       },
+       "choices": [
+        {
+         "fr": "Il sauta de l’assiette et chanta",
+         "en": "It jumped off the plate and crowed"
+        },
+        {
+         "fr": "Il s’envola par la fenêtre",
+         "en": "It flew out of the window"
+        },
+        {
+         "fr": "Il resta dans l’assiette",
+         "en": "It stayed on the plate"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’y a-t-il aujourd’hui dans la cathédrale ?",
+        "en": "What is there in the cathedral today?"
+       },
+       "choices": [
+        {
+         "fr": "Un coq et une poule blancs",
+         "en": "A white rooster and hen"
+        },
+        {
+         "fr": "Une coupe en argent",
+         "en": "A silver cup"
+        },
+        {
+         "fr": "La maison du juge",
+         "en": "The judge’s house"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ciudad-de-duio",
+   "glyph": "d",
+   "level": "DELEB1",
+   "color": "#2E6A8A",
+   "title": {
+    "jp": "La ciudad sumergida de Duio",
+    "fr": "La ville engloutie de Duio",
+    "en": "The sunken city of Duio"
+   },
+   "summary": {
+    "fr": "Près de Fisterra, une ville orgueilleuse refuse d’accueillir les voyageurs… et disparaît sous la mer. On dit qu’on entend encore ses cloches.",
+    "en": "Near Fisterra, a proud city refuses to welcome travellers… and disappears beneath the sea. They say you can still hear its bells."
+   },
+   "chapters": [
+    {
+     "slug": "ciudad-de-duio-1",
+     "title": {
+      "jp": "Una ciudad orgullosa",
+      "fr": "Une ville orgueilleuse",
+      "en": "A proud city"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Cuenta la leyenda que, junto a la playa de Langosteira, había una ciudad rica y poderosa llamada Duio.",
+        "fr": "La légende raconte qu’à côté de la plage de Langosteira se trouvait une ville riche et puissante appelée Duio.",
+        "en": "Legend has it that, next to Langosteira beach, there was a rich and powerful city called Duio.",
+        "kana": "Cuenta la leyenda que, junto a la playa de Langosteira, había una ciudad rica y poderosa llamada Duio."
+       },
+       {
+        "jp": "Sus habitantes vivían en casas de piedra, comían en platos de oro y no querían que nadie de fuera entrara en la ciudad.",
+        "fr": "Ses habitants vivaient dans des maisons de pierre, mangeaient dans des assiettes en or et ne voulaient pas que des étrangers entrent dans la ville.",
+        "en": "Its inhabitants lived in stone houses, ate from gold plates and did not want any outsiders to enter the city.",
+        "kana": "Sus habitantes vivían en casas de piedra, comían en platos de oro y no querían que nadie de fuera entrara en la ciudad."
+       }
+      ],
+      [
+       {
+        "jp": "Un día llegaron dos viajeros cansados que pidieron agua y un lugar donde dormir.",
+        "fr": "Un jour arrivèrent deux voyageurs fatigués qui demandèrent de l’eau et un endroit où dormir.",
+        "en": "One day two tired travellers arrived and asked for water and a place to sleep.",
+        "kana": "Un día llegaron dos viajeros cansados que pidieron agua y un lugar donde dormir."
+       },
+       {
+        "jp": "«Aquí no hay sitio para mendigos», les dijeron. Y les cerraron todas las puertas.",
+        "fr": "« Ici, il n’y a pas de place pour les mendiants », leur dit-on. Et on leur ferma toutes les portes.",
+        "en": "“There’s no room here for beggars,” they were told. And every door was shut in their faces.",
+        "kana": "«Aquí no hay sitio para mendigos», les dijeron. Y les cerraron todas las puertas."
+       },
+       {
+        "jp": "Solo una mujer pobre, que vivía fuera de las murallas, les ofreció pan y su cama.",
+        "fr": "Seule une femme pauvre, qui vivait hors des remparts, leur offrit du pain et son lit.",
+        "en": "Only a poor woman, who lived outside the walls, offered them bread and her bed.",
+        "kana": "Solo una mujer pobre, que vivía fuera de las murallas, les ofreció pan y su cama."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "poderoso",
+       "reading": "/poðeˈɾoso/",
+       "fr": "puissant",
+       "en": "powerful"
+      },
+      {
+       "jp": "el habitante",
+       "reading": "/el aβiˈtante/",
+       "fr": "l’habitant",
+       "en": "the inhabitant"
+      },
+      {
+       "jp": "la piedra",
+       "reading": "/la ˈpjeðɾa/",
+       "fr": "la pierre",
+       "en": "stone"
+      },
+      {
+       "jp": "el viajero",
+       "reading": "/el bjaˈxeɾo/",
+       "fr": "le voyageur",
+       "en": "the traveller"
+      },
+      {
+       "jp": "el mendigo",
+       "reading": "/el menˈdiɣo/",
+       "fr": "le mendiant",
+       "en": "the beggar"
+      },
+      {
+       "jp": "ofrecer",
+       "reading": "/ofɾeˈθeɾ/",
+       "fr": "offrir, proposer",
+       "en": "to offer"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que refusaient les habitants de Duio ?",
+        "en": "What did the people of Duio refuse?"
+       },
+       "choices": [
+        {
+         "fr": "Que des étrangers entrent dans la ville",
+         "en": "To let outsiders into the city"
+        },
+        {
+         "fr": "De manger dans de l’or",
+         "en": "To eat from gold plates"
+        },
+        {
+         "fr": "D’aller à la plage",
+         "en": "To go to the beach"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qui aida les voyageurs ?",
+        "en": "Who helped the travellers?"
+       },
+       "choices": [
+        {
+         "fr": "Une femme pauvre hors des remparts",
+         "en": "A poor woman outside the walls"
+        },
+        {
+         "fr": "Le maire de la ville",
+         "en": "The mayor of the city"
+        },
+        {
+         "fr": "Personne",
+         "en": "Nobody"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "ciudad-de-duio-2",
+     "title": {
+      "jp": "Las campanas bajo el mar",
+      "fr": "Les cloches sous la mer",
+      "en": "The bells beneath the sea"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Por la mañana, los viajeros le dijeron a la mujer: «Vete al monte y no mires atrás, pase lo que pase».",
+        "fr": "Le matin, les voyageurs dirent à la femme : « Va sur la montagne et ne te retourne pas, quoi qu’il arrive. »",
+        "en": "In the morning, the travellers said to the woman: “Go up the mountain and don’t look back, whatever happens.”",
+        "kana": "Por la mañana, los viajeros le dijeron a la mujer: «Vete al monte y no mires atrás, pase lo que pase»."
+       },
+       {
+        "jp": "Mientras ella subía, se levantó una tormenta terrible y el mar cubrió la ciudad entera.",
+        "fr": "Pendant qu’elle montait, une terrible tempête se leva et la mer recouvrit la ville entière.",
+        "en": "As she was climbing, a terrible storm rose and the sea covered the whole city.",
+        "kana": "Mientras ella subía, se levantó una tormenta terrible y el mar cubrió la ciudad entera."
+       },
+       {
+        "jp": "La mujer obedeció y se salvó; de Duio no quedó nada.",
+        "fr": "La femme obéit et fut sauvée ; de Duio, il ne resta rien.",
+        "en": "The woman obeyed and was saved; nothing was left of Duio.",
+        "kana": "La mujer obedeció y se salvó; de Duio no quedó nada."
+       }
+      ],
+      [
+       {
+        "jp": "Hoy los pescadores de Fisterra dicen que, en las noches tranquilas, se oyen las campanas de la ciudad bajo el agua.",
+        "fr": "Aujourd’hui, les pêcheurs de Fisterra disent que, par les nuits calmes, on entend les cloches de la ville sous l’eau.",
+        "en": "Today the fishermen of Fisterra say that, on calm nights, you can hear the city’s bells beneath the water.",
+        "kana": "Hoy los pescadores de Fisterra dicen que, en las noches tranquilas, se oyen las campanas de la ciudad bajo el agua."
+       },
+       {
+        "jp": "Y los peregrinos que llegan al fin del mundo recuerdan la lección: siempre hay que abrir la puerta al viajero.",
+        "fr": "Et les pèlerins qui arrivent au bout du monde se souviennent de la leçon : il faut toujours ouvrir sa porte au voyageur.",
+        "en": "And the pilgrims who reach the end of the world remember the lesson: you should always open your door to the traveller.",
+        "kana": "Y los peregrinos que llegan al fin del mundo recuerdan la lección: siempre hay que abrir la puerta al viajero."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "mirar atrás",
+       "reading": "/miˈɾaɾ aˈtɾas/",
+       "fr": "regarder en arrière",
+       "en": "to look back"
+      },
+      {
+       "jp": "pase lo que pase",
+       "reading": "/ˈpase lo ke ˈpase/",
+       "fr": "quoi qu’il arrive",
+       "en": "whatever happens"
+      },
+      {
+       "jp": "cubrir",
+       "reading": "/kuˈβɾiɾ/",
+       "fr": "couvrir",
+       "en": "to cover"
+      },
+      {
+       "jp": "salvarse",
+       "reading": "/salˈβaɾse/",
+       "fr": "se sauver, être sauvé",
+       "en": "to be saved"
+      },
+      {
+       "jp": "la campana",
+       "reading": "/la kamˈpana/",
+       "fr": "la cloche",
+       "en": "the bell"
+      },
+      {
+       "jp": "el pescador",
+       "reading": "/el peskaˈðoɾ/",
+       "fr": "le pêcheur",
+       "en": "the fisherman"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que conseillèrent les voyageurs à la femme ?",
+        "en": "What did the travellers advise the woman?"
+       },
+       "choices": [
+        {
+         "fr": "De monter sans se retourner",
+         "en": "To climb without looking back"
+        },
+        {
+         "fr": "De rester chez elle",
+         "en": "To stay at home"
+        },
+        {
+         "fr": "De prévenir la ville",
+         "en": "To warn the city"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’entendent les pêcheurs par les nuits calmes ?",
+        "en": "What do fishermen hear on calm nights?"
+       },
+       "choices": [
+        {
+         "fr": "Les cloches de la ville engloutie",
+         "en": "The bells of the sunken city"
+        },
+        {
+         "fr": "Des chants de pèlerins",
+         "en": "Pilgrims singing"
+        },
+        {
+         "fr": "La tempête",
+         "en": "The storm"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
  * Mode histoire espagnol (l'écuyer·ère de Don Quichotte) : le décor de chaque île raconte son chapitre.
  * DELE A1, la Manche : moulins à vent, maisons blanches, venta, oliviers, sierra et château des Ducs.
  * DELE A2, la route de Barcelone : rivière, ferme d'Aragon, fontaine, diligence, toits envolés, crêtes, fête et port.
+ * DELE B1, le chemin de Saint-Jacques : col des Pyrénées, vignes, cathédrales, blés de la Meseta, château templier, hórreo, phare.
  * Dessins originaux, centrés sur (0, 0).
  */
 const WHITE = '#F6F1E6';
@@ -287,6 +288,126 @@ function Rose({ ...p }: P) {
   );
 }
 
+/** Rangs de vigne et grappes. */
+function Vineyard({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      {[-8, -2, 4].map((y, i) => <path key={y} d={`M${-26 + i * 3} ${y} Q0 ${y - 3} ${26 - i * 3} ${y}`} stroke={OLIVE} strokeWidth="2.2" fill="none" strokeDasharray="3 2" />)}
+      {[-14, 2, 16].map((x) => <g key={x} fill="#6A2A5A">{[[0, 0], [2, 0], [1, 2]].map(([dx, dy]) => <circle key={`${dx}${dy}`} cx={x + dx} cy={-12 + dy} r="1.3" />)}</g>)}
+    </g>
+  );
+}
+
+/** Tonneau de vin. */
+function Barrel({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-8" rx="7" ry="9" fill={WOOD} />
+      <path d="M-6 -13 H6 M-6 -3 H6" stroke="#4A2A1A" strokeWidth="1.2" />
+      <ellipse cx="0" cy="-8" rx="2.5" ry="3" fill="#5A3420" />
+    </g>
+  );
+}
+
+/** Cathédrale gothique : deux flèches ajourées et une rosace. */
+function Gothic({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-14" y="-18" width="28" height="18" fill={STONE} />
+      {[-10, 10].map((x) => <g key={x}><rect x={x - 4} y="-30" width="8" height="14" fill={STONE} /><path d={`M${x - 4} -30 L${x} -46 L${x + 4} -30Z`} fill="#9A9080" /></g>)}
+      <circle cx="0" cy="-11" r="4.5" fill="#3A6AA8" stroke={GOLD} strokeWidth="1" />
+      <path d="M-3 0 V-4 Q0 -7 3 -4 V0Z" fill={WOOD} />
+    </g>
+  );
+}
+
+/** Champ de blé et arbre solitaire de la Meseta. */
+function Wheat({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-30 0 Q0 -6 30 0Z" fill={GOLD} />
+      {[-22, -14, -6, 2, 10, 18].map((x) => <path key={x} d={`M${x} -1 V-7 M${x - 1.5} -6 L${x} -8 L${x + 1.5} -6`} stroke="#B8902A" strokeWidth="0.8" fill="none" />)}
+      <path d="M24 0 V-12" stroke={WOOD} strokeWidth="1.6" />
+      <circle cx="24" cy="-15" r="6" fill={OLIVE} />
+    </g>
+  );
+}
+
+/** Rosace de vitrail. */
+function RoseWindow({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <circle cx="0" cy="-14" r="13" fill={STONE} />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((a, i) => <path key={a} d="M0 -14 L0 -25 A11 11 0 0 1 7.8 -21.8Z" transform={`rotate(${a} 0 -14)`} fill={[RED, '#3A6AA8', GOLD, OLIVE][i % 4]} />)}
+      <circle cx="0" cy="-14" r="3" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Château templier : tours crénelées. */
+function Castle({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-16" y="-16" width="32" height="16" fill={STONE} />
+      {[-16, 8].map((x) => <g key={x}><rect x={x} y="-26" width="8" height="26" fill="#A89E88" /><path d={`M${x} -26 v-3 h2 v3 h2 v-3 h2 v3 h2 v-3`} stroke="#A89E88" strokeWidth="1.4" fill="none" /></g>)}
+      <path d="M-3 0 V-8 Q0 -11 3 -8 V0Z" fill="#3A2A1A" />
+      <path d="M0 -26 V-36 L8 -33 L0 -30" fill="#F6F1E6" stroke={WOOD} strokeWidth="0.6" />
+      <path d="M2 -34 H5 M3.5 -35.5 V-31.5" stroke={RED} strokeWidth="0.8" />
+    </g>
+  );
+}
+
+/** Hórreo galicien : grenier de pierre sur pilotis, croix sur le toit. */
+function Horreo({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      {[-10, 10].map((x) => <rect key={x} x={x - 1.5} y="-6" width="3" height="6" fill={STONE} />)}
+      <rect x="-14" y="-8" width="28" height="2" fill="#9A9080" />
+      <rect x="-12" y="-17" width="24" height="9" fill={STONE} />
+      {[-8, -4, 0, 4, 8].map((x) => <rect key={x} x={x - 0.5} y="-16" width="1" height="7" fill="#6A6458" />)}
+      <path d="M-14 -17 L0 -23 L14 -17Z" fill={ROOF} />
+      <path d="M-14 -23 V-27 M-15.5 -25.5 H-12.5" stroke={STONE} strokeWidth="1" />
+    </g>
+  );
+}
+
+/** Coquille Saint-Jacques. */
+function Scallop({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-8 -2 Q-10 -14 0 -16 Q10 -14 8 -2 Z" fill={GOLD} stroke="#B8902A" strokeWidth="0.8" />
+      {[-5, -2.5, 0, 2.5, 5].map((x) => <path key={x} d={`M0 -2 L${x * 1.4} -14`} stroke="#B8902A" strokeWidth="0.6" />)}
+      <rect x="-3" y="-3" width="6" height="2" fill="#B8902A" />
+    </g>
+  );
+}
+
+/** Phare au bord de la falaise. */
+function Lighthouse({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 L-10 -6 L10 -6 L14 0Z" fill="#7A6A5A" />
+      <path d="M-4 -6 L-3 -26 H3 L4 -6Z" fill={WHITE} stroke={STONE} strokeWidth="0.6" />
+      <rect x="-3" y="-18" width="6" height="3" fill={RED} />
+      <rect x="-3.5" y="-31" width="7" height="5" fill={GOLD} />
+      <path d="M-4 -31 L0 -35 L4 -31Z" fill={RED} />
+      {!calm && <path d="M4 -29 L24 -36 L24 -22Z" fill={GOLD} opacity="0.45" />}
+    </g>
+  );
+}
+
+/** Cathédrale baroque de Saint-Jacques : deux tours. */
+function Santiago({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-12" y="-20" width="24" height="20" fill={OCHRE} />
+      {[-14, 8].map((x) => <g key={x}><rect x={x} y="-38" width="6" height="38" fill="#B8823A" /><path d={`M${x} -38 L${x + 3} -46 L${x + 6} -38Z`} fill="#9A6A2A" /><circle cx={x + 3} cy="-30" r="1.4" fill={GOLD} /></g>)}
+      <path d="M-4 0 V-10 Q0 -14 4 -10 V0Z" fill={WOOD} />
+      <circle cx="0" cy="-16" r="2" fill={GOLD} />
+    </g>
+  );
+}
+
 export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'auberge où Don Quichotte se fait adouber
   'delea1-w1': () => (<><Venta x={-10} y={12} /><Lance x={16} y={12} /><OliveTree x={30} y={12} s={0.7} /></>),
@@ -324,4 +445,22 @@ export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'delea2-w8': () => (<><SeaBoat x={-6} y={14} /><Rose x={24} y={12} /></>),
   // Le duel sur la plage face au chevalier de la Blanche Lune
   'delea2-final': () => (<><Spires x={-14} y={12} /><SeaBoat x={14} y={14} s={0.8} /><Lance x={30} y={10} s={0.7} /></>),
+  // DELE B1 — le chemin de Saint-Jacques : le col des Pyrénées dans la brume de l'Herensuge
+  'deleb1-w1': (calm) => (<><Ridge x={-2} y={12} /><Scallop x={24} y={12} /><Weather x={-22} y={-20} calm={calm} /></>),
+  // Les vignes de la Rioja
+  'deleb1-w2': () => (<><Vineyard x={-4} y={14} /><Barrel x={22} y={12} /></>),
+  // La cathédrale de Burgos
+  'deleb1-w3': () => (<><Gothic x={-6} y={12} s={1.1} /><WhiteHouse x={20} y={12} s={0.6} /></>),
+  // La Meseta infinie
+  'deleb1-w4': () => (<><Wheat x={-2} y={14} /><Scallop x={-24} y={12} s={0.8} /></>),
+  // Les vitraux de León
+  'deleb1-w5': () => (<><RoseWindow x={-8} y={12} /><Gothic x={18} y={12} s={0.6} /></>),
+  // Le château des Templiers de Ponferrada
+  'deleb1-w6': () => (<><Castle x={-4} y={12} s={1.1} /><OliveTree x={24} y={12} s={0.6} /></>),
+  // Les brumes de Galice : hórreo et brouillard
+  'deleb1-w7': (calm) => (<><Horreo x={-8} y={12} /><OliveTree x={18} y={12} s={0.7} /><Weather x={22} y={-20} calm={calm} /></>),
+  // Fisterra, la fin du monde
+  'deleb1-w8': (calm) => (<><Lighthouse x={-12} y={12} calm={calm} /><SeaBoat x={14} y={14} s={0.7} /></>),
+  // La cathédrale de Saint-Jacques
+  'deleb1-final': () => (<><Santiago x={-6} y={12} s={1.1} /><Scallop x={22} y={12} /></>),
 };

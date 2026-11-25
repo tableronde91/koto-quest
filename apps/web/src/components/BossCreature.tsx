@@ -524,6 +524,63 @@ const SPECIES: Record<string, Species> = {
     face: <><path d="M86 116 Q100 126 114 116" stroke="#1E3A20" strokeWidth="3" fill="none" /><circle cx="94" cy="106" r="2" fill="#1E3A20" /><circle cx="106" cy="106" r="2" fill="#1E3A20" /></>,
     front: <g transform="translate(160 150)"><path d="M0 14 V-4" stroke="#3E7A3A" strokeWidth="2" /><circle cx="0" cy="-8" r="6" fill="#C8323F" /></g>,
   },
+  // ───── Gardiens espagnols (DELE B1 — le chemin de Saint-Jacques) ─────
+  // Herensuge : dragon à sept têtes de la sierra d'Aralar (petites têtes sur les épaules)
+  'Ç': {
+    body: '#4A7A3A', belly: '#C8D890', head: '#5A8A4A', eye: '#F2D94E',
+    back: <g fill="#5A8A4A" stroke="#2E4A22" strokeWidth="1.5">{[[34, 78], [50, 56], [150, 56], [166, 78], [24, 104], [176, 104]].map(([x, y]) => <g key={`${x}${y}`}><path d={`M100 110 Q${(x + 100) / 2} ${y + 20} ${x} ${y}`} fill="none" strokeWidth="9" stroke="#4A7A3A" /><circle cx={x} cy={y} r="10" /><circle cx={x + 3} cy={y - 2} r="2.2" fill="#F2D94E" stroke="none" /></g>)}</g>,
+    top: <path d="M84 56 L90 38 L96 54 L104 54 L110 38 L116 56" fill="#E2B84A" />,
+    face: <path d="M88 118 Q100 126 112 118" stroke="#1E3A18" strokeWidth="3" fill="none" />,
+  },
+  // Gizotso : loup-garou basque, fourrure grise, oreilles pointues, crocs
+  'ç': {
+    body: '#6A6A72', belly: '#A8A8B0', head: '#7A7A84', eye: '#F2D94E',
+    top: <>{ear(66, false, '#6A6A72', '#C8A8A8')}{ear(134, true, '#6A6A72', '#C8A8A8')}</>,
+    face: <><ellipse cx="100" cy="114" rx="16" ry="11" fill="#9A9AA2" /><ellipse cx="100" cy="108" rx="5" ry="3.5" fill="#1F2433" /><path d="M92 120 L94 126 L96 120 M104 120 L106 126 L108 120" fill="#FFFFFF" /></>,
+    back: <path d="M150 170 Q192 150 186 110 Q172 140 150 146Z" fill="#5A5A62" />,
+  },
+  // Tarasca : dragon de procession, carapace de tortue, cavalière juchée sur le dos
+  'º': {
+    body: '#3E7A5A', belly: '#BFE0A0', head: '#4E8A6A', eye: '#F2D94E',
+    back: <><ellipse cx="100" cy="130" rx="82" ry="52" fill="#8A6A3A" stroke="#5A4A2A" strokeWidth="3" />{[[70, 112], [100, 104], [130, 112], [84, 146], [116, 146]].map(([x, y]) => <path key={`${x}${y}`} d={`M${x - 10} ${y} l10 -8 l10 8 l-10 8Z`} fill="#A8824A" />)}</>,
+    top: <g transform="translate(100 40)"><path d="M-10 0 L0 -26 L10 0Z" fill="#C8323F" /><circle cx="0" cy="-30" r="6" fill="#E8C8A8" /></g>,
+    face: <path d="M86 118 Q100 128 114 118" stroke="#1E3A20" strokeWidth="3" fill="#C8323F" />,
+  },
+  // Basilic : roi des serpents, crête de coq et couronne d'or
+  'ª': {
+    body: '#6E8A2E', belly: '#D8E08A', head: '#7E9A3E', eye: '#E2422E',
+    top: <><path d="M80 52 L86 34 L94 48 L100 30 L106 48 L114 34 L120 52Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /><path d="M92 30 Q96 16 102 26 Q108 14 110 30" fill="#C8323F" /></>,
+    back: <path d="M150 180 Q196 168 184 132 Q176 156 154 160 Q176 140 166 118" stroke="#5E7A1E" strokeWidth="14" fill="none" strokeLinecap="round" />,
+    face: <><path d="M92 116 L100 124 L108 116Z" fill="#E2B84A" /><path d="M100 124 V132 M100 132 L96 136 M100 132 L104 136" stroke="#C8323F" strokeWidth="2" /></>,
+  },
+  // Trenti : petit lutin cantabre couvert de mousse et de feuilles
+  '«': {
+    body: '#5A7A3A', belly: '#8AAA5A', head: '#7A9A4A', eye: '#2A1A10',
+    top: <g fill="#3E6A2A">{[[70, 62], [86, 46], [100, 40], [114, 46], [130, 62]].map(([x, y]) => <ellipse key={x} cx={x} cy={y} rx="12" ry="7" transform={`rotate(${(x - 100) / 2} ${x} ${y})`} />)}</g>,
+    under: <path d="M78 112 Q100 150 122 112 Q110 126 100 126 Q90 126 78 112Z" fill="#4A6A2A" />,
+    front: <g fill="#C8823A">{[[36, 140], [164, 136], [44, 170]].map(([x, y]) => <path key={x} d={`M${x} ${y} q6 -10 12 0 q-6 6 -12 0Z`} />)}</g>,
+  },
+  // Diaño burlón : diable farceur qui change de forme, cornes de bouc et sourire moqueur
+  '»': {
+    body: '#3A2A4A', belly: '#6A5A7A', head: '#B8323A', eye: '#F2D94E',
+    top: <path d="M72 60 Q58 40 66 20 Q74 40 86 50 M128 60 Q142 40 134 20 Q126 40 114 50" stroke="#E8DCC0" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    face: <><path d="M82 114 Q100 132 118 114" stroke="#1F1F1F" strokeWidth="3" fill="#FFFFFF" /><path d="M96 134 Q100 150 104 134" fill="#3A2A2A" /></>,
+    back: <path d="M150 160 Q186 170 180 130 L188 124 L178 122" stroke="#3A2A4A" strokeWidth="6" fill="none" strokeLinecap="round" />,
+  },
+  // Meiga : sorcière galicienne, foulard noir, chaudron de queimada aux flammes bleues
+  '~': {
+    body: '#2A2A3A', belly: '#4A4A5E', head: '#E8C8A8', eye: '#3A5A2A',
+    top: <path d="M58 86 Q56 40 100 34 Q144 40 142 86 Q132 70 100 66 Q68 70 58 86Z" fill="#1F1F2A" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#6A2A3A" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(158 158)"><path d="M-18 -6 H18 Q16 16 0 18 Q-16 16 -18 -6Z" fill="#3A3A3A" /><path d="M-10 -8 Q-6 -24 0 -12 Q4 -26 10 -8" fill="#5A9AE2" opacity="0.85" /></g>,
+  },
+  // Urco : grand chien noir des côtes galiciennes, cornes de taureau, ruisselant d'eau de mer
+  '€': {
+    body: '#1F1F26', belly: '#3A3A44', head: '#2A2A32', eye: '#F2D94E',
+    top: <path d="M70 62 Q48 52 44 30 Q60 44 80 50 M130 62 Q152 52 156 30 Q140 44 120 50" stroke="#E8DCC0" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    face: <><ellipse cx="100" cy="116" rx="17" ry="11" fill="#3A3A44" /><ellipse cx="100" cy="110" rx="6" ry="4" fill="#0F0F14" /></>,
+    front: <g fill="#7AB8E2">{[[60, 186], [80, 192], [124, 192], [144, 186]].map(([x, y]) => <path key={x} d={`M${x} ${y - 8} Q${x + 3} ${y - 2} ${x} ${y} Q${x - 3} ${y - 2} ${x} ${y - 8}Z`} />)}</g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

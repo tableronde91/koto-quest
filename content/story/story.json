@@ -3672,6 +3672,159 @@
      }
     }
    }
+  },
+  "DELEB1": {
+   "glyph": "¿",
+   "jp": "Camino",
+   "color": "#B07A2A",
+   "saga": {
+    "fr": "Le chemin de Saint-Jacques",
+    "en": "The Way of St James"
+   },
+   "hero": {
+    "fr": "Pèlerin·e du Camino",
+    "en": "Pilgrim on the Camino"
+   },
+   "short": {
+    "fr": "Pèlerin·e",
+    "en": "Pilgrim"
+   },
+   "prologue": {
+    "fr": "À Roncevaux, au pied des Pyrénées, une vieille hospitalière tamponne ta crédentiale et te tend une coquille : « Huit cents kilomètres jusqu’à Saint-Jacques… Sur le Camino, tu rencontreras des pèlerins du monde entier, et les créatures des légendes du Nord. Les unes comme les autres voudront savoir ce que tu penses, ce que tu espères et ce que tu ferais à leur place. » Tu ajustes ton sac et suis la première flèche jaune.",
+    "en": "At Roncesvalles, at the foot of the Pyrenees, an old hostel warden stamps your pilgrim passport and hands you a scallop shell: “Eight hundred kilometres to Santiago… On the Camino you will meet pilgrims from all over the world, and the creatures of the northern legends. Both will want to know what you think, what you hope for and what you would do in their place.” You adjust your rucksack and follow the first yellow arrow."
+   },
+   "epilogue": {
+    "fr": "Devant la cathédrale de Saint-Jacques, le botafumeiro se balance au-dessus des pèlerins. Tu reçois ta Compostela, puis tu marches encore jusqu’à Fisterra, où le soleil se couche sur l’océan. Tu sais maintenant donner ton avis, nuancer, espérer et imaginer en espagnol. La fin du monde n’est qu’un nouveau départ…",
+    "en": "In front of Santiago cathedral, the botafumeiro swings above the pilgrims. You receive your Compostela, then walk on to Fisterra, where the sun sets over the ocean. You can now give your opinion, qualify it, hope and imagine in Spanish. The end of the world is only a new beginning…"
+   },
+   "chapters": {
+    "deleb1-w1": {
+     "title": {
+      "fr": "Le départ de Roncevaux",
+      "en": "Setting off from Roncesvalles"
+     },
+     "intro": {
+      "fr": "Au col des Pyrénées, l’Herensuge aux sept têtes barre le passage dans la brume. Dis-lui ce que tu feras sur le Chemin, ce que tu ferais à sa place, et devine où sont passés les autres pèlerins.",
+      "en": "At the Pyrenean pass, the seven-headed Herensuge blocks the way in the mist. Tell it what you will do on the Camino, what you would do in its place, and guess where the other pilgrims have gone."
+     },
+     "outro": {
+      "fr": "L’Herensuge s’écarte et ses sept têtes te souhaitent « ¡Buen Camino! » en chœur.",
+      "en": "The Herensuge steps aside and its seven heads wish you “¡Buen Camino!” in chorus."
+     }
+    },
+    "deleb1-w2": {
+     "title": {
+      "fr": "Les vignes de la Rioja",
+      "en": "The vineyards of La Rioja"
+     },
+     "intro": {
+      "fr": "Entre les vignes de la Rioja, le Gizotso provoque des disputes entre vignerons et pèlerins. Donne ton avis avec nuance et accepte celui des autres.",
+      "en": "Among the vineyards of La Rioja, the Gizotso stirs up quarrels between winemakers and pilgrims. Give your opinion with nuance and accept other people’s."
+     },
+     "outro": {
+      "fr": "Le Gizotso, à court d’arguments, retourne dans la forêt. Les vignerons trinquent à ta santé.",
+      "en": "Out of arguments, the Gizotso goes back into the forest. The winemakers raise a glass to you."
+     }
+    },
+    "deleb1-w3": {
+     "title": {
+      "fr": "La cathédrale de Burgos",
+      "en": "Burgos cathedral"
+     },
+     "intro": {
+      "fr": "Sur le parvis de Burgos, la Tarasca s’est réveillée et sème la panique dans la procession. Exprime tes souhaits, tes demandes et tes sentiments avec délicatesse pour la calmer.",
+      "en": "In the cathedral square of Burgos, the Tarasca has woken up and is causing panic in the procession. Express your wishes, requests and feelings tactfully to calm it."
+     },
+     "outro": {
+      "fr": "La Tarasca reprend sa place dans le cortège, toute fière, et les enfants dansent autour d’elle.",
+      "en": "The Tarasca proudly takes its place in the procession again, and the children dance around it."
+     }
+    },
+    "deleb1-w4": {
+     "title": {
+      "fr": "La Meseta infinie",
+      "en": "The endless Meseta"
+     },
+     "intro": {
+      "fr": "Sous le soleil de la Meseta, le Basilic pétrifie les pèlerins qui perdent la notion du temps. Dis-lui ce que tu feras quand tu arriveras, pourquoi tu marches et ce qui s’était passé avant.",
+      "en": "Under the Meseta sun, the Basilisk turns to stone the pilgrims who lose track of time. Tell it what you will do when you arrive, why you are walking and what had happened before."
+     },
+     "outro": {
+      "fr": "Le Basilic ferme les yeux et se rendort sous une pierre. Les pèlerins pétrifiés reprennent leur marche.",
+      "en": "The Basilisk closes its eyes and goes back to sleep under a stone. The petrified pilgrims start walking again."
+     }
+    },
+    "deleb1-w5": {
+     "title": {
+      "fr": "Les vitraux de León",
+      "en": "The stained glass of León"
+     },
+     "intro": {
+      "fr": "Dans la cathédrale de León, le Trenti a mélangé tous les messages des pèlerins. Relie les phrases, trouve ce que chacun cherche et rapporte fidèlement ce qui a été dit.",
+      "en": "In León cathedral, the Trenti has mixed up all the pilgrims’ messages. Link the sentences, find what everyone is looking for and report faithfully what was said."
+     },
+     "outro": {
+      "fr": "Le Trenti rit dans sa barbe de mousse et rend les messages à leurs destinataires.",
+      "en": "The Trenti laughs into its mossy beard and gives the messages back to the right people."
+     }
+    },
+    "deleb1-w6": {
+     "title": {
+      "fr": "Le château des Templiers",
+      "en": "The Templar castle"
+     },
+     "intro": {
+      "fr": "Au château de Ponferrada, le Diaño burlón change de forme pour se moquer des pèlerins blessés. Dis-lui ce que tu viens de faire, depuis quand tu marches, et explique tes douleurs au médecin.",
+      "en": "At Ponferrada castle, the Diaño burlón keeps changing shape to mock injured pilgrims. Tell it what you have just done, how long you have been walking, and explain your aches to the doctor."
+     },
+     "outro": {
+      "fr": "Le Diaño burlón se transforme en corbeau et s’envole par-dessus les remparts.",
+      "en": "The Diaño burlón turns into a crow and flies off over the ramparts."
+     }
+    },
+    "deleb1-w7": {
+     "title": {
+      "fr": "Les brumes de Galice",
+      "en": "The mists of Galicia"
+     },
+     "intro": {
+      "fr": "Au Cebreiro, la Meiga ensorcelle les pèlerins qui parlent sans réfléchir. Argumente sur l’environnement, relie tes idées et garde ton téléphone loin de son chaudron.",
+      "en": "At O Cebreiro, the Meiga bewitches pilgrims who talk without thinking. Argue about the environment, link your ideas and keep your phone away from her cauldron."
+     },
+     "outro": {
+      "fr": "La Meiga t’offre une tasse de queimada et lève le brouillard sur la Galice.",
+      "en": "The Meiga offers you a cup of queimada and lifts the fog over Galicia."
+     }
+    },
+    "deleb1-w8": {
+     "title": {
+      "fr": "Saint-Jacques et la fin du monde",
+      "en": "Santiago and the end of the world"
+     },
+     "intro": {
+      "fr": "À Fisterra, l’Urco sort des vagues les nuits de tempête. Imagine ce qui arriverait si…, puis écris-lui une lettre en bonne et due forme pour l’apaiser.",
+      "en": "At Fisterra, the Urco rises from the waves on stormy nights. Imagine what would happen if…, then write it a proper formal letter to calm it."
+     },
+     "outro": {
+      "fr": "L’Urco lit ta lettre, hoche ses cornes et replonge dans l’océan. Le phare se rallume.",
+      "en": "The Urco reads your letter, nods its horns and dives back into the ocean. The lighthouse shines again."
+     }
+    },
+    "deleb1-final": {
+     "title": {
+      "fr": "La cathédrale de Saint-Jacques",
+      "en": "Santiago cathedral"
+     },
+     "intro": {
+      "fr": "Au bureau du pèlerin, pour recevoir ta Compostela, passe l’épreuve : lis, écoute et écris comme au DELE B1. Il faut au moins 30 points sur 50 dans chaque groupe.",
+      "en": "At the Pilgrim’s Office, to receive your Compostela, take the test: read, listen and write as in the DELE B1. You need at least 30 points out of 50 in each group."
+     },
+     "outro": {
+      "fr": "La Compostela est à ton nom. Niveau DELE B1 validé : tu donnes ton avis, tu nuances et tu imagines en espagnol !",
+      "en": "The Compostela bears your name. DELE B1 level complete: you give your opinion, qualify it and imagine in Spanish!"
+     }
+    }
+   }
   }
  }
 }

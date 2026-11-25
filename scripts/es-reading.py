@@ -224,7 +224,86 @@ BLANCA = STORY('blanca-luna', 'l', 'DELEA2', '#2E7DA8', ('El Caballero de la Bla
   ]),
 ])
 
-ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA]
+# ═════════════════════════ El gallo de Santo Domingo (légende du Camino ; DELE B1) ═════════════════════════
+GALLO = STORY('gallo-santo-domingo', 'g', 'DELEB1', '#C8823A', ('El gallo de Santo Domingo', 'Le coq de Santo Domingo', 'The rooster of Santo Domingo'),
+  ('À Santo Domingo de la Calzada, un jeune pèlerin accusé à tort est sauvé par un miracle… et par un coq rôti qui se met à chanter.', 'In Santo Domingo de la Calzada, a young pilgrim falsely accused is saved by a miracle… and by a roast rooster that starts to crow.'), [
+  CH('gallo-santo-domingo-1', ('Una acusación injusta', 'Une accusation injuste', 'An unfair accusation'), [
+    [S('Hace muchos siglos, una familia alemana hacía el Camino de Santiago con su hijo, un chico de dieciocho años.', 'Il y a bien des siècles, une famille allemande faisait le chemin de Saint-Jacques avec son fils, un garçon de dix-huit ans.', 'Many centuries ago, a German family was walking the Camino de Santiago with their son, a boy of eighteen.'),
+     S('Una noche durmieron en una posada de Santo Domingo de la Calzada. La hija del posadero se enamoró del joven, pero él no le hizo caso.', 'Un soir, ils dormirent dans une auberge de Santo Domingo de la Calzada. La fille de l’aubergiste tomba amoureuse du jeune homme, mais il ne fit pas attention à elle.', 'One night they slept at an inn in Santo Domingo de la Calzada. The innkeeper’s daughter fell in love with the young man, but he paid no attention to her.'),
+     S('Enfadada, la chica escondió una copa de plata en la mochila del peregrino y lo acusó de haberla robado.', 'Vexée, la jeune fille cacha une coupe en argent dans le sac du pèlerin et l’accusa de l’avoir volée.', 'Offended, the girl hid a silver cup in the pilgrim’s bag and accused him of stealing it.')],
+    [S('Los guardias encontraron la copa y el juez condenó al chico sin escucharlo.', 'Les gardes trouvèrent la coupe et le juge condamna le garçon sans l’écouter.', 'The guards found the cup and the judge condemned the boy without listening to him.'),
+     S('Sus padres, muy tristes, siguieron el Camino hasta Santiago para rezar por él.', 'Ses parents, très tristes, continuèrent le Chemin jusqu’à Saint-Jacques pour prier pour lui.', 'His parents, very sad, continued along the Camino to Santiago to pray for him.')],
+  ], [
+    W('la posada', '/la poˈsaða/', 'l’auberge', 'the inn'),
+    W('enamorarse', '/enamoˈɾaɾse/', 'tomber amoureux', 'to fall in love'),
+    W('hacer caso', '/aˈθeɾ ˈkaso/', 'faire attention, écouter', 'to pay attention'),
+    W('la copa', '/la ˈkopa/', 'la coupe, le verre à pied', 'the cup, the goblet'),
+    W('acusar', '/akuˈsaɾ/', 'accuser', 'to accuse'),
+    W('el juez', '/el xweθ/', 'le juge', 'the judge'),
+  ], [
+    Q(('Pourquoi la fille de l’aubergiste accusa-t-elle le pèlerin ?', 'Why did the innkeeper’s daughter accuse the pilgrim?'), [('Il ne s’était pas intéressé à elle', 'He had paid no attention to her'), ('Il avait vraiment volé la coupe', 'He had really stolen the cup'), ('Il n’avait pas payé', 'He had not paid')], 0),
+    Q(('Que firent les parents ?', 'What did the parents do?'), [('Ils continuèrent jusqu’à Saint-Jacques', 'They went on to Santiago'), ('Ils rentrèrent en Allemagne', 'They went back to Germany'), ('Ils restèrent à l’auberge', 'They stayed at the inn')], 0),
+  ]),
+  CH('gallo-santo-domingo-2', ('El gallo que cantó', 'Le coq qui chanta', 'The rooster that crowed'), [
+    [S('A la vuelta, los padres pasaron otra vez por Santo Domingo y, para su sorpresa, su hijo seguía vivo: el santo lo había protegido.', 'Au retour, les parents repassèrent par Santo Domingo et, à leur grande surprise, leur fils était toujours en vie : le saint l’avait protégé.', 'On the way back, the parents passed through Santo Domingo again and, to their surprise, their son was still alive: the saint had protected him.'),
+     S('Corrieron a casa del juez, que estaba a punto de cenar un gallo y una gallina asados.', 'Ils coururent chez le juge, qui s’apprêtait à dîner d’un coq et d’une poule rôtis.', 'They ran to the judge’s house, as he was about to dine on a roast rooster and hen.'),
+     S('«Su hijo está tan vivo como este gallo que voy a comer», se rio el juez.', '« Votre fils est aussi vivant que ce coq que je vais manger », se moqua le juge.', '“Your son is as alive as this rooster I’m about to eat,” the judge laughed.')],
+    [S('En ese momento, el gallo saltó del plato y se puso a cantar.', 'À ce moment-là, le coq sauta de l’assiette et se mit à chanter.', 'At that moment, the rooster jumped off the plate and began to crow.'),
+     S('El juez liberó al joven y, desde entonces, en la catedral de Santo Domingo viven un gallo y una gallina blancos.', 'Le juge libéra le jeune homme et, depuis, un coq et une poule blancs vivent dans la cathédrale de Santo Domingo.', 'The judge set the young man free and, ever since, a white rooster and hen have lived in Santo Domingo cathedral.'),
+     S('Por eso dice el refrán: «Santo Domingo de la Calzada, donde cantó la gallina después de asada».', 'C’est pourquoi le proverbe dit : « Santo Domingo de la Calzada, où la poule chanta après avoir été rôtie ».', 'That is why the saying goes: “Santo Domingo de la Calzada, where the hen sang after being roasted”.')],
+  ], [
+    W('la vuelta', '/la ˈbwelta/', 'le retour', 'the return'),
+    W('a punto de', '/a ˈpunto ðe/', 'sur le point de', 'about to'),
+    W('asado', '/aˈsaðo/', 'rôti', 'roast, roasted'),
+    W('el gallo', '/el ˈɡaʎo/', 'le coq', 'the rooster'),
+    W('saltar', '/salˈtaɾ/', 'sauter', 'to jump'),
+    W('liberar', '/liβeˈɾaɾ/', 'libérer', 'to set free'),
+  ], [
+    Q(('Que fit le coq rôti ?', 'What did the roast rooster do?'), [('Il sauta de l’assiette et chanta', 'It jumped off the plate and crowed'), ('Il s’envola par la fenêtre', 'It flew out of the window'), ('Il resta dans l’assiette', 'It stayed on the plate')], 0),
+    Q(('Qu’y a-t-il aujourd’hui dans la cathédrale ?', 'What is there in the cathedral today?'), [('Un coq et une poule blancs', 'A white rooster and hen'), ('Une coupe en argent', 'A silver cup'), ('La maison du juge', 'The judge’s house')], 0),
+  ]),
+])
+
+# ═════════════════════════ La ciudad sumergida de Duio (légende de Fisterra ; DELE B1) ═════════════════════════
+DUIO = STORY('ciudad-de-duio', 'd', 'DELEB1', '#2E6A8A', ('La ciudad sumergida de Duio', 'La ville engloutie de Duio', 'The sunken city of Duio'),
+  ('Près de Fisterra, une ville orgueilleuse refuse d’accueillir les voyageurs… et disparaît sous la mer. On dit qu’on entend encore ses cloches.', 'Near Fisterra, a proud city refuses to welcome travellers… and disappears beneath the sea. They say you can still hear its bells.'), [
+  CH('ciudad-de-duio-1', ('Una ciudad orgullosa', 'Une ville orgueilleuse', 'A proud city'), [
+    [S('Cuenta la leyenda que, junto a la playa de Langosteira, había una ciudad rica y poderosa llamada Duio.', 'La légende raconte qu’à côté de la plage de Langosteira se trouvait une ville riche et puissante appelée Duio.', 'Legend has it that, next to Langosteira beach, there was a rich and powerful city called Duio.'),
+     S('Sus habitantes vivían en casas de piedra, comían en platos de oro y no querían que nadie de fuera entrara en la ciudad.', 'Ses habitants vivaient dans des maisons de pierre, mangeaient dans des assiettes en or et ne voulaient pas que des étrangers entrent dans la ville.', 'Its inhabitants lived in stone houses, ate from gold plates and did not want any outsiders to enter the city.')],
+    [S('Un día llegaron dos viajeros cansados que pidieron agua y un lugar donde dormir.', 'Un jour arrivèrent deux voyageurs fatigués qui demandèrent de l’eau et un endroit où dormir.', 'One day two tired travellers arrived and asked for water and a place to sleep.'),
+     S('«Aquí no hay sitio para mendigos», les dijeron. Y les cerraron todas las puertas.', '« Ici, il n’y a pas de place pour les mendiants », leur dit-on. Et on leur ferma toutes les portes.', '“There’s no room here for beggars,” they were told. And every door was shut in their faces.'),
+     S('Solo una mujer pobre, que vivía fuera de las murallas, les ofreció pan y su cama.', 'Seule une femme pauvre, qui vivait hors des remparts, leur offrit du pain et son lit.', 'Only a poor woman, who lived outside the walls, offered them bread and her bed.')],
+  ], [
+    W('poderoso', '/poðeˈɾoso/', 'puissant', 'powerful'),
+    W('el habitante', '/el aβiˈtante/', 'l’habitant', 'the inhabitant'),
+    W('la piedra', '/la ˈpjeðɾa/', 'la pierre', 'stone'),
+    W('el viajero', '/el bjaˈxeɾo/', 'le voyageur', 'the traveller'),
+    W('el mendigo', '/el menˈdiɣo/', 'le mendiant', 'the beggar'),
+    W('ofrecer', '/ofɾeˈθeɾ/', 'offrir, proposer', 'to offer'),
+  ], [
+    Q(('Que refusaient les habitants de Duio ?', 'What did the people of Duio refuse?'), [('Que des étrangers entrent dans la ville', 'To let outsiders into the city'), ('De manger dans de l’or', 'To eat from gold plates'), ('D’aller à la plage', 'To go to the beach')], 0),
+    Q(('Qui aida les voyageurs ?', 'Who helped the travellers?'), [('Une femme pauvre hors des remparts', 'A poor woman outside the walls'), ('Le maire de la ville', 'The mayor of the city'), ('Personne', 'Nobody')], 0),
+  ]),
+  CH('ciudad-de-duio-2', ('Las campanas bajo el mar', 'Les cloches sous la mer', 'The bells beneath the sea'), [
+    [S('Por la mañana, los viajeros le dijeron a la mujer: «Vete al monte y no mires atrás, pase lo que pase».', 'Le matin, les voyageurs dirent à la femme : « Va sur la montagne et ne te retourne pas, quoi qu’il arrive. »', 'In the morning, the travellers said to the woman: “Go up the mountain and don’t look back, whatever happens.”'),
+     S('Mientras ella subía, se levantó una tormenta terrible y el mar cubrió la ciudad entera.', 'Pendant qu’elle montait, une terrible tempête se leva et la mer recouvrit la ville entière.', 'As she was climbing, a terrible storm rose and the sea covered the whole city.'),
+     S('La mujer obedeció y se salvó; de Duio no quedó nada.', 'La femme obéit et fut sauvée ; de Duio, il ne resta rien.', 'The woman obeyed and was saved; nothing was left of Duio.')],
+    [S('Hoy los pescadores de Fisterra dicen que, en las noches tranquilas, se oyen las campanas de la ciudad bajo el agua.', 'Aujourd’hui, les pêcheurs de Fisterra disent que, par les nuits calmes, on entend les cloches de la ville sous l’eau.', 'Today the fishermen of Fisterra say that, on calm nights, you can hear the city’s bells beneath the water.'),
+     S('Y los peregrinos que llegan al fin del mundo recuerdan la lección: siempre hay que abrir la puerta al viajero.', 'Et les pèlerins qui arrivent au bout du monde se souviennent de la leçon : il faut toujours ouvrir sa porte au voyageur.', 'And the pilgrims who reach the end of the world remember the lesson: you should always open your door to the traveller.')],
+  ], [
+    W('mirar atrás', '/miˈɾaɾ aˈtɾas/', 'regarder en arrière', 'to look back'),
+    W('pase lo que pase', '/ˈpase lo ke ˈpase/', 'quoi qu’il arrive', 'whatever happens'),
+    W('cubrir', '/kuˈβɾiɾ/', 'couvrir', 'to cover'),
+    W('salvarse', '/salˈβaɾse/', 'se sauver, être sauvé', 'to be saved'),
+    W('la campana', '/la kamˈpana/', 'la cloche', 'the bell'),
+    W('el pescador', '/el peskaˈðoɾ/', 'le pêcheur', 'the fisherman'),
+  ], [
+    Q(('Que conseillèrent les voyageurs à la femme ?', 'What did the travellers advise the woman?'), [('De monter sans se retourner', 'To climb without looking back'), ('De rester chez elle', 'To stay at home'), ('De prévenir la ville', 'To warn the city')], 0),
+    Q(('Qu’entendent les pêcheurs par les nuits calmes ?', 'What do fishermen hear on calm nights?'), [('Les cloches de la ville engloutie', 'The bells of the sunken city'), ('Des chants de pèlerins', 'Pilgrims singing'), ('La tempête', 'The storm')], 0),
+  ]),
+])
+
+ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES

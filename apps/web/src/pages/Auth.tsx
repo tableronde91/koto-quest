@@ -295,7 +295,7 @@ const HSK_LEVELS = [
 const DELE_LEVELS = [
   { id: 'DELE A1', ready: true, name: () => T("Découverte"), text: () => T("Saluer, se présenter, la famille, les nombres, commander à table, demander son chemin, le présent, ser et estar.") },
   { id: 'DELE A2', ready: true, name: () => T("Survie"), text: () => T("Raconter au passé, comparer, faire des projets, se débrouiller en voyage et dans les situations courantes.") },
-  { id: 'DELE B1', ready: false, name: () => T("Seuil"), text: () => T("Exprimer son opinion, raconter une expérience, le subjonctif présent, comprendre l’essentiel d’un texte courant.") },
+  { id: 'DELE B1', ready: true, name: () => T("Seuil"), text: () => T("Exprimer son opinion, raconter une expérience, le subjonctif présent, comprendre l’essentiel d’un texte courant.") },
   { id: 'DELE B2', ready: false, name: () => T("Avancé"), text: () => T("Argumenter, débattre, comprendre la presse et des conférences, maîtriser les temps du subjonctif.") },
   { id: 'DELE C1', ready: false, name: () => T("Autonome"), text: () => T("S’exprimer avec aisance et précision, comprendre des textes longs et exigeants, registre soutenu.") },
   { id: 'DELE C2', ready: false, name: () => T("Maîtrise"), text: () => T("Tout comprendre sans effort, nuancer finement, jouer avec les registres et les expressions idiomatiques.") },

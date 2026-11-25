@@ -24,4 +24,5 @@ export const MOCK_EXAM: Record<string, string> = {
   HSK6: 'hsk6-official',
   DELEA1: 'delea1-official',
   DELEA2: 'delea2-official',
+  DELEB1: 'deleb1-official',
 };
