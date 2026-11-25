@@ -140,8 +140,11 @@ export function pickDistractors(
   key: 'meaning' | 'front' | 'reading',
   count: number,
   rng: Rng,
+  /** Question d'écoute : écarte aussi les notions qui se prononcent comme la bonne réponse (他 / 她, 来ます / 着ます, ㅐ / ㅔ). */
+  byEar = false,
 ): string[] {
   const correct = normalizeAnswer(field(item, key));
+  const sound = byEar ? soundKey(item) : null;
   const seen = new Set([correct]);
   // Pour les kana, les choix restent dans la même écriture (hiragana ou katakana) : sinon la réponse saute aux yeux.
   const script = item.kind === 'kana' ? kanaScript(item.front) : null;
@@ -155,12 +158,26 @@ export function pickDistractors(
     // Écarte aussi les notions partageant le même sens ou la même graphie (réponses ambiguës).
     if (normalizeAnswer(cand.meaning) === normalizeAnswer(item.meaning)) continue;
     if (normalizeAnswer(cand.front) === normalizeAnswer(item.front)) continue;
+    if (sound && soundKey(cand) === sound) continue;
     const v = normalizeAnswer(field(cand, key));
     if (seen.has(v)) continue;
     seen.add(v);
     out.push(field(cand, key));
   }
   return out;
+}
+
+/** Caractères que la voix prononce comme un autre : を comme お, ぢ comme じ, づ comme ず ; ㅔ comme ㅐ, ㅖ comme ㅒ, ㅚ et ㅞ comme ㅙ. */
+const SAME_SOUND: Record<string, string> = { を: 'お', ぢ: 'じ', づ: 'ず', ヲ: 'オ', ヂ: 'ジ', ヅ: 'ズ', ㅔ: 'ㅐ', ㅖ: 'ㅒ', ㅚ: 'ㅙ', ㅞ: 'ㅙ' };
+
+/**
+ * Ce qu'on entend quand la voix prononce une notion : deux notions de même clé sont indiscernables à l'oreille.
+ * C'est la lecture (kana, ou pinyin en chinois : 他 et 她 se disent tā), sans les parenthèses de l'okurigana.
+ */
+export function soundKey(item: Pick<EngineItem, 'kind' | 'front' | 'reading'>): string {
+  if (item.kind === 'kana') return [...item.front].map((c) => SAME_SOUND[c] ?? c).join('');
+  const spoken = item.reading ?? item.front;
+  return spoken.normalize('NFKC').toLowerCase().replace(/[\s()（）〜~]/g, '');
 }
 
 /**
@@ -191,15 +208,19 @@ const kindLabel: Record<ItemKind, string> = {
   grammar: 'cette construction',
 };
 
-/** Notion chinoise : des caractères chinois lus en pinyin (lettres latines), sans kana. */
+/**
+ * Notion chinoise : des caractères chinois sans kana, lus en pinyin (lettres latines).
+ * Une structure sans lecture (« 年 + 月 + 号 ») est chinoise aussi : en japonais, toute notion a sa lecture en kana.
+ */
 export function isChineseItem(item: Pick<EngineItem, 'front' | 'reading'>): boolean {
-  return /[\u3400-\u9fff]/.test(item.front) && !/[\u3040-\u30ff]/.test(item.front) && !!item.reading && /[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(item.reading);
+  return /[\u3400-\u9fff]/.test(item.front) && !/[\u3040-\u30ff]/.test(item.front) && (!item.reading || /[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(item.reading));
 }
 
 const labelOf = (item: EngineItem) => (item.kind === 'kanji' && isChineseItem(item) ? 'ce caractère' : kindLabel[item.kind]);
 
 function describe(item: EngineItem): string {
-  const reading = item.reading && item.reading !== item.front ? ` (${item.reading})` : '';
+  // Lecture d'un kanji seul : « なが(い) » s'écrit ici « なが・い », pour ne pas emboîter les parenthèses.
+  const reading = item.reading && item.reading !== item.front ? ` (${item.reading.replace(/[(（](.+?)[)）]/g, '・$1')})` : '';
   if (item.kind === 'kana') return `${item.front} se lit « ${item.meaning} ».`;
   return `${item.front}${reading} signifie « ${item.meaning} ».`;
 }
@@ -221,9 +242,10 @@ export function generateQuestion(
   if (type === 'jlpt_reading') return jlptReadingQuestion(item, pool, rng, example);
   if (type === 'jlpt_writing') return jlptWritingQuestion(item, pool, rng, example);
   const base = { itemId: item.id, explanation: describe(item), guessable: false };
-  const audio = item.kind === 'grammar' ? undefined : isChineseItem(item) ? item.front : (item.reading ?? item.front);
+  // La voix lit la lecture sans les parenthèses de l'okurigana (なが(い) → ながい).
+  const audio = item.kind === 'grammar' ? undefined : isChineseItem(item) ? item.front : (item.reading ?? item.front).replace(/[()（）]/g, '');
   const choiceQuestion = (key: 'meaning' | 'front' | 'reading', prompt: string, display: Question['display'], extra: Partial<Question> = {}): Question | null => {
-    const distractors = pickDistractors(item, pool, key, 3, rng);
+    const distractors = pickDistractors(item, pool, key, 3, rng, type === 'listening_choice');
     if (distractors.length < 2) return null;
     const answer = field(item, key);
     return { ...base, type, prompt, display, choices: shuffle([answer, ...distractors], rng), answer, ...extra };

@@ -140,13 +140,16 @@ export function LessonPage({ me }: { me: MeDto }) {
 
 function ItemCard({ item, furigana, reserveRuby }: { item: LessonDto['items'][number]; furigana: boolean; reserveRuby: boolean }) {
   const audio = item.kind === 'grammar' ? null : spokenForm(item.front, item.reading);
+  // Un long mot d'un seul tenant (« imprescindible ») s'écrit plus petit sur téléphone, pour tenir dans la carte.
+  const longest = Math.max(...item.front.split(/[\s/]+/).map((w) => [...w].length));
+  const size = [...item.front].length <= 2 ? 'text-5xl' : longest >= 13 ? 'text-lg sm:text-3xl' : longest >= 10 ? 'text-xl sm:text-3xl' : 'text-2xl sm:text-3xl';
   return (
-    <li className="flex flex-col gap-1 rounded-2xl border border-line bg-surface p-4">
+    <li className="flex min-w-0 flex-col gap-1 rounded-2xl border border-line bg-surface p-4">
       <span className="truncate text-xs text-ink-soft">{kindLabelOf(item)}{item.mastery ? `, ${MASTERY_LABEL[item.mastery]}` : ''}</span>
       {/* Zone de hauteur minimale, alignée en bas : glyphes et furigana restent sur la même ligne d'une carte à l'autre,
           sans que les furigana ni une construction sur plusieurs lignes ne débordent sur l'étiquette. */}
-      <button type="button" className={`flex items-end text-left ${reserveRuby ? 'min-h-20 pt-1' : 'mt-1'}`} onClick={() => audio && import('../lib/speech').then((m) => m.speak(audio))} aria-label={T("Écouter {0}", [item.front])} disabled={!audio}>
-        <Jp text={item.front} reading={item.kind === 'kana' ? null : item.reading} furigana={furigana} className={`${[...item.front].length <= 2 ? 'text-5xl' : 'text-2xl sm:text-3xl'} font-bold leading-tight`} />
+      <button type="button" className={`flex min-w-0 max-w-full items-end text-left ${reserveRuby ? 'min-h-20 pt-1' : 'mt-1'}`} onClick={() => audio && import('../lib/speech').then((m) => m.speak(audio))} aria-label={T("Écouter {0}", [item.front])} disabled={!audio}>
+        <Jp text={item.front} reading={item.kind === 'kana' ? null : item.reading} furigana={furigana} className={`${size} min-w-0 font-bold leading-tight [overflow-wrap:anywhere]`} />
       </button>
       <span className="font-bold">{item.meaning}</span>
       {item.kind !== 'kana' && item.romaji && <span className="text-sm text-ink-soft">{item.romaji}</span>}

@@ -139,7 +139,8 @@ export function jlptWritingQuestion(item: EngineItem, pool: readonly EngineItem[
   if (!item.reading || !hasKanji(item.front) || item.kind !== 'vocabulary' || item.reading === item.front) return null;
   let traps = shuffle(writingTraps(item.front, item.reading), rng).slice(0, 3);
   if (traps.length < 3) {
-    const others = shuffle(pool.filter((p) => p.id !== item.id && hasKanji(p.front) && p.kind === item.kind && [...p.front].length === [...item.front].length), rng).map((p) => p.front);
+    // Pas d'homophone parmi les pièges : 着ます s'écrit aussi きます, ce serait une seconde bonne réponse.
+    const others = shuffle(pool.filter((p) => p.id !== item.id && hasKanji(p.front) && p.kind === item.kind && p.reading !== item.reading && [...p.front].length === [...item.front].length), rng).map((p) => p.front);
     traps = [...new Set([...traps, ...others])].filter((t) => t !== item.front).slice(0, 3);
   }
   if (traps.length < 2) return null;

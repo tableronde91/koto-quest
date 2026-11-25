@@ -1189,5 +1189,8 @@
  "Tu connais déjà un peu d’espagnol ? Saute ce que tu sais.": "Already know some Spanish? Skip what you know.",
  "Tu connais déjà un peu d’espagnol ?": "Already know some Spanish?",
  "Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare en six étapes : la Manche de Don Quichotte, la route de Barcelone, le chemin de Saint-Jacques, la traversée des Amériques, la Bibliothèque enchantée et son Rayon secret.": "The DELE (Diplomas de Español como Lengua Extranjera) is the official Spanish diploma awarded by the Instituto Cervantes on behalf of the Spanish Ministry of Education. It follows the six CEFR levels, from A1 to C2. Koto Quest prepares you for it in six stages: Don Quixote’s La Mancha, the road to Barcelona, the Way of St James, the journey across the Americas, the enchanted library and its Secret Shelf.",
- "Le DELE compte six niveaux, du A1 au C2, comme le cadre européen (CECRL) : les six parcours sont prêts.": "The DELE has six levels, from A1 to C2, like the European framework (CEFR): all six paths are ready."
+ "Le DELE compte six niveaux, du A1 au C2, comme le cadre européen (CECRL) : les six parcours sont prêts.": "The DELE has six levels, from A1 to C2, like the European framework (CEFR): all six paths are ready.",
+ "Débloqué après avoir rencontré {0} {1} ({2}/{3}). Continue tes leçons.": "Unlocked after meeting {0} {1} ({2}/{3}). Keep going with your lessons.",
+ "notions": "items",
+ "lettres ou mots": "letters or words"
 }

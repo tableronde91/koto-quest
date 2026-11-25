@@ -1,7 +1,7 @@
 import { useDecor, useStudyLang } from '../../src/study';
 import { Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { gameGlyph, KIND_HINT } from '../../src/games';
+import { gameGlyph, gameHint } from '../../src/games';
 import { useGames } from '../../src/hooks';
 import { C } from '../../src/theme';
 import { Button, Card, ErrorBox, H1, H2, Loading, P, Screen } from '../../src/ui';
@@ -50,7 +50,7 @@ export default function GamesScreen() {
             <Button label={T('Jouer à {0}', [g.title])} tone="gold" onPress={() => router.push(`/games/${g.id}`)} />
           ) : (
             <View style={{ backgroundColor: C.surface2, borderRadius: 14, padding: 12 }}>
-              <P>{T('Débloqué après avoir rencontré {0} {1} ({2}/{0}). Continue tes leçons.', [g.minItems, T(KIND_HINT[g.id]), g.seenItems])}</P>
+              <P>{T('Débloqué après avoir rencontré {0} {1} ({2}/{0}). Continue tes leçons.', [g.minItems, T(gameHint(g.id, lang)), g.seenItems])}</P>
             </View>
           )}
         </Card>

@@ -9,7 +9,7 @@ import { useAuth } from '../../src/auth';
 import { speak, stopSpeech } from '../../src/speech';
 import { C } from '../../src/theme';
 import { Button, ErrorBox, H1, Loading, P, Screen } from '../../src/ui';
-import { gameGlyph, KIND_HINT } from '../../src/games';
+import { gameGlyph, gameHint } from '../../src/games';
 import { T, plural } from '../../src/i18n';
 
 type Stage = { kind: 'intro' } | { kind: 'countdown'; game: GameStartDto } | { kind: 'play'; game: GameStartDto; startedAt: number } | { kind: 'finishing' } | { kind: 'done'; result: GameResultDto; info: GameInfoDto };
@@ -88,7 +88,7 @@ export default function GameScreen() {
       {info.available ? (
         <Button label={T('C’est parti')} tone="gold" onPress={start} />
       ) : (
-        <P>{T('Rencontre au moins {0} {1} pour débloquer ce jeu ({2}/{0}).', [info.minItems, T(KIND_HINT[info.id]), info.seenItems])}</P>
+        <P>{T('Rencontre au moins {0} {1} pour débloquer ce jeu ({2}/{0}).', [info.minItems, T(gameHint(info.id, me?.preferences.studyLanguage)), info.seenItems])}</P>
       )}
     </Screen>
   );

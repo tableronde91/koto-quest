@@ -7,8 +7,9 @@ let html = readFileSync(`${dir}/index.html`, 'utf8');
 html = html
   .replace(/<link rel="manifest"[^>]*>\s*/g, '')
   .replace(/<link rel="apple-touch-icon"[^>]*>\s*/g, '')
-  .replaceAll('/icons/icon.svg', dataUri)
-  .replaceAll('./icons/icon.svg', dataUri);
+  // « ./icons/… » d'abord : sinon il resterait « .data:image… » et l'icône de l'onglet ne se chargerait pas.
+  .replaceAll('./icons/icon.svg', dataUri)
+  .replaceAll('/icons/icon.svg', dataUri);
 writeFileSync(`${dir}/KotoQuest.html`, html);
 for (const f of readdirSync(dir)) if (f !== 'KotoQuest.html') rmSync(`${dir}/${f}`, { recursive: true, force: true });
 console.log(`✔ ${dir}/KotoQuest.html (${Math.round(html.length / 1024)} Ko) : double-cliquez pour l'ouvrir`);

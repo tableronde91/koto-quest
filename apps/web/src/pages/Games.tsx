@@ -11,7 +11,10 @@ import { T } from '../i18n';
 import { useStudyLang, useDecor } from '../components/StudyLanguage';
 
 const GLYPH: Record<GameInfoDto['id'], string> = { 'word-rush': 'W', 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', 'hanzi-rush': '字', speed: '走', listening: '耳' };
-const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), 'hanzi-rush': T("caractères"), speed: 'notions', listening: T("kana ou mots") };
+const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': T("mots"), 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), 'hanzi-rush': T("caractères"), speed: T("notions"), listening: T("kana ou mots") };
+/** Ce qu'il faut avoir rencontré pour débloquer un jeu ; l'écoute porte sur des kana en japonais, des lettres en coréen, des mots ailleurs. */
+const hintOf = (id: GameInfoDto['id'], w: { ko: boolean; en: boolean; zh: boolean; es: boolean }) =>
+  id !== 'listening' ? KIND_HINT[id] : w.ko ? T("lettres ou mots") : w.en || w.zh || w.es ? T("mots") : KIND_HINT.listening;
 
 const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api<GamesDto>('/games') });
 
@@ -19,6 +22,7 @@ export function GamesPage() {
   const D = useDecor();
   const glyphOf = (id: GameInfoDto['id']) => (id === 'speed' ? D('speed') : id === 'listening' ? D('listening') : GLYPH[id]);
   const { data, isLoading, error, refetch } = useGames();
+  const words = useStudyLang();
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} onRetry={refetch} />;
   return (
@@ -38,7 +42,7 @@ export function GamesPage() {
                 <Link to={`/games/${g.id}`} className="btn btn-gold">{T("Jouer")}</Link>
               </>
             ) : (
-              <p className="rounded-2xl bg-surface-2 p-3 text-sm">{T("Débloqué après avoir rencontré {0} {1} ({2}/{3}). Continue tes leçons ou l’onglet Caractères.", [ g.minItems , KIND_HINT[g.id] , g.seenItems , g.minItems ])}</p>
+              <p className="rounded-2xl bg-surface-2 p-3 text-sm">{words.hasCharacters ? T("Débloqué après avoir rencontré {0} {1} ({2}/{3}). Continue tes leçons ou l’onglet Caractères.", [ g.minItems , hintOf(g.id, words) , g.seenItems , g.minItems ]) : T("Débloqué après avoir rencontré {0} {1} ({2}/{3}). Continue tes leçons.", [ g.minItems , hintOf(g.id, words) , g.seenItems , g.minItems ])}</p>
             )}
           </li>
         ))}
@@ -60,6 +64,7 @@ export function GamePlayPage() {
   const [error, setError] = useState<unknown>(null);
   const qc = useQueryClient();
   const { ko, en, zh, es } = useStudyLang();
+  const hint = (gid: GameInfoDto['id']) => hintOf(gid, { ko, en, zh, es });
 
   const start = async () => {
     setError(null);
@@ -114,7 +119,7 @@ export function GamePlayPage() {
       {info.available ? (
         <button className="btn btn-gold min-h-14 px-10 text-lg" onClick={start}>{T("C’est parti")}</button>
       ) : (
-        <p className="rounded-2xl bg-surface-2 p-4">{T("Rencontre au moins {0} {1} pour débloquer ce jeu ({2}/{3}).", [ info.minItems , KIND_HINT[info.id] , info.seenItems , info.minItems ])}</p>
+        <p className="rounded-2xl bg-surface-2 p-4">{T("Rencontre au moins {0} {1} pour débloquer ce jeu ({2}/{3}).", [ info.minItems , hint(info.id) , info.seenItems , info.minItems ])}</p>
       )}
     </div>
   );
