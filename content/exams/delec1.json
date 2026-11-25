@@ -1,0 +1,1021 @@
+{
+ "slug": "delec1",
+ "level": "DELEC1",
+ "contentVersion": "2026.11.24",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel du DELE C1 (Instituto Cervantes : épreuves de compréhension et d’usage de la langue, consignes en espagnol, notation sur 100 en deux groupes). L’expression écrite intégrée se fait par choix multiple et l’expression orale n’est pas évaluée : le groupe 2 est noté sur l’écoute. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "r-texto",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura y uso de la lengua — Tarea 1",
+   "title": "Un texte d’analyse",
+   "prompt": "Lea el texto y conteste a las preguntas.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "Que los datos lo contradicen.",
+      "Que se ha cumplido.",
+      "Que nadie lo formuló nunca."
+     ],
+     "answer": "Que los datos lo contradicen.",
+     "explanation": "Réponse : Que los datos lo contradicen.",
+     "text": "★ ¿Qué afirma el texto sobre el pronóstico de la muerte del libro?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "Ha aumentado ligeramente.",
+      "Se ha reducido a la mitad.",
+      "Se ha mantenido idéntico."
+     ],
+     "answer": "Ha aumentado ligeramente.",
+     "explanation": "Réponse : Ha aumentado ligeramente.",
+     "text": "★ ¿Qué ha ocurrido con el número de lectores en España?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "suele ser más superficial.",
+      "mejora la memoria.",
+      "es más lenta y profunda."
+     ],
+     "answer": "suele ser más superficial.",
+     "explanation": "Réponse : suele ser más superficial.",
+     "text": "★ Según los estudios citados, la lectura en pantalla…",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "Porque ayudan a personas con problemas de visión.",
+      "Porque son más baratos.",
+      "Porque los jóvenes no leen libros."
+     ],
+     "answer": "Porque ayudan a personas con problemas de visión.",
+     "explanation": "Réponse : Porque ayudan a personas con problemas de visión.",
+     "text": "★ ¿Por qué no conviene demonizar los dispositivos electrónicos?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "La atención que se presta a la lectura.",
+      "El tipo de soporte.",
+      "El precio de los libros."
+     ],
+     "answer": "La atención que se presta a la lectura.",
+     "explanation": "Réponse : La atención que se presta a la lectura.",
+     "text": "★ Según los expertos, ¿qué es lo fundamental?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "Porque creen que favorece la comprensión profunda.",
+      "Porque faltan libros.",
+      "Porque los alumnos no saben leer en silencio."
+     ],
+     "answer": "Porque creen que favorece la comprensión profunda.",
+     "explanation": "Réponse : Porque creen que favorece la comprensión profunda.",
+     "text": "★ ¿Por qué algunas escuelas recuperan la lectura en voz alta?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    },
+    {
+     "choices": [
+      "Matizado y argumentativo.",
+      "Alarmista.",
+      "Humorístico."
+     ],
+     "answer": "Matizado y argumentativo.",
+     "explanation": "Réponse : Matizado y argumentativo.",
+     "text": "★ ¿Qué tono predomina en el texto?",
+     "passage": "La lectura en la era de las pantallas. Durante décadas se vaticinó la muerte del libro impreso; sin embargo, las cifras desmienten aquel pronóstico apocalíptico. En España, el número de lectores habituales no solo no ha disminuido, sino que ha aumentado ligeramente en la última década, impulsado en gran medida por los jóvenes. Lo que sí ha cambiado es la manera de leer. Diversos estudios señalan que la lectura en pantalla tiende a ser más fragmentaria y superficial: el lector salta de un párrafo a otro y retiene peor los detalles. No obstante, sería un error demonizar los dispositivos electrónicos. Para muchas personas con dificultades visuales, la posibilidad de ampliar la letra ha supuesto una auténtica revolución. Los expertos coinciden en que la clave no reside en el soporte, sino en la atención que le dedicamos. De ahí que algunas escuelas hayan recuperado la lectura en voz alta y los clubes de lectura, convencidas de que leer despacio, y en compañía, sigue siendo la mejor manera de comprender un texto en profundidad."
+    }
+   ]
+  },
+  {
+   "id": "r-fragmentos",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura y uso de la lengua — Tarea 2",
+   "title": "Un texte à reconstituer",
+   "prompt": "Lea el texto y elija el fragmento que falta.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "Su autor, Fernando de Rojas, afirmó haber encontrado el primer acto ya escrito.",
+      "Es una novela de ciencia ficción.",
+      "Nunca llegó a imprimirse."
+     ],
+     "answer": "Su autor, Fernando de Rojas, afirmó haber encontrado el primer acto ya escrito.",
+     "explanation": "Réponse : Su autor, Fernando de Rojas, afirmó haber encontrado el primer acto ya escrito.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "La Celestina se publicó por primera vez en 1499. [ … ] De ahí que su autoría haya suscitado tantos debates."
+    },
+    {
+     "choices": [
+      "Su crítica a la hipocresía del clero incomodó a las autoridades.",
+      "Era un libro de recetas de cocina.",
+      "Lo escribió un rey para sus hijos."
+     ],
+     "answer": "Su crítica a la hipocresía del clero incomodó a las autoridades.",
+     "explanation": "Réponse : Su crítica a la hipocresía del clero incomodó a las autoridades.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El Lazarillo de Tormes apareció de forma anónima en 1554. [ … ] Por eso fue incluido en el índice de libros prohibidos."
+    },
+    {
+     "choices": [
+      "La más célebre es, sin duda, La vida es sueño.",
+      "Ninguna se representó en vida del autor.",
+      "Todas transcurren en América."
+     ],
+     "answer": "La más célebre es, sin duda, La vida es sueño.",
+     "explanation": "Réponse : La más célebre es, sin duda, La vida es sueño.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "Calderón de la Barca escribió más de cien comedias. [ … ] En ella, la frontera entre sueño y vigilia se vuelve borrosa."
+    },
+    {
+     "choices": [
+      "Sus amigos las reunieron y editaron un año después.",
+      "Las quemó antes de morir y se perdieron.",
+      "Se publicaron en francés."
+     ],
+     "answer": "Sus amigos las reunieron y editaron un año después.",
+     "explanation": "Réponse : Sus amigos las reunieron y editaron un año después.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "Gustavo Adolfo Bécquer murió en 1870 sin ver publicadas sus Rimas. [ … ] Hoy es uno de los poetas más leídos en lengua española."
+    },
+    {
+     "choices": [
+      "Su extensión geográfica explica la gran variedad de acentos y vocabulario.",
+      "Solo se habla en la península ibérica.",
+      "No tiene ninguna variante regional."
+     ],
+     "answer": "Su extensión geográfica explica la gran variedad de acentos y vocabulario.",
+     "explanation": "Réponse : Su extensión geográfica explica la gran variedad de acentos y vocabulario.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El español es la lengua materna de casi quinientos millones de personas. [ … ] Sin embargo, la unidad del idioma se mantiene gracias a una norma culta compartida."
+    },
+    {
+     "choices": [
+      "En sus orígenes se llamó Real Biblioteca Pública.",
+      "Se cerró definitivamente en 1800.",
+      "Solo guarda periódicos actuales."
+     ],
+     "answer": "En sus orígenes se llamó Real Biblioteca Pública.",
+     "explanation": "Réponse : En sus orígenes se llamó Real Biblioteca Pública.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "La Biblioteca Nacional de España fue fundada en 1712 por Felipe V. [ … ] Hoy conserva más de treinta millones de documentos."
+    },
+    {
+     "choices": [
+      "Hablan de cosechas, de animales y del tiempo atmosférico.",
+      "Fueron inventados por las redes sociales.",
+      "Nadie los entiende en la actualidad."
+     ],
+     "answer": "Hablan de cosechas, de animales y del tiempo atmosférico.",
+     "explanation": "Réponse : Hablan de cosechas, de animales y del tiempo atmosférico.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "Muchos refranes tienen su origen en la vida rural. [ … ] Aun así, siguen usándose en las ciudades del siglo XXI."
+    }
+   ]
+  },
+  {
+   "id": "r-resenas",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura y uso de la lengua — Tarea 3",
+   "title": "Quatre critiques",
+   "prompt": "Lea las reseñas y diga a cuál corresponde cada enunciado.",
+   "count": 8,
+   "questions": [
+    {
+     "choices": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+     ],
+     "answer": "A.",
+     "explanation": "Réponse : A.",
+     "text": "★ ¿Qué reseña critica la extensión de la obra?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "B.",
+      "A.",
+      "C.",
+      "D."
+     ],
+     "answer": "B.",
+     "explanation": "Réponse : B.",
+     "text": "★ ¿Qué reseña elogia a una actriz?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "C.",
+      "A.",
+      "B.",
+      "D."
+     ],
+     "answer": "C.",
+     "explanation": "Réponse : C.",
+     "text": "★ ¿Qué reseña recomienda la obra sin reservas?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "D.",
+      "A.",
+      "B.",
+      "C."
+     ],
+     "answer": "D.",
+     "explanation": "Réponse : D.",
+     "text": "★ ¿Qué reseña considera que el final no sorprende?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "C.",
+      "A.",
+      "B.",
+      "D."
+     ],
+     "answer": "C.",
+     "explanation": "Réponse : C.",
+     "text": "★ ¿Qué reseña se refiere a un texto de no ficción?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "B.",
+      "A.",
+      "C.",
+      "D."
+     ],
+     "answer": "B.",
+     "explanation": "Réponse : B.",
+     "text": "★ ¿Qué reseña critica el decorado?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "D.",
+      "A.",
+      "B.",
+      "C."
+     ],
+     "answer": "D.",
+     "explanation": "Réponse : D.",
+     "text": "★ ¿Qué reseña destaca que la obra emociona con contención?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "A.",
+      "B.",
+      "C.",
+      "D."
+     ],
+     "answer": "A.",
+     "explanation": "Réponse : A.",
+     "text": "★ ¿Qué reseña califica la obra de ambiciosa?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    },
+    {
+     "choices": [
+      "C.",
+      "A.",
+      "B.",
+      "D."
+     ],
+     "answer": "C.",
+     "explanation": "Réponse : C.",
+     "text": "★ ¿Qué reseña combina rigor y amenidad?",
+     "passage": "A. «Una novela ambiciosa que, sin embargo, peca de excesiva: le sobran al menos cien páginas.»\nB. «El montaje teatral destaca por la interpretación de la protagonista; la escenografía, en cambio, deja que desear.»\nC. «Un ensayo riguroso y ameno a la vez, imprescindible para quien quiera entender la historia de la lengua.»\nD. «La película logra emocionar sin caer en el sentimentalismo, aunque el desenlace resulta previsible.»"
+    }
+   ]
+  },
+  {
+   "id": "r-lexico",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura y uso de la lengua — Tarea 4",
+   "title": "Lexique en contexte",
+   "prompt": "Lea las frases y elija la opción correcta.",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "cabo",
+      "término de",
+      "fin"
+     ],
+     "answer": "cabo",
+     "explanation": "Réponse : cabo",
+     "text": "★ El ayuntamiento ha decidido llevar a ＿ una reforma de la biblioteca."
+    },
+    {
+     "choices": [
+      "lugar",
+      "paso de",
+      "cuenta"
+     ],
+     "answer": "lugar",
+     "explanation": "Réponse : lugar",
+     "text": "★ La crisis dio ＿ a numerosas protestas."
+    },
+    {
+     "choices": [
+      "frente",
+      "cara de",
+      "cabo"
+     ],
+     "answer": "frente",
+     "explanation": "Réponse : frente",
+     "text": "★ Hay que hacer ＿ a los nuevos retos tecnológicos."
+    },
+    {
+     "choices": [
+      "lugar",
+      "sitio",
+      "espacio"
+     ],
+     "answer": "lugar",
+     "explanation": "Réponse : lugar",
+     "text": "★ La reunión tendrá ＿ el próximo lunes."
+    },
+    {
+     "choices": [
+      "cuenta",
+      "lugar",
+      "paso"
+     ],
+     "answer": "cuenta",
+     "explanation": "Réponse : cuenta",
+     "text": "★ No me di ＿ de que había cerrado la puerta."
+    },
+    {
+     "choices": [
+      "marcha",
+      "camino",
+      "paso"
+     ],
+     "answer": "marcha",
+     "explanation": "Réponse : marcha",
+     "text": "★ El gobierno ha puesto en ＿ un plan de lectura."
+    },
+    {
+     "choices": [
+      "pata",
+      "mano",
+      "pierna"
+     ],
+     "answer": "pata",
+     "explanation": "Réponse : pata",
+     "text": "★ Le preguntó por su ex delante de todos: metió la ＿."
+    },
+    {
+     "choices": [
+      "cara",
+      "mano",
+      "cabeza"
+     ],
+     "answer": "cara",
+     "explanation": "Réponse : cara",
+     "text": "★ Ese abrigo le costó un ojo de la ＿."
+    },
+    {
+     "choices": [
+      "lengua",
+      "boca",
+      "cabeza"
+     ],
+     "answer": "lengua",
+     "explanation": "Réponse : lengua",
+     "text": "★ No tiene pelos en la ＿: dice siempre lo que piensa."
+    },
+    {
+     "choices": [
+      "comido",
+      "duro",
+      "tierno"
+     ],
+     "answer": "comido",
+     "explanation": "Réponse : comido",
+     "text": "★ El examen fue pan ＿: lo terminé en media hora."
+    },
+    {
+     "choices": [
+      "refrán",
+      "dicho que",
+      "proverbial"
+     ],
+     "answer": "refrán",
+     "explanation": "Réponse : refrán",
+     "text": "★ Como dice el ＿, a quien madruga, Dios le ayuda."
+    }
+   ]
+  },
+  {
+   "id": "r-gramatica",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura y uso de la lengua — Tarea 5",
+   "title": "Grammaire en contexte",
+   "prompt": "Lea el texto y elija la opción correcta para cada hueco.",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "abra",
+      "abre",
+      "abrirá"
+     ],
+     "answer": "abra",
+     "explanation": "Réponse : abra",
+     "text": "★ El hecho de que la biblioteca ＿ los domingos es una excelente noticia."
+    },
+    {
+     "choices": [
+      "sepa",
+      "sé",
+      "supe"
+     ],
+     "answer": "sepa",
+     "explanation": "Réponse : sepa",
+     "text": "★ Que yo ＿, nadie ha encontrado todavía el manuscrito original."
+    },
+    {
+     "choices": [
+      "pase",
+      "pasa",
+      "pasará"
+     ],
+     "answer": "pase",
+     "explanation": "Réponse : pase",
+     "text": "★ Pase lo que ＿, terminaré la tesis este año."
+    },
+    {
+     "choices": [
+      "guste",
+      "gusta",
+      "gustará"
+     ],
+     "answer": "guste",
+     "explanation": "Réponse : guste",
+     "text": "★ No es que no me ＿ el libro, es que no tengo tiempo."
+    },
+    {
+     "choices": [
+      "haber",
+      "hubiera",
+      "habría"
+     ],
+     "answer": "haber",
+     "explanation": "Réponse : haber",
+     "text": "★ De ＿ sabido la verdad, habría actuado de otra manera."
+    },
+    {
+     "choices": [
+      "escritas",
+      "escrito",
+      "escribiendo"
+     ],
+     "answer": "escritas",
+     "explanation": "Réponse : escritas",
+     "text": "★ Tengo ＿ ya veinte páginas del informe."
+    },
+    {
+     "choices": [
+      "hablara",
+      "habló",
+      "hablará"
+     ],
+     "answer": "hablara",
+     "explanation": "Réponse : hablara",
+     "text": "★ Resulta curioso que nadie ＿ antes de este fenómeno."
+    },
+    {
+     "choices": [
+      "asistieron",
+      "asistieran",
+      "asistan"
+     ],
+     "answer": "asistieron",
+     "explanation": "Réponse : asistieron",
+     "text": "★ Se estima que más de mil personas ＿ a la conferencia."
+    },
+    {
+     "choices": [
+      "intentes",
+      "intentas",
+      "intentarás"
+     ],
+     "answer": "intentes",
+     "explanation": "Réponse : intentes",
+     "text": "★ Por mucho que lo ＿, no lograrás convencerlo."
+    },
+    {
+     "choices": [
+      "sorprendente",
+      "sorprendida",
+      "sorprender"
+     ],
+     "answer": "sorprendente",
+     "explanation": "Réponse : sorprendente",
+     "text": "★ Lo ＿ es que la obra sigue siendo actual."
+    },
+    {
+     "choices": [
+      "ser",
+      "estar",
+      "tener"
+     ],
+     "answer": "ser",
+     "explanation": "Réponse : ser",
+     "text": "★ Para ＿ tan joven, escribe con una madurez asombrosa."
+    }
+   ]
+  },
+  {
+   "id": "l-conferencia",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva y uso de la lengua — Tarea 1",
+   "title": "Une conférence",
+   "prompt": "Escuche el fragmento de una conferencia sobre la historia del español y conteste a las preguntas.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "F|El español procede del latín vulgar que hablaban los soldados y comerciantes romanos, no del latín clásico de Cicerón.\nN|Pregunta: ¿De qué procede el español, según la conferenciante?",
+     "choices": [
+      "Del latín vulgar.",
+      "Del latín clásico.",
+      "Del griego."
+     ],
+     "answer": "Del latín vulgar.",
+     "explanation": "Transcription : Femme : El español procede del latín vulgar que hablaban los soldados y comerciantes romanos, no del latín clásico de Cicerón. / Narrateur : Pregunta: ¿De qué procede el español, según la conferenciante?"
+    },
+    {
+     "audio": "F|Los primeros testimonios escritos de una lengua romance en la península son las Glosas Emilianenses, unas anotaciones al margen de un texto latino.\nN|Pregunta: ¿Qué son las Glosas Emilianenses?",
+     "choices": [
+      "Anotaciones al margen de un texto latino.",
+      "Un poema épico completo.",
+      "Un diccionario moderno."
+     ],
+     "answer": "Anotaciones al margen de un texto latino.",
+     "explanation": "Transcription : Femme : Los primeros testimonios escritos de una lengua romance en la península son las Glosas Emilianenses, unas anotaciones al margen de un texto latino. / Narrateur : Pregunta: ¿Qué son las Glosas Emilianenses?"
+    },
+    {
+     "audio": "F|En 1492 Antonio de Nebrija publicó la primera gramática de una lengua europea moderna, la gramática castellana.\nN|Pregunta: ¿Qué publicó Nebrija en 1492?",
+     "choices": [
+      "La primera gramática del castellano.",
+      "El primer diccionario de francés.",
+      "Una novela de caballerías."
+     ],
+     "answer": "La primera gramática del castellano.",
+     "explanation": "Transcription : Femme : En 1492 Antonio de Nebrija publicó la primera gramática de una lengua europea moderna, la gramática castellana. / Narrateur : Pregunta: ¿Qué publicó Nebrija en 1492?"
+    },
+    {
+     "audio": "F|Ese mismo año, la llegada de los españoles a América cambió para siempre la historia del idioma, que se extendió por todo un continente.\nN|Pregunta: ¿Qué otro hecho de 1492 destaca la conferenciante?",
+     "choices": [
+      "La llegada de los españoles a América.",
+      "La invención de la imprenta.",
+      "La fundación de Madrid."
+     ],
+     "answer": "La llegada de los españoles a América.",
+     "explanation": "Transcription : Femme : Ese mismo año, la llegada de los españoles a América cambió para siempre la historia del idioma, que se extendió por todo un continente. / Narrateur : Pregunta: ¿Qué otro hecho de 1492 destaca la conferenciante?"
+    },
+    {
+     "audio": "F|La Real Academia Española se fundó en 1713 con el lema «Limpia, fija y da esplendor».\nN|Pregunta: ¿Cuándo se fundó la Real Academia Española?",
+     "choices": [
+      "En 1713.",
+      "En 1492.",
+      "En 1812."
+     ],
+     "answer": "En 1713.",
+     "explanation": "Transcription : Femme : La Real Academia Española se fundó en 1713 con el lema «Limpia, fija y da esplendor». / Narrateur : Pregunta: ¿Cuándo se fundó la Real Academia Española?"
+    },
+    {
+     "audio": "F|Hoy, la Asociación de Academias de la Lengua Española reúne a veintitrés academias que trabajan de forma conjunta en la norma del idioma.\nN|Pregunta: ¿Qué hacen hoy las academias de la lengua?",
+     "choices": [
+      "Trabajan juntas en la norma común.",
+      "Compiten entre ellas.",
+      "Solo se ocupan del español de España."
+     ],
+     "answer": "Trabajan juntas en la norma común.",
+     "explanation": "Transcription : Femme : Hoy, la Asociación de Academias de la Lengua Española reúne a veintitrés academias que trabajan de forma conjunta en la norma del idioma. / Narrateur : Pregunta: ¿Qué hacen hoy las academias de la lengua?"
+    },
+    {
+     "audio": "F|En definitiva, el español es una lengua policéntrica: no existe un único modelo correcto, sino varias normas cultas igualmente válidas.\nN|Pregunta: ¿Qué significa que el español es una lengua policéntrica?",
+     "choices": [
+      "Que tiene varias normas cultas válidas.",
+      "Que solo se habla en ciudades.",
+      "Que tiene un único modelo correcto."
+     ],
+     "answer": "Que tiene varias normas cultas válidas.",
+     "explanation": "Transcription : Femme : En definitiva, el español es una lengua policéntrica: no existe un único modelo correcto, sino varias normas cultas igualmente válidas. / Narrateur : Pregunta: ¿Qué significa que el español es una lengua policéntrica?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-implicito",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva y uso de la lengua — Tarea 2",
+   "title": "Le sens implicite",
+   "prompt": "Escuche las conversaciones y elija la interpretación correcta.",
+   "count": 8,
+   "questions": [
+    {
+     "audio": "M|¿Qué tal el concierto?\nF|¡Uf! Menudo rollo: tres horas de solos de batería.\nN|Pregunta: ¿Qué opina la mujer del concierto?",
+     "choices": [
+      "Le pareció aburrido.",
+      "Le encantó.",
+      "No fue."
+     ],
+     "answer": "Le pareció aburrido.",
+     "explanation": "Transcription : Homme : ¿Qué tal el concierto? / Femme : ¡Uf! Menudo rollo: tres horas de solos de batería. / Narrateur : Pregunta: ¿Qué opina la mujer del concierto?"
+    },
+    {
+     "audio": "F|He suspendido el examen de conducir otra vez.\nM|Bueno, no hay mal que por bien no venga: así practicas un poco más.\nN|Pregunta: ¿Qué intenta hacer el hombre?",
+     "choices": [
+      "Consolarla.",
+      "Burlarse de ella.",
+      "Criticarla."
+     ],
+     "answer": "Consolarla.",
+     "explanation": "Transcription : Femme : He suspendido el examen de conducir otra vez. / Homme : Bueno, no hay mal que por bien no venga: así practicas un poco más. / Narrateur : Pregunta: ¿Qué intenta hacer el hombre?"
+    },
+    {
+     "audio": "M|¿Le has dicho a Marta lo de la fiesta sorpresa?\nF|Sí… creo que he metido la pata.\nN|Pregunta: ¿Qué ha pasado?",
+     "choices": [
+      "La mujer ha cometido un error.",
+      "La fiesta ha sido un éxito.",
+      "Marta no ha entendido nada."
+     ],
+     "answer": "La mujer ha cometido un error.",
+     "explanation": "Transcription : Homme : ¿Le has dicho a Marta lo de la fiesta sorpresa? / Femme : Sí… creo que he metido la pata. / Narrateur : Pregunta: ¿Qué ha pasado?"
+    },
+    {
+     "audio": "F|¿Me prestas tu coche nuevo para el fin de semana?\nM|Sí, claro, y te doy también las llaves de mi casa, ¿no?\nN|Pregunta: ¿Qué quiere decir el hombre?",
+     "choices": [
+      "Que no piensa prestarle el coche.",
+      "Que le prestará el coche y la casa.",
+      "Que no tiene coche."
+     ],
+     "answer": "Que no piensa prestarle el coche.",
+     "explanation": "Transcription : Femme : ¿Me prestas tu coche nuevo para el fin de semana? / Homme : Sí, claro, y te doy también las llaves de mi casa, ¿no? / Narrateur : Pregunta: ¿Qué quiere decir el hombre?"
+    },
+    {
+     "audio": "M|¿Has visto a Luis? Dice que ha escrito una novela de mil páginas.\nF|¿Luis? Ese no tiene abuela.\nN|Pregunta: ¿Qué piensa la mujer de Luis?",
+     "choices": [
+      "Que es presumido.",
+      "Que es huérfano.",
+      "Que es muy modesto."
+     ],
+     "answer": "Que es presumido.",
+     "explanation": "Transcription : Homme : ¿Has visto a Luis? Dice que ha escrito una novela de mil páginas. / Femme : ¿Luis? Ese no tiene abuela. / Narrateur : Pregunta: ¿Qué piensa la mujer de Luis?"
+    },
+    {
+     "audio": "F|Llevamos media hora esperando y el camarero ni nos mira.\nM|¡Pues sí que estamos buenos! Así no cenamos hasta medianoche.\nN|Pregunta: ¿Cómo se siente el hombre?",
+     "choices": [
+      "Molesto por la situación.",
+      "Contento con el servicio.",
+      "Indiferente."
+     ],
+     "answer": "Molesto por la situación.",
+     "explanation": "Transcription : Femme : Llevamos media hora esperando y el camarero ni nos mira. / Homme : ¡Pues sí que estamos buenos! Así no cenamos hasta medianoche. / Narrateur : Pregunta: ¿Cómo se siente el hombre?"
+    },
+    {
+     "audio": "M|Al final, ¿aceptaste el trabajo en Bilbao?\nF|Ni loca. Con lo que pagaban, no me daba ni para el alquiler.\nN|Pregunta: ¿Qué decidió la mujer?",
+     "choices": [
+      "Rechazar el trabajo.",
+      "Aceptar el trabajo.",
+      "Mudarse a Bilbao."
+     ],
+     "answer": "Rechazar el trabajo.",
+     "explanation": "Transcription : Homme : Al final, ¿aceptaste el trabajo en Bilbao? / Femme : Ni loca. Con lo que pagaban, no me daba ni para el alquiler. / Narrateur : Pregunta: ¿Qué decidió la mujer?"
+    },
+    {
+     "audio": "F|¿Te ayudo con la mudanza?\nM|Si no es mucha molestia… te lo agradecería en el alma.\nN|Pregunta: ¿Qué responde el hombre?",
+     "choices": [
+      "Acepta la ayuda con mucho agradecimiento.",
+      "Rechaza la ayuda.",
+      "Dice que ya ha terminado."
+     ],
+     "answer": "Acepta la ayuda con mucho agradecimiento.",
+     "explanation": "Transcription : Femme : ¿Te ayudo con la mudanza? / Homme : Si no es mucha molestia… te lo agradecería en el alma. / Narrateur : Pregunta: ¿Qué responde el hombre?"
+    },
+    {
+     "audio": "M|¿Qué te pareció la conferencia?\nF|Digamos que he oído cosas más interesantes.\nN|Pregunta: ¿Qué opina la mujer de la conferencia?",
+     "choices": [
+      "No le gustó mucho.",
+      "Le pareció fascinante.",
+      "No la escuchó."
+     ],
+     "answer": "No le gustó mucho.",
+     "explanation": "Transcription : Homme : ¿Qué te pareció la conferencia? / Femme : Digamos que he oído cosas más interesantes. / Narrateur : Pregunta: ¿Qué opina la mujer de la conferencia?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-entrevista",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva y uso de la lengua — Tarea 3",
+   "title": "Une interview",
+   "prompt": "Escuche la entrevista a una traductora literaria y conteste a las preguntas.",
+   "count": 8,
+   "questions": [
+    {
+     "audio": "M|Elena, ¿cómo llegó a la traducción literaria?\nF|Por casualidad. Estudiaba Filología Francesa y un profesor me pidió que tradujera unos poemas para una revista.\nN|Pregunta: ¿Cómo empezó Elena a traducir?",
+     "choices": [
+      "Por un encargo de un profesor.",
+      "Por un concurso.",
+      "Por su padre, que era traductor."
+     ],
+     "answer": "Por un encargo de un profesor.",
+     "explanation": "Transcription : Homme : Elena, ¿cómo llegó a la traducción literaria? / Femme : Por casualidad. Estudiaba Filología Francesa y un profesor me pidió que tradujera unos poemas para una revista. / Narrateur : Pregunta: ¿Cómo empezó Elena a traducir?"
+    },
+    {
+     "audio": "M|¿Qué es lo más difícil de traducir?\nF|El humor, sin duda. Un juego de palabras rara vez funciona en otra lengua; hay que reinventarlo.\nN|Pregunta: ¿Qué le resulta más difícil?",
+     "choices": [
+      "Traducir el humor.",
+      "Traducir los nombres propios.",
+      "Cumplir los plazos."
+     ],
+     "answer": "Traducir el humor.",
+     "explanation": "Transcription : Homme : ¿Qué es lo más difícil de traducir? / Femme : El humor, sin duda. Un juego de palabras rara vez funciona en otra lengua; hay que reinventarlo. / Narrateur : Pregunta: ¿Qué le resulta más difícil?"
+    },
+    {
+     "audio": "M|¿Y la poesía?\nF|La poesía es otro reto: hay que elegir entre ser fiel al sentido o a la música del verso. Casi nunca se puede tener las dos cosas.\nN|Pregunta: ¿Qué dilema plantea la poesía?",
+     "choices": [
+      "Elegir entre el sentido y la música.",
+      "Elegir entre dos editoriales.",
+      "Elegir entre prosa y verso."
+     ],
+     "answer": "Elegir entre el sentido y la música.",
+     "explanation": "Transcription : Homme : ¿Y la poesía? / Femme : La poesía es otro reto: hay que elegir entre ser fiel al sentido o a la música del verso. Casi nunca se puede tener las dos cosas. / Narrateur : Pregunta: ¿Qué dilema plantea la poesía?"
+    },
+    {
+     "audio": "M|¿Usa herramientas de traducción automática?\nF|Para documentos técnicos, quizá; para la literatura, no. Una máquina no capta la ironía ni los dobles sentidos.\nN|Pregunta: ¿Qué piensa de la traducción automática?",
+     "choices": [
+      "Que no sirve para la literatura.",
+      "Que es mejor que un traductor humano.",
+      "Que la usa para todo."
+     ],
+     "answer": "Que no sirve para la literatura.",
+     "explanation": "Transcription : Homme : ¿Usa herramientas de traducción automática? / Femme : Para documentos técnicos, quizá; para la literatura, no. Una máquina no capta la ironía ni los dobles sentidos. / Narrateur : Pregunta: ¿Qué piensa de la traducción automática?"
+    },
+    {
+     "audio": "M|¿Está bien pagado el oficio?\nF|Digamos que nadie se hace rico traduciendo novelas. Lo hacemos por vocación.\nN|Pregunta: ¿Qué da a entender sobre el sueldo?",
+     "choices": [
+      "Que es modesto.",
+      "Que es muy alto.",
+      "Que depende del idioma."
+     ],
+     "answer": "Que es modesto.",
+     "explanation": "Transcription : Homme : ¿Está bien pagado el oficio? / Femme : Digamos que nadie se hace rico traduciendo novelas. Lo hacemos por vocación. / Narrateur : Pregunta: ¿Qué da a entender sobre el sueldo?"
+    },
+    {
+     "audio": "M|¿Qué libro le habría gustado traducir?\nF|El Quijote al francés, aunque ya existen traducciones magníficas. ¡Quién tuviera ese honor!\nN|Pregunta: ¿Qué libro le habría gustado traducir?",
+     "choices": [
+      "El Quijote.",
+      "La Celestina.",
+      "Las Rimas de Bécquer."
+     ],
+     "answer": "El Quijote.",
+     "explanation": "Transcription : Homme : ¿Qué libro le habría gustado traducir? / Femme : El Quijote al francés, aunque ya existen traducciones magníficas. ¡Quién tuviera ese honor! / Narrateur : Pregunta: ¿Qué libro le habría gustado traducir?"
+    },
+    {
+     "audio": "M|¿Algún consejo para los futuros traductores?\nF|Que lean muchísimo en su propia lengua. Se traduce hacia la lengua materna, y hay que dominarla a la perfección.\nN|Pregunta: ¿Qué aconseja Elena?",
+     "choices": [
+      "Leer mucho en la lengua materna.",
+      "Vivir en el extranjero.",
+      "Aprender muchos idiomas a la vez."
+     ],
+     "answer": "Leer mucho en la lengua materna.",
+     "explanation": "Transcription : Homme : ¿Algún consejo para los futuros traductores? / Femme : Que lean muchísimo en su propia lengua. Se traduce hacia la lengua materna, y hay que dominarla a la perfección. / Narrateur : Pregunta: ¿Qué aconseja Elena?"
+    },
+    {
+     "audio": "M|Por último, ¿en qué trabaja ahora?\nF|En una antología de cuentos latinoamericanos que saldrá en primavera.\nN|Pregunta: ¿En qué trabaja actualmente?",
+     "choices": [
+      "En una antología de cuentos.",
+      "En una novela propia.",
+      "En un diccionario."
+     ],
+     "answer": "En una antología de cuentos.",
+     "explanation": "Transcription : Homme : Por último, ¿en qué trabaja ahora? / Femme : En una antología de cuentos latinoamericanos que saldrá en primavera. / Narrateur : Pregunta: ¿En qué trabaja actualmente?"
+    },
+    {
+     "audio": "M|¿Cuánto tarda en traducir una novela?\nF|Depende, pero una novela de trescientas páginas me lleva unos seis meses de trabajo.\nN|Pregunta: ¿Cuánto tarda en traducir una novela de trescientas páginas?",
+     "choices": [
+      "Unos seis meses.",
+      "Unas tres semanas.",
+      "Unos dos años."
+     ],
+     "answer": "Unos seis meses.",
+     "explanation": "Transcription : Homme : ¿Cuánto tarda en traducir una novela? / Femme : Depende, pero una novela de trescientas páginas me lleva unos seis meses de trabajo. / Narrateur : Pregunta: ¿Cuánto tarda en traducir una novela de trescientas páginas?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-tertulia",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva y uso de la lengua — Tarea 4",
+   "title": "Un débat radio",
+   "prompt": "Escuche la tertulia sobre las redes sociales y elija la opción correcta.",
+   "count": 8,
+   "questions": [
+    {
+     "audio": "N|Hoy debatimos sobre si las redes sociales empobrecen el idioma.\nM|Yo no lo creo: los jóvenes escriben más que nunca, aunque de otra manera.\nN|Pregunta: ¿Qué opina el primer tertuliano?",
+     "choices": [
+      "Que los jóvenes escriben más, pero de otra forma.",
+      "Que los jóvenes ya no escriben.",
+      "Que hay que prohibir las redes."
+     ],
+     "answer": "Que los jóvenes escriben más, pero de otra forma.",
+     "explanation": "Transcription : Narrateur : Hoy debatimos sobre si las redes sociales empobrecen el idioma. / Homme : Yo no lo creo: los jóvenes escriben más que nunca, aunque de otra manera. / Narrateur : Pregunta: ¿Qué opina el primer tertuliano?"
+    },
+    {
+     "audio": "F|Discrepo. Escribir mucho no significa escribir bien: las abreviaturas y la falta de tildes se trasladan a los exámenes.\nN|Pregunta: ¿Qué preocupa a la tertuliana?",
+     "choices": [
+      "Que los errores pasen a los exámenes.",
+      "Que los jóvenes lean demasiado.",
+      "Que desaparezcan las abreviaturas."
+     ],
+     "answer": "Que los errores pasen a los exámenes.",
+     "explanation": "Transcription : Femme : Discrepo. Escribir mucho no significa escribir bien: las abreviaturas y la falta de tildes se trasladan a los exámenes. / Narrateur : Pregunta: ¿Qué preocupa a la tertuliana?"
+    },
+    {
+     "audio": "M|No obstante, la lengua siempre ha evolucionado. Lo mismo se dijo del telégrafo y del teléfono.\nN|Pregunta: ¿Qué argumento usa el tertuliano?",
+     "choices": [
+      "Que la lengua siempre ha cambiado.",
+      "Que el telégrafo fue un error.",
+      "Que el teléfono empobreció el idioma."
+     ],
+     "answer": "Que la lengua siempre ha cambiado.",
+     "explanation": "Transcription : Homme : No obstante, la lengua siempre ha evolucionado. Lo mismo se dijo del telégrafo y del teléfono. / Narrateur : Pregunta: ¿Qué argumento usa el tertuliano?"
+    },
+    {
+     "audio": "F|Estoy de acuerdo en que cambia, pero la escuela debe enseñar a distinguir registros: no se escribe igual un mensaje que una carta formal.\nN|Pregunta: ¿Qué propone la tertuliana?",
+     "choices": [
+      "Enseñar a distinguir registros.",
+      "Eliminar las cartas formales.",
+      "Escribir siempre como en los mensajes."
+     ],
+     "answer": "Enseñar a distinguir registros.",
+     "explanation": "Transcription : Femme : Estoy de acuerdo en que cambia, pero la escuela debe enseñar a distinguir registros: no se escribe igual un mensaje que una carta formal. / Narrateur : Pregunta: ¿Qué propone la tertuliana?"
+    },
+    {
+     "audio": "M|En eso coincidimos. Y, por cierto, las redes también han difundido palabras de toda Hispanoamérica.\nN|Pregunta: ¿Qué efecto positivo menciona?",
+     "choices": [
+      "La difusión de palabras de toda Hispanoamérica.",
+      "La desaparición de los acentos.",
+      "El aumento de las faltas."
+     ],
+     "answer": "La difusión de palabras de toda Hispanoamérica.",
+     "explanation": "Transcription : Homme : En eso coincidimos. Y, por cierto, las redes también han difundido palabras de toda Hispanoamérica. / Narrateur : Pregunta: ¿Qué efecto positivo menciona?"
+    },
+    {
+     "audio": "F|Cierto. Gracias a internet, un chico de Madrid sabe hoy lo que significa «chamba» o «pibe».\nN|Pregunta: ¿Qué ejemplo da la tertuliana?",
+     "choices": [
+      "El conocimiento de palabras americanas.",
+      "El uso de palabras inglesas.",
+      "El olvido del vocabulario español."
+     ],
+     "answer": "El conocimiento de palabras americanas.",
+     "explanation": "Transcription : Femme : Cierto. Gracias a internet, un chico de Madrid sabe hoy lo que significa «chamba» o «pibe». / Narrateur : Pregunta: ¿Qué ejemplo da la tertuliana?"
+    },
+    {
+     "audio": "N|Para terminar, ¿una recomendación?\nM|Leer, leer y leer. Es la mejor vacuna contra el empobrecimiento del idioma.\nN|Pregunta: ¿Qué recomienda el tertuliano?",
+     "choices": [
+      "Leer mucho.",
+      "Usar menos el móvil.",
+      "Estudiar gramática."
+     ],
+     "answer": "Leer mucho.",
+     "explanation": "Transcription : Narrateur : Para terminar, ¿una recomendación? / Homme : Leer, leer y leer. Es la mejor vacuna contra el empobrecimiento del idioma. / Narrateur : Pregunta: ¿Qué recomienda el tertuliano?"
+    },
+    {
+     "audio": "F|Y escribir a mano de vez en cuando; obliga a pensar antes de escribir.\nN|Pregunta: ¿Qué recomienda la tertuliana?",
+     "choices": [
+      "Escribir a mano de vez en cuando.",
+      "No escribir nunca a mano.",
+      "Escribir solo en el ordenador."
+     ],
+     "answer": "Escribir a mano de vez en cuando.",
+     "explanation": "Transcription : Femme : Y escribir a mano de vez en cuando; obliga a pensar antes de escribir. / Narrateur : Pregunta: ¿Qué recomienda la tertuliana?"
+    },
+    {
+     "audio": "N|En resumen, ¿las redes empobrecen el idioma?\nF|Digamos que depende de cómo las usemos.\nN|Pregunta: ¿Cuál es la conclusión de la tertuliana?",
+     "choices": [
+      "Que depende del uso que hagamos.",
+      "Que sí, sin ninguna duda.",
+      "Que no tienen ningún efecto."
+     ],
+     "answer": "Que depende del uso que hagamos.",
+     "explanation": "Transcription : Narrateur : En resumen, ¿las redes empobrecen el idioma? / Femme : Digamos que depende de cómo las usemos. / Narrateur : Pregunta: ¿Cuál es la conclusión de la tertuliana?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "w-sintesis",
+   "section": "writing",
+   "jpTitle": "Destrezas integradas — Tarea 1",
+   "title": "Une synthèse",
+   "prompt": "Lea la situación y elija la opción mejor redactada.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "La ponente sostuvo que, si bien el número de lectores ha aumentado, la lectura digital tiende a ser más fragmentaria; por consiguiente, propuso recuperar la lectura en voz alta y los clubes de lectura.",
+      "La ponente dijo que hay más lectores pero se lee peor y que hay que leer en voz alta.",
+      "La ponente sostuvo que el número de lectores ha disminuido drásticamente y que conviene prohibir las pantallas.",
+      "Lectores, pantallas, voz alta, clubes."
+     ],
+     "answer": "La ponente sostuvo que, si bien el número de lectores ha aumentado, la lectura digital tiende a ser más fragmentaria; por consiguiente, propuso recuperar la lectura en voz alta y los clubes de lectura.",
+     "explanation": "Réponse : La ponente sostuvo que, si bien el número de lectores ha aumentado, la lectura digital tiende a ser más fragmentaria; por consiguiente, propuso recuperar la lectura en voz alta y los clubes de lectura.",
+     "text": "Usted ha asistido a una conferencia sobre la lectura en la era digital. Según la ponente, el número de lectores ha aumentado, pero se lee de forma más fragmentaria; propone recuperar la lectura en voz alta y los clubes de lectura.\n★ Elija la síntesis más completa, fiel y formal."
+    },
+    {
+     "choices": [
+      "Cabe señalar que la ponente no rechazó los dispositivos electrónicos.",
+      "Cabe señalar de que la ponente no rechazó los dispositivos electrónicos.",
+      "Cabe señalar que la ponente no rechazara los dispositivos electrónicos.",
+      "Cabe a señalar que la ponente no rechazó los dispositivos electrónicos."
+     ],
+     "answer": "Cabe señalar que la ponente no rechazó los dispositivos electrónicos.",
+     "explanation": "Réponse : Cabe señalar que la ponente no rechazó los dispositivos electrónicos.",
+     "text": "Usted ha asistido a una conferencia sobre la lectura en la era digital. Según la ponente, el número de lectores ha aumentado, pero se lee de forma más fragmentaria; propone recuperar la lectura en voz alta y los clubes de lectura.\n★ Elija la frase correcta."
+    },
+    {
+     "choices": [
+      "Resulta lógico que las escuelas quieran recuperar la lectura en voz alta.",
+      "Resulta lógico que las escuelas quieren recuperar la lectura en voz alta.",
+      "Resulta lógico de que las escuelas quieran recuperar la lectura en voz alta.",
+      "Resulta lógico que las escuelas querrán recuperar la lectura en voz alta."
+     ],
+     "answer": "Resulta lógico que las escuelas quieran recuperar la lectura en voz alta.",
+     "explanation": "Réponse : Resulta lógico que las escuelas quieran recuperar la lectura en voz alta.",
+     "text": "Usted ha asistido a una conferencia sobre la lectura en la era digital. Según la ponente, el número de lectores ha aumentado, pero se lee de forma más fragmentaria; propone recuperar la lectura en voz alta y los clubes de lectura.\n★ Elija la frase correcta para valorar la propuesta."
+    },
+    {
+     "choices": [
+      "En cuanto a los clubes de lectura, la ponente destacó su función social.",
+      "En cuanto los clubes de lectura, la ponente destacó su función social.",
+      "En cuanto a los clubes de lectura, la ponente destacó por su función social a.",
+      "Cuanto a los clubes de lectura, la ponente destacó su función social."
+     ],
+     "answer": "En cuanto a los clubes de lectura, la ponente destacó su función social.",
+     "explanation": "Réponse : En cuanto a los clubes de lectura, la ponente destacó su función social.",
+     "text": "Usted ha asistido a una conferencia sobre la lectura en la era digital. Según la ponente, el número de lectores ha aumentado, pero se lee de forma más fragmentaria; propone recuperar la lectura en voz alta y los clubes de lectura.\n★ Elija la frase correcta."
+    }
+   ]
+  },
+  {
+   "id": "w-resena",
+   "section": "writing",
+   "jpTitle": "Destrezas integradas — Tarea 2",
+   "title": "Un compte rendu critique",
+   "prompt": "Lea la situación y elija el texto mejor escrito.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "La versión teatral de La vida es sueño que se representa estos días en Madrid destaca por la intensidad del actor protagonista y por una escenografía sobria que pone el foco en el texto. Si bien el ritmo decae en el tercer acto, el montaje logra transmitir la vigencia de las preguntas de Calderón. En definitiva, una propuesta que merece la pena.",
+      "La versión teatral de La vida es sueño destaca por el actor y por la escenografía. Si bien el ritmo decaiga en el tercer acto, el montaje logra transmitir. En definitiva, merece pena.",
+      "Fui al teatro. Estaba bien. El actor guay. Recomendado.",
+      "La versión teatral de La vida es sueño es la peor obra de la historia porque es mala y no me gustó nada de nada."
+     ],
+     "answer": "La versión teatral de La vida es sueño que se representa estos días en Madrid destaca por la intensidad del actor protagonista y por una escenografía sobria que pone el foco en el texto. Si bien el ritmo decae en el tercer acto, el montaje logra transmitir la vigencia de las preguntas de Calderón. En definitiva, una propuesta que merece la pena.",
+     "explanation": "Réponse : La versión teatral de La vida es sueño que se representa estos días en Madrid destaca por la intensidad del actor protagonista y por una escenografía sobria que pone el foco en el texto. Si bien el ritmo decae en el tercer acto, el montaje logra transmitir la vigencia de las preguntas de Calderón. En definitiva, una propuesta que merece la pena.",
+     "text": "★ Situación: escriba la reseña de una obra de teatro para una revista cultural."
+    },
+    {
+     "choices": [
+      "El ensayo aborda con rigor la evolución del español en América. Cabe destacar la claridad con la que el autor explica fenómenos complejos, como el voseo o el seseo. No obstante, se echa de menos un capítulo dedicado a las lenguas indígenas. Aun así, resulta una lectura imprescindible.",
+      "El ensayo aborda la evolución del español. Cabe destacar la claridad. No obstante, se echa de menos un capítulo. Aun así, resulte imprescindible.",
+      "Libro sobre el español en América. Voseo, seseo. Bueno.",
+      "El ensayo no aborda nada y cabe destacar que no explica nada, por lo tanto es imprescindible."
+     ],
+     "answer": "El ensayo aborda con rigor la evolución del español en América. Cabe destacar la claridad con la que el autor explica fenómenos complejos, como el voseo o el seseo. No obstante, se echa de menos un capítulo dedicado a las lenguas indígenas. Aun así, resulta una lectura imprescindible.",
+     "explanation": "Réponse : El ensayo aborda con rigor la evolución del español en América. Cabe destacar la claridad con la que el autor explica fenómenos complejos, como el voseo o el seseo. No obstante, se echa de menos un capítulo dedicado a las lenguas indígenas. Aun así, resulta una lectura imprescindible.",
+     "text": "★ Situación: escriba la reseña de un ensayo para el blog de una biblioteca."
+    },
+    {
+     "choices": [
+      "La película adapta con acierto la leyenda de Bécquer: la fotografía, de tonos verdes y fríos, recrea la atmósfera inquietante del relato. Sin embargo, el guion añade un desenlace feliz que traiciona el espíritu del original. Pese a ello, merece la pena verla en pantalla grande.",
+      "La película adapta la leyenda de Bécquer: la fotografía recrea la atmósfera. Sin embargo, el guion añadiera un desenlace feliz. Pese a ello, merece verla.",
+      "Película verde. Final feliz. Bien.",
+      "La película es exactamente igual que el libro y por eso no tiene nada que comentar."
+     ],
+     "answer": "La película adapta con acierto la leyenda de Bécquer: la fotografía, de tonos verdes y fríos, recrea la atmósfera inquietante del relato. Sin embargo, el guion añade un desenlace feliz que traiciona el espíritu del original. Pese a ello, merece la pena verla en pantalla grande.",
+     "explanation": "Réponse : La película adapta con acierto la leyenda de Bécquer: la fotografía, de tonos verdes y fríos, recrea la atmósfera inquietante del relato. Sin embargo, el guion añade un desenlace feliz que traiciona el espíritu del original. Pese a ello, merece la pena verla en pantalla grande.",
+     "text": "★ Situación: escriba la reseña de una adaptación cinematográfica."
+    }
+   ]
+  }
+ ]
+}

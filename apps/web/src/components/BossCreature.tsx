@@ -639,6 +639,64 @@ const SPECIES: Record<string, Species> = {
     under: <path d="M70 106 Q100 150 130 106 Q116 122 100 122 Q84 122 70 106Z" fill="#4A2A1A" />,
     front: <g>{[[36, 70, '#E2622E'], [168, 84, '#3A8AE2'], [40, 140, '#E2B84A']].map(([x, y, c]) => <g key={String(x)} transform={`translate(${x} ${y})`}><ellipse rx="9" ry="6" fill={String(c)} /><path d="M7 -2 L13 0 L7 2Z" fill="#E2B84A" /><circle cx="3" cy="-2" r="1.4" fill="#1F2433" /></g>)}</g>,
   },
+  // ───── Gardiens de la Bibliothèque enchantée (DELE C1 — personnages des classiques espagnols ; signes typographiques) ─────
+  // Lion du Cid : crinière fauve, couronne
+  '§': {
+    body: '#C8923A', belly: '#F2D8A0', head: '#D8A24A', eye: '#2A1A10',
+    back: <g fill="#A8622A">{Array.from({ length: 12 }, (_, i) => i * 30).map((a) => <ellipse key={a} cx="100" cy="46" rx="14" ry="26" transform={`rotate(${a} 100 96)`} />)}</g>,
+    top: <path d="M80 50 L86 34 L94 46 L100 30 L106 46 L114 34 L120 50Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" />,
+    face: <><ellipse cx="100" cy="112" rx="14" ry="10" fill="#F2D8A0" /><path d="M94 106 L100 112 L106 106Z" fill="#5A3A24" /><path d="M100 112 V118 M92 120 Q100 124 108 120" stroke="#5A3A24" strokeWidth="2" fill="none" /></>,
+  },
+  // Célestine : vieille entremetteuse, mante noire, quenouille et fil rouge
+  '¶': {
+    body: '#3A2A3A', belly: '#5A4A5A', head: '#D8B898', eye: '#2A1A10',
+    top: <path d="M56 92 Q52 40 100 34 Q148 40 144 92 Q132 66 100 62 Q68 66 56 92Z" fill="#2A1F2A" />,
+    face: <><path d="M88 120 Q100 114 112 120" stroke="#6A3A2A" strokeWidth="2.5" fill="none" /><path d="M80 98 Q86 94 92 98 M108 98 Q114 94 120 98" stroke="#8A6A5A" strokeWidth="1.2" fill="none" /></>,
+    front: <g transform="translate(160 140)"><path d="M0 -40 V40" stroke="#7A4A2A" strokeWidth="4" /><ellipse cx="0" cy="-30" rx="8" ry="12" fill="#E8DCC0" /><path d="M0 -20 Q-30 0 -60 10" stroke="#C8323F" strokeWidth="2" fill="none" /></g>,
+  },
+  // Aveugle du Lazarillo : yeux clos, bâton, cruche de vin
+  '†': {
+    body: '#6A5A4A', belly: '#9A8A6A', head: '#C9A27A', eye: '#C9A27A',
+    top: <path d="M62 70 Q66 40 100 38 Q134 40 138 70 Q120 58 100 58 Q80 58 62 70Z" fill="#4A3A2A" />,
+    under: <path d="M78 96 Q88 92 96 96 M104 96 Q112 92 122 96" stroke="#3A2A1A" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <><path d="M40 196 L56 80" stroke="#8A6A3A" strokeWidth="5" strokeLinecap="round" /><g transform="translate(160 156)"><path d="M-10 -14 Q-12 6 0 10 Q12 6 10 -14Z" fill="#B8562E" /><rect x="-4" y="-20" width="8" height="7" fill="#9A4A2A" /></g></>,
+  },
+  // Segismundo : prince sauvage vêtu de peaux, chaînes aux poignets
+  '‡': {
+    body: '#8A6A4A', belly: '#B89A6A', head: '#D9A07A', eye: '#2A1A10',
+    top: <path d="M58 86 Q54 34 100 30 Q146 34 142 86 Q134 56 120 60 Q110 44 100 54 Q90 44 80 60 Q66 56 58 86Z" fill="#3A2A1A" />,
+    under: <path d="M66 140 Q100 170 134 140 L140 160 Q100 186 60 160Z" fill="#6A4A2A" />,
+    front: <g fill="none" stroke="#6A6A6A" strokeWidth="3">{[[44, 150], [56, 160], [68, 168]].map(([x, y]) => <ellipse key={x} cx={x} cy={y} rx="6" ry="4" />)}{[[156, 150], [144, 160], [132, 168]].map(([x, y]) => <ellipse key={x} cx={x} cy={y} rx="6" ry="4" />)}</g>,
+  },
+  // Licencié de verre : corps translucide, reflets
+  '°': {
+    body: '#BFE0F0', belly: '#E8F6FC', head: '#CFE8F4', eye: '#2A4A6A',
+    top: <path d="M70 60 Q74 40 100 38 Q126 40 130 60" stroke="#7AA8C8" strokeWidth="3" fill="none" />,
+    under: <g stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" fill="none"><path d="M70 130 Q74 120 80 116" /><path d="M120 76 Q126 72 130 74" /></g>,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#2A4A6A" strokeWidth="2.5" fill="none" />,
+  },
+  // Commandeur : statue de pierre en armure, épée
+  '¤': {
+    body: '#9A9A96', belly: '#B8B8B4', head: '#A8A8A4', eye: '#F2F2EE',
+    top: <><path d="M64 80 Q62 36 100 34 Q138 36 136 80Z" fill="#8A8A86" /><path d="M100 34 V20 M94 24 H106" stroke="#7A7A76" strokeWidth="4" /></>,
+    under: <path d="M70 140 H130 M100 126 V160" stroke="#7A7A76" strokeWidth="3" />,
+    front: <path d="M162 190 L170 80 M160 100 H180" stroke="#7A7A76" strokeWidth="5" strokeLinecap="round" />,
+  },
+  // Dame aux yeux verts : chevelure d'eau, yeux d'émeraude
+  '‰': {
+    body: '#5A9AA8', belly: '#BFE0E8', head: '#E8D0C0', eye: '#2EA86A',
+    back: <path d="M48 70 Q30 150 50 196 Q70 180 80 196 Q90 180 100 196 Q110 180 120 196 Q130 180 150 196 Q170 150 152 70 Q100 30 48 70Z" fill="#3A7A8A" opacity="0.85" />,
+    top: <path d="M60 86 Q58 40 100 36 Q142 40 140 86 Q124 64 100 62 Q76 64 60 86Z" fill="#3A7A8A" />,
+    face: <path d="M92 118 Q100 122 108 118" stroke="#8A4A5A" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#7AC8E2">{[[40, 120], [164, 132], [52, 160]].map(([x, y]) => <path key={x} d={`M${x} ${y - 8} Q${x + 4} ${y - 2} ${x} ${y} Q${x - 4} ${y - 2} ${x} ${y - 8}Z`} />)}</g>,
+  },
+  // Spectre de Salamanque : dame voilée de blanc, visage pâle
+  '¬': {
+    body: '#E8E8F0', belly: '#F6F6FA', head: '#DADAE6', eye: '#3A3A4A',
+    back: <path d="M44 196 Q40 110 60 70 Q100 20 140 70 Q160 110 156 196 Q140 184 128 196 Q114 184 100 196 Q86 184 72 196 Q58 184 44 196Z" fill="#F2F2F8" stroke="#C8C8D8" strokeWidth="2" />,
+    top: <path d="M58 90 Q56 40 100 34 Q144 40 142 90 Q130 70 100 68 Q70 70 58 90Z" fill="#F6F6FA" stroke="#C8C8D8" strokeWidth="2" />,
+    face: <path d="M92 120 Q100 116 108 120" stroke="#5A5A6A" strokeWidth="2" fill="none" />,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

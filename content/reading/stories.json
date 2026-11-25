@@ -29908,6 +29908,550 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "don-illan",
+   "glyph": "i",
+   "level": "DELEC1",
+   "color": "#5A3A6A",
+   "title": {
+    "jp": "Don Illán, el mago de Toledo",
+    "fr": "Don Illán, le magicien de Tolède",
+    "en": "Don Illán, the magician of Toledo"
+   },
+   "summary": {
+    "fr": "D’après El conde Lucanor de don Juan Manuel (1335) : un doyen ambitieux demande au grand magicien de Tolède de lui enseigner son art… et promet de ne jamais l’oublier.",
+    "en": "From El conde Lucanor by Don Juan Manuel (1335): an ambitious dean asks the great magician of Toledo to teach him his art… and promises never to forget him."
+   },
+   "chapters": [
+    {
+     "slug": "don-illan-1",
+     "title": {
+      "jp": "Una promesa interesada",
+      "fr": "Une promesse intéressée",
+      "en": "A self-serving promise"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Había en Santiago un deán que deseaba aprender el arte de la magia, y como oyó decir que don Illán de Toledo era el mayor maestro de su tiempo, fue a buscarlo.",
+        "fr": "Il y avait à Saint-Jacques un doyen qui désirait apprendre l’art de la magie, et comme il avait entendu dire que don Illán de Tolède était le plus grand maître de son temps, il alla le trouver.",
+        "en": "There was in Santiago a dean who longed to learn the art of magic, and having heard that Don Illán of Toledo was the greatest master of his time, he went to find him.",
+        "kana": "Había en Santiago un deán que deseaba aprender el arte de la magia, y como oyó decir que don Illán de Toledo era el mayor maestro de su tiempo, fue a buscarlo."
+       },
+       {
+        "jp": "Don Illán lo recibió con amabilidad, pero le advirtió que los hombres poderosos suelen olvidar a quienes los ayudaron.",
+        "fr": "Don Illán le reçut avec amabilité, mais l’avertit que les hommes puissants oublient souvent ceux qui les ont aidés.",
+        "en": "Don Illán received him kindly, but warned him that powerful men tend to forget those who helped them.",
+        "kana": "Don Illán lo recibió con amabilidad, pero le advirtió que los hombres poderosos suelen olvidar a quienes los ayudaron."
+       },
+       {
+        "jp": "El deán le juró que, llegara a la dignidad que llegara, nunca le negaría nada de lo que le pidiera.",
+        "fr": "Le doyen lui jura que, quelle que soit la dignité à laquelle il parviendrait, il ne lui refuserait jamais rien de ce qu’il demanderait.",
+        "en": "The dean swore that, whatever rank he might reach, he would never refuse him anything he asked.",
+        "kana": "El deán le juró que, llegara a la dignidad que llegara, nunca le negaría nada de lo que le pidiera."
+       }
+      ],
+      [
+       {
+        "jp": "Entonces don Illán llamó a su criada y le pidió que preparara unas perdices para la cena, pero que no las asara hasta que él se lo mandara.",
+        "fr": "Alors don Illán appela sa servante et lui demanda de préparer des perdrix pour le dîner, mais de ne pas les faire rôtir avant qu’il le lui ordonne.",
+        "en": "Then Don Illán called his maid and asked her to prepare some partridges for supper, but not to roast them until he told her to.",
+        "kana": "Entonces don Illán llamó a su criada y le pidió que preparara unas perdices para la cena, pero que no las asara hasta que él se lo mandara."
+       },
+       {
+        "jp": "Después bajaron los dos a una sala escondida bajo el río Tajo para empezar las lecciones.",
+        "fr": "Puis tous deux descendirent dans une salle cachée sous le Tage pour commencer les leçons.",
+        "en": "Then the two of them went down to a hidden room beneath the river Tagus to begin the lessons.",
+        "kana": "Después bajaron los dos a una sala escondida bajo el río Tajo para empezar las lecciones."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el deán",
+       "reading": "/el deˈan/",
+       "fr": "le doyen (d’une cathédrale)",
+       "en": "the dean"
+      },
+      {
+       "jp": "advertir",
+       "reading": "/aðβeɾˈtiɾ/",
+       "fr": "avertir",
+       "en": "to warn"
+      },
+      {
+       "jp": "jurar",
+       "reading": "/xuˈɾaɾ/",
+       "fr": "jurer",
+       "en": "to swear"
+      },
+      {
+       "jp": "la dignidad",
+       "reading": "/la ðiɣniˈðað/",
+       "fr": "la dignité, le rang",
+       "en": "rank, dignity"
+      },
+      {
+       "jp": "la perdiz",
+       "reading": "/la peɾˈðiθ/",
+       "fr": "la perdrix",
+       "en": "the partridge"
+      },
+      {
+       "jp": "escondido",
+       "reading": "/eskonˈdiðo/",
+       "fr": "caché",
+       "en": "hidden"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que craignait don Illán ?",
+        "en": "What did Don Illán fear?"
+       },
+       "choices": [
+        {
+         "fr": "Que le doyen l’oublie une fois puissant",
+         "en": "That the dean would forget him once powerful"
+        },
+        {
+         "fr": "Que le doyen soit trop jeune",
+         "en": "That the dean was too young"
+        },
+        {
+         "fr": "Que la magie soit interdite",
+         "en": "That magic was forbidden"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Quelle consigne donna-t-il à sa servante ?",
+        "en": "What instruction did he give his maid?"
+       },
+       "choices": [
+        {
+         "fr": "Ne pas rôtir les perdrix avant son ordre",
+         "en": "Not to roast the partridges until he said so"
+        },
+        {
+         "fr": "Fermer la maison",
+         "en": "To lock the house"
+        },
+        {
+         "fr": "Aller au marché",
+         "en": "To go to the market"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "don-illan-2",
+     "title": {
+      "jp": "Las perdices de don Illán",
+      "fr": "Les perdrix de don Illán",
+      "en": "Don Illán’s partridges"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Al poco tiempo llegaron mensajeros: el deán había sido nombrado obispo, luego arzobispo, más tarde cardenal y, por último, papa.",
+        "fr": "Peu après arrivèrent des messagers : le doyen avait été nommé évêque, puis archevêque, plus tard cardinal et enfin pape.",
+        "en": "Shortly afterwards messengers arrived: the dean had been made bishop, then archbishop, later cardinal and finally pope.",
+        "kana": "Al poco tiempo llegaron mensajeros: el deán había sido nombrado obispo, luego arzobispo, más tarde cardenal y, por último, papa."
+       },
+       {
+        "jp": "Cada vez que don Illán le pedía un cargo para su hijo, el nuevo poderoso encontraba una excusa para dárselo a otro.",
+        "fr": "Chaque fois que don Illán lui demandait une charge pour son fils, le nouveau puissant trouvait une excuse pour la donner à un autre.",
+        "en": "Every time Don Illán asked him for a post for his son, the newly powerful man found an excuse to give it to someone else.",
+        "kana": "Cada vez que don Illán le pedía un cargo para su hijo, el nuevo poderoso encontraba una excusa para dárselo a otro."
+       },
+       {
+        "jp": "Al final, el papa lo amenazó con la cárcel y lo llamó hechicero.",
+        "fr": "À la fin, le pape le menaça de prison et le traita de sorcier.",
+        "en": "In the end, the pope threatened him with prison and called him a sorcerer.",
+        "kana": "Al final, el papa lo amenazó con la cárcel y lo llamó hechicero."
+       }
+      ],
+      [
+       {
+        "jp": "Entonces don Illán dijo con calma: «Pues ya veo que nada puedo esperar de vos; volveré a mi casa, y cenaré las perdices».",
+        "fr": "Alors don Illán dit avec calme : « Je vois bien que je ne puis rien attendre de vous ; je rentrerai chez moi, et je mangerai les perdrix. »",
+        "en": "Then Don Illán said calmly: “I see that I can expect nothing from you; I shall go home and eat the partridges.”",
+        "kana": "Entonces don Illán dijo con calma: «Pues ya veo que nada puedo esperar de vos; volveré a mi casa, y cenaré las perdices»."
+       },
+       {
+        "jp": "En ese instante el deán se encontró de nuevo en la sala bajo el Tajo: todo había sido una ilusión, y apenas habían pasado unos minutos.",
+        "fr": "À cet instant, le doyen se retrouva dans la salle sous le Tage : tout n’avait été qu’une illusion, et à peine quelques minutes s’étaient écoulées.",
+        "en": "At that moment the dean found himself back in the room beneath the Tagus: it had all been an illusion, and barely a few minutes had passed.",
+        "kana": "En ese instante el deán se encontró de nuevo en la sala bajo el Tajo: todo había sido una ilusión, y apenas habían pasado unos minutos."
+       },
+       {
+        "jp": "Avergonzado, no supo qué decir, y don Illán lo despidió sin darle de cenar.",
+        "fr": "Honteux, il ne sut que dire, et don Illán le congédia sans lui donner à dîner.",
+        "en": "Ashamed, he did not know what to say, and Don Illán sent him away without supper.",
+        "kana": "Avergonzado, no supo qué decir, y don Illán lo despidió sin darle de cenar."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el mensajero",
+       "reading": "/el mensaˈxeɾo/",
+       "fr": "le messager",
+       "en": "the messenger"
+      },
+      {
+       "jp": "nombrar",
+       "reading": "/nomˈbɾaɾ/",
+       "fr": "nommer",
+       "en": "to appoint"
+      },
+      {
+       "jp": "el cargo",
+       "reading": "/el ˈkaɾɣo/",
+       "fr": "la charge, le poste",
+       "en": "the post, the position"
+      },
+      {
+       "jp": "amenazar",
+       "reading": "/amenaˈθaɾ/",
+       "fr": "menacer",
+       "en": "to threaten"
+      },
+      {
+       "jp": "el hechicero",
+       "reading": "/el etʃiˈθeɾo/",
+       "fr": "le sorcier",
+       "en": "the sorcerer"
+      },
+      {
+       "jp": "avergonzado",
+       "reading": "/aβeɾɣonˈθaðo/",
+       "fr": "honteux",
+       "en": "ashamed"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fit le doyen chaque fois que don Illán lui demandait une faveur ?",
+        "en": "What did the dean do each time Don Illán asked a favour?"
+       },
+       "choices": [
+        {
+         "fr": "Il trouvait une excuse pour refuser",
+         "en": "He found an excuse to refuse"
+        },
+        {
+         "fr": "Il acceptait aussitôt",
+         "en": "He agreed at once"
+        },
+        {
+         "fr": "Il partait en voyage",
+         "en": "He went travelling"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que révèle la fin de l’histoire ?",
+        "en": "What does the end of the story reveal?"
+       },
+       "choices": [
+        {
+         "fr": "Tout n’était qu’une illusion de quelques minutes",
+         "en": "It was all a few minutes’ illusion"
+        },
+        {
+         "fr": "Le doyen était vraiment devenu pape",
+         "en": "The dean had really become pope"
+        },
+        {
+         "fr": "Don Illán était en prison",
+         "en": "Don Illán was in prison"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ojos-verdes",
+   "glyph": "v",
+   "level": "DELEC1",
+   "color": "#2E8A6A",
+   "title": {
+    "jp": "Los ojos verdes",
+    "fr": "Les yeux verts",
+    "en": "The green eyes"
+   },
+   "summary": {
+    "fr": "D’après la légende de Bécquer : à Soria, le jeune Fernando poursuit un cerf blessé jusqu’à une source maudite… où l’attendent deux yeux verts.",
+    "en": "From Bécquer’s legend: in Soria, young Fernando chases a wounded stag to a cursed spring… where two green eyes are waiting for him."
+   },
+   "chapters": [
+    {
+     "slug": "ojos-verdes-1",
+     "title": {
+      "jp": "La fuente de los Álamos",
+      "fr": "La source des Peupliers",
+      "en": "The Poplar Spring"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Fernando de Argensola, el primogénito de los marqueses, perseguía un ciervo herido por el monte cuando llegó a la fuente de los Álamos.",
+        "fr": "Fernando de Argensola, fils aîné des marquis, poursuivait un cerf blessé dans la montagne quand il arriva à la source des Peupliers.",
+        "en": "Fernando de Argensola, the marquises’ eldest son, was chasing a wounded stag across the hills when he came to the Poplar Spring.",
+        "kana": "Fernando de Argensola, el primogénito de los marqueses, perseguía un ciervo herido por el monte cuando llegó a la fuente de los Álamos."
+       },
+       {
+        "jp": "Su montero, Íñigo, se detuvo, pálido: «Quien enturbia sus aguas paga caro su atrevimiento; allí habita un espíritu del mal».",
+        "fr": "Son veneur, Íñigo, s’arrêta, pâle : « Qui trouble ses eaux paie cher son audace ; là habite un esprit du mal. »",
+        "en": "His huntsman, Íñigo, stopped, pale: “Whoever disturbs its waters pays dearly for their daring; an evil spirit dwells there.”",
+        "kana": "Su montero, Íñigo, se detuvo, pálido: «Quien enturbia sus aguas paga caro su atrevimiento; allí habita un espíritu del mal»."
+       },
+       {
+        "jp": "Pero Fernando, orgulloso, siguió adelante y se internó entre los árboles.",
+        "fr": "Mais Fernando, orgueilleux, continua et s’enfonça parmi les arbres.",
+        "en": "But Fernando, proud, went on and disappeared among the trees.",
+        "kana": "Pero Fernando, orgulloso, siguió adelante y se internó entre los árboles."
+       }
+      ],
+      [
+       {
+        "jp": "Desde aquel día, el joven cambió. Volvía cada tarde a la fuente y pasaba horas contemplando el agua, ausente y melancólico.",
+        "fr": "Depuis ce jour, le jeune homme changea. Il retournait chaque après-midi à la source et passait des heures à contempler l’eau, absent et mélancolique.",
+        "en": "From that day on, the young man changed. He went back to the spring every afternoon and spent hours gazing into the water, distant and melancholy.",
+        "kana": "Desde aquel día, el joven cambió. Volvía cada tarde a la fuente y pasaba horas contemplando el agua, ausente y melancólico."
+       },
+       {
+        "jp": "Al fin confesó a Íñigo su secreto: en el fondo de la fuente había visto unos ojos verdes, luminosos, de una mujer que lo llamaba.",
+        "fr": "Il finit par confier son secret à Íñigo : au fond de la source, il avait vu des yeux verts, lumineux, d’une femme qui l’appelait.",
+        "en": "At last he confessed his secret to Íñigo: at the bottom of the spring he had seen a woman’s green, shining eyes, calling to him.",
+        "kana": "Al fin confesó a Íñigo su secreto: en el fondo de la fuente había visto unos ojos verdes, luminosos, de una mujer que lo llamaba."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el primogénito",
+       "reading": "/el pɾimoˈxenito/",
+       "fr": "le fils aîné",
+       "en": "the firstborn son"
+      },
+      {
+       "jp": "el ciervo",
+       "reading": "/el ˈθjeɾβo/",
+       "fr": "le cerf",
+       "en": "the stag, the deer"
+      },
+      {
+       "jp": "enturbiar",
+       "reading": "/entuɾˈβjaɾ/",
+       "fr": "troubler (l’eau)",
+       "en": "to cloud, to muddy"
+      },
+      {
+       "jp": "el atrevimiento",
+       "reading": "/el atɾeβiˈmjento/",
+       "fr": "l’audace",
+       "en": "daring"
+      },
+      {
+       "jp": "melancólico",
+       "reading": "/melaŋˈkoliko/",
+       "fr": "mélancolique",
+       "en": "melancholy"
+      },
+      {
+       "jp": "luminoso",
+       "reading": "/lumiˈnoso/",
+       "fr": "lumineux",
+       "en": "shining, luminous"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que craignait Íñigo à propos de la source ?",
+        "en": "What did Íñigo fear about the spring?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’un esprit du mal y habite",
+         "en": "That an evil spirit lived there"
+        },
+        {
+         "fr": "Que l’eau soit empoisonnée",
+         "en": "That the water was poisoned"
+        },
+        {
+         "fr": "Que le cerf soit dangereux",
+         "en": "That the stag was dangerous"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qu’avait vu Fernando au fond de la source ?",
+        "en": "What had Fernando seen at the bottom of the spring?"
+       },
+       "choices": [
+        {
+         "fr": "Des yeux verts lumineux",
+         "en": "Shining green eyes"
+        },
+        {
+         "fr": "Un trésor",
+         "en": "A treasure"
+        },
+        {
+         "fr": "Son propre reflet",
+         "en": "His own reflection"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "ojos-verdes-2",
+     "title": {
+      "jp": "La mujer del agua",
+      "fr": "La femme de l’eau",
+      "en": "The woman of the water"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Una tarde, la vio por fin: una mujer de belleza extraordinaria, sentada sobre una roca, con los ojos del color de las esmeraldas.",
+        "fr": "Un après-midi, il la vit enfin : une femme d’une beauté extraordinaire, assise sur un rocher, aux yeux couleur d’émeraude.",
+        "en": "One afternoon he finally saw her: a woman of extraordinary beauty, sitting on a rock, with eyes the colour of emeralds.",
+        "kana": "Una tarde, la vio por fin: una mujer de belleza extraordinaria, sentada sobre una roca, con los ojos del color de las esmeraldas."
+       },
+       {
+        "jp": "«¿Quién eres?», le preguntó. «Soy un espíritu —respondió ella— que vive en el fondo de estas aguas. Si me amas, ven conmigo.»",
+        "fr": "« Qui es-tu ? » lui demanda-t-il. « Je suis un esprit, répondit-elle, qui vit au fond de ces eaux. Si tu m’aimes, viens avec moi. »",
+        "en": "“Who are you?” he asked her. “I am a spirit,” she replied, “who lives at the bottom of these waters. If you love me, come with me.”",
+        "kana": "«¿Quién eres?», le preguntó. «Soy un espíritu —respondió ella— que vive en el fondo de estas aguas. Si me amas, ven conmigo.»"
+       }
+      ],
+      [
+       {
+        "jp": "Fernando, hechizado, dio un paso hacia el borde de la roca, y otro, y otro más.",
+        "fr": "Fernando, ensorcelé, fit un pas vers le bord du rocher, puis un autre, puis un autre encore.",
+        "en": "Fernando, spellbound, took a step towards the edge of the rock, then another, and another.",
+        "kana": "Fernando, hechizado, dio un paso hacia el borde de la roca, y otro, y otro más."
+       },
+       {
+        "jp": "Las aguas se agitaron un instante, brillaron unas chispas de luz y después la superficie quedó lisa como un espejo.",
+        "fr": "Les eaux s’agitèrent un instant, quelques étincelles de lumière brillèrent, puis la surface redevint lisse comme un miroir.",
+        "en": "The waters stirred for a moment, a few sparks of light glittered, and then the surface was smooth as a mirror again.",
+        "kana": "Las aguas se agitaron un instante, brillaron unas chispas de luz y después la superficie quedó lisa como un espejo."
+       },
+       {
+        "jp": "Desde entonces, nadie se acerca a la fuente de los Álamos al caer la tarde.",
+        "fr": "Depuis, personne ne s’approche de la source des Peupliers à la tombée du jour.",
+        "en": "Since then, no one goes near the Poplar Spring at dusk.",
+        "kana": "Desde entonces, nadie se acerca a la fuente de los Álamos al caer la tarde."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la belleza",
+       "reading": "/la βeˈʎeθa/",
+       "fr": "la beauté",
+       "en": "beauty"
+      },
+      {
+       "jp": "la roca",
+       "reading": "/la ˈroka/",
+       "fr": "le rocher",
+       "en": "the rock"
+      },
+      {
+       "jp": "hechizado",
+       "reading": "/etʃiˈθaðo/",
+       "fr": "ensorcelé",
+       "en": "spellbound, bewitched"
+      },
+      {
+       "jp": "el borde",
+       "reading": "/el ˈβoɾðe/",
+       "fr": "le bord",
+       "en": "the edge"
+      },
+      {
+       "jp": "la chispa",
+       "reading": "/la ˈtʃispa/",
+       "fr": "l’étincelle",
+       "en": "the spark"
+      },
+      {
+       "jp": "liso",
+       "reading": "/ˈliso/",
+       "fr": "lisse",
+       "en": "smooth"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que proposa l’esprit à Fernando ?",
+        "en": "What did the spirit offer Fernando?"
+       },
+       "choices": [
+        {
+         "fr": "De la suivre au fond de l’eau",
+         "en": "To follow her to the bottom of the water"
+        },
+        {
+         "fr": "De l’épouser au château",
+         "en": "To marry her at the castle"
+        },
+        {
+         "fr": "De partir à la chasse",
+         "en": "To go hunting"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait-on aujourd’hui près de la source au crépuscule ?",
+        "en": "What do people do near the spring at dusk today?"
+       },
+       "choices": [
+        {
+         "fr": "Personne ne s’en approche",
+         "en": "Nobody goes near it"
+        },
+        {
+         "fr": "On y organise des fêtes",
+         "en": "Festivals are held there"
+        },
+        {
+         "fr": "On y pêche",
+         "en": "People fish there"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

@@ -6,6 +6,7 @@ import type { ReactNode } from 'react';
  * DELE A2, la route de Barcelone : rivière, ferme d'Aragon, fontaine, diligence, toits envolés, crêtes, fête et port.
  * DELE B1, le chemin de Saint-Jacques : col des Pyrénées, vignes, cathédrales, blés de la Meseta, château templier, hórreo, phare.
  * DELE B2, la traversée des Amériques : Teide, La Havane, Mexico, Antigua, Magdalena, Andes, Chiloé, Buenos Aires.
+ * DELE C1, la Bibliothèque enchantée : rayonnages, manuscrits, lion de pierre, tour, verre, statue, source, façade de Salamanque.
  * Dessins originaux, centrés sur (0, 0).
  */
 const WHITE = '#F6F1E6';
@@ -560,6 +561,120 @@ function Theatre({ ...p }: P) {
   );
 }
 
+/** Rayonnage de livres. */
+function Bookshelf({ ...p }: P) {
+  const colors = [RED, '#3A6AA8', OLIVE, GOLD, '#6A3A5A', TERRACOTTA];
+  return (
+    <g transform={at(p)}>
+      <rect x="-18" y="-30" width="36" height="30" fill={WOOD} />
+      {[-28, -18, -8].map((y, r) => <g key={y}>{[0, 1, 2, 3, 4, 5].map((i) => <rect key={i} x={-16 + i * 5.4} y={y} width="4.6" height="8" fill={colors[(i + r) % colors.length]} />)}<rect x="-18" y={y + 8} width="36" height="1.6" fill="#5A3420" /></g>)}
+    </g>
+  );
+}
+
+/** Livre ouvert. */
+function OpenBook({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 -4 Q-10 -10 -20 -6 V-18 Q-10 -22 0 -16Z" fill={WHITE} stroke={STONE} strokeWidth="0.8" />
+      <path d="M0 -4 Q10 -10 20 -6 V-18 Q10 -22 0 -16Z" fill={WHITE} stroke={STONE} strokeWidth="0.8" />
+      {[-14, -11, -8].map((y) => <path key={y} d={`M-16 ${y} Q-9 ${y - 3} -3 ${y + 1} M3 ${y + 1} Q9 ${y - 3} 16 ${y}`} stroke="#9A9080" strokeWidth="0.5" fill="none" />)}
+    </g>
+  );
+}
+
+/** Plume et encrier. */
+function Quill({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-4" y="-6" width="8" height="6" rx="1.5" fill="#2A2A3A" />
+      <path d="M0 -6 L10 -28 Q14 -34 12 -24 Q8 -14 1 -6Z" fill={WHITE} stroke={STONE} strokeWidth="0.6" />
+    </g>
+  );
+}
+
+/** Lion de pierre sur son socle. */
+function LionStatue({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-14" y="-6" width="28" height="6" fill={STONE} />
+      <ellipse cx="0" cy="-12" rx="11" ry="6" fill="#C8A86A" />
+      <circle cx="9" cy="-19" r="6" fill="#B8904A" />
+      <circle cx="10" cy="-19" r="3.4" fill="#D8B87A" />
+      <path d="M-11 -12 Q-18 -18 -14 -22" stroke="#C8A86A" strokeWidth="2" fill="none" />
+    </g>
+  );
+}
+
+/** Tour de pierre avec chaînes. */
+function ChainTower({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-8" y="-36" width="16" height="36" fill="#8A8070" />
+      <path d="M-9 -36 v-3 h3 v3 h3 v-3 h3 v3 h3 v-3 h3 v3" stroke="#8A8070" strokeWidth="1.6" fill="none" />
+      <rect x="-2.5" y="-26" width="5" height="7" fill="#2A2420" />
+      <path d="M8 -14 Q16 -10 14 -2" stroke="#5A5A5A" strokeWidth="1.2" strokeDasharray="2 1" fill="none" />
+    </g>
+  );
+}
+
+/** Carafe de verre. */
+function GlassFlask({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-3 -24 H3 V-16 Q12 -10 10 -2 Q8 2 0 2 Q-8 2 -10 -2 Q-12 -10 -3 -16Z" fill="#CFE6F2" stroke="#7AA8C8" strokeWidth="1" opacity="0.9" />
+      <path d="M-5 -8 Q-4 -4 -2 -3" stroke={WHITE} strokeWidth="1.2" fill="none" />
+    </g>
+  );
+}
+
+/** Statue de pierre du Commandeur. */
+function StoneStatue({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-10" y="-6" width="20" height="6" fill="#8A8A86" />
+      <path d="M-6 -6 V-24 Q0 -28 6 -24 V-6Z" fill="#A8A8A4" />
+      <circle cx="0" cy="-29" r="4.4" fill="#A8A8A4" />
+      <path d="M6 -20 L14 -32" stroke="#8A8A86" strokeWidth="1.6" />
+    </g>
+  );
+}
+
+/** Source aux yeux verts. */
+function GreenEyesSpring({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-2" rx="18" ry="5" fill="#5A9AA8" />
+      {!calm && <g fill="#2EA86A">{[-5, 5].map((x) => <ellipse key={x} cx={x} cy={-2} rx="2.4" ry="1.3" />)}</g>}
+      <path d="M-18 -2 Q-22 -10 -16 -14 M18 -2 Q22 -10 16 -14" stroke={OLIVE} strokeWidth="1.6" fill="none" />
+    </g>
+  );
+}
+
+/** Façade plateresque de l'université de Salamanque (avec sa grenouille). */
+function Facade({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-18" y="-30" width="36" height="30" fill="#E2B87A" />
+      {[-24, -16].map((y) => <path key={y} d={`M-16 ${y} H16`} stroke="#B8904A" strokeWidth="0.8" strokeDasharray="2 1.5" />)}
+      {[-9, 9].map((x) => <path key={x} d={`M${x - 4} 0 V-10 Q${x} -15 ${x + 4} -10 V0Z`} fill="#5A3A24" />)}
+      <circle cx="0" cy="-20" r="2.2" fill="#7AAA4A" />
+    </g>
+  );
+}
+
+/** Lampe de bibliothèque verte. */
+function ReadingLamp({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-10" y="-2" width="20" height="2" fill={WOOD} />
+      <path d="M0 -2 V-12" stroke={GOLD} strokeWidth="1.4" />
+      <path d="M-8 -12 Q0 -20 8 -12Z" fill="#2E7A4A" />
+      <ellipse cx="0" cy="-12" rx="8" ry="1.4" fill="#FFF6C8" />
+    </g>
+  );
+}
+
 export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'auberge où Don Quichotte se fait adouber
   'delea1-w1': () => (<><Venta x={-10} y={12} /><Lance x={16} y={12} /><OliveTree x={30} y={12} s={0.7} /></>),
@@ -633,4 +748,22 @@ export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'deleb2-w8': () => (<><Obelisk x={-12} y={12} /><ColonialHouse x={10} y={12} s={0.8} color="#3AA8A0" /></>),
   // Le théâtre Colón
   'deleb2-final': () => (<><Theatre x={-4} y={12} s={1.1} /><Obelisk x={26} y={12} s={0.6} /></>),
+  // DELE C1 — la Bibliothèque enchantée : la salle des incunables et le lion du Cid
+  'delec1-w1': () => (<><LionStatue x={-10} y={12} /><OpenBook x={16} y={12} /></>),
+  // Les intrigues de la Célestine entre les rayonnages
+  'delec1-w2': () => (<><Bookshelf x={-10} y={12} /><Quill x={18} y={12} /></>),
+  // Le pont de Salamanque du Lazarillo
+  'delec1-w3': () => (<><River x={0} y={14} /><Facade x={-16} y={8} s={0.6} /><Bookshelf x={20} y={10} s={0.6} /></>),
+  // La tour de Segismundo
+  'delec1-w4': () => (<><ChainTower x={-6} y={12} /><OpenBook x={18} y={12} s={0.8} /></>),
+  // Le Licencié de verre
+  'delec1-w5': () => (<><GlassFlask x={-10} y={12} /><Bookshelf x={14} y={12} s={0.8} /></>),
+  // La statue du Commandeur
+  'delec1-w6': () => (<><StoneStatue x={-8} y={12} /><Church x={18} y={12} s={0.6} /></>),
+  // La source aux yeux verts
+  'delec1-w7': (calm) => (<><GreenEyesSpring x={-4} y={14} calm={calm} /><OliveTree x={22} y={10} s={0.7} /></>),
+  // L'université de Salamanque et son spectre
+  'delec1-w8': () => (<><Facade x={-6} y={12} /><Quill x={22} y={12} s={0.8} /></>),
+  // La salle de lecture
+  'delec1-final': () => (<><Bookshelf x={-16} y={12} /><ReadingLamp x={6} y={12} /><Bookshelf x={26} y={12} s={0.7} /></>),
 };

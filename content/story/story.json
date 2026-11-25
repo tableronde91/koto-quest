@@ -3978,6 +3978,159 @@
      }
     }
    }
+  },
+  "DELEC1": {
+   "glyph": "¶",
+   "jp": "Biblioteca Nacional",
+   "color": "#6A3A5A",
+   "saga": {
+    "fr": "La Bibliothèque enchantée",
+    "en": "The enchanted library"
+   },
+   "hero": {
+    "fr": "Lecteur·rice de la Bibliothèque nationale",
+    "en": "Reader at the National Library"
+   },
+   "short": {
+    "fr": "Lecteur·rice",
+    "en": "Reader"
+   },
+   "prologue": {
+    "fr": "Un soir d’hiver, à la Bibliothèque nationale de Madrid, une vieille bibliothécaire te confie une clé de bronze : « Cette nuit, les personnages des classiques se sont échappés de leurs livres. Le lion du Cid rugit dans la salle des incunables, la Célestine intrigue entre les rayonnages… Seul quelqu’un qui maîtrise toutes les nuances de l’espagnol pourra les ramener à leurs pages. » Les lampes vertes s’allument une à une.",
+    "en": "One winter evening at the National Library in Madrid, an old librarian entrusts you with a bronze key: “Tonight, the characters from the classics have escaped from their books. The Cid’s lion is roaring in the incunabula room, Celestina is plotting among the shelves… Only someone who masters every nuance of Spanish can lead them back to their pages.” The green lamps light up one by one."
+   },
+   "epilogue": {
+    "fr": "À l’aube, le dernier personnage regagne son livre. La bibliothécaire referme le registre et sourit : « Tu as parlé à chacun dans sa langue : celle des chevaliers, des entremetteuses, des poètes et des savants. » Elle t’inscrit parmi les gardiens de la parole espagnole. Il reste pourtant un rayonnage, tout au fond, que personne n’a jamais ouvert…",
+    "en": "At dawn, the last character returns to its book. The librarian closes the register and smiles: “You spoke to each of them in their own language: that of knights, go-betweens, poets and scholars.” She enrols you among the guardians of the Spanish word. Yet there is still one shelf, at the very back, that no one has ever opened…"
+   },
+   "chapters": {
+    "delec1-w1": {
+     "title": {
+      "fr": "Le Cantar de mio Cid",
+      "en": "The Song of My Cid"
+     },
+     "intro": {
+      "fr": "Dans la salle des incunables, le Lion du Cid rugit et fait trembler les vitrines. Parle-lui avec la dignité d’un chevalier, dans le registre qui convient.",
+      "en": "In the incunabula room, the Cid’s Lion roars and shakes the display cases. Speak to it with a knight’s dignity, in the right register."
+     },
+     "outro": {
+      "fr": "Le lion baisse la tête, comme devant le Cid à Valence, et regagne le vieux manuscrit.",
+      "en": "The lion bows its head, as it did before the Cid in Valencia, and returns to the old manuscript."
+     }
+    },
+    "delec1-w2": {
+     "title": {
+      "fr": "Les ruses de la Célestine",
+      "en": "The Celestina’s wiles"
+     },
+     "intro": {
+      "fr": "Entre les rayonnages, la Célestine tisse ses intrigues avec un fil ensorcelé. Déjoue ses manœuvres en maîtrisant toutes les nuances du subjonctif et de la persuasion.",
+      "en": "Among the shelves, Celestina weaves her intrigues with a bewitched thread. Foil her schemes by mastering every nuance of the subjunctive and of persuasion."
+     },
+     "outro": {
+      "fr": "La Célestine range son fil, vexée d’avoir trouvé plus rusé qu’elle, et retourne à Salamanque… entre deux pages.",
+      "en": "Celestina puts her thread away, annoyed to have met someone craftier than herself, and goes back to Salamanca… between two pages."
+     }
+    },
+    "delec1-w3": {
+     "title": {
+      "fr": "Les tours du Lazarillo",
+      "en": "Lazarillo’s tricks"
+     },
+     "intro": {
+      "fr": "L’Aveugle du Lazarillo parle en proverbes et en sous-entendus pour piéger les lecteurs naïfs. Comprends son langage imagé avant qu’il ne te joue un tour.",
+      "en": "Lazarillo’s Blind Master speaks in proverbs and innuendo to trap naive readers. Understand his colourful language before he plays a trick on you."
+     },
+     "outro": {
+      "fr": "L’aveugle éclate de rire : « Tu en sais autant que Lázaro ! » Et il retourne sur le pont de Salamanque.",
+      "en": "The blind man bursts out laughing: “You know as much as Lázaro!” And he returns to the bridge in Salamanca."
+     }
+    },
+    "delec1-w4": {
+     "title": {
+      "fr": "La tour de Segismundo",
+      "en": "Segismundo’s tower"
+     },
+     "intro": {
+      "fr": "Dans la tour des manuscrits, Segismundo secoue ses chaînes et se demande s’il rêve. Réponds-lui en jonglant avec les idées abstraites et les hypothèses.",
+      "en": "In the manuscript tower, Segismundo rattles his chains and wonders if he is dreaming. Answer him by juggling abstract ideas and hypotheses."
+     },
+     "outro": {
+      "fr": "Segismundo dépose ses chaînes : « Rêve ou réalité, il faut bien agir. » Il rentre dans le drame de Calderón.",
+      "en": "Segismundo lays down his chains: “Dream or reality, one must act well.” He returns to Calderón’s play."
+     }
+    },
+    "delec1-w5": {
+     "title": {
+      "fr": "Le Licencié de verre",
+      "en": "The Glass Graduate"
+     },
+     "intro": {
+      "fr": "Le Licencié de verre, persuadé d’être fragile comme une carafe, répond à tout avec une précision redoutable. Sois aussi précis que lui, jusqu’à la préposition.",
+      "en": "The Glass Graduate, convinced he is as fragile as a carafe, answers everything with fearsome precision. Be as precise as he is, down to the preposition."
+     },
+     "outro": {
+      "fr": "Rassuré, Tomás Rodaja retrouve sa raison et regagne les Nouvelles exemplaires de Cervantes.",
+      "en": "Reassured, Tomás Rodaja regains his reason and returns to Cervantes’s Exemplary Novels."
+     }
+    },
+    "delec1-w6": {
+     "title": {
+      "fr": "La statue du Commandeur",
+      "en": "The Commander’s statue"
+     },
+     "intro": {
+      "fr": "La statue du Commandeur erre dans la bibliothèque et n’écoute que ceux qui parlent comme dans la rue. Montre-lui que tu comprends l’espagnol de tous les jours.",
+      "en": "The Commander’s statue roams the library and only listens to those who talk like people in the street. Show it you understand everyday Spanish."
+     },
+     "outro": {
+      "fr": "Le Commandeur retourne à son tombeau de Séville en marmonnant : « Bueno, pues… total, que me voy. »",
+      "en": "The Commander returns to his tomb in Seville, muttering: “Bueno, pues… total, que me voy.”"
+     }
+    },
+    "delec1-w7": {
+     "title": {
+      "fr": "La source aux yeux verts",
+      "en": "The green-eyed spring"
+     },
+     "intro": {
+      "fr": "Dans la salle des poètes, la Dame aux yeux verts murmure depuis une fontaine. Ne te laisse pas ensorceler : réponds-lui avec les mots justes de la poésie.",
+      "en": "In the poets’ room, the Green-Eyed Lady murmurs from a fountain. Don’t be bewitched: answer her with the precise words of poetry."
+     },
+     "outro": {
+      "fr": "La dame sourit tristement et disparaît dans l’eau, qui redevient une simple page des Légendes de Bécquer.",
+      "en": "The lady smiles sadly and vanishes into the water, which becomes a simple page of Bécquer’s Legends once more."
+     }
+    },
+    "delec1-w8": {
+     "title": {
+      "fr": "Le Spectre de Salamanque",
+      "en": "The Spectre of Salamanca"
+     },
+     "intro": {
+      "fr": "Le Spectre de Salamanque, voilé de blanc, hante la salle des thèses. Seul un texte académique impeccable, nuancé et bien construit le fera reculer.",
+      "en": "The veiled Spectre of Salamanca haunts the thesis room. Only a flawless, nuanced and well-built academic text will drive it back."
+     },
+     "outro": {
+      "fr": "Le spectre relit ton texte, hoche la tête et s’efface entre les vers d’Espronceda.",
+      "en": "The spectre rereads your text, nods and fades away between Espronceda’s lines."
+     }
+    },
+    "delec1-final": {
+     "title": {
+      "fr": "La salle de lecture",
+      "en": "The reading room"
+     },
+     "intro": {
+      "fr": "Dans la grande salle de lecture, sous les lampes vertes, passe l’épreuve finale : lis, écoute et écris comme au DELE C1. Il faut au moins 30 points sur 50 dans chaque groupe.",
+      "en": "In the great reading room, under the green lamps, take the final test: read, listen and write as in the DELE C1. You need at least 30 points out of 50 in each group."
+     },
+     "outro": {
+      "fr": "Le registre se referme sur ton nom. Niveau DELE C1 validé : tu manies l’espagnol avec aisance, précision et style !",
+      "en": "The register closes over your name. DELE C1 level complete: you handle Spanish with ease, precision and style!"
+     }
+    }
+   }
   }
  }
 }

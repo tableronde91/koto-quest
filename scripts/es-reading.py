@@ -380,7 +380,86 @@ MAIZ = STORY('hombres-de-maiz', 'z', 'DELEB2', '#B8902A', ('Los hombres de maíz
   ]),
 ])
 
-ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ]
+# ═════════════════════════ Don Illán, el mago de Toledo (El conde Lucanor, XIVe siècle ; DELE C1) ═════════════════════════
+ILLAN = STORY('don-illan', 'i', 'DELEC1', '#5A3A6A', ('Don Illán, el mago de Toledo', 'Don Illán, le magicien de Tolède', 'Don Illán, the magician of Toledo'),
+  ('D’après El conde Lucanor de don Juan Manuel (1335) : un doyen ambitieux demande au grand magicien de Tolède de lui enseigner son art… et promet de ne jamais l’oublier.', 'From El conde Lucanor by Don Juan Manuel (1335): an ambitious dean asks the great magician of Toledo to teach him his art… and promises never to forget him.'), [
+  CH('don-illan-1', ('Una promesa interesada', 'Une promesse intéressée', 'A self-serving promise'), [
+    [S('Había en Santiago un deán que deseaba aprender el arte de la magia, y como oyó decir que don Illán de Toledo era el mayor maestro de su tiempo, fue a buscarlo.', 'Il y avait à Saint-Jacques un doyen qui désirait apprendre l’art de la magie, et comme il avait entendu dire que don Illán de Tolède était le plus grand maître de son temps, il alla le trouver.', 'There was in Santiago a dean who longed to learn the art of magic, and having heard that Don Illán of Toledo was the greatest master of his time, he went to find him.'),
+     S('Don Illán lo recibió con amabilidad, pero le advirtió que los hombres poderosos suelen olvidar a quienes los ayudaron.', 'Don Illán le reçut avec amabilité, mais l’avertit que les hommes puissants oublient souvent ceux qui les ont aidés.', 'Don Illán received him kindly, but warned him that powerful men tend to forget those who helped them.'),
+     S('El deán le juró que, llegara a la dignidad que llegara, nunca le negaría nada de lo que le pidiera.', 'Le doyen lui jura que, quelle que soit la dignité à laquelle il parviendrait, il ne lui refuserait jamais rien de ce qu’il demanderait.', 'The dean swore that, whatever rank he might reach, he would never refuse him anything he asked.')],
+    [S('Entonces don Illán llamó a su criada y le pidió que preparara unas perdices para la cena, pero que no las asara hasta que él se lo mandara.', 'Alors don Illán appela sa servante et lui demanda de préparer des perdrix pour le dîner, mais de ne pas les faire rôtir avant qu’il le lui ordonne.', 'Then Don Illán called his maid and asked her to prepare some partridges for supper, but not to roast them until he told her to.'),
+     S('Después bajaron los dos a una sala escondida bajo el río Tajo para empezar las lecciones.', 'Puis tous deux descendirent dans une salle cachée sous le Tage pour commencer les leçons.', 'Then the two of them went down to a hidden room beneath the river Tagus to begin the lessons.')],
+  ], [
+    W('el deán', '/el deˈan/', 'le doyen (d’une cathédrale)', 'the dean'),
+    W('advertir', '/aðβeɾˈtiɾ/', 'avertir', 'to warn'),
+    W('jurar', '/xuˈɾaɾ/', 'jurer', 'to swear'),
+    W('la dignidad', '/la ðiɣniˈðað/', 'la dignité, le rang', 'rank, dignity'),
+    W('la perdiz', '/la peɾˈðiθ/', 'la perdrix', 'the partridge'),
+    W('escondido', '/eskonˈdiðo/', 'caché', 'hidden'),
+  ], [
+    Q(('Que craignait don Illán ?', 'What did Don Illán fear?'), [('Que le doyen l’oublie une fois puissant', 'That the dean would forget him once powerful'), ('Que le doyen soit trop jeune', 'That the dean was too young'), ('Que la magie soit interdite', 'That magic was forbidden')], 0),
+    Q(('Quelle consigne donna-t-il à sa servante ?', 'What instruction did he give his maid?'), [('Ne pas rôtir les perdrix avant son ordre', 'Not to roast the partridges until he said so'), ('Fermer la maison', 'To lock the house'), ('Aller au marché', 'To go to the market')], 0),
+  ]),
+  CH('don-illan-2', ('Las perdices de don Illán', 'Les perdrix de don Illán', 'Don Illán’s partridges'), [
+    [S('Al poco tiempo llegaron mensajeros: el deán había sido nombrado obispo, luego arzobispo, más tarde cardenal y, por último, papa.', 'Peu après arrivèrent des messagers : le doyen avait été nommé évêque, puis archevêque, plus tard cardinal et enfin pape.', 'Shortly afterwards messengers arrived: the dean had been made bishop, then archbishop, later cardinal and finally pope.'),
+     S('Cada vez que don Illán le pedía un cargo para su hijo, el nuevo poderoso encontraba una excusa para dárselo a otro.', 'Chaque fois que don Illán lui demandait une charge pour son fils, le nouveau puissant trouvait une excuse pour la donner à un autre.', 'Every time Don Illán asked him for a post for his son, the newly powerful man found an excuse to give it to someone else.'),
+     S('Al final, el papa lo amenazó con la cárcel y lo llamó hechicero.', 'À la fin, le pape le menaça de prison et le traita de sorcier.', 'In the end, the pope threatened him with prison and called him a sorcerer.')],
+    [S('Entonces don Illán dijo con calma: «Pues ya veo que nada puedo esperar de vos; volveré a mi casa, y cenaré las perdices».', 'Alors don Illán dit avec calme : « Je vois bien que je ne puis rien attendre de vous ; je rentrerai chez moi, et je mangerai les perdrix. »', 'Then Don Illán said calmly: “I see that I can expect nothing from you; I shall go home and eat the partridges.”'),
+     S('En ese instante el deán se encontró de nuevo en la sala bajo el Tajo: todo había sido una ilusión, y apenas habían pasado unos minutos.', 'À cet instant, le doyen se retrouva dans la salle sous le Tage : tout n’avait été qu’une illusion, et à peine quelques minutes s’étaient écoulées.', 'At that moment the dean found himself back in the room beneath the Tagus: it had all been an illusion, and barely a few minutes had passed.'),
+     S('Avergonzado, no supo qué decir, y don Illán lo despidió sin darle de cenar.', 'Honteux, il ne sut que dire, et don Illán le congédia sans lui donner à dîner.', 'Ashamed, he did not know what to say, and Don Illán sent him away without supper.')],
+  ], [
+    W('el mensajero', '/el mensaˈxeɾo/', 'le messager', 'the messenger'),
+    W('nombrar', '/nomˈbɾaɾ/', 'nommer', 'to appoint'),
+    W('el cargo', '/el ˈkaɾɣo/', 'la charge, le poste', 'the post, the position'),
+    W('amenazar', '/amenaˈθaɾ/', 'menacer', 'to threaten'),
+    W('el hechicero', '/el etʃiˈθeɾo/', 'le sorcier', 'the sorcerer'),
+    W('avergonzado', '/aβeɾɣonˈθaðo/', 'honteux', 'ashamed'),
+  ], [
+    Q(('Que fit le doyen chaque fois que don Illán lui demandait une faveur ?', 'What did the dean do each time Don Illán asked a favour?'), [('Il trouvait une excuse pour refuser', 'He found an excuse to refuse'), ('Il acceptait aussitôt', 'He agreed at once'), ('Il partait en voyage', 'He went travelling')], 0),
+    Q(('Que révèle la fin de l’histoire ?', 'What does the end of the story reveal?'), [('Tout n’était qu’une illusion de quelques minutes', 'It was all a few minutes’ illusion'), ('Le doyen était vraiment devenu pape', 'The dean had really become pope'), ('Don Illán était en prison', 'Don Illán was in prison')], 0),
+  ]),
+])
+
+# ═════════════════════════ Los ojos verdes (Gustavo Adolfo Bécquer, 1861 ; DELE C1) ═════════════════════════
+OJOS = STORY('ojos-verdes', 'v', 'DELEC1', '#2E8A6A', ('Los ojos verdes', 'Les yeux verts', 'The green eyes'),
+  ('D’après la légende de Bécquer : à Soria, le jeune Fernando poursuit un cerf blessé jusqu’à une source maudite… où l’attendent deux yeux verts.', 'From Bécquer’s legend: in Soria, young Fernando chases a wounded stag to a cursed spring… where two green eyes are waiting for him.'), [
+  CH('ojos-verdes-1', ('La fuente de los Álamos', 'La source des Peupliers', 'The Poplar Spring'), [
+    [S('Fernando de Argensola, el primogénito de los marqueses, perseguía un ciervo herido por el monte cuando llegó a la fuente de los Álamos.', 'Fernando de Argensola, fils aîné des marquis, poursuivait un cerf blessé dans la montagne quand il arriva à la source des Peupliers.', 'Fernando de Argensola, the marquises’ eldest son, was chasing a wounded stag across the hills when he came to the Poplar Spring.'),
+     S('Su montero, Íñigo, se detuvo, pálido: «Quien enturbia sus aguas paga caro su atrevimiento; allí habita un espíritu del mal».', 'Son veneur, Íñigo, s’arrêta, pâle : « Qui trouble ses eaux paie cher son audace ; là habite un esprit du mal. »', 'His huntsman, Íñigo, stopped, pale: “Whoever disturbs its waters pays dearly for their daring; an evil spirit dwells there.”'),
+     S('Pero Fernando, orgulloso, siguió adelante y se internó entre los árboles.', 'Mais Fernando, orgueilleux, continua et s’enfonça parmi les arbres.', 'But Fernando, proud, went on and disappeared among the trees.')],
+    [S('Desde aquel día, el joven cambió. Volvía cada tarde a la fuente y pasaba horas contemplando el agua, ausente y melancólico.', 'Depuis ce jour, le jeune homme changea. Il retournait chaque après-midi à la source et passait des heures à contempler l’eau, absent et mélancolique.', 'From that day on, the young man changed. He went back to the spring every afternoon and spent hours gazing into the water, distant and melancholy.'),
+     S('Al fin confesó a Íñigo su secreto: en el fondo de la fuente había visto unos ojos verdes, luminosos, de una mujer que lo llamaba.', 'Il finit par confier son secret à Íñigo : au fond de la source, il avait vu des yeux verts, lumineux, d’une femme qui l’appelait.', 'At last he confessed his secret to Íñigo: at the bottom of the spring he had seen a woman’s green, shining eyes, calling to him.')],
+  ], [
+    W('el primogénito', '/el pɾimoˈxenito/', 'le fils aîné', 'the firstborn son'),
+    W('el ciervo', '/el ˈθjeɾβo/', 'le cerf', 'the stag, the deer'),
+    W('enturbiar', '/entuɾˈβjaɾ/', 'troubler (l’eau)', 'to cloud, to muddy'),
+    W('el atrevimiento', '/el atɾeβiˈmjento/', 'l’audace', 'daring'),
+    W('melancólico', '/melaŋˈkoliko/', 'mélancolique', 'melancholy'),
+    W('luminoso', '/lumiˈnoso/', 'lumineux', 'shining, luminous'),
+  ], [
+    Q(('Que craignait Íñigo à propos de la source ?', 'What did Íñigo fear about the spring?'), [('Qu’un esprit du mal y habite', 'That an evil spirit lived there'), ('Que l’eau soit empoisonnée', 'That the water was poisoned'), ('Que le cerf soit dangereux', 'That the stag was dangerous')], 0),
+    Q(('Qu’avait vu Fernando au fond de la source ?', 'What had Fernando seen at the bottom of the spring?'), [('Des yeux verts lumineux', 'Shining green eyes'), ('Un trésor', 'A treasure'), ('Son propre reflet', 'His own reflection')], 0),
+  ]),
+  CH('ojos-verdes-2', ('La mujer del agua', 'La femme de l’eau', 'The woman of the water'), [
+    [S('Una tarde, la vio por fin: una mujer de belleza extraordinaria, sentada sobre una roca, con los ojos del color de las esmeraldas.', 'Un après-midi, il la vit enfin : une femme d’une beauté extraordinaire, assise sur un rocher, aux yeux couleur d’émeraude.', 'One afternoon he finally saw her: a woman of extraordinary beauty, sitting on a rock, with eyes the colour of emeralds.'),
+     S('«¿Quién eres?», le preguntó. «Soy un espíritu —respondió ella— que vive en el fondo de estas aguas. Si me amas, ven conmigo.»', '« Qui es-tu ? » lui demanda-t-il. « Je suis un esprit, répondit-elle, qui vit au fond de ces eaux. Si tu m’aimes, viens avec moi. »', '“Who are you?” he asked her. “I am a spirit,” she replied, “who lives at the bottom of these waters. If you love me, come with me.”')],
+    [S('Fernando, hechizado, dio un paso hacia el borde de la roca, y otro, y otro más.', 'Fernando, ensorcelé, fit un pas vers le bord du rocher, puis un autre, puis un autre encore.', 'Fernando, spellbound, took a step towards the edge of the rock, then another, and another.'),
+     S('Las aguas se agitaron un instante, brillaron unas chispas de luz y después la superficie quedó lisa como un espejo.', 'Les eaux s’agitèrent un instant, quelques étincelles de lumière brillèrent, puis la surface redevint lisse comme un miroir.', 'The waters stirred for a moment, a few sparks of light glittered, and then the surface was smooth as a mirror again.'),
+     S('Desde entonces, nadie se acerca a la fuente de los Álamos al caer la tarde.', 'Depuis, personne ne s’approche de la source des Peupliers à la tombée du jour.', 'Since then, no one goes near the Poplar Spring at dusk.')],
+  ], [
+    W('la belleza', '/la βeˈʎeθa/', 'la beauté', 'beauty'),
+    W('la roca', '/la ˈroka/', 'le rocher', 'the rock'),
+    W('hechizado', '/etʃiˈθaðo/', 'ensorcelé', 'spellbound, bewitched'),
+    W('el borde', '/el ˈβoɾðe/', 'le bord', 'the edge'),
+    W('la chispa', '/la ˈtʃispa/', 'l’étincelle', 'the spark'),
+    W('liso', '/ˈliso/', 'lisse', 'smooth'),
+  ], [
+    Q(('Que proposa l’esprit à Fernando ?', 'What did the spirit offer Fernando?'), [('De la suivre au fond de l’eau', 'To follow her to the bottom of the water'), ('De l’épouser au château', 'To marry her at the castle'), ('De partir à la chasse', 'To go hunting')], 0),
+    Q(('Que fait-on aujourd’hui près de la source au crépuscule ?', 'What do people do near the spring at dusk today?'), [('Personne ne s’en approche', 'Nobody goes near it'), ('On y organise des fêtes', 'Festivals are held there'), ('On y pêche', 'People fish there')], 0),
+  ]),
+])
+
+ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ, ILLAN, OJOS]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES

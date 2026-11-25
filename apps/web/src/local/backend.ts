@@ -163,6 +163,7 @@ import contentDeleA1 from '../../../../content/delea1/delea1.json';
 import contentDeleA2 from '../../../../content/delea2/delea2.json';
 import contentDeleB1 from '../../../../content/deleb1/deleb1.json';
 import contentDeleB2 from '../../../../content/deleb2/deleb2.json';
+import contentDeleC1 from '../../../../content/delec1/delec1.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import hangulContent from '../../../../content/characters/hangul.json';
 import hanziContent from '../../../../content/characters/hanzi.json';
@@ -199,9 +200,10 @@ import bankDeleA1 from '../../../../content/exams/delea1.json';
 import bankDeleA2 from '../../../../content/exams/delea2.json';
 import bankDeleB1 from '../../../../content/exams/deleb1.json';
 import bankDeleB2 from '../../../../content/exams/deleb2.json';
+import bankDeleC1 from '../../../../content/exams/delec1.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank, 'b2-toeic': bankB2 as unknown as ExamBank, 'c1-toeic': bankC1 as unknown as ExamBank, hsk1: bankHsk1 as unknown as ExamBank, hsk2: bankHsk2 as unknown as ExamBank, hsk3: bankHsk3 as unknown as ExamBank, hsk4: bankHsk4 as unknown as ExamBank, hsk5: bankHsk5 as unknown as ExamBank, hsk6: bankHsk6 as unknown as ExamBank, delea1: bankDeleA1 as unknown as ExamBank, delea2: bankDeleA2 as unknown as ExamBank, deleb1: bankDeleB1 as unknown as ExamBank, deleb2: bankDeleB2 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank, 'b2-toeic': bankB2 as unknown as ExamBank, 'c1-toeic': bankC1 as unknown as ExamBank, hsk1: bankHsk1 as unknown as ExamBank, hsk2: bankHsk2 as unknown as ExamBank, hsk3: bankHsk3 as unknown as ExamBank, hsk4: bankHsk4 as unknown as ExamBank, hsk5: bankHsk5 as unknown as ExamBank, hsk6: bankHsk6 as unknown as ExamBank, delea1: bankDeleA1 as unknown as ExamBank, delea2: bankDeleA2 as unknown as ExamBank, deleb1: bankDeleB1 as unknown as ExamBank, deleb2: bankDeleB2 as unknown as ExamBank, delec1: bankDeleC1 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -213,7 +215,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1, contentB2, contentC1, contentHsk1, contentHsk2, contentHsk3, contentHsk4, contentHsk5, contentHsk6, contentDeleA1, contentDeleA2, contentDeleB1, contentDeleB2].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1, contentB2, contentC1, contentHsk1, contentHsk2, contentHsk3, contentHsk4, contentHsk5, contentHsk6, contentDeleA1, contentDeleA2, contentDeleB1, contentDeleB2, contentDeleC1].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,
