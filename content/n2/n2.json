@@ -601,8 +601,8 @@
          "slug": "kanji-n2-tsuku",
          "kind": "kanji",
          "front": "突",
-         "reading": "つく",
-         "romaji": "tsuku",
+         "reading": "つ(く)",
+         "romaji": "tsu(ku)",
          "meaning": "heurter, surgir",
          "kanji": {
           "onyomi": [
@@ -1100,8 +1100,8 @@
          "slug": "kanji-n2-makaseru",
          "kind": "kanji",
          "front": "任",
-         "reading": "まかせる",
-         "romaji": "makaseru",
+         "reading": "まか(せる)",
+         "romaji": "maka(seru)",
          "meaning": "confier, charge",
          "kanji": {
           "onyomi": [
@@ -1735,8 +1735,8 @@
          "slug": "kanji-n2-fueru",
          "kind": "kanji",
          "front": "増",
-         "reading": "ふえる",
-         "romaji": "fueru",
+         "reading": "ふ(える)",
+         "romaji": "fu(eru)",
          "meaning": "augmenter, s’accroître",
          "kanji": {
           "onyomi": [
@@ -1753,8 +1753,8 @@
          "slug": "kanji-n2-heru",
          "kind": "kanji",
          "front": "減",
-         "reading": "へる",
-         "romaji": "heru",
+         "reading": "へ(る)",
+         "romaji": "he(ru)",
          "meaning": "diminuer, se réduire",
          "kanji": {
           "onyomi": [
@@ -1896,8 +1896,8 @@
          "slug": "kanji-n2-sakarau",
          "kind": "kanji",
          "front": "逆",
-         "reading": "さからう",
-         "romaji": "sakarau",
+         "reading": "さか(らう)",
+         "romaji": "saka(rau)",
          "meaning": "aller à l’encontre",
          "kanji": {
           "onyomi": [
@@ -2077,8 +2077,8 @@
          "slug": "kanji-n2-kagiru",
          "kind": "kanji",
          "front": "限",
-         "reading": "かぎる",
-         "romaji": "kagiru",
+         "reading": "かぎ(る)",
+         "romaji": "kagi(ru)",
          "meaning": "limiter, borne",
          "kanji": {
           "onyomi": [
@@ -2248,8 +2248,8 @@
          "slug": "kanji-n2-mayou",
          "kind": "kanji",
          "front": "迷",
-         "reading": "まよう",
-         "romaji": "mayou",
+         "reading": "まよ(う)",
+         "romaji": "mayo(u)",
          "meaning": "hésiter, se perdre",
          "kanji": {
           "onyomi": [
@@ -2571,8 +2571,8 @@
          "slug": "kanji-n2-yurusu",
          "kind": "kanji",
          "front": "許",
-         "reading": "ゆるす",
-         "romaji": "yurusu",
+         "reading": "ゆる(す)",
+         "romaji": "yuru(su)",
          "meaning": "permettre, pardonner",
          "kanji": {
           "onyomi": [
@@ -3223,8 +3223,8 @@
          "slug": "kanji-n2-kawaru",
          "kind": "kanji",
          "front": "変",
-         "reading": "かわる",
-         "romaji": "kawaru",
+         "reading": "か(わる)",
+         "romaji": "ka(waru)",
          "meaning": "changer ; étrange",
          "kanji": {
           "onyomi": [
@@ -3382,8 +3382,8 @@
          "slug": "kanji-n2-tsukareru",
          "kind": "kanji",
          "front": "疲",
-         "reading": "つかれる",
-         "romaji": "tsukareru",
+         "reading": "つか(れる)",
+         "romaji": "tsuka(reru)",
          "meaning": "se fatiguer",
          "kanji": {
           "onyomi": [
@@ -3399,8 +3399,8 @@
          "slug": "kanji-n2-yogoreru",
          "kind": "kanji",
          "front": "汚",
-         "reading": "よごれる",
-         "romaji": "yogoreru",
+         "reading": "よご(れる)",
+         "romaji": "yogo(reru)",
          "meaning": "salir, sale",
          "kanji": {
           "onyomi": [
@@ -3562,8 +3562,8 @@
          "slug": "kanji-n2-okasu",
          "kind": "kanji",
          "front": "犯",
-         "reading": "おかす",
-         "romaji": "okasu",
+         "reading": "おか(す)",
+         "romaji": "oka(su)",
          "meaning": "commettre, enfreindre",
          "kanji": {
           "onyomi": [
@@ -3718,8 +3718,8 @@
          "slug": "kanji-n2-mitomeru",
          "kind": "kanji",
          "front": "認",
-         "reading": "みとめる",
-         "romaji": "mitomeru",
+         "reading": "みと(める)",
+         "romaji": "mito(meru)",
          "meaning": "reconnaître, approuver",
          "kanji": {
           "onyomi": [
@@ -3735,8 +3735,8 @@
          "slug": "kanji-n2-eru",
          "kind": "kanji",
          "front": "得",
-         "reading": "える",
-         "romaji": "eru",
+         "reading": "え(る)",
+         "romaji": "e(ru)",
          "meaning": "obtenir, gagner",
          "kanji": {
           "onyomi": [
@@ -3895,8 +3895,8 @@
          "slug": "kanji-n2-naosu",
          "kind": "kanji",
          "front": "直",
-         "reading": "なおす",
-         "romaji": "naosu",
+         "reading": "なお(す)",
+         "romaji": "nao(su)",
          "meaning": "droit ; réparer",
          "kanji": {
           "onyomi": [

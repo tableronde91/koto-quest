@@ -93,7 +93,7 @@ export default function LessonScreen() {
               <View style={{ flex: 1 }}>
                 {it.reading && it.reading !== it.front && <Text style={{ color: C.inkSoft }}>{it.reading}{it.romaji ? ` · ${it.romaji}` : ''}</Text>}
                 <Text style={{ fontWeight: '700', color: C.ink }}>{it.meaning}</Text>
-                <Text style={{ color: C.inkSoft, fontSize: 12 }}>{T(it.kind === 'kana' && hasHangul(it.front) ? 'Hangeul' : KIND[it.kind] ?? it.kind)}</Text>
+                <Text style={{ color: C.inkSoft, fontSize: 12 }}>{T(it.kind === 'kana' && hasHangul(it.front) ? 'Hangeul' : it.kind === 'kanji' && /[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(it.reading ?? '') ? 'Hanzi' : KIND[it.kind] ?? it.kind)}</Text>
               </View>
               <Text style={{ fontSize: 18 }}>🔊</Text>
             </Card>

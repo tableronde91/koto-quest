@@ -25,6 +25,9 @@ def item(slug, kind, front, reading, romaji, meaning, kanji=None):
     # Un sens identique à un sens existant garde la même traduction (ex. kanji 洗 et verbe 洗います).
     fr = meaning[0]
     meaning = (fr, EN.get(fr) or _DICO.get(fr) or meaning[1])
+    if kind == 'kanji' and kanji:
+        from kq_content import kanji_reading
+        reading, romaji = kanji_reading(reading, romaji, kanji[1])
     it = {'slug': slug, 'kind': kind, 'front': front, 'reading': reading, 'romaji': romaji, 'meaning': t(meaning)}
     if kanji:
         on, kun, strokes = kanji

@@ -12,7 +12,8 @@ export function Jp({ text, reading, furigana, className = '' }: { text: string; 
     <ruby lang={langOf(text)} className={`jp ${className}`}>
       {text}
       <rp>(</rp>
-      <rt>{reading}</rt>
+      {/* Kanji seul : seule la partie lue au-dessus du caractère (なが de なが(い)) va en furigana. */}
+      <rt>{reading.replace(/\(.*?\)/g, '')}</rt>
       <rp>)</rp>
     </ruby>
   );

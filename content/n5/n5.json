@@ -1,5 +1,5 @@
 {
-  "contentVersion": "2026.11.4",
+  "contentVersion": "2026.11.24",
   "level": {
     "code": "N5",
     "title": "Débutant : bases du japonais",
@@ -669,11 +669,11 @@
       "slug": "n5-w2",
       "title": "Maîtrise des katakana",
       "region": "Archipel des débutants",
-      "description": "L'écriture des mots étrangers.",
+      "description": "Les 46 katakana de base, l’écriture des mots étrangers.",
       "chapters": [
         {
           "slug": "n5-w2-c1",
-          "title": "Premiers katakana",
+          "title": "Voyelles et ligne K",
           "lessons": [
             {
               "slug": "n5-kata-a",
@@ -785,7 +785,592 @@
                   "fr": "cacao"
                 }
               ],
-              "exercises": []
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ココア",
+                  "choices": [
+                    "kokoa",
+                    "kakoa",
+                    "kokua"
+                  ],
+                  "answer": "kokoa",
+                  "explanation": "コ = ko, コ = ko, ア = a : ココア, le chocolat chaud."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w2-c2",
+          "title": "Lignes S et T",
+          "lessons": [
+            {
+              "slug": "n5-kata-sa",
+              "title": "Katakana : サシスセソ",
+              "objective": "Lire et reconnaître サシスセソ.",
+              "minutes": 6,
+              "explanation": [
+                "シ (shi) et ツ (tsu) se ressemblent : les deux petits traits de シ sont presque horizontaux et son grand trait remonte vers la droite ; ceux de ツ sont presque verticaux et son grand trait descend.",
+                "De même, ソ (so) a un petit trait presque vertical, alors que celui de ン (n) est presque horizontal. Écoute chaque caractère, puis entraîne-toi à le reconnaître."
+              ],
+              "items": [
+                {
+                  "slug": "kata-sa",
+                  "kind": "kana",
+                  "front": "サ",
+                  "reading": "サ",
+                  "romaji": "sa",
+                  "meaning": "sa"
+                },
+                {
+                  "slug": "kata-shi",
+                  "kind": "kana",
+                  "front": "シ",
+                  "reading": "シ",
+                  "romaji": "shi",
+                  "meaning": "shi"
+                },
+                {
+                  "slug": "kata-su",
+                  "kind": "kana",
+                  "front": "ス",
+                  "reading": "ス",
+                  "romaji": "su",
+                  "meaning": "su"
+                },
+                {
+                  "slug": "kata-se",
+                  "kind": "kana",
+                  "front": "セ",
+                  "reading": "セ",
+                  "romaji": "se",
+                  "meaning": "se"
+                },
+                {
+                  "slug": "kata-so",
+                  "kind": "kana",
+                  "front": "ソ",
+                  "reading": "ソ",
+                  "romaji": "so",
+                  "meaning": "so"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "アイス",
+                  "reading": "あいす",
+                  "fr": "glace (dessert)"
+                },
+                {
+                  "jp": "スイス",
+                  "reading": "すいす",
+                  "fr": "Suisse"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "スイス",
+                  "choices": [
+                    "suisu",
+                    "shiisu",
+                    "tsuisu"
+                  ],
+                  "answer": "suisu",
+                  "explanation": "ス = su, イ = i, ス = su : スイス, la Suisse."
+                }
+              ]
+            },
+            {
+              "slug": "n5-kata-ta",
+              "title": "Katakana : タチツテト",
+              "objective": "Lire et reconnaître タチツテト.",
+              "minutes": 6,
+              "explanation": [
+                "チ (chi) et ツ (tsu) se prononcent comme leurs équivalents hiragana ち et つ.",
+                "Dans les mots étrangers, le trait ー allonge la voyelle qui le précède et compte pour un temps : タクシー (takushī, taxi)."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ta",
+                  "kind": "kana",
+                  "front": "タ",
+                  "reading": "タ",
+                  "romaji": "ta",
+                  "meaning": "ta"
+                },
+                {
+                  "slug": "kata-chi",
+                  "kind": "kana",
+                  "front": "チ",
+                  "reading": "チ",
+                  "romaji": "chi",
+                  "meaning": "chi"
+                },
+                {
+                  "slug": "kata-tsu",
+                  "kind": "kana",
+                  "front": "ツ",
+                  "reading": "ツ",
+                  "romaji": "tsu",
+                  "meaning": "tsu"
+                },
+                {
+                  "slug": "kata-te",
+                  "kind": "kana",
+                  "front": "テ",
+                  "reading": "テ",
+                  "romaji": "te",
+                  "meaning": "te"
+                },
+                {
+                  "slug": "kata-to",
+                  "kind": "kana",
+                  "front": "ト",
+                  "reading": "ト",
+                  "romaji": "to",
+                  "meaning": "to"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "テキスト",
+                  "reading": "てきすと",
+                  "fr": "manuel (de cours)"
+                },
+                {
+                  "jp": "タクシー",
+                  "reading": "たくしー",
+                  "fr": "taxi"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "テキスト",
+                  "choices": [
+                    "tekisuto",
+                    "tekisoto",
+                    "tekishito"
+                  ],
+                  "answer": "tekisuto",
+                  "explanation": "テ = te, キ = ki, ス = su, ト = to : テキスト, le manuel."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w2-c3",
+          "title": "Lignes N et H",
+          "lessons": [
+            {
+              "slug": "n5-kata-na",
+              "title": "Katakana : ナニヌネノ",
+              "objective": "Lire et reconnaître ナニヌネノ.",
+              "minutes": 6,
+              "explanation": [
+                "ヌ (nu) ressemble à ス (su), avec un petit trait de plus qui croise sa diagonale.",
+                "ノ (no) n’est qu’un seul trait penché ; ニ (ni) est formé de deux traits horizontaux, comme le kanji 二 (deux)."
+              ],
+              "items": [
+                {
+                  "slug": "kata-na",
+                  "kind": "kana",
+                  "front": "ナ",
+                  "reading": "ナ",
+                  "romaji": "na",
+                  "meaning": "na"
+                },
+                {
+                  "slug": "kata-ni",
+                  "kind": "kana",
+                  "front": "ニ",
+                  "reading": "ニ",
+                  "romaji": "ni",
+                  "meaning": "ni"
+                },
+                {
+                  "slug": "kata-nu",
+                  "kind": "kana",
+                  "front": "ヌ",
+                  "reading": "ヌ",
+                  "romaji": "nu",
+                  "meaning": "nu"
+                },
+                {
+                  "slug": "kata-ne",
+                  "kind": "kana",
+                  "front": "ネ",
+                  "reading": "ネ",
+                  "romaji": "ne",
+                  "meaning": "ne"
+                },
+                {
+                  "slug": "kata-no",
+                  "kind": "kana",
+                  "front": "ノ",
+                  "reading": "ノ",
+                  "romaji": "no",
+                  "meaning": "no"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "テニス",
+                  "reading": "てにす",
+                  "fr": "tennis"
+                },
+                {
+                  "jp": "ネクタイ",
+                  "reading": "ねくたい",
+                  "fr": "cravate"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ネクタイ",
+                  "choices": [
+                    "nekutai",
+                    "nukutai",
+                    "nekutsui"
+                  ],
+                  "answer": "nekutai",
+                  "explanation": "ネ = ne, ク = ku, タ = ta, イ = i : ネクタイ, la cravate."
+                }
+              ]
+            },
+            {
+              "slug": "n5-kata-ha",
+              "title": "Katakana : ハヒフヘホ",
+              "objective": "Lire et reconnaître ハヒフヘホ.",
+              "minutes": 6,
+              "explanation": [
+                "ヘ (he) a presque la même forme que le hiragana へ : c’est le plus facile à retenir.",
+                "フ (fu) se prononce entre « f » et « h », les lèvres à peine rapprochées, comme ふ."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ha",
+                  "kind": "kana",
+                  "front": "ハ",
+                  "reading": "ハ",
+                  "romaji": "ha",
+                  "meaning": "ha"
+                },
+                {
+                  "slug": "kata-hi",
+                  "kind": "kana",
+                  "front": "ヒ",
+                  "reading": "ヒ",
+                  "romaji": "hi",
+                  "meaning": "hi"
+                },
+                {
+                  "slug": "kata-fu",
+                  "kind": "kana",
+                  "front": "フ",
+                  "reading": "フ",
+                  "romaji": "fu",
+                  "meaning": "fu"
+                },
+                {
+                  "slug": "kata-he",
+                  "kind": "kana",
+                  "front": "ヘ",
+                  "reading": "ヘ",
+                  "romaji": "he",
+                  "meaning": "he"
+                },
+                {
+                  "slug": "kata-ho",
+                  "kind": "kana",
+                  "front": "ホ",
+                  "reading": "ホ",
+                  "romaji": "ho",
+                  "meaning": "ho"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ハート",
+                  "reading": "はーと",
+                  "fr": "cœur (le symbole)"
+                },
+                {
+                  "jp": "ヒーター",
+                  "reading": "ひーたー",
+                  "fr": "radiateur, chauffage d’appoint"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ハート",
+                  "choices": [
+                    "hāto",
+                    "hato",
+                    "heto"
+                  ],
+                  "answer": "hāto",
+                  "explanation": "ハ = ha, ー allonge le a, ト = to : ハート, le cœur."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "n5-w2-c4",
+          "title": "Lignes M, Y, R, W et ン",
+          "lessons": [
+            {
+              "slug": "n5-kata-ma",
+              "title": "Katakana : マミムメモ",
+              "objective": "Lire et reconnaître マミムメモ.",
+              "minutes": 6,
+              "explanation": [
+                "マ (ma) se termine par une petite pointe vers le bas ; ム (mu) ressemble à un triangle ouvert avec un petit trait à droite.",
+                "ミ (mi) s’écrit en trois traits obliques, comme trois petites vagues ; メ (me) est une croix penchée."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ma",
+                  "kind": "kana",
+                  "front": "マ",
+                  "reading": "マ",
+                  "romaji": "ma",
+                  "meaning": "ma"
+                },
+                {
+                  "slug": "kata-mi",
+                  "kind": "kana",
+                  "front": "ミ",
+                  "reading": "ミ",
+                  "romaji": "mi",
+                  "meaning": "mi"
+                },
+                {
+                  "slug": "kata-mu",
+                  "kind": "kana",
+                  "front": "ム",
+                  "reading": "ム",
+                  "romaji": "mu",
+                  "meaning": "mu"
+                },
+                {
+                  "slug": "kata-me",
+                  "kind": "kana",
+                  "front": "メ",
+                  "reading": "メ",
+                  "romaji": "me",
+                  "meaning": "me"
+                },
+                {
+                  "slug": "kata-mo",
+                  "kind": "kana",
+                  "front": "モ",
+                  "reading": "モ",
+                  "romaji": "mo",
+                  "meaning": "mo"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "トマト",
+                  "reading": "とまと",
+                  "fr": "tomate"
+                },
+                {
+                  "jp": "メモ",
+                  "reading": "めも",
+                  "fr": "mémo, note"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "トマト",
+                  "choices": [
+                    "tomato",
+                    "tomuto",
+                    "tamato"
+                  ],
+                  "answer": "tomato",
+                  "explanation": "ト = to, マ = ma, ト = to : トマト, la tomate."
+                }
+              ]
+            },
+            {
+              "slug": "n5-kata-ya",
+              "title": "Katakana : ヤユヨワヲン",
+              "objective": "Lire et reconnaître ヤユヨワヲン.",
+              "minutes": 6,
+              "explanation": [
+                "ヤ (ya), ユ (yu) et ヨ (yo) s’écrivent aussi en petit (ャ, ュ, ョ) pour former des sons comme キャ (kya).",
+                "ヲ (wo) n’apparaît presque jamais : la particule を s’écrit en hiragana. ン (n) se lit « n », comme ん."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ya",
+                  "kind": "kana",
+                  "front": "ヤ",
+                  "reading": "ヤ",
+                  "romaji": "ya",
+                  "meaning": "ya"
+                },
+                {
+                  "slug": "kata-yu",
+                  "kind": "kana",
+                  "front": "ユ",
+                  "reading": "ユ",
+                  "romaji": "yu",
+                  "meaning": "yu"
+                },
+                {
+                  "slug": "kata-yo",
+                  "kind": "kana",
+                  "front": "ヨ",
+                  "reading": "ヨ",
+                  "romaji": "yo",
+                  "meaning": "yo"
+                },
+                {
+                  "slug": "kata-wa",
+                  "kind": "kana",
+                  "front": "ワ",
+                  "reading": "ワ",
+                  "romaji": "wa",
+                  "meaning": "wa"
+                },
+                {
+                  "slug": "kata-wo",
+                  "kind": "kana",
+                  "front": "ヲ",
+                  "reading": "ヲ",
+                  "romaji": "wo",
+                  "meaning": "wo"
+                },
+                {
+                  "slug": "kata-n",
+                  "kind": "kana",
+                  "front": "ン",
+                  "reading": "ン",
+                  "romaji": "n",
+                  "meaning": "n"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "ワイン",
+                  "reading": "わいん",
+                  "fr": "vin"
+                },
+                {
+                  "jp": "ユーモア",
+                  "reading": "ゆーもあ",
+                  "fr": "humour"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ワイン",
+                  "choices": [
+                    "wain",
+                    "wein",
+                    "yain"
+                  ],
+                  "answer": "wain",
+                  "explanation": "ワ = wa, イ = i, ン = n : ワイン, le vin."
+                }
+              ]
+            },
+            {
+              "slug": "n5-kata-ra",
+              "title": "Katakana : ラリルレロ",
+              "objective": "Lire et reconnaître ラリルレロ.",
+              "minutes": 6,
+              "explanation": [
+                "Le « r » japonais est battu, entre « r » et « l » : les mots étrangers en « l » s’écrivent donc aussi avec la ligne R (ホテル, hôtel).",
+                "ロ (ro) est un carré, plus petit et plus anguleux que le kanji 口 (bouche)."
+              ],
+              "items": [
+                {
+                  "slug": "kata-ra",
+                  "kind": "kana",
+                  "front": "ラ",
+                  "reading": "ラ",
+                  "romaji": "ra",
+                  "meaning": "ra"
+                },
+                {
+                  "slug": "kata-ri",
+                  "kind": "kana",
+                  "front": "リ",
+                  "reading": "リ",
+                  "romaji": "ri",
+                  "meaning": "ri"
+                },
+                {
+                  "slug": "kata-ru",
+                  "kind": "kana",
+                  "front": "ル",
+                  "reading": "ル",
+                  "romaji": "ru",
+                  "meaning": "ru"
+                },
+                {
+                  "slug": "kata-re",
+                  "kind": "kana",
+                  "front": "レ",
+                  "reading": "レ",
+                  "romaji": "re",
+                  "meaning": "re"
+                },
+                {
+                  "slug": "kata-ro",
+                  "kind": "kana",
+                  "front": "ロ",
+                  "reading": "ロ",
+                  "romaji": "ro",
+                  "meaning": "ro"
+                }
+              ],
+              "examples": [
+                {
+                  "jp": "カメラ",
+                  "reading": "かめら",
+                  "fr": "appareil photo"
+                },
+                {
+                  "jp": "ホテル",
+                  "reading": "ほてる",
+                  "fr": "hôtel"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "fill_blank",
+                  "prompt": "Comment se lit ce mot ?",
+                  "sentence": "ホテル",
+                  "choices": [
+                    "hoteru",
+                    "hotero",
+                    "hoteri"
+                  ],
+                  "answer": "hoteru",
+                  "explanation": "ホ = ho, テ = te, ル = ru : ホテル, l’hôtel."
+                }
+              ]
             }
           ]
         }
@@ -1606,8 +2191,8 @@
                   "slug": "kanji-nagai",
                   "kind": "kanji",
                   "front": "長",
-                  "reading": "ながい",
-                  "romaji": "nagai",
+                  "reading": "なが(い)",
+                  "romaji": "naga(i)",
                   "meaning": "long",
                   "kanji": {
                     "onyomi": [
@@ -1623,8 +2208,8 @@
                   "slug": "kanji-atarashii",
                   "kind": "kanji",
                   "front": "新",
-                  "reading": "あたらしい",
-                  "romaji": "atarashii",
+                  "reading": "あたら(しい)",
+                  "romaji": "atara(shii)",
                   "meaning": "nouveau",
                   "kanji": {
                     "onyomi": [
@@ -1768,8 +2353,8 @@
                   "slug": "kanji-chikai",
                   "kind": "kanji",
                   "front": "近",
-                  "reading": "ちかい",
-                  "romaji": "chikai",
+                  "reading": "ちか(い)",
+                  "romaji": "chika(i)",
                   "meaning": "proche",
                   "kanji": {
                     "onyomi": [
@@ -3616,8 +4201,8 @@
                   "slug": "kanji-hashiru",
                   "kind": "kanji",
                   "front": "走",
-                  "reading": "はしる",
-                  "romaji": "hashiru",
+                  "reading": "はし(る)",
+                  "romaji": "hashi(ru)",
                   "meaning": "courir",
                   "kanji": {
                     "onyomi": [
@@ -3633,8 +4218,8 @@
                   "slug": "kanji-yasumu",
                   "kind": "kanji",
                   "front": "休",
-                  "reading": "やすむ",
-                  "romaji": "yasumu",
+                  "reading": "やす(む)",
+                  "romaji": "yasu(mu)",
                   "meaning": "se reposer",
                   "kanji": {
                     "onyomi": [

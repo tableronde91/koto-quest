@@ -164,5 +164,6 @@ export function levelsOfLanguage(lang: StudyLanguage): JlptCode[] {
  * mais jamais le pinyin (lettres latines), qu'une voix chinoise lirait mal : on lit alors les caractères.
  */
 export function spokenForm(text: string, reading?: string | null): string {
-  return reading && !/[A-Za-zÀ-ɏ]/.test(reading) ? reading : text;
+  // Lecture d'un kanji seul : « なが(い) » se dit « ながい » (les parenthèses marquent l'okurigana).
+  return reading && !/[A-Za-zÀ-ɏ]/.test(reading) ? reading.replace(/[()（）]/g, '') : text;
 }

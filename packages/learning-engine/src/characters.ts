@@ -68,7 +68,7 @@ export function planCharacterPractice(
     if (q) first.push(q);
     if (isNew) {
       const recall: QuestionType = e.item.kind === 'kana' ? (rng() < 0.5 ? 'reverse_choice' : 'listening_choice') : 'reverse_choice';
-      const q2 = generateQuestion(e.item, pool, recall, rng);
+      const q2 = generateQuestion(e.item, pool, recall, rng) ?? generateQuestion(e.item, pool, 'reverse_choice', rng);
       if (q2) second.push(q2);
     }
   }

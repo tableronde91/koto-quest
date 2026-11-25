@@ -19,6 +19,7 @@ import {
   examScale,
   fillBlank,
   generateMatching,
+  chooseQuestionType,
   generateQuestion,
   gradeExam,
   isKorean,
@@ -27,7 +28,9 @@ import {
   planBankExam,
   planExam,
   planJlptDrill,
+  questionTypesFor,
   reminderMessage,
+  silentInitial,
   validateAuthoredExercise,
   type AuthoredExercise,
   type EngineItem,
@@ -86,6 +89,24 @@ describe('coréen : exercices générés', () => {
       const d = pickDistractors(a, items, 'front', 3, createRng(`d${k}`));
       expect(d.every((x) => x.codePointAt(0)! >= 0x314f && x.codePointAt(0)! <= 0x3163)).toBe(true);
     }
+  });
+
+  it('écoute d’une lettre : ㅇ (muet en tête de syllabe) n’est jamais demandé à l’oreille, les consonnes se reconnaissent au début de la syllabe', () => {
+    const ng = items.find((i) => i.front === 'ㅇ')!;
+    const g = items.find((i) => i.front === 'ㄱ')!;
+    expect(silentInitial(ng)).toBe(true);
+    expect(silentInitial(g)).toBe(false);
+    expect(silentInitial(items.find((i) => i.front === 'ㅏ')!)).toBe(false);
+    expect(questionTypesFor(ng)).not.toContain('listening_choice');
+    expect(generateQuestion(ng, items, 'listening_choice', rng)).toBeNull();
+    for (let k = 0; k < 30; k++) expect(chooseQuestionType(ng, k % 8, createRng(`ng${k}`))).not.toBe('listening_choice');
+    const q = generateQuestion(g, items, 'listening_choice', rng)!;
+    expect(q.prompt).toBe('Écoute la syllabe : par quelle consonne commence-t-elle ?');
+    expect(q.audio).toBe('가');
+  });
+
+  it('une lettre du hangeul n’a pas de question « lecture » : la syllabe prononcée n’est qu’un support pour la voix', () => {
+    for (const l of items.filter((i) => i.kind === 'kana')) expect(generateQuestion(l, items, 'reading_choice', rng)).toBeNull();
   });
 
   it('phrase à remettre dans l’ordre : les segments coréens sont séparés par des espaces', () => {

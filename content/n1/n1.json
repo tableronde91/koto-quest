@@ -576,8 +576,8 @@
          "slug": "kanji-n1-osoreru",
          "kind": "kanji",
          "front": "恐",
-         "reading": "おそれる",
-         "romaji": "osoreru",
+         "reading": "おそ(れる)",
+         "romaji": "oso(reru)",
          "meaning": "craindre",
          "kanji": {
           "onyomi": [
@@ -748,8 +748,8 @@
          "slug": "kanji-n1-nigeru",
          "kind": "kanji",
          "front": "逃",
-         "reading": "にげる",
-         "romaji": "nigeru",
+         "reading": "に(げる)",
+         "romaji": "ni(geru)",
          "meaning": "fuir, s’échapper",
          "kanji": {
           "onyomi": [
@@ -1091,8 +1091,8 @@
          "slug": "kanji-n1-kakomu",
          "kind": "kanji",
          "front": "囲",
-         "reading": "かこむ",
-         "romaji": "kakomu",
+         "reading": "かこ(む)",
+         "romaji": "kako(mu)",
          "meaning": "entourer",
          "kanji": {
           "onyomi": [
@@ -1726,8 +1726,8 @@
          "slug": "kanji-n1-taeru",
          "kind": "kanji",
          "front": "堪",
-         "reading": "たえる",
-         "romaji": "taeru",
+         "reading": "た(える)",
+         "romaji": "ta(eru)",
          "meaning": "supporter, endurer",
          "kanji": {
           "onyomi": [
@@ -2059,8 +2059,8 @@
          "slug": "kanji-n1-afureru",
          "kind": "kanji",
          "front": "溢",
-         "reading": "あふれる",
-         "romaji": "afureru",
+         "reading": "あふ(れる)",
+         "romaji": "afu(reru)",
          "meaning": "déborder",
          "kanji": {
           "onyomi": [
@@ -2218,8 +2218,8 @@
          "slug": "kanji-n1-oyobu",
          "kind": "kanji",
          "front": "及",
-         "reading": "およぶ",
-         "romaji": "oyobu",
+         "reading": "およ(ぶ)",
+         "romaji": "oyo(bu)",
          "meaning": "atteindre, s’étendre à",
          "kanji": {
           "onyomi": [
@@ -2392,8 +2392,8 @@
          "slug": "kanji-n1-okotaru",
          "kind": "kanji",
          "front": "怠",
-         "reading": "おこたる",
-         "romaji": "okotaru",
+         "reading": "おこた(る)",
+         "romaji": "okota(ru)",
          "meaning": "négliger, paresser",
          "kanji": {
           "onyomi": [
@@ -2713,8 +2713,8 @@
          "slug": "kanji-n1-itaru",
          "kind": "kanji",
          "front": "至",
-         "reading": "いたる",
-         "romaji": "itaru",
+         "reading": "いた(る)",
+         "romaji": "ita(ru)",
          "meaning": "atteindre, parvenir à",
          "kanji": {
           "onyomi": [

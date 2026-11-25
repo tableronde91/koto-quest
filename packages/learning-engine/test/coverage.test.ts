@@ -48,3 +48,35 @@ describe('cours alignés sur l’examen blanc N5', () => {
     expect(missing).toEqual([]);
   });
 });
+
+describe('parcours N5 : kana et kanji', () => {
+  const n5 = load('n5/n5.json');
+  const lessons = (slug: string) => n5.worlds.find((w: { slug: string }) => w.slug === slug).chapters.flatMap((c: { lessons: unknown[] }) => c.lessons);
+  const fronts = (slug: string) => lessons(slug).flatMap((l: { items: { kind: string; front: string }[] }) => l.items.filter((i) => i.kind === 'kana').map((i) => i.front));
+
+  it('l’île des katakana couvre les 46 katakana de base, comme celle des hiragana', () => {
+    expect(new Set(fronts('n5-w1')).size).toBe(46);
+    expect(new Set(fronts('n5-w2')).size).toBe(46);
+    expect(fronts('n5-w2').every((k: string) => /^[ァ-ヶ]$/.test(k))).toBe(true);
+  });
+
+  it('un kanji seul note son okurigana entre parenthèses (長 : なが(い)), il ne répète pas la lecture du mot', () => {
+    const items = lessons('n5-w4').concat(lessons('n5-w7')).flatMap((l: { items: { slug: string; reading: string; romaji: string }[] }) => l.items);
+    expect(items.find((i: { slug: string }) => i.slug === 'kanji-nagai')).toMatchObject({ reading: 'なが(い)', romaji: 'naga(i)' });
+    for (const p of ['n5/n5.json', 'n4/n4.json', 'n3/n3.json', 'n2/n2.json', 'n1/n1.json', 'characters/characters.json']) {
+      const walk = (o: unknown): void => {
+        if (Array.isArray(o)) o.forEach(walk);
+        else if (o && typeof o === 'object') {
+          const r = o as { kind?: string; reading?: string; romaji?: string; kanji?: { kunyomi: string[] } };
+          if (r.kind === 'kanji' && r.kanji) {
+            // La lecture d'un kanji n'est jamais un kun'yomi dont on aurait fondu l'okurigana.
+            expect(r.kanji.kunyomi.some((k) => k.includes('(') && k.replace(/[()]/g, '') === r.reading)).toBe(false);
+            expect(r.romaji ?? '').not.toMatch(/^[a-z]+-[a-z]+$/);
+          }
+          Object.values(r).forEach(walk);
+        }
+      };
+      walk(load(p));
+    }
+  });
+});

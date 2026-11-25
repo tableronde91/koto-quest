@@ -86,8 +86,8 @@
          "slug": "kanji-tomeru",
          "kind": "kanji",
          "front": "留",
-         "reading": "とめる",
-         "romaji": "tomeru",
+         "reading": "と(める)",
+         "romaji": "to(meru)",
          "meaning": "retenir, rester",
          "kanji": {
           "onyomi": [
@@ -105,8 +105,8 @@
          "slug": "kanji-mamoru",
          "kind": "kanji",
          "front": "守",
-         "reading": "まもる",
-         "romaji": "mamoru",
+         "reading": "まも(る)",
+         "romaji": "mamo(ru)",
          "meaning": "protéger, garder",
          "kanji": {
           "onyomi": [
@@ -241,8 +241,8 @@
          "slug": "kanji-mottomo",
          "kind": "kanji",
          "front": "最",
-         "reading": "もっとも",
-         "romaji": "mottomo",
+         "reading": "もっと(も)",
+         "romaji": "motto(mo)",
          "meaning": "le plus, extrême",
          "kanji": {
           "onyomi": [
@@ -258,8 +258,8 @@
          "slug": "kanji-kosu",
          "kind": "kanji",
          "front": "越",
-         "reading": "こす",
-         "romaji": "kosu",
+         "reading": "こ(す)",
+         "romaji": "ko(su)",
          "meaning": "franchir, dépasser",
          "kanji": {
           "onyomi": [
@@ -402,8 +402,8 @@
          "slug": "kanji-tashika",
          "kind": "kanji",
          "front": "確",
-         "reading": "たしか",
-         "romaji": "tashika",
+         "reading": "たし(か)",
+         "romaji": "tashi(ka)",
          "meaning": "certain, vérifier",
          "kanji": {
           "onyomi": [
@@ -420,8 +420,8 @@
          "slug": "kanji-sadameru",
          "kind": "kanji",
          "front": "定",
-         "reading": "さだめる",
-         "romaji": "sadameru",
+         "reading": "さだ(める)",
+         "romaji": "sada(meru)",
          "meaning": "fixer, déterminer",
          "kanji": {
           "onyomi": [
@@ -574,8 +574,8 @@
          "slug": "kanji-nareru",
          "kind": "kanji",
          "front": "慣",
-         "reading": "なれる",
-         "romaji": "nareru",
+         "reading": "な(れる)",
+         "romaji": "na(reru)",
          "meaning": "s’habituer, coutume",
          "kanji": {
           "onyomi": [
@@ -591,8 +591,8 @@
          "slug": "kanji-hajime",
          "kind": "kanji",
          "front": "初",
-         "reading": "はじめ",
-         "romaji": "hajime",
+         "reading": "はじ(め)",
+         "romaji": "haji(me)",
          "meaning": "premier, début",
          "kanji": {
           "onyomi": [
@@ -727,8 +727,8 @@
          "slug": "kanji-kimeru",
          "kind": "kanji",
          "front": "決",
-         "reading": "きめる",
-         "romaji": "kimeru",
+         "reading": "き(める)",
+         "romaji": "ki(meru)",
          "meaning": "décider",
          "kanji": {
           "onyomi": [
@@ -745,8 +745,8 @@
          "slug": "kanji-sukoyaka",
          "kind": "kanji",
          "front": "健",
-         "reading": "すこやか",
-         "romaji": "sukoyaka",
+         "reading": "すこ(やか)",
+         "romaji": "suko(yaka)",
          "meaning": "sain, robuste",
          "kanji": {
           "onyomi": [
@@ -884,8 +884,8 @@
          "slug": "kanji-tsutomeru",
          "kind": "kanji",
          "front": "勤",
-         "reading": "つとめる",
-         "romaji": "tsutomeru",
+         "reading": "つと(める)",
+         "romaji": "tsuto(meru)",
          "meaning": "être employé, servir",
          "kanji": {
           "onyomi": [
@@ -901,8 +901,8 @@
          "slug": "kanji-haru",
          "kind": "kanji",
          "front": "張",
-         "reading": "はる",
-         "romaji": "haru",
+         "reading": "は(る)",
+         "romaji": "ha(ru)",
          "meaning": "tendre, étirer",
          "kanji": {
           "onyomi": [
@@ -1071,8 +1071,8 @@
          "slug": "kanji-nokoru",
          "kind": "kanji",
          "front": "残",
-         "reading": "のこる",
-         "romaji": "nokoru",
+         "reading": "のこ(る)",
+         "romaji": "noko(ru)",
          "meaning": "rester, laisser",
          "kanji": {
           "onyomi": [
@@ -1220,8 +1220,8 @@
          "slug": "kanji-soru",
          "kind": "kanji",
          "front": "反",
-         "reading": "そる",
-         "romaji": "soru",
+         "reading": "そ(る)",
+         "romaji": "so(ru)",
          "meaning": "anti-, se cambrer",
          "kanji": {
           "onyomi": [
@@ -1238,8 +1238,8 @@
          "slug": "kanji-yabureru",
          "kind": "kanji",
          "front": "敗",
-         "reading": "やぶれる",
-         "romaji": "yabureru",
+         "reading": "やぶ(れる)",
+         "romaji": "yabu(reru)",
          "meaning": "être vaincu, échec",
          "kanji": {
           "onyomi": [
@@ -1363,8 +1363,8 @@
          "slug": "kanji-amai",
          "kind": "kanji",
          "front": "甘",
-         "reading": "あまい",
-         "romaji": "amai",
+         "reading": "あま(い)",
+         "romaji": "ama(i)",
          "meaning": "doux, sucré",
          "kanji": {
           "onyomi": [
@@ -1381,8 +1381,8 @@
          "slug": "kanji-asobu",
          "kind": "kanji",
          "front": "遊",
-         "reading": "あそぶ",
-         "romaji": "asobu",
+         "reading": "あそ(ぶ)",
+         "romaji": "aso(bu)",
          "meaning": "jouer, s’amuser",
          "kanji": {
           "onyomi": [
@@ -1542,8 +1542,8 @@
          "slug": "kanji-sonaeru",
          "kind": "kanji",
          "front": "備",
-         "reading": "そなえる",
-         "romaji": "sonaeru",
+         "reading": "そな(える)",
+         "romaji": "sona(eru)",
          "meaning": "préparer, équiper",
          "kanji": {
           "onyomi": [
@@ -1684,8 +1684,8 @@
          "slug": "kanji-umu",
          "kind": "kanji",
          "front": "産",
-         "reading": "うむ",
-         "romaji": "umu",
+         "reading": "う(む)",
+         "romaji": "u(mu)",
          "meaning": "donner naissance, produire",
          "kanji": {
           "onyomi": [
@@ -1819,8 +1819,8 @@
          "slug": "kanji-hieru",
          "kind": "kanji",
          "front": "冷",
-         "reading": "ひえる",
-         "romaji": "hieru",
+         "reading": "ひ(える)",
+         "romaji": "hi(eru)",
          "meaning": "froid, refroidir",
          "kanji": {
           "onyomi": [
@@ -1838,8 +1838,8 @@
          "slug": "kanji-nemuru",
          "kind": "kanji",
          "front": "眠",
-         "reading": "ねむる",
-         "romaji": "nemuru",
+         "reading": "ねむ(る)",
+         "romaji": "nemu(ru)",
          "meaning": "dormir, sommeil",
          "kanji": {
           "onyomi": [
@@ -2017,8 +2017,8 @@
          "slug": "kanji-toku",
          "kind": "kanji",
          "front": "説",
-         "reading": "とく",
-         "romaji": "toku",
+         "reading": "と(く)",
+         "romaji": "to(ku)",
          "meaning": "expliquer, théorie",
          "kanji": {
           "onyomi": [
@@ -2160,8 +2160,8 @@
          "slug": "kanji-tasukeru",
          "kind": "kanji",
          "front": "助",
-         "reading": "たすける",
-         "romaji": "tasukeru",
+         "reading": "たす(ける)",
+         "romaji": "tasu(keru)",
          "meaning": "aider, sauver",
          "kanji": {
           "onyomi": [
@@ -2178,8 +2178,8 @@
          "slug": "kanji-makeru",
          "kind": "kanji",
          "front": "負",
-         "reading": "まける",
-         "romaji": "makeru",
+         "reading": "ま(ける)",
+         "romaji": "ma(keru)",
          "meaning": "perdre, porter (un fardeau)",
          "kanji": {
           "onyomi": [
@@ -2319,8 +2319,8 @@
          "slug": "kanji-chigau",
          "kind": "kanji",
          "front": "違",
-         "reading": "ちがう",
-         "romaji": "chigau",
+         "reading": "ちが(う)",
+         "romaji": "chiga(u)",
          "meaning": "différer, erreur",
          "kanji": {
           "onyomi": [
@@ -2337,8 +2337,8 @@
          "slug": "kanji-yoru",
          "kind": "kanji",
          "front": "因",
-         "reading": "よる",
-         "romaji": "yoru",
+         "reading": "よ(る)",
+         "romaji": "yo(ru)",
          "meaning": "cause, dépendre de",
          "kanji": {
           "onyomi": [
@@ -2514,8 +2514,8 @@
          "slug": "kanji-odoroku",
          "kind": "kanji",
          "front": "驚",
-         "reading": "おどろく",
-         "romaji": "odoroku",
+         "reading": "おどろ(く)",
+         "romaji": "odoro(ku)",
          "meaning": "s’étonner",
          "kanji": {
           "onyomi": [
@@ -2659,8 +2659,8 @@
          "slug": "kanji-naku",
          "kind": "kanji",
          "front": "泣",
-         "reading": "なく",
-         "romaji": "naku",
+         "reading": "な(く)",
+         "romaji": "na(ku)",
          "meaning": "pleurer",
          "kanji": {
           "onyomi": [
@@ -2808,8 +2808,8 @@
          "slug": "kanji-tanomu",
          "kind": "kanji",
          "front": "頼",
-         "reading": "たのむ",
-         "romaji": "tanomu",
+         "reading": "たの(む)",
+         "romaji": "tano(mu)",
          "meaning": "demander, compter sur",
          "kanji": {
           "onyomi": [
@@ -2980,8 +2980,8 @@
          "slug": "kanji-kibishii",
          "kind": "kanji",
          "front": "厳",
-         "reading": "きびしい",
-         "romaji": "kibishii",
+         "reading": "きび(しい)",
+         "romaji": "kibi(shii)",
          "meaning": "sévère, strict",
          "kanji": {
           "onyomi": [
@@ -3141,8 +3141,8 @@
          "slug": "kanji-shiraberu",
          "kind": "kanji",
          "front": "調",
-         "reading": "しらべる",
-         "romaji": "shiraberu",
+         "reading": "しら(べる)",
+         "romaji": "shira(beru)",
          "meaning": "examiner, ton",
          "kanji": {
           "onyomi": [
@@ -3290,8 +3290,8 @@
          "slug": "kanji-kawaru",
          "kind": "kanji",
          "front": "代",
-         "reading": "かわる",
-         "romaji": "kawaru",
+         "reading": "か(わる)",
+         "romaji": "ka(waru)",
          "meaning": "remplacer, époque",
          "kanji": {
           "onyomi": [
@@ -3444,8 +3444,8 @@
          "slug": "kanji-ayamaru",
          "kind": "kanji",
          "front": "謝",
-         "reading": "あやまる",
-         "romaji": "ayamaru",
+         "reading": "あやま(る)",
+         "romaji": "ayama(ru)",
          "meaning": "s’excuser, remercier",
          "kanji": {
           "onyomi": [
@@ -3461,8 +3461,8 @@
          "slug": "kanji-kotowaru",
          "kind": "kanji",
          "front": "断",
-         "reading": "ことわる",
-         "romaji": "kotowaru",
+         "reading": "ことわ(る)",
+         "romaji": "kotowa(ru)",
          "meaning": "refuser, trancher",
          "kanji": {
           "onyomi": [
@@ -3597,8 +3597,8 @@
          "slug": "kanji-isogashii",
          "kind": "kanji",
          "front": "忙",
-         "reading": "いそがしい",
-         "romaji": "isogashii",
+         "reading": "いそが(しい)",
+         "romaji": "isoga(shii)",
          "meaning": "occupé",
          "kanji": {
           "onyomi": [
@@ -3614,8 +3614,8 @@
          "slug": "kanji-kumoru",
          "kind": "kanji",
          "front": "曇",
-         "reading": "くもる",
-         "romaji": "kumoru",
+         "reading": "くも(る)",
+         "romaji": "kumo(ru)",
          "meaning": "se couvrir (ciel)",
          "kanji": {
           "onyomi": [
@@ -3749,8 +3749,8 @@
          "slug": "kanji-tomaru",
          "kind": "kanji",
          "front": "泊",
-         "reading": "とまる",
-         "romaji": "tomaru",
+         "reading": "と(まる)",
+         "romaji": "to(maru)",
          "meaning": "passer la nuit",
          "kanji": {
           "onyomi": [
@@ -3767,8 +3767,8 @@
          "slug": "kanji-kubaru",
          "kind": "kanji",
          "front": "配",
-         "reading": "くばる",
-         "romaji": "kubaru",
+         "reading": "くば(る)",
+         "romaji": "kuba(ru)",
          "meaning": "distribuer",
          "kanji": {
           "onyomi": [

@@ -1,5 +1,5 @@
 {
-  "contentVersion": "2026.11.2",
+  "contentVersion": "2026.11.24",
   "notice": "Les kanji proposés ici sont courants au niveau N5 ; ils ne constituent pas une liste officielle exhaustive du JLPT.",
   "sections": [
     {
@@ -2121,7 +2121,7 @@
               "kind": "kanji",
               "front": "火",
               "reading": "ひ",
-              "romaji": "ka-hi",
+              "romaji": "hi",
               "meaning": "feu",
               "kanji": {
                 "onyomi": [
@@ -2268,7 +2268,8 @@
                   "ウ"
                 ],
                 "kunyomi": [
-                  "あめ"
+                  "あめ",
+                  "あま"
                 ],
                 "strokes": 8
               }
@@ -2901,7 +2902,7 @@
               "kind": "kanji",
               "front": "気",
               "reading": "き",
-              "romaji": "ki-ki",
+              "romaji": "ki",
               "meaning": "esprit, énergie",
               "kanji": {
                 "onyomi": [

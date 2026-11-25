@@ -211,8 +211,8 @@
          "slug": "kanji-matsu",
          "kind": "kanji",
          "front": "待",
-         "reading": "まつ",
-         "romaji": "matsu",
+         "reading": "ま(つ)",
+         "romaji": "ma(tsu)",
          "meaning": "attendre",
          "kanji": {
           "onyomi": [
@@ -228,8 +228,8 @@
          "slug": "kanji-hanasu",
          "kind": "kanji",
          "front": "話",
-         "reading": "はなす",
-         "romaji": "hanasu",
+         "reading": "はな(す)",
+         "romaji": "hana(su)",
          "meaning": "parler, histoire",
          "kanji": {
           "onyomi": [
@@ -356,8 +356,8 @@
          "slug": "kanji-hiraku",
          "kind": "kanji",
          "front": "開",
-         "reading": "ひらく",
-         "romaji": "hiraku",
+         "reading": "ひら(く)",
+         "romaji": "hira(ku)",
          "meaning": "ouvrir",
          "kanji": {
           "onyomi": [
@@ -487,8 +487,8 @@
          "slug": "kanji-tsukuru",
          "kind": "kanji",
          "front": "作",
-         "reading": "つくる",
-         "romaji": "tsukuru",
+         "reading": "つく(る)",
+         "romaji": "tsuku(ru)",
          "meaning": "faire, fabriquer",
          "kanji": {
           "onyomi": [
@@ -620,8 +620,8 @@
          "slug": "kanji-owaru",
          "kind": "kanji",
          "front": "終",
-         "reading": "おわる",
-         "romaji": "owaru",
+         "reading": "お(わる)",
+         "romaji": "o(waru)",
          "meaning": "finir, se terminer",
          "kanji": {
           "onyomi": [
@@ -638,8 +638,8 @@
          "slug": "kanji-wasureru",
          "kind": "kanji",
          "front": "忘",
-         "reading": "わすれる",
-         "romaji": "wasureru",
+         "reading": "わす(れる)",
+         "romaji": "wasu(reru)",
          "meaning": "oublier",
          "kanji": {
           "onyomi": [
@@ -906,8 +906,8 @@
          "slug": "kanji-hairu",
          "kind": "kanji",
          "front": "入",
-         "reading": "はいる",
-         "romaji": "hairu",
+         "reading": "はい(る)",
+         "romaji": "hai(ru)",
          "meaning": "entrer",
          "kanji": {
           "onyomi": [
@@ -1158,8 +1158,8 @@
          "slug": "kanji-kanarazu",
          "kind": "kanji",
          "front": "必",
-         "reading": "かならず",
-         "romaji": "kanarazu",
+         "reading": "かなら(ず)",
+         "romaji": "kanara(zu)",
          "meaning": "nécessaire, sans faute",
          "kanji": {
           "onyomi": [
@@ -1175,8 +1175,8 @@
          "slug": "kanji-harau",
          "kind": "kanji",
          "front": "払",
-         "reading": "はらう",
-         "romaji": "harau",
+         "reading": "はら(う)",
+         "romaji": "hara(u)",
          "meaning": "payer, balayer",
          "kanji": {
           "onyomi": [
@@ -1315,8 +1315,8 @@
          "slug": "kanji-okiru",
          "kind": "kanji",
          "front": "起",
-         "reading": "おきる",
-         "romaji": "okiru",
+         "reading": "お(きる)",
+         "romaji": "o(kiru)",
          "meaning": "se lever, se produire",
          "kanji": {
           "onyomi": [
@@ -1600,8 +1600,8 @@
          "slug": "kanji-sumu",
          "kind": "kanji",
          "front": "住",
-         "reading": "すむ",
-         "romaji": "sumu",
+         "reading": "す(む)",
+         "romaji": "su(mu)",
          "meaning": "habiter",
          "kanji": {
           "onyomi": [
@@ -1720,8 +1720,8 @@
          "slug": "kanji-tamesu",
          "kind": "kanji",
          "front": "試",
-         "reading": "ためす",
-         "romaji": "tamesu",
+         "reading": "ため(す)",
+         "romaji": "tame(su)",
          "meaning": "essayer, épreuve",
          "kanji": {
           "onyomi": [
@@ -1860,8 +1860,8 @@
          "slug": "kanji-arau",
          "kind": "kanji",
          "front": "洗",
-         "reading": "あらう",
-         "romaji": "arau",
+         "reading": "あら(う)",
+         "romaji": "ara(u)",
          "meaning": "laver",
          "kanji": {
           "onyomi": [
@@ -1994,8 +1994,8 @@
          "slug": "kanji-hajimeru",
          "kind": "kanji",
          "front": "始",
-         "reading": "はじめる",
-         "romaji": "hajimeru",
+         "reading": "はじ(める)",
+         "romaji": "haji(meru)",
          "meaning": "commencer",
          "kanji": {
           "onyomi": [
@@ -2012,8 +2012,8 @@
          "slug": "kanji-narau",
          "kind": "kanji",
          "front": "習",
-         "reading": "ならう",
-         "romaji": "narau",
+         "reading": "なら(う)",
+         "romaji": "nara(u)",
          "meaning": "apprendre",
          "kanji": {
           "onyomi": [
@@ -2171,8 +2171,8 @@
          "slug": "kanji-hayai",
          "kind": "kanji",
          "front": "速",
-         "reading": "はやい",
-         "romaji": "hayai",
+         "reading": "はや(い)",
+         "romaji": "haya(i)",
          "meaning": "rapide, vitesse",
          "kanji": {
           "onyomi": [
@@ -2558,8 +2558,8 @@
          "slug": "kanji-furu",
          "kind": "kanji",
          "front": "降",
-         "reading": "ふる",
-         "romaji": "furu",
+         "reading": "ふ(る)",
+         "romaji": "fu(ru)",
          "meaning": "tomber (pluie), descendre",
          "kanji": {
           "onyomi": [
@@ -2694,8 +2694,8 @@
          "slug": "kanji-hareru",
          "kind": "kanji",
          "front": "晴",
-         "reading": "はれる",
-         "romaji": "hareru",
+         "reading": "は(れる)",
+         "romaji": "ha(reru)",
          "meaning": "beau temps, se dégager",
          "kanji": {
           "onyomi": [
@@ -2861,8 +2861,8 @@
          "slug": "kanji-omou",
          "kind": "kanji",
          "front": "思",
-         "reading": "おもう",
-         "romaji": "omou",
+         "reading": "おも(う)",
+         "romaji": "omo(u)",
          "meaning": "penser",
          "kanji": {
           "onyomi": [
@@ -2980,8 +2980,8 @@
          "slug": "kanji-hayai-early",
          "kind": "kanji",
          "front": "早",
-         "reading": "はやい",
-         "romaji": "hayai",
+         "reading": "はや(い)",
+         "romaji": "haya(i)",
          "meaning": "tôt, rapide",
          "kanji": {
           "onyomi": [
@@ -3096,8 +3096,8 @@
          "slug": "kanji-osoi",
          "kind": "kanji",
          "front": "遅",
-         "reading": "おそい",
-         "romaji": "osoi",
+         "reading": "おそ(い)",
+         "romaji": "oso(i)",
          "meaning": "en retard, lent",
          "kanji": {
           "onyomi": [
@@ -3228,8 +3228,8 @@
          "slug": "kanji-kiku",
          "kind": "kanji",
          "front": "聞",
-         "reading": "きく",
-         "romaji": "kiku",
+         "reading": "き(く)",
+         "romaji": "ki(ku)",
          "meaning": "entendre, écouter, demander",
          "kanji": {
           "onyomi": [
@@ -3247,8 +3247,8 @@
          "slug": "kanji-iu",
          "kind": "kanji",
          "front": "言",
-         "reading": "いう",
-         "romaji": "iu",
+         "reading": "い(う)",
+         "romaji": "i(u)",
          "meaning": "dire, mot",
          "kanji": {
           "onyomi": [
@@ -3631,8 +3631,8 @@
          "slug": "kanji-kariru",
          "kind": "kanji",
          "front": "借",
-         "reading": "かりる",
-         "romaji": "kariru",
+         "reading": "か(りる)",
+         "romaji": "ka(riru)",
          "meaning": "emprunter",
          "kanji": {
           "onyomi": [
@@ -3869,8 +3869,8 @@
          "slug": "kanji-okuru",
          "kind": "kanji",
          "front": "送",
-         "reading": "おくる",
-         "romaji": "okuru",
+         "reading": "おく(る)",
+         "romaji": "oku(ru)",
          "meaning": "envoyer",
          "kanji": {
           "onyomi": [
@@ -3886,8 +3886,8 @@
          "slug": "kanji-oshieru",
          "kind": "kanji",
          "front": "教",
-         "reading": "おしえる",
-         "romaji": "oshieru",
+         "reading": "おし(える)",
+         "romaji": "oshi(eru)",
          "meaning": "enseigner",
          "kanji": {
           "onyomi": [
@@ -4024,8 +4024,8 @@
          "slug": "kanji-hataraku",
          "kind": "kanji",
          "front": "働",
-         "reading": "はたらく",
-         "romaji": "hataraku",
+         "reading": "はたら(く)",
+         "romaji": "hatara(ku)",
          "meaning": "travailler",
          "kanji": {
           "onyomi": [
@@ -4041,8 +4041,8 @@
          "slug": "kanji-hakobu",
          "kind": "kanji",
          "front": "運",
-         "reading": "はこぶ",
-         "romaji": "hakobu",
+         "reading": "はこ(ぶ)",
+         "romaji": "hako(bu)",
          "meaning": "transporter, chance",
          "kanji": {
           "onyomi": [
@@ -4194,8 +4194,8 @@
          "slug": "kanji-tsuku",
          "kind": "kanji",
          "front": "着",
-         "reading": "つく",
-         "romaji": "tsuku",
+         "reading": "つ(く)",
+         "romaji": "tsu(ku)",
          "meaning": "arriver, porter (vêtement)",
          "kanji": {
           "onyomi": [
@@ -4314,8 +4314,8 @@
          "slug": "kanji-oyogu",
          "kind": "kanji",
          "front": "泳",
-         "reading": "およぐ",
-         "romaji": "oyogu",
+         "reading": "およ(ぐ)",
+         "romaji": "oyo(gu)",
          "meaning": "nager",
          "kanji": {
           "onyomi": [
@@ -4546,8 +4546,8 @@
          "slug": "kanji-isogu",
          "kind": "kanji",
          "front": "急",
-         "reading": "いそぐ",
-         "romaji": "isogu",
+         "reading": "いそ(ぐ)",
+         "romaji": "iso(gu)",
          "meaning": "urgent, se dépêcher",
          "kanji": {
           "onyomi": [
@@ -4845,8 +4845,8 @@
          "slug": "kanji-mesu",
          "kind": "kanji",
          "front": "召",
-         "reading": "めす",
-         "romaji": "mesu",
+         "reading": "め(す)",
+         "romaji": "me(su)",
          "meaning": "convoquer ; (honorifique) prendre",
          "kanji": {
           "onyomi": [
@@ -4997,8 +4997,8 @@
          "slug": "kanji-mousu",
          "kind": "kanji",
          "front": "申",
-         "reading": "もうす",
-         "romaji": "mousu",
+         "reading": "もう(す)",
+         "romaji": "mou(su)",
          "meaning": "dire (humble), déclarer",
          "kanji": {
           "onyomi": [
@@ -5014,8 +5014,8 @@
          "slug": "kanji-mairu",
          "kind": "kanji",
          "front": "参",
-         "reading": "まいる",
-         "romaji": "mairu",
+         "reading": "まい(る)",
+         "romaji": "mai(ru)",
          "meaning": "aller (humble), participer",
          "kanji": {
           "onyomi": [
@@ -5161,8 +5161,8 @@
          "slug": "kanji-yobu",
          "kind": "kanji",
          "front": "呼",
-         "reading": "よぶ",
-         "romaji": "yobu",
+         "reading": "よ(ぶ)",
+         "romaji": "yo(bu)",
          "meaning": "appeler",
          "kanji": {
           "onyomi": [
@@ -5288,8 +5288,8 @@
          "slug": "kanji-tsukau",
          "kind": "kanji",
          "front": "使",
-         "reading": "つかう",
-         "romaji": "tsukau",
+         "reading": "つか(う)",
+         "romaji": "tsuka(u)",
          "meaning": "utiliser, envoyé",
          "kanji": {
           "onyomi": [
@@ -5305,8 +5305,8 @@
          "slug": "kanji-nomu",
          "kind": "kanji",
          "front": "飲",
-         "reading": "のむ",
-         "romaji": "nomu",
+         "reading": "の(む)",
+         "romaji": "no(mu)",
          "meaning": "boire",
          "kanji": {
           "onyomi": [

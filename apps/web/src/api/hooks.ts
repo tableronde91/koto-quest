@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import type { AchievementsDto, CharactersDto, DashboardDto, InboxItemDto, LessonDto, MeDto, NotificationPrefsDto, PathDto, StatsDto } from '@koto/shared';
-import { setHanLanguage } from '@koto/shared';
+import { applyStudyLanguage } from '../lib/studyLanguage';
 import { ApiError, api, put } from './client';
 
 export const qk = {
@@ -23,7 +23,7 @@ export function useMe() {
       try {
         const me = await api<MeDto>('/me');
         // Un texte en caractères seuls (sans kana) se lit en chinois quand on étudie le chinois
-        setHanLanguage(me.preferences.studyLanguage);
+        applyStudyLanguage(me.preferences.studyLanguage);
         return me;
       } catch (e) {
         if (e instanceof ApiError && e.status === 401) return null;

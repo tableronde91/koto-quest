@@ -64,6 +64,26 @@ h1, h2, h3, .font-display { font-family: var(--font-jp); font-weight: 700; line-
 .jp { font-family: var(--font-jp); }
 /* Chinois : polices du chinois simplifié (formes des caractères du continent), pas les glyphes japonais. */
 .jp:lang(zh), :lang(zh) > .jp, ruby:lang(zh) { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif; }
+/* Quand on étudie le chinois, tous les caractères (titres, cartes, glyphes décoratifs) prennent les formes du chinois simplifié :
+   cette police n'existe que pour les caractères chinois (unicode-range), les lettres latines gardent la police de l'appli.
+   Sans elle, Zen Maru Gothic ou Yu Gothic dessinent les caractères à la japonaise. */
+@font-face {
+  font-family: "KQ Hanzi"; font-weight: 100 599; font-display: swap;
+  unicode-range: U+2E80-2FDF, U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+  src: local("Microsoft YaHei"), local("MicrosoftYaHei"), local("PingFang SC Regular"), local("PingFangSC-Regular"), local("Noto Sans SC Regular"), local("NotoSansSC-Regular"),
+    local("Noto Sans CJK SC Regular"), local("NotoSansCJKsc-Regular"), local("Source Han Sans SC Regular"), local("SourceHanSansSC-Regular"), local("Hiragino Sans GB W3"), local("HiraginoSansGB-W3");
+}
+@font-face {
+  font-family: "KQ Hanzi"; font-weight: 600 1000; font-display: swap;
+  unicode-range: U+2E80-2FDF, U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+  src: local("Microsoft YaHei Bold"), local("MicrosoftYaHei-Bold"), local("PingFang SC Semibold"), local("PingFangSC-Semibold"), local("Noto Sans SC Bold"), local("NotoSansSC-Bold"),
+    local("Noto Sans CJK SC Bold"), local("NotoSansCJKsc-Bold"), local("Source Han Sans SC Bold"), local("SourceHanSansSC-Bold"), local("Hiragino Sans GB W6"), local("HiraginoSansGB-W6");
+}
+/* Pas d'autre police chinoise nommée dans ces listes : elle servirait aussi aux lettres latines et à l'apostrophe (« l’ école »). */
+html[data-study="zh"] {
+  --font-jp: "KQ Hanzi", "Zen Maru Gothic", "Gowun Dodum", "Hiragino Maru Gothic ProN", "Yu Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-sans: "Atkinson Hyperlegible", "KQ Hanzi", system-ui, sans-serif;
+}
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
 ruby rt { font-size: 0.45em; color: var(--ink-soft); }
 .reduced * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }

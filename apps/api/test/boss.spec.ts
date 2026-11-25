@@ -8,12 +8,14 @@ describe('Combats de boss', () => {
   });
   afterAll(() => ctx.app.close());
 
-  /** Utilisateur qui lit déjà les kana et a terminé les 2 leçons de katakana (monde 2). */
+  /** Les 9 leçons de l'île des katakana (les 46 caractères de base). */
+  const KATA_LESSONS = ['n5-kata-a', 'n5-kata-ka', 'n5-kata-sa', 'n5-kata-ta', 'n5-kata-na', 'n5-kata-ha', 'n5-kata-ma', 'n5-kata-ya', 'n5-kata-ra'];
+
+  /** Utilisateur qui lit déjà les kana et a terminé les leçons de katakana (monde 2). */
   async function readyForKatakanaBoss() {
     const u = await signUp(ctx.app, { selfLevel: 'kana' });
     await u.agent.post('/api/worlds/n5-w2/boss/start').expect(403);
-    await completeFirstLesson(ctx, u.agent, 'n5-kata-a');
-    await completeFirstLesson(ctx, u.agent, 'n5-kata-ka');
+    for (const slug of KATA_LESSONS) await completeFirstLesson(ctx, u.agent, slug);
     return u;
   }
 

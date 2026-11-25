@@ -49,7 +49,7 @@ test('hors ligne : onboarding, leçon, persistance, révisions planifiées et d�
   // Fermeture / réouverture : la progression est conservée dans le navigateur
   await page.reload();
   await page.goto(FILE + '#/');
-  await expect(page.getByText(/1 leçon\(s\) sur 43 disponibles/)).toBeVisible();
+  await expect(page.getByText(/1 leçon\(s\) sur 50 disponibles/)).toBeVisible();
 
   // Quelques heures plus tard, les 5 kana sont à réviser
   // (simulé en reculant de 5 h les dates enregistrées dans la sauvegarde locale)
@@ -253,6 +253,8 @@ test('hors ligne : phrase complète prononcée après une bonne réponse, exerci
 });
 
 test('hors ligne : gardien de fin de monde, combat gagné côté moteur et marqué vaincu', async ({ page }) => {
+  // Les 9 leçons de katakana (46 caractères) avant le gardien
+  test.setTimeout(240_000);
   await page.goto(FILE);
   await page.getByRole('radio', { name: /Je lis les hiragana/ }).click();
   for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'Suivant' }).click();
@@ -261,7 +263,7 @@ test('hors ligne : gardien de fin de monde, combat gagné côté moteur et marqu
   await page.goto(FILE + '#/path');
   await expect(page.getByLabel(/Le Tanuki farceur : Termine l’île/)).toBeVisible();
 
-  for (const slug of ['n5-kata-a', 'n5-kata-ka']) {
+  for (const slug of ['n5-kata-a', 'n5-kata-ka', 'n5-kata-sa', 'n5-kata-ta', 'n5-kata-na', 'n5-kata-ha', 'n5-kata-ma', 'n5-kata-ya', 'n5-kata-ra']) {
     await page.goto(FILE + '#/lesson/' + slug);
     await page.getByRole('button', { name: 'Passer aux exercices' }).click();
     for (let k = 0; k < 40; k++) {
@@ -841,6 +843,9 @@ test('hors ligne : apprendre le coréen (hangeul, saga du hwarang, contes, retou
   // Première leçon : les voyelles du hangeul
   await page.getByRole('link', { name: 'Commencer la leçon' }).click();
   await expect(page.getByRole('heading', { name: 'Les voyelles ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ' })).toBeVisible();
+  // Une lettre coréenne est du hangeul, pas un kana
+  await expect(page.locator('#items-title + ul li').first()).toContainText('Hangeul');
+  await expect(page.locator('#items-title + ul')).not.toContainText('Kana');
   await page.getByRole('button', { name: 'Passer aux exercices' }).click();
   await answerAll(page, /Sans faute|Leçon terminée/);
 
@@ -1004,6 +1009,8 @@ test('hors ligne : apprendre le chinois pour le HSK (pinyin, saga du messager, h
   await page.getByRole('link', { name: 'Commencer la leçon' }).click();
   await expect(page.getByRole('heading', { name: 'Le pinyin et les quatre tons' })).toBeVisible();
   await expect(page.locator('ruby[lang="zh"]').filter({ hasText: 'bā' }).first()).toBeVisible();
+  // Les caractères prennent les formes du chinois simplifié dans toute l'appli (polices, voir index.css)
+  await expect(page.locator('html')).toHaveAttribute('data-study', 'zh');
   await page.getByRole('button', { name: 'Passer aux exercices' }).click();
   await answerAll(page, /Sans faute|Leçon terminée/);
 

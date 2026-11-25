@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { DUEL_TIER_NAMES, STUDY_LANGUAGES, decor, examLevelLabel, languageInfo, setHanLanguage, type DecorKey, type MeDto, type StudyLanguage } from '@koto/shared';
+import { DUEL_TIER_NAMES, STUDY_LANGUAGES, decor, examLevelLabel, languageInfo, type DecorKey, type MeDto, type StudyLanguage } from '@koto/shared';
+import { applyStudyLanguage } from '../lib/studyLanguage';
 import { put } from '../api/client';
 import { useMe } from '../api/hooks';
 import { T } from '../i18n';
@@ -46,7 +47,7 @@ export function studyWords(lang: StudyLanguage) {
 export function useStudyLang() {
   const { data: me } = useMe();
   const lang = me?.preferences.studyLanguage ?? 'ja';
-  setHanLanguage(lang);
+  applyStudyLanguage(lang);
   return studyWords(lang);
 }
 

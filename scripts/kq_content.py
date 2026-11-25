@@ -13,10 +13,27 @@ def t(pair):
     EN[fr] = en
     return fr
 
+def kanji_reading(reading, romaji, kun):
+    """Lecture d'un kanji seul : quand la lecture donnée est celle d'un mot à okurigana (長い → ながい),
+    on note la partie écrite en kana entre parenthèses, comme dans les dictionnaires : なが(い), naga(i)."""
+    if not reading or not kun or '(' in reading:
+        return reading, romaji
+    for k in kun:
+        if '(' in k and k.replace('(', '').replace(')', '') == reading:
+            okuri = k[k.index('(') + 1:k.index(')')]
+            from reading_roman import _kana_romaji
+            okuri_r = _kana_romaji(okuri)
+            if romaji and romaji.endswith(okuri_r) and len(romaji) > len(okuri_r):
+                romaji = f'{romaji[:-len(okuri_r)]}({okuri_r})'
+            return k, romaji
+    return reading, romaji
+
 def item(slug, kind, front, reading, romaji, meaning, kanji=None):
     # Un sens identique à un sens existant garde la même traduction.
     fr = meaning[0]
     meaning = (fr, EN.get(fr) or DICO.get(fr) or meaning[1])
+    if kind == 'kanji' and kanji:
+        reading, romaji = kanji_reading(reading, romaji, kanji[1])
     it = {'slug': slug, 'kind': kind, 'front': front, 'reading': reading, 'romaji': romaji, 'meaning': t(meaning)}
     if kanji:
         on, kun, strokes = kanji

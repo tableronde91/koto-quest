@@ -95,7 +95,8 @@ export function checkAnswer(q: Pick<Question, 'answer' | 'type'>, given: unknown
 export function questionTypesFor(item: EngineItem): QuestionType[] {
   switch (item.kind) {
     case 'kana':
-      return ['meaning_choice', 'reverse_choice', 'listening_choice', 'true_false'];
+      // ㅇ en tête de syllabe ne se prononce pas : impossible de le reconnaître à l'oreille.
+      return silentInitial(item) ? ['meaning_choice', 'reverse_choice', 'true_false'] : ['meaning_choice', 'reverse_choice', 'listening_choice', 'true_false'];
     case 'vocabulary': {
       const types: QuestionType[] = ['meaning_choice', 'reverse_choice', 'listening_choice', 'true_false'];
       if (item.reading && item.reading !== item.front) types.push('reading_choice');
@@ -160,6 +161,16 @@ export function pickDistractors(
     out.push(field(cand, key));
   }
   return out;
+}
+
+/**
+ * Consonne coréenne muette en tête de syllabe (ㅇ) : la synthèse vocale la prononce avec ㅏ (아),
+ * on n'entend donc que la voyelle. Pas de question d'écoute pour elle.
+ */
+export function silentInitial(item: Pick<EngineItem, 'kind' | 'front' | 'reading'>): boolean {
+  if (item.kind !== 'kana' || kanaScript(item.front) !== 'consonant' || !item.reading) return false;
+  const c = item.reading.codePointAt(0) ?? 0;
+  return c >= 0xac00 && c <= 0xd7a3 && Math.floor((c - 0xac00) / 588) === 11;
 }
 
 function kanaScript(s: string): 'hiragana' | 'katakana' | 'consonant' | 'vowel' | 'syllable' | 'other' {
@@ -233,10 +244,15 @@ export function generateQuestion(
         { text: item.meaning },
       );
     case 'reading_choice':
+      // Un kana ou une lettre du hangeul n'a pas d'autre « lecture » que son son (la syllabe lue par la voix n'en est pas une).
+      if (item.kind === 'kana') return null;
       return choiceQuestion('reading', isChineseItem(item) ? `Quel est le pinyin de ${labelOf(item)} ?` : `Quelle est la lecture de ${labelOf(item)} ?`, { jp: item.front }, { audio });
     case 'listening_choice':
       if (item.kind === 'kana') {
-        return choiceQuestion('front', 'Écoute : quel caractère entends-tu ?', {}, { audio });
+        if (silentInitial(item)) return null;
+        // Consonne du hangeul : la voix la prononce avec ㅏ (ㄱ → 가), on reconnaît donc le début de la syllabe.
+        const prompt = kanaScript(item.front) === 'consonant' ? 'Écoute la syllabe : par quelle consonne commence-t-elle ?' : 'Écoute : quel caractère entends-tu ?';
+        return choiceQuestion('front', prompt, {}, { audio });
       }
       return choiceQuestion('meaning', 'Écoute : que signifie le mot prononcé ?', {}, { audio });
     case 'true_false': {

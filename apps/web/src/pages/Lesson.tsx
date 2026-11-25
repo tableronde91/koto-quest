@@ -7,7 +7,7 @@ import { post } from '../api/client';
 import { useLesson } from '../api/hooks';
 import { QuizRunner, RunSummary } from '../components/QuizRunner';
 import { ErrorBox, Jp, SpeakButtons, Spinner } from '../components/ui';
-import { KIND_LABEL, MASTERY_LABEL } from '../lib/format';
+import { MASTERY_LABEL, kindLabelOf } from '../lib/format';
 import { Avatar } from '../components/Avatar';
 import { Cheer, Confetti, Stamp } from '../components/Celebrate';
 import { T } from '../i18n';
@@ -142,9 +142,10 @@ function ItemCard({ item, furigana, reserveRuby }: { item: LessonDto['items'][nu
   const audio = item.kind === 'grammar' ? null : spokenForm(item.front, item.reading);
   return (
     <li className="flex flex-col gap-1 rounded-2xl border border-line bg-surface p-4">
-      <span className="truncate text-xs text-ink-soft">{KIND_LABEL[item.kind]}{item.mastery ? `, ${MASTERY_LABEL[item.mastery]}` : ''}</span>
-      {/* Zone de hauteur fixe, alignée en bas : glyphes et furigana restent sur la même ligne d'une carte à l'autre. */}
-      <button type="button" className={`flex items-end text-left ${reserveRuby ? 'h-16' : 'mt-1'}`} onClick={() => audio && import('../lib/speech').then((m) => m.speak(audio))} aria-label={T("Écouter {0}", [item.front])} disabled={!audio}>
+      <span className="truncate text-xs text-ink-soft">{kindLabelOf(item)}{item.mastery ? `, ${MASTERY_LABEL[item.mastery]}` : ''}</span>
+      {/* Zone de hauteur minimale, alignée en bas : glyphes et furigana restent sur la même ligne d'une carte à l'autre,
+          sans que les furigana ni une construction sur plusieurs lignes ne débordent sur l'étiquette. */}
+      <button type="button" className={`flex items-end text-left ${reserveRuby ? 'min-h-20 pt-1' : 'mt-1'}`} onClick={() => audio && import('../lib/speech').then((m) => m.speak(audio))} aria-label={T("Écouter {0}", [item.front])} disabled={!audio}>
         <Jp text={item.front} reading={item.kind === 'kana' ? null : item.reading} furigana={furigana} className={`${[...item.front].length <= 2 ? 'text-5xl' : 'text-2xl sm:text-3xl'} font-bold leading-tight`} />
       </button>
       <span className="font-bold">{item.meaning}</span>
