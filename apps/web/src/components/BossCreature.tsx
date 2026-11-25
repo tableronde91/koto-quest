@@ -581,6 +581,64 @@ const SPECIES: Record<string, Species> = {
     face: <><ellipse cx="100" cy="116" rx="17" ry="11" fill="#3A3A44" /><ellipse cx="100" cy="110" rx="6" ry="4" fill="#0F0F14" /></>,
     front: <g fill="#7AB8E2">{[[60, 186], [80, 192], [124, 192], [144, 186]].map(([x, y]) => <path key={x} d={`M${x} ${y - 8} Q${x + 3} ${y - 2} ${x} ${y} Q${x - 3} ${y - 2} ${x} ${y - 8}Z`} />)}</g>,
   },
+  // ───── Gardiens hispano-américains (DELE B2 — la traversée des Amériques ; voyelles à tilde du guaraní) ─────
+  // Guayota : démon guanche des volcans, corps de lave, cornes de basalte
+  'ã': {
+    body: '#3A2A2A', belly: '#E2622E', head: '#4A3030', eye: '#F2D94E',
+    top: <path d="M74 58 Q62 36 72 20 Q78 38 88 48 M126 58 Q138 36 128 20 Q122 38 112 48" stroke="#2A1A1A" strokeWidth="7" fill="none" strokeLinecap="round" />,
+    under: <g stroke="#E2862A" strokeWidth="2" fill="none">{[[70, 140, 82, 160], [130, 140, 118, 166], [100, 150, 104, 176]].map(([a, b, c, d]) => <path key={a} d={`M${a} ${b} L${c} ${d}`} />)}</g>,
+    face: <path d="M86 118 Q100 128 114 118" stroke="#E2622E" strokeWidth="3" fill="none" />,
+  },
+  // Ciguapa : femme sauvage des Caraïbes, longue chevelure noire, pieds tournés vers l'arrière
+  'ẽ': {
+    body: '#A86A4A', belly: '#D89A72', head: '#C88A62', eye: '#2A1A10',
+    back: <path d="M50 70 Q36 150 56 196 L144 196 Q164 150 150 70 Q100 30 50 70Z" fill="#1F1A1A" />,
+    top: <path d="M60 86 Q58 40 100 36 Q142 40 140 86 Q124 64 100 62 Q76 64 60 86Z" fill="#1F1A1A" />,
+    face: <path d="M90 118 Q100 124 110 118" stroke="#6A2A2A" strokeWidth="2.5" fill="none" />,
+    front: <g fill="#A86A4A">{[78, 122].map((x) => <path key={x} d={`M${x - 10} 196 Q${x} 186 ${x + 10} 196 L${x + 14} 202 H${x - 6}Z`} transform={`scale(-1 1) translate(${-2 * x} 0)`} />)}</g>,
+  },
+  // Nahual : sorcier masqué qui se change en jaguar (oreilles et taches de jaguar)
+  'ĩ': {
+    body: '#C8923A', belly: '#F2D8A0', head: '#D8A24A', eye: '#2A1A10',
+    top: <>{ear(70, false, '#C8923A', '#F2D8A0')}{ear(130, true, '#C8923A', '#F2D8A0')}</>,
+    under: <g fill="#5A3A1A">{[[72, 140], [92, 156], [116, 146], [132, 164], [84, 176]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="4.5" />)}</g>,
+    face: <><rect x="70" y="86" width="60" height="16" rx="6" fill="#3A8A7A" /><path d="M94 114 L100 120 L106 114Z" fill="#3A2A1A" /></>,
+  },
+  // Sombrerón : petit homme au chapeau immense et à la guitare
+  'õ': {
+    body: '#2A2A3A', belly: '#4A4A5E', head: '#C9A27A', eye: '#2A1A10',
+    top: <><ellipse cx="100" cy="56" rx="78" ry="14" fill="#1F1F2A" /><path d="M66 56 Q68 14 100 12 Q132 14 134 56Z" fill="#1F1F2A" /><rect x="66" y="44" width="68" height="6" fill="#C8323F" /></>,
+    face: <path d="M88 116 Q100 126 112 116 M86 108 Q100 112 114 108" stroke="#2A1A10" strokeWidth="2.5" fill="none" />,
+    front: <g transform="translate(160 150) rotate(-30)"><ellipse cx="0" cy="8" rx="12" ry="14" fill="#C8823A" /><circle cx="0" cy="8" r="4" fill="#3A2A1A" /><rect x="-2" y="-30" width="4" height="26" fill="#7A4A2A" /></g>,
+  },
+  // Mohán : vieux sorcier du fleuve, longue barbe, pipe fumante
+  'ũ': {
+    body: '#3A5A4A', belly: '#6A8A6A', head: '#C9A27A', eye: '#2A1A10',
+    top: <path d="M62 86 Q60 46 100 42 Q140 46 138 86 Q130 66 100 64 Q70 66 62 86Z" fill="#E8E8E8" />,
+    under: <path d="M68 108 Q100 196 132 108 Q118 130 100 130 Q82 130 68 108Z" fill="#E8E8E8" />,
+    front: <g transform="translate(124 120)"><path d="M0 0 L22 6" stroke="#5A3A24" strokeWidth="3" /><rect x="20" y="0" width="8" height="10" rx="2" fill="#5A3A24" /><g fill="#B8B8C0" opacity="0.8"><circle cx="26" cy="-6" r="4" /><circle cx="30" cy="-14" r="5" /></g></g>,
+  },
+  // Muki : gnome des mines andines, casque d'or, lampe
+  'Ã': {
+    body: '#8A5A3A', belly: '#C89A6A', head: '#D9A07A', eye: '#2A1A10',
+    top: <><path d="M62 70 Q62 30 100 28 Q138 30 138 70Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="2" /><circle cx="100" cy="44" r="7" fill="#FFF6C8" stroke="#9A7A2A" strokeWidth="1.5" /></>,
+    under: <path d="M72 110 Q100 160 128 110 Q114 126 100 126 Q86 126 72 110Z" fill="#E8E8E8" />,
+    front: <g transform="translate(160 150)"><path d="M-6 0 L6 -18 L12 -14" stroke="#7A7A7A" strokeWidth="4" fill="none" /><path d="M8 -20 L22 -12 L14 -8Z" fill="#9A9A9A" /></g>,
+  },
+  // Caleuche : navire fantôme vivant, coque sombre, voiles lumineuses
+  'Õ': {
+    body: '#2A3A4A', belly: '#4A5A6A', head: '#3A4A5A', eye: '#F2F6FF',
+    back: <g><path d="M100 14 V60 M36 30 V130 M164 30 V130" stroke="#1F2A3A" strokeWidth="4" /><path d="M36 34 L6 118 H36Z M164 34 L194 118 H164Z M100 16 L76 52 H100Z" fill="#D8E4F8" stroke="#7A8AA8" strokeWidth="2" /></g>,
+    under: <g fill="#F2D94E">{[64, 84, 104, 124, 144].map((x) => <circle key={x} cx={x} cy={170} r="4" />)}</g>,
+    face: <path d="M88 118 Q100 112 112 118" stroke="#E8F0FF" strokeWidth="2.5" fill="none" />,
+  },
+  // Pombero : petit homme velu des forêts, chapeau de paille, oiseaux autour
+  'ỹ': {
+    body: '#5A3A2A', belly: '#8A6A4A', head: '#7A5A3A', eye: '#F2D94E',
+    top: <><ellipse cx="100" cy="54" rx="56" ry="10" fill="#E2C87A" /><path d="M72 54 Q74 30 100 28 Q126 30 128 54Z" fill="#E2C87A" /></>,
+    under: <path d="M70 106 Q100 150 130 106 Q116 122 100 122 Q84 122 70 106Z" fill="#4A2A1A" />,
+    front: <g>{[[36, 70, '#E2622E'], [168, 84, '#3A8AE2'], [40, 140, '#E2B84A']].map(([x, y, c]) => <g key={String(x)} transform={`translate(${x} ${y})`}><ellipse rx="9" ry="6" fill={String(c)} /><path d="M7 -2 L13 0 L7 2Z" fill="#E2B84A" /><circle cx="3" cy="-2" r="1.4" fill="#1F2433" /></g>)}</g>,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

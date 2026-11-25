@@ -303,7 +303,84 @@ DUIO = STORY('ciudad-de-duio', 'd', 'DELEB1', '#2E6A8A', ('La ciudad sumergida d
   ]),
 ])
 
-ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO]
+# ═════════════════════════ La leyenda de El Dorado (Colombie ; DELE B2) ═════════════════════════
+DORADO = STORY('el-dorado', 'o', 'DELEB2', '#C8A02A', ('La leyenda de El Dorado', 'La légende de l’Eldorado', 'The legend of El Dorado'),
+  ('Sur la lagune de Guatavita, un chef muisca couvert de poudre d’or offre des trésors aux dieux… et fait naître le rêve fou des conquistadors.', 'On Lake Guatavita, a Muisca chief covered in gold dust offers treasures to the gods… and gives birth to the conquistadors’ wild dream.'), [
+  CH('el-dorado-1', ('El hombre dorado', 'L’homme doré', 'The golden man'), [
+    [S('En las montañas de lo que hoy es Colombia vivían los muiscas, un pueblo que dominaba el arte de trabajar el oro.', 'Dans les montagnes de l’actuelle Colombie vivaient les Muiscas, un peuple qui maîtrisait l’art de travailler l’or.', 'In the mountains of what is now Colombia lived the Muisca, a people who had mastered the art of working gold.'),
+     S('Cuando un nuevo jefe subía al poder, se celebraba una ceremonia en la laguna de Guatavita.', 'Quand un nouveau chef prenait le pouvoir, on célébrait une cérémonie sur la lagune de Guatavita.', 'Whenever a new chief came to power, a ceremony was held on Lake Guatavita.'),
+     S('Le cubrían el cuerpo de polvo de oro, de manera que brillaba como si fuera el mismo sol.', 'On lui couvrait le corps de poudre d’or, de sorte qu’il brillait comme s’il était le soleil lui-même.', 'They covered his body in gold dust, so that he shone as if he were the sun itself.')],
+    [S('Subido a una balsa, el jefe navegaba hasta el centro de la laguna y arrojaba al agua joyas y figuras de oro como ofrenda a los dioses.', 'Monté sur un radeau, le chef naviguait jusqu’au centre de la lagune et jetait à l’eau des bijoux et des figurines en or en offrande aux dieux.', 'Standing on a raft, the chief sailed to the middle of the lake and threw jewels and gold figures into the water as an offering to the gods.'),
+     S('Después se sumergía en el agua y salía de ella convertido en el nuevo señor de su pueblo.', 'Puis il plongeait dans l’eau et en ressortait devenu le nouveau seigneur de son peuple.', 'Then he plunged into the water and came out as the new lord of his people.')],
+  ], [
+    W('dominar', '/domiˈnaɾ/', 'maîtriser', 'to master'),
+    W('el polvo', '/el ˈpolβo/', 'la poussière, la poudre', 'dust, powder'),
+    W('brillar', '/bɾiˈʎaɾ/', 'briller', 'to shine'),
+    W('la balsa', '/la ˈbalsa/', 'le radeau', 'the raft'),
+    W('arrojar', '/aroˈxaɾ/', 'jeter, lancer', 'to throw'),
+    W('la ofrenda', '/la oˈfɾenda/', 'l’offrande', 'the offering'),
+  ], [
+    Q(('De quoi couvrait-on le corps du nouveau chef ?', 'What was the new chief’s body covered with?'), [('De poudre d’or', 'Gold dust'), ('De plumes', 'Feathers'), ('De boue', 'Mud')], 0),
+    Q(('Que jetait le chef dans la lagune ?', 'What did the chief throw into the lake?'), [('Des bijoux et des figurines en or', 'Jewels and gold figures'), ('Des fleurs', 'Flowers'), ('Des pierres', 'Stones')], 0),
+  ]),
+  CH('el-dorado-2', ('La ciudad que nunca existió', 'La ville qui n’a jamais existé', 'The city that never existed'), [
+    [S('Cuando los conquistadores españoles oyeron hablar del «hombre dorado», imaginaron una ciudad entera hecha de oro.', 'Quand les conquistadors espagnols entendirent parler de « l’homme doré », ils imaginèrent une ville entière faite d’or.', 'When the Spanish conquistadors heard about the “golden man”, they imagined an entire city made of gold.'),
+     S('Durante más de un siglo, cientos de expediciones la buscaron por selvas, ríos y montañas, y muchos hombres murieron en el intento.', 'Pendant plus d’un siècle, des centaines d’expéditions la cherchèrent à travers forêts, fleuves et montagnes, et beaucoup d’hommes moururent en essayant.', 'For more than a century, hundreds of expeditions searched for it through jungles, rivers and mountains, and many men died in the attempt.'),
+     S('Incluso intentaron vaciar la laguna de Guatavita, aunque solo encontraron unas pocas piezas.', 'On tenta même de vider la lagune de Guatavita, mais on n’y trouva que quelques pièces.', 'They even tried to drain Lake Guatavita, but only found a few pieces.')],
+    [S('El Dorado nunca existió como ciudad, pero la leyenda sobrevivió.', 'L’Eldorado n’a jamais existé en tant que ville, mais la légende a survécu.', 'El Dorado never existed as a city, but the legend survived.'),
+     S('Hoy, en el Museo del Oro de Bogotá, puede verse una balsa de oro que representa aquella ceremonia.', 'Aujourd’hui, au musée de l’Or de Bogotá, on peut voir un radeau en or qui représente cette cérémonie.', 'Today, at the Gold Museum in Bogotá, you can see a gold raft that depicts that ceremony.'),
+     S('Y en español, «encontrar El Dorado» sigue significando hallar un lugar donde todos los sueños se cumplen.', 'Et en espagnol, « trouver l’Eldorado » signifie toujours découvrir un endroit où tous les rêves se réalisent.', 'And in Spanish, “finding El Dorado” still means discovering a place where every dream comes true.')],
+  ], [
+    W('el conquistador', '/el konkistaˈðoɾ/', 'le conquistador', 'the conquistador'),
+    W('la selva', '/la ˈselβa/', 'la jungle, la forêt tropicale', 'the jungle, the rainforest'),
+    W('el intento', '/el inˈtento/', 'la tentative', 'the attempt'),
+    W('vaciar', '/baˈθjaɾ/', 'vider', 'to empty, to drain'),
+    W('sobrevivir', '/soβɾeβiˈβiɾ/', 'survivre', 'to survive'),
+    W('cumplirse', '/kumˈpliɾse/', 'se réaliser', 'to come true'),
+  ], [
+    Q(('Qu’imaginèrent les conquistadors ?', 'What did the conquistadors imagine?'), [('Une ville entière faite d’or', 'A whole city made of gold'), ('Une montagne de sel', 'A mountain of salt'), ('Un fleuve d’argent', 'A river of silver')], 0),
+    Q(('Que peut-on voir au musée de l’Or de Bogotá ?', 'What can you see at the Gold Museum in Bogotá?'), [('Un radeau en or', 'A gold raft'), ('La ville de l’Eldorado', 'The city of El Dorado'), ('La couronne du roi d’Espagne', 'The King of Spain’s crown')], 0),
+  ]),
+])
+
+# ═════════════════════════ Los hombres de maíz (Popol Vuh, mythe maya ; DELE B2) ═════════════════════════
+MAIZ = STORY('hombres-de-maiz', 'z', 'DELEB2', '#B8902A', ('Los hombres de maíz', 'Les hommes de maïs', 'The people of maize'),
+  ('D’après le Popol Vuh, livre sacré des Mayas k’iche’ : les dieux essaient de créer les humains avec de la boue, puis du bois… avant de trouver le maïs.', 'From the Popol Vuh, the sacred book of the K’iche’ Maya: the gods try to create humans from mud, then wood… before finding maize.'), [
+  CH('hombres-de-maiz-1', ('El barro y la madera', 'La boue et le bois', 'Mud and wood'), [
+    [S('Al principio no había más que el cielo y el mar en calma. Los dioses decidieron crear seres que les hablaran y les dieran las gracias.', 'Au commencement, il n’y avait que le ciel et la mer calme. Les dieux décidèrent de créer des êtres qui leur parleraient et les remercieraient.', 'In the beginning there was nothing but the sky and the calm sea. The gods decided to create beings who would speak to them and thank them.'),
+     S('Primero los hicieron de barro, pero aquellos hombres se deshacían con el agua y no podían moverse ni pensar.', 'D’abord, ils les firent de boue, mais ces hommes se défaisaient dans l’eau et ne pouvaient ni bouger ni penser.', 'First they made them from mud, but those people fell apart in water and could neither move nor think.')],
+    [S('Entonces los tallaron en madera. Los hombres de madera hablaban y tenían hijos, pero no tenían corazón ni memoria de sus creadores.', 'Alors, ils les taillèrent dans le bois. Les hommes de bois parlaient et avaient des enfants, mais ils n’avaient ni cœur ni souvenir de leurs créateurs.', 'Then they carved them from wood. The wooden people spoke and had children, but they had neither hearts nor any memory of their creators.'),
+     S('Decepcionados, los dioses enviaron una gran inundación, y dicen que los monos de la selva son lo que queda de ellos.', 'Déçus, les dieux envoyèrent un grand déluge, et l’on dit que les singes de la forêt sont ce qu’il en reste.', 'Disappointed, the gods sent a great flood, and it is said that the monkeys of the forest are all that remains of them.')],
+  ], [
+    W('el barro', '/el ˈbaro/', 'la boue, l’argile', 'mud, clay'),
+    W('deshacerse', '/desaˈθeɾse/', 'se défaire, se dissoudre', 'to fall apart, to dissolve'),
+    W('tallar', '/taˈʎaɾ/', 'tailler, sculpter', 'to carve'),
+    W('la madera', '/la maˈðeɾa/', 'le bois (matière)', 'wood'),
+    W('la inundación', '/la inundaˈθjon/', 'l’inondation, le déluge', 'the flood'),
+    W('el mono', '/el ˈmono/', 'le singe', 'the monkey'),
+  ], [
+    Q(('Pourquoi les hommes de boue ne convenaient-ils pas ?', 'Why were the mud people no good?'), [('Ils se défaisaient dans l’eau et ne pensaient pas', 'They fell apart in water and could not think'), ('Ils étaient trop grands', 'They were too tall'), ('Ils parlaient trop', 'They talked too much')], 0),
+    Q(('Que manquait-il aux hommes de bois ?', 'What did the wooden people lack?'), [('Un cœur et la mémoire de leurs créateurs', 'A heart and memory of their creators'), ('La parole', 'Speech'), ('Des enfants', 'Children')], 0),
+  ]),
+  CH('hombres-de-maiz-2', ('La masa de maíz', 'La pâte de maïs', 'The maize dough'), [
+    [S('Los animales de la selva les hablaron a los dioses de un lugar lleno de mazorcas amarillas y blancas.', 'Les animaux de la forêt parlèrent aux dieux d’un endroit plein d’épis jaunes et blancs.', 'The animals of the forest told the gods about a place full of yellow and white ears of maize.'),
+     S('Con la masa de aquel maíz, la abuela Ixmucané preparó la carne de los primeros hombres, y con el agua en la que se había lavado las manos, su sangre.', 'Avec la pâte de ce maïs, la grand-mère Ixmucané prépara la chair des premiers hommes, et avec l’eau dans laquelle elle s’était lavé les mains, leur sang.', 'With the dough from that maize, grandmother Ixmucané made the flesh of the first people, and with the water she had washed her hands in, their blood.')],
+    [S('Estos hombres sí pensaban, hablaban y daban las gracias. Veían tan lejos que los dioses temieron que llegaran a ser como ellos.', 'Ces hommes-là pensaient, parlaient et remerciaient. Ils voyaient si loin que les dieux craignirent qu’ils ne deviennent leurs égaux.', 'These people did think, speak and give thanks. They could see so far that the gods feared they would become their equals.'),
+     S('Por eso les nublaron un poco la vista, como cuando se empaña un espejo. Desde entonces, para los mayas, el ser humano está hecho de maíz.', 'C’est pourquoi ils leur voilèrent un peu la vue, comme un miroir qui s’embue. Depuis, pour les Mayas, l’être humain est fait de maïs.', 'So they clouded their sight a little, like a mirror misting over. Since then, for the Maya, human beings have been made of maize.')],
+  ], [
+    W('la mazorca', '/la maˈθoɾka/', 'l’épi (de maïs)', 'the ear of maize, the corn cob'),
+    W('la masa', '/la ˈmasa/', 'la pâte', 'the dough'),
+    W('la carne', '/la ˈkaɾne/', 'la chair, la viande', 'flesh, meat'),
+    W('la sangre', '/la ˈsaŋɡɾe/', 'le sang', 'blood'),
+    W('temer', '/teˈmeɾ/', 'craindre', 'to fear'),
+    W('empañarse', '/empaˈɲaɾse/', 's’embuer, se ternir', 'to mist up'),
+  ], [
+    Q(('Qui parla du maïs aux dieux ?', 'Who told the gods about maize?'), [('Les animaux de la forêt', 'The animals of the forest'), ('Les hommes de bois', 'The wooden people'), ('Le soleil', 'The sun')], 0),
+    Q(('Pourquoi les dieux voilèrent-ils la vue des hommes de maïs ?', 'Why did the gods cloud the maize people’s sight?'), [('Ils craignaient qu’ils deviennent leurs égaux', 'They feared they would become their equals'), ('Pour les punir d’un mensonge', 'To punish them for a lie'), ('Pour qu’ils dorment', 'So they would sleep')], 0),
+  ]),
+])
+
+ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES

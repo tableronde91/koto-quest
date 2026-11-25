@@ -1,0 +1,3672 @@
+{
+ "contentVersion": "2026.11.23",
+ "level": {
+  "code": "DELEB2",
+  "title": "DELE B2 : la traversée des Amériques",
+  "region": "Traversée des Amériques",
+  "order": 53
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau B2 du CECRL et préparent au DELE B2, mais ne sont pas des listes officielles de l’Instituto Cervantes.",
+ "worlds": [
+  {
+   "slug": "deleb2-w1",
+   "title": "Les volcans des Canaries",
+   "region": "Traversée des Amériques",
+   "description": "Maîtriser ser et estar quand le sens change (ser listo / estar listo), exprimer les changements (ponerse, volverse, hacerse, quedarse) et décrire le caractère avec nuance.",
+   "boss": {
+    "name": "Guayota du Teide",
+    "glyph": "ã",
+    "intro": "Selon les Guanches, premiers habitants des Canaries, Guayota, démon des volcans, avait un jour enfermé le soleil dans le Teide. Il a de nouveau assombri le ciel de Tenerife : décris avec précision les gens et leurs changements, et il rendra la lumière."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w1-c1",
+     "title": "Au pied du Teide",
+     "lessons": [
+      {
+       "slug": "es-ser-estar-b2",
+       "title": "Être prêt ou être intelligent ? ser et estar",
+       "objective": "Choisir ser ou estar quand un adjectif change de sens, et employer estar de et ser pour les événements.",
+       "minutes": 10,
+       "explanation": [
+        "Certains adjectifs changent de sens : ser listo (être intelligent) / estar listo (être prêt) ; ser rico (riche) / estar rico (délicieux) ; ser aburrido (ennuyeux) / estar aburrido (s’ennuyer) ; ser malo (méchant) / estar malo (malade).",
+        "Estar de + nom ou activité : estar de vacaciones, de viaje, de buen / mal humor, de camarero (travailler provisoirement comme serveur).",
+        "Pour dire où a lieu un événement, on emploie ser : La fiesta es en la playa. El concierto fue en el auditorio."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-ser-estar-sentido",
+         "kind": "grammar",
+         "front": "ser listo / estar listo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être intelligent / être prêt"
+        },
+        {
+         "slug": "es-ser-aburrido",
+         "kind": "vocabulary",
+         "front": "ser aburrido / estar aburrido",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être ennuyeux / s’ennuyer"
+        },
+        {
+         "slug": "es-estar-malo",
+         "kind": "vocabulary",
+         "front": "ser malo / estar malo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être méchant / être malade"
+        },
+        {
+         "slug": "es-estar-de-vacaciones",
+         "kind": "vocabulary",
+         "front": "estar de vacaciones",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être en vacances"
+        },
+        {
+         "slug": "es-estar-de-mal-humor",
+         "kind": "vocabulary",
+         "front": "estar de mal humor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être de mauvaise humeur"
+        },
+        {
+         "slug": "es-el-volcan",
+         "kind": "vocabulary",
+         "front": "el volcán",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le volcan"
+        },
+        {
+         "slug": "es-el-archipielago",
+         "kind": "vocabulary",
+         "front": "el archipiélago",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’archipel"
+        },
+        {
+         "slug": "es-la-lava",
+         "kind": "vocabulary",
+         "front": "la lava",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la lave"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Mi primo es muy listo, pero nunca está listo a tiempo.",
+         "reading": null,
+         "fr": "Mon cousin est très intelligent, mais il n’est jamais prêt à l’heure."
+        },
+        {
+         "jp": "La fiesta es en la playa de Las Teresitas, y todos estamos de buen humor.",
+         "reading": null,
+         "fr": "La fête a lieu sur la plage de Las Teresitas, et nous sommes tous de bonne humeur."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Esta paella ＿ riquísima.",
+         "choices": [
+          "está",
+          "es",
+          "hay"
+         ],
+         "answer": "está",
+         "explanation": "Estar rico = être délicieux.",
+         "translation": "Cette paella est délicieuse."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El concierto ＿ en el auditorio de Tenerife.",
+         "choices": [
+          "es",
+          "está",
+          "hay"
+         ],
+         "answer": "es",
+         "explanation": "Un événement a lieu : ser.",
+         "translation": "Le concert a lieu à l’auditorium de Tenerife."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mi abuelo ＿ malo: tiene gripe.",
+         "choices": [
+          "está",
+          "es",
+          "tiene"
+         ],
+         "answer": "está",
+         "explanation": "Estar malo = être malade.",
+         "translation": "Mon grand-père est malade : il a la grippe."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Este libro es muy aburrido.",
+         "translation": "Le livre est ennuyeux.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Ser aburrido = être ennuyeux."
+        }
+       ]
+      },
+      {
+       "slug": "es-verbos-cambio",
+       "title": "Devenir : ponerse, volverse, hacerse, quedarse",
+       "objective": "Choisir le bon verbe pour exprimer un changement.",
+       "minutes": 10,
+       "explanation": [
+        "Ponerse + adjectif = changement passager : ponerse nervioso, rojo, triste. Quedarse = le résultat d’un événement : quedarse sordo, sin trabajo, solo, sin palabras.",
+        "Volverse = changement profond, souvent négatif : volverse loco, egoísta, desconfiado. Hacerse = changement par l’effort ou la volonté : hacerse rico, famoso, médico, vegetariano.",
+        "Llegar a ser = finir par devenir, après un long chemin : Llegó a ser alcaldesa. Convertirse en + nom : El pueblo se convirtió en una ciudad."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-ponerse",
+         "kind": "grammar",
+         "front": "ponerse + adjetivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devenir (changement passager)"
+        },
+        {
+         "slug": "gram-es-volverse",
+         "kind": "grammar",
+         "front": "volverse + adjetivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devenir (changement profond)"
+        },
+        {
+         "slug": "gram-es-hacerse",
+         "kind": "grammar",
+         "front": "hacerse + adjetivo / nombre",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devenir (par la volonté)"
+        },
+        {
+         "slug": "es-quedarse-cambio",
+         "kind": "vocabulary",
+         "front": "quedarse + adjetivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se retrouver (résultat d’un événement)"
+        },
+        {
+         "slug": "es-llegar-a-ser",
+         "kind": "vocabulary",
+         "front": "llegar a ser",
+         "reading": null,
+         "romaji": null,
+         "meaning": "finir par devenir"
+        },
+        {
+         "slug": "es-convertirse",
+         "kind": "vocabulary",
+         "front": "convertirse en",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se transformer en"
+        },
+        {
+         "slug": "es-ponerse-rojo",
+         "kind": "vocabulary",
+         "front": "ponerse rojo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rougir"
+        },
+        {
+         "slug": "es-volverse-loco",
+         "kind": "vocabulary",
+         "front": "volverse loco",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devenir fou"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Cuando vio la erupción, se puso muy nerviosa y se quedó sin palabras.",
+         "reading": null,
+         "fr": "Quand elle a vu l’éruption, elle est devenue très nerveuse et est restée sans voix."
+        },
+        {
+         "jp": "Empezó vendiendo plátanos en el mercado y llegó a ser el empresario más rico de la isla.",
+         "reading": null,
+         "fr": "Il a commencé en vendant des bananes au marché et il a fini par devenir l’entrepreneur le plus riche de l’île."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Cuando habla en público, se ＿ muy nervioso.",
+         "choices": [
+          "pone",
+          "vuelve",
+          "hace"
+         ],
+         "answer": "pone",
+         "explanation": "Changement passager : ponerse.",
+         "translation": "Quand il parle en public, il devient très nerveux."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Después de años de estudio, se ＿ médica.",
+         "choices": [
+          "hizo",
+          "puso",
+          "quedó"
+         ],
+         "answer": "hizo",
+         "explanation": "Par l’effort : hacerse.",
+         "translation": "Après des années d’études, elle est devenue médecin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Con tanto trabajo, me voy a ＿ loco.",
+         "choices": [
+          "volver",
+          "poner",
+          "hacer"
+         ],
+         "answer": "volver",
+         "explanation": "Volverse loco = devenir fou.",
+         "translation": "Avec tout ce travail, je vais devenir fou."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Cerraron la fábrica y muchos se ＿ sin trabajo.",
+         "choices": [
+          "quedaron",
+          "pusieron",
+          "hicieron"
+         ],
+         "answer": "quedaron",
+         "explanation": "Résultat d’un événement : quedarse.",
+         "translation": "L’usine a fermé et beaucoup se sont retrouvés sans travail."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w1-c2",
+     "title": "Les gens de l’île",
+     "lessons": [
+      {
+       "slug": "es-caracter",
+       "title": "Le caractère : orgulloso, terco, generoso",
+       "objective": "Décrire les qualités et les défauts de quelqu’un avec nuance.",
+       "minutes": 9,
+       "explanation": [
+        "Qualités : generoso, sincero, sensato (raisonnable), comprensivo (compréhensif), trabajador, valiente.",
+        "Défauts : orgulloso (fier, orgueilleux), terco ou cabezota (têtu), tacaño (radin), celoso (jaloux), vago (paresseux), mentiroso (menteur).",
+        "Nuancer : un poco, bastante, demasiado ; tener buen / mal carácter ; ser de los que… (faire partie de ceux qui…)."
+       ],
+       "items": [
+        {
+         "slug": "es-orgulloso",
+         "kind": "vocabulary",
+         "front": "orgulloso / orgullosa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fier, orgueilleux"
+        },
+        {
+         "slug": "es-terco",
+         "kind": "vocabulary",
+         "front": "terco / terca",
+         "reading": null,
+         "romaji": null,
+         "meaning": "têtu / têtue"
+        },
+        {
+         "slug": "es-tacano",
+         "kind": "vocabulary",
+         "front": "tacaño / tacaña",
+         "reading": null,
+         "romaji": null,
+         "meaning": "radin, mesquin"
+        },
+        {
+         "slug": "es-celoso",
+         "kind": "vocabulary",
+         "front": "celoso / celosa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jaloux / jalouse"
+        },
+        {
+         "slug": "es-vago",
+         "kind": "vocabulary",
+         "front": "vago / vaga",
+         "reading": null,
+         "romaji": null,
+         "meaning": "paresseux / paresseuse"
+        },
+        {
+         "slug": "es-sensato",
+         "kind": "vocabulary",
+         "front": "sensato / sensata",
+         "reading": null,
+         "romaji": null,
+         "meaning": "raisonnable, sensé"
+        },
+        {
+         "slug": "es-comprensivo",
+         "kind": "vocabulary",
+         "front": "comprensivo / comprensiva",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compréhensif / compréhensive"
+        },
+        {
+         "slug": "es-tener-buen-caracter",
+         "kind": "vocabulary",
+         "front": "tener buen carácter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir bon caractère"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Mi abuela es generosa y comprensiva, pero un poco terca cuando discute de política.",
+         "reading": null,
+         "fr": "Ma grand-mère est généreuse et compréhensive, mais un peu têtue quand elle parle politique."
+        },
+        {
+         "jp": "No seas tan orgulloso: pídele perdón.",
+         "reading": null,
+         "fr": "Ne sois pas si orgueilleux : demande-lui pardon."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Nunca invita a nadie y cuenta cada céntimo: es muy ＿.",
+         "choices": [
+          "tacaño",
+          "generoso",
+          "sensato"
+         ],
+         "answer": "tacaño",
+         "explanation": "Radin : tacaño.",
+         "translation": "Il n’invite jamais personne et compte chaque centime : il est très radin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "No cambia de opinión aunque se equivoque: es muy ＿.",
+         "choices": [
+          "terco",
+          "comprensivo",
+          "vago"
+         ],
+         "answer": "terco",
+         "explanation": "Têtu : terco.",
+         "translation": "Il ne change pas d’avis même quand il se trompe : il est très têtu."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Guayota",
+           "jp": "¿Cómo es tu mejor amigo?"
+          }
+         ],
+         "translation": "Guayota te demande comment est ton meilleur ami.",
+         "choices": [
+          "Es sincero y trabajador, aunque a veces es un poco celoso.",
+          "Está sincero y trabajador.",
+          "Tiene sincero."
+         ],
+         "answer": "Es sincero y trabajador, aunque a veces es un poco celoso.",
+         "explanation": "Caractère : ser + adjectif."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Es una persona muy sensata.",
+         "translation": "Elle prend des décisions raisonnables.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Sensato = raisonnable."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w2",
+   "title": "Les rythmes de La Havane",
+   "region": "Traversée des Amériques",
+   "description": "Employer l’imparfait du subjonctif (quería que vinieras), respecter la concordance des temps et comparer avec como si.",
+   "boss": {
+    "name": "La Ciguapa aux pieds inversés",
+    "glyph": "ẽ",
+    "intro": "Dans les montagnes des Caraïbes, la Ciguapa, femme sauvage aux longs cheveux et aux pieds tournés vers l’arrière, égare ceux qui suivent ses traces. Elle s’est glissée dans les bals de La Havane : raconte ce qu’on voulait que tu fasses, et ne te laisse pas tromper."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w2-c1",
+     "title": "Le bal de La Havane",
+     "lessons": [
+      {
+       "slug": "es-imperfecto-subjuntivo",
+       "title": "Il voulait que je danse : l’imparfait du subjonctif",
+       "objective": "Former et employer l’imparfait du subjonctif.",
+       "minutes": 10,
+       "explanation": [
+        "Formation : 3e personne du pluriel du passé simple, -ron → -ra ou -se : hablaron → hablara / hablase ; tuvieron → tuviera / tuviese. Les deux formes sont équivalentes ; -ra est la plus courante.",
+        "Il remplace le subjonctif présent quand le verbe principal est au passé : Quiero que vengas → Quería que vinieras.",
+        "Irréguliers fréquents : fuera (ser, ir), estuviera, hiciera, dijera, pudiera, supiera, quisiera, viniera, diera, trajera."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-imperf-subj-ra-se",
+         "kind": "grammar",
+         "front": "hablara / hablase",
+         "reading": null,
+         "romaji": null,
+         "meaning": "(que) je parlasse : deux formes"
+        },
+        {
+         "slug": "gram-es-quisiera",
+         "kind": "grammar",
+         "front": "quisiera / pudiera / supiera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "(que) je voulusse / pusse / susse"
+        },
+        {
+         "slug": "es-dijera",
+         "kind": "vocabulary",
+         "front": "dijera / trajera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "(que) je disse / j’apportasse"
+        },
+        {
+         "slug": "es-el-son-cubano",
+         "kind": "vocabulary",
+         "front": "el son cubano",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le son (musique cubaine)"
+        },
+        {
+         "slug": "es-bailar-salsa",
+         "kind": "vocabulary",
+         "front": "bailar salsa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "danser la salsa"
+        },
+        {
+         "slug": "es-el-malecon",
+         "kind": "vocabulary",
+         "front": "el malecón",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le front de mer"
+        },
+        {
+         "slug": "es-el-ritmo",
+         "kind": "vocabulary",
+         "front": "el ritmo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le rythme"
+        },
+        {
+         "slug": "es-la-orquesta",
+         "kind": "vocabulary",
+         "front": "la orquesta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’orchestre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Mi abuela quería que aprendiera a bailar son antes de ir a La Habana.",
+         "reading": null,
+         "fr": "Ma grand-mère voulait que j’apprenne à danser le son avant d’aller à La Havane."
+        },
+        {
+         "jp": "El guía nos pidió que no camináramos solos por el malecón de noche.",
+         "reading": null,
+         "fr": "Le guide nous a demandé de ne pas marcher seuls sur le front de mer la nuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Quería que ＿ conmigo al concierto.",
+         "choices": [
+          "vinieras",
+          "vengas",
+          "vendrías"
+         ],
+         "answer": "vinieras",
+         "explanation": "Verbe principal au passé : imparfait du subjonctif.",
+         "translation": "Je voulais que tu viennes avec moi au concert."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Les pedí que ＿ más despacio.",
+         "choices": [
+          "hablaran",
+          "hablen",
+          "hablaban"
+         ],
+         "answer": "hablaran",
+         "explanation": "Pedí (passé) que + imparfait du subjonctif.",
+         "translation": "Je leur ai demandé de parler plus lentement."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No creía que ＿ tan difícil.",
+         "choices": [
+          "fuera",
+          "sea",
+          "era"
+         ],
+         "answer": "fuera",
+         "explanation": "No creía que + imparfait du subjonctif.",
+         "translation": "Je ne croyais pas que ce soit si difficile."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ojalá ＿ bailar como tú, pero soy muy torpe.",
+         "choices": [
+          "supiera",
+          "sé",
+          "sabré"
+         ],
+         "answer": "supiera",
+         "explanation": "Souhait irréel : ojalá + imparfait du subjonctif.",
+         "translation": "Si seulement je savais danser comme toi, mais je suis très maladroit."
+        }
+       ]
+      },
+      {
+       "slug": "es-concordancia",
+       "title": "La concordance des temps",
+       "objective": "Choisir le subjonctif présent ou imparfait selon le verbe principal.",
+       "minutes": 10,
+       "explanation": [
+        "Présent, futur ou impératif → subjonctif présent : Te pido que vengas. Le diré que llame.",
+        "Passé (passé simple, imparfait, plus-que-parfait) ou conditionnel → imparfait du subjonctif : Te pedí que vinieras. Me gustaría que vinieras.",
+        "Avec me gustaría, preferiría, sería mejor : toujours l’imparfait du subjonctif : Sería mejor que salierais temprano."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-concordancia-tiempos",
+         "kind": "grammar",
+         "front": "quiero que vengas / quería que vinieras",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la concordance des temps"
+        },
+        {
+         "slug": "es-me-gustaria-que",
+         "kind": "vocabulary",
+         "front": "me gustaría que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aimerais que…"
+        },
+        {
+         "slug": "es-preferiria-que",
+         "kind": "vocabulary",
+         "front": "preferiría que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je préférerais que…"
+        },
+        {
+         "slug": "es-seria-mejor-que",
+         "kind": "vocabulary",
+         "front": "sería mejor que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il vaudrait mieux que…"
+        },
+        {
+         "slug": "es-el-puro",
+         "kind": "vocabulary",
+         "front": "el puro",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cigare"
+        },
+        {
+         "slug": "es-la-plantacion",
+         "kind": "vocabulary",
+         "front": "la plantación",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la plantation"
+        },
+        {
+         "slug": "es-la-cana-de-azucar",
+         "kind": "vocabulary",
+         "front": "la caña de azúcar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la canne à sucre"
+        },
+        {
+         "slug": "es-colonial",
+         "kind": "vocabulary",
+         "front": "colonial",
+         "reading": null,
+         "romaji": null,
+         "meaning": "colonial, de l’époque coloniale"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Me gustaría que visitarais el barrio colonial de Trinidad.",
+         "reading": null,
+         "fr": "J’aimerais que vous visitiez le quartier colonial de Trinidad."
+        },
+        {
+         "jp": "El guía nos dijo que era mejor que compráramos los puros en la fábrica.",
+         "reading": null,
+         "fr": "Le guide nous a dit qu’il valait mieux acheter les cigares à la fabrique."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Me gustaría que ＿ a mi boda.",
+         "choices": [
+          "vinieras",
+          "vengas",
+          "vienes"
+         ],
+         "answer": "vinieras",
+         "explanation": "Me gustaría que + imparfait du subjonctif.",
+         "translation": "J’aimerais que tu viennes à mon mariage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Le diré que te ＿ mañana.",
+         "choices": [
+          "llame",
+          "llamara",
+          "llamaría"
+         ],
+         "answer": "llame",
+         "explanation": "Futur → subjonctif présent.",
+         "translation": "Je lui dirai de t’appeler demain."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sería mejor que ＿ antes del calor.",
+         "choices": [
+          "saliéramos",
+          "salgamos",
+          "salimos"
+         ],
+         "answer": "saliéramos",
+         "explanation": "Sería mejor que + imparfait du subjonctif.",
+         "translation": "Il vaudrait mieux que nous partions avant la chaleur."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Mi madre me pidió que la llamara.",
+         "translation": "La mère a demandé qu’on l’appelle.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Pidió que la llamara = elle a demandé que je l’appelle."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w2-c2",
+     "title": "Les traces inversées",
+     "lessons": [
+      {
+       "slug": "es-como-si",
+       "title": "Comme s’il était cubain : como si",
+       "objective": "Faire une comparaison imaginaire avec como si et protester avec ni que.",
+       "minutes": 9,
+       "explanation": [
+        "Como si + imparfait du subjonctif : Habla como si fuera cubano (il parle comme s’il était cubain).",
+        "Pour une action antérieure : como si + plus-que-parfait du subjonctif : Me miró como si no me hubiera visto nunca.",
+        "¡Ni que + imparfait du subjonctif! pour protester : ¡Ni que fuera mi madre! (comme si c’était ma mère !). Hacer como si = faire comme si."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-como-si",
+         "kind": "grammar",
+         "front": "como si + imperfecto de subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "comme si + imparfait"
+        },
+        {
+         "slug": "es-ni-que",
+         "kind": "vocabulary",
+         "front": "¡Ni que…!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Comme si… ! (protestation)"
+        },
+        {
+         "slug": "es-hacer-como-si",
+         "kind": "vocabulary",
+         "front": "hacer como si",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire comme si"
+        },
+        {
+         "slug": "es-el-acento",
+         "kind": "vocabulary",
+         "front": "el acento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’accent"
+        },
+        {
+         "slug": "es-presumir",
+         "kind": "vocabulary",
+         "front": "presumir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se vanter"
+        },
+        {
+         "slug": "es-disimular",
+         "kind": "vocabulary",
+         "front": "disimular",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire semblant, dissimuler"
+        },
+        {
+         "slug": "es-el-disfraz",
+         "kind": "vocabulary",
+         "front": "el disfraz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le déguisement"
+        },
+        {
+         "slug": "es-enganar",
+         "kind": "vocabulary",
+         "front": "engañar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tromper, duper"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Baila como si hubiera nacido en La Habana.",
+         "reading": null,
+         "fr": "Il danse comme s’il était né à La Havane."
+        },
+        {
+         "jp": "Hizo como si no me conociera. ¡Ni que le hubiera hecho algo malo!",
+         "reading": null,
+         "fr": "Il a fait comme s’il ne me connaissait pas. Comme si je lui avais fait quelque chose de mal !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Habla español como si ＿ cubana.",
+         "choices": [
+          "fuera",
+          "es",
+          "sea"
+         ],
+         "answer": "fuera",
+         "explanation": "Como si + imparfait du subjonctif.",
+         "translation": "Elle parle espagnol comme si elle était cubaine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Me miró como si no me ＿ nunca.",
+         "choices": [
+          "hubiera visto",
+          "ha visto",
+          "había visto"
+         ],
+         "answer": "hubiera visto",
+         "explanation": "Action antérieure : como si + plus-que-parfait du subjonctif.",
+         "translation": "Il m’a regardé comme s’il ne m’avait jamais vu."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hace como si no ＿ nada.",
+         "choices": [
+          "supiera",
+          "sabe",
+          "sepa"
+         ],
+         "answer": "supiera",
+         "explanation": "Hacer como si + imparfait du subjonctif.",
+         "translation": "Il fait comme s’il ne savait rien."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "¡Ni que fuera mi jefe!",
+         "translation": "La personne accepte volontiers l’ordre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "¡Ni que…! exprime l’agacement."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w3",
+   "title": "Les marchés de Mexico",
+   "region": "Traversée des Amériques",
+   "description": "Exprimer la concession (aunque + indicatif ou subjonctif, a pesar de, por mucho que) et découvrir l’espagnol du Mexique (¿mande?, ahorita, ustedes).",
+   "boss": {
+    "name": "Le Nahual masqué",
+    "glyph": "ĩ",
+    "intro": "Au marché de la Merced, un Nahual, sorcier des légendes mésoaméricaines capable de se changer en jaguar ou en coyote, se cache parmi les marchands. Il ne cède qu’à ceux qui savent concéder sans se contredire… et qui comprennent l’espagnol du Mexique."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w3-c1",
+     "title": "Au marché de la Merced",
+     "lessons": [
+      {
+       "slug": "es-aunque-subjuntivo",
+       "title": "Bien que, même si : aunque",
+       "objective": "Choisir l’indicatif ou le subjonctif après aunque.",
+       "minutes": 10,
+       "explanation": [
+        "Aunque + indicatif : un fait réel et connu (bien que) : Aunque llueve, voy a salir (il pleut, et je sors quand même).",
+        "Aunque + subjonctif : une hypothèse, ou un fait dont on ne tient pas compte (même si) : Aunque llueva, saldré (même s’il pleut).",
+        "Aunque + imparfait du subjonctif : une hypothèse irréelle : Aunque tuviera dinero, no lo compraría."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-aunque-indicativo",
+         "kind": "grammar",
+         "front": "aunque + indicativo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que (fait réel)"
+        },
+        {
+         "slug": "gram-es-aunque-subjuntivo",
+         "kind": "grammar",
+         "front": "aunque + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "même si (hypothèse)"
+        },
+        {
+         "slug": "es-aun-asi",
+         "kind": "vocabulary",
+         "front": "aun así",
+         "reading": null,
+         "romaji": null,
+         "meaning": "malgré tout, quand même"
+        },
+        {
+         "slug": "es-de-todas-formas",
+         "kind": "vocabulary",
+         "front": "de todas formas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de toute façon"
+        },
+        {
+         "slug": "es-el-puesto-mercado",
+         "kind": "vocabulary",
+         "front": "el puesto del mercado",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’étal (du marché)"
+        },
+        {
+         "slug": "es-picante",
+         "kind": "vocabulary",
+         "front": "picante",
+         "reading": null,
+         "romaji": null,
+         "meaning": "piquant, épicé"
+        },
+        {
+         "slug": "es-el-chile",
+         "kind": "vocabulary",
+         "front": "el chile",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le piment"
+        },
+        {
+         "slug": "es-la-tortilla-de-maiz",
+         "kind": "vocabulary",
+         "front": "la tortilla de maíz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la galette de maïs"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Aunque el mole es picante, me encanta.",
+         "reading": null,
+         "fr": "Bien que le mole soit épicé, je l’adore."
+        },
+        {
+         "jp": "Aunque me pagaras, no comería ese chile: ¡es demasiado picante!",
+         "reading": null,
+         "fr": "Même si tu me payais, je ne mangerais pas ce piment : il est bien trop fort !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Aunque mañana ＿, iremos a Teotihuacán.",
+         "choices": [
+          "llueva",
+          "llovió",
+          "lloverá"
+         ],
+         "answer": "llueva",
+         "explanation": "Hypothèse : aunque + subjonctif.",
+         "translation": "Même s’il pleut demain, nous irons à Teotihuacán."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Aunque ＿ muy cansado, ayer salí a cenar.",
+         "choices": [
+          "estaba",
+          "esté",
+          "estuviera"
+         ],
+         "answer": "estaba",
+         "explanation": "Fait réel passé : aunque + indicatif.",
+         "translation": "Bien que je fusse très fatigué, je suis sorti dîner hier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Aunque ＿ millonario, seguiría trabajando.",
+         "choices": [
+          "fuera",
+          "soy",
+          "sea"
+         ],
+         "answer": "fuera",
+         "explanation": "Hypothèse irréelle : imparfait du subjonctif.",
+         "translation": "Même si j’étais millionnaire, je continuerais à travailler."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Aunque haga frío, iremos a la playa.",
+         "translation": "Il fait certainement froid en ce moment.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Aunque + subjonctif : on ne sait pas s’il fera froid."
+        }
+       ]
+      },
+      {
+       "slug": "es-concesivas",
+       "title": "Malgré, avoir beau : a pesar de, por mucho que",
+       "objective": "Exprimer l’obstacle et la concession avec d’autres tournures.",
+       "minutes": 10,
+       "explanation": [
+        "A pesar de + nom ou infinitif : A pesar del tráfico, llegamos a tiempo. A pesar de que + indicatif pour un fait réel.",
+        "Por mucho que / por más que + subjonctif = avoir beau… : Por mucho que estudie, no lo entiende. Por muy + adjectif + que : Por muy caro que sea, lo compraré.",
+        "Registre soutenu : si bien (bien que), no obstante. Familier : aun así (malgré tout), de todas formas (de toute façon)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-a-pesar-de",
+         "kind": "grammar",
+         "front": "a pesar de / a pesar de que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "malgré / bien que"
+        },
+        {
+         "slug": "gram-es-por-mucho-que",
+         "kind": "grammar",
+         "front": "por mucho que + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir beau… (por mucho que)"
+        },
+        {
+         "slug": "es-por-muy-que",
+         "kind": "vocabulary",
+         "front": "por muy… que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si… que (concession)"
+        },
+        {
+         "slug": "es-si-bien",
+         "kind": "vocabulary",
+         "front": "si bien",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que (soutenu)"
+        },
+        {
+         "slug": "es-el-trafico",
+         "kind": "vocabulary",
+         "front": "el tráfico",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la circulation"
+        },
+        {
+         "slug": "es-el-atasco",
+         "kind": "vocabulary",
+         "front": "el atasco",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’embouteillage"
+        },
+        {
+         "slug": "es-la-capital",
+         "kind": "vocabulary",
+         "front": "la capital",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la capitale"
+        },
+        {
+         "slug": "es-el-metro",
+         "kind": "vocabulary",
+         "front": "el metro",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le métro"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "A pesar del tráfico, la Ciudad de México es una capital fascinante.",
+         "reading": null,
+         "fr": "Malgré la circulation, Mexico est une capitale fascinante."
+        },
+        {
+         "jp": "Por mucho que le explique el camino, siempre se pierde en el metro.",
+         "reading": null,
+         "fr": "J’ai beau lui expliquer le chemin, il se perd toujours dans le métro."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ la lluvia, el mercado estaba lleno.",
+         "choices": [
+          "A pesar de",
+          "Aunque",
+          "Por mucho que"
+         ],
+         "answer": "A pesar de",
+         "explanation": "Devant un nom : a pesar de.",
+         "translation": "Malgré la pluie, le marché était plein."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Por mucho que lo ＿, no consigo dormir.",
+         "choices": [
+          "intente",
+          "intento",
+          "intentaré"
+         ],
+         "answer": "intente",
+         "explanation": "Por mucho que + subjonctif.",
+         "translation": "J’ai beau essayer, je n’arrive pas à dormir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Por muy caro que ＿, lo compraré.",
+         "choices": [
+          "sea",
+          "es",
+          "será"
+         ],
+         "answer": "sea",
+         "explanation": "Por muy… que + subjonctif.",
+         "translation": "Aussi cher qu’il soit, je l’achèterai."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Nahual",
+           "jp": "La ciudad es enorme y hay mucho ruido. ¿Te gusta?"
+          }
+         ],
+         "translation": "Le Nahual te demande si la ville te plaît malgré le bruit.",
+         "choices": [
+          "Sí, a pesar del ruido, me encanta.",
+          "Sí, a pesar de que el ruido me encante.",
+          "Sí, por mucho que me gusta."
+         ],
+         "answer": "Sí, a pesar del ruido, me encanta.",
+         "explanation": "A pesar de + nom."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w3-c2",
+     "title": "L’espagnol du Mexique",
+     "lessons": [
+      {
+       "slug": "es-mexico",
+       "title": "¿Mande?, ahorita, ¡qué padre! : l’espagnol du Mexique",
+       "objective": "Comprendre les tournures et le vocabulaire de l’espagnol du Mexique.",
+       "minutes": 9,
+       "explanation": [
+        "Formules mexicaines : ¿Mande? (pardon ? — pour faire répéter, poli), ahorita (tout de suite… ou plus tard !), ¡Qué padre! (génial !), ¡Órale! (d’accord ! allez !).",
+        "Vocabulaire d’Amérique latine : el carro (la voiture ; el coche en Espagne), el celular (le portable ; el móvil en Espagne), la chamba (le boulot, familier au Mexique).",
+        "Dans toute l’Amérique, ustedes remplace vosotros, même entre amis : ¿Ustedes quieren venir?"
+       ],
+       "items": [
+        {
+         "slug": "es-mande",
+         "kind": "vocabulary",
+         "front": "¿Mande?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Pardon ? (Mexique)"
+        },
+        {
+         "slug": "es-ahorita",
+         "kind": "vocabulary",
+         "front": "ahorita",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout de suite, dans un moment (Mexique)"
+        },
+        {
+         "slug": "es-que-padre",
+         "kind": "vocabulary",
+         "front": "¡Qué padre!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Génial ! (Mexique)"
+        },
+        {
+         "slug": "es-orale",
+         "kind": "vocabulary",
+         "front": "¡Órale!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "D’accord ! Allez ! (Mexique)"
+        },
+        {
+         "slug": "es-el-carro",
+         "kind": "vocabulary",
+         "front": "el carro",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la voiture (Amérique latine)"
+        },
+        {
+         "slug": "es-el-celular",
+         "kind": "vocabulary",
+         "front": "el celular",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le portable (Amérique latine)"
+        },
+        {
+         "slug": "es-la-chamba",
+         "kind": "vocabulary",
+         "front": "la chamba",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le boulot (Mexique, familier)"
+        },
+        {
+         "slug": "es-ustedes-america",
+         "kind": "vocabulary",
+         "front": "ustedes (en América)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vous (pluriel, en Amérique)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "¿Mande? — Le pregunto si ustedes ya tienen carro para ir a Puebla.",
+         "reading": null,
+         "fr": "Pardon ? — Je vous demande si vous avez déjà une voiture pour aller à Puebla."
+        },
+        {
+         "jp": "Ahorita vengo, voy a buscar mi celular. — ¡Órale!",
+         "reading": null,
+         "fr": "Je reviens tout de suite, je vais chercher mon portable. — D’accord !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Vendedora",
+           "jp": "¿Qué va a llevar, joven?"
+          }
+         ],
+         "translation": "La vendeuse parle très vite et tu n’as pas compris.",
+         "choices": [
+          "¿Mande?",
+          "¡Órale!",
+          "¡Qué padre!"
+         ],
+         "answer": "¿Mande?",
+         "explanation": "Faire répéter poliment au Mexique : ¿Mande?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En México no se dice «el coche», sino «el ＿».",
+         "choices": [
+          "carro",
+          "celular",
+          "metro"
+         ],
+         "answer": "carro",
+         "explanation": "La voiture : el carro.",
+         "translation": "Au Mexique, on ne dit pas « el coche », mais « el carro »."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "En México, a un grupo de amigos se le dice: «¿＿ quieren venir?»",
+         "choices": [
+          "Ustedes",
+          "Vosotros",
+          "Vos"
+         ],
+         "answer": "Ustedes",
+         "explanation": "En Amérique : ustedes.",
+         "translation": "Au Mexique, à un groupe d’amis on dit : « Vous voulez venir ? »"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "¡Qué padre!",
+         "translation": "La personne trouve la chose géniale.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "¡Qué padre! = génial !"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w4",
+   "title": "Les volcans d’Antigua",
+   "region": "Traversée des Amériques",
+   "description": "Poser des conditions (siempre que, a no ser que, con tal de que), prévoir l’imprévu (en caso de que, por si acaso) et parler du patrimoine et de l’histoire.",
+   "boss": {
+    "name": "Le Sombrerón",
+    "glyph": "õ",
+    "intro": "À Antigua, le Sombrerón, petit homme au chapeau géant des légendes guatémaltèques, tresse la crinière des chevaux et chante des sérénades sous les balcons. Il propose des marchés pleins de conditions : apprends à poser les tiennes avant qu’il ne t’embobine."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w4-c1",
+     "title": "Le marché d’Antigua",
+     "lessons": [
+      {
+       "slug": "es-condicionales-b2",
+       "title": "À condition que, à moins que : siempre que, a no ser que",
+       "objective": "Poser des conditions avec les conjonctions suivies du subjonctif.",
+       "minutes": 10,
+       "explanation": [
+        "Siempre que + subjonctif = à condition que : Te lo presto siempre que me lo devuelvas. Con tal de que (pourvu que), a condición de que (soutenu).",
+        "A no ser que / a menos que + subjonctif = à moins que : Iremos a pie, a no ser que llueva.",
+        "De + infinitif passé = si (soutenu) : De haberlo sabido, no habría venido. Como + subjonctif = si jamais (menace) : Como llegues tarde, me enfado."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-siempre-que",
+         "kind": "grammar",
+         "front": "siempre que + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à condition que"
+        },
+        {
+         "slug": "gram-es-a-no-ser-que",
+         "kind": "grammar",
+         "front": "a no ser que / a menos que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à moins que, sauf si"
+        },
+        {
+         "slug": "es-con-tal-de-que",
+         "kind": "vocabulary",
+         "front": "con tal de que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pourvu que"
+        },
+        {
+         "slug": "es-como-amenaza",
+         "kind": "vocabulary",
+         "front": "como + subjuntivo (amenaza)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si jamais… (menace)"
+        },
+        {
+         "slug": "es-el-trato",
+         "kind": "vocabulary",
+         "front": "el trato",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le marché, l’accord"
+        },
+        {
+         "slug": "es-regatear",
+         "kind": "vocabulary",
+         "front": "regatear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "marchander"
+        },
+        {
+         "slug": "es-la-artesania",
+         "kind": "vocabulary",
+         "front": "la artesanía",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’artisanat"
+        },
+        {
+         "slug": "es-el-tejido",
+         "kind": "vocabulary",
+         "front": "el tejido",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le tissu, le tissage"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Te hago un buen precio siempre que me compres dos tejidos.",
+         "reading": null,
+         "fr": "Je te fais un bon prix à condition que tu m’achètes deux tissus."
+        },
+        {
+         "jp": "Subiremos al volcán mañana, a no ser que haya mucha niebla.",
+         "reading": null,
+         "fr": "Nous monterons sur le volcan demain, à moins qu’il y ait beaucoup de brouillard."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Puedes venir siempre que no ＿ ruido.",
+         "choices": [
+          "hagas",
+          "haces",
+          "harás"
+         ],
+         "answer": "hagas",
+         "explanation": "Siempre que + subjonctif.",
+         "translation": "Tu peux venir à condition de ne pas faire de bruit."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Iremos al lago, a no ser que ＿ mal tiempo.",
+         "choices": [
+          "haga",
+          "hace",
+          "hará"
+         ],
+         "answer": "haga",
+         "explanation": "A no ser que + subjonctif.",
+         "translation": "Nous irons au lac, à moins qu’il fasse mauvais."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Como ＿ tarde otra vez, me voy sin ti.",
+         "choices": [
+          "llegues",
+          "llegas",
+          "llegarás"
+         ],
+         "answer": "llegues",
+         "explanation": "Menace : como + subjonctif.",
+         "translation": "Si jamais tu arrives encore en retard, je pars sans toi."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Sombrerón",
+           "jp": "Te presto mi caballo… pero me lo traes mañana."
+          }
+         ],
+         "translation": "Le Sombrerón te prête son cheval ; tu acceptes en posant ta condition.",
+         "choices": [
+          "De acuerdo, siempre que no le trences la crin.",
+          "De acuerdo, siempre que no le trenzas la crin.",
+          "De acuerdo, a no ser que le trenzarás la crin."
+         ],
+         "answer": "De acuerdo, siempre que no le trences la crin.",
+         "explanation": "Siempre que + subjonctif."
+        }
+       ]
+      },
+      {
+       "slug": "es-en-caso-de-que",
+       "title": "Au cas où : en caso de que, por si acaso",
+       "objective": "Prévoir l’imprévu et donner des consignes de sécurité.",
+       "minutes": 9,
+       "explanation": [
+        "En caso de que + subjonctif = au cas où : En caso de que no funcione, llame a este número. En caso de + nom : en caso de emergencia.",
+        "Por si (acaso) + indicatif = au cas où : Lleva paraguas por si acaso. Por si llueve.",
+        "Prévoir : prevenir (anticiper), el imprevisto (l’imprévu), el seguro de viaje (l’assurance voyage), la salida de emergencia (la sortie de secours)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-en-caso-de-que",
+         "kind": "grammar",
+         "front": "en caso de que + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au cas où + conditionnel"
+        },
+        {
+         "slug": "es-por-si-acaso",
+         "kind": "vocabulary",
+         "front": "por si acaso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au cas où, par précaution"
+        },
+        {
+         "slug": "es-la-emergencia",
+         "kind": "vocabulary",
+         "front": "la emergencia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’urgence"
+        },
+        {
+         "slug": "es-el-imprevisto",
+         "kind": "vocabulary",
+         "front": "el imprevisto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’imprévu"
+        },
+        {
+         "slug": "es-el-seguro-de-viaje",
+         "kind": "vocabulary",
+         "front": "el seguro de viaje",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’assurance voyage"
+        },
+        {
+         "slug": "es-el-terremoto",
+         "kind": "vocabulary",
+         "front": "el terremoto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le tremblement de terre"
+        },
+        {
+         "slug": "es-la-salida-de-emergencia",
+         "kind": "vocabulary",
+         "front": "la salida de emergencia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la sortie de secours"
+        },
+        {
+         "slug": "es-prevenir",
+         "kind": "vocabulary",
+         "front": "prevenir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prévenir, anticiper"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En caso de que haya un terremoto, salga por la salida de emergencia.",
+         "reading": null,
+         "fr": "En cas de tremblement de terre, sortez par la sortie de secours."
+        },
+        {
+         "jp": "Llévate el seguro de viaje por si acaso.",
+         "reading": null,
+         "fr": "Emporte ton assurance voyage, au cas où."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "En caso de que ＿ problemas, llámame.",
+         "choices": [
+          "tengas",
+          "tienes",
+          "tendrás"
+         ],
+         "answer": "tengas",
+         "explanation": "En caso de que + subjonctif.",
+         "translation": "Au cas où tu aurais des problèmes, appelle-moi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Llevo dinero extra ＿.",
+         "choices": [
+          "por si acaso",
+          "en caso de que",
+          "a no ser que"
+         ],
+         "answer": "por si acaso",
+         "explanation": "En fin de phrase : por si acaso.",
+         "translation": "J’emporte de l’argent en plus, au cas où."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En caso de ＿, llame al 112.",
+         "choices": [
+          "emergencia",
+          "seguro",
+          "salida"
+         ],
+         "answer": "emergencia",
+         "explanation": "En cas d’urgence : en caso de emergencia.",
+         "translation": "En cas d’urgence, appelez le 112."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "En caso de que llueva, la excursión se cancela.",
+         "translation": "L’excursion est déjà annulée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Elle ne sera annulée que s’il pleut."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w4-c2",
+     "title": "Les ruines de Tikal",
+     "lessons": [
+      {
+       "slug": "es-patrimonio",
+       "title": "Le patrimoine : las ruinas, el yacimiento",
+       "objective": "Parler du patrimoine et situer des faits historiques.",
+       "minutes": 9,
+       "explanation": [
+        "Le patrimoine : el patrimonio (de la humanidad), las ruinas, el yacimiento arqueológico (le site archéologique), la pirámide, el templo, la civilización maya.",
+        "Situer dans le temps : en el siglo X, a lo largo de (tout au long de), a principios / a mediados / a finales de (au début / au milieu / à la fin de).",
+        "Les verbes de l’histoire : fundar (fonder), construir, conquistar, desaparecer, descubrir (découvrir). Au passif : La ciudad fue fundada en 1543."
+       ],
+       "items": [
+        {
+         "slug": "es-el-patrimonio",
+         "kind": "vocabulary",
+         "front": "el patrimonio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le patrimoine"
+        },
+        {
+         "slug": "es-las-ruinas",
+         "kind": "vocabulary",
+         "front": "las ruinas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les ruines"
+        },
+        {
+         "slug": "es-el-yacimiento",
+         "kind": "vocabulary",
+         "front": "el yacimiento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le site (archéologique)"
+        },
+        {
+         "slug": "es-la-piramide",
+         "kind": "vocabulary",
+         "front": "la pirámide",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la pyramide"
+        },
+        {
+         "slug": "es-la-civilizacion",
+         "kind": "vocabulary",
+         "front": "la civilización",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la civilisation"
+        },
+        {
+         "slug": "es-fundar",
+         "kind": "vocabulary",
+         "front": "fundar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fonder"
+        },
+        {
+         "slug": "es-descubrir",
+         "kind": "vocabulary",
+         "front": "descubrir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "découvrir"
+        },
+        {
+         "slug": "es-a-finales-de",
+         "kind": "vocabulary",
+         "front": "a principios de / a finales de",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au début de / à la fin de"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Tikal fue una de las ciudades más importantes de la civilización maya y hoy es patrimonio de la humanidad.",
+         "reading": null,
+         "fr": "Tikal fut l’une des villes les plus importantes de la civilisation maya et elle est aujourd’hui patrimoine de l’humanité."
+        },
+        {
+         "jp": "Antigua fue fundada a mediados del siglo XVI y destruida por un terremoto en 1773.",
+         "reading": null,
+         "fr": "Antigua fut fondée au milieu du XVIe siècle et détruite par un tremblement de terre en 1773."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Los arqueólogos trabajan en un ＿ maya.",
+         "choices": [
+          "yacimiento",
+          "patrimonio",
+          "siglo"
+         ],
+         "answer": "yacimiento",
+         "explanation": "Le site archéologique : el yacimiento.",
+         "translation": "Les archéologues travaillent sur un site maya."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La ciudad fue ＿ en el siglo XVI.",
+         "choices": [
+          "fundada",
+          "fundado",
+          "fundó"
+         ],
+         "answer": "fundada",
+         "explanation": "Passif : ser + participe accordé (la ciudad → fundada).",
+         "translation": "La ville fut fondée au XVIe siècle."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Las ruinas fueron ＿ por un campesino.",
+         "choices": [
+          "descubiertas",
+          "descubiertos",
+          "descubrieron"
+         ],
+         "answer": "descubiertas",
+         "explanation": "Participe irrégulier accordé : descubiertas.",
+         "translation": "Les ruines furent découvertes par un paysan."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "El templo se construyó a finales del siglo VIII.",
+         "translation": "Le temple date de la fin du VIIIe siècle.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "A finales de = à la fin de."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w5",
+   "title": "Le fleuve Magdalena",
+   "region": "Traversée des Amériques",
+   "description": "Exprimer ce qui aurait pu se passer (habría hecho), faire des hypothèses sur le passé (si hubiera sabido…) et dire ses regrets et ses reproches.",
+   "boss": {
+    "name": "Le Mohán du fleuve",
+    "glyph": "ũ",
+    "intro": "Sur les rives du Magdalena, le Mohán, vieux sorcier barbu des légendes colombiennes, fume sa pipe dans une grotte sous les rapides et fait chavirer les barques des imprudents. Il adore les regrets : dis-lui ce que tu aurais fait autrement… et ce qui se serait passé."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w5-c1",
+     "title": "Sur le fleuve",
+     "lessons": [
+      {
+       "slug": "es-condicional-compuesto",
+       "title": "J’aurais aimé : le conditionnel passé",
+       "objective": "Former le conditionnel passé et exprimer un regret, un reproche ou une supposition.",
+       "minutes": 10,
+       "explanation": [
+        "Conditionnel passé = haber au conditionnel + participe : habría, habrías, habría, habríamos, habríais, habrían + ido. Me habría gustado verlo (j’aurais aimé le voir).",
+        "Reproche ou regret : Deberías haberme llamado (tu aurais dû m’appeler). Podrías haberlo dicho antes (tu aurais pu le dire avant).",
+        "Supposition sur un passé plus lointain : ¿Por qué no vino? — Habría perdido el autobús (il avait dû rater le bus)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-condicional-compuesto",
+         "kind": "grammar",
+         "front": "habría + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aurais + participe (conditionnel passé)"
+        },
+        {
+         "slug": "es-deberias-haber",
+         "kind": "vocabulary",
+         "front": "deberías haber + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tu aurais dû…"
+        },
+        {
+         "slug": "es-podrias-haber",
+         "kind": "vocabulary",
+         "front": "podrías haber + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tu aurais pu…"
+        },
+        {
+         "slug": "es-me-habria-gustado",
+         "kind": "vocabulary",
+         "front": "me habría gustado",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aurais aimé"
+        },
+        {
+         "slug": "es-la-orilla",
+         "kind": "vocabulary",
+         "front": "la orilla",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la rive"
+        },
+        {
+         "slug": "es-la-canoa",
+         "kind": "vocabulary",
+         "front": "la canoa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la pirogue, le canoë"
+        },
+        {
+         "slug": "es-hundirse",
+         "kind": "vocabulary",
+         "front": "hundirse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "couler, sombrer"
+        },
+        {
+         "slug": "es-el-remo",
+         "kind": "vocabulary",
+         "front": "el remo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la rame, la pagaie"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Me habría gustado navegar por el Magdalena, pero no tuve tiempo.",
+         "reading": null,
+         "fr": "J’aurais aimé naviguer sur le Magdalena, mais je n’ai pas eu le temps."
+        },
+        {
+         "jp": "Deberías haberme avisado: la canoa casi se hunde.",
+         "reading": null,
+         "fr": "Tu aurais dû me prévenir : la pirogue a failli couler."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Me ＿ gustado conocerte antes.",
+         "choices": [
+          "habría",
+          "había",
+          "hubo"
+         ],
+         "answer": "habría",
+         "explanation": "Regret : habría + participe.",
+         "translation": "J’aurais aimé te connaître plus tôt."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Deberías ＿ llamado antes de venir.",
+         "choices": [
+          "haber",
+          "habías",
+          "hubieras"
+         ],
+         "answer": "haber",
+         "explanation": "Deberías haber + participe.",
+         "translation": "Tu aurais dû appeler avant de venir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Yo, en tu lugar, ＿ aceptado el trabajo.",
+         "choices": [
+          "habría",
+          "hubiera habido",
+          "había"
+         ],
+         "answer": "habría",
+         "explanation": "À ta place : conditionnel passé.",
+         "translation": "À ta place, j’aurais accepté le travail."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Podrías haberme ayudado.",
+         "translation": "La personne reproche à l’autre de ne pas l’avoir aidée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Podrías haber… = tu aurais pu…"
+        }
+       ]
+      },
+      {
+       "slug": "es-si-pasado",
+       "title": "Si j’avais su : l’irréel du passé",
+       "objective": "Faire une hypothèse sur le passé avec si + plus-que-parfait du subjonctif.",
+       "minutes": 10,
+       "explanation": [
+        "Irréel du passé : si + hubiera (ou hubiese) + participe, puis habría + participe : Si hubiera sabido que venías, te habría esperado.",
+        "Plus-que-parfait du subjonctif : hubiera, hubieras, hubiera, hubiéramos, hubierais, hubieran + participe. À l’oral, il remplace souvent le conditionnel passé : Si lo hubiera sabido, no hubiera venido.",
+        "Conséquence dans le présent : Si hubiera estudiado medicina, ahora sería médico. Tournure soutenue : De haberlo sabido… (si j’avais su…)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-pluscuamperfecto-subj",
+         "kind": "grammar",
+         "front": "hubiera + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "(que) j’eusse + participe (plus-que-parfait du subjonctif)"
+        },
+        {
+         "slug": "gram-es-si-hubiera",
+         "kind": "grammar",
+         "front": "si hubiera… habría…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si j’avais… j’aurais…"
+        },
+        {
+         "slug": "es-de-haberlo-sabido",
+         "kind": "vocabulary",
+         "front": "de haberlo sabido",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si j’avais su"
+        },
+        {
+         "slug": "es-arrepentirse",
+         "kind": "vocabulary",
+         "front": "arrepentirse de",
+         "reading": null,
+         "romaji": null,
+         "meaning": "regretter (d’avoir fait)"
+        },
+        {
+         "slug": "es-la-oportunidad",
+         "kind": "vocabulary",
+         "front": "la oportunidad",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’occasion, la chance"
+        },
+        {
+         "slug": "es-cometer-un-error",
+         "kind": "vocabulary",
+         "front": "cometer un error",
+         "reading": null,
+         "romaji": null,
+         "meaning": "commettre une erreur"
+        },
+        {
+         "slug": "es-tomar-una-decision",
+         "kind": "vocabulary",
+         "front": "tomar una decisión",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre une décision"
+        },
+        {
+         "slug": "es-el-destino",
+         "kind": "vocabulary",
+         "front": "el destino",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le destin, la destination"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Si hubiera escuchado al barquero, no me habría caído al río.",
+         "reading": null,
+         "fr": "Si j’avais écouté le passeur, je ne serais pas tombé dans le fleuve."
+        },
+        {
+         "jp": "Si no hubiera tomado aquella decisión, ahora no viviría en Colombia.",
+         "reading": null,
+         "fr": "Si je n’avais pas pris cette décision, je ne vivrais pas en Colombie aujourd’hui."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Si ＿ antes, habríamos visto el atardecer.",
+         "choices": [
+          "hubiéramos llegado",
+          "habríamos llegado",
+          "llegáramos"
+         ],
+         "answer": "hubiéramos llegado",
+         "explanation": "Si + plus-que-parfait du subjonctif.",
+         "translation": "Si nous étions arrivés plus tôt, nous aurions vu le coucher du soleil."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Si me lo hubieras dicho, te ＿.",
+         "choices": [
+          "habría ayudado",
+          "hubiera ayudo",
+          "ayudaba"
+         ],
+         "answer": "habría ayudado",
+         "explanation": "Conséquence : habría + participe.",
+         "translation": "Si tu me l’avais dit, je t’aurais aidé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "De ＿ sabido, no habría venido.",
+         "choices": [
+          "haberlo",
+          "hubiera",
+          "habría"
+         ],
+         "answer": "haberlo",
+         "explanation": "De + infinitif passé : de haberlo sabido.",
+         "translation": "Si j’avais su, je ne serais pas venu."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Si hubiera estudiado más, habría aprobado.",
+         "translation": "La personne a réussi son examen.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Irréel du passé : elle n’a pas réussi."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w5-c2",
+     "title": "Les regrets du passeur",
+     "lessons": [
+      {
+       "slug": "es-lamentos",
+       "title": "Si seulement… : regrets et reproches",
+       "objective": "Exprimer un regret, un souhait impossible ou un reproche.",
+       "minutes": 9,
+       "explanation": [
+        "Regret : ojalá + plus-que-parfait du subjonctif : Ojalá hubiera venido (si seulement il était venu). Me arrepiento de no haber estudiado más.",
+        "Souhait impossible : ¡Quién pudiera volar! (si seulement je pouvais voler !) ¡Quién tuviera veinte años!",
+        "Reproche : ¡Haberlo dicho antes! (il fallait le dire avant !). Tener la culpa = être responsable : La culpa es mía."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-ojala-hubiera",
+         "kind": "grammar",
+         "front": "ojalá hubiera + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si seulement j’avais…"
+        },
+        {
+         "slug": "es-quien-pudiera",
+         "kind": "vocabulary",
+         "front": "¡Quién pudiera…!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Si seulement je pouvais… !"
+        },
+        {
+         "slug": "es-haberlo-dicho",
+         "kind": "vocabulary",
+         "front": "¡Haberlo dicho antes!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Il fallait le dire avant !"
+        },
+        {
+         "slug": "es-lamentar",
+         "kind": "vocabulary",
+         "front": "lamentar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "regretter, déplorer"
+        },
+        {
+         "slug": "es-echar-de-menos",
+         "kind": "vocabulary",
+         "front": "echar de menos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "manquer à quelqu’un (regretter l’absence)"
+        },
+        {
+         "slug": "es-la-nostalgia",
+         "kind": "vocabulary",
+         "front": "la nostalgia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la nostalgie"
+        },
+        {
+         "slug": "es-advertir",
+         "kind": "vocabulary",
+         "front": "advertir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avertir"
+        },
+        {
+         "slug": "es-tener-la-culpa",
+         "kind": "vocabulary",
+         "front": "tener la culpa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être responsable, être fautif"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Ojalá hubiera traído el impermeable: llueve a cántaros en Medellín.",
+         "reading": null,
+         "fr": "Si seulement j’avais pris mon imperméable : il pleut des cordes à Medellín."
+        },
+        {
+         "jp": "¿Que no sabías nadar? ¡Haberlo dicho antes de subir a la canoa!",
+         "reading": null,
+         "fr": "Tu ne savais pas nager ? Il fallait le dire avant de monter dans la pirogue !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ojalá ＿ más tiempo con mis abuelos.",
+         "choices": [
+          "hubiera pasado",
+          "habría pasado",
+          "he pasado"
+         ],
+         "answer": "hubiera pasado",
+         "explanation": "Regret : ojalá + plus-que-parfait du subjonctif.",
+         "translation": "Si seulement j’avais passé plus de temps avec mes grands-parents."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¡Quién ＿ vivir junto al mar!",
+         "choices": [
+          "pudiera",
+          "puede",
+          "podría"
+         ],
+         "answer": "pudiera",
+         "explanation": "Souhait impossible : quién + imparfait du subjonctif.",
+         "translation": "Si seulement je pouvais vivre au bord de la mer !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Mohán",
+           "jp": "Perdiste el último barco. ¿Qué sientes?"
+          }
+         ],
+         "translation": "Le Mohán te demande ce que tu ressens après avoir raté le dernier bateau.",
+         "choices": [
+          "Me arrepiento de no haber salido antes.",
+          "Me arrepiento de no salir mañana.",
+          "Ojalá saldré antes."
+         ],
+         "answer": "Me arrepiento de no haber salido antes.",
+         "explanation": "Arrepentirse de + infinitif passé."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Echo de menos a mi familia.",
+         "translation": "La famille manque à la personne.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Echar de menos = manquer à quelqu’un."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w6",
+   "title": "Les mines des Andes",
+   "region": "Traversée des Amériques",
+   "description": "Employer la voix passive (fue construido), les tournures impersonnelles (se vende, dicen que) et comprendre la presse (según, al parecer, conditionnel journalistique).",
+   "boss": {
+    "name": "Le Muki des mines",
+    "glyph": "Ã",
+    "intro": "Dans les galeries des Andes, le Muki, petit gnome barbu au casque d’or, protège les filons et égare les mineurs. Il ne s’intéresse qu’aux nouvelles : apprends à lire la presse, à tourner les phrases au passif et à parler de façon impersonnelle."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w6-c1",
+     "title": "Les galeries du Muki",
+     "lessons": [
+      {
+       "slug": "es-pasiva",
+       "title": "Il a été construit : la voix passive",
+       "objective": "Former la voix passive avec ser et l’état résultant avec estar.",
+       "minutes": 10,
+       "explanation": [
+        "Passif = ser + participe accordé (+ por) : Machu Picchu fue construido por los incas. Las ruinas fueron descubiertas en 1911.",
+        "Estar + participe = l’état qui résulte d’une action : El museo está cerrado. La ciudad está rodeada de montañas.",
+        "Le passif avec ser s’emploie surtout à l’écrit (presse, histoire) ; à l’oral, on préfère la voix active ou la tournure avec se."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-pasiva-ser",
+         "kind": "grammar",
+         "front": "ser + participio (+ por)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être + participe (passif)"
+        },
+        {
+         "slug": "gram-es-estar-participio",
+         "kind": "grammar",
+         "front": "estar + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être + participe (état)"
+        },
+        {
+         "slug": "es-construir",
+         "kind": "vocabulary",
+         "front": "construir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "construire"
+        },
+        {
+         "slug": "es-destruir",
+         "kind": "vocabulary",
+         "front": "destruir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "détruire"
+        },
+        {
+         "slug": "es-rodeado-de",
+         "kind": "vocabulary",
+         "front": "rodeado de",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entouré de"
+        },
+        {
+         "slug": "es-el-imperio",
+         "kind": "vocabulary",
+         "front": "el imperio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’empire"
+        },
+        {
+         "slug": "es-la-mina",
+         "kind": "vocabulary",
+         "front": "la mina",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la mine"
+        },
+        {
+         "slug": "es-el-oro",
+         "kind": "vocabulary",
+         "front": "el oro / la plata",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’or / l’argent (métal)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Machu Picchu fue construido en el siglo XV y no fue conocido por el mundo hasta 1911.",
+         "reading": null,
+         "fr": "Machu Picchu fut construit au XVe siècle et ne fut connu du monde qu’en 1911."
+        },
+        {
+         "jp": "El valle está rodeado de montañas y la mina está cerrada desde hace años.",
+         "reading": null,
+         "fr": "La vallée est entourée de montagnes et la mine est fermée depuis des années."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El puente fue ＿ por los incas.",
+         "choices": [
+          "construido",
+          "construida",
+          "construyó"
+         ],
+         "answer": "construido",
+         "explanation": "El puente (masculin) : construido.",
+         "translation": "Le pont fut construit par les Incas."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Las cartas fueron ＿ por el rey.",
+         "choices": [
+          "escritas",
+          "escritos",
+          "escribieron"
+         ],
+         "answer": "escritas",
+         "explanation": "Las cartas (féminin pluriel) : escritas.",
+         "translation": "Les lettres furent écrites par le roi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ahora la puerta ＿ abierta.",
+         "choices": [
+          "está",
+          "es",
+          "fue"
+         ],
+         "answer": "está",
+         "explanation": "État résultant : estar + participe.",
+         "translation": "Maintenant, la porte est ouverte."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « La ville a été détruite par un tremblement de terre. »",
+         "answer": [
+          "La",
+          "ciudad",
+          "fue",
+          "destruida",
+          "por",
+          "un",
+          "terremoto."
+         ],
+         "explanation": "Sujet + fue + participe + por + agent."
+        }
+       ]
+      },
+      {
+       "slug": "es-se-impersonal",
+       "title": "On dit que… : se impersonnel et se passif",
+       "objective": "Parler de façon impersonnelle avec se, la 3e personne du pluriel et uno.",
+       "minutes": 9,
+       "explanation": [
+        "Se passif : se + verbe accordé avec le sujet : Se venden casas. Se alquila piso. Se construyeron nuevas carreteras.",
+        "Se impersonnel : se + verbe au singulier, sans sujet : Se vive bien aquí. Se busca a los responsables.",
+        "Autres tournures : la 3e personne du pluriel (Dicen que… = on dit que), uno / una (Uno nunca sabe), la gente."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-se-pasiva",
+         "kind": "grammar",
+         "front": "se venden / se alquila",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à vendre / à louer (se passif)"
+        },
+        {
+         "slug": "gram-es-se-impersonal",
+         "kind": "grammar",
+         "front": "se vive / se dice",
+         "reading": null,
+         "romaji": null,
+         "meaning": "on vit / on dit (se impersonnel)"
+        },
+        {
+         "slug": "es-dicen-que",
+         "kind": "vocabulary",
+         "front": "dicen que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "on dit que…"
+        },
+        {
+         "slug": "es-uno-nunca-sabe",
+         "kind": "vocabulary",
+         "front": "uno nunca sabe",
+         "reading": null,
+         "romaji": null,
+         "meaning": "on ne sait jamais"
+        },
+        {
+         "slug": "es-se-prohibe",
+         "kind": "vocabulary",
+         "front": "se prohíbe",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il est interdit de"
+        },
+        {
+         "slug": "es-el-mal-de-altura",
+         "kind": "vocabulary",
+         "front": "el mal de altura",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le mal des montagnes"
+        },
+        {
+         "slug": "es-la-llama",
+         "kind": "vocabulary",
+         "front": "la llama",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le lama"
+        },
+        {
+         "slug": "es-la-infusion",
+         "kind": "vocabulary",
+         "front": "la infusión",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’infusion"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En Cuzco se recomienda descansar el primer día por el mal de altura.",
+         "reading": null,
+         "fr": "À Cuzco, on recommande de se reposer le premier jour à cause du mal des montagnes."
+        },
+        {
+         "jp": "Dicen que en estas minas se encontró oro hace siglos. — Uno nunca sabe…",
+         "reading": null,
+         "fr": "On dit qu’on a trouvé de l’or dans ces mines il y a des siècles. — On ne sait jamais…"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Se ＿ habitaciones con vistas al lago.",
+         "choices": [
+          "alquilan",
+          "alquila",
+          "alquilamos"
+         ],
+         "answer": "alquilan",
+         "explanation": "Se passif : accord avec habitaciones.",
+         "translation": "Chambres à louer avec vue sur le lac."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "En esta ciudad se ＿ muy bien.",
+         "choices": [
+          "vive",
+          "viven",
+          "vivimos"
+         ],
+         "answer": "vive",
+         "explanation": "Se impersonnel : verbe au singulier.",
+         "translation": "Dans cette ville, on vit très bien."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ que va a llover mañana.",
+         "choices": [
+          "Dicen",
+          "Se dicen",
+          "Dice uno"
+         ],
+         "answer": "Dicen",
+         "explanation": "On dit que : dicen que.",
+         "translation": "On dit qu’il va pleuvoir demain."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Se prohíbe fumar.",
+         "translation": "On a le droit de fumer.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Se prohíbe = il est interdit."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w6-c2",
+     "title": "Le journal de Cuzco",
+     "lessons": [
+      {
+       "slug": "es-prensa",
+       "title": "La presse : el titular, según, al parecer",
+       "objective": "Comprendre un article de presse et rapporter une information non confirmée.",
+       "minutes": 9,
+       "explanation": [
+        "La presse : el periódico, la noticia, el titular (le gros titre), la portada (la une), el artículo de opinión, el / la periodista, la entrevista.",
+        "Information non confirmée : según (selon), al parecer (apparemment), conditionnel journalistique : El ministro habría dimitido (le ministre aurait démissionné).",
+        "Les verbes de la presse : informar, anunciar, afirmar, negar (nier), confirmar, denunciar."
+       ],
+       "items": [
+        {
+         "slug": "es-el-titular",
+         "kind": "vocabulary",
+         "front": "el titular",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le gros titre"
+        },
+        {
+         "slug": "es-la-noticia",
+         "kind": "vocabulary",
+         "front": "la noticia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la nouvelle, l’information"
+        },
+        {
+         "slug": "es-el-periodista",
+         "kind": "vocabulary",
+         "front": "el / la periodista",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le / la journaliste"
+        },
+        {
+         "slug": "es-la-portada",
+         "kind": "vocabulary",
+         "front": "la portada",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la une (d’un journal)"
+        },
+        {
+         "slug": "es-segun",
+         "kind": "vocabulary",
+         "front": "según",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’après, selon"
+        },
+        {
+         "slug": "es-al-parecer",
+         "kind": "vocabulary",
+         "front": "al parecer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "apparemment"
+        },
+        {
+         "slug": "es-negar",
+         "kind": "vocabulary",
+         "front": "negar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nier"
+        },
+        {
+         "slug": "es-afirmar",
+         "kind": "vocabulary",
+         "front": "afirmar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "affirmer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Según el periódico, los arqueólogos habrían encontrado una nueva tumba inca.",
+         "reading": null,
+         "fr": "Selon le journal, les archéologues auraient trouvé une nouvelle tombe inca."
+        },
+        {
+         "jp": "El alcalde negó la noticia, pero al parecer la mina volverá a abrir.",
+         "reading": null,
+         "fr": "Le maire a démenti la nouvelle, mais apparemment la mine va rouvrir."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "La noticia salió en la ＿ de todos los periódicos.",
+         "choices": [
+          "portada",
+          "periodista",
+          "mina"
+         ],
+         "answer": "portada",
+         "explanation": "La une : la portada.",
+         "translation": "La nouvelle a fait la une de tous les journaux."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Según la policía, el ladrón ＿ huido a Bolivia.",
+         "choices": [
+          "habría",
+          "habrá sido",
+          "haya"
+         ],
+         "answer": "habría",
+         "explanation": "Information non confirmée : conditionnel journalistique.",
+         "translation": "Selon la police, le voleur aurait fui en Bolivie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "El ministro ＿ las acusaciones: dijo que eran falsas.",
+         "choices": [
+          "negó",
+          "afirmó",
+          "confirmó"
+         ],
+         "answer": "negó",
+         "explanation": "Nier : negar.",
+         "translation": "Le ministre a nié les accusations : il a dit qu’elles étaient fausses."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Al parecer, el museo cerrará en verano.",
+         "translation": "L’information est présentée comme certaine.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Al parecer = apparemment : ce n’est pas confirmé."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w7",
+   "title": "Le vaisseau fantôme de Chiloé",
+   "region": "Traversée des Amériques",
+   "description": "Rapporter des paroles au passé (dijo que vendría), employer les relatifs soutenus (cuyo, el cual, lo cual) et argumenter dans un débat.",
+   "boss": {
+    "name": "Le Caleuche",
+    "glyph": "Õ",
+    "intro": "Au large de Chiloé, le Caleuche, navire fantôme illuminé et plein de musique, emporte les marins qui ne savent pas débattre. Rapporte fidèlement les paroles de l’équipage, relie tes idées avec précision et argumente pour qu’il te laisse débarquer."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w7-c1",
+     "title": "Les paroles de l’équipage",
+     "lessons": [
+      {
+       "slug": "es-indirecto-pasado",
+       "title": "Il a dit qu’il viendrait : le discours rapporté au passé",
+       "objective": "Transformer les temps, les ordres et les repères dans le discours rapporté au passé.",
+       "minutes": 10,
+       "explanation": [
+        "Les temps reculent : présent → imparfait ; passé composé → plus-que-parfait ; futur → conditionnel. «Vendré» → Dijo que vendría. «He terminado» → Dijo que había terminado.",
+        "Ordres et demandes → imparfait du subjonctif : «Ven» → Me pidió que fuera. Les questions : Me preguntó si / dónde / cuándo…",
+        "Les repères changent : hoy → aquel día, mañana → al día siguiente, ayer → el día anterior, aquí → allí."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-dijo-que-vendria",
+         "kind": "grammar",
+         "front": "dijo que vendría",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il a dit qu’il viendrait"
+        },
+        {
+         "slug": "gram-es-me-pidio-que",
+         "kind": "grammar",
+         "front": "me pidió que + imperfecto de subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il m’a demandé de…"
+        },
+        {
+         "slug": "es-aquel-dia",
+         "kind": "vocabulary",
+         "front": "aquel día",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce jour-là"
+        },
+        {
+         "slug": "es-el-dia-anterior",
+         "kind": "vocabulary",
+         "front": "el día anterior",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la veille"
+        },
+        {
+         "slug": "es-asegurar",
+         "kind": "vocabulary",
+         "front": "asegurar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "assurer, affirmer"
+        },
+        {
+         "slug": "es-prometer",
+         "kind": "vocabulary",
+         "front": "prometer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "promettre"
+        },
+        {
+         "slug": "es-el-marinero",
+         "kind": "vocabulary",
+         "front": "el marinero",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le marin"
+        },
+        {
+         "slug": "es-la-tripulacion",
+         "kind": "vocabulary",
+         "front": "la tripulación",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’équipage"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El capitán nos aseguró que llegaríamos a Chiloé al día siguiente.",
+         "reading": null,
+         "fr": "Le capitaine nous a assuré que nous arriverions à Chiloé le lendemain."
+        },
+        {
+         "jp": "Un marinero me pidió que no le contara a nadie lo que había visto aquella noche.",
+         "reading": null,
+         "fr": "Un marin m’a demandé de ne raconter à personne ce que j’avais vu cette nuit-là."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "«Volveré pronto». → Dijo que ＿ pronto.",
+         "choices": [
+          "volvería",
+          "volverá",
+          "vuelva"
+         ],
+         "answer": "volvería",
+         "explanation": "Futur → conditionnel.",
+         "translation": "« Je reviendrai bientôt. » → Il a dit qu’il reviendrait bientôt."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "«He visto el barco». → Dijo que ＿ el barco.",
+         "choices": [
+          "había visto",
+          "ha visto",
+          "vería"
+         ],
+         "answer": "había visto",
+         "explanation": "Passé composé → plus-que-parfait.",
+         "translation": "« J’ai vu le bateau. » → Il a dit qu’il avait vu le bateau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "«Ayúdame». → Me pidió que lo ＿.",
+         "choices": [
+          "ayudara",
+          "ayude",
+          "ayudaba"
+         ],
+         "answer": "ayudara",
+         "explanation": "Ordre rapporté au passé : imparfait du subjonctif.",
+         "translation": "« Aide-moi. » → Il m’a demandé de l’aider."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "«Mañana salimos». → Dijo que ＿ salían.",
+         "choices": [
+          "al día siguiente",
+          "mañana",
+          "ayer"
+         ],
+         "answer": "al día siguiente",
+         "explanation": "Mañana → al día siguiente.",
+         "translation": "« Nous partons demain. » → Il a dit qu’ils partaient le lendemain."
+        }
+       ]
+      },
+      {
+       "slug": "es-relativos-b2",
+       "title": "Dont, lequel : cuyo, el cual, lo cual",
+       "objective": "Employer les relatifs soutenus cuyo, el cual et lo cual.",
+       "minutes": 10,
+       "explanation": [
+        "Cuyo, cuya, cuyos, cuyas = dont (possession) ; il s’accorde avec ce qui est possédé : el pescador cuya barca se hundió.",
+        "El cual, la cual, los cuales, las cuales après une préposition, surtout à l’écrit : la isla en la cual vivimos.",
+        "Lo cual / lo que = ce qui (reprend toute une phrase) : Llovió toda la semana, lo cual nos obligó a quedarnos en casa."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-cuyo",
+         "kind": "grammar",
+         "front": "cuyo / cuya / cuyos / cuyas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dont, à qui"
+        },
+        {
+         "slug": "gram-es-el-cual",
+         "kind": "grammar",
+         "front": "el cual / la cual",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lequel / laquelle"
+        },
+        {
+         "slug": "es-lo-cual",
+         "kind": "vocabulary",
+         "front": "lo cual",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce qui (reprend une phrase)"
+        },
+        {
+         "slug": "es-la-leyenda",
+         "kind": "vocabulary",
+         "front": "la leyenda",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la légende"
+        },
+        {
+         "slug": "es-el-barco-fantasma",
+         "kind": "vocabulary",
+         "front": "el barco fantasma",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le vaisseau fantôme"
+        },
+        {
+         "slug": "es-la-marea",
+         "kind": "vocabulary",
+         "front": "la marea",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la marée"
+        },
+        {
+         "slug": "es-el-muelle",
+         "kind": "vocabulary",
+         "front": "el muelle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le quai (d’un port)"
+        },
+        {
+         "slug": "es-el-pescador",
+         "kind": "vocabulary",
+         "front": "el pescador",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le pêcheur"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Es una leyenda de Chiloé cuyo origen nadie conoce.",
+         "reading": null,
+         "fr": "C’est une légende de Chiloé dont personne ne connaît l’origine."
+        },
+        {
+         "jp": "La marea subió de repente, lo cual asustó a los pescadores del muelle.",
+         "reading": null,
+         "fr": "La marée est montée d’un coup, ce qui a effrayé les pêcheurs du quai."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Es el pescador ＿ barca desapareció.",
+         "choices": [
+          "cuya",
+          "cuyo",
+          "que su"
+         ],
+         "answer": "cuya",
+         "explanation": "Cuya s’accorde avec barca.",
+         "translation": "C’est le pêcheur dont la barque a disparu."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Perdimos el último barco, ＿ nos obligó a dormir en el puerto.",
+         "choices": [
+          "lo cual",
+          "el cual",
+          "cuyo"
+         ],
+         "answer": "lo cual",
+         "explanation": "Reprend toute la phrase : lo cual.",
+         "translation": "Nous avons raté le dernier bateau, ce qui nous a obligés à dormir au port."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Esta es la isla en ＿ nació mi abuela.",
+         "choices": [
+          "la cual",
+          "cuya",
+          "lo cual"
+         ],
+         "answer": "la cual",
+         "explanation": "Après une préposition : la cual.",
+         "translation": "Voici l’île où est née ma grand-mère."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "El autor, cuyos libros leo, vive en Chile.",
+         "translation": "Je lis les livres de cet auteur.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Cuyos libros = dont les livres."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w7-c2",
+     "title": "Le débat sur le pont",
+     "lessons": [
+      {
+       "slug": "es-debate",
+       "title": "Argumenter : en primer lugar, no obstante, por consiguiente",
+       "objective": "Structurer une argumentation avec les connecteurs du registre soutenu.",
+       "minutes": 9,
+       "explanation": [
+        "Introduire et ordonner : en primer lugar, en segundo lugar, cabe destacar que (il convient de souligner que), hay que tener en cuenta que (il faut tenir compte de).",
+        "Opposer et concéder : no obstante (néanmoins), si bien es cierto que… (s’il est vrai que…), por el contrario (au contraire).",
+        "Conclure : por consiguiente (par conséquent), en definitiva, en conclusión, para terminar."
+       ],
+       "items": [
+        {
+         "slug": "es-en-primer-lugar",
+         "kind": "vocabulary",
+         "front": "en primer lugar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "premièrement, en premier lieu"
+        },
+        {
+         "slug": "es-cabe-destacar",
+         "kind": "vocabulary",
+         "front": "cabe destacar que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il convient de souligner que"
+        },
+        {
+         "slug": "es-tener-en-cuenta",
+         "kind": "vocabulary",
+         "front": "tener en cuenta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tenir compte de"
+        },
+        {
+         "slug": "es-no-obstante",
+         "kind": "vocabulary",
+         "front": "no obstante",
+         "reading": null,
+         "romaji": null,
+         "meaning": "néanmoins"
+        },
+        {
+         "slug": "es-por-consiguiente",
+         "kind": "vocabulary",
+         "front": "por consiguiente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "par conséquent"
+        },
+        {
+         "slug": "es-en-definitiva",
+         "kind": "vocabulary",
+         "front": "en definitiva",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en définitive, bref"
+        },
+        {
+         "slug": "es-por-el-contrario",
+         "kind": "vocabulary",
+         "front": "por el contrario",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au contraire"
+        },
+        {
+         "slug": "es-el-argumento",
+         "kind": "vocabulary",
+         "front": "el argumento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’argument"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En primer lugar, cabe destacar que el turismo ha traído trabajo a la isla; no obstante, también ha encarecido la vivienda.",
+         "reading": null,
+         "fr": "En premier lieu, il convient de souligner que le tourisme a apporté du travail sur l’île ; néanmoins, il a aussi fait grimper le prix du logement."
+        },
+        {
+         "jp": "Por consiguiente, hay que tener en cuenta la opinión de los vecinos.",
+         "reading": null,
+         "fr": "Par conséquent, il faut tenir compte de l’avis des habitants."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El proyecto es caro; ＿, puede crear empleo.",
+         "choices": [
+          "no obstante",
+          "por consiguiente",
+          "en primer lugar"
+         ],
+         "answer": "no obstante",
+         "explanation": "Opposition : no obstante.",
+         "translation": "Le projet est cher ; néanmoins, il peut créer des emplois."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No hay suficientes médicos; ＿, las esperas son largas.",
+         "choices": [
+          "por consiguiente",
+          "no obstante",
+          "por el contrario"
+         ],
+         "answer": "por consiguiente",
+         "explanation": "Conséquence : por consiguiente.",
+         "translation": "Il n’y a pas assez de médecins ; par conséquent, l’attente est longue."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hay que ＿ en cuenta el coste.",
+         "choices": [
+          "tener",
+          "poner",
+          "hacer"
+         ],
+         "answer": "tener",
+         "explanation": "Tener en cuenta = tenir compte de.",
+         "translation": "Il faut tenir compte du coût."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "En definitiva, el turismo tiene más ventajas que inconvenientes.",
+         "translation": "C’est une phrase de conclusion.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "En definitiva introduit une conclusion."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-w8",
+   "title": "Buenos Aires et la pampa",
+   "region": "Traversée des Amériques",
+   "description": "Comprendre le voseo et l’espagnol du Río de la Plata, situer les actions dans le temps (antes de que, nada más + infinitif) et réussir un entretien d’embauche.",
+   "boss": {
+    "name": "Le Pombero",
+    "glyph": "ỹ",
+    "intro": "Dans les forêts du nord de l’Argentine et du Paraguay, le Pombero, petit homme velu qui imite le chant des oiseaux, protège la nature et joue des tours aux voyageurs. Pour le gagner à ta cause, parle comme un vrai porteño, situe chaque action dans le temps et réussis ton entretien d’embauche."
+   },
+   "chapters": [
+    {
+     "slug": "deleb2-w8-c1",
+     "title": "Les rues de Buenos Aires",
+     "lessons": [
+      {
+       "slug": "es-voseo",
+       "title": "Vos tenés : le voseo du Río de la Plata",
+       "objective": "Comprendre et employer le voseo et le vocabulaire rioplatense.",
+       "minutes": 10,
+       "explanation": [
+        "En Argentine, en Uruguay et au Paraguay, vos remplace tú : vos sos (tu es), vos tenés, vos querés, vos vivís. L’accent tombe sur la fin et il n’y a pas de diphtongue : tenés (tienes), podés (puedes).",
+        "L’impératif : vení (viens), decime (dis-moi), mirá (regarde), tomá (tiens, prends).",
+        "Mots rioplatenses : che (hé, eh), ¡dale! (d’accord, vas-y), el colectivo (le bus), la pileta (la piscine), el subte (le métro de Buenos Aires), laburar (travailler)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-voseo",
+         "kind": "grammar",
+         "front": "vos sos / vos tenés",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tu es / tu as (voseo)"
+        },
+        {
+         "slug": "gram-es-imperativo-vos",
+         "kind": "grammar",
+         "front": "vení / decime / mirá",
+         "reading": null,
+         "romaji": null,
+         "meaning": "viens / dis-moi / regarde (voseo)"
+        },
+        {
+         "slug": "es-che",
+         "kind": "vocabulary",
+         "front": "che",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hé, eh (Río de la Plata)"
+        },
+        {
+         "slug": "es-dale",
+         "kind": "vocabulary",
+         "front": "¡Dale!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "D’accord ! Vas-y ! (Río de la Plata)"
+        },
+        {
+         "slug": "es-el-colectivo",
+         "kind": "vocabulary",
+         "front": "el colectivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bus (Argentine)"
+        },
+        {
+         "slug": "es-laburar",
+         "kind": "vocabulary",
+         "front": "laburar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "travailler (Argentine, familier)"
+        },
+        {
+         "slug": "es-el-subte",
+         "kind": "vocabulary",
+         "front": "el subte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le métro (Buenos Aires)"
+        },
+        {
+         "slug": "es-la-pileta",
+         "kind": "vocabulary",
+         "front": "la pileta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la piscine (Argentine)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Che, ¿vos sabés a qué hora sale el colectivo para La Plata?",
+         "reading": null,
+         "fr": "Hé, tu sais à quelle heure part le bus pour La Plata ?"
+        },
+        {
+         "jp": "Vení el sábado a casa, tenemos pileta. — ¡Dale!",
+         "reading": null,
+         "fr": "Viens samedi à la maison, on a une piscine. — D’accord !"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Vos ＿ argentino, ¿no?",
+         "choices": [
+          "sos",
+          "eres",
+          "es"
+         ],
+         "answer": "sos",
+         "explanation": "Voseo : vos sos.",
+         "translation": "Tu es argentin, non ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Vos ＿ hermanos?",
+         "choices": [
+          "tenés",
+          "tienes",
+          "tenéis"
+         ],
+         "answer": "tenés",
+         "explanation": "Voseo : vos tenés.",
+         "translation": "Tu as des frères et sœurs ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Porteña",
+           "jp": "¿Venís al asado el domingo?"
+          }
+         ],
+         "translation": "Une habitante de Buenos Aires t’invite à un barbecue ; tu acceptes.",
+         "choices": [
+          "¡Dale! ¿Llevo algo?",
+          "¡Órale! Llevo algo.",
+          "Vale, llevaré nada."
+         ],
+         "answer": "¡Dale! ¿Llevo algo?",
+         "explanation": "Accepter au Río de la Plata : ¡dale!"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En Buenos Aires, para ir al centro, tomo el ＿.",
+         "choices": [
+          "subte",
+          "pileta",
+          "asado"
+         ],
+         "answer": "subte",
+         "explanation": "Le métro de Buenos Aires : el subte.",
+         "translation": "À Buenos Aires, pour aller au centre, je prends le métro."
+        }
+       ]
+      },
+      {
+       "slug": "es-temporales",
+       "title": "Avant que, dès que : antes de que, nada más",
+       "objective": "Situer les actions dans le temps avec les subordonnées et les tournures à l’infinitif.",
+       "minutes": 10,
+       "explanation": [
+        "Antes de que + subjonctif, toujours : Llámame antes de que salga el avión. Au passé : Me fui antes de que llegaran.",
+        "Después de que, en cuanto, cuando : subjonctif pour le futur, indicatif pour le passé : En cuanto llegues, avísame. En cuanto llegó, me avisó.",
+        "Nada más + infinitif = dès que, à peine : Nada más llegar, se durmió. Al + infinitif = au moment de : Al salir, vi a Pedro."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-antes-de-que",
+         "kind": "grammar",
+         "front": "antes de que + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avant que + subjonctif"
+        },
+        {
+         "slug": "gram-es-despues-de-que",
+         "kind": "grammar",
+         "front": "después de que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "après que"
+        },
+        {
+         "slug": "es-nada-mas",
+         "kind": "vocabulary",
+         "front": "nada más + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dès que, à peine…"
+        },
+        {
+         "slug": "es-al-infinitivo",
+         "kind": "vocabulary",
+         "front": "al + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au moment de, en (+ participe présent)"
+        },
+        {
+         "slug": "es-mientras-tanto",
+         "kind": "vocabulary",
+         "front": "mientras tanto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pendant ce temps"
+        },
+        {
+         "slug": "es-el-asado",
+         "kind": "vocabulary",
+         "front": "el asado",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le barbecue (argentin)"
+        },
+        {
+         "slug": "es-la-pampa",
+         "kind": "vocabulary",
+         "front": "la pampa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la pampa"
+        },
+        {
+         "slug": "es-el-gaucho",
+         "kind": "vocabulary",
+         "front": "el gaucho",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le gaucho"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Nada más llegar a la estancia, los gauchos nos invitaron a un asado.",
+         "reading": null,
+         "fr": "Dès notre arrivée à l’estancia, les gauchos nous ont invités à un barbecue."
+        },
+        {
+         "jp": "Volvamos a la ciudad antes de que se haga de noche en la pampa.",
+         "reading": null,
+         "fr": "Rentrons en ville avant qu’il fasse nuit dans la pampa."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Salgamos antes de que ＿ a llover.",
+         "choices": [
+          "empiece",
+          "empieza",
+          "empezará"
+         ],
+         "answer": "empiece",
+         "explanation": "Antes de que + subjonctif.",
+         "translation": "Partons avant qu’il commence à pleuvoir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Después de que ＿ los invitados, limpiaremos.",
+         "choices": [
+          "se vayan",
+          "se van",
+          "se irán"
+         ],
+         "answer": "se vayan",
+         "explanation": "Futur : después de que + subjonctif.",
+         "translation": "Après le départ des invités, nous ferons le ménage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Nada más ＿ a casa, se quitó los zapatos.",
+         "choices": [
+          "llegar",
+          "llegó",
+          "llegue"
+         ],
+         "answer": "llegar",
+         "explanation": "Nada más + infinitif.",
+         "translation": "Dès qu’il est arrivé à la maison, il a enlevé ses chaussures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ salir del cine, vimos a Lucía.",
+         "choices": [
+          "Al",
+          "Nada",
+          "Antes"
+         ],
+         "answer": "Al",
+         "explanation": "Au moment de : al + infinitif.",
+         "translation": "En sortant du cinéma, nous avons vu Lucía."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deleb2-w8-c2",
+     "title": "Un emploi à l’estancia",
+     "lessons": [
+      {
+       "slug": "es-entrevista",
+       "title": "L’entretien d’embauche",
+       "objective": "Se présenter, parler de son expérience et répondre aux questions d’un entretien.",
+       "minutes": 9,
+       "explanation": [
+        "Le poste : el puesto de trabajo, la oferta de empleo, el contrato (indefinido / temporal), a jornada completa / a tiempo parcial, el sueldo.",
+        "Se présenter : Tengo experiencia en…, Me considero una persona responsable, Domino el inglés (je maîtrise l’anglais), Me encantaría formar parte de su equipo.",
+        "Les questions : ¿Por qué quiere este puesto? ¿Cuáles son sus puntos fuertes y débiles? ¿Cuándo podría incorporarse? (quand pourriez-vous commencer ?)"
+       ],
+       "items": [
+        {
+         "slug": "es-el-puesto-de-trabajo",
+         "kind": "vocabulary",
+         "front": "el puesto de trabajo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le poste (de travail)"
+        },
+        {
+         "slug": "es-la-oferta-de-empleo",
+         "kind": "vocabulary",
+         "front": "la oferta de empleo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’offre d’emploi"
+        },
+        {
+         "slug": "es-el-contrato",
+         "kind": "vocabulary",
+         "front": "el contrato",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le contrat"
+        },
+        {
+         "slug": "es-jornada-completa",
+         "kind": "vocabulary",
+         "front": "a jornada completa / a tiempo parcial",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à temps plein / à temps partiel"
+        },
+        {
+         "slug": "es-el-sueldo",
+         "kind": "vocabulary",
+         "front": "el sueldo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le salaire"
+        },
+        {
+         "slug": "es-dominar",
+         "kind": "vocabulary",
+         "front": "dominar (un idioma)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "maîtriser (une langue)"
+        },
+        {
+         "slug": "es-incorporarse",
+         "kind": "vocabulary",
+         "front": "incorporarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre son poste"
+        },
+        {
+         "slug": "es-los-puntos-fuertes",
+         "kind": "vocabulary",
+         "front": "los puntos fuertes / débiles",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les points forts / faibles"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Me encantaría formar parte de su equipo: domino el inglés y tengo cinco años de experiencia.",
+         "reading": null,
+         "fr": "J’aimerais beaucoup faire partie de votre équipe : je maîtrise l’anglais et j’ai cinq ans d’expérience."
+        },
+        {
+         "jp": "Es un contrato indefinido a jornada completa. ¿Cuándo podría incorporarse?",
+         "reading": null,
+         "fr": "C’est un CDI à temps plein. Quand pourriez-vous commencer ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Entrevistadora",
+           "jp": "¿Por qué quiere este puesto?"
+          }
+         ],
+         "translation": "La recruteuse te demande pourquoi tu veux ce poste.",
+         "choices": [
+          "Porque me apasiona el turismo y creo que puedo aportar mucho a su empresa.",
+          "Porque el sueldo.",
+          "Porque quería que me lo dieras."
+         ],
+         "answer": "Porque me apasiona el turismo y creo que puedo aportar mucho a su empresa.",
+         "explanation": "Motiver sa candidature : intérêt et apport."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Busco un trabajo a tiempo ＿, solo por las mañanas.",
+         "choices": [
+          "parcial",
+          "completo",
+          "fuerte"
+         ],
+         "answer": "parcial",
+         "explanation": "À temps partiel : a tiempo parcial.",
+         "translation": "Je cherche un travail à temps partiel, seulement le matin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Firmé un ＿ indefinido el mes pasado.",
+         "choices": [
+          "contrato",
+          "sueldo",
+          "puesto"
+         ],
+         "answer": "contrato",
+         "explanation": "Le contrat : el contrato.",
+         "translation": "J’ai signé un CDI le mois dernier."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Podría incorporarme el lunes.",
+         "translation": "Le candidat peut commencer lundi.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Incorporarse = prendre son poste."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "deleb2-final",
+   "title": "Simulation DELE B2 : le théâtre Colón",
+   "region": "Traversée des Amériques",
+   "description": "Examen blanc au format du DELE B2, en espagnol : compréhension écrite, compréhension auditive et expression écrite (l’oral n’est pas évalué). Noté sur 100 ; réussite avec au moins 30 points dans chacun des deux groupes d’épreuves.",
+   "exam": "deleb2-official",
+   "chapters": []
+  }
+ ]
+}

@@ -1121,6 +1121,7 @@ test('hors ligne : apprendre l’espagnol pour le DELE (saga de Don Quichotte, e
   await expect(page.getByText('Los molinos de viento').first()).toBeVisible();
   await expect(page.getByText('Juan sin Miedo').first()).toBeVisible();
   await expect(page.getByText('El gallo de Santo Domingo').first()).toBeVisible();
+  await expect(page.getByText('La leyenda de El Dorado').first()).toBeVisible();
   await expect(page.getByText('Goldilocks and the Three Bears')).toHaveCount(0);
 
   // Atelier DELE et examen blanc noté sur 100
@@ -1132,6 +1133,9 @@ test('hors ligne : apprendre l’espagnol pour le DELE (saga de Don Quichotte, e
   await page.goto(FILE + '#/exam/deleb1-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc DELE B1 — format officiel' })).toBeVisible();
   await expect(page.getByText(/65 questions en 130 minutes/)).toBeVisible();
+  await page.goto(FILE + '#/exam/deleb2-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc DELE B2 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/71 questions en 150 minutes/)).toBeVisible();
   await page.goto(FILE + '#/exam/delea1-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc DELE A1 — format officiel' })).toBeVisible();
   await expect(page.getByText(/55 questions en 90 minutes/)).toBeVisible();

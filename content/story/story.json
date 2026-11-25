@@ -3825,6 +3825,159 @@
      }
     }
    }
+  },
+  "DELEB2": {
+   "glyph": "«",
+   "jp": "Las Américas",
+   "color": "#2E8A6A",
+   "saga": {
+    "fr": "La traversée des Amériques",
+    "en": "Across the Americas"
+   },
+   "hero": {
+    "fr": "Voyageur·se des Amériques",
+    "en": "Traveller of the Americas"
+   },
+   "short": {
+    "fr": "Voyageur·se",
+    "en": "Traveller"
+   },
+   "prologue": {
+    "fr": "À Cadix, un vieux voilier restauré s’apprête à traverser l’Atlantique sur la route des anciens navigateurs. Sa capitaine, une Canarienne au rire sonore, cherche un·e équipier·ère capable de comprendre l’espagnol de toutes les rives : « Aux Canaries, à La Havane, à Mexico ou à Buenos Aires, on ne parle pas tout à fait la même langue… et les légendes non plus ne sont pas les mêmes. » Tu montes à bord.",
+    "en": "In Cádiz, an old restored sailing ship is about to cross the Atlantic along the route of the old navigators. Her captain, a loud-laughing woman from the Canaries, is looking for a crew member who understands the Spanish of every shore: “In the Canaries, in Havana, in Mexico City or Buenos Aires, they don’t speak quite the same language… and the legends aren’t the same either.” You climb aboard."
+   },
+   "epilogue": {
+    "fr": "Au théâtre Colón de Buenos Aires, l’orchestre attaque un tango. Tu repenses aux volcans des Canaries, aux bals de La Havane, aux marchés de Mexico et aux brumes de Chiloé : tu comprends maintenant l’espagnol de deux continents, tu argumentes, tu nuances et tu imagines ce qui aurait pu être. La capitaine lève son verre : « La prochaine traversée sera encore plus longue… »",
+    "en": "At the Teatro Colón in Buenos Aires, the orchestra strikes up a tango. You think back to the volcanoes of the Canaries, the dance halls of Havana, the markets of Mexico City and the mists of Chiloé: you now understand the Spanish of two continents, you argue, qualify and imagine what might have been. The captain raises her glass: “The next crossing will be even longer…”"
+   },
+   "chapters": {
+    "deleb2-w1": {
+     "title": {
+      "fr": "Les volcans des Canaries",
+      "en": "The volcanoes of the Canaries"
+     },
+     "intro": {
+      "fr": "À Tenerife, Guayota a de nouveau enfermé le soleil dans le Teide. Décris avec justesse les gens et leurs changements pour qu’il rende la lumière.",
+      "en": "In Tenerife, Guayota has locked the sun inside Mount Teide again. Describe people and how they change with accuracy so he gives back the light."
+     },
+     "outro": {
+      "fr": "Guayota rouvre le cratère : le soleil jaillit et le voilier peut lever l’ancre.",
+      "en": "Guayota opens the crater again: the sun bursts out and the ship can weigh anchor."
+     }
+    },
+    "deleb2-w2": {
+     "title": {
+      "fr": "Les rythmes de La Havane",
+      "en": "The rhythms of Havana"
+     },
+     "intro": {
+      "fr": "Dans les bals de La Havane, la Ciguapa égare les danseurs qui suivent ses traces inversées. Raconte ce qu’on voulait que tu fasses et démasque ses ruses.",
+      "en": "In the dance halls of Havana, the Ciguapa leads astray the dancers who follow her backward footprints. Say what people wanted you to do and see through her tricks."
+     },
+     "outro": {
+      "fr": "La Ciguapa éclate de rire et disparaît dans la montagne en dansant le son.",
+      "en": "The Ciguapa bursts out laughing and vanishes into the mountains, dancing the son."
+     }
+    },
+    "deleb2-w3": {
+     "title": {
+      "fr": "Les marchés de Mexico",
+      "en": "The markets of Mexico City"
+     },
+     "intro": {
+      "fr": "Au marché de la Merced, le Nahual se cache sous la forme d’un coyote. Concède sans te contredire et comprends l’espagnol du Mexique pour le démasquer.",
+      "en": "At La Merced market, the Nahual is hiding in the shape of a coyote. Concede without contradicting yourself and understand Mexican Spanish to unmask him."
+     },
+     "outro": {
+      "fr": "Le Nahual reprend forme humaine, t’offre un tamal et s’éloigne en riant : « ¡Órale! »",
+      "en": "The Nahual takes human form again, offers you a tamal and walks off laughing: “¡Órale!”"
+     }
+    },
+    "deleb2-w4": {
+     "title": {
+      "fr": "Les volcans d’Antigua",
+      "en": "The volcanoes of Antigua"
+     },
+     "intro": {
+      "fr": "À Antigua, le Sombrerón propose des marchés pleins de pièges. Pose tes propres conditions et prévois l’imprévu avant de visiter les ruines.",
+      "en": "In Antigua, the Sombrerón offers deals full of traps. Set your own conditions and plan for the unexpected before visiting the ruins."
+     },
+     "outro": {
+      "fr": "Le Sombrerón soulève son immense chapeau, salue et va tresser la crinière d’un autre cheval.",
+      "en": "The Sombrerón raises his huge hat, bows and goes off to braid another horse’s mane."
+     }
+    },
+    "deleb2-w5": {
+     "title": {
+      "fr": "Le fleuve Magdalena",
+      "en": "The Magdalena river"
+     },
+     "intro": {
+      "fr": "Sur le Magdalena, le Mohán fait chavirer les pirogues des imprudents. Parle-lui de ce que tu aurais fait autrement et de ce qui se serait passé.",
+      "en": "On the Magdalena, the Mohán capsizes the canoes of the careless. Tell him what you would have done differently and what would have happened."
+     },
+     "outro": {
+      "fr": "Le Mohán rallume sa pipe, satisfait, et laisse le fleuve se calmer jusqu’à la mer.",
+      "en": "The Mohán relights his pipe, satisfied, and lets the river calm down all the way to the sea."
+     }
+    },
+    "deleb2-w6": {
+     "title": {
+      "fr": "Les mines des Andes",
+      "en": "The mines of the Andes"
+     },
+     "intro": {
+      "fr": "Dans les galeries des Andes, le Muki égare les mineurs qui ne lisent pas les nouvelles. Lis la presse, tourne les phrases au passif et parle de façon impersonnelle.",
+      "en": "In the tunnels of the Andes, the Muki leads astray the miners who don’t read the news. Read the press, turn sentences into the passive and speak impersonally."
+     },
+     "outro": {
+      "fr": "Le Muki t’offre une pépite d’or et te montre la sortie de la mine.",
+      "en": "The Muki gives you a gold nugget and shows you the way out of the mine."
+     }
+    },
+    "deleb2-w7": {
+     "title": {
+      "fr": "Le vaisseau fantôme de Chiloé",
+      "en": "The ghost ship of Chiloé"
+     },
+     "intro": {
+      "fr": "Au large de Chiloé, le Caleuche emporte les marins qui ne savent pas débattre. Rapporte les paroles de l’équipage et argumente pour débarquer.",
+      "en": "Off the coast of Chiloé, the Caleuche carries off sailors who cannot debate. Report the crew’s words and argue your case to go ashore."
+     },
+     "outro": {
+      "fr": "Le Caleuche s’éloigne dans la brume, toutes ses lumières allumées, et sa musique se perd au loin.",
+      "en": "The Caleuche sails off into the mist, all its lights ablaze, its music fading in the distance."
+     }
+    },
+    "deleb2-w8": {
+     "title": {
+      "fr": "Buenos Aires et la pampa",
+      "en": "Buenos Aires and the pampas"
+     },
+     "intro": {
+      "fr": "Dans la forêt du nord, le Pombero imite les oiseaux pour égarer les voyageurs. Parle comme un porteño, situe chaque action dans le temps et décroche ton emploi à l’estancia.",
+      "en": "In the northern forest, the Pombero imitates birds to lead travellers astray. Talk like a porteño, place every action in time and land your job at the ranch."
+     },
+     "outro": {
+      "fr": "Le Pombero siffle un dernier chant d’oiseau et te laisse passer jusqu’à Buenos Aires.",
+      "en": "The Pombero whistles one last birdsong and lets you through to Buenos Aires."
+     }
+    },
+    "deleb2-final": {
+     "title": {
+      "fr": "Le théâtre Colón",
+      "en": "The Teatro Colón"
+     },
+     "intro": {
+      "fr": "Au théâtre Colón, pour obtenir ta place dans l’orchestre du voyage, passe l’épreuve : lis, écoute et écris comme au DELE B2. Il faut au moins 30 points sur 50 dans chaque groupe.",
+      "en": "At the Teatro Colón, to earn your seat in the journey’s orchestra, take the test: read, listen and write as in the DELE B2. You need at least 30 points out of 50 in each group."
+     },
+     "outro": {
+      "fr": "Le rideau se lève sous les applaudissements. Niveau DELE B2 validé : tu maîtrises l’espagnol des deux rives de l’Atlantique !",
+      "en": "The curtain rises to applause. DELE B2 level complete: you master the Spanish of both sides of the Atlantic!"
+     }
+    }
+   }
   }
  }
 }

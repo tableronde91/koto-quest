@@ -130,7 +130,7 @@ export function StatsPage() {
   const { data: s, isLoading, error, refetch } = useStats();
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
-  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen, HSK 1 à 6 en chinois, DELE A1 à B1 en espagnol.
+  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen, HSK 1 à 6 en chinois, DELE A1 à B2 en espagnol.
   const words = useStudyLang();
   const ko = words.ko;
   const zh = words.zh;
@@ -138,9 +138,9 @@ export function StatsPage() {
   const { data: n4Raw } = usePath(ko ? 'TOPIK2' : zh ? 'HSK2' : words.es ? 'DELEA2' : 'N4');
   const n4 = words.en ? undefined : n4Raw;
   const { data: topik3 } = usePath(zh ? 'HSK3' : words.es ? 'DELEB1' : 'TOPIK3');
-  const { data: topik4 } = usePath(zh ? 'HSK4' : 'TOPIK4');
+  const { data: topik4 } = usePath(zh ? 'HSK4' : words.es ? 'DELEB2' : 'TOPIK4');
   const third = ko || zh || words.es ? topik3 : undefined;
-  const fourth = ko || zh ? topik4 : undefined;
+  const fourth = ko || zh || words.es ? topik4 : undefined;
   const { data: topik5 } = usePath(zh ? 'HSK5' : 'TOPIK5');
   const { data: topik6 } = usePath(zh ? 'HSK6' : 'TOPIK6');
   const fifth = ko || zh ? topik5 : undefined;

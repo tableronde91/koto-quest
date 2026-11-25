@@ -1,0 +1,986 @@
+{
+ "slug": "deleb2",
+ "level": "DELEB2",
+ "contentVersion": "2026.11.23",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel du DELE B2 (Instituto Cervantes : types d’épreuves, consignes en espagnol, notation sur 100 en deux groupes). L’expression écrite se fait par choix multiple et l’expression orale n’est pas évaluée : le groupe 2 est noté sur l’écoute. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "r-articulo",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 1",
+   "title": "Un article",
+   "prompt": "Lea el texto y conteste a las preguntas.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "Porque se fueron a vivir a las ciudades.",
+      "Porque estaban prohibidas en internet.",
+      "Porque sus abuelos no las hablaban."
+     ],
+     "answer": "Porque se fueron a vivir a las ciudades.",
+     "explanation": "Réponse : Porque se fueron a vivir a las ciudades.",
+     "text": "★ ¿Por qué muchos jóvenes dejaron de hablar las lenguas originarias?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "Muchos creadores publican contenidos en estas lenguas.",
+      "Las escuelas han dejado de enseñarlas.",
+      "Los jóvenes han olvidado el español."
+     ],
+     "answer": "Muchos creadores publican contenidos en estas lenguas.",
+     "explanation": "Réponse : Muchos creadores publican contenidos en estas lenguas.",
+     "text": "★ ¿Qué fenómeno ha surgido en la última década?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "han hecho que los jóvenes se sientan orgullosos de su lengua.",
+      "han fracasado como las políticas educativas.",
+      "son peligrosas para las lenguas originarias."
+     ],
+     "answer": "han hecho que los jóvenes se sientan orgullosos de su lengua.",
+     "explanation": "Réponse : han hecho que los jóvenes se sientan orgullosos de su lengua.",
+     "text": "★ Según Rosa Mamani, las redes sociales…",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "Que una lengua necesita usarse también en la escuela y la administración.",
+      "Que internet es suficiente para salvar una lengua.",
+      "Que el entusiasmo digital es negativo."
+     ],
+     "answer": "Que una lengua necesita usarse también en la escuela y la administración.",
+     "explanation": "Réponse : Que una lengua necesita usarse también en la escuela y la administración.",
+     "text": "★ ¿Qué advierten los expertos?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "Que la convivencia de lenguas es posible con voluntad política.",
+      "Que el guaraní está desapareciendo.",
+      "Que nadie habla español en Paraguay."
+     ],
+     "answer": "Que la convivencia de lenguas es posible con voluntad política.",
+     "explanation": "Réponse : Que la convivencia de lenguas es posible con voluntad política.",
+     "text": "★ ¿Qué demuestra el caso de Paraguay?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "Optimista.",
+      "Decepcionada.",
+      "Indiferente."
+     ],
+     "answer": "Optimista.",
+     "explanation": "Réponse : Optimista.",
+     "text": "★ ¿Cómo se siente Mamani al final del texto?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    },
+    {
+     "choices": [
+      "Desde 1992.",
+      "Desde hace veinte años exactos.",
+      "Desde el siglo XIX."
+     ],
+     "answer": "Desde 1992.",
+     "explanation": "Réponse : Desde 1992.",
+     "text": "★ ¿Desde cuándo es oficial el guaraní en Paraguay?",
+     "passage": "El auge de las lenguas originarias en internet. Durante siglos, el quechua, el guaraní o el náhuatl se transmitieron casi exclusivamente de forma oral, y muchos jóvenes dejaron de hablarlos al trasladarse a las ciudades. Sin embargo, en la última década ha surgido un fenómeno inesperado: cientos de creadores publican vídeos, canciones y podcasts en estas lenguas. Según la lingüista peruana Rosa Mamani, «las redes sociales han conseguido lo que no lograron décadas de políticas educativas: que los jóvenes se sientan orgullosos de hablar la lengua de sus abuelos». No obstante, los expertos advierten de que el entusiasmo digital no basta. Para que una lengua sobreviva, es imprescindible que se utilice en la escuela, en la administración y en la vida cotidiana. En Paraguay, donde el guaraní es oficial junto al español desde 1992, la mayoría de la población es bilingüe, lo cual demuestra que la convivencia de lenguas es posible si existe voluntad política. Mamani concluye con optimismo: «Si hace veinte años me hubieran dicho que un rapero cantaría en quechua ante miles de personas, no lo habría creído»."
+    }
+   ]
+  },
+  {
+   "id": "r-perfiles",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 2",
+   "title": "Quatre parcours",
+   "prompt": "Lea los textos y diga a qué persona corresponde cada enunciado.",
+   "count": 10,
+   "questions": [
+    {
+     "choices": [
+      "Rodrigo.",
+      "Valeria.",
+      "Tomás.",
+      "Inés."
+     ],
+     "answer": "Rodrigo.",
+     "explanation": "Réponse : Rodrigo.",
+     "text": "★ ¿Quién cambió de profesión a pesar de sus estudios?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Tomás.",
+      "Valeria.",
+      "Inés.",
+      "Rodrigo."
+     ],
+     "answer": "Tomás.",
+     "explanation": "Réponse : Tomás.",
+     "text": "★ ¿Quién trabaja para una empresa extranjera?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Valeria.",
+      "Tomás.",
+      "Inés.",
+      "Rodrigo."
+     ],
+     "answer": "Valeria.",
+     "explanation": "Réponse : Valeria.",
+     "text": "★ ¿Quién tuvo dificultades con su familia?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Inés.",
+      "Valeria.",
+      "Tomás.",
+      "Rodrigo."
+     ],
+     "answer": "Inés.",
+     "explanation": "Réponse : Inés.",
+     "text": "★ ¿Quién se queja del transporte?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Tomás.",
+      "Valeria.",
+      "Inés.",
+      "Rodrigo."
+     ],
+     "answer": "Tomás.",
+     "explanation": "Réponse : Tomás.",
+     "text": "★ ¿Quién echa de menos la vida en la oficina?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Inés.",
+      "Valeria.",
+      "Tomás.",
+      "Rodrigo."
+     ],
+     "answer": "Inés.",
+     "explanation": "Réponse : Inés.",
+     "text": "★ ¿Quién cambió de vida por la llegada de un hijo?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Valeria.",
+      "Tomás.",
+      "Inés.",
+      "Rodrigo."
+     ],
+     "answer": "Valeria.",
+     "explanation": "Réponse : Valeria.",
+     "text": "★ ¿Quién gana ahora menos dinero?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Rodrigo.",
+      "Valeria.",
+      "Tomás.",
+      "Inés."
+     ],
+     "answer": "Rodrigo.",
+     "explanation": "Réponse : Rodrigo.",
+     "text": "★ ¿Quién no tiene libres los fines de semana?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Inés.",
+      "Valeria.",
+      "Tomás.",
+      "Rodrigo."
+     ],
+     "answer": "Inés.",
+     "explanation": "Réponse : Inés.",
+     "text": "★ ¿Quién vive ahora en un lugar más barato?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Tomás.",
+      "Valeria.",
+      "Inés.",
+      "Rodrigo."
+     ],
+     "answer": "Tomás.",
+     "explanation": "Réponse : Tomás.",
+     "text": "★ ¿Quién valora sobre todo la flexibilidad?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    },
+    {
+     "choices": [
+      "Rodrigo.",
+      "Valeria.",
+      "Tomás.",
+      "Inés."
+     ],
+     "answer": "Rodrigo.",
+     "explanation": "Réponse : Rodrigo.",
+     "text": "★ ¿Quién eligió su carrera por presión familiar?",
+     "passage": "Valeria (Bogotá): Dejé mi trabajo en un banco para abrir una librería de barrio. Gano menos, pero por fin hago lo que me apasiona. Lo más duro fue convencer a mi familia.\nTomás (Santiago de Chile): Llevo diez años teletrabajando para una empresa de Canadá. Me encanta la flexibilidad, aunque a veces echo de menos tener compañeros con quienes tomar un café.\nInés (Sevilla): Me mudé a un pueblo de la sierra cuando nació mi hija. Allí la vida es más barata y tranquila, si bien las conexiones de transporte dejan mucho que desear.\nRodrigo (Montevideo): Estudié Derecho porque mis padres insistieron, pero a los treinta años me hice cocinero. No me arrepiento en absoluto, aunque trabajo todos los fines de semana."
+    }
+   ]
+  },
+  {
+   "id": "r-fragmentos",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 3",
+   "title": "Un texte à compléter",
+   "prompt": "Lea el texto y elija el fragmento que falta.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "Se trata de un barco fantasma que navega de noche, iluminado y lleno de música.",
+      "Es un plato típico que se prepara con mariscos.",
+      "Es el nombre del aeropuerto de la isla."
+     ],
+     "answer": "Se trata de un barco fantasma que navega de noche, iluminado y lleno de música.",
+     "explanation": "Réponse : Se trata de un barco fantasma que navega de noche, iluminado y lleno de música.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El Caleuche es uno de los mitos más conocidos de Chiloé. [ … ] Quienes lo ven, dicen, no vuelven a ser los mismos."
+    },
+    {
+     "choices": [
+      "También se usa en Uruguay, Paraguay y gran parte de Centroamérica.",
+      "En España es la forma más habitual de tratamiento.",
+      "Nadie lo utiliza ya en la vida cotidiana."
+     ],
+     "answer": "También se usa en Uruguay, Paraguay y gran parte de Centroamérica.",
+     "explanation": "Réponse : También se usa en Uruguay, Paraguay y gran parte de Centroamérica.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El voseo no es exclusivo de Argentina. [ … ] En cada país, sin embargo, presenta formas ligeramente distintas."
+    },
+    {
+     "choices": [
+      "Esta afluencia masiva pone en peligro la conservación del lugar.",
+      "Casi nadie conoce su existencia.",
+      "Está situado junto al mar Caribe."
+     ],
+     "answer": "Esta afluencia masiva pone en peligro la conservación del lugar.",
+     "explanation": "Réponse : Esta afluencia masiva pone en peligro la conservación del lugar.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "Machu Picchu recibe más de un millón de visitantes al año. [ … ] Por ello, las autoridades han limitado el número de entradas diarias."
+    },
+    {
+     "choices": [
+      "Su elaboración se transmite de generación en generación desde hace miles de años.",
+      "Se inventó en Europa en el siglo XX.",
+      "Solo se come en los restaurantes caros."
+     ],
+     "answer": "Su elaboración se transmite de generación en generación desde hace miles de años.",
+     "explanation": "Réponse : Su elaboración se transmite de generación en generación desde hace miles de años.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "La tortilla de maíz es la base de la cocina mexicana. [ … ] De hecho, en 2010 esta cocina fue declarada patrimonio cultural inmaterial de la humanidad."
+    },
+    {
+     "choices": [
+      "Miles de empleados ya no se desplazan cada día a las oficinas.",
+      "Ahora todos los trabajadores viven en el centro.",
+      "Las empresas han prohibido trabajar desde casa."
+     ],
+     "answer": "Miles de empleados ya no se desplazan cada día a las oficinas.",
+     "explanation": "Réponse : Miles de empleados ya no se desplazan cada día a las oficinas.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El teletrabajo ha transformado muchas ciudades latinoamericanas. [ … ] Como consecuencia, algunos barrios céntricos han perdido comercios."
+    },
+    {
+     "choices": [
+      "Tras el de 1773, la capital se trasladó a otro valle.",
+      "Por eso nunca ha tenido iglesias.",
+      "Nunca ha habido volcanes cerca de la ciudad."
+     ],
+     "answer": "Tras el de 1773, la capital se trasladó a otro valle.",
+     "explanation": "Réponse : Tras el de 1773, la capital se trasladó a otro valle.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "Antigua Guatemala sufrió varios terremotos devastadores. [ … ] Hoy sus ruinas coloniales atraen a viajeros de todo el mundo."
+    },
+    {
+     "choices": [
+      "Al principio estaba mal visto por la alta sociedad, pero acabó conquistando los salones.",
+      "Siempre fue el baile oficial de la corte española.",
+      "Se inventó en un conservatorio de París."
+     ],
+     "answer": "Al principio estaba mal visto por la alta sociedad, pero acabó conquistando los salones.",
+     "explanation": "Réponse : Al principio estaba mal visto por la alta sociedad, pero acabó conquistando los salones.",
+     "text": "★ ¿Qué fragmento completa el hueco [ … ]?",
+     "passage": "El tango nació en los barrios humildes de Buenos Aires y Montevideo. [ … ] Hoy se baila en todo el mundo."
+    }
+   ]
+  },
+  {
+   "id": "r-gramatica",
+   "section": "reading",
+   "jpTitle": "Comprensión de lectura — Tarea 4",
+   "title": "Grammaire en contexte",
+   "prompt": "Lea el texto y elija la opción correcta para cada hueco.",
+   "count": 14,
+   "questions": [
+    {
+     "choices": [
+      "habría traído",
+      "traería",
+      "traje"
+     ],
+     "answer": "habría traído",
+     "explanation": "Réponse : habría traído",
+     "text": "★ Si hubiera sabido que el viaje era tan largo, ＿ más libros."
+    },
+    {
+     "choices": [
+      "estudiara",
+      "estudie",
+      "estudiaba"
+     ],
+     "answer": "estudiara",
+     "explanation": "Réponse : estudiara",
+     "text": "★ Mis padres querían que ＿ Medicina, pero elegí Historia."
+    },
+    {
+     "choices": [
+      "trabaje",
+      "trabajaría",
+      "trabajé"
+     ],
+     "answer": "trabaje",
+     "explanation": "Réponse : trabaje",
+     "text": "★ Aunque ＿ toda la noche, no terminaré el informe a tiempo."
+    },
+    {
+     "choices": [
+      "fue",
+      "estuvo",
+      "era siendo"
+     ],
+     "answer": "fue",
+     "explanation": "Réponse : fue",
+     "text": "★ El puente ＿ construido por los incas hace cinco siglos."
+    },
+    {
+     "choices": [
+      "llegue",
+      "llego",
+      "llegaré"
+     ],
+     "answer": "llegue",
+     "explanation": "Réponse : llegue",
+     "text": "★ Te llamaré en cuanto ＿ a Lima."
+    },
+    {
+     "choices": [
+      "cuyas",
+      "cuyos",
+      "que sus"
+     ],
+     "answer": "cuyas",
+     "explanation": "Réponse : cuyas",
+     "text": "★ Es el escritor ＿ novelas se han traducido a treinta idiomas."
+    },
+    {
+     "choices": [
+      "fuera",
+      "es",
+      "sea"
+     ],
+     "answer": "fuera",
+     "explanation": "Réponse : fuera",
+     "text": "★ Hablaba con tanta seguridad como si ＿ el dueño de la empresa."
+    },
+    {
+     "choices": [
+      "insistas",
+      "insistes",
+      "insistirás"
+     ],
+     "answer": "insistas",
+     "explanation": "Réponse : insistas",
+     "text": "★ Por mucho que ＿, no lograrás convencerme."
+    },
+    {
+     "choices": [
+      "haríamos",
+      "haremos",
+      "hagamos"
+     ],
+     "answer": "haríamos",
+     "explanation": "Réponse : haríamos",
+     "text": "★ El guía nos dijo que al día siguiente ＿ la excursión al volcán."
+    },
+    {
+     "choices": [
+      "por si",
+      "en caso de que",
+      "a no ser que"
+     ],
+     "answer": "por si",
+     "explanation": "Réponse : por si",
+     "text": "★ Llévate el paraguas ＿ llueve."
+    },
+    {
+     "choices": [
+      "puso",
+      "hizo",
+      "volvió a"
+     ],
+     "answer": "puso",
+     "explanation": "Réponse : puso",
+     "text": "★ Cuando se enteró de la noticia, se ＿ muy triste."
+    },
+    {
+     "choices": [
+      "alquilan",
+      "alquila",
+      "alquilen"
+     ],
+     "answer": "alquilan",
+     "explanation": "Réponse : alquilan",
+     "text": "★ Se ＿ pisos en el centro histórico."
+    },
+    {
+     "choices": [
+      "hubieras",
+      "habrías",
+      "hayas sido"
+     ],
+     "answer": "hubieras",
+     "explanation": "Réponse : hubieras",
+     "text": "★ Ojalá ＿ venido a la fiesta: lo habríamos pasado genial."
+    },
+    {
+     "choices": [
+      "termine",
+      "termina",
+      "terminará"
+     ],
+     "answer": "termine",
+     "explanation": "Réponse : termine",
+     "text": "★ No creo que la reunión ＿ antes de las ocho."
+    },
+    {
+     "choices": [
+      "devuelvas",
+      "devuelves",
+      "devolverás"
+     ],
+     "answer": "devuelvas",
+     "explanation": "Réponse : devuelvas",
+     "text": "★ Te presto el coche siempre que me lo ＿ con el depósito lleno."
+    }
+   ]
+  },
+  {
+   "id": "l-conversaciones",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 1",
+   "title": "Conversations courtes",
+   "prompt": "Escuche las conversaciones y elija la opción correcta.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "F|¿Al final aceptaste el trabajo en Quito?\nM|No, me lo pensé mucho, pero si me hubiera ido, habría tenido que dejar a mi padre solo.\nN|Pregunta: ¿Por qué no aceptó el trabajo?",
+     "choices": [
+      "Para no dejar solo a su padre.",
+      "Porque el sueldo era bajo.",
+      "Porque no le gusta Quito."
+     ],
+     "answer": "Para no dejar solo a su padre.",
+     "explanation": "Transcription : Femme : ¿Al final aceptaste el trabajo en Quito? / Homme : No, me lo pensé mucho, pero si me hubiera ido, habría tenido que dejar a mi padre solo. / Narrateur : Pregunta: ¿Por qué no aceptó el trabajo?"
+    },
+    {
+     "audio": "M|¿Qué tal la entrevista?\nF|Bien, aunque me preguntaron por mis puntos débiles y me quedé en blanco.\nN|Pregunta: ¿Qué le pasó a la mujer en la entrevista?",
+     "choices": [
+      "No supo qué responder a una pregunta.",
+      "Llegó tarde.",
+      "Le ofrecieron el puesto enseguida."
+     ],
+     "answer": "No supo qué responder a una pregunta.",
+     "explanation": "Transcription : Homme : ¿Qué tal la entrevista? / Femme : Bien, aunque me preguntaron por mis puntos débiles y me quedé en blanco. / Narrateur : Pregunta: ¿Qué le pasó a la mujer en la entrevista?"
+    },
+    {
+     "audio": "F|Te noto cansado.\nM|Es que llevo una semana durmiendo mal: los vecinos están de obras.\nN|Pregunta: ¿Por qué está cansado el hombre?",
+     "choices": [
+      "Por las obras de los vecinos.",
+      "Porque trabaja de noche.",
+      "Porque está enfermo."
+     ],
+     "answer": "Por las obras de los vecinos.",
+     "explanation": "Transcription : Femme : Te noto cansado. / Homme : Es que llevo una semana durmiendo mal: los vecinos están de obras. / Narrateur : Pregunta: ¿Por qué está cansado el hombre?"
+    },
+    {
+     "audio": "M|¿Vienes al concierto el sábado?\nF|Iré siempre que termine el informe a tiempo; si no, me quedo en casa.\nN|Pregunta: ¿De qué depende que la mujer vaya al concierto?",
+     "choices": [
+      "De terminar un informe.",
+      "Del precio de la entrada.",
+      "Del tiempo que haga."
+     ],
+     "answer": "De terminar un informe.",
+     "explanation": "Transcription : Homme : ¿Vienes al concierto el sábado? / Femme : Iré siempre que termine el informe a tiempo; si no, me quedo en casa. / Narrateur : Pregunta: ¿De qué depende que la mujer vaya al concierto?"
+    },
+    {
+     "audio": "F|Dicen que van a cerrar la biblioteca del barrio.\nM|¿En serio? Pues habría que hacer algo: es el único sitio donde estudian los chicos.\nN|Pregunta: ¿Qué opina el hombre?",
+     "choices": [
+      "Que hay que actuar para evitar el cierre.",
+      "Que el cierre es una buena idea.",
+      "Que nadie usa la biblioteca."
+     ],
+     "answer": "Que hay que actuar para evitar el cierre.",
+     "explanation": "Transcription : Femme : Dicen que van a cerrar la biblioteca del barrio. / Homme : ¿En serio? Pues habría que hacer algo: es el único sitio donde estudian los chicos. / Narrateur : Pregunta: ¿Qué opina el hombre?"
+    },
+    {
+     "audio": "M|¿Has leído la novela que te presté?\nF|Sí, y aunque el final me decepcionó un poco, la recomendaría.\nN|Pregunta: ¿Qué piensa la mujer de la novela?",
+     "choices": [
+      "Que merece la pena, a pesar del final.",
+      "Que es la peor que ha leído.",
+      "Que todavía no la ha empezado."
+     ],
+     "answer": "Que merece la pena, a pesar del final.",
+     "explanation": "Transcription : Homme : ¿Has leído la novela que te presté? / Femme : Sí, y aunque el final me decepcionó un poco, la recomendaría. / Narrateur : Pregunta: ¿Qué piensa la mujer de la novela?"
+    },
+    {
+     "audio": "F|Perdona por no haberte llamado.\nM|No pasa nada, pero la próxima vez avísame antes, que te estuve esperando una hora.\nN|Pregunta: ¿Qué le pide el hombre?",
+     "choices": [
+      "Que le avise la próxima vez.",
+      "Que le devuelva el dinero.",
+      "Que no lo llame nunca."
+     ],
+     "answer": "Que le avise la próxima vez.",
+     "explanation": "Transcription : Femme : Perdona por no haberte llamado. / Homme : No pasa nada, pero la próxima vez avísame antes, que te estuve esperando una hora. / Narrateur : Pregunta: ¿Qué le pide el hombre?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-debate",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 2",
+   "title": "Un débat",
+   "prompt": "Escuche a Lucía y Martín, que debaten sobre el turismo, y elija la opción correcta.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "F|Para mí, el turismo es una oportunidad: crea empleo y permite conservar el patrimonio.\nN|Pregunta: ¿Qué ventaja menciona Lucía?",
+     "choices": [
+      "Crea empleo y ayuda a conservar el patrimonio.",
+      "Hace subir los precios.",
+      "Reduce la contaminación."
+     ],
+     "answer": "Crea empleo y ayuda a conservar el patrimonio.",
+     "explanation": "Transcription : Femme : Para mí, el turismo es una oportunidad: crea empleo y permite conservar el patrimonio. / Narrateur : Pregunta: ¿Qué ventaja menciona Lucía?"
+    },
+    {
+     "audio": "M|No niego que crea empleo, pero muchos contratos son temporales y mal pagados.\nN|Pregunta: ¿Qué critica Martín?",
+     "choices": [
+      "La calidad de los empleos.",
+      "La falta de turistas.",
+      "El patrimonio histórico."
+     ],
+     "answer": "La calidad de los empleos.",
+     "explanation": "Transcription : Homme : No niego que crea empleo, pero muchos contratos son temporales y mal pagados. / Narrateur : Pregunta: ¿Qué critica Martín?"
+    },
+    {
+     "audio": "F|Si bien es cierto que hay problemas, sin turismo muchos pueblos se habrían quedado vacíos.\nN|Pregunta: ¿Qué argumento da Lucía?",
+     "choices": [
+      "El turismo ha evitado que algunos pueblos se vacíen.",
+      "Los pueblos ya estaban vacíos.",
+      "El turismo no tiene problemas."
+     ],
+     "answer": "El turismo ha evitado que algunos pueblos se vacíen.",
+     "explanation": "Transcription : Femme : Si bien es cierto que hay problemas, sin turismo muchos pueblos se habrían quedado vacíos. / Narrateur : Pregunta: ¿Qué argumento da Lucía?"
+    },
+    {
+     "audio": "M|Por el contrario, en el centro de muchas ciudades los vecinos se han tenido que ir por el precio de los alquileres.\nN|Pregunta: ¿Qué problema menciona Martín?",
+     "choices": [
+      "El aumento de los alquileres expulsa a los vecinos.",
+      "El ruido de los bares.",
+      "La falta de hoteles."
+     ],
+     "answer": "El aumento de los alquileres expulsa a los vecinos.",
+     "explanation": "Transcription : Homme : Por el contrario, en el centro de muchas ciudades los vecinos se han tenido que ir por el precio de los alquileres. / Narrateur : Pregunta: ¿Qué problema menciona Martín?"
+    },
+    {
+     "audio": "F|Quizás la solución sea limitar los pisos turísticos en ciertos barrios.\nN|Pregunta: ¿Qué propone Lucía?",
+     "choices": [
+      "Limitar los pisos turísticos en algunos barrios.",
+      "Prohibir el turismo.",
+      "Construir más hoteles."
+     ],
+     "answer": "Limitar los pisos turísticos en algunos barrios.",
+     "explanation": "Transcription : Femme : Quizás la solución sea limitar los pisos turísticos en ciertos barrios. / Narrateur : Pregunta: ¿Qué propone Lucía?"
+    },
+    {
+     "audio": "M|En eso estoy de acuerdo contigo: hay que encontrar un equilibrio.\nN|Pregunta: ¿En qué coinciden finalmente?",
+     "choices": [
+      "En que hace falta un equilibrio.",
+      "En que el turismo es malo.",
+      "En que no hay solución."
+     ],
+     "answer": "En que hace falta un equilibrio.",
+     "explanation": "Transcription : Homme : En eso estoy de acuerdo contigo: hay que encontrar un equilibrio. / Narrateur : Pregunta: ¿En qué coinciden finalmente?"
+    },
+    {
+     "audio": "F|Y, por supuesto, habría que escuchar más a los vecinos antes de tomar decisiones.\nN|Pregunta: ¿Qué añade Lucía?",
+     "choices": [
+      "Que hay que tener en cuenta la opinión de los vecinos.",
+      "Que los vecinos deben irse.",
+      "Que las decisiones ya están tomadas."
+     ],
+     "answer": "Que hay que tener en cuenta la opinión de los vecinos.",
+     "explanation": "Transcription : Femme : Y, por supuesto, habría que escuchar más a los vecinos antes de tomar decisiones. / Narrateur : Pregunta: ¿Qué añade Lucía?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-entrevista",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 3",
+   "title": "Une interview",
+   "prompt": "Escuche la entrevista a una fotógrafa chilena y conteste a las preguntas.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "M|Carla, ¿cómo empezó tu interés por la fotografía?\nF|Mi abuelo era pescador en Chiloé y tenía una cámara vieja. De pequeña me pasaba las horas fotografiando los barcos del muelle.\nN|Pregunta: ¿Quién la inició en la fotografía?",
+     "choices": [
+      "Su abuelo.",
+      "Un profesor.",
+      "Su madre."
+     ],
+     "answer": "Su abuelo.",
+     "explanation": "Transcription : Homme : Carla, ¿cómo empezó tu interés por la fotografía? / Femme : Mi abuelo era pescador en Chiloé y tenía una cámara vieja. De pequeña me pasaba las horas fotografiando los barcos del muelle. / Narrateur : Pregunta: ¿Quién la inició en la fotografía?"
+    },
+    {
+     "audio": "M|¿Estudiaste fotografía?\nF|No, estudié Periodismo, pero nada más terminar la carrera me di cuenta de que prefería contar historias con imágenes.\nN|Pregunta: ¿Qué estudió Carla?",
+     "choices": [
+      "Periodismo.",
+      "Fotografía.",
+      "Bellas Artes."
+     ],
+     "answer": "Periodismo.",
+     "explanation": "Transcription : Homme : ¿Estudiaste fotografía? / Femme : No, estudié Periodismo, pero nada más terminar la carrera me di cuenta de que prefería contar historias con imágenes. / Narrateur : Pregunta: ¿Qué estudió Carla?"
+    },
+    {
+     "audio": "M|Tu último libro trata sobre las mujeres de la Patagonia.\nF|Sí, pasé dos años viajando por la región. Quería mostrar cómo viven en un lugar tan aislado.\nN|Pregunta: ¿Cuánto tiempo duró el proyecto?",
+     "choices": [
+      "Dos años.",
+      "Dos meses.",
+      "Doce años."
+     ],
+     "answer": "Dos años.",
+     "explanation": "Transcription : Homme : Tu último libro trata sobre las mujeres de la Patagonia. / Femme : Sí, pasé dos años viajando por la región. Quería mostrar cómo viven en un lugar tan aislado. / Narrateur : Pregunta: ¿Cuánto tiempo duró el proyecto?"
+    },
+    {
+     "audio": "M|¿Qué fue lo más difícil?\nF|El clima, sin duda. Por mucho que te prepares, el viento de la Patagonia siempre te sorprende.\nN|Pregunta: ¿Qué fue lo más difícil?",
+     "choices": [
+      "El clima.",
+      "Conseguir financiación.",
+      "Hablar con las mujeres."
+     ],
+     "answer": "El clima.",
+     "explanation": "Transcription : Homme : ¿Qué fue lo más difícil? / Femme : El clima, sin duda. Por mucho que te prepares, el viento de la Patagonia siempre te sorprende. / Narrateur : Pregunta: ¿Qué fue lo más difícil?"
+    },
+    {
+     "audio": "M|¿Usas fotografía digital?\nF|Para el trabajo diario, sí, pero para mis proyectos personales sigo usando carrete, como mi abuelo.\nN|Pregunta: ¿Qué usa para sus proyectos personales?",
+     "choices": [
+      "Cámara de carrete.",
+      "El teléfono móvil.",
+      "Solo cámara digital."
+     ],
+     "answer": "Cámara de carrete.",
+     "explanation": "Transcription : Homme : ¿Usas fotografía digital? / Femme : Para el trabajo diario, sí, pero para mis proyectos personales sigo usando carrete, como mi abuelo. / Narrateur : Pregunta: ¿Qué usa para sus proyectos personales?"
+    },
+    {
+     "audio": "M|¿Qué consejo darías a los jóvenes fotógrafos?\nF|Que no tengan prisa. Una buena foto exige paciencia y, sobre todo, respeto por las personas a las que fotografías.\nN|Pregunta: ¿Qué aconseja Carla?",
+     "choices": [
+      "Tener paciencia y respeto.",
+      "Comprar el mejor equipo.",
+      "Publicar mucho en redes."
+     ],
+     "answer": "Tener paciencia y respeto.",
+     "explanation": "Transcription : Homme : ¿Qué consejo darías a los jóvenes fotógrafos? / Femme : Que no tengan prisa. Una buena foto exige paciencia y, sobre todo, respeto por las personas a las que fotografías. / Narrateur : Pregunta: ¿Qué aconseja Carla?"
+    },
+    {
+     "audio": "M|¿Próximo proyecto?\nF|Me gustaría volver a Chiloé y fotografiar a los últimos constructores de barcos de madera, antes de que desaparezca el oficio.\nN|Pregunta: ¿Qué quiere fotografiar Carla?",
+     "choices": [
+      "A los constructores de barcos de madera.",
+      "Las ciudades del norte.",
+      "Los glaciares de la Patagonia."
+     ],
+     "answer": "A los constructores de barcos de madera.",
+     "explanation": "Transcription : Homme : ¿Próximo proyecto? / Femme : Me gustaría volver a Chiloé y fotografiar a los últimos constructores de barcos de madera, antes de que desaparezca el oficio. / Narrateur : Pregunta: ¿Qué quiere fotografiar Carla?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-monologos",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 4",
+   "title": "Des témoignages",
+   "prompt": "Escuche a estas personas que hablan de un cambio en su vida y elija la opción correcta.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "M|Me jubilé el año pasado y, aunque al principio me sentía perdido, ahora estudio guitarra y viajo con mi mujer.\nN|Pregunta: ¿Cómo se sintió al principio de la jubilación?",
+     "choices": [
+      "Perdido.",
+      "Muy feliz.",
+      "Enfermo."
+     ],
+     "answer": "Perdido.",
+     "explanation": "Transcription : Homme : Me jubilé el año pasado y, aunque al principio me sentía perdido, ahora estudio guitarra y viajo con mi mujer. / Narrateur : Pregunta: ¿Cómo se sintió al principio de la jubilación?"
+    },
+    {
+     "audio": "F|Cuando me quedé sin trabajo, decidí montar mi propia empresa de traducción. Fue lo mejor que me pudo pasar.\nN|Pregunta: ¿Qué hizo la mujer al perder su trabajo?",
+     "choices": [
+      "Creó su propia empresa.",
+      "Se fue al extranjero.",
+      "Volvió a estudiar."
+     ],
+     "answer": "Creó su propia empresa.",
+     "explanation": "Transcription : Femme : Cuando me quedé sin trabajo, decidí montar mi propia empresa de traducción. Fue lo mejor que me pudo pasar. / Narrateur : Pregunta: ¿Qué hizo la mujer al perder su trabajo?"
+    },
+    {
+     "audio": "M|Dejé de fumar hace tres años. Si me hubieran dicho que sería tan fácil, lo habría hecho antes.\nN|Pregunta: ¿Qué opina ahora de haber dejado de fumar?",
+     "choices": [
+      "Que debería haberlo hecho antes.",
+      "Que fue muy difícil.",
+      "Que volverá a fumar."
+     ],
+     "answer": "Que debería haberlo hecho antes.",
+     "explanation": "Transcription : Homme : Dejé de fumar hace tres años. Si me hubieran dicho que sería tan fácil, lo habría hecho antes. / Narrateur : Pregunta: ¿Qué opina ahora de haber dejado de fumar?"
+    },
+    {
+     "audio": "F|Me mudé a Buenos Aires por amor. La relación no funcionó, pero me quedé porque me enamoré de la ciudad.\nN|Pregunta: ¿Por qué se quedó en Buenos Aires?",
+     "choices": [
+      "Porque le encantó la ciudad.",
+      "Porque encontró trabajo.",
+      "Porque se casó."
+     ],
+     "answer": "Porque le encantó la ciudad.",
+     "explanation": "Transcription : Femme : Me mudé a Buenos Aires por amor. La relación no funcionó, pero me quedé porque me enamoré de la ciudad. / Narrateur : Pregunta: ¿Por qué se quedó en Buenos Aires?"
+    },
+    {
+     "audio": "M|Tras el accidente, tuve que aprender a caminar de nuevo. Me volví más paciente y valoro mucho más las cosas pequeñas.\nN|Pregunta: ¿Cómo cambió el hombre?",
+     "choices": [
+      "Se volvió más paciente.",
+      "Se hizo rico.",
+      "Se puso muy nervioso."
+     ],
+     "answer": "Se volvió más paciente.",
+     "explanation": "Transcription : Homme : Tras el accidente, tuve que aprender a caminar de nuevo. Me volví más paciente y valoro mucho más las cosas pequeñas. / Narrateur : Pregunta: ¿Cómo cambió el hombre?"
+    },
+    {
+     "audio": "F|Adoptamos a nuestra hija con cinco años. Por mucho que lo hubiéramos preparado, nada nos preparó para tanta felicidad.\nN|Pregunta: ¿Qué cambio vivió la mujer?",
+     "choices": [
+      "La adopción de su hija.",
+      "Un cambio de casa.",
+      "Un nuevo trabajo."
+     ],
+     "answer": "La adopción de su hija.",
+     "explanation": "Transcription : Femme : Adoptamos a nuestra hija con cinco años. Por mucho que lo hubiéramos preparado, nada nos preparó para tanta felicidad. / Narrateur : Pregunta: ¿Qué cambio vivió la mujer?"
+    },
+    {
+     "audio": "M|Vendí el coche y ahora voy a todas partes en bici. Ahorro dinero y, de paso, me he puesto en forma.\nN|Pregunta: ¿Qué ventajas ha encontrado?",
+     "choices": [
+      "Ahorra dinero y está más en forma.",
+      "Llega antes a todas partes.",
+      "Ya no tiene que trabajar."
+     ],
+     "answer": "Ahorra dinero y está más en forma.",
+     "explanation": "Transcription : Homme : Vendí el coche y ahora voy a todas partes en bici. Ahorro dinero y, de paso, me he puesto en forma. / Narrateur : Pregunta: ¿Qué ventajas ha encontrado?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-radio",
+   "section": "listening",
+   "jpTitle": "Comprensión auditiva — Tarea 5",
+   "title": "Un reportage radio",
+   "prompt": "Escuche el reportaje sobre el tango y conteste a las preguntas.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "N|El tango nació a finales del siglo XIX en los barrios del puerto de Buenos Aires y Montevideo, donde vivían inmigrantes de todo el mundo.\nN|Pregunta: ¿Dónde nació el tango?",
+     "choices": [
+      "En los barrios del puerto.",
+      "En el centro elegante de la ciudad.",
+      "En el campo."
+     ],
+     "answer": "En los barrios del puerto.",
+     "explanation": "Transcription : Narrateur : El tango nació a finales del siglo XIX en los barrios del puerto de Buenos Aires y Montevideo, donde vivían inmigrantes de todo el mundo. / Narrateur : Pregunta: ¿Dónde nació el tango?"
+    },
+    {
+     "audio": "N|Al principio, la alta sociedad lo consideraba vulgar; sin embargo, tras triunfar en París hacia 1910, fue aceptado en los salones porteños.\nN|Pregunta: ¿Qué cambió la opinión de la alta sociedad?",
+     "choices": [
+      "Su éxito en París.",
+      "Una ley del gobierno.",
+      "La radio."
+     ],
+     "answer": "Su éxito en París.",
+     "explanation": "Transcription : Narrateur : Al principio, la alta sociedad lo consideraba vulgar; sin embargo, tras triunfar en París hacia 1910, fue aceptado en los salones porteños. / Narrateur : Pregunta: ¿Qué cambió la opinión de la alta sociedad?"
+    },
+    {
+     "audio": "N|El instrumento más característico del tango es el bandoneón, que llegó de Alemania en los barcos de los inmigrantes.\nN|Pregunta: ¿De dónde llegó el bandoneón?",
+     "choices": [
+      "De Alemania.",
+      "De Italia.",
+      "De España."
+     ],
+     "answer": "De Alemania.",
+     "explanation": "Transcription : Narrateur : El instrumento más característico del tango es el bandoneón, que llegó de Alemania en los barcos de los inmigrantes. / Narrateur : Pregunta: ¿De dónde llegó el bandoneón?"
+    },
+    {
+     "audio": "N|En 2009, la UNESCO declaró el tango patrimonio cultural inmaterial de la humanidad, a propuesta de Argentina y Uruguay.\nN|Pregunta: ¿Qué ocurrió en 2009?",
+     "choices": [
+      "El tango fue declarado patrimonio de la humanidad.",
+      "Se prohibió el tango.",
+      "Se inventó el bandoneón."
+     ],
+     "answer": "El tango fue declarado patrimonio de la humanidad.",
+     "explanation": "Transcription : Narrateur : En 2009, la UNESCO declaró el tango patrimonio cultural inmaterial de la humanidad, a propuesta de Argentina y Uruguay. / Narrateur : Pregunta: ¿Qué ocurrió en 2009?"
+    },
+    {
+     "audio": "N|Hoy, en las milongas, que así se llaman los salones de baile, conviven jubilados y jóvenes de veinte años.\nN|Pregunta: ¿Qué es una milonga en este contexto?",
+     "choices": [
+      "Un salón de baile.",
+      "Un instrumento.",
+      "Un barrio."
+     ],
+     "answer": "Un salón de baile.",
+     "explanation": "Transcription : Narrateur : Hoy, en las milongas, que así se llaman los salones de baile, conviven jubilados y jóvenes de veinte años. / Narrateur : Pregunta: ¿Qué es una milonga en este contexto?"
+    },
+    {
+     "audio": "N|Los profesores insisten en que, para bailar bien, no basta con aprender los pasos: hay que escuchar la música y al compañero.\nN|Pregunta: ¿Qué aconsejan los profesores?",
+     "choices": [
+      "Escuchar la música y a la pareja.",
+      "Aprender solo los pasos.",
+      "Bailar siempre solo."
+     ],
+     "answer": "Escuchar la música y a la pareja.",
+     "explanation": "Transcription : Narrateur : Los profesores insisten en que, para bailar bien, no basta con aprender los pasos: hay que escuchar la música y al compañero. / Narrateur : Pregunta: ¿Qué aconsejan los profesores?"
+    },
+    {
+     "audio": "N|Cada agosto, Buenos Aires celebra un festival y un mundial de tango que reúne a bailarines de más de cuarenta países.\nN|Pregunta: ¿Qué se celebra cada agosto?",
+     "choices": [
+      "Un festival y un mundial de tango.",
+      "El aniversario de la ciudad.",
+      "Un concurso de cocina."
+     ],
+     "answer": "Un festival y un mundial de tango.",
+     "explanation": "Transcription : Narrateur : Cada agosto, Buenos Aires celebra un festival y un mundial de tango que reúne a bailarines de más de cuarenta países. / Narrateur : Pregunta: ¿Qué se celebra cada agosto?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "w-carta",
+   "section": "writing",
+   "jpTitle": "Expresión escrita — Tarea 1",
+   "title": "Une lettre de protestation",
+   "prompt": "Lea la situación y elija la opción mejor escrita.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "Estimado señor alcalde: me dirijo a usted para expresar mi desacuerdo con el cierre de la biblioteca del barrio. En primer lugar, es el único espacio cultural de la zona; en segundo lugar, cientos de estudiantes la utilizan cada día. Por consiguiente, le ruego que reconsidere su decisión. Atentamente, Ana Ruiz.",
+      "Estimado señor alcalde: me dirijo a usted para expresar mi desacuerdo con el cierre. Es el único espacio cultural; cientos de estudiantes la utilizan. Le ruego que reconsidera su decisión. Atentamente.",
+      "Hola, alcalde: no cierres la biblioteca, que es muy bonita. Un beso.",
+      "Estimado señor alcalde: le felicito por cerrar la biblioteca, ya que nadie la usa. Atentamente, Ana Ruiz."
+     ],
+     "answer": "Estimado señor alcalde: me dirijo a usted para expresar mi desacuerdo con el cierre de la biblioteca del barrio. En primer lugar, es el único espacio cultural de la zona; en segundo lugar, cientos de estudiantes la utilizan cada día. Por consiguiente, le ruego que reconsidere su decisión. Atentamente, Ana Ruiz.",
+     "explanation": "Réponse : Estimado señor alcalde: me dirijo a usted para expresar mi desacuerdo con el cierre de la biblioteca del barrio. En primer lugar, es el único espacio cultural de la zona; en segundo lugar, cientos de estudiantes la utilizan cada día. Por consiguiente, le ruego que reconsidere su decisión. Atentamente, Ana Ruiz.",
+     "text": "Usted leyó en el periódico que el ayuntamiento va a cerrar la biblioteca de su barrio para construir un aparcamiento.\n★ Elija la carta que expone el problema, argumenta y hace una petición formal."
+    },
+    {
+     "choices": [
+      "Le agradecería que tuviera en cuenta la opinión de los vecinos.",
+      "Le agradecería que tiene en cuenta la opinión de los vecinos.",
+      "Le agradeceré que tuviera en cuenta la opinión de los vecinos.",
+      "Le agradecería tener en cuenta de la opinión de los vecinos."
+     ],
+     "answer": "Le agradecería que tuviera en cuenta la opinión de los vecinos.",
+     "explanation": "Réponse : Le agradecería que tuviera en cuenta la opinión de los vecinos.",
+     "text": "Usted leyó en el periódico que el ayuntamiento va a cerrar la biblioteca de su barrio para construir un aparcamiento.\n★ Elija la frase correcta."
+    },
+    {
+     "choices": [
+      "Si se cerrara la biblioteca, los jóvenes no tendrían dónde estudiar.",
+      "Si se cerraría la biblioteca, los jóvenes no tendrían dónde estudiar.",
+      "Si se cerrara la biblioteca, los jóvenes no tenían dónde estudiar.",
+      "Si se cierre la biblioteca, los jóvenes no tendrán dónde estudiar."
+     ],
+     "answer": "Si se cerrara la biblioteca, los jóvenes no tendrían dónde estudiar.",
+     "explanation": "Réponse : Si se cerrara la biblioteca, los jóvenes no tendrían dónde estudiar.",
+     "text": "Usted leyó en el periódico que el ayuntamiento va a cerrar la biblioteca de su barrio para construir un aparcamiento.\n★ Elija la frase correcta para presentar una consecuencia."
+    },
+    {
+     "choices": [
+      "A pesar de que entiendo la falta de aparcamiento, creo que hay otras soluciones.",
+      "A pesar de entiendo la falta de aparcamiento, creo que hay otras soluciones.",
+      "Aunque entendiera la falta de aparcamiento ayer, creo que hay otras soluciones.",
+      "Por mucho que entiendo la falta de aparcamiento, creo que hay otras soluciones."
+     ],
+     "answer": "A pesar de que entiendo la falta de aparcamiento, creo que hay otras soluciones.",
+     "explanation": "Réponse : A pesar de que entiendo la falta de aparcamiento, creo que hay otras soluciones.",
+     "text": "Usted leyó en el periódico que el ayuntamiento va a cerrar la biblioteca de su barrio para construir un aparcamiento.\n★ Elija la frase correcta para hacer una concesión."
+    }
+   ]
+  },
+  {
+   "id": "w-articulo",
+   "section": "writing",
+   "jpTitle": "Expresión escrita — Tarea 2",
+   "title": "Un article d’opinion",
+   "prompt": "Lea la situación y elija el texto mejor escrito.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "Cada vez más personas trabajan desde casa. Si bien es cierto que el teletrabajo ofrece flexibilidad y ahorra tiempo de transporte, también puede provocar aislamiento. En mi opinión, la solución sería un modelo mixto, siempre que las empresas respeten el derecho a desconectar. En definitiva, el teletrabajo no es bueno ni malo: depende de cómo se organice.",
+      "Cada vez más personas trabajan desde casa. Si bien es cierto que el teletrabajo ofrece flexibilidad, también puede provocar aislamiento. En mi opinión, la solución sería un modelo mixto, siempre que las empresas respetan el derecho a desconectar.",
+      "Teletrabajo: flexibilidad, aislamiento, modelo mixto, desconectar.",
+      "Cada vez más personas trabajan desde casa, lo cual es bueno porque es bueno, y también es malo porque es malo. En definitiva, no sé."
+     ],
+     "answer": "Cada vez más personas trabajan desde casa. Si bien es cierto que el teletrabajo ofrece flexibilidad y ahorra tiempo de transporte, también puede provocar aislamiento. En mi opinión, la solución sería un modelo mixto, siempre que las empresas respeten el derecho a desconectar. En definitiva, el teletrabajo no es bueno ni malo: depende de cómo se organice.",
+     "explanation": "Réponse : Cada vez más personas trabajan desde casa. Si bien es cierto que el teletrabajo ofrece flexibilidad y ahorra tiempo de transporte, también puede provocar aislamiento. En mi opinión, la solución sería un modelo mixto, siempre que las empresas respeten el derecho a desconectar. En definitiva, el teletrabajo no es bueno ni malo: depende de cómo se organice.",
+     "text": "★ Situación: escriba un artículo de opinión sobre el teletrabajo (ventajas, inconvenientes, propuesta)."
+    },
+    {
+     "choices": [
+      "Hace cinco años tomé una decisión que cambió mi vida: dejé mi empleo en una gran empresa y me fui a vivir a Cuzco. Al principio echaba de menos a mi familia, pero poco a poco me adapté. Si no me hubiera atrevido, nunca habría descubierto mi verdadera vocación.",
+      "Hace cinco años tomaba una decisión que cambió mi vida: dejaba mi empleo y me iba a vivir a Cuzco. Al principio eché de menos a mi familia. Si no me atrevería, nunca habría descubierto mi vocación.",
+      "Cinco años. Decisión. Cuzco. Familia. Vocación.",
+      "Hace cinco años tomaré una decisión: dejo mi empleo y me fui a Cuzco mañana."
+     ],
+     "answer": "Hace cinco años tomé una decisión que cambió mi vida: dejé mi empleo en una gran empresa y me fui a vivir a Cuzco. Al principio echaba de menos a mi familia, pero poco a poco me adapté. Si no me hubiera atrevido, nunca habría descubierto mi verdadera vocación.",
+     "explanation": "Réponse : Hace cinco años tomé una decisión que cambió mi vida: dejé mi empleo en una gran empresa y me fui a vivir a Cuzco. Al principio echaba de menos a mi familia, pero poco a poco me adapté. Si no me hubiera atrevido, nunca habría descubierto mi verdadera vocación.",
+     "text": "★ Situación: escriba un relato sobre una decisión importante de su vida (qué pasó, cómo se sintió, qué habría pasado si…)."
+    },
+    {
+     "choices": [
+      "Las redes sociales han transformado la manera en que nos informamos. No obstante, cabe destacar que muchas noticias falsas se difunden con rapidez. Por consiguiente, es fundamental que aprendamos a contrastar las fuentes antes de compartir una información.",
+      "Las redes sociales han transformado la manera en que nos informamos. No obstante, muchas noticias falsas se difunden. Por consiguiente, es fundamental que aprendemos a contrastar las fuentes.",
+      "Redes sociales malas. Noticias falsas. Contrastar.",
+      "Las redes sociales son geniales y nunca hay noticias falsas, por consiguiente no hay que contrastar nada."
+     ],
+     "answer": "Las redes sociales han transformado la manera en que nos informamos. No obstante, cabe destacar que muchas noticias falsas se difunden con rapidez. Por consiguiente, es fundamental que aprendamos a contrastar las fuentes antes de compartir una información.",
+     "explanation": "Réponse : Las redes sociales han transformado la manera en que nos informamos. No obstante, cabe destacar que muchas noticias falsas se difunden con rapidez. Por consiguiente, es fundamental que aprendamos a contrastar las fuentes antes de compartir una información.",
+     "text": "★ Situación: escriba un texto para un foro sobre las redes sociales y la información."
+    }
+   ]
+  }
+ ]
+}

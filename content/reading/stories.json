@@ -29376,6 +29376,538 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "el-dorado",
+   "glyph": "o",
+   "level": "DELEB2",
+   "color": "#C8A02A",
+   "title": {
+    "jp": "La leyenda de El Dorado",
+    "fr": "La légende de l’Eldorado",
+    "en": "The legend of El Dorado"
+   },
+   "summary": {
+    "fr": "Sur la lagune de Guatavita, un chef muisca couvert de poudre d’or offre des trésors aux dieux… et fait naître le rêve fou des conquistadors.",
+    "en": "On Lake Guatavita, a Muisca chief covered in gold dust offers treasures to the gods… and gives birth to the conquistadors’ wild dream."
+   },
+   "chapters": [
+    {
+     "slug": "el-dorado-1",
+     "title": {
+      "jp": "El hombre dorado",
+      "fr": "L’homme doré",
+      "en": "The golden man"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "En las montañas de lo que hoy es Colombia vivían los muiscas, un pueblo que dominaba el arte de trabajar el oro.",
+        "fr": "Dans les montagnes de l’actuelle Colombie vivaient les Muiscas, un peuple qui maîtrisait l’art de travailler l’or.",
+        "en": "In the mountains of what is now Colombia lived the Muisca, a people who had mastered the art of working gold.",
+        "kana": "En las montañas de lo que hoy es Colombia vivían los muiscas, un pueblo que dominaba el arte de trabajar el oro."
+       },
+       {
+        "jp": "Cuando un nuevo jefe subía al poder, se celebraba una ceremonia en la laguna de Guatavita.",
+        "fr": "Quand un nouveau chef prenait le pouvoir, on célébrait une cérémonie sur la lagune de Guatavita.",
+        "en": "Whenever a new chief came to power, a ceremony was held on Lake Guatavita.",
+        "kana": "Cuando un nuevo jefe subía al poder, se celebraba una ceremonia en la laguna de Guatavita."
+       },
+       {
+        "jp": "Le cubrían el cuerpo de polvo de oro, de manera que brillaba como si fuera el mismo sol.",
+        "fr": "On lui couvrait le corps de poudre d’or, de sorte qu’il brillait comme s’il était le soleil lui-même.",
+        "en": "They covered his body in gold dust, so that he shone as if he were the sun itself.",
+        "kana": "Le cubrían el cuerpo de polvo de oro, de manera que brillaba como si fuera el mismo sol."
+       }
+      ],
+      [
+       {
+        "jp": "Subido a una balsa, el jefe navegaba hasta el centro de la laguna y arrojaba al agua joyas y figuras de oro como ofrenda a los dioses.",
+        "fr": "Monté sur un radeau, le chef naviguait jusqu’au centre de la lagune et jetait à l’eau des bijoux et des figurines en or en offrande aux dieux.",
+        "en": "Standing on a raft, the chief sailed to the middle of the lake and threw jewels and gold figures into the water as an offering to the gods.",
+        "kana": "Subido a una balsa, el jefe navegaba hasta el centro de la laguna y arrojaba al agua joyas y figuras de oro como ofrenda a los dioses."
+       },
+       {
+        "jp": "Después se sumergía en el agua y salía de ella convertido en el nuevo señor de su pueblo.",
+        "fr": "Puis il plongeait dans l’eau et en ressortait devenu le nouveau seigneur de son peuple.",
+        "en": "Then he plunged into the water and came out as the new lord of his people.",
+        "kana": "Después se sumergía en el agua y salía de ella convertido en el nuevo señor de su pueblo."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "dominar",
+       "reading": "/domiˈnaɾ/",
+       "fr": "maîtriser",
+       "en": "to master"
+      },
+      {
+       "jp": "el polvo",
+       "reading": "/el ˈpolβo/",
+       "fr": "la poussière, la poudre",
+       "en": "dust, powder"
+      },
+      {
+       "jp": "brillar",
+       "reading": "/bɾiˈʎaɾ/",
+       "fr": "briller",
+       "en": "to shine"
+      },
+      {
+       "jp": "la balsa",
+       "reading": "/la ˈbalsa/",
+       "fr": "le radeau",
+       "en": "the raft"
+      },
+      {
+       "jp": "arrojar",
+       "reading": "/aroˈxaɾ/",
+       "fr": "jeter, lancer",
+       "en": "to throw"
+      },
+      {
+       "jp": "la ofrenda",
+       "reading": "/la oˈfɾenda/",
+       "fr": "l’offrande",
+       "en": "the offering"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "De quoi couvrait-on le corps du nouveau chef ?",
+        "en": "What was the new chief’s body covered with?"
+       },
+       "choices": [
+        {
+         "fr": "De poudre d’or",
+         "en": "Gold dust"
+        },
+        {
+         "fr": "De plumes",
+         "en": "Feathers"
+        },
+        {
+         "fr": "De boue",
+         "en": "Mud"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que jetait le chef dans la lagune ?",
+        "en": "What did the chief throw into the lake?"
+       },
+       "choices": [
+        {
+         "fr": "Des bijoux et des figurines en or",
+         "en": "Jewels and gold figures"
+        },
+        {
+         "fr": "Des fleurs",
+         "en": "Flowers"
+        },
+        {
+         "fr": "Des pierres",
+         "en": "Stones"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "el-dorado-2",
+     "title": {
+      "jp": "La ciudad que nunca existió",
+      "fr": "La ville qui n’a jamais existé",
+      "en": "The city that never existed"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Cuando los conquistadores españoles oyeron hablar del «hombre dorado», imaginaron una ciudad entera hecha de oro.",
+        "fr": "Quand les conquistadors espagnols entendirent parler de « l’homme doré », ils imaginèrent une ville entière faite d’or.",
+        "en": "When the Spanish conquistadors heard about the “golden man”, they imagined an entire city made of gold.",
+        "kana": "Cuando los conquistadores españoles oyeron hablar del «hombre dorado», imaginaron una ciudad entera hecha de oro."
+       },
+       {
+        "jp": "Durante más de un siglo, cientos de expediciones la buscaron por selvas, ríos y montañas, y muchos hombres murieron en el intento.",
+        "fr": "Pendant plus d’un siècle, des centaines d’expéditions la cherchèrent à travers forêts, fleuves et montagnes, et beaucoup d’hommes moururent en essayant.",
+        "en": "For more than a century, hundreds of expeditions searched for it through jungles, rivers and mountains, and many men died in the attempt.",
+        "kana": "Durante más de un siglo, cientos de expediciones la buscaron por selvas, ríos y montañas, y muchos hombres murieron en el intento."
+       },
+       {
+        "jp": "Incluso intentaron vaciar la laguna de Guatavita, aunque solo encontraron unas pocas piezas.",
+        "fr": "On tenta même de vider la lagune de Guatavita, mais on n’y trouva que quelques pièces.",
+        "en": "They even tried to drain Lake Guatavita, but only found a few pieces.",
+        "kana": "Incluso intentaron vaciar la laguna de Guatavita, aunque solo encontraron unas pocas piezas."
+       }
+      ],
+      [
+       {
+        "jp": "El Dorado nunca existió como ciudad, pero la leyenda sobrevivió.",
+        "fr": "L’Eldorado n’a jamais existé en tant que ville, mais la légende a survécu.",
+        "en": "El Dorado never existed as a city, but the legend survived.",
+        "kana": "El Dorado nunca existió como ciudad, pero la leyenda sobrevivió."
+       },
+       {
+        "jp": "Hoy, en el Museo del Oro de Bogotá, puede verse una balsa de oro que representa aquella ceremonia.",
+        "fr": "Aujourd’hui, au musée de l’Or de Bogotá, on peut voir un radeau en or qui représente cette cérémonie.",
+        "en": "Today, at the Gold Museum in Bogotá, you can see a gold raft that depicts that ceremony.",
+        "kana": "Hoy, en el Museo del Oro de Bogotá, puede verse una balsa de oro que representa aquella ceremonia."
+       },
+       {
+        "jp": "Y en español, «encontrar El Dorado» sigue significando hallar un lugar donde todos los sueños se cumplen.",
+        "fr": "Et en espagnol, « trouver l’Eldorado » signifie toujours découvrir un endroit où tous les rêves se réalisent.",
+        "en": "And in Spanish, “finding El Dorado” still means discovering a place where every dream comes true.",
+        "kana": "Y en español, «encontrar El Dorado» sigue significando hallar un lugar donde todos los sueños se cumplen."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el conquistador",
+       "reading": "/el konkistaˈðoɾ/",
+       "fr": "le conquistador",
+       "en": "the conquistador"
+      },
+      {
+       "jp": "la selva",
+       "reading": "/la ˈselβa/",
+       "fr": "la jungle, la forêt tropicale",
+       "en": "the jungle, the rainforest"
+      },
+      {
+       "jp": "el intento",
+       "reading": "/el inˈtento/",
+       "fr": "la tentative",
+       "en": "the attempt"
+      },
+      {
+       "jp": "vaciar",
+       "reading": "/baˈθjaɾ/",
+       "fr": "vider",
+       "en": "to empty, to drain"
+      },
+      {
+       "jp": "sobrevivir",
+       "reading": "/soβɾeβiˈβiɾ/",
+       "fr": "survivre",
+       "en": "to survive"
+      },
+      {
+       "jp": "cumplirse",
+       "reading": "/kumˈpliɾse/",
+       "fr": "se réaliser",
+       "en": "to come true"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’imaginèrent les conquistadors ?",
+        "en": "What did the conquistadors imagine?"
+       },
+       "choices": [
+        {
+         "fr": "Une ville entière faite d’or",
+         "en": "A whole city made of gold"
+        },
+        {
+         "fr": "Une montagne de sel",
+         "en": "A mountain of salt"
+        },
+        {
+         "fr": "Un fleuve d’argent",
+         "en": "A river of silver"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que peut-on voir au musée de l’Or de Bogotá ?",
+        "en": "What can you see at the Gold Museum in Bogotá?"
+       },
+       "choices": [
+        {
+         "fr": "Un radeau en or",
+         "en": "A gold raft"
+        },
+        {
+         "fr": "La ville de l’Eldorado",
+         "en": "The city of El Dorado"
+        },
+        {
+         "fr": "La couronne du roi d’Espagne",
+         "en": "The King of Spain’s crown"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hombres-de-maiz",
+   "glyph": "z",
+   "level": "DELEB2",
+   "color": "#B8902A",
+   "title": {
+    "jp": "Los hombres de maíz",
+    "fr": "Les hommes de maïs",
+    "en": "The people of maize"
+   },
+   "summary": {
+    "fr": "D’après le Popol Vuh, livre sacré des Mayas k’iche’ : les dieux essaient de créer les humains avec de la boue, puis du bois… avant de trouver le maïs.",
+    "en": "From the Popol Vuh, the sacred book of the K’iche’ Maya: the gods try to create humans from mud, then wood… before finding maize."
+   },
+   "chapters": [
+    {
+     "slug": "hombres-de-maiz-1",
+     "title": {
+      "jp": "El barro y la madera",
+      "fr": "La boue et le bois",
+      "en": "Mud and wood"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Al principio no había más que el cielo y el mar en calma. Los dioses decidieron crear seres que les hablaran y les dieran las gracias.",
+        "fr": "Au commencement, il n’y avait que le ciel et la mer calme. Les dieux décidèrent de créer des êtres qui leur parleraient et les remercieraient.",
+        "en": "In the beginning there was nothing but the sky and the calm sea. The gods decided to create beings who would speak to them and thank them.",
+        "kana": "Al principio no había más que el cielo y el mar en calma. Los dioses decidieron crear seres que les hablaran y les dieran las gracias."
+       },
+       {
+        "jp": "Primero los hicieron de barro, pero aquellos hombres se deshacían con el agua y no podían moverse ni pensar.",
+        "fr": "D’abord, ils les firent de boue, mais ces hommes se défaisaient dans l’eau et ne pouvaient ni bouger ni penser.",
+        "en": "First they made them from mud, but those people fell apart in water and could neither move nor think.",
+        "kana": "Primero los hicieron de barro, pero aquellos hombres se deshacían con el agua y no podían moverse ni pensar."
+       }
+      ],
+      [
+       {
+        "jp": "Entonces los tallaron en madera. Los hombres de madera hablaban y tenían hijos, pero no tenían corazón ni memoria de sus creadores.",
+        "fr": "Alors, ils les taillèrent dans le bois. Les hommes de bois parlaient et avaient des enfants, mais ils n’avaient ni cœur ni souvenir de leurs créateurs.",
+        "en": "Then they carved them from wood. The wooden people spoke and had children, but they had neither hearts nor any memory of their creators.",
+        "kana": "Entonces los tallaron en madera. Los hombres de madera hablaban y tenían hijos, pero no tenían corazón ni memoria de sus creadores."
+       },
+       {
+        "jp": "Decepcionados, los dioses enviaron una gran inundación, y dicen que los monos de la selva son lo que queda de ellos.",
+        "fr": "Déçus, les dieux envoyèrent un grand déluge, et l’on dit que les singes de la forêt sont ce qu’il en reste.",
+        "en": "Disappointed, the gods sent a great flood, and it is said that the monkeys of the forest are all that remains of them.",
+        "kana": "Decepcionados, los dioses enviaron una gran inundación, y dicen que los monos de la selva son lo que queda de ellos."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "el barro",
+       "reading": "/el ˈbaro/",
+       "fr": "la boue, l’argile",
+       "en": "mud, clay"
+      },
+      {
+       "jp": "deshacerse",
+       "reading": "/desaˈθeɾse/",
+       "fr": "se défaire, se dissoudre",
+       "en": "to fall apart, to dissolve"
+      },
+      {
+       "jp": "tallar",
+       "reading": "/taˈʎaɾ/",
+       "fr": "tailler, sculpter",
+       "en": "to carve"
+      },
+      {
+       "jp": "la madera",
+       "reading": "/la maˈðeɾa/",
+       "fr": "le bois (matière)",
+       "en": "wood"
+      },
+      {
+       "jp": "la inundación",
+       "reading": "/la inundaˈθjon/",
+       "fr": "l’inondation, le déluge",
+       "en": "the flood"
+      },
+      {
+       "jp": "el mono",
+       "reading": "/el ˈmono/",
+       "fr": "le singe",
+       "en": "the monkey"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi les hommes de boue ne convenaient-ils pas ?",
+        "en": "Why were the mud people no good?"
+       },
+       "choices": [
+        {
+         "fr": "Ils se défaisaient dans l’eau et ne pensaient pas",
+         "en": "They fell apart in water and could not think"
+        },
+        {
+         "fr": "Ils étaient trop grands",
+         "en": "They were too tall"
+        },
+        {
+         "fr": "Ils parlaient trop",
+         "en": "They talked too much"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que manquait-il aux hommes de bois ?",
+        "en": "What did the wooden people lack?"
+       },
+       "choices": [
+        {
+         "fr": "Un cœur et la mémoire de leurs créateurs",
+         "en": "A heart and memory of their creators"
+        },
+        {
+         "fr": "La parole",
+         "en": "Speech"
+        },
+        {
+         "fr": "Des enfants",
+         "en": "Children"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "hombres-de-maiz-2",
+     "title": {
+      "jp": "La masa de maíz",
+      "fr": "La pâte de maïs",
+      "en": "The maize dough"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Los animales de la selva les hablaron a los dioses de un lugar lleno de mazorcas amarillas y blancas.",
+        "fr": "Les animaux de la forêt parlèrent aux dieux d’un endroit plein d’épis jaunes et blancs.",
+        "en": "The animals of the forest told the gods about a place full of yellow and white ears of maize.",
+        "kana": "Los animales de la selva les hablaron a los dioses de un lugar lleno de mazorcas amarillas y blancas."
+       },
+       {
+        "jp": "Con la masa de aquel maíz, la abuela Ixmucané preparó la carne de los primeros hombres, y con el agua en la que se había lavado las manos, su sangre.",
+        "fr": "Avec la pâte de ce maïs, la grand-mère Ixmucané prépara la chair des premiers hommes, et avec l’eau dans laquelle elle s’était lavé les mains, leur sang.",
+        "en": "With the dough from that maize, grandmother Ixmucané made the flesh of the first people, and with the water she had washed her hands in, their blood.",
+        "kana": "Con la masa de aquel maíz, la abuela Ixmucané preparó la carne de los primeros hombres, y con el agua en la que se había lavado las manos, su sangre."
+       }
+      ],
+      [
+       {
+        "jp": "Estos hombres sí pensaban, hablaban y daban las gracias. Veían tan lejos que los dioses temieron que llegaran a ser como ellos.",
+        "fr": "Ces hommes-là pensaient, parlaient et remerciaient. Ils voyaient si loin que les dieux craignirent qu’ils ne deviennent leurs égaux.",
+        "en": "These people did think, speak and give thanks. They could see so far that the gods feared they would become their equals.",
+        "kana": "Estos hombres sí pensaban, hablaban y daban las gracias. Veían tan lejos que los dioses temieron que llegaran a ser como ellos."
+       },
+       {
+        "jp": "Por eso les nublaron un poco la vista, como cuando se empaña un espejo. Desde entonces, para los mayas, el ser humano está hecho de maíz.",
+        "fr": "C’est pourquoi ils leur voilèrent un peu la vue, comme un miroir qui s’embue. Depuis, pour les Mayas, l’être humain est fait de maïs.",
+        "en": "So they clouded their sight a little, like a mirror misting over. Since then, for the Maya, human beings have been made of maize.",
+        "kana": "Por eso les nublaron un poco la vista, como cuando se empaña un espejo. Desde entonces, para los mayas, el ser humano está hecho de maíz."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "la mazorca",
+       "reading": "/la maˈθoɾka/",
+       "fr": "l’épi (de maïs)",
+       "en": "the ear of maize, the corn cob"
+      },
+      {
+       "jp": "la masa",
+       "reading": "/la ˈmasa/",
+       "fr": "la pâte",
+       "en": "the dough"
+      },
+      {
+       "jp": "la carne",
+       "reading": "/la ˈkaɾne/",
+       "fr": "la chair, la viande",
+       "en": "flesh, meat"
+      },
+      {
+       "jp": "la sangre",
+       "reading": "/la ˈsaŋɡɾe/",
+       "fr": "le sang",
+       "en": "blood"
+      },
+      {
+       "jp": "temer",
+       "reading": "/teˈmeɾ/",
+       "fr": "craindre",
+       "en": "to fear"
+      },
+      {
+       "jp": "empañarse",
+       "reading": "/empaˈɲaɾse/",
+       "fr": "s’embuer, se ternir",
+       "en": "to mist up"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui parla du maïs aux dieux ?",
+        "en": "Who told the gods about maize?"
+       },
+       "choices": [
+        {
+         "fr": "Les animaux de la forêt",
+         "en": "The animals of the forest"
+        },
+        {
+         "fr": "Les hommes de bois",
+         "en": "The wooden people"
+        },
+        {
+         "fr": "Le soleil",
+         "en": "The sun"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi les dieux voilèrent-ils la vue des hommes de maïs ?",
+        "en": "Why did the gods cloud the maize people’s sight?"
+       },
+       "choices": [
+        {
+         "fr": "Ils craignaient qu’ils deviennent leurs égaux",
+         "en": "They feared they would become their equals"
+        },
+        {
+         "fr": "Pour les punir d’un mensonge",
+         "en": "To punish them for a lie"
+        },
+        {
+         "fr": "Pour qu’ils dorment",
+         "en": "So they would sleep"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

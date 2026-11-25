@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
  * DELE A1, la Manche : moulins à vent, maisons blanches, venta, oliviers, sierra et château des Ducs.
  * DELE A2, la route de Barcelone : rivière, ferme d'Aragon, fontaine, diligence, toits envolés, crêtes, fête et port.
  * DELE B1, le chemin de Saint-Jacques : col des Pyrénées, vignes, cathédrales, blés de la Meseta, château templier, hórreo, phare.
+ * DELE B2, la traversée des Amériques : Teide, La Havane, Mexico, Antigua, Magdalena, Andes, Chiloé, Buenos Aires.
  * Dessins originaux, centrés sur (0, 0).
  */
 const WHITE = '#F6F1E6';
@@ -408,6 +409,157 @@ function Santiago({ ...p }: P) {
   );
 }
 
+/** Volcan : cône et panache (éteint quand l'île est apaisée). */
+function Volcano({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-30 0 L-8 -32 H8 L30 0Z" fill="#7A5A4A" />
+      <path d="M-8 -32 H8 L4 -26 H-4Z" fill={calm ? '#5A4A3A' : '#E2622E'} />
+      <path d="M-14 -24 L-8 -32 L-6 -20Z M10 -22 L8 -32 L14 -26Z" fill={WHITE} opacity="0.7" />
+      {!calm && <g fill="#8A8A92" opacity="0.8"><circle cx="0" cy="-40" r="6" /><circle cx="8" cy="-48" r="7" /><circle cx="-4" cy="-54" r="5" /></g>}
+    </g>
+  );
+}
+
+/** Palmier. */
+function Palm({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 0 Q-2 -14 2 -26" stroke={WOOD} strokeWidth="2.4" fill="none" />
+      {[-60, -20, 20, 60, 100].map((a) => <path key={a} d="M2 -26 Q10 -30 16 -24" stroke={OLIVE} strokeWidth="2.4" fill="none" transform={`rotate(${a} 2 -26)`} />)}
+    </g>
+  );
+}
+
+/** Maison coloniale colorée à arcades. */
+function ColonialHouse({ color = '#E2A23B', ...p }: P & { color?: string }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-14" y="-16" width="28" height="16" fill={color} />
+      <rect x="-14" y="-18" width="28" height="2" fill={WHITE} />
+      {[-9, 0, 9].map((x) => <path key={x} d={`M${x - 3} 0 V-7 Q${x} -11 ${x + 3} -7 V0Z`} fill="#3A2A1A" />)}
+      {[-9, 0, 9].map((x) => <rect key={`w${x}`} x={x - 2} y="-15" width="4" height="4" fill="#3A6AA8" />)}
+    </g>
+  );
+}
+
+/** Voiture ancienne (La Havane). */
+function ClassicCar({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-16 -4 V-9 Q-12 -10 -8 -10 L-4 -16 H6 L10 -10 Q16 -10 16 -6 V-4Z" fill="#3AA8A0" />
+      <path d="M-3 -15 H5 L8 -10 H-6Z" fill={SKY} />
+      {[-9, 9].map((x) => <circle key={x} cx={x} cy={-3} r="3.4" fill="#2A2A2A" stroke={STONE} strokeWidth="1" />)}
+    </g>
+  );
+}
+
+/** Pyramide à degrés. */
+function Pyramid({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      {[0, 1, 2, 3].map((i) => <rect key={i} x={-24 + i * 5} y={-6 - i * 6} width={48 - i * 10} height="6" fill={i % 2 ? '#B89A6A' : '#A88A5A'} />)}
+      <rect x="-5" y="-32" width="10" height="8" fill="#8A6A3A" />
+      <path d="M-2 -6 V-24 H2 V-6Z" fill="#8A6A3A" />
+    </g>
+  );
+}
+
+/** Arche coloniale à horloge (Antigua). */
+function ClockArch({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-20 0 V-22 H20 V0 H10 V-8 Q0 -18 -10 -8 V0Z" fill="#E2B84A" stroke="#B8902A" strokeWidth="0.8" />
+      <rect x="-5" y="-30" width="10" height="9" fill="#E2B84A" />
+      <circle cx="0" cy="-26" r="3" fill={WHITE} stroke={WOOD} strokeWidth="0.6" />
+      <path d="M0 -26 V-28 M0 -26 H1.6" stroke={WOOD} strokeWidth="0.6" />
+    </g>
+  );
+}
+
+/** Pirogue sur l'eau. */
+function Canoe({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-18 -4 Q0 4 18 -4 L14 0 Q0 6 -14 0Z" fill={WOOD} />
+      <path d="M6 -14 L-2 4" stroke="#5A3A24" strokeWidth="1.4" />
+      <ellipse cx="-2" cy="4" rx="3" ry="1.4" fill="#5A3A24" />
+    </g>
+  );
+}
+
+/** Lama des Andes. */
+function Llama({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-10" rx="9" ry="5" fill="#F2E6D0" />
+      <path d="M6 -12 V-26" stroke="#F2E6D0" strokeWidth="4" strokeLinecap="round" />
+      <ellipse cx="8" cy="-27" rx="3.5" ry="2.4" fill="#F2E6D0" />
+      <path d="M5 -29 L5 -33 M7 -29 L8 -33" stroke="#F2E6D0" strokeWidth="1.2" />
+      {[-6, -2, 3, 7].map((x) => <path key={x} d={`M${x} -6 V0`} stroke="#D8C8B0" strokeWidth="1.6" />)}
+      <rect x="-4" y="-16" width="8" height="3" fill={RED} />
+    </g>
+  );
+}
+
+/** Entrée de mine dans la montagne. */
+function Mine({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-28 0 L-10 -30 L4 -18 L14 -34 L30 0Z" fill="#8A7A6A" />
+      <path d="M-8 0 V-12 Q0 -20 8 -12 V0Z" fill="#2A2420" />
+      <path d="M-9 0 V-13 M9 0 V-13 M-10 -13 H10" stroke={WOOD} strokeWidth="1.6" />
+      <circle cx="14" cy="-6" r="1.6" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Palafito de Chiloé : maison sur pilotis. */
+function Palafito({ color = '#C8562E', ...p }: P & { color?: string }) {
+  return (
+    <g transform={at(p)}>
+      {[-8, 0, 8].map((x) => <rect key={x} x={x - 0.8} y="-6" width="1.6" height="6" fill={WOOD} />)}
+      <rect x="-11" y="-17" width="22" height="11" fill={color} />
+      <path d="M-13 -17 L0 -24 L13 -17Z" fill="#5A4A4A" />
+      <rect x="-3" y="-13" width="6" height="5" fill={SKY} />
+    </g>
+  );
+}
+
+/** Vaisseau fantôme lumineux (le Caleuche). */
+function GhostShip({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)} opacity={calm ? 0.35 : 1}>
+      <path d="M-20 -4 H20 L14 4 H-14Z" fill="#3A3A4A" />
+      <path d="M-2 -4 V-30 M10 -4 V-22" stroke="#3A3A4A" strokeWidth="1.4" />
+      <path d="M-2 -28 L-14 -10 H-2Z M10 -20 L18 -8 H10Z" fill="#E8F0FF" opacity="0.85" />
+      {[-12, -4, 4, 12].map((x) => <circle key={x} cx={x} cy={-1} r="1.4" fill={GOLD} />)}
+    </g>
+  );
+}
+
+/** Obélisque de Buenos Aires. */
+function Obelisk({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-4 0 L-2.6 -40 L0 -44 L2.6 -40 L4 0Z" fill={WHITE} stroke={STONE} strokeWidth="0.6" />
+      <rect x="-1" y="-30" width="2" height="2" fill="#3A3A4A" />
+    </g>
+  );
+}
+
+/** Théâtre à l'italienne (le Colón). */
+function Theatre({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-20" y="-20" width="40" height="20" fill="#E8DCC0" />
+      <path d="M-22 -20 H22 L18 -26 H-18Z" fill="#B8A07A" />
+      {[-14, -7, 0, 7, 14].map((x) => <rect key={x} x={x - 1.4} y="-18" width="2.8" height="18" fill={WHITE} />)}
+      <path d="M-6 -26 Q0 -34 6 -26Z" fill="#7A9AA0" />
+    </g>
+  );
+}
+
 export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'auberge où Don Quichotte se fait adouber
   'delea1-w1': () => (<><Venta x={-10} y={12} /><Lance x={16} y={12} /><OliveTree x={30} y={12} s={0.7} /></>),
@@ -463,4 +615,22 @@ export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'deleb1-w8': (calm) => (<><Lighthouse x={-12} y={12} calm={calm} /><SeaBoat x={14} y={14} s={0.7} /></>),
   // La cathédrale de Saint-Jacques
   'deleb1-final': () => (<><Santiago x={-6} y={12} s={1.1} /><Scallop x={22} y={12} /></>),
+  // DELE B2 — la traversée des Amériques : le Teide de Guayota
+  'deleb2-w1': (calm) => (<><Volcano x={-6} y={12} calm={calm} /><Palm x={24} y={12} s={0.8} /></>),
+  // La Havane : maisons colorées et voiture ancienne
+  'deleb2-w2': () => (<><ColonialHouse x={-12} y={12} color="#E2869A" /><ClassicCar x={16} y={14} /></>),
+  // Mexico : marché et pyramide
+  'deleb2-w3': () => (<><Pyramid x={-10} y={12} /><Festoon x={18} y={12} s={0.6} /></>),
+  // Antigua : arche coloniale et volcan
+  'deleb2-w4': (calm) => (<><Volcano x={14} y={12} s={0.8} calm={calm} /><ClockArch x={-12} y={12} /></>),
+  // Le fleuve Magdalena
+  'deleb2-w5': () => (<><River x={0} y={14} /><Canoe x={-4} y={10} s={0.8} /><Palm x={24} y={10} s={0.7} /></>),
+  // Les Andes : mine et lama
+  'deleb2-w6': () => (<><Mine x={-8} y={12} /><Llama x={20} y={12} /></>),
+  // Chiloé : palafitos et vaisseau fantôme
+  'deleb2-w7': (calm) => (<><Palafito x={-16} y={12} /><Palafito x={-2} y={12} s={0.8} color="#3A7AA8" /><GhostShip x={22} y={10} s={0.8} calm={calm} /></>),
+  // Buenos Aires : l'obélisque et les maisons de couleur
+  'deleb2-w8': () => (<><Obelisk x={-12} y={12} /><ColonialHouse x={10} y={12} s={0.8} color="#3AA8A0" /></>),
+  // Le théâtre Colón
+  'deleb2-final': () => (<><Theatre x={-4} y={12} s={1.1} /><Obelisk x={26} y={12} s={0.6} /></>),
 };

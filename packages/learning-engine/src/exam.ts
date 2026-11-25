@@ -526,6 +526,8 @@ export const EXAM_DELEA2 = DELE_OFFICIAL('DELEA2', 110, 25, 30, 5);
 export const EXAM_DELEA2_MOCK = DELE_MOCK('DELEA2');
 export const EXAM_DELEB1 = DELE_OFFICIAL('DELEB1', 130, 30, 30, 5);
 export const EXAM_DELEB1_MOCK = DELE_MOCK('DELEB1');
+export const EXAM_DELEB2 = DELE_OFFICIAL('DELEB2', 150, 36, 30, 5);
+export const EXAM_DELEB2_MOCK = DELE_MOCK('DELEB2');
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
@@ -546,6 +548,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_DELEA2.slug]: EXAM_DELEA2,
   [EXAM_DELEB1_MOCK.slug]: EXAM_DELEB1_MOCK,
   [EXAM_DELEB1.slug]: EXAM_DELEB1,
+  [EXAM_DELEB2_MOCK.slug]: EXAM_DELEB2_MOCK,
+  [EXAM_DELEB2.slug]: EXAM_DELEB2,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
@@ -860,11 +864,18 @@ const TIPS_DELE_B1: Partial<Record<ExamSectionId, string>> = {
   writing: 'Expression écrite : structure ton texte avec des connecteurs (por un lado, sin embargo, por eso), donne ton avis et vérifie l’emploi du subjonctif.',
 };
 
+/** Conseils propres au DELE B2 et au-delà : la concordance des temps, l'irréel du passé, les variétés de l'espagnol. */
+const TIPS_DELE_B2: Partial<Record<ExamSectionId, string>> = {
+  grammar: 'Grammaire : reprends la concordance des temps (quería que vinieras), l’irréel du passé (si hubiera…, habría…), la concession (aunque, por mucho que) et le passif, puis entraîne-toi dans l’atelier DELE.',
+  listening: 'Compréhension auditive : écoute des débats, des interviews et des reportages, et habitue-toi aux accents d’Espagne et d’Amérique (voseo, ustedes, vocabulaire local).',
+  writing: 'Expression écrite : rédige des lettres formelles et des articles d’opinion structurés (en primer lugar, no obstante, por consiguiente) et vérifie la concordance des temps.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^DELE[ABC][12]$/.test(level)) {
     const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakEs.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    const tips = level === 'DELEA1' ? TIPS_DELE : level === 'DELEA2' ? { ...TIPS_DELE, ...TIPS_DELE_A2 } : { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1 };
+    const tips = level === 'DELEA1' ? TIPS_DELE : level === 'DELEA2' ? { ...TIPS_DELE, ...TIPS_DELE_A2 } : level === 'DELEB1' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1 } : { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2 };
     return weakEs.map((s) => tips[s.id] ?? tips.grammar!).filter(Boolean);
   }
   if (/^HSK[1-6]$/.test(level)) {
