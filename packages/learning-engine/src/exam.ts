@@ -530,6 +530,8 @@ export const EXAM_DELEB2 = DELE_OFFICIAL('DELEB2', 150, 36, 30, 5);
 export const EXAM_DELEB2_MOCK = DELE_MOCK('DELEB2');
 export const EXAM_DELEC1 = DELE_OFFICIAL('DELEC1', 170, 40, 30, 5);
 export const EXAM_DELEC1_MOCK = DELE_MOCK('DELEC1');
+export const EXAM_DELEC2 = DELE_OFFICIAL('DELEC2', 190, 45, 30, 5);
+export const EXAM_DELEC2_MOCK = DELE_MOCK('DELEC2');
 
 export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK1_MOCK.slug]: EXAM_HSK1_MOCK,
@@ -554,6 +556,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_DELEB2.slug]: EXAM_DELEB2,
   [EXAM_DELEC1_MOCK.slug]: EXAM_DELEC1_MOCK,
   [EXAM_DELEC1.slug]: EXAM_DELEC1,
+  [EXAM_DELEC2_MOCK.slug]: EXAM_DELEC2_MOCK,
+  [EXAM_DELEC2.slug]: EXAM_DELEC2,
   [EXAM_A1_MOCK.slug]: EXAM_A1_MOCK,
   [EXAM_A1_TOEIC.slug]: EXAM_A1_TOEIC,
   [EXAM_A2_MOCK.slug]: EXAM_A2_MOCK,
@@ -883,11 +887,20 @@ const TIPS_DELE_C1: Partial<Record<ExamSectionId, string>> = {
   writing: 'Expression écrite : entraîne-toi à résumer fidèlement une conférence et à rédiger un compte rendu critique dans un registre soutenu.',
 };
 
+/** Conseils propres au DELE C2 : la précision du lexique, les ressources expressives, la médiation. */
+const TIPS_DELE_C2: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Lexique : travaille la précision (quasi-synonymes, faux amis, verbes exacts à la place de hacer ou tener), les mots savants et les euphémismes ; joue à Word Rush pour gagner en rapidité.',
+  grammar: 'Usage de la langue : reprends la concession littéraire (si bien, aun cuando, así + subjonctif), les constructions absolues, le neutre lo, les valeurs de se et la mise en relief, puis entraîne-toi dans l’atelier DELE.',
+  reading: 'Compréhension écrite : lis des essais, des chroniques et des classiques (Darío, Unamuno, Quiroga) et repère le ton, l’ironie et les nuances de l’auteur.',
+  listening: 'Compréhension auditive : écoute des conférences, des interviews et des débats sans transcription, en repérant l’humour, les euphémismes et ce qui n’est pas dit.',
+  writing: 'Expression écrite : entraîne-toi à reformuler et à synthétiser fidèlement un texte, puis à rédiger un article d’opinion nuancé (cabría objetar, ahora bien, de ahí que + subjonctif).',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^DELE[ABC][12]$/.test(level)) {
     const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakEs.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    const tips = level === 'DELEA1' ? TIPS_DELE : level === 'DELEA2' ? { ...TIPS_DELE, ...TIPS_DELE_A2 } : level === 'DELEB1' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1 } : level === 'DELEB2' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2 } : { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2, ...TIPS_DELE_C1 };
+    const tips = level === 'DELEA1' ? TIPS_DELE : level === 'DELEA2' ? { ...TIPS_DELE, ...TIPS_DELE_A2 } : level === 'DELEB1' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1 } : level === 'DELEB2' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2 } : level === 'DELEC1' ? { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2, ...TIPS_DELE_C1 } : { ...TIPS_DELE, ...TIPS_DELE_A2, ...TIPS_DELE_B1, ...TIPS_DELE_B2, ...TIPS_DELE_C1, ...TIPS_DELE_C2 };
     return weakEs.map((s) => tips[s.id] ?? tips.grammar!).filter(Boolean);
   }
   if (/^HSK[1-6]$/.test(level)) {

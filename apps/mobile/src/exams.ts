@@ -27,4 +27,5 @@ export const MOCK_EXAM: Record<string, string> = {
   DELEB1: 'deleb1-official',
   DELEB2: 'deleb2-official',
   DELEC1: 'delec1-official',
+  DELEC2: 'delec2-official',
 };

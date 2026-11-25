@@ -210,7 +210,7 @@ export function WelcomePage() {
         <div>
           <h2 id="dele-title" className="text-3xl">{T("Et l’espagnol ? Le DELE")}</h2>
           <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare sur les chemins de la Manche, aux côtés de Don Quichotte et de Sancho Panza.")}
+            {T("Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare en six étapes : la Manche de Don Quichotte, la route de Barcelone, le chemin de Saint-Jacques, la traversée des Amériques, la Bibliothèque enchantée et son Rayon secret.")}
           </p>
         </div>
         <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -298,7 +298,7 @@ const DELE_LEVELS = [
   { id: 'DELE B1', ready: true, name: () => T("Seuil"), text: () => T("Exprimer son opinion, raconter une expérience, le subjonctif présent, comprendre l’essentiel d’un texte courant.") },
   { id: 'DELE B2', ready: true, name: () => T("Avancé"), text: () => T("Argumenter, débattre, comprendre la presse et des conférences, maîtriser les temps du subjonctif.") },
   { id: 'DELE C1', ready: true, name: () => T("Autonome"), text: () => T("S’exprimer avec aisance et précision, comprendre des textes longs et exigeants, registre soutenu.") },
-  { id: 'DELE C2', ready: false, name: () => T("Maîtrise"), text: () => T("Tout comprendre sans effort, nuancer finement, jouer avec les registres et les expressions idiomatiques.") },
+  { id: 'DELE C2', ready: true, name: () => T("Maîtrise"), text: () => T("Tout comprendre sans effort, nuancer finement, jouer avec les registres et les expressions idiomatiques.") },
 ];
 
 const FEATURES = [

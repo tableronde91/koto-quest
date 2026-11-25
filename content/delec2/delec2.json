@@ -1,0 +1,3650 @@
+{
+ "contentVersion": "2026.11.23",
+ "level": {
+  "code": "DELEC2",
+  "title": "DELE C2 : le Rayon secret",
+  "region": "Rayon secret",
+  "order": 51
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau C2 du CECRL et préparent au DELE C2, mais ne sont pas des listes officielles de l’Instituto Cervantes.",
+ "worlds": [
+  {
+   "slug": "delec2-w1",
+   "title": "La Dixième Muse",
+   "region": "Rayon secret",
+   "description": "Choisir le mot exact : nuances entre quasi-synonymes (mirar, ver, observar), pièges des faux amis (embarazada, constipado) et remplacement des verbes passe-partout.",
+   "boss": {
+    "name": "La Dixième Muse",
+    "glyph": "❦",
+    "intro": "Sor Juana Inés de la Cruz, religieuse et poétesse de la Nouvelle-Espagne que l’on surnomma « la Dixième Muse », s’est éveillée dans le Rayon secret. Elle ne tolère aucune approximation : à chaque mot imprécis, elle referme un livre pour toujours. Choisis le terme juste."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w1-c1",
+     "title": "La cellule de Sor Juana",
+     "lessons": [
+      {
+       "slug": "es-sinonimos",
+       "title": "Mirar, ver, observar : les nuances",
+       "objective": "Distinguer les quasi-synonymes et choisir le plus précis.",
+       "minutes": 10,
+       "explanation": [
+        "La perception : ver (percevoir), mirar (diriger le regard), observar (examiner avec attention), contemplar (regarder longuement, avec admiration) ; oír (percevoir un son) / escuchar (prêter l’oreille).",
+        "Savoir et connaître : saber (une information, un savoir-faire : sé nadar), conocer (une personne, un lieu, une œuvre). Demander : pedir (solliciter quelque chose) / preguntar (poser une question).",
+        "Nuances d’intensité : enfadado < furioso < colérico ; temer < aterrorizar ; agradable < delicioso < exquisito."
+       ],
+       "items": [
+        {
+         "slug": "es-contemplar",
+         "kind": "vocabulary",
+         "front": "contemplar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contempler"
+        },
+        {
+         "slug": "es-observar",
+         "kind": "vocabulary",
+         "front": "observar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "observer"
+        },
+        {
+         "slug": "es-oir-escuchar",
+         "kind": "vocabulary",
+         "front": "oír / escuchar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entendre / écouter"
+        },
+        {
+         "slug": "es-saber-conocer",
+         "kind": "vocabulary",
+         "front": "saber / conocer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "savoir / connaître"
+        },
+        {
+         "slug": "es-pedir-preguntar",
+         "kind": "vocabulary",
+         "front": "pedir / preguntar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "demander (quelque chose) / poser une question"
+        },
+        {
+         "slug": "es-exquisito",
+         "kind": "vocabulary",
+         "front": "exquisito / exquisita",
+         "reading": null,
+         "romaji": null,
+         "meaning": "exquis / exquise"
+        },
+        {
+         "slug": "es-la-celda",
+         "kind": "vocabulary",
+         "front": "la celda",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la cellule (de couvent, de prison)"
+        },
+        {
+         "slug": "es-el-convento",
+         "kind": "vocabulary",
+         "front": "el convento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le couvent"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Sor Juana no se limitaba a mirar el cielo: lo observaba con un telescopio y anotaba cuanto veía.",
+         "reading": null,
+         "fr": "Sor Juana ne se contentait pas de regarder le ciel : elle l’observait au télescope et notait tout ce qu’elle voyait."
+        },
+        {
+         "jp": "Oía las campanas del convento, pero no las escuchaba: estaba absorta en su lectura.",
+         "reading": null,
+         "fr": "Elle entendait les cloches du couvent, mais ne les écoutait pas : elle était absorbée par sa lecture."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿＿ a la autora de este poema?",
+         "choices": [
+          "Conoces",
+          "Sabes",
+          "Sabes a"
+         ],
+         "answer": "Conoces",
+         "explanation": "Une personne : conocer.",
+         "translation": "Connais-tu l’autrice de ce poème ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Le ＿ que me prestara su libro.",
+         "choices": [
+          "pedí",
+          "pregunté",
+          "demandé"
+         ],
+         "answer": "pedí",
+         "explanation": "Solliciter quelque chose : pedir.",
+         "translation": "Je lui ai demandé de me prêter son livre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Pasó horas ＿ el atardecer desde la terraza.",
+         "choices": [
+          "contemplando",
+          "viendo de",
+          "oyendo"
+         ],
+         "answer": "contemplando",
+         "explanation": "Regarder longuement avec admiration : contemplar.",
+         "translation": "Il passa des heures à contempler le coucher du soleil depuis la terrasse."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Lo oí, pero no lo escuché.",
+         "translation": "La personne a perçu le son sans y prêter attention.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Oír = percevoir ; escuchar = prêter l’oreille."
+        }
+       ]
+      },
+      {
+       "slug": "es-falsos-amigos",
+       "title": "Embarazada, constipado : les faux amis",
+       "objective": "Éviter les faux amis entre le français et l’espagnol.",
+       "minutes": 10,
+       "explanation": [
+        "Faux amis classiques : embarazada (enceinte, et non embarrassée), constipado (enrhumé), la carpeta (la chemise, le classeur), el éxito (le succès), largo (long, et non large), el suceso (le fait divers).",
+        "Encore : molestar (déranger), el compromiso (l’engagement, les fiançailles), la firma (la signature), salir (sortir, partir), la oficina (le bureau), recordar (se souvenir, rappeler).",
+        "Pour « embarrassé » : avergonzado ou cortado ; pour « constipé » : estreñido ; pour « large » : ancho."
+       ],
+       "items": [
+        {
+         "slug": "es-embarazada",
+         "kind": "vocabulary",
+         "front": "embarazada",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enceinte"
+        },
+        {
+         "slug": "es-constipado",
+         "kind": "vocabulary",
+         "front": "constipado / constipada",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enrhumé / enrhumée"
+        },
+        {
+         "slug": "es-la-carpeta",
+         "kind": "vocabulary",
+         "front": "la carpeta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la chemise (dossier), le classeur"
+        },
+        {
+         "slug": "es-el-exito",
+         "kind": "vocabulary",
+         "front": "el éxito",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le succès"
+        },
+        {
+         "slug": "es-el-suceso",
+         "kind": "vocabulary",
+         "front": "el suceso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le fait divers, l’événement"
+        },
+        {
+         "slug": "es-molestar",
+         "kind": "vocabulary",
+         "front": "molestar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déranger, gêner"
+        },
+        {
+         "slug": "es-el-compromiso",
+         "kind": "vocabulary",
+         "front": "el compromiso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’engagement, les fiançailles"
+        },
+        {
+         "slug": "es-avergonzado",
+         "kind": "vocabulary",
+         "front": "avergonzado / cortado",
+         "reading": null,
+         "romaji": null,
+         "meaning": "embarrassé, gêné"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Estoy constipada y me siento avergonzada: he estornudado en plena conferencia.",
+         "reading": null,
+         "fr": "Je suis enrhumée et je me sens gênée : j’ai éternué en pleine conférence."
+        },
+        {
+         "jp": "El libro fue un éxito, pero la sección de sucesos del periódico apenas lo mencionó.",
+         "reading": null,
+         "fr": "Le livre fut un succès, mais la rubrique faits divers du journal le mentionna à peine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Me puse rojo: estaba muy ＿.",
+         "choices": [
+          "avergonzado",
+          "embarazado",
+          "constipado"
+         ],
+         "answer": "avergonzado",
+         "explanation": "Embarrassé : avergonzado (embarazada = enceinte).",
+         "translation": "J’ai rougi : j’étais très gêné."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Guarda los documentos en esta ＿ azul.",
+         "choices": [
+          "carpeta",
+          "alfombra",
+          "firma"
+         ],
+         "answer": "carpeta",
+         "explanation": "Une chemise à documents : la carpeta.",
+         "translation": "Range les documents dans cette chemise bleue."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El río es muy ＿: mide cien metros de orilla a orilla.",
+         "choices": [
+          "ancho",
+          "largo",
+          "amplio de"
+         ],
+         "answer": "ancho",
+         "explanation": "Large : ancho (largo = long).",
+         "translation": "Le fleuve est très large : il mesure cent mètres d’une rive à l’autre."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Mi hermana está embarazada.",
+         "translation": "La sœur attend un enfant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Embarazada = enceinte."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w1-c2",
+     "title": "La plume exacte",
+     "lessons": [
+      {
+       "slug": "es-precision-lexica",
+       "title": "Formuler, padecer, depositar : remplacer les verbes passe-partout",
+       "objective": "Remplacer hacer, tener, poner, decir par des verbes précis.",
+       "minutes": 10,
+       "explanation": [
+        "Hacer : hacer una pregunta → formular ; hacer un informe → elaborar, redactar ; hacer un crimen → cometer ; hacer un viaje → realizar, emprender.",
+        "Tener : tener una enfermedad → padecer ; tener un cargo → ocupar, desempeñar ; tener éxito → cosechar ; tener lugar → celebrarse.",
+        "Poner et decir : poner dinero → ingresar, depositar ; poner una norma → establecer ; decir una opinión → expresar, manifestar ; decir un secreto → revelar, desvelar."
+       ],
+       "items": [
+        {
+         "slug": "es-formular",
+         "kind": "vocabulary",
+         "front": "formular",
+         "reading": null,
+         "romaji": null,
+         "meaning": "formuler"
+        },
+        {
+         "slug": "es-elaborar",
+         "kind": "vocabulary",
+         "front": "elaborar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "élaborer, rédiger"
+        },
+        {
+         "slug": "es-padecer",
+         "kind": "vocabulary",
+         "front": "padecer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "souffrir de"
+        },
+        {
+         "slug": "es-desempenar",
+         "kind": "vocabulary",
+         "front": "desempeñar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "exercer, remplir (une fonction)"
+        },
+        {
+         "slug": "es-cosechar",
+         "kind": "vocabulary",
+         "front": "cosechar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "récolter, remporter"
+        },
+        {
+         "slug": "es-ingresar",
+         "kind": "vocabulary",
+         "front": "ingresar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déposer (de l’argent), entrer (à l’hôpital)"
+        },
+        {
+         "slug": "es-manifestar",
+         "kind": "vocabulary",
+         "front": "manifestar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "manifester, exprimer"
+        },
+        {
+         "slug": "es-desvelar",
+         "kind": "vocabulary",
+         "front": "desvelar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dévoiler, révéler"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Sor Juana desempeñó un papel decisivo en la literatura novohispana y cosechó una fama inmensa en vida.",
+         "reading": null,
+         "fr": "Sor Juana joua un rôle décisif dans la littérature de la Nouvelle-Espagne et connut une immense renommée de son vivant."
+        },
+        {
+         "jp": "La investigadora formuló una hipótesis audaz y desveló el origen del manuscrito.",
+         "reading": null,
+         "fr": "La chercheuse formula une hypothèse audacieuse et dévoila l’origine du manuscrit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El ministro ＿ el cargo durante diez años.",
+         "choices": [
+          "desempeñó",
+          "hizo",
+          "puso"
+         ],
+         "answer": "desempeñó",
+         "explanation": "Exercer une fonction : desempeñar un cargo.",
+         "translation": "Le ministre a exercé la fonction pendant dix ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Su abuelo ＿ una enfermedad rara.",
+         "choices": [
+          "padecía",
+          "tenía de",
+          "hacía"
+         ],
+         "answer": "padecía",
+         "explanation": "Souffrir d’une maladie : padecer.",
+         "translation": "Son grand-père souffrait d’une maladie rare."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La periodista ＿ una pregunta incómoda.",
+         "choices": [
+          "formuló",
+          "puso",
+          "tuvo"
+         ],
+         "answer": "formuló",
+         "explanation": "Poser une question (soutenu) : formular.",
+         "translation": "La journaliste a posé une question gênante."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "La película cosechó un gran éxito.",
+         "translation": "Le film a remporté un grand succès.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Cosechar un éxito = remporter un succès."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w2",
+   "title": "Le Cygne de Darío",
+   "region": "Rayon secret",
+   "description": "Jouer avec la formation des mots : suffixes affectifs (-ito, -ón, -ucho), préfixes et suffixes de dérivation, et mots savants du registre littéraire (efímero, inefable).",
+   "boss": {
+    "name": "Le Cygne de Darío",
+    "glyph": "❧",
+    "intro": "Le cygne, emblème du modernisme de Rubén Darío, a quitté les pages d’Azul… pour glisser sur la fontaine du Rayon secret. Il ne se laisse approcher que par ceux qui savent sculpter les mots comme des bijoux."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w2-c1",
+     "title": "Le bassin du cygne",
+     "lessons": [
+      {
+       "slug": "es-sufijos",
+       "title": "Casita, casona, casucha : les suffixes affectifs",
+       "objective": "Comprendre et employer diminutifs, augmentatifs et péjoratifs.",
+       "minutes": 10,
+       "explanation": [
+        "Diminutifs : -ito (le plus courant), -illo (fréquent en Andalousie), -ico (Aragon, Colombie), -ín (Asturies). Ils expriment la petite taille ou l’affection : un cafecito, ahorita, abuelito.",
+        "Augmentatifs : -ón / -ona (un cucharón, una mujerona), -azo (un golpazo : un grand coup ; un cochazo : une superbe voiture).",
+        "Péjoratifs : -ucho (una casucha : une masure), -ejo (un pueblejo), -aco (un libraco : un gros livre sans intérêt). Certains mots ont pris un sens propre : la bombilla, el cigarrillo, el bolsillo."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-diminutivo",
+         "kind": "grammar",
+         "front": "-ito / -illo / -ico",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixes diminutifs"
+        },
+        {
+         "slug": "gram-es-aumentativo",
+         "kind": "grammar",
+         "front": "-ón / -azo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixes augmentatifs"
+        },
+        {
+         "slug": "gram-es-despectivo",
+         "kind": "grammar",
+         "front": "-ucho / -ejo / -aco",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixes péjoratifs"
+        },
+        {
+         "slug": "es-el-golpazo",
+         "kind": "vocabulary",
+         "front": "el golpazo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le grand coup"
+        },
+        {
+         "slug": "es-la-casucha",
+         "kind": "vocabulary",
+         "front": "la casucha",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la masure"
+        },
+        {
+         "slug": "es-el-cisne",
+         "kind": "vocabulary",
+         "front": "el cisne",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cygne"
+        },
+        {
+         "slug": "es-el-modernismo",
+         "kind": "vocabulary",
+         "front": "el modernismo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le modernisme (littéraire)"
+        },
+        {
+         "slug": "es-la-bombilla",
+         "kind": "vocabulary",
+         "front": "la bombilla",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’ampoule (électrique)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El abuelito vivía en una casita junto al lago, donde nadaba un cisne blanquísimo.",
+         "reading": null,
+         "fr": "Le grand-père vivait dans une maisonnette près du lac, où nageait un cygne d’une blancheur éclatante."
+        },
+        {
+         "jp": "Se dio un golpazo contra la puerta y pasó la noche en una casucha del pueblo.",
+         "reading": null,
+         "fr": "Il s’est donné un grand coup contre la porte et a passé la nuit dans une masure du village."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿Tomamos un ＿? Solo tengo diez minutos.",
+         "choices": [
+          "cafecito",
+          "cafetón",
+          "cafeucho"
+         ],
+         "answer": "cafecito",
+         "explanation": "Affection et petite quantité : -ito.",
+         "translation": "On prend un petit café ? Je n’ai que dix minutes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Vive en una ＿ sin luz ni agua.",
+         "choices": [
+          "casucha",
+          "casita",
+          "casona"
+         ],
+         "answer": "casucha",
+         "explanation": "Péjoratif : -ucha.",
+         "translation": "Il vit dans une masure sans électricité ni eau."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Se dio un ＿ tremendo contra la puerta.",
+         "choices": [
+          "golpazo",
+          "golpito",
+          "golpucho"
+         ],
+         "answer": "golpazo",
+         "explanation": "Grand coup : -azo.",
+         "translation": "Il s’est donné un coup terrible contre la porte."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Bombilla» significa una bomba pequeña.",
+         "translation": "Le mot désigne une petite bombe.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Bombilla a son propre sens : l’ampoule."
+        }
+       ]
+      },
+      {
+       "slug": "es-derivacion",
+       "title": "Deshacer, imprevisible : préfixes et suffixes",
+       "objective": "Comprendre et former des mots par dérivation.",
+       "minutes": 10,
+       "explanation": [
+        "Préfixes : des- / dis- (contraire : deshacer, disgustar), in- / im- / i- (négation : inútil, imposible, ilegal), re- (répétition : releer), pre- (avant : prever), sobre- (excès : sobrevalorar), contra- (opposition : contradecir).",
+        "Suffixes : -able / -ible (possibilité : imprevisible, legible), -ismo (doctrine : realismo), -ista (personne : novelista), -ez (qualité : timidez), -ería (lieu ou commerce : librería).",
+        "Attention aux accords : prever se conjugue comme ver (preví, previsto) ; contradecir comme decir (contradijo)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-prefijos",
+         "kind": "grammar",
+         "front": "des- / in- / re- / pre- / sobre-",
+         "reading": null,
+         "romaji": null,
+         "meaning": "préfixes de dérivation"
+        },
+        {
+         "slug": "gram-es-sufijos-derivacion",
+         "kind": "grammar",
+         "front": "-able / -ismo / -ista / -ería",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixes de dérivation"
+        },
+        {
+         "slug": "es-imprevisible",
+         "kind": "vocabulary",
+         "front": "imprevisible",
+         "reading": null,
+         "romaji": null,
+         "meaning": "imprévisible"
+        },
+        {
+         "slug": "es-releer",
+         "kind": "vocabulary",
+         "front": "releer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "relire"
+        },
+        {
+         "slug": "es-prever",
+         "kind": "vocabulary",
+         "front": "prever",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prévoir"
+        },
+        {
+         "slug": "es-sobrevalorar",
+         "kind": "vocabulary",
+         "front": "sobrevalorar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "surestimer"
+        },
+        {
+         "slug": "es-contradecir",
+         "kind": "vocabulary",
+         "front": "contradecir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contredire"
+        },
+        {
+         "slug": "es-legible",
+         "kind": "vocabulary",
+         "front": "legible / ilegible",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lisible / illisible"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Releí el poema tres veces: su final es tan imprevisible como hermoso.",
+         "reading": null,
+         "fr": "J’ai relu le poème trois fois : sa fin est aussi imprévisible que belle."
+        },
+        {
+         "jp": "Muchos críticos sobrevaloraron su obra; otros contradijeron esa opinión con argumentos sólidos.",
+         "reading": null,
+         "fr": "Beaucoup de critiques surestimèrent son œuvre ; d’autres contredirent cet avis avec des arguments solides."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Nadie ＿ el final de la historia.",
+         "choices": [
+          "previó",
+          "prevenió",
+          "preveyó"
+         ],
+         "answer": "previó",
+         "explanation": "Prever se conjugue comme ver : previó.",
+         "translation": "Personne ne prévit la fin de l’histoire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Su letra es tan mala que el texto es ＿.",
+         "choices": [
+          "ilegible",
+          "inlegible",
+          "deslegible"
+         ],
+         "answer": "ilegible",
+         "explanation": "Devant l : il- (ilegible).",
+         "translation": "Son écriture est si mauvaise que le texte est illisible."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Compré la novela en una ＿ de viejo.",
+         "choices": [
+          "librería",
+          "librista",
+          "librismo"
+         ],
+         "answer": "librería",
+         "explanation": "Commerce : -ería.",
+         "translation": "J’ai acheté le roman chez un bouquiniste."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Le contradijo delante de todos.",
+         "translation": "Il a dit l’inverse de lui en public.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Contradecir = contredire."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w2-c2",
+     "title": "Les bijoux du poète",
+     "lessons": [
+      {
+       "slug": "es-cultismos",
+       "title": "Efímero, inefable : les mots savants",
+       "objective": "Reconnaître et employer les mots savants du registre littéraire.",
+       "minutes": 9,
+       "explanation": [
+        "Adjectifs savants : efímero (éphémère), inefable (indicible), lúgubre (lugubre), nimio (insignifiant), ubérrimo (très fertile), prístino (originel, pur), sempiterno (éternel, sans fin).",
+        "Ils donnent un ton soutenu ou poétique ; employés hors contexte, ils peuvent paraître pédants. L’ironie les utilise volontiers : su sempiterna queja (sa sempiternelle plainte).",
+        "Leurs équivalents courants : efímero → breve, inefable → indescriptible, nimio → sin importancia, lúgubre → triste y oscuro."
+       ],
+       "items": [
+        {
+         "slug": "es-efimero",
+         "kind": "vocabulary",
+         "front": "efímero / efímera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "éphémère"
+        },
+        {
+         "slug": "es-inefable",
+         "kind": "vocabulary",
+         "front": "inefable",
+         "reading": null,
+         "romaji": null,
+         "meaning": "indicible, ineffable"
+        },
+        {
+         "slug": "es-lugubre",
+         "kind": "vocabulary",
+         "front": "lúgubre",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lugubre"
+        },
+        {
+         "slug": "es-nimio",
+         "kind": "vocabulary",
+         "front": "nimio / nimia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "insignifiant, futile"
+        },
+        {
+         "slug": "es-pristino",
+         "kind": "vocabulary",
+         "front": "prístino / prístina",
+         "reading": null,
+         "romaji": null,
+         "meaning": "originel, pur"
+        },
+        {
+         "slug": "es-sempiterno",
+         "kind": "vocabulary",
+         "front": "sempiterno / sempiterna",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sempiternel"
+        },
+        {
+         "slug": "es-la-fugacidad",
+         "kind": "vocabulary",
+         "front": "la fugacidad",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le caractère fugace"
+        },
+        {
+         "slug": "es-el-ocaso",
+         "kind": "vocabulary",
+         "front": "el ocaso",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le crépuscule, le déclin"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El poeta canta la belleza efímera de la rosa y la inefable melancolía del ocaso.",
+         "reading": null,
+         "fr": "Le poète chante la beauté éphémère de la rose et l’indicible mélancolie du crépuscule."
+        },
+        {
+         "jp": "Discutieron durante horas por un detalle nimio, con su sempiterno orgullo.",
+         "reading": null,
+         "fr": "Ils discutèrent pendant des heures pour un détail insignifiant, avec leur sempiternel orgueil."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La fama es ＿: hoy te aplauden y mañana te olvidan.",
+         "choices": [
+          "efímera",
+          "sempiterna",
+          "prístina"
+         ],
+         "answer": "efímera",
+         "explanation": "Qui dure peu : efímero.",
+         "translation": "La gloire est éphémère : aujourd’hui on t’applaudit, demain on t’oublie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No discutas por algo tan ＿.",
+         "choices": [
+          "nimio",
+          "inefable",
+          "lúgubre"
+         ],
+         "answer": "nimio",
+         "explanation": "Sans importance : nimio.",
+         "translation": "Ne te dispute pas pour une chose aussi futile."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El castillo tenía un aspecto ＿ bajo la tormenta.",
+         "choices": [
+          "lúgubre",
+          "nimio",
+          "efímero"
+         ],
+         "answer": "lúgubre",
+         "explanation": "Triste et sombre : lúgubre.",
+         "translation": "Le château avait un aspect lugubre sous l’orage."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Sintió una alegría inefable.",
+         "translation": "La joie était impossible à exprimer.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Inefable = indicible."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w3",
+   "title": "Les souris de fray Martín",
+   "region": "Rayon secret",
+   "description": "Reconnaître les variétés de l’espagnol (seseo, yeísmo, aspiration, leísmo), comprendre l’espagnol des Andes et maîtriser les subtilités de l’orthographe (tilde diacritique, porque / por qué).",
+   "boss": {
+    "name": "Les Souris de fray Martín",
+    "glyph": "☙",
+    "intro": "Dans une Tradition péruvienne de Ricardo Palma, fray Martín de Porres parvient à faire manger dans la même écuelle un chien, un chat et une souris. Ses souris se sont échappées et grignotent les accents des manuscrits : rends à chaque mot sa forme et à chaque accent sa région."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w3-c1",
+     "title": "Le couvent de Lima",
+     "lessons": [
+      {
+       "slug": "es-variedades",
+       "title": "Seseo, yeísmo, leísmo : les variétés de l’espagnol",
+       "objective": "Identifier les principaux traits de prononciation et de grammaire selon les régions.",
+       "minutes": 10,
+       "explanation": [
+        "Prononciation : seseo (z et c prononcés s : Andalousie, Canaries, toute l’Amérique), ceceo (s prononcé comme z, une partie de l’Andalousie), yeísmo (ll = y, quasi général), aspiration du s final (los amigos → « loh amigoh », Caraïbes, Andalousie).",
+        "Rioplatense : rehilamiento (ll et y prononcés « ch » ou « j » français : « shó » pour yo). Mexique : consonnes nettes, voyelles parfois affaiblies.",
+        "Grammaire : leísmo (le comme COD masculin de personne : a Juan le vi, admis par la RAE), laísmo (la comme COI : la dije, fautif), ustedes au lieu de vosotros en Amérique et aux Canaries."
+       ],
+       "items": [
+        {
+         "slug": "es-el-seseo",
+         "kind": "vocabulary",
+         "front": "el seseo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le seseo (c et z prononcés s)"
+        },
+        {
+         "slug": "es-el-yeismo",
+         "kind": "vocabulary",
+         "front": "el yeísmo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le yeísmo (ll prononcé y)"
+        },
+        {
+         "slug": "es-aspirar-la-s",
+         "kind": "vocabulary",
+         "front": "aspirar la s",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aspirer le s"
+        },
+        {
+         "slug": "es-el-leismo",
+         "kind": "vocabulary",
+         "front": "el leísmo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le leísmo (le complément direct)"
+        },
+        {
+         "slug": "es-el-laismo",
+         "kind": "vocabulary",
+         "front": "el laísmo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le laísmo (la complément indirect)"
+        },
+        {
+         "slug": "es-el-habla",
+         "kind": "vocabulary",
+         "front": "el habla",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le parler (d’une région)"
+        },
+        {
+         "slug": "es-la-variedad",
+         "kind": "vocabulary",
+         "front": "la variedad",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la variété"
+        },
+        {
+         "slug": "es-la-norma-culta",
+         "kind": "vocabulary",
+         "front": "la norma culta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la norme cultivée"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En Lima, como en toda América, se practica el seseo: «cielo» y «sielo» suenan igual.",
+         "reading": null,
+         "fr": "À Lima, comme dans toute l’Amérique, on pratique le seseo : « cielo » et « sielo » sonnent pareil."
+        },
+        {
+         "jp": "El leísmo de persona está admitido («a Juan le vi»), pero el laísmo («la dije la verdad») se considera incorrecto.",
+         "reading": null,
+         "fr": "Le leísmo de personne est admis (« a Juan le vi »), mais le laísmo (« la dije la verdad ») est considéré comme fautif."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "A mi madre ＿ dije la verdad.",
+         "choices": [
+          "le",
+          "la",
+          "lo"
+         ],
+         "answer": "le",
+         "explanation": "Complément indirect : le (la serait un laísmo).",
+         "translation": "J’ai dit la vérité à ma mère."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Si «casa» y «caza» suenan igual, se trata de ＿.",
+         "choices": [
+          "seseo",
+          "yeísmo",
+          "leísmo"
+         ],
+         "answer": "seseo",
+         "explanation": "c / z prononcés s : seseo.",
+         "translation": "Si « casa » et « caza » sonnent pareil, il s’agit de seseo."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "En Buenos Aires, «yo» puede sonar «shó».",
+         "translation": "C’est le rehilamiento rioplatense.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Ll et y prononcés « sh » au Río de la Plata."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "El laísmo es la norma culta en América.",
+         "translation": "Le laísmo est la norme en Amérique.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Le laísmo est considéré comme fautif."
+        }
+       ]
+      },
+      {
+       "slug": "es-andino",
+       "title": "Palta, choclo, guagua : l’espagnol des Andes",
+       "objective": "Comprendre le vocabulaire andin, souvent d’origine quechua.",
+       "minutes": 9,
+       "explanation": [
+        "Mots d’origine quechua : la palta (l’avocat ; aguacate au Mexique et en Espagne), el choclo (l’épi de maïs tendre), la chacra (la petite ferme), la guagua (le bébé au Pérou et en Bolivie… mais le bus aux Canaries et à Cuba !), el poncho, la cancha (le terrain).",
+        "Usages andins : le diminutif de politesse (ahorita, cerquita, ¿me pasas la sal, por favorcito?), dice que (paraît-il) pour rapporter une information.",
+        "Le Pérou a deux traditions littéraires majeures : Ricardo Palma (Tradiciones peruanas) et l’Inca Garcilaso de la Vega (Comentarios reales)."
+       ],
+       "items": [
+        {
+         "slug": "es-la-palta",
+         "kind": "vocabulary",
+         "front": "la palta",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’avocat (fruit, Andes)"
+        },
+        {
+         "slug": "es-el-choclo",
+         "kind": "vocabulary",
+         "front": "el choclo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’épi de maïs tendre"
+        },
+        {
+         "slug": "es-la-chacra",
+         "kind": "vocabulary",
+         "front": "la chacra",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la petite ferme (Andes)"
+        },
+        {
+         "slug": "es-la-guagua",
+         "kind": "vocabulary",
+         "front": "la guagua",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bébé (Andes), le bus (Canaries, Caraïbes)"
+        },
+        {
+         "slug": "es-la-cancha",
+         "kind": "vocabulary",
+         "front": "la cancha",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le terrain (de sport)"
+        },
+        {
+         "slug": "es-el-quechua",
+         "kind": "vocabulary",
+         "front": "el quechua",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le quechua"
+        },
+        {
+         "slug": "es-la-tradicion",
+         "kind": "vocabulary",
+         "front": "la tradición",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la tradition, le récit traditionnel"
+        },
+        {
+         "slug": "es-cerquita",
+         "kind": "vocabulary",
+         "front": "cerquita",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout près (diminutif)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "En la chacra de mis abuelos comíamos choclo con queso y palta.",
+         "reading": null,
+         "fr": "Dans la petite ferme de mes grands-parents, nous mangions du maïs tendre avec du fromage et de l’avocat."
+        },
+        {
+         "jp": "En Lima, la guagua dormía; en Las Palmas, la guagua no llegaba.",
+         "reading": null,
+         "fr": "À Lima, le bébé dormait ; à Las Palmas, le bus n’arrivait pas."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En Perú no se dice «aguacate», sino «＿».",
+         "choices": [
+          "palta",
+          "choclo",
+          "chacra"
+         ],
+         "answer": "palta",
+         "explanation": "L’avocat au Pérou : la palta.",
+         "translation": "Au Pérou, on ne dit pas « aguacate », mais « palta »."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Los niños juegan al fútbol en la ＿ del barrio.",
+         "choices": [
+          "cancha",
+          "chacra",
+          "palta"
+         ],
+         "answer": "cancha",
+         "explanation": "Le terrain : la cancha.",
+         "translation": "Les enfants jouent au football sur le terrain du quartier."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "En Canarias, «coger la guagua» es tomar el autobús.",
+         "translation": "Aux Canaries, guagua veut dire bus.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Guagua = bus aux Canaries et à Cuba."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Ratón",
+           "jp": "¿Dónde está el convento?"
+          }
+         ],
+         "translation": "Une souris de fray Martín te demande où est le couvent ; il est tout près.",
+         "choices": [
+          "Aquí cerquita, a la vuelta de la esquina.",
+          "Aquí cerquísimo de lejos.",
+          "Está choclo."
+         ],
+         "answer": "Aquí cerquita, a la vuelta de la esquina.",
+         "explanation": "Diminutif andin : cerquita."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w3-c2",
+     "title": "Les accents grignotés",
+     "lessons": [
+      {
+       "slug": "es-ortografia",
+       "title": "Tú / tu, aún / aun, porque / por qué : l’orthographe fine",
+       "objective": "Maîtriser la tilde diacritique et les formes qu’on confond.",
+       "minutes": 10,
+       "explanation": [
+        "Tilde diacritique : tú (pronom) / tu (possessif), él / el, mí / mi, sí (oui, soi) / si (si), té (thé) / te, más (plus) / mas (mais, littéraire), aún (encore = todavía) / aun (même = incluso). Depuis 2010, la RAE recommande solo sans accent.",
+        "Porque (parce que), por qué (pourquoi ?), el porqué (la raison), por que (pour lequel / par lequel) : No sé por qué se fue. Ignoro el porqué de su decisión.",
+        "Sino (mais au contraire, après une négation) / si no (si… ne… pas) : No es rojo, sino azul. Si no vienes, me voy."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-tilde-diacritica",
+         "kind": "grammar",
+         "front": "tú / tu, él / el, sí / si",
+         "reading": null,
+         "romaji": null,
+         "meaning": "accent diacritique"
+        },
+        {
+         "slug": "es-aun-aun",
+         "kind": "vocabulary",
+         "front": "aún / aun",
+         "reading": null,
+         "romaji": null,
+         "meaning": "encore / même"
+        },
+        {
+         "slug": "es-porque-por-que",
+         "kind": "vocabulary",
+         "front": "porque / por qué / el porqué",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parce que / pourquoi / la raison"
+        },
+        {
+         "slug": "es-sino-si-no",
+         "kind": "vocabulary",
+         "front": "sino / si no",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mais (au contraire) / si… ne… pas"
+        },
+        {
+         "slug": "es-la-tilde",
+         "kind": "vocabulary",
+         "front": "la tilde",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’accent écrit"
+        },
+        {
+         "slug": "es-la-ortografia",
+         "kind": "vocabulary",
+         "front": "la ortografía",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’orthographe"
+        },
+        {
+         "slug": "es-la-errata",
+         "kind": "vocabulary",
+         "front": "la errata",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la coquille (faute d’impression)"
+        },
+        {
+         "slug": "es-el-manuscrito",
+         "kind": "vocabulary",
+         "front": "el manuscrito",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le manuscrit"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Aún no entiendo el porqué de tantas erratas en el manuscrito: ¡los ratones se comieron las tildes!",
+         "reading": null,
+         "fr": "Je ne comprends toujours pas la raison de tant de coquilles dans le manuscrit : les souris ont mangé les accents !"
+        },
+        {
+         "jp": "No lo escribió fray Martín, sino Ricardo Palma; si no me crees, mira la portada.",
+         "reading": null,
+         "fr": "Ce n’est pas fray Martín qui l’a écrit, mais Ricardo Palma ; si tu ne me crois pas, regarde la couverture."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿＿ no viniste ayer?",
+         "choices": [
+          "Por qué",
+          "Porque",
+          "Porqué"
+         ],
+         "answer": "Por qué",
+         "explanation": "Question : por qué.",
+         "translation": "Pourquoi n’es-tu pas venu hier ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No es francés, ＿ belga.",
+         "choices": [
+          "sino",
+          "si no",
+          "sí no"
+         ],
+         "answer": "sino",
+         "explanation": "Après une négation, rectification : sino.",
+         "translation": "Il n’est pas français, mais belge."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ no ha llegado el tren.",
+         "choices": [
+          "Aún",
+          "Aun",
+          "Haún"
+         ],
+         "answer": "Aún",
+         "explanation": "Encore (= todavía) : aún avec accent.",
+         "translation": "Le train n’est toujours pas arrivé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Este regalo es para ＿.",
+         "choices": [
+          "ti",
+          "tí",
+          "tu"
+         ],
+         "answer": "ti",
+         "explanation": "Ti ne porte jamais d’accent.",
+         "translation": "Ce cadeau est pour toi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w4",
+   "title": "Le Miroir déformant",
+   "region": "Rayon secret",
+   "description": "Saisir l’humour et les jeux de mots, décoder les euphémismes (la tercera edad, pasar a mejor vida) et employer les expressions idiomatiques les plus fines.",
+   "boss": {
+    "name": "Le Miroir déformant",
+    "glyph": "⁂",
+    "intro": "Dans Lumières de bohème de Valle-Inclán (1924), Max Estrella affirme que l’esperpento est né des miroirs concaves de la rue du Chat, à Madrid. L’un d’eux a pris vie dans le Rayon secret et déforme tout ce qu’on lui dit : montre-lui que tu lis entre les lignes."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w4-c1",
+     "title": "La rue du Chat",
+     "lessons": [
+      {
+       "slug": "es-humor",
+       "title": "Les jeux de mots et le double sens",
+       "objective": "Comprendre l’humour verbal, les calembours et le double sens.",
+       "minutes": 10,
+       "explanation": [
+        "Le calembour (el juego de palabras) joue sur la polysémie : «El banco cerró» (la banque ou le banc ?). «Estar en las nubes» et «tener la cabeza en las nubes».",
+        "Les chistes (blagues) espagnols aiment les jeux phoniques : «—¿Qué le dice un jaguar a otro? —Jaguar you» (jeu sur l’anglais).",
+        "L’esperpento de Valle-Inclán déforme la réalité pour la critiquer : el esperpento, lo esperpéntico (grotesque et absurde)."
+       ],
+       "items": [
+        {
+         "slug": "es-el-juego-de-palabras",
+         "kind": "vocabulary",
+         "front": "el juego de palabras",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le jeu de mots"
+        },
+        {
+         "slug": "es-el-chiste",
+         "kind": "vocabulary",
+         "front": "el chiste",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la blague"
+        },
+        {
+         "slug": "es-la-polisemia",
+         "kind": "vocabulary",
+         "front": "la polisemia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la polysémie"
+        },
+        {
+         "slug": "es-el-esperpento",
+         "kind": "vocabulary",
+         "front": "el esperpento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’esperpento (grotesque), un épouvantail"
+        },
+        {
+         "slug": "es-esperpentico",
+         "kind": "vocabulary",
+         "front": "esperpéntico / esperpéntica",
+         "reading": null,
+         "romaji": null,
+         "meaning": "grotesque, absurde"
+        },
+        {
+         "slug": "es-hacer-gracia",
+         "kind": "vocabulary",
+         "front": "hacer gracia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire rire, amuser"
+        },
+        {
+         "slug": "es-el-ingenio",
+         "kind": "vocabulary",
+         "front": "el ingenio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’esprit, l’ingéniosité"
+        },
+        {
+         "slug": "es-el-espejo-concavo",
+         "kind": "vocabulary",
+         "front": "el espejo cóncavo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le miroir concave"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El chiste no me hizo ninguna gracia, aunque reconozco el ingenio del juego de palabras.",
+         "reading": null,
+         "fr": "La blague ne m’a pas du tout fait rire, même si je reconnais l’ingéniosité du jeu de mots."
+        },
+        {
+         "jp": "Max Estrella decía que los héroes clásicos, reflejados en los espejos cóncavos, dan el esperpento.",
+         "reading": null,
+         "fr": "Max Estrella disait que les héros classiques, reflétés dans les miroirs concaves, donnent l’esperpento."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Su chiste no me ＿ ninguna gracia.",
+         "choices": [
+          "hizo",
+          "puso",
+          "tuvo"
+         ],
+         "answer": "hizo",
+         "explanation": "Faire rire : hacer gracia.",
+         "translation": "Sa blague ne m’a pas fait rire du tout."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "La escena era tan absurda que resultaba ＿.",
+         "choices": [
+          "esperpéntica",
+          "ingeniosa",
+          "cóncava"
+         ],
+         "answer": "esperpéntica",
+         "explanation": "Grotesque et absurde : esperpéntico.",
+         "translation": "La scène était si absurde qu’elle en devenait grotesque."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«El banco cerró» puede tener dos sentidos.",
+         "translation": "La phrase est ambiguë.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Banco = banque ou banc."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Espejo",
+           "jp": "¿Sabes por qué el libro de matemáticas estaba triste? Porque tenía muchos problemas."
+          }
+         ],
+         "translation": "Le miroir te raconte une blague à double sens ; réagis.",
+         "choices": [
+          "¡Qué ingenioso! Juega con el doble sentido de «problemas».",
+          "¡Qué triste el libro!",
+          "No tengo problemas."
+         ],
+         "answer": "¡Qué ingenioso! Juega con el doble sentido de «problemas».",
+         "explanation": "Problemas = exercices ou soucis."
+        }
+       ]
+      },
+      {
+       "slug": "es-eufemismos",
+       "title": "La tercera edad, pasar a mejor vida : les euphémismes",
+       "objective": "Reconnaître les euphémismes et le langage politiquement correct.",
+       "minutes": 9,
+       "explanation": [
+        "L’âge et la mort : la tercera edad, las personas mayores (les personnes âgées), pasar a mejor vida, fallecer (décéder), dejarnos (nous quitter).",
+        "Le travail et l’économie : el reajuste de plantilla (la réduction d’effectifs), la desaceleración económica (la crise), el crecimiento negativo, los recursos humanos.",
+        "Le handicap et la société : persona con discapacidad, persona invidente (aveugle), persona sin hogar (sans-abri), en situación de vulnerabilidad."
+       ],
+       "items": [
+        {
+         "slug": "es-el-eufemismo",
+         "kind": "vocabulary",
+         "front": "el eufemismo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’euphémisme"
+        },
+        {
+         "slug": "es-la-tercera-edad",
+         "kind": "vocabulary",
+         "front": "la tercera edad",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le troisième âge"
+        },
+        {
+         "slug": "es-pasar-a-mejor-vida",
+         "kind": "vocabulary",
+         "front": "pasar a mejor vida",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passer de vie à trépas"
+        },
+        {
+         "slug": "es-fallecer",
+         "kind": "vocabulary",
+         "front": "fallecer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "décéder"
+        },
+        {
+         "slug": "es-el-reajuste-de-plantilla",
+         "kind": "vocabulary",
+         "front": "el reajuste de plantilla",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la réduction d’effectifs"
+        },
+        {
+         "slug": "es-la-desaceleracion",
+         "kind": "vocabulary",
+         "front": "la desaceleración",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le ralentissement"
+        },
+        {
+         "slug": "es-invidente",
+         "kind": "vocabulary",
+         "front": "invidente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "non-voyant"
+        },
+        {
+         "slug": "es-persona-sin-hogar",
+         "kind": "vocabulary",
+         "front": "persona sin hogar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sans-abri"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Max Estrella, poeta invidente, pasó a mejor vida en la miseria, como tantos bohemios de su tiempo.",
+         "reading": null,
+         "fr": "Max Estrella, poète non-voyant, passa de vie à trépas dans la misère, comme tant de bohèmes de son temps."
+        },
+        {
+         "jp": "La empresa anunció un «reajuste de plantilla»: en realidad, despidió a cien personas.",
+         "reading": null,
+         "fr": "L’entreprise annonça un « ajustement des effectifs » : en réalité, elle licencia cent personnes."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El abuelo de Lucía ＿ anoche.",
+         "choices": [
+          "falleció",
+          "deceso",
+          "fallecido"
+         ],
+         "answer": "falleció",
+         "explanation": "Décéder (soutenu) : fallecer.",
+         "translation": "Le grand-père de Lucía est décédé hier soir."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Detrás del «＿ de plantilla» se esconden despidos.",
+         "choices": [
+          "reajuste",
+          "crecimiento",
+          "hogar"
+         ],
+         "answer": "reajuste",
+         "explanation": "Euphémisme : reajuste de plantilla.",
+         "translation": "Derrière l’« ajustement des effectifs » se cachent des licenciements."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Crecimiento negativo» significa que la economía crece.",
+         "translation": "L’économie progresse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "C’est un euphémisme pour une baisse."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Pasar a mejor vida» es una forma suave de decir «morir».",
+         "translation": "C’est un euphémisme de la mort.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Pasar a mejor vida = mourir."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w4-c2",
+     "title": "Le café des bohèmes",
+     "lessons": [
+      {
+       "slug": "es-expresiones-c2",
+       "title": "Dar en el clavo, a regañadientes : les expressions fines",
+       "objective": "Employer des expressions idiomatiques de niveau maîtrise.",
+       "minutes": 10,
+       "explanation": [
+        "Expressions verbales : dar en el clavo (mettre dans le mille), hacer de tripas corazón (prendre son courage à deux mains), echar leña al fuego (jeter de l’huile sur le feu), andarse por las ramas (tourner autour du pot).",
+        "Locutions adverbiales : a regañadientes (à contrecœur), a trancas y barrancas (tant bien que mal), de buenas a primeras (tout à coup), sin ton ni son (sans rime ni raison), a la chita callando (en douce).",
+        "Proverbes de maîtrise : a buen entendedor, pocas palabras bastan (à bon entendeur, salut) ; cría cuervos y te sacarán los ojos (nourris un serpent…)."
+       ],
+       "items": [
+        {
+         "slug": "es-dar-en-el-clavo",
+         "kind": "vocabulary",
+         "front": "dar en el clavo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mettre dans le mille"
+        },
+        {
+         "slug": "es-hacer-de-tripas-corazon",
+         "kind": "vocabulary",
+         "front": "hacer de tripas corazón",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre son courage à deux mains"
+        },
+        {
+         "slug": "es-echar-lena-al-fuego",
+         "kind": "vocabulary",
+         "front": "echar leña al fuego",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jeter de l’huile sur le feu"
+        },
+        {
+         "slug": "es-andarse-por-las-ramas",
+         "kind": "vocabulary",
+         "front": "andarse por las ramas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tourner autour du pot"
+        },
+        {
+         "slug": "es-a-reganadientes",
+         "kind": "vocabulary",
+         "front": "a regañadientes",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à contrecœur"
+        },
+        {
+         "slug": "es-a-trancas-y-barrancas",
+         "kind": "vocabulary",
+         "front": "a trancas y barrancas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tant bien que mal"
+        },
+        {
+         "slug": "es-de-buenas-a-primeras",
+         "kind": "vocabulary",
+         "front": "de buenas a primeras",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout à coup, de but en blanc"
+        },
+        {
+         "slug": "es-a-buen-entendedor",
+         "kind": "vocabulary",
+         "front": "a buen entendedor, pocas palabras bastan",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à bon entendeur, salut"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "No te andes por las ramas: dime qué opinas. — Pues creo que has dado en el clavo.",
+         "reading": null,
+         "fr": "Ne tourne pas autour du pot : dis-moi ce que tu penses. — Eh bien, je crois que tu as mis dans le mille."
+        },
+        {
+         "jp": "Aceptó a regañadientes y terminó la obra a trancas y barrancas.",
+         "reading": null,
+         "fr": "Il accepta à contrecœur et termina l’œuvre tant bien que mal."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Con esa respuesta has dado en el ＿.",
+         "choices": [
+          "clavo",
+          "martillo",
+          "tornillo"
+         ],
+         "answer": "clavo",
+         "explanation": "Mettre dans le mille : dar en el clavo.",
+         "translation": "Avec cette réponse, tu as mis dans le mille."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No eches más leña al ＿: ya están bastante enfadados.",
+         "choices": [
+          "fuego",
+          "agua",
+          "viento"
+         ],
+         "answer": "fuego",
+         "explanation": "Jeter de l’huile sur le feu : echar leña al fuego.",
+         "translation": "N’en rajoute pas : ils sont déjà assez fâchés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Lo hizo a ＿: no quería en absoluto.",
+         "choices": [
+          "regañadientes",
+          "buenas",
+          "trancas"
+         ],
+         "answer": "regañadientes",
+         "explanation": "À contrecœur : a regañadientes.",
+         "translation": "Il l’a fait à contrecœur : il n’en avait aucune envie."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "De buenas a primeras se puso a llorar.",
+         "translation": "Elle s’est mise à pleurer soudainement.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "De buenas a primeras = tout à coup."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w5",
+   "title": "La payada de Martín Fierro",
+   "region": "Rayon secret",
+   "description": "Débattre au plus haut niveau : réfuter une thèse (rebatir, poner en tela de juicio), nuancer son propos (hasta cierto punto, más bien) et concéder avec des tournures littéraires (si bien, así + subjonctif).",
+   "boss": {
+    "name": "Martín Fierro le payador",
+    "glyph": "✦",
+    "intro": "Martín Fierro, le gaucho du poème de José Hernández (1872), a planté sa guitare sous les étoiles de la pampa du Rayon secret. Comme autrefois face au Moreno, il te défie en payada, un duel de couplets improvisés : réfute, nuance et concède sans jamais perdre le fil."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w5-c1",
+     "title": "La pulpería",
+     "lessons": [
+      {
+       "slug": "es-refutar",
+       "title": "Rebatir, refutar : contredire avec des arguments",
+       "objective": "Réfuter une thèse et formuler des objections.",
+       "minutes": 10,
+       "explanation": [
+        "Réfuter : rebatir un argumento, refutar una tesis, desmentir una noticia (démentir), poner en tela de juicio (remettre en question), echar por tierra un razonamiento (le réduire à néant).",
+        "Objecter : objetar que…, plantear una objeción, cabría objetar que… (on pourrait objecter que), carecer de fundamento (être sans fondement), no se sostiene (ne tient pas).",
+        "Concéder pour mieux réfuter : Es cierto que…, pero… ; Admitamos que…, aun así… ; Nadie niega que + subjonctif…, sin embargo…"
+       ],
+       "items": [
+        {
+         "slug": "es-rebatir",
+         "kind": "vocabulary",
+         "front": "rebatir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réfuter, contrer"
+        },
+        {
+         "slug": "es-objetar",
+         "kind": "vocabulary",
+         "front": "objetar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "objecter"
+        },
+        {
+         "slug": "es-desmentir",
+         "kind": "vocabulary",
+         "front": "desmentir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "démentir"
+        },
+        {
+         "slug": "es-poner-en-tela-de-juicio",
+         "kind": "vocabulary",
+         "front": "poner en tela de juicio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remettre en question"
+        },
+        {
+         "slug": "es-echar-por-tierra",
+         "kind": "vocabulary",
+         "front": "echar por tierra",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réduire à néant"
+        },
+        {
+         "slug": "es-la-objecion",
+         "kind": "vocabulary",
+         "front": "la objeción",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’objection"
+        },
+        {
+         "slug": "es-carecer-de-fundamento",
+         "kind": "vocabulary",
+         "front": "carecer de fundamento",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être sans fondement"
+        },
+        {
+         "slug": "es-la-pulperia",
+         "kind": "vocabulary",
+         "front": "la pulpería",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’épicerie-bar de la pampa"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El Moreno rebatió cada verso de Martín Fierro y puso en tela de juicio su fama de payador.",
+         "reading": null,
+         "fr": "Le Moreno réfuta chaque couplet de Martín Fierro et remit en question sa réputation de payador."
+        },
+        {
+         "jp": "Cabría objetar que su argumento carece de fundamento: no cita ninguna fuente.",
+         "reading": null,
+         "fr": "On pourrait objecter que son argument est sans fondement : il ne cite aucune source."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El ministro ＿ la noticia: según él, es completamente falsa.",
+         "choices": [
+          "desmintió",
+          "echó por tierra de",
+          "objetó a"
+         ],
+         "answer": "desmintió",
+         "explanation": "Démentir une information : desmentir.",
+         "translation": "Le ministre a démenti l’information : selon lui, elle est complètement fausse."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Esa teoría ＿ de fundamento.",
+         "choices": [
+          "carece",
+          "sobra",
+          "queda"
+         ],
+         "answer": "carece",
+         "explanation": "Carecer de = manquer de.",
+         "translation": "Cette théorie est sans fondement."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Los nuevos datos ＿ por tierra su hipótesis.",
+         "choices": [
+          "echaron",
+          "pusieron",
+          "dieron"
+         ],
+         "answer": "echaron",
+         "explanation": "Réduire à néant : echar por tierra.",
+         "translation": "Les nouvelles données ont réduit son hypothèse à néant."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Nadie pone en tela de juicio su talento.",
+         "translation": "Son talent est contesté.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Poner en tela de juicio = remettre en question ; ici, personne ne le fait."
+        }
+       ]
+      },
+      {
+       "slug": "es-matizar",
+       "title": "Hasta cierto punto : nuancer son propos",
+       "objective": "Nuancer une affirmation et exprimer des degrés d’accord.",
+       "minutes": 9,
+       "explanation": [
+        "Nuancer : hasta cierto punto (jusqu’à un certain point), en cierta medida (dans une certaine mesure), a grandes rasgos (en gros), no del todo (pas tout à fait).",
+        "Rectifier : más bien (plutôt), mejor dicho (ou plutôt), por así decirlo (pour ainsi dire), valga la expresión (si j’ose dire). Matizar = nuancer ; el matiz = la nuance.",
+        "Degrés d’accord : Estoy totalmente de acuerdo < Coincido en parte < No lo veo del todo claro < Discrepo (je ne suis pas d’accord)."
+       ],
+       "items": [
+        {
+         "slug": "es-hasta-cierto-punto",
+         "kind": "vocabulary",
+         "front": "hasta cierto punto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jusqu’à un certain point"
+        },
+        {
+         "slug": "es-en-cierta-medida",
+         "kind": "vocabulary",
+         "front": "en cierta medida",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dans une certaine mesure"
+        },
+        {
+         "slug": "es-a-grandes-rasgos",
+         "kind": "vocabulary",
+         "front": "a grandes rasgos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en gros, dans les grandes lignes"
+        },
+        {
+         "slug": "es-valga-la-expresion",
+         "kind": "vocabulary",
+         "front": "valga la expresión",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si j’ose dire"
+        },
+        {
+         "slug": "es-coincidir-en-parte",
+         "kind": "vocabulary",
+         "front": "coincidir en parte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être en partie d’accord"
+        },
+        {
+         "slug": "es-matizar",
+         "kind": "vocabulary",
+         "front": "matizar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nuancer"
+        },
+        {
+         "slug": "es-el-matiz",
+         "kind": "vocabulary",
+         "front": "el matiz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la nuance"
+        },
+        {
+         "slug": "es-discrepar",
+         "kind": "vocabulary",
+         "front": "discrepar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ne pas être d’accord, diverger"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Hasta cierto punto tienes razón, pero conviene matizar: no todos los gauchos eran payadores.",
+         "reading": null,
+         "fr": "Jusqu’à un certain point tu as raison, mais il convient de nuancer : tous les gauchos n’étaient pas des payadores."
+        },
+        {
+         "jp": "Discrepo, o mejor dicho, coincido solo en parte con su análisis.",
+         "reading": null,
+         "fr": "Je ne suis pas d’accord, ou plutôt, je ne partage qu’en partie son analyse."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Estoy de acuerdo, pero solo hasta cierto ＿.",
+         "choices": [
+          "punto",
+          "medida",
+          "rasgo"
+         ],
+         "answer": "punto",
+         "explanation": "Jusqu’à un certain point : hasta cierto punto.",
+         "translation": "Je suis d’accord, mais seulement jusqu’à un certain point."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Te lo explico a grandes ＿: luego entramos en detalle.",
+         "choices": [
+          "rasgos",
+          "líneas",
+          "puntos"
+         ],
+         "answer": "rasgos",
+         "explanation": "En gros : a grandes rasgos.",
+         "translation": "Je te l’explique dans les grandes lignes : ensuite on entre dans les détails."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No es tímido; es, ＿, reservado.",
+         "choices": [
+          "más bien",
+          "a lo más",
+          "por si acaso"
+         ],
+         "answer": "más bien",
+         "explanation": "Plutôt : más bien.",
+         "translation": "Il n’est pas timide ; il est plutôt réservé."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Discrepo» expresa un acuerdo total.",
+         "translation": "Le locuteur est entièrement d’accord.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Discrepar = ne pas être d’accord."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w5-c2",
+     "title": "Le duel de guitares",
+     "lessons": [
+      {
+       "slug": "es-concesion-c2",
+       "title": "Si bien, así me lo pidas : la concession littéraire",
+       "objective": "Exprimer la concession avec des tournures soutenues et familières.",
+       "minutes": 10,
+       "explanation": [
+        "Soutenu : aun cuando + subjonctif (même si : Aun cuando llueva, saldremos), si bien + indicatif (bien que, s’il est vrai que : Si bien es cierto que canta bien, le falta oficio).",
+        "Littéraire : así + subjonctif (même si : No lo haré así me lo pidas de rodillas), mal que me pese (à mon grand regret), siquiera (ne serait-ce que : Dame siquiera una pista ; ni siquiera = même pas).",
+        "Familier : con lo + adjectif + que (vu comme : Con lo listo que es, ha suspendido), y eso que (et pourtant : Llegó tarde, y eso que salió pronto)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-aun-cuando",
+         "kind": "grammar",
+         "front": "aun cuando + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "même si (soutenu)"
+        },
+        {
+         "slug": "gram-es-si-bien",
+         "kind": "grammar",
+         "front": "si bien + indicativo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que, s’il est vrai que"
+        },
+        {
+         "slug": "gram-es-asi-subjuntivo",
+         "kind": "grammar",
+         "front": "así + subjuntivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "même si (littéraire)"
+        },
+        {
+         "slug": "es-mal-que-me-pese",
+         "kind": "vocabulary",
+         "front": "mal que me pese",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à mon grand regret"
+        },
+        {
+         "slug": "es-siquiera",
+         "kind": "vocabulary",
+         "front": "siquiera",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ne serait-ce que, au moins"
+        },
+        {
+         "slug": "gram-es-con-lo-que",
+         "kind": "grammar",
+         "front": "con lo + adjetivo + que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vu comme, alors que"
+        },
+        {
+         "slug": "es-y-eso-que",
+         "kind": "vocabulary",
+         "front": "y eso que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "et pourtant, alors même que"
+        },
+        {
+         "slug": "es-el-payador",
+         "kind": "vocabulary",
+         "front": "el payador",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le payador (chanteur improvisateur)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Si bien el Moreno cantaba con maestría, Martín Fierro no se rindió, así le costara la vida.",
+         "reading": null,
+         "fr": "Bien que le Moreno chantât avec maestria, Martín Fierro ne s’avoua pas vaincu, dût-il y laisser la vie."
+        },
+        {
+         "jp": "Perdió el duelo, y eso que había ensayado toda la noche.",
+         "reading": null,
+         "fr": "Il perdit le duel, alors même qu’il avait répété toute la nuit."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No cambiaré de opinión aun cuando me lo ＿ el mismo presidente.",
+         "choices": [
+          "pida",
+          "pide",
+          "pidió"
+         ],
+         "answer": "pida",
+         "explanation": "Aun cuando (même si, hypothèse) + subjonctif.",
+         "translation": "Je ne changerai pas d’avis, même si c’est le président lui-même qui me le demande."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Si bien ＿ cierto que es joven, tiene mucha experiencia.",
+         "choices": [
+          "es",
+          "sea",
+          "fuera"
+         ],
+         "answer": "es",
+         "explanation": "Si bien + indicatif.",
+         "translation": "S’il est vrai qu’il est jeune, il a beaucoup d’expérience."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Con lo ＿ que es, no entiendo cómo ha suspendido.",
+         "choices": [
+          "listo",
+          "listísimo de",
+          "más listo"
+         ],
+         "answer": "listo",
+         "explanation": "Con lo + adjectif + que.",
+         "translation": "Vu comme il est intelligent, je ne comprends pas comment il a échoué."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ni ＿ me saludó: pasó de largo.",
+         "choices": [
+          "siquiera",
+          "tan",
+          "mal"
+         ],
+         "answer": "siquiera",
+         "explanation": "Ni siquiera = même pas.",
+         "translation": "Il ne m’a même pas salué : il est passé sans s’arrêter."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w6",
+   "title": "La tortue géante de Quiroga",
+   "region": "Rayon secret",
+   "description": "Décrire la nature avec précision : les bruits et les cris (zumbar, crujir, aullar), les verbes de mouvement (deslizarse, serpentear) et les constructions absolues du récit (terminada la cena, al llegar).",
+   "boss": {
+    "name": "La Tortue géante de Quiroga",
+    "glyph": "✿",
+    "intro": "Dans les Contes de la forêt vierge d’Horacio Quiroga (1918), une tortue géante porte un chasseur malade à travers la jungle jusqu’à Buenos Aires. La voici dans le Rayon secret, couverte de lianes : elle ne laisse passer que ceux qui savent nommer chaque bruit et chaque mouvement de la forêt."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w6-c1",
+     "title": "La forêt de Misiones",
+     "lessons": [
+      {
+       "slug": "es-sonidos",
+       "title": "Zumbar, crujir, aullar : les bruits et les cris",
+       "objective": "Nommer précisément les sons de la nature et des objets.",
+       "minutes": 10,
+       "explanation": [
+        "Cris d’animaux : el perro ladra, el lobo aúlla, el león ruge, la rana croa, la abeja zumba, el pájaro trina, el caballo relincha.",
+        "Bruits : crujir (craquer : la madera cruje), chirriar (grincer : la puerta chirría), chasquear (claquer), retumbar (retentir, gronder), el estruendo (le fracas), el chapoteo (le clapotis).",
+        "L’accent écrit sur le u ou le i en hiatus : aullar → aúlla, chirriar → chirría, reunir → reúne, prohibir → prohíbe."
+       ],
+       "items": [
+        {
+         "slug": "es-zumbar",
+         "kind": "vocabulary",
+         "front": "zumbar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bourdonner"
+        },
+        {
+         "slug": "es-aullar",
+         "kind": "vocabulary",
+         "front": "aullar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hurler (comme un loup)"
+        },
+        {
+         "slug": "es-rugir",
+         "kind": "vocabulary",
+         "front": "rugir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rugir"
+        },
+        {
+         "slug": "es-croar",
+         "kind": "vocabulary",
+         "front": "croar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "coasser"
+        },
+        {
+         "slug": "es-chasquear",
+         "kind": "vocabulary",
+         "front": "chasquear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "claquer (fouet, doigts, langue)"
+        },
+        {
+         "slug": "es-chirriar",
+         "kind": "vocabulary",
+         "front": "chirriar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "grincer"
+        },
+        {
+         "slug": "es-el-chapoteo",
+         "kind": "vocabulary",
+         "front": "el chapoteo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le clapotis"
+        },
+        {
+         "slug": "es-el-estruendo",
+         "kind": "vocabulary",
+         "front": "el estruendo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le fracas"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "De noche la selva no calla: zumban los mosquitos, croan las ranas y, a lo lejos, ruge un yaguareté.",
+         "reading": null,
+         "fr": "La nuit, la forêt ne se tait pas : les moustiques bourdonnent, les grenouilles coassent et, au loin, rugit un jaguar."
+        },
+        {
+         "jp": "Crujían las ramas bajo el peso de la tortuga y el trueno retumbaba sobre el río.",
+         "reading": null,
+         "fr": "Les branches craquaient sous le poids de la tortue et le tonnerre grondait au-dessus du fleuve."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Toda la noche ＿ los lobos en la montaña.",
+         "choices": [
+          "aullaron",
+          "croaron",
+          "zumbaron"
+         ],
+         "answer": "aullaron",
+         "explanation": "Le loup hurle : aullar.",
+         "translation": "Les loups ont hurlé toute la nuit dans la montagne."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La puerta vieja ＿ cada vez que la abro.",
+         "choices": [
+          "chirría",
+          "ruge",
+          "trina"
+         ],
+         "answer": "chirría",
+         "explanation": "Une porte grince : chirriar.",
+         "translation": "La vieille porte grince chaque fois que je l’ouvre."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Una abeja me ＿ junto al oído.",
+         "choices": [
+          "zumbaba",
+          "relinchaba",
+          "aullaba"
+         ],
+         "answer": "zumbaba",
+         "explanation": "L’abeille bourdonne : zumbar.",
+         "translation": "Une abeille me bourdonnait près de l’oreille."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "La rana ruge.",
+         "translation": "C’est le cri de la grenouille.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "La grenouille coasse : la rana croa."
+        }
+       ]
+      },
+      {
+       "slug": "es-movimiento",
+       "title": "Deslizarse, serpentear : les verbes de mouvement",
+       "objective": "Décrire un mouvement avec le verbe exact.",
+       "minutes": 9,
+       "explanation": [
+        "Mouvements d’animaux : deslizarse (glisser), arrastrarse (ramper), serpentear (serpenter), revolotear (voleter), trepar (grimper), brincar (bondir).",
+        "Le fleuve et l’eau : el río serpentea, desemboca (se jette), se desborda (déborde) ; zambullirse (plonger), chapotear (patauger), flotar (flotter).",
+        "Guetter et rôder : acechar (être à l’affût), merodear (rôder), vislumbrar (apercevoir au loin). Attention : zambullirse fait zambulló, zambulleron (sans i)."
+       ],
+       "items": [
+        {
+         "slug": "es-deslizarse",
+         "kind": "vocabulary",
+         "front": "deslizarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "glisser"
+        },
+        {
+         "slug": "es-arrastrarse",
+         "kind": "vocabulary",
+         "front": "arrastrarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ramper"
+        },
+        {
+         "slug": "es-serpentear",
+         "kind": "vocabulary",
+         "front": "serpentear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "serpenter"
+        },
+        {
+         "slug": "es-revolotear",
+         "kind": "vocabulary",
+         "front": "revolotear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "voleter, voltiger"
+        },
+        {
+         "slug": "es-trepar",
+         "kind": "vocabulary",
+         "front": "trepar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "grimper"
+        },
+        {
+         "slug": "es-zambullirse",
+         "kind": "vocabulary",
+         "front": "zambullirse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plonger"
+        },
+        {
+         "slug": "es-acechar",
+         "kind": "vocabulary",
+         "front": "acechar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "guetter, être à l’affût"
+        },
+        {
+         "slug": "es-merodear",
+         "kind": "vocabulary",
+         "front": "merodear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rôder"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El Paraná serpentea entre la selva; un yacaré se desliza en el agua mientras las mariposas revolotean.",
+         "reading": null,
+         "fr": "Le Paraná serpente dans la forêt ; un caïman glisse dans l’eau tandis que les papillons voltigent."
+        },
+        {
+         "jp": "El yaguareté acechaba entre las cañas, pero los monos ya habían trepado a lo alto del árbol.",
+         "reading": null,
+         "fr": "Le jaguar guettait parmi les roseaux, mais les singes avaient déjà grimpé en haut de l’arbre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "La serpiente se ＿ silenciosamente entre las hojas.",
+         "choices": [
+          "deslizaba",
+          "revoloteaba",
+          "zambullía"
+         ],
+         "answer": "deslizaba",
+         "explanation": "Glisser sans bruit : deslizarse.",
+         "translation": "Le serpent glissait silencieusement entre les feuilles."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Los niños se ＿ en el río desde la roca.",
+         "choices": [
+          "zambulleron",
+          "zambullieron",
+          "trepar"
+         ],
+         "answer": "zambulleron",
+         "explanation": "Zambullirse : zambulleron, sans i.",
+         "translation": "Les enfants ont plongé dans le fleuve depuis le rocher."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Un hombre sospechoso ＿ por el barrio desde ayer.",
+         "choices": [
+          "merodea",
+          "revolotea",
+          "serpentea"
+         ],
+         "answer": "merodea",
+         "explanation": "Rôder : merodear.",
+         "translation": "Un homme suspect rôde dans le quartier depuis hier."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "El mono trepó al árbol.",
+         "translation": "Le singe est descendu de l’arbre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Trepar = grimper."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w6-c2",
+     "title": "Le voyage vers Buenos Aires",
+     "lessons": [
+      {
+       "slug": "es-construcciones-absolutas",
+       "title": "Terminada la cena, al llegar : les constructions absolues",
+       "objective": "Condenser le récit avec des participes, des gérondifs et des infinitifs.",
+       "minutes": 10,
+       "explanation": [
+        "Participe absolu (action terminée) : Terminada la cena, salieron. Dicho esto, se marchó. Una vez + participe : Una vez firmado el contrato, empezaremos. Le participe s’accorde avec son nom.",
+        "Gérondif de cause : Siendo así, no insisto (puisqu’il en est ainsi). Al + infinitif (au moment où) : Al llegar a la orilla, la tortuga se detuvo.",
+        "De + infinitif (condition) : De haberlo sabido, habría venido (si j’avais su). De seguir así, nos perderemos (si on continue ainsi)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-participio-absoluto",
+         "kind": "grammar",
+         "front": "terminada la cena, …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le participe absolu"
+        },
+        {
+         "slug": "gram-es-una-vez-participio",
+         "kind": "grammar",
+         "front": "una vez + participio",
+         "reading": null,
+         "romaji": null,
+         "meaning": "une fois + participe"
+        },
+        {
+         "slug": "gram-es-al-infinitivo",
+         "kind": "grammar",
+         "front": "al + infinitivo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en + participe présent, au moment où"
+        },
+        {
+         "slug": "es-de-seguir-asi",
+         "kind": "vocabulary",
+         "front": "de seguir así",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si ça continue ainsi"
+        },
+        {
+         "slug": "es-dicho-esto",
+         "kind": "vocabulary",
+         "front": "dicho esto",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cela dit"
+        },
+        {
+         "slug": "es-siendo-asi",
+         "kind": "vocabulary",
+         "front": "siendo así",
+         "reading": null,
+         "romaji": null,
+         "meaning": "puisqu’il en est ainsi"
+        },
+        {
+         "slug": "es-el-cazador",
+         "kind": "vocabulary",
+         "front": "el cazador / la cazadora",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le chasseur / la chasseuse"
+        },
+        {
+         "slug": "es-el-caparazon",
+         "kind": "vocabulary",
+         "front": "el caparazón",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la carapace"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Una vez curado el cazador, la tortuga emprendió el camino de vuelta a la selva.",
+         "reading": null,
+         "fr": "Une fois le chasseur guéri, la tortue reprit le chemin de la forêt."
+        },
+        {
+         "jp": "Al llegar a Buenos Aires, la tortuga apenas podía caminar; de haber tardado un día más, el hombre habría muerto.",
+         "reading": null,
+         "fr": "En arrivant à Buenos Aires, la tortue pouvait à peine marcher ; si elle avait tardé un jour de plus, l’homme serait mort."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ la reunión, todos volvieron a casa.",
+         "choices": [
+          "Terminada",
+          "Terminado",
+          "Terminando de"
+         ],
+         "answer": "Terminada",
+         "explanation": "Le participe s’accorde : la reunión → terminada.",
+         "translation": "La réunion terminée, tout le monde rentra chez soi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ salir de casa, me di cuenta de que llovía.",
+         "choices": [
+          "Al",
+          "De",
+          "Una vez"
+         ],
+         "answer": "Al",
+         "explanation": "Au moment où : al + infinitif.",
+         "translation": "En sortant de chez moi, je me suis rendu compte qu’il pleuvait."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "De ＿ la verdad, no habría firmado.",
+         "choices": [
+          "haber sabido",
+          "sabiendo",
+          "sabido"
+         ],
+         "answer": "haber sabido",
+         "explanation": "Condition passée : de + haber + participe.",
+         "translation": "Si j’avais su la vérité, je n’aurais pas signé."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Dicho esto, se marchó» significa que se fue antes de hablar.",
+         "translation": "Il est parti avant de parler.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Dicho esto = cela dit : il a parlé, puis il est parti."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w7",
+   "title": "Le brouillard d’Unamuno",
+   "region": "Rayon secret",
+   "description": "Manier les ressources expressives : le neutre lo (lo difícil que es), les valeurs de se (se me olvidó, leerse un libro) et la mise en relief (fue él quien…, ¿acaso…?).",
+   "boss": {
+    "name": "Augusto dans le brouillard",
+    "glyph": "◊",
+    "intro": "Dans Brouillard (Niebla, 1914), Augusto Pérez découvre qu’il n’est qu’un personnage et se rend à Salamanque pour supplier son auteur, Miguel de Unamuno, de le laisser vivre. Égaré dans la brume du Rayon secret, Augusto cherche encore la réponse : aide-le à dire l’indicible."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w7-c1",
+     "title": "Salamanque dans la brume",
+     "lessons": [
+      {
+       "slug": "es-lo-neutro",
+       "title": "Lo difícil que es : le neutre lo",
+       "objective": "Employer lo pour abstraire, insister et résumer.",
+       "minutes": 10,
+       "explanation": [
+        "Lo + adjectif = ce qui est… : lo bueno (le bon côté), lo importante, lo raro es que… Lo + participe : lo dicho (ce qui a été dit).",
+        "Lo + adjectif ou adverbe + que (= à quel point) : No sabes lo difícil que es. Me sorprende lo bien que canta. L’adjectif s’accorde : lo altas que son.",
+        "Lo de + nom ou infinitif (l’affaire de) : ¿Te has enterado de lo de Augusto? Locutions : a lo grande (en grand), a lo loco (n’importe comment), lo suyo (pas mal : Le costó lo suyo)."
+       ],
+       "items": [
+        {
+         "slug": "es-lo-raro-es-que",
+         "kind": "vocabulary",
+         "front": "lo raro es que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce qui est étrange, c’est que…"
+        },
+        {
+         "slug": "gram-es-lo-que-intensidad",
+         "kind": "grammar",
+         "front": "lo + adjetivo + que",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à quel point"
+        },
+        {
+         "slug": "es-lo-de",
+         "kind": "vocabulary",
+         "front": "lo de…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’affaire de, l’histoire de"
+        },
+        {
+         "slug": "es-lo-dicho",
+         "kind": "vocabulary",
+         "front": "lo dicho",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce qui a été dit, c’est entendu"
+        },
+        {
+         "slug": "es-a-lo-grande",
+         "kind": "vocabulary",
+         "front": "a lo grande",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en grand"
+        },
+        {
+         "slug": "es-a-lo-loco",
+         "kind": "vocabulary",
+         "front": "a lo loco",
+         "reading": null,
+         "romaji": null,
+         "meaning": "n’importe comment, à la légère"
+        },
+        {
+         "slug": "es-lo-suyo",
+         "kind": "vocabulary",
+         "front": "lo suyo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "pas mal, énormément"
+        },
+        {
+         "slug": "es-la-bruma",
+         "kind": "vocabulary",
+         "front": "la bruma",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la brume"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Augusto no sabía lo difícil que es ser un personaje: lo peor era no poder decidir su propio destino.",
+         "reading": null,
+         "fr": "Augusto ne savait pas à quel point il est difficile d’être un personnage : le pire était de ne pas pouvoir décider de son propre destin."
+        },
+        {
+         "jp": "¿Te has enterado de lo de Augusto? Convencer a su autor le costó lo suyo.",
+         "reading": null,
+         "fr": "Tu connais l’histoire d’Augusto ? Convaincre son auteur lui a donné bien du mal."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No te imaginas lo ＿ que son estas montañas.",
+         "choices": [
+          "altas",
+          "alto",
+          "altos"
+         ],
+         "answer": "altas",
+         "explanation": "L’adjectif s’accorde avec le nom : las montañas → altas.",
+         "translation": "Tu n’imagines pas à quel point ces montagnes sont hautes."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Me sorprende lo ＿ que habla español.",
+         "choices": [
+          "bien",
+          "bueno",
+          "buen"
+         ],
+         "answer": "bien",
+         "explanation": "Avec un verbe, un adverbe : lo bien que.",
+         "translation": "Je suis surpris de voir à quel point il parle bien espagnol."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Celebraron la boda a lo ＿: trescientos invitados y fuegos artificiales.",
+         "choices": [
+          "grande",
+          "largo",
+          "suyo"
+         ],
+         "answer": "grande",
+         "explanation": "En grand : a lo grande.",
+         "translation": "Ils ont célébré le mariage en grand : trois cents invités et un feu d’artifice."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Lo bueno de vivir aquí es el clima.»",
+         "translation": "Le locuteur parle d’un avantage.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Lo bueno = le bon côté."
+        }
+       ]
+      },
+      {
+       "slug": "es-valores-se",
+       "title": "Se me olvidó, leerse un libro : les valeurs de se",
+       "objective": "Distinguer le se involontaire, le se d’intensité et le se qui change le sens.",
+       "minutes": 10,
+       "explanation": [
+        "Se involontaire (on n’en est pas responsable) : se me olvidó la llave, se le cayó el vaso, se nos rompió el coche, se te ocurre una idea. Le verbe s’accorde avec la chose : se me olvidaron las llaves.",
+        "Se d’intensité ou d’accomplissement (avec un complément précis) : comerse una pizza entera, leerse un libro en un día, saberse la lección de memoria, beberse el café de un trago.",
+        "Se qui change le sens : ir / irse (partir), dormir / dormirse (s’endormir), llevar / llevarse (emporter), negar / negarse a (refuser de), parecer / parecerse a (ressembler à)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-se-involuntario",
+         "kind": "grammar",
+         "front": "se me olvidó, se le cayó",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le se involontaire"
+        },
+        {
+         "slug": "gram-es-se-aspectual",
+         "kind": "grammar",
+         "front": "comerse, leerse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le se d’intensité"
+        },
+        {
+         "slug": "es-ocurrirsele",
+         "kind": "vocabulary",
+         "front": "ocurrírsele algo a alguien",
+         "reading": null,
+         "romaji": null,
+         "meaning": "venir à l’esprit de quelqu’un"
+        },
+        {
+         "slug": "es-caersele",
+         "kind": "vocabulary",
+         "front": "caérsele algo a alguien",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire tomber sans le vouloir"
+        },
+        {
+         "slug": "es-saberse",
+         "kind": "vocabulary",
+         "front": "saberse algo de memoria",
+         "reading": null,
+         "romaji": null,
+         "meaning": "connaître par cœur"
+        },
+        {
+         "slug": "es-beberse",
+         "kind": "vocabulary",
+         "front": "beberse algo de un trago",
+         "reading": null,
+         "romaji": null,
+         "meaning": "boire d’un trait"
+        },
+        {
+         "slug": "es-el-personaje",
+         "kind": "vocabulary",
+         "front": "el personaje",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le personnage"
+        },
+        {
+         "slug": "es-el-autor",
+         "kind": "vocabulary",
+         "front": "el autor / la autora",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’auteur / l’autrice"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Se me olvidó que eras un personaje, Augusto; y a ti se te ocurrió rebelarte contra tu autor.",
+         "reading": null,
+         "fr": "J’avais oublié que tu étais un personnage, Augusto ; et toi, tu as eu l’idée de te rebeller contre ton auteur."
+        },
+        {
+         "jp": "Unamuno se negó a cambiar el final, aunque Augusto se sabía de memoria todos sus argumentos.",
+         "reading": null,
+         "fr": "Unamuno refusa de changer la fin, bien qu’Augusto connût par cœur tous ses arguments."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Perdona, se me ＿ las llaves en casa.",
+         "choices": [
+          "olvidaron",
+          "olvidó",
+          "olvidé"
+         ],
+         "answer": "olvidaron",
+         "explanation": "Le verbe s’accorde avec les choses : las llaves → olvidaron.",
+         "translation": "Pardon, j’ai oublié les clés à la maison."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Se ＿ un libro entero en una tarde.",
+         "choices": [
+          "leyó",
+          "leía de",
+          "lee a"
+         ],
+         "answer": "leyó",
+         "explanation": "Se d’accomplissement : leerse un libro.",
+         "translation": "Il a lu un livre entier en un après-midi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "El testigo se ＿ a declarar.",
+         "choices": [
+          "negó",
+          "negó de",
+          "negaba en"
+         ],
+         "answer": "negó",
+         "explanation": "Refuser de : negarse a.",
+         "translation": "Le témoin a refusé de témoigner."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "«Se le cayó el vaso» indica que lo rompió a propósito.",
+         "translation": "Il l’a fait exprès.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Se involontaire : c’est un accident."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w7-c2",
+     "title": "La visite à l’auteur",
+     "lessons": [
+      {
+       "slug": "es-enfasis",
+       "title": "Fue él quien…, ¿acaso…? : la mise en relief",
+       "objective": "Mettre une idée en relief et poser des questions rhétoriques.",
+       "minutes": 10,
+       "explanation": [
+        "Phrases clivées : ser + élément + relatif. Fue Unamuno quien lo decidió. Es aquí donde nos conocimos. Fue entonces cuando lo entendí. Lo que quiero es… / Lo que pasa es que… Ser se met au temps de la phrase.",
+        "Questions rhétoriques : ¿Acaso no lo sabías? (tu ne le savais donc pas ?), ¿A que no lo adivinas? (je parie que tu ne devines pas), ¿Quién no ha soñado alguna vez…?",
+        "Exclamations d’insistance : ¡Vaya si lo sé! (et comment !), ¡Si será tonto! (qu’est-ce qu’il est bête !), ¡Pues sí que…! (eh bien vraiment…)."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-oracion-hendida",
+         "kind": "grammar",
+         "front": "fue… quien / es… donde",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la phrase clivée (c’est… qui)"
+        },
+        {
+         "slug": "es-acaso-retorico",
+         "kind": "vocabulary",
+         "front": "¿acaso…?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "est-ce donc que… ?"
+        },
+        {
+         "slug": "es-a-que",
+         "kind": "vocabulary",
+         "front": "¿a que…?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je parie que… ?"
+        },
+        {
+         "slug": "es-vaya-si",
+         "kind": "vocabulary",
+         "front": "¡vaya si…!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "et comment !"
+        },
+        {
+         "slug": "es-lo-que-pasa-es-que",
+         "kind": "vocabulary",
+         "front": "lo que pasa es que…",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le problème, c’est que…"
+        },
+        {
+         "slug": "es-el-creador",
+         "kind": "vocabulary",
+         "front": "el creador / la creadora",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le créateur / la créatrice"
+        },
+        {
+         "slug": "es-rebelarse",
+         "kind": "vocabulary",
+         "front": "rebelarse",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se rebeller"
+        },
+        {
+         "slug": "es-la-nivola",
+         "kind": "vocabulary",
+         "front": "la nivola",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la « nivola » (le roman selon Unamuno)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Fue en Salamanca donde Augusto se enfrentó a su creador. —¿Acaso no puedo vivir sin usted? —le preguntó.",
+         "reading": null,
+         "fr": "C’est à Salamanque qu’Augusto affronta son créateur. « Ne puis-je donc pas vivre sans vous ? » lui demanda-t-il."
+        },
+        {
+         "jp": "—¿A que no adivinas quién escribió esta nivola? —¡Vaya si lo adivino: Unamuno!",
+         "reading": null,
+         "fr": "« Je parie que tu ne devines pas qui a écrit cette nivola ! — Et comment que je devine : Unamuno ! »"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Fue mi abuela ＿ me enseñó a leer.",
+         "choices": [
+          "quien",
+          "donde",
+          "cuando"
+         ],
+         "answer": "quien",
+         "explanation": "Une personne : fue… quien.",
+         "translation": "C’est ma grand-mère qui m’a appris à lire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Fue en 1914 ＿ se publicó Niebla.",
+         "choices": [
+          "cuando",
+          "donde",
+          "quien"
+         ],
+         "answer": "cuando",
+         "explanation": "Le temps : fue… cuando.",
+         "translation": "C’est en 1914 que Niebla fut publié."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "¿＿ no te lo había dicho ya?",
+         "choices": [
+          "Acaso",
+          "Vaya si",
+          "Lo que"
+         ],
+         "answer": "Acaso",
+         "explanation": "Question rhétorique : ¿acaso…?",
+         "translation": "Est-ce que je ne te l’avais pas déjà dit ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Augusto",
+           "jp": "¿Sabes tú quién decide mi destino?"
+          }
+         ],
+         "translation": "Augusto te demande qui décide de son destin ; réponds en insistant sur l’auteur.",
+         "choices": [
+          "Es tu autor quien lo decide, no tú.",
+          "Es tu autor donde lo decide.",
+          "Lo que tu autor es decide."
+         ],
+         "answer": "Es tu autor quien lo decide, no tú.",
+         "explanation": "Mise en relief : es… quien."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-w8",
+   "title": "Le manuscrit de Cide Hamete",
+   "region": "Rayon secret",
+   "description": "Lire l’espagnol classique (vuestra merced, fermosa), reconnaître le futur du subjonctif des textes juridiques et des proverbes (adonde fueres…), puis reformuler et résumer comme un médiateur.",
+   "boss": {
+    "name": "Le Manuscrit de Benengeli",
+    "glyph": "✧",
+    "intro": "Au chapitre IX du Quichotte, Cervantès raconte avoir acheté à l’Alcaná de Tolède des cahiers en arabe signés Cide Hamete Benengeli, le véritable historien de don Quichotte. Ce manuscrit est le cœur du Rayon secret : pour le refermer, il faudra lire, traduire et résumer comme Cervantès lui-même."
+   },
+   "chapters": [
+    {
+     "slug": "delec2-w8-c1",
+     "title": "L’Alcaná de Tolède",
+     "lessons": [
+      {
+       "slug": "es-espanol-clasico",
+       "title": "Vuestra merced, fermosa : lire l’espagnol classique",
+       "objective": "Comprendre les formes de l’espagnol du Siècle d’or.",
+       "minutes": 10,
+       "explanation": [
+        "Traitement : vuestra merced (votre grâce, d’où vient usted), vos (tu ou vous de respect), os (vous). Don Quichotte imite la vieille langue des romans de chevalerie : fermosa (hermosa), facer (hacer), desfacer entuertos (redresser les torts).",
+        "Mots anciens : asaz (fort, très), do (où), maguer (bien que), mesmo (mismo), agora (ahora), luengo (largo), la ínsula (l’île).",
+        "Le pronom accolé au verbe conjugué : díjole (le dijo), fuese (se fue), hablóme (me habló). Aujourd’hui, il ne survit que dans un style très littéraire."
+       ],
+       "items": [
+        {
+         "slug": "es-vuestra-merced",
+         "kind": "vocabulary",
+         "front": "vuestra merced",
+         "reading": null,
+         "romaji": null,
+         "meaning": "votre grâce (ancêtre de usted)"
+        },
+        {
+         "slug": "es-fermoso",
+         "kind": "vocabulary",
+         "front": "fermoso / fermosa",
+         "reading": null,
+         "romaji": null,
+         "meaning": "beau, belle (forme archaïque)"
+        },
+        {
+         "slug": "es-desfacer-entuertos",
+         "kind": "vocabulary",
+         "front": "desfacer entuertos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "redresser les torts"
+        },
+        {
+         "slug": "es-asaz",
+         "kind": "vocabulary",
+         "front": "asaz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fort, très (archaïque)"
+        },
+        {
+         "slug": "es-agora",
+         "kind": "vocabulary",
+         "front": "agora",
+         "reading": null,
+         "romaji": null,
+         "meaning": "maintenant (archaïque)"
+        },
+        {
+         "slug": "es-la-insula",
+         "kind": "vocabulary",
+         "front": "la ínsula",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’île (archaïque)"
+        },
+        {
+         "slug": "es-el-hidalgo",
+         "kind": "vocabulary",
+         "front": "el hidalgo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’hidalgo, le petit noble"
+        },
+        {
+         "slug": "es-el-escudero",
+         "kind": "vocabulary",
+         "front": "el escudero",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’écuyer"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "—Vuestra merced no ha de temer —dijo don Quijote—, que yo he venido a desfacer entuertos.",
+         "reading": null,
+         "fr": "« Votre grâce n’a rien à craindre, dit don Quichotte, car je suis venu redresser les torts. »"
+        },
+        {
+         "jp": "Sancho, el escudero, soñaba con gobernar una ínsula asaz rica.",
+         "reading": null,
+         "fr": "Sancho, l’écuyer, rêvait de gouverner une île fort riche."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En español moderno, «vuestra merced» se convirtió en «＿».",
+         "choices": [
+          "usted",
+          "vosotros",
+          "vos"
+         ],
+         "answer": "usted",
+         "explanation": "Vuestra merced → vuesarced → usted.",
+         "translation": "En espagnol moderne, « vuestra merced » est devenu « usted »."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "«Fermosa» es la forma antigua de «＿».",
+         "choices": [
+          "hermosa",
+          "famosa",
+          "ferviente"
+         ],
+         "answer": "hermosa",
+         "explanation": "Le f- initial latin est devenu h- : fermosa → hermosa.",
+         "translation": "« Fermosa » est la forme ancienne de « hermosa »."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "«Díjole la verdad» equivale hoy a «＿ dijo la verdad».",
+         "choices": [
+          "Le",
+          "Se",
+          "Lo"
+         ],
+         "answer": "Le",
+         "explanation": "Pronom accolé ancien : díjole = le dijo.",
+         "translation": "« Díjole la verdad » équivaut aujourd’hui à « Le dijo la verdad »."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Don Quijote quería desfacer entuertos.",
+         "translation": "Il voulait redresser les torts.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Vrai",
+         "explanation": "Desfacer entuertos = deshacer agravios."
+        }
+       ]
+      },
+      {
+       "slug": "es-futuro-subjuntivo",
+       "title": "Si así fuere : le futur du subjonctif",
+       "objective": "Reconnaître le futur du subjonctif dans les textes juridiques et les proverbes.",
+       "minutes": 9,
+       "explanation": [
+        "Formation : à partir de la 3e personne du pluriel du passé simple (hablaron → hablare, tuvieron → tuviere, fueron → fuere). Formes : hablare, hablares, hablare, habláremos, hablareis, hablaren.",
+        "Emplois actuels : les textes juridiques (El que infringiere esta norma será sancionado ; si hubiere controversia…) et quelques expressions figées : sea lo que fuere (quoi qu’il en soit), venga de donde viniere.",
+        "Proverbe : Adonde fueres, haz lo que vieres (à Rome, fais comme les Romains). Dans l’usage courant, on le remplace par le présent du subjonctif ou de l’indicatif : el que infrinja, si hay."
+       ],
+       "items": [
+        {
+         "slug": "gram-es-futuro-subjuntivo",
+         "kind": "grammar",
+         "front": "hablare, tuviere, fuere",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le futur du subjonctif"
+        },
+        {
+         "slug": "es-sea-lo-que-fuere",
+         "kind": "vocabulary",
+         "front": "sea lo que fuere",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quoi qu’il en soit"
+        },
+        {
+         "slug": "es-adonde-fueres",
+         "kind": "vocabulary",
+         "front": "adonde fueres, haz lo que vieres",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à Rome, fais comme les Romains"
+        },
+        {
+         "slug": "es-infringir",
+         "kind": "vocabulary",
+         "front": "infringir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enfreindre"
+        },
+        {
+         "slug": "es-la-controversia",
+         "kind": "vocabulary",
+         "front": "la controversia",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la controverse, le litige"
+        },
+        {
+         "slug": "es-el-codigo-civil",
+         "kind": "vocabulary",
+         "front": "el código civil",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le code civil"
+        },
+        {
+         "slug": "es-vigente",
+         "kind": "vocabulary",
+         "front": "vigente",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en vigueur"
+        },
+        {
+         "slug": "es-la-clausula",
+         "kind": "vocabulary",
+         "front": "la cláusula",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la clause"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "«El que infringiere lo dispuesto en esta cláusula será sancionado», dice un artículo todavía vigente.",
+         "reading": null,
+         "fr": "« Quiconque enfreindra les dispositions de cette clause sera sanctionné », dit un article toujours en vigueur."
+        },
+        {
+         "jp": "Sea lo que fuere, Cervantes siguió el viejo refrán: adonde fueres, haz lo que vieres.",
+         "reading": null,
+         "fr": "Quoi qu’il en soit, Cervantès suivit le vieux proverbe : à Rome, fais comme les Romains."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Adonde ＿, haz lo que vieres.",
+         "choices": [
+          "fueres",
+          "fueras",
+          "vayas a"
+         ],
+         "answer": "fueres",
+         "explanation": "Proverbe figé au futur du subjonctif : fueres.",
+         "translation": "À Rome, fais comme les Romains."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Sea lo que ＿, mañana lo sabremos.",
+         "choices": [
+          "fuere",
+          "fue",
+          "sería"
+         ],
+         "answer": "fuere",
+         "explanation": "Expression figée : sea lo que fuere.",
+         "translation": "Quoi qu’il en soit, demain nous le saurons."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "En la lengua corriente, «si hubiere dudas» se dice «si ＿ dudas».",
+         "choices": [
+          "hay",
+          "haya",
+          "habría"
+         ],
+         "answer": "hay",
+         "explanation": "Si + présent de l’indicatif : si hay.",
+         "translation": "Dans la langue courante, « si hubiere dudas » se dit « si hay dudas »."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "La ley vigente ya no se aplica.",
+         "translation": "La loi ne s’applique plus.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Vigente = en vigueur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "delec2-w8-c2",
+     "title": "Le traducteur morisque",
+     "lessons": [
+      {
+       "slug": "es-reformular",
+       "title": "Dicho de otro modo : reformuler et résumer",
+       "objective": "Reformuler, résumer et transmettre un texte (médiation).",
+       "minutes": 10,
+       "explanation": [
+        "Reformuler : dicho de otro modo, en otras palabras, o lo que es lo mismo (ce qui revient au même), esto es (c’est-à-dire, soutenu).",
+        "Résumer et conclure : en resumidas cuentas (en somme), en definitiva (en définitive), en suma, a modo de conclusión. Verbes : resumir, sintetizar, parafrasear, condensar.",
+        "Transmettre (médiation) : Según el texto…, El autor sostiene que…, Viene a decir que… (il veut dire en substance que) ; traducir al pie de la letra (mot à mot) ou libremente."
+       ],
+       "items": [
+        {
+         "slug": "es-esto-es",
+         "kind": "vocabulary",
+         "front": "esto es",
+         "reading": null,
+         "romaji": null,
+         "meaning": "c’est-à-dire (soutenu)"
+        },
+        {
+         "slug": "es-o-lo-que-es-lo-mismo",
+         "kind": "vocabulary",
+         "front": "o lo que es lo mismo",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce qui revient au même"
+        },
+        {
+         "slug": "es-en-resumidas-cuentas",
+         "kind": "vocabulary",
+         "front": "en resumidas cuentas",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en somme, bref"
+        },
+        {
+         "slug": "es-en-suma",
+         "kind": "vocabulary",
+         "front": "en suma",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en résumé, au total"
+        },
+        {
+         "slug": "es-parafrasear",
+         "kind": "vocabulary",
+         "front": "parafrasear",
+         "reading": null,
+         "romaji": null,
+         "meaning": "paraphraser"
+        },
+        {
+         "slug": "es-sintetizar",
+         "kind": "vocabulary",
+         "front": "sintetizar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "synthétiser"
+        },
+        {
+         "slug": "es-venir-a-decir",
+         "kind": "vocabulary",
+         "front": "venir a decir",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vouloir dire en substance"
+        },
+        {
+         "slug": "es-al-pie-de-la-letra",
+         "kind": "vocabulary",
+         "front": "al pie de la letra",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à la lettre, mot à mot"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "El morisco tradujo el manuscrito en poco más de mes y medio; dicho de otro modo, Cervantes no escribió la historia, sino que la mandó traducir.",
+         "reading": null,
+         "fr": "Le morisque traduisit le manuscrit en un peu plus d’un mois et demi ; autrement dit, Cervantès n’écrivit pas l’histoire : il la fit traduire."
+        },
+        {
+         "jp": "En resumidas cuentas, el capítulo viene a decir que toda historia depende de quien la cuenta.",
+         "reading": null,
+         "fr": "En somme, le chapitre veut dire en substance que toute histoire dépend de celui qui la raconte."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Es un poema difícil; ＿, no es para principiantes.",
+         "choices": [
+          "dicho de otro modo",
+          "al pie de la letra",
+          "sea lo que fuere"
+         ],
+         "answer": "dicho de otro modo",
+         "explanation": "Reformuler : dicho de otro modo.",
+         "translation": "C’est un poème difficile ; autrement dit, il n’est pas pour les débutants."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "No lo traduzcas al pie de la ＿: suena muy artificial.",
+         "choices": [
+          "letra",
+          "página",
+          "palabra"
+         ],
+         "answer": "letra",
+         "explanation": "Mot à mot : al pie de la letra.",
+         "translation": "Ne le traduis pas mot à mot : ça sonne très artificiel."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "En resumidas ＿, el proyecto ha sido un éxito.",
+         "choices": [
+          "cuentas",
+          "palabras",
+          "líneas"
+         ],
+         "answer": "cuentas",
+         "explanation": "En somme : en resumidas cuentas.",
+         "translation": "En somme, le projet a été un succès."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Benengeli",
+           "jp": "¿Qué dice, en pocas palabras, el capítulo IX?"
+          }
+         ],
+         "translation": "Benengeli te demande de résumer le chapitre IX en quelques mots.",
+         "choices": [
+          "Viene a decir que la historia de don Quijote procede de un manuscrito árabe.",
+          "Viene decir que el manuscrito al pie.",
+          "En resumidas palabras, sí."
+         ],
+         "answer": "Viene a decir que la historia de don Quijote procede de un manuscrito árabe.",
+         "explanation": "Résumer : viene a decir que…"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "delec2-final",
+   "title": "Simulation DELE C2 : la salle des manuscrits",
+   "region": "Rayon secret",
+   "description": "Examen blanc au format du DELE C2, en espagnol : usage de la langue, compréhension écrite, compréhension auditive et expression écrite intégrée (l’oral n’est pas évalué). Noté sur 100 ; réussite avec au moins 30 points dans chacun des deux groupes d’épreuves.",
+   "exam": "delec2-official",
+   "chapters": []
+  }
+ ]
+}

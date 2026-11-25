@@ -73,6 +73,7 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'DELEB1', hint: 'Seuil' },
     { code: 'DELEB2', hint: 'Avancé' },
     { code: 'DELEC1', hint: 'Autonome' },
+    { code: 'DELEC2', hint: 'Maîtrise' },
   ],
 };
 

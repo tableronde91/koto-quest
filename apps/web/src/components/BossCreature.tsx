@@ -697,6 +697,68 @@ const SPECIES: Record<string, Species> = {
     top: <path d="M58 90 Q56 40 100 34 Q144 40 142 90 Q130 70 100 68 Q70 70 58 90Z" fill="#F6F6FA" stroke="#C8C8D8" strokeWidth="2" />,
     face: <path d="M92 120 Q100 116 108 120" stroke="#5A5A6A" strokeWidth="2" fill="none" />,
   },
+  // ───── Gardiens du Rayon secret (DELE C2 — personnages des classiques d'Espagne et d'Amérique ; fleurons typographiques) ─────
+  // Dixième Muse (Sor Juana) : habit blanc, voile noir, grand médaillon sur la poitrine
+  '❦': {
+    body: '#F2EEE6', belly: '#E6DFD2', head: '#E8C8A8', eye: '#2A1A10',
+    back: <path d="M52 92 Q44 150 54 196 H146 Q156 150 148 92 Q100 64 52 92Z" fill="#1F1A22" />,
+    top: <><path d="M56 96 Q52 38 100 32 Q148 38 144 96 Q138 70 100 64 Q62 70 56 96Z" fill="#1F1A22" /><path d="M66 92 Q66 60 100 56 Q134 60 134 92 Q120 78 100 76 Q80 78 66 92Z" fill="#FFFFFF" /></>,
+    face: <path d="M92 120 Q100 124 108 120" stroke="#8A4A3A" strokeWidth="2" fill="none" />,
+    front: <><circle cx="100" cy="152" r="17" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="2" /><circle cx="100" cy="152" r="12" fill="#7A9AC8" /><path d="M160 190 L176 120 Q180 112 178 124 L166 190Z" fill="#FFFFFF" stroke="#B9AE98" strokeWidth="1" /></>,
+  },
+  // Cygne de Darío : plumes blanches, grandes ailes, bec orange, aigrette bleue (Azul…)
+  '❧': {
+    body: '#FAFAF6', belly: '#FFFFFF', head: '#F6F6F2', eye: '#1A1A22',
+    back: <g fill="#ECECE6" stroke="#C8C8C0" strokeWidth="1.5"><path d="M60 120 Q14 96 20 60 Q50 80 70 108Z" /><path d="M140 120 Q186 96 180 60 Q150 80 130 108Z" /></g>,
+    top: <path d="M92 44 Q100 22 108 44 Q100 36 92 44Z" fill="#3A6AB8" />,
+    face: <path d="M90 112 L100 128 L110 112Z" fill="#E2902A" stroke="#A85A1A" strokeWidth="1.2" />,
+  },
+  // Souris de fray Martín : pelage gris, grandes oreilles roses, moustaches, longue queue
+  '☙': {
+    body: '#9A9AA4', belly: '#C8C8D0', head: '#A8A8B2', eye: '#1A1A22',
+    back: <path d="M150 170 Q186 168 182 132 Q178 108 192 96" stroke="#C88A9A" strokeWidth="4" fill="none" strokeLinecap="round" />,
+    top: <g><circle cx="66" cy="58" r="22" fill="#A8A8B2" /><circle cx="66" cy="58" r="14" fill="#E8B0BA" /><circle cx="134" cy="58" r="22" fill="#A8A8B2" /><circle cx="134" cy="58" r="14" fill="#E8B0BA" /></g>,
+    face: <><circle cx="100" cy="114" r="5" fill="#E88A9A" /><path d="M94 116 L66 110 M94 118 L66 122 M106 116 L134 110 M106 118 L134 122" stroke="#5A5A62" strokeWidth="1.2" /></>,
+  },
+  // Miroir déformant : cadre doré, reflet argenté ondulé
+  '⁂': {
+    body: '#C8D4DE', belly: '#E4ECF2', head: '#D2DCE4', eye: '#3A2A4A',
+    back: <rect x="34" y="28" width="132" height="168" rx="40" fill="#8A5A2A" stroke="#E2B84A" strokeWidth="4" />,
+    top: <path d="M70 50 Q100 24 130 50 Q118 40 100 40 Q82 40 70 50Z" fill="#E2B84A" />,
+    under: <g stroke="#FFFFFF" strokeWidth="3" fill="none" opacity="0.8"><path d="M64 140 Q82 128 100 140 T136 140" /><path d="M70 160 Q86 150 100 160 T130 160" /></g>,
+    face: <path d="M86 118 Q94 128 100 116 Q106 128 114 118" stroke="#6A3A5A" strokeWidth="2.5" fill="none" />,
+  },
+  // Martín Fierro : chapeau de gaucho, moustache, poncho, guitare
+  '✦': {
+    body: '#8A3A2A', belly: '#B8562E', head: '#C99A70', eye: '#2A1A10',
+    top: <><ellipse cx="100" cy="64" rx="56" ry="10" fill="#2A2420" /><path d="M72 62 Q74 36 100 34 Q126 36 128 62Z" fill="#2A2420" /></>,
+    under: <path d="M56 136 L100 180 L144 136 L150 150 L100 196 L50 150Z" fill="#E2B84A" opacity="0.9" />,
+    face: <path d="M84 116 Q92 110 100 116 Q108 110 116 116 Q108 122 100 118 Q92 122 84 116Z" fill="#3A2A1A" />,
+    front: <g transform="translate(160 150) rotate(-25)"><circle cx="0" cy="10" r="13" fill="#C8823A" /><circle cx="0" cy="-6" r="10" fill="#C8823A" /><circle cx="0" cy="2" r="3.5" fill="#3A2414" /><rect x="-2.5" y="-48" width="5" height="40" fill="#7A4A2A" /></g>,
+  },
+  // Tortue géante de Quiroga : carapace à écailles, lianes, regard patient
+  '✿': {
+    body: '#6A7A3A', belly: '#C8C08A', head: '#8A9A5A', eye: '#2A2A1A',
+    back: <g><path d="M30 170 Q24 76 100 70 Q176 76 170 170Z" fill="#5A6A2A" stroke="#3A4A1A" strokeWidth="3" />{[[70, 120], [100, 104], [130, 120], [84, 150], [116, 150]].map(([x, y]) => <path key={`${x}-${y}`} d={`M${x} ${y - 14} L${x + 12} ${y - 6} L${x + 12} ${y + 8} L${x} ${y + 14} L${x - 12} ${y + 8} L${x - 12} ${y - 6}Z`} fill="#7A8A3A" stroke="#3A4A1A" strokeWidth="2" />)}</g>,
+    top: <path d="M60 60 Q80 40 100 52 Q120 40 140 56" stroke="#2E7A3A" strokeWidth="4" fill="none" strokeLinecap="round" />,
+    face: <path d="M90 120 Q100 126 110 120" stroke="#3A4A1A" strokeWidth="2.5" fill="none" />,
+  },
+  // Augusto dans le brouillard : chapeau melon, parapluie, volutes de brume
+  '◊': {
+    body: '#5A6470', belly: '#8A949E', head: '#D8C0A8', eye: '#2A2A3A',
+    back: <g stroke="#DCE2E8" strokeWidth="8" fill="none" strokeLinecap="round" opacity="0.7"><path d="M20 120 Q50 108 80 120" /><path d="M120 176 Q150 164 184 176" /><path d="M14 176 Q40 166 64 176" /></g>,
+    top: <><ellipse cx="100" cy="62" rx="40" ry="7" fill="#1F2228" /><path d="M76 60 Q76 32 100 32 Q124 32 124 60Z" fill="#1F2228" /></>,
+    face: <path d="M92 120 L108 120" stroke="#6A4A3A" strokeWidth="2.5" strokeLinecap="round" />,
+    front: <g transform="translate(164 120)"><path d="M-28 0 Q0 -34 28 0 Q20 -6 14 0 Q7 -6 0 0 Q-7 -6 -14 0 Q-20 -6 -28 0Z" fill="#2A2A32" /><path d="M0 0 V54 Q0 62 -8 60" stroke="#3A2A1A" strokeWidth="3" fill="none" /></g>,
+  },
+  // Manuscrit de Benengeli : parchemin, turban, lignes d'écriture arabe, calame
+  '✧': {
+    body: '#E6D4A8', belly: '#F2E6C6', head: '#C9A27A', eye: '#2A1A10',
+    top: <path d="M58 82 Q54 40 100 36 Q146 40 142 82 Q128 70 100 70 Q72 70 58 82Z M100 36 Q112 46 100 58 Q88 46 100 36Z" fill="#F6F1E6" stroke="#B89A6A" strokeWidth="2" />,
+    under: <g stroke="#5A3A2A" strokeWidth="2" fill="none">{[138, 152, 166].map((y) => <path key={y} d={`M128 ${y} Q120 ${y - 4} 112 ${y} T96 ${y} T80 ${y} T70 ${y}`} />)}</g>,
+    face: <path d="M90 120 Q100 126 110 120" stroke="#6A3A2A" strokeWidth="2" fill="none" />,
+    front: <path d="M168 186 L178 110 L182 112 L172 186Z" fill="#7A4A2A" />,
+  },
   // ───── Gardiens anglais (C1 — îles du Nord) ─────
   // Nuckelavee : démon marin sans peau, rouge vif, veines jaunes, un seul œil
   n: {

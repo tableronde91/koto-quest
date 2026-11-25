@@ -7,6 +7,7 @@ import type { ReactNode } from 'react';
  * DELE B1, le chemin de Saint-Jacques : col des Pyrénées, vignes, cathédrales, blés de la Meseta, château templier, hórreo, phare.
  * DELE B2, la traversée des Amériques : Teide, La Havane, Mexico, Antigua, Magdalena, Andes, Chiloé, Buenos Aires.
  * DELE C1, la Bibliothèque enchantée : rayonnages, manuscrits, lion de pierre, tour, verre, statue, source, façade de Salamanque.
+ * DELE C2, le Rayon secret : télescope de Sor Juana, cygne, souris de Lima, miroir concave, guitare de la pampa, tortue, brume, manuscrit arabe.
  * Dessins originaux, centrés sur (0, 0).
  */
 const WHITE = '#F6F1E6';
@@ -675,6 +676,109 @@ function ReadingLamp({ ...p }: P) {
   );
 }
 
+/** Télescope sur son trépied (la cellule de Sor Juana). */
+function Telescope({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 -12 L-8 0 M0 -12 L8 0 M0 -12 V0" stroke={WOOD} strokeWidth="1.4" />
+      <g transform="rotate(-28 0 -14)">
+        <rect x="-14" y="-17" width="26" height="6" rx="1.5" fill={GOLD} stroke="#8A6A2A" strokeWidth="0.6" />
+        <rect x="12" y="-18" width="4" height="8" rx="1" fill="#8A6A2A" />
+      </g>
+      <circle cx="-14" cy="-30" r="1.2" fill={GOLD} />
+      <circle cx="-6" cy="-36" r="0.9" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Cygne blanc sur un bassin (le modernisme de Darío). */
+function Swan({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="0" rx="20" ry="4" fill="#7AB0D0" />
+      <path d="M-10 -2 Q-12 -10 -2 -10 Q8 -10 12 -4 Q8 0 -6 0Z" fill={WHITE} stroke={STONE} strokeWidth="0.6" />
+      <path d="M8 -6 Q12 -12 9 -18 Q7 -22 10 -24" stroke={WHITE} strokeWidth="2.6" fill="none" strokeLinecap="round" />
+      <path d="M10 -24 L14 -23" stroke={OCHRE} strokeWidth="1.6" strokeLinecap="round" />
+    </g>
+  );
+}
+
+/** Souris devant une écuelle (les souris de fray Martín). */
+function Mouse({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M2 0 Q2 -6 10 -6 Q16 -6 16 0Z" fill="#8A6A4A" />
+      <ellipse cx="-6" cy="-4" rx="6" ry="4" fill="#9A9AA0" />
+      <circle cx="-2" cy="-8" r="2" fill="#B8B8C0" />
+      <circle cx="-10.5" cy="-5" r="0.7" fill="#2A2A2A" />
+      <path d="M0 -3 Q6 -1 4 3" stroke="#9A9AA0" strokeWidth="0.8" fill="none" />
+    </g>
+  );
+}
+
+/** Miroir concave de la rue du Chat, au reflet déformé. */
+function ConcaveMirror({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-12" y="-34" width="24" height="34" rx="4" fill={WOOD} />
+      <path d="M-9 -31 Q-4 -17 -9 -3 H9 Q4 -17 9 -31Z" fill="#C8D8E4" />
+      <ellipse cx="0" cy="-22" rx="3" ry="5" fill="#E2B87A" />
+      <path d="M-4 -6 Q0 -18 4 -6Z" fill="#6A3A5A" />
+    </g>
+  );
+}
+
+/** Guitare de payador sous les étoiles de la pampa. */
+function Guitar({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <g transform="rotate(-20 0 -10)">
+        <circle cx="0" cy="-6" r="6" fill="#C8823A" />
+        <circle cx="0" cy="-14" r="4.6" fill="#C8823A" />
+        <circle cx="0" cy="-9" r="1.6" fill="#3A2414" />
+        <rect x="-1" y="-34" width="2" height="20" fill={WOOD} />
+        <rect x="-2" y="-37" width="4" height="4" fill="#3A2414" />
+      </g>
+      {[[-16, -34], [14, -30], [22, -38]].map(([cx, cy]) => <path key={cx} d={`M${cx} ${cy - 2} L${cx + 0.7} ${cy} L${cx} ${cy + 2} L${cx - 0.7} ${cy}Z`} fill={GOLD} />)}
+    </g>
+  );
+}
+
+/** Tortue géante couverte de lianes. */
+function Tortoise({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 Q-14 -14 0 -14 Q14 -14 14 0Z" fill="#6A7A3A" stroke="#4A5A2A" strokeWidth="0.8" />
+      <path d="M-7 -1 L-4 -12 M0 -1 V-14 M7 -1 L4 -12" stroke="#4A5A2A" strokeWidth="0.6" />
+      <ellipse cx="18" cy="-4" rx="4" ry="3" fill="#8A9A5A" />
+      <rect x="-12" y="-1" width="4" height="3" fill="#8A9A5A" />
+      <rect x="8" y="-1" width="4" height="3" fill="#8A9A5A" />
+      <path d="M-12 -8 Q-6 -16 2 -12 Q8 -10 12 -14" stroke="#3A7A3A" strokeWidth="1" fill="none" />
+    </g>
+  );
+}
+
+/** Nappes de brume (Niebla) qui se lèvent quand le calme revient. */
+function FogBank({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)} opacity={calm ? 0.25 : 0.8}>
+      {[-12, -4, 4].map((y, i) => <path key={y} d={`M${-30 + i * 4} ${y} Q-10 ${y - 4} 4 ${y} Q18 ${y + 4} ${30 - i * 4} ${y}`} stroke="#E4E8EC" strokeWidth="4" fill="none" strokeLinecap="round" />)}
+    </g>
+  );
+}
+
+/** Manuscrit déroulé aux lignes d'écriture arabe (Cide Hamete Benengeli). */
+function Scroll({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-16" y="-24" width="32" height="22" fill="#EADBB4" stroke="#B89A6A" strokeWidth="0.6" />
+      <rect x="-18" y="-26" width="4" height="26" rx="2" fill="#8A6A3A" />
+      <rect x="14" y="-26" width="4" height="26" rx="2" fill="#8A6A3A" />
+      {[-20, -15, -10, -5].map((y) => <path key={y} d={`M10 ${y} Q6 ${y - 2} 3 ${y} T-4 ${y} T-11 ${y}`} stroke="#5A3A2A" strokeWidth="0.7" fill="none" />)}
+    </g>
+  );
+}
+
 export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // L'auberge où Don Quichotte se fait adouber
   'delea1-w1': () => (<><Venta x={-10} y={12} /><Lance x={16} y={12} /><OliveTree x={30} y={12} s={0.7} /></>),
@@ -766,4 +870,22 @@ export const SPANISH_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'delec1-w8': () => (<><Facade x={-6} y={12} /><Quill x={22} y={12} s={0.8} /></>),
   // La salle de lecture
   'delec1-final': () => (<><Bookshelf x={-16} y={12} /><ReadingLamp x={6} y={12} /><Bookshelf x={26} y={12} s={0.7} /></>),
+  // DELE C2 — le Rayon secret : la cellule de Sor Juana, ses livres et son télescope
+  'delec2-w1': () => (<><Bookshelf x={-12} y={12} /><Telescope x={16} y={12} /></>),
+  // Le cygne de Darío sur la fontaine
+  'delec2-w2': () => (<><Swan x={-4} y={14} /><Rose x={22} y={12} s={0.8} /></>),
+  // Les souris de fray Martín au couvent de Lima
+  'delec2-w3': () => (<><Church x={-12} y={12} s={0.7} /><Mouse x={14} y={12} /></>),
+  // Le miroir concave de la rue du Chat
+  'delec2-w4': () => (<><ConcaveMirror x={-6} y={12} /><ReadingLamp x={20} y={12} s={0.8} /></>),
+  // La guitare de Martín Fierro sous les étoiles de la pampa
+  'delec2-w5': () => (<><Wheat x={0} y={14} s={0.9} /><Guitar x={-4} y={12} /></>),
+  // La tortue géante dans la forêt de Misiones
+  'delec2-w6': () => (<><Palm x={-20} y={12} s={0.8} /><River x={6} y={16} s={0.7} /><Tortoise x={8} y={12} /></>),
+  // La brume de Salamanque, qui se lève à la fin
+  'delec2-w7': (calm) => (<><Facade x={-6} y={12} /><FogBank x={0} y={8} calm={calm} /></>),
+  // Le manuscrit de Cide Hamete Benengeli
+  'delec2-w8': () => (<><Scroll x={-8} y={12} /><Quill x={18} y={12} s={0.8} /></>),
+  // La salle des manuscrits
+  'delec2-final': () => (<><Bookshelf x={-16} y={12} /><Scroll x={6} y={12} s={0.8} /><Bookshelf x={26} y={12} s={0.7} /></>),
 };

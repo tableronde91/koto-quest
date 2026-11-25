@@ -459,11 +459,90 @@ OJOS = STORY('ojos-verdes', 'v', 'DELEC1', '#2E8A6A', ('Los ojos verdes', 'Les y
   ]),
 ])
 
-ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ, ILLAN, OJOS]
+# ═════════════════════════ La tortuga gigante (Horacio Quiroga, Cuentos de la selva, 1918 ; DELE C2) ═════════════════════════
+TORTUGA = STORY('tortuga-gigante', 't', 'DELEC2', '#5A7A3A', ('La tortuga gigante', 'La tortue géante', 'The giant tortoise'),
+  ('D’après Horacio Quiroga (Contes de la forêt vierge, 1918) : dans la forêt de Misiones, un chasseur sauve une tortue des griffes d’un jaguar… et la tortue lui rend la pareille.', 'From Horacio Quiroga (South American Jungle Tales, 1918): in the Misiones forest, a hunter saves a tortoise from a jaguar’s claws… and the tortoise returns the favour.'), [
+  CH('tortuga-gigante-1', ('El cazador y el tigre', 'Le chasseur et le jaguar', 'The hunter and the jaguar'), [
+    [S('Había una vez un hombre que vivía en Buenos Aires y trabajaba sin descanso, hasta que cayó enfermo y los médicos le aconsejaron irse a vivir al monte.', 'Il était une fois un homme qui vivait à Buenos Aires et travaillait sans relâche, jusqu’au jour où il tomba malade et où les médecins lui conseillèrent d’aller vivre dans la forêt.', 'Once upon a time there was a man who lived in Buenos Aires and worked tirelessly, until he fell ill and the doctors advised him to go and live in the forest.'),
+     S('Se instaló en la selva de Misiones, donde cazaba para comer y dormía al raso, y poco a poco recobró la salud.', 'Il s’installa dans la forêt de Misiones, où il chassait pour se nourrir et dormait à la belle étoile, et peu à peu il recouvra la santé.', 'He settled in the Misiones jungle, where he hunted for food and slept in the open, and little by little he recovered his health.')],
+    [S('Un día vio a un tigre enorme que intentaba devorar a una tortuga gigante; la fiera había metido las garras bajo el caparazón.', 'Un jour, il vit un énorme jaguar qui tentait de dévorer une tortue géante ; le fauve avait glissé ses griffes sous la carapace.', 'One day he saw an enormous jaguar trying to devour a giant tortoise; the beast had slipped its claws under the shell.'),
+     S('El hombre apuntó con cuidado y mató al tigre de un solo tiro.', 'L’homme visa avec soin et tua le jaguar d’un seul coup de feu.', 'The man took careful aim and killed the jaguar with a single shot.'),
+     S('Luego vendó la cabeza herida de la tortuga con tiras de su propia camisa y la cuidó durante semanas.', 'Puis il banda la tête blessée de la tortue avec des bandes de sa propre chemise et la soigna pendant des semaines.', 'Then he bandaged the tortoise’s wounded head with strips of his own shirt and looked after her for weeks.')],
+  ], [
+    W('el monte', '/el ˈmonte/', 'la forêt, la brousse (Amérique)', 'the bush, the forest'),
+    W('al raso', '/al ˈraso/', 'à la belle étoile', 'in the open air'),
+    W('recobrar', '/rekoˈβɾaɾ/', 'recouvrer, retrouver', 'to recover'),
+    W('la garra', '/la ˈɣara/', 'la griffe', 'the claw'),
+    W('apuntar', '/apunˈtaɾ/', 'viser', 'to aim'),
+    W('vendar', '/benˈdaɾ/', 'bander, panser', 'to bandage'),
+  ], [
+    Q(('Pourquoi l’homme partit-il vivre dans la forêt ?', 'Why did the man go to live in the forest?'), [('Les médecins le lui avaient conseillé pour guérir', 'The doctors had advised it to cure him'), ('Il fuyait la justice', 'He was running from the law'), ('Il voulait devenir chasseur professionnel', 'He wanted to become a professional hunter')], 0),
+    Q(('Comment soigna-t-il la tortue ?', 'How did he treat the tortoise?'), [('Il banda sa tête avec sa chemise', 'He bandaged her head with his shirt'), ('Il l’emmena chez un vétérinaire', 'He took her to a vet'), ('Il la laissa dans le fleuve', 'He left her in the river')], 0),
+  ]),
+  CH('tortuga-gigante-2', ('El largo viaje', 'Le long voyage', 'The long journey'), [
+    [S('Tiempo después, el hombre cayó enfermo de fiebre y quedó tendido en el suelo, sin fuerzas para levantarse.', 'Quelque temps après, l’homme tomba malade de fièvre et resta étendu sur le sol, sans force pour se lever.', 'Some time later, the man fell ill with a fever and lay on the ground, too weak to get up.'),
+     S('La tortuga, agradecida, le traía agua en una hoja grande y raíces para comer.', 'La tortue, reconnaissante, lui apportait de l’eau dans une grande feuille et des racines à manger.', 'The tortoise, grateful, brought him water in a large leaf and roots to eat.'),
+     S('Comprendió que, si se quedaban en la selva, el hombre moriría, y decidió llevarlo a Buenos Aires.', 'Elle comprit que, s’ils restaient dans la forêt, l’homme mourrait, et décida de l’emmener à Buenos Aires.', 'She realised that if they stayed in the jungle the man would die, and decided to take him to Buenos Aires.')],
+    [S('Lo cargó sobre su caparazón y caminó durante meses, de día y de noche, aunque apenas comía y estaba agotada.', 'Elle le chargea sur sa carapace et marcha pendant des mois, jour et nuit, bien qu’elle mangeât à peine et fût épuisée.', 'She loaded him onto her shell and walked for months, day and night, though she barely ate and was exhausted.'),
+     S('Por fin divisó a lo lejos las luces de la ciudad, y allí los médicos salvaron al hombre.', 'Enfin, elle aperçut au loin les lumières de la ville, et là, les médecins sauvèrent l’homme.', 'At last she made out the lights of the city in the distance, and there the doctors saved the man.'),
+     S('Desde entonces la tortuga vive en el Jardín Zoológico, y su amigo va a visitarla todos los días.', 'Depuis, la tortue vit au Jardin zoologique, et son ami va lui rendre visite tous les jours.', 'Since then the tortoise has lived at the Zoo, and her friend goes to visit her every day.')],
+  ], [
+    W('tendido', '/tenˈdiðo/', 'étendu, allongé', 'lying, stretched out'),
+    W('agradecido', '/aɣɾaðeˈθiðo/', 'reconnaissant', 'grateful'),
+    W('la raíz', '/la raˈiθ/', 'la racine', 'the root'),
+    W('cargar', '/kaɾˈɣaɾ/', 'charger, porter', 'to load, to carry'),
+    W('agotado', '/aɣoˈtaðo/', 'épuisé', 'exhausted'),
+    W('divisar', '/diβiˈsaɾ/', 'apercevoir au loin', 'to make out, to spot'),
+  ], [
+    Q(('Pourquoi la tortue décida-t-elle d’aller à Buenos Aires ?', 'Why did the tortoise decide to go to Buenos Aires?'), [('Pour sauver l’homme, qui allait mourir', 'To save the man, who was going to die'), ('Pour visiter la ville', 'To visit the city'), ('Pour fuir un autre jaguar', 'To escape another jaguar')], 0),
+    Q(('Où vit la tortue à la fin ?', 'Where does the tortoise live at the end?'), [('Au Jardin zoologique de Buenos Aires', 'At the Buenos Aires Zoo'), ('Dans la forêt de Misiones', 'In the Misiones forest'), ('Chez l’homme', 'At the man’s house')], 0),
+  ]),
+])
+
+# ═════════════════════════ El rey burgués (Rubén Darío, Azul…, 1888 ; DELE C2) ═════════════════════════
+BURGUES = STORY('rey-burgues', 'b', 'DELEC2', '#8A6A2A', ('El rey burgués', 'Le roi bourgeois', 'The bourgeois king'),
+  ('D’après Rubén Darío (Azul…, 1888) : un roi qui aime le luxe plus que l’art reçoit un poète affamé… et lui trouve un bien étrange emploi.', 'From Rubén Darío (Azul…, 1888): a king who loves luxury more than art receives a starving poet… and finds him a very strange job.'), [
+  CH('rey-burgues-1', ('El palacio del rey', 'Le palais du roi', 'The king’s palace'), [
+    [S('Había en una ciudad inmensa y brillante un rey muy poderoso, que tenía tronos de oro, caballos de lujo y salones llenos de porcelanas y tapices.', 'Il y avait dans une ville immense et brillante un roi très puissant, qui possédait des trônes d’or, des chevaux de luxe et des salons remplis de porcelaines et de tapisseries.', 'In a vast and glittering city there was a very powerful king, who owned golden thrones, fine horses and halls full of porcelain and tapestries.'),
+     S('Le llamaban el rey burgués, porque amaba el lujo y la moda, pero no entendía nada de arte.', 'On l’appelait le roi bourgeois, car il aimait le luxe et la mode, mais ne comprenait rien à l’art.', 'He was called the bourgeois king, because he loved luxury and fashion but understood nothing about art.')],
+    [S('Un día le llevaron a un hombre pobre y extraño: era un poeta.', 'Un jour, on lui amena un homme pauvre et étrange : c’était un poète.', 'One day they brought him a poor, strange man: he was a poet.'),
+     S('El poeta habló del arte verdadero, de la belleza y del ideal, y terminó diciendo: «Señor, no he comido».', 'Le poète parla de l’art véritable, de la beauté et de l’idéal, et finit par dire : « Sire, je n’ai pas mangé. »', 'The poet spoke of true art, of beauty and of the ideal, and ended by saying: “Sire, I have not eaten.”'),
+     S('El rey, aburrido, decidió darle un empleo: tocaría una caja de música en el jardín, junto a los cisnes, a cambio de un pedazo de pan.', 'Le roi, ennuyé, décida de lui donner un emploi : il jouerait d’une boîte à musique dans le jardin, près des cygnes, en échange d’un morceau de pain.', 'The king, bored, decided to give him a job: he would play a music box in the garden, beside the swans, in exchange for a piece of bread.')],
+  ], [
+    W('el trono', '/el ˈtɾono/', 'le trône', 'the throne'),
+    W('el tapiz', '/el taˈpiθ/', 'la tapisserie', 'the tapestry'),
+    W('burgués', '/buɾˈɣes/', 'bourgeois', 'bourgeois, middle-class'),
+    W('el ideal', '/el ideˈal/', 'l’idéal', 'the ideal'),
+    W('la caja de música', '/la ˈkaxa ðe ˈmusika/', 'la boîte à musique', 'the music box'),
+    W('el pedazo', '/el peˈðaθo/', 'le morceau', 'the piece'),
+  ], [
+    Q(('Pourquoi appelait-on le roi « bourgeois » ?', 'Why was the king called “bourgeois”?'), [('Il aimait le luxe mais ne comprenait rien à l’art', 'He loved luxury but understood nothing about art'), ('Il était né dans une famille de marchands', 'He was born into a merchant family'), ('Il vivait modestement', 'He lived modestly')], 0),
+    Q(('Quel emploi le roi donna-t-il au poète ?', 'What job did the king give the poet?'), [('Jouer d’une boîte à musique dans le jardin', 'Playing a music box in the garden'), ('Écrire des poèmes pour la cour', 'Writing poems for the court'), ('Garder les chevaux', 'Looking after the horses')], 0),
+  ]),
+  CH('rey-burgues-2', ('La caja de música', 'La boîte à musique', 'The music box'), [
+    [S('Desde entonces, el poeta daba vueltas al manubrio de la mañana a la noche: valses, cuadrillas y galopes, siempre las mismas melodías.', 'Dès lors, le poète tournait la manivelle du matin au soir : valses, quadrilles et galops, toujours les mêmes mélodies.', 'From then on the poet turned the crank from morning till night: waltzes, quadrilles and galops, always the same tunes.'),
+     S('Poco a poco olvidó sus grandes versos y sus sueños de belleza.', 'Peu à peu, il oublia ses grands vers et ses rêves de beauté.', 'Little by little he forgot his great verses and his dreams of beauty.')],
+    [S('Llegó el invierno, y el poeta seguía en el jardín, tiritando bajo la nieve, mientras en el palacio el rey y sus cortesanos celebraban un banquete.', 'L’hiver arriva, et le poète était toujours au jardin, grelottant sous la neige, tandis qu’au palais le roi et ses courtisans célébraient un banquet.', 'Winter came, and the poet was still in the garden, shivering in the snow, while in the palace the king and his courtiers held a banquet.'),
+     S('A la mañana siguiente lo encontraron muerto de frío, junto a la caja de música, con una sonrisa amarga en los labios.', 'Le lendemain matin, on le trouva mort de froid, près de la boîte à musique, avec un sourire amer aux lèvres.', 'The next morning they found him dead of cold beside the music box, with a bitter smile on his lips.'),
+     S('Murió pensando que algún día volvería a salir el sol, y con él, el ideal.', 'Il mourut en pensant qu’un jour le soleil se lèverait de nouveau, et avec lui l’idéal.', 'He died thinking that one day the sun would rise again, and with it the ideal.')],
+  ], [
+    W('el manubrio', '/el maˈnuβɾjo/', 'la manivelle', 'the crank, the handle'),
+    W('el vals', '/el bals/', 'la valse', 'the waltz'),
+    W('tiritar', '/tiɾiˈtaɾ/', 'grelotter', 'to shiver'),
+    W('el cortesano', '/el koɾteˈsano/', 'le courtisan', 'the courtier'),
+    W('el banquete', '/el baŋˈkete/', 'le banquet', 'the banquet'),
+    W('amargo', '/aˈmaɾɣo/', 'amer', 'bitter'),
+  ], [
+    Q(('Qu’arriva-t-il peu à peu au poète ?', 'What gradually happened to the poet?'), [('Il oublia ses vers et ses rêves', 'He forgot his verses and his dreams'), ('Il devint roi', 'He became king'), ('Il apprit à composer des valses', 'He learnt to compose waltzes')], 0),
+    Q(('Comment se termine le conte ?', 'How does the tale end?'), [('Le poète meurt de froid pendant que la cour fait la fête', 'The poet dies of cold while the court celebrates'), ('Le roi offre son trône au poète', 'The king gives his throne to the poet'), ('Le poète s’enfuit avec les cygnes', 'The poet escapes with the swans')], 0),
+  ]),
+])
+
+ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ, ILLAN, OJOS, TORTUGA, BURGUES]
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES
-data.setdefault('notices', {})['es'] = {'fr': 'Contes populaires d’Espagne et épisodes de Don Quichotte (domaine public), réécrits en espagnol simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (espagnol d’Espagne).', 'en': 'Spanish folk tales and episodes from Don Quixote (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain).'}
+data.setdefault('notices', {})['es'] = {'fr': 'Contes populaires, légendes et classiques d’Espagne et d’Amérique latine (domaine public), réécrits en espagnol simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (espagnol d’Espagne).', 'en': 'Folk tales, legends and classics from Spain and Latin America (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain).'}
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
 for s in ES_STORIES:
