@@ -53,7 +53,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
   const words = studyWords(me.preferences.studyLanguage ?? 'ja');
   // L'anglais n'a pas d'onglet d'écriture : seulement les expressions
   const navGlyph: Record<string, DecorKey> = { '/expressions': 'phrases', '/lecture': 'read', '/duel': 'duel', '/profile': 'me' };
-  const nav = NAV.filter((n) => n.to !== '/characters' || words.hasCharacters).map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : navGlyph[n.to] ? { ...n, glyph: decor(navGlyph[n.to], words.lang) } : n));
+  const nav = NAV.filter((n) => n.to !== '/characters' || words.hasCharacters).map((n) => (n.to === '/characters' ? { ...n, short: words.charsShort, glyph: words.charsGlyph } : navGlyph[n.to] ? { ...n, glyph: decor(navGlyph[n.to], words.lang) } : n)) as NavEntry[];
   const immersive = /^\/(lesson|quiz|boss|games|exam|duel)\//.test(location.pathname) || location.pathname === '/placement' || location.pathname === '/reviews/session' || location.pathname.startsWith('/characters/practice') || location.pathname.startsWith('/expressions/practice');
 
   return (
@@ -95,23 +95,70 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
         {!immersive && <SiteFooter />}
       </main>
 
-      {!immersive && (
-        <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-9 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
-          {nav.filter((n) => n.to !== '/settings' && n.to !== '/profile').map((n) => (
-            <NavLink key={n.to} to={n.to} end={n.to === '/'} aria-label={n.label} className={({ isActive }) => `relative flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-bold ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
-              <Icon d={n.icon} glyph={(n as { glyph?: string }).glyph} />
-              {(n as { short?: string }).short ?? n.label}
-              {n.to === '/reviews' && due > 0 && <span className="absolute right-[22%] top-2 h-2.5 w-2.5 rounded-full bg-gold" aria-label={T("{0} révisions", [due])} />}
-            </NavLink>
-          ))}
-        </nav>
-      )}
+      {!immersive && <MobileNav nav={nav} due={due} path={location.pathname} />}
 
       <ChallengePopup me={me} paused={immersive} />
       <AchievementWatcher />
       <DuelInviteWatcher path={location.pathname} />
       <FriendRequestWatcher path={location.pathname} />
     </div>
+  );
+}
+
+type NavEntry = { to: string; label: string; icon: string; short?: string; glyph?: string };
+
+/** Les quatre onglets toujours visibles sur téléphone ; le reste se range derrière « Plus ». */
+const MOBILE_MAIN = ['/', '/path', '/reviews', '/games'];
+
+/**
+ * Barre du bas sur téléphone : quatre onglets et un bouton « Plus » qui ouvre les autres rubriques.
+ * Neuf onglets côte à côte ne tenaient pas : leurs libellés se touchaient.
+ */
+function MobileNav({ nav, due, path }: { nav: NavEntry[]; due: number; path: string }) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [path]);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+  const main = nav.filter((n) => MOBILE_MAIN.includes(n.to));
+  const more = nav.filter((n) => !MOBILE_MAIN.includes(n.to));
+  const inMore = more.some((n) => path === n.to || path.startsWith(`${n.to}/`));
+  const tab = 'relative flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 px-1 text-xs font-bold';
+  return (
+    <>
+      {open && (
+        <div className="fixed inset-0 z-30 flex items-end bg-[rgb(10_14_40/0.45)] md:hidden" onClick={() => setOpen(false)}>
+          <div id="mobile-more" role="dialog" aria-modal="true" aria-label={T("Autres rubriques")} className="mb-[calc(4rem+env(safe-area-inset-bottom))] w-full rounded-t-3xl border-t border-line bg-surface p-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <ul className="grid grid-cols-3 gap-2">
+              {more.map((n) => (
+                <li key={n.to}>
+                  <NavLink to={n.to} onClick={() => setOpen(false)} className={({ isActive }) => `flex min-h-20 flex-col items-center justify-center gap-1.5 rounded-2xl border px-2 py-3 text-center text-sm font-bold leading-tight ${isActive ? 'border-ink bg-ink text-paper' : 'border-line text-ink'}`}>
+                    <Icon d={n.icon} glyph={n.glyph} />
+                    {n.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+      <nav aria-label={T("Navigation principale")} className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden">
+        {main.map((n) => (
+          <NavLink key={n.to} to={n.to} end={n.to === '/'} className={({ isActive }) => `${tab} ${isActive && !open ? 'text-ink' : 'text-ink-soft'}`}>
+            <Icon d={n.icon} glyph={n.glyph} />
+            <span className="max-w-full truncate">{n.label}</span>
+            {n.to === '/reviews' && due > 0 && <span className="absolute right-[26%] top-2 h-2.5 w-2.5 rounded-full bg-gold" aria-label={T("{0} révisions", [due])} />}
+          </NavLink>
+        ))}
+        <button type="button" className={`${tab} ${open || inMore ? 'text-ink' : 'text-ink-soft'}`} aria-expanded={open} aria-controls="mobile-more" onClick={() => setOpen(!open)}>
+          <Icon d="M5 12h.01M12 12h.01M19 12h.01" />
+          <span className="max-w-full truncate">{T("Plus")}</span>
+        </button>
+      </nav>
+    </>
   );
 }
 

@@ -59,7 +59,7 @@ export function PathPage() {
     <div>
       {saga ? <SagaBanner saga={saga} code={data.level.code} region={data.level.region} notice={data.level.notice} done={sagaDone} /> : <PageTitle sub={data.level.notice}>{T("{0} : {1}", [levelLabel(data.level.code), data.level.region])}</PageTitle>}
       {data.levels.length > 1 && (
-        <div role="tablist" aria-label={T("Niveau du parcours")} className="mb-6 flex flex-wrap gap-2">
+        <div role="tablist" aria-label={T("Niveau du parcours")} className="-mx-4 mb-6 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
           {data.levels.map((l) => {
             const active = l.code === data.level.code;
             return (
@@ -68,7 +68,7 @@ export function PathPage() {
                 role="tab"
                 aria-selected={active}
                 onClick={() => choose(l.code)}
-                className={`flex min-h-12 items-center gap-3 rounded-2xl border-2 px-4 text-left ${active ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}
+                className={`flex min-h-12 shrink-0 items-center gap-3 whitespace-nowrap rounded-2xl border-2 px-4 text-left ${active ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}
               >
                 <span className="font-display text-xl">{levelLabel(l.code)}</span>
                 <span className="text-sm leading-tight">

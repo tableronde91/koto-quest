@@ -18,6 +18,8 @@ export function WelcomePage() {
   const navigate = useNavigate();
   const location = useLocation();
   const from = (location.state as { from?: string } | null)?.from;
+  const [lang, setLang] = useState<(typeof LANGS)[number]['id']>('ja');
+  const current = LANGS.find((l) => l.id === lang)!;
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -65,18 +67,16 @@ export function WelcomePage() {
         </span>
       </header>
 
-      {/* Héros : la mission, en clair */}
+      {/* Héros : la promesse en une phrase */}
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
-          <p className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · <span lang="es">Español</span> · {T("Préparation au JLPT, au TOPIK, au TOEIC, au HSK et au DELE")}
+          <p className="inline-flex flex-wrap items-center gap-x-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · <span lang="es">Español</span>
           </p>
-          <h1 id="hero-title" className="mt-4 max-w-[22ch] text-4xl sm:text-5xl">{T("Apprends le japonais, le coréen, l’anglais, le chinois ou l’espagnol, et réussis ton examen.")}</h1>
-          <p className="mt-4 max-w-[54ch] text-lg text-ink-soft">
-            {T("Koto Quest a une seule mission : aider chacun à apprendre une langue et à se présenter serein à son examen, le JLPT pour le japonais, le TOPIK pour le coréen, le TOEIC pour l’anglais, le HSK pour le chinois. Du premier mot jusqu’à l’examen blanc, tu progresses par leçons de 5 à 10 minutes, avec des révisions qui reviennent au moment où tu allais oublier.")}
-          </p>
+          <h1 id="hero-title" className="mt-4 max-w-[16ch] text-4xl sm:text-5xl">{T("Apprends une langue. Réussis ton examen.")}</h1>
+          <p className="mt-4 max-w-[46ch] text-lg text-ink-soft">{T("Des leçons de 5 à 10 minutes, des révisions au bon moment et des examens blancs, du premier mot jusqu’au jour J.")}</p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("Un parcours aligné sur les niveaux officiels du JLPT, du TOPIK, du CECRL, du HSK et du DELE"), T("Des examens blancs au format exact de l’épreuve"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("JLPT, TOPIK, TOEIC, HSK ou DELE : un parcours par niveau officiel"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -115,116 +115,32 @@ export function WelcomePage() {
       </section>
       </div>
 
-      {/* Le JLPT, niveau par niveau */}
-      <section aria-labelledby="jlpt-title" className="flex flex-col gap-5">
-        <div>
-          <h2 id="jlpt-title" className="text-3xl">{T("Le JLPT, c’est quoi ?")}</h2>
-          <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le JLPT (Japanese-Language Proficiency Test) est la certification de japonais la plus reconnue pour les non-japonophones. Il compte cinq niveaux, du N5 (débutant) au N1 (avancé), et a lieu une à deux fois par an selon les pays, en juillet et en décembre. Il évalue le vocabulaire, les kanji, la grammaire, la lecture et la compréhension orale.")}
-          </p>
-        </div>
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {JLPT_LEVELS.map((l) => (
-            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line'}`}>
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display text-3xl">{l.id}</span>
-                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface-2 text-ink-soft'}`}>{l.ready ? T("Disponible") : T("En préparation")}</span>
-              </div>
-              <p className="font-bold">{l.name()}</p>
-              <p className="text-sm text-ink-soft">{l.text()}</p>
-              <p className="mt-auto text-sm"><span className="font-bold">{T("≈ {0} kanji", [l.kanji])}</span> · {T("≈ {0} mots", [l.words])}</p>
-            </li>
+      {/* Cinq langues : une seule visible à la fois, le détail de l'examen sur demande */}
+      <section aria-labelledby="langs-title" className="flex flex-col gap-5">
+        <h2 id="langs-title" className="text-3xl">{T("Cinq langues, cinq examens")}</h2>
+        <div role="tablist" aria-label={T("Langue à découvrir")} className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+          {LANGS.map((l) => (
+            <button key={l.id} role="tab" id={`lang-${l.id}`} aria-selected={lang === l.id} aria-controls="lang-panel" onClick={() => setLang(l.id)} className={`flex min-h-14 shrink-0 items-center gap-3 rounded-2xl border-2 px-4 text-left ${lang === l.id ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}>
+              <span aria-hidden="true" className="jp text-2xl font-black">{l.glyph}</span>
+              <span className="leading-tight"><span className="block font-bold">{l.name()}</span><span className={`text-sm ${lang === l.id ? 'opacity-80' : 'text-ink-soft'}`}>{l.exam}</span></span>
+            </button>
           ))}
-        </ol>
-        <p className="text-sm text-ink-soft">{T("Nombres de kanji et de mots : repères indicatifs couramment utilisés, non publiés par les organisateurs du JLPT.")}</p>
-      </section>
-
-      {/* Le TOPIK, pour le coréen */}
-      <section aria-labelledby="topik-title" className="flex flex-col gap-5">
-        <div>
-          <h2 id="topik-title" className="text-3xl">{T("Et le coréen ? Le TOPIK")}</h2>
-          <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le TOPIK (Test of Proficiency in Korean) est l’examen officiel de coréen pour les non-coréanophones. Le TOPIK I couvre les niveaux 1 et 2, le TOPIK II les niveaux 3 à 6 ; le niveau dépend du score obtenu. Il évalue l’écoute et la lecture, et l’écriture au TOPIK II. Koto Quest commence par le hangeul, l’alphabet coréen, que l’on apprend en quelques jours.")}
-          </p>
         </div>
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {TOPIK_LEVELS.map((l) => (
-            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line'}`}>
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display text-2xl">{l.id}</span>
-                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface-2 text-ink-soft'}`}>{l.ready ? T("Disponible") : T("En préparation")}</span>
-              </div>
-              <p className="font-bold">{l.name()}</p>
-              <p className="text-sm text-ink-soft">{l.text()}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* Le TOEIC, pour l'anglais */}
-      <section aria-labelledby="toeic-title" className="flex flex-col gap-5">
-        <div>
-          <h2 id="toeic-title" className="text-3xl">{T("Et l’anglais ? Le TOEIC")}</h2>
-          <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le TOEIC Listening & Reading est le test d’anglais professionnel le plus demandé par les entreprises. Il est noté sur 990 points (495 en écoute, 495 en lecture). Koto Quest suit les niveaux du CECRL, de A1 à C1, avec pour chacun le score TOEIC correspondant, et mêle l’anglais du bureau aux légendes britanniques.")}
-          </p>
+        <div id="lang-panel" role="tabpanel" aria-labelledby={`lang-${current.id}`} className="panel flex flex-col gap-4 p-5 sm:p-6">
+          <p className="max-w-[60ch] text-lg">{current.pitch()}</p>
+          <ol className="flex flex-wrap gap-2">
+            {current.levels.map((l) => (
+              <li key={l.id} className="rounded-2xl border border-line bg-surface-2 px-3 py-2 leading-tight">
+                <span className="block font-display text-lg">{l.id}</span>
+                <span className="text-sm text-ink-soft">{l.name()}</span>
+              </li>
+            ))}
+          </ol>
+          <details className="text-ink-soft">
+            <summary className="cursor-pointer font-bold text-ink underline">{T("En savoir plus sur l’examen ({0})", [current.exam])}</summary>
+            <p className="mt-2 max-w-[70ch]">{current.about()}</p>
+          </details>
         </div>
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {TOEIC_LEVELS.map((l) => (
-            <li key={l.id} className="flex flex-col gap-2 rounded-3xl border-2 border-ink bg-surface p-4">
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display text-2xl">{l.id}</span>
-                <span className="rounded-full bg-ok-bg px-2.5 py-0.5 text-xs font-bold">{T("Disponible")}</span>
-              </div>
-              <p className="font-bold">{l.name()}</p>
-              <p className="text-sm text-ink-soft">{l.text()}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* Le HSK, pour le chinois */}
-      <section aria-labelledby="hsk-title" className="flex flex-col gap-5">
-        <div>
-          <h2 id="hsk-title" className="text-3xl">{T("Et le chinois ? Le HSK")}</h2>
-          <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le HSK (Hanyu Shuiping Kaoshi) est l’examen officiel de chinois pour les non-sinophones. Il compte six niveaux, de 150 mots au HSK 1 à plus de 5 000 au HSK 6. Koto Quest suit le format des sessions de 2026, avec le pinyin au-dessus des caractères qui s’efface au fil des niveaux, et t’emmène à travers les Royaumes combattants.")}
-          </p>
-        </div>
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {HSK_LEVELS.map((l) => (
-            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line bg-surface-2'}`}>
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display text-2xl">{l.id}</span>
-                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface text-ink-soft'}`}>{l.ready ? T("Disponible") : T("Bientôt")}</span>
-              </div>
-              <p className="font-bold">{l.name()}</p>
-              <p className="text-sm text-ink-soft">{l.text()}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* Le DELE, pour l'espagnol */}
-      <section aria-labelledby="dele-title" className="flex flex-col gap-5">
-        <div>
-          <h2 id="dele-title" className="text-3xl">{T("Et l’espagnol ? Le DELE")}</h2>
-          <p className="mt-2 max-w-[70ch] text-ink-soft">
-            {T("Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare en six étapes : la Manche de Don Quichotte, la route de Barcelone, le chemin de Saint-Jacques, la traversée des Amériques, la Bibliothèque enchantée et son Rayon secret.")}
-          </p>
-        </div>
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {DELE_LEVELS.map((l) => (
-            <li key={l.id} className={`flex flex-col gap-2 rounded-3xl border-2 p-4 ${l.ready ? 'border-ink bg-surface' : 'border-dashed border-line bg-surface-2'}`}>
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display text-2xl">{l.id}</span>
-                <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${l.ready ? 'bg-ok-bg' : 'bg-surface text-ink-soft'}`}>{l.ready ? T("Disponible") : T("Bientôt")}</span>
-              </div>
-              <p className="font-bold">{l.name()}</p>
-              <p className="text-sm text-ink-soft">{l.text()}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* Comment Koto Quest prépare */}
@@ -232,11 +148,11 @@ export function WelcomePage() {
         <h2 id="how-title" className="text-3xl">{T("Comment Koto Quest te prépare")}</h2>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
-            <li key={f.glyph} className="flex gap-4 rounded-3xl border border-line bg-surface p-5">
+            <li key={f.glyph} className="flex items-center gap-4 rounded-3xl border border-line bg-surface p-4">
               <span aria-hidden="true" lang="ja" className="jp flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-2xl font-black text-white" style={{ background: f.color }}>{f.glyph}</span>
               <div>
-                <h3 className="text-lg">{f.title()}</h3>
-                <p className="text-ink-soft">{f.text()}</p>
+                <h3 className="text-lg leading-tight">{f.title()}</h3>
+                <p className="text-sm text-ink-soft">{f.text()}</p>
               </div>
             </li>
           ))}
@@ -246,68 +162,92 @@ export function WelcomePage() {
       {/* Appel final */}
       <section aria-labelledby="cta-title" className="relative overflow-hidden rounded-3xl bg-ink p-6 text-paper sm:p-10">
         <span aria-hidden="true" lang="ja" className="jp pointer-events-none absolute -right-6 -top-10 select-none text-[12rem] font-black leading-none opacity-[0.07]">合格</span>
-        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton objectif JLPT, TOPIK, TOEIC ou HSK commence aujourd’hui.")}</h2>
-        <p className="relative mt-3 max-w-[56ch] text-lg opacity-85">{T("Débutant complet, étudiant, voyageur ou candidat à l’examen : fixe ton niveau visé et ta date d’examen, Koto Quest construit ton programme jour après jour.")}</p>
+        <h2 id="cta-title" className="relative max-w-[24ch] text-3xl sm:text-4xl">{T("Ton examen commence aujourd’hui.")}</h2>
+        <p className="relative mt-3 max-w-[50ch] text-lg opacity-85">{T("Fixe ton niveau visé et ta date d’examen : Koto Quest construit ton programme jour après jour.")}</p>
         <button className="btn btn-gold relative mt-6 min-h-14 px-6 text-lg" onClick={startNow}>{T("Commencer gratuitement")}</button>
       </section>
 
-      <p className="text-sm text-ink-soft">{T("Koto Quest n’est pas affilié à la Japan Foundation ni à JEES, organisateurs du JLPT, ni au NIIED, organisateur du TOPIK, ni à ETS, organisateur du TOEIC, ni au CLEC (Centre for Language Education and Cooperation), organisateur du HSK. Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
+      <p className="text-xs text-ink-soft">{T("Koto Quest n’est affilié à aucun organisateur d’examen (Japan Foundation et JEES pour le JLPT, NIIED pour le TOPIK, ETS pour le TOEIC, CLEC pour le HSK, Instituto Cervantes pour le DELE). Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
     </div>
     <div className="mx-auto max-w-5xl px-5"><SiteFooter className="mt-0" /></div>
     </>
   );
 }
 
-const JLPT_LEVELS = [
-  { id: 'N5', ready: true, kanji: '100', words: '800', name: () => T("Les bases"), text: () => T("Lire hiragana, katakana et des kanji simples ; comprendre des phrases lentes du quotidien.") },
-  { id: 'N4', ready: true, kanji: '300', words: '1 500', name: () => T("Japonais élémentaire"), text: () => T("Suivre des conversations courantes et lire des textes simples sur des sujets familiers.") },
-  { id: 'N3', ready: true, kanji: '650', words: '3 750', name: () => T("Niveau intermédiaire"), text: () => T("Comprendre le japonais de la vie quotidienne à une vitesse presque naturelle.") },
-  { id: 'N2', ready: true, kanji: '1 000', words: '6 000', name: () => T("Niveau avancé"), text: () => T("Lire articles et actualités, suivre des échanges de la vie courante et du travail.") },
-  { id: 'N1', ready: true, kanji: '2 000', words: '10 000', name: () => T("Maîtrise"), text: () => T("Comprendre des textes complexes et abstraits et des discours dans des situations variées.") },
-];
-
-const TOPIK_LEVELS = [
-  { id: 'TOPIK 1', ready: true, name: () => T("Débutant (TOPIK I)"), text: () => T("Lire le hangeul, se présenter, compter, faire ses courses et parler de son quotidien au présent, au passé et au futur.") },
-  { id: 'TOPIK 2', ready: true, name: () => T("Élémentaire (TOPIK I)"), text: () => T("Expliquer pourquoi, demander la permission, raconter ses expériences, décrire, situer dans le temps et parler poliment des aînés.") },
-  { id: 'TOPIK 3', ready: true, name: () => T("Intermédiaire (TOPIK II)"), text: () => T("Rapporter des paroles, expliquer un contexte, raconter un changement, exprimer un but, le passif et le causatif, regrets et souhaits.") },
-  { id: 'TOPIK 4', ready: true, name: () => T("Intermédiaire avancé (TOPIK II)"), text: () => T("Distinguer le vu de l’entendu, deviner, faire des hypothèses, la concession, causes et conséquences, l’actualité et la société.") },
-  { id: 'TOPIK 5', ready: true, name: () => T("Avancé (TOPIK II)"), text: () => T("Nuancer, comparer, argumenter, exprimer l’inévitable et le paradoxe : mythes, chamanisme et grands débats de société.") },
-  { id: 'TOPIK 6', ready: true, name: () => T("Maîtrise (TOPIK II)"), text: () => T("Style écrit soutenu, proverbes et expressions en quatre caractères, textes académiques et mythes fondateurs de la Corée.") },
-];
-
-const TOEIC_LEVELS = [
-  { id: 'A1', name: () => T("Découverte · TOEIC 120+"), text: () => T("Saluer, se présenter, compter, l’heure, commander, demander son chemin, le présent et le prétérit.") },
-  { id: 'A2', name: () => T("Survie · TOEIC 225+"), text: () => T("Raconter au passé, comparer, parler de ses projets, le present perfect, les règles et les conditions simples.") },
-  { id: 'B1', name: () => T("Seuil · TOEIC 550+"), text: () => T("E-mails professionnels, téléphone, entretien, passif, discours rapporté, hypothèses et négociation.") },
-  { id: 'B2', name: () => T("Avancé · TOEIC 785+"), text: () => T("Présentations, finance, ressources humaines, rapports, conditionnels mixtes et langage diplomatique.") },
-  { id: 'C1', name: () => T("Autonome · TOEIC 945+"), text: () => T("Registre soutenu, idiomes, nuances, stratégie, contrats et négociation de haut niveau.") },
-];
-
-const HSK_LEVELS = [
-  { id: 'HSK 1', ready: true, name: () => T("Découverte · 150 mots"), text: () => T("Le pinyin et les tons, les nombres, se présenter, la famille, les achats, l’heure, les transports et le temps qu’il fait.") },
-  { id: 'HSK 2', ready: true, name: () => T("Élémentaire · 300 mots"), text: () => T("Comparer, raconter une expérience, les compléments de résultat et de durée, les petits échanges du quotidien.") },
-  { id: 'HSK 3', ready: true, name: () => T("Intermédiaire · 600 mots"), text: () => T("Se débrouiller en voyage, au travail et à l’école ; 把, 被, les compléments de direction ; premiers textes sans pinyin.") },
-  { id: 'HSK 4', ready: true, name: () => T("Intermédiaire avancé · 1 200 mots"), text: () => T("Discuter de sujets variés avec des natifs, lire des textes courants et rédiger de courtes phrases.") },
-  { id: 'HSK 5', ready: true, name: () => T("Avancé · 2 500 mots"), text: () => T("Lire journaux et magazines, suivre films et émissions, faire un exposé structuré.") },
-  { id: 'HSK 6', ready: true, name: () => T("Maîtrise · 5 000 mots"), text: () => T("Comprendre sans effort ce qu’on lit et entend, chengyu et langue écrite soutenue.") },
-];
-
-const DELE_LEVELS = [
-  { id: 'DELE A1', ready: true, name: () => T("Découverte"), text: () => T("Saluer, se présenter, la famille, les nombres, commander à table, demander son chemin, le présent, ser et estar.") },
-  { id: 'DELE A2', ready: true, name: () => T("Survie"), text: () => T("Raconter au passé, comparer, faire des projets, se débrouiller en voyage et dans les situations courantes.") },
-  { id: 'DELE B1', ready: true, name: () => T("Seuil"), text: () => T("Exprimer son opinion, raconter une expérience, le subjonctif présent, comprendre l’essentiel d’un texte courant.") },
-  { id: 'DELE B2', ready: true, name: () => T("Avancé"), text: () => T("Argumenter, débattre, comprendre la presse et des conférences, maîtriser les temps du subjonctif.") },
-  { id: 'DELE C1', ready: true, name: () => T("Autonome"), text: () => T("S’exprimer avec aisance et précision, comprendre des textes longs et exigeants, registre soutenu.") },
-  { id: 'DELE C2', ready: true, name: () => T("Maîtrise"), text: () => T("Tout comprendre sans effort, nuancer finement, jouer avec les registres et les expressions idiomatiques.") },
-];
+/** Les cinq langues de la page d'accueil : une phrase, les niveaux, et le détail de l'examen replié. */
+const LANGS = [
+  {
+    id: 'ja', glyph: '言', exam: 'JLPT', name: () => T("Japonais"),
+    pitch: () => T("Du N5 au N1, des hiragana aux textes complexes, sur les pas d’un apprenti samouraï."),
+    about: () => T("Le JLPT (Japanese-Language Proficiency Test) est la certification de japonais la plus reconnue pour les non-japonophones. Il compte cinq niveaux, du N5 (débutant) au N1 (avancé), et a lieu une à deux fois par an selon les pays, en juillet et en décembre. Il évalue le vocabulaire, les kanji, la grammaire, la lecture et la compréhension orale."),
+    levels: [
+      { id: 'N5', name: () => T("Les bases") },
+      { id: 'N4', name: () => T("Japonais élémentaire") },
+      { id: 'N3', name: () => T("Niveau intermédiaire") },
+      { id: 'N2', name: () => T("Niveau avancé") },
+      { id: 'N1', name: () => T("Maîtrise") },
+    ],
+  },
+  {
+    id: 'ko', glyph: '한', exam: 'TOPIK', name: () => T("Coréen"),
+    pitch: () => T("Du TOPIK 1 au TOPIK 6, en commençant par le hangeul, l’alphabet coréen."),
+    about: () => T("Le TOPIK (Test of Proficiency in Korean) est l’examen officiel de coréen pour les non-coréanophones. Le TOPIK I couvre les niveaux 1 et 2, le TOPIK II les niveaux 3 à 6 ; le niveau dépend du score obtenu. Il évalue l’écoute et la lecture, et l’écriture au TOPIK II. Koto Quest commence par le hangeul, l’alphabet coréen, que l’on apprend en quelques jours."),
+    levels: [
+      { id: 'TOPIK 1', name: () => T("Débutant (TOPIK I)") },
+      { id: 'TOPIK 2', name: () => T("Élémentaire (TOPIK I)") },
+      { id: 'TOPIK 3', name: () => T("Intermédiaire (TOPIK II)") },
+      { id: 'TOPIK 4', name: () => T("Intermédiaire avancé (TOPIK II)") },
+      { id: 'TOPIK 5', name: () => T("Avancé (TOPIK II)") },
+      { id: 'TOPIK 6', name: () => T("Maîtrise (TOPIK II)") },
+    ],
+  },
+  {
+    id: 'en', glyph: 'E', exam: 'TOEIC', name: () => T("Anglais"),
+    pitch: () => T("Du A1 au C1, avec le score TOEIC visé à chaque niveau."),
+    about: () => T("Le TOEIC Listening & Reading est le test d’anglais professionnel le plus demandé par les entreprises. Il est noté sur 990 points (495 en écoute, 495 en lecture). Koto Quest suit les niveaux du CECRL, de A1 à C1, avec pour chacun le score TOEIC correspondant, et mêle l’anglais du bureau aux légendes britanniques."),
+    levels: [
+      { id: 'A1', name: () => T("Découverte · TOEIC 120+") },
+      { id: 'A2', name: () => T("Survie · TOEIC 225+") },
+      { id: 'B1', name: () => T("Seuil · TOEIC 550+") },
+      { id: 'B2', name: () => T("Avancé · TOEIC 785+") },
+      { id: 'C1', name: () => T("Autonome · TOEIC 945+") },
+    ],
+  },
+  {
+    id: 'zh', glyph: '中', exam: 'HSK', name: () => T("Chinois"),
+    pitch: () => T("Du HSK 1 au HSK 6, avec le pinyin qui s’efface au fil des niveaux."),
+    about: () => T("Le HSK (Hanyu Shuiping Kaoshi) est l’examen officiel de chinois pour les non-sinophones. Il compte six niveaux, de 150 mots au HSK 1 à plus de 5 000 au HSK 6. Koto Quest suit le format des sessions de 2026, avec le pinyin au-dessus des caractères qui s’efface au fil des niveaux, et t’emmène à travers les Royaumes combattants."),
+    levels: [
+      { id: 'HSK 1', name: () => T("Découverte · 150 mots") },
+      { id: 'HSK 2', name: () => T("Élémentaire · 300 mots") },
+      { id: 'HSK 3', name: () => T("Intermédiaire · 600 mots") },
+      { id: 'HSK 4', name: () => T("Intermédiaire avancé · 1 200 mots") },
+      { id: 'HSK 5', name: () => T("Avancé · 2 500 mots") },
+      { id: 'HSK 6', name: () => T("Maîtrise · 5 000 mots") },
+    ],
+  },
+  {
+    id: 'es', glyph: 'Ñ', exam: 'DELE', name: () => T("Espagnol"),
+    pitch: () => T("Du A1 au C2, de la Manche de Don Quichotte aux classiques d’Amérique latine."),
+    about: () => T("Le DELE (Diplomas de Español como Lengua Extranjera) est le diplôme officiel d’espagnol délivré au nom du ministère espagnol de l’Éducation par l’Instituto Cervantes. Il suit les six niveaux du CECRL, de A1 à C2. Koto Quest t’y prépare en six étapes : la Manche de Don Quichotte, la route de Barcelone, le chemin de Saint-Jacques, la traversée des Amériques, la Bibliothèque enchantée et son Rayon secret."),
+    levels: [
+      { id: 'DELE A1', name: () => T("Découverte") },
+      { id: 'DELE A2', name: () => T("Survie") },
+      { id: 'DELE B1', name: () => T("Seuil") },
+      { id: 'DELE B2', name: () => T("Avancé") },
+      { id: 'DELE C1', name: () => T("Autonome") },
+      { id: 'DELE C2', name: () => T("Maîtrise") },
+    ],
+  },
+] as const;
 
 const FEATURES = [
-  { glyph: '道', color: '#C8323F', title: () => T("Un mode histoire par niveau"), text: () => T("Samouraï au N5, ninja au N4, esprit au N3, onmyōji au N2, shōgun au N1 ; en coréen, apprenti hwarang au TOPIK 1, conteur au TOPIK 2, inspecteur royal au TOPIK 3, historien au TOPIK 4, chanteur de mythes au TOPIK 5, gardien des mythes au TOPIK 6 ; en anglais, apprenti de Merlin en A1 jusqu’à héritier d’Arthur en C1 ; en chinois, messager des Royaumes au HSK 1 : chaque niveau est une aventure, avec des leçons de 5 à 10 minutes qui suivent le programme de l’examen.") },
-  { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("La répétition espacée fait revenir chaque mot, kanji ou point de grammaire juste avant que tu l’oublies.") },
-  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs JLPT, TOPIK, TOEIC et HSK"), text: () => T("Au format exact du JLPT, du TOPIK et du HSK, au format abrégé du TOEIC, corrigés immédiatement, pour arriver le jour J sans surprise.") },
-  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes japonais, coréens et britanniques et des fables chinoises en langue simple, tous ouverts dès le départ, pour s’habituer à lire vraiment.") },
-  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases dont on a besoin au Japon, en Corée, en Chine ou en anglais, classées par situation, avec l’audio.") },
-  { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Affronte d’autres apprenants en quiz rapides pour réviser en t’amusant et grimper au classement.") },
+  { glyph: '道', color: '#C8323F', title: () => T("Une histoire par niveau"), text: () => T("Chaque niveau est une aventure, avec ses îles et ses gardiens à vaincre.") },
+  { glyph: '復', color: '#3FA7A0', title: () => T("Des révisions au bon moment"), text: () => T("Chaque notion revient juste avant que tu l’oublies.") },
+  { glyph: '試', color: '#D4A537', title: () => T("Des examens blancs"), text: () => T("Au format de l’épreuve, chronométrés et corrigés aussitôt.") },
+  { glyph: '読', color: '#6E63B5', title: () => T("Des contes à lire"), text: () => T("Des contes et légendes en langue simple, ouverts dès le départ.") },
+  { glyph: '話', color: '#2E8B9A', title: () => T("Des expressions utiles"), text: () => T("Les phrases du quotidien, classées par situation, avec l’audio.") },
+  { glyph: '闘', color: '#9C6B3E', title: () => T("Des duels entre amis"), text: () => T("Des quiz rapides contre d’autres apprenants, pour réviser en t’amusant.") },
 ];
 
 export function ForgotPasswordPage() {

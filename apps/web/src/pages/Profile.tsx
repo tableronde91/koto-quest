@@ -50,8 +50,8 @@ function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
       <span aria-hidden="true" className="jp pointer-events-none absolute -right-2 -top-8 select-none text-[9rem] font-black leading-none opacity-10">{D('me')}</span>
       <div className="flex flex-wrap items-center gap-5">
         <span className="overflow-hidden rounded-3xl border-2 border-[rgb(255_255_255/0.3)] bg-surface"><Avatar config={me.avatar} size={96} /></span>
-        <div className="min-w-0 flex-1">
-          <p className="font-display text-3xl leading-tight">{me.displayName}</p>
+        <div className="min-w-[11rem] flex-1">
+          <p className="break-words font-display text-3xl leading-tight">{me.displayName}</p>
           <p className="mt-1 opacity-85">{T("Niveau {0} · objectif {1}", [lv.level, examLevelLabel(me.preferences.targetLevel)])}</p>
           <div className="mt-3 h-2.5 max-w-xs overflow-hidden rounded-full bg-[rgb(255_255_255/0.2)]" role="progressbar" aria-label={T("XP du niveau")} aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
             <div className="h-full rounded-full bg-gold" style={{ width: `${pct}%` }} />
@@ -59,7 +59,7 @@ function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
           <p className="mt-1 text-sm opacity-75">{T("{0} / {1} XP", [lv.intoLevel, lv.forNext])} · <Coins value={me.coins} /></p>
         </div>
         {lobby && (
-          <div className="flex flex-col items-center gap-1 text-center">
+          <div className="flex items-center gap-3 text-left sm:flex-col sm:gap-1 sm:text-center">
             <RankBadge rank={lobby.profile.rank} size={56} />
             <span className="text-sm font-bold">{RL(lobby.profile.rank)}</span>
             <span className="text-xs opacity-75">{T("{0} pts", [lobby.profile.rating])}</span>
@@ -68,7 +68,8 @@ function IdentityCard({ me, lobby }: { me: MeDto; lobby?: DuelLobbyDto }) {
       </div>
       <div className="mt-5 flex flex-wrap gap-3">
         <Link to="/avatar" className="btn btn-gold">{T("Personnaliser")}</Link>
-        <Link to="/achievements" className="btn btn-quiet bg-surface text-ink">{T("Mes succès")}</Link>
+        {/* Fond clair explicite : .btn-quiet est transparent, et le texte foncé disparaissait sur la carte sombre. */}
+        <Link to="/achievements" className="btn btn-quiet" style={{ background: 'var(--surface)' }}>{T("Mes succès")}</Link>
       </div>
     </section>
   );
