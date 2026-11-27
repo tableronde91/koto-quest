@@ -4590,6 +4590,159 @@
      }
     }
    }
+  },
+  "GOETHEB1": {
+   "glyph": "Ä",
+   "jp": "Sagenland",
+   "color": "#6A4A2A",
+   "saga": {
+    "fr": "Le pays des légendes",
+    "en": "The land of legends"
+   },
+   "hero": {
+    "fr": "Apprenti·e des frères Grimm",
+    "en": "The Brothers Grimm’s apprentice"
+   },
+   "short": {
+    "fr": "L’apprenti·e",
+    "en": "The apprentice"
+   },
+   "prologue": {
+    "fr": "Le livre des contes est presque complet quand Jacob ouvre un second volume, plus épais et plus sombre : les Deutsche Sagen, les légendes allemandes. « Les contes se passent nulle part et partout, dit-il. Les légendes, elles, ont un lieu et une date : une montagne, un rocher, une ville. » Wilhelm ajoute : « Et ceux qui les habitent discutent, exigent, mentent parfois. Il te faudra raconter au passé, supposer, argumenter. En route pour le Harz ! »",
+    "en": "The book of tales is almost complete when Jacob opens a second volume, thicker and darker: the Deutsche Sagen, the German legends. “Tales happen nowhere and everywhere,” he says. “Legends have a place and a date: a mountain, a rock, a town.” Wilhelm adds: “And those who live in them argue, make demands, sometimes lie. You will have to narrate in the past, suppose, argue. Off to the Harz!”"
+   },
+   "epilogue": {
+    "fr": "Sur le Brocken, la nuit de Walpurgis s’achève. Les sorcières t’ont écouté raconter, supposer et débattre jusqu’à l’aube, et pas une n’a trouvé à redire. Jacob note la dernière légende ; Wilhelm regarde vers le sud. « À Weimar et à Vienne, il y a des poètes et des musiciens qui parlent une langue plus fine encore. Tu es prêt·e pour eux. »",
+    "en": "On the Brocken, Walpurgis Night is ending. The witches listened to you narrate, suppose and debate until dawn, and not one found fault. Jacob writes down the last legend; Wilhelm looks south. “In Weimar and Vienna there are poets and musicians who speak a finer language still. You are ready for them.”"
+   },
+   "chapters": {
+    "goetheb1-w1": {
+     "title": {
+      "fr": "La montagne de Barberousse",
+      "en": "Barbarossa’s mountain"
+     },
+     "intro": {
+      "fr": "Dans la grotte du Kyffhäuser, l’Empereur dort à sa table de pierre et les corbeaux tournent au-dehors. Réveille-le avec une chronique au prétérit, verbes forts compris.",
+      "en": "In the Kyffhäuser cave, the Emperor sleeps at his stone table while the ravens circle outside. Wake him with a chronicle in the simple past, strong verbs included."
+     },
+     "outro": {
+      "fr": "Barberousse ouvre un œil, t’écoute jusqu’au bout, puis se rendort en souriant : « Pas encore cent ans… »",
+      "en": "Barbarossa opens one eye, hears you out, then goes back to sleep with a smile: “Not a hundred years yet…”"
+     }
+    },
+    "goetheb1-w2": {
+     "title": {
+      "fr": "Les monts de Rübezahl",
+      "en": "Rübezahl’s mountains"
+     },
+     "intro": {
+      "fr": "Dans les monts des Géants, le Géant Rübezahl se cache sous mille apparences. Désigne-le sans erreur : l’homme qui…, le bâton avec lequel…, les gens à qui…",
+      "en": "In the Giant Mountains, the Giant Rübezahl hides behind a thousand shapes. Point him out without a mistake: the man who…, the staff with which…, the people to whom…"
+     },
+     "outro": {
+      "fr": "Démasqué, Rübezahl éclate d’un rire qui fait trembler les sapins et te laisse passer le col.",
+      "en": "Unmasked, Rübezahl bursts into a laugh that shakes the fir trees and lets you over the pass."
+     }
+    },
+    "goetheb1-w3": {
+     "title": {
+      "fr": "La cabane du Pêcheur",
+      "en": "The Fisherman’s hut"
+     },
+     "intro": {
+      "fr": "Au bord de la mer, la Femme du pêcheur enchaîne les vœux et la mer vire au noir. Formule souhaits et hypothèses au Konjunktiv II avant que tout ne s’effondre.",
+      "en": "By the sea, the Fisherman’s Wife makes wish after wish and the sea turns black. Phrase wishes and hypotheses in Konjunktiv II before everything collapses."
+     },
+     "outro": {
+      "fr": "La tempête retombe. La Femme du pêcheur regarde sa vieille cabane… et, pour la première fois, ne demande rien.",
+      "en": "The storm dies down. The Fisherman’s Wife looks at her old hut… and, for the first time, asks for nothing."
+     }
+    },
+    "goetheb1-w4": {
+     "title": {
+      "fr": "Les ateliers de Cologne",
+      "en": "The workshops of Cologne"
+     },
+     "intro": {
+      "fr": "À Cologne, les Lutins font tout le travail la nuit, à condition de n’être jamais vus. Dis ce qui est fait, ce qui a été fait et ce qui doit l’être, au passif.",
+      "en": "In Cologne, the Elves do all the work at night, provided they are never seen. Say what is done, what was done and what must be done, in the passive."
+     },
+     "outro": {
+      "fr": "Au matin, tout est prêt et personne n’a rien vu. Les Lutins restent à Cologne une nuit de plus.",
+      "en": "In the morning everything is ready and nobody saw a thing. The Elves stay in Cologne one more night."
+     }
+    },
+    "goetheb1-w5": {
+     "title": {
+      "fr": "Le cabinet du Docteur Faust",
+      "en": "Doctor Faust’s study"
+     },
+     "intro": {
+      "fr": "Entre ses cornues et ses grimoires, le Docteur Faust examine ta candidature. Explique ce que tu essaies de faire, dans quel but, et quelle est ta formation.",
+      "en": "Among his flasks and spell books, Doctor Faust examines your application. Explain what you are trying to do, for what purpose, and what your training is."
+     },
+     "outro": {
+      "fr": "Faust repose sa plume : « Enfin quelqu’un qui sait pourquoi il apprend. » Il ne signera rien ce soir.",
+      "en": "Faust puts down his pen: “At last someone who knows why they are learning.” He will sign nothing tonight."
+     }
+    },
+    "goetheb1-w6": {
+     "title": {
+      "fr": "Les tours de Till l’Espiègle",
+      "en": "Till Eulenspiegel’s tricks"
+     },
+     "intro": {
+      "fr": "Sur la place du marché, Till retourne chaque mot contre celui qui le prononce. Tiens-lui tête : concède, conclus, donne ton avis sans lui laisser de prise.",
+      "en": "On the market square, Till turns every word against the person who utters it. Stand up to him: concede, conclude, give your opinion without leaving him an opening."
+     },
+     "outro": {
+      "fr": "Till ôte son bonnet à grelots : « Voilà quelqu’un qui dit exactement ce qu’il veut dire. Je n’ai plus rien à faire ici ! »",
+      "en": "Till takes off his jester’s cap: “Here is someone who says exactly what they mean. I have nothing left to do here!”"
+     }
+    },
+    "goetheb1-w7": {
+     "title": {
+      "fr": "Le rocher de la Lorelei",
+      "en": "The Lorelei rock"
+     },
+     "intro": {
+      "fr": "Sur le Rhin, le chant de la Lorelei fait dériver les barques vers les récifs. Décris le fleuve, le paysage et le voyage, génitif compris, sans lever les yeux.",
+      "en": "On the Rhine, the song of the Lorelei makes the boats drift towards the reefs. Describe the river, the landscape and the journey, genitive included, without looking up."
+     },
+     "outro": {
+      "fr": "Ta barque passe le rocher. Là-haut, la Lorelei cesse de chanter et te suit du regard, intriguée.",
+      "en": "Your boat passes the rock. Up above, the Lorelei stops singing and follows you with her eyes, intrigued."
+     }
+    },
+    "goetheb1-w8": {
+     "title": {
+      "fr": "Les récits du Baron de Münchhausen",
+      "en": "Baron Münchhausen’s tales"
+     },
+     "intro": {
+      "fr": "Au coin du feu, le Baron enchaîne les exploits impossibles. Interroge-le poliment, choisis la bonne préposition et démêle le vrai du faux.",
+      "en": "By the fireside, the Baron reels off impossible feats. Question him politely, choose the right preposition and sort truth from lies."
+     },
+     "outro": {
+      "fr": "Le Baron vide son verre : « Vous ne me croyez pas ? Vous avez raison… à moitié ! » Et la légende rejoint le livre.",
+      "en": "The Baron drains his glass: “You do not believe me? You are right… half right!” And the legend joins the book."
+     }
+    },
+    "goetheb1-final": {
+     "title": {
+      "fr": "La nuit de Walpurgis",
+      "en": "Walpurgis Night"
+     },
+     "intro": {
+      "fr": "Au sommet du Brocken, les sorcières du Harz tiennent leur assemblée et font passer l’épreuve : lis, écoute et écris comme au Goethe-Zertifikat B1. Chaque module se valide à 60 points.",
+      "en": "On the summit of the Brocken, the witches of the Harz hold their assembly and set the test: read, listen and write as in the Goethe-Zertifikat B1. Each module is passed at 60 points."
+     },
+     "outro": {
+      "fr": "Le feu s’éteint avec le jour. Niveau Goethe B1 validé : les légendes d’Allemagne n’ont plus de secret pour toi !",
+      "en": "The fire goes out with the dawn. Goethe B1 level complete: the legends of Germany hold no more secrets for you!"
+     }
+    }
+   }
   }
  }
 }

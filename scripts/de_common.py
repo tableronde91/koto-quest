@@ -68,12 +68,15 @@ def order(fr_en, words, expl):
     """Phrase à remettre dans l'ordre (les mots allemands, séparés par des espaces)."""
     return SO(fr_en, words, expl)
 
-def FINAL(code, region, title, parts_fr, parts_en):
+def FINAL(code, region, title, parts_fr, parts_en, modules=False):
+    """Île finale. `modules` : à partir du B1, chaque module se valide séparément à 60 %."""
     cefr = code[6:]
+    rule_fr = 'Chaque module est noté sur 100 et se valide séparément à partir de 60 points.' if modules else 'Noté sur 100 ; réussite à partir de 60 points.'
+    rule_en = 'Each module is marked out of 100 and passed separately from 60 points.' if modules else 'Marked out of 100; pass from 60 points.'
     return {
       'slug': f'{code.lower()}-final', 'title': t(title), 'region': region,
-      'description': t((f'Examen blanc au format du Goethe-Zertifikat {cefr}, en allemand : {parts_fr}. Noté sur 100 ; réussite à partir de 60 points.',
-                        f'Mock exam in Goethe-Zertifikat {cefr} format, in German: {parts_en}. Marked out of 100; pass from 60 points.')),
+      'description': t((f'Examen blanc au format du Goethe-Zertifikat {cefr}, en allemand : {parts_fr}. {rule_fr}',
+                        f'Mock exam in Goethe-Zertifikat {cefr} format, in German: {parts_en}. {rule_en}')),
       'exam': f'{code.lower()}-official', 'chapters': [],
     }
 

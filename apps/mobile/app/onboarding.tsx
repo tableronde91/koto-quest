@@ -76,7 +76,7 @@ const TARGETS: Record<StudyLanguage, { code: JlptCode; hint: string }[]> = {
     { code: 'DELEC2', hint: 'Maîtrise' },
   ],
   // Allemand : seuls les niveaux dont le parcours est prêt
-  de: [{ code: 'GOETHEA1', hint: 'Découverte' }, { code: 'GOETHEA2', hint: 'Survie' }],
+  de: [{ code: 'GOETHEA1', hint: 'Découverte' }, { code: 'GOETHEA2', hint: 'Survie' }, { code: 'GOETHEB1', hint: 'Seuil' }],
 };
 
 function Choice({ selected, label, hint, glyph, onPress, testID }: { selected: boolean; label: string; hint?: string; glyph?: string; onPress: () => void; testID?: string }) {

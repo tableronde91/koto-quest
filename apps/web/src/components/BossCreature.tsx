@@ -580,6 +580,64 @@ const SPECIES: Record<string, Species> = {
     under: <path d="M72 108 Q100 124 128 108 Q116 150 100 176 Q84 150 72 108Z" fill="#8A5A3A" />,
     front: <g transform="translate(158 150) rotate(-25)"><ellipse rx="11" ry="15" fill="#B8733A" stroke="#7A4A2A" strokeWidth="1.5" /><rect x="-2" y="-40" width="4" height="28" fill="#7A4A2A" /><path d="M-1 -12 V12 M1 -12 V12" stroke="#F4EDDC" strokeWidth="0.8" /></g>,
   },
+  // ───── Gardiens allemands (Goethe B1 — le pays des légendes) ─────
+  // L'Empereur Barberousse : couronne impériale, immense barbe rousse, yeux mi-clos
+  '♤': {
+    body: '#7A2A2A', belly: '#B8923A', head: '#E8C8A8', eye: '#3A2A1A',
+    top: <><path d="M64 50 L64 24 L78 38 L100 12 L122 38 L136 24 L136 50Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /><circle cx="100" cy="30" r="5" fill="#C8323F" /></>,
+    under: <path d="M64 100 Q100 120 136 100 Q150 160 100 196 Q50 160 64 100Z" fill="#C8582A" />,
+    face: <><path d="M76 84 H92 M108 84 H124" stroke="#3A2A1A" strokeWidth="4" strokeLinecap="round" /><path d="M84 108 Q100 116 116 108" stroke="#8A3A1A" strokeWidth="3" fill="none" /></>,
+  },
+  // Rübezahl : géant des montagnes, barbe de mousse, bâton noueux
+  '♧': {
+    body: '#5A6A4A', belly: '#8A9A7A', head: '#C8B898', eye: '#2A3A1A',
+    top: <path d="M52 76 Q60 30 100 26 Q140 30 148 76 Q128 52 100 50 Q72 52 52 76Z" fill="#4A5A3A" />,
+    under: <path d="M68 104 Q100 120 132 104 Q128 150 100 170 Q72 150 68 104Z" fill="#6E8A5A" />,
+    front: <g><path d="M164 198 Q158 140 166 84" stroke="#6A4A2A" strokeWidth="8" fill="none" strokeLinecap="round" /><circle cx="166" cy="80" r="9" fill="#6A4A2A" /><path d="M24 150 L34 128 L44 150Z M16 170 L30 144 L44 170Z" fill="#2F6B4F" /></g>,
+  },
+  // La Femme du pêcheur (Ilsebill) : fichu, couronne trop grande, vague sombre
+  '♡': {
+    body: '#3A5A7A', belly: '#7A9AB8', head: '#E8D0C0', eye: '#2A2A3A',
+    back: <path d="M10 196 q22 -30 44 0 q22 -30 46 0 q24 -30 46 0 q22 -30 44 0 V200 H10Z" fill="#2A3A4A" />,
+    top: <><path d="M54 84 Q54 36 100 34 Q146 36 146 84 Q126 58 100 58 Q74 58 54 84Z" fill="#C8323F" /><path d="M70 40 L70 20 L84 32 L100 14 L116 32 L130 20 L130 40Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" transform="rotate(-12 100 30)" /></>,
+    face: <path d="M88 118 Q100 110 112 118" stroke="#8E1B26" strokeWidth="3" fill="none" strokeLinecap="round" />,
+  },
+  // Les Lutins de Cologne : bonnet pointu, tablier, marteau et lanterne
+  '♙': {
+    body: '#8A4A6A', belly: '#F4EDDC', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M58 72 Q84 10 96 -6 Q112 30 142 72Z" fill="#3A6AA8" stroke="#2A4A78" strokeWidth="2" />,
+    under: <path d="M72 130 H128 V176 Q100 186 72 176Z" fill="#F4EDDC" stroke="#C9B08A" strokeWidth="1.5" />,
+    front: <g><path d="M160 190 L150 120" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><rect x="136" y="106" width="30" height="16" rx="3" fill="#8A93A6" /><g transform="translate(40 156)"><rect x="-8" y="-12" width="16" height="20" rx="3" fill="#E2B84A" stroke="#5A3A24" strokeWidth="2" /><path d="M-5 -12 Q0 -22 5 -12" stroke="#5A3A24" strokeWidth="2" fill="none" /></g></g>,
+  },
+  // Le Docteur Faust : bonnet de savant, col blanc, livre et plume
+  '♗': {
+    body: '#2A2A3A', belly: '#4A4A5E', head: '#E8D8C8', eye: '#2A1A2A',
+    top: <path d="M56 70 Q60 34 100 30 Q140 34 144 70 Q146 52 100 50 Q54 52 56 70Z" fill="#5A1F2A" />,
+    under: <><path d="M70 126 Q100 114 130 126 L126 138 Q100 128 74 138Z" fill="#FFFFFF" /><path d="M84 106 Q100 126 116 106 Q108 130 100 136 Q92 130 84 106Z" fill="#B8B8B8" /></>,
+    front: <g><g transform="translate(152 152)"><path d="M-18 -10 Q-9 -16 0 -10 Q9 -16 18 -10 V10 Q9 4 0 10 Q-9 4 -18 10Z" fill="#F4EDDC" stroke="#5A3A24" strokeWidth="1.5" /><path d="M0 -10 V10" stroke="#5A3A24" strokeWidth="1" /></g><path d="M36 180 Q44 140 60 116" stroke="#F4EDDC" strokeWidth="3" fill="none" strokeLinecap="round" /></g>,
+  },
+  // Till l'Espiègle : bonnet de bouffon à grelots, chouette et miroir
+  '♘': {
+    body: '#C8323F', belly: '#E2B84A', head: '#E8C8A8', eye: '#2A1A10',
+    top: <><path d="M58 70 Q30 40 20 62 Q40 60 60 84Z" fill="#E2B84A" /><path d="M142 70 Q170 40 180 62 Q160 60 140 84Z" fill="#3E8A3A" /><path d="M56 78 Q60 36 100 34 Q140 36 144 78 Q124 56 100 56 Q76 56 56 78Z" fill="#C8323F" /><circle cx="20" cy="64" r="5" fill="#E2B84A" stroke="#9A7A2A" /><circle cx="180" cy="64" r="5" fill="#E2B84A" stroke="#9A7A2A" /></>,
+    under: <path d="M100 122 V180" stroke="#3E8A3A" strokeWidth="46" opacity="0.5" strokeDasharray="14 14" />,
+    face: <path d="M80 110 Q100 128 120 110" stroke="#8E1B26" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(160 150)"><path d="M0 14 V38" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><circle r="14" fill="#C9D4E4" stroke="#7A4A2A" strokeWidth="3" /></g>,
+  },
+  // La Lorelei : longue chevelure dorée, peigne d'or, vagues du Rhin
+  '♫': {
+    body: '#3A7A8A', belly: '#A8D8D0', head: '#F0E0D8', eye: '#2A4A5A',
+    back: <path d="M46 80 Q20 140 40 196 L160 196 Q180 140 154 80 Q100 20 46 80Z" fill="#E2B84A" />,
+    top: <path d="M54 84 Q54 34 100 30 Q146 34 146 84 Q128 56 100 54 Q72 56 54 84Z" fill="#E2B84A" />,
+    front: <g><g transform="translate(160 132) rotate(20)"><rect x="-10" y="-4" width="20" height="6" rx="2" fill="#C89A2A" />{[-8, -4, 0, 4, 8].map((x) => <rect key={x} x={x - 1} y="2" width="2" height="10" fill="#C89A2A" />)}</g><path d="M14 184 q14 -14 28 0 q14 14 28 0" fill="none" stroke="#FFFFFF" strokeWidth="3" opacity="0.8" /></g>,
+  },
+  // Le Baron de Münchhausen : tricorne, moustache en croc, boulet de canon
+  '♖': {
+    body: '#2E4A7A', belly: '#E2B84A', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M40 66 Q100 20 160 66 Q130 54 100 60 Q70 54 40 66Z" fill="#1F1A2A" stroke="#E2B84A" strokeWidth="2" />,
+    face: <><path d="M100 104 Q84 98 72 108 M100 104 Q116 98 128 108" stroke="#5A3A1A" strokeWidth="4" fill="none" strokeLinecap="round" /><path d="M92 116 Q100 120 108 116" stroke="#8A3A1A" strokeWidth="2.5" fill="none" /></>,
+    front: <g><circle cx="158" cy="160" r="18" fill="#3A3A3A" /><circle cx="152" cy="154" r="5" fill="#7A7A7A" /><path d="M170 144 Q182 132 178 120" stroke="#E2703A" strokeWidth="3" fill="none" strokeLinecap="round" /></g>,
+  },
   // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
   // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
   ñ: {
@@ -1729,7 +1787,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢', '♤', '♡', '♘', '♖'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

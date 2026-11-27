@@ -28,7 +28,7 @@ const japanese = (file: string) => /^n\d\//.test(file) || file === 'characters/c
 
 describe('questions générées sur tout le contenu', () => {
   it('couvre les six langues', () => {
-    expect(LEVELS.length).toBe(30);
+    expect(LEVELS.length).toBe(31);
   });
 
   it('une seule bonne réponse, même à l’oreille, et la consigne nomme la bonne langue', { timeout: 120_000 }, () => {

@@ -118,7 +118,7 @@ export function ExamPage() {
         <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
           <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en allemand")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
           <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Écoute réelle")}</strong>{T("Dialogues et annonces à deux voix, 2 écoutes au maximum.")}</li>
-          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Barème du Goethe-Zertifikat")}</strong>{T("Sur 100 : réussite à partir de 60 points. L’épreuve orale (Sprechen) n’est pas évaluée.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Barème du Goethe-Zertifikat")}</strong>{def.sectionMinPercent ? T("Chaque module (Hören, Lesen, Schreiben) est noté sur 100 et se valide séparément à 60 points. L’épreuve orale (Sprechen) n’est pas évaluée.") : T("Sur 100 : réussite à partir de 60 points. L’épreuve orale (Sprechen) n’est pas évaluée.")}</li>
         </ul>
       )}
       {goethe && (
@@ -240,13 +240,14 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
   const study = useStudyLang();
   const decorOf = useDecor();
   /** Goethe-Zertifikat : noté en pourcentage (sur 100), réussite à 60 points, sans barème par partie. */
-  const goethe = study.de && !result.scaled && result.sectionMinPercent === 0;
+  const goethe = study.de && !result.scaled && result.passPercent === 60 && (result.sectionMinPercent === 0 || result.sectionMinPercent === 60);
+  const modules = goethe && result.sectionMinPercent === 60;
   return (
     <div className="flex flex-col gap-8">
       <header className="flex flex-col items-center gap-2 text-center">
         {result.passed && <Confetti count={60} />}
         <Stamp className="jp text-5xl font-black text-ko">{toeic ? (result.passed ? 'Target reached' : 'Keep going') : hsk ? (result.passed ? '合格' : '不合格') : dele ? (result.passed ? 'Apto' : 'No apto') : topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? decorOf('pass') : decorOf('fail')}</Stamp>
-        <h1 className="text-4xl">{toeic ? (result.passed ? T("Score visé atteint") : T("Pas encore le score visé ({0})", [result.scaled!.max.passTotal])) : hsk ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite ({0} points)", [result.scaled!.max.passTotal])) : dele ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (30 points dans chaque groupe)")) : topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : goethe ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (60 points)")) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
+        <h1 className="text-4xl">{toeic ? (result.passed ? T("Score visé atteint") : T("Pas encore le score visé ({0})", [result.scaled!.max.passTotal])) : hsk ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite ({0} points)", [result.scaled!.max.passTotal])) : dele ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (30 points dans chaque groupe)")) : topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : goethe ? (result.passed ? T("Examen réussi") : modules ? T("Pas encore la réussite (60 points par module)") : T("Pas encore la réussite (60 points)")) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
         {topik && !result.passed && (result.scaled!.level ?? 0) > 0 && <p className="font-bold text-ko">{T("Il faut le niveau {0} ({1} points) pour valider cet examen.", [result.scaled!.max.passLevel ?? 2, result.scaled!.max.levels?.find((l) => l.level === (result.scaled!.max.passLevel ?? 2))?.min ?? 140])}</p>}
         {result.scaled ? (
           <p className="font-display text-7xl tabular-nums"><CountUp value={result.scaled.total} /><span className="text-3xl text-ink-soft"> / {result.scaled.max.total}</span></p>
@@ -256,7 +257,9 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
         <p className="text-ink-soft">{T("{0} bonnes réponses sur {1}{2}", [result.correct , result.total, result.late ? T(" (copie rendue après le temps imparti)") : ''])}</p>
         <p className="flex items-center gap-3 font-bold text-gold-ink">+{result.xpGained}{' '}{T("XP")}{' '}{result.coinsGained > 0 && <Coins value={result.coinsGained} />}</p>
         <p className="max-w-[56ch] text-sm text-ink-soft">
-          {goethe
+          {modules
+            ? T("Barème du Goethe-Zertifikat : chaque module (Hören, Lesen, Schreiben) est noté sur 100 et se valide séparément à partir de 60 points ; un module manqué peut être repassé seul. L’épreuve orale (Sprechen) n’est pas évaluée. Questions rédigées par Koto Quest, non officielles.")
+            : goethe
             ? T("Barème du Goethe-Zertifikat : Hören, Lesen et Schreiben, noté sur 100 ; réussite à partir de 60 points. L’épreuve orale (Sprechen) n’est pas évaluée. Questions rédigées par Koto Quest, non officielles.")
             : dele
             ? T("Barème du DELE : groupe 1 (compréhension et expression écrites, 25 + 25) et groupe 2 (compréhension auditive et expression orale, ici l’écoute seule sur 50) ; au moins 30 points dans chaque groupe. Questions rédigées par Koto Quest, non officielles.")

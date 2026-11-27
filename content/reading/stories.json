@@ -32401,6 +32401,568 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "fischer-und-frau",
+   "glyph": "V",
+   "level": "GOETHEB1",
+   "color": "#2E6A7A",
+   "title": {
+    "jp": "Vom Fischer und seiner Frau",
+    "fr": "Le Pêcheur et sa femme",
+    "en": "The Fisherman and His Wife"
+   },
+   "summary": {
+    "fr": "Un pêcheur relâche un poisson enchanté ; sa femme, elle, veut une maison, puis un château, puis davantage encore.",
+    "en": "A fisherman lets an enchanted fish go; his wife, however, wants a house, then a castle, then even more."
+   },
+   "chapters": [
+    {
+     "slug": "fischer-und-frau-1",
+     "title": {
+      "jp": "Der verzauberte Fisch",
+      "fr": "Le poisson enchanté",
+      "en": "The enchanted fish"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Es war einmal ein Fischer, der mit seiner Frau Ilsebill in einer alten Hütte am Meer wohnte.",
+        "fr": "Il était une fois un pêcheur qui habitait avec sa femme Ilsebill dans une vieille cabane au bord de la mer.",
+        "en": "Once upon a time there was a fisherman who lived with his wife Ilsebill in an old hut by the sea.",
+        "kana": "Es war einmal ein Fischer, der mit seiner Frau Ilsebill in einer alten Hütte am Meer wohnte."
+       },
+       {
+        "jp": "Eines Tages fing er einen großen Fisch, der plötzlich zu sprechen begann.",
+        "fr": "Un jour, il attrapa un gros poisson qui se mit soudain à parler.",
+        "en": "One day he caught a big fish that suddenly began to speak.",
+        "kana": "Eines Tages fing er einen großen Fisch, der plötzlich zu sprechen begann."
+       },
+       {
+        "jp": "„Lass mich leben“, bat der Fisch, „ich bin ein verzauberter Prinz.“ Da ließ der Fischer ihn wieder ins Wasser.",
+        "fr": "« Laisse-moi la vie, pria le poisson, je suis un prince ensorcelé. » Alors le pêcheur le remit à l’eau.",
+        "en": "“Let me live,” begged the fish, “I am an enchanted prince.” So the fisherman put him back in the water.",
+        "kana": "„Lass mich leben“, bat der Fisch, „ich bin ein verzauberter Prinz.“ Da ließ der Fischer ihn wieder ins Wasser."
+       }
+      ],
+      [
+       {
+        "jp": "Als die Frau das hörte, wurde sie böse: „Hättest du dir doch etwas gewünscht! Geh zurück und sag ihm, dass wir ein Haus haben wollen.“",
+        "fr": "Quand la femme entendit cela, elle se fâcha : « Si seulement tu avais fait un vœu ! Retourne lui dire que nous voulons une maison. »",
+        "en": "When his wife heard this, she grew angry: “If only you had made a wish! Go back and tell him that we want a house.”",
+        "kana": "Als die Frau das hörte, wurde sie böse: „Hättest du dir doch etwas gewünscht! Geh zurück und sag ihm, dass wir ein Haus haben wollen.“"
+       },
+       {
+        "jp": "Der Mann ging nicht gern, aber er rief den Fisch. Das Meer war grün und gelb und gar nicht mehr so klar.",
+        "fr": "L’homme n’y alla pas de bon cœur, mais il appela le poisson. La mer était verte et jaune, et plus du tout aussi claire.",
+        "en": "The man did not go gladly, but he called the fish. The sea was green and yellow and no longer so clear.",
+        "kana": "Der Mann ging nicht gern, aber er rief den Fisch. Das Meer war grün und gelb und gar nicht mehr so klar."
+       },
+       {
+        "jp": "„Geh nur nach Hause“, sagte der Fisch, „sie hat es schon.“",
+        "fr": "« Rentre donc chez toi, dit le poisson, elle l’a déjà. »",
+        "en": "“Just go home,” said the fish, “she already has it.”",
+        "kana": "„Geh nur nach Hause“, sagte der Fisch, „sie hat es schon.“"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "fangen",
+       "reading": "/ˈfaŋən/",
+       "fr": "attraper",
+       "en": "to catch"
+      },
+      {
+       "jp": "verzaubert",
+       "reading": "/fɛɐ̯ˈtsaʊbɐt/",
+       "fr": "ensorcelé",
+       "en": "enchanted"
+      },
+      {
+       "jp": "bitten",
+       "reading": "/ˈbɪtn̩/",
+       "fr": "prier, demander",
+       "en": "to ask, to beg"
+      },
+      {
+       "jp": "sich etwas wünschen",
+       "reading": "/zɪç ˈɛtvas ˈvʏnʃn̩/",
+       "fr": "faire un vœu",
+       "en": "to wish for something"
+      },
+      {
+       "jp": "rufen",
+       "reading": "/ˈʁuːfn̩/",
+       "fr": "appeler",
+       "en": "to call"
+      },
+      {
+       "jp": "klar",
+       "reading": "/klaːɐ̯/",
+       "fr": "clair, limpide",
+       "en": "clear"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi le pêcheur relâche-t-il le poisson ?",
+        "en": "Why does the fisherman let the fish go?"
+       },
+       "choices": [
+        {
+         "fr": "Le poisson est trop petit",
+         "en": "The fish is too small"
+        },
+        {
+         "fr": "Le poisson dit qu’il est un prince ensorcelé",
+         "en": "The fish says he is an enchanted prince"
+        },
+        {
+         "fr": "Sa femme le lui demande",
+         "en": "His wife asks him to"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que reproche la femme à son mari ?",
+        "en": "What does the wife reproach her husband for?"
+       },
+       "choices": [
+        {
+         "fr": "De ne pas avoir fait de vœu",
+         "en": "Not having made a wish"
+        },
+        {
+         "fr": "D’être rentré trop tard",
+         "en": "Coming home too late"
+        },
+        {
+         "fr": "D’avoir mangé le poisson",
+         "en": "Eating the fish"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "fischer-und-frau-2",
+     "title": {
+      "jp": "Immer mehr",
+      "fr": "Toujours plus",
+      "en": "More and more"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Das Haus war schön, doch nach zwei Wochen sagte die Frau: „Es ist zu klein. Ich möchte in einem Schloss wohnen.“",
+        "fr": "La maison était belle, mais au bout de deux semaines la femme dit : « Elle est trop petite. Je voudrais habiter dans un château. »",
+        "en": "The house was lovely, but after two weeks the wife said: “It is too small. I would like to live in a castle.”",
+        "kana": "Das Haus war schön, doch nach zwei Wochen sagte die Frau: „Es ist zu klein. Ich möchte in einem Schloss wohnen.“"
+       },
+       {
+        "jp": "Der Fischer ging wieder ans Meer, das jetzt dunkelgrau war, und sie bekam ihr Schloss.",
+        "fr": "Le pêcheur retourna à la mer, qui était maintenant gris foncé, et elle eut son château.",
+        "en": "The fisherman went back to the sea, which was now dark grey, and she got her castle.",
+        "kana": "Der Fischer ging wieder ans Meer, das jetzt dunkelgrau war, und sie bekam ihr Schloss."
+       },
+       {
+        "jp": "Dann wollte sie Königin werden, danach Kaiserin, und jedes Mal wurde das Meer schwärzer und der Wind stärker.",
+        "fr": "Puis elle voulut devenir reine, ensuite impératrice, et à chaque fois la mer devenait plus noire et le vent plus fort.",
+        "en": "Then she wanted to become queen, after that empress, and each time the sea grew blacker and the wind stronger.",
+        "kana": "Dann wollte sie Königin werden, danach Kaiserin, und jedes Mal wurde das Meer schwärzer und der Wind stärker."
+       }
+      ],
+      [
+       {
+        "jp": "Eines Morgens sah sie die Sonne aufgehen und dachte: „Wenn ich doch die Sonne und den Mond aufgehen lassen könnte!“",
+        "fr": "Un matin, elle vit le soleil se lever et pensa : « Si seulement je pouvais faire lever le soleil et la lune ! »",
+        "en": "One morning she saw the sun rise and thought: “If only I could make the sun and the moon rise!”",
+        "kana": "Eines Morgens sah sie die Sonne aufgehen und dachte: „Wenn ich doch die Sonne und den Mond aufgehen lassen könnte!“"
+       },
+       {
+        "jp": "Der Fischer zitterte vor Angst, aber er ging. Ein Sturm tobte, und die Wellen waren so hoch wie Kirchtürme.",
+        "fr": "Le pêcheur tremblait de peur, mais il y alla. Une tempête faisait rage, et les vagues étaient aussi hautes que des clochers.",
+        "en": "The fisherman trembled with fear, but he went. A storm was raging, and the waves were as high as church towers.",
+        "kana": "Der Fischer zitterte vor Angst, aber er ging. Ein Sturm tobte, und die Wellen waren so hoch wie Kirchtürme."
+       },
+       {
+        "jp": "„Geh nur nach Hause“, sagte der Fisch. „Sie sitzt wieder in der alten Hütte.“ Und dort sitzen die beiden noch heute.",
+        "fr": "« Rentre donc chez toi, dit le poisson. Elle est de nouveau dans la vieille cabane. » Et ils y sont encore aujourd’hui.",
+        "en": "“Just go home,” said the fish. “She is sitting in the old hut again.” And there the two of them sit to this day.",
+        "kana": "„Geh nur nach Hause“, sagte der Fisch. „Sie sitzt wieder in der alten Hütte.“ Und dort sitzen die beiden noch heute."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "die Kaiserin",
+       "reading": "/diː ˈkaɪzəʁɪn/",
+       "fr": "l’impératrice",
+       "en": "the empress"
+      },
+      {
+       "jp": "aufgehen",
+       "reading": "/ˈaʊfˌɡeːən/",
+       "fr": "se lever (astre)",
+       "en": "to rise (sun, moon)"
+      },
+      {
+       "jp": "zittern",
+       "reading": "/ˈtsɪtɐn/",
+       "fr": "trembler",
+       "en": "to tremble"
+      },
+      {
+       "jp": "toben",
+       "reading": "/ˈtoːbn̩/",
+       "fr": "faire rage",
+       "en": "to rage"
+      },
+      {
+       "jp": "die Welle",
+       "reading": "/diː ˈvɛlə/",
+       "fr": "la vague",
+       "en": "the wave"
+      },
+      {
+       "jp": "der Kirchturm",
+       "reading": "/deːɐ̯ ˈkɪʁçˌtʊʁm/",
+       "fr": "le clocher",
+       "en": "the church tower"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Comment la mer change-t-elle au fil des vœux ?",
+        "en": "How does the sea change as the wishes go on?"
+       },
+       "choices": [
+        {
+         "fr": "Elle se retire peu à peu",
+         "en": "It gradually recedes"
+        },
+        {
+         "fr": "Elle devient de plus en plus calme",
+         "en": "It becomes calmer and calmer"
+        },
+        {
+         "fr": "Elle devient de plus en plus sombre et agitée",
+         "en": "It becomes darker and rougher"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Quel dernier vœu fait tout perdre à la femme ?",
+        "en": "Which last wish makes the wife lose everything?"
+       },
+       "choices": [
+        {
+         "fr": "Devenir reine",
+         "en": "To become queen"
+        },
+        {
+         "fr": "Commander au soleil et à la lune",
+         "en": "To command the sun and the moon"
+        },
+        {
+         "fr": "Avoir un château en or",
+         "en": "To have a castle of gold"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "heinzelmaennchen",
+   "glyph": "K",
+   "level": "GOETHEB1",
+   "color": "#8A4A6A",
+   "title": {
+    "jp": "Die Heinzelmännchen zu Köln",
+    "fr": "Les Lutins de Cologne",
+    "en": "The Elves of Cologne"
+   },
+   "summary": {
+    "fr": "Autrefois, à Cologne, de petits lutins faisaient tout le travail pendant la nuit… jusqu’à ce qu’une curieuse veuille les voir.",
+    "en": "Long ago in Cologne, little elves did all the work during the night… until a curious woman wanted to see them."
+   },
+   "chapters": [
+    {
+     "slug": "heinzelmaennchen-1",
+     "title": {
+      "jp": "Wie bequem es war",
+      "fr": "Comme c’était commode",
+      "en": "How comfortable it was"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Früher war das Leben in Köln sehr bequem, denn in der Nacht kamen die Heinzelmännchen.",
+        "fr": "Autrefois, la vie à Cologne était très commode, car les lutins venaient pendant la nuit.",
+        "en": "In the old days life in Cologne was very comfortable, for the elves came during the night.",
+        "kana": "Früher war das Leben in Köln sehr bequem, denn in der Nacht kamen die Heinzelmännchen."
+       },
+       {
+        "jp": "Während die Handwerker schliefen, wurde ihre ganze Arbeit von den kleinen Männern erledigt.",
+        "fr": "Pendant que les artisans dormaient, tout leur travail était fait par les petits hommes.",
+        "en": "While the craftsmen slept, all their work was done by the little men.",
+        "kana": "Während die Handwerker schliefen, wurde ihre ganze Arbeit von den kleinen Männern erledigt."
+       },
+       {
+        "jp": "Beim Bäcker wurde das Brot gebacken, beim Zimmermann wurden Häuser gebaut, und beim Schneider wurden die Kleider genäht.",
+        "fr": "Chez le boulanger le pain était cuit, chez le charpentier les maisons étaient bâties, et chez le tailleur les habits étaient cousus.",
+        "en": "At the baker’s the bread was baked, at the carpenter’s houses were built, and at the tailor’s the clothes were sewn.",
+        "kana": "Beim Bäcker wurde das Brot gebacken, beim Zimmermann wurden Häuser gebaut, und beim Schneider wurden die Kleider genäht."
+       }
+      ],
+      [
+       {
+        "jp": "Am Morgen war alles fertig, obwohl niemand einen Finger bewegt hatte.",
+        "fr": "Le matin, tout était prêt, bien que personne n’eût bougé le petit doigt.",
+        "en": "In the morning everything was ready, although nobody had lifted a finger.",
+        "kana": "Am Morgen war alles fertig, obwohl niemand einen Finger bewegt hatte."
+       },
+       {
+        "jp": "Niemand wusste, wie die Heinzelmännchen aussahen, denn sie wollten nicht gesehen werden.",
+        "fr": "Personne ne savait à quoi ressemblaient les lutins, car ils ne voulaient pas être vus.",
+        "en": "Nobody knew what the elves looked like, for they did not want to be seen.",
+        "kana": "Niemand wusste, wie die Heinzelmännchen aussahen, denn sie wollten nicht gesehen werden."
+       },
+       {
+        "jp": "So lebten die Kölner viele Jahre lang faul und zufrieden.",
+        "fr": "C’est ainsi que les habitants de Cologne vécurent de longues années, paresseux et contents.",
+        "en": "And so the people of Cologne lived for many years, lazy and content.",
+        "kana": "So lebten die Kölner viele Jahre lang faul und zufrieden."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "bequem",
+       "reading": "/bəˈkveːm/",
+       "fr": "commode, confortable",
+       "en": "comfortable, easy"
+      },
+      {
+       "jp": "der Handwerker",
+       "reading": "/deːɐ̯ ˈhantˌvɛʁkɐ/",
+       "fr": "l’artisan",
+       "en": "the craftsman"
+      },
+      {
+       "jp": "erledigen",
+       "reading": "/ɛɐ̯ˈleːdɪɡn̩/",
+       "fr": "accomplir, régler",
+       "en": "to get done"
+      },
+      {
+       "jp": "der Zimmermann",
+       "reading": "/deːɐ̯ ˈtsɪmɐˌman/",
+       "fr": "le charpentier",
+       "en": "the carpenter"
+      },
+      {
+       "jp": "der Schneider",
+       "reading": "/deːɐ̯ ˈʃnaɪdɐ/",
+       "fr": "le tailleur",
+       "en": "the tailor"
+      },
+      {
+       "jp": "bewegen",
+       "reading": "/bəˈveːɡn̩/",
+       "fr": "bouger",
+       "en": "to move"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quand les lutins travaillaient-ils ?",
+        "en": "When did the elves work?"
+       },
+       "choices": [
+        {
+         "fr": "Le dimanche seulement",
+         "en": "Only on Sundays"
+        },
+        {
+         "fr": "La nuit, pendant que les artisans dormaient",
+         "en": "At night, while the craftsmen slept"
+        },
+        {
+         "fr": "Le jour, avec les artisans",
+         "en": "By day, with the craftsmen"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Pourquoi personne ne savait-il à quoi ils ressemblaient ?",
+        "en": "Why did nobody know what they looked like?"
+       },
+       "choices": [
+        {
+         "fr": "Ils ne voulaient pas être vus",
+         "en": "They did not want to be seen"
+        },
+        {
+         "fr": "Ils portaient des masques",
+         "en": "They wore masks"
+        },
+        {
+         "fr": "Ils vivaient dans une autre ville",
+         "en": "They lived in another town"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "heinzelmaennchen-2",
+     "title": {
+      "jp": "Die neugierige Frau",
+      "fr": "La femme curieuse",
+      "en": "The curious woman"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Die Frau des Schneiders war jedoch sehr neugierig. Sie wollte unbedingt wissen, wer nachts in der Werkstatt arbeitete.",
+        "fr": "La femme du tailleur, cependant, était très curieuse. Elle voulait absolument savoir qui travaillait la nuit dans l’atelier.",
+        "en": "The tailor’s wife, however, was very curious. She absolutely wanted to know who worked in the workshop at night.",
+        "kana": "Die Frau des Schneiders war jedoch sehr neugierig. Sie wollte unbedingt wissen, wer nachts in der Werkstatt arbeitete."
+       },
+       {
+        "jp": "Eines Abends streute sie Erbsen auf die Treppe und versteckte sich mit einer Lampe.",
+        "fr": "Un soir, elle répandit des petits pois sur l’escalier et se cacha avec une lampe.",
+        "en": "One evening she scattered peas on the stairs and hid with a lamp.",
+        "kana": "Eines Abends streute sie Erbsen auf die Treppe und versteckte sich mit einer Lampe."
+       },
+       {
+        "jp": "Als die Heinzelmännchen kamen, rutschten sie auf den Erbsen aus und fielen mit großem Lärm die Treppe hinunter.",
+        "fr": "Quand les lutins arrivèrent, ils glissèrent sur les pois et dégringolèrent l’escalier à grand bruit.",
+        "en": "When the elves came, they slipped on the peas and tumbled down the stairs with a great noise.",
+        "kana": "Als die Heinzelmännchen kamen, rutschten sie auf den Erbsen aus und fielen mit großem Lärm die Treppe hinunter."
+       }
+      ],
+      [
+       {
+        "jp": "Die Frau lief mit der Lampe herbei, um sie zu sehen. Aber die Heinzelmännchen waren schon verschwunden.",
+        "fr": "La femme accourut avec la lampe pour les voir. Mais les lutins avaient déjà disparu.",
+        "en": "The woman came running with the lamp to see them. But the elves had already vanished.",
+        "kana": "Die Frau lief mit der Lampe herbei, um sie zu sehen. Aber die Heinzelmännchen waren schon verschwunden."
+       },
+       {
+        "jp": "Seit dieser Nacht sind sie nie wieder zurückgekommen.",
+        "fr": "Depuis cette nuit-là, ils ne sont plus jamais revenus.",
+        "en": "Since that night they have never come back.",
+        "kana": "Seit dieser Nacht sind sie nie wieder zurückgekommen."
+       },
+       {
+        "jp": "Deshalb müssen die Kölner heute alles selbst machen — und wenn die Frau nicht so neugierig gewesen wäre, hätten sie es noch immer bequem.",
+        "fr": "C’est pourquoi les habitants de Cologne doivent aujourd’hui tout faire eux-mêmes — et si la femme n’avait pas été aussi curieuse, ils auraient encore la vie facile.",
+        "en": "That is why the people of Cologne have to do everything themselves today — and if the woman had not been so curious, they would still have an easy life.",
+        "kana": "Deshalb müssen die Kölner heute alles selbst machen — und wenn die Frau nicht so neugierig gewesen wäre, hätten sie es noch immer bequem."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "neugierig",
+       "reading": "/ˈnɔʏˌɡiːʁɪç/",
+       "fr": "curieux",
+       "en": "curious"
+      },
+      {
+       "jp": "streuen",
+       "reading": "/ˈʃtʁɔʏən/",
+       "fr": "répandre, semer",
+       "en": "to scatter"
+      },
+      {
+       "jp": "die Erbse",
+       "reading": "/diː ˈɛʁpsə/",
+       "fr": "le petit pois",
+       "en": "the pea"
+      },
+      {
+       "jp": "sich verstecken",
+       "reading": "/zɪç fɛɐ̯ˈʃtɛkn̩/",
+       "fr": "se cacher",
+       "en": "to hide"
+      },
+      {
+       "jp": "ausrutschen",
+       "reading": "/ˈaʊsˌʁʊtʃn̩/",
+       "fr": "glisser",
+       "en": "to slip"
+      },
+      {
+       "jp": "verschwinden",
+       "reading": "/fɛɐ̯ˈʃvɪndn̩/",
+       "fr": "disparaître",
+       "en": "to disappear"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que fait la femme du tailleur pour surprendre les lutins ?",
+        "en": "What does the tailor’s wife do to catch the elves?"
+       },
+       "choices": [
+        {
+         "fr": "Elle leur prépare un repas",
+         "en": "She cooks them a meal"
+        },
+        {
+         "fr": "Elle ferme la porte à clé",
+         "en": "She locks the door"
+        },
+        {
+         "fr": "Elle répand des pois sur l’escalier",
+         "en": "She scatters peas on the stairs"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Quelle est la conséquence pour les habitants de Cologne ?",
+        "en": "What is the consequence for the people of Cologne?"
+       },
+       "choices": [
+        {
+         "fr": "Ils deviennent riches",
+         "en": "They become rich"
+        },
+        {
+         "fr": "Ils doivent désormais tout faire eux-mêmes",
+         "en": "They now have to do everything themselves"
+        },
+        {
+         "fr": "Ils quittent la ville",
+         "en": "They leave the town"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

@@ -1168,7 +1168,7 @@ test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des fr
   await expect(page.getByRole('heading', { name: 'Quel niveau Goethe vises-tu ?' })).toBeVisible();
   await expect(page.getByRole('radio', { name: /Goethe A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
   // Les niveaux suivants sont annoncés mais pas encore ouverts
-  await expect(page.getByRole('radio', { name: /Goethe B1 — seuil/ })).toBeDisabled();
+  await expect(page.getByRole('radio', { name: /Goethe B2 — avancé/ })).toBeDisabled();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
   await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);
   await page.getByRole('button', { name: 'Suivant' }).click();
@@ -1216,6 +1216,9 @@ test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des fr
   await page.goto(FILE + '#/exam/goethea2-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat A2 — format officiel' })).toBeVisible();
   await expect(page.getByText(/45 questions en 90 minutes/)).toBeVisible();
+  await page.goto(FILE + '#/exam/goetheb1-official');
+  await expect(page.getByText(/65 questions en 165 minutes/)).toBeVisible();
+  await expect(page.getByText(/se valide séparément à 60 points/)).toBeVisible();
   await page.goto(FILE + '#/exam/goethea1-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat A1 — format officiel' })).toBeVisible();
   await expect(page.getByText(/35 questions en 65 minutes/)).toBeVisible();

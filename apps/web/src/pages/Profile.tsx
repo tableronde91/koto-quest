@@ -6,7 +6,7 @@ import { levelFromXp } from '@koto/learning-engine';
 import { examLevelLabel, levelsOfLanguage, type DuelLobbyDto, type MeDto } from '@koto/shared';
 
 /** Niveaux dont le parcours est publié (les autres sont affichés « bientôt »). */
-const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6', 'A1', 'A2', 'B1', 'B2', 'C1', 'HSK1', 'HSK2', 'HSK3', 'HSK4', 'HSK5', 'HSK6', 'DELEA1', 'DELEA2', 'DELEB1', 'DELEB2', 'DELEC1', 'DELEC2', 'GOETHEA1', 'GOETHEA2']);
+const READY_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1', 'TOPIK1', 'TOPIK2', 'TOPIK3', 'TOPIK4', 'TOPIK5', 'TOPIK6', 'A1', 'A2', 'B1', 'B2', 'C1', 'HSK1', 'HSK2', 'HSK3', 'HSK4', 'HSK5', 'HSK6', 'DELEA1', 'DELEA2', 'DELEB1', 'DELEB2', 'DELEC1', 'DELEC2', 'GOETHEA1', 'GOETHEA2', 'GOETHEB1']);
 import { api } from '../api/client';
 import { useUpdatePrefs } from '../api/hooks';
 import { Avatar } from '../components/Avatar';

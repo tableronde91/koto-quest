@@ -228,7 +228,89 @@ HANS = STORY('hans-im-glueck', 'U', 'GOETHEA2', '#B8902A', ('Hans im Glück', 'J
   ]),
 ])
 
-DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS]
+# ═════════════════════════ Vom Fischer und seiner Frau (B1) ═════════════════════════
+FISCHER = STORY('fischer-und-frau', 'V', 'GOETHEB1', '#2E6A7A', ('Vom Fischer und seiner Frau', 'Le Pêcheur et sa femme', 'The Fisherman and His Wife'),
+  ('Un pêcheur relâche un poisson enchanté ; sa femme, elle, veut une maison, puis un château, puis davantage encore.', 'A fisherman lets an enchanted fish go; his wife, however, wants a house, then a castle, then even more.'), [
+  CH('fischer-und-frau-1', ('Der verzauberte Fisch', 'Le poisson enchanté', 'The enchanted fish'), [
+    [S('Es war einmal ein Fischer, der mit seiner Frau Ilsebill in einer alten Hütte am Meer wohnte.', 'Il était une fois un pêcheur qui habitait avec sa femme Ilsebill dans une vieille cabane au bord de la mer.', 'Once upon a time there was a fisherman who lived with his wife Ilsebill in an old hut by the sea.'),
+     S('Eines Tages fing er einen großen Fisch, der plötzlich zu sprechen begann.', 'Un jour, il attrapa un gros poisson qui se mit soudain à parler.', 'One day he caught a big fish that suddenly began to speak.'),
+     S('„Lass mich leben“, bat der Fisch, „ich bin ein verzauberter Prinz.“ Da ließ der Fischer ihn wieder ins Wasser.', '« Laisse-moi la vie, pria le poisson, je suis un prince ensorcelé. » Alors le pêcheur le remit à l’eau.', '“Let me live,” begged the fish, “I am an enchanted prince.” So the fisherman put him back in the water.')],
+    [S('Als die Frau das hörte, wurde sie böse: „Hättest du dir doch etwas gewünscht! Geh zurück und sag ihm, dass wir ein Haus haben wollen.“', 'Quand la femme entendit cela, elle se fâcha : « Si seulement tu avais fait un vœu ! Retourne lui dire que nous voulons une maison. »', 'When his wife heard this, she grew angry: “If only you had made a wish! Go back and tell him that we want a house.”'),
+     S('Der Mann ging nicht gern, aber er rief den Fisch. Das Meer war grün und gelb und gar nicht mehr so klar.', 'L’homme n’y alla pas de bon cœur, mais il appela le poisson. La mer était verte et jaune, et plus du tout aussi claire.', 'The man did not go gladly, but he called the fish. The sea was green and yellow and no longer so clear.'),
+     S('„Geh nur nach Hause“, sagte der Fisch, „sie hat es schon.“', '« Rentre donc chez toi, dit le poisson, elle l’a déjà. »', '“Just go home,” said the fish, “she already has it.”')],
+  ], [
+    W('fangen', '/ˈfaŋən/', 'attraper', 'to catch'),
+    W('verzaubert', '/fɛɐ̯ˈtsaʊbɐt/', 'ensorcelé', 'enchanted'),
+    W('bitten', '/ˈbɪtn̩/', 'prier, demander', 'to ask, to beg'),
+    W('sich etwas wünschen', '/zɪç ˈɛtvas ˈvʏnʃn̩/', 'faire un vœu', 'to wish for something'),
+    W('rufen', '/ˈʁuːfn̩/', 'appeler', 'to call'),
+    W('klar', '/klaːɐ̯/', 'clair, limpide', 'clear'),
+  ], [
+    Q(('Pourquoi le pêcheur relâche-t-il le poisson ?', 'Why does the fisherman let the fish go?'), [('Le poisson dit qu’il est un prince ensorcelé', 'The fish says he is an enchanted prince'), ('Le poisson est trop petit', 'The fish is too small'), ('Sa femme le lui demande', 'His wife asks him to')], 0),
+    Q(('Que reproche la femme à son mari ?', 'What does the wife reproach her husband for?'), [('De ne pas avoir fait de vœu', 'Not having made a wish'), ('D’être rentré trop tard', 'Coming home too late'), ('D’avoir mangé le poisson', 'Eating the fish')], 0),
+  ]),
+  CH('fischer-und-frau-2', ('Immer mehr', 'Toujours plus', 'More and more'), [
+    [S('Das Haus war schön, doch nach zwei Wochen sagte die Frau: „Es ist zu klein. Ich möchte in einem Schloss wohnen.“', 'La maison était belle, mais au bout de deux semaines la femme dit : « Elle est trop petite. Je voudrais habiter dans un château. »', 'The house was lovely, but after two weeks the wife said: “It is too small. I would like to live in a castle.”'),
+     S('Der Fischer ging wieder ans Meer, das jetzt dunkelgrau war, und sie bekam ihr Schloss.', 'Le pêcheur retourna à la mer, qui était maintenant gris foncé, et elle eut son château.', 'The fisherman went back to the sea, which was now dark grey, and she got her castle.'),
+     S('Dann wollte sie Königin werden, danach Kaiserin, und jedes Mal wurde das Meer schwärzer und der Wind stärker.', 'Puis elle voulut devenir reine, ensuite impératrice, et à chaque fois la mer devenait plus noire et le vent plus fort.', 'Then she wanted to become queen, after that empress, and each time the sea grew blacker and the wind stronger.')],
+    [S('Eines Morgens sah sie die Sonne aufgehen und dachte: „Wenn ich doch die Sonne und den Mond aufgehen lassen könnte!“', 'Un matin, elle vit le soleil se lever et pensa : « Si seulement je pouvais faire lever le soleil et la lune ! »', 'One morning she saw the sun rise and thought: “If only I could make the sun and the moon rise!”'),
+     S('Der Fischer zitterte vor Angst, aber er ging. Ein Sturm tobte, und die Wellen waren so hoch wie Kirchtürme.', 'Le pêcheur tremblait de peur, mais il y alla. Une tempête faisait rage, et les vagues étaient aussi hautes que des clochers.', 'The fisherman trembled with fear, but he went. A storm was raging, and the waves were as high as church towers.'),
+     S('„Geh nur nach Hause“, sagte der Fisch. „Sie sitzt wieder in der alten Hütte.“ Und dort sitzen die beiden noch heute.', '« Rentre donc chez toi, dit le poisson. Elle est de nouveau dans la vieille cabane. » Et ils y sont encore aujourd’hui.', '“Just go home,” said the fish. “She is sitting in the old hut again.” And there the two of them sit to this day.')],
+  ], [
+    W('die Kaiserin', '/diː ˈkaɪzəʁɪn/', 'l’impératrice', 'the empress'),
+    W('aufgehen', '/ˈaʊfˌɡeːən/', 'se lever (astre)', 'to rise (sun, moon)'),
+    W('zittern', '/ˈtsɪtɐn/', 'trembler', 'to tremble'),
+    W('toben', '/ˈtoːbn̩/', 'faire rage', 'to rage'),
+    W('die Welle', '/diː ˈvɛlə/', 'la vague', 'the wave'),
+    W('der Kirchturm', '/deːɐ̯ ˈkɪʁçˌtʊʁm/', 'le clocher', 'the church tower'),
+  ], [
+    Q(('Comment la mer change-t-elle au fil des vœux ?', 'How does the sea change as the wishes go on?'), [('Elle devient de plus en plus sombre et agitée', 'It becomes darker and rougher'), ('Elle devient de plus en plus calme', 'It becomes calmer and calmer'), ('Elle se retire peu à peu', 'It gradually recedes')], 0),
+    Q(('Quel dernier vœu fait tout perdre à la femme ?', 'Which last wish makes the wife lose everything?'), [('Commander au soleil et à la lune', 'To command the sun and the moon'), ('Devenir reine', 'To become queen'), ('Avoir un château en or', 'To have a castle of gold')], 0),
+  ]),
+])
+
+# ═════════════════════════ Die Heinzelmännchen zu Köln (B1) ═════════════════════════
+HEINZEL = STORY('heinzelmaennchen', 'K', 'GOETHEB1', '#8A4A6A', ('Die Heinzelmännchen zu Köln', 'Les Lutins de Cologne', 'The Elves of Cologne'),
+  ('Autrefois, à Cologne, de petits lutins faisaient tout le travail pendant la nuit… jusqu’à ce qu’une curieuse veuille les voir.', 'Long ago in Cologne, little elves did all the work during the night… until a curious woman wanted to see them.'), [
+  CH('heinzelmaennchen-1', ('Wie bequem es war', 'Comme c’était commode', 'How comfortable it was'), [
+    [S('Früher war das Leben in Köln sehr bequem, denn in der Nacht kamen die Heinzelmännchen.', 'Autrefois, la vie à Cologne était très commode, car les lutins venaient pendant la nuit.', 'In the old days life in Cologne was very comfortable, for the elves came during the night.'),
+     S('Während die Handwerker schliefen, wurde ihre ganze Arbeit von den kleinen Männern erledigt.', 'Pendant que les artisans dormaient, tout leur travail était fait par les petits hommes.', 'While the craftsmen slept, all their work was done by the little men.'),
+     S('Beim Bäcker wurde das Brot gebacken, beim Zimmermann wurden Häuser gebaut, und beim Schneider wurden die Kleider genäht.', 'Chez le boulanger le pain était cuit, chez le charpentier les maisons étaient bâties, et chez le tailleur les habits étaient cousus.', 'At the baker’s the bread was baked, at the carpenter’s houses were built, and at the tailor’s the clothes were sewn.')],
+    [S('Am Morgen war alles fertig, obwohl niemand einen Finger bewegt hatte.', 'Le matin, tout était prêt, bien que personne n’eût bougé le petit doigt.', 'In the morning everything was ready, although nobody had lifted a finger.'),
+     S('Niemand wusste, wie die Heinzelmännchen aussahen, denn sie wollten nicht gesehen werden.', 'Personne ne savait à quoi ressemblaient les lutins, car ils ne voulaient pas être vus.', 'Nobody knew what the elves looked like, for they did not want to be seen.'),
+     S('So lebten die Kölner viele Jahre lang faul und zufrieden.', 'C’est ainsi que les habitants de Cologne vécurent de longues années, paresseux et contents.', 'And so the people of Cologne lived for many years, lazy and content.')],
+  ], [
+    W('bequem', '/bəˈkveːm/', 'commode, confortable', 'comfortable, easy'),
+    W('der Handwerker', '/deːɐ̯ ˈhantˌvɛʁkɐ/', 'l’artisan', 'the craftsman'),
+    W('erledigen', '/ɛɐ̯ˈleːdɪɡn̩/', 'accomplir, régler', 'to get done'),
+    W('der Zimmermann', '/deːɐ̯ ˈtsɪmɐˌman/', 'le charpentier', 'the carpenter'),
+    W('der Schneider', '/deːɐ̯ ˈʃnaɪdɐ/', 'le tailleur', 'the tailor'),
+    W('bewegen', '/bəˈveːɡn̩/', 'bouger', 'to move'),
+  ], [
+    Q(('Quand les lutins travaillaient-ils ?', 'When did the elves work?'), [('La nuit, pendant que les artisans dormaient', 'At night, while the craftsmen slept'), ('Le dimanche seulement', 'Only on Sundays'), ('Le jour, avec les artisans', 'By day, with the craftsmen')], 0),
+    Q(('Pourquoi personne ne savait-il à quoi ils ressemblaient ?', 'Why did nobody know what they looked like?'), [('Ils ne voulaient pas être vus', 'They did not want to be seen'), ('Ils portaient des masques', 'They wore masks'), ('Ils vivaient dans une autre ville', 'They lived in another town')], 0),
+  ]),
+  CH('heinzelmaennchen-2', ('Die neugierige Frau', 'La femme curieuse', 'The curious woman'), [
+    [S('Die Frau des Schneiders war jedoch sehr neugierig. Sie wollte unbedingt wissen, wer nachts in der Werkstatt arbeitete.', 'La femme du tailleur, cependant, était très curieuse. Elle voulait absolument savoir qui travaillait la nuit dans l’atelier.', 'The tailor’s wife, however, was very curious. She absolutely wanted to know who worked in the workshop at night.'),
+     S('Eines Abends streute sie Erbsen auf die Treppe und versteckte sich mit einer Lampe.', 'Un soir, elle répandit des petits pois sur l’escalier et se cacha avec une lampe.', 'One evening she scattered peas on the stairs and hid with a lamp.'),
+     S('Als die Heinzelmännchen kamen, rutschten sie auf den Erbsen aus und fielen mit großem Lärm die Treppe hinunter.', 'Quand les lutins arrivèrent, ils glissèrent sur les pois et dégringolèrent l’escalier à grand bruit.', 'When the elves came, they slipped on the peas and tumbled down the stairs with a great noise.')],
+    [S('Die Frau lief mit der Lampe herbei, um sie zu sehen. Aber die Heinzelmännchen waren schon verschwunden.', 'La femme accourut avec la lampe pour les voir. Mais les lutins avaient déjà disparu.', 'The woman came running with the lamp to see them. But the elves had already vanished.'),
+     S('Seit dieser Nacht sind sie nie wieder zurückgekommen.', 'Depuis cette nuit-là, ils ne sont plus jamais revenus.', 'Since that night they have never come back.'),
+     S('Deshalb müssen die Kölner heute alles selbst machen — und wenn die Frau nicht so neugierig gewesen wäre, hätten sie es noch immer bequem.', 'C’est pourquoi les habitants de Cologne doivent aujourd’hui tout faire eux-mêmes — et si la femme n’avait pas été aussi curieuse, ils auraient encore la vie facile.', 'That is why the people of Cologne have to do everything themselves today — and if the woman had not been so curious, they would still have an easy life.')],
+  ], [
+    W('neugierig', '/ˈnɔʏˌɡiːʁɪç/', 'curieux', 'curious'),
+    W('streuen', '/ˈʃtʁɔʏən/', 'répandre, semer', 'to scatter'),
+    W('die Erbse', '/diː ˈɛʁpsə/', 'le petit pois', 'the pea'),
+    W('sich verstecken', '/zɪç fɛɐ̯ˈʃtɛkn̩/', 'se cacher', 'to hide'),
+    W('ausrutschen', '/ˈaʊsˌʁʊtʃn̩/', 'glisser', 'to slip'),
+    W('verschwinden', '/fɛɐ̯ˈʃvɪndn̩/', 'disparaître', 'to disappear'),
+  ], [
+    Q(('Que fait la femme du tailleur pour surprendre les lutins ?', 'What does the tailor’s wife do to catch the elves?'), [('Elle répand des pois sur l’escalier', 'She scatters peas on the stairs'), ('Elle ferme la porte à clé', 'She locks the door'), ('Elle leur prépare un repas', 'She cooks them a meal')], 0),
+    Q(('Quelle est la conséquence pour les habitants de Cologne ?', 'What is the consequence for the people of Cologne?'), [('Ils doivent désormais tout faire eux-mêmes', 'They now have to do everything themselves'), ('Ils deviennent riches', 'They become rich'), ('Ils quittent la ville', 'They leave the town')], 0),
+  ]),
+])
+
+DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS, FISCHER, HEINZEL]
 
 import sys
 sys.path.insert(0, os.path.dirname(__file__))

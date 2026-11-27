@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
  * Mode histoire allemand (l'apprenti·e des frères Grimm) : le décor de chaque île raconte son chapitre.
  * Goethe A1, la Route des contes : maisons à colombages de Hanau et Steinau, ruelles de Marbourg, maison de pain d'épices,
  * château de Sababurg sous les ronces, marché de Göttingen, mont de Dame Holle, Hamelin et les Musiciens de Brême.
+ * Goethe B1, le pays des légendes : grotte de Barberousse, monts de Rübezahl, barque du Pêcheur, Cologne, cabinet de Faust, rocher de la Lorelei, Brocken.
  * Goethe A2, du Rhin à la Forêt-Noire : puits du Roi Grenouille, bal de Cendrillon, tour de Raiponce, miroir de la Reine, halte du Chat botté, Oie d'or, château de Barbe-de-Grive.
  * Dessins originaux, centrés sur (0, 0).
  */
@@ -267,6 +268,78 @@ function Halt({ ...p }: P) {
   );
 }
 
+/** Montagne creuse du Kyffhäuser : la grotte de l'empereur et ses corbeaux. */
+function Cave({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-24 0 L-8 -28 L4 -16 L12 -24 L26 0Z" fill="#6E7468" />
+      <path d="M-7 0 V-8 Q0 -16 7 -8 V0Z" fill="#2A2420" />
+      <circle cx="0" cy="-5" r="2" fill={calm ? GOLD : RED} />
+      {!calm && <g fill="#1F1A1A"><path d="M-14 -32 l4 -2 l4 2 l-4 1Z" /><path d="M10 -34 l4 -2 l4 2 l-4 1Z" /><path d="M0 -40 l3 -2 l3 2 l-3 1Z" /></g>}
+    </g>
+  );
+}
+
+/** Barque de pêcheur sur une mer qui s'assombrit à chaque vœu. */
+function FisherBoat({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-22 2 q5.5 -5 11 0 q5.5 5 11 0 q5.5 -5 11 0 q5.5 5 11 0" fill="none" stroke={calm ? '#7FC4D8' : '#2A3A4A'} strokeWidth="2.4" />
+      <path d="M-10 -2 H10 L7 4 H-7Z" fill={WOOD} />
+      <path d="M0 -2 V-18" stroke={BEAM} strokeWidth="1.2" />
+      <path d="M0 -17 L9 -6 H0Z" fill={PLASTER} />
+    </g>
+  );
+}
+
+/** Pupitre de savant : livre ouvert, plume et bougie. */
+function Desk({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-12" y="-8" width="24" height="3" fill={WOOD} />
+      <path d="M-10 -5 V0 M10 -5 V0" stroke={WOOD} strokeWidth="2" />
+      <path d="M-8 -9 Q-4 -13 0 -9 Q4 -13 8 -9 V-11 Q4 -15 0 -11 Q-4 -15 -8 -11Z" fill={PLASTER} stroke={BEAM} strokeWidth="0.6" />
+      <rect x="9" y="-14" width="2" height="6" fill={PLASTER} /><path d="M10 -18 q2 2 0 4 q-2 -2 0 -4Z" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Rocher de la Lorelei au-dessus du Rhin. */
+function LoreleiRock({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 L-10 -22 L-2 -30 L8 -26 L14 0Z" fill="#7E8A7A" />
+      <path d="M-10 -22 L-2 -30 L0 -18Z" fill="#6A7668" />
+      <circle cx="0" cy="-34" r="2.6" fill="#E8C8A8" />
+      <path d="M-2.6 -34 Q-6 -26 -3 -22" stroke={GOLD} strokeWidth="2.2" fill="none" strokeLinecap="round" />
+      {!calm && <g fill={BEAM}><circle cx="12" cy="-36" r="1.4" /><rect x="13" y="-42" width="0.8" height="6" /><circle cx="18" cy="-32" r="1.4" /><rect x="19" y="-38" width="0.8" height="6" /></g>}
+    </g>
+  );
+}
+
+/** Le boulet de canon du Baron, lancé au-dessus des toits. */
+function Cannonball({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-16 6 Q-2 -14 12 -12" stroke={SNOW} strokeWidth="1.6" fill="none" strokeDasharray="2 3" opacity="0.8" />
+      <circle cx="12" cy="-12" r="5" fill="#3A3A3A" />
+      <circle cx="10.5" cy="-13.5" r="1.4" fill="#7A7A7A" />
+    </g>
+  );
+}
+
+/** Feu de la nuit de Walpurgis au sommet du Brocken. */
+function Bonfire({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-22 0 L0 -20 L22 0Z" fill="#6E7468" />
+      <path d="M-6 -16 L6 -20 M-6 -20 L6 -16" stroke={WOOD} strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M0 -36 Q8 -26 4 -19 H-4 Q-8 -26 0 -36Z" fill="#E2703A" />
+      <path d="M0 -28 Q3 -24 2 -19 H-2 Q-3 -24 0 -28Z" fill={GOLD} />
+    </g>
+  );
+}
+
 export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Hanau : la maison natale des Grimm et le feu du Rumpelstilzchen
   'goethea1-w1': (calm) => (<><TimberHouse x={-12} y={12} /><Campfire x={12} y={14} calm={calm} /><Fir x={28} y={12} s={0.7} /></>),
@@ -305,4 +378,23 @@ export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'goethea2-w8': () => (<><Castle x={-4} y={13} s={1.1} /><ClothStall x={26} y={13} s={0.6} /></>),
   // Le festin des contes
   'goethea2-final': () => (<><Castle x={-12} y={13} /><Goose x={14} y={14} s={0.8} /><Mirror x={28} y={14} s={0.6} /></>),
+  // ───── Goethe B1 : le pays des légendes ─────
+  // Le Kyffhäuser : la grotte de Barberousse (les corbeaux s'en vont quand l'empereur a écouté)
+  'goetheb1-w1': (calm) => (<><Cave x={-2} y={13} calm={calm} /><Fir x={30} y={12} s={0.6} /></>),
+  // Les monts des Géants de Rübezahl
+  'goetheb1-w2': (calm) => (<><HolleMountain x={-6} y={13} calm={calm} /><Fir x={-30} y={12} s={0.6} /><Signpost x={26} y={14} s={0.8} /></>),
+  // La cabane du Pêcheur et la mer
+  'goetheb1-w3': (calm) => (<><TimberHouse x={-16} y={12} s={0.75} /><FisherBoat x={14} y={12} calm={calm} /></>),
+  // Cologne : les ateliers et la cathédrale
+  'goetheb1-w4': () => (<><TimberHouse x={-18} y={13} s={0.85} /><Tower x={2} y={14} s={0.9} /><Tower x={12} y={14} s={0.9} /><ClothStall x={30} y={13} s={0.6} /></>),
+  // Le cabinet du Docteur Faust
+  'goetheb1-w5': () => (<><TimberHouse x={-14} y={13} /><Desk x={14} y={14} /></>),
+  // La place du marché de Till l'Espiègle
+  'goetheb1-w6': () => (<><ClothStall x={-14} y={13} /><TownGate x={12} y={13} s={0.9} /></>),
+  // Le rocher de la Lorelei
+  'goetheb1-w7': (calm) => (<><LoreleiRock x={-8} y={13} calm={calm} /><FisherBoat x={18} y={12} calm s={0.8} /></>),
+  // Le manoir du Baron de Münchhausen
+  'goetheb1-w8': (calm) => (<><Castle x={-8} y={13} s={0.9} />{!calm && <Cannonball x={20} y={0} />}</>),
+  // Le Brocken, nuit de Walpurgis
+  'goetheb1-final': () => (<><Bonfire x={0} y={13} /><Fir x={-28} y={12} s={0.7} /><Fir x={28} y={12} s={0.7} /></>),
 };

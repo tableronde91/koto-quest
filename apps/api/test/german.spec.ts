@@ -26,7 +26,7 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'de', targetLevel: 'GOETHEA1' });
     const path = (await agent.get('/api/path/GOETHEA1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'GOETHEA1', region: 'Route des contes' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['GOETHEA1', 'GOETHEA2']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['GOETHEA1', 'GOETHEA2', 'GOETHEB1']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['Ä', 'Ö', 'ß', 'ä', 'ö', '7', '❄', '♪']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'goethea1-final', exam: { slug: 'goethea1-official' } });
@@ -50,7 +50,7 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     expect(s.questions.length).toBeGreaterThan(5);
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['bremer-stadtmusikanten', 'suesser-brei', 'sterntaler', 'froschkoenig', 'hans-im-glueck']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['bremer-stadtmusikanten', 'suesser-brei', 'sterntaler', 'froschkoenig', 'hans-im-glueck', 'fischer-und-frau', 'heinzelmaennchen']);
     await agent.get('/api/reading/chapters/medio-pollito-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'suesser-brei').chapters[0];
     const r = (await agent.post('/api/reading/chapters/suesser-brei-1/complete').send({ answers: ch.questions.map((q: any) => q.answer) }).expect(201)).body;
@@ -124,6 +124,32 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     expect(result).toMatchObject({ passed: true, percent: 100 });
     const saga = JSON.parse(readFileSync(resolve(__dirname, '../../../content/story/story.json'), 'utf8')).levels.GOETHEA2;
     expect(saga).toMatchObject({ glyph: 'Ö', jp: 'Schwarzwald' });
+  });
+
+  it('Goethe B1 : le pays des légendes, examen modulaire (30 + 30 + 5 questions, 60 % par module)', async () => {
+    const { agent } = await signUpGerman(ctx);
+    await agent.put('/api/me/preferences').send({ targetLevel: 'GOETHEB1' }).expect(200);
+    const path = (await agent.get('/api/path/GOETHEB1').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'GOETHEB1', region: 'Pays des légendes' });
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['♤', '♧', '♡', '♙', '♗', '♘', '♫', '♖']);
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'goetheb1-final', exam: { slug: 'goetheb1-official' } });
+    const exam = (await agent.post('/api/exams/goetheb1-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(65);
+    expect(exam.exam).toMatchObject({ durationMin: 165, passPercent: 60, sectionMinPercent: 60 });
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const ok = (await agent.post('/api/exams/goetheb1-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(ok).toMatchObject({ passed: true, percent: 100 });
+
+    // Un module manqué suffit à ne pas valider : Schreiben à 0, le total reste pourtant au-dessus de 60 %
+    const exam2 = (await agent.post('/api/exams/goetheb1-official/start').expect(201)).body;
+    const writing = new Set(exam2.questions.filter((q: any) => q.section === 'writing').map((q: any) => q.id));
+    expect(writing.size).toBe(5);
+    const answers2: Record<string, unknown> = {};
+    for (const q of exam2.questions) answers2[q.id] = writing.has(q.id) ? '—' : await correctAnswer(ctx.prisma, q.id);
+    const ko = (await agent.post('/api/exams/goetheb1-official/submit').send({ sessionId: exam2.sessionId, answers: answers2 }).expect(200)).body;
+    expect(ko.percent).toBeGreaterThan(60);
+    expect(ko.passed).toBe(false);
   });
 
   it('saga : l’apprenti·e des frères Grimm, un chapitre par île', async () => {

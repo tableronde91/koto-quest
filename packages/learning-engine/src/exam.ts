@@ -523,9 +523,10 @@ const DELE_MOCK = (level: string): ExamDef => ({
 /**
  * Examen blanc Goethe-Zertifikat au format officiel : Hören, Lesen et Schreiben (en format à choix adapté) ;
  * l'épreuve orale (Sprechen) n'est pas évaluée. Noté sur 100, réussite à 60 points comme à l'examen.
+ * À partir du B1, l'examen est modulaire : chaque module se valide séparément à 60 % (`moduleMin`).
  * Banques content/exams/<niveau>.json, en allemand.
  */
-const GOETHE_OFFICIAL = (level: string, durationMin: number, listening: number, reading: number, writing: number): ExamDef => ({
+const GOETHE_OFFICIAL = (level: string, durationMin: number, listening: number, reading: number, writing: number, moduleMin = 0): ExamDef => ({
   slug: `${level.toLowerCase()}-official`,
   level,
   title: `Examen blanc Goethe-Zertifikat ${level.slice(6)} — format officiel`,
@@ -536,7 +537,7 @@ const GOETHE_OFFICIAL = (level: string, durationMin: number, listening: number, 
     { id: 'writing', title: 'Expression écrite', jpTitle: 'Schreiben', count: writing },
   ],
   passPercent: 60,
-  sectionMinPercent: 0,
+  sectionMinPercent: moduleMin,
   bank: level.toLowerCase(),
 });
 
@@ -559,6 +560,8 @@ export const EXAM_GOETHEA1 = GOETHE_OFFICIAL('GOETHEA1', 65, 15, 15, 5);
 export const EXAM_GOETHEA1_MOCK = GOETHE_MOCK('GOETHEA1');
 export const EXAM_GOETHEA2 = GOETHE_OFFICIAL('GOETHEA2', 90, 20, 20, 5);
 export const EXAM_GOETHEA2_MOCK = GOETHE_MOCK('GOETHEA2');
+export const EXAM_GOETHEB1 = GOETHE_OFFICIAL('GOETHEB1', 165, 30, 30, 5, 60);
+export const EXAM_GOETHEB1_MOCK = GOETHE_MOCK('GOETHEB1');
 
 export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
 export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
@@ -590,6 +593,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_GOETHEA1.slug]: EXAM_GOETHEA1,
   [EXAM_GOETHEA2_MOCK.slug]: EXAM_GOETHEA2_MOCK,
   [EXAM_GOETHEA2.slug]: EXAM_GOETHEA2,
+  [EXAM_GOETHEB1_MOCK.slug]: EXAM_GOETHEB1_MOCK,
+  [EXAM_GOETHEB1.slug]: EXAM_GOETHEB1,
   [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
   [EXAM_DELEA1.slug]: EXAM_DELEA1,
   [EXAM_DELEA2_MOCK.slug]: EXAM_DELEA2_MOCK,
@@ -956,11 +961,19 @@ const TIPS_GOETHE_A2: Partial<Record<ExamSectionId, string>> = {
   writing: 'Schreiben : entraîne-toi à écrire un SMS de trois informations et un courriel formel (Sehr geehrte…, Könnten Sie…, Mit freundlichen Grüßen).',
 };
 
+/** Conseils propres au Goethe B1 : le récit, l'irréel, le passif, l'argumentation. */
+const TIPS_GOETHE_B1: Partial<Record<ExamSectionId, string>> = {
+  grammar: 'Grammaire : reprends le prétérit des verbes forts, le Konjunktiv II (wäre, hätte, würde), le passif, les relatives et les connecteurs (obwohl, trotzdem, deshalb), puis entraîne-toi dans l’atelier Goethe.',
+  listening: 'Hören : entraîne-toi sur des textes longs (visite guidée, conversation, débat radio) ; lis les affirmations avant l’écoute et repère qui défend quelle opinion.',
+  reading: 'Lesen : lis chaque jour un article court et un courrier des lecteurs ; demande-toi si l’auteur est pour ou contre, et relève les mots qui le montrent (obwohl, trotzdem, einerseits).',
+  writing: 'Schreiben : entraîne-toi aux trois formats du B1 — courriel à un ami (trois points à traiter), avis argumenté sur un forum, courriel formel d’excuse — avec connecteurs et formules de politesse.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^GOETHE[ABC][12]$/.test(level)) {
     const weakDe = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakDe.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    const tipsDe = level === 'GOETHEA1' ? TIPS_GOETHE : { ...TIPS_GOETHE, ...TIPS_GOETHE_A2 };
+    const tipsDe = level === 'GOETHEA1' ? TIPS_GOETHE : level === 'GOETHEA2' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2 } : { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1 };
     return weakDe.map((s) => tipsDe[s.id] ?? tipsDe.grammar!).filter(Boolean);
   }
   if (/^DELE[ABC][12]$/.test(level)) {
