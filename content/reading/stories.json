@@ -23717,19 +23717,19 @@
        },
        "choices": [
         {
-         "fr": "À côté d’un cimetière",
-         "en": "Next to a cemetery"
+         "fr": "À côté d’une école",
+         "en": "Next to a school"
         },
         {
          "fr": "À côté d’un marché",
          "en": "Next to a market"
         },
         {
-         "fr": "À côté d’une école",
-         "en": "Next to a school"
+         "fr": "À côté d’un cimetière",
+         "en": "Next to a cemetery"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -23738,19 +23738,19 @@
        },
        "choices": [
         {
-         "fr": "Il imite ceux qui pleurent",
-         "en": "He imitates the mourners"
-        },
-        {
          "fr": "Il lit des livres",
          "en": "He reads books"
+        },
+        {
+         "fr": "Il imite ceux qui pleurent",
+         "en": "He imitates the mourners"
         },
         {
          "fr": "Il vend des légumes",
          "en": "He sells vegetables"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -23876,19 +23876,19 @@
        },
        "choices": [
         {
-         "fr": "Elle déménage encore",
-         "en": "She moves again"
+         "fr": "Elle le punit",
+         "en": "She punishes him"
         },
         {
          "fr": "Elle ouvre une boutique",
          "en": "She opens a shop"
         },
         {
-         "fr": "Elle le punit",
-         "en": "She punishes him"
+         "fr": "Elle déménage encore",
+         "en": "She moves again"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -23993,19 +23993,19 @@
        },
        "choices": [
         {
-         "fr": "On y étudie les rites",
-         "en": "People study the rites"
-        },
-        {
          "fr": "On y vend des livres",
          "en": "People sell books"
+        },
+        {
+         "fr": "On y étudie les rites",
+         "en": "People study the rites"
         },
         {
          "fr": "On y pleure",
          "en": "People weep"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -24148,19 +24148,19 @@
        },
        "choices": [
         {
-         "fr": "Les pousses grandissent trop lentement",
-         "en": "The shoots grow too slowly"
+         "fr": "Les oiseaux mangent tout",
+         "en": "Birds eat everything"
         },
         {
          "fr": "Il pleut trop",
          "en": "It rains too much"
         },
         {
-         "fr": "Les oiseaux mangent tout",
-         "en": "Birds eat everything"
+         "fr": "Les pousses grandissent trop lentement",
+         "en": "The shoots grow too slowly"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -24169,19 +24169,19 @@
        },
        "choices": [
         {
-         "fr": "Il tire les pousses vers le haut",
-         "en": "He pulls the shoots upwards"
-        },
-        {
          "fr": "Il arrose",
          "en": "He waters them"
+        },
+        {
+         "fr": "Il tire les pousses vers le haut",
+         "en": "He pulls the shoots upwards"
         },
         {
          "fr": "Il plante encore",
          "en": "He plants more"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -24307,19 +24307,19 @@
        },
        "choices": [
         {
-         "fr": "Il ne faut pas trop se presser",
-         "en": "Don’t be in too much of a hurry"
+         "fr": "Il faut planter plus",
+         "en": "Plant more"
         },
         {
          "fr": "Il faut travailler la nuit",
          "en": "Work at night"
         },
         {
-         "fr": "Il faut planter plus",
-         "en": "Plant more"
+         "fr": "Il ne faut pas trop se presser",
+         "en": "Don’t be in too much of a hurry"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -24441,19 +24441,19 @@
        },
        "choices": [
         {
-         "fr": "Sous un arbre",
-         "en": "Under a tree"
-        },
-        {
          "fr": "Dans un bateau",
          "en": "In a boat"
+        },
+        {
+         "fr": "Sous un arbre",
+         "en": "Under a tree"
         },
         {
          "fr": "À l’école",
          "en": "At school"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -24579,19 +24579,19 @@
        },
        "choices": [
         {
-         "fr": "S’il est un homme ou un papillon",
-         "en": "Whether he is a man or a butterfly"
+         "fr": "Où est sa maison",
+         "en": "Where his house is"
         },
         {
          "fr": "Quelle heure il est",
          "en": "What time it is"
         },
         {
-         "fr": "Où est sa maison",
-         "en": "Where his house is"
+         "fr": "S’il est un homme ou un papillon",
+         "en": "Whether he is a man or a butterfly"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -24600,19 +24600,19 @@
        },
        "choices": [
         {
-         "fr": "change sans cesse",
-         "en": "keeps changing"
-        },
-        {
          "fr": "ne change jamais",
          "en": "never changes"
+        },
+        {
+         "fr": "change sans cesse",
+         "en": "keeps changing"
         },
         {
          "fr": "est un mauvais rêve",
          "en": "is a bad dream"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -24748,19 +24748,19 @@
        },
        "choices": [
         {
-         "fr": "Que c’est le meilleur du monde",
-         "en": "That it is the best in the world"
+         "fr": "Qu’il faut le brûler",
+         "en": "That it should be burnt"
         },
         {
          "fr": "Qu’il est trop long",
          "en": "That it is too long"
         },
         {
-         "fr": "Qu’il faut le brûler",
-         "en": "That it should be burnt"
+         "fr": "Que c’est le meilleur du monde",
+         "en": "That it is the best in the world"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -24865,19 +24865,19 @@
        },
        "choices": [
         {
-         "fr": "De l’or à qui change un caractère",
-         "en": "Gold to anyone who changes a character"
-        },
-        {
          "fr": "Un poste de ministre",
          "en": "A minister’s post"
+        },
+        {
+         "fr": "De l’or à qui change un caractère",
+         "en": "Gold to anyone who changes a character"
         },
         {
          "fr": "Un nouveau livre",
          "en": "A new book"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -25020,19 +25020,19 @@
        },
        "choices": [
         {
-         "fr": "Zhao Gao",
-         "en": "Zhao Gao"
+         "fr": "Les soldats",
+         "en": "The soldiers"
         },
         {
          "fr": "L’empereur",
          "en": "The emperor"
         },
         {
-         "fr": "Les soldats",
-         "en": "The soldiers"
+         "fr": "Zhao Gao",
+         "en": "Zhao Gao"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -25041,19 +25041,19 @@
        },
        "choices": [
         {
-         "fr": "Un cerf",
-         "en": "A deer"
-        },
-        {
          "fr": "Un cheval",
          "en": "A horse"
+        },
+        {
+         "fr": "Un cerf",
+         "en": "A deer"
         },
         {
          "fr": "Un tigre",
          "en": "A tiger"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -25179,19 +25179,19 @@
        },
        "choices": [
         {
-         "fr": "Faire passer le faux pour le vrai",
-         "en": "Passing off falsehood as truth"
+         "fr": "Offrir un cadeau",
+         "en": "Giving a present"
         },
         {
          "fr": "Bien connaître les animaux",
          "en": "Knowing animals well"
         },
         {
-         "fr": "Offrir un cadeau",
-         "en": "Giving a present"
+         "fr": "Faire passer le faux pour le vrai",
+         "en": "Passing off falsehood as truth"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -25306,19 +25306,19 @@
        },
        "choices": [
         {
-         "fr": "Quinze villes contre le jade",
-         "en": "Fifteen cities for the jade"
+         "fr": "La paix",
+         "en": "Peace"
         },
         {
          "fr": "De l’or contre le jade",
          "en": "Gold for the jade"
         },
         {
-         "fr": "La paix",
-         "en": "Peace"
+         "fr": "Quinze villes contre le jade",
+         "en": "Fifteen cities for the jade"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -25327,19 +25327,19 @@
        },
        "choices": [
         {
-         "fr": "Rapporter le jade intact si Qin ne donne rien",
-         "en": "To bring back the jade intact if Qin gives nothing"
-        },
-        {
          "fr": "Vendre le jade",
          "en": "To sell the jade"
+        },
+        {
+         "fr": "Rapporter le jade intact si Qin ne donne rien",
+         "en": "To bring back the jade intact if Qin gives nothing"
         },
         {
          "fr": "Rester à Qin",
          "en": "To stay in Qin"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -25465,19 +25465,19 @@
        },
        "choices": [
         {
-         "fr": "Se jeter contre la colonne avec le jade",
-         "en": "Smash himself and the jade against the pillar"
+         "fr": "Appeler les soldats de Zhao",
+         "en": "Call the Zhao soldiers"
         },
         {
          "fr": "Partir en courant",
          "en": "Run away"
         },
         {
-         "fr": "Appeler les soldats de Zhao",
-         "en": "Call the Zhao soldiers"
+         "fr": "Se jeter contre la colonne avec le jade",
+         "en": "Smash himself and the jade against the pillar"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -25582,19 +25582,19 @@
        },
        "choices": [
         {
-         "fr": "Un homme le rapporte en secret",
-         "en": "A man secretly carries it back"
-        },
-        {
          "fr": "Le roi de Qin le rend",
          "en": "The king of Qin returns it"
+        },
+        {
+         "fr": "Un homme le rapporte en secret",
+         "en": "A man secretly carries it back"
         },
         {
          "fr": "Il est vendu",
          "en": "It is sold"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -25737,19 +25737,19 @@
        },
        "choices": [
         {
-         "fr": "Elle se noie en mer",
-         "en": "She drowns at sea"
+         "fr": "Elle part vivre ailleurs",
+         "en": "She goes to live elsewhere"
         },
         {
          "fr": "Elle se perd en montagne",
          "en": "She gets lost in the mountains"
         },
         {
-         "fr": "Elle part vivre ailleurs",
-         "en": "She goes to live elsewhere"
+         "fr": "Elle se noie en mer",
+         "en": "She drowns at sea"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -25758,19 +25758,19 @@
        },
        "choices": [
         {
-         "fr": "À cause de son cri",
-         "en": "Because of its cry"
-        },
-        {
          "fr": "À cause de sa couleur",
          "en": "Because of its colour"
+        },
+        {
+         "fr": "À cause de son cri",
+         "en": "Because of its cry"
         },
         {
          "fr": "C’est le nom de son père",
          "en": "It is its father’s name"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -25896,19 +25896,19 @@
        },
        "choices": [
         {
-         "fr": "Une volonté inébranlable",
-         "en": "An unshakeable will"
+         "fr": "L’amour de la mer",
+         "en": "Love of the sea"
         },
         {
          "fr": "Une colère inutile",
          "en": "Useless anger"
         },
         {
-         "fr": "L’amour de la mer",
-         "en": "Love of the sea"
+         "fr": "Une volonté inébranlable",
+         "en": "An unshakeable will"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -26030,19 +26030,19 @@
        },
        "choices": [
         {
-         "fr": "Elles l’obligent à faire de longs détours",
-         "en": "They force him to make long detours"
-        },
-        {
          "fr": "Il veut construire une maison",
          "en": "He wants to build a house"
+        },
+        {
+         "fr": "Elles l’obligent à faire de longs détours",
+         "en": "They force him to make long detours"
         },
         {
          "fr": "Il cherche de l’or",
          "en": "He is looking for gold"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -26145,19 +26145,19 @@
        },
        "choices": [
         {
-         "fr": "Jusqu’à la mer",
-         "en": "To the sea"
+         "fr": "Au marché",
+         "en": "To the market"
         },
         {
          "fr": "Dans la forêt",
          "en": "Into the forest"
         },
         {
-         "fr": "Au marché",
-         "en": "To the market"
+         "fr": "Jusqu’à la mer",
+         "en": "To the sea"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -26166,19 +26166,19 @@
        },
        "choices": [
         {
-         "fr": "Qu’il est sot",
-         "en": "That he is foolish"
-        },
-        {
          "fr": "Qu’il est courageux",
          "en": "That he is brave"
+        },
+        {
+         "fr": "Qu’il est sot",
+         "en": "That he is foolish"
         },
         {
          "fr": "Qu’il est riche",
          "en": "That he is rich"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -26304,19 +26304,19 @@
        },
        "choices": [
         {
-         "fr": "Deux divinités",
-         "en": "Two gods"
+         "fr": "Les voisins",
+         "en": "The neighbours"
         },
         {
          "fr": "Zhisou",
          "en": "Zhisou"
         },
         {
-         "fr": "Les voisins",
-         "en": "The neighbours"
+         "fr": "Deux divinités",
+         "en": "Two gods"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -26459,19 +26459,19 @@
        },
        "choices": [
         {
-         "fr": "La moule séchera sans pluie",
-         "en": "The clam will dry up without rain"
+         "fr": "Il la mangera tout de suite",
+         "en": "He will eat it at once"
         },
         {
          "fr": "Il appellera ses amis",
          "en": "He will call his friends"
         },
         {
-         "fr": "Il la mangera tout de suite",
-         "en": "He will eat it at once"
+         "fr": "La moule séchera sans pluie",
+         "en": "The clam will dry up without rain"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -26569,19 +26569,19 @@
        },
        "choices": [
         {
-         "fr": "Le pêcheur",
-         "en": "The fisherman"
-        },
-        {
          "fr": "Le héron",
          "en": "The snipe"
+        },
+        {
+         "fr": "Le pêcheur",
+         "en": "The fisherman"
         },
         {
          "fr": "La moule",
          "en": "The clam"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -26724,19 +26724,19 @@
        },
        "choices": [
         {
-         "fr": "De se rendre",
-         "en": "To surrender"
-        },
-        {
          "fr": "De partir",
          "en": "To leave"
+        },
+        {
+         "fr": "De se rendre",
+         "en": "To surrender"
         },
         {
          "fr": "De lui apprendre le chinois",
          "en": "To teach him Chinese"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -26862,19 +26862,19 @@
        },
        "choices": [
         {
-         "fr": "Quand les béliers auront des agneaux",
-         "en": "When the rams bear lambs"
+         "fr": "Après un an",
+         "en": "After a year"
         },
         {
          "fr": "Au printemps",
          "en": "In spring"
         },
         {
-         "fr": "Après un an",
-         "en": "After a year"
+         "fr": "Quand les béliers auront des agneaux",
+         "en": "When the rams bear lambs"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -26883,19 +26883,19 @@
        },
        "choices": [
         {
-         "fr": "Dix-neuf ans",
-         "en": "Nineteen years"
-        },
-        {
          "fr": "Trois ans",
          "en": "Three years"
+        },
+        {
+         "fr": "Dix-neuf ans",
+         "en": "Nineteen years"
         },
         {
          "fr": "Toute sa vie",
          "en": "All his life"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -27031,19 +27031,19 @@
        },
        "choices": [
         {
-         "fr": "Il le croit soumis",
-         "en": "He thinks he has submitted"
+         "fr": "Il a payé une rançon",
+         "en": "He paid a ransom"
         },
         {
          "fr": "Goujian s’est échappé",
          "en": "Goujian escaped"
         },
         {
-         "fr": "Il a payé une rançon",
-         "en": "He paid a ransom"
+         "fr": "Il le croit soumis",
+         "en": "He thinks he has submitted"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -27141,19 +27141,19 @@
        },
        "choices": [
         {
-         "fr": "Pour ne pas oublier sa honte",
-         "en": "So as not to forget his shame"
-        },
-        {
          "fr": "Pour se soigner",
          "en": "To cure himself"
+        },
+        {
+         "fr": "Pour ne pas oublier sa honte",
+         "en": "So as not to forget his shame"
         },
         {
          "fr": "Parce qu’il aime l’amertume",
          "en": "Because he likes bitterness"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -27282,19 +27282,19 @@
        },
        "choices": [
         {
-         "fr": "Parler de stratégie",
-         "en": "Talking about strategy"
-        },
-        {
          "fr": "Monter à cheval",
          "en": "Riding horses"
+        },
+        {
+         "fr": "Parler de stratégie",
+         "en": "Talking about strategy"
         },
         {
          "fr": "Soigner les blessés",
          "en": "Healing the wounded"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -27413,19 +27413,19 @@
        },
        "choices": [
         {
-         "fr": "En suivant les livres à la lettre",
-         "en": "Strictly by the book"
+         "fr": "En s’adaptant au terrain",
+         "en": "By adapting to the terrain"
         },
         {
          "fr": "En écoutant ses officiers",
          "en": "By listening to his officers"
         },
         {
-         "fr": "En s’adaptant au terrain",
-         "en": "By adapting to the terrain"
+         "fr": "En suivant les livres à la lettre",
+         "en": "Strictly by the book"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -27434,19 +27434,19 @@
        },
        "choices": [
         {
-         "fr": "Théoriser sans savoir agir",
-         "en": "Theorising without being able to act"
-        },
-        {
          "fr": "Écrire de bons livres",
          "en": "Writing good books"
+        },
+        {
+         "fr": "Théoriser sans savoir agir",
+         "en": "Theorising without being able to act"
         },
         {
          "fr": "Gagner sans combattre",
          "en": "Winning without fighting"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -27556,19 +27556,19 @@
        },
        "choices": [
         {
-         "fr": "Douze",
-         "en": "Twelve"
+         "fr": "Onze",
+         "en": "Eleven"
         },
         {
          "fr": "Deux",
          "en": "Two"
         },
         {
-         "fr": "Onze",
-         "en": "Eleven"
+         "fr": "Douze",
+         "en": "Twelve"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -27577,19 +27577,19 @@
        },
        "choices": [
         {
-         "fr": "À Madrid",
-         "en": "To Madrid"
-        },
-        {
          "fr": "À la rivière",
          "en": "To the river"
+        },
+        {
+         "fr": "À Madrid",
+         "en": "To Madrid"
         },
         {
          "fr": "Chez sa grand-mère",
          "en": "To his grandmother’s"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -27709,19 +27709,19 @@
        },
        "choices": [
         {
-         "fr": "Une girouette",
-         "en": "A weathervane"
+         "fr": "Un cuisinier",
+         "en": "A cook"
         },
         {
          "fr": "Un roi",
          "en": "A king"
         },
         {
-         "fr": "Un cuisinier",
-         "en": "A cook"
+         "fr": "Une girouette",
+         "en": "A weathervane"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -27831,19 +27831,19 @@
        },
        "choices": [
         {
-         "fr": "Une pièce d’or",
-         "en": "A gold coin"
+         "fr": "Des bonbons",
+         "en": "Sweets"
         },
         {
          "fr": "Un ruban",
          "en": "A ribbon"
         },
         {
-         "fr": "Des bonbons",
-         "en": "Sweets"
+         "fr": "Une pièce d’or",
+         "en": "A gold coin"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -27852,19 +27852,19 @@
        },
        "choices": [
         {
-         "fr": "Un ruban rouge",
-         "en": "A red ribbon"
-        },
-        {
          "fr": "Des bonbons",
          "en": "Sweets"
+        },
+        {
+         "fr": "Un ruban rouge",
+         "en": "A red ribbon"
         },
         {
          "fr": "Une robe",
          "en": "A dress"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -27978,19 +27978,19 @@
        },
        "choices": [
         {
-         "fr": "Son ami le souriceau",
-         "en": "Her friend the mouse"
+         "fr": "Le chat",
+         "en": "The cat"
         },
         {
          "fr": "Le coq",
          "en": "The rooster"
         },
         {
-         "fr": "Le chat",
-         "en": "The cat"
+         "fr": "Son ami le souriceau",
+         "en": "Her friend the mouse"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -28127,19 +28127,19 @@
        },
        "choices": [
         {
-         "fr": "Les ailes des moulins",
-         "en": "The windmills’ sails"
+         "fr": "Des lances",
+         "en": "Spears"
         },
         {
          "fr": "Des arbres",
          "en": "Trees"
         },
         {
-         "fr": "Des lances",
-         "en": "Spears"
+         "fr": "Les ailes des moulins",
+         "en": "The windmills’ sails"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -28232,19 +28232,19 @@
        },
        "choices": [
         {
-         "fr": "Sa lance se brise et il tombe",
-         "en": "His lance breaks and he falls"
-        },
-        {
          "fr": "Il gagne",
          "en": "He wins"
+        },
+        {
+         "fr": "Sa lance se brise et il tombe",
+         "en": "His lance breaks and he falls"
         },
         {
          "fr": "Le moulin s’arrête",
          "en": "The windmill stops"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -28402,19 +28402,19 @@
        },
        "choices": [
         {
-         "fr": "Ce qu’est la peur",
-         "en": "What fear is"
+         "fr": "Un métier",
+         "en": "A trade"
         },
         {
          "fr": "À lire",
          "en": "To read"
         },
         {
-         "fr": "Un métier",
-         "en": "A trade"
+         "fr": "Ce qu’est la peur",
+         "en": "What fear is"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -28513,19 +28513,19 @@
        },
        "choices": [
         {
-         "fr": "Un trésor caché",
-         "en": "A hidden treasure"
-        },
-        {
          "fr": "Une porte secrète",
          "en": "A secret door"
+        },
+        {
+         "fr": "Un trésor caché",
+         "en": "A hidden treasure"
         },
         {
          "fr": "Le chemin du village",
          "en": "The way to the village"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -28662,19 +28662,19 @@
        },
        "choices": [
         {
-         "fr": "Une lune blanche",
-         "en": "A white moon"
-        },
-        {
          "fr": "Un soleil",
          "en": "A sun"
+        },
+        {
+         "fr": "Une lune blanche",
+         "en": "A white moon"
         },
         {
          "fr": "Un moulin",
          "en": "A windmill"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -28794,19 +28794,19 @@
        },
        "choices": [
         {
-         "fr": "Sansón Carrasco, un voisin",
-         "en": "Sansón Carrasco, a neighbour"
+         "fr": "Un géant",
+         "en": "A giant"
         },
         {
          "fr": "Le duc",
          "en": "The duke"
         },
         {
-         "fr": "Un géant",
-         "en": "A giant"
+         "fr": "Sansón Carrasco, un voisin",
+         "en": "Sansón Carrasco, a neighbour"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -28815,19 +28815,19 @@
        },
        "choices": [
         {
-         "fr": "Pour le bien de don Quichotte",
-         "en": "For Don Quixote’s own good"
-        },
-        {
          "fr": "Pour gagner de l’argent",
          "en": "To win money"
+        },
+        {
+         "fr": "Pour le bien de don Quichotte",
+         "en": "For Don Quixote’s own good"
         },
         {
          "fr": "Pour épouser Dulcinée",
          "en": "To marry Dulcinea"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -28937,19 +28937,19 @@
        },
        "choices": [
         {
-         "fr": "Il ne s’était pas intéressé à elle",
-         "en": "He had paid no attention to her"
+         "fr": "Il n’avait pas payé",
+         "en": "He had not paid"
         },
         {
          "fr": "Il avait vraiment volé la coupe",
          "en": "He had really stolen the cup"
         },
         {
-         "fr": "Il n’avait pas payé",
-         "en": "He had not paid"
+         "fr": "Il ne s’était pas intéressé à elle",
+         "en": "He had paid no attention to her"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -28958,19 +28958,19 @@
        },
        "choices": [
         {
-         "fr": "Ils continuèrent jusqu’à Saint-Jacques",
-         "en": "They went on to Santiago"
-        },
-        {
          "fr": "Ils rentrèrent en Allemagne",
          "en": "They went back to Germany"
+        },
+        {
+         "fr": "Ils continuèrent jusqu’à Saint-Jacques",
+         "en": "They went on to Santiago"
         },
         {
          "fr": "Ils restèrent à l’auberge",
          "en": "They stayed at the inn"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -29090,19 +29090,19 @@
        },
        "choices": [
         {
-         "fr": "Un coq et une poule blancs",
-         "en": "A white rooster and hen"
+         "fr": "La maison du juge",
+         "en": "The judge’s house"
         },
         {
          "fr": "Une coupe en argent",
          "en": "A silver cup"
         },
         {
-         "fr": "La maison du juge",
-         "en": "The judge’s house"
+         "fr": "Un coq et une poule blancs",
+         "en": "A white rooster and hen"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -29212,19 +29212,19 @@
        },
        "choices": [
         {
-         "fr": "Que des étrangers entrent dans la ville",
-         "en": "To let outsiders into the city"
+         "fr": "D’aller à la plage",
+         "en": "To go to the beach"
         },
         {
          "fr": "De manger dans de l’or",
          "en": "To eat from gold plates"
         },
         {
-         "fr": "D’aller à la plage",
-         "en": "To go to the beach"
+         "fr": "Que des étrangers entrent dans la ville",
+         "en": "To let outsiders into the city"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -29233,19 +29233,19 @@
        },
        "choices": [
         {
-         "fr": "Une femme pauvre hors des remparts",
-         "en": "A poor woman outside the walls"
-        },
-        {
          "fr": "Le maire de la ville",
          "en": "The mayor of the city"
+        },
+        {
+         "fr": "Une femme pauvre hors des remparts",
+         "en": "A poor woman outside the walls"
         },
         {
          "fr": "Personne",
          "en": "Nobody"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     },
@@ -29359,19 +29359,19 @@
        },
        "choices": [
         {
-         "fr": "Les cloches de la ville engloutie",
-         "en": "The bells of the sunken city"
+         "fr": "La tempête",
+         "en": "The storm"
         },
         {
          "fr": "Des chants de pèlerins",
          "en": "Pilgrims singing"
         },
         {
-         "fr": "La tempête",
-         "en": "The storm"
+         "fr": "Les cloches de la ville engloutie",
+         "en": "The bells of the sunken city"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     }
@@ -29502,19 +29502,19 @@
        },
        "choices": [
         {
-         "fr": "Des bijoux et des figurines en or",
-         "en": "Jewels and gold figures"
+         "fr": "Des pierres",
+         "en": "Stones"
         },
         {
          "fr": "Des fleurs",
          "en": "Flowers"
         },
         {
-         "fr": "Des pierres",
-         "en": "Stones"
+         "fr": "Des bijoux et des figurines en or",
+         "en": "Jewels and gold figures"
         }
        ],
-       "answer": 0
+       "answer": 2
       }
      ]
     },
@@ -29613,19 +29613,19 @@
        },
        "choices": [
         {
-         "fr": "Une ville entière faite d’or",
-         "en": "A whole city made of gold"
-        },
-        {
          "fr": "Une montagne de sel",
          "en": "A mountain of salt"
+        },
+        {
+         "fr": "Une ville entière faite d’or",
+         "en": "A whole city made of gold"
         },
         {
          "fr": "Un fleuve d’argent",
          "en": "A river of silver"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -29750,19 +29750,19 @@
        },
        "choices": [
         {
-         "fr": "Ils se défaisaient dans l’eau et ne pensaient pas",
-         "en": "They fell apart in water and could not think"
-        },
-        {
          "fr": "Ils étaient trop grands",
          "en": "They were too tall"
+        },
+        {
+         "fr": "Ils se défaisaient dans l’eau et ne pensaient pas",
+         "en": "They fell apart in water and could not think"
         },
         {
          "fr": "Ils parlaient trop",
          "en": "They talked too much"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -29870,19 +29870,19 @@
        },
        "choices": [
         {
-         "fr": "Les animaux de la forêt",
-         "en": "The animals of the forest"
+         "fr": "Le soleil",
+         "en": "The sun"
         },
         {
          "fr": "Les hommes de bois",
          "en": "The wooden people"
         },
         {
-         "fr": "Le soleil",
-         "en": "The sun"
+         "fr": "Les animaux de la forêt",
+         "en": "The animals of the forest"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -29891,19 +29891,19 @@
        },
        "choices": [
         {
-         "fr": "Ils craignaient qu’ils deviennent leurs égaux",
-         "en": "They feared they would become their equals"
-        },
-        {
          "fr": "Pour les punir d’un mensonge",
          "en": "To punish them for a lie"
+        },
+        {
+         "fr": "Ils craignaient qu’ils deviennent leurs égaux",
+         "en": "They feared they would become their equals"
         },
         {
          "fr": "Pour qu’ils dorment",
          "en": "So they would sleep"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -30013,19 +30013,19 @@
        },
        "choices": [
         {
-         "fr": "Que le doyen l’oublie une fois puissant",
-         "en": "That the dean would forget him once powerful"
-        },
-        {
          "fr": "Que le doyen soit trop jeune",
          "en": "That the dean was too young"
+        },
+        {
+         "fr": "Que le doyen l’oublie une fois puissant",
+         "en": "That the dean would forget him once powerful"
         },
         {
          "fr": "Que la magie soit interdite",
          "en": "That magic was forbidden"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -30145,19 +30145,19 @@
        },
        "choices": [
         {
-         "fr": "Il trouvait une excuse pour refuser",
-         "en": "He found an excuse to refuse"
+         "fr": "Il partait en voyage",
+         "en": "He went travelling"
         },
         {
          "fr": "Il acceptait aussitôt",
          "en": "He agreed at once"
         },
         {
-         "fr": "Il partait en voyage",
-         "en": "He went travelling"
+         "fr": "Il trouvait une excuse pour refuser",
+         "en": "He found an excuse to refuse"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -30166,19 +30166,19 @@
        },
        "choices": [
         {
-         "fr": "Tout n’était qu’une illusion de quelques minutes",
-         "en": "It was all a few minutes’ illusion"
-        },
-        {
          "fr": "Le doyen était vraiment devenu pape",
          "en": "The dean had really become pope"
+        },
+        {
+         "fr": "Tout n’était qu’une illusion de quelques minutes",
+         "en": "It was all a few minutes’ illusion"
         },
         {
          "fr": "Don Illán était en prison",
          "en": "Don Illán was in prison"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -30288,19 +30288,19 @@
        },
        "choices": [
         {
-         "fr": "Qu’un esprit du mal y habite",
-         "en": "That an evil spirit lived there"
-        },
-        {
          "fr": "Que l’eau soit empoisonnée",
          "en": "That the water was poisoned"
+        },
+        {
+         "fr": "Qu’un esprit du mal y habite",
+         "en": "That an evil spirit lived there"
         },
         {
          "fr": "Que le cerf soit dangereux",
          "en": "That the stag was dangerous"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -30414,19 +30414,19 @@
        },
        "choices": [
         {
-         "fr": "De la suivre au fond de l’eau",
-         "en": "To follow her to the bottom of the water"
+         "fr": "De partir à la chasse",
+         "en": "To go hunting"
         },
         {
          "fr": "De l’épouser au château",
          "en": "To marry her at the castle"
         },
         {
-         "fr": "De partir à la chasse",
-         "en": "To go hunting"
+         "fr": "De la suivre au fond de l’eau",
+         "en": "To follow her to the bottom of the water"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -30435,19 +30435,19 @@
        },
        "choices": [
         {
-         "fr": "Personne ne s’en approche",
-         "en": "Nobody goes near it"
-        },
-        {
          "fr": "On y organise des fêtes",
          "en": "Festivals are held there"
+        },
+        {
+         "fr": "Personne ne s’en approche",
+         "en": "Nobody goes near it"
         },
         {
          "fr": "On y pêche",
          "en": "People fish there"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -30557,19 +30557,19 @@
        },
        "choices": [
         {
-         "fr": "Les médecins le lui avaient conseillé pour guérir",
-         "en": "The doctors had advised it to cure him"
-        },
-        {
          "fr": "Il fuyait la justice",
          "en": "He was running from the law"
+        },
+        {
+         "fr": "Les médecins le lui avaient conseillé pour guérir",
+         "en": "The doctors had advised it to cure him"
         },
         {
          "fr": "Il voulait devenir chasseur professionnel",
          "en": "He wanted to become a professional hunter"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -30689,19 +30689,19 @@
        },
        "choices": [
         {
-         "fr": "Pour sauver l’homme, qui allait mourir",
-         "en": "To save the man, who was going to die"
+         "fr": "Pour fuir un autre jaguar",
+         "en": "To escape another jaguar"
         },
         {
          "fr": "Pour visiter la ville",
          "en": "To visit the city"
         },
         {
-         "fr": "Pour fuir un autre jaguar",
-         "en": "To escape another jaguar"
+         "fr": "Pour sauver l’homme, qui allait mourir",
+         "en": "To save the man, who was going to die"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -30710,19 +30710,19 @@
        },
        "choices": [
         {
-         "fr": "Au Jardin zoologique de Buenos Aires",
-         "en": "At the Buenos Aires Zoo"
-        },
-        {
          "fr": "Dans la forêt de Misiones",
          "en": "In the Misiones forest"
+        },
+        {
+         "fr": "Au Jardin zoologique de Buenos Aires",
+         "en": "At the Buenos Aires Zoo"
         },
         {
          "fr": "Chez l’homme",
          "en": "At the man’s house"
         }
        ],
-       "answer": 0
+       "answer": 1
       }
      ]
     }
@@ -30832,19 +30832,19 @@
        },
        "choices": [
         {
-         "fr": "Il aimait le luxe mais ne comprenait rien à l’art",
-         "en": "He loved luxury but understood nothing about art"
-        },
-        {
          "fr": "Il était né dans une famille de marchands",
          "en": "He was born into a merchant family"
+        },
+        {
+         "fr": "Il aimait le luxe mais ne comprenait rien à l’art",
+         "en": "He loved luxury but understood nothing about art"
         },
         {
          "fr": "Il vivait modestement",
          "en": "He lived modestly"
         }
        ],
-       "answer": 0
+       "answer": 1
       },
       {
        "q": {
@@ -30958,19 +30958,19 @@
        },
        "choices": [
         {
-         "fr": "Il oublia ses vers et ses rêves",
-         "en": "He forgot his verses and his dreams"
+         "fr": "Il apprit à composer des valses",
+         "en": "He learnt to compose waltzes"
         },
         {
          "fr": "Il devint roi",
          "en": "He became king"
         },
         {
-         "fr": "Il apprit à composer des valses",
-         "en": "He learnt to compose waltzes"
+         "fr": "Il oublia ses vers et ses rêves",
+         "en": "He forgot his verses and his dreams"
         }
        ],
-       "answer": 0
+       "answer": 2
       },
       {
        "q": {
@@ -30979,19 +30979,862 @@
        },
        "choices": [
         {
-         "fr": "Le poète meurt de froid pendant que la cour fait la fête",
-         "en": "The poet dies of cold while the court celebrates"
-        },
-        {
          "fr": "Le roi offre son trône au poète",
          "en": "The king gives his throne to the poet"
+        },
+        {
+         "fr": "Le poète meurt de froid pendant que la cour fait la fête",
+         "en": "The poet dies of cold while the court celebrates"
         },
         {
          "fr": "Le poète s’enfuit avec les cygnes",
          "en": "The poet escapes with the swans"
         }
        ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "bremer-stadtmusikanten",
+   "glyph": "B",
+   "level": "GOETHEA1",
+   "color": "#8A6A3A",
+   "title": {
+    "jp": "Die Bremer Stadtmusikanten",
+    "fr": "Les Musiciens de Brême",
+    "en": "The Bremen Town Musicians"
+   },
+   "summary": {
+    "fr": "Un âne, un chien, un chat et un coq, trop vieux pour travailler, partent à Brême pour devenir musiciens.",
+    "en": "A donkey, a dog, a cat and a rooster, too old to work, set off for Bremen to become musicians."
+   },
+   "chapters": [
+    {
+     "slug": "bremer-stadtmusikanten-1",
+     "title": {
+      "jp": "Vier alte Tiere",
+      "fr": "Quatre vieux animaux",
+      "en": "Four old animals"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Ein Esel ist alt und kann nicht mehr arbeiten.",
+        "fr": "Un âne est vieux et ne peut plus travailler.",
+        "en": "A donkey is old and can no longer work.",
+        "kana": "Ein Esel ist alt und kann nicht mehr arbeiten."
+       },
+       {
+        "jp": "Er sagt: „Ich gehe nach Bremen. Dort mache ich Musik.“",
+        "fr": "Il dit : « Je vais à Brême. Là-bas, je ferai de la musique. »",
+        "en": "He says: “I’m going to Bremen. There I will make music.”",
+        "kana": "Er sagt: „Ich gehe nach Bremen. Dort mache ich Musik.“"
+       },
+       {
+        "jp": "Auf dem Weg trifft er einen Hund. Der Hund ist müde und traurig.",
+        "fr": "En chemin, il rencontre un chien. Le chien est fatigué et triste.",
+        "en": "On the way he meets a dog. The dog is tired and sad.",
+        "kana": "Auf dem Weg trifft er einen Hund. Der Hund ist müde und traurig."
+       }
+      ],
+      [
+       {
+        "jp": "„Komm mit nach Bremen!“, sagt der Esel.",
+        "fr": "« Viens avec moi à Brême ! » dit l’âne.",
+        "en": "“Come with me to Bremen!” says the donkey.",
+        "kana": "„Komm mit nach Bremen!“, sagt der Esel."
+       },
+       {
+        "jp": "Dann treffen sie eine Katze und einen Hahn.",
+        "fr": "Ensuite, ils rencontrent un chat et un coq.",
+        "en": "Then they meet a cat and a rooster.",
+        "kana": "Dann treffen sie eine Katze und einen Hahn."
+       },
+       {
+        "jp": "Jetzt sind sie vier Freunde, und sie gehen zusammen weiter.",
+        "fr": "Maintenant, ils sont quatre amis, et ils continuent ensemble.",
+        "en": "Now they are four friends, and they walk on together.",
+        "kana": "Jetzt sind sie vier Freunde, und sie gehen zusammen weiter."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "der Esel",
+       "reading": "/deːɐ̯ ˈeːzl̩/",
+       "fr": "l’âne",
+       "en": "the donkey"
+      },
+      {
+       "jp": "der Hund",
+       "reading": "/deːɐ̯ hʊnt/",
+       "fr": "le chien",
+       "en": "the dog"
+      },
+      {
+       "jp": "die Katze",
+       "reading": "/diː ˈkatsə/",
+       "fr": "le chat",
+       "en": "the cat"
+      },
+      {
+       "jp": "der Hahn",
+       "reading": "/deːɐ̯ haːn/",
+       "fr": "le coq",
+       "en": "the rooster"
+      },
+      {
+       "jp": "müde",
+       "reading": "/ˈmyːdə/",
+       "fr": "fatigué",
+       "en": "tired"
+      },
+      {
+       "jp": "zusammen",
+       "reading": "/tsuˈzamən/",
+       "fr": "ensemble",
+       "en": "together"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi l’âne part-il ?",
+        "en": "Why does the donkey leave?"
+       },
+       "choices": [
+        {
+         "fr": "Il veut voir la mer",
+         "en": "He wants to see the sea"
+        },
+        {
+         "fr": "Il est vieux et ne peut plus travailler",
+         "en": "He is old and can no longer work"
+        },
+        {
+         "fr": "Il cherche son maître",
+         "en": "He is looking for his master"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Combien d’amis sont-ils à la fin du chapitre ?",
+        "en": "How many friends are there at the end of the chapter?"
+       },
+       "choices": [
+        {
+         "fr": "Quatre",
+         "en": "Four"
+        },
+        {
+         "fr": "Deux",
+         "en": "Two"
+        },
+        {
+         "fr": "Sept",
+         "en": "Seven"
+        }
+       ],
        "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "bremer-stadtmusikanten-2",
+     "title": {
+      "jp": "Das Haus im Wald",
+      "fr": "La maison dans la forêt",
+      "en": "The house in the forest"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Am Abend kommen die Tiere in einen Wald. Sie haben Hunger.",
+        "fr": "Le soir, les animaux arrivent dans une forêt. Ils ont faim.",
+        "en": "In the evening the animals come to a forest. They are hungry.",
+        "kana": "Am Abend kommen die Tiere in einen Wald. Sie haben Hunger."
+       },
+       {
+        "jp": "Sie sehen ein Haus mit Licht. Im Haus sitzen Räuber und essen.",
+        "fr": "Ils voient une maison éclairée. Dans la maison, des brigands sont à table et mangent.",
+        "en": "They see a house with a light on. Inside, robbers are sitting and eating.",
+        "kana": "Sie sehen ein Haus mit Licht. Im Haus sitzen Räuber und essen."
+       },
+       {
+        "jp": "Der Hund steht auf dem Esel, die Katze auf dem Hund und der Hahn auf der Katze.",
+        "fr": "Le chien monte sur l’âne, le chat sur le chien et le coq sur le chat.",
+        "en": "The dog stands on the donkey, the cat on the dog and the rooster on the cat.",
+        "kana": "Der Hund steht auf dem Esel, die Katze auf dem Hund und der Hahn auf der Katze."
+       }
+      ],
+      [
+       {
+        "jp": "Dann machen sie Musik: Der Esel schreit, der Hund bellt, die Katze miaut und der Hahn kräht.",
+        "fr": "Puis ils font de la musique : l’âne brait, le chien aboie, le chat miaule et le coq chante.",
+        "en": "Then they make music: the donkey brays, the dog barks, the cat miaows and the rooster crows.",
+        "kana": "Dann machen sie Musik: Der Esel schreit, der Hund bellt, die Katze miaut und der Hahn kräht."
+       },
+       {
+        "jp": "Die Räuber haben Angst und laufen schnell weg.",
+        "fr": "Les brigands ont peur et s’enfuient vite.",
+        "en": "The robbers are frightened and quickly run away.",
+        "kana": "Die Räuber haben Angst und laufen schnell weg."
+       },
+       {
+        "jp": "Die vier Freunde essen gut und bleiben für immer im Haus.",
+        "fr": "Les quatre amis mangent bien et restent pour toujours dans la maison.",
+        "en": "The four friends eat well and stay in the house for ever.",
+        "kana": "Die vier Freunde essen gut und bleiben für immer im Haus."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "der Wald",
+       "reading": "/deːɐ̯ valt/",
+       "fr": "la forêt",
+       "en": "the forest"
+      },
+      {
+       "jp": "das Licht",
+       "reading": "/das lɪçt/",
+       "fr": "la lumière",
+       "en": "the light"
+      },
+      {
+       "jp": "der Räuber",
+       "reading": "/deːɐ̯ ˈʁɔʏbɐ/",
+       "fr": "le brigand",
+       "en": "the robber"
+      },
+      {
+       "jp": "bellen",
+       "reading": "/ˈbɛlən/",
+       "fr": "aboyer",
+       "en": "to bark"
+      },
+      {
+       "jp": "die Angst",
+       "reading": "/diː aŋst/",
+       "fr": "la peur",
+       "en": "the fear"
+      },
+      {
+       "jp": "bleiben",
+       "reading": "/ˈblaɪbn̩/",
+       "fr": "rester",
+       "en": "to stay"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qui se trouve dans la maison ?",
+        "en": "Who is in the house?"
+       },
+       "choices": [
+        {
+         "fr": "Sept nains",
+         "en": "Seven dwarfs"
+        },
+        {
+         "fr": "Une sorcière",
+         "en": "A witch"
+        },
+        {
+         "fr": "Des brigands",
+         "en": "Robbers"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que font les brigands en entendant la « musique » ?",
+        "en": "What do the robbers do when they hear the “music”?"
+       },
+       "choices": [
+        {
+         "fr": "Ils dansent",
+         "en": "They dance"
+        },
+        {
+         "fr": "Ils s’enfuient",
+         "en": "They run away"
+        },
+        {
+         "fr": "Ils invitent les animaux",
+         "en": "They invite the animals in"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "suesser-brei",
+   "glyph": "S",
+   "level": "GOETHEA1",
+   "color": "#C8923A",
+   "title": {
+    "jp": "Der süße Brei",
+    "fr": "La bouillie sucrée",
+    "en": "Sweet Porridge"
+   },
+   "summary": {
+    "fr": "Une petite fille pauvre reçoit une marmite magique qui cuit de la bouillie… mais il faut connaître les mots pour l’arrêter.",
+    "en": "A poor little girl is given a magic pot that cooks porridge… but you need to know the words to stop it."
+   },
+   "chapters": [
+    {
+     "slug": "suesser-brei-1",
+     "title": {
+      "jp": "Der kleine Topf",
+      "fr": "La petite marmite",
+      "en": "The little pot"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Ein Mädchen wohnt mit seiner Mutter in einem kleinen Haus.",
+        "fr": "Une fillette habite avec sa mère dans une petite maison.",
+        "en": "A girl lives with her mother in a small house.",
+        "kana": "Ein Mädchen wohnt mit seiner Mutter in einem kleinen Haus."
+       },
+       {
+        "jp": "Sie sind arm und haben nichts zu essen.",
+        "fr": "Elles sont pauvres et n’ont rien à manger.",
+        "en": "They are poor and have nothing to eat.",
+        "kana": "Sie sind arm und haben nichts zu essen."
+       },
+       {
+        "jp": "Das Mädchen geht in den Wald. Dort trifft es eine alte Frau.",
+        "fr": "La fillette va dans la forêt. Là, elle rencontre une vieille femme.",
+        "en": "The girl goes into the forest. There she meets an old woman.",
+        "kana": "Das Mädchen geht in den Wald. Dort trifft es eine alte Frau."
+       }
+      ],
+      [
+       {
+        "jp": "Die Frau gibt dem Mädchen einen kleinen Topf.",
+        "fr": "La femme donne à la fillette une petite marmite.",
+        "en": "The woman gives the girl a little pot.",
+        "kana": "Die Frau gibt dem Mädchen einen kleinen Topf."
+       },
+       {
+        "jp": "Das Mädchen sagt: „Töpfchen, koche!“ Und der Topf kocht süßen Brei.",
+        "fr": "La fillette dit : « Petite marmite, cuis ! » Et la marmite cuit de la bouillie sucrée.",
+        "en": "The girl says: “Little pot, cook!” And the pot cooks sweet porridge.",
+        "kana": "Das Mädchen sagt: „Töpfchen, koche!“ Und der Topf kocht süßen Brei."
+       },
+       {
+        "jp": "Es sagt: „Töpfchen, steh!“ Und der Topf kocht nicht mehr.",
+        "fr": "Elle dit : « Petite marmite, arrête ! » Et la marmite ne cuit plus.",
+        "en": "She says: “Little pot, stop!” And the pot stops cooking.",
+        "kana": "Es sagt: „Töpfchen, steh!“ Und der Topf kocht nicht mehr."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "arm",
+       "reading": "/aʁm/",
+       "fr": "pauvre",
+       "en": "poor"
+      },
+      {
+       "jp": "der Topf",
+       "reading": "/deːɐ̯ tɔpf/",
+       "fr": "la marmite, la casserole",
+       "en": "the pot"
+      },
+      {
+       "jp": "kochen",
+       "reading": "/ˈkɔxn̩/",
+       "fr": "cuire, cuisiner",
+       "en": "to cook"
+      },
+      {
+       "jp": "der Brei",
+       "reading": "/deːɐ̯ bʁaɪ/",
+       "fr": "la bouillie",
+       "en": "the porridge"
+      },
+      {
+       "jp": "süß",
+       "reading": "/zyːs/",
+       "fr": "sucré",
+       "en": "sweet"
+      },
+      {
+       "jp": "nichts",
+       "reading": "/nɪçts/",
+       "fr": "rien",
+       "en": "nothing"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que donne la vieille femme à la fillette ?",
+        "en": "What does the old woman give the girl?"
+       },
+       "choices": [
+        {
+         "fr": "Une petite marmite",
+         "en": "A little pot"
+        },
+        {
+         "fr": "Un gâteau",
+         "en": "A cake"
+        },
+        {
+         "fr": "Une pièce d’or",
+         "en": "A gold coin"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que faut-il dire pour arrêter la marmite ?",
+        "en": "What must you say to stop the pot?"
+       },
+       "choices": [
+        {
+         "fr": "« Guten Appetit! »",
+         "en": "“Guten Appetit!”"
+        },
+        {
+         "fr": "« Töpfchen, koche! »",
+         "en": "“Töpfchen, koche!”"
+        },
+        {
+         "fr": "« Töpfchen, steh! »",
+         "en": "“Töpfchen, steh!”"
+        }
+       ],
+       "answer": 2
+      }
+     ]
+    },
+    {
+     "slug": "suesser-brei-2",
+     "title": {
+      "jp": "Brei in der ganzen Stadt",
+      "fr": "De la bouillie dans toute la ville",
+      "en": "Porridge all over town"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Eines Tages ist das Mädchen nicht zu Hause.",
+        "fr": "Un jour, la fillette n’est pas à la maison.",
+        "en": "One day the girl is not at home.",
+        "kana": "Eines Tages ist das Mädchen nicht zu Hause."
+       },
+       {
+        "jp": "Die Mutter hat Hunger und sagt: „Töpfchen, koche!“",
+        "fr": "La mère a faim et dit : « Petite marmite, cuis ! »",
+        "en": "The mother is hungry and says: “Little pot, cook!”",
+        "kana": "Die Mutter hat Hunger und sagt: „Töpfchen, koche!“"
+       },
+       {
+        "jp": "Sie isst und ist satt. Aber sie kennt das zweite Wort nicht!",
+        "fr": "Elle mange et n’a plus faim. Mais elle ne connaît pas le deuxième mot !",
+        "en": "She eats and is full. But she doesn’t know the second word!",
+        "kana": "Sie isst und ist satt. Aber sie kennt das zweite Wort nicht!"
+       }
+      ],
+      [
+       {
+        "jp": "Der Topf kocht und kocht. Der Brei ist in der Küche, im Haus und dann auf der Straße.",
+        "fr": "La marmite cuit et cuit encore. La bouillie est dans la cuisine, dans la maison, puis dans la rue.",
+        "en": "The pot cooks and cooks. The porridge is in the kitchen, in the house and then in the street.",
+        "kana": "Der Topf kocht und kocht. Der Brei ist in der Küche, im Haus und dann auf der Straße."
+       },
+       {
+        "jp": "Am Abend kommt das Mädchen und sagt schnell: „Töpfchen, steh!“",
+        "fr": "Le soir, la fillette revient et dit vite : « Petite marmite, arrête ! »",
+        "en": "In the evening the girl comes back and quickly says: “Little pot, stop!”",
+        "kana": "Am Abend kommt das Mädchen und sagt schnell: „Töpfchen, steh!“"
+       },
+       {
+        "jp": "Wer jetzt in die Stadt will, muss zuerst viel Brei essen.",
+        "fr": "Celui qui veut maintenant entrer dans la ville doit d’abord manger beaucoup de bouillie.",
+        "en": "Anyone who now wants to enter the town must first eat a lot of porridge.",
+        "kana": "Wer jetzt in die Stadt will, muss zuerst viel Brei essen."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "zu Hause",
+       "reading": "/tsuː ˈhaʊzə/",
+       "fr": "à la maison",
+       "en": "at home"
+      },
+      {
+       "jp": "satt",
+       "reading": "/zat/",
+       "fr": "rassasié",
+       "en": "full (after eating)"
+      },
+      {
+       "jp": "kennen",
+       "reading": "/ˈkɛnən/",
+       "fr": "connaître",
+       "en": "to know"
+      },
+      {
+       "jp": "das Wort",
+       "reading": "/das vɔʁt/",
+       "fr": "le mot",
+       "en": "the word"
+      },
+      {
+       "jp": "die Küche",
+       "reading": "/diː ˈkʏçə/",
+       "fr": "la cuisine",
+       "en": "the kitchen"
+      },
+      {
+       "jp": "zuerst",
+       "reading": "/tsuˈeːɐ̯st/",
+       "fr": "d’abord",
+       "en": "first"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi la marmite ne s’arrête-t-elle pas ?",
+        "en": "Why doesn’t the pot stop?"
+       },
+       "choices": [
+        {
+         "fr": "La marmite est cassée",
+         "en": "The pot is broken"
+        },
+        {
+         "fr": "La mère ne connaît pas le mot pour l’arrêter",
+         "en": "The mother doesn’t know the word to stop it"
+        },
+        {
+         "fr": "La fillette l’a voulu",
+         "en": "The girl wanted it to"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Qui arrête enfin la marmite ?",
+        "en": "Who finally stops the pot?"
+       },
+       "choices": [
+        {
+         "fr": "La fillette",
+         "en": "The girl"
+        },
+        {
+         "fr": "La vieille femme",
+         "en": "The old woman"
+        },
+        {
+         "fr": "Le maire",
+         "en": "The mayor"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "sterntaler",
+   "glyph": "Z",
+   "level": "GOETHEA1",
+   "color": "#3A5A8A",
+   "title": {
+    "jp": "Die Sterntaler",
+    "fr": "Les Écus tombés du ciel",
+    "en": "The Star Talers"
+   },
+   "summary": {
+    "fr": "Une orpheline donne tout ce qu’elle possède à plus pauvre qu’elle… et les étoiles la récompensent.",
+    "en": "An orphan girl gives away everything she owns to those poorer than her… and the stars reward her."
+   },
+   "chapters": [
+    {
+     "slug": "sterntaler-1",
+     "title": {
+      "jp": "Ein Stück Brot",
+      "fr": "Un morceau de pain",
+      "en": "A piece of bread"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Ein kleines Mädchen hat keinen Vater und keine Mutter mehr.",
+        "fr": "Une petite fille n’a plus ni père ni mère.",
+        "en": "A little girl no longer has a father or a mother.",
+        "kana": "Ein kleines Mädchen hat keinen Vater und keine Mutter mehr."
+       },
+       {
+        "jp": "Es hat kein Haus und kein Bett. Es hat nur seine Kleidung und ein Stück Brot.",
+        "fr": "Elle n’a ni maison ni lit. Elle n’a que ses vêtements et un morceau de pain.",
+        "en": "She has no house and no bed. She has only her clothes and a piece of bread.",
+        "kana": "Es hat kein Haus und kein Bett. Es hat nur seine Kleidung und ein Stück Brot."
+       },
+       {
+        "jp": "Aber das Mädchen ist gut und geht allein in die Welt.",
+        "fr": "Mais la fillette est bonne et s’en va seule dans le monde.",
+        "en": "But the girl is good and goes out alone into the world.",
+        "kana": "Aber das Mädchen ist gut und geht allein in die Welt."
+       }
+      ],
+      [
+       {
+        "jp": "Ein armer Mann sagt: „Ich habe Hunger. Gib mir bitte etwas zu essen!“",
+        "fr": "Un pauvre homme dit : « J’ai faim. Donne-moi quelque chose à manger, s’il te plaît ! »",
+        "en": "A poor man says: “I’m hungry. Please give me something to eat!”",
+        "kana": "Ein armer Mann sagt: „Ich habe Hunger. Gib mir bitte etwas zu essen!“"
+       },
+       {
+        "jp": "Das Mädchen gibt ihm das ganze Brot.",
+        "fr": "La fillette lui donne tout le pain.",
+        "en": "The girl gives him all the bread.",
+        "kana": "Das Mädchen gibt ihm das ganze Brot."
+       },
+       {
+        "jp": "Dann kommt ein Kind: „Mein Kopf ist so kalt.“ Das Mädchen gibt ihm seine Mütze.",
+        "fr": "Puis vient un enfant : « J’ai si froid à la tête. » La fillette lui donne son bonnet.",
+        "en": "Then a child comes: “My head is so cold.” The girl gives him her cap.",
+        "kana": "Dann kommt ein Kind: „Mein Kopf ist so kalt.“ Das Mädchen gibt ihm seine Mütze."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "das Stück",
+       "reading": "/das ʃtʏk/",
+       "fr": "le morceau",
+       "en": "the piece"
+      },
+      {
+       "jp": "das Bett",
+       "reading": "/das bɛt/",
+       "fr": "le lit",
+       "en": "the bed"
+      },
+      {
+       "jp": "allein",
+       "reading": "/aˈlaɪn/",
+       "fr": "seul",
+       "en": "alone"
+      },
+      {
+       "jp": "die Welt",
+       "reading": "/diː vɛlt/",
+       "fr": "le monde",
+       "en": "the world"
+      },
+      {
+       "jp": "geben",
+       "reading": "/ˈɡeːbn̩/",
+       "fr": "donner",
+       "en": "to give"
+      },
+      {
+       "jp": "die Mütze",
+       "reading": "/diː ˈmʏtsə/",
+       "fr": "le bonnet",
+       "en": "the cap, the woolly hat"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que possède la fillette au début ?",
+        "en": "What does the girl own at the beginning?"
+       },
+       "choices": [
+        {
+         "fr": "Une maison et un lit",
+         "en": "A house and a bed"
+        },
+        {
+         "fr": "Ses vêtements et un morceau de pain",
+         "en": "Her clothes and a piece of bread"
+        },
+        {
+         "fr": "Une marmite magique",
+         "en": "A magic pot"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que donne-t-elle à l’homme pauvre ?",
+        "en": "What does she give the poor man?"
+       },
+       "choices": [
+        {
+         "fr": "Tout son pain",
+         "en": "All her bread"
+        },
+        {
+         "fr": "Son bonnet",
+         "en": "Her cap"
+        },
+        {
+         "fr": "De l’argent",
+         "en": "Money"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "sterntaler-2",
+     "title": {
+      "jp": "Sterne im Wald",
+      "fr": "Des étoiles dans la forêt",
+      "en": "Stars in the forest"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Am Abend ist das Mädchen im Wald. Es ist dunkel und sehr kalt.",
+        "fr": "Le soir, la fillette est dans la forêt. Il fait sombre et très froid.",
+        "en": "In the evening the girl is in the forest. It is dark and very cold.",
+        "kana": "Am Abend ist das Mädchen im Wald. Es ist dunkel und sehr kalt."
+       },
+       {
+        "jp": "Noch ein Kind kommt und möchte ein Hemd. Das Mädchen gibt auch sein Hemd.",
+        "fr": "Un autre enfant arrive et voudrait une chemise. La fillette donne aussi sa chemise.",
+        "en": "Another child comes and would like a shirt. The girl gives her shirt too.",
+        "kana": "Noch ein Kind kommt und möchte ein Hemd. Das Mädchen gibt auch sein Hemd."
+       },
+       {
+        "jp": "Jetzt hat es nichts mehr.",
+        "fr": "Maintenant, elle n’a plus rien.",
+        "en": "Now she has nothing left.",
+        "kana": "Jetzt hat es nichts mehr."
+       }
+      ],
+      [
+       {
+        "jp": "Da fallen die Sterne vom Himmel, und sie sind Geld aus Silber!",
+        "fr": "Alors les étoiles tombent du ciel, et ce sont des pièces d’argent !",
+        "en": "Then the stars fall from the sky, and they are silver coins!",
+        "kana": "Da fallen die Sterne vom Himmel, und sie sind Geld aus Silber!"
+       },
+       {
+        "jp": "Das Mädchen trägt plötzlich ein neues, schönes Hemd.",
+        "fr": "La fillette porte soudain une belle chemise neuve.",
+        "en": "Suddenly the girl is wearing a beautiful new shirt.",
+        "kana": "Das Mädchen trägt plötzlich ein neues, schönes Hemd."
+       },
+       {
+        "jp": "Es sammelt die Taler und ist reich für sein ganzes Leben.",
+        "fr": "Elle ramasse les écus et elle est riche pour toute sa vie.",
+        "en": "She gathers the talers and is rich for the rest of her life.",
+        "kana": "Es sammelt die Taler und ist reich für sein ganzes Leben."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "dunkel",
+       "reading": "/ˈdʊŋkl̩/",
+       "fr": "sombre",
+       "en": "dark"
+      },
+      {
+       "jp": "der Stern",
+       "reading": "/deːɐ̯ ʃtɛʁn/",
+       "fr": "l’étoile",
+       "en": "the star"
+      },
+      {
+       "jp": "der Himmel",
+       "reading": "/deːɐ̯ ˈhɪml̩/",
+       "fr": "le ciel",
+       "en": "the sky"
+      },
+      {
+       "jp": "fallen",
+       "reading": "/ˈfalən/",
+       "fr": "tomber",
+       "en": "to fall"
+      },
+      {
+       "jp": "reich",
+       "reading": "/ʁaɪç/",
+       "fr": "riche",
+       "en": "rich"
+      },
+      {
+       "jp": "das Leben",
+       "reading": "/das ˈleːbn̩/",
+       "fr": "la vie",
+       "en": "the life"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que donne encore la fillette dans la forêt ?",
+        "en": "What else does the girl give away in the forest?"
+       },
+       "choices": [
+        {
+         "fr": "Son pain",
+         "en": "Her bread"
+        },
+        {
+         "fr": "Ses chaussures",
+         "en": "Her shoes"
+        },
+        {
+         "fr": "Sa chemise",
+         "en": "Her shirt"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que deviennent les étoiles ?",
+        "en": "What do the stars turn into?"
+       },
+       "choices": [
+        {
+         "fr": "De la neige",
+         "en": "Snow"
+        },
+        {
+         "fr": "Des pièces d’argent",
+         "en": "Silver coins"
+        },
+        {
+         "fr": "Des gâteaux",
+         "en": "Cakes"
+        }
+       ],
+       "answer": 1
       }
      ]
     }
@@ -31014,6 +31857,10 @@
   "es": {
    "fr": "Contes populaires, légendes et classiques d’Espagne et d’Amérique latine (domaine public), réécrits en espagnol simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (espagnol d’Espagne).",
    "en": "Folk tales, legends and classics from Spain and Latin America (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain)."
+  },
+  "de": {
+   "fr": "Contes des frères Grimm et légendes d’Allemagne (domaine public), réécrits en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).",
+   "en": "Tales by the Brothers Grimm and legends of Germany (public domain), retold in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German)."
   }
  }
 }

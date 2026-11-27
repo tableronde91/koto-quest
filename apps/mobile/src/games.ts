@@ -11,4 +11,4 @@ export function gameGlyph(id: GameInfoDto['id'], lang: StudyLanguage): string {
 export const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': 'mots', 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': 'lettres du hangeul', 'hanzi-rush': 'caractères', speed: 'notions', listening: 'kana ou mots' };
 /** Ce qu'il faut avoir rencontré pour débloquer un jeu ; l'écoute porte sur des kana en japonais, des lettres en coréen, des mots ailleurs. */
 export const gameHint = (id: GameInfoDto['id'], lang: string | null | undefined): string =>
-  id !== 'listening' ? KIND_HINT[id] : lang === 'ko' ? 'lettres ou mots' : lang === 'en' || lang === 'zh' || lang === 'es' ? 'mots' : KIND_HINT.listening;
+  id !== 'listening' ? KIND_HINT[id] : lang === 'ko' ? 'lettres ou mots' : lang === 'en' || lang === 'zh' || lang === 'es' || lang === 'de' ? 'mots' : KIND_HINT.listening;

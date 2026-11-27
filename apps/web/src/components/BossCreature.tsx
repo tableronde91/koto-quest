@@ -463,6 +463,64 @@ const SPECIES: Record<string, Species> = {
     back: <path d="M30 190 Q40 120 60 80 Q100 20 140 80 Q160 120 170 190 Q150 176 135 190 Q118 176 100 190 Q82 176 65 190 Q50 176 30 190Z" fill="#1F1F2E" />,
     face: <path d="M86 118 L92 124 L100 118 L108 124 L114 118" stroke="#F2D94E" strokeWidth="2" fill="none" strokeLinejoin="round" />,
   },
+  // ───── Gardiens allemands (Goethe A1 — la Route des contes des frères Grimm) ─────
+  // Rumpelstilzchen : petit bonhomme à longue barbe, bonnet pointu, fil d'or
+  Ä: {
+    body: '#7A5A3A', belly: '#C9B08A', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M56 70 Q76 14 132 6 Q116 38 144 70Z" fill="#6E3A8A" stroke="#4A2460" strokeWidth="2" />,
+    under: <path d="M70 108 Q100 176 130 108 Q116 122 100 122 Q84 122 70 108Z" fill="#E8E0D0" />,
+    face: <path d="M94 104 Q100 112 106 104" stroke="#8A5A3A" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(158 150)"><circle r="12" fill="none" stroke="#E2B84A" strokeWidth="5" /><path d="M-12 0 H12 M0 -12 V12" stroke="#E2B84A" strokeWidth="2" /><path d="M12 0 Q26 -20 18 -40" stroke="#E2B84A" strokeWidth="2" fill="none" /></g>,
+  },
+  // Les sept Nains : bonnet rouge tombant, barbe blanche, pioche et lanterne
+  Ö: {
+    body: '#3A6AA8', belly: '#9CC0E4', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M56 72 Q70 22 118 26 Q150 30 158 62 Q138 44 142 72Z" fill="#C8323F" stroke="#8E1B26" strokeWidth="2" />,
+    under: <path d="M66 104 Q100 164 134 104 Q118 120 100 120 Q82 120 66 104Z" fill="#FFFFFF" />,
+    front: <g><path d="M30 196 L52 110" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><path d="M36 106 Q54 96 70 112" stroke="#8A93A6" strokeWidth="6" fill="none" strokeLinecap="round" /><text x="160" y="168" fontSize="26" fontWeight="900" fill="#E2B84A" textAnchor="middle">7</text></g>,
+  },
+  // Le Loup du Chaperon rouge : pelage gris, grandes oreilles, bonnet de nuit de la grand-mère
+  ß: {
+    body: '#6A6E78', belly: '#C9CCD4', head: '#7A7E88', eye: '#F2D94E',
+    top: <>{ear(58, false, '#6A6E78', '#E8B8B0')}{ear(142, true, '#6A6E78', '#E8B8B0')}<path d="M62 62 Q100 22 138 62 Q120 50 100 50 Q80 50 62 62Z" fill="#FFFFFF" stroke="#E8B8D0" strokeWidth="3" /></>,
+    under: <ellipse cx="100" cy="112" rx="22" ry="16" fill="#C9CCD4" />,
+    face: <><ellipse cx="100" cy="102" rx="7" ry="5" fill="#1F2433" /><path d="M86 116 L91 124 L96 116 L100 124 L104 116 L109 124 L114 116" fill="#FFFFFF" stroke="#1F2433" strokeWidth="1.5" strokeLinejoin="round" /></>,
+  },
+  // La Sorcière de pain d'épices : chapeau noir, nez crochu, bonhomme de pain d'épices
+  ä: {
+    body: '#4A3A5A', belly: '#7A6A8A', head: '#C8D8A8', eye: '#2A1A10',
+    top: <><ellipse cx="100" cy="52" rx="60" ry="9" fill="#2A2233" /><path d="M72 52 Q88 2 124 -4 Q112 26 128 52Z" fill="#2A2233" /><rect x="74" y="42" width="52" height="7" fill="#B8733A" /></>,
+    face: <path d="M100 92 Q112 104 100 112" stroke="#8AA06A" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(156 152)" fill="#B8733A" stroke="#FFFFFF" strokeWidth="1.5"><circle cx="0" cy="-14" r="7" /><path d="M-4 -8 H4 L12 -2 L10 2 L5 -1 V8 L9 18 H4 L0 10 L-4 18 H-9 L-5 8 V-1 L-10 2 L-12 -2Z" /></g>,
+  },
+  // La Treizième Fée : voile sombre, fuseau et rose des ronces
+  ö: {
+    body: '#3A2A5A', belly: '#6A5A9A', head: '#E8D8E8', eye: '#5A2A8A',
+    back: <path d="M40 80 Q20 150 44 190 L156 190 Q180 150 160 80 Q100 20 40 80Z" fill="#2A1F44" />,
+    top: <path d="M54 84 Q54 34 100 30 Q146 34 146 84 Q130 56 100 54 Q70 56 54 84Z" fill="#2A1F44" />,
+    front: <g><path d="M160 196 V112" stroke="#C9B08A" strokeWidth="3" /><path d="M160 104 L154 122 H166Z" fill="#E8E0D0" stroke="#8A7A5A" strokeWidth="1.5" /><g transform="translate(40 150)"><circle r="8" fill="#C8323F" /><path d="M-4 -2 Q0 4 4 -2" stroke="#8E1B26" strokeWidth="1.5" fill="none" /><path d="M0 8 V26 M0 16 l6 -4" stroke="#2F6B4F" strokeWidth="2.5" /></g></g>,
+  },
+  // Le Vaillant Petit Tailleur : ceinture « 7 », ciseaux, bonnet à plume
+  '7': {
+    body: '#2F6B4F', belly: '#F4EDDC', head: '#E8C8A8', eye: '#2A1A10',
+    top: <><path d="M58 66 Q100 26 142 66 Q120 54 100 54 Q80 54 58 66Z" fill="#8A6A3A" /><path d="M128 52 Q146 20 160 22 Q150 38 140 58Z" fill="#C8323F" /></>,
+    under: <g><rect x="52" y="156" width="96" height="12" fill="#E2B84A" /><text x="100" y="166" fontSize="11" fontWeight="900" fill="#5A3A1A" textAnchor="middle">7</text></g>,
+    front: <g transform="translate(158 140) rotate(20)" stroke="#8A93A6" strokeWidth="3" fill="none"><path d="M-6 -22 L4 8 M6 -22 L-4 8" /><circle cx="-6" cy="14" r="5" stroke="#C8323F" /><circle cx="6" cy="14" r="5" stroke="#C8323F" /></g>,
+  },
+  // Dame Holle : coiffe blanche, édredon et flocons
+  '❄': {
+    body: '#8AA8C8', belly: '#E8F0F8', head: '#F0DCCB', eye: '#2A3A5A',
+    top: <><path d="M54 78 Q54 30 100 28 Q146 30 146 78 Q124 56 100 56 Q76 56 54 78Z" fill="#FFFFFF" stroke="#C9D4E4" strokeWidth="2" /><path d="M54 78 Q46 96 54 112 M146 78 Q154 96 146 112" stroke="#FFFFFF" strokeWidth="8" fill="none" strokeLinecap="round" /></>,
+    front: <g><rect x="132" y="126" width="46" height="34" rx="10" fill="#FFFFFF" stroke="#C9D4E4" strokeWidth="2" /><path d="M144 126 V160 M156 126 V160 M168 126 V160" stroke="#C9D4E4" strokeWidth="1.5" /><g fill="#FFFFFF" stroke="#C9D4E4" strokeWidth="1">{[[24, 40], [38, 70], [16, 96], [176, 36], [186, 84], [150, 14]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="4" />)}</g></g>,
+  },
+  // Le Joueur de flûte : habit bariolé, chapeau à plume, flûte et notes
+  '♪': {
+    body: '#C8323F', belly: '#E2B84A', head: '#E8C8A8', eye: '#2A1A10',
+    back: <path d="M50 120 L50 184 L74 170 L100 186 L126 170 L150 184 L150 120Z" fill="#2F6B4F" />,
+    top: <><path d="M56 68 Q100 30 144 68 Q120 56 100 56 Q80 56 56 68Z" fill="#2F6B4F" /><path d="M60 62 Q40 26 30 30 Q44 44 52 68Z" fill="#E2B84A" /></>,
+    under: <path d="M100 118 V178 M84 124 V176 M116 124 V176" stroke="#3A6AA8" strokeWidth="5" opacity="0.7" />,
+    front: <g><path d="M104 112 L168 96" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><g fill="#1F2433"><circle cx="176" cy="66" r="5" /><rect x="179" y="44" width="2.5" height="22" /><circle cx="158" cy="54" r="5" /><rect x="161" y="32" width="2.5" height="22" /></g></g>,
+  },
   // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
   // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
   ñ: {
@@ -1612,7 +1670,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

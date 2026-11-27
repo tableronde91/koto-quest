@@ -520,6 +520,44 @@ const DELE_MOCK = (level: string): ExamDef => ({
   sectionMinPercent: 40,
 });
 
+/**
+ * Examen blanc Goethe-Zertifikat au format officiel : Hören, Lesen et Schreiben (en format à choix adapté) ;
+ * l'épreuve orale (Sprechen) n'est pas évaluée. Noté sur 100, réussite à 60 points comme à l'examen.
+ * Banques content/exams/<niveau>.json, en allemand.
+ */
+const GOETHE_OFFICIAL = (level: string, durationMin: number, listening: number, reading: number, writing: number): ExamDef => ({
+  slug: `${level.toLowerCase()}-official`,
+  level,
+  title: `Examen blanc Goethe-Zertifikat ${level.slice(6)} — format officiel`,
+  durationMin,
+  sections: [
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Hören', count: listening },
+    { id: 'reading', title: 'Compréhension écrite', jpTitle: 'Lesen', count: reading },
+    { id: 'writing', title: 'Expression écrite', jpTitle: 'Schreiben', count: writing },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 0,
+  bank: level.toLowerCase(),
+});
+
+/** Entraînement généré à partir des leçons d'un niveau du Goethe-Zertifikat. */
+const GOETHE_MOCK = (level: string): ExamDef => ({
+  slug: `${level.toLowerCase()}-mock`,
+  level,
+  title: `Entraînement Goethe ${level.slice(6)}`,
+  durationMin: 25,
+  sections: [
+    { id: 'vocab', title: 'Vocabulaire', jpTitle: 'Wortschatz', count: 12 },
+    { id: 'grammar', title: 'Grammaire', jpTitle: 'Grammatik', count: 10 },
+    { id: 'listening', title: 'Compréhension orale', jpTitle: 'Hören', count: 8 },
+  ],
+  passPercent: 60,
+  sectionMinPercent: 40,
+});
+
+export const EXAM_GOETHEA1 = GOETHE_OFFICIAL('GOETHEA1', 65, 15, 15, 5);
+export const EXAM_GOETHEA1_MOCK = GOETHE_MOCK('GOETHEA1');
+
 export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
 export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
 export const EXAM_DELEA2 = DELE_OFFICIAL('DELEA2', 110, 25, 30, 5);
@@ -546,6 +584,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK5.slug]: EXAM_HSK5,
   [EXAM_HSK6_MOCK.slug]: EXAM_HSK6_MOCK,
   [EXAM_HSK6.slug]: EXAM_HSK6,
+  [EXAM_GOETHEA1_MOCK.slug]: EXAM_GOETHEA1_MOCK,
+  [EXAM_GOETHEA1.slug]: EXAM_GOETHEA1,
   [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
   [EXAM_DELEA1.slug]: EXAM_DELEA1,
   [EXAM_DELEA2_MOCK.slug]: EXAM_DELEA2_MOCK,
@@ -896,7 +936,21 @@ const TIPS_DELE_C2: Partial<Record<ExamSectionId, string>> = {
   writing: 'Expression écrite : entraîne-toi à reformuler et à synthétiser fidèlement un texte, puis à rédiger un article d’opinion nuancé (cabría objetar, ahora bien, de ahí que + subjonctif).',
 };
 
+/** Conseils Goethe-Zertifikat (communs aux niveaux : les leçons et contes du niveau étudié). */
+const TIPS_GOETHE: Partial<Record<ExamSectionId, string>> = {
+  vocab: 'Vocabulaire : refais les leçons du niveau et joue à Word Rush ; apprends chaque nom avec son article (der, die, das) et son pluriel.',
+  grammar: 'Grammaire : reprends les leçons sur la place du verbe (en deuxième position), les articles à l’accusatif, les verbes à particule et les verbes de modalité, puis entraîne-toi dans l’atelier Goethe.',
+  listening: 'Hören : réécoute les dialogues des leçons et joue à Listening Ninja ; entraîne-toi à noter les chiffres, les heures et les prix dès la première écoute.',
+  reading: 'Lesen : lis un chapitre de conte allemand chaque jour et entraîne-toi à repérer l’essentiel d’un message, d’une annonce ou d’un panneau.',
+  writing: 'Schreiben : entraîne-toi à remplir un formulaire et à écrire un court message avec formule d’appel, trois informations et formule de fin (Liebe…, Viele Grüße).',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
+  if (/^GOETHE[ABC][12]$/.test(level)) {
+    const weakDe = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
+    if (!weakDe.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
+    return weakDe.map((s) => TIPS_GOETHE[s.id] ?? TIPS_GOETHE.grammar!).filter(Boolean);
+  }
   if (/^DELE[ABC][12]$/.test(level)) {
     const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakEs.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];

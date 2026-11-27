@@ -1005,6 +1005,11 @@ if MISSING:
     raise SystemExit('\n'.join(MISSING))
 ZH_STORIES = [SHOUZHU, HUASHE, MAODUN, SUNZI, HUJIA, SAIWENG, MENGMU, YAMIAO, ZHUANGZI, YIZI, ZHILU, WANBI, JINGWEI, YUGONG, YUBANG, SUWU, WOXIN, ZHIBING]
 
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from reading_mix import mix
+mix(ZH_STORIES)
+
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('HSK')] + ZH_STORIES
 data.setdefault('notices', {}).update({

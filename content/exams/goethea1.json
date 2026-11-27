@@ -1,0 +1,667 @@
+{
+ "slug": "goethea1",
+ "level": "GOETHEA1",
+ "contentVersion": "2026.11.27",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel Goethe-Zertifikat A1 « Start Deutsch 1 » (Goethe-Institut : types d’épreuves, consignes en allemand, notation sur 100, réussite à 60 points). L’épreuve Schreiben se fait par choix multiple et l’épreuve orale (Sprechen) n’est pas évaluée. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "h-gespraeche",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 1",
+   "title": "Dialogues courts",
+   "prompt": "Was ist richtig? Hören Sie das Gespräch und wählen Sie die richtige Antwort.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "F|Guten Tag! Was möchten Sie?\nM|Einen Kaffee und ein Stück Kuchen, bitte.\nN|Frage: Was möchte der Mann?",
+     "choices": [
+      "Kaffee und Kuchen.",
+      "Tee und Brot.",
+      "Nur ein Wasser."
+     ],
+     "answer": "Kaffee und Kuchen.",
+     "explanation": "Transcription : Femme : Guten Tag! Was möchten Sie? / Homme : Einen Kaffee und ein Stück Kuchen, bitte. / Narrateur : Frage: Was möchte der Mann?"
+    },
+    {
+     "audio": "M|Entschuldigung, wo ist der Bahnhof?\nF|Gehen Sie geradeaus und dann rechts.\nN|Frage: Wo ist der Bahnhof?",
+     "choices": [
+      "Geradeaus und dann rechts.",
+      "Gleich links.",
+      "Neben der Kirche."
+     ],
+     "answer": "Geradeaus und dann rechts.",
+     "explanation": "Transcription : Homme : Entschuldigung, wo ist der Bahnhof? / Femme : Gehen Sie geradeaus und dann rechts. / Narrateur : Frage: Wo ist der Bahnhof?"
+    },
+    {
+     "audio": "F|Was kosten die Äpfel?\nM|Zwei Euro das Kilo.\nN|Frage: Was kosten die Äpfel?",
+     "choices": [
+      "Zwei Euro das Kilo.",
+      "Zwölf Euro das Kilo.",
+      "Zwei Euro das Stück."
+     ],
+     "answer": "Zwei Euro das Kilo.",
+     "explanation": "Transcription : Femme : Was kosten die Äpfel? / Homme : Zwei Euro das Kilo. / Narrateur : Frage: Was kosten die Äpfel?"
+    },
+    {
+     "audio": "M|Wann fängt der Film an?\nF|Um halb neun.\nN|Frage: Wann fängt der Film an?",
+     "choices": [
+      "Um 8.30 Uhr.",
+      "Um 9.30 Uhr.",
+      "Um 9.00 Uhr."
+     ],
+     "answer": "Um 8.30 Uhr.",
+     "explanation": "Transcription : Homme : Wann fängt der Film an? / Femme : Um halb neun. / Narrateur : Frage: Wann fängt der Film an?"
+    },
+    {
+     "audio": "F|Hast du Geschwister?\nM|Ja, eine Schwester. Sie heißt Clara und ist fünfzehn Jahre alt.\nN|Frage: Wie alt ist Clara?",
+     "choices": [
+      "Fünfzehn.",
+      "Fünf.",
+      "Fünfzig."
+     ],
+     "answer": "Fünfzehn.",
+     "explanation": "Transcription : Femme : Hast du Geschwister? / Homme : Ja, eine Schwester. Sie heißt Clara und ist fünfzehn Jahre alt. / Narrateur : Frage: Wie alt ist Clara?"
+    },
+    {
+     "audio": "M|Wie ist das Wetter heute in Bremen?\nF|Es ist kalt, und es regnet ein bisschen.\nN|Frage: Wie ist das Wetter in Bremen?",
+     "choices": [
+      "Es ist kalt und es regnet.",
+      "Die Sonne scheint.",
+      "Es schneit sehr."
+     ],
+     "answer": "Es ist kalt und es regnet.",
+     "explanation": "Transcription : Homme : Wie ist das Wetter heute in Bremen? / Femme : Es ist kalt, und es regnet ein bisschen. / Narrateur : Frage: Wie ist das Wetter in Bremen?"
+    },
+    {
+     "audio": "F|Was machst du am Sonntag?\nM|Ich besuche meine Großeltern in Kassel.\nN|Frage: Was macht der Mann am Sonntag?",
+     "choices": [
+      "Er besucht seine Großeltern.",
+      "Er arbeitet.",
+      "Er geht ins Kino."
+     ],
+     "answer": "Er besucht seine Großeltern.",
+     "explanation": "Transcription : Femme : Was machst du am Sonntag? / Homme : Ich besuche meine Großeltern in Kassel. / Narrateur : Frage: Was macht der Mann am Sonntag?"
+    },
+    {
+     "audio": "M|Guten Tag, haben Sie das Hemd auch in Größe L?\nF|Ja, in Blau und in Weiß.\nN|Frage: Welche Farben hat das Hemd?",
+     "choices": [
+      "Blau und Weiß.",
+      "Rot und Schwarz.",
+      "Grün."
+     ],
+     "answer": "Blau und Weiß.",
+     "explanation": "Transcription : Homme : Guten Tag, haben Sie das Hemd auch in Größe L? / Femme : Ja, in Blau und in Weiß. / Narrateur : Frage: Welche Farben hat das Hemd?"
+    },
+    {
+     "audio": "F|Wo wohnst du?\nM|Ich wohne in Hameln, in der Nähe vom Fluss.\nN|Frage: Wo wohnt der Mann?",
+     "choices": [
+      "In Hameln.",
+      "In Hanau.",
+      "In Hamburg."
+     ],
+     "answer": "In Hameln.",
+     "explanation": "Transcription : Femme : Wo wohnst du? / Homme : Ich wohne in Hameln, in der Nähe vom Fluss. / Narrateur : Frage: Wo wohnt der Mann?"
+    },
+    {
+     "audio": "M|Was fehlt Ihnen?\nF|Mein Kopf tut sehr weh.\nN|Frage: Was fehlt der Frau?",
+     "choices": [
+      "Sie hat Kopfschmerzen.",
+      "Ihr Rücken tut weh.",
+      "Sie hat Hunger."
+     ],
+     "answer": "Sie hat Kopfschmerzen.",
+     "explanation": "Transcription : Homme : Was fehlt Ihnen? / Femme : Mein Kopf tut sehr weh. / Narrateur : Frage: Was fehlt der Frau?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-durchsagen",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 2",
+   "title": "Annonces : vrai ou faux",
+   "prompt": "Richtig oder falsch? Hören Sie die Durchsage.",
+   "count": 4,
+   "questions": [
+    {
+     "audio": "N|Achtung, eine Durchsage: Der Zug nach Göttingen fährt heute von Gleis vier ab.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Achtung, eine Durchsage: Der Zug nach Göttingen fährt heute von Gleis vier ab.",
+     "text": "★ Der Zug fährt von Gleis vier."
+    },
+    {
+     "audio": "N|Liebe Kunden, unser Supermarkt schließt in zehn Minuten. Vielen Dank für Ihren Besuch.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Narrateur : Liebe Kunden, unser Supermarkt schließt in zehn Minuten. Vielen Dank für Ihren Besuch.",
+     "text": "★ Der Supermarkt öffnet in zehn Minuten."
+    },
+    {
+     "audio": "N|Heute im Kaufhaus: Alle Schuhe sind dreißig Prozent billiger.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Heute im Kaufhaus: Alle Schuhe sind dreißig Prozent billiger.",
+     "text": "★ Die Schuhe sind heute billiger."
+    },
+    {
+     "audio": "N|Das Wetter für morgen: Im Norden regnet es. Im Süden scheint die Sonne, und es ist warm.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Narrateur : Das Wetter für morgen: Im Norden regnet es. Im Süden scheint die Sonne, und es ist warm.",
+     "text": "★ Im Süden regnet es morgen."
+    },
+    {
+     "audio": "N|Herzlich willkommen im Brüder-Grimm-Museum. Die Führung beginnt um elf Uhr am Eingang.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Herzlich willkommen im Brüder-Grimm-Museum. Die Führung beginnt um elf Uhr am Eingang.",
+     "text": "★ Die Führung beginnt um elf Uhr."
+    },
+    {
+     "audio": "N|Information für unsere Gäste: Das Schwimmbad im Hotel ist von zehn bis zwanzig Uhr geöffnet.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Narrateur : Information für unsere Gäste: Das Schwimmbad im Hotel ist von zehn bis zwanzig Uhr geöffnet.",
+     "text": "★ Das Schwimmbad schließt um zehn Uhr."
+    },
+    {
+     "audio": "N|Der Bus nach Marburg hat heute zwanzig Minuten Verspätung.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Der Bus nach Marburg hat heute zwanzig Minuten Verspätung.",
+     "text": "★ Der Bus kommt heute später."
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-nachrichten",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 3",
+   "title": "Messages téléphoniques",
+   "prompt": "Was ist richtig? Hören Sie die Nachricht am Telefon.",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "F|Hallo Jan, hier ist Lena. Ich kann morgen leider nicht kommen. Können wir uns am Donnerstag treffen? Ruf mich bitte an.\nN|Frage: Wann möchte Lena Jan treffen?",
+     "choices": [
+      "Am Donnerstag.",
+      "Morgen.",
+      "Am Dienstag."
+     ],
+     "answer": "Am Donnerstag.",
+     "explanation": "Transcription : Femme : Hallo Jan, hier ist Lena. Ich kann morgen leider nicht kommen. Können wir uns am Donnerstag treffen? Ruf mich bitte an. / Narrateur : Frage: Wann möchte Lena Jan treffen?"
+    },
+    {
+     "audio": "M|Guten Tag, hier ist das Restaurant Zur Mühle. Ihr Tisch ist für neun Uhr reserviert, für vier Personen.\nN|Frage: Für wie viele Personen ist der Tisch?",
+     "choices": [
+      "Für vier.",
+      "Für neun.",
+      "Für zwei."
+     ],
+     "answer": "Für vier.",
+     "explanation": "Transcription : Homme : Guten Tag, hier ist das Restaurant Zur Mühle. Ihr Tisch ist für neun Uhr reserviert, für vier Personen. / Narrateur : Frage: Für wie viele Personen ist der Tisch?"
+    },
+    {
+     "audio": "M|Hallo Mama. Ich komme um acht Uhr nach Hause. Soll ich das Abendessen machen?\nN|Frage: Wann kommt der Sohn nach Hause?",
+     "choices": [
+      "Um acht Uhr.",
+      "Um elf Uhr.",
+      "Um vier Uhr."
+     ],
+     "answer": "Um acht Uhr.",
+     "explanation": "Transcription : Homme : Hallo Mama. Ich komme um acht Uhr nach Hause. Soll ich das Abendessen machen? / Narrateur : Frage: Wann kommt der Sohn nach Hause?"
+    },
+    {
+     "audio": "F|Hier ist die Praxis Doktor Weber. Ihr Termin ist nicht am Montag, sondern am Mittwoch um zehn Uhr.\nN|Frage: Wann ist der Termin?",
+     "choices": [
+      "Am Mittwoch.",
+      "Am Montag.",
+      "Um zwölf Uhr."
+     ],
+     "answer": "Am Mittwoch.",
+     "explanation": "Transcription : Femme : Hier ist die Praxis Doktor Weber. Ihr Termin ist nicht am Montag, sondern am Mittwoch um zehn Uhr. / Narrateur : Frage: Wann ist der Termin?"
+    },
+    {
+     "audio": "F|Meine Telefonnummer ist null, sechs, vier, acht, zwanzig, einunddreißig.\nN|Frage: Wie ist die Nummer?",
+     "choices": [
+      "0648 20 31",
+      "0648 12 13",
+      "0684 20 31"
+     ],
+     "answer": "0648 20 31",
+     "explanation": "Transcription : Femme : Meine Telefonnummer ist null, sechs, vier, acht, zwanzig, einunddreißig. / Narrateur : Frage: Wie ist die Nummer?"
+    },
+    {
+     "audio": "M|Hallo Tom, der Deutschkurs ist jetzt am Dienstag und am Donnerstag, nicht mehr am Montag.\nN|Frage: An welchen Tagen ist der Kurs?",
+     "choices": [
+      "Dienstag und Donnerstag.",
+      "Montag und Mittwoch.",
+      "Nur am Montag."
+     ],
+     "answer": "Dienstag und Donnerstag.",
+     "explanation": "Transcription : Homme : Hallo Tom, der Deutschkurs ist jetzt am Dienstag und am Donnerstag, nicht mehr am Montag. / Narrateur : Frage: An welchen Tagen ist der Kurs?"
+    },
+    {
+     "audio": "F|Guten Tag, Frau Schmidt. Ihre Schuhe sind fertig. Sie können sie bis achtzehn Uhr abholen. Das macht fünfunddreißig Euro.\nN|Frage: Was kosten die Schuhe?",
+     "choices": [
+      "35 €",
+      "53 €",
+      "25 €"
+     ],
+     "answer": "35 €",
+     "explanation": "Transcription : Femme : Guten Tag, Frau Schmidt. Ihre Schuhe sind fertig. Sie können sie bis achtzehn Uhr abholen. Das macht fünfunddreißig Euro. / Narrateur : Frage: Was kosten die Schuhe?"
+    },
+    {
+     "audio": "M|Hier ist Paul. Ich bin schon am Bahnhof, aber mein Zug kommt erst in dreißig Minuten. Warte bitte am Rathaus auf mich.\nN|Frage: Wo soll man auf Paul warten?",
+     "choices": [
+      "Am Rathaus.",
+      "Am Bahnhof.",
+      "Im Zug."
+     ],
+     "answer": "Am Rathaus.",
+     "explanation": "Transcription : Homme : Hier ist Paul. Ich bin schon am Bahnhof, aber mein Zug kommt erst in dreißig Minuten. Warte bitte am Rathaus auf mich. / Narrateur : Frage: Wo soll man auf Paul warten?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-email",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 1",
+   "title": "Un courriel : vrai ou faux",
+   "prompt": "Richtig oder falsch? Lesen Sie die E-Mail.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Lucie ist mit ihrem Bruder in Kassel.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Das Hotel ist weit vom Zentrum.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Am Nachmittag gehen sie im Park spazieren.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ In Kassel ist es warm.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Am Samstag wollen sie ein Schloss sehen.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Sie fahren mit dem Auto nach Hause.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Lucie mag das Essen nicht.",
+     "passage": "Liebe Marta,\nviele Grüße aus Kassel! Ich bin mit meinem Bruder Paul hier. Unser Hotel ist im Zentrum, neben dem Museum. Am Morgen besuchen wir die Stadt, und am Nachmittag gehen wir im Park spazieren. Das Essen ist sehr gut: Ich mag die Suppen! Es ist kalt, nur drei Grad. Am Samstag wollen wir das Schloss Sababurg sehen. Am Sonntag fahren wir mit dem Zug nach Hause.\nBis bald!\nLucie"
+    }
+   ]
+  },
+  {
+   "id": "l-anzeigen",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 2",
+   "title": "Petites annonces",
+   "prompt": "Lesen Sie die Anzeige. Was ist richtig?",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "ist in der Nacht geöffnet.",
+      "ist heute geschlossen.",
+      "öffnet nur am Morgen."
+     ],
+     "answer": "ist in der Nacht geöffnet.",
+     "explanation": "Réponse : ist in der Nacht geöffnet.",
+     "text": "★ Die Apotheke …",
+     "passage": "APOTHEKE AM MARKT\nNotdienst: heute von 22 bis 9 Uhr geöffnet."
+    },
+    {
+     "choices": [
+      "kostet am Sonntagnachmittag nichts.",
+      "ist jeden Tag geöffnet.",
+      "kostet am Sonntagnachmittag fünf Euro."
+     ],
+     "answer": "kostet am Sonntagnachmittag nichts.",
+     "explanation": "Réponse : kostet am Sonntagnachmittag nichts.",
+     "text": "★ Das Museum …",
+     "passage": "BRÜDER-GRIMM-MUSEUM\nEintritt: 5 €. Sonntagnachmittag: frei.\nMontag geschlossen."
+    },
+    {
+     "choices": [
+      "hat zwei Zimmer.",
+      "ist weit vom Bahnhof.",
+      "kostet 500 € in der Woche."
+     ],
+     "answer": "hat zwei Zimmer.",
+     "explanation": "Réponse : hat zwei Zimmer.",
+     "text": "★ Die Wohnung …",
+     "passage": "WOHNUNG ZU VERMIETEN\nZwei Zimmer, Küche und Bad. In der Nähe vom Bahnhof. 500 € im Monat.\nTelefon: 0561 34 56 78"
+    },
+    {
+     "choices": [
+      "ist ein Getränk dabei.",
+      "gibt es keinen Kuchen.",
+      "kostet die Suppe extra."
+     ],
+     "answer": "ist ein Getränk dabei.",
+     "explanation": "Réponse : ist ein Getränk dabei.",
+     "text": "★ Im Tagesmenü …",
+     "passage": "GASTHAUS ZUR MÜHLE\nTagesmenü: 12 €\nSuppe, Hauptgericht, Kuchen und ein Getränk."
+    },
+    {
+     "choices": [
+      "ist am Samstagmorgen geöffnet.",
+      "ist am Sonntag geöffnet.",
+      "schließt jeden Tag um 14 Uhr."
+     ],
+     "answer": "ist am Samstagmorgen geöffnet.",
+     "explanation": "Réponse : ist am Samstagmorgen geöffnet.",
+     "text": "★ Die Bibliothek …",
+     "passage": "STADTBIBLIOTHEK\nMontag bis Freitag: 9 bis 20 Uhr.\nSamstag: 10 bis 14 Uhr."
+    },
+    {
+     "choices": [
+      "ist an zwei Tagen in der Woche.",
+      "ist nur für Kinder.",
+      "ist am Morgen."
+     ],
+     "answer": "ist an zwei Tagen in der Woche.",
+     "explanation": "Réponse : ist an zwei Tagen in der Woche.",
+     "text": "★ Der Gitarrenkurs …",
+     "passage": "GITARRENKURS\nFür Kinder und Erwachsene. Dienstag und Donnerstag um 18 Uhr.\nDie erste Stunde ist gratis."
+    },
+    {
+     "choices": [
+      "ist die Kleidung jetzt billiger.",
+      "kosten die Hemden 50 €.",
+      "gibt es keine Hemden."
+     ],
+     "answer": "ist die Kleidung jetzt billiger.",
+     "explanation": "Réponse : ist die Kleidung jetzt billiger.",
+     "text": "★ Im Modehaus …",
+     "passage": "MODEHAUS SONNE\nAlles 50 % billiger!\nHemden ab 10 €."
+    },
+    {
+     "choices": [
+      "ist im Sommer geöffnet.",
+      "ist das ganze Jahr geöffnet.",
+      "ist für alle gratis."
+     ],
+     "answer": "ist im Sommer geöffnet.",
+     "explanation": "Réponse : ist im Sommer geöffnet.",
+     "text": "★ Das Schwimmbad …",
+     "passage": "SCHWIMMBAD\nGeöffnet von Juni bis September.\nKinder bis 6 Jahre: gratis."
+    }
+   ]
+  },
+  {
+   "id": "l-schilder",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 3",
+   "title": "Panneaux et messages : vrai ou faux",
+   "prompt": "Richtig oder falsch? Lesen Sie den Text.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Am Sonntag kann man hier Brot kaufen.",
+     "passage": "An der Tür der Bäckerei:\nBÄCKEREI MÜLLER — Am Sonntag geschlossen."
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Hunde dürfen im Park frei laufen.",
+     "passage": "Im Park:\nHunde müssen an der Leine bleiben."
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Der Zug nach Bremen fährt von Gleis 7.",
+     "passage": "Am Bahnhof:\nDer Zug nach Bremen fährt heute von Gleis 7, nicht von Gleis 2."
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Morgen gibt es Unterricht.",
+     "passage": "In der Schule:\nMorgen ist kein Unterricht. Wir sehen uns am Donnerstag."
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Im Restaurant ist Rauchen verboten.",
+     "passage": "Im Restaurant:\nHier darf man nicht rauchen."
+    },
+    {
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Réponse : Falsch",
+     "text": "★ Am Samstag ist die Praxis geöffnet.",
+     "passage": "An der Arztpraxis:\nSprechstunde: Montag bis Freitag, 8 bis 12 Uhr."
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Das Abendessen ist schon fertig.",
+     "passage": "Nachricht von Mama:\nIch komme heute spät, um neun Uhr. Das Abendessen ist in der Küche."
+    },
+    {
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Réponse : Richtig",
+     "text": "★ Kleidung für Kinder ist im zweiten Stock.",
+     "passage": "Im Kaufhaus:\nKinderkleidung finden Sie im zweiten Stock."
+    }
+   ]
+  },
+  {
+   "id": "s-formular",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 1",
+   "title": "Remplir un formulaire",
+   "prompt": "Ergänzen Sie das Formular: Wählen Sie die passende Antwort.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "Martin",
+      "28 Jahre",
+      "Frankreich",
+      "Sonnenstraße 5"
+     ],
+     "answer": "Martin",
+     "explanation": "Réponse : Martin",
+     "text": "Sie heißen Claire Martin, sind 28 Jahre alt, kommen aus Frankreich, wohnen in Lyon und möchten Deutsch lernen, weil Sie in Deutschland arbeiten wollen.\nANMELDUNG — Sprachschule\n★ Familienname:"
+    },
+    {
+     "choices": [
+      "Frankreich",
+      "Lyon",
+      "28",
+      "Martin"
+     ],
+     "answer": "Frankreich",
+     "explanation": "Réponse : Frankreich",
+     "text": "Sie heißen Claire Martin, sind 28 Jahre alt, kommen aus Frankreich, wohnen in Lyon und möchten Deutsch lernen, weil Sie in Deutschland arbeiten wollen.\nANMELDUNG — Sprachschule\n★ Land:"
+    },
+    {
+     "choices": [
+      "28",
+      "achtundzwanzig Euro",
+      "Mai",
+      "Claire"
+     ],
+     "answer": "28",
+     "explanation": "Réponse : 28",
+     "text": "Sie heißen Claire Martin, sind 28 Jahre alt, kommen aus Frankreich, wohnen in Lyon und möchten Deutsch lernen, weil Sie in Deutschland arbeiten wollen.\nANMELDUNG — Sprachschule\n★ Alter:"
+    },
+    {
+     "choices": [
+      "Ich möchte in Deutschland arbeiten.",
+      "Es ist Dienstag.",
+      "Ich bin groß.",
+      "Ich bin achtundzwanzig."
+     ],
+     "answer": "Ich möchte in Deutschland arbeiten.",
+     "explanation": "Réponse : Ich möchte in Deutschland arbeiten.",
+     "text": "Sie heißen Claire Martin, sind 28 Jahre alt, kommen aus Frankreich, wohnen in Lyon und möchten Deutsch lernen, weil Sie in Deutschland arbeiten wollen.\nANMELDUNG — Sprachschule\n★ Warum möchten Sie Deutsch lernen?"
+    },
+    {
+     "choices": [
+      "Lyon",
+      "Frankreich",
+      "Claire",
+      "Sprachschule"
+     ],
+     "answer": "Lyon",
+     "explanation": "Réponse : Lyon",
+     "text": "Sie heißen Claire Martin, sind 28 Jahre alt, kommen aus Frankreich, wohnen in Lyon und möchten Deutsch lernen, weil Sie in Deutschland arbeiten wollen.\nANMELDUNG — Sprachschule\n★ Wohnort:"
+    }
+   ]
+  },
+  {
+   "id": "s-nachricht",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 2",
+   "title": "Un message court",
+   "prompt": "Lesen Sie die Situation und wählen Sie die beste Nachricht.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "Liebe Anna, am Samstag habe ich Geburtstag. Kommst du um acht Uhr zu mir? Wir essen und tanzen. Viele Grüße, Tom",
+      "Liebe Anna, am Samstag ich habe Geburtstag. Kommst du um acht Uhr bei mich? Wir essen und tanzt.",
+      "Anna, Samstag Geburtstag acht Uhr essen tanzen.",
+      "Liebe Anna, am Samstag hast du Geburtstag. Ich komme nicht zu mir. Tschüss."
+     ],
+     "answer": "Liebe Anna, am Samstag habe ich Geburtstag. Kommst du um acht Uhr zu mir? Wir essen und tanzen. Viele Grüße, Tom",
+     "explanation": "Réponse : Liebe Anna, am Samstag habe ich Geburtstag. Kommst du um acht Uhr zu mir? Wir essen und tanzen. Viele Grüße, Tom",
+     "text": "★ Situation: Laden Sie Ihre Freundin Anna zum Geburtstag ein (Tag, Uhrzeit, Ort, was Sie machen)."
+    },
+    {
+     "choices": [
+      "Lieber Paul, ich bin mit meiner Familie in Bremen. Das Hotel ist sehr schön, und die Sonne scheint. Morgen wollen wir das Rathaus besuchen. Viele Grüße, Sara",
+      "Lieber Paul, ich bin mit meine Familie in Bremen. Das Hotel sehr schön ist, und die Sonne scheinen. Morgen wir wollen besuchen das Rathaus.",
+      "Paul: Bremen. Familie. Hotel schön. Sonne. Rathaus.",
+      "Lieber Paul, ich bin in Bremen. Gestern wollen wir morgen das Rathaus besuchen. Das Hotel ist kalt, und es schneit Sonne."
+     ],
+     "answer": "Lieber Paul, ich bin mit meiner Familie in Bremen. Das Hotel ist sehr schön, und die Sonne scheint. Morgen wollen wir das Rathaus besuchen. Viele Grüße, Sara",
+     "explanation": "Réponse : Lieber Paul, ich bin mit meiner Familie in Bremen. Das Hotel ist sehr schön, und die Sonne scheint. Morgen wollen wir das Rathaus besuchen. Viele Grüße, Sara",
+     "text": "★ Situation: Schreiben Sie Ihrem Freund Paul eine Postkarte aus dem Urlaub (wo, mit wem, Wetter, ein Plan)."
+    },
+    {
+     "choices": [
+      "Sehr geehrte Damen und Herren, mein Name ist Hugo Leroy. Ich möchte ein Doppelzimmer vom 10. bis 12. Juli reservieren. Vielen Dank! Mit freundlichen Grüßen, Hugo Leroy",
+      "Sehr geehrte Damen und Herren, mein Name ist Hugo Leroy. Ich möchte reservieren ein Doppelzimmer vom 10. bis 12. Juli.",
+      "Hallo, ich will Zimmer. Danke.",
+      "Sehr geehrte Damen und Herren, mein Name ist Hugo Leroy. Ich habe ein Doppelzimmer am 10. Juli. Auf Wiedersehen."
+     ],
+     "answer": "Sehr geehrte Damen und Herren, mein Name ist Hugo Leroy. Ich möchte ein Doppelzimmer vom 10. bis 12. Juli reservieren. Vielen Dank! Mit freundlichen Grüßen, Hugo Leroy",
+     "explanation": "Réponse : Sehr geehrte Damen und Herren, mein Name ist Hugo Leroy. Ich möchte ein Doppelzimmer vom 10. bis 12. Juli reservieren. Vielen Dank! Mit freundlichen Grüßen, Hugo Leroy",
+     "text": "★ Situation: Schreiben Sie an das Hotel und reservieren Sie ein Zimmer (Name, Zimmer, Datum)."
+    }
+   ]
+  }
+ ]
+}

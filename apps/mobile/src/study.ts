@@ -8,27 +8,31 @@ export function studyWords(lang: StudyLanguage) {
   const en = lang === 'en';
   const zh = lang === 'zh';
   const es = lang === 'es';
-  /** Valeur selon la langue étudiée : japonais, coréen, anglais, chinois, espagnol. */
-  const pick = <V,>(ja: V, kor: V, eng: V, chi: V, esp: V): V => (ko ? kor : en ? eng : zh ? chi : es ? esp : ja);
+  const de = lang === 'de';
+  /** Valeur selon la langue étudiée : japonais, coréen, anglais, chinois, espagnol, allemand. */
+  const pick = <V,>(ja: V, kor: V, eng: V, chi: V, esp: V, ger: V): V => (ko ? kor : en ? eng : zh ? chi : es ? esp : de ? ger : ja);
   return {
     lang,
     ko,
     en,
     zh,
     es,
+    de,
+    /** Langue à alphabet latin, sans écriture à apprendre : anglais, espagnol, allemand */
+    latin: en || es || de,
     pick,
     info: languageInfo(lang),
     /** Nom de l'examen : JLPT, TOPIK ou TOEIC */
     exam: languageInfo(lang).exam,
     /** « le japonais », « le coréen », « l'anglais » */
-    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais'), T('le chinois'), T('l’espagnol')),
+    theLanguage: pick(T('le japonais'), T('le coréen'), T('l’anglais'), T('le chinois'), T('l’espagnol'), T('l’allemand')),
     /** adjectif : « japonais », « coréen », « anglais » */
-    adjective: pick(T('japonais'), T('coréen'), T('anglais'), T('chinois'), T('espagnol')),
+    adjective: pick(T('japonais'), T('coréen'), T('anglais'), T('chinois'), T('espagnol'), T('allemand')),
     /** Onglet des caractères (libellé et glyphe) ; en anglais, seulement les expressions */
-    charsTitle: pick(T('Kana et kanji'), T('Hangeul et expressions'), T('Expressions'), T('Hanzi et expressions'), T('Expressions')),
-    charsGlyph: pick('あ', '한', '“', '字', '¡!'),
+    charsTitle: pick(T('Kana et kanji'), T('Hangeul et expressions'), T('Expressions'), T('Hanzi et expressions'), T('Expressions'), T('Expressions')),
+    charsGlyph: pick('あ', '한', '“', '字', '¡!', '„“'),
     /** Atelier d'entraînement */
-    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC'), T('Atelier HSK'), T('Atelier DELE')),
+    workshop: pick(T('Atelier JLPT'), T('Atelier TOPIK'), T('Atelier TOEIC'), T('Atelier HSK'), T('Atelier DELE'), T('Atelier Goethe')),
   };
 }
 

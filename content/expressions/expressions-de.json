@@ -1,0 +1,299 @@
+{
+ "contentVersion": "2026.11.27",
+ "language": "de",
+ "notice": "Expressions allemandes courantes sélectionnées par Koto Quest (allemand d’Allemagne) ; le registre (poli, familier…) aide à choisir la bonne formule selon la situation.",
+ "themes": [
+  {
+   "slug": "de-hoeflichkeit",
+   "glyph": "„",
+   "title": "Politesse et salutations",
+   "description": "Les formules qui ouvrent toutes les portes : en Allemagne, on se serre la main et on choisit avec soin entre du et Sie.",
+   "expressions": [
+    {
+     "slug": "dex-freut-mich",
+     "kind": "vocabulary",
+     "front": "Freut mich!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ravi·e de vous rencontrer !",
+     "note": "Forme courte de Es freut mich, Sie kennenzulernen. On la dit en serrant la main.",
+     "register": "neutral",
+     "example": {
+      "jp": "Ich bin Jacob Grimm. — Freut mich!",
+      "fr": "Je suis Jacob Grimm. — Ravi de vous rencontrer !"
+     }
+    },
+    {
+     "slug": "dex-bitte-schoen",
+     "kind": "vocabulary",
+     "front": "Bitte schön!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "je vous en prie ! ; voici !",
+     "note": "Bitte sert à tout : demander (s’il vous plaît), répondre à danke (de rien) et tendre quelque chose (voici).",
+     "register": "polite"
+    },
+    {
+     "slug": "dex-entschuldigung",
+     "kind": "vocabulary",
+     "front": "Entschuldigung!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "excusez-moi !",
+     "note": "Pour aborder quelqu’un ou s’excuser d’un petit faux pas. Plus fort : Es tut mir leid (je suis désolé).",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-mahlzeit",
+     "kind": "vocabulary",
+     "front": "Mahlzeit!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "bon appétit ! ; bonjour ! (à midi, au travail)",
+     "note": "Littéralement « repas ». Entre collègues, on se salue ainsi dans les couloirs vers midi.",
+     "register": "casual"
+    },
+    {
+     "slug": "dex-gesundheit",
+     "kind": "vocabulary",
+     "front": "Gesundheit!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "à tes souhaits !",
+     "note": "Littéralement « santé ». On le dit quand quelqu’un éternue ; pour trinquer, on dit Prost!",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-schoenen-tag",
+     "kind": "vocabulary",
+     "front": "Schönen Tag noch!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "bonne journée !",
+     "note": "La formule des commerçants en fin d’échange. Réponse : Danke, gleichfalls! (merci, pareillement).",
+     "register": "polite",
+     "example": {
+      "jp": "Auf Wiedersehen und schönen Tag noch! — Danke, gleichfalls!",
+      "fr": "Au revoir et bonne journée ! — Merci, pareillement !"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "de-alltag",
+   "glyph": "☀",
+   "title": "Au quotidien",
+   "description": "Les petits mots qu’on entend partout en Allemagne, à la boulangerie comme au bureau.",
+   "expressions": [
+    {
+     "slug": "dex-genau",
+     "kind": "vocabulary",
+     "front": "Genau!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "exactement !",
+     "note": "Le mot préféré des Allemands pour dire qu’on est d’accord. On l’entend cent fois par jour.",
+     "register": "neutral",
+     "example": {
+      "jp": "Wir treffen uns um acht? — Genau!",
+      "fr": "On se retrouve à huit heures ? — Exactement !"
+     }
+    },
+    {
+     "slug": "dex-na",
+     "kind": "vocabulary",
+     "front": "Na?",
+     "reading": null,
+     "romaji": null,
+     "meaning": "alors, ça va ?",
+     "note": "Le salut le plus court du monde, entre amis. On peut répondre… Na? ou Na, du?",
+     "register": "casual"
+    },
+    {
+     "slug": "dex-doch",
+     "kind": "vocabulary",
+     "front": "Doch!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "si ! (pour contredire une négation)",
+     "note": "Comme le « si » français : Du kommst nicht? — Doch! (tu ne viens pas ? — Si !).",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-feierabend",
+     "kind": "vocabulary",
+     "front": "der Feierabend",
+     "reading": null,
+     "romaji": null,
+     "meaning": "la fin de la journée de travail",
+     "note": "Littéralement « soirée de fête ». Schönen Feierabend! = bonne soirée (après le travail).",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-gemuetlich",
+     "kind": "vocabulary",
+     "front": "gemütlich",
+     "reading": null,
+     "romaji": null,
+     "meaning": "douillet, chaleureux, où l’on se sent bien",
+     "note": "La Gemütlichkeit est un art de vivre : bougies, coussins, café et gâteau entre amis.",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-kaffee-und-kuchen",
+     "kind": "vocabulary",
+     "front": "Kaffee und Kuchen",
+     "reading": null,
+     "romaji": null,
+     "meaning": "le café-gâteau de l’après-midi",
+     "note": "Le goûter des adultes, vers quinze ou seize heures, surtout le dimanche.",
+     "register": "neutral"
+    }
+   ]
+  },
+  {
+   "slug": "de-bilder",
+   "glyph": "♥",
+   "title": "Expressions imagées",
+   "description": "Des images surprenantes qu’il ne faut surtout pas traduire mot à mot.",
+   "expressions": [
+    {
+     "slug": "dex-nur-bahnhof",
+     "kind": "vocabulary",
+     "front": "Ich verstehe nur Bahnhof.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "je n’y comprends rien",
+     "note": "Littéralement « je ne comprends que gare ».",
+     "register": "casual",
+     "example": {
+      "jp": "Kannst du das wiederholen? Ich verstehe nur Bahnhof.",
+      "fr": "Tu peux répéter ? Je n’y comprends rien."
+     }
+    },
+    {
+     "slug": "dex-daumen-druecken",
+     "kind": "vocabulary",
+     "front": "Ich drücke dir die Daumen!",
+     "reading": null,
+     "romaji": null,
+     "meaning": "je croise les doigts pour toi !",
+     "note": "En allemand, on « presse les pouces » au lieu de croiser les doigts.",
+     "register": "casual"
+    },
+    {
+     "slug": "dex-tomaten-auf-den-augen",
+     "kind": "vocabulary",
+     "front": "Tomaten auf den Augen haben",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ne pas voir ce qui crève les yeux",
+     "note": "Littéralement « avoir des tomates sur les yeux ».",
+     "register": "casual"
+    },
+    {
+     "slug": "dex-wurst",
+     "kind": "vocabulary",
+     "front": "Das ist mir Wurst.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "ça m’est égal",
+     "note": "Littéralement « c’est saucisse pour moi ».",
+     "register": "casual"
+    },
+    {
+     "slug": "dex-schwein-haben",
+     "kind": "vocabulary",
+     "front": "Schwein haben",
+     "reading": null,
+     "romaji": null,
+     "meaning": "avoir de la chance",
+     "note": "Littéralement « avoir du cochon » : le cochon porte bonheur en Allemagne.",
+     "register": "casual",
+     "example": {
+      "jp": "Du hast Schwein gehabt!",
+      "fr": "Tu as eu de la chance !"
+     }
+    },
+    {
+     "slug": "dex-die-nase-voll",
+     "kind": "vocabulary",
+     "front": "die Nase voll haben",
+     "reading": null,
+     "romaji": null,
+     "meaning": "en avoir assez",
+     "note": "Littéralement « avoir le nez plein ».",
+     "register": "casual"
+    }
+   ]
+  },
+  {
+   "slug": "de-sprichwoerter",
+   "glyph": "❧",
+   "title": "Proverbes (Sprichwörter)",
+   "description": "Les proverbes allemands aiment le travail bien fait et le bon sens paysan ; plusieurs viennent tout droit des contes.",
+   "expressions": [
+    {
+     "slug": "dex-ende-gut",
+     "kind": "vocabulary",
+     "front": "Ende gut, alles gut.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "tout est bien qui finit bien",
+     "note": "La morale de bien des contes des frères Grimm.",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-uebung-macht",
+     "kind": "vocabulary",
+     "front": "Übung macht den Meister.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "c’est en forgeant qu’on devient forgeron",
+     "note": "Littéralement « l’exercice fait le maître ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-morgenstund",
+     "kind": "vocabulary",
+     "front": "Morgenstund hat Gold im Mund.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "l’avenir appartient à ceux qui se lèvent tôt",
+     "note": "Littéralement « l’heure du matin a de l’or dans la bouche ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-aller-anfang",
+     "kind": "vocabulary",
+     "front": "Aller Anfang ist schwer.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "il n’y a que le premier pas qui coûte",
+     "note": "Littéralement « tout début est difficile » : à se répéter quand on commence l’allemand !",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-wer-a-sagt",
+     "kind": "vocabulary",
+     "front": "Wer A sagt, muss auch B sagen.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "quand le vin est tiré, il faut le boire",
+     "note": "Littéralement « qui dit A doit aussi dire B ».",
+     "register": "neutral"
+    },
+    {
+     "slug": "dex-alles-hat-ein-ende",
+     "kind": "vocabulary",
+     "front": "Alles hat ein Ende, nur die Wurst hat zwei.",
+     "reading": null,
+     "romaji": null,
+     "meaning": "tout a une fin (sauf la saucisse, qui en a deux)",
+     "note": "Un proverbe humoristique, devenu une chanson célèbre.",
+     "register": "casual"
+    }
+   ]
+  }
+ ]
+}

@@ -33,6 +33,7 @@ export function ExamPage() {
   const english = languageOfLevel(def?.level) === 'en';
   const hsk = languageOfLevel(def?.level) === 'zh';
   const dele = languageOfLevel(def?.level) === 'es';
+  const goethe = languageOfLevel(def?.level) === 'de';
 
   async function start() {
     setError(null);
@@ -68,7 +69,7 @@ export function ExamPage() {
   return (
     <div className="flex flex-col items-center gap-5 py-6 text-center">
       <Link to={`/path?niveau=${def?.level ?? 'N5'}`} className="self-start text-ink-soft underline">{T("← Parcours")}</Link>
-      <Stamp className="jp text-6xl font-black text-ko">{english ? 'Mock test' : hsk ? '模拟考试' : dele ? 'Simulacro' : topik ? '모의고사' : '模試'}</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{english ? 'Mock test' : hsk ? '模拟考试' : dele ? 'Simulacro' : goethe ? 'Modelltest' : topik ? '모의고사' : '模試'}</Stamp>
       <h1 className="text-4xl">{def?.title ?? T("Examen blanc")}</h1>
       {english ? (
         <p className="max-w-[52ch] text-lg">{def?.scoring === 'toeic' ? T("{0} questions en {1} minutes, réparties comme au TOEIC : écoute (photos, questions-réponses, conversations, annonces, avec des accents américain, britannique, australien et canadien), phrases et textes à compléter, compréhension écrite. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin]) : T("{0} questions en {1} minutes sur les leçons du niveau : vocabulaire, grammaire et écoute. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25])}</p>
@@ -76,6 +77,8 @@ export function ExamPage() {
         <p className="max-w-[52ch] text-lg">{def?.bank ? T("{0} questions en {1} minutes, réparties comme au HSK : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin, def.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ')]) : T("{0} questions en {1} minutes, tirées des leçons du niveau : vocabulaire, grammaire et écoute.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25])}</p>
       ) : dele ? (
         <p className="max-w-[52ch] text-lg">{def?.bank ? T("{0} questions en {1} minutes, réparties comme au DELE : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin, def.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ')]) : T("{0} questions en {1} minutes, tirées des leçons du niveau : vocabulaire, grammaire et écoute.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25])}</p>
+      ) : goethe ? (
+        <p className="max-w-[52ch] text-lg">{def?.bank ? T("{0} questions en {1} minutes, réparties comme au Goethe-Zertifikat : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def.sections.reduce((n, x) => n + x.count, 0), def.durationMin, def.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ')]) : T("{0} questions en {1} minutes, tirées des leçons du niveau : vocabulaire, grammaire et écoute.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25])}</p>
       ) : topik ? (
         <p className="max-w-[52ch] text-lg">{T("{0} questions en {1} minutes, réparties comme au TOPIK : {2}. Pas de correction pendant l’épreuve : tu peux revenir sur tes réponses avant de rendre ta copie.", [def ? def.sections.reduce((n, x) => n + x.count, 0) : 30, def?.durationMin ?? 25, def?.sections.map((x) => `${x.title.toLowerCase()} (${x.jpTitle})`).join(', ') ?? ''])}</p>
       ) : (
@@ -111,6 +114,16 @@ export function ExamPage() {
       {dele && (
         <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier DELE")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={def?.bank ? `/exam/${def.level.toLowerCase()}-mock` : `/exam/${(def?.level ?? 'DELEA1').toLowerCase()}-official`} className="underline">{def?.bank ? T("Entraînement sur les leçons") : T("Examen blanc au format officiel")}</Link></p>
       )}
+      {goethe && def?.bank && (
+        <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en allemand")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Écoute réelle")}</strong>{T("Dialogues et annonces à deux voix, 2 écoutes au maximum.")}</li>
+          <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Barème du Goethe-Zertifikat")}</strong>{T("Sur 100 : réussite à partir de 60 points. L’épreuve orale (Sprechen) n’est pas évaluée.")}</li>
+        </ul>
+      )}
+      {goethe && (
+        <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier Goethe")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={def?.bank ? `/exam/${def.level.toLowerCase()}-mock` : `/exam/${(def?.level ?? 'GOETHEA1').toLowerCase()}-official`} className="underline">{def?.bank ? T("Entraînement sur les leçons") : T("Examen blanc au format officiel")}</Link></p>
+      )}
       {def?.scoring === 'toeic' && (
         <ul className="grid w-full max-w-xl gap-2 text-left text-sm sm:grid-cols-3">
           <li className="rounded-2xl border border-line bg-surface p-3"><strong className="block">{T("Tout en anglais")}</strong>{T("Consignes, questions et réponses, comme le jour J.")}</li>
@@ -131,7 +144,7 @@ export function ExamPage() {
       {(def?.scoring === 'jlpt' || def?.scoring === 'jlpt3') && (
         <p className="text-sm text-ink-soft">{T("Pas encore prêt·e ?")}{' '}<Link to="/prepa" className="underline">{T("Atelier JLPT")}</Link>{' '}{T("(épreuve par épreuve) ·")}{' '}<Link to={`/exam/${def.level.toLowerCase()}-mock`} className="underline">{T("version entraînement")}</Link>{' '}{T("(plus facile)")}</p>
       )}
-      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{english ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le TOEIC d’ETS et son résultat n’en prédit pas le score.") : hsk ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du HSK et son résultat n’en prédit pas la réussite.") : dele ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le DELE de l’Instituto Cervantes et son résultat n’en prédit pas la réussite.") : topik ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.") : T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
+      <p className="max-w-[52ch] rounded-2xl bg-surface-2 p-4 text-sm">{english ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le TOEIC d’ETS et son résultat n’en prédit pas le score.") : hsk ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du HSK et son résultat n’en prédit pas la réussite.") : dele ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le DELE de l’Instituto Cervantes et son résultat n’en prédit pas la réussite.") : goethe ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas le Goethe-Zertifikat du Goethe-Institut et son résultat n’en prédit pas la réussite.") : topik ? T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du TOPIK et son résultat n’en prédit pas la réussite.") : T("Examen blanc non officiel, conçu par Koto Quest : il ne remplace pas la certification du JLPT et son résultat n’en prédit pas la réussite.")}</p>
       {info && info.attempts > 0 && <p>{T("Meilleur score :")}{' '}<strong>{info.bestPercent} %</strong> ({info.attempts}{' '}{T("tentative")}{info.attempts > 1 ? 's' : ''})</p>}
       <button className="btn btn-gold min-h-14 px-10 text-lg" onClick={start}>{T("Commencer l’examen")}</button>
     </div>
@@ -224,12 +237,16 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
   const toeic = result.scaled?.max.system === 'toeic';
   const hsk = result.scaled?.max.system === 'hsk';
   const dele = result.scaled?.max.system === 'dele';
+  const study = useStudyLang();
+  const decorOf = useDecor();
+  /** Goethe-Zertifikat : noté en pourcentage (sur 100), réussite à 60 points, sans barème par partie. */
+  const goethe = study.de && !result.scaled && result.sectionMinPercent === 0;
   return (
     <div className="flex flex-col gap-8">
       <header className="flex flex-col items-center gap-2 text-center">
         {result.passed && <Confetti count={60} />}
-        <Stamp className="jp text-5xl font-black text-ko">{toeic ? (result.passed ? 'Target reached' : 'Keep going') : hsk ? (result.passed ? '合格' : '不合格') : dele ? (result.passed ? 'Apto' : 'No apto') : topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? '合格' : '不合格'}</Stamp>
-        <h1 className="text-4xl">{toeic ? (result.passed ? T("Score visé atteint") : T("Pas encore le score visé ({0})", [result.scaled!.max.passTotal])) : hsk ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite ({0} points)", [result.scaled!.max.passTotal])) : dele ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (30 points dans chaque groupe)")) : topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
+        <Stamp className="jp text-5xl font-black text-ko">{toeic ? (result.passed ? 'Target reached' : 'Keep going') : hsk ? (result.passed ? '合格' : '不合格') : dele ? (result.passed ? 'Apto' : 'No apto') : topik ? (result.scaled!.level ? `${result.scaled!.level}급` : '불합격') : result.passed ? decorOf('pass') : decorOf('fail')}</Stamp>
+        <h1 className="text-4xl">{toeic ? (result.passed ? T("Score visé atteint") : T("Pas encore le score visé ({0})", [result.scaled!.max.passTotal])) : hsk ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite ({0} points)", [result.scaled!.max.passTotal])) : dele ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (30 points dans chaque groupe)")) : topik ? (result.scaled!.level ? T("Niveau {0} du TOPIK atteint", [result.scaled!.level]) : T("Pas encore le niveau {0}", [result.scaled!.max.levels?.[0]?.level ?? 1])) : goethe ? (result.passed ? T("Examen réussi") : T("Pas encore la réussite (60 points)")) : result.passed ? T("Seuil indicatif atteint") : T("Pas encore le seuil")}</h1>
         {topik && !result.passed && (result.scaled!.level ?? 0) > 0 && <p className="font-bold text-ko">{T("Il faut le niveau {0} ({1} points) pour valider cet examen.", [result.scaled!.max.passLevel ?? 2, result.scaled!.max.levels?.find((l) => l.level === (result.scaled!.max.passLevel ?? 2))?.min ?? 140])}</p>}
         {result.scaled ? (
           <p className="font-display text-7xl tabular-nums"><CountUp value={result.scaled.total} /><span className="text-3xl text-ink-soft"> / {result.scaled.max.total}</span></p>
@@ -239,7 +256,9 @@ function ExamResult({ result, onAgain }: { result: ExamResultDto; onAgain: () =>
         <p className="text-ink-soft">{T("{0} bonnes réponses sur {1}{2}", [result.correct , result.total, result.late ? T(" (copie rendue après le temps imparti)") : ''])}</p>
         <p className="flex items-center gap-3 font-bold text-gold-ink">+{result.xpGained}{' '}{T("XP")}{' '}{result.coinsGained > 0 && <Coins value={result.coinsGained} />}</p>
         <p className="max-w-[56ch] text-sm text-ink-soft">
-          {dele
+          {goethe
+            ? T("Barème du Goethe-Zertifikat : Hören, Lesen et Schreiben, noté sur 100 ; réussite à partir de 60 points. L’épreuve orale (Sprechen) n’est pas évaluée. Questions rédigées par Koto Quest, non officielles.")
+            : dele
             ? T("Barème du DELE : groupe 1 (compréhension et expression écrites, 25 + 25) et groupe 2 (compréhension auditive et expression orale, ici l’écoute seule sur 50) ; au moins 30 points dans chaque groupe. Questions rédigées par Koto Quest, non officielles.")
             : hsk
             ? T("Barème du HSK : {0}, chacune sur 100, soit {1} points ; réussite à {2} au total, sans minimum par partie. Questions rédigées par Koto Quest, non officielles.", [result.scaled!.max.writing ? T("écoute, lecture et écriture") : T("écoute et lecture"), result.scaled!.max.total, result.scaled!.max.passTotal])
@@ -405,7 +424,7 @@ export function PlacementPage() {
     return (
       <div className="flex flex-col items-center gap-5 py-6 text-center">
         <Link to="/" className="self-start text-ink-soft underline">{T("← Accueil")}</Link>
-        <Stamp className="jp text-6xl font-black text-ko">{study.pick('診断', '진단', 'Test', '测试', 'Prueba')}</Stamp>
+        <Stamp className="jp text-6xl font-black text-ko">{study.pick('診断', '진단', 'Test', '测试', 'Prueba', 'Einstufung')}</Stamp>
         <h1 className="text-4xl">{T("Test de positionnement")}</h1>
         <p className="max-w-[52ch] text-lg">{T("Trois questions par monde, dans l’ordre du parcours. Chaque monde réussi (2 bonnes réponses sur 3) est validé et tu passes au suivant ; le test s’arrête au premier monde à travailler.")}</p>
         <p className="max-w-[52ch] text-ink-soft">{T("Les notions des mondes validés reviendront en révision dans quelques jours pour vérifier qu’elles sont bien acquises. Réponds sans deviner : « je ne sais pas » vaut mieux qu’un coup de chance.")}</p>

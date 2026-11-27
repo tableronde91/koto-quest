@@ -71,6 +71,7 @@ function notice(): Block[] {
           'TOEIC is a registered trademark of ETS. Koto Quest is not affiliated with ETS: its TOEIC-format mock exams are unofficial and do not predict any score.',
           'HSK (Hanyu Shuiping Kaoshi) is run by the Centre for Language Education and Cooperation (CLEC) and Chinese Testing International. Koto Quest is not affiliated with them: its HSK mock exams and lists are unofficial and do not guarantee any result.',
           'DELE (Diplomas de Español como Lengua Extranjera) are awarded by the Instituto Cervantes on behalf of the Spanish Ministry of Education. Koto Quest is not affiliated with them: its DELE mock exams and lists are unofficial and do not guarantee any result.',
+          'The Goethe-Zertifikat exams are run by the Goethe-Institut. Koto Quest is not affiliated with it: its Goethe-Zertifikat mock exams and lists are unofficial and do not guarantee any result.',
         ],
       },
     ];
@@ -110,6 +111,7 @@ function notice(): Block[] {
         'TOEIC est une marque déposée d’ETS. Koto Quest n’est pas affilié à ETS : ses examens blancs au format du TOEIC ne sont pas officiels et n’en prédisent pas le score.',
         'Le HSK (Hanyu Shuiping Kaoshi) est organisé par le Centre for Language Education and Cooperation (CLEC) et Chinese Testing International. Koto Quest n’est pas affilié à ces organismes : ses examens blancs HSK et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
         'Les DELE (Diplomas de Español como Lengua Extranjera) sont délivrés par l’Instituto Cervantes au nom du ministère espagnol de l’Éducation. Koto Quest n’est pas affilié à ces organismes : ses examens blancs DELE et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
+        'Les examens Goethe-Zertifikat sont organisés par le Goethe-Institut. Koto Quest n’est pas affilié à cet organisme : ses examens blancs Goethe-Zertifikat et ses listes ne sont pas officiels et ne garantissent aucun résultat.',
       ],
     },
   ];

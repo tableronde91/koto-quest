@@ -7,12 +7,13 @@ import { Button, Card, ErrorBox, H2, Loading, P, ProgressBar } from '../../src/u
 import { T, plural } from '../../src/i18n';
 import { useStudyLang, useDecor } from '../../src/study';
 
-function greeting(lang: 'ja' | 'ko' | 'en' | 'zh' | 'es', name: string) {
+function greeting(lang: 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de', name: string) {
   const h = new Date().getHours();
   if (lang === 'ko') return `${name} 님, 안녕하세요`;
   if (lang === 'zh') return `${name}，${h < 11 ? '早上好' : h < 18 ? '你好' : '晚上好'}`;
   if (lang === 'en') return `${h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'}, ${name}!`;
   if (lang === 'es') return `¡${h < 13 ? 'Buenos días' : h < 20 ? 'Buenas tardes' : 'Buenas noches'}, ${name}!`;
+  if (lang === 'de') return `${h < 11 ? 'Guten Morgen' : h < 18 ? 'Guten Tag' : 'Guten Abend'}, ${name}!`;
   return `${h < 11 ? 'おはよう' : h < 18 ? 'こんにちは' : 'こんばんは'}、${name}`;
 }
 
@@ -60,7 +61,7 @@ export default function Home() {
           <Card testID="placement-suggest" style={{ flexDirection: 'row', alignItems: 'center', gap: 12, borderColor: '#7B5BD6', borderWidth: 2 }}>
             <Text style={{ fontSize: 30, fontWeight: '900', color: '#7B5BD6' }}>{D('placement')}</Text>
             <View style={{ flex: 1, gap: 6 }}>
-              <Text style={{ fontWeight: '800', color: C.ink }}>{w.es ? T('Tu connais déjà un peu d’espagnol ?') : w.en ? T('Tu connais déjà un peu d’anglais ?') : w.zh ? T('Tu connais déjà un peu de chinois ?') : w.ko ? T('Tu connais déjà un peu de coréen ?') : T('Tu connais déjà un peu de japonais ?')}</Text>
+              <Text style={{ fontWeight: '800', color: C.ink }}>{w.de ? T('Tu connais déjà un peu d’allemand ?') : w.es ? T('Tu connais déjà un peu d’espagnol ?') : w.en ? T('Tu connais déjà un peu d’anglais ?') : w.zh ? T('Tu connais déjà un peu de chinois ?') : w.ko ? T('Tu connais déjà un peu de coréen ?') : T('Tu connais déjà un peu de japonais ?')}</Text>
               <Text style={{ color: C.inkSoft, fontSize: 13 }}>{T('Un test de quelques minutes valide ce que tu sais déjà, pour commencer au bon endroit.')}</Text>
               <Button tone="quiet" label={T('Passer le test de niveau')} onPress={() => router.push('/placement')} />
             </View>
@@ -71,7 +72,7 @@ export default function Home() {
           <Card testID="how-it-works" style={{ gap: 10 }}>
             <H2>{T('Comment ça marche ?')}</H2>
             {[
-              [D('learn'), T('Une leçon de 5 à 10 minutes'), w.en || w.es ? T('Des mots, des phrases utiles ou de la grammaire, puis des exercices.') : w.zh ? T('Des caractères, des mots ou de la grammaire, puis des exercices.') : w.ko ? T('Du hangeul, des mots ou de la grammaire, puis des exercices.') : T('De nouveaux kana, mots ou kanji, puis des exercices.')],
+              [D('learn'), T('Une leçon de 5 à 10 minutes'), w.latin ? T('Des mots, des phrases utiles ou de la grammaire, puis des exercices.') : w.zh ? T('Des caractères, des mots ou de la grammaire, puis des exercices.') : w.ko ? T('Du hangeul, des mots ou de la grammaire, puis des exercices.') : T('De nouveaux kana, mots ou kanji, puis des exercices.')],
               [D('review'), T('Des révisions au bon moment'), T('Koto Quest te redemande chaque notion juste avant que tu l’oublies.')],
               [D('island'), T('Une aventure à suivre'), T('Chaque île du parcours raconte un chapitre et se termine par un gardien à vaincre.')],
             ].map(([g, t, x], i) => (

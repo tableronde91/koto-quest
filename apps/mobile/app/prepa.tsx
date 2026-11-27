@@ -48,7 +48,7 @@ export default function Prepa() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, marginTop: 30 }}>
-          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>{w.pick(pct >= 80 ? '合格' : '練習', pct >= 80 ? '합격' : '연습', pct >= 80 ? 'Pass' : 'Practice', pct >= 80 ? '及格' : '练习', pct >= 80 ? 'Apto' : 'Práctica')}</Text>
+          <Text style={{ fontSize: 64, fontWeight: '900', color: C.ko }}>{w.pick(pct >= 80 ? '合格' : '練習', pct >= 80 ? '합격' : '연습', pct >= 80 ? 'Pass' : 'Practice', pct >= 80 ? '及格' : '练习', pct >= 80 ? 'Apto' : 'Práctica', pct >= 80 ? 'Bestanden' : 'Übung')}</Text>
           <H1 style={{ textAlign: 'center' }}>{T('{0} : {1} %', [summary.title, pct])}</H1>
           <P style={{ textAlign: 'center' }}>{T('{0}/{1} bonnes réponses · +{2} XP', [summary.s.correct, summary.s.total, summary.s.xp])}</P>
           <P soft style={{ textAlign: 'center' }}>{pct >= 80 ? T('Niveau examen atteint sur cette épreuve. Varie avec les autres épreuves.') : T('Les notions ratées reviendront dans tes révisions. Une autre série pour consolider ?')}</P>
@@ -65,7 +65,7 @@ export default function Prepa() {
   return (
     <Screen>
       <TitleBar title={w.workshop} fallback="/learn" />
-      <P soft>{w.es ? T('Les épreuves du DELE, consignes en espagnol, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.en ? T('Les parties du TOEIC, consignes en anglais, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.zh ? T('Les épreuves du HSK, consignes en chinois, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.ko ? T('Les épreuves du TOPIK, consignes en coréen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : T('Chaque épreuve du JLPT, au format exact de l’examen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.')}</P>
+      <P soft>{w.de ? T('Les épreuves du Goethe-Zertifikat, consignes en allemand, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.es ? T('Les épreuves du DELE, consignes en espagnol, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.en ? T('Les parties du TOEIC, consignes en anglais, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.zh ? T('Les épreuves du HSK, consignes en chinois, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : w.ko ? T('Les épreuves du TOPIK, consignes en coréen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.') : T('Chaque épreuve du JLPT, au format exact de l’examen, avec seulement ce que tu as déjà appris. Correction immédiate, erreurs reprises en fin de série.')}</P>
       {startError != null && <ErrorBox error={startError} />}
       {data.drills.map((d) => {
         const ready = d.available >= data.minQuestions;
@@ -73,7 +73,7 @@ export default function Prepa() {
           <Card key={d.part} style={{ gap: 10 }} testID="drill">
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
               <View style={{ width: 52, height: 52, borderRadius: 16, backgroundColor: C.seal, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ color: '#fff', fontSize: 28, fontWeight: '900' }}>{w.pick(GLYPH[d.part], d.part === 'listening' ? '듣' : '문', d.part === 'listening' ? 'L' : 'R', d.part === 'listening' ? '听' : d.part === 'kanji' ? '拼' : '读', d.part === 'listening' ? 'A' : 'L')}</Text>
+                <Text style={{ color: '#fff', fontSize: 28, fontWeight: '900' }}>{w.pick(GLYPH[d.part], d.part === 'listening' ? '듣' : '문', d.part === 'listening' ? 'L' : 'R', d.part === 'listening' ? '听' : d.part === 'kanji' ? '拼' : '读', d.part === 'listening' ? 'A' : 'L', d.part === 'listening' ? 'H' : 'L')}</Text>
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={{ color: C.inkSoft, fontWeight: '700', fontSize: 12 }}>{d.jpTitle}</Text>

@@ -1,5 +1,5 @@
 import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import type { Mastery } from '@koto/shared';
+import { levelLabel, type Mastery } from '@koto/shared';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { useAchievements, useDashboard, usePath, useStats } from '../api/hooks';
@@ -60,7 +60,16 @@ const RANKS_ES: [number, string][] = [
   [3, T("Voyageur·se des îles")],
   [1, T("Apprenti·e de Sancho")],
 ];
-const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' | 'zh' | 'es' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'zh' ? RANKS_ZH : lang === 'es' ? RANKS_ES : RANKS).find(([min]) => level >= min)![1];
+/** En allemand, les rangs suivent les frères Grimm. */
+const RANKS_DE: [number, string][] = [
+  [16, T("Maître du Koto")],
+  [12, T("Conteur·se de la Forêt")],
+  [8, T("Gardien·ne des légendes")],
+  [5, T("Compagnon·ne des Grimm")],
+  [3, T("Voyageur·se des îles")],
+  [1, T("Apprenti·e des contes")],
+];
+const rankFor = (level: number, lang: 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de' = 'ja') => (lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'zh' ? RANKS_ZH : lang === 'es' ? RANKS_ES : lang === 'de' ? RANKS_DE : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés. */
 const SKILL_STEP = 10;
@@ -130,13 +139,13 @@ export function StatsPage() {
   const { data: s, isLoading, error, refetch } = useStats();
   const { data: d } = useDashboard();
   const { data: ach } = useAchievements();
-  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen, HSK 1 à 6 en chinois, DELE A1 à C2 en espagnol.
+  // Gardiens de la langue étudiée : N5 et N4 en japonais, TOPIK 1 à 6 en coréen, HSK 1 à 6 en chinois, DELE A1 à C2 en espagnol, Goethe A1 en allemand.
   const words = useStudyLang();
   const ko = words.ko;
   const zh = words.zh;
-  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1', 'HSK1', 'DELEA1'));
+  const { data: n5 } = usePath(words.pick('N5', 'TOPIK1', 'A1', 'HSK1', 'DELEA1', 'GOETHEA1'));
   const { data: n4Raw } = usePath(ko ? 'TOPIK2' : zh ? 'HSK2' : words.es ? 'DELEA2' : 'N4');
-  const n4 = words.en ? undefined : n4Raw;
+  const n4 = words.en || words.de ? undefined : n4Raw;
   const { data: topik3 } = usePath(zh ? 'HSK3' : words.es ? 'DELEB1' : 'TOPIK3');
   const { data: topik4 } = usePath(zh ? 'HSK4' : words.es ? 'DELEB2' : 'TOPIK4');
   const third = ko || zh || words.es ? topik3 : undefined;
@@ -196,7 +205,7 @@ export function StatsPage() {
       {/* Compétences */}
       <Section title={T("Compétences")} glyph={D('skills')}>
         <ul className="grid gap-3 sm:grid-cols-2">
-          {(words.en || words.es ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
+          {(words.latin ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k, i) => {
             const v = s.byKind[k.kind];
             const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
             const into = v.mastered % SKILL_STEP;
@@ -299,7 +308,7 @@ export function StatsPage() {
       <section id="examens" aria-labelledby="exams-title" className="scroll-mt-6">
         <h2 id="exams-title" className="text-xl">{T("Examens blancs")}</h2>
         {s.exams.length === 0 ? (
-          <p className="mt-2 text-ink-soft">{T("Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.")}</p>
+          <p className="mt-2 text-ink-soft">{T("Aucun examen blanc passé. Tu le trouveras à la fin du parcours {0}.", [levelLabel(words.info.firstLevel)])}</p>
         ) : (
           <>
             {s.exams.length > 1 && (

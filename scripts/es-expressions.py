@@ -23,7 +23,7 @@ THEMES = [
     E('de-nada', 'De nada.', ('de rien', 'you’re welcome'), ('La réponse standard à gracias. Plus soutenu : No hay de qué.', 'The standard reply to gracias. More formal: No hay de qué.'), 'neutral'),
     E('perdon', '¡Perdón!', ('pardon !', 'sorry (small mistake)'), ('Pour s’excuser d’un petit faux pas. Lo siento (je suis désolé) exprime un regret plus fort.', 'To apologise for a small slip. Lo siento (I’m sorry) expresses stronger regret.'), 'neutral'),
     E('con-permiso', 'Con permiso.', ('pardon, vous permettez ?', 'excuse me (to get past)'), ('Pour passer devant quelqu’un ou entrer dans une pièce. On répond : Adelante (je vous en prie).', 'To get past someone or enter a room. The reply is: Adelante (go ahead).'), 'polite'),
-    E('que-aproveche', '¡Que aproveche!', ('bon appétit !', 'enjoy your meal'), ('On le dit en passant près de quelqu’un qui mange, même un inconnu au restaurant. Aussi : ¡Buen provecho!', 'People say it when passing someone who is eating, even a stranger in a restaurant. Also: ¡Buen provecho!'), 'polite'),
+    E('que-aproveche', '¡Que aproveche!', ('bon appétit', 'enjoy your meal'), ('On le dit en passant près de quelqu’un qui mange, même un inconnu au restaurant. Aussi : ¡Buen provecho!', 'People say it when passing someone who is eating, even a stranger in a restaurant. Also: ¡Buen provecho!'), 'polite'),
     E('salud', '¡Salud!', ('santé ! ; à tes souhaits !', 'cheers!; bless you!'), ('Pour trinquer… et quand quelqu’un éternue.', 'To make a toast… and when someone sneezes.'), 'casual'),
   ]),
   TH('es-diario', '☀', ('Au quotidien', 'Everyday life'), ('Les petits mots qu’on entend partout en Espagne, au bar comme dans la rue.', 'The little words you hear everywhere in Spain, at the bar as in the street.'), [
@@ -38,7 +38,7 @@ THEMES = [
     E('estar-en-las-nubes', 'estar en las nubes', ('être dans la lune', 'to be daydreaming'), ('Littéralement « être dans les nuages ».', 'Literally “to be in the clouds”.'), 'casual'),
     E('ser-pan-comido', 'ser pan comido', ('être du gâteau, un jeu d’enfant', 'to be very easy'), ('Littéralement « être du pain mangé ».', 'Literally “to be eaten bread”.'), 'casual', ('El examen es pan comido.', 'L’examen, c’est du gâteau.', 'The exam is a piece of cake.')),
     E('costar-un-ojo', 'costar un ojo de la cara', ('coûter les yeux de la tête', 'to be very expensive'), ('En espagnol, ça ne coûte qu’un œil… du visage.', 'In Spanish it only costs one eye… from your face.'), 'casual'),
-    E('tomar-el-pelo', 'tomar el pelo', ('se moquer de quelqu’un, le faire marcher', 'to pull someone’s leg'), ('Littéralement « prendre les cheveux ». ¿Me estás tomando el pelo? = tu te moques de moi ?', 'Literally “to take the hair”. ¿Me estás tomando el pelo? = are you pulling my leg?'), 'casual'),
+    E('tomar-el-pelo', 'tomar el pelo', ('se moquer de quelqu’un, faire marcher', 'to pull someone’s leg'), ('Littéralement « prendre les cheveux ». ¿Me estás tomando el pelo? = tu te moques de moi ?', 'Literally “to take the hair”. ¿Me estás tomando el pelo? = are you pulling my leg?'), 'casual'),
     E('media-naranja', 'mi media naranja', ('ma moitié, l’âme sœur', 'my other half, soulmate'), ('Littéralement « ma moitié d’orange ».', 'Literally “my half orange”.'), 'casual'),
     E('meter-la-pata', 'meter la pata', ('faire une gaffe', 'to put your foot in it'), ('Littéralement « mettre la patte ».', 'Literally “to put the paw in”.'), 'casual'),
   ]),

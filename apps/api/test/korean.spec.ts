@@ -98,7 +98,7 @@ describe('Coréen : apprendre une deuxième langue', () => {
     // Choisir un niveau d'une langue fait passer à cette langue
     const direct = (await agent.put('/api/me/preferences').send({ targetLevel: 'TOPIK1' }).expect(200)).body;
     expect(direct.preferences.studyLanguage).toBe('ko');
-    await agent.put('/api/me/preferences').send({ studyLanguage: 'de' }).expect(400);
+    await agent.put('/api/me/preferences').send({ studyLanguage: 'xx' }).expect(400);
   });
 
   it('leçon de grammaire : exercices en coréen, distracteurs coréens', async () => {

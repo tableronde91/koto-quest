@@ -26,6 +26,8 @@ const CATALOG_PATHS: Record<StudyLanguage, string | null> = {
   zh: resolve(__dirname, '../../../../content/characters/hanzi.json'),
   // L'espagnol aussi : alphabet latin, pas d'onglet d'écriture
   es: null,
+  // L'allemand aussi (ä, ö, ü et ß s'apprennent dans la première leçon)
+  de: null,
 };
 
 @Injectable()

@@ -27,8 +27,8 @@ const SOURCES = [...LEVELS.map((d) => `${d}/${d}.json`), 'characters/characters.
 const japanese = (file: string) => /^n\d\//.test(file) || file === 'characters/characters.json';
 
 describe('questions générées sur tout le contenu', () => {
-  it('couvre les cinq langues', () => {
-    expect(LEVELS.length).toBe(28);
+  it('couvre les six langues', () => {
+    expect(LEVELS.length).toBe(29);
   });
 
   it('une seule bonne réponse, même à l’oreille, et la consigne nomme la bonne langue', { timeout: 120_000 }, () => {

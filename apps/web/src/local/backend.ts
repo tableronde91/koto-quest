@@ -165,6 +165,7 @@ import contentDeleB1 from '../../../../content/deleb1/deleb1.json';
 import contentDeleB2 from '../../../../content/deleb2/deleb2.json';
 import contentDeleC1 from '../../../../content/delec1/delec1.json';
 import contentDeleC2 from '../../../../content/delec2/delec2.json';
+import contentGoetheA1 from '../../../../content/goethea1/goethea1.json';
 import charactersContent from '../../../../content/characters/characters.json';
 import hangulContent from '../../../../content/characters/hangul.json';
 import hanziContent from '../../../../content/characters/hanzi.json';
@@ -173,6 +174,7 @@ import expressionsKoContent from '../../../../content/expressions/expressions-ko
 import expressionsEnContent from '../../../../content/expressions/expressions-en.json';
 import expressionsZhContent from '../../../../content/expressions/expressions-zh.json';
 import expressionsEsContent from '../../../../content/expressions/expressions-es.json';
+import expressionsDeContent from '../../../../content/expressions/expressions-de.json';
 import readingContent from '../../../../content/reading/stories.json';
 import cosmeticsCatalog from '../../../../content/cosmetics/catalog.json';
 import bankN5 from '../../../../content/exams/n5-jlpt.json';
@@ -203,9 +205,10 @@ import bankDeleB1 from '../../../../content/exams/deleb1.json';
 import bankDeleB2 from '../../../../content/exams/deleb2.json';
 import bankDeleC1 from '../../../../content/exams/delec1.json';
 import bankDeleC2 from '../../../../content/exams/delec2.json';
+import bankGoetheA1 from '../../../../content/exams/goethea1.json';
 
 /** Banques de questions au format officiel (examens blancs). */
-const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank, 'b2-toeic': bankB2 as unknown as ExamBank, 'c1-toeic': bankC1 as unknown as ExamBank, hsk1: bankHsk1 as unknown as ExamBank, hsk2: bankHsk2 as unknown as ExamBank, hsk3: bankHsk3 as unknown as ExamBank, hsk4: bankHsk4 as unknown as ExamBank, hsk5: bankHsk5 as unknown as ExamBank, hsk6: bankHsk6 as unknown as ExamBank, delea1: bankDeleA1 as unknown as ExamBank, delea2: bankDeleA2 as unknown as ExamBank, deleb1: bankDeleB1 as unknown as ExamBank, deleb2: bankDeleB2 as unknown as ExamBank, delec1: bankDeleC1 as unknown as ExamBank, delec2: bankDeleC2 as unknown as ExamBank };
+const BANKS: Record<string, ExamBank> = { 'n5-jlpt': bankN5 as unknown as ExamBank, 'n4-jlpt': bankN4 as unknown as ExamBank, 'n3-jlpt': bankN3 as unknown as ExamBank, 'n2-jlpt': bankN2 as unknown as ExamBank, 'n1-jlpt': bankN1 as unknown as ExamBank, topik1: bankTopik1 as unknown as ExamBank, topik2: bankTopik2 as unknown as ExamBank, topik3: bankTopik3 as unknown as ExamBank, topik4: bankTopik4 as unknown as ExamBank, topik5: bankTopik5 as unknown as ExamBank, topik6: bankTopik6 as unknown as ExamBank, 'a1-toeic': bankA1 as unknown as ExamBank, 'a2-toeic': bankA2 as unknown as ExamBank, 'b1-toeic': bankB1 as unknown as ExamBank, 'b2-toeic': bankB2 as unknown as ExamBank, 'c1-toeic': bankC1 as unknown as ExamBank, hsk1: bankHsk1 as unknown as ExamBank, hsk2: bankHsk2 as unknown as ExamBank, hsk3: bankHsk3 as unknown as ExamBank, hsk4: bankHsk4 as unknown as ExamBank, hsk5: bankHsk5 as unknown as ExamBank, hsk6: bankHsk6 as unknown as ExamBank, delea1: bankDeleA1 as unknown as ExamBank, delea2: bankDeleA2 as unknown as ExamBank, deleb1: bankDeleB1 as unknown as ExamBank, deleb2: bankDeleB2 as unknown as ExamBank, delec1: bankDeleC1 as unknown as ExamBank, delec2: bankDeleC2 as unknown as ExamBank, goethea1: bankGoetheA1 as unknown as ExamBank };
 
 const CATALOG = cosmeticsCatalog as unknown as CosmeticCatalog;
 
@@ -217,7 +220,7 @@ interface LessonEntry extends LessonJson { level: JlptCode; worldOrder: number; 
 
 type WorldJson = { slug: string; title: string; region: string; description: string; boss?: { name: string; glyph: string; intro: string }; exam?: string; chapters: { slug: string; title: string; lessons: LessonJson[] }[] };
 /** Niveaux embarqués, du plus facile au plus difficile. */
-const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1, contentB2, contentC1, contentHsk1, contentHsk2, contentHsk3, contentHsk4, contentHsk5, contentHsk6, contentDeleA1, contentDeleA2, contentDeleB1, contentDeleB2, contentDeleC1, contentDeleC2].map((c) => ({
+const LEVELS = [content, contentN4, contentN3, contentN2, contentN1, contentTopik1, contentTopik2, contentTopik3, contentTopik4, contentTopik5, contentTopik6, contentA1, contentA2, contentB1, contentB2, contentC1, contentHsk1, contentHsk2, contentHsk3, contentHsk4, contentHsk5, contentHsk6, contentDeleA1, contentDeleA2, contentDeleB1, contentDeleB2, contentDeleC1, contentDeleC2, contentGoetheA1].map((c) => ({
   code: c.level.code as JlptCode,
   title: c.level.title,
   region: c.level.region,
@@ -236,21 +239,21 @@ const ITEMS = new Map<string, ItemJson>();
 LESSONS.forEach((l) => l.items.forEach((it) => ITEMS.set(it.slug, it)));
 // Onglet Caractères : mêmes slugs que le parcours, donc maîtrise partagée.
 type CharactersJson = { notice?: string; sections: { slug: string; glyph?: string; title: string; description: string; groups: { slug: string; title: string; items: ItemJson[] }[] }[] };
-const CHARACTERS_BY_LANG: Record<StudyLanguage, CharactersJson> = { ja: charactersContent as unknown as CharactersJson, ko: hangulContent as unknown as CharactersJson, en: { sections: [] }, zh: hanziContent as unknown as CharactersJson, es: { sections: [] } };
+const CHARACTERS_BY_LANG: Record<StudyLanguage, CharactersJson> = { ja: charactersContent as unknown as CharactersJson, ko: hangulContent as unknown as CharactersJson, en: { sections: [] }, zh: hanziContent as unknown as CharactersJson, es: { sections: [] }, de: { sections: [] } };
 /** Langue de chaque notion (les révisions, les jeux et les duels ne mélangent pas les langues). */
 const LANG_OF = new Map<string, StudyLanguage>();
 LESSONS.forEach((l) => l.items.forEach((it) => LANG_OF.set(it.slug, languageOfLevel(l.level))));
-for (const lang of ['ja', 'ko', 'en', 'zh', 'es'] as const)
+for (const lang of ['ja', 'ko', 'en', 'zh', 'es', 'de'] as const)
   CHARACTERS_BY_LANG[lang].sections.forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => { ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); })));
 type ExpressionJson = ItemJson & { note: string; register: ExpressionRegister; example?: { jp: string; fr: string } };
 type ExpressionsJson = { notice?: string; themes: { slug: string; glyph: string; title: string; description: string; expressions: ExpressionJson[] }[] };
-const EXPRESSIONS_BY_LANG: Record<StudyLanguage, ExpressionsJson> = { ja: expressionsContent as unknown as ExpressionsJson, ko: expressionsKoContent as unknown as ExpressionsJson, en: expressionsEnContent as unknown as ExpressionsJson, zh: expressionsZhContent as unknown as ExpressionsJson, es: expressionsEsContent as unknown as ExpressionsJson };
-for (const lang of ['ja', 'ko', 'en', 'zh', 'es'] as const)
+const EXPRESSIONS_BY_LANG: Record<StudyLanguage, ExpressionsJson> = { ja: expressionsContent as unknown as ExpressionsJson, ko: expressionsKoContent as unknown as ExpressionsJson, en: expressionsEnContent as unknown as ExpressionsJson, zh: expressionsZhContent as unknown as ExpressionsJson, es: expressionsEsContent as unknown as ExpressionsJson, de: expressionsDeContent as unknown as ExpressionsJson };
+for (const lang of ['ja', 'ko', 'en', 'zh', 'es', 'de'] as const)
   EXPRESSIONS_BY_LANG[lang].themes.forEach((t) => t.expressions.forEach((it) => { if (!ITEMS.has(it.slug)) ITEMS.set(it.slug, it); LANG_OF.set(it.slug, lang); }));
 const POOL: EngineItem[] = [...ITEMS.values()].map(toEngine);
 /** Réserve de distracteurs par langue (jamais de choix japonais dans une question coréenne ou anglaise). */
 const langOfItem = (id: string): StudyLanguage => LANG_OF.get(id) ?? 'ja';
-const POOL_BY_LANG: Record<StudyLanguage, EngineItem[]> = { ja: POOL.filter((i) => langOfItem(i.id) === 'ja'), ko: POOL.filter((i) => langOfItem(i.id) === 'ko'), en: POOL.filter((i) => langOfItem(i.id) === 'en'), zh: POOL.filter((i) => langOfItem(i.id) === 'zh'), es: POOL.filter((i) => langOfItem(i.id) === 'es') };
+const POOL_BY_LANG: Record<StudyLanguage, EngineItem[]> = { ja: POOL.filter((i) => langOfItem(i.id) === 'ja'), ko: POOL.filter((i) => langOfItem(i.id) === 'ko'), en: POOL.filter((i) => langOfItem(i.id) === 'en'), zh: POOL.filter((i) => langOfItem(i.id) === 'zh'), es: POOL.filter((i) => langOfItem(i.id) === 'es'), de: POOL.filter((i) => langOfItem(i.id) === 'de') };
 /** Notion de la langue étudiée. */
 const inLang = (id: string) => ITEMS.has(id) && (LANG_OF.get(id) ?? 'ja') === studyLang();
 /** Distracteurs centrés sur le monde de la leçon (voir focusedPool). */
@@ -1442,6 +1445,9 @@ function achievementStats(): AchievementStats {
     spanishBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && languageOfSlug(slug) === 'es').length,
     delePassed: (s.exams ?? []).filter((e) => e.passed && languageOfSlug(e.slug) === 'es').length,
     spanishChapters: (s.reading ?? []).filter((r) => ES_CHAPTERS.has(r.chapter)).length,
+    germanBosses: Object.entries(s.bosses ?? {}).filter(([slug, b]) => b.firstVictoryAt && languageOfSlug(slug) === 'de').length,
+    goethePassed: (s.exams ?? []).filter((e) => e.passed && languageOfSlug(e.slug) === 'de').length,
+    germanChapters: (s.reading ?? []).filter((r) => DE_CHAPTERS.has(r.chapter)).length,
   };
 }
 /** Chapitres des contes coréens (succès « contes coréens »). */
@@ -1450,6 +1456,7 @@ const KO_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'ko').stories.flatMap
 const EN_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'en').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 const ZH_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'zh').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 const ES_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'es').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
+const DE_CHAPTERS = new Set(readingCatalogFor(READING_ALL, 'de').stories.flatMap((st) => st.chapters.map((c) => c.slug)));
 
 const achievementDto = (def: AchievementDef, value: number, unlocked: boolean, at: string | null): AchievementDto => ({
   slug: def.slug, title: def.title, description: def.description, glyph: def.glyph, category: def.category, rarity: def.rarity,
@@ -1492,7 +1499,12 @@ const duels = localDuels({
   me: () => ({ displayName: load().user.displayName, avatar: normalizeAvatar(load().avatar) }),
   seenItems: () => seenItems(),
   // Premier monde de la langue : les kana ou le hangeul ; en anglais, les premiers mots
-  starterItems: () => [...(WORLD_POOL.get(`${languageInfo(studyLang()).firstLevel.toLowerCase()}-w1`) ?? [])].filter((i) => i.kind === (studyLang() === 'en' ? 'vocabulary' : 'kana')),
+  // Premières notions de la langue : les caractères (kana, hangeul, pinyin) quand la première île en enseigne, sinon ses mots (anglais, espagnol, allemand).
+  starterItems: () => {
+    const first = [...(WORLD_POOL.get(`${languageInfo(studyLang()).firstLevel.toLowerCase()}-w1`) ?? [])];
+    const chars = first.filter((i) => i.kind === 'kana');
+    return chars.length ? chars : first.filter((i) => i.kind === 'vocabulary');
+  },
   get pool() {
     return POOL_BY_LANG[studyLang()];
   },

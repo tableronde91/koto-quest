@@ -63,7 +63,7 @@ export default function GameScreen() {
     return (
       <Screen>
         <View style={{ alignItems: 'center', gap: 10, paddingTop: 24 }}>
-          <Text style={{ fontSize: 52, fontWeight: '900', color: C.ko }}>{me?.preferences.studyLanguage === 'en' ? (stage.result.newBest ? 'Record!' : 'Time!') : me?.preferences.studyLanguage === 'ko' ? (stage.result.newBest ? '신기록' : '끝') : me?.preferences.studyLanguage === 'zh' ? (stage.result.newBest ? '新纪录' : '结束') : me?.preferences.studyLanguage === 'es' ? (stage.result.newBest ? '¡Récord!' : '¡Tiempo!') : stage.result.newBest ? '新記録' : '終了'}</Text>
+          <Text style={{ fontSize: 52, fontWeight: '900', color: C.ko }}>{me?.preferences.studyLanguage === 'en' ? (stage.result.newBest ? 'Record!' : 'Time!') : me?.preferences.studyLanguage === 'ko' ? (stage.result.newBest ? '신기록' : '끝') : me?.preferences.studyLanguage === 'zh' ? (stage.result.newBest ? '新纪录' : '结束') : me?.preferences.studyLanguage === 'es' ? (stage.result.newBest ? '¡Récord!' : '¡Tiempo!') : me?.preferences.studyLanguage === 'de' ? (stage.result.newBest ? 'Rekord!' : 'Zeit!') : stage.result.newBest ? '新記録' : '終了'}</Text>
           <H1 style={{ textAlign: 'center' }}>{stage.result.newBest ? T('Nouveau record !') : T('Partie terminée')}</H1>
           <Text testID="final-score" style={{ fontSize: 72, fontWeight: '900', color: C.ink }}>{stage.result.score}</Text>
           <P soft>{plural(stage.result.score, 'bonne réponse sur {1}, record : {2}', 'bonnes réponses sur {1}, record : {2}', [stage.result.score, stage.result.answered, stage.result.bestScore])}</P>

@@ -1,9 +1,9 @@
-/** Langues étudiées et niveaux (JLPT, TOPIK, TOEIC/CECRL, HSK, DELE). Sans dépendance : importé par index et reading. */
+/** Langues étudiées et niveaux (JLPT, TOPIK, TOEIC/CECRL, HSK, DELE, Goethe-Zertifikat). Sans dépendance : importé par index et reading. */
 
 // ───────────────────────── Langues étudiées ─────────────────────────
 
-/** Langue étudiée : japonais (JLPT), coréen (TOPIK), anglais (TOEIC, niveaux du CECRL), chinois (HSK) ou espagnol (DELE). */
-export type StudyLanguage = 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'es';
+/** Langue étudiée : japonais (JLPT), coréen (TOPIK), anglais (TOEIC, niveaux du CECRL), chinois (HSK), espagnol (DELE) ou allemand (Goethe-Zertifikat). */
+export type StudyLanguage = 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de';
 
 export type JlptLevelCode = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 export type TopikCode = 'TOPIK1' | 'TOPIK2' | 'TOPIK3' | 'TOPIK4' | 'TOPIK5' | 'TOPIK6';
@@ -14,7 +14,9 @@ export type HskCode = 'HSK1' | 'HSK2' | 'HSK3' | 'HSK4' | 'HSK5' | 'HSK6';
 /** Niveaux du DELE (espagnol, Instituto Cervantes), alignés sur le CECRL. */
 export type DeleCode = 'DELEA1' | 'DELEA2' | 'DELEB1' | 'DELEB2' | 'DELEC1' | 'DELEC2';
 /** Code d'un niveau du parcours, toutes langues confondues (le nom est historique). */
-export type JlptCode = JlptLevelCode | TopikCode | CefrCode | HskCode | DeleCode;
+/** Niveaux du Goethe-Zertifikat (allemand, Goethe-Institut), alignés sur le CECRL. */
+export type GoetheCode = 'GOETHEA1' | 'GOETHEA2' | 'GOETHEB1' | 'GOETHEB2' | 'GOETHEC1' | 'GOETHEC2';
+export type JlptCode = JlptLevelCode | TopikCode | CefrCode | HskCode | DeleCode | GoetheCode;
 export type LevelCode = JlptCode;
 
 /** Niveaux du JLPT, du plus facile au plus difficile. */
@@ -29,8 +31,10 @@ export const TOEIC_SCORE_OF: Record<CefrCode, number> = { A1: 120, A2: 225, B1: 
 export const HSK_LEVELS: HskCode[] = ['HSK1', 'HSK2', 'HSK3', 'HSK4', 'HSK5', 'HSK6'];
 /** Niveaux du DELE, du plus facile au plus difficile. */
 export const DELE_LEVELS: DeleCode[] = ['DELEA1', 'DELEA2', 'DELEB1', 'DELEB2', 'DELEC1', 'DELEC2'];
+/** Niveaux du Goethe-Zertifikat, du plus facile au plus difficile. */
+export const GOETHE_LEVELS: GoetheCode[] = ['GOETHEA1', 'GOETHEA2', 'GOETHEB1', 'GOETHEB2', 'GOETHEC1', 'GOETHEC2'];
 /** Tous les niveaux acceptés par l'API (le nom est historique). */
-export const JLPT_LEVELS: JlptCode[] = [...JLPT_ONLY_LEVELS, ...TOPIK_LEVELS, ...CEFR_LEVELS, ...HSK_LEVELS, ...DELE_LEVELS];
+export const JLPT_LEVELS: JlptCode[] = [...JLPT_ONLY_LEVELS, ...TOPIK_LEVELS, ...CEFR_LEVELS, ...HSK_LEVELS, ...DELE_LEVELS, ...GOETHE_LEVELS];
 export const ALL_LEVELS = JLPT_LEVELS;
 
 export interface StudyLanguageInfo {
@@ -42,7 +46,7 @@ export interface StudyLanguageInfo {
   /** Glyphe emblème */
   glyph: string;
   /** Examen préparé */
-  exam: 'JLPT' | 'TOPIK' | 'TOEIC' | 'HSK' | 'DELE';
+  exam: 'JLPT' | 'TOPIK' | 'TOEIC' | 'HSK' | 'DELE' | 'Goethe';
   /** Code BCP 47 pour la synthèse vocale */
   speech: string;
   levels: JlptCode[];
@@ -56,6 +60,7 @@ export const STUDY_LANGUAGES: StudyLanguageInfo[] = [
   { code: 'en', name: 'Anglais', native: 'English', glyph: 'E', exam: 'TOEIC', speech: 'en-GB', levels: CEFR_LEVELS, firstLevel: 'A1' },
   { code: 'zh', name: 'Chinois', native: '中文', glyph: '中', exam: 'HSK', speech: 'zh-CN', levels: HSK_LEVELS, firstLevel: 'HSK1' },
   { code: 'es', name: 'Espagnol', native: 'Español', glyph: 'Ñ', exam: 'DELE', speech: 'es-ES', levels: DELE_LEVELS, firstLevel: 'DELEA1' },
+  { code: 'de', name: 'Allemand', native: 'Deutsch', glyph: 'ß', exam: 'Goethe', speech: 'de-DE', levels: GOETHE_LEVELS, firstLevel: 'GOETHEA1' },
 ];
 export const STUDY_LANGUAGE_CODES: StudyLanguage[] = STUDY_LANGUAGES.map((l) => l.code);
 
@@ -72,11 +77,15 @@ export const isHsk = (code: string | null | undefined): code is HskCode => !!cod
 /** Vrai pour un niveau du DELE (espagnol) : DELEA1…DELEC2. */
 export const isDele = (code: string | null | undefined): code is DeleCode => !!code && /^DELE[ABC][12]$/.test(code);
 
-/** Langue d'un niveau : TOPIK → coréen, A1…C1 → anglais, HSK → chinois, DELE → espagnol, les autres (N5…N1) → japonais. */
+/** Vrai pour un niveau du Goethe-Zertifikat (allemand) : GOETHEA1…GOETHEC2. */
+export const isGoethe = (code: string | null | undefined): code is GoetheCode => !!code && /^GOETHE[ABC][12]$/.test(code);
+
+/** Langue d'un niveau : Goethe → allemand, TOPIK → coréen, A1…C1 → anglais, HSK → chinois, DELE → espagnol, les autres (N5…N1) → japonais. */
 export function languageOfLevel(code: string | null | undefined): StudyLanguage {
   if (code && code.startsWith('TOPIK')) return 'ko';
   if (isHsk(code)) return 'zh';
   if (isDele(code)) return 'es';
+  if (isGoethe(code)) return 'de';
   return isCefr(code) ? 'en' : 'ja';
 }
 
@@ -84,6 +93,7 @@ export function languageOfLevel(code: string | null | undefined): StudyLanguage 
 export function levelLabel(code: string): string {
   if (isHsk(code)) return `HSK ${code.slice(3)}`;
   if (isDele(code)) return `DELE ${code.slice(4)}`;
+  if (isGoethe(code)) return `Goethe ${code.slice(6)}`;
   return code.startsWith('TOPIK') ? `TOPIK ${code.slice(5)}` : code;
 }
 
@@ -92,6 +102,7 @@ export function examLevelLabel(code: string): string {
   if (code.startsWith('TOPIK')) return `TOPIK ${code.slice(5)}`;
   if (isHsk(code)) return `HSK ${code.slice(3)}`;
   if (isDele(code)) return `DELE ${code.slice(4)}`;
+  if (isGoethe(code)) return `Goethe ${code.slice(6)}`;
   return isCefr(code) ? `TOEIC ${code}` : `JLPT ${code}`;
 }
 
@@ -110,11 +121,11 @@ export const hasHan = (s: string) => /[\u3400-\u9fff]/.test(s);
  * japonais sinon. Fixée par l'application selon la langue étudiée (setHanLanguage).
  */
 let hanLanguage: 'ja' | 'zh' = 'ja';
-/** Langue des textes en lettres latines : l'espagnol pour qui étudie l'espagnol, l'anglais sinon. */
-let latinLanguage: 'en' | 'es' = 'en';
+/** Langue des textes en lettres latines : l'espagnol ou l'allemand pour qui les étudie, l'anglais sinon. */
+let latinLanguage: 'en' | 'es' | 'de' = 'en';
 export function setHanLanguage(lang: StudyLanguage | null | undefined) {
   hanLanguage = lang === 'zh' ? 'zh' : 'ja';
-  latinLanguage = lang === 'es' ? 'es' : 'en';
+  latinLanguage = lang === 'es' ? 'es' : lang === 'de' ? 'de' : 'en';
 }
 export const currentLatinLanguage = () => latinLanguage;
 export const currentHanLanguage = () => hanLanguage;
@@ -125,6 +136,7 @@ export function textLanguage(s: string): StudyLanguage {
   if (hasKana(s)) return 'ja';
   if (hasHan(s)) return hanLanguage;
   if (/[ñÑ¿¡]/.test(s)) return 'es';
+  if (/[äöÄÖßẞ]/.test(s)) return 'de';
   return /[A-Za-z]/.test(s) ? latinLanguage : hanLanguage;
 }
 

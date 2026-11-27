@@ -71,12 +71,12 @@ export function WelcomePage() {
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
         <section aria-labelledby="hero-title">
           <p className="inline-flex flex-wrap items-center gap-x-2 rounded-full bg-surface-2 px-3 py-1 text-sm font-bold">
-            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · <span lang="es">Español</span>
+            <span lang="ja" className="jp">日本語</span> · <span lang="ko" className="jp">한국어</span> · <span lang="en">English</span> · <span lang="zh" className="jp">中文</span> · <span lang="es">Español</span> · <span lang="de">Deutsch</span>
           </p>
           <h1 id="hero-title" className="mt-4 max-w-[16ch] text-4xl sm:text-5xl">{T("Apprends une langue. Réussis ton examen.")}</h1>
           <p className="mt-4 max-w-[46ch] text-lg text-ink-soft">{T("Des leçons de 5 à 10 minutes, des révisions au bon moment et des examens blancs, du premier mot jusqu’au jour J.")}</p>
           <ul className="mt-5 flex flex-col gap-2">
-            {[T("JLPT, TOPIK, TOEIC, HSK ou DELE : un parcours par niveau officiel"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
+            {[T("JLPT, TOPIK, TOEIC, HSK, DELE ou Goethe-Zertifikat : un parcours par niveau officiel"), T("Gratuit, sans publicité, en français ou en anglais")].map((x) => (
               <li key={x} className="flex items-start gap-2"><span aria-hidden="true" className="mt-0.5 font-bold text-ok">✓</span>{x}</li>
             ))}
           </ul>
@@ -115,9 +115,9 @@ export function WelcomePage() {
       </section>
       </div>
 
-      {/* Cinq langues : une seule visible à la fois, le détail de l'examen sur demande */}
+      {/* Six langues : une seule visible à la fois, le détail de l'examen sur demande */}
       <section aria-labelledby="langs-title" className="flex flex-col gap-5">
-        <h2 id="langs-title" className="text-3xl">{T("Cinq langues, cinq examens")}</h2>
+        <h2 id="langs-title" className="text-3xl">{T("Six langues, six examens")}</h2>
         <div role="tablist" aria-label={T("Langue à découvrir")} className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
           {LANGS.map((l) => (
             <button key={l.id} role="tab" id={`lang-${l.id}`} aria-selected={lang === l.id} aria-controls="lang-panel" onClick={() => setLang(l.id)} className={`flex min-h-14 shrink-0 items-center gap-3 rounded-2xl border-2 px-4 text-left ${lang === l.id ? 'border-ink bg-ink text-paper' : 'border-line bg-surface hover:border-ink-soft'}`}>
@@ -167,14 +167,14 @@ export function WelcomePage() {
         <button className="btn btn-gold relative mt-6 min-h-14 px-6 text-lg" onClick={startNow}>{T("Commencer gratuitement")}</button>
       </section>
 
-      <p className="text-xs text-ink-soft">{T("Koto Quest n’est affilié à aucun organisateur d’examen (Japan Foundation et JEES pour le JLPT, NIIED pour le TOPIK, ETS pour le TOEIC, CLEC pour le HSK, Instituto Cervantes pour le DELE). Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
+      <p className="text-xs text-ink-soft">{T("Koto Quest n’est affilié à aucun organisateur d’examen (Japan Foundation et JEES pour le JLPT, NIIED pour le TOPIK, ETS pour le TOEIC, CLEC pour le HSK, Instituto Cervantes pour le DELE, Goethe-Institut pour le Goethe-Zertifikat). Les examens blancs sont non officiels et ne garantissent pas la réussite.")}</p>
     </div>
     <div className="mx-auto max-w-5xl px-5"><SiteFooter className="mt-0" /></div>
     </>
   );
 }
 
-/** Les cinq langues de la page d'accueil : une phrase, les niveaux, et le détail de l'examen replié. */
+/** Les six langues de la page d'accueil : une phrase, les niveaux, et le détail de l'examen replié. */
 const LANGS = [
   {
     id: 'ja', glyph: '言', exam: 'JLPT', name: () => T("Japonais"),
@@ -237,6 +237,19 @@ const LANGS = [
       { id: 'DELE B2', name: () => T("Avancé") },
       { id: 'DELE C1', name: () => T("Autonome") },
       { id: 'DELE C2', name: () => T("Maîtrise") },
+    ],
+  },
+  {
+    id: 'de', glyph: 'ß', exam: 'Goethe-Zertifikat', name: () => T("Allemand"),
+    pitch: () => T("Le Goethe-Zertifikat A1 pour commencer, sur la Route des contes des frères Grimm."),
+    about: () => T("Le Goethe-Zertifikat est le diplôme d’allemand du Goethe-Institut, reconnu dans le monde entier. Il suit les six niveaux du CECRL, de A1 (« Start Deutsch 1 ») à C2, et évalue quatre épreuves : Hören, Lesen, Schreiben et Sprechen. Koto Quest t’y prépare en suivant les contes des frères Grimm, de Hanau à Brême ; le niveau A1 est prêt, les suivants arrivent. Les examens blancs sont notés sur 100, avec réussite à 60 points ; l’épreuve orale n’est pas évaluée."),
+    levels: [
+      { id: 'Goethe A1', name: () => T("Découverte") },
+      { id: 'Goethe A2', name: () => T("Bientôt") },
+      { id: 'Goethe B1', name: () => T("Bientôt") },
+      { id: 'Goethe B2', name: () => T("Bientôt") },
+      { id: 'Goethe C1', name: () => T("Bientôt") },
+      { id: 'Goethe C2', name: () => T("Bientôt") },
     ],
   },
 ] as const;

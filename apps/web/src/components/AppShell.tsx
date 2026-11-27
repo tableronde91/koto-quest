@@ -65,7 +65,7 @@ export function AppShell({ me, children }: { me: MeDto; children: ReactNode }) {
             <img src="/icons/icon.svg" alt="" className="h-10 w-10" />
             <div>
               <p className="font-display text-lg leading-tight">{T("Koto Quest")}</p>
-              <p className="jp text-sm text-ink-soft">{words.pick('言葉の旅', '말의 여행', 'A journey in words', '言语之旅', 'Un viaje de palabras')}</p>
+              <p className="jp text-sm text-ink-soft">{words.pick('言葉の旅', '말의 여행', 'A journey in words', '言语之旅', 'Un viaje de palabras', 'Eine Reise in Worten')}</p>
             </div>
           </div>
           {nav.map((n) => (

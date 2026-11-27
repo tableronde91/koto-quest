@@ -540,6 +540,11 @@ BURGUES = STORY('rey-burgues', 'b', 'DELEC2', '#8A6A2A', ('El rey burgués', 'Le
 
 ES_STORIES = [POLLITO, RATITA, MOLINOS, JUAN, BLANCA, GALLO, DUIO, DORADO, MAIZ, ILLAN, OJOS, TORTUGA, BURGUES]
 
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from reading_mix import mix
+mix(ES_STORIES)
+
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('DELE')] + ES_STORIES
 data.setdefault('notices', {})['es'] = {'fr': 'Contes populaires, légendes et classiques d’Espagne et d’Amérique latine (domaine public), réécrits en espagnol simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (espagnol d’Espagne).', 'en': 'Folk tales, legends and classics from Spain and Latin America (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain).'}

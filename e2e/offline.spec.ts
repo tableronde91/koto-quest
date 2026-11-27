@@ -1158,3 +1158,60 @@ test('hors ligne : apprendre l’espagnol pour le DELE (saga de Don Quichotte, e
   await page.getByRole('button', { name: 'Commencer l’examen' }).click();
   await expect(page.getByText('Comprensión de lectura — Tarea 1').first()).toBeVisible();
 });
+
+test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des frères Grimm, expressions, contes, examen sur 100)', async ({ page }) => {
+  await page.goto(FILE);
+  await page.getByRole('radio', { name: /Allemand/ }).click();
+  await expect(page.getByRole('heading', { name: 'Où en es-tu en allemand ?' })).toBeVisible();
+  await page.getByRole('radio', { name: /Je pars de zéro ou presque/ }).click();
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('heading', { name: 'Quel niveau Goethe vises-tu ?' })).toBeVisible();
+  await expect(page.getByRole('radio', { name: /Goethe A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
+  // Les niveaux suivants sont annoncés mais pas encore ouverts
+  await expect(page.getByRole('radio', { name: /Goethe A2 — survie/ })).toBeDisabled();
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
+  await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Suivant' }).click();
+  await page.getByRole('button', { name: 'Commencer l’aventure' }).click();
+
+  // Première leçon : saluer
+  await page.getByRole('link', { name: 'Commencer la leçon' }).click();
+  await expect(page.getByRole('heading', { name: 'Hallo! Saluer et prendre congé' })).toBeVisible();
+  await page.getByRole('button', { name: 'Passer aux exercices' }).click();
+  await answerAll(page, /Sans faute|Leçon terminée/);
+
+  // Parcours : la Route des contes, sans japonais ni autre langue
+  await page.goto(FILE + '#/path');
+  await expect(page.getByRole('heading', { name: 'Goethe A1 : La Route des contes' })).toBeVisible();
+  await expect(page.locator('[data-theme-map="germany"]')).toBeVisible();
+  await expect(page.getByText(/[぀-ヿ一-鿿]/)).toHaveCount(0);
+  await expect(page.getByText('Le Rumpelstilzchen').first()).toBeVisible();
+
+  // Pas d'onglet d'écriture : la page Caractères mène aux expressions
+  await page.goto(FILE + '#/characters');
+  await expect(page).toHaveURL(/#\/expressions/);
+  await page.getByRole('button', { name: /Au quotidien/ }).click();
+  await expect(page.getByText('Genau!', { exact: true })).toBeVisible();
+
+  // Mini-jeux : Word Rush
+  await page.goto(FILE + '#/games');
+  await expect(page.getByRole('heading', { name: 'Word Rush' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Kana Rush' })).toHaveCount(0);
+
+  // Lecture : les contes des frères Grimm
+  await page.goto(FILE + '#/lecture');
+  await expect(page.getByText('Die Bremer Stadtmusikanten').first()).toBeVisible();
+  await expect(page.getByText('Der süße Brei').first()).toBeVisible();
+  await expect(page.getByText('Die Sterntaler').first()).toBeVisible();
+  await expect(page.getByText('El medio pollito')).toHaveCount(0);
+
+  // Atelier Goethe et examen blanc noté sur 100
+  await page.goto(FILE + '#/prepa');
+  await expect(page.getByRole('heading', { name: 'Atelier Goethe' })).toBeVisible();
+  await page.goto(FILE + '#/exam/goethea1-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat A1 — format officiel' })).toBeVisible();
+  await expect(page.getByText(/35 questions en 65 minutes/)).toBeVisible();
+  await expect(page.getByText('Barème du Goethe-Zertifikat')).toBeVisible();
+  await page.getByRole('button', { name: 'Commencer l’examen' }).click();
+  await expect(page.getByText('Hören — Teil 1').first()).toBeVisible();
+});

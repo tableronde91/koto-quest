@@ -46,12 +46,12 @@ export function ExpressionsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <PageTitle sub={words.pick(T('Les phrases toutes faites qu’on entend partout au Japon : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Corée : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en anglais : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Chine : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en espagnol : quand les dire, à qui, et comment les prononcer.'))}>{T('Expressions')}</PageTitle>
+      <PageTitle sub={words.pick(T('Les phrases toutes faites qu’on entend partout au Japon : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Corée : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en anglais : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Chine : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en espagnol : quand les dire, à qui, et comment les prononcer.'), T('Les phrases toutes faites qu’on entend partout en Allemagne : quand les dire, à qui, et comment les prononcer.'))}>{T('Expressions')}</PageTitle>
 
       <label className="flex items-center gap-3 rounded-2xl border-2 border-line bg-surface px-4 focus-within:border-ink">
         <span aria-hidden="true" className="text-xl">🔎</span>
         <span className="sr-only">{T('Rechercher une expression')}</span>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={words.pick(T('Rechercher : merci, おねがい, sumimasen…'), T('Rechercher : merci, 감사, gamsa…'), T('Rechercher : merci, thank you, sorry…'), T('Rechercher : merci, 谢谢, xièxie…'), T('Rechercher : merci, gracias, perdón…'))} className="min-h-12 flex-1 bg-transparent outline-none" />
+        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={words.pick(T('Rechercher : merci, おねがい, sumimasen…'), T('Rechercher : merci, 감사, gamsa…'), T('Rechercher : merci, thank you, sorry…'), T('Rechercher : merci, 谢谢, xièxie…'), T('Rechercher : merci, gracias, perdón…'), T('Rechercher : merci, danke, bitte…'))} className="min-h-12 flex-1 bg-transparent outline-none" />
         {query && (
           <button type="button" className="text-ink-soft" onClick={() => setQuery('')} aria-label={T('Effacer la recherche')}>
             ✕

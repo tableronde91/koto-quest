@@ -13,7 +13,7 @@ import { useStudyLang } from '../src/study';
 
 type Pane = string;
 // Libellés traduits à l'affichage avec T()
-const PANES: Record<'ja' | 'ko' | 'en' | 'zh' | 'es', { slug: Pane; glyph: string; label: string }[]> = {
+const PANES: Record<'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de', { slug: Pane; glyph: string; label: string }[]> = {
   ja: [
     { slug: 'hiragana', glyph: 'あ', label: 'Hiragana' },
     { slug: 'katakana', glyph: 'ア', label: 'Katakana' },
@@ -35,6 +35,8 @@ const PANES: Record<'ja' | 'ko' | 'en' | 'zh' | 'es', { slug: Pane; glyph: strin
   ],
   // Espagnol : alphabet latin, seulement les expressions
   es: [{ slug: 'expressions', glyph: '¡!', label: 'Expressions' }],
+  // Allemand : alphabet latin, seulement les expressions
+  de: [{ slug: 'expressions', glyph: '„“', label: 'Expressions' }],
 };
 
 // Traduits à l'affichage avec T()
@@ -54,8 +56,8 @@ export default function KanaTab() {
   const pane = panes.some((p) => p.slug === picked) ? picked : panes[0].slug;
   return (
     <Screen>
-      <TitleBar title={w.pick(T('Caractères'), T('Hangeul'), T('Expressions'), T('Hanzi'), T('Expressions'))} fallback="/learn" />
-      <P soft>{w.pick(T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.'), T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.'), T('Les expressions idiomatiques et les verbes à particule les plus utiles, accessibles à tout moment.'), T('Les caractères chinois avec leur pinyin et les expressions du quotidien, accessibles à tout moment.'), T('Les expressions et les tournures les plus utiles de l’espagnol, accessibles à tout moment.'))}</P>
+      <TitleBar title={w.pick(T('Caractères'), T('Hangeul'), T('Expressions'), T('Hanzi'), T('Expressions'), T('Expressions'))} fallback="/learn" />
+      <P soft>{w.pick(T('Les écritures japonaises et les expressions du quotidien, accessibles à tout moment.'), T('L’alphabet coréen, les expressions du quotidien et les proverbes, accessibles à tout moment.'), T('Les expressions idiomatiques et les verbes à particule les plus utiles, accessibles à tout moment.'), T('Les caractères chinois avec leur pinyin et les expressions du quotidien, accessibles à tout moment.'), T('Les expressions et les tournures les plus utiles de l’espagnol, accessibles à tout moment.'), T('Les expressions, les images et les proverbes les plus utiles de l’allemand, accessibles à tout moment.'))}</P>
       <View accessibilityRole="tablist" accessibilityLabel={T('Écriture')} style={{ flexDirection: 'row', backgroundColor: C.surface2, borderRadius: 16, padding: 4 }}>
         {panes.map((p) => {
           const on = p.slug === pane;
@@ -206,7 +208,7 @@ function Row({ k, v }: { k: string; v: string }) {
 
 function ExpressionsPane() {
   const router = useRouter();
-  const { ko, zh, es } = useStudyLang();
+  const { ko, zh, es, de } = useStudyLang();
   const { data, isLoading, error, refetch } = useExpressions();
   const [themeSlug, setThemeSlug] = useState<string | null>(null);
   const [query, setQuery] = useState('');
@@ -221,7 +223,7 @@ function ExpressionsPane() {
       <TextInput
         value={query}
         onChangeText={setQuery}
-        placeholder={es ? T('Rechercher : merci, gracias, perdón…') : zh ? T('Rechercher : merci, 谢谢, xièxie…') : ko ? T('Rechercher : merci, 감사, gamsa…') : T('Rechercher : merci, おねがい, sumimasen…')}
+        placeholder={de ? T('Rechercher : merci, danke, bitte…') : es ? T('Rechercher : merci, gracias, perdón…') : zh ? T('Rechercher : merci, 谢谢, xièxie…') : ko ? T('Rechercher : merci, 감사, gamsa…') : T('Rechercher : merci, おねがい, sumimasen…')}
         placeholderTextColor={C.inkSoft}
         accessibilityLabel={T('Rechercher une expression')}
         autoCorrect={false}

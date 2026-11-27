@@ -44,6 +44,6 @@ export function kindLabelOf(item: { kind: string; front: string; reading?: strin
 }
 
 /** Attribut lang d'un texte dans la langue étudiée : coréen (hangeul), japonais (kana, kanji), chinois (caractères seuls, quand on étudie le chinois) ou anglais (alphabet latin). */
-export function langOf(text: unknown): 'ja' | 'ko' | 'en' | 'zh' | 'es' {
+export function langOf(text: unknown): 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de' {
   return typeof text === 'string' ? textLanguage(text) : 'ja';
 }

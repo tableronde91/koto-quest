@@ -61,12 +61,19 @@ export interface AchievementStats {
   delePassed: number;
   /** Chapitres de contes espagnols lus */
   spanishChapters: number;
+  /** Gardiens allemands (îles du Goethe-Zertifikat) vaincus */
+  germanBosses: number;
+  /** Examens blancs du Goethe-Zertifikat validés */
+  goethePassed: number;
+  /** Chapitres de contes allemands lus */
+  germanChapters: number;
 }
 
-/** Langue d'un monde ou d'un examen d'après son slug : topik… → coréen, a1-…/c1-… → anglais, hsk… → chinois, dele… → espagnol, sinon japonais. */
-export function languageOfSlug(slug: string): 'ja' | 'ko' | 'en' | 'zh' | 'es' {
+/** Langue d'un monde ou d'un examen d'après son slug : topik… → coréen, a1-…/c1-… → anglais, hsk… → chinois, dele… → espagnol, goethe… → allemand, sinon japonais. */
+export function languageOfSlug(slug: string): 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de' {
   if (slug.startsWith('topik')) return 'ko';
   if (slug.startsWith('dele')) return 'es';
+  if (slug.startsWith('goethe')) return 'de';
   if (slug.startsWith('hsk')) return 'zh';
   return /^[abc][12]-/.test(slug) ? 'en' : 'ja';
 }
@@ -82,7 +89,7 @@ export interface AchievementDef {
   metric: keyof AchievementStats;
   target: number;
   /** Succès propre à une langue étudiée : montré seulement à qui l'étudie (ou l'a déjà débloqué). */
-  language?: 'ja' | 'ko' | 'en' | 'zh' | 'es';
+  language?: 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de';
 }
 
 export const ACHIEVEMENT_COINS: Record<AchievementRarity, number> = { common: 10, rare: 25, epic: 50 };
@@ -96,7 +103,7 @@ export const ACHIEVEMENT_CATEGORIES: Record<AchievementCategory, string> = {
   play: 'Jeux et collection',
 };
 
-const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number, language?: 'ja' | 'ko' | 'en' | 'zh' | 'es'): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target, ...(language ? { language } : {}) });
+const a = (slug: string, glyph: string, title: string, description: string, category: AchievementCategory, rarity: AchievementRarity, metric: keyof AchievementStats, target: number, language?: 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de'): AchievementDef => ({ slug, glyph, title, description, category, rarity, metric, target, ...(language ? { language } : {}) });
 
 export const ACHIEVEMENTS: AchievementDef[] = [
   // Étude
@@ -152,6 +159,10 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   a('es-bosses-24', '♚', 'Légende de la Manche', 'Vaincre 24 gardiens espagnols.', 'adventure', 'epic', 'spanishBosses', 24, 'es'),
   a('dele-passed', 'Ñ', 'DELE en poche', 'Valider un examen blanc du DELE.', 'adventure', 'epic', 'delePassed', 1, 'es'),
   a('es-tales-10', '✍', 'Conteur·se de la Péninsule', 'Lire 10 chapitres de contes espagnols.', 'study', 'rare', 'spanishChapters', 10, 'es'),
+  a('de-bosses-8', '♞', 'Compagnon·ne des Grimm', 'Vaincre 8 gardiens allemands.', 'adventure', 'rare', 'germanBosses', 8, 'de'),
+  a('de-bosses-24', '♛', 'Légende de la Route des contes', 'Vaincre 24 gardiens allemands.', 'adventure', 'epic', 'germanBosses', 24, 'de'),
+  a('goethe-passed', 'ß', 'Goethe-Zertifikat en poche', 'Valider un examen blanc du Goethe-Zertifikat.', 'adventure', 'epic', 'goethePassed', 1, 'de'),
+  a('de-tales-10', '❦', 'Conteur·se de la Forêt', 'Lire 10 chapitres de contes allemands.', 'study', 'rare', 'germanChapters', 10, 'de'),
   // Jeux et collection
   a('games-10', '遊', 'Joueur·se', 'Jouer 10 parties de mini-jeux.', 'play', 'common', 'gamesPlayed', 10),
   a('game-score-20', '速', 'Réflexes éclair', 'Marquer 20 points dans une partie de mini-jeu.', 'play', 'rare', 'bestGameScore', 20),
@@ -171,7 +182,7 @@ export interface AchievementProgress {
  * Progression de chaque succès (valeur plafonnée à la cible). Avec une langue, les succès propres
  * à l'autre langue sont cachés, sauf s'ils ont déjà été débloqués.
  */
-export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>, language?: 'ja' | 'ko' | 'en' | 'zh' | 'es'): AchievementProgress[] {
+export function achievementProgress(stats: AchievementStats, unlocked: Iterable<string>, language?: 'ja' | 'ko' | 'en' | 'zh' | 'es' | 'de'): AchievementProgress[] {
   const done = new Set(unlocked);
   return ACHIEVEMENTS.filter((def) => !language || !def.language || def.language === language || done.has(def.slug)).map((def) => {
     const raw = Math.max(0, Math.floor(stats[def.metric] ?? 0));
@@ -211,4 +222,5 @@ export const EMPTY_ACHIEVEMENT_STATS: AchievementStats = {
   bestGameScore: 0, itemsCollected: 0, placementDone: 0, masteredKana: 0, japaneseBosses: 0, jlptPassed: 0, japaneseChapters: 0, masteredHangul: 0, koreanBosses: 0, topikPassed: 0, koreanChapters: 0,
   englishBosses: 0, toeicPassed: 0, englishChapters: 0, chineseBosses: 0, hskPassed: 0, chineseChapters: 0,
   spanishBosses: 0, delePassed: 0, spanishChapters: 0,
+  germanBosses: 0, goethePassed: 0, germanChapters: 0,
 };

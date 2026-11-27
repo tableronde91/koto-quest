@@ -13,8 +13,8 @@ import { useStudyLang, useDecor } from '../components/StudyLanguage';
 const GLYPH: Record<GameInfoDto['id'], string> = { 'word-rush': 'W', 'kana-rush': 'あ', 'kanji-rush': '速', 'hangul-rush': '한', 'hanzi-rush': '字', speed: '走', listening: '耳' };
 const KIND_HINT: Record<GameInfoDto['id'], string> = { 'word-rush': T("mots"), 'kana-rush': 'kana', 'kanji-rush': 'kanji', 'hangul-rush': T("lettres du hangeul"), 'hanzi-rush': T("caractères"), speed: T("notions"), listening: T("kana ou mots") };
 /** Ce qu'il faut avoir rencontré pour débloquer un jeu ; l'écoute porte sur des kana en japonais, des lettres en coréen, des mots ailleurs. */
-const hintOf = (id: GameInfoDto['id'], w: { ko: boolean; en: boolean; zh: boolean; es: boolean }) =>
-  id !== 'listening' ? KIND_HINT[id] : w.ko ? T("lettres ou mots") : w.en || w.zh || w.es ? T("mots") : KIND_HINT.listening;
+const hintOf = (id: GameInfoDto['id'], w: { ko: boolean; en: boolean; zh: boolean; es: boolean; de: boolean }) =>
+  id !== 'listening' ? KIND_HINT[id] : w.ko ? T("lettres ou mots") : w.en || w.zh || w.es || w.de ? T("mots") : KIND_HINT.listening;
 
 const useGames = () => useQuery({ queryKey: ['games'], queryFn: () => api<GamesDto>('/games') });
 
@@ -63,8 +63,8 @@ export function GamePlayPage() {
   const [stage, setStage] = useState<Stage>({ kind: 'intro' });
   const [error, setError] = useState<unknown>(null);
   const qc = useQueryClient();
-  const { ko, en, zh, es } = useStudyLang();
-  const hint = (gid: GameInfoDto['id']) => hintOf(gid, { ko, en, zh, es });
+  const { ko, en, zh, es, de } = useStudyLang();
+  const hint = (gid: GameInfoDto['id']) => hintOf(gid, { ko, en, zh, es, de });
 
   const start = async () => {
     setError(null);
@@ -113,7 +113,7 @@ export function GamePlayPage() {
       <ul className="text-ink-soft">
         <li>{T("{0} secondes, pas de pause.", [info.durationSec ])}</li>
         <li>{T("Touche une réponse (ou les touches 1 à 4) : la suivante arrive aussitôt.")}</li>
-        {info.id === 'listening' && !speechSupported() && <li className="font-bold text-ko">{en ? T("Ce navigateur ne peut pas lire l’audio anglais.") : zh ? T("Ce navigateur ne peut pas lire l’audio chinois.") : es ? T("Ce navigateur ne peut pas lire l’audio espagnol.") : ko ? T("Ce navigateur ne peut pas lire l’audio coréen.") : T("Ce navigateur ne peut pas lire l’audio japonais.")}</li>}
+        {info.id === 'listening' && !speechSupported() && <li className="font-bold text-ko">{en ? T("Ce navigateur ne peut pas lire l’audio anglais.") : zh ? T("Ce navigateur ne peut pas lire l’audio chinois.") : es ? T("Ce navigateur ne peut pas lire l’audio espagnol.") : de ? T("Ce navigateur ne peut pas lire l’audio allemand.") : ko ? T("Ce navigateur ne peut pas lire l’audio coréen.") : T("Ce navigateur ne peut pas lire l’audio japonais.")}</li>}
       </ul>
       {info.plays > 0 && <p>{T("Ton record :")}{' '}<strong>{info.bestScore}</strong></p>}
       {info.available ? (
@@ -250,11 +250,11 @@ function Play({ game, startedAt, onEnd }: { game: GameStartDto; startedAt: numbe
 }
 
 function Result({ info, result, onAgain }: { info: GameInfoDto; result: GameResultDto; onAgain: () => void }) {
-  const { ko, en, zh, es } = useStudyLang();
+  const { ko, en, zh, es, de } = useStudyLang();
   return (
     <div className="flex flex-col items-center gap-4 py-8 text-center">
       {result.newBest && result.score > 0 && <Confetti />}
-      <Stamp className="jp text-6xl font-black text-ko">{en ? (result.newBest ? 'New record!' : 'Time!') : zh ? (result.newBest ? '新纪录' : '结束') : es ? (result.newBest ? '¡Nuevo récord!' : '¡Tiempo!') : ko ? (result.newBest ? '신기록' : '끝') : result.newBest ? '新記録' : '終了'}</Stamp>
+      <Stamp className="jp text-6xl font-black text-ko">{en ? (result.newBest ? 'New record!' : 'Time!') : zh ? (result.newBest ? '新纪录' : '结束') : es ? (result.newBest ? '¡Nuevo récord!' : '¡Tiempo!') : de ? (result.newBest ? 'Neuer Rekord!' : 'Zeit!') : ko ? (result.newBest ? '신기록' : '끝') : result.newBest ? '新記録' : '終了'}</Stamp>
       <h1 className="text-4xl">{result.newBest ? T("Nouveau record !") : T("Partie terminée")}</h1>
       <p className="font-display text-7xl tabular-nums"><CountUp value={result.score} /></p>
       <p className="text-ink-soft">{T("bonne{0} réponse{1} sur {2}, record : {3}", [ result.score > 1 ? 's' : '' , result.score > 1 ? 's' : '' , result.answered , result.bestScore ])}</p>

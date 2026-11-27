@@ -54,7 +54,15 @@ const RANKS_ES: [number, string][] = [
   [3, 'Voyageur·se des îles'],
   [1, 'Apprenti·e de Sancho'],
 ];
-const rankFor = (level: number, lang: string) => (lang === 'zh' ? RANKS_ZH : lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'es' ? RANKS_ES : RANKS).find(([min]) => level >= min)![1];
+const RANKS_DE: [number, string][] = [
+  [16, 'Maître du Koto'],
+  [12, 'Conteur·se de la Forêt'],
+  [8, 'Gardien·ne des légendes'],
+  [5, 'Compagnon·ne des Grimm'],
+  [3, 'Voyageur·se des îles'],
+  [1, 'Apprenti·e des contes'],
+];
+const rankFor = (level: number, lang: string) => (lang === 'zh' ? RANKS_ZH : lang === 'ko' ? RANKS_KO : lang === 'en' ? RANKS_EN : lang === 'es' ? RANKS_ES : lang === 'de' ? RANKS_DE : RANKS).find(([min]) => level >= min)![1];
 
 /** Niveau d'une compétence : un palier tous les 10 éléments maîtrisés (comme sur le web). */
 const SKILL_STEP = 10;
@@ -101,7 +109,7 @@ function duration(seconds: number) {
 /** Mon aventure : fiche du héros, compétences, jardin de la mémoire, carnet de route, examens. */
 export default function Progress() {
   const D = useDecor();
-  const { ko, en, zh, es } = useStudyLang();
+  const { ko, en, zh, es, de } = useStudyLang();
   const router = useRouter();
   const stats = useQuery({ queryKey: ['stats'], queryFn: () => api<StatsDto>('/stats') });
   const ach = useQuery({ queryKey: ['achievements'], queryFn: () => api<AchievementsDto>('/achievements') });
@@ -133,7 +141,7 @@ export default function Progress() {
             <Avatar config={d.avatar} size={80} />
           </View>
           <View style={{ flex: 1, gap: 2 }}>
-            <Text style={{ color: '#FFD58A', fontWeight: '800', fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }}>{T(rankFor(d.xp.level, ko ? 'ko' : zh ? 'zh' : en ? 'en' : es ? 'es' : 'ja'))}</Text>
+            <Text style={{ color: '#FFD58A', fontWeight: '800', fontSize: 12, textTransform: 'uppercase', letterSpacing: 0.5 }}>{T(rankFor(d.xp.level, ko ? 'ko' : zh ? 'zh' : en ? 'en' : es ? 'es' : de ? 'de' : 'ja'))}</Text>
             <Text style={{ color: '#fff', fontSize: 24, fontWeight: '800' }}>{d.displayName}</Text>
             <Text style={{ color: '#fff', opacity: 0.8, fontSize: 13 }}>{T('Niveau {0} · {1} XP au total', [d.xp.level, d.xp.total])}</Text>
           </View>
@@ -162,7 +170,7 @@ export default function Progress() {
 
       {/* Compétences */}
       <Section glyph={D('skills')} title={T('Compétences')}>
-        {(en || es ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k) => {
+        {(en || es || de ? SKILLS_EN : zh ? SKILLS_ZH : ko ? SKILLS_KO : SKILLS).map((k) => {
           const v = s.byKind[k.kind];
           const lv = 1 + Math.floor(v.mastered / SKILL_STEP);
           const into = v.mastered % SKILL_STEP;
@@ -258,7 +266,7 @@ export default function Progress() {
       {/* Examens blancs */}
       <Section glyph={D('exam')} title={T('Examens blancs')}>
         {s.exams.length === 0 ? (
-          <P soft>{zh ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours HSK 1.') : es ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours DELE A1.') : en ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours A1.') : ko ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours TOPIK 1.') : T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.')}</P>
+          <P soft>{zh ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours HSK 1.') : de ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours Goethe A1.') : es ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours DELE A1.') : en ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours A1.') : ko ? T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours TOPIK 1.') : T('Aucun examen blanc passé. Tu le trouveras à la fin du parcours N5.')}</P>
         ) : (
           [...s.exams].reverse().map((e) => (
             <View key={e.date} testID="exam-result" style={{ gap: 4, borderWidth: 1, borderColor: C.line, borderRadius: 14, backgroundColor: C.surface, padding: 10 }}>

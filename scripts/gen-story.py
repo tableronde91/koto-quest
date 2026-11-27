@@ -1411,6 +1411,57 @@ story['levels']['DELEC2'] = {
       ('Le Rayon secret se referme sur ton nom, gravé à l’encre d’or. Niveau DELE C2 validé : tu maîtrises l’espagnol comme les plus grands auteurs !', 'The Secret Shelf closes over your name, engraved in golden ink. DELE C2 level complete: you master Spanish like the greatest authors!')),
    },
 }
+# ═════════════════════════ Allemand — Goethe-Zertifikat : l'apprenti·e des frères Grimm ═════════════════════════
+story['levels']['GOETHEA1'] = {
+   'glyph': 'ß', 'jp': 'Märchenstraße', 'color': '#2F6B4F',
+   'saga': B('La Route des contes', 'The Fairy Tale Route'),
+   'hero': B('Apprenti·e des frères Grimm', 'The Brothers Grimm’s apprentice'),
+   'short': B('L’apprenti·e', 'The apprentice'),
+   'prologue': B(
+     'Hanau, 1812. Jacob et Wilhelm Grimm viennent de terminer leur grand livre de contes quand un coup de vent ouvre la fenêtre : les pages s’envolent, et tous les personnages s’échappent sur les routes de Hesse ! Les deux frères ont besoin d’un·e apprenti·e pour les suivre de Hanau à Brême et les ramener un à un dans le livre. « Tu ne parles pas encore allemand ? sourit Wilhelm. Les contes te l’apprendront : il était une fois… »',
+     'Hanau, 1812. Jacob and Wilhelm Grimm have just finished their great book of tales when a gust of wind opens the window: the pages fly away, and all the characters escape onto the roads of Hesse! The two brothers need an apprentice to follow them from Hanau to Bremen and bring them back into the book one by one. “You don’t speak German yet?” smiles Wilhelm. “The tales will teach you: once upon a time…”'),
+   'epilogue': B(
+     'Sur la place du marché de Brême, l’âne, le chien, le chat et le coq chantent à tue-tête, et tu racontes tout le voyage dans un allemand clair et sûr. Jacob referme le livre : huit contes y ont retrouvé leur place. « Ce n’est qu’un début, dit Wilhelm. Il en manque encore beaucoup… et les forêts d’Allemagne sont vastes. »',
+     'On the market square in Bremen, the donkey, the dog, the cat and the rooster sing at the top of their voices, and you tell the whole journey in clear, confident German. Jacob closes the book: eight tales are back in their place. “This is only the beginning,” says Wilhelm. “Many are still missing… and the forests of Germany are vast.”'),
+   'chapters': {
+    'goethea1-w1': CHAP(('Hallo! À Hanau', 'Hallo! In Hanau'),
+      ('À Hanau, devant la maison natale des Grimm, le Rumpelstilzchen danse autour de son feu avec le manuscrit sous le bras. Salue, présente-toi et épelle son nom.',
+       'In Hanau, in front of the Grimms’ birthplace, Rumpelstiltskin dances around his fire with the manuscript under his arm. Greet, introduce yourself and spell his name.'),
+      ('« Qui te l’a dit ? » hurle le lutin en tapant du pied. Il disparaît dans le livre, et le manuscrit est sauvé.', '“Who told you that?” screams the imp, stamping his foot. He vanishes into the book, and the manuscript is saved.')),
+    'goethea1-w2': CHAP(('La maison de Steinau', 'The house in Steinau'),
+      ('À Steinau, dans la maison d’enfance des deux frères, les sept Nains cherchent qui a dérangé leurs affaires. Présente ta famille, dis ton âge et compte avec eux.',
+       'In Steinau, in the two brothers’ childhood home, the seven Dwarfs are looking for whoever disturbed their things. Introduce your family, give your age and count with them.'),
+      ('Sept assiettes, sept cuillères, sept lits : le compte est bon. Les Nains repartent en chantant vers leur page.', 'Seven plates, seven spoons, seven beds: it all adds up. The Dwarfs go off singing back to their page.')),
+    'goethea1-w3': CHAP(('Les ruelles de Marbourg', 'The lanes of Marburg'),
+      ('Dans les ruelles en pente de Marbourg, le Loup indique de faux chemins aux passants. Nomme les lieux de la ville, demande ta route et arrive le premier dans la forêt.',
+       'In the steep lanes of Marburg, the Wolf gives passers-by false directions. Name the places in town, ask your way and get to the forest first.'),
+      ('La grand-mère t’ouvre la porte avant le Loup. Penaud, il rentre dans le conte la queue basse.', 'The grandmother opens the door to you before the Wolf arrives. Sheepish, he slinks back into the tale.')),
+    'goethea1-w4': CHAP(('À table, à Cassel', 'At the table, in Kassel'),
+      ('À Cassel, où la conteuse Dorothea Viehmann a dicté ses histoires, la Sorcière a ouvert une auberge en pain d’épices. Commande, dis ce que tu aimes… et paie avant de partir.',
+       'In Kassel, where the storyteller Dorothea Viehmann dictated her stories, the Witch has opened a gingerbread inn. Order, say what you like… and pay before you leave.'),
+      ('L’addition réglée, la Sorcière n’a plus aucun droit sur toi. Elle retourne à son four, entre deux pages.', 'With the bill paid, the Witch has no hold on you any more. She goes back to her oven, between two pages.')),
+    'goethea1-w5': CHAP(('Le château de Sababurg', 'Sababurg Castle'),
+      ('Derrière les ronces de Sababurg, la Treizième Fée a figé les horloges et tout le château dort. Conjugue, dis l’heure et raconte une journée pour que le temps reparte.',
+       'Behind the briars of Sababurg, the Thirteenth Fairy has frozen the clocks and the whole castle is asleep. Conjugate, tell the time and describe a day so that time starts again.'),
+      ('Les aiguilles se remettent à tourner, le cuisinier se lève, et la Fée regagne le livre en bâillant.', 'The hands start turning again, the cook gets up, and the Fairy returns to the book with a yawn.')),
+    'goethea1-w6': CHAP(('Le marché de Göttingen', 'Göttingen market'),
+      ('À Göttingen, où les Grimm furent professeurs, le Vaillant Petit Tailleur vend ses ceintures brodées « Sept d’un coup ». Nomme vêtements et couleurs, et discute les prix.',
+       'In Göttingen, where the Grimms were professors, the Brave Little Tailor sells his belts embroidered “Seven at one blow”. Name clothes and colours, and discuss the prices.'),
+      ('Tu repars avec un manteau à bon prix, et le Tailleur avec une histoire de plus à raconter dans le livre.', 'You leave with a coat at a fair price, and the Tailor with one more story to tell in the book.')),
+    'goethea1-w7': CHAP(('La montagne de Dame Holle', 'Mother Holle’s mountain'),
+      ('Au sommet du Meissner, Dame Holle secoue ses édredons sans regarder le calendrier. Parle-lui du temps, des mois et des saisons, et propose-lui ton aide.',
+       'At the top of the Meissner, Mother Holle shakes out her featherbeds without looking at the calendar. Talk to her about the weather, the months and the seasons, and offer her your help.'),
+      ('Dame Holle te couvre d’une pluie d’or pour te remercier, et la neige attendra l’hiver.', 'Mother Holle showers you with gold to thank you, and the snow will wait for winter.')),
+    'goethea1-w8': CHAP(('Hamelin et le Joueur de flûte', 'Hamelin and the Pied Piper'),
+      ('À Hamelin, le Joueur de flûte n’a pas été payé et sa musique entraîne déjà les enfants. Décris-le, soigne les danseurs et dis à la ville ce qu’elle doit faire.',
+       'In Hamelin, the Pied Piper has not been paid and his music is already leading the children away. Describe him, look after the dancers and tell the town what it must do.'),
+      ('Le maire paie enfin sa dette. Le Joueur de flûte salue, range son instrument et reprend sa place dans la légende.', 'The mayor finally pays his debt. The Pied Piper bows, puts away his instrument and takes his place in the legend again.')),
+    'goethea1-final': CHAP(('Les Musiciens de Brême', 'The Bremen Town Musicians'),
+      ('Sur la place de Brême, l’âne, le chien, le chat et le coq t’attendent pour le concert final : écoute, lis et écris comme au Goethe-Zertifikat A1. Il faut au moins 60 points sur 100.',
+       'On the square in Bremen, the donkey, the dog, the cat and the rooster are waiting for you for the final concert: listen, read and write as in the Goethe-Zertifikat A1. You need at least 60 points out of 100.'),
+      ('Les quatre Musiciens entonnent ton nom. Niveau Goethe A1 validé : te voilà apprenti·e confirmé·e des frères Grimm !', 'The four Musicians strike up your name. Goethe A1 level complete: you are now the Brothers Grimm’s seasoned apprentice!')),
+   },
+}
 out = os.path.join(os.path.dirname(__file__), '..', 'content/story/story.json')
 json.dump(story, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(sum(len(l['chapters']) for l in story['levels'].values()), 'chapitres')
