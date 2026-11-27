@@ -13,7 +13,7 @@ const en = new Translator(['ui', 'engine', 'api', 'content'].map((f) => json(`co
 const FRENCH = /[àâçéèêëîïôûùœ«»]|\b(le|la|les|des|du|une|est|et|pour|avec|ce|cette|signifie|quel|quelle|que|comment)\b/i;
 const JP_ONLY = /^[\s　-ヿ一-鿿＀-￯0-9０-９.,!?()「」『』…〜・ー/★＿:：;]+$/;
 
-const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/a1/a1.json', 'content/a2/a2.json', 'content/b1/b1.json', 'content/b2/b2.json', 'content/c1/c1.json', 'content/hsk1/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json', 'content/delea1/delea1.json', 'content/delea2/delea2.json', 'content/deleb1/deleb1.json', 'content/deleb2/deleb2.json', 'content/delec1/delec1.json', 'content/delec2/delec2.json', 'content/goethea1/goethea1.json', 'content/goethea2/goethea2.json', 'content/goetheb1/goetheb1.json'].map(json);
+const levels = ['content/n5/n5.json', 'content/n4/n4.json', 'content/n3/n3.json', 'content/n2/n2.json', 'content/n1/n1.json', 'content/topik1/topik1.json', 'content/topik2/topik2.json', 'content/topik3/topik3.json', 'content/topik4/topik4.json', 'content/topik5/topik5.json', 'content/topik6/topik6.json', 'content/a1/a1.json', 'content/a2/a2.json', 'content/b1/b1.json', 'content/b2/b2.json', 'content/c1/c1.json', 'content/hsk1/hsk1.json', 'content/hsk2/hsk2.json', 'content/hsk3/hsk3.json', 'content/hsk4/hsk4.json', 'content/hsk5/hsk5.json', 'content/hsk6/hsk6.json', 'content/delea1/delea1.json', 'content/delea2/delea2.json', 'content/deleb1/deleb1.json', 'content/deleb2/deleb2.json', 'content/delec1/delec1.json', 'content/delec2/delec2.json', 'content/goethea1/goethea1.json', 'content/goethea2/goethea2.json', 'content/goetheb1/goetheb1.json', 'content/goetheb2/goetheb2.json'].map(json);
 const items: EngineItem[] = [];
 const authored: AuthoredExercise[] = [];
 for (const lvl of levels)
@@ -29,7 +29,7 @@ for (const t of [...json('content/expressions/expressions.json').themes, ...json
 // Espagnol et allemand : mots et choix des exercices, dans la langue étudiée (jamais traduits, même s'ils contiennent « la », « que » ou « du »).
 const SPANISH = new Set<string>();
 for (const it of items) if (/^(es-|gram-es-|esx-|de-|gram-de-|dex-)/.test(it.id)) SPANISH.add(it.front);
-for (const w of [...json('content/delea1/delea1.json').worlds, ...json('content/delea2/delea2.json').worlds, ...json('content/deleb1/deleb1.json').worlds, ...json('content/deleb2/deleb2.json').worlds, ...json('content/delec1/delec1.json').worlds, ...json('content/delec2/delec2.json').worlds, ...json('content/goethea1/goethea1.json').worlds, ...json('content/goethea2/goethea2.json').worlds, ...json('content/goetheb1/goetheb1.json').worlds])
+for (const w of [...json('content/delea1/delea1.json').worlds, ...json('content/delea2/delea2.json').worlds, ...json('content/deleb1/deleb1.json').worlds, ...json('content/deleb2/deleb2.json').worlds, ...json('content/delec1/delec1.json').worlds, ...json('content/delec2/delec2.json').worlds, ...json('content/goethea1/goethea1.json').worlds, ...json('content/goethea2/goethea2.json').worlds, ...json('content/goetheb1/goetheb1.json').worlds, ...json('content/goetheb2/goetheb2.json').worlds])
   for (const c of w.chapters) for (const l of c.lessons) for (const ex of l.exercises ?? []) [...(ex.choices ?? []), ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer])].forEach((x: string) => SPANISH.add(x));
 
 // Pinyin (chinois romanisé avec les tons) : jamais traduit, même s'il contient des voyelles accentuées.
@@ -77,6 +77,8 @@ describe('Traduction anglaise', () => {
     walkEs(json('content/exams/goethea2.json'), EXAM_ES);
     walkEs(json('content/goetheb1/goetheb1.json'), SKIP_ES);
     walkEs(json('content/exams/goetheb1.json'), EXAM_ES);
+    walkEs(json('content/goetheb2/goetheb2.json'), SKIP_ES);
+    walkEs(json('content/exams/goetheb2.json'), EXAM_ES);
     expect([...missing]).toEqual([]);
   });
 

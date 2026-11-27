@@ -310,7 +310,87 @@ HEINZEL = STORY('heinzelmaennchen', 'K', 'GOETHEB1', '#8A4A6A', ('Die Heinzelmä
   ]),
 ])
 
-DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS, FISCHER, HEINZEL]
+ZAUBER = STORY('zauberlehrling', 'W', 'GOETHEB2', '#3F4A6B', ('Der Zauberlehrling', 'L’Apprenti sorcier', 'The Sorcerer’s Apprentice'),
+  ('Le maître est sorti, et l’apprenti veut enfin essayer la magie tout seul. D’après la ballade de Goethe.', 'The master is out, and the apprentice finally wants to try magic on his own. After Goethe’s ballad.'), [
+  CH('zauberlehrling-1', ('Der Meister ist fort', 'Le maître est sorti', 'The master is away'), [
+    [S('Kaum hatte der alte Meister das Haus verlassen, beschloss sein Lehrling, die Gelegenheit zu nutzen.', 'À peine le vieux maître avait-il quitté la maison que son apprenti décida de profiter de l’occasion.', 'Hardly had the old master left the house when his apprentice decided to seize the opportunity.'),
+     S('Er hatte oft genug beobachtet, wie der Meister zauberte, und war überzeugt, es genauso gut zu können.', 'Il avait observé assez souvent comment le maître pratiquait la magie, et il était convaincu de pouvoir en faire autant.', 'He had watched the master work magic often enough and was convinced he could do it just as well.'),
+     S('Statt selbst Wasser für das Bad zu holen, sprach er die Worte, die er gehört hatte, und der alte Besen in der Ecke begann sich zu bewegen.', 'Au lieu d’aller chercher lui-même l’eau du bain, il prononça les mots qu’il avait entendus, et le vieux balai, dans son coin, se mit à bouger.', 'Instead of fetching the bath water himself, he spoke the words he had heard, and the old broom in the corner began to move.')],
+    [S('Dem Besen wuchsen zwei Beine und ein Kopf, und er lief zum Fluss, als hätte er nie etwas anderes getan.', 'Deux jambes et une tête poussèrent au balai, et il courut à la rivière comme s’il n’avait jamais rien fait d’autre.', 'The broom grew two legs and a head, and it ran to the river as if it had never done anything else.'),
+     S('Eimer um Eimer wurde herbeigetragen, und bald war die Wanne gefüllt.', 'Seau après seau fut apporté, et la baignoire fut bientôt remplie.', 'Bucket after bucket was carried in, and soon the tub was full.'),
+     S('Der Lehrling war stolz: Wozu sollte man jahrelang lernen, wenn sich alles so leicht erledigen ließ?', 'L’apprenti était fier : à quoi bon étudier pendant des années, si tout se réglait aussi facilement ?', 'The apprentice was proud: why study for years if everything could be done so easily?')],
+  ], [
+    W('die Gelegenheit', '/diː ɡəˈleːɡn̩haɪt/', 'l’occasion', 'the opportunity'),
+    W('beobachten', '/bəˈʔoːbaxtn̩/', 'observer', 'to watch, to observe'),
+    W('überzeugt', '/yːbɐˈtsɔʏkt/', 'convaincu', 'convinced'),
+    W('der Eimer', '/deːɐ̯ ˈaɪmɐ/', 'le seau', 'the bucket'),
+    W('die Wanne', '/diː ˈvanə/', 'la baignoire', 'the tub'),
+    W('stolz', '/ʃtɔlts/', 'fier', 'proud'),
+  ], [
+    Q(('Pourquoi l’apprenti pense-t-il pouvoir faire de la magie ?', 'Why does the apprentice think he can work magic?'), [('Il a souvent observé le maître', 'He has often watched the master'), ('Le maître lui a tout appris', 'The master has taught him everything'), ('Il a trouvé un livre de formules', 'He has found a book of spells')], 0),
+    Q(('Que fait le balai ensorcelé ?', 'What does the enchanted broom do?'), [('Il va chercher de l’eau à la rivière', 'It fetches water from the river'), ('Il balaie tout l’atelier', 'It sweeps the whole workshop'), ('Il s’envole par la fenêtre', 'It flies out of the window')], 0),
+  ]),
+  CH('zauberlehrling-2', ('Die Geister, die ich rief', 'Les esprits que j’ai appelés', 'The spirits I summoned'), [
+    [S('Doch der Besen hörte nicht auf: Das Wasser lief über den Rand der Wanne und stand bald im ganzen Zimmer.', 'Mais le balai ne s’arrêtait pas : l’eau déborda de la baignoire et monta bientôt dans toute la pièce.', 'But the broom did not stop: the water ran over the edge of the tub and soon stood in the whole room.'),
+     S('Erst jetzt wurde dem Lehrling klar, dass er das Wort vergessen hatte, mit dem sich der Zauber beenden ließ.', 'C’est seulement alors que l’apprenti comprit qu’il avait oublié le mot qui permettait de mettre fin au sortilège.', 'Only now did the apprentice realise that he had forgotten the word with which the spell could be ended.'),
+     S('In seiner Verzweiflung griff er zum Beil und schlug den Besen entzwei, aber nun liefen zwei Besen zum Fluss, und das Wasser stieg doppelt so schnell.', 'Dans son désespoir, il saisit la hache et fendit le balai en deux, mais voilà que deux balais couraient à la rivière, et l’eau monta deux fois plus vite.', 'In his despair he seized the axe and split the broom in two, but now two brooms ran to the river, and the water rose twice as fast.')],
+    [S('Wäre der Meister nicht in diesem Augenblick zurückgekehrt, wäre das ganze Haus überschwemmt worden.', 'Si le maître n’était pas revenu à cet instant, toute la maison aurait été inondée.', 'Had the master not returned at that moment, the whole house would have been flooded.'),
+     S('Mit einem einzigen Satz schickte er die Besen in die Ecke zurück und erklärte, nur der Meister dürfe sie rufen.', 'D’une seule phrase, il renvoya les balais dans leur coin et déclara que seul le maître avait le droit de les appeler.', 'With a single sentence he sent the brooms back to their corner and declared that only the master might call them.'),
+     S('Der Lehrling soll danach geschworen haben, nie wieder etwas zu beginnen, was er nicht auch beenden könne.', 'On dit que l’apprenti jura ensuite de ne plus jamais commencer ce qu’il ne saurait pas aussi terminer.', 'The apprentice is said to have sworn afterwards never again to start anything he could not also finish.')],
+  ], [
+    W('der Rand', '/deːɐ̯ ʁant/', 'le bord', 'the edge'),
+    W('der Zauber', '/deːɐ̯ ˈtsaʊbɐ/', 'le sortilège, la magie', 'the spell, magic'),
+    W('die Verzweiflung', '/diː fɛɐ̯ˈtsvaɪflʊŋ/', 'le désespoir', 'despair'),
+    W('das Beil', '/das baɪl/', 'la hache', 'the axe'),
+    W('zurückkehren', '/tsuˈʁʏkˌkeːʁən/', 'revenir', 'to return'),
+    W('schwören', '/ˈʃvøːʁən/', 'jurer', 'to swear'),
+  ], [
+    Q(('Quel est le problème de l’apprenti ?', 'What is the apprentice’s problem?'), [('Il a oublié le mot qui arrête le sortilège', 'He has forgotten the word that stops the spell'), ('Il ne trouve plus le balai', 'He cannot find the broom any more'), ('Le maître a emporté la baignoire', 'The master has taken the tub away')], 0),
+    Q(('Que se passe-t-il quand il fend le balai ?', 'What happens when he splits the broom?'), [('Deux balais apportent de l’eau', 'Two brooms bring water'), ('Le balai s’arrête enfin', 'The broom finally stops'), ('L’eau disparaît', 'The water disappears')], 0),
+  ]),
+])
+
+ERLKOENIG = STORY('erlkoenig', 'E', 'GOETHEB2', '#2F4F4A', ('Der Erlkönig', 'Le Roi des Aulnes', 'The Erlking'),
+  ('Un père chevauche dans la nuit avec son fils malade, et l’enfant voit ce que le père ne voit pas. D’après la ballade de Goethe.', 'A father rides through the night with his sick son, and the child sees what the father does not. After Goethe’s ballad.'), [
+  CH('erlkoenig-1', ('Der Ritt durch die Nacht', 'La chevauchée dans la nuit', 'The ride through the night'), [
+    [S('Spät in der Nacht ritt ein Vater durch den Wind, seinen kranken Sohn fest im Arm.', 'Tard dans la nuit, un père chevauchait dans le vent, son fils malade serré dans ses bras.', 'Late at night a father rode through the wind, his sick son held tight in his arms.'),
+     S('Plötzlich verbarg das Kind sein Gesicht und fragte, ob der Vater den Erlkönig mit Krone und Mantel nicht sehe.', 'Soudain, l’enfant cacha son visage et demanda si le père ne voyait pas le Roi des Aulnes avec sa couronne et son manteau.', 'Suddenly the child hid his face and asked whether his father did not see the Erlking with his crown and cloak.'),
+     S('Der Vater antwortete ruhig, das sei nur ein Streifen Nebel über den Wiesen.', 'Le père répondit calmement que ce n’était qu’une traînée de brouillard au-dessus des prés.', 'The father answered calmly that it was only a streak of mist over the meadows.')],
+    [S('Doch das Kind hörte eine leise Stimme, die ihm schöne Spiele und bunte Blumen am Ufer versprach.', 'Mais l’enfant entendait une voix douce qui lui promettait de beaux jeux et des fleurs de toutes les couleurs sur la rive.', 'But the child heard a soft voice that promised him lovely games and bright flowers on the shore.'),
+     S('„Hörst du nicht, was er mir zuflüstert?“, rief es. Der Vater meinte, es sei bloß der Wind in den trockenen Blättern.', '« N’entends-tu pas ce qu’il me chuchote ? » s’écria-t-il. Le père estima que ce n’était que le vent dans les feuilles sèches.', '“Do you not hear what he whispers to me?” he cried. The father said it was merely the wind in the dry leaves.'),
+     S('Er tat so, als ob er keine Angst hätte, und trieb das Pferd dennoch schneller an.', 'Il faisait comme s’il n’avait pas peur, et pourtant il pressa son cheval.', 'He acted as if he were not afraid, and yet he urged the horse on faster.')],
+  ], [
+    W('verbergen', '/fɛɐ̯ˈbɛʁɡn̩/', 'cacher', 'to hide'),
+    W('die Krone', '/diː ˈkʁoːnə/', 'la couronne', 'the crown'),
+    W('der Streifen', '/deːɐ̯ ˈʃtʁaɪfn̩/', 'la bande, la traînée', 'the streak, the strip'),
+    W('die Wiese', '/diː ˈviːzə/', 'le pré', 'the meadow'),
+    W('das Ufer', '/das ˈuːfɐ/', 'la rive', 'the shore, the bank'),
+    W('antreiben', '/ˈanˌtʁaɪbn̩/', 'presser, pousser en avant', 'to urge on'),
+  ], [
+    Q(('Que voit l’enfant ?', 'What does the child see?'), [('Le Roi des Aulnes avec une couronne', 'The Erlking with a crown'), ('Un loup au bord du chemin', 'A wolf by the roadside'), ('Sa mère qui l’attend', 'His mother waiting for him')], 0),
+    Q(('Comment le père explique-t-il ce que l’enfant voit et entend ?', 'How does the father explain what the child sees and hears?'), [('Par le brouillard et le vent', 'By the mist and the wind'), ('Par un rêve', 'By a dream'), ('Par des voyageurs sur la route', 'By travellers on the road')], 0),
+  ]),
+  CH('erlkoenig-2', ('Die Stimme im Wind', 'La voix dans le vent', 'The voice in the wind'), [
+    [S('Die Stimme wurde lockender: Die Töchter des Königs würden das Kind wiegen und für es tanzen und singen.', 'La voix se fit plus enjôleuse : les filles du roi berceraient l’enfant, danseraient et chanteraient pour lui.', 'The voice grew more enticing: the king’s daughters would rock the child and dance and sing for him.'),
+     S('Der Vater behauptete, dort hinten stünden nur alte, graue Weiden, obwohl ihm selbst unheimlich zumute war.', 'Le père affirma qu’il n’y avait là-bas que de vieux saules gris, alors que lui-même se sentait mal à l’aise.', 'The father claimed that only old grey willows stood over there, although he himself felt uneasy.'),
+     S('Da drohte die Stimme: Wenn das Kind nicht freiwillig komme, werde sie Gewalt gebrauchen.', 'Alors la voix menaça : si l’enfant ne venait pas de son plein gré, elle emploierait la force.', 'Then the voice threatened: if the child did not come willingly, it would use force.')],
+    [S('Das Kind schrie auf, der Erlkönig habe ihm wehgetan, und dem Vater lief es kalt über den Rücken.', 'L’enfant poussa un cri : le Roi des Aulnes lui avait fait mal ; et le père sentit un frisson lui courir dans le dos.', 'The child cried out that the Erlking had hurt him, and a shiver ran down the father’s back.'),
+     S('Er ritt, so schnell er konnte, und erreichte den Hof mit letzter Kraft.', 'Il chevaucha aussi vite qu’il le put et atteignit la ferme à bout de forces.', 'He rode as fast as he could and reached the farm with his last strength.'),
+     S('Als er aber in seine Arme blickte, war es zu spät: Hätte er dem Kind doch nur früher geglaubt!', 'Mais quand il baissa les yeux vers ses bras, il était trop tard : si seulement il avait cru l’enfant plus tôt !', 'But when he looked down into his arms, it was too late: if only he had believed the child sooner!')],
+  ], [
+    W('wiegen', '/ˈviːɡn̩/', 'bercer', 'to rock'),
+    W('die Weide', '/diː ˈvaɪdə/', 'le saule', 'the willow'),
+    W('unheimlich', '/ˈʊnhaɪmlɪç/', 'inquiétant, sinistre', 'eerie, uncanny'),
+    W('drohen', '/ˈdʁoːən/', 'menacer', 'to threaten'),
+    W('die Gewalt', '/diː ɡəˈvalt/', 'la force, la violence', 'force, violence'),
+    W('der Hof', '/deːɐ̯ hoːf/', 'la ferme, la cour', 'the farm, the yard'),
+  ], [
+    Q(('Que promet la voix à l’enfant ?', 'What does the voice promise the child?'), [('Que les filles du roi s’occuperont de lui', 'That the king’s daughters will look after him'), ('Qu’il deviendra roi à son tour', 'That he will become king in turn'), ('Que son père sera riche', 'That his father will be rich')], 0),
+    Q(('Que regrette le père à la fin ?', 'What does the father regret at the end?'), [('De ne pas avoir cru l’enfant plus tôt', 'Not having believed the child sooner'), ('D’avoir pris le mauvais chemin', 'Having taken the wrong road'), ('D’être parti sans manteau', 'Having left without a cloak')], 0),
+  ]),
+])
+
+DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS, FISCHER, HEINZEL, ZAUBER, ERLKOENIG]
 
 import sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -319,7 +399,7 @@ mix(DE_STORIES)
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('GOETHE')] + DE_STORIES
-data.setdefault('notices', {})['de'] = {'fr': 'Contes des frères Grimm et légendes d’Allemagne (domaine public), réécrits en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).', 'en': 'Tales by the Brothers Grimm and legends of Germany (public domain), retold in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German).'}
+data.setdefault('notices', {})['de'] = {'fr': 'Contes des frères Grimm, légendes d’Allemagne et ballades de Goethe (domaine public), réécrits en prose et en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).', 'en': 'Tales by the Brothers Grimm, legends of Germany and ballads by Goethe (public domain), retold in prose and in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German).'}
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
 others = {s['glyph'] for s in data['stories'] if not s['level'].startswith('GOETHE')}

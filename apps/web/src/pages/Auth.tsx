@@ -241,13 +241,13 @@ const LANGS = [
   },
   {
     id: 'de', glyph: 'ß', exam: 'Goethe-Zertifikat', name: () => T("Allemand"),
-    pitch: () => T("Les Goethe-Zertifikat A1 à B1, des contes des frères Grimm aux légendes d’Allemagne."),
-    about: () => T("Le Goethe-Zertifikat est le diplôme d’allemand du Goethe-Institut, reconnu dans le monde entier. Il suit les six niveaux du CECRL, de A1 (« Start Deutsch 1 ») à C2, et évalue quatre épreuves : Hören, Lesen, Schreiben et Sprechen. Koto Quest t’y prépare en suivant les contes des frères Grimm, de Hanau à Brême, puis du Rhin à la Forêt-Noire et au pays des légendes ; les niveaux A1 à B1 sont prêts, les suivants arrivent. Les examens blancs sont notés sur 100, avec réussite à 60 points (par module à partir du B1) ; l’épreuve orale n’est pas évaluée."),
+    pitch: () => T("Les Goethe-Zertifikat A1 à B2, des contes des frères Grimm aux ballades de Weimar."),
+    about: () => T("Le Goethe-Zertifikat est le diplôme d’allemand du Goethe-Institut, reconnu dans le monde entier. Il suit les six niveaux du CECRL, de A1 (« Start Deutsch 1 ») à C2, et évalue quatre épreuves : Hören, Lesen, Schreiben et Sprechen. Koto Quest t’y prépare en suivant les contes des frères Grimm, de Hanau à Brême, puis du Rhin à la Forêt-Noire, au pays des légendes et à Weimar, parmi les ballades de Goethe et de Schiller ; les niveaux A1 à B2 sont prêts, les suivants arrivent. Les examens blancs sont notés sur 100, avec réussite à 60 points (par module à partir du B1) ; l’épreuve orale n’est pas évaluée."),
     levels: [
       { id: 'Goethe A1', name: () => T("Découverte") },
       { id: 'Goethe A2', name: () => T("Survie") },
       { id: 'Goethe B1', name: () => T("Seuil") },
-      { id: 'Goethe B2', name: () => T("Bientôt") },
+      { id: 'Goethe B2', name: () => T("Avancé") },
       { id: 'Goethe C1', name: () => T("Bientôt") },
       { id: 'Goethe C2', name: () => T("Bientôt") },
     ],

@@ -4743,6 +4743,159 @@
      }
     }
    }
+  },
+  "GOETHEB2": {
+   "glyph": "Ü",
+   "jp": "Weimar",
+   "color": "#3F4A6B",
+   "saga": {
+    "fr": "La cour des poètes",
+    "en": "The court of poets"
+   },
+   "hero": {
+    "fr": "Apprenti·e des frères Grimm",
+    "en": "The Brothers Grimm’s apprentice"
+   },
+   "short": {
+    "fr": "L’apprenti·e",
+    "en": "The apprentice"
+   },
+   "prologue": {
+    "fr": "La diligence vous dépose à Weimar un soir de pluie. Dans la bibliothèque de la duchesse, les manuscrits des ballades sont ouverts sur les pupitres, et les pages sont blanches. « Elles se sont échappées, murmure le bibliothécaire. Le Roi des Aulnes, le Balai, le Plongeur… Goethe et Schiller les avaient écrites la même année, et les voilà dans les rues. » Jacob hoche la tête : « Les légendes discutaient. Les ballades, elles, pèsent chaque mot. Il te faudra l’irréel du passé, le discours rapporté, des arguments. » Wilhelm te tend une plume : « Ramène-les une à une. »",
+    "en": "The coach drops you in Weimar on a rainy evening. In the duchess’s library, the manuscripts of the ballads lie open on the desks, and the pages are blank. “They have escaped,” the librarian whispers. “The Erlking, the Broom, the Diver… Goethe and Schiller wrote them in the same year, and now they are out in the streets.” Jacob nods: “The legends argued. The ballads weigh every word. You will need the unreal past, reported speech, arguments.” Wilhelm hands you a quill: “Bring them back one by one.”"
+   },
+   "epilogue": {
+    "fr": "Dans la bibliothèque, les pages se sont remplies : chaque ballade a retrouvé ses vers. Le bibliothécaire referme le dernier manuscrit et te remet une clé. « Vous avez argumenté contre Méphisto lui-même. Il ne reste que deux portes : celle des savants, puis celle des maîtres. » Jacob sourit : « À Vienne et à Berlin, on parle une langue où chaque nuance compte. » Wilhelm ajoute : « Tu n’es plus vraiment un·e apprenti·e. »",
+    "en": "In the library, the pages have filled up: every ballad has its lines back. The librarian closes the last manuscript and hands you a key. “You argued against Mephisto himself. Only two doors remain: the scholars’, then the masters’.” Jacob smiles: “In Vienna and Berlin they speak a language where every nuance counts.” Wilhelm adds: “You are not really an apprentice any more.”"
+   },
+   "chapters": {
+    "goetheb2-w1": {
+     "title": {
+      "fr": "La chevauchée du Roi des Aulnes",
+      "en": "The Erlking’s ride"
+     },
+     "intro": {
+      "fr": "Sur la route de nuit, un père galope avec son enfant, et le Roi des Aulnes chuchote dans le vent. Dis ce qui aurait pu se passer, décris ce qui semble être, et nomme la peur sans la nourrir.",
+      "en": "On the night road, a father gallops with his child, and the Erlking whispers in the wind. Say what could have happened, describe what seems to be, and name the fear without feeding it."
+     },
+     "outro": {
+      "fr": "Le brouillard se déchire. Le Roi des Aulnes n’est plus qu’un saule gris au bord du chemin, et la ballade retourne à sa page.",
+      "en": "The mist tears apart. The Erlking is no more than a grey willow by the roadside, and the ballad returns to its page."
+     }
+    },
+    "goetheb2-w2": {
+     "title": {
+      "fr": "L’atelier de l’Apprenti sorcier",
+      "en": "The Sorcerer’s Apprentice’s workshop"
+     },
+     "intro": {
+      "fr": "Le maître est sorti et le Balai ensorcelé inonde l’atelier, seau après seau. Distingue ce qui se fait de ce qui est fait, et trouve ce qui se laisse arrêter.",
+      "en": "The master is out and the Enchanted Broom is flooding the workshop, bucket after bucket. Tell what is being done from what is done, and find what can be stopped."
+     },
+     "outro": {
+      "fr": "Le Balai retombe dans son coin, simple bois. Le maître, sur le seuil, lève un sourcil : « Au moins, toi, tu connais la formule. »",
+      "en": "The Broom falls back into its corner, plain wood. The master, on the threshold, raises an eyebrow: “At least you know the spell.”"
+     }
+    },
+    "goetheb2-w3": {
+     "title": {
+      "fr": "Le gouffre du Plongeur",
+      "en": "The Diver’s abyss"
+     },
+     "intro": {
+      "fr": "Au pied de la falaise, le tourbillon gronde, et le Monstre du gouffre garde la coupe du roi. Rapporte le récit du plongeur au discours indirect, source à l’appui.",
+      "en": "At the foot of the cliff the whirlpool roars, and the Monster of the Abyss guards the king’s cup. Report the diver’s tale in indirect speech, with its source."
+     },
+     "outro": {
+      "fr": "Le gouffre se calme. Le Monstre replonge, et le roi, pour une fois, ne jette rien d’autre à la mer.",
+      "en": "The abyss grows calm. The Monster dives back down, and the king, for once, throws nothing else into the sea."
+     }
+    },
+    "goetheb2-w4": {
+     "title": {
+      "fr": "L’arène du Gant",
+      "en": "The arena of the Glove"
+     },
+     "intro": {
+      "fr": "Dans l’arène du roi François, un gant est tombé entre le tigre et le Lion. Ni peur ni orgueil : relie tes idées deux à deux et tire les conséquences.",
+      "en": "In King Francis’s arena, a glove has fallen between the tiger and the Lion. Neither fear nor pride: link your ideas in pairs and draw the consequences."
+     },
+     "outro": {
+      "fr": "Le Lion bâille et se recouche. Le gant revient à la dame, mais pas le chevalier, et la cour a compris la leçon.",
+      "en": "The Lion yawns and lies back down. The glove returns to the lady, but not the knight, and the court has learnt its lesson."
+     }
+    },
+    "goetheb2-w5": {
+     "title": {
+      "fr": "Le théâtre des Grues",
+      "en": "The theatre of the Cranes"
+     },
+     "intro": {
+      "fr": "Au théâtre de Corinthe, les Grues d’Ibycus tournent au-dessus des gradins, et les meurtriers sont dans la foule. Désigne-les : l’homme dont…, les oiseaux qui volent, la faute commise.",
+      "en": "In the theatre of Corinth, the Cranes of Ibycus circle above the tiers, and the murderers are in the crowd. Point them out: the man whose…, the flying birds, the crime committed."
+     },
+     "outro": {
+      "fr": "Un cri part des gradins : les coupables se sont trahis. Les Grues reprennent leur route vers le sud.",
+      "en": "A cry rises from the tiers: the culprits have given themselves away. The Cranes resume their journey south."
+     }
+    },
+    "goetheb2-w6": {
+     "title": {
+      "fr": "La forêt du Chasseur sauvage",
+      "en": "The Wild Huntsman’s forest"
+     },
+     "intro": {
+      "fr": "Dans la forêt, le Chasseur sauvage passe en trombe avec sa meute, sans égard pour personne. Prends une décision, pose tes questions, et dis les choses dans le style des textes soignés.",
+      "en": "In the forest, the Wild Huntsman storms past with his pack, with no regard for anyone. Make a decision, ask your questions, and put things in the style of formal texts."
+     },
+     "outro": {
+      "fr": "Le cor se tait. Le Chasseur met pied à terre, pour la première fois depuis des siècles, et laisse passer le cerf.",
+      "en": "The horn falls silent. The Huntsman dismounts, for the first time in centuries, and lets the stag go by."
+     }
+    },
+    "goetheb2-w7": {
+     "title": {
+      "fr": "Le lac de l’Ondine",
+      "en": "The Undine’s lake"
+     },
+     "intro": {
+      "fr": "Au bord du lac, l’eau monte doucement et l’Ondine chante pour le pêcheur. Suppose avec prudence, pose tes conditions, et garde la tête froide.",
+      "en": "On the lake shore the water rises gently and the Undine sings to the fisherman. Suppose with care, set your conditions, and keep a cool head."
+     },
+     "outro": {
+      "fr": "L’Ondine incline la tête, presque déçue, et s’enfonce sans une ride. Le pêcheur ramasse sa ligne et rentre chez lui.",
+      "en": "The Undine tilts her head, almost disappointed, and sinks without a ripple. The fisherman picks up his line and goes home."
+     }
+    },
+    "goetheb2-w8": {
+     "title": {
+      "fr": "Le cabinet de Méphisto",
+      "en": "Mephisto’s study"
+     },
+     "intro": {
+      "fr": "Dans le cabinet de travail, Méphisto a posé le contrat sur la table et taillé la plume. Argumente : thèse, objection, conclusion, avec les prépositions de la langue écrite.",
+      "en": "In the study, Mephisto has laid the contract on the table and sharpened the quill. Argue: thesis, objection, conclusion, with the prepositions of written German."
+     },
+     "outro": {
+      "fr": "Méphisto roule son parchemin en soupirant : « Vous raisonnez trop bien, c’est mauvais pour les affaires. » Et il disparaît dans une odeur de soufre.",
+      "en": "Mephisto rolls up his parchment with a sigh: “You reason too well, it is bad for business.” And he vanishes in a smell of sulphur."
+     }
+    },
+    "goetheb2-final": {
+     "title": {
+      "fr": "La bibliothèque de Weimar",
+      "en": "The Weimar library"
+     },
+     "intro": {
+      "fr": "Sous la coupole de la bibliothèque, les poètes ont préparé l’épreuve : lis, écoute et écris comme au Goethe-Zertifikat B2. Chaque module se valide à 60 points.",
+      "en": "Under the dome of the library, the poets have prepared the test: read, listen and write as in the Goethe-Zertifikat B2. Each module is passed at 60 points."
+     },
+     "outro": {
+      "fr": "La dernière page se referme. Niveau Goethe B2 validé : tu lis la presse, tu débats et tu écris comme à la cour des poètes !",
+      "en": "The last page closes. Goethe B2 level complete: you read the press, debate and write as at the court of poets!"
+     }
+    }
+   }
   }
  }
 }

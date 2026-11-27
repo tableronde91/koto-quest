@@ -638,6 +638,67 @@ const SPECIES: Record<string, Species> = {
     face: <><path d="M100 104 Q84 98 72 108 M100 104 Q116 98 128 108" stroke="#5A3A1A" strokeWidth="4" fill="none" strokeLinecap="round" /><path d="M92 116 Q100 120 108 116" stroke="#8A3A1A" strokeWidth="2.5" fill="none" /></>,
     front: <g><circle cx="158" cy="160" r="18" fill="#3A3A3A" /><circle cx="152" cy="154" r="5" fill="#7A7A7A" /><path d="M170 144 Q182 132 178 120" stroke="#E2703A" strokeWidth="3" fill="none" strokeLinecap="round" /></g>,
   },
+  // ───── Gardiens allemands (Goethe B2 — Weimar, la cour des poètes) ─────
+  // Le Roi des Aulnes : couronne de branches, manteau de brume, longue traîne grise
+  '☾': {
+    body: '#5A6A72', belly: '#A8B8BE', head: '#D8E0DC', eye: '#E8F4F0',
+    back: <path d="M30 196 Q20 120 60 70 Q100 40 140 70 Q180 120 170 196 Q140 176 100 190 Q60 176 30 196Z" fill="#8A9AA0" opacity="0.7" />,
+    top: <><path d="M62 62 L56 26 M78 54 L72 14 M100 50 V8 M122 54 L128 14 M138 62 L144 26" stroke="#4A5A4A" strokeWidth="5" strokeLinecap="round" /><path d="M72 30 l-8 -6 M100 22 l8 -8 M128 30 l8 -6" stroke="#4A5A4A" strokeWidth="3" strokeLinecap="round" /></>,
+    face: <path d="M88 116 Q100 110 112 116" stroke="#3A4A52" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <path d="M10 160 q14 -10 28 0 t28 0 M134 176 q14 -10 28 0 t28 0" stroke="#FFFFFF" strokeWidth="3" fill="none" opacity="0.6" strokeLinecap="round" />,
+  },
+  // Le Balai ensorcelé : manche de bois, brins de paille, deux seaux qui débordent
+  '✤': {
+    body: '#C8A45A', belly: '#E8D08A', head: '#9A6A3A', eye: '#FFFFFF',
+    top: <rect x="93" y="-6" width="14" height="60" rx="5" fill="#7A4A2A" />,
+    under: <path d="M64 150 L58 198 M76 154 L72 198 M88 156 L86 198 M100 158 V198 M112 156 L114 198 M124 154 L128 198 M136 150 L142 198" stroke="#B8923A" strokeWidth="5" strokeLinecap="round" />,
+    front: <g><g transform="translate(30 150)"><path d="M-12 -12 H12 L9 12 H-9Z" fill="#7A4A2A" stroke="#5A3A24" strokeWidth="2" /><path d="M-12 -12 Q0 -30 12 -12" stroke="#5A3A24" strokeWidth="2.5" fill="none" /><path d="M-10 -12 H10 V-8 H-10Z" fill="#7FC4D8" /><path d="M-6 12 q-2 8 0 12 M6 12 q2 8 0 12" stroke="#7FC4D8" strokeWidth="3" strokeLinecap="round" /></g><g transform="translate(170 150)"><path d="M-12 -12 H12 L9 12 H-9Z" fill="#7A4A2A" stroke="#5A3A24" strokeWidth="2" /><path d="M-12 -12 Q0 -30 12 -12" stroke="#5A3A24" strokeWidth="2.5" fill="none" /><path d="M-10 -12 H10 V-8 H-10Z" fill="#7FC4D8" /></g></g>,
+  },
+  // Le Monstre du gouffre : pieuvre des abysses, tentacules, coupe d'or
+  '❂': {
+    body: '#3A4A7A', belly: '#6A7AB8', head: '#4A5A8E', eye: '#F2D94E',
+    back: <path d="M40 150 Q10 170 14 198 M60 170 Q40 186 44 200 M160 150 Q190 170 186 198 M140 170 Q160 186 156 200" stroke="#3A4A7A" strokeWidth="12" fill="none" strokeLinecap="round" />,
+    top: <path d="M56 80 Q54 28 100 24 Q146 28 144 80 Q124 60 100 60 Q76 60 56 80Z" fill="#2A3A66" />,
+    under: <>{[70, 85, 100, 115, 130].map((x) => <circle key={x} cx={x} cy="150" r="4" fill="#A8B4E0" />)}</>,
+    front: <g transform="translate(164 120)"><path d="M-12 -12 H12 Q12 4 0 6 Q-12 4 -12 -12Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /><path d="M0 6 V16 M-7 16 H7" stroke="#9A7A2A" strokeWidth="3" strokeLinecap="round" /></g>,
+  },
+  // Le Lion de l'arène : crinière fauve, museau, gant tombé à ses pieds
+  '✠': {
+    body: '#C8923A', belly: '#F0D8A0', head: '#E2B45A', eye: '#3A2A10',
+    back: <>{Array.from({ length: 12 }, (_, i) => { const a = (i * Math.PI) / 6; return <ellipse key={i} cx={100 + Math.cos(a) * 52} cy={84 + Math.sin(a) * 50} rx="20" ry="14" transform={`rotate(${(i * 30)} ${100 + Math.cos(a) * 52} ${84 + Math.sin(a) * 50})`} fill="#8A5A2A" />; })}</>,
+    face: <><path d="M92 100 H108 L100 110Z" fill="#5A3A1A" /><path d="M100 110 V116 M100 116 Q92 124 84 118 M100 116 Q108 124 116 118" stroke="#5A3A1A" strokeWidth="2.5" fill="none" strokeLinecap="round" /></>,
+    front: <g transform="translate(156 184) rotate(-14)"><path d="M-14 -8 H6 Q14 -8 14 0 Q14 8 6 8 H-14Z" fill="#F4EDDC" stroke="#8A7A5A" strokeWidth="1.5" /><path d="M-14 -8 V8" stroke="#C8323F" strokeWidth="4" /></g>,
+  },
+  // Les Grues d'Ibycus : long cou, calotte rouge, ailes grises déployées
+  '❖': {
+    body: '#8A93A0', belly: '#D8DCE2', head: '#E8ECF0', eye: '#2A2A2A',
+    back: <><path d="M56 130 Q10 110 2 150 Q30 140 60 160Z" fill="#6A7380" /><path d="M144 130 Q190 110 198 150 Q170 140 140 160Z" fill="#6A7380" /></>,
+    top: <path d="M78 60 Q100 44 122 60 Q112 52 100 52 Q88 52 78 60Z" fill="#C8323F" stroke="#C8323F" strokeWidth="6" strokeLinejoin="round" />,
+    face: <path d="M92 100 L100 132 L108 100Z" fill="#3A3A3A" />,
+    front: <g stroke="#3A3A3A" strokeWidth="2.5" fill="none" strokeLinecap="round"><path d="M20 40 l10 8 l10 -8" /><path d="M150 30 l10 8 l10 -8" /><path d="M164 60 l8 6 l8 -6" /></g>,
+  },
+  // Le Chasseur sauvage : chapeau à plume, barbe noire, cor de chasse
+  '✺': {
+    body: '#2F4A36', belly: '#5A7A5E', head: '#D8B898', eye: '#E2703A',
+    top: <><path d="M44 66 Q100 50 156 66 Q132 60 100 62 Q68 60 44 66Z" fill="#1F2E22" stroke="#1F2E22" strokeWidth="6" strokeLinejoin="round" /><path d="M66 60 Q70 30 100 28 Q130 30 134 60Z" fill="#1F2E22" /><path d="M128 40 Q150 10 166 14 Q150 26 138 50Z" fill="#C8323F" /></>,
+    under: <path d="M72 106 Q100 122 128 106 Q124 150 100 164 Q76 150 72 106Z" fill="#1F1A1A" />,
+    front: <g transform="translate(158 150)"><path d="M-16 6 Q-22 -22 4 -22 Q22 -22 18 -2" stroke="#E2B84A" strokeWidth="7" fill="none" strokeLinecap="round" /><path d="M18 -2 L28 12 L8 10Z" fill="#E2B84A" /></g>,
+  },
+  // L'Ondine : chevelure d'algues, couronne de nénuphars, eau jusqu'aux épaules
+  '⚘': {
+    body: '#3F8A8A', belly: '#A8E0D8', head: '#E0F0E8', eye: '#1F5A6A',
+    back: <path d="M50 78 Q24 130 36 196 L164 196 Q176 130 150 78 Q100 24 50 78Z" fill="#2F6B5A" />,
+    top: <><path d="M56 82 Q56 36 100 32 Q144 36 144 82 Q126 58 100 56 Q74 58 56 82Z" fill="#2F6B5A" />{[72, 100, 128].map((x) => <g key={x} transform={`translate(${x} ${x === 100 ? 34 : 42})`}><path d="M0 0 q-4 -8 0 -12 q4 4 0 12Z M0 0 q-9 -3 -9 -9 q7 0 9 9Z M0 0 q9 -3 9 -9 q-7 0 -9 9Z" fill="#F4C8D8" /><circle r="2" fill="#E2B84A" /></g>)}</>,
+    front: <path d="M0 176 q16 -14 32 0 t32 0 t34 0 t34 0 t34 0 t34 0 V200 H0Z" fill="#7FC4D8" opacity="0.85" />,
+  },
+  // Méphisto : calotte rouge à plume, barbiche, contrat roulé et plume
+  '✥': {
+    body: '#7A1F26', belly: '#2A1A1E', head: '#E0C8B8', eye: '#F2D94E',
+    top: <><path d="M58 72 Q60 30 100 26 Q140 30 142 72 Q122 54 100 54 Q78 54 58 72Z" fill="#C8323F" /><path d="M100 56 L92 70 H108Z" fill="#C8323F" /><path d="M134 40 Q160 4 170 10 Q156 24 142 52Z" fill="#1F1A1A" /></>,
+    under: <path d="M92 124 Q100 128 108 124 L100 150Z" fill="#1F1A1A" />,
+    face: <><path d="M72 74 L92 82 M128 74 L108 82" stroke="#1F1A1A" strokeWidth="4" strokeLinecap="round" /><path d="M84 112 Q100 122 118 108" stroke="#5A1F1A" strokeWidth="3" fill="none" strokeLinecap="round" /></>,
+    front: <g><g transform="translate(160 150) rotate(-18)"><rect x="-10" y="-22" width="20" height="44" rx="4" fill="#F4EDDC" stroke="#8A7A5A" strokeWidth="1.5" /><path d="M-5 -12 H5 M-5 -4 H5 M-5 4 H3" stroke="#8A7A5A" strokeWidth="1.5" /><circle cx="4" cy="14" r="4" fill="#C8323F" /></g><path d="M34 186 Q44 150 62 126" stroke="#F4EDDC" strokeWidth="3" fill="none" strokeLinecap="round" /></g>,
+  },
   // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
   // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
   ñ: {
@@ -1787,7 +1848,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢', '♤', '♡', '♘', '♖'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢', '♤', '♡', '♘', '♖', '☾', '✠', '❖', '✥'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

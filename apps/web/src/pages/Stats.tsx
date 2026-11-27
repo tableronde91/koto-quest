@@ -147,9 +147,9 @@ export function StatsPage() {
   const { data: n4Raw } = usePath(ko ? 'TOPIK2' : zh ? 'HSK2' : words.es ? 'DELEA2' : words.de ? 'GOETHEA2' : 'N4');
   const n4 = words.en ? undefined : n4Raw;
   const { data: topik3 } = usePath(zh ? 'HSK3' : words.es ? 'DELEB1' : words.de ? 'GOETHEB1' : 'TOPIK3');
-  const { data: topik4 } = usePath(zh ? 'HSK4' : words.es ? 'DELEB2' : 'TOPIK4');
+  const { data: topik4 } = usePath(zh ? 'HSK4' : words.es ? 'DELEB2' : words.de ? 'GOETHEB2' : 'TOPIK4');
   const third = ko || zh || words.es || words.de ? topik3 : undefined;
-  const fourth = ko || zh || words.es ? topik4 : undefined;
+  const fourth = ko || zh || words.es || words.de ? topik4 : undefined;
   const { data: topik5 } = usePath(zh ? 'HSK5' : words.es ? 'DELEC1' : 'TOPIK5');
   const { data: topik6 } = usePath(zh ? 'HSK6' : words.es ? 'DELEC2' : 'TOPIK6');
   const fifth = ko || zh || words.es ? topik5 : undefined;

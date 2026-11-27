@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
  * Mode histoire allemand (l'apprenti·e des frères Grimm) : le décor de chaque île raconte son chapitre.
  * Goethe A1, la Route des contes : maisons à colombages de Hanau et Steinau, ruelles de Marbourg, maison de pain d'épices,
  * château de Sababurg sous les ronces, marché de Göttingen, mont de Dame Holle, Hamelin et les Musiciens de Brême.
+ * Goethe B2, Weimar : route du Roi des Aulnes, atelier de l'Apprenti sorcier, gouffre du Plongeur, arène, théâtre de Corinthe, forêt, lac, bibliothèque.
  * Goethe B1, le pays des légendes : grotte de Barberousse, monts de Rübezahl, barque du Pêcheur, Cologne, cabinet de Faust, rocher de la Lorelei, Brocken.
  * Goethe A2, du Rhin à la Forêt-Noire : puits du Roi Grenouille, bal de Cendrillon, tour de Raiponce, miroir de la Reine, halte du Chat botté, Oie d'or, château de Barbe-de-Grive.
  * Dessins originaux, centrés sur (0, 0).
@@ -340,6 +341,108 @@ function Bonfire({ ...p }: P) {
   );
 }
 
+/** Saule gris au bord du chemin : le Roi des Aulnes n'est plus qu'un arbre une fois la ballade rentrée. */
+function Willow({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-1.5 0 Q-3 -10 0 -20 Q3 -10 1.5 0Z" fill={WOOD} />
+      <path d="M0 -22 Q-16 -24 -15 -4 M0 -22 Q-9 -22 -9 -2 M0 -22 Q9 -22 9 -2 M0 -22 Q16 -24 15 -4 M0 -22 Q-3 -20 -3 -6 M0 -22 Q3 -20 3 -6" stroke={calm ? '#7FA06A' : '#6E7C78'} strokeWidth="2" fill="none" strokeLinecap="round" />
+      {!calm && <path d="M-26 -10 q6 -5 12 0 t12 0 M14 -16 q6 -5 12 0" stroke={SNOW} strokeWidth="1.6" fill="none" opacity="0.7" strokeLinecap="round" />}
+    </g>
+  );
+}
+
+/** Seaux et flaque de l'Apprenti sorcier (l'eau se retire quand le balai s'arrête). */
+function Buckets({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      {!calm && <ellipse cx="0" cy="1" rx="20" ry="3.4" fill="#7FC4D8" opacity="0.85" />}
+      <path d="M-12 -10 H-4 L-5.5 0 H-10.5Z" fill={WOOD} stroke={BEAM} strokeWidth="0.8" />
+      <path d="M-12 -10 Q-8 -17 -4 -10" stroke={BEAM} strokeWidth="1" fill="none" />
+      <path d="M4 -8 H12 L10.5 0 H5.5Z" fill={WOOD} stroke={BEAM} strokeWidth="0.8" />
+      {!calm && <path d="M5 -8 H11 V-7 H5Z" fill="#7FC4D8" />}
+    </g>
+  );
+}
+
+/** Falaise et tourbillon du Plongeur. */
+function Whirlpool({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-26 0 L-24 -26 L-12 -30 L-8 0Z" fill="#7E8A7A" />
+      <path d="M-24 -26 L-12 -30 L-14 -14Z" fill="#6A7668" />
+      <ellipse cx="10" cy="-2" rx="16" ry="5" fill={calm ? '#7FC4D8' : '#2A4A5A'} />
+      {!calm && <path d="M0 -2 q10 -6 18 0 q-8 5 -13 0 q4 -3 8 0" stroke={SNOW} strokeWidth="1.2" fill="none" opacity="0.85" />}
+      {calm && <path d="M7 -6 h6 l-1.4 4 h-3.2Z M10 -2 v2.4 M8 0.6 h4" stroke={GOLD} strokeWidth="1.2" fill={GOLD} />}
+    </g>
+  );
+}
+
+/** Arène à arcades du Gant. */
+function Arena({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-22 0 V-16 Q0 -24 22 -16 V0Z" fill={STONE} />
+      <path d="M-17 0 V-8 a3.5 3.5 0 0 1 7 0 V0Z M-7 0 V-9 a3.5 3.5 0 0 1 7 0 V0Z M3 0 V-9 a3.5 3.5 0 0 1 7 0 V0Z M13 0 V-8 a3 3 0 0 1 6 0 V0Z" fill="#4A4038" />
+      <path d="M-22 -16 Q0 -24 22 -16" stroke={BEAM} strokeWidth="1.2" fill="none" />
+      <path d="M0 -21 V-30 M0 -30 L7 -27.5 L0 -25Z" stroke={BEAM} strokeWidth="1" fill={RED} />
+    </g>
+  );
+}
+
+/** Gradins du théâtre et vol de grues. */
+function Amphitheatre({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-22 0 Q0 -8 22 0Z" fill={STONE} />
+      <path d="M-20 -3 Q0 -12 20 -3 M-17 -7 Q0 -16 17 -7 M-13 -11 Q0 -19 13 -11" stroke="#8A8478" strokeWidth="2.4" fill="none" />
+      <g stroke={calm ? '#B8B4A8' : '#3A3A3A'} strokeWidth="1.4" fill="none" strokeLinecap="round" opacity={calm ? 0.7 : 1}>
+        <path d="M-12 -30 l4 3 l4 -3" /><path d="M0 -35 l4 3 l4 -3" /><path d="M12 -29 l4 3 l4 -3" />
+      </g>
+    </g>
+  );
+}
+
+/** Cor de chasse du Chasseur sauvage, suspendu à une branche. */
+function HuntingHorn({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-8 -6 Q-10 -18 2 -18 Q12 -18 10 -8" stroke={GOLD} strokeWidth="3" fill="none" strokeLinecap="round" />
+      <path d="M10 -8 L14 -2 L5 -3Z" fill={GOLD} />
+      <path d="M-8 -6 v-3" stroke={BEAM} strokeWidth="1.6" />
+      <path d="M-4 -18 Q0 -26 6 -18" stroke={RED} strokeWidth="1" fill="none" />
+    </g>
+  );
+}
+
+/** Lac de l'Ondine : roseaux et nénuphar. */
+function Lake({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-1" rx="22" ry="5.5" fill={calm ? '#7FC4D8' : '#3F6A8A'} />
+      <path d="M-18 -2 V-14 M-15 -2 V-11 M17 -2 V-13" stroke={FIR} strokeWidth="1.2" />
+      <path d="M-18 -14 v-4 M-15 -11 v-3 M17 -13 v-4" stroke={WOOD} strokeWidth="2.2" strokeLinecap="round" />
+      <ellipse cx="4" cy="-1" rx="5" ry="1.8" fill="#4F8A5A" />
+      <path d="M4 -2 q-2 -4 0 -5 q2 1 0 5Z M4 -2 q-4 -2 -4 -4 q3 0 4 4Z M4 -2 q4 -2 4 -4 q-3 0 -4 4Z" fill="#F4C8D8" />
+      {!calm && <path d="M-8 -4 q2 -2 4 0 M10 -5 q2 -2 4 0" stroke={SNOW} strokeWidth="1" fill="none" opacity="0.8" />}
+    </g>
+  );
+}
+
+/** Bibliothèque de Weimar : façade claire, fronton et coupole. */
+function Library({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-18" y="-16" width="36" height="16" fill={PLASTER} stroke={BEAM} strokeWidth="0.8" />
+      <path d="M-20 -16 H20 L0 -25Z" fill={STONE} />
+      <path d="M-6 -24 Q0 -34 6 -24Z" fill="#6A8A9A" />
+      <path d="M0 -31 v-4" stroke={GOLD} strokeWidth="1.2" />
+      <path d="M-13 -13 V0 M-7 -13 V0 M7 -13 V0 M13 -13 V0" stroke={STONE} strokeWidth="2.2" />
+      <path d="M-2.5 0 V-8 a2.5 2.5 0 0 1 5 0 V0Z" fill={WOOD} />
+    </g>
+  );
+}
+
 export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Hanau : la maison natale des Grimm et le feu du Rumpelstilzchen
   'goethea1-w1': (calm) => (<><TimberHouse x={-12} y={12} /><Campfire x={12} y={14} calm={calm} /><Fir x={28} y={12} s={0.7} /></>),
@@ -397,4 +500,23 @@ export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'goetheb1-w8': (calm) => (<><Castle x={-8} y={13} s={0.9} />{!calm && <Cannonball x={20} y={0} />}</>),
   // Le Brocken, nuit de Walpurgis
   'goetheb1-final': () => (<><Bonfire x={0} y={13} /><Fir x={-28} y={12} s={0.7} /><Fir x={28} y={12} s={0.7} /></>),
+  // ───── Goethe B2 : Weimar, la cour des poètes ─────
+  // La route de nuit du Roi des Aulnes : un saule gris dans le vent
+  'goetheb2-w1': (calm) => (<><Willow x={-10} y={13} calm={calm} /><Fir x={22} y={12} s={0.7} /><Signpost x={34} y={14} s={0.7} /></>),
+  // L'atelier de l'Apprenti sorcier, inondé
+  'goetheb2-w2': (calm) => (<><TimberHouse x={-14} y={12} /><Buckets x={14} y={14} calm={calm} /></>),
+  // Le gouffre du Plongeur (la coupe d'or remonte quand la mer se calme)
+  'goetheb2-w3': (calm) => (<><Whirlpool x={0} y={13} calm={calm} /></>),
+  // L'arène du Gant
+  'goetheb2-w4': () => (<><Arena x={0} y={13} /></>),
+  // Le théâtre de Corinthe et les Grues d'Ibycus
+  'goetheb2-w5': (calm) => (<><Amphitheatre x={0} y={13} calm={calm} /></>),
+  // La forêt du Chasseur sauvage
+  'goetheb2-w6': () => (<><Fir x={-24} y={12} s={0.9} /><Fir x={-8} y={13} s={0.7} /><HuntingHorn x={12} y={12} /><Fir x={30} y={12} s={0.8} /></>),
+  // Le lac de l'Ondine
+  'goetheb2-w7': (calm) => (<><Lake x={-2} y={13} calm={calm} /><Fir x={32} y={11} s={0.6} /></>),
+  // Le cabinet de Méphisto
+  'goetheb2-w8': () => (<><Desk x={-12} y={14} /><TimberHouse x={16} y={13} s={0.85} /></>),
+  // La bibliothèque de Weimar
+  'goetheb2-final': () => (<><Library x={0} y={13} /><Fir x={-32} y={12} s={0.6} /><Fir x={32} y={12} s={0.6} /></>),
 };

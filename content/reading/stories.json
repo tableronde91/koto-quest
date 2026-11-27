@@ -32963,6 +32963,568 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "zauberlehrling",
+   "glyph": "W",
+   "level": "GOETHEB2",
+   "color": "#3F4A6B",
+   "title": {
+    "jp": "Der Zauberlehrling",
+    "fr": "L’Apprenti sorcier",
+    "en": "The Sorcerer’s Apprentice"
+   },
+   "summary": {
+    "fr": "Le maître est sorti, et l’apprenti veut enfin essayer la magie tout seul. D’après la ballade de Goethe.",
+    "en": "The master is out, and the apprentice finally wants to try magic on his own. After Goethe’s ballad."
+   },
+   "chapters": [
+    {
+     "slug": "zauberlehrling-1",
+     "title": {
+      "jp": "Der Meister ist fort",
+      "fr": "Le maître est sorti",
+      "en": "The master is away"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Kaum hatte der alte Meister das Haus verlassen, beschloss sein Lehrling, die Gelegenheit zu nutzen.",
+        "fr": "À peine le vieux maître avait-il quitté la maison que son apprenti décida de profiter de l’occasion.",
+        "en": "Hardly had the old master left the house when his apprentice decided to seize the opportunity.",
+        "kana": "Kaum hatte der alte Meister das Haus verlassen, beschloss sein Lehrling, die Gelegenheit zu nutzen."
+       },
+       {
+        "jp": "Er hatte oft genug beobachtet, wie der Meister zauberte, und war überzeugt, es genauso gut zu können.",
+        "fr": "Il avait observé assez souvent comment le maître pratiquait la magie, et il était convaincu de pouvoir en faire autant.",
+        "en": "He had watched the master work magic often enough and was convinced he could do it just as well.",
+        "kana": "Er hatte oft genug beobachtet, wie der Meister zauberte, und war überzeugt, es genauso gut zu können."
+       },
+       {
+        "jp": "Statt selbst Wasser für das Bad zu holen, sprach er die Worte, die er gehört hatte, und der alte Besen in der Ecke begann sich zu bewegen.",
+        "fr": "Au lieu d’aller chercher lui-même l’eau du bain, il prononça les mots qu’il avait entendus, et le vieux balai, dans son coin, se mit à bouger.",
+        "en": "Instead of fetching the bath water himself, he spoke the words he had heard, and the old broom in the corner began to move.",
+        "kana": "Statt selbst Wasser für das Bad zu holen, sprach er die Worte, die er gehört hatte, und der alte Besen in der Ecke begann sich zu bewegen."
+       }
+      ],
+      [
+       {
+        "jp": "Dem Besen wuchsen zwei Beine und ein Kopf, und er lief zum Fluss, als hätte er nie etwas anderes getan.",
+        "fr": "Deux jambes et une tête poussèrent au balai, et il courut à la rivière comme s’il n’avait jamais rien fait d’autre.",
+        "en": "The broom grew two legs and a head, and it ran to the river as if it had never done anything else.",
+        "kana": "Dem Besen wuchsen zwei Beine und ein Kopf, und er lief zum Fluss, als hätte er nie etwas anderes getan."
+       },
+       {
+        "jp": "Eimer um Eimer wurde herbeigetragen, und bald war die Wanne gefüllt.",
+        "fr": "Seau après seau fut apporté, et la baignoire fut bientôt remplie.",
+        "en": "Bucket after bucket was carried in, and soon the tub was full.",
+        "kana": "Eimer um Eimer wurde herbeigetragen, und bald war die Wanne gefüllt."
+       },
+       {
+        "jp": "Der Lehrling war stolz: Wozu sollte man jahrelang lernen, wenn sich alles so leicht erledigen ließ?",
+        "fr": "L’apprenti était fier : à quoi bon étudier pendant des années, si tout se réglait aussi facilement ?",
+        "en": "The apprentice was proud: why study for years if everything could be done so easily?",
+        "kana": "Der Lehrling war stolz: Wozu sollte man jahrelang lernen, wenn sich alles so leicht erledigen ließ?"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "die Gelegenheit",
+       "reading": "/diː ɡəˈleːɡn̩haɪt/",
+       "fr": "l’occasion",
+       "en": "the opportunity"
+      },
+      {
+       "jp": "beobachten",
+       "reading": "/bəˈʔoːbaxtn̩/",
+       "fr": "observer",
+       "en": "to watch, to observe"
+      },
+      {
+       "jp": "überzeugt",
+       "reading": "/yːbɐˈtsɔʏkt/",
+       "fr": "convaincu",
+       "en": "convinced"
+      },
+      {
+       "jp": "der Eimer",
+       "reading": "/deːɐ̯ ˈaɪmɐ/",
+       "fr": "le seau",
+       "en": "the bucket"
+      },
+      {
+       "jp": "die Wanne",
+       "reading": "/diː ˈvanə/",
+       "fr": "la baignoire",
+       "en": "the tub"
+      },
+      {
+       "jp": "stolz",
+       "reading": "/ʃtɔlts/",
+       "fr": "fier",
+       "en": "proud"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi l’apprenti pense-t-il pouvoir faire de la magie ?",
+        "en": "Why does the apprentice think he can work magic?"
+       },
+       "choices": [
+        {
+         "fr": "Il a souvent observé le maître",
+         "en": "He has often watched the master"
+        },
+        {
+         "fr": "Le maître lui a tout appris",
+         "en": "The master has taught him everything"
+        },
+        {
+         "fr": "Il a trouvé un livre de formules",
+         "en": "He has found a book of spells"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Que fait le balai ensorcelé ?",
+        "en": "What does the enchanted broom do?"
+       },
+       "choices": [
+        {
+         "fr": "Il s’envole par la fenêtre",
+         "en": "It flies out of the window"
+        },
+        {
+         "fr": "Il balaie tout l’atelier",
+         "en": "It sweeps the whole workshop"
+        },
+        {
+         "fr": "Il va chercher de l’eau à la rivière",
+         "en": "It fetches water from the river"
+        }
+       ],
+       "answer": 2
+      }
+     ]
+    },
+    {
+     "slug": "zauberlehrling-2",
+     "title": {
+      "jp": "Die Geister, die ich rief",
+      "fr": "Les esprits que j’ai appelés",
+      "en": "The spirits I summoned"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Doch der Besen hörte nicht auf: Das Wasser lief über den Rand der Wanne und stand bald im ganzen Zimmer.",
+        "fr": "Mais le balai ne s’arrêtait pas : l’eau déborda de la baignoire et monta bientôt dans toute la pièce.",
+        "en": "But the broom did not stop: the water ran over the edge of the tub and soon stood in the whole room.",
+        "kana": "Doch der Besen hörte nicht auf: Das Wasser lief über den Rand der Wanne und stand bald im ganzen Zimmer."
+       },
+       {
+        "jp": "Erst jetzt wurde dem Lehrling klar, dass er das Wort vergessen hatte, mit dem sich der Zauber beenden ließ.",
+        "fr": "C’est seulement alors que l’apprenti comprit qu’il avait oublié le mot qui permettait de mettre fin au sortilège.",
+        "en": "Only now did the apprentice realise that he had forgotten the word with which the spell could be ended.",
+        "kana": "Erst jetzt wurde dem Lehrling klar, dass er das Wort vergessen hatte, mit dem sich der Zauber beenden ließ."
+       },
+       {
+        "jp": "In seiner Verzweiflung griff er zum Beil und schlug den Besen entzwei, aber nun liefen zwei Besen zum Fluss, und das Wasser stieg doppelt so schnell.",
+        "fr": "Dans son désespoir, il saisit la hache et fendit le balai en deux, mais voilà que deux balais couraient à la rivière, et l’eau monta deux fois plus vite.",
+        "en": "In his despair he seized the axe and split the broom in two, but now two brooms ran to the river, and the water rose twice as fast.",
+        "kana": "In seiner Verzweiflung griff er zum Beil und schlug den Besen entzwei, aber nun liefen zwei Besen zum Fluss, und das Wasser stieg doppelt so schnell."
+       }
+      ],
+      [
+       {
+        "jp": "Wäre der Meister nicht in diesem Augenblick zurückgekehrt, wäre das ganze Haus überschwemmt worden.",
+        "fr": "Si le maître n’était pas revenu à cet instant, toute la maison aurait été inondée.",
+        "en": "Had the master not returned at that moment, the whole house would have been flooded.",
+        "kana": "Wäre der Meister nicht in diesem Augenblick zurückgekehrt, wäre das ganze Haus überschwemmt worden."
+       },
+       {
+        "jp": "Mit einem einzigen Satz schickte er die Besen in die Ecke zurück und erklärte, nur der Meister dürfe sie rufen.",
+        "fr": "D’une seule phrase, il renvoya les balais dans leur coin et déclara que seul le maître avait le droit de les appeler.",
+        "en": "With a single sentence he sent the brooms back to their corner and declared that only the master might call them.",
+        "kana": "Mit einem einzigen Satz schickte er die Besen in die Ecke zurück und erklärte, nur der Meister dürfe sie rufen."
+       },
+       {
+        "jp": "Der Lehrling soll danach geschworen haben, nie wieder etwas zu beginnen, was er nicht auch beenden könne.",
+        "fr": "On dit que l’apprenti jura ensuite de ne plus jamais commencer ce qu’il ne saurait pas aussi terminer.",
+        "en": "The apprentice is said to have sworn afterwards never again to start anything he could not also finish.",
+        "kana": "Der Lehrling soll danach geschworen haben, nie wieder etwas zu beginnen, was er nicht auch beenden könne."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "der Rand",
+       "reading": "/deːɐ̯ ʁant/",
+       "fr": "le bord",
+       "en": "the edge"
+      },
+      {
+       "jp": "der Zauber",
+       "reading": "/deːɐ̯ ˈtsaʊbɐ/",
+       "fr": "le sortilège, la magie",
+       "en": "the spell, magic"
+      },
+      {
+       "jp": "die Verzweiflung",
+       "reading": "/diː fɛɐ̯ˈtsvaɪflʊŋ/",
+       "fr": "le désespoir",
+       "en": "despair"
+      },
+      {
+       "jp": "das Beil",
+       "reading": "/das baɪl/",
+       "fr": "la hache",
+       "en": "the axe"
+      },
+      {
+       "jp": "zurückkehren",
+       "reading": "/tsuˈʁʏkˌkeːʁən/",
+       "fr": "revenir",
+       "en": "to return"
+      },
+      {
+       "jp": "schwören",
+       "reading": "/ˈʃvøːʁən/",
+       "fr": "jurer",
+       "en": "to swear"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Quel est le problème de l’apprenti ?",
+        "en": "What is the apprentice’s problem?"
+       },
+       "choices": [
+        {
+         "fr": "Il ne trouve plus le balai",
+         "en": "He cannot find the broom any more"
+        },
+        {
+         "fr": "Il a oublié le mot qui arrête le sortilège",
+         "en": "He has forgotten the word that stops the spell"
+        },
+        {
+         "fr": "Le maître a emporté la baignoire",
+         "en": "The master has taken the tub away"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Que se passe-t-il quand il fend le balai ?",
+        "en": "What happens when he splits the broom?"
+       },
+       "choices": [
+        {
+         "fr": "Deux balais apportent de l’eau",
+         "en": "Two brooms bring water"
+        },
+        {
+         "fr": "Le balai s’arrête enfin",
+         "en": "The broom finally stops"
+        },
+        {
+         "fr": "L’eau disparaît",
+         "en": "The water disappears"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "erlkoenig",
+   "glyph": "E",
+   "level": "GOETHEB2",
+   "color": "#2F4F4A",
+   "title": {
+    "jp": "Der Erlkönig",
+    "fr": "Le Roi des Aulnes",
+    "en": "The Erlking"
+   },
+   "summary": {
+    "fr": "Un père chevauche dans la nuit avec son fils malade, et l’enfant voit ce que le père ne voit pas. D’après la ballade de Goethe.",
+    "en": "A father rides through the night with his sick son, and the child sees what the father does not. After Goethe’s ballad."
+   },
+   "chapters": [
+    {
+     "slug": "erlkoenig-1",
+     "title": {
+      "jp": "Der Ritt durch die Nacht",
+      "fr": "La chevauchée dans la nuit",
+      "en": "The ride through the night"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Spät in der Nacht ritt ein Vater durch den Wind, seinen kranken Sohn fest im Arm.",
+        "fr": "Tard dans la nuit, un père chevauchait dans le vent, son fils malade serré dans ses bras.",
+        "en": "Late at night a father rode through the wind, his sick son held tight in his arms.",
+        "kana": "Spät in der Nacht ritt ein Vater durch den Wind, seinen kranken Sohn fest im Arm."
+       },
+       {
+        "jp": "Plötzlich verbarg das Kind sein Gesicht und fragte, ob der Vater den Erlkönig mit Krone und Mantel nicht sehe.",
+        "fr": "Soudain, l’enfant cacha son visage et demanda si le père ne voyait pas le Roi des Aulnes avec sa couronne et son manteau.",
+        "en": "Suddenly the child hid his face and asked whether his father did not see the Erlking with his crown and cloak.",
+        "kana": "Plötzlich verbarg das Kind sein Gesicht und fragte, ob der Vater den Erlkönig mit Krone und Mantel nicht sehe."
+       },
+       {
+        "jp": "Der Vater antwortete ruhig, das sei nur ein Streifen Nebel über den Wiesen.",
+        "fr": "Le père répondit calmement que ce n’était qu’une traînée de brouillard au-dessus des prés.",
+        "en": "The father answered calmly that it was only a streak of mist over the meadows.",
+        "kana": "Der Vater antwortete ruhig, das sei nur ein Streifen Nebel über den Wiesen."
+       }
+      ],
+      [
+       {
+        "jp": "Doch das Kind hörte eine leise Stimme, die ihm schöne Spiele und bunte Blumen am Ufer versprach.",
+        "fr": "Mais l’enfant entendait une voix douce qui lui promettait de beaux jeux et des fleurs de toutes les couleurs sur la rive.",
+        "en": "But the child heard a soft voice that promised him lovely games and bright flowers on the shore.",
+        "kana": "Doch das Kind hörte eine leise Stimme, die ihm schöne Spiele und bunte Blumen am Ufer versprach."
+       },
+       {
+        "jp": "„Hörst du nicht, was er mir zuflüstert?“, rief es. Der Vater meinte, es sei bloß der Wind in den trockenen Blättern.",
+        "fr": "« N’entends-tu pas ce qu’il me chuchote ? » s’écria-t-il. Le père estima que ce n’était que le vent dans les feuilles sèches.",
+        "en": "“Do you not hear what he whispers to me?” he cried. The father said it was merely the wind in the dry leaves.",
+        "kana": "„Hörst du nicht, was er mir zuflüstert?“, rief es. Der Vater meinte, es sei bloß der Wind in den trockenen Blättern."
+       },
+       {
+        "jp": "Er tat so, als ob er keine Angst hätte, und trieb das Pferd dennoch schneller an.",
+        "fr": "Il faisait comme s’il n’avait pas peur, et pourtant il pressa son cheval.",
+        "en": "He acted as if he were not afraid, and yet he urged the horse on faster.",
+        "kana": "Er tat so, als ob er keine Angst hätte, und trieb das Pferd dennoch schneller an."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "verbergen",
+       "reading": "/fɛɐ̯ˈbɛʁɡn̩/",
+       "fr": "cacher",
+       "en": "to hide"
+      },
+      {
+       "jp": "die Krone",
+       "reading": "/diː ˈkʁoːnə/",
+       "fr": "la couronne",
+       "en": "the crown"
+      },
+      {
+       "jp": "der Streifen",
+       "reading": "/deːɐ̯ ˈʃtʁaɪfn̩/",
+       "fr": "la bande, la traînée",
+       "en": "the streak, the strip"
+      },
+      {
+       "jp": "die Wiese",
+       "reading": "/diː ˈviːzə/",
+       "fr": "le pré",
+       "en": "the meadow"
+      },
+      {
+       "jp": "das Ufer",
+       "reading": "/das ˈuːfɐ/",
+       "fr": "la rive",
+       "en": "the shore, the bank"
+      },
+      {
+       "jp": "antreiben",
+       "reading": "/ˈanˌtʁaɪbn̩/",
+       "fr": "presser, pousser en avant",
+       "en": "to urge on"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que voit l’enfant ?",
+        "en": "What does the child see?"
+       },
+       "choices": [
+        {
+         "fr": "Un loup au bord du chemin",
+         "en": "A wolf by the roadside"
+        },
+        {
+         "fr": "Le Roi des Aulnes avec une couronne",
+         "en": "The Erlking with a crown"
+        },
+        {
+         "fr": "Sa mère qui l’attend",
+         "en": "His mother waiting for him"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Comment le père explique-t-il ce que l’enfant voit et entend ?",
+        "en": "How does the father explain what the child sees and hears?"
+       },
+       "choices": [
+        {
+         "fr": "Par le brouillard et le vent",
+         "en": "By the mist and the wind"
+        },
+        {
+         "fr": "Par un rêve",
+         "en": "By a dream"
+        },
+        {
+         "fr": "Par des voyageurs sur la route",
+         "en": "By travellers on the road"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "erlkoenig-2",
+     "title": {
+      "jp": "Die Stimme im Wind",
+      "fr": "La voix dans le vent",
+      "en": "The voice in the wind"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Die Stimme wurde lockender: Die Töchter des Königs würden das Kind wiegen und für es tanzen und singen.",
+        "fr": "La voix se fit plus enjôleuse : les filles du roi berceraient l’enfant, danseraient et chanteraient pour lui.",
+        "en": "The voice grew more enticing: the king’s daughters would rock the child and dance and sing for him.",
+        "kana": "Die Stimme wurde lockender: Die Töchter des Königs würden das Kind wiegen und für es tanzen und singen."
+       },
+       {
+        "jp": "Der Vater behauptete, dort hinten stünden nur alte, graue Weiden, obwohl ihm selbst unheimlich zumute war.",
+        "fr": "Le père affirma qu’il n’y avait là-bas que de vieux saules gris, alors que lui-même se sentait mal à l’aise.",
+        "en": "The father claimed that only old grey willows stood over there, although he himself felt uneasy.",
+        "kana": "Der Vater behauptete, dort hinten stünden nur alte, graue Weiden, obwohl ihm selbst unheimlich zumute war."
+       },
+       {
+        "jp": "Da drohte die Stimme: Wenn das Kind nicht freiwillig komme, werde sie Gewalt gebrauchen.",
+        "fr": "Alors la voix menaça : si l’enfant ne venait pas de son plein gré, elle emploierait la force.",
+        "en": "Then the voice threatened: if the child did not come willingly, it would use force.",
+        "kana": "Da drohte die Stimme: Wenn das Kind nicht freiwillig komme, werde sie Gewalt gebrauchen."
+       }
+      ],
+      [
+       {
+        "jp": "Das Kind schrie auf, der Erlkönig habe ihm wehgetan, und dem Vater lief es kalt über den Rücken.",
+        "fr": "L’enfant poussa un cri : le Roi des Aulnes lui avait fait mal ; et le père sentit un frisson lui courir dans le dos.",
+        "en": "The child cried out that the Erlking had hurt him, and a shiver ran down the father’s back.",
+        "kana": "Das Kind schrie auf, der Erlkönig habe ihm wehgetan, und dem Vater lief es kalt über den Rücken."
+       },
+       {
+        "jp": "Er ritt, so schnell er konnte, und erreichte den Hof mit letzter Kraft.",
+        "fr": "Il chevaucha aussi vite qu’il le put et atteignit la ferme à bout de forces.",
+        "en": "He rode as fast as he could and reached the farm with his last strength.",
+        "kana": "Er ritt, so schnell er konnte, und erreichte den Hof mit letzter Kraft."
+       },
+       {
+        "jp": "Als er aber in seine Arme blickte, war es zu spät: Hätte er dem Kind doch nur früher geglaubt!",
+        "fr": "Mais quand il baissa les yeux vers ses bras, il était trop tard : si seulement il avait cru l’enfant plus tôt !",
+        "en": "But when he looked down into his arms, it was too late: if only he had believed the child sooner!",
+        "kana": "Als er aber in seine Arme blickte, war es zu spät: Hätte er dem Kind doch nur früher geglaubt!"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "wiegen",
+       "reading": "/ˈviːɡn̩/",
+       "fr": "bercer",
+       "en": "to rock"
+      },
+      {
+       "jp": "die Weide",
+       "reading": "/diː ˈvaɪdə/",
+       "fr": "le saule",
+       "en": "the willow"
+      },
+      {
+       "jp": "unheimlich",
+       "reading": "/ˈʊnhaɪmlɪç/",
+       "fr": "inquiétant, sinistre",
+       "en": "eerie, uncanny"
+      },
+      {
+       "jp": "drohen",
+       "reading": "/ˈdʁoːən/",
+       "fr": "menacer",
+       "en": "to threaten"
+      },
+      {
+       "jp": "die Gewalt",
+       "reading": "/diː ɡəˈvalt/",
+       "fr": "la force, la violence",
+       "en": "force, violence"
+      },
+      {
+       "jp": "der Hof",
+       "reading": "/deːɐ̯ hoːf/",
+       "fr": "la ferme, la cour",
+       "en": "the farm, the yard"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que promet la voix à l’enfant ?",
+        "en": "What does the voice promise the child?"
+       },
+       "choices": [
+        {
+         "fr": "Que son père sera riche",
+         "en": "That his father will be rich"
+        },
+        {
+         "fr": "Qu’il deviendra roi à son tour",
+         "en": "That he will become king in turn"
+        },
+        {
+         "fr": "Que les filles du roi s’occuperont de lui",
+         "en": "That the king’s daughters will look after him"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que regrette le père à la fin ?",
+        "en": "What does the father regret at the end?"
+       },
+       "choices": [
+        {
+         "fr": "D’avoir pris le mauvais chemin",
+         "en": "Having taken the wrong road"
+        },
+        {
+         "fr": "De ne pas avoir cru l’enfant plus tôt",
+         "en": "Not having believed the child sooner"
+        },
+        {
+         "fr": "D’être parti sans manteau",
+         "en": "Having left without a cloak"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -32983,8 +33545,8 @@
    "en": "Folk tales, legends and classics from Spain and Latin America (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain)."
   },
   "de": {
-   "fr": "Contes des frères Grimm et légendes d’Allemagne (domaine public), réécrits en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).",
-   "en": "Tales by the Brothers Grimm and legends of Germany (public domain), retold in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German)."
+   "fr": "Contes des frères Grimm, légendes d’Allemagne et ballades de Goethe (domaine public), réécrits en prose et en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).",
+   "en": "Tales by the Brothers Grimm, legends of Germany and ballads by Goethe (public domain), retold in prose and in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German)."
   }
  }
 }

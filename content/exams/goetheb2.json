@@ -1,0 +1,835 @@
+{
+ "slug": "goetheb2",
+ "level": "GOETHEB2",
+ "contentVersion": "2026.11.27",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel Goethe-Zertifikat B2 (Goethe-Institut : types d’épreuves, consignes en allemand, modules notés sur 100 et validés séparément à 60 points). L’épreuve Schreiben se fait par choix multiple et l’épreuve orale (Sprechen) n’est pas évaluée. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "h-kurztexte",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 1",
+   "title": "Textes courts : vrai ou faux, puis une question",
+   "prompt": "Sie hören fünf kurze Texte. Zu jedem Text lösen Sie zwei Aufgaben.",
+   "count": 10,
+   "questions": [
+    {
+     "audio": "F|Sie hören nun einen Hinweis für alle Teilnehmenden der Tagung „Arbeit im Wandel“. Der Vortrag von Professor Lindner über künstliche Intelligenz im Büro muss leider entfallen, da der Referent wegen eines Streiks am Flughafen nicht anreisen konnte. Stattdessen findet im selben Saal eine Podiumsdiskussion statt. Die Folien des Vortrags werden Ihnen im Laufe der Woche per E-Mail zugeschickt.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Femme : Sie hören nun einen Hinweis für alle Teilnehmenden der Tagung „Arbeit im Wandel“. Der Vortrag von Professor Lindner über künstliche Intelligenz im Büro muss leider entfallen, da der Referent wegen eines Streiks am Flughafen nicht anreisen konnte. Stattdessen findet im selben Saal eine Podiumsdiskussion statt. Die Folien des Vortrags werden Ihnen im Laufe der Woche per E-Mail zugeschickt.",
+     "text": "★ Der Vortrag wird auf den Nachmittag verschoben."
+    },
+    {
+     "audio": "F|Sie hören nun einen Hinweis für alle Teilnehmenden der Tagung „Arbeit im Wandel“. Der Vortrag von Professor Lindner über künstliche Intelligenz im Büro muss leider entfallen, da der Referent wegen eines Streiks am Flughafen nicht anreisen konnte. Stattdessen findet im selben Saal eine Podiumsdiskussion statt. Die Folien des Vortrags werden Ihnen im Laufe der Woche per E-Mail zugeschickt.",
+     "choices": [
+      "Die Folien des Vortrags.",
+      "Ihr Geld zurück.",
+      "Eine Einladung zur nächsten Tagung."
+     ],
+     "answer": "Die Folien des Vortrags.",
+     "explanation": "Transcription : Femme : Sie hören nun einen Hinweis für alle Teilnehmenden der Tagung „Arbeit im Wandel“. Der Vortrag von Professor Lindner über künstliche Intelligenz im Büro muss leider entfallen, da der Referent wegen eines Streiks am Flughafen nicht anreisen konnte. Stattdessen findet im selben Saal eine Podiumsdiskussion statt. Die Folien des Vortrags werden Ihnen im Laufe der Woche per E-Mail zugeschickt.",
+     "text": "★ Was erhalten die Teilnehmenden später?"
+    },
+    {
+     "audio": "M|Guten Tag, Frau Petrović, hier spricht Baumann von der Hausverwaltung. Sie hatten sich wegen des Wasserschadens in Ihrem Bad gemeldet. Der Handwerker könnte am Donnerstag zwischen acht und zwölf Uhr kommen. Sollten Sie dann nicht zu Hause sein, können Sie den Schlüssel bei Ihrer Nachbarin hinterlegen. Die Kosten übernimmt selbstverständlich der Vermieter.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Homme : Guten Tag, Frau Petrović, hier spricht Baumann von der Hausverwaltung. Sie hatten sich wegen des Wasserschadens in Ihrem Bad gemeldet. Der Handwerker könnte am Donnerstag zwischen acht und zwölf Uhr kommen. Sollten Sie dann nicht zu Hause sein, können Sie den Schlüssel bei Ihrer Nachbarin hinterlegen. Die Kosten übernimmt selbstverständlich der Vermieter.",
+     "text": "★ Frau Petrović muss die Reparatur selbst bezahlen."
+    },
+    {
+     "audio": "M|Guten Tag, Frau Petrović, hier spricht Baumann von der Hausverwaltung. Sie hatten sich wegen des Wasserschadens in Ihrem Bad gemeldet. Der Handwerker könnte am Donnerstag zwischen acht und zwölf Uhr kommen. Sollten Sie dann nicht zu Hause sein, können Sie den Schlüssel bei Ihrer Nachbarin hinterlegen. Die Kosten übernimmt selbstverständlich der Vermieter.",
+     "choices": [
+      "Den Schlüssel bei der Nachbarin lassen.",
+      "Einen neuen Termin vereinbaren.",
+      "Den Handwerker selbst anrufen."
+     ],
+     "answer": "Den Schlüssel bei der Nachbarin lassen.",
+     "explanation": "Transcription : Homme : Guten Tag, Frau Petrović, hier spricht Baumann von der Hausverwaltung. Sie hatten sich wegen des Wasserschadens in Ihrem Bad gemeldet. Der Handwerker könnte am Donnerstag zwischen acht und zwölf Uhr kommen. Sollten Sie dann nicht zu Hause sein, können Sie den Schlüssel bei Ihrer Nachbarin hinterlegen. Die Kosten übernimmt selbstverständlich der Vermieter.",
+     "text": "★ Was soll Frau Petrović tun, falls sie nicht da ist?"
+    },
+    {
+     "audio": "N|Wissenschaft aktuell: Laut einer Studie der Universität Jena lernen Erwachsene Vokabeln deutlich besser, wenn sie kurz nach dem Lernen schlafen. Die Forscher vermuten, dass das Gehirn im Schlaf neue Informationen sortiert. Wer also abends lernt, behält am nächsten Tag bis zu vierzig Prozent mehr als jemand, der morgens lernt und den ganzen Tag wach bleibt.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Wissenschaft aktuell: Laut einer Studie der Universität Jena lernen Erwachsene Vokabeln deutlich besser, wenn sie kurz nach dem Lernen schlafen. Die Forscher vermuten, dass das Gehirn im Schlaf neue Informationen sortiert. Wer also abends lernt, behält am nächsten Tag bis zu vierzig Prozent mehr als jemand, der morgens lernt und den ganzen Tag wach bleibt.",
+     "text": "★ Der Studie zufolge ist es günstig, am Abend zu lernen."
+    },
+    {
+     "audio": "N|Wissenschaft aktuell: Laut einer Studie der Universität Jena lernen Erwachsene Vokabeln deutlich besser, wenn sie kurz nach dem Lernen schlafen. Die Forscher vermuten, dass das Gehirn im Schlaf neue Informationen sortiert. Wer also abends lernt, behält am nächsten Tag bis zu vierzig Prozent mehr als jemand, der morgens lernt und den ganzen Tag wach bleibt.",
+     "choices": [
+      "Dass das Gehirn im Schlaf Informationen ordnet.",
+      "Dass Erwachsene schlechter lernen als Kinder.",
+      "Dass man morgens konzentrierter ist."
+     ],
+     "answer": "Dass das Gehirn im Schlaf Informationen ordnet.",
+     "explanation": "Transcription : Narrateur : Wissenschaft aktuell: Laut einer Studie der Universität Jena lernen Erwachsene Vokabeln deutlich besser, wenn sie kurz nach dem Lernen schlafen. Die Forscher vermuten, dass das Gehirn im Schlaf neue Informationen sortiert. Wer also abends lernt, behält am nächsten Tag bis zu vierzig Prozent mehr als jemand, der morgens lernt und den ganzen Tag wach bleibt.",
+     "text": "★ Was vermuten die Forscher?"
+    },
+    {
+     "audio": "F|Hallo Markus, ich bin’s, Irene. Ich wollte dir nur sagen, dass ich mich nun doch für die Stelle in Weimar entschieden habe. Das Gehalt ist zwar etwas niedriger als in Hamburg, aber die Aufgaben sind viel interessanter, und ich könnte zwei Tage pro Woche von zu Hause aus arbeiten. Wenn ich das Angebot abgelehnt hätte, hätte ich es bestimmt bereut.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Femme : Hallo Markus, ich bin’s, Irene. Ich wollte dir nur sagen, dass ich mich nun doch für die Stelle in Weimar entschieden habe. Das Gehalt ist zwar etwas niedriger als in Hamburg, aber die Aufgaben sind viel interessanter, und ich könnte zwei Tage pro Woche von zu Hause aus arbeiten. Wenn ich das Angebot abgelehnt hätte, hätte ich es bestimmt bereut.",
+     "text": "★ Irene verdient in Weimar mehr als in Hamburg."
+    },
+    {
+     "audio": "F|Hallo Markus, ich bin’s, Irene. Ich wollte dir nur sagen, dass ich mich nun doch für die Stelle in Weimar entschieden habe. Das Gehalt ist zwar etwas niedriger als in Hamburg, aber die Aufgaben sind viel interessanter, und ich könnte zwei Tage pro Woche von zu Hause aus arbeiten. Wenn ich das Angebot abgelehnt hätte, hätte ich es bestimmt bereut.",
+     "choices": [
+      "Weil die Aufgaben interessanter sind.",
+      "Weil sie nicht mehr im Büro arbeiten muss.",
+      "Weil Markus in Weimar wohnt."
+     ],
+     "answer": "Weil die Aufgaben interessanter sind.",
+     "explanation": "Transcription : Femme : Hallo Markus, ich bin’s, Irene. Ich wollte dir nur sagen, dass ich mich nun doch für die Stelle in Weimar entschieden habe. Das Gehalt ist zwar etwas niedriger als in Hamburg, aber die Aufgaben sind viel interessanter, und ich könnte zwei Tage pro Woche von zu Hause aus arbeiten. Wenn ich das Angebot abgelehnt hätte, hätte ich es bestimmt bereut.",
+     "text": "★ Warum hat Irene die Stelle angenommen?"
+    },
+    {
+     "audio": "N|Verkehrshinweis: Auf der A4 zwischen Erfurt und Weimar hat sich nach einem Unfall mit einem Lastwagen ein Stau von zwölf Kilometern Länge gebildet. Die Fahrbahn in Richtung Dresden bleibt voraussichtlich bis achtzehn Uhr gesperrt. Autofahrern wird empfohlen, die Autobahn an der Ausfahrt Erfurt-Ost zu verlassen und der Umleitung zu folgen.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Narrateur : Verkehrshinweis: Auf der A4 zwischen Erfurt und Weimar hat sich nach einem Unfall mit einem Lastwagen ein Stau von zwölf Kilometern Länge gebildet. Die Fahrbahn in Richtung Dresden bleibt voraussichtlich bis achtzehn Uhr gesperrt. Autofahrern wird empfohlen, die Autobahn an der Ausfahrt Erfurt-Ost zu verlassen und der Umleitung zu folgen.",
+     "text": "★ Die Autobahn ist in Richtung Dresden gesperrt."
+    },
+    {
+     "audio": "N|Verkehrshinweis: Auf der A4 zwischen Erfurt und Weimar hat sich nach einem Unfall mit einem Lastwagen ein Stau von zwölf Kilometern Länge gebildet. Die Fahrbahn in Richtung Dresden bleibt voraussichtlich bis achtzehn Uhr gesperrt. Autofahrern wird empfohlen, die Autobahn an der Ausfahrt Erfurt-Ost zu verlassen und der Umleitung zu folgen.",
+     "choices": [
+      "Die Autobahn zu verlassen.",
+      "Im Stau zu warten.",
+      "Erst nach achtzehn Uhr loszufahren."
+     ],
+     "answer": "Die Autobahn zu verlassen.",
+     "explanation": "Transcription : Narrateur : Verkehrshinweis: Auf der A4 zwischen Erfurt und Weimar hat sich nach einem Unfall mit einem Lastwagen ein Stau von zwölf Kilometern Länge gebildet. Die Fahrbahn in Richtung Dresden bleibt voraussichtlich bis achtzehn Uhr gesperrt. Autofahrern wird empfohlen, die Autobahn an der Ausfahrt Erfurt-Ost zu verlassen und der Umleitung zu folgen.",
+     "text": "★ Was wird den Autofahrern geraten?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-interview",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 2",
+   "title": "Une interview à la radio",
+   "prompt": "Sie hören ein Interview. Wählen Sie die richtige Lösung.",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Er schreibt regelmäßig Texte über die Stadt.",
+      "Er führt Touristen durch die Stadt.",
+      "Er leitet das Goethe-Museum."
+     ],
+     "answer": "Er schreibt regelmäßig Texte über die Stadt.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Was ist die Aufgabe von Herrn Reuter?"
+    },
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Eine Wohnung.",
+      "Ein Auto.",
+      "Ein Büro in der Zeitung."
+     ],
+     "answer": "Eine Wohnung.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Was bekommt er von der Stadt?"
+    },
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Dass sich alles nur um die Dichter dreht.",
+      "Dass er keine Wohnung findet.",
+      "Dass zu viele Studenten dort leben."
+     ],
+     "answer": "Dass sich alles nur um die Dichter dreht.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Was hatte er vor seinem Umzug befürchtet?"
+    },
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Über Menschen aus dem Alltag.",
+      "Über Goethe und Schiller.",
+      "Über die Geschichte der Universität."
+     ],
+     "answer": "Über Menschen aus dem Alltag.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Worüber schreibt er am liebsten?"
+    },
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Sie waren unterschiedlicher Meinung.",
+      "Sie haben ihm alle zugestimmt.",
+      "Sie haben seine Texte nicht gelesen."
+     ],
+     "answer": "Sie waren unterschiedlicher Meinung.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Wie haben die Leser auf seine Kritik an der Innenstadt reagiert?"
+    },
+    {
+     "audio": "F|Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich?\nM|Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung.\nF|Sie stammen aus Hamburg. War die Umstellung schwer?\nM|Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität.\nF|Worüber schreiben Sie am liebsten?\nM|Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist.\nF|Gab es auch Kritik an Ihren Texten?\nM|Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben.\nF|Ihre Zeit hier endet im Sommer. Was nehmen Sie mit?\nM|Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "choices": [
+      "Einen Roman, der im heutigen Weimar spielt.",
+      "Ein Buch über Goethes Leben.",
+      "Einen Reiseführer für Autofahrer."
+     ],
+     "answer": "Einen Roman, der im heutigen Weimar spielt.",
+     "explanation": "Transcription : Femme : Kultur am Mittag. Bei mir im Studio ist heute Jonas Reuter, der seit drei Jahren als Stadtschreiber in Weimar lebt. Herr Reuter, was macht ein Stadtschreiber eigentlich? / Homme : Im Grunde werde ich dafür bezahlt, die Stadt zu beobachten und darüber zu schreiben. Die Stadt stellt mir eine Wohnung zur Verfügung, und ich veröffentliche jeden Monat einen Text in der Lokalzeitung. / Femme : Sie stammen aus Hamburg. War die Umstellung schwer? / Homme : Anfangs schon. Ich hatte befürchtet, dass Weimar ein einziges Museum sei, in dem sich alles um Goethe und Schiller dreht. Inzwischen habe ich festgestellt, dass hier erstaunlich viele junge Leute leben, vor allem wegen der Universität. / Femme : Worüber schreiben Sie am liebsten? / Homme : Nicht über die berühmten Dichter, sondern über die Menschen, denen ich im Alltag begegne: die Bäckerin, den Busfahrer, die Studenten im Park. Mich interessiert, wie man in einer Stadt lebt, deren Vergangenheit so groß ist. / Femme : Gab es auch Kritik an Ihren Texten? / Homme : Natürlich. Als ich schrieb, dass die Innenstadt abends wie ausgestorben wirke, haben sich einige Leser beschwert. Andere haben mir allerdings zugestimmt. Ich finde, ein Stadtschreiber sollte nicht nur loben. / Femme : Ihre Zeit hier endet im Sommer. Was nehmen Sie mit? / Homme : Vor allem die Erkenntnis, dass man eine Stadt erst versteht, wenn man langsam durch sie geht. Ich habe hier kein Auto gebraucht. Und ich arbeite an einem Roman, der in Weimar spielt, allerdings in der Gegenwart.",
+     "text": "★ Woran arbeitet er zurzeit?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-gespraechsrunde",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 3",
+   "title": "Une table ronde : qui dit quoi ?",
+   "prompt": "Sie hören ein Gespräch mit mehreren Personen. Wer sagt was?",
+   "count": 6,
+   "questions": [
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Lena",
+      "Paul",
+      "Der Moderator"
+     ],
+     "answer": "Lena",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Ohne die Pause hätte ich vermutlich das Falsche studiert."
+    },
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Paul",
+      "Lena",
+      "Der Moderator"
+     ],
+     "answer": "Paul",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Nicht jede Familie kann ein solches Jahr finanzieren."
+    },
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Paul",
+      "Lena",
+      "Der Moderator"
+     ],
+     "answer": "Paul",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Nach einer langen Pause fällt das Lernen schwerer."
+    },
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Lena",
+      "Paul",
+      "Der Moderator"
+     ],
+     "answer": "Lena",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Nach dem Jahr war ich motivierter als vorher."
+    },
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Paul",
+      "Lena",
+      "Der Moderator"
+     ],
+     "answer": "Paul",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Auch in einer anderen deutschen Stadt wird man selbstständig."
+    },
+    {
+     "audio": "N|Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat.\nF|Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt.\nM|Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können.\nF|Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben.\nM|Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist.\nF|Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch.\nM|Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen.\nF|Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut.\nM|Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland.\nN|Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "choices": [
+      "Der Moderator",
+      "Lena",
+      "Paul"
+     ],
+     "answer": "Der Moderator",
+     "explanation": "Transcription : Narrateur : Campusradio, die Gesprächsrunde. Heute geht es um die Frage, ob man nach dem Abitur sofort studieren oder erst ein Jahr Pause machen sollte. Zu Gast sind Lena, die ein Jahr in Chile verbracht hat, und Paul, der direkt mit dem Studium begonnen hat. / Femme : Für mich war das Jahr im Ausland die beste Entscheidung. Ich hatte nach der Schule keine Ahnung, was ich studieren wollte. Hätte ich sofort angefangen, hätte ich wahrscheinlich das falsche Fach gewählt. / Homme : Das kann ich verstehen, aber so ein Jahr muss man sich auch leisten können. Meine Eltern hätten mir das nicht bezahlen können. / Femme : Ich habe dort gearbeitet, in einem Kindergarten. Reich wird man dabei nicht, aber es reicht zum Leben. / Homme : Trotzdem: Wer ein Jahr aussetzt, verliert die Gewohnheit zu lernen. Ich habe an meinen Freunden gesehen, wie schwer ihnen der Anfang an der Uni gefallen ist. / Femme : Bei mir war es umgekehrt. Ich war viel motivierter, weil ich endlich wusste, wofür ich lerne. Und selbstständiger war ich auch. / Homme : Selbstständig wird man auch, wenn man in eine andere Stadt zieht und allein wohnt. Dafür muss man nicht um die halbe Welt fliegen. / Femme : Da hast du recht. Aber eine Fremdsprache lernt man zu Hause nicht so gut. / Homme : Stimmt. Mein Spanisch ist jedenfalls furchtbar. Vielleicht gehe ich im Master für ein Semester ins Ausland. / Narrateur : Man sieht: Den einen richtigen Weg gibt es wohl nicht. Vielen Dank euch beiden.",
+     "text": "★ Es gibt nicht nur eine richtige Lösung."
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-vortrag",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 4",
+   "title": "Un exposé",
+   "prompt": "Sie hören einen Vortrag. Wählen Sie die richtige Lösung.",
+   "count": 8,
+   "questions": [
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Deutlich mehr als heute.",
+      "Ungefähr so viel wie heute.",
+      "Weniger als heute."
+     ],
+     "answer": "Deutlich mehr als heute.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Wie lange arbeitete man vor hundertfünfzig Jahren?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Sie haben das Gefühl, zu wenig Zeit zu haben.",
+      "Sie möchten mehr arbeiten.",
+      "Sie sind mit ihrer Freizeit zufrieden."
+     ],
+     "answer": "Sie haben das Gefühl, zu wenig Zeit zu haben.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Was sagen zwei Drittel der Beschäftigten in Umfragen?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Arbeit und Freizeit lassen sich schlechter trennen.",
+      "Die Wege zur Arbeit sind länger geworden.",
+      "Die Arbeit ist körperlich schwerer geworden."
+     ],
+     "answer": "Arbeit und Freizeit lassen sich schlechter trennen.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Was nennt die Rednerin als ersten Grund?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Man fühlt sich auch dort unter Leistungsdruck.",
+      "Sie ist zu teuer geworden.",
+      "Man verbringt sie meistens allein."
+     ],
+     "answer": "Man fühlt sich auch dort unter Leistungsdruck.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Was sagt sie über die Freizeit?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Die Angestellten waren seltener krank.",
+      "Die Leistung ging deutlich zurück.",
+      "Die Gehälter wurden gekürzt."
+     ],
+     "answer": "Die Angestellten waren seltener krank.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Was war ein Ergebnis des Versuchs mit der Vier-Tage-Woche?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Die Forscher hatten es nicht erwartet.",
+      "Es entsprach genau den Erwartungen.",
+      "Es wurde nie veröffentlicht."
+     ],
+     "answer": "Die Forscher hatten es nicht erwartet.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Wie wurde das Ergebnis aufgenommen?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Es eignet sich nicht für jeden Beruf.",
+      "Es funktioniert überall gleich gut.",
+      "Es ist vor allem für die Pflege gedacht."
+     ],
+     "answer": "Es eignet sich nicht für jeden Beruf.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Welche Einschränkung nennt die Rednerin?"
+    },
+    {
+     "audio": "F|Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären?\nF|Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen.\nF|Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen.\nF|Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "choices": [
+      "Dass man über die eigene Zeit mitbestimmen kann.",
+      "Dass alle möglichst wenig arbeiten.",
+      "Dass die Freizeit besser geplant wird."
+     ],
+     "answer": "Dass man über die eigene Zeit mitbestimmen kann.",
+     "explanation": "Transcription : Femme : Meine Damen und Herren, ich begrüße Sie zu meinem Vortrag „Wie viel Arbeit braucht der Mensch?“. Lassen Sie mich mit einer Zahl beginnen: Vor hundertfünfzig Jahren arbeitete ein Fabrikarbeiter in Deutschland durchschnittlich über siebzig Stunden pro Woche. Heute sind es weniger als vierzig. Man könnte also annehmen, dass wir so viel freie Zeit haben wie nie zuvor. Dennoch klagen in Umfragen zwei von drei Beschäftigten über Zeitmangel. Wie lässt sich das erklären? / Femme : Der erste Grund ist, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch dienstliche Nachrichten liest, hat zwar offiziell frei, kann aber nicht abschalten. Der zweite Grund betrifft die Freizeit selbst: Sie ist zu einer Aufgabe geworden. Sport, Weiterbildung, soziale Netzwerke: Auch in der freien Zeit haben viele das Gefühl, etwas leisten zu müssen. / Femme : Einige Unternehmen haben darauf reagiert. In einem Versuch mit sechzig Firmen wurde die Arbeitszeit bei gleichem Gehalt auf vier Tage verkürzt. Das Ergebnis hat selbst die Forscher überrascht: Die Leistung blieb gleich, die Zahl der Krankheitstage sank um ein Drittel. Allerdings, und das muss man betonen, lässt sich dieses Modell nicht auf alle Berufe übertragen. In der Pflege oder im Handwerk kann man die Arbeit nicht einfach schneller erledigen. / Femme : Mein Fazit lautet deshalb: Entscheidend ist nicht nur, wie lange wir arbeiten, sondern ob wir über unsere Zeit selbst bestimmen können. Wer seine Arbeitszeit mitgestalten darf, ist nachweislich zufriedener, und zwar unabhängig von der Zahl der Stunden. Vielen Dank für Ihre Aufmerksamkeit.",
+     "text": "★ Was ist laut dem Fazit am wichtigsten?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-forum",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 1",
+   "title": "Un forum : qui exprime cette idée ?",
+   "prompt": "Lesen Sie die Beiträge. Wer äußert diese Meinung?",
+   "count": 9,
+   "questions": [
+    {
+     "choices": [
+      "Gerd",
+      "Marlene",
+      "Aylin",
+      "Friedrich"
+     ],
+     "answer": "Gerd",
+     "explanation": "Réponse : Gerd",
+     "text": "★ Bargeld schützt die Privatsphäre.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Friedrich",
+      "Marlene",
+      "Gerd",
+      "Aylin"
+     ],
+     "answer": "Friedrich",
+     "explanation": "Réponse : Friedrich",
+     "text": "★ Ältere Menschen könnten benachteiligt werden.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Aylin",
+      "Marlene",
+      "Gerd",
+      "Friedrich"
+     ],
+     "answer": "Aylin",
+     "explanation": "Réponse : Aylin",
+     "text": "★ Für kleine Beträge ist die Kartenzahlung für Geschäfte ungünstig.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Marlene",
+      "Gerd",
+      "Aylin",
+      "Friedrich"
+     ],
+     "answer": "Marlene",
+     "explanation": "Réponse : Marlene",
+     "text": "★ Die Herstellung und Sicherung von Bargeld verursacht Kosten.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Gerd",
+      "Marlene",
+      "Aylin",
+      "Friedrich"
+     ],
+     "answer": "Gerd",
+     "explanation": "Réponse : Gerd",
+     "text": "★ Mit Bargeld behält man seine Ausgaben besser im Blick.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Aylin",
+      "Marlene",
+      "Gerd",
+      "Friedrich"
+     ],
+     "answer": "Aylin",
+     "explanation": "Réponse : Aylin",
+     "text": "★ Die Kunden sollen selbst wählen können.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Marlene",
+      "Gerd",
+      "Aylin",
+      "Friedrich"
+     ],
+     "answer": "Marlene",
+     "explanation": "Réponse : Marlene",
+     "text": "★ Die Sorge um die eigenen Daten ist übertrieben.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Friedrich",
+      "Marlene",
+      "Gerd",
+      "Aylin"
+     ],
+     "answer": "Friedrich",
+     "explanation": "Réponse : Friedrich",
+     "text": "★ Bequemlichkeit ist kein ausreichendes Argument.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    },
+    {
+     "choices": [
+      "Aylin",
+      "Marlene",
+      "Gerd",
+      "Friedrich"
+     ],
+     "answer": "Aylin",
+     "explanation": "Réponse : Aylin",
+     "text": "★ Weniger Bargeld in der Kasse bedeutet weniger Risiko.",
+     "passage": "FORUM: Brauchen wir noch Bargeld?\n\nA — Marlene: Ich zahle fast nur noch mit dem Handy. Es geht schneller, und ich muss nie überlegen, ob ich genug Geld dabeihabe. Angst vor Überwachung habe ich nicht: Wer nichts zu verbergen hat, braucht sich keine Sorgen zu machen. Bargeld ist außerdem teuer, denn es muss gedruckt, transportiert und bewacht werden.\n\nB — Gerd: Für mich bedeutet Bargeld Freiheit. Niemand weiß, was ich kaufe, und kein Stromausfall kann mich am Bezahlen hindern. Außerdem habe ich mit Scheinen in der Hand einen besseren Überblick über meine Ausgaben. Mit der Karte gibt man, das ist bewiesen, leichter zu viel aus.\n\nC — Aylin: Als Besitzerin eines kleinen Cafés sehe ich beide Seiten. Kartenzahlung kostet mich Gebühren, die sich bei einem Kaffee für drei Euro kaum lohnen. Andererseits muss ich abends kein Geld mehr zur Bank bringen, was sicherer ist. Ich biete deshalb beides an und lasse die Gäste entscheiden.\n\nD — Friedrich: Man vergisst oft die Menschen, die mit der Technik nicht zurechtkommen. Meine Mutter ist 84 und hat kein Smartphone. Sollte das Bargeld abgeschafft werden, wäre sie auf fremde Hilfe angewiesen. Eine Gesellschaft darf niemanden ausschließen, nur weil es bequemer ist.\n"
+    }
+   ]
+  },
+  {
+   "id": "l-artikel",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 2",
+   "title": "Un article de magazine",
+   "prompt": "Lesen Sie den Artikel und wählen Sie die richtige Lösung.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "es sich finanziell nicht lohnte oder gar nicht ging.",
+      "niemand wusste, wie man sie repariert.",
+      "die Hersteller es verboten hatten."
+     ],
+     "answer": "es sich finanziell nicht lohnte oder gar nicht ging.",
+     "explanation": "Réponse : es sich finanziell nicht lohnte oder gar nicht ging.",
+     "text": "★ Früher wurden defekte Geräte selten repariert, weil …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    },
+    {
+     "choices": [
+      "bauten ihre Geräte so, dass man sie nicht öffnen konnte.",
+      "reparierten ihre Geräte kostenlos.",
+      "eröffneten eigene Reparaturcafés."
+     ],
+     "answer": "bauten ihre Geräte so, dass man sie nicht öffnen konnte.",
+     "explanation": "Réponse : bauten ihre Geräte so, dass man sie nicht öffnen konnte.",
+     "text": "★ Manche Hersteller …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    },
+    {
+     "choices": [
+      "helfen Freiwillige den Besitzern bei der Reparatur.",
+      "arbeiten ausgebildete Techniker gegen Bezahlung.",
+      "kann man gebrauchte Geräte kaufen."
+     ],
+     "answer": "helfen Freiwillige den Besitzern bei der Reparatur.",
+     "explanation": "Réponse : helfen Freiwillige den Besitzern bei der Reparatur.",
+     "text": "★ In den Reparaturcafés …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    },
+    {
+     "choices": [
+      "verändert das Reparieren die Einstellung zu den eigenen Sachen.",
+      "sollte man Technik lieber Fachleuten überlassen.",
+      "ist Müllvermeidung das einzige Ziel."
+     ],
+     "answer": "verändert das Reparieren die Einstellung zu den eigenen Sachen.",
+     "explanation": "Réponse : verändert das Reparieren die Einstellung zu den eigenen Sachen.",
+     "text": "★ Nach Ansicht der Gründerin aus Jena …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    },
+    {
+     "choices": [
+      "Ersatzteile über mehrere Jahre zu liefern.",
+      "defekte Geräte zurückzunehmen.",
+      "die Preise für Ersatzteile zu senken."
+     ],
+     "answer": "Ersatzteile über mehrere Jahre zu liefern.",
+     "explanation": "Réponse : Ersatzteile über mehrere Jahre zu liefern.",
+     "text": "★ Das neue Gesetz verpflichtet die Hersteller, …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    },
+    {
+     "choices": [
+      "Reparaturen steuerlich günstiger werden.",
+      "das Gesetz wieder abgeschafft wird.",
+      "die Reparaturcafés Geld vom Staat bekommen."
+     ],
+     "answer": "Reparaturen steuerlich günstiger werden.",
+     "explanation": "Réponse : Reparaturen steuerlich günstiger werden.",
+     "text": "★ Die Kritiker verlangen, dass …",
+     "passage": "DIE RÜCKKEHR DER REPARATUR\nNoch vor wenigen Jahren galt es als selbstverständlich, ein defektes Gerät durch ein neues zu ersetzen. Eine Reparatur war oft teurer als der Neukauf, sofern sie überhaupt möglich war: Viele Hersteller verklebten ihre Geräte so, dass sie sich nicht öffnen ließen, oder lieferten keine Ersatzteile. Inzwischen zeichnet sich ein Wandel ab. In mehr als tausend deutschen Städten gibt es sogenannte Reparaturcafés, in denen Ehrenamtliche gemeinsam mit den Besitzern Toaster, Lampen oder Fahrräder wieder in Gang bringen. Bezahlt wird nichts, höchstens eine Spende für Kaffee und Kuchen. Den Organisatoren zufolge geht es dabei nicht nur um Müllvermeidung. „Wer einmal selbst etwas repariert hat, betrachtet seine Dinge anders“, sagt die Gründerin eines Cafés in Jena. Man verliere die Angst vor der Technik und kaufe bewusster ein. Auch die Politik hat reagiert: Seit Kurzem sind Hersteller bestimmter Geräte verpflichtet, Ersatzteile mindestens sieben Jahre lang anzubieten. Kritikern geht das nicht weit genug. Sie bemängeln, dass die Teile häufig so teuer seien, dass sich die Reparatur weiterhin kaum lohne, und fordern deshalb eine niedrigere Steuer auf Reparaturen."
+    }
+   ]
+  },
+  {
+   "id": "l-zeitung",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 3",
+   "title": "Un article de presse",
+   "prompt": "Lesen Sie den Zeitungsartikel und wählen Sie die richtige Lösung.",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "junge Erwachsene sich öfter einsam fühlen als alte Menschen.",
+      "die Großeltern am einsamsten sind.",
+      "Einsamkeit insgesamt abnimmt."
+     ],
+     "answer": "junge Erwachsene sich öfter einsam fühlen als alte Menschen.",
+     "explanation": "Réponse : junge Erwachsene sich öfter einsam fühlen als alte Menschen.",
+     "text": "★ Die Umfrage zeigt, dass …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    },
+    {
+     "choices": [
+      "je nach Nutzung helfen oder schaden können.",
+      "die Hauptursache der Einsamkeit sind.",
+      "von jungen Leuten kaum genutzt werden."
+     ],
+     "answer": "je nach Nutzung helfen oder schaden können.",
+     "explanation": "Réponse : je nach Nutzung helfen oder schaden können.",
+     "text": "★ Frau Hansen meint, dass soziale Netzwerke …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    },
+    {
+     "choices": [
+      "nur das Leben anderer zu beobachten.",
+      "online Treffen zu vereinbaren.",
+      "mit Freunden in der Ferne zu schreiben."
+     ],
+     "answer": "nur das Leben anderer zu beobachten.",
+     "explanation": "Réponse : nur das Leben anderer zu beobachten.",
+     "text": "★ Schädlich ist es laut Hansen, …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    },
+    {
+     "choices": [
+      "junge Menschen häufig den Wohnort wechseln.",
+      "junge Menschen zu viel arbeiten.",
+      "Familien kleiner geworden sind."
+     ],
+     "answer": "junge Menschen häufig den Wohnort wechseln.",
+     "explanation": "Réponse : junge Menschen häufig den Wohnort wechseln.",
+     "text": "★ Den wichtigsten Grund sieht die Psychologin darin, dass …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    },
+    {
+     "choices": [
+      "man dort kaum neue Leute trifft.",
+      "es die Einsamkeit verringert.",
+      "es vor allem ältere Menschen betrifft."
+     ],
+     "answer": "man dort kaum neue Leute trifft.",
+     "explanation": "Réponse : man dort kaum neue Leute trifft.",
+     "text": "★ Über das Homeoffice sagt der Text, dass …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    },
+    {
+     "choices": [
+      "auch kleine alltägliche Kontakte zu pflegen.",
+      "sich auf einen engen Freund zu konzentrieren.",
+      "sofort einen Arzt aufzusuchen."
+     ],
+     "answer": "auch kleine alltägliche Kontakte zu pflegen.",
+     "explanation": "Réponse : auch kleine alltägliche Kontakte zu pflegen.",
+     "text": "★ Hansen empfiehlt, …",
+     "passage": "ALLEIN UNTER VIELEN\nNie zuvor war es so einfach, mit anderen in Kontakt zu treten, und doch geben in einer aktuellen Umfrage vier von zehn jungen Erwachsenen an, sich häufig einsam zu fühlen. Damit sind sie stärker betroffen als die Generation ihrer Großeltern, was viele überraschen dürfte. Die Psychologin Vera Hansen warnt allerdings davor, die Schuld allein bei den sozialen Netzwerken zu suchen. Zwar verbrächten junge Leute viel Zeit am Bildschirm, entscheidend sei jedoch, wie sie diese Zeit nutzten. Wer online Verabredungen treffe oder mit entfernten Freunden schreibe, fühle sich sogar weniger allein. Problematisch werde es erst, wenn man nur noch das scheinbar perfekte Leben anderer betrachte. Als eigentliche Ursache nennt Hansen die wachsende Mobilität. Für Ausbildung und Beruf zögen junge Menschen heute mehrmals um und müssten ihr soziales Umfeld jedes Mal neu aufbauen. Hinzu komme, dass Orte der zufälligen Begegnung verschwänden: Vereine verlören Mitglieder, und wer im Homeoffice arbeite, lerne keine Kollegen kennen. Einsamkeit sei, so die Forscherin, keine Krankheit, könne aber krank machen, wenn sie andauere. Sie rät Betroffenen, nicht auf den einen besten Freund zu warten, sondern regelmäßige, auch oberflächliche Kontakte zu pflegen: den Gruß im Treppenhaus, das Gespräch im Sportkurs. Aus solchen Begegnungen entstehe mit der Zeit Vertrauen."
+    }
+   ]
+  },
+  {
+   "id": "l-meinungen",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 4",
+   "title": "Courrier des lecteurs : pour ou contre ?",
+   "prompt": "Lesen Sie die Texte. Ist die Person für die Abschaffung der Hausaufgaben?",
+   "count": 6,
+   "questions": [
+    {
+     "choices": [
+      "Ja",
+      "Nein"
+     ],
+     "answer": "Ja",
+     "explanation": "Réponse : Ja",
+     "text": "★ Ist Sabine für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nSabine: Als Mutter von drei Kindern erlebe ich jeden Nachmittag denselben Streit. Was in der Schule nicht verstanden wurde, soll ich zu Hause erklären, obwohl ich dafür nicht ausgebildet bin. Üben gehört in die Schule, und zwar unter Anleitung von Fachleuten."
+    },
+    {
+     "choices": [
+      "Nein",
+      "Ja"
+     ],
+     "answer": "Nein",
+     "explanation": "Réponse : Nein",
+     "text": "★ Ist Herr Albrecht für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nHerr Albrecht: Ich unterrichte seit dreißig Jahren Mathematik. Wer glaubt, man könne Rechnen lernen, ohne regelmäßig allein zu üben, der irrt. In fünfundvierzig Minuten Unterricht ist dafür schlicht keine Zeit. Auf Hausaufgaben zu verzichten, hieße, auf Lernerfolg zu verzichten."
+    },
+    {
+     "choices": [
+      "Ja",
+      "Nein"
+     ],
+     "answer": "Ja",
+     "explanation": "Réponse : Ja",
+     "text": "★ Ist Deniz für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nDeniz: Bei uns zu Hause gab es keinen ruhigen Platz zum Arbeiten und niemanden, der helfen konnte. Meine Mitschüler mit studierten Eltern hatten es leichter. Hausaufgaben vergrößern also die Unterschiede, die die Schule eigentlich ausgleichen sollte. Weg damit!"
+    },
+    {
+     "choices": [
+      "Nein",
+      "Ja"
+     ],
+     "answer": "Nein",
+     "explanation": "Réponse : Nein",
+     "text": "★ Ist Kathrin für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nKathrin: Natürlich sind Hausaufgaben lästig. Aber Kinder lernen dabei etwas, das kein Unterricht vermitteln kann: sich selbst zu organisieren und eine Aufgabe auch dann zu Ende zu bringen, wenn niemand danebensteht. Das wird später im Beruf von ihnen erwartet."
+    },
+    {
+     "choices": [
+      "Ja",
+      "Nein"
+     ],
+     "answer": "Ja",
+     "explanation": "Réponse : Ja",
+     "text": "★ Ist Professor Lange für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nProfessor Lange: Die Forschung ist eindeutig: In der Grundschule lässt sich kaum ein Zusammenhang zwischen Hausaufgaben und Leistung nachweisen. Statt an einer Tradition festzuhalten, sollten wir die Zeit für Bewegung, Musik und Spiel nutzen und das Üben in den Schultag einbauen."
+    },
+    {
+     "choices": [
+      "Nein",
+      "Ja"
+     ],
+     "answer": "Nein",
+     "explanation": "Réponse : Nein",
+     "text": "★ Ist Jonas für die Abschaffung der Hausaufgaben?",
+     "passage": "LESERBRIEFE: Sollten Hausaufgaben abgeschafft werden?\n\nJonas: Ich bin sechzehn und fände es zwar bequem, nachmittags frei zu haben. Ehrlich gesagt würde ich dann aber vor Prüfungen nichts mehr können. Die Aufgaben zwingen mich, den Stoff zu wiederholen. Weniger wäre gut, gar keine wäre ein Fehler."
+    }
+   ]
+  },
+  {
+   "id": "l-ordnung",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 5",
+   "title": "Un règlement",
+   "prompt": "Lesen Sie die Nutzungsordnung und wählen Sie die richtige Lösung.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "bekommen Studierende umsonst.",
+      "braucht man schon für den Lesesaal.",
+      "muss jeder bezahlen."
+     ],
+     "answer": "bekommen Studierende umsonst.",
+     "explanation": "Réponse : bekommen Studierende umsonst.",
+     "text": "★ Den Bibliotheksausweis …",
+     "passage": "NUTZUNGSORDNUNG — Herzogin-Bibliothek Weimar\n§ 1 Anmeldung: Die Nutzung des Lesesaals ist kostenlos. Für die Ausleihe ist ein Bibliotheksausweis erforderlich, der gegen Vorlage eines gültigen Ausweises ausgestellt wird. Studierende erhalten ihn gebührenfrei, alle anderen zahlen zwanzig Euro pro Jahr.\n§ 2 Ausleihe: Bücher können vier Wochen ausgeliehen werden. Die Frist lässt sich zweimal online verlängern, sofern das Buch nicht von einer anderen Person vorbestellt wurde. Werke, die vor 1900 erschienen sind, dürfen ausschließlich im Lesesaal eingesehen werden.\n§ 3 Verhalten: Im Lesesaal ist Ruhe zu halten. Mobiltelefone sind stumm zu schalten. Getränke in verschließbaren Flaschen sind gestattet, Speisen dagegen nicht. Taschen und Mäntel sind in den Schließfächern im Erdgeschoss aufzubewahren.\n§ 4 Haftung: Bei Verlust oder Beschädigung eines Buches hat die Nutzerin oder der Nutzer den Wiederbeschaffungswert zu ersetzen. Für überschrittene Fristen wird eine Gebühr von fünfzig Cent pro Tag und Buch erhoben."
+    },
+    {
+     "choices": [
+      "jemand anderes das Buch reserviert hat.",
+      "man sie schon einmal verlängert hat.",
+      "das Buch nach 1900 erschienen ist."
+     ],
+     "answer": "jemand anderes das Buch reserviert hat.",
+     "explanation": "Réponse : jemand anderes das Buch reserviert hat.",
+     "text": "★ Die Leihfrist kann man nicht verlängern, wenn …",
+     "passage": "NUTZUNGSORDNUNG — Herzogin-Bibliothek Weimar\n§ 1 Anmeldung: Die Nutzung des Lesesaals ist kostenlos. Für die Ausleihe ist ein Bibliotheksausweis erforderlich, der gegen Vorlage eines gültigen Ausweises ausgestellt wird. Studierende erhalten ihn gebührenfrei, alle anderen zahlen zwanzig Euro pro Jahr.\n§ 2 Ausleihe: Bücher können vier Wochen ausgeliehen werden. Die Frist lässt sich zweimal online verlängern, sofern das Buch nicht von einer anderen Person vorbestellt wurde. Werke, die vor 1900 erschienen sind, dürfen ausschließlich im Lesesaal eingesehen werden.\n§ 3 Verhalten: Im Lesesaal ist Ruhe zu halten. Mobiltelefone sind stumm zu schalten. Getränke in verschließbaren Flaschen sind gestattet, Speisen dagegen nicht. Taschen und Mäntel sind in den Schließfächern im Erdgeschoss aufzubewahren.\n§ 4 Haftung: Bei Verlust oder Beschädigung eines Buches hat die Nutzerin oder der Nutzer den Wiederbeschaffungswert zu ersetzen. Für überschrittene Fristen wird eine Gebühr von fünfzig Cent pro Tag und Buch erhoben."
+    },
+    {
+     "choices": [
+      "aus einer verschließbaren Flasche trinken.",
+      "leise telefonieren.",
+      "seine Tasche mitnehmen."
+     ],
+     "answer": "aus einer verschließbaren Flasche trinken.",
+     "explanation": "Réponse : aus einer verschließbaren Flasche trinken.",
+     "text": "★ Im Lesesaal darf man …",
+     "passage": "NUTZUNGSORDNUNG — Herzogin-Bibliothek Weimar\n§ 1 Anmeldung: Die Nutzung des Lesesaals ist kostenlos. Für die Ausleihe ist ein Bibliotheksausweis erforderlich, der gegen Vorlage eines gültigen Ausweises ausgestellt wird. Studierende erhalten ihn gebührenfrei, alle anderen zahlen zwanzig Euro pro Jahr.\n§ 2 Ausleihe: Bücher können vier Wochen ausgeliehen werden. Die Frist lässt sich zweimal online verlängern, sofern das Buch nicht von einer anderen Person vorbestellt wurde. Werke, die vor 1900 erschienen sind, dürfen ausschließlich im Lesesaal eingesehen werden.\n§ 3 Verhalten: Im Lesesaal ist Ruhe zu halten. Mobiltelefone sind stumm zu schalten. Getränke in verschließbaren Flaschen sind gestattet, Speisen dagegen nicht. Taschen und Mäntel sind in den Schließfächern im Erdgeschoss aufzubewahren.\n§ 4 Haftung: Bei Verlust oder Beschädigung eines Buches hat die Nutzerin oder der Nutzer den Wiederbeschaffungswert zu ersetzen. Für überschrittene Fristen wird eine Gebühr von fünfzig Cent pro Tag und Buch erhoben."
+    }
+   ]
+  },
+  {
+   "id": "s-forum",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 1",
+   "title": "Une contribution argumentée sur un forum",
+   "prompt": "Lesen Sie die Situation und wählen Sie den besten Text.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "Meiner Ansicht nach sollte das Tempolimit auf Autobahnen eingeführt werden. Dafür spricht vor allem, dass bei niedrigerer Geschwindigkeit weniger schwere Unfälle passieren. Hinzu kommt, dass der Verbrauch und damit die Belastung für die Umwelt sinken würden. Zwar verliert man auf langen Strecken etwas Zeit, aber dieser Nachteil wiegt meines Erachtens weniger schwer als der Gewinn an Sicherheit.",
+      "Meiner Ansicht nach das Tempolimit sollte eingeführt werden. Dafür spricht, dass passieren weniger Unfälle. Hinzu kommt, der Verbrauch würde sinken. Zwar man verliert Zeit, aber dieser Nachteil wiegt weniger schwer als der Gewinn von Sicherheit.",
+      "Tempolimit ist gut. Ich fahre gern schnell. Autos sind laut. Was denkt ihr?",
+      "Ich bin für ein Tempolimit, weil dadurch mehr Unfälle passieren. Deshalb würde der Verbrauch steigen, obwohl man Zeit verliert. Folglich bin ich dagegen."
+     ],
+     "answer": "Meiner Ansicht nach sollte das Tempolimit auf Autobahnen eingeführt werden. Dafür spricht vor allem, dass bei niedrigerer Geschwindigkeit weniger schwere Unfälle passieren. Hinzu kommt, dass der Verbrauch und damit die Belastung für die Umwelt sinken würden. Zwar verliert man auf langen Strecken etwas Zeit, aber dieser Nachteil wiegt meines Erachtens weniger schwer als der Gewinn an Sicherheit.",
+     "explanation": "Réponse : Meiner Ansicht nach sollte das Tempolimit auf Autobahnen eingeführt werden. Dafür spricht vor allem, dass bei niedrigerer Geschwindigkeit weniger schwere Unfälle passieren. Hinzu kommt, dass der Verbrauch und damit die Belastung für die Umwelt sinken würden. Zwar verliert man auf langen Strecken etwas Zeit, aber dieser Nachteil wiegt meines Erachtens weniger schwer als der Gewinn an Sicherheit.",
+     "text": "★ Situation: In einem Forum wird über ein Tempolimit auf Autobahnen diskutiert. Äußern Sie Ihre Meinung, nennen Sie Gründe und gehen Sie auf ein Gegenargument ein."
+    },
+    {
+     "choices": [
+      "Zusammenfassend lässt sich sagen, dass sowohl ökologische als auch gesundheitliche Gründe dafür sprechen, weniger Fleisch zu essen.",
+      "Zusammenfassend lässt sich sagen, dass sowohl ökologische noch gesundheitliche Gründe sprechen dafür, weniger Fleisch zu essen.",
+      "Zusammenfassend ich sage, dass ökologische als auch gesundheitliche Gründe dafür sprechen, weniger Fleisch essen.",
+      "Zusammenfassend lässt es sagen, dass weder ökologische als auch gesundheitliche Gründe dafür spricht."
+     ],
+     "answer": "Zusammenfassend lässt sich sagen, dass sowohl ökologische als auch gesundheitliche Gründe dafür sprechen, weniger Fleisch zu essen.",
+     "explanation": "Réponse : Zusammenfassend lässt sich sagen, dass sowohl ökologische als auch gesundheitliche Gründe dafür sprechen, weniger Fleisch zu essen.",
+     "text": "★ Sie möchten Ihren Forumsbeitrag über Fleischkonsum mit einem Schlusssatz beenden. Welcher Satz ist korrekt?"
+    },
+    {
+     "choices": [
+      "Das mag in Einzelfällen zutreffen, allerdings zeigen Studien, dass die meisten Beschäftigten zu Hause genauso produktiv sind.",
+      "Das stimmt nicht, du hast keine Ahnung. Alle arbeiten zu Hause viel.",
+      "Das mag in Einzelfällen zutreffen, allerdings Studien zeigen, dass die meisten Beschäftigten sind zu Hause genauso produktiv.",
+      "Das mag zutreffen, folglich arbeiten die meisten zu Hause weniger, wie du sagst, und ich widerspreche dir."
+     ],
+     "answer": "Das mag in Einzelfällen zutreffen, allerdings zeigen Studien, dass die meisten Beschäftigten zu Hause genauso produktiv sind.",
+     "explanation": "Réponse : Das mag in Einzelfällen zutreffen, allerdings zeigen Studien, dass die meisten Beschäftigten zu Hause genauso produktiv sind.",
+     "text": "★ Ein Nutzer schreibt: „Im Homeoffice arbeitet doch niemand richtig.“ Sie möchten sachlich widersprechen. Welche Antwort passt?"
+    }
+   ]
+  },
+  {
+   "id": "s-formell",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 2",
+   "title": "Un message formel",
+   "prompt": "Lesen Sie die Situation und wählen Sie die passende Formulierung.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "Sehr geehrte Frau Dr. Winter, aufgrund eines Arzttermins, der sich leider nicht verschieben lässt, kann ich am Donnerstag nicht an der Besprechung teilnehmen. Ich wäre Ihnen dankbar, wenn Sie mir das Protokoll zukommen lassen könnten. Selbstverständlich stehe ich am Freitag für Rückfragen zur Verfügung. Mit freundlichen Grüßen, Tomás Vidal",
+      "Hallo Frau Winter, am Donnerstag kann ich nicht, ich muss zum Arzt. Schick mir bitte das Protokoll. Bis Freitag! Tomás",
+      "Sehr geehrte Frau Dr. Winter, aufgrund einen Arzttermin, der sich leider nicht verschieben lasst, ich kann am Donnerstag nicht an die Besprechung teilnehmen. Ich wäre Ihnen dankbar, wenn Sie könnten mir das Protokoll zukommen lassen.",
+      "Sehr geehrte Frau Dr. Winter, ich werde am Donnerstag an der Besprechung teilnehmen, obwohl ich keinen Termin habe. Bitte schicken Sie mir deshalb kein Protokoll. Mit freundlichen Grüßen, Tomás Vidal"
+     ],
+     "answer": "Sehr geehrte Frau Dr. Winter, aufgrund eines Arzttermins, der sich leider nicht verschieben lässt, kann ich am Donnerstag nicht an der Besprechung teilnehmen. Ich wäre Ihnen dankbar, wenn Sie mir das Protokoll zukommen lassen könnten. Selbstverständlich stehe ich am Freitag für Rückfragen zur Verfügung. Mit freundlichen Grüßen, Tomás Vidal",
+     "explanation": "Réponse : Sehr geehrte Frau Dr. Winter, aufgrund eines Arzttermins, der sich leider nicht verschieben lässt, kann ich am Donnerstag nicht an der Besprechung teilnehmen. Ich wäre Ihnen dankbar, wenn Sie mir das Protokoll zukommen lassen könnten. Selbstverständlich stehe ich am Freitag für Rückfragen zur Verfügung. Mit freundlichen Grüßen, Tomás Vidal",
+     "text": "★ Situation: Sie können an einer Besprechung mit Ihrer Vorgesetzten, Frau Dr. Winter, nicht teilnehmen. Entschuldigen Sie sich, nennen Sie den Grund und bitten Sie um das Protokoll."
+    },
+    {
+     "choices": [
+      "Ich wäre Ihnen sehr verbunden, wenn Sie mir bis Ende der Woche Bescheid geben könnten.",
+      "Sagen Sie mir Bescheid bis Ende der Woche, okay?",
+      "Ich wäre Ihnen sehr verbunden, wenn Sie könnten mir bis Ende der Woche Bescheid geben.",
+      "Ich bin dir sehr verbunden, wenn Sie mir bis Ende der Woche Bescheid gibst."
+     ],
+     "answer": "Ich wäre Ihnen sehr verbunden, wenn Sie mir bis Ende der Woche Bescheid geben könnten.",
+     "explanation": "Réponse : Ich wäre Ihnen sehr verbunden, wenn Sie mir bis Ende der Woche Bescheid geben könnten.",
+     "text": "★ Sie bitten in einer formellen E-Mail höflich um eine schnelle Antwort. Welcher Satz ist angemessen und korrekt?"
+    }
+   ]
+  }
+ ]
+}
