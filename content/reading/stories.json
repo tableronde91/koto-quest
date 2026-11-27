@@ -33525,6 +33525,568 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "siegfried-drache",
+   "glyph": "N",
+   "level": "GOETHEC1",
+   "color": "#5A3A4A",
+   "title": {
+    "jp": "Siegfried und der Drache",
+    "fr": "Siegfried et le dragon",
+    "en": "Siegfried and the Dragon"
+   },
+   "summary": {
+    "fr": "Comment le jeune Siegfried devint invulnérable, à un endroit près. D’après la Chanson des Nibelungen.",
+    "en": "How young Siegfried became invulnerable, save for one spot. After the Song of the Nibelungs."
+   },
+   "chapters": [
+    {
+     "slug": "siegfried-drache-1",
+     "title": {
+      "jp": "Der Kampf auf der Heide",
+      "fr": "Le combat sur la lande",
+      "en": "The fight on the heath"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Von dem jungen Siegfried, dem Sohn eines Königs am Niederrhein, wird berichtet, er habe schon früh jede Gefahr gesucht, statt ihr auszuweichen.",
+        "fr": "Du jeune Siegfried, fils d’un roi du Rhin inférieur, on rapporte qu’il chercha très tôt le danger au lieu de l’éviter.",
+        "en": "Of young Siegfried, the son of a king on the Lower Rhine, it is reported that from an early age he sought out every danger instead of avoiding it.",
+        "kana": "Von dem jungen Siegfried, dem Sohn eines Königs am Niederrhein, wird berichtet, er habe schon früh jede Gefahr gesucht, statt ihr auszuweichen."
+       },
+       {
+        "jp": "Auf einer einsamen Heide hauste ein Drache, der einen unermesslichen Schatz bewachte und vor dem selbst erfahrene Krieger zurückschreckten.",
+        "fr": "Sur une lande solitaire vivait un dragon qui gardait un trésor incommensurable et devant lequel même des guerriers aguerris reculaient.",
+        "en": "On a lonely heath dwelt a dragon that guarded an immeasurable treasure and from which even seasoned warriors shrank back.",
+        "kana": "Auf einer einsamen Heide hauste ein Drache, der einen unermesslichen Schatz bewachte und vor dem selbst erfahrene Krieger zurückschreckten."
+       },
+       {
+        "jp": "Ungeachtet aller Warnungen ritt Siegfried hinaus, zumal ihn weniger das Gold als der Ruhm lockte.",
+        "fr": "En dépit de tous les avertissements, Siegfried partit à cheval, d’autant que c’était moins l’or que la gloire qui l’attirait.",
+        "en": "Regardless of all warnings, Siegfried rode out, especially as it was fame rather than gold that drew him.",
+        "kana": "Ungeachtet aller Warnungen ritt Siegfried hinaus, zumal ihn weniger das Gold als der Ruhm lockte."
+       }
+      ],
+      [
+       {
+        "jp": "Der Kampf, über dessen Dauer die Quellen schweigen, endete mit dem Tod des Ungeheuers.",
+        "fr": "Le combat, sur la durée duquel les sources se taisent, s’acheva par la mort du monstre.",
+        "en": "The fight, on whose length the sources are silent, ended with the monster’s death.",
+        "kana": "Der Kampf, über dessen Dauer die Quellen schweigen, endete mit dem Tod des Ungeheuers."
+       },
+       {
+        "jp": "Indem Siegfried anschließend im Blut des Drachen badete, wurde seine Haut so hart wie Horn.",
+        "fr": "En se baignant ensuite dans le sang du dragon, Siegfried eut la peau aussi dure que la corne.",
+        "en": "By bathing afterwards in the dragon’s blood, Siegfried made his skin as hard as horn.",
+        "kana": "Indem Siegfried anschließend im Blut des Drachen badete, wurde seine Haut so hart wie Horn."
+       },
+       {
+        "jp": "Kein Schwert, so scharf es auch sein mochte, konnte ihn fortan verwunden.",
+        "fr": "Aucune épée, si tranchante fût-elle, ne pouvait désormais le blesser.",
+        "en": "No sword, however sharp it might be, could wound him from then on.",
+        "kana": "Kein Schwert, so scharf es auch sein mochte, konnte ihn fortan verwunden."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "ausweichen",
+       "reading": "/ˈaʊsˌvaɪçn̩/",
+       "fr": "éviter, esquiver",
+       "en": "to avoid, to dodge"
+      },
+      {
+       "jp": "die Heide",
+       "reading": "/diː ˈhaɪdə/",
+       "fr": "la lande",
+       "en": "the heath"
+      },
+      {
+       "jp": "unermesslich",
+       "reading": "/ʊnʔɛɐ̯ˈmɛslɪç/",
+       "fr": "incommensurable",
+       "en": "immeasurable"
+      },
+      {
+       "jp": "zurückschrecken",
+       "reading": "/tsuˈʁʏkˌʃʁɛkn̩/",
+       "fr": "reculer (d’effroi)",
+       "en": "to shrink back"
+      },
+      {
+       "jp": "das Horn",
+       "reading": "/das hɔʁn/",
+       "fr": "la corne",
+       "en": "horn"
+      },
+      {
+       "jp": "verwunden",
+       "reading": "/fɛɐ̯ˈvʊndn̩/",
+       "fr": "blesser",
+       "en": "to wound"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Qu’est-ce qui attire surtout Siegfried vers le dragon ?",
+        "en": "What chiefly draws Siegfried to the dragon?"
+       },
+       "choices": [
+        {
+         "fr": "La peur des habitants",
+         "en": "The inhabitants’ fear"
+        },
+        {
+         "fr": "L’ordre de son père",
+         "en": "His father’s order"
+        },
+        {
+         "fr": "La gloire, plus que l’or",
+         "en": "Fame, more than gold"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Comment devient-il presque invulnérable ?",
+        "en": "How does he become almost invulnerable?"
+       },
+       "choices": [
+        {
+         "fr": "En mangeant le cœur du dragon",
+         "en": "By eating the dragon’s heart"
+        },
+        {
+         "fr": "En se baignant dans le sang du dragon",
+         "en": "By bathing in the dragon’s blood"
+        },
+        {
+         "fr": "En portant une armure d’or",
+         "en": "By wearing golden armour"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "siegfried-drache-2",
+     "title": {
+      "jp": "Das Lindenblatt",
+      "fr": "La feuille de tilleul",
+      "en": "The linden leaf"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Was Siegfried nicht bemerkt hatte: Während des Bades war ihm ein Lindenblatt zwischen die Schultern gefallen.",
+        "fr": "Ce que Siegfried n’avait pas remarqué : pendant le bain, une feuille de tilleul lui était tombée entre les épaules.",
+        "en": "What Siegfried had not noticed: during the bath a linden leaf had fallen between his shoulders.",
+        "kana": "Was Siegfried nicht bemerkt hatte: Während des Bades war ihm ein Lindenblatt zwischen die Schultern gefallen."
+       },
+       {
+        "jp": "An dieser einen, von dem Blatt bedeckten Stelle blieb er verwundbar wie jeder andere Mensch.",
+        "fr": "À ce seul endroit, recouvert par la feuille, il resta vulnérable comme n’importe quel homme.",
+        "en": "At this one spot, covered by the leaf, he remained as vulnerable as any other man.",
+        "kana": "An dieser einen, von dem Blatt bedeckten Stelle blieb er verwundbar wie jeder andere Mensch."
+       },
+       {
+        "jp": "Er vertraute das Geheimnis nur seiner Frau Kriemhild an, die es aus Sorge um ihn nicht für sich behielt.",
+        "fr": "Il ne confia le secret qu’à sa femme Kriemhild, qui, par inquiétude pour lui, ne le garda pas pour elle.",
+        "en": "He entrusted the secret only to his wife Kriemhild, who, out of concern for him, did not keep it to herself.",
+        "kana": "Er vertraute das Geheimnis nur seiner Frau Kriemhild an, die es aus Sorge um ihn nicht für sich behielt."
+       }
+      ],
+      [
+       {
+        "jp": "Hagen von Tronje, der ihr versichert hatte, er wolle den Helden im Kampf beschützen, bat sie, die Stelle mit einem kleinen Kreuz auf dem Gewand zu kennzeichnen.",
+        "fr": "Hagen de Tronje, qui lui avait assuré vouloir protéger le héros au combat, la pria de marquer l’endroit d’une petite croix sur le vêtement.",
+        "en": "Hagen of Tronje, who had assured her that he wished to protect the hero in battle, asked her to mark the spot with a small cross on his garment.",
+        "kana": "Hagen von Tronje, der ihr versichert hatte, er wolle den Helden im Kampf beschützen, bat sie, die Stelle mit einem kleinen Kreuz auf dem Gewand zu kennzeichnen."
+       },
+       {
+        "jp": "Hätte Kriemhild geahnt, wozu dieses Zeichen dienen sollte, wäre es nie genäht worden.",
+        "fr": "Si Kriemhild avait deviné à quoi ce signe devait servir, il n’aurait jamais été cousu.",
+        "en": "Had Kriemhild suspected what this mark was to be used for, it would never have been sewn.",
+        "kana": "Hätte Kriemhild geahnt, wozu dieses Zeichen dienen sollte, wäre es nie genäht worden."
+       },
+       {
+        "jp": "So aber wurde ausgerechnet ihre Fürsorge dem Unverwundbaren zum Verhängnis, als er sich bei einer Jagd über eine Quelle beugte.",
+        "fr": "Mais c’est ainsi que sa sollicitude, précisément, fut fatale à l’invulnérable, lorsqu’il se pencha sur une source au cours d’une chasse.",
+        "en": "As it was, her very care proved the undoing of the invulnerable man when he bent over a spring during a hunt.",
+        "kana": "So aber wurde ausgerechnet ihre Fürsorge dem Unverwundbaren zum Verhängnis, als er sich bei einer Jagd über eine Quelle beugte."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "das Lindenblatt",
+       "reading": "/das ˈlɪndn̩ˌblat/",
+       "fr": "la feuille de tilleul",
+       "en": "the linden leaf"
+      },
+      {
+       "jp": "verwundbar",
+       "reading": "/fɛɐ̯ˈvʊntbaːɐ̯/",
+       "fr": "vulnérable",
+       "en": "vulnerable"
+      },
+      {
+       "jp": "anvertrauen",
+       "reading": "/ˈanfɛɐ̯ˌtʁaʊən/",
+       "fr": "confier",
+       "en": "to entrust, to confide"
+      },
+      {
+       "jp": "das Gewand",
+       "reading": "/das ɡəˈvant/",
+       "fr": "le vêtement, l’habit",
+       "en": "the garment"
+      },
+      {
+       "jp": "ahnen",
+       "reading": "/ˈaːnən/",
+       "fr": "se douter de, pressentir",
+       "en": "to suspect, to sense"
+      },
+      {
+       "jp": "das Verhängnis",
+       "reading": "/das fɛɐ̯ˈhɛŋnɪs/",
+       "fr": "la fatalité, la perte",
+       "en": "doom, undoing"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Siegfried reste-t-il vulnérable à un endroit ?",
+        "en": "Why does Siegfried remain vulnerable in one spot?"
+       },
+       "choices": [
+        {
+         "fr": "Une feuille de tilleul y était tombée",
+         "en": "A linden leaf had fallen there"
+        },
+        {
+         "fr": "Le sang du dragon manquait",
+         "en": "There was not enough dragon’s blood"
+        },
+        {
+         "fr": "Il avait gardé son armure",
+         "en": "He had kept his armour on"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Kriemhild marque-t-elle l’endroit d’une croix ?",
+        "en": "Why does Kriemhild mark the spot with a cross?"
+       },
+       "choices": [
+        {
+         "fr": "Le roi le lui ordonne",
+         "en": "The king orders her to"
+        },
+        {
+         "fr": "Elle veut se venger de Siegfried",
+         "en": "She wants revenge on Siegfried"
+        },
+        {
+         "fr": "Elle croit que Hagen veut protéger son mari",
+         "en": "She believes Hagen wants to protect her husband"
+        }
+       ],
+       "answer": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "lieber-augustin",
+   "glyph": "O",
+   "level": "GOETHEC1",
+   "color": "#8A5A2A",
+   "title": {
+    "jp": "Der liebe Augustin",
+    "fr": "Le Cher Augustin",
+    "en": "Dear Augustin"
+   },
+   "summary": {
+    "fr": "Vienne, 1679 : un musicien de taverne tombe dans la fosse aux pestiférés… et en ressort en chantant. Légende viennoise.",
+    "en": "Vienna, 1679: a tavern musician falls into the plague pit… and comes out singing. A Viennese legend."
+   },
+   "chapters": [
+    {
+     "slug": "lieber-augustin-1",
+     "title": {
+      "jp": "Die Stadt im Pestjahr",
+      "fr": "La ville, l’année de la peste",
+      "en": "The city in the plague year"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Im Jahr 1679 wütete in Wien die Pest, der binnen weniger Monate Zehntausende zum Opfer fielen.",
+        "fr": "En 1679, la peste sévissait à Vienne ; en quelques mois, des dizaines de milliers de personnes en furent victimes.",
+        "en": "In 1679 the plague raged in Vienna; within a few months tens of thousands fell victim to it.",
+        "kana": "Im Jahr 1679 wütete in Wien die Pest, der binnen weniger Monate Zehntausende zum Opfer fielen."
+       },
+       {
+        "jp": "Wer es sich leisten konnte, hatte die Stadt längst verlassen; die Zurückgebliebenen mieden einander, soweit es eben ging.",
+        "fr": "Ceux qui en avaient les moyens avaient quitté la ville depuis longtemps ; ceux qui restaient s’évitaient autant que faire se pouvait.",
+        "en": "Those who could afford it had long since left the city; those who stayed behind avoided one another as far as was possible.",
+        "kana": "Wer es sich leisten konnte, hatte die Stadt längst verlassen; die Zurückgebliebenen mieden einander, soweit es eben ging."
+       },
+       {
+        "jp": "Nur in einem Wirtshaus am Fleischmarkt ging es noch laut zu, denn dort spielte Abend für Abend der Sackpfeifer Augustin.",
+        "fr": "Seule une taverne du Fleischmarkt restait bruyante, car le joueur de cornemuse Augustin y jouait soir après soir.",
+        "en": "Only in one tavern on the Fleischmarkt was it still noisy, for there the bagpiper Augustin played evening after evening.",
+        "kana": "Nur in einem Wirtshaus am Fleischmarkt ging es noch laut zu, denn dort spielte Abend für Abend der Sackpfeifer Augustin."
+       }
+      ],
+      [
+       {
+        "jp": "Man nannte ihn den lieben Augustin, weil er selbst den Verzweifelten ein Lachen entlockte.",
+        "fr": "On l’appelait le Cher Augustin, parce qu’il arrachait un rire même aux désespérés.",
+        "en": "They called him Dear Augustin because he coaxed a laugh even from the despairing.",
+        "kana": "Man nannte ihn den lieben Augustin, weil er selbst den Verzweifelten ein Lachen entlockte."
+       },
+       {
+        "jp": "Die Seuche schien ihn nicht im Geringsten zu kümmern: „Es ist ja doch alles hin“, pflegte er zu sagen, „da kann man ruhig noch eins trinken.“",
+        "fr": "L’épidémie ne semblait pas le préoccuper le moins du monde : « De toute façon, tout est fichu, avait-il coutume de dire, alors on peut bien en boire encore un. »",
+        "en": "The epidemic did not seem to trouble him in the least: “It is all gone anyway,” he used to say, “so one may as well have another drink.”",
+        "kana": "Die Seuche schien ihn nicht im Geringsten zu kümmern: „Es ist ja doch alles hin“, pflegte er zu sagen, „da kann man ruhig noch eins trinken.“"
+       },
+       {
+        "jp": "Eines Nachts hatte er jedoch dermaßen viel getrunken, dass er auf dem Heimweg im Rinnstein einschlief.",
+        "fr": "Une nuit, cependant, il avait tellement bu qu’il s’endormit dans le caniveau en rentrant chez lui.",
+        "en": "One night, however, he had drunk so much that he fell asleep in the gutter on his way home.",
+        "kana": "Eines Nachts hatte er jedoch dermaßen viel getrunken, dass er auf dem Heimweg im Rinnstein einschlief."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "wüten",
+       "reading": "/ˈvyːtn̩/",
+       "fr": "sévir, faire rage",
+       "en": "to rage"
+      },
+      {
+       "jp": "meiden",
+       "reading": "/ˈmaɪdn̩/",
+       "fr": "éviter, fuir",
+       "en": "to avoid, to shun"
+      },
+      {
+       "jp": "das Wirtshaus",
+       "reading": "/das ˈvɪʁtsˌhaʊs/",
+       "fr": "la taverne, l’auberge",
+       "en": "the tavern, the inn"
+      },
+      {
+       "jp": "entlocken",
+       "reading": "/ɛntˈlɔkn̩/",
+       "fr": "arracher, soutirer",
+       "en": "to coax out of"
+      },
+      {
+       "jp": "die Seuche",
+       "reading": "/diː ˈzɔʏçə/",
+       "fr": "l’épidémie",
+       "en": "the epidemic"
+      },
+      {
+       "jp": "der Rinnstein",
+       "reading": "/deːɐ̯ ˈʁɪnˌʃtaɪn/",
+       "fr": "le caniveau",
+       "en": "the gutter"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi appelle-t-on le musicien « le Cher Augustin » ?",
+        "en": "Why is the musician called “Dear Augustin”?"
+       },
+       "choices": [
+        {
+         "fr": "Il offre à boire à tout le monde",
+         "en": "He buys everyone drinks"
+        },
+        {
+         "fr": "Il soigne les malades",
+         "en": "He tends the sick"
+        },
+        {
+         "fr": "Il fait rire même les désespérés",
+         "en": "He makes even the despairing laugh"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que lui arrive-t-il une nuit ?",
+        "en": "What happens to him one night?"
+       },
+       "choices": [
+        {
+         "fr": "Il quitte Vienne",
+         "en": "He leaves Vienna"
+        },
+        {
+         "fr": "Il s’endort ivre dans la rue",
+         "en": "He falls asleep drunk in the street"
+        },
+        {
+         "fr": "Il perd sa cornemuse",
+         "en": "He loses his bagpipes"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "lieber-augustin-2",
+     "title": {
+      "jp": "Das Lied aus der Grube",
+      "fr": "La chanson dans la fosse",
+      "en": "The song from the pit"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Die Pestknechte, die im Morgengrauen die Toten einsammelten, hielten den reglosen Mann für eines ihrer Opfer.",
+        "fr": "Les croque-morts de la peste, qui ramassaient les morts à l’aube, prirent l’homme inerte pour l’une des victimes.",
+        "en": "The plague carriers who collected the dead at dawn took the motionless man for one of the victims.",
+        "kana": "Die Pestknechte, die im Morgengrauen die Toten einsammelten, hielten den reglosen Mann für eines ihrer Opfer."
+       },
+       {
+        "jp": "Ohne lange zu prüfen, luden sie ihn samt seinem Dudelsack auf den Karren und warfen ihn vor der Stadtmauer in eine offene Grube.",
+        "fr": "Sans vérifier longtemps, ils le chargèrent sur la charrette avec sa cornemuse et le jetèrent dans une fosse ouverte, devant les remparts.",
+        "en": "Without checking for long, they loaded him and his bagpipes onto the cart and threw him into an open pit outside the city wall.",
+        "kana": "Ohne lange zu prüfen, luden sie ihn samt seinem Dudelsack auf den Karren und warfen ihn vor der Stadtmauer in eine offene Grube."
+       },
+       {
+        "jp": "Als Augustin erwachte, begriff er nicht sogleich, wo er sich befand, wohl aber, dass er allein nicht hinauskommen würde.",
+        "fr": "Quand Augustin se réveilla, il ne comprit pas tout de suite où il se trouvait, mais bien qu’il n’en sortirait pas seul.",
+        "en": "When Augustin awoke, he did not grasp at once where he was, but he did grasp that he would not get out alone.",
+        "kana": "Als Augustin erwachte, begriff er nicht sogleich, wo er sich befand, wohl aber, dass er allein nicht hinauskommen würde."
+       }
+      ],
+      [
+       {
+        "jp": "Anstatt zu schreien, was ohnehin niemand gehört hätte, griff er nach seinem Instrument und spielte, so laut er konnte.",
+        "fr": "Au lieu de crier, ce que personne n’aurait entendu de toute façon, il saisit son instrument et joua aussi fort qu’il le put.",
+        "en": "Instead of shouting, which nobody would have heard anyway, he reached for his instrument and played as loudly as he could.",
+        "kana": "Anstatt zu schreien, was ohnehin niemand gehört hätte, griff er nach seinem Instrument und spielte, so laut er konnte."
+       },
+       {
+        "jp": "Vorübergehende, denen die Musik aus der Erde unheimlich vorkam, holten schließlich Hilfe und zogen ihn heraus.",
+        "fr": "Des passants, à qui cette musique sortie de terre parut inquiétante, finirent par aller chercher de l’aide et le tirèrent de là.",
+        "en": "Passers-by, to whom the music from the earth seemed uncanny, finally fetched help and pulled him out.",
+        "kana": "Vorübergehende, denen die Musik aus der Erde unheimlich vorkam, holten schließlich Hilfe und zogen ihn heraus."
+       },
+       {
+        "jp": "Entgegen allen Erwartungen blieb er gesund, was die Wiener als Zeichen deuteten: Wer den Humor nicht verliere, den hole so schnell nichts.",
+        "fr": "Contre toute attente, il resta en bonne santé, ce que les Viennois interprétèrent comme un signe : celui qui ne perd pas son humour, rien ne l’emporte si vite.",
+        "en": "Contrary to all expectations he stayed healthy, which the Viennese took as a sign: whoever keeps his sense of humour is not so easily carried off.",
+        "kana": "Entgegen allen Erwartungen blieb er gesund, was die Wiener als Zeichen deuteten: Wer den Humor nicht verliere, den hole so schnell nichts."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "das Morgengrauen",
+       "reading": "/das ˈmɔʁɡn̩ˌɡʁaʊən/",
+       "fr": "l’aube",
+       "en": "dawn"
+      },
+      {
+       "jp": "reglos",
+       "reading": "/ˈʁeːkloːs/",
+       "fr": "inerte, immobile",
+       "en": "motionless"
+      },
+      {
+       "jp": "der Karren",
+       "reading": "/deːɐ̯ ˈkaʁən/",
+       "fr": "la charrette",
+       "en": "the cart"
+      },
+      {
+       "jp": "die Grube",
+       "reading": "/diː ˈɡʁuːbə/",
+       "fr": "la fosse",
+       "en": "the pit"
+      },
+      {
+       "jp": "begreifen",
+       "reading": "/bəˈɡʁaɪfn̩/",
+       "fr": "comprendre, saisir",
+       "en": "to grasp"
+      },
+      {
+       "jp": "der Dudelsack",
+       "reading": "/deːɐ̯ ˈduːdl̩ˌzak/",
+       "fr": "la cornemuse",
+       "en": "the bagpipes"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Augustin est-il jeté dans la fosse ?",
+        "en": "Why is Augustin thrown into the pit?"
+       },
+       "choices": [
+        {
+         "fr": "On le croit mort de la peste",
+         "en": "He is thought to have died of the plague"
+        },
+        {
+         "fr": "Il doit de l’argent à l’aubergiste",
+         "en": "He owes the innkeeper money"
+        },
+        {
+         "fr": "Il a insulté les gardes",
+         "en": "He insulted the guards"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Comment parvient-il à sortir ?",
+        "en": "How does he manage to get out?"
+       },
+       "choices": [
+        {
+         "fr": "Il attend la nuit suivante",
+         "en": "He waits for the next night"
+        },
+        {
+         "fr": "Il escalade la paroi",
+         "en": "He climbs the wall"
+        },
+        {
+         "fr": "Il joue de la cornemuse jusqu’à ce qu’on l’entende",
+         "en": "He plays his bagpipes until he is heard"
+        }
+       ],
+       "answer": 2
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {
@@ -33545,8 +34107,8 @@
    "en": "Folk tales, legends and classics from Spain and Latin America (public domain), retold in simple Spanish for Koto Quest. Word pronunciation is shown in phonetic script (Spanish from Spain)."
   },
   "de": {
-   "fr": "Contes des frères Grimm, légendes d’Allemagne et ballades de Goethe (domaine public), réécrits en prose et en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).",
-   "en": "Tales by the Brothers Grimm, legends of Germany and ballads by Goethe (public domain), retold in prose and in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German)."
+   "fr": "Contes des frères Grimm, légendes d’Allemagne et d’Autriche, ballades de Goethe et épisodes des Nibelungen (domaine public), réécrits en prose pour Koto Quest, dans un allemand adapté à chaque niveau. La prononciation des mots est notée en alphabet phonétique (allemand standard).",
+   "en": "Tales by the Brothers Grimm, legends of Germany and Austria, ballads by Goethe and episodes from the Nibelungs (public domain), retold in prose for Koto Quest, in German suited to each level. Word pronunciation is given in the phonetic alphabet (standard German)."
   }
  }
 }

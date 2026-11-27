@@ -32,4 +32,5 @@ export const MOCK_EXAM: Record<string, string> = {
   GOETHEA2: 'goethea2-official',
   GOETHEB1: 'goetheb1-official',
   GOETHEB2: 'goetheb2-official',
+  GOETHEC1: 'goethec1-official',
 };

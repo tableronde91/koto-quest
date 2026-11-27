@@ -1,0 +1,3777 @@
+{
+ "contentVersion": "2026.11.27",
+ "level": {
+  "code": "GOETHEC1",
+  "title": "Goethe C1 : le Danube des Nibelungen",
+  "region": "Danube des Nibelungen",
+  "order": 46
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau C1 du CECRL et préparent au Goethe-Zertifikat C1, mais ne sont pas des listes officielles du Goethe-Institut.",
+ "worlds": [
+  {
+   "slug": "goethec1-w1",
+   "title": "La lande du Dragon",
+   "region": "Danube des Nibelungen",
+   "description": "Condenser une subordonnée en groupe nominal, employer les locutions à verbe support de la langue soutenue, parler d’exploit et de renommée.",
+   "boss": {
+    "name": "Le Dragon Fafnir",
+    "glyph": "☄",
+    "intro": "Sur la lande, le Dragon Fafnir couve l’or du Rhin et ne répond qu’aux phrases denses des chroniques. Dis en un groupe nominal ce que d’autres disent en une subordonnée, et il baissera la tête."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w1-c1",
+     "title": "La langue des chroniques",
+     "lessons": [
+      {
+       "slug": "de-nominalstil",
+       "title": "De la subordonnée au groupe nominal",
+       "objective": "Transformer une subordonnée en complément nominal avec la bonne préposition.",
+       "minutes": 10,
+       "explanation": [
+        "Chaque conjonction a sa préposition : weil → wegen / aufgrund (+ génitif) ; obwohl → trotz ; wenn / falls → bei / im Falle ; nachdem → nach ; bevor → vor ; während → während ; damit / um… zu → zu / zwecks ; indem → durch.",
+        "Le verbe devient un nom, son sujet ou son objet passe au génitif : Nachdem der Drache besiegt worden war… → Nach dem Sieg über den Drachen… ; Weil der Schatz verloren ging… → Wegen des Verlusts des Schatzes…",
+        "L’adverbe devient adjectif : Weil die Preise stark steigen → wegen des starken Anstiegs der Preise. Le pronom sujet devient possessif : Bevor er abreiste → vor seiner Abreise."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-nominal-kausal",
+         "kind": "grammar",
+         "front": "weil … → wegen / aufgrund + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cause : de la subordonnée au groupe nominal"
+        },
+        {
+         "slug": "gram-de-nominal-konzessiv",
+         "kind": "grammar",
+         "front": "obwohl … → trotz + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "concession : de la subordonnée au groupe nominal"
+        },
+        {
+         "slug": "gram-de-nominal-temporal",
+         "kind": "grammar",
+         "front": "nachdem … → nach + Dativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "temps : de la subordonnée au groupe nominal"
+        },
+        {
+         "slug": "gram-de-nominal-final",
+         "kind": "grammar",
+         "front": "um … zu → zu / zwecks",
+         "reading": null,
+         "romaji": null,
+         "meaning": "but : de la subordonnée au groupe nominal"
+        },
+        {
+         "slug": "gram-de-nominal-modal",
+         "kind": "grammar",
+         "front": "indem … → durch + Akkusativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "moyen : de la subordonnée au groupe nominal"
+        },
+        {
+         "slug": "de-sieg",
+         "kind": "vocabulary",
+         "front": "der Sieg",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la victoire"
+        },
+        {
+         "slug": "de-verlust",
+         "kind": "vocabulary",
+         "front": "der Verlust",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la perte"
+        },
+        {
+         "slug": "de-abreise",
+         "kind": "vocabulary",
+         "front": "die Abreise",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le départ (en voyage)"
+        },
+        {
+         "slug": "de-zwecks",
+         "kind": "vocabulary",
+         "front": "zwecks",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en vue de, aux fins de"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Nach dem Sieg über den Drachen badete Siegfried in dessen Blut.",
+         "reading": null,
+         "fr": "Après sa victoire sur le dragon, Siegfried se baigna dans son sang."
+        },
+        {
+         "jp": "Trotz seiner Unverwundbarkeit blieb eine Stelle zwischen den Schultern ungeschützt.",
+         "reading": null,
+         "fr": "Malgré son invulnérabilité, un endroit entre les épaules resta sans protection."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ des schlechten Wetters wurde das Fest verschoben. (= Weil das Wetter schlecht war)",
+         "choices": [
+          "Wegen",
+          "Trotz",
+          "Zwecks"
+         ],
+         "answer": "Wegen",
+         "explanation": "Weil → wegen + génitif.",
+         "translation": "En raison du mauvais temps, la fête a été reportée."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ seiner Ankunft rief er sofort an. (= Nachdem er angekommen war)",
+         "choices": [
+          "Nach",
+          "Vor",
+          "Bei"
+         ],
+         "answer": "Nach",
+         "explanation": "Nachdem → nach + datif.",
+         "translation": "Après son arrivée, il a tout de suite appelé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Durch ＿ kann man viel Geld sparen. (= Indem man Preise vergleicht)",
+         "choices": [
+          "den Vergleich der Preise",
+          "die Preise vergleichen",
+          "dem Vergleich die Preise"
+         ],
+         "answer": "den Vergleich der Preise",
+         "explanation": "Indem → durch + accusatif, objet au génitif.",
+         "translation": "En comparant les prix, on peut économiser beaucoup d’argent."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ großer Anstrengung gelang es ihm nicht. (= Obwohl er sich sehr anstrengte)",
+         "choices": [
+          "Trotz",
+          "Wegen",
+          "Durch"
+         ],
+         "answer": "Trotz",
+         "explanation": "Obwohl → trotz.",
+         "translation": "Malgré de grands efforts, il n’y est pas parvenu."
+        }
+       ]
+      },
+      {
+       "slug": "de-fvg",
+       "title": "Les verbes supports : zum Ausdruck bringen",
+       "objective": "Reconnaître et employer les locutions figées de la langue administrative et savante.",
+       "minutes": 9,
+       "explanation": [
+        "Sens actif avec bringen, stellen, nehmen, treffen : zum Ausdruck bringen (exprimer), in Frage stellen (remettre en question), in Betracht ziehen (prendre en considération), zur Kenntnis nehmen (prendre acte de), Maßnahmen ergreifen (prendre des mesures).",
+        "Sens passif avec kommen, stehen, finden, geraten : zum Ausdruck kommen (s’exprimer), zur Sprache kommen (être abordé), unter Druck stehen, Anerkennung finden (être reconnu), in Vergessenheit geraten (tomber dans l’oubli).",
+        "Ces locutions précisent le déroulement : in Gang setzen (mettre en marche), in Kraft treten (entrer en vigueur), zum Abschluss bringen (mener à terme), ein Ende nehmen (prendre fin)."
+       ],
+       "items": [
+        {
+         "slug": "de-zum-ausdruck-bringen",
+         "kind": "vocabulary",
+         "front": "zum Ausdruck bringen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "exprimer"
+        },
+        {
+         "slug": "de-in-frage-stellen",
+         "kind": "vocabulary",
+         "front": "in Frage stellen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remettre en question"
+        },
+        {
+         "slug": "de-in-betracht-ziehen",
+         "kind": "vocabulary",
+         "front": "in Betracht ziehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre en considération"
+        },
+        {
+         "slug": "de-zur-kenntnis-nehmen",
+         "kind": "vocabulary",
+         "front": "zur Kenntnis nehmen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre acte de"
+        },
+        {
+         "slug": "de-massnahmen-ergreifen",
+         "kind": "vocabulary",
+         "front": "Maßnahmen ergreifen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre des mesures"
+        },
+        {
+         "slug": "de-zur-sprache-kommen",
+         "kind": "vocabulary",
+         "front": "zur Sprache kommen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être abordé, être évoqué"
+        },
+        {
+         "slug": "de-in-vergessenheit-geraten",
+         "kind": "vocabulary",
+         "front": "in Vergessenheit geraten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tomber dans l’oubli"
+        },
+        {
+         "slug": "de-in-kraft-treten",
+         "kind": "vocabulary",
+         "front": "in Kraft treten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entrer en vigueur"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Das Nibelungenlied war lange in Vergessenheit geraten, ehe es im 18. Jahrhundert wiederentdeckt wurde.",
+         "reading": null,
+         "fr": "La Chanson des Nibelungen était longtemps tombée dans l’oubli avant d’être redécouverte au XVIIIe siècle."
+        },
+        {
+         "jp": "Niemand wagte es, Siegfrieds Mut in Frage zu stellen.",
+         "reading": null,
+         "fr": "Personne n’osait remettre en question le courage de Siegfried."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Regierung muss endlich Maßnahmen ＿.",
+         "choices": [
+          "ergreifen",
+          "stellen",
+          "bringen"
+         ],
+         "answer": "ergreifen",
+         "explanation": "Maßnahmen ergreifen.",
+         "translation": "Le gouvernement doit enfin prendre des mesures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das neue Gesetz ＿ am ersten Januar in Kraft.",
+         "choices": [
+          "tritt",
+          "kommt",
+          "bringt"
+         ],
+         "answer": "tritt",
+         "explanation": "In Kraft treten.",
+         "translation": "La nouvelle loi entre en vigueur le premier janvier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "In der Sitzung ＿ auch die Finanzen zur Sprache.",
+         "choices": [
+          "kamen",
+          "brachten",
+          "stellten"
+         ],
+         "answer": "kamen",
+         "explanation": "Sens passif : zur Sprache kommen.",
+         "translation": "Lors de la réunion, les finances ont aussi été abordées."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir sollten auch andere Möglichkeiten in Betracht ＿.",
+         "choices": [
+          "ziehen",
+          "nehmen",
+          "treffen"
+         ],
+         "answer": "ziehen",
+         "explanation": "In Betracht ziehen.",
+         "translation": "Nous devrions aussi envisager d’autres possibilités."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w1-c2",
+     "title": "La gloire de Siegfried",
+     "lessons": [
+      {
+       "slug": "de-ruhm",
+       "title": "L’exploit et la renommée",
+       "objective": "Parler de réussite, de réputation et de reconnaissance.",
+       "minutes": 8,
+       "explanation": [
+        "La réussite : die Leistung (la performance), der Erfolg, etwas vollbringen (accomplir), sich bewähren (faire ses preuves), sich auszeichnen durch (se distinguer par), übertreffen (surpasser).",
+        "La réputation : der Ruf (la réputation), der Ruhm (la gloire), das Ansehen (le prestige), die Anerkennung (la reconnaissance), bewundern (admirer), beneiden (envier), der Neid (l’envie).",
+        "Nuancer un éloge : Er gilt als… (il passe pour…). Sie genießt hohes Ansehen. Sein Ruf eilt ihm voraus (sa réputation le précède). Hochmut kommt vor dem Fall (l’orgueil précède la chute)."
+       ],
+       "items": [
+        {
+         "slug": "de-leistung",
+         "kind": "vocabulary",
+         "front": "die Leistung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la performance, la prestation"
+        },
+        {
+         "slug": "de-vollbringen",
+         "kind": "vocabulary",
+         "front": "vollbringen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "accomplir"
+        },
+        {
+         "slug": "de-sich-bewaehren",
+         "kind": "vocabulary",
+         "front": "sich bewähren",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire ses preuves"
+        },
+        {
+         "slug": "de-uebertreffen",
+         "kind": "vocabulary",
+         "front": "übertreffen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "surpasser"
+        },
+        {
+         "slug": "de-ruf",
+         "kind": "vocabulary",
+         "front": "der Ruf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la réputation"
+        },
+        {
+         "slug": "de-ansehen",
+         "kind": "vocabulary",
+         "front": "das Ansehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le prestige, la considération"
+        },
+        {
+         "slug": "de-gelten-als",
+         "kind": "vocabulary",
+         "front": "gelten als",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passer pour, être considéré comme"
+        },
+        {
+         "slug": "de-neid",
+         "kind": "vocabulary",
+         "front": "der Neid",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’envie, la jalousie"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Siegfried galt als der stärkste aller Helden, und sein Ruf eilte ihm voraus.",
+         "reading": null,
+         "fr": "Siegfried passait pour le plus fort de tous les héros, et sa réputation le précédait."
+        },
+        {
+         "jp": "Sein Ruhm weckte am Hof nicht nur Bewunderung, sondern auch Neid.",
+         "reading": null,
+         "fr": "À la cour, sa gloire n’éveilla pas seulement l’admiration, mais aussi l’envie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie gilt ＿ eine der besten Ärztinnen des Landes.",
+         "choices": [
+          "als",
+          "für",
+          "wie"
+         ],
+         "answer": "als",
+         "explanation": "Gelten als + nominatif.",
+         "translation": "Elle passe pour l’une des meilleures médecins du pays."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Der neue Mitarbeiter hat sich in der Krise ＿: Man kann sich auf ihn verlassen.",
+         "choices": [
+          "bewährt",
+          "beneidet",
+          "übertroffen"
+         ],
+         "answer": "bewährt",
+         "explanation": "Faire ses preuves : sich bewähren.",
+         "translation": "Le nouveau collègue a fait ses preuves pendant la crise : on peut compter sur lui."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Das Ergebnis hat alle Erwartungen übertroffen.",
+         "translation": "Le résultat est décevant.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Übertreffen = dépasser, surpasser."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Kollege",
+           "jp": "Frau Dr. Sommer hat schon wieder einen Preis bekommen. Ist das nicht übertrieben?"
+          }
+         ],
+         "translation": "Un collègue jalouse une chercheuse primée (réponds qu’elle jouit à juste titre d’une grande considération).",
+         "choices": [
+          "Ich finde, sie genießt zu Recht hohes Ansehen.",
+          "Ich finde, sie genießt zu Recht hohen Neid.",
+          "Ich finde, sie gilt zu Recht für hohes Ansehen."
+         ],
+         "answer": "Ich finde, sie genießt zu Recht hohes Ansehen.",
+         "explanation": "Hohes Ansehen genießen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w2",
+   "title": "La cour de Worms",
+   "region": "Danube des Nibelungen",
+   "description": "Lire et construire les attributs étendus de la langue écrite, exprimer ce qui est à faire avec zu + participe, parler de pouvoir et de politique.",
+   "boss": {
+    "name": "La Reine Kriemhild",
+    "glyph": "♛",
+    "intro": "Devant la cathédrale de Worms, deux reines se disputent le pas. La Reine Kriemhild pèse chaque titre : il te faudra des phrases longues et sans faute, où tout ce qui qualifie le nom se glisse devant lui."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w2-c1",
+     "title": "Chaque mot à sa place",
+     "lessons": [
+      {
+       "slug": "de-attribut-erweitert",
+       "title": "Les attributs étendus : lire la phrase à tiroirs",
+       "objective": "Décoder et former les longs groupes placés entre l’article et le nom.",
+       "minutes": 10,
+       "explanation": [
+        "Entre l’article et le nom, l’allemand écrit peut placer toute une relative condensée : die [seit Jahren in Worms lebende] Königin = die Königin, die seit Jahren in Worms lebt. On lit d’abord l’article et le nom, puis le groupe de droite à gauche.",
+        "Participe I = relative active et simultanée : der [laut schreiende] Bote. Participe II = relative passive ou achevée : der [von Hagen verratene] Held ; die [gestern eingetroffenen] Gäste.",
+        "Un adjectif peut aussi porter des compléments : ein [für alle Beteiligten vorteilhafter] Vertrag ; die [auf ihren Rang stolze] Königin. Le participe ou l’adjectif garde sa terminaison d’épithète."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-attribut-part1",
+         "kind": "grammar",
+         "front": "die seit Jahren hier lebende Familie",
+         "reading": null,
+         "romaji": null,
+         "meaning": "attribut étendu au participe I (relative active)"
+        },
+        {
+         "slug": "gram-de-attribut-part2",
+         "kind": "grammar",
+         "front": "der von allen bewunderte Held",
+         "reading": null,
+         "romaji": null,
+         "meaning": "attribut étendu au participe II (relative passive)"
+        },
+        {
+         "slug": "gram-de-attribut-adj",
+         "kind": "grammar",
+         "front": "ein für alle vorteilhafter Vertrag",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adjectif épithète avec complément"
+        },
+        {
+         "slug": "de-beteiligt",
+         "kind": "vocabulary",
+         "front": "beteiligt an",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impliqué dans, qui participe à"
+        },
+        {
+         "slug": "de-eintreffen",
+         "kind": "vocabulary",
+         "front": "eintreffen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "arriver (officiel)"
+        },
+        {
+         "slug": "de-verraten",
+         "kind": "vocabulary",
+         "front": "verraten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "trahir"
+        },
+        {
+         "slug": "de-rang",
+         "kind": "vocabulary",
+         "front": "der Rang",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le rang"
+        },
+        {
+         "slug": "de-vorteilhaft",
+         "kind": "vocabulary",
+         "front": "vorteilhaft",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avantageux"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die auf ihren Rang stolze Königin wollte als Erste den Dom betreten.",
+         "reading": null,
+         "fr": "La reine, fière de son rang, voulait entrer la première dans la cathédrale."
+        },
+        {
+         "jp": "Der von seinem eigenen Freund verratene Held ahnte nichts.",
+         "reading": null,
+         "fr": "Le héros, trahi par son propre ami, ne se doutait de rien."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die gestern ＿ Gäste wohnen im Schloss. (= die gestern eingetroffen sind)",
+         "choices": [
+          "eingetroffenen",
+          "eintreffenden",
+          "eingetroffen"
+         ],
+         "answer": "eingetroffenen",
+         "explanation": "Action achevée : participe II décliné.",
+         "translation": "Les invités arrivés hier logent au château."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die in dieser Stadt ＿ Menschen sind stolz auf ihren Dom. (= die hier leben)",
+         "choices": [
+          "lebenden",
+          "gelebten",
+          "lebende"
+         ],
+         "answer": "lebenden",
+         "explanation": "Action en cours : participe I, pluriel avec article.",
+         "translation": "Les gens qui vivent dans cette ville sont fiers de leur cathédrale."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das ist ein für beide Seiten ＿ Kompromiss.",
+         "choices": [
+          "annehmbarer",
+          "annehmbare",
+          "annehmbar"
+         ],
+         "answer": "annehmbarer",
+         "explanation": "Ein + masculin nominatif : -er.",
+         "translation": "C’est un compromis acceptable pour les deux parties."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Der von der Presse scharf kritisierte Minister trat zurück.",
+         "translation": "Le ministre a critiqué la presse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Von der Presse kritisiert = critiqué par la presse."
+        }
+       ]
+      },
+      {
+       "slug": "de-gerundivum",
+       "title": "Ce qui est à faire : das zu lösende Problem",
+       "objective": "Exprimer une nécessité ou une possibilité passive devant le nom.",
+       "minutes": 8,
+       "explanation": [
+        "Zu + participe I devant un nom = qui doit ou peut être fait : das zu lösende Problem (= das Problem, das gelöst werden muss) ; die zu erwartenden Kosten (= die Kosten, die zu erwarten sind).",
+        "Avec un verbe à particule, zu s’intercale : die auszufüllenden Formulare ; der einzuhaltende Termin. La tournure correspond à sein + zu + infinitif : Die Formulare sind auszufüllen.",
+        "Avec une négation ou kaum, le sens est « qui ne peut pas être fait » : ein nicht zu unterschätzendes Risiko (un risque à ne pas sous-estimer) ; ein kaum zu ertragender Lärm (un bruit à peine supportable)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-gerundivum",
+         "kind": "grammar",
+         "front": "zu + Partizip I (das zu lösende Problem)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gérondif : qui doit ou peut être fait"
+        },
+        {
+         "slug": "gram-de-gerundivum-trennbar",
+         "kind": "grammar",
+         "front": "die auszufüllenden Formulare",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gérondif d’un verbe à particule"
+        },
+        {
+         "slug": "gram-de-gerundivum-negativ",
+         "kind": "grammar",
+         "front": "ein nicht zu unterschätzendes Risiko",
+         "reading": null,
+         "romaji": null,
+         "meaning": "gérondif nié : qu’on ne peut pas…"
+        },
+        {
+         "slug": "de-einhalten",
+         "kind": "vocabulary",
+         "front": "einhalten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "respecter (un délai, une règle)"
+        },
+        {
+         "slug": "de-unterschaetzen",
+         "kind": "vocabulary",
+         "front": "unterschätzen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sous-estimer"
+        },
+        {
+         "slug": "de-ertragen",
+         "kind": "vocabulary",
+         "front": "ertragen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "supporter, endurer"
+        },
+        {
+         "slug": "de-erwarten",
+         "kind": "vocabulary",
+         "front": "erwarten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "attendre, s’attendre à"
+        },
+        {
+         "slug": "de-risiko",
+         "kind": "vocabulary",
+         "front": "das Risiko",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le risque"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Beleidigung vor dem Dom war eine nicht zu verzeihende Kränkung.",
+         "reading": null,
+         "fr": "L’insulte devant la cathédrale était un affront impardonnable."
+        },
+        {
+         "jp": "Die zu erwartende Rache ließ nicht lange auf sich warten.",
+         "reading": null,
+         "fr": "La vengeance à laquelle il fallait s’attendre ne se fit pas attendre longtemps."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Bitte beachten Sie die ＿ Fristen. (= die Fristen, die einzuhalten sind)",
+         "choices": [
+          "einzuhaltenden",
+          "eingehaltenen",
+          "zu einhaltenden"
+         ],
+         "answer": "einzuhaltenden",
+         "explanation": "Verbe à particule : ein-zu-haltend + en.",
+         "translation": "Veuillez tenir compte des délais à respecter."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das ist ein nicht zu ＿ Problem.",
+         "choices": [
+          "unterschätzendes",
+          "unterschätztes",
+          "unterschätzen"
+         ],
+         "answer": "unterschätzendes",
+         "explanation": "Zu + participe I, neutre après ein : -es.",
+         "translation": "C’est un problème à ne pas sous-estimer."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die zu ＿ Aufgaben stehen auf der Liste.",
+         "choices": [
+          "erledigenden",
+          "erledigten",
+          "erledigen"
+         ],
+         "answer": "erledigenden",
+         "explanation": "Qui doivent être faites : zu erledigenden.",
+         "translation": "Les tâches à accomplir figurent sur la liste."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die bereits bezahlten Rechnungen liegen links, die noch zu bezahlenden rechts.",
+         "translation": "Les factures de droite ont déjà été payées.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Noch zu bezahlend = qui restent à payer."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w2-c2",
+     "title": "La querelle des reines",
+     "lessons": [
+      {
+       "slug": "de-macht",
+       "title": "Le pouvoir et la politique",
+       "objective": "Parler d’institutions, de décisions et de rapports de force.",
+       "minutes": 8,
+       "explanation": [
+        "Les institutions : die Regierung (le gouvernement), das Parlament, der Abgeordnete (le député), die Partei (le parti), die Opposition, die Wahl (l’élection), die Verfassung (la constitution), die Behörde (l’administration).",
+        "Décider : ein Gesetz verabschieden (adopter une loi), abstimmen über (voter sur), beschließen (décider), zurücktreten (démissionner), verhandeln (négocier), sich durchsetzen (s’imposer), der Kompromiss.",
+        "Le pouvoir : die Macht, der Einfluss (l’influence), die Herrschaft (la domination), der Machtkampf (la lutte de pouvoir), jemanden stürzen (renverser), die Mehrheit erringen (obtenir la majorité)."
+       ],
+       "items": [
+        {
+         "slug": "de-regierung",
+         "kind": "vocabulary",
+         "front": "die Regierung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le gouvernement"
+        },
+        {
+         "slug": "de-abgeordnete",
+         "kind": "vocabulary",
+         "front": "der / die Abgeordnete",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le député, la députée"
+        },
+        {
+         "slug": "de-verfassung",
+         "kind": "vocabulary",
+         "front": "die Verfassung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la constitution"
+        },
+        {
+         "slug": "de-verabschieden",
+         "kind": "vocabulary",
+         "front": "ein Gesetz verabschieden",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adopter une loi"
+        },
+        {
+         "slug": "de-zuruecktreten",
+         "kind": "vocabulary",
+         "front": "zurücktreten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "démissionner (d’une fonction)"
+        },
+        {
+         "slug": "de-verhandeln",
+         "kind": "vocabulary",
+         "front": "verhandeln",
+         "reading": null,
+         "romaji": null,
+         "meaning": "négocier"
+        },
+        {
+         "slug": "de-sich-durchsetzen",
+         "kind": "vocabulary",
+         "front": "sich durchsetzen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’imposer"
+        },
+        {
+         "slug": "de-macht",
+         "kind": "vocabulary",
+         "front": "die Macht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le pouvoir"
+        },
+        {
+         "slug": "de-einfluss",
+         "kind": "vocabulary",
+         "front": "der Einfluss",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’influence"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Nach langen Verhandlungen hat das Parlament das umstrittene Gesetz verabschiedet.",
+         "reading": null,
+         "fr": "Après de longues négociations, le parlement a adopté la loi controversée."
+        },
+        {
+         "jp": "Hinter dem Streit der Königinnen stand ein Machtkampf zwischen zwei Höfen.",
+         "reading": null,
+         "fr": "Derrière la querelle des reines se cachait une lutte de pouvoir entre deux cours."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Nach dem Skandal musste die Ministerin ＿.",
+         "choices": [
+          "zurücktreten",
+          "verabschieden",
+          "verhandeln"
+         ],
+         "answer": "zurücktreten",
+         "explanation": "Démissionner : zurücktreten.",
+         "translation": "Après le scandale, la ministre a dû démissionner."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Morgen stimmen die Abgeordneten ＿ den Haushalt ab.",
+         "choices": [
+          "über",
+          "für",
+          "an"
+         ],
+         "answer": "über",
+         "explanation": "Abstimmen über + accusatif.",
+         "translation": "Demain, les députés votent sur le budget."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Opposition konnte sich mit ihrem Vorschlag nicht durchsetzen.",
+         "translation": "La proposition de l’opposition a été adoptée.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Sich nicht durchsetzen = ne pas réussir à s’imposer."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Journalist",
+           "jp": "Wie beurteilen Sie den Kompromiss, den die Regierung gestern vorgestellt hat?"
+          }
+         ],
+         "translation": "Un journaliste te demande ton avis sur un compromis (tu le juges acceptable pour toutes les parties).",
+         "choices": [
+          "Es ist eine für alle Beteiligten annehmbare Lösung.",
+          "Es ist eine für alle Beteiligte annehmbar Lösung.",
+          "Es ist eine Lösung für alle annehmbaren Beteiligten zu lösen."
+         ],
+         "answer": "Es ist eine für alle Beteiligten annehmbare Lösung.",
+         "explanation": "Attribut étendu : für alle Beteiligten annehmbare."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w3",
+   "title": "La forêt d’Odenwald",
+   "region": "Danube des Nibelungen",
+   "description": "Rapporter questions, ordres et prières au discours indirect, choisir le verbe introducteur juste, parler de presse et d’information.",
+   "boss": {
+    "name": "Hagen de Tronje",
+    "glyph": "⚔",
+    "intro": "À la source de l’Odenwald, Hagen a caché sa lance et prépare son récit : il jure qu’il n’y est pour rien. Rapporte ses paroles, ses questions et ses ordres sans les prendre à ton compte, et la vérité paraîtra d’elle-même."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w3-c1",
+     "title": "Il aurait dit que…",
+     "lessons": [
+      {
+       "slug": "de-indirekte-rede-2",
+       "title": "Questions et ordres rapportés",
+       "objective": "Rapporter une question, un ordre ou une prière au Konjunktiv I.",
+       "minutes": 9,
+       "explanation": [
+        "Question rapportée : ob ou mot interrogatif + Konjunktiv I, verbe à la fin. Er fragte, ob sie die Stelle kenne. Sie wollte wissen, wann er zurückkomme und was geschehen sei.",
+        "Ordre rapporté : sollen au Konjunktiv I. „Schweig!“ → Er sagte, sie solle schweigen. Prière polie : mögen. „Bitte warten Sie!“ → Er bat, man möge warten.",
+        "Les repères changent : ich → er / sie ; hier → dort ; heute → an jenem Tag ; morgen → am nächsten Tag ; gestern → am Tag zuvor. Le futur se rapporte avec werde : Er sagte, er werde kommen."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-indirekte-frage-konj",
+         "kind": "grammar",
+         "front": "Er fragte, ob sie … kenne.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "question rapportée au Konjunktiv I"
+        },
+        {
+         "slug": "gram-de-indirekt-solle",
+         "kind": "grammar",
+         "front": "Er sagte, sie solle schweigen.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ordre rapporté (solle)"
+        },
+        {
+         "slug": "gram-de-indirekt-moege",
+         "kind": "grammar",
+         "front": "Er bat, man möge warten.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prière rapportée (möge)"
+        },
+        {
+         "slug": "gram-de-indirekt-werde",
+         "kind": "grammar",
+         "front": "Er sagte, er werde kommen.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "futur rapporté (werde)"
+        },
+        {
+         "slug": "de-am-tag-zuvor",
+         "kind": "vocabulary",
+         "front": "am Tag zuvor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la veille"
+        },
+        {
+         "slug": "de-schweigen",
+         "kind": "vocabulary",
+         "front": "schweigen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se taire"
+        },
+        {
+         "slug": "de-geschehen",
+         "kind": "vocabulary",
+         "front": "geschehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se passer, arriver"
+        },
+        {
+         "slug": "de-auffordern",
+         "kind": "vocabulary",
+         "front": "jemanden auffordern, … zu",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sommer, inviter quelqu’un à"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Kriemhild fragte, wer ihren Mann getötet habe und warum niemand ihm geholfen habe.",
+         "reading": null,
+         "fr": "Kriemhild demanda qui avait tué son mari et pourquoi personne ne l’avait aidé."
+        },
+        {
+         "jp": "Hagen erwiderte, sie solle nicht weiter fragen; Räuber hätten den Helden überfallen.",
+         "reading": null,
+         "fr": "Hagen répliqua qu’elle ne devait pas poser d’autres questions ; des brigands avaient attaqué le héros."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie fragte, ob er die Wahrheit ＿.",
+         "choices": [
+          "sage",
+          "sagt",
+          "sagen"
+         ],
+         "answer": "sage",
+         "explanation": "Question rapportée : Konjunktiv I, sage.",
+         "translation": "Elle demanda s’il disait la vérité."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Arzt sagte, ich ＿ mehr schlafen.",
+         "choices": [
+          "solle",
+          "sollte gewesen",
+          "möge sein"
+         ],
+         "answer": "solle",
+         "explanation": "Ordre ou conseil rapporté : solle.",
+         "translation": "Le médecin a dit que je devais dormir davantage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er kündigte an, er ＿ am nächsten Tag abreisen.",
+         "choices": [
+          "werde",
+          "wird",
+          "würde sein"
+         ],
+         "answer": "werde",
+         "explanation": "Futur rapporté : werde.",
+         "translation": "Il annonça qu’il partirait le lendemain."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Rednerin bat, man ＿ die Handys ausschalten.",
+         "choices": [
+          "möge",
+          "mag",
+          "mochte"
+         ],
+         "answer": "möge",
+         "explanation": "Prière rapportée : möge.",
+         "translation": "L’oratrice pria le public d’éteindre les téléphones."
+        }
+       ]
+      },
+      {
+       "slug": "de-redeverben",
+       "title": "Les verbes de parole",
+       "objective": "Choisir un verbe introducteur précis au lieu de sagen.",
+       "minutes": 8,
+       "explanation": [
+        "Affirmer : erklären (déclarer), versichern (assurer), betonen (souligner), hervorheben (mettre en avant), einräumen (concéder), andeuten (laisser entendre).",
+        "Contredire et critiquer : widersprechen + datif (contredire), leugnen (nier), einwenden (objecter), bemängeln (déplorer), jemandem etwas vorwerfen (reprocher), anzweifeln (mettre en doute).",
+        "Demander et annoncer : fordern (exiger), appellieren an (en appeler à), ankündigen (annoncer), in Aussicht stellen (laisser espérer), sich äußern zu (s’exprimer sur), Stellung nehmen zu (prendre position sur)."
+       ],
+       "items": [
+        {
+         "slug": "de-versichern",
+         "kind": "vocabulary",
+         "front": "versichern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "assurer, affirmer"
+        },
+        {
+         "slug": "de-einraeumen",
+         "kind": "vocabulary",
+         "front": "einräumen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "concéder, reconnaître"
+        },
+        {
+         "slug": "de-andeuten",
+         "kind": "vocabulary",
+         "front": "andeuten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "laisser entendre"
+        },
+        {
+         "slug": "de-leugnen",
+         "kind": "vocabulary",
+         "front": "leugnen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nier"
+        },
+        {
+         "slug": "de-einwenden",
+         "kind": "vocabulary",
+         "front": "einwenden",
+         "reading": null,
+         "romaji": null,
+         "meaning": "objecter"
+        },
+        {
+         "slug": "de-vorwerfen",
+         "kind": "vocabulary",
+         "front": "jemandem etwas vorwerfen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "reprocher quelque chose à quelqu’un"
+        },
+        {
+         "slug": "de-ankuendigen",
+         "kind": "vocabulary",
+         "front": "ankündigen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "annoncer"
+        },
+        {
+         "slug": "de-stellung-nehmen",
+         "kind": "vocabulary",
+         "front": "Stellung nehmen zu",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prendre position sur"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Hagen leugnete die Tat nicht lange; später räumte er ein, den Helden getötet zu haben.",
+         "reading": null,
+         "fr": "Hagen ne nia pas longtemps son acte ; plus tard, il reconnut avoir tué le héros."
+        },
+        {
+         "jp": "Die Königin warf ihm vor, er habe das Vertrauen ihres Mannes missbraucht.",
+         "reading": null,
+         "fr": "La reine lui reprocha d’avoir abusé de la confiance de son mari."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Der Minister ＿ ein, dass Fehler gemacht worden seien.",
+         "choices": [
+          "räumte",
+          "leugnete",
+          "forderte"
+         ],
+         "answer": "räumte",
+         "explanation": "Concéder : einräumen.",
+         "translation": "Le ministre a reconnu que des erreurs avaient été commises."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Gewerkschaft wirft ＿ vor, die Löhne zu drücken.",
+         "choices": [
+          "dem Unternehmen",
+          "das Unternehmen",
+          "des Unternehmens"
+         ],
+         "answer": "dem Unternehmen",
+         "explanation": "Jemandem (datif) etwas vorwerfen.",
+         "translation": "Le syndicat reproche à l’entreprise de tirer les salaires vers le bas."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Zu den Vorwürfen wollte der Sprecher keine Stellung ＿.",
+         "choices": [
+          "nehmen",
+          "geben",
+          "machen"
+         ],
+         "answer": "nehmen",
+         "explanation": "Stellung nehmen zu.",
+         "translation": "Le porte-parole n’a pas voulu prendre position sur les accusations."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Firma deutete an, dass es bald Entlassungen geben könnte.",
+         "translation": "L’entreprise a annoncé officiellement des licenciements.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Andeuten = laisser entendre, sans l’annoncer clairement."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w3-c2",
+     "title": "La version de Hagen",
+     "lessons": [
+      {
+       "slug": "de-medien",
+       "title": "La presse et l’information",
+       "objective": "Parler des médias, des sources et de la fiabilité d’une information.",
+       "minutes": 8,
+       "explanation": [
+        "Les médias : die Berichterstattung (la couverture médiatique), die Schlagzeile (le gros titre), der Leitartikel (l’éditorial), die Meldung (la dépêche), die Quelle (la source), der Rundfunk (la radiodiffusion), die Pressefreiheit.",
+        "Informer : recherchieren (enquêter), veröffentlichen (publier), enthüllen (révéler), verbreiten (diffuser), überprüfen (vérifier), sich berufen auf (se réclamer de, invoquer).",
+        "Juger une information : glaubwürdig (crédible), seriös (sérieux), einseitig (partial), die Falschmeldung (la fausse nouvelle), aus dem Zusammenhang reißen (sortir de son contexte), die Meinungsbildung (la formation de l’opinion)."
+       ],
+       "items": [
+        {
+         "slug": "de-berichterstattung",
+         "kind": "vocabulary",
+         "front": "die Berichterstattung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la couverture médiatique"
+        },
+        {
+         "slug": "de-schlagzeile",
+         "kind": "vocabulary",
+         "front": "die Schlagzeile",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le gros titre"
+        },
+        {
+         "slug": "de-quelle",
+         "kind": "vocabulary",
+         "front": "die Quelle",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la source"
+        },
+        {
+         "slug": "de-veroeffentlichen",
+         "kind": "vocabulary",
+         "front": "veröffentlichen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "publier"
+        },
+        {
+         "slug": "de-enthuellen",
+         "kind": "vocabulary",
+         "front": "enthüllen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "révéler, dévoiler"
+        },
+        {
+         "slug": "de-ueberpruefen",
+         "kind": "vocabulary",
+         "front": "überprüfen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vérifier, contrôler"
+        },
+        {
+         "slug": "de-glaubwuerdig",
+         "kind": "vocabulary",
+         "front": "glaubwürdig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "crédible"
+        },
+        {
+         "slug": "de-einseitig",
+         "kind": "vocabulary",
+         "front": "einseitig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "partial, unilatéral"
+        },
+        {
+         "slug": "de-sich-berufen",
+         "kind": "vocabulary",
+         "front": "sich berufen auf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "invoquer, se réclamer de"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Zeitung beruft sich auf eine Quelle, die nicht genannt werden möchte.",
+         "reading": null,
+         "fr": "Le journal invoque une source qui ne souhaite pas être nommée."
+        },
+        {
+         "jp": "Eine einseitige Berichterstattung erschwert die freie Meinungsbildung.",
+         "reading": null,
+         "fr": "Une couverture médiatique partiale rend plus difficile la libre formation de l’opinion."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Bevor man eine Nachricht teilt, sollte man die ＿ überprüfen.",
+         "choices": [
+          "Quelle",
+          "Schlagzeile",
+          "Meinungsbildung"
+         ],
+         "answer": "Quelle",
+         "explanation": "La source : die Quelle.",
+         "translation": "Avant de partager une nouvelle, il faut en vérifier la source."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Bericht beruft sich ＿ interne Dokumente.",
+         "choices": [
+          "auf",
+          "an",
+          "über"
+         ],
+         "answer": "auf",
+         "explanation": "Sich berufen auf + accusatif.",
+         "translation": "Le rapport s’appuie sur des documents internes."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Das Zitat wurde aus dem Zusammenhang gerissen und wirkt deshalb viel schärfer.",
+         "translation": "La citation a été replacée dans son contexte.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Aus dem Zusammenhang reißen = sortir du contexte."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Freundin",
+           "jp": "Hast du gelesen? Angeblich wird das Museum für immer geschlossen!"
+          }
+         ],
+         "translation": "Une amie relaie une rumeur lue en ligne (tu veux d’abord savoir d’où vient l’information).",
+         "choices": [
+          "Woher stammt die Meldung? Ist die Quelle glaubwürdig?",
+          "Woher stammt die Meldung? Ist die Quelle einseitig veröffentlicht?",
+          "Wohin stammt die Meldung? Ist die Schlagzeile glaubwürdig auf?"
+         ],
+         "answer": "Woher stammt die Meldung? Ist die Quelle glaubwürdig?",
+         "explanation": "Vérifier la source : glaubwürdig."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w4",
+   "title": "Le puits du Basilic",
+   "region": "Danube des Nibelungen",
+   "description": "Employer les connecteurs de la langue soutenue, exprimer une concession nuancée, parler d’environnement et de climat.",
+   "boss": {
+    "name": "Le Basilic de Vienne",
+    "glyph": "☤",
+    "intro": "Dans un puits de la Schönlaterngasse, le Basilic empoisonne l’eau et l’air de tout le quartier. Nul ne peut le regarder en face : relie tes arguments avec précision, concède ce qu’il faut, et tends-lui le miroir."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w4-c1",
+     "title": "Si dangereux soit-il",
+     "lessons": [
+      {
+       "slug": "de-konnektoren-c1",
+       "title": "Les connecteurs soutenus : indem, zumal, wohingegen",
+       "objective": "Relier les idées avec les conjonctions de l’écrit.",
+       "minutes": 9,
+       "explanation": [
+        "Moyen : indem (en + participe présent) et dadurch, dass : Man besiegte ihn, indem man ihm einen Spiegel vorhielt. Cause renforcée : zumal (d’autant plus que) : Niemand ging hinunter, zumal die Luft giftig war.",
+        "Opposition : wohingegen / während (alors que) : Die einen flohen, wohingegen der Bäckergeselle blieb. Restriction : insofern, als (dans la mesure où) ; nur dass (sauf que) ; außer dass / außer wenn.",
+        "Gradation : geschweige denn (encore moins, à plus forte raison) après une négation : Er konnte kaum stehen, geschweige denn laufen. Absence : ohne dass (sans que) ; anstatt dass (au lieu que)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-indem",
+         "kind": "grammar",
+         "front": "indem",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en (faisant), par le fait de"
+        },
+        {
+         "slug": "gram-de-zumal",
+         "kind": "grammar",
+         "front": "zumal",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’autant plus que"
+        },
+        {
+         "slug": "gram-de-wohingegen",
+         "kind": "grammar",
+         "front": "wohingegen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "alors que, tandis que (opposition)"
+        },
+        {
+         "slug": "gram-de-insofern-als",
+         "kind": "grammar",
+         "front": "insofern, als",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dans la mesure où"
+        },
+        {
+         "slug": "gram-de-geschweige-denn",
+         "kind": "grammar",
+         "front": "geschweige denn",
+         "reading": null,
+         "romaji": null,
+         "meaning": "encore moins, sans parler de"
+        },
+        {
+         "slug": "gram-de-ohne-dass",
+         "kind": "grammar",
+         "front": "ohne dass",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sans que"
+        },
+        {
+         "slug": "gram-de-dadurch-dass",
+         "kind": "grammar",
+         "front": "dadurch, dass",
+         "reading": null,
+         "romaji": null,
+         "meaning": "du fait que, par le fait que"
+        },
+        {
+         "slug": "de-giftig",
+         "kind": "vocabulary",
+         "front": "giftig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "toxique, vénéneux"
+        },
+        {
+         "slug": "de-spiegel-vorhalten",
+         "kind": "vocabulary",
+         "front": "jemandem den Spiegel vorhalten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tendre le miroir à quelqu’un"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Geselle besiegte das Ungeheuer, indem er ihm einen Spiegel vorhielt.",
+         "reading": null,
+         "fr": "Le compagnon vainquit le monstre en lui tendant un miroir."
+        },
+        {
+         "jp": "Niemand wagte, in den Brunnen zu schauen, geschweige denn hinabzusteigen.",
+         "reading": null,
+         "fr": "Personne n’osait regarder dans le puits, encore moins y descendre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Man kann Energie sparen, ＿ man die Heizung niedriger stellt.",
+         "choices": [
+          "indem",
+          "zumal",
+          "wohingegen"
+         ],
+         "answer": "indem",
+         "explanation": "Le moyen : indem.",
+         "translation": "On peut économiser de l’énergie en baissant le chauffage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich bleibe heute zu Hause, ＿ ich ohnehin erkältet bin.",
+         "choices": [
+          "zumal",
+          "indem",
+          "ohne dass"
+         ],
+         "answer": "zumal",
+         "explanation": "Raison supplémentaire : zumal.",
+         "translation": "Je reste à la maison aujourd’hui, d’autant que je suis enrhumé de toute façon."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er hat kein Geld für ein Fahrrad, ＿ für ein Auto.",
+         "choices": [
+          "geschweige denn",
+          "wohingegen",
+          "insofern als"
+         ],
+         "answer": "geschweige denn",
+         "explanation": "Encore moins : geschweige denn.",
+         "translation": "Il n’a pas d’argent pour un vélo, encore moins pour une voiture."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Im Norden regnet es viel, ＿ der Süden unter Trockenheit leidet.",
+         "choices": [
+          "wohingegen",
+          "zumal",
+          "indem"
+         ],
+         "answer": "wohingegen",
+         "explanation": "Opposition : wohingegen.",
+         "translation": "Il pleut beaucoup dans le nord, alors que le sud souffre de la sécheresse."
+        }
+       ]
+      },
+      {
+       "slug": "de-konzessiv-c1",
+       "title": "La concession nuancée : wenngleich, so… auch",
+       "objective": "Concéder un point avec les tournures de l’écrit.",
+       "minutes": 9,
+       "explanation": [
+        "Synonymes soutenus de obwohl : wenngleich, obgleich, obschon, wenn auch. Wenngleich die Gefahr bekannt war, unternahm niemand etwas.",
+        "So + adjectif… auch (si… que) : So gefährlich das Tier auch war, es hatte eine Schwäche. Wie / was / wer… auch (immer) : Was auch immer geschieht, wir bleiben. La principale garde l’ordre normal, sans inversion.",
+        "Adverbes et prépositions : gleichwohl / nichtsdestotrotz / dennoch (néanmoins), allerdings (toutefois), ungeachtet + génitif (en dépit de), selbst wenn (même si), auch wenn."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-wenngleich",
+         "kind": "grammar",
+         "front": "wenngleich / obgleich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien que (soutenu)"
+        },
+        {
+         "slug": "gram-de-so-auch",
+         "kind": "grammar",
+         "front": "so + Adjektiv … auch",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si… que, aussi… que"
+        },
+        {
+         "slug": "gram-de-was-auch-immer",
+         "kind": "grammar",
+         "front": "was / wer / wie auch immer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quoi que, qui que, de quelque manière que"
+        },
+        {
+         "slug": "gram-de-gleichwohl",
+         "kind": "grammar",
+         "front": "gleichwohl / nichtsdestotrotz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "néanmoins"
+        },
+        {
+         "slug": "gram-de-ungeachtet",
+         "kind": "grammar",
+         "front": "ungeachtet + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en dépit de, sans tenir compte de"
+        },
+        {
+         "slug": "gram-de-selbst-wenn",
+         "kind": "grammar",
+         "front": "selbst wenn",
+         "reading": null,
+         "romaji": null,
+         "meaning": "même si"
+        },
+        {
+         "slug": "de-schwaeche",
+         "kind": "vocabulary",
+         "front": "die Schwäche",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la faiblesse"
+        },
+        {
+         "slug": "de-etwas-unternehmen",
+         "kind": "vocabulary",
+         "front": "etwas unternehmen gegen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "agir contre, entreprendre quelque chose"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "So schrecklich der Basilisk auch aussah, seinen eigenen Anblick ertrug er nicht.",
+         "reading": null,
+         "fr": "Si effrayant que fût le Basilic, il ne supportait pas sa propre vue."
+        },
+        {
+         "jp": "Ungeachtet aller Warnungen stieg der junge Mann in den Brunnen.",
+         "reading": null,
+         "fr": "En dépit de tous les avertissements, le jeune homme descendit dans le puits."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "So teuer das Projekt auch ＿, es lohnt sich.",
+         "choices": [
+          "ist",
+          "wäre gewesen",
+          "sein"
+         ],
+         "answer": "ist",
+         "explanation": "So… auch + verbe conjugué à la fin.",
+         "translation": "Si coûteux que soit le projet, il en vaut la peine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ auch immer anruft, ich bin nicht da.",
+         "choices": [
+          "Wer",
+          "Was",
+          "Wie"
+         ],
+         "answer": "Wer",
+         "explanation": "Une personne, sujet : wer auch immer.",
+         "translation": "Qui que ce soit qui appelle, je ne suis pas là."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ungeachtet ＿ wurde die Straße gebaut.",
+         "choices": [
+          "der Proteste",
+          "die Proteste",
+          "den Protesten"
+         ],
+         "answer": "der Proteste",
+         "explanation": "Ungeachtet + génitif.",
+         "translation": "En dépit des protestations, la route a été construite."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Si fatigué qu’il fût, il continua à travailler. »",
+         "answer": [
+          "So",
+          "müde",
+          "er",
+          "auch",
+          "war,",
+          "er",
+          "arbeitete",
+          "weiter."
+         ],
+         "explanation": "Après so… auch, la principale garde l’ordre sujet-verbe."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w4-c2",
+     "title": "L’air empoisonné",
+     "lessons": [
+      {
+       "slug": "de-umwelt-c1",
+       "title": "L’environnement et le climat",
+       "objective": "Parler de pollution, de ressources et de transition écologique.",
+       "minutes": 8,
+       "explanation": [
+        "Constater : der Klimawandel, die Erderwärmung (le réchauffement), der Ausstoß von Treibhausgasen (les émissions de gaz à effet de serre), die Dürre (la sécheresse), das Artensterben (l’extinction des espèces), die Verschmutzung.",
+        "Agir : erneuerbare Energien (les énergies renouvelables), der Verbrauch (la consommation), Ressourcen schonen (ménager les ressources), verringern (réduire), verzichten auf (renoncer à), umsteigen auf (passer à), die Energiewende (la transition énergétique).",
+        "Évaluer : umweltfreundlich / umweltschädlich (respectueux / nuisible), langfristig / kurzfristig (à long / court terme), die Folgen abschätzen (évaluer les conséquences), unumkehrbar (irréversible), dringend (urgent)."
+       ],
+       "items": [
+        {
+         "slug": "de-erderwaermung",
+         "kind": "vocabulary",
+         "front": "die Erderwärmung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le réchauffement climatique"
+        },
+        {
+         "slug": "de-ausstoss",
+         "kind": "vocabulary",
+         "front": "der Ausstoß",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les émissions, le rejet"
+        },
+        {
+         "slug": "de-duerre",
+         "kind": "vocabulary",
+         "front": "die Dürre",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sécheresse"
+        },
+        {
+         "slug": "de-erneuerbar",
+         "kind": "vocabulary",
+         "front": "erneuerbare Energien",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les énergies renouvelables"
+        },
+        {
+         "slug": "de-verbrauch",
+         "kind": "vocabulary",
+         "front": "der Verbrauch",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la consommation (d’énergie, de ressources)"
+        },
+        {
+         "slug": "de-schonen",
+         "kind": "vocabulary",
+         "front": "schonen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ménager, préserver"
+        },
+        {
+         "slug": "de-verringern",
+         "kind": "vocabulary",
+         "front": "verringern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réduire"
+        },
+        {
+         "slug": "de-langfristig",
+         "kind": "vocabulary",
+         "front": "langfristig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à long terme"
+        },
+        {
+         "slug": "de-unumkehrbar",
+         "kind": "vocabulary",
+         "front": "unumkehrbar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "irréversible"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Ausstoß von Treibhausgasen muss langfristig deutlich verringert werden.",
+         "reading": null,
+         "fr": "Les émissions de gaz à effet de serre doivent être nettement réduites à long terme."
+        },
+        {
+         "jp": "Manche Schäden sind unumkehrbar, wohingegen sich andere noch begrenzen lassen.",
+         "reading": null,
+         "fr": "Certains dégâts sont irréversibles, alors que d’autres peuvent encore être limités."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Viele Menschen wollen nicht ＿ das Auto verzichten.",
+         "choices": [
+          "auf",
+          "von",
+          "über"
+         ],
+         "answer": "auf",
+         "explanation": "Verzichten auf + accusatif.",
+         "translation": "Beaucoup de gens ne veulent pas renoncer à la voiture."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Wind und Sonne gehören zu den ＿ Energien.",
+         "choices": [
+          "erneuerbaren",
+          "unumkehrbaren",
+          "langfristigen"
+         ],
+         "answer": "erneuerbaren",
+         "explanation": "Renouvelables : erneuerbar.",
+         "translation": "Le vent et le soleil font partie des énergies renouvelables."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Kurzfristig ist die Umstellung teuer, langfristig spart sie jedoch Kosten.",
+         "translation": "La transition coûte cher à long terme.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Langfristig spart sie Kosten = à long terme, elle fait économiser."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Moderatorin",
+           "jp": "Reicht es, wenn jeder Einzelne weniger Energie verbraucht?"
+          }
+         ],
+         "translation": "Dans un débat, on te demande si les gestes individuels suffisent (concède, puis nuance).",
+         "choices": [
+          "So wichtig das auch ist, ohne politische Maßnahmen genügt es nicht.",
+          "So wichtig das auch ist, genügt es ohne politische Maßnahmen nicht.",
+          "Wenngleich wichtig das ist, es nicht genügt ohne Maßnahmen."
+         ],
+         "answer": "So wichtig das auch ist, ohne politische Maßnahmen genügt es nicht.",
+         "explanation": "So… auch ; la principale garde l’ordre normal."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w5",
+   "title": "La taverne du Cher Augustin",
+   "region": "Danube des Nibelungen",
+   "description": "Saisir et employer les particules modales, comprendre les expressions imagées, adapter son registre.",
+   "boss": {
+    "name": "Le Cher Augustin",
+    "glyph": "♨",
+    "intro": "Vienne, 1679 : la peste vide les rues, et le Cher Augustin chante encore dans sa taverne, cornemuse sous le bras. Avec lui, tout se joue dans les petits mots : doch, ja, halt, eben. Réponds-lui sur le même ton."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w5-c1",
+     "title": "Les petits mots",
+     "lessons": [
+      {
+       "slug": "de-modalpartikeln",
+       "title": "Les particules modales : doch, ja, eben, halt",
+       "objective": "Donner à une phrase sa nuance affective avec la bonne particule.",
+       "minutes": 9,
+       "explanation": [
+        "Ja rappelle ce que l’autre sait déjà : Du weißt ja, wie er ist. Doch contredit doucement ou insiste : Das habe ich dir doch gesagt! Komm doch mit! Eben et halt marquent la résignation : Das ist eben so. Dann gehen wir halt.",
+        "Dans une question : denn exprime l’intérêt (Was machst du denn hier?), eigentlich change de sujet (Wie alt bist du eigentlich?), etwa attend un non (Hast du das etwa vergessen?), wohl exprime le doute (Ob er wohl kommt?).",
+        "Dans un ordre : mal adoucit (Hör mal zu!), ruhig encourage (Nimm ruhig noch ein Stück!), bloß / ja menacent ou avertissent (Mach das bloß nicht! Komm ja nicht zu spät!), schon rassure (Das wird schon klappen)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-partikel-ja",
+         "kind": "grammar",
+         "front": "ja (Partikel)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : tu le sais bien"
+        },
+        {
+         "slug": "gram-de-partikel-doch",
+         "kind": "grammar",
+         "front": "doch (Partikel)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : mais si, donc (insistance)"
+        },
+        {
+         "slug": "gram-de-partikel-eben-halt",
+         "kind": "grammar",
+         "front": "eben / halt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particules : c’est comme ça (résignation)"
+        },
+        {
+         "slug": "gram-de-partikel-etwa",
+         "kind": "grammar",
+         "front": "etwa (in Fragen)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : par hasard (on espère que non)"
+        },
+        {
+         "slug": "gram-de-partikel-ruhig",
+         "kind": "grammar",
+         "front": "ruhig (Partikel)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : n’hésite pas à"
+        },
+        {
+         "slug": "gram-de-partikel-bloss",
+         "kind": "grammar",
+         "front": "bloß / ja (Warnung)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particules : surtout (avertissement)"
+        },
+        {
+         "slug": "gram-de-partikel-schon",
+         "kind": "grammar",
+         "front": "schon (Partikel)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : ça ira bien (rassurer)"
+        },
+        {
+         "slug": "gram-de-partikel-wohl",
+         "kind": "grammar",
+         "front": "wohl (Partikel)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "particule : sans doute, je me demande"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "„Alles ist hin“, sang Augustin, „aber das wird schon wieder!“",
+         "reading": null,
+         "fr": "« Tout est perdu, chantait Augustin, mais ça va bien finir par s’arranger ! »"
+        },
+        {
+         "jp": "Du willst doch nicht etwa nachts allein durch die Stadt gehen?",
+         "reading": null,
+         "fr": "Tu ne veux tout de même pas traverser la ville seul en pleine nuit ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das habe ich dir ＿ schon dreimal erklärt!",
+         "choices": [
+          "doch",
+          "etwa",
+          "ruhig"
+         ],
+         "answer": "doch",
+         "explanation": "Reproche, insistance : doch.",
+         "translation": "Mais je te l’ai déjà expliqué trois fois !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Setzen Sie sich ＿, es dauert noch einen Moment.",
+         "choices": [
+          "ruhig",
+          "etwa",
+          "bloß"
+         ],
+         "answer": "ruhig",
+         "explanation": "Encourager : ruhig.",
+         "translation": "Asseyez-vous, je vous en prie, il y en a encore pour un moment."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Hast du ＿ den Schlüssel verloren?",
+         "choices": [
+          "etwa",
+          "ruhig",
+          "halt"
+         ],
+         "answer": "etwa",
+         "explanation": "On craint que oui : etwa.",
+         "translation": "Tu n’aurais tout de même pas perdu la clé ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Zug ist weg. Dann nehmen wir ＿ den nächsten.",
+         "choices": [
+          "halt",
+          "etwa",
+          "denn"
+         ],
+         "answer": "halt",
+         "explanation": "Résignation : halt / eben.",
+         "translation": "Le train est parti. Eh bien, nous prendrons le suivant."
+        }
+       ]
+      },
+      {
+       "slug": "de-redewendungen",
+       "title": "Les expressions imagées",
+       "objective": "Comprendre et placer les tournures figurées du quotidien.",
+       "minutes": 8,
+       "explanation": [
+        "Le corps : jemandem die Daumen drücken (croiser les doigts pour quelqu’un), die Nase voll haben (en avoir assez), auf die Nerven gehen (taper sur les nerfs), ein Auge zudrücken (fermer les yeux sur), sich etwas aus dem Kopf schlagen (s’ôter une idée de la tête).",
+        "La chance et l’échec : Schwein haben (avoir de la veine), ins Fettnäpfchen treten (mettre les pieds dans le plat), im Stich lassen (laisser tomber), den Faden verlieren (perdre le fil), etwas auf die lange Bank schieben (remettre à plus tard).",
+        "Ces tournures sont figées : on ne change ni l’article ni le nom. Elles appartiennent au registre familier ; à l’écrit soutenu, on préfère le verbe simple (aufschieben au lieu de auf die lange Bank schieben)."
+       ],
+       "items": [
+        {
+         "slug": "de-daumen-druecken",
+         "kind": "vocabulary",
+         "front": "jemandem die Daumen drücken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "croiser les doigts pour quelqu’un"
+        },
+        {
+         "slug": "de-nase-voll",
+         "kind": "vocabulary",
+         "front": "die Nase voll haben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en avoir par-dessus la tête"
+        },
+        {
+         "slug": "de-auf-die-nerven",
+         "kind": "vocabulary",
+         "front": "jemandem auf die Nerven gehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "taper sur les nerfs de quelqu’un"
+        },
+        {
+         "slug": "de-auge-zudruecken",
+         "kind": "vocabulary",
+         "front": "ein Auge zudrücken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fermer les yeux (sur une faute)"
+        },
+        {
+         "slug": "de-schwein-haben",
+         "kind": "vocabulary",
+         "front": "Schwein haben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir de la veine"
+        },
+        {
+         "slug": "de-fettnaepfchen",
+         "kind": "vocabulary",
+         "front": "ins Fettnäpfchen treten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "mettre les pieds dans le plat"
+        },
+        {
+         "slug": "de-im-stich-lassen",
+         "kind": "vocabulary",
+         "front": "im Stich lassen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "laisser tomber, abandonner"
+        },
+        {
+         "slug": "de-lange-bank",
+         "kind": "vocabulary",
+         "front": "auf die lange Bank schieben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remettre à plus tard"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Augustin fiel betrunken in die Pestgrube und wachte gesund wieder auf: Da hat er wirklich Schwein gehabt.",
+         "reading": null,
+         "fr": "Augustin tomba ivre dans la fosse aux pestiférés et se réveilla en bonne santé : il a vraiment eu de la veine."
+        },
+        {
+         "jp": "Seine Freunde hatten ihn nicht im Stich gelassen, sie hatten ihn nur für tot gehalten.",
+         "reading": null,
+         "fr": "Ses amis ne l’avaient pas laissé tomber, ils l’avaient seulement cru mort."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Morgen hast du deine Prüfung? Ich drücke dir die ＿!",
+         "choices": [
+          "Daumen",
+          "Nase",
+          "Augen"
+         ],
+         "answer": "Daumen",
+         "explanation": "Die Daumen drücken.",
+         "translation": "Tu as ton examen demain ? Je croise les doigts pour toi !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Seit drei Wochen regnet es. Ich habe die ＿ voll!",
+         "choices": [
+          "Nase",
+          "Daumen",
+          "Bank"
+         ],
+         "answer": "Nase",
+         "explanation": "Die Nase voll haben.",
+         "translation": "Il pleut depuis trois semaines. J’en ai assez !"
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Der Lehrer hat heute ein Auge zugedrückt, als ich zu spät kam.",
+         "translation": "Le professeur m’a puni pour mon retard.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Ein Auge zudrücken = fermer les yeux, être indulgent."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Freund",
+           "jp": "Ich habe die Chefin gefragt, wann ihr Baby kommt. Sie ist gar nicht schwanger!"
+          }
+         ],
+         "translation": "Un ami te raconte sa gaffe (commente avec l’expression qui convient).",
+         "choices": [
+          "Oje, da bist du ja richtig ins Fettnäpfchen getreten!",
+          "Oje, da hast du ja richtig Schwein gehabt!",
+          "Oje, da hast du ihr ja die Daumen gedrückt!"
+         ],
+         "answer": "Oje, da bist du ja richtig ins Fettnäpfchen getreten!",
+         "explanation": "Faire une gaffe : ins Fettnäpfchen treten."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w5-c2",
+     "title": "Parler à chacun",
+     "lessons": [
+      {
+       "slug": "de-register",
+       "title": "Les registres : familier, courant, soutenu",
+       "objective": "Reconnaître le niveau de langue et le changer selon la situation.",
+       "minutes": 8,
+       "explanation": [
+        "Un même sens, trois registres : kriegen (familier) / bekommen (courant) / erhalten (soutenu) ; gucken / sehen / betrachten ; kaputt / defekt / beschädigt ; Job / Arbeit / Tätigkeit ; klappen / gelingen.",
+        "À l’oral familier : contractions (’ne, ’s, hab’), particules, was pour etwas, mots courts (Uni, Abi, Azubi). À l’écrit soutenu : style nominal, passif, génitif, connecteurs (folglich, zudem, hingegen).",
+        "Atténuer : Ich würde meinen, dass… ; Es scheint mir, als… ; Wenn ich mich nicht irre… ; Dürfte ich Sie bitten, …? Renforcer : zweifellos (sans aucun doute), keineswegs (nullement), durchaus (tout à fait)."
+       ],
+       "items": [
+        {
+         "slug": "de-erhalten",
+         "kind": "vocabulary",
+         "front": "erhalten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "recevoir (soutenu)"
+        },
+        {
+         "slug": "de-kriegen",
+         "kind": "vocabulary",
+         "front": "kriegen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "recevoir, avoir (familier)"
+        },
+        {
+         "slug": "de-taetigkeit",
+         "kind": "vocabulary",
+         "front": "die Tätigkeit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’activité (professionnelle)"
+        },
+        {
+         "slug": "de-gelingen",
+         "kind": "vocabulary",
+         "front": "gelingen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réussir (à quelqu’un)"
+        },
+        {
+         "slug": "de-klappen",
+         "kind": "vocabulary",
+         "front": "klappen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "marcher, fonctionner (familier)"
+        },
+        {
+         "slug": "de-zweifellos",
+         "kind": "vocabulary",
+         "front": "zweifellos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sans aucun doute"
+        },
+        {
+         "slug": "de-keineswegs",
+         "kind": "vocabulary",
+         "front": "keineswegs",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nullement, en aucun cas"
+        },
+        {
+         "slug": "de-durchaus",
+         "kind": "vocabulary",
+         "front": "durchaus",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout à fait, parfaitement"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Unter Freunden sagt man: „Hat’s geklappt?“ Im Bericht schreibt man: „Der Versuch ist gelungen.“",
+         "reading": null,
+         "fr": "Entre amis, on dit : « Ça a marché ? » Dans un rapport, on écrit : « L’expérience a réussi. »"
+        },
+        {
+         "jp": "Das ist keineswegs sicher, aber durchaus möglich.",
+         "reading": null,
+         "fr": "Ce n’est nullement certain, mais tout à fait possible."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "In einem formellen Brief: „Wir haben Ihr Schreiben vom 3. Mai ＿.“",
+         "choices": [
+          "erhalten",
+          "gekriegt",
+          "geguckt"
+         ],
+         "answer": "erhalten",
+         "explanation": "Registre soutenu : erhalten.",
+         "translation": "Dans une lettre formelle : « Nous avons bien reçu votre courrier du 3 mai. »"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Zu einem Freund: „Und, hat alles ＿?“",
+         "choices": [
+          "geklappt",
+          "gelungen",
+          "erhalten"
+         ],
+         "answer": "geklappt",
+         "explanation": "Registre familier, avec haben : geklappt.",
+         "translation": "À un ami : « Alors, tout a marché ? »"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das Experiment ist uns leider nicht ＿.",
+         "choices": [
+          "gelungen",
+          "geklappt",
+          "gekriegt"
+         ],
+         "answer": "gelungen",
+         "explanation": "Avec sein et un datif : gelingen.",
+         "translation": "Malheureusement, nous n’avons pas réussi l’expérience."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Der Vorschlag ist durchaus vernünftig.",
+         "translation": "La proposition est jugée déraisonnable.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Durchaus = tout à fait."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w6",
+   "title": "Le grenier du Golem",
+   "region": "Danube des Nibelungen",
+   "description": "Maîtriser le passif avec verbe de modalité aux temps composés, comprendre la formation des mots, débattre d’éthique et de progrès.",
+   "boss": {
+    "name": "Le Golem",
+    "glyph": "⚒",
+    "intro": "À Prague, sous les toits de la vieille synagogue, le Golem d’argile attend qu’on lui dise ce qui aurait dû être fait. Démonte les mots préfixe par préfixe, et tu trouveras celui qui l’arrête."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w6-c1",
+     "title": "Ce qui aurait dû être fait",
+     "lessons": [
+      {
+       "slug": "de-passiv-c1",
+       "title": "Le passif complexe : hätte gemacht werden müssen",
+       "objective": "Combiner passif, verbe de modalité et temps composés.",
+       "minutes": 10,
+       "explanation": [
+        "Passif + modal au parfait : hat + participe + werden + modal à l’infinitif. Der Golem hat aufgehalten werden müssen. À l’irréel du passé : Er hätte früher aufgehalten werden müssen (il aurait fallu l’arrêter plus tôt).",
+        "Dans une subordonnée, l’auxiliaire conjugué se place avant le groupe verbal : …, weil er früher hätte aufgehalten werden müssen. C’est la seule exception à la règle du verbe final.",
+        "Passif du destinataire avec bekommen / erhalten + participe : Er bekam das Wort auf die Stirn geschrieben (on lui écrivit le mot sur le front). Passif impersonnel : Es wurde lange diskutiert. Hier wird nicht geraucht."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-passiv-modal-perfekt",
+         "kind": "grammar",
+         "front": "hat … gemacht werden müssen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passif avec modal au parfait"
+        },
+        {
+         "slug": "gram-de-passiv-modal-konj2",
+         "kind": "grammar",
+         "front": "hätte … gemacht werden müssen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il aurait fallu que ce soit fait"
+        },
+        {
+         "slug": "gram-de-passiv-nebensatz",
+         "kind": "grammar",
+         "front": "…, weil es hätte gemacht werden müssen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "auxiliaire avant le groupe verbal en subordonnée"
+        },
+        {
+         "slug": "gram-de-bekommen-passiv",
+         "kind": "grammar",
+         "front": "bekommen / erhalten + Partizip II",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passif du destinataire"
+        },
+        {
+         "slug": "gram-de-unpersoenliches-passiv",
+         "kind": "grammar",
+         "front": "Es wurde lange diskutiert.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passif impersonnel (sans sujet)"
+        },
+        {
+         "slug": "de-lehm",
+         "kind": "vocabulary",
+         "front": "der Lehm",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’argile, la glaise"
+        },
+        {
+         "slug": "de-stirn",
+         "kind": "vocabulary",
+         "front": "die Stirn",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le front"
+        },
+        {
+         "slug": "de-erschaffen",
+         "kind": "vocabulary",
+         "front": "erschaffen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "créer"
+        },
+        {
+         "slug": "de-verhindern",
+         "kind": "vocabulary",
+         "front": "verhindern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "empêcher"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Das Unglück hätte verhindert werden können, wenn der Rabbi das Wort rechtzeitig entfernt hätte.",
+         "reading": null,
+         "fr": "Le malheur aurait pu être évité si le rabbin avait retiré le mot à temps."
+        },
+        {
+         "jp": "Der Golem bekam jeden Freitag das Zeichen von der Stirn genommen.",
+         "reading": null,
+         "fr": "Chaque vendredi, on retirait le signe du front du Golem."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Fehler hätte früher bemerkt werden ＿.",
+         "choices": [
+          "müssen",
+          "gemusst",
+          "muss"
+         ],
+         "answer": "müssen",
+         "explanation": "Double infinitif : werden müssen.",
+         "translation": "L’erreur aurait dû être remarquée plus tôt."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich weiß, dass das Gebäude ＿ renoviert werden sollen.",
+         "choices": [
+          "hätte",
+          "wäre",
+          "würde"
+         ],
+         "answer": "hätte",
+         "explanation": "En subordonnée, hätte précède le groupe verbal.",
+         "translation": "Je sais que le bâtiment aurait dû être rénové."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Zum Geburtstag ＿ sie ein Fahrrad geschenkt.",
+         "choices": [
+          "bekam",
+          "wurde",
+          "war"
+         ],
+         "answer": "bekam",
+         "explanation": "Passif du destinataire : bekam… geschenkt.",
+         "translation": "Pour son anniversaire, on lui a offert un vélo."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « La décision aurait pu être mieux expliquée. »",
+         "answer": [
+          "Die",
+          "Entscheidung",
+          "hätte",
+          "besser",
+          "erklärt",
+          "werden",
+          "können."
+         ],
+         "explanation": "Hätte en 2e position ; participe + werden + können à la fin."
+        }
+       ]
+      },
+      {
+       "slug": "de-wortbildung",
+       "title": "La formation des mots : ver-, zer-, ent-, miss-",
+       "objective": "Deviner le sens d’un mot grâce à ses préfixes et suffixes.",
+       "minutes": 9,
+       "explanation": [
+        "Préfixes inséparables : zer- (mettre en morceaux : zerbrechen, zerstören), ent- (ôter, s’éloigner : entfernen, entkommen), miss- (mal : missverstehen, misslingen), ver- (erreur ou transformation : sich verlaufen, verbessern), er- (résultat : erreichen, erfinden).",
+        "Suffixes d’adjectifs : -los (sans : hilflos, sinnlos), -haft (qui a l’allure de : fehlerhaft, dauerhaft), -mäßig (conforme à : regelmäßig, planmäßig), -sam (enclin à : sparsam, schweigsam), -wert / -würdig (digne de : sehenswert, glaubwürdig).",
+        "Composés : le dernier élément donne le genre et le sens de base, les précédents le précisent. Die Lebensmittelverschwendung = das Verschwenden von Lebensmitteln. Un -s- ou -n- de liaison est fréquent : Arbeitszeit, Sonnenschein."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-praefix-zer",
+         "kind": "grammar",
+         "front": "zer- (zerbrechen, zerstören)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "préfixe zer- : mettre en pièces"
+        },
+        {
+         "slug": "gram-de-praefix-ent",
+         "kind": "grammar",
+         "front": "ent- (entfernen, entkommen)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "préfixe ent- : ôter, s’éloigner"
+        },
+        {
+         "slug": "gram-de-praefix-miss",
+         "kind": "grammar",
+         "front": "miss- (missverstehen, misslingen)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "préfixe miss- : mal, de travers"
+        },
+        {
+         "slug": "gram-de-suffix-los",
+         "kind": "grammar",
+         "front": "-los (hilflos, sinnlos)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixe -los : sans"
+        },
+        {
+         "slug": "gram-de-suffix-haft",
+         "kind": "grammar",
+         "front": "-haft (fehlerhaft, dauerhaft)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "suffixe -haft : qui a le caractère de"
+        },
+        {
+         "slug": "de-entfernen",
+         "kind": "vocabulary",
+         "front": "entfernen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enlever, retirer"
+        },
+        {
+         "slug": "de-misslingen",
+         "kind": "vocabulary",
+         "front": "misslingen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "échouer, rater"
+        },
+        {
+         "slug": "de-zerfallen",
+         "kind": "vocabulary",
+         "front": "zerfallen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tomber en poussière, se désagréger"
+        },
+        {
+         "slug": "de-sinnlos",
+         "kind": "vocabulary",
+         "front": "sinnlos",
+         "reading": null,
+         "romaji": null,
+         "meaning": "absurde, vain"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Als der Rabbi den ersten Buchstaben entfernte, zerfiel der Golem zu Staub.",
+         "reading": null,
+         "fr": "Quand le rabbin retira la première lettre, le Golem tomba en poussière."
+        },
+        {
+         "jp": "Jeder Versuch, ihn mit Gewalt aufzuhalten, war misslungen und schien sinnlos.",
+         "reading": null,
+         "fr": "Toute tentative de l’arrêter par la force avait échoué et semblait vaine."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das Glas ist auf den Boden gefallen und ＿.",
+         "choices": [
+          "zerbrochen",
+          "entbrochen",
+          "verbrochen"
+         ],
+         "answer": "zerbrochen",
+         "explanation": "En morceaux : zer-.",
+         "translation": "Le verre est tombé par terre et s’est brisé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Entschuldigung, ich habe Sie ＿. Können Sie das wiederholen?",
+         "choices": [
+          "missverstanden",
+          "zerverstanden",
+          "entverstanden"
+         ],
+         "answer": "missverstanden",
+         "explanation": "Mal comprendre : miss-.",
+         "translation": "Excusez-moi, je vous ai mal compris. Pouvez-vous répéter ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ohne Karte und Handy fühlte sie sich völlig ＿.",
+         "choices": [
+          "hilflos",
+          "hilfhaft",
+          "hilfsam"
+         ],
+         "answer": "hilflos",
+         "explanation": "Sans aide : -los.",
+         "translation": "Sans carte ni téléphone, elle se sentait complètement désemparée."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Rechnung war fehlerhaft und musste korrigiert werden.",
+         "translation": "La facture était correcte.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Fehlerhaft = qui contient des erreurs."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w6-c2",
+     "title": "La créature et son maître",
+     "lessons": [
+      {
+       "slug": "de-ethik",
+       "title": "L’éthique et le progrès",
+       "objective": "Débattre des limites de la science et de la responsabilité.",
+       "minutes": 8,
+       "explanation": [
+        "Les notions : die Ethik, die Würde (la dignité), das Gewissen (la conscience morale), die Pflicht (le devoir), die Freiheit, der Fortschritt (le progrès), die Grenze (la limite), der Grundsatz (le principe).",
+        "Juger : vertretbar (défendable), verwerflich (condamnable), fragwürdig (contestable), etwas rechtfertigen (justifier), abwägen (peser), verantworten (répondre de), missbrauchen (abuser de).",
+        "Formules de débat : Es stellt sich die Frage, inwieweit… (dans quelle mesure). Der Zweck heiligt nicht die Mittel (la fin ne justifie pas les moyens). Man muss Nutzen und Risiken gegeneinander abwägen."
+       ],
+       "items": [
+        {
+         "slug": "de-gewissen",
+         "kind": "vocabulary",
+         "front": "das Gewissen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la conscience (morale)"
+        },
+        {
+         "slug": "de-wuerde",
+         "kind": "vocabulary",
+         "front": "die Würde",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la dignité"
+        },
+        {
+         "slug": "de-fortschritt",
+         "kind": "vocabulary",
+         "front": "der Fortschritt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avancement, progrès"
+        },
+        {
+         "slug": "de-vertretbar",
+         "kind": "vocabulary",
+         "front": "vertretbar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "défendable, acceptable"
+        },
+        {
+         "slug": "de-fragwuerdig",
+         "kind": "vocabulary",
+         "front": "fragwürdig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contestable, douteux"
+        },
+        {
+         "slug": "de-rechtfertigen",
+         "kind": "vocabulary",
+         "front": "rechtfertigen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "justifier"
+        },
+        {
+         "slug": "de-abwaegen",
+         "kind": "vocabulary",
+         "front": "abwägen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "peser, soupeser"
+        },
+        {
+         "slug": "de-missbrauchen",
+         "kind": "vocabulary",
+         "front": "missbrauchen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "abuser de, détourner"
+        },
+        {
+         "slug": "de-inwieweit",
+         "kind": "vocabulary",
+         "front": "inwieweit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dans quelle mesure"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Es stellt sich die Frage, inwieweit der Mensch erschaffen darf, was er nicht beherrschen kann.",
+         "reading": null,
+         "fr": "La question se pose de savoir dans quelle mesure l’homme a le droit de créer ce qu’il ne peut pas maîtriser."
+        },
+        {
+         "jp": "Auch ein guter Zweck rechtfertigt nicht jedes Mittel.",
+         "reading": null,
+         "fr": "Même un but louable ne justifie pas tous les moyens."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Bei dieser Entscheidung muss man Nutzen und Risiken sorgfältig ＿.",
+         "choices": [
+          "abwägen",
+          "missbrauchen",
+          "rechtfertigen"
+         ],
+         "answer": "abwägen",
+         "explanation": "Peser : abwägen.",
+         "translation": "Pour cette décision, il faut peser soigneusement avantages et risques."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Ich konnte nicht lügen: Mein ＿ hat es nicht erlaubt.",
+         "choices": [
+          "Gewissen",
+          "Fortschritt",
+          "Grundsatz"
+         ],
+         "answer": "Gewissen",
+         "explanation": "La conscience morale : das Gewissen.",
+         "translation": "Je n’ai pas pu mentir : ma conscience ne me l’a pas permis."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Viele halten die Methode für fragwürdig, auch wenn sie legal ist.",
+         "translation": "La méthode fait l’unanimité.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Fragwürdig = contestable."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Professorin",
+           "jp": "Darf die Forschung alles, was technisch möglich ist?"
+          }
+         ],
+         "translation": "En séminaire, on te demande si la recherche peut tout se permettre (réponds que non, avec nuance).",
+         "choices": [
+          "Meines Erachtens nicht: Nicht alles, was machbar ist, ist auch vertretbar.",
+          "Meines Erachtens nicht: Nicht alles, was machbar ist, ist auch missbraucht.",
+          "Meiner Erachtens nach nicht: Alles machbar ist fragwürdig vertretbar."
+         ],
+         "answer": "Meines Erachtens nicht: Nicht alles, was machbar ist, ist auch vertretbar.",
+         "explanation": "Meines Erachtens ; vertretbar = défendable."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w7",
+   "title": "Le mont de Vénus",
+   "region": "Danube des Nibelungen",
+   "description": "Employer la bonne préposition après un nom ou un adjectif, comprendre les prépositions de la langue officielle, parler d’art et de culture.",
+   "boss": {
+    "name": "Dame Vénus",
+    "glyph": "❀",
+    "intro": "Le chevalier-poète Tannhäuser est entré dans la montagne, et Dame Vénus ne laisse repartir que ceux qui chantent juste. Ici, chaque nom réclame sa préposition : un seul faux accord, et la porte reste close."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w7-c1",
+     "title": "Chaque nom sa préposition",
+     "lessons": [
+      {
+       "slug": "de-rektion",
+       "title": "Noms et adjectifs à préposition",
+       "objective": "Associer un nom ou un adjectif à sa préposition fixe.",
+       "minutes": 9,
+       "explanation": [
+        "Adjectifs : angewiesen auf + accusatif (tributaire de), stolz auf, neugierig auf, abhängig von, begeistert von, überzeugt von, zuständig für (compétent pour), bekannt für, fähig zu, bereit zu, interessiert an + datif, reich an, arm an.",
+        "Noms : der Bedarf an + datif (le besoin en), der Mangel an (le manque de), das Interesse an, die Teilnahme an ; der Anspruch auf + accusatif (le droit à), der Einfluss auf, die Hoffnung auf ; die Sehnsucht nach (la nostalgie de), die Nachfrage nach ; die Angst vor.",
+        "Le nom garde en général la préposition du verbe : sich interessieren für → mais das Interesse an ; hoffen auf → die Hoffnung auf ; sich sehnen nach → die Sehnsucht nach. Avec une subordonnée : darauf, dass… ; daran, zu…"
+       ],
+       "items": [
+        {
+         "slug": "de-angewiesen",
+         "kind": "vocabulary",
+         "front": "angewiesen sein auf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être tributaire de, dépendre de"
+        },
+        {
+         "slug": "de-zustaendig",
+         "kind": "vocabulary",
+         "front": "zuständig für",
+         "reading": null,
+         "romaji": null,
+         "meaning": "compétent pour, chargé de"
+        },
+        {
+         "slug": "de-bereit-zu",
+         "kind": "vocabulary",
+         "front": "bereit zu",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prêt à"
+        },
+        {
+         "slug": "de-bedarf",
+         "kind": "vocabulary",
+         "front": "der Bedarf an",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le besoin en"
+        },
+        {
+         "slug": "de-mangel",
+         "kind": "vocabulary",
+         "front": "der Mangel an",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le manque de, la pénurie de"
+        },
+        {
+         "slug": "de-anspruch",
+         "kind": "vocabulary",
+         "front": "der Anspruch auf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le droit à, la prétention à"
+        },
+        {
+         "slug": "de-sehnsucht",
+         "kind": "vocabulary",
+         "front": "die Sehnsucht nach",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la nostalgie de, le désir ardent de"
+        },
+        {
+         "slug": "de-reich-an",
+         "kind": "vocabulary",
+         "front": "reich an",
+         "reading": null,
+         "romaji": null,
+         "meaning": "riche en"
+        },
+        {
+         "slug": "de-begeistert-von",
+         "kind": "vocabulary",
+         "front": "begeistert von",
+         "reading": null,
+         "romaji": null,
+         "meaning": "enthousiasmé par"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Nach einem Jahr im Venusberg ergriff Tannhäuser die Sehnsucht nach der Welt der Menschen.",
+         "reading": null,
+         "fr": "Après un an au mont de Vénus, Tannhäuser fut saisi par la nostalgie du monde des hommes."
+        },
+        {
+         "jp": "Er war auf die Gnade des Papstes angewiesen, hatte aber wenig Hoffnung auf Vergebung.",
+         "reading": null,
+         "fr": "Il dépendait de la grâce du pape, mais avait peu d’espoir d’être pardonné."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Viele Studierende sind ＿ finanzielle Hilfe angewiesen.",
+         "choices": [
+          "auf",
+          "von",
+          "an"
+         ],
+         "answer": "auf",
+         "explanation": "Angewiesen auf + accusatif.",
+         "translation": "Beaucoup d’étudiants dépendent d’une aide financière."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "In der Pflege herrscht ein großer Mangel ＿ Fachkräften.",
+         "choices": [
+          "an",
+          "von",
+          "für"
+         ],
+         "answer": "an",
+         "explanation": "Der Mangel an + datif.",
+         "translation": "Dans les soins, il y a une grande pénurie de personnel qualifié."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Jeder Arbeitnehmer hat Anspruch ＿ bezahlten Urlaub.",
+         "choices": [
+          "auf",
+          "an",
+          "für"
+         ],
+         "answer": "auf",
+         "explanation": "Der Anspruch auf + accusatif.",
+         "translation": "Chaque salarié a droit à des congés payés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wer ist hier ＿ die Anmeldung zuständig?",
+         "choices": [
+          "für",
+          "auf",
+          "zu"
+         ],
+         "answer": "für",
+         "explanation": "Zuständig für.",
+         "translation": "Qui est chargé des inscriptions ici ?"
+        }
+       ]
+      },
+      {
+       "slug": "de-praep-c1",
+       "title": "Les prépositions officielles : gemäß, zugunsten, anlässlich",
+       "objective": "Comprendre et employer les prépositions des textes administratifs.",
+       "minutes": 8,
+       "explanation": [
+        "Avec le datif : gemäß (conformément à), entsprechend (selon, en fonction de), zufolge (d’après, placé après le nom), entgegen (contrairement à), samt (avec, y compris). Gemäß Paragraf 5… Entgegen allen Erwartungen…",
+        "Avec le génitif : anlässlich (à l’occasion de), zugunsten (en faveur de), mangels (faute de), kraft (en vertu de), seitens (de la part de), einschließlich (y compris), abzüglich (déduction faite de), binnen (dans un délai de).",
+        "Ces prépositions appartiennent à la langue officielle. À l’oral, on dit plutôt : nach (gemäß), wegen (aufgrund), für (zugunsten), weil… fehlt (mangels), mit (samt)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-gemaess",
+         "kind": "grammar",
+         "front": "gemäß + Dativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "conformément à"
+        },
+        {
+         "slug": "gram-de-entgegen",
+         "kind": "grammar",
+         "front": "entgegen + Dativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "contrairement à"
+        },
+        {
+         "slug": "gram-de-anlaesslich",
+         "kind": "grammar",
+         "front": "anlässlich + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à l’occasion de"
+        },
+        {
+         "slug": "gram-de-zugunsten",
+         "kind": "grammar",
+         "front": "zugunsten + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en faveur de, au profit de"
+        },
+        {
+         "slug": "gram-de-mangels",
+         "kind": "grammar",
+         "front": "mangels + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faute de"
+        },
+        {
+         "slug": "gram-de-kraft",
+         "kind": "grammar",
+         "front": "kraft + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "grâce à, en vertu de"
+        },
+        {
+         "slug": "gram-de-seitens",
+         "kind": "grammar",
+         "front": "seitens + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de la part de"
+        },
+        {
+         "slug": "gram-de-einschliesslich",
+         "kind": "grammar",
+         "front": "einschließlich + Genitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "y compris"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Entgegen allen Erwartungen begann der trockene Stab des Papstes zu blühen.",
+         "reading": null,
+         "fr": "Contre toute attente, le bâton desséché du pape se mit à fleurir."
+        },
+        {
+         "jp": "Anlässlich des Sängerfestes kamen Dichter aus dem ganzen Land auf die Wartburg.",
+         "reading": null,
+         "fr": "À l’occasion du concours de chant, des poètes de tout le pays vinrent à la Wartburg."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ Beweisen wurde der Angeklagte freigesprochen.",
+         "choices": [
+          "Mangels",
+          "Anlässlich",
+          "Zugunsten"
+         ],
+         "answer": "Mangels",
+         "explanation": "Faute de : mangels.",
+         "translation": "Faute de preuves, l’accusé a été acquitté."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ des Jubiläums findet ein Konzert statt.",
+         "choices": [
+          "Anlässlich",
+          "Mangels",
+          "Entgegen"
+         ],
+         "answer": "Anlässlich",
+         "explanation": "À l’occasion de : anlässlich.",
+         "translation": "À l’occasion de l’anniversaire, un concert est organisé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Entgegen ＿ ist der Umsatz gestiegen.",
+         "choices": [
+          "der Prognose",
+          "die Prognose",
+          "des Prognose"
+         ],
+         "answer": "der Prognose",
+         "explanation": "Entgegen + datif.",
+         "translation": "Contrairement aux prévisions, le chiffre d’affaires a augmenté."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Spenden werden ＿ der Flutopfer gesammelt.",
+         "choices": [
+          "zugunsten",
+          "mangels",
+          "kraft"
+         ],
+         "answer": "zugunsten",
+         "explanation": "Au profit de : zugunsten.",
+         "translation": "Les dons sont collectés au profit des victimes des inondations."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w7-c2",
+     "title": "Le concours des chanteurs",
+     "lessons": [
+      {
+       "slug": "de-kultur",
+       "title": "L’art et la culture",
+       "objective": "Parler d’une œuvre, d’une mise en scène et de sa réception.",
+       "minutes": 8,
+       "explanation": [
+        "Les œuvres : das Werk (l’œuvre), das Gemälde (le tableau), die Ausstellung, die Aufführung (la représentation), die Inszenierung (la mise en scène), die Uraufführung (la première mondiale), das Bühnenbild (le décor), die Oper.",
+        "Créer et interpréter : entwerfen (concevoir), vertonen (mettre en musique), darstellen (représenter, interpréter), deuten (interpréter, expliquer), anspielen auf (faire allusion à), prägen (marquer).",
+        "Critiquer : gelungen (réussi), ergreifend (poignant), eindrucksvoll (impressionnant), langatmig (qui traîne en longueur), umstritten (controversé), die Kritik fiel begeistert / vernichtend aus (la critique fut enthousiaste / assassine)."
+       ],
+       "items": [
+        {
+         "slug": "de-werk",
+         "kind": "vocabulary",
+         "front": "das Werk",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’œuvre"
+        },
+        {
+         "slug": "de-auffuehrung",
+         "kind": "vocabulary",
+         "front": "die Aufführung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la représentation"
+        },
+        {
+         "slug": "de-inszenierung",
+         "kind": "vocabulary",
+         "front": "die Inszenierung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la mise en scène"
+        },
+        {
+         "slug": "de-darstellen",
+         "kind": "vocabulary",
+         "front": "darstellen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "représenter, interpréter"
+        },
+        {
+         "slug": "de-deuten",
+         "kind": "vocabulary",
+         "front": "deuten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "interpréter, expliquer"
+        },
+        {
+         "slug": "de-praegen",
+         "kind": "vocabulary",
+         "front": "prägen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "marquer, façonner"
+        },
+        {
+         "slug": "de-ergreifend",
+         "kind": "vocabulary",
+         "front": "ergreifend",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poignant, émouvant"
+        },
+        {
+         "slug": "de-umstritten",
+         "kind": "vocabulary",
+         "front": "umstritten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "controversé"
+        },
+        {
+         "slug": "de-langatmig",
+         "kind": "vocabulary",
+         "front": "langatmig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "qui traîne en longueur"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Wagners Oper hat das Bild des Tannhäuser bis heute geprägt.",
+         "reading": null,
+         "fr": "L’opéra de Wagner a marqué jusqu’à aujourd’hui l’image de Tannhäuser."
+        },
+        {
+         "jp": "Die neue Inszenierung ist umstritten: Die einen finden sie ergreifend, die anderen langatmig.",
+         "reading": null,
+         "fr": "La nouvelle mise en scène est controversée : les uns la trouvent poignante, les autres trop longue."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Die ＿ des Stücks dauerte vier Stunden, aber niemand ging früher.",
+         "choices": [
+          "Aufführung",
+          "Ausstellung",
+          "Schlagzeile"
+         ],
+         "answer": "Aufführung",
+         "explanation": "La représentation : die Aufführung.",
+         "translation": "La représentation de la pièce a duré quatre heures, mais personne n’est parti avant la fin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Titel spielt ＿ ein berühmtes Gedicht an.",
+         "choices": [
+          "auf",
+          "an",
+          "zu"
+         ],
+         "answer": "auf",
+         "explanation": "Anspielen auf + accusatif.",
+         "translation": "Le titre fait allusion à un poème célèbre."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Kritik fiel vernichtend aus.",
+         "translation": "Les critiques ont adoré le spectacle.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Vernichtend = assassine, très négative."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Bekannte",
+           "jp": "Wie hat Ihnen die Ausstellung gefallen?"
+          }
+         ],
+         "translation": "Une connaissance te demande ton avis sur une exposition (tu l’as trouvée impressionnante, mais un peu longue).",
+         "choices": [
+          "Eindrucksvoll, wenngleich stellenweise etwas langatmig.",
+          "Eindrucksvoll, wenngleich stellenweise etwas umstritten an.",
+          "Ergreifend auf, geschweige denn langatmig."
+         ],
+         "answer": "Eindrucksvoll, wenngleich stellenweise etwas langatmig.",
+         "explanation": "Wenngleich + adjectif : concession."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-w8",
+   "title": "La rive du Chevalier au cygne",
+   "region": "Danube des Nibelungen",
+   "description": "Assurer la cohésion d’un texte par les mots de reprise, rédiger un résumé et commenter un graphique, parler d’études et de recherche.",
+   "boss": {
+    "name": "Le Chevalier au cygne",
+    "glyph": "⚜",
+    "intro": "Une nacelle tirée par un cygne accoste au bord du fleuve : le Chevalier au cygne défend la duchesse, à condition qu’on ne lui demande jamais son nom. Renvoie à ce qui a été dit sans le répéter, résume sans trahir, et il restera."
+   },
+   "chapters": [
+    {
+     "slug": "goethec1-w8-c1",
+     "title": "Sans jamais répéter",
+     "lessons": [
+      {
+       "slug": "de-textkohaesion",
+       "title": "Les mots de reprise : dieser, letzterer, hierbei",
+       "objective": "Relier les phrases d’un texte sans répéter les noms.",
+       "minutes": 9,
+       "explanation": [
+        "Reprendre un nom : dieser / jener (celui-ci / celui-là), ersterer… letzterer (le premier… le second), derselbe (le même), solch ein (un tel), der Genannte. Der Ritter und der Herzog stritten; letzterer verlor.",
+        "Reprendre une phrase entière : das / dies (cela), was (ce qui) : Er verschwieg seinen Namen, was alle wunderte. Adverbes pronominaux : dabei / hierbei (ce faisant), dadurch, daraus, demzufolge (par conséquent), diesbezüglich (à ce sujet).",
+        "Structurer : zunächst (tout d’abord), ferner / darüber hinaus (en outre), schließlich (enfin), im Folgenden (ci-après), wie bereits erwähnt (comme déjà mentionné), im Hinblick auf (en vue de, eu égard à), was… betrifft (en ce qui concerne)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-letzterer",
+         "kind": "grammar",
+         "front": "ersterer … letzterer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le premier… le second"
+        },
+        {
+         "slug": "gram-de-was-satzbezug",
+         "kind": "grammar",
+         "front": "…, was alle wunderte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce qui (reprise de toute la phrase)"
+        },
+        {
+         "slug": "gram-de-hierbei",
+         "kind": "grammar",
+         "front": "hierbei / dabei",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce faisant, à cette occasion"
+        },
+        {
+         "slug": "gram-de-demzufolge",
+         "kind": "grammar",
+         "front": "demzufolge",
+         "reading": null,
+         "romaji": null,
+         "meaning": "par conséquent, en conséquence"
+        },
+        {
+         "slug": "gram-de-diesbezueglich",
+         "kind": "grammar",
+         "front": "diesbezüglich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à ce sujet, à cet égard"
+        },
+        {
+         "slug": "gram-de-darueber-hinaus",
+         "kind": "grammar",
+         "front": "darüber hinaus / ferner",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en outre, de plus"
+        },
+        {
+         "slug": "gram-de-im-hinblick-auf",
+         "kind": "grammar",
+         "front": "im Hinblick auf + Akkusativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "eu égard à, en vue de"
+        },
+        {
+         "slug": "gram-de-wie-erwaehnt",
+         "kind": "grammar",
+         "front": "wie bereits erwähnt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "comme déjà mentionné"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Ritter stellte eine einzige Bedingung, was der Herzogin zunächst leicht erschien.",
+         "reading": null,
+         "fr": "Le chevalier posa une seule condition, ce qui parut d’abord facile à la duchesse."
+        },
+        {
+         "jp": "Sie fragte dennoch nach seinem Namen; demzufolge musste er sie für immer verlassen.",
+         "reading": null,
+         "fr": "Elle lui demanda pourtant son nom ; par conséquent, il dut la quitter pour toujours."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er kam eine Stunde zu spät, ＿ die Chefin sehr ärgerte.",
+         "choices": [
+          "was",
+          "das",
+          "welche"
+         ],
+         "answer": "was",
+         "explanation": "Reprise de toute la phrase : was.",
+         "translation": "Il est arrivé avec une heure de retard, ce qui a beaucoup agacé la directrice."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir bieten Kurse und Workshops an; ＿ finden am Wochenende statt.",
+         "choices": [
+          "letztere",
+          "erstere",
+          "dieselbe"
+         ],
+         "answer": "letztere",
+         "explanation": "Le dernier nommé : letztere.",
+         "translation": "Nous proposons des cours et des ateliers ; ces derniers ont lieu le week-end."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Kosten sind gestiegen. ＿ müssen die Preise erhöht werden.",
+         "choices": [
+          "Demzufolge",
+          "Diesbezüglich",
+          "Hierbei"
+         ],
+         "answer": "Demzufolge",
+         "explanation": "Conséquence : demzufolge.",
+         "translation": "Les coûts ont augmenté. Par conséquent, les prix doivent être relevés."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Zu Ihrer Anfrage: ＿ kann ich Ihnen leider noch nichts mitteilen.",
+         "choices": [
+          "Diesbezüglich",
+          "Demzufolge",
+          "Ferner"
+         ],
+         "answer": "Diesbezüglich",
+         "explanation": "À ce sujet : diesbezüglich.",
+         "translation": "Concernant votre demande : je ne peux malheureusement encore rien vous dire à ce sujet."
+        }
+       ]
+      },
+      {
+       "slug": "de-wissenschaftlich",
+       "title": "Résumer et commenter un graphique",
+       "objective": "Rédiger un résumé objectif et décrire des données chiffrées.",
+       "minutes": 9,
+       "explanation": [
+        "Résumer : Der Text handelt von… / befasst sich mit… (traite de). Der Autor vertritt die These, dass… Er führt als Beleg an, dass… (il cite comme preuve). Abschließend kommt er zu dem Schluss, dass…",
+        "Décrire un graphique : Die Grafik stellt dar, wie… Aus dem Schaubild geht hervor, dass… (il ressort du graphique que). Der Anteil beträgt… (s’élève à). Die Zahl hat sich verdoppelt / halbiert. An erster Stelle steht…",
+        "Comparer et nuancer : im Vergleich zu, im Gegensatz zu, verglichen mit ; rund / knapp / gut (environ / un peu moins de / un peu plus de) ; auffällig ist, dass… (il est frappant que) ; dies lässt sich darauf zurückführen, dass… (cela s’explique par)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-sich-befassen",
+         "kind": "grammar",
+         "front": "Der Text befasst sich mit …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Le texte traite de…"
+        },
+        {
+         "slug": "gram-de-these-vertreten",
+         "kind": "grammar",
+         "front": "die These vertreten, dass …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "soutenir la thèse que…"
+        },
+        {
+         "slug": "gram-de-geht-hervor",
+         "kind": "grammar",
+         "front": "Aus der Grafik geht hervor, dass …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Il ressort du graphique que…"
+        },
+        {
+         "slug": "gram-de-zurueckfuehren",
+         "kind": "grammar",
+         "front": "Das lässt sich auf … zurückführen.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Cela s’explique par…"
+        },
+        {
+         "slug": "de-beleg",
+         "kind": "vocabulary",
+         "front": "der Beleg",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la preuve, la référence"
+        },
+        {
+         "slug": "de-betragen",
+         "kind": "vocabulary",
+         "front": "betragen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’élever à"
+        },
+        {
+         "slug": "de-schaubild",
+         "kind": "vocabulary",
+         "front": "das Schaubild",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le graphique, le schéma"
+        },
+        {
+         "slug": "de-knapp",
+         "kind": "vocabulary",
+         "front": "knapp",
+         "reading": null,
+         "romaji": null,
+         "meaning": "un peu moins de, à peine"
+        },
+        {
+         "slug": "de-auffaellig",
+         "kind": "vocabulary",
+         "front": "auffällig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "frappant, remarquable"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Aus dem Schaubild geht hervor, dass knapp die Hälfte der Befragten täglich liest.",
+         "reading": null,
+         "fr": "Il ressort du graphique qu’un peu moins de la moitié des personnes interrogées lit chaque jour."
+        },
+        {
+         "jp": "Der Autor vertritt die These, dass sich dieser Rückgang auf die sozialen Medien zurückführen lässt.",
+         "reading": null,
+         "fr": "L’auteur soutient la thèse que ce recul s’explique par les réseaux sociaux."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Artikel befasst sich ＿ den Folgen der Digitalisierung.",
+         "choices": [
+          "mit",
+          "über",
+          "von"
+         ],
+         "answer": "mit",
+         "explanation": "Sich befassen mit.",
+         "translation": "L’article traite des conséquences de la numérisation."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Anteil der Frauen ＿ 42 Prozent.",
+         "choices": [
+          "beträgt",
+          "steht",
+          "handelt"
+         ],
+         "answer": "beträgt",
+         "explanation": "S’élever à : betragen.",
+         "translation": "La part des femmes s’élève à 42 pour cent."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Dieser Anstieg lässt sich ＿ die höheren Energiepreise zurückführen.",
+         "choices": [
+          "auf",
+          "an",
+          "zu"
+         ],
+         "answer": "auf",
+         "explanation": "Zurückführen auf + accusatif.",
+         "translation": "Cette hausse s’explique par l’augmentation des prix de l’énergie."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Knapp 30 Prozent der Befragten stimmten zu.",
+         "translation": "Un peu plus de 30 % des personnes interrogées étaient d’accord.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Knapp = un peu moins de."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethec1-w8-c2",
+     "title": "La question interdite",
+     "lessons": [
+      {
+       "slug": "de-hochschule",
+       "title": "Les études et la vie universitaire",
+       "objective": "Parler de son cursus, d’un séminaire et d’un travail de recherche.",
+       "minutes": 8,
+       "explanation": [
+        "Le cursus : das Studienfach (la discipline), der Studiengang (le cursus), das Semester, die Vorlesung (le cours magistral), das Seminar, der Abschluss (le diplôme), sich einschreiben (s’inscrire), das Stipendium (la bourse).",
+        "Les travaux : das Referat (l’exposé), die Hausarbeit (le dossier, le mémoire court), die Abschlussarbeit (le mémoire de fin d’études), die Doktorarbeit (la thèse), der Betreuer (le directeur de recherche), die Fragestellung (la problématique), die Gliederung (le plan).",
+        "Travailler : sich auseinandersetzen mit (étudier de près), zitieren, belegen (étayer), eine Arbeit einreichen (remettre un travail), eine Frist verlängern (prolonger un délai), sich spezialisieren auf."
+       ],
+       "items": [
+        {
+         "slug": "de-studiengang",
+         "kind": "vocabulary",
+         "front": "der Studiengang",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cursus, la filière"
+        },
+        {
+         "slug": "de-vorlesung",
+         "kind": "vocabulary",
+         "front": "die Vorlesung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cours magistral"
+        },
+        {
+         "slug": "de-referat",
+         "kind": "vocabulary",
+         "front": "das Referat",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’exposé"
+        },
+        {
+         "slug": "de-hausarbeit",
+         "kind": "vocabulary",
+         "front": "die Hausarbeit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le dossier, le mémoire court"
+        },
+        {
+         "slug": "de-fragestellung",
+         "kind": "vocabulary",
+         "front": "die Fragestellung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la problématique"
+        },
+        {
+         "slug": "de-gliederung",
+         "kind": "vocabulary",
+         "front": "die Gliederung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le plan (d’un texte)"
+        },
+        {
+         "slug": "de-einreichen",
+         "kind": "vocabulary",
+         "front": "einreichen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remettre, déposer"
+        },
+        {
+         "slug": "de-sich-auseinandersetzen",
+         "kind": "vocabulary",
+         "front": "sich auseinandersetzen mit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "étudier de près, se confronter à"
+        },
+        {
+         "slug": "de-stipendium",
+         "kind": "vocabulary",
+         "front": "das Stipendium",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la bourse d’études"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "In ihrer Hausarbeit setzt sie sich mit der Frage auseinander, warum Lohengrin seinen Namen verschweigt.",
+         "reading": null,
+         "fr": "Dans son dossier, elle étudie de près la question de savoir pourquoi Lohengrin tait son nom."
+        },
+        {
+         "jp": "Die Arbeit ist bis Ende des Semesters beim Betreuer einzureichen.",
+         "reading": null,
+         "fr": "Le travail est à remettre au directeur de recherche avant la fin du semestre."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Bevor du schreibst, brauchst du eine klare ＿ mit Einleitung, Hauptteil und Schluss.",
+         "choices": [
+          "Gliederung",
+          "Vorlesung",
+          "Frist"
+         ],
+         "answer": "Gliederung",
+         "explanation": "Le plan : die Gliederung.",
+         "translation": "Avant d’écrire, il te faut un plan clair avec introduction, développement et conclusion."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Im Seminar setzen wir uns ＿ aktuellen Theorien auseinander.",
+         "choices": [
+          "mit",
+          "über",
+          "an"
+         ],
+         "answer": "mit",
+         "explanation": "Sich auseinandersetzen mit.",
+         "translation": "En séminaire, nous étudions de près les théories actuelles."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Professorin hat die Frist um zwei Wochen verlängert.",
+         "translation": "Il faut rendre le travail deux semaines plus tôt.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Die Frist verlängern = prolonger le délai."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Betreuerin",
+           "jp": "Worum geht es in Ihrer Abschlussarbeit?"
+          }
+         ],
+         "translation": "Ta directrice de mémoire te demande ton sujet (les effets du télétravail sur la santé).",
+         "choices": [
+          "Sie befasst sich mit den Auswirkungen des Homeoffice auf die Gesundheit.",
+          "Sie befasst sich über die Auswirkungen des Homeoffice an die Gesundheit.",
+          "Sie handelt mit den Auswirkungen von Homeoffice zu Gesundheit."
+         ],
+         "answer": "Sie befasst sich mit den Auswirkungen des Homeoffice auf die Gesundheit.",
+         "explanation": "Sich befassen mit ; Auswirkungen auf."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethec1-final",
+   "title": "Simulation Goethe C1 : la porte des savants",
+   "region": "Danube des Nibelungen",
+   "description": "Examen blanc au format du Goethe-Zertifikat C1, en allemand : Lesen, Hören et Schreiben (l’oral, Sprechen, n’est pas évalué). Chaque module est noté sur 100 et se valide séparément à partir de 60 points.",
+   "exam": "goethec1-official",
+   "chapters": []
+  }
+ ]
+}

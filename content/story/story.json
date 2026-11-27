@@ -4896,6 +4896,159 @@
      }
     }
    }
+  },
+  "GOETHEC1": {
+   "glyph": "ü",
+   "jp": "Donau",
+   "color": "#5A3A4A",
+   "saga": {
+    "fr": "Le Danube des Nibelungen",
+    "en": "The Danube of the Nibelungs"
+   },
+   "hero": {
+    "fr": "Apprenti·e des frères Grimm",
+    "en": "The Brothers Grimm’s apprentice"
+   },
+   "short": {
+    "fr": "L’apprenti·e",
+    "en": "The apprentice"
+   },
+   "prologue": {
+    "fr": "La clé du bibliothécaire de Weimar ouvre une porte basse, au fond de la salle des manuscrits : la porte des savants. Derrière, un seul livre, immense, enchaîné à son pupitre : la Chanson des Nibelungen. « Trente-neuf aventures, dit Jacob en soufflant la poussière. Des héros qui ne parlent qu’en phrases longues, des reines qui pèsent chaque titre. » Wilhelm déplie une carte du Danube, de Worms à Vienne et jusqu’à Prague. « Tes classes sont finies. Voici ton tour de compagnon : on te jugera sur ta langue, pas sur ton courage. »",
+    "en": "The Weimar librarian’s key opens a low door at the back of the manuscript room: the scholars’ gate. Behind it lies a single huge book, chained to its desk: the Song of the Nibelungs. “Thirty-nine adventures,” says Jacob, blowing off the dust. “Heroes who speak only in long sentences, queens who weigh every title.” Wilhelm unfolds a map of the Danube, from Worms to Vienna and on to Prague. “Your schooling is over. This is your journeyman’s tour: you will be judged on your language, not your courage.”"
+   },
+   "epilogue": {
+    "fr": "À Vienne, les savants referment le grand livre : pas une tournure ne t’a résisté, du style des chroniques aux petits mots de la taverne. Jacob te serre la main comme à un égal. « Il ne reste qu’une porte, celle des maîtres. Derrière elle, on ne t’apprendra plus de règles : on te demandera de jouer avec. » Wilhelm désigne le nord : « Berlin t’attend. »",
+    "en": "In Vienna, the scholars close the great book: not one turn of phrase defeated you, from the style of the chronicles to the little words of the tavern. Jacob shakes your hand as an equal. “Only one door remains, the masters’. Behind it nobody will teach you rules any more: you will be asked to play with them.” Wilhelm points north: “Berlin awaits.”"
+   },
+   "chapters": {
+    "goethec1-w1": {
+     "title": {
+      "fr": "La lande du Dragon",
+      "en": "The Dragon’s heath"
+     },
+     "intro": {
+      "fr": "Sur la lande, le Dragon Fafnir garde l’or du Rhin et n’écoute que la langue dense des chroniques. Condense tes subordonnées en groupes nominaux et emploie les verbes supports.",
+      "en": "On the heath, the Dragon Fafnir guards the Rhine gold and listens only to the dense language of the chronicles. Condense your clauses into noun phrases and use support verbs."
+     },
+     "outro": {
+      "fr": "Fafnir replie ses ailes sur le trésor et te laisse passer : « Voilà quelqu’un qui parle comme on écrit l’histoire. »",
+      "en": "Fafnir folds his wings over the hoard and lets you pass: “Here is someone who speaks the way history is written.”"
+     }
+    },
+    "goethec1-w2": {
+     "title": {
+      "fr": "La cour de Worms",
+      "en": "The court of Worms"
+     },
+     "intro": {
+      "fr": "Devant la cathédrale, la Reine Kriemhild et sa rivale se disputent le pas. Glisse devant chaque nom tout ce qui le qualifie, et dis ce qui reste à faire avec zu et le participe.",
+      "en": "In front of the cathedral, Queen Kriemhild and her rival argue over precedence. Slip everything that qualifies a noun in front of it, and say what remains to be done with zu and the participle."
+     },
+     "outro": {
+      "fr": "Kriemhild incline la tête : aucun titre n’a été écorché. Les portes de la cathédrale s’ouvrent pour toi.",
+      "en": "Kriemhild inclines her head: not one title was mangled. The cathedral doors open for you."
+     }
+    },
+    "goethec1-w3": {
+     "title": {
+      "fr": "La forêt d’Odenwald",
+      "en": "The Odenwald forest"
+     },
+     "intro": {
+      "fr": "À la source, Hagen prépare sa version des faits. Rapporte ses paroles, ses questions et ses ordres au discours indirect, avec le verbe introducteur juste.",
+      "en": "At the spring, Hagen prepares his version of events. Report his words, questions and orders in indirect speech, with the right reporting verb."
+     },
+     "outro": {
+      "fr": "Pris dans ses propres phrases, Hagen se tait. La chronique note enfin ce qui s’est passé à la source.",
+      "en": "Caught in his own sentences, Hagen falls silent. The chronicle at last records what happened at the spring."
+     }
+    },
+    "goethec1-w4": {
+     "title": {
+      "fr": "Le puits du Basilic",
+      "en": "The Basilisk’s well"
+     },
+     "intro": {
+      "fr": "À Vienne, le Basilic empoisonne un puits de la vieille ville. Relie tes arguments avec les connecteurs soutenus, concède ce qu’il faut, et tends-lui le miroir.",
+      "en": "In Vienna, the Basilisk is poisoning a well in the old town. Link your arguments with formal connectors, concede what you must, and hold up the mirror."
+     },
+     "outro": {
+      "fr": "Le Basilic voit son reflet et se change en pierre. L’eau du puits redevient claire.",
+      "en": "The Basilisk sees its reflection and turns to stone. The well water runs clear again."
+     }
+    },
+    "goethec1-w5": {
+     "title": {
+      "fr": "La taverne du Cher Augustin",
+      "en": "Dear Augustin’s tavern"
+     },
+     "intro": {
+      "fr": "Dans sa taverne, le Cher Augustin chante malgré la peste et parle tout en petits mots : doch, ja, halt. Réponds-lui sur le même ton, expressions imagées comprises.",
+      "en": "In his tavern, Dear Augustin sings despite the plague and speaks all in little words: doch, ja, halt. Answer him in the same tone, idioms included."
+     },
+     "outro": {
+      "fr": "Augustin éclate de rire et t’offre un verre : « Du redest ja wie ein Wiener! » La ville reprend courage.",
+      "en": "Augustin bursts out laughing and buys you a drink: “Du redest ja wie ein Wiener!” The city takes heart again."
+     }
+    },
+    "goethec1-w6": {
+     "title": {
+      "fr": "Le grenier du Golem",
+      "en": "The Golem’s attic"
+     },
+     "intro": {
+      "fr": "À Prague, le Golem d’argile attend sous les toits. Dis ce qui aurait dû être fait, démonte les mots par leurs préfixes et pèse ce que la science peut se permettre.",
+      "en": "In Prague, the clay Golem waits under the roof. Say what should have been done, take words apart by their prefixes and weigh what science may allow itself."
+     },
+     "outro": {
+      "fr": "Tu effaces la première lettre : le Golem redevient argile, sans colère. Le rabbin referme la porte du grenier.",
+      "en": "You rub out the first letter: the Golem turns back to clay, without anger. The rabbi closes the attic door."
+     }
+    },
+    "goethec1-w7": {
+     "title": {
+      "fr": "Le mont de Vénus",
+      "en": "The Venusberg"
+     },
+     "intro": {
+      "fr": "Dans la montagne, Dame Vénus retient le chevalier-poète Tannhäuser. Donne à chaque nom sa préposition et parle de l’art comme un critique.",
+      "en": "Inside the mountain, Lady Venus holds the knight-poet Tannhäuser. Give every noun its preposition and talk about art like a critic."
+     },
+     "outro": {
+      "fr": "La montagne s’ouvre. Dehors, un bâton sec s’est couvert de feuilles, et Tannhäuser reprend la route.",
+      "en": "The mountain opens. Outside, a dry staff has burst into leaf, and Tannhäuser takes to the road again."
+     }
+    },
+    "goethec1-w8": {
+     "title": {
+      "fr": "La rive du Chevalier au cygne",
+      "en": "The Swan Knight’s shore"
+     },
+     "intro": {
+      "fr": "Sur la rive, le Chevalier au cygne ne dira jamais son nom. Renvoie à ce qui a été dit sans le répéter, résume, commente des chiffres, comme à l’université.",
+      "en": "On the shore, the Swan Knight will never say his name. Refer to what has been said without repeating it, summarise, comment on figures, as at university."
+     },
+     "outro": {
+      "fr": "Personne n’a posé la question interdite. Le Chevalier sourit, et le cygne attend encore un peu.",
+      "en": "Nobody asked the forbidden question. The Knight smiles, and the swan waits a little longer."
+     }
+    },
+    "goethec1-final": {
+     "title": {
+      "fr": "La porte des savants",
+      "en": "The scholars’ gate"
+     },
+     "intro": {
+      "fr": "À l’université de Vienne, les savants font passer l’épreuve : lis, écoute et écris comme au Goethe-Zertifikat C1. Chaque module se valide à 60 points.",
+      "en": "At the University of Vienna, the scholars set the test: read, listen and write as in the Goethe-Zertifikat C1. Each module is passed at 60 points."
+     },
+     "outro": {
+      "fr": "Le grand livre se referme. Niveau Goethe C1 validé : tu étudies, tu débats et tu écris en allemand comme un savant !",
+      "en": "The great book closes. Goethe C1 level complete: you study, debate and write in German like a scholar!"
+     }
+    }
+   }
   }
  }
 }

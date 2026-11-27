@@ -150,9 +150,9 @@ export function StatsPage() {
   const { data: topik4 } = usePath(zh ? 'HSK4' : words.es ? 'DELEB2' : words.de ? 'GOETHEB2' : 'TOPIK4');
   const third = ko || zh || words.es || words.de ? topik3 : undefined;
   const fourth = ko || zh || words.es || words.de ? topik4 : undefined;
-  const { data: topik5 } = usePath(zh ? 'HSK5' : words.es ? 'DELEC1' : 'TOPIK5');
+  const { data: topik5 } = usePath(zh ? 'HSK5' : words.es ? 'DELEC1' : words.de ? 'GOETHEC1' : 'TOPIK5');
   const { data: topik6 } = usePath(zh ? 'HSK6' : words.es ? 'DELEC2' : 'TOPIK6');
-  const fifth = ko || zh || words.es ? topik5 : undefined;
+  const fifth = ko || zh || words.es || words.de ? topik5 : undefined;
   const sixth = ko || zh || words.es ? topik6 : undefined;
   if (isLoading) return <Spinner />;
   if (error || !s) return <ErrorBox error={error} onRetry={refetch} />;

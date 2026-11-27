@@ -699,6 +699,69 @@ const SPECIES: Record<string, Species> = {
     face: <><path d="M72 74 L92 82 M128 74 L108 82" stroke="#1F1A1A" strokeWidth="4" strokeLinecap="round" /><path d="M84 112 Q100 122 118 108" stroke="#5A1F1A" strokeWidth="3" fill="none" strokeLinecap="round" /></>,
     front: <g><g transform="translate(160 150) rotate(-18)"><rect x="-10" y="-22" width="20" height="44" rx="4" fill="#F4EDDC" stroke="#8A7A5A" strokeWidth="1.5" /><path d="M-5 -12 H5 M-5 -4 H5 M-5 4 H3" stroke="#8A7A5A" strokeWidth="1.5" /><circle cx="4" cy="14" r="4" fill="#C8323F" /></g><path d="M34 186 Q44 150 62 126" stroke="#F4EDDC" strokeWidth="3" fill="none" strokeLinecap="round" /></g>,
   },
+  // ───── Gardiens allemands (Goethe C1 — le Danube des Nibelungen) ─────
+  // Le Dragon Fafnir : écailles vertes, crête, ailes, pièces d'or sous les griffes
+  '☄': {
+    body: '#3E7A4A', belly: '#D8C878', head: '#4E8A5A', eye: '#F2D94E',
+    back: <><path d="M52 120 Q4 80 8 40 Q34 70 62 96Z" fill="#2E5A3A" /><path d="M148 120 Q196 80 192 40 Q166 70 138 96Z" fill="#2E5A3A" /></>,
+    top: <path d="M70 52 L78 26 L90 46 L100 18 L110 46 L122 26 L130 52Z" fill="#C8582A" />,
+    face: <><path d="M90 104 q-2 -4 2 -5 M110 104 q2 -4 -2 -5" stroke="#1F3A24" strokeWidth="2.5" fill="none" strokeLinecap="round" /><path d="M80 116 Q100 128 120 116" stroke="#1F3A24" strokeWidth="3" fill="none" /><path d="M88 119 l3 6 l3 -5 M106 120 l3 5 l3 -6" fill="#FFFFFF" stroke="#FFFFFF" strokeWidth="1" /></>,
+    front: <g fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5"><circle cx="40" cy="188" r="8" /><circle cx="56" cy="192" r="8" /><circle cx="150" cy="190" r="8" /><circle cx="164" cy="186" r="8" /></g>,
+  },
+  // La Reine Kriemhild : haute couronne, longues tresses blondes, voile
+  '♛': {
+    body: '#6A2A5A', belly: '#C89AB8', head: '#F0D8C8', eye: '#3A4A7A',
+    back: <><path d="M58 80 Q40 140 52 190" stroke="#E2B84A" strokeWidth="14" fill="none" strokeLinecap="round" /><path d="M142 80 Q160 140 148 190" stroke="#E2B84A" strokeWidth="14" fill="none" strokeLinecap="round" /></>,
+    top: <><path d="M56 82 Q56 40 100 36 Q144 40 144 82 Q126 58 100 56 Q74 58 56 82Z" fill="#E2B84A" /><path d="M66 48 L62 14 L80 32 L100 6 L120 32 L138 14 L134 48Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /><circle cx="100" cy="26" r="5" fill="#3A6AA8" /><circle cx="76" cy="36" r="3.4" fill="#C8323F" /><circle cx="124" cy="36" r="3.4" fill="#C8323F" /></>,
+    face: <path d="M90 116 Q100 112 110 116" stroke="#8E1B26" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    under: <path d="M76 128 Q100 138 124 128" stroke="#E2B84A" strokeWidth="4" fill="none" />,
+  },
+  // Hagen de Tronje : casque sombre, bandeau sur un œil, lance
+  '⚔': {
+    body: '#2A2E3A', belly: '#5A6272', head: '#D8C0A8', eye: '#1F1A1A',
+    top: <><path d="M54 78 Q54 30 100 26 Q146 30 146 78 Q124 60 100 60 Q76 60 54 78Z" fill="#3A3E4A" stroke="#1F2228" strokeWidth="2" /><path d="M100 26 V8" stroke="#1F2228" strokeWidth="5" strokeLinecap="round" /><path d="M96 60 H104 V86 H96Z" fill="#3A3E4A" /></>,
+    face: <><path d="M56 78 L124 96" stroke="#1F1A1A" strokeWidth="3" /><ellipse cx="118" cy="90" rx="11" ry="9" fill="#1F1A1A" /><path d="M84 116 H112" stroke="#5A3A2A" strokeWidth="3" strokeLinecap="round" /></>,
+    front: <g><path d="M168 200 L160 60" stroke="#6A4A2A" strokeWidth="5" strokeLinecap="round" /><path d="M160 60 L152 80 L168 80Z" fill="#B8C0CC" stroke="#6A7280" strokeWidth="1.5" transform="rotate(-3 160 70) translate(0 -22)" /></g>,
+  },
+  // Le Basilic de Vienne : corps de coq, queue de serpent, crête rouge
+  '☤': {
+    body: '#6A8A3A', belly: '#D8D078', head: '#8AA84A', eye: '#C8323F',
+    back: <path d="M150 150 Q196 150 186 110 Q178 84 158 96 Q176 106 170 122 Q164 134 146 130Z" fill="#4A6A2A" />,
+    top: <path d="M78 54 Q74 30 86 34 Q88 20 100 28 Q112 20 114 34 Q126 30 122 54Z" fill="#C8323F" />,
+    face: <><path d="M90 102 L100 118 L110 102Z" fill="#E2A03A" stroke="#9A6A1A" strokeWidth="1.5" /><path d="M94 120 Q100 132 106 120Z" fill="#C8323F" /></>,
+    front: <g transform="translate(40 150) rotate(-14)"><ellipse rx="15" ry="20" fill="#C9D4E4" stroke="#7A4A2A" strokeWidth="3" /><path d="M0 20 V40" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><path d="M-6 -8 L4 -14" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" /></g>,
+  },
+  // Le Cher Augustin : chapeau à plume, joues rouges, cornemuse
+  '♨': {
+    body: '#7A5A2A', belly: '#D8B878', head: '#F0C8A8', eye: '#3A2A1A',
+    top: <><ellipse cx="100" cy="58" rx="52" ry="9" fill="#3A4A2A" /><path d="M70 58 Q72 28 100 26 Q128 28 130 58Z" fill="#3A4A2A" /><path d="M126 38 Q146 8 158 14 Q146 24 136 50Z" fill="#C8323F" /></>,
+    face: <><circle cx="76" cy="106" r="8" fill="#E88A7A" opacity="0.8" /><circle cx="124" cy="106" r="8" fill="#E88A7A" opacity="0.8" /><path d="M82 112 Q100 130 118 112 Q100 122 82 112Z" fill="#8E3A2A" /></>,
+    front: <g transform="translate(156 150)"><ellipse rx="20" ry="16" fill="#C8323F" stroke="#7A1F26" strokeWidth="2" /><path d="M-8 -14 L-14 -44 M2 -16 L2 -50 M12 -12 L22 -42" stroke="#5A3A24" strokeWidth="4" strokeLinecap="round" /><path d="M-20 4 L-34 14" stroke="#5A3A24" strokeWidth="4" strokeLinecap="round" /></g>,
+  },
+  // Le Golem : argile craquelée, lettres sur le front, yeux sans pupille
+  '⚒': {
+    body: '#A8785A', belly: '#C89A78', head: '#B8866A', eye: '#F4EDDC',
+    top: <path d="M58 60 H142 V72 H58Z" fill="#8A5E44" />,
+    face: <><rect x="80" y="62" width="40" height="14" rx="2" fill="#F4EDDC" stroke="#5A3A24" strokeWidth="1.5" /><path d="M86 66 v6 M92 66 h5 v6 M103 66 l3 6 l3 -6 M113 66 v6" stroke="#5A3A24" strokeWidth="1.6" fill="none" /><path d="M84 118 H116" stroke="#5A3A24" strokeWidth="4" strokeLinecap="round" /></>,
+    under: <path d="M70 140 l8 10 l-6 12 M126 132 l-8 12 l8 14 M96 150 l6 10" stroke="#7A5038" strokeWidth="2.5" fill="none" strokeLinecap="round" />,
+    front: <path d="M52 92 l6 8 l-4 8 M146 100 l-6 6 l5 8" stroke="#7A5038" strokeWidth="2.5" fill="none" strokeLinecap="round" />,
+  },
+  // Dame Vénus : chevelure rousse, couronne de roses, miroir à main
+  '❀': {
+    body: '#C8507A', belly: '#F4C8D8', head: '#F8E0D4', eye: '#3A6A5A',
+    back: <path d="M48 80 Q26 140 44 196 L156 196 Q174 140 152 80 Q100 22 48 80Z" fill="#C8582A" />,
+    top: <><path d="M54 84 Q54 36 100 32 Q146 36 146 84 Q128 58 100 56 Q72 58 54 84Z" fill="#C8582A" />{[68, 84, 100, 116, 132].map((x) => <g key={x}><circle cx={x} cy={44 - Math.abs(x - 100) / 8} r="6" fill="#E84A6A" /><circle cx={x} cy={44 - Math.abs(x - 100) / 8} r="2.4" fill="#F4A8B8" /></g>)}</>,
+    face: <path d="M90 114 Q100 122 110 114" stroke="#A8283F" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(160 150) rotate(16)"><circle r="13" fill="#C9E4EC" stroke="#E2B84A" strokeWidth="3" /><path d="M0 13 V34" stroke="#E2B84A" strokeWidth="5" strokeLinecap="round" /></g>,
+  },
+  // Le Chevalier au cygne : heaume argenté à ailes de cygne, bouclier au cygne
+  '⚜': {
+    body: '#8A98B0', belly: '#DCE4F0', head: '#E8D0BC', eye: '#2A3A5A',
+    back: <><path d="M58 60 Q24 30 14 52 Q34 52 52 80Z" fill="#FFFFFF" stroke="#C9D4E4" strokeWidth="1.5" /><path d="M142 60 Q176 30 186 52 Q166 52 148 80Z" fill="#FFFFFF" stroke="#C9D4E4" strokeWidth="1.5" /></>,
+    top: <path d="M56 80 Q56 30 100 26 Q144 30 144 80 Q124 60 100 60 Q76 60 56 80Z" fill="#B8C4D8" stroke="#7A869A" strokeWidth="2" />,
+    face: <path d="M92 114 Q100 118 108 114" stroke="#7A4A3A" strokeWidth="2.5" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(156 152)"><path d="M-18 -20 H18 V4 Q18 22 0 30 Q-18 22 -18 4Z" fill="#3A5A9A" stroke="#E2B84A" strokeWidth="2.5" /><ellipse cx="2" cy="6" rx="8" ry="5" fill="#FFFFFF" /><path d="M-4 4 Q-10 -8 -3 -10" stroke="#FFFFFF" strokeWidth="3.4" fill="none" strokeLinecap="round" /><path d="M-3 -10 l5 1 l-4.4 2Z" fill="#E2703A" /></g>,
+  },
   // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
   // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
   ñ: {
@@ -1848,7 +1911,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢', '♤', '♡', '♘', '♖', '☾', '✠', '❖', '✥'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢', '♤', '♡', '♘', '♖', '☾', '✠', '❖', '✥', '☄', '♛', '⚔', '☤', '♨', '⚒', '❀', '⚜'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

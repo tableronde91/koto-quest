@@ -1168,8 +1168,8 @@ test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des fr
   await expect(page.getByRole('heading', { name: 'Quel niveau Goethe vises-tu ?' })).toBeVisible();
   await expect(page.getByRole('radio', { name: /Goethe A1 — découverte/ })).toHaveAttribute('aria-checked', 'true');
   // Les niveaux suivants sont annoncés mais pas encore ouverts
-  await expect(page.getByRole('radio', { name: /Goethe C1 — autonome/ })).toBeDisabled();
-  await expect(page.getByRole('radio', { name: /Goethe B2 — avancé/ })).toBeEnabled();
+  await expect(page.getByRole('radio', { name: /Goethe C2 — maîtrise/ })).toBeDisabled();
+  await expect(page.getByRole('radio', { name: /Goethe C1 — autonome/ })).toBeEnabled();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Suivant' }).click();
   await expect(page.getByRole('button', { name: 'Les kanji' })).toHaveCount(0);
   await page.getByRole('button', { name: 'Suivant' }).click();
@@ -1207,6 +1207,7 @@ test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des fr
   await expect(page.getByText('Der Froschkönig').first()).toBeVisible();
   await expect(page.getByText('Der Zauberlehrling').first()).toBeVisible();
   await expect(page.getByText('Der Erlkönig').first()).toBeVisible();
+  await expect(page.getByText('Siegfried und der Drache').first()).toBeVisible();
   await expect(page.getByText('El medio pollito')).toHaveCount(0);
 
   // Atelier Goethe et examen blanc noté sur 100
@@ -1225,6 +1226,8 @@ test('hors ligne : apprendre l’allemand pour le Goethe-Zertifikat (saga des fr
   await page.goto(FILE + '#/exam/goetheb2-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat B2 — format officiel' })).toBeVisible();
   await expect(page.getByText(/65 questions en 180 minutes/)).toBeVisible();
+  await page.goto(FILE + '#/exam/goethec1-official');
+  await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat C1 — format officiel' })).toBeVisible();
   await page.goto(FILE + '#/exam/goethea1-official');
   await expect(page.getByRole('heading', { name: 'Examen blanc Goethe-Zertifikat A1 — format officiel' })).toBeVisible();
   await expect(page.getByText(/35 questions en 65 minutes/)).toBeVisible();

@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
  * Mode histoire allemand (l'apprenti·e des frères Grimm) : le décor de chaque île raconte son chapitre.
  * Goethe A1, la Route des contes : maisons à colombages de Hanau et Steinau, ruelles de Marbourg, maison de pain d'épices,
  * château de Sababurg sous les ronces, marché de Göttingen, mont de Dame Holle, Hamelin et les Musiciens de Brême.
+ * Goethe C1, le Danube des Nibelungen : trésor de Fafnir, cathédrale de Worms, source de l'Odenwald, puits et taverne de Vienne, synagogue de Prague, mont de Vénus, nacelle au cygne, université.
  * Goethe B2, Weimar : route du Roi des Aulnes, atelier de l'Apprenti sorcier, gouffre du Plongeur, arène, théâtre de Corinthe, forêt, lac, bibliothèque.
  * Goethe B1, le pays des légendes : grotte de Barberousse, monts de Rübezahl, barque du Pêcheur, Cologne, cabinet de Faust, rocher de la Lorelei, Brocken.
  * Goethe A2, du Rhin à la Forêt-Noire : puits du Roi Grenouille, bal de Cendrillon, tour de Raiponce, miroir de la Reine, halte du Chat botté, Oie d'or, château de Barbe-de-Grive.
@@ -443,6 +444,119 @@ function Library({ ...p }: P) {
   );
 }
 
+/** Trésor du dragon : tas d'or et crâne de dragon (fumée tant que Fafnir veille). */
+function Hoard({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-18 0 Q-10 -14 0 -12 Q10 -16 18 0Z" fill={GOLD} />
+      <g fill="#F4D878"><circle cx="-8" cy="-4" r="2" /><circle cx="2" cy="-8" r="2" /><circle cx="9" cy="-3" r="2" /><circle cx="-2" cy="-2" r="1.6" /></g>
+      <path d="M-4 -12 l2 -6 l3 5 l3 -5 l2 6Z" fill={PLASTER} stroke={BEAM} strokeWidth="0.6" />
+      {!calm && <path d="M14 -14 q4 -4 0 -8 q-4 -4 0 -8" stroke="#8A8A8A" strokeWidth="1.6" fill="none" opacity="0.8" strokeLinecap="round" />}
+    </g>
+  );
+}
+
+/** Cathédrale de Worms : nef de grès rouge et quatre tours rondes. */
+function Cathedral({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-14" y="-14" width="28" height="14" fill="#B8705A" />
+      <path d="M-14 -14 L0 -22 L14 -14Z" fill="#8A4A3A" />
+      {[-18, 14].map((x) => <g key={x}><rect x={x} y="-24" width="5" height="24" fill="#A8604A" /><path d={`M${x - 1} -24 L${x + 2.5} -33 L${x + 6} -24Z`} fill="#5A6A72" /></g>)}
+      <path d="M-3 0 V-7 a3 3 0 0 1 6 0 V0Z" fill={BEAM} />
+      <circle cx="0" cy="-13" r="2.4" fill="#E8D8B8" stroke={BEAM} strokeWidth="0.6" />
+    </g>
+  );
+}
+
+/** Source de l'Odenwald sous un tilleul (la lance de Hagen disparaît quand la vérité est dite). */
+function Spring({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-1.5" y="-12" width="3" height="12" fill={WOOD} />
+      <circle cx="0" cy="-19" r="10" fill="#6FA85A" /><circle cx="-7" cy="-14" r="6" fill="#5E9A4E" /><circle cx="7" cy="-14" r="6" fill="#7FB868" />
+      <ellipse cx="14" cy="-1" rx="9" ry="3" fill="#7FC4D8" />
+      {!calm && <g><path d="M-18 0 L-12 -24" stroke={BEAM} strokeWidth="1.4" /><path d="M-12 -24 l-2.4 3.4 l3.6 0.8Z" fill={STONE} /></g>}
+    </g>
+  );
+}
+
+/** Puits de pierre viennois (vapeur verte tant que le Basilic y vit). */
+function StoneWell({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-9" y="-8" width="18" height="8" rx="1.5" fill={STONE} stroke="#7A766C" strokeWidth="0.8" />
+      <path d="M-8 -8 V-20 M8 -8 V-20 M-10 -20 H10" stroke={WOOD} strokeWidth="1.8" />
+      <path d="M-11 -20 L0 -27 L11 -20Z" fill={ROOF} />
+      <path d="M0 -20 V-12" stroke={BEAM} strokeWidth="0.8" /><rect x="-2" y="-12" width="4" height="3.4" fill={WOOD} />
+      {!calm && <path d="M-4 -9 q-4 -5 0 -9 M3 -9 q4 -5 0 -10" stroke="#7FBF5A" strokeWidth="1.6" fill="none" opacity="0.85" strokeLinecap="round" />}
+    </g>
+  );
+}
+
+/** Table de taverne : tonneau, chope et cornemuse. */
+function Tavern({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="-10" cy="-7" rx="7" ry="8" fill={WOOD} stroke={BEAM} strokeWidth="1" />
+      <path d="M-17 -10 H-3 M-17 -4 H-3" stroke={BEAM} strokeWidth="1" />
+      <rect x="2" y="-8" width="6" height="8" rx="1" fill={PLASTER} stroke={BEAM} strokeWidth="0.8" /><path d="M8 -6 q4 2 0 4" stroke={BEAM} strokeWidth="1" fill="none" /><ellipse cx="5" cy="-8.5" rx="3.4" ry="1.6" fill={SNOW} />
+      <ellipse cx="17" cy="-5" rx="5" ry="4" fill={RED} /><path d="M14 -8 L11 -18 M17 -9 L17 -20 M20 -8 L23 -17" stroke={BEAM} strokeWidth="1.2" />
+    </g>
+  );
+}
+
+/** Vieille synagogue de Prague : pignon de brique en dents de scie et petite fenêtre du grenier. */
+function Synagogue({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-13" y="-14" width="26" height="14" fill="#C8B89A" stroke={BEAM} strokeWidth="0.8" />
+      <path d="M-13 -14 L-9 -14 L-9 -19 L-5 -19 L-5 -24 L-1.5 -24 L-1.5 -29 L1.5 -29 L1.5 -24 L5 -24 L5 -19 L9 -19 L9 -14 L13 -14Z" fill="#A8553A" />
+      <rect x="-1.6" y="-22" width="3.2" height="4" fill={calm ? '#3A3A3A' : GOLD} />
+      <path d="M-2.5 0 V-7 a2.5 2.5 0 0 1 5 0 V0Z" fill={WOOD} />
+      <path d="M-9 -10 v5 M9 -10 v5" stroke="#5A6A72" strokeWidth="2" />
+    </g>
+  );
+}
+
+/** Le mont de Vénus : colline à la porte fleurie (ouverte une fois Tannhäuser libéré). */
+function VenusHill({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-24 0 Q-12 -30 0 -30 Q12 -30 24 0Z" fill="#6FA85A" />
+      <path d="M-5 0 V-9 a5 5 0 0 1 10 0 V0Z" fill={calm ? '#F4D878' : '#3A2A3A'} />
+      <g fill="#F4A8C8"><circle cx="-8" cy="-12" r="1.8" /><circle cx="8" cy="-12" r="1.8" /><circle cx="0" cy="-18" r="1.8" /><circle cx="-13" cy="-5" r="1.5" /><circle cx="13" cy="-5" r="1.5" /></g>
+    </g>
+  );
+}
+
+/** Nacelle tirée par un cygne sur le fleuve. */
+function SwanBoat({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-24 2 q6 -5 12 0 t12 0 t12 0 t12 0" fill="none" stroke="#7FC4D8" strokeWidth="2.4" />
+      <path d="M2 -3 H18 L15 3 H5Z" fill={WOOD} />
+      <path d="M2 -1 H-6" stroke={GOLD} strokeWidth="0.8" />
+      <ellipse cx="-11" cy="-2" rx="6" ry="3.6" fill={SNOW} />
+      <path d="M-15 -3 Q-19 -12 -14 -14" stroke={SNOW} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <path d="M-14 -14 l3.4 0.6 l-3 1.4Z" fill="#E2703A" />
+    </g>
+  );
+}
+
+/** Université de Vienne : grand portail à colonnes et fronton, chouette de la sagesse. */
+function University({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-20" y="-14" width="40" height="14" fill="#E8DCC0" stroke={BEAM} strokeWidth="0.8" />
+      <path d="M-22 -14 H22 L0 -24Z" fill="#C8B890" stroke={BEAM} strokeWidth="0.6" />
+      <path d="M-15 -12 V0 M-9 -12 V0 M9 -12 V0 M15 -12 V0" stroke={STONE} strokeWidth="2.4" />
+      <path d="M-4 0 V-9 a4 4 0 0 1 8 0 V0Z" fill={WOOD} />
+      <circle cx="0" cy="-18" r="2.2" fill={BEAM} /><circle cx="-0.8" cy="-18.4" r="0.6" fill={GOLD} /><circle cx="0.8" cy="-18.4" r="0.6" fill={GOLD} />
+    </g>
+  );
+}
+
 export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Hanau : la maison natale des Grimm et le feu du Rumpelstilzchen
   'goethea1-w1': (calm) => (<><TimberHouse x={-12} y={12} /><Campfire x={12} y={14} calm={calm} /><Fir x={28} y={12} s={0.7} /></>),
@@ -519,4 +633,23 @@ export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'goetheb2-w8': () => (<><Desk x={-12} y={14} /><TimberHouse x={16} y={13} s={0.85} /></>),
   // La bibliothèque de Weimar
   'goetheb2-final': () => (<><Library x={0} y={13} /><Fir x={-32} y={12} s={0.6} /><Fir x={32} y={12} s={0.6} /></>),
+  // ───── Goethe C1 : le Danube des Nibelungen ─────
+  // La lande du Dragon Fafnir et son trésor
+  'goethec1-w1': (calm) => (<><Hoard x={-4} y={13} calm={calm} /><Fir x={26} y={12} s={0.7} /></>),
+  // Worms : la cathédrale où les reines se disputent le pas
+  'goethec1-w2': () => (<><Cathedral x={0} y={13} /></>),
+  // La source de l'Odenwald, sous le tilleul
+  'goethec1-w3': (calm) => (<><Spring x={-4} y={13} calm={calm} /><Fir x={30} y={12} s={0.7} /></>),
+  // Vienne : le puits du Basilic
+  'goethec1-w4': (calm) => (<><TimberHouse x={-16} y={13} s={0.85} /><StoneWell x={12} y={14} calm={calm} /></>),
+  // La taverne du Cher Augustin
+  'goethec1-w5': () => (<><TimberHouse x={-16} y={13} s={0.85} /><Tavern x={12} y={14} /></>),
+  // Prague : la vieille synagogue (la lucarne du grenier s'éteint quand le Golem redevient argile)
+  'goethec1-w6': (calm) => (<><Synagogue x={0} y={13} calm={calm} /></>),
+  // Le mont de Vénus
+  'goethec1-w7': (calm) => (<><VenusHill x={0} y={13} calm={calm} /></>),
+  // La rive du Chevalier au cygne
+  'goethec1-w8': () => (<><SwanBoat x={0} y={12} /></>),
+  // L'université de Vienne : la porte des savants
+  'goethec1-final': () => (<><University x={0} y={13} /></>),
 };

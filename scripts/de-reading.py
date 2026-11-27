@@ -390,7 +390,87 @@ ERLKOENIG = STORY('erlkoenig', 'E', 'GOETHEB2', '#2F4F4A', ('Der Erlkönig', 'Le
   ]),
 ])
 
-DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS, FISCHER, HEINZEL, ZAUBER, ERLKOENIG]
+SIEGFRIED = STORY('siegfried-drache', 'N', 'GOETHEC1', '#5A3A4A', ('Siegfried und der Drache', 'Siegfried et le dragon', 'Siegfried and the Dragon'),
+  ('Comment le jeune Siegfried devint invulnérable, à un endroit près. D’après la Chanson des Nibelungen.', 'How young Siegfried became invulnerable, save for one spot. After the Song of the Nibelungs.'), [
+  CH('siegfried-drache-1', ('Der Kampf auf der Heide', 'Le combat sur la lande', 'The fight on the heath'), [
+    [S('Von dem jungen Siegfried, dem Sohn eines Königs am Niederrhein, wird berichtet, er habe schon früh jede Gefahr gesucht, statt ihr auszuweichen.', 'Du jeune Siegfried, fils d’un roi du Rhin inférieur, on rapporte qu’il chercha très tôt le danger au lieu de l’éviter.', 'Of young Siegfried, the son of a king on the Lower Rhine, it is reported that from an early age he sought out every danger instead of avoiding it.'),
+     S('Auf einer einsamen Heide hauste ein Drache, der einen unermesslichen Schatz bewachte und vor dem selbst erfahrene Krieger zurückschreckten.', 'Sur une lande solitaire vivait un dragon qui gardait un trésor incommensurable et devant lequel même des guerriers aguerris reculaient.', 'On a lonely heath dwelt a dragon that guarded an immeasurable treasure and from which even seasoned warriors shrank back.'),
+     S('Ungeachtet aller Warnungen ritt Siegfried hinaus, zumal ihn weniger das Gold als der Ruhm lockte.', 'En dépit de tous les avertissements, Siegfried partit à cheval, d’autant que c’était moins l’or que la gloire qui l’attirait.', 'Regardless of all warnings, Siegfried rode out, especially as it was fame rather than gold that drew him.')],
+    [S('Der Kampf, über dessen Dauer die Quellen schweigen, endete mit dem Tod des Ungeheuers.', 'Le combat, sur la durée duquel les sources se taisent, s’acheva par la mort du monstre.', 'The fight, on whose length the sources are silent, ended with the monster’s death.'),
+     S('Indem Siegfried anschließend im Blut des Drachen badete, wurde seine Haut so hart wie Horn.', 'En se baignant ensuite dans le sang du dragon, Siegfried eut la peau aussi dure que la corne.', 'By bathing afterwards in the dragon’s blood, Siegfried made his skin as hard as horn.'),
+     S('Kein Schwert, so scharf es auch sein mochte, konnte ihn fortan verwunden.', 'Aucune épée, si tranchante fût-elle, ne pouvait désormais le blesser.', 'No sword, however sharp it might be, could wound him from then on.')],
+  ], [
+    W('ausweichen', '/ˈaʊsˌvaɪçn̩/', 'éviter, esquiver', 'to avoid, to dodge'),
+    W('die Heide', '/diː ˈhaɪdə/', 'la lande', 'the heath'),
+    W('unermesslich', '/ʊnʔɛɐ̯ˈmɛslɪç/', 'incommensurable', 'immeasurable'),
+    W('zurückschrecken', '/tsuˈʁʏkˌʃʁɛkn̩/', 'reculer (d’effroi)', 'to shrink back'),
+    W('das Horn', '/das hɔʁn/', 'la corne', 'horn'),
+    W('verwunden', '/fɛɐ̯ˈvʊndn̩/', 'blesser', 'to wound'),
+  ], [
+    Q(('Qu’est-ce qui attire surtout Siegfried vers le dragon ?', 'What chiefly draws Siegfried to the dragon?'), [('La gloire, plus que l’or', 'Fame, more than gold'), ('L’ordre de son père', 'His father’s order'), ('La peur des habitants', 'The inhabitants’ fear')], 0),
+    Q(('Comment devient-il presque invulnérable ?', 'How does he become almost invulnerable?'), [('En se baignant dans le sang du dragon', 'By bathing in the dragon’s blood'), ('En mangeant le cœur du dragon', 'By eating the dragon’s heart'), ('En portant une armure d’or', 'By wearing golden armour')], 0),
+  ]),
+  CH('siegfried-drache-2', ('Das Lindenblatt', 'La feuille de tilleul', 'The linden leaf'), [
+    [S('Was Siegfried nicht bemerkt hatte: Während des Bades war ihm ein Lindenblatt zwischen die Schultern gefallen.', 'Ce que Siegfried n’avait pas remarqué : pendant le bain, une feuille de tilleul lui était tombée entre les épaules.', 'What Siegfried had not noticed: during the bath a linden leaf had fallen between his shoulders.'),
+     S('An dieser einen, von dem Blatt bedeckten Stelle blieb er verwundbar wie jeder andere Mensch.', 'À ce seul endroit, recouvert par la feuille, il resta vulnérable comme n’importe quel homme.', 'At this one spot, covered by the leaf, he remained as vulnerable as any other man.'),
+     S('Er vertraute das Geheimnis nur seiner Frau Kriemhild an, die es aus Sorge um ihn nicht für sich behielt.', 'Il ne confia le secret qu’à sa femme Kriemhild, qui, par inquiétude pour lui, ne le garda pas pour elle.', 'He entrusted the secret only to his wife Kriemhild, who, out of concern for him, did not keep it to herself.')],
+    [S('Hagen von Tronje, der ihr versichert hatte, er wolle den Helden im Kampf beschützen, bat sie, die Stelle mit einem kleinen Kreuz auf dem Gewand zu kennzeichnen.', 'Hagen de Tronje, qui lui avait assuré vouloir protéger le héros au combat, la pria de marquer l’endroit d’une petite croix sur le vêtement.', 'Hagen of Tronje, who had assured her that he wished to protect the hero in battle, asked her to mark the spot with a small cross on his garment.'),
+     S('Hätte Kriemhild geahnt, wozu dieses Zeichen dienen sollte, wäre es nie genäht worden.', 'Si Kriemhild avait deviné à quoi ce signe devait servir, il n’aurait jamais été cousu.', 'Had Kriemhild suspected what this mark was to be used for, it would never have been sewn.'),
+     S('So aber wurde ausgerechnet ihre Fürsorge dem Unverwundbaren zum Verhängnis, als er sich bei einer Jagd über eine Quelle beugte.', 'Mais c’est ainsi que sa sollicitude, précisément, fut fatale à l’invulnérable, lorsqu’il se pencha sur une source au cours d’une chasse.', 'As it was, her very care proved the undoing of the invulnerable man when he bent over a spring during a hunt.')],
+  ], [
+    W('das Lindenblatt', '/das ˈlɪndn̩ˌblat/', 'la feuille de tilleul', 'the linden leaf'),
+    W('verwundbar', '/fɛɐ̯ˈvʊntbaːɐ̯/', 'vulnérable', 'vulnerable'),
+    W('anvertrauen', '/ˈanfɛɐ̯ˌtʁaʊən/', 'confier', 'to entrust, to confide'),
+    W('das Gewand', '/das ɡəˈvant/', 'le vêtement, l’habit', 'the garment'),
+    W('ahnen', '/ˈaːnən/', 'se douter de, pressentir', 'to suspect, to sense'),
+    W('das Verhängnis', '/das fɛɐ̯ˈhɛŋnɪs/', 'la fatalité, la perte', 'doom, undoing'),
+  ], [
+    Q(('Pourquoi Siegfried reste-t-il vulnérable à un endroit ?', 'Why does Siegfried remain vulnerable in one spot?'), [('Une feuille de tilleul y était tombée', 'A linden leaf had fallen there'), ('Le sang du dragon manquait', 'There was not enough dragon’s blood'), ('Il avait gardé son armure', 'He had kept his armour on')], 0),
+    Q(('Pourquoi Kriemhild marque-t-elle l’endroit d’une croix ?', 'Why does Kriemhild mark the spot with a cross?'), [('Elle croit que Hagen veut protéger son mari', 'She believes Hagen wants to protect her husband'), ('Elle veut se venger de Siegfried', 'She wants revenge on Siegfried'), ('Le roi le lui ordonne', 'The king orders her to')], 0),
+  ]),
+])
+
+AUGUSTIN = STORY('lieber-augustin', 'O', 'GOETHEC1', '#8A5A2A', ('Der liebe Augustin', 'Le Cher Augustin', 'Dear Augustin'),
+  ('Vienne, 1679 : un musicien de taverne tombe dans la fosse aux pestiférés… et en ressort en chantant. Légende viennoise.', 'Vienna, 1679: a tavern musician falls into the plague pit… and comes out singing. A Viennese legend.'), [
+  CH('lieber-augustin-1', ('Die Stadt im Pestjahr', 'La ville, l’année de la peste', 'The city in the plague year'), [
+    [S('Im Jahr 1679 wütete in Wien die Pest, der binnen weniger Monate Zehntausende zum Opfer fielen.', 'En 1679, la peste sévissait à Vienne ; en quelques mois, des dizaines de milliers de personnes en furent victimes.', 'In 1679 the plague raged in Vienna; within a few months tens of thousands fell victim to it.'),
+     S('Wer es sich leisten konnte, hatte die Stadt längst verlassen; die Zurückgebliebenen mieden einander, soweit es eben ging.', 'Ceux qui en avaient les moyens avaient quitté la ville depuis longtemps ; ceux qui restaient s’évitaient autant que faire se pouvait.', 'Those who could afford it had long since left the city; those who stayed behind avoided one another as far as was possible.'),
+     S('Nur in einem Wirtshaus am Fleischmarkt ging es noch laut zu, denn dort spielte Abend für Abend der Sackpfeifer Augustin.', 'Seule une taverne du Fleischmarkt restait bruyante, car le joueur de cornemuse Augustin y jouait soir après soir.', 'Only in one tavern on the Fleischmarkt was it still noisy, for there the bagpiper Augustin played evening after evening.')],
+    [S('Man nannte ihn den lieben Augustin, weil er selbst den Verzweifelten ein Lachen entlockte.', 'On l’appelait le Cher Augustin, parce qu’il arrachait un rire même aux désespérés.', 'They called him Dear Augustin because he coaxed a laugh even from the despairing.'),
+     S('Die Seuche schien ihn nicht im Geringsten zu kümmern: „Es ist ja doch alles hin“, pflegte er zu sagen, „da kann man ruhig noch eins trinken.“', 'L’épidémie ne semblait pas le préoccuper le moins du monde : « De toute façon, tout est fichu, avait-il coutume de dire, alors on peut bien en boire encore un. »', 'The epidemic did not seem to trouble him in the least: “It is all gone anyway,” he used to say, “so one may as well have another drink.”'),
+     S('Eines Nachts hatte er jedoch dermaßen viel getrunken, dass er auf dem Heimweg im Rinnstein einschlief.', 'Une nuit, cependant, il avait tellement bu qu’il s’endormit dans le caniveau en rentrant chez lui.', 'One night, however, he had drunk so much that he fell asleep in the gutter on his way home.')],
+  ], [
+    W('wüten', '/ˈvyːtn̩/', 'sévir, faire rage', 'to rage'),
+    W('meiden', '/ˈmaɪdn̩/', 'éviter, fuir', 'to avoid, to shun'),
+    W('das Wirtshaus', '/das ˈvɪʁtsˌhaʊs/', 'la taverne, l’auberge', 'the tavern, the inn'),
+    W('entlocken', '/ɛntˈlɔkn̩/', 'arracher, soutirer', 'to coax out of'),
+    W('die Seuche', '/diː ˈzɔʏçə/', 'l’épidémie', 'the epidemic'),
+    W('der Rinnstein', '/deːɐ̯ ˈʁɪnˌʃtaɪn/', 'le caniveau', 'the gutter'),
+  ], [
+    Q(('Pourquoi appelle-t-on le musicien « le Cher Augustin » ?', 'Why is the musician called “Dear Augustin”?'), [('Il fait rire même les désespérés', 'He makes even the despairing laugh'), ('Il soigne les malades', 'He tends the sick'), ('Il offre à boire à tout le monde', 'He buys everyone drinks')], 0),
+    Q(('Que lui arrive-t-il une nuit ?', 'What happens to him one night?'), [('Il s’endort ivre dans la rue', 'He falls asleep drunk in the street'), ('Il quitte Vienne', 'He leaves Vienna'), ('Il perd sa cornemuse', 'He loses his bagpipes')], 0),
+  ]),
+  CH('lieber-augustin-2', ('Das Lied aus der Grube', 'La chanson dans la fosse', 'The song from the pit'), [
+    [S('Die Pestknechte, die im Morgengrauen die Toten einsammelten, hielten den reglosen Mann für eines ihrer Opfer.', 'Les croque-morts de la peste, qui ramassaient les morts à l’aube, prirent l’homme inerte pour l’une des victimes.', 'The plague carriers who collected the dead at dawn took the motionless man for one of the victims.'),
+     S('Ohne lange zu prüfen, luden sie ihn samt seinem Dudelsack auf den Karren und warfen ihn vor der Stadtmauer in eine offene Grube.', 'Sans vérifier longtemps, ils le chargèrent sur la charrette avec sa cornemuse et le jetèrent dans une fosse ouverte, devant les remparts.', 'Without checking for long, they loaded him and his bagpipes onto the cart and threw him into an open pit outside the city wall.'),
+     S('Als Augustin erwachte, begriff er nicht sogleich, wo er sich befand, wohl aber, dass er allein nicht hinauskommen würde.', 'Quand Augustin se réveilla, il ne comprit pas tout de suite où il se trouvait, mais bien qu’il n’en sortirait pas seul.', 'When Augustin awoke, he did not grasp at once where he was, but he did grasp that he would not get out alone.')],
+    [S('Anstatt zu schreien, was ohnehin niemand gehört hätte, griff er nach seinem Instrument und spielte, so laut er konnte.', 'Au lieu de crier, ce que personne n’aurait entendu de toute façon, il saisit son instrument et joua aussi fort qu’il le put.', 'Instead of shouting, which nobody would have heard anyway, he reached for his instrument and played as loudly as he could.'),
+     S('Vorübergehende, denen die Musik aus der Erde unheimlich vorkam, holten schließlich Hilfe und zogen ihn heraus.', 'Des passants, à qui cette musique sortie de terre parut inquiétante, finirent par aller chercher de l’aide et le tirèrent de là.', 'Passers-by, to whom the music from the earth seemed uncanny, finally fetched help and pulled him out.'),
+     S('Entgegen allen Erwartungen blieb er gesund, was die Wiener als Zeichen deuteten: Wer den Humor nicht verliere, den hole so schnell nichts.', 'Contre toute attente, il resta en bonne santé, ce que les Viennois interprétèrent comme un signe : celui qui ne perd pas son humour, rien ne l’emporte si vite.', 'Contrary to all expectations he stayed healthy, which the Viennese took as a sign: whoever keeps his sense of humour is not so easily carried off.')],
+  ], [
+    W('das Morgengrauen', '/das ˈmɔʁɡn̩ˌɡʁaʊən/', 'l’aube', 'dawn'),
+    W('reglos', '/ˈʁeːkloːs/', 'inerte, immobile', 'motionless'),
+    W('der Karren', '/deːɐ̯ ˈkaʁən/', 'la charrette', 'the cart'),
+    W('die Grube', '/diː ˈɡʁuːbə/', 'la fosse', 'the pit'),
+    W('begreifen', '/bəˈɡʁaɪfn̩/', 'comprendre, saisir', 'to grasp'),
+    W('der Dudelsack', '/deːɐ̯ ˈduːdl̩ˌzak/', 'la cornemuse', 'the bagpipes'),
+  ], [
+    Q(('Pourquoi Augustin est-il jeté dans la fosse ?', 'Why is Augustin thrown into the pit?'), [('On le croit mort de la peste', 'He is thought to have died of the plague'), ('Il doit de l’argent à l’aubergiste', 'He owes the innkeeper money'), ('Il a insulté les gardes', 'He insulted the guards')], 0),
+    Q(('Comment parvient-il à sortir ?', 'How does he manage to get out?'), [('Il joue de la cornemuse jusqu’à ce qu’on l’entende', 'He plays his bagpipes until he is heard'), ('Il escalade la paroi', 'He climbs the wall'), ('Il attend la nuit suivante', 'He waits for the next night')], 0),
+  ]),
+])
+
+DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS, FISCHER, HEINZEL, ZAUBER, ERLKOENIG, SIEGFRIED, AUGUSTIN]
 
 import sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -399,7 +479,7 @@ mix(DE_STORIES)
 
 data = json.load(open(P, encoding='utf-8'))
 data['stories'] = [s for s in data['stories'] if not s['level'].startswith('GOETHE')] + DE_STORIES
-data.setdefault('notices', {})['de'] = {'fr': 'Contes des frères Grimm, légendes d’Allemagne et ballades de Goethe (domaine public), réécrits en prose et en allemand simple pour Koto Quest. La prononciation des mots est notée en alphabet phonétique (allemand standard).', 'en': 'Tales by the Brothers Grimm, legends of Germany and ballads by Goethe (public domain), retold in prose and in simple German for Koto Quest. Word pronunciation is given in the phonetic alphabet (standard German).'}
+data.setdefault('notices', {})['de'] = {'fr': 'Contes des frères Grimm, légendes d’Allemagne et d’Autriche, ballades de Goethe et épisodes des Nibelungen (domaine public), réécrits en prose pour Koto Quest, dans un allemand adapté à chaque niveau. La prononciation des mots est notée en alphabet phonétique (allemand standard).', 'en': 'Tales by the Brothers Grimm, legends of Germany and Austria, ballads by Goethe and episodes from the Nibelungs (public domain), retold in prose for Koto Quest, in German suited to each level. Word pronunciation is given in the phonetic alphabet (standard German).'}
 slugs = [c['slug'] for s in data['stories'] for c in s['chapters']]
 assert len(slugs) == len(set(slugs)), 'slug de chapitre en double'
 others = {s['glyph'] for s in data['stories'] if not s['level'].startswith('GOETHE')}

@@ -564,6 +564,8 @@ export const EXAM_GOETHEB1 = GOETHE_OFFICIAL('GOETHEB1', 165, 30, 30, 5, 60);
 export const EXAM_GOETHEB1_MOCK = GOETHE_MOCK('GOETHEB1');
 export const EXAM_GOETHEB2 = GOETHE_OFFICIAL('GOETHEB2', 180, 30, 30, 5, 60);
 export const EXAM_GOETHEB2_MOCK = GOETHE_MOCK('GOETHEB2');
+export const EXAM_GOETHEC1 = GOETHE_OFFICIAL('GOETHEC1', 180, 30, 30, 5, 60);
+export const EXAM_GOETHEC1_MOCK = GOETHE_MOCK('GOETHEC1');
 
 export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
 export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
@@ -599,6 +601,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_GOETHEB1.slug]: EXAM_GOETHEB1,
   [EXAM_GOETHEB2_MOCK.slug]: EXAM_GOETHEB2_MOCK,
   [EXAM_GOETHEB2.slug]: EXAM_GOETHEB2,
+  [EXAM_GOETHEC1_MOCK.slug]: EXAM_GOETHEC1_MOCK,
+  [EXAM_GOETHEC1.slug]: EXAM_GOETHEC1,
   [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
   [EXAM_DELEA1.slug]: EXAM_DELEA1,
   [EXAM_DELEA2_MOCK.slug]: EXAM_DELEA2_MOCK,
@@ -981,11 +985,19 @@ const TIPS_GOETHE_B2: Partial<Record<ExamSectionId, string>> = {
   writing: 'Schreiben : entraîne-toi aux deux formats du B2 — contribution argumentée à un forum (avis, raisons, objection, conclusion) et message formel à un supérieur — avec un registre soigné et des phrases bien reliées.',
 };
 
+/** Conseils propres au Goethe C1 : le style nominal, les attributs étendus, les registres, l'écrit universitaire. */
+const TIPS_GOETHE_C1: Partial<Record<ExamSectionId, string>> = {
+  grammar: 'Grammaire : reprends le style nominal (wegen, trotz, nach + nom), les attributs étendus et le gérondif (das zu lösende Problem), le passif avec verbe de modalité aux temps composés, les connecteurs soutenus et les rections des noms, puis entraîne-toi dans l’atelier Goethe.',
+  listening: 'Hören : écoute des podcasts, des débats d’experts et des conférences sans transcription ; note la thèse, les réserves et les concessions de chaque intervenant, car les questions portent sur les nuances.',
+  reading: 'Lesen : lis des articles de fond, des commentaires de presse et des textes réglementaires ; reformule la thèse de l’auteur en une phrase et repère ce qu’il concède avant de le réfuter.',
+  writing: 'Schreiben : entraîne-toi à une contribution de forum structurée (position, pesée des arguments, proposition) et à un message formel au registre irréprochable, avec connecteurs soutenus et mots de reprise.',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^GOETHE[ABC][12]$/.test(level)) {
     const weakDe = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakDe.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    const tipsDe = level === 'GOETHEA1' ? TIPS_GOETHE : level === 'GOETHEA2' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2 } : level === 'GOETHEB1' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1 } : { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1, ...TIPS_GOETHE_B2 };
+    const tipsDe = level === 'GOETHEA1' ? TIPS_GOETHE : level === 'GOETHEA2' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2 } : level === 'GOETHEB1' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1 } : level === 'GOETHEB2' ? { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1, ...TIPS_GOETHE_B2 } : { ...TIPS_GOETHE, ...TIPS_GOETHE_A2, ...TIPS_GOETHE_B1, ...TIPS_GOETHE_B2, ...TIPS_GOETHE_C1 };
     return weakDe.map((s) => tipsDe[s.id] ?? tipsDe.grammar!).filter(Boolean);
   }
   if (/^DELE[ABC][12]$/.test(level)) {
