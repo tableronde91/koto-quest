@@ -521,6 +521,65 @@ const SPECIES: Record<string, Species> = {
     under: <path d="M100 118 V178 M84 124 V176 M116 124 V176" stroke="#3A6AA8" strokeWidth="5" opacity="0.7" />,
     front: <g><path d="M104 112 L168 96" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><g fill="#1F2433"><circle cx="176" cy="66" r="5" /><rect x="179" y="44" width="2.5" height="22" /><circle cx="158" cy="54" r="5" /><rect x="161" y="32" width="2.5" height="22" /></g></g>,
   },
+  // ───── Gardiens allemands (Goethe A2 — du Rhin à la Forêt-Noire) ─────
+  // Le Roi Grenouille : grenouille verte, petite couronne, balle d'or
+  '♔': {
+    body: '#4E9A4A', belly: '#D8ECA8', head: '#5AAE56', eye: '#1F3A20',
+    top: <><circle cx="70" cy="52" r="16" fill="#5AAE56" /><circle cx="130" cy="52" r="16" fill="#5AAE56" /><path d="M84 40 L88 22 L96 34 L100 18 L104 34 L112 22 L116 40Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /></>,
+    face: <path d="M74 112 Q100 132 126 112" stroke="#1F3A20" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <circle cx="156" cy="158" r="13" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="2" />,
+  },
+  // La Marâtre de Cendrillon : chignon sévère, col haut, balai
+  '♟': {
+    body: '#4A3A4E', belly: '#7A6A80', head: '#E8D0C0', eye: '#2A1A2A',
+    top: <><circle cx="100" cy="36" r="18" fill="#5A4A4A" /><path d="M56 84 Q56 40 100 38 Q144 40 144 84 Q126 60 100 60 Q74 60 56 84Z" fill="#5A4A4A" /></>,
+    under: <path d="M70 128 Q100 112 130 128 L124 140 Q100 128 76 140Z" fill="#E8E0D0" />,
+    face: <path d="M90 118 Q100 112 110 118" stroke="#6A3A3A" strokeWidth="2.5" fill="none" strokeLinecap="round" />,
+    front: <g><path d="M34 196 L46 96" stroke="#7A4A2A" strokeWidth="5" strokeLinecap="round" /><path d="M24 196 L34 172 H46 L42 198Z" fill="#C9A24A" /></g>,
+  },
+  // Dame Gothel : capuche sombre, mèche grise, grande tresse dorée volée
+  '♜': {
+    body: '#3A4A3A', belly: '#5E6E5A', head: '#D8D0B8', eye: '#2A2A1A',
+    back: <path d="M42 84 Q24 150 46 190 L154 190 Q176 150 158 84 Q100 22 42 84Z" fill="#2A3A2A" />,
+    top: <path d="M52 86 Q52 32 100 28 Q148 32 148 86 Q130 54 100 52 Q70 54 52 86Z" fill="#2A3A2A" />,
+    under: <path d="M76 62 Q86 78 80 96" stroke="#B8B8B8" strokeWidth="6" fill="none" strokeLinecap="round" />,
+    front: <path d="M150 110 Q170 130 158 150 Q146 170 162 196" stroke="#E2B84A" strokeWidth="9" fill="none" strokeLinecap="round" />,
+  },
+  // La Reine au miroir : haute couronne, col noir, miroir à main
+  '♕': {
+    body: '#5A2A6A', belly: '#8A5A9A', head: '#F0E0D8', eye: '#2A1A3A',
+    back: <path d="M50 96 Q30 60 60 44 Q100 76 140 44 Q170 60 150 96Z" fill="#1F1A2A" />,
+    top: <><path d="M56 82 Q56 38 100 36 Q144 38 144 82 Q126 58 100 58 Q74 58 56 82Z" fill="#1F1A2A" /><path d="M72 40 L72 14 L86 30 L100 8 L114 30 L128 14 L128 40Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" /></>,
+    face: <path d="M92 116 Q100 120 108 116" stroke="#8E1B26" strokeWidth="3" fill="none" strokeLinecap="round" />,
+    front: <g transform="translate(160 146)"><path d="M0 14 V40" stroke="#E2B84A" strokeWidth="5" strokeLinecap="round" /><ellipse rx="14" ry="17" fill="#E2B84A" /><ellipse rx="10" ry="13" fill="#CFE6F2" /></g>,
+  },
+  // Jean le Chanceux : chapeau de paille, baluchon, trèfle
+  '☘': {
+    body: '#B8823A', belly: '#F4EDDC', head: '#E8C8A8', eye: '#2A1A10',
+    top: <><ellipse cx="100" cy="54" rx="62" ry="9" fill="#E2C46A" /><path d="M70 54 Q72 28 100 26 Q128 28 130 54Z" fill="#E2C46A" stroke="#B89A3A" strokeWidth="1.5" /></>,
+    front: <g><path d="M176 196 L150 92" stroke="#7A4A2A" strokeWidth="4" strokeLinecap="round" /><circle cx="150" cy="88" r="15" fill="#C8323F" /><g transform="translate(42 150)" fill="#3E8A3A"><circle cx="-5" cy="-3" r="6" /><circle cx="5" cy="-3" r="6" /><circle cx="0" cy="5" r="6" /><path d="M0 8 V18" stroke="#3E8A3A" strokeWidth="2.5" /></g></g>,
+  },
+  // Le Chat botté : chat roux, chapeau à plume, grandes bottes
+  '♞': {
+    body: '#C8823A', belly: '#F6E0B8', head: '#D8924A', eye: '#2E6A3A',
+    top: <>{ear(58, false, '#C8823A', '#F2B8A8')}{ear(142, true, '#C8823A', '#F2B8A8')}<ellipse cx="100" cy="50" rx="50" ry="8" fill="#3A2A2A" /><path d="M76 50 Q78 30 100 28 Q122 30 124 50Z" fill="#3A2A2A" /><path d="M122 40 Q150 10 162 16 Q150 30 134 50Z" fill="#C8323F" /></>,
+    face: <><path d="M96 104 L104 104 L100 110Z" fill="#8E3A2A" /><path d="M70 106 H48 M70 112 H50 M130 106 H152 M130 112 H150" stroke="#5A3A1A" strokeWidth="1.5" /></>,
+    front: <g fill="#5A3A24"><path d="M60 168 H96 V192 H56 Q54 180 60 168Z" /><path d="M104 168 H140 Q146 180 144 192 H104Z" /><rect x="58" y="164" width="40" height="7" fill="#7A5A3A" /><rect x="102" y="164" width="40" height="7" fill="#7A5A3A" /></g>,
+  },
+  // L'Oie d'or : plumage doré, bec orange, plumes brillantes
+  '♢': {
+    body: '#E2B84A', belly: '#FFF0B8', head: '#EEC85A', eye: '#2A1A10',
+    back: <path d="M48 120 Q14 104 20 70 Q40 96 62 104 M152 120 Q186 104 180 70 Q160 96 138 104" fill="#C89A2A" stroke="#9A7A2A" strokeWidth="2" />,
+    face: <path d="M86 104 Q100 96 114 104 Q108 120 100 122 Q92 120 86 104Z" fill="#E2703A" stroke="#B8502A" strokeWidth="1.5" />,
+    front: <g fill="#FFFFFF" opacity="0.9">{[[36, 40], [166, 34], [150, 180], [44, 176]].map(([x, y]) => <path key={`${x}${y}`} d={`M${x} ${y - 7} L${x + 2} ${y - 2} L${x + 7} ${y} L${x + 2} ${y + 2} L${x} ${y + 7} L${x - 2} ${y + 2} L${x - 7} ${y} L${x - 2} ${y - 2}Z`} />)}</g>,
+  },
+  // Le Roi Barbe-de-Grive : couronne, longue barbe pointue, violon de ménestrel
+  '♚': {
+    body: '#3A5A8A', belly: '#9CB8D8', head: '#E8C8A8', eye: '#2A1A10',
+    top: <path d="M66 48 L66 20 L82 36 L100 14 L118 36 L134 20 L134 48Z" fill="#E2B84A" stroke="#9A7A2A" strokeWidth="1.5" />,
+    under: <path d="M72 108 Q100 124 128 108 Q116 150 100 176 Q84 150 72 108Z" fill="#8A5A3A" />,
+    front: <g transform="translate(158 150) rotate(-25)"><ellipse rx="11" ry="15" fill="#B8733A" stroke="#7A4A2A" strokeWidth="1.5" /><rect x="-2" y="-40" width="4" height="28" fill="#7A4A2A" /><path d="M-1 -12 V12 M1 -12 V12" stroke="#F4EDDC" strokeWidth="0.8" /></g>,
+  },
   // ───── Gardiens espagnols (DELE A2 — la route de Barcelone) ─────
   // Lamia : nymphe des rivières, longue chevelure dorée, peigne d'or
   ñ: {
@@ -1670,7 +1729,7 @@ export function BossCreature({ glyph, mood = 'idle', size = 180, title }: { glyp
       {sp.under}
       <Eyes mood={mood} color={sp.eye ?? INK} />
       {sp.face}
-      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß'].includes(glyph) && <Mouth mood={mood} />}
+      {!['河', '天', '鶴', '獏', '해', '범', '용', '두', '까', '삼', '탈', '봉', '백', '산', '록', '변', '업', '억', '강', '개', '연', '목', '마', '생', '종', '적', '처', '단', '毕', '¡', 'ß', '♔', '♟', '♕', '♢'].includes(glyph) && <Mouth mood={mood} />}
       {sp.front}
     </svg>
   );

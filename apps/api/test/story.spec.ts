@@ -5,7 +5,7 @@ import { resolve } from 'path';
 const ROOT = resolve(__dirname, '../../..');
 const json = (p: string) => JSON.parse(readFileSync(resolve(ROOT, p), 'utf8'));
 const story = json('content/story/story.json');
-const LEVELS = ['n5', 'n4', 'n3', 'n2', 'n1', 'topik1', 'topik2', 'topik3', 'topik4', 'topik5', 'topik6', 'a1', 'a2', 'b1', 'b2', 'c1', 'hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6', 'delea1', 'delea2', 'deleb1', 'deleb2', 'delec1', 'delec2', 'goethea1'];
+const LEVELS = ['n5', 'n4', 'n3', 'n2', 'n1', 'topik1', 'topik2', 'topik3', 'topik4', 'topik5', 'topik6', 'a1', 'a2', 'b1', 'b2', 'c1', 'hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6', 'delea1', 'delea2', 'deleb1', 'deleb2', 'delec1', 'delec2', 'goethea1', 'goethea2'];
 const filled = (b: { fr?: string; en?: string }) => !!b?.fr?.trim() && !!b?.en?.trim() && b.fr !== b.en;
 
 describe('mode histoire', () => {
@@ -17,7 +17,7 @@ describe('mode histoire', () => {
       expect(saga.color).toMatch(/^#[0-9A-F]{6}$/i);
       for (const k of ['saga', 'hero', 'short', 'prologue', 'epilogue']) expect(filled(saga[k])).toBe(true);
     }
-    expect(Object.values<any>(story.levels).map((s) => s.glyph)).toEqual(['侍', '忍', '霊', '陽', '将', '화', '이', '어', '사', '바', '단', 'M', 'R', 'G', 'K', 'E', '信', '兵', '学', '秦', '仙', '丝', 'Ñ', '¡', '¿', '«', '¶', '✎', 'ß']);
+    expect(Object.values<any>(story.levels).map((s) => s.glyph)).toEqual(['侍', '忍', '霊', '陽', '将', '화', '이', '어', '사', '바', '단', 'M', 'R', 'G', 'K', 'E', '信', '兵', '学', '秦', '仙', '丝', 'Ñ', '¡', '¿', '«', '¶', '✎', 'ß', 'Ö']);
   });
 
   it.each(LEVELS)('%s : un chapitre par île, ni plus ni moins', (code) => {

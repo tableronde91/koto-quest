@@ -31839,6 +31839,568 @@
      ]
     }
    ]
+  },
+  {
+   "slug": "froschkoenig",
+   "glyph": "F",
+   "level": "GOETHEA2",
+   "color": "#3E7A4A",
+   "title": {
+    "jp": "Der Froschkönig",
+    "fr": "Le Roi Grenouille",
+    "en": "The Frog King"
+   },
+   "summary": {
+    "fr": "Une princesse perd sa balle d’or dans un puits ; une grenouille la lui rend… contre une promesse qu’elle voudrait bien oublier.",
+    "en": "A princess loses her golden ball in a well; a frog gives it back… in return for a promise she would rather forget."
+   },
+   "chapters": [
+    {
+     "slug": "froschkoenig-1",
+     "title": {
+      "jp": "Die goldene Kugel",
+      "fr": "La balle d’or",
+      "en": "The golden ball"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Eine junge Prinzessin hat jeden Tag am Brunnen mit ihrer goldenen Kugel gespielt.",
+        "fr": "Une jeune princesse jouait chaque jour près du puits avec sa balle d’or.",
+        "en": "A young princess played by the well every day with her golden ball.",
+        "kana": "Eine junge Prinzessin hat jeden Tag am Brunnen mit ihrer goldenen Kugel gespielt."
+       },
+       {
+        "jp": "Eines Tages ist die Kugel ins Wasser gefallen.",
+        "fr": "Un jour, la balle est tombée dans l’eau.",
+        "en": "One day the ball fell into the water.",
+        "kana": "Eines Tages ist die Kugel ins Wasser gefallen."
+       },
+       {
+        "jp": "Die Prinzessin hat geweint, weil der Brunnen so tief war.",
+        "fr": "La princesse a pleuré, parce que le puits était si profond.",
+        "en": "The princess cried because the well was so deep.",
+        "kana": "Die Prinzessin hat geweint, weil der Brunnen so tief war."
+       }
+      ],
+      [
+       {
+        "jp": "Da hat ein Frosch gefragt: „Was gibst du mir, wenn ich dir die Kugel hole?“",
+        "fr": "Alors une grenouille a demandé : « Que me donnes-tu si je vais te chercher la balle ? »",
+        "en": "Then a frog asked: “What will you give me if I fetch the ball for you?”",
+        "kana": "Da hat ein Frosch gefragt: „Was gibst du mir, wenn ich dir die Kugel hole?“"
+       },
+       {
+        "jp": "„Ich möchte mit dir essen und in deinem Bett schlafen.“",
+        "fr": "« Je voudrais manger avec toi et dormir dans ton lit. »",
+        "en": "“I would like to eat with you and sleep in your bed.”",
+        "kana": "„Ich möchte mit dir essen und in deinem Bett schlafen.“"
+       },
+       {
+        "jp": "Die Prinzessin hat alles versprochen, aber sie hat gedacht: „Ein Frosch kann doch nicht mitkommen!“",
+        "fr": "La princesse a tout promis, mais elle a pensé : « Une grenouille ne peut tout de même pas venir avec moi ! »",
+        "en": "The princess promised everything, but she thought: “A frog can’t come along, surely!”",
+        "kana": "Die Prinzessin hat alles versprochen, aber sie hat gedacht: „Ein Frosch kann doch nicht mitkommen!“"
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "der Brunnen",
+       "reading": "/deːɐ̯ ˈbʁʊnən/",
+       "fr": "le puits",
+       "en": "the well"
+      },
+      {
+       "jp": "die Kugel",
+       "reading": "/diː ˈkuːɡl̩/",
+       "fr": "la balle, la boule",
+       "en": "the ball"
+      },
+      {
+       "jp": "weinen",
+       "reading": "/ˈvaɪnən/",
+       "fr": "pleurer",
+       "en": "to cry"
+      },
+      {
+       "jp": "tief",
+       "reading": "/tiːf/",
+       "fr": "profond",
+       "en": "deep"
+      },
+      {
+       "jp": "der Frosch",
+       "reading": "/deːɐ̯ fʁɔʃ/",
+       "fr": "la grenouille",
+       "en": "the frog"
+      },
+      {
+       "jp": "versprechen",
+       "reading": "/fɛɐ̯ˈʃpʁɛçn̩/",
+       "fr": "promettre",
+       "en": "to promise"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi la princesse pleure-t-elle ?",
+        "en": "Why does the princess cry?"
+       },
+       "choices": [
+        {
+         "fr": "La grenouille l’a mordue",
+         "en": "The frog bit her"
+        },
+        {
+         "fr": "Elle a perdu son chemin",
+         "en": "She has lost her way"
+        },
+        {
+         "fr": "Sa balle est tombée dans un puits profond",
+         "en": "Her ball has fallen into a deep well"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Que demande la grenouille en échange ?",
+        "en": "What does the frog ask for in return?"
+       },
+       "choices": [
+        {
+         "fr": "De l’or et des bijoux",
+         "en": "Gold and jewels"
+        },
+        {
+         "fr": "Manger avec elle et dormir dans son lit",
+         "en": "To eat with her and sleep in her bed"
+        },
+        {
+         "fr": "Un baiser tout de suite",
+         "en": "A kiss straight away"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "slug": "froschkoenig-2",
+     "title": {
+      "jp": "Der Gast am Tisch",
+      "fr": "L’invité à table",
+      "en": "The guest at the table"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Am nächsten Tag hat es an der Tür geklopft: Der Frosch war da.",
+        "fr": "Le lendemain, on a frappé à la porte : la grenouille était là.",
+        "en": "The next day there was a knock at the door: the frog was there.",
+        "kana": "Am nächsten Tag hat es an der Tür geklopft: Der Frosch war da."
+       },
+       {
+        "jp": "Der König hat gesagt: „Was du versprochen hast, musst du auch halten.“",
+        "fr": "Le roi a dit : « Ce que tu as promis, tu dois le tenir. »",
+        "en": "The king said: “What you have promised, you must keep.”",
+        "kana": "Der König hat gesagt: „Was du versprochen hast, musst du auch halten.“"
+       },
+       {
+        "jp": "Also hat der Frosch vom goldenen Teller gegessen, und die Prinzessin hat sich sehr geärgert.",
+        "fr": "La grenouille a donc mangé dans l’assiette d’or, et la princesse s’est beaucoup fâchée.",
+        "en": "So the frog ate from the golden plate, and the princess was very annoyed.",
+        "kana": "Also hat der Frosch vom goldenen Teller gegessen, und die Prinzessin hat sich sehr geärgert."
+       }
+      ],
+      [
+       {
+        "jp": "Im Schlafzimmer hat sie den Frosch wütend an die Wand geworfen.",
+        "fr": "Dans la chambre, furieuse, elle a jeté la grenouille contre le mur.",
+        "en": "In the bedroom she angrily threw the frog against the wall.",
+        "kana": "Im Schlafzimmer hat sie den Frosch wütend an die Wand geworfen."
+       },
+       {
+        "jp": "Aber da war er kein Frosch mehr, sondern ein junger König mit freundlichen Augen.",
+        "fr": "Mais ce n’était plus une grenouille : c’était un jeune roi au regard bienveillant.",
+        "en": "But he was no longer a frog: he was a young king with friendly eyes.",
+        "kana": "Aber da war er kein Frosch mehr, sondern ein junger König mit freundlichen Augen."
+       },
+       {
+        "jp": "Eine Hexe hatte ihn verzaubert. Am nächsten Morgen sind die beiden zusammen in sein Land gefahren.",
+        "fr": "Une sorcière l’avait ensorcelé. Le lendemain matin, ils sont partis ensemble pour son pays.",
+        "en": "A witch had put a spell on him. The next morning the two of them travelled to his country together.",
+        "kana": "Eine Hexe hatte ihn verzaubert. Am nächsten Morgen sind die beiden zusammen in sein Land gefahren."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "klopfen",
+       "reading": "/ˈklɔpfn̩/",
+       "fr": "frapper (à la porte)",
+       "en": "to knock"
+      },
+      {
+       "jp": "halten",
+       "reading": "/ˈhaltn̩/",
+       "fr": "tenir (une promesse)",
+       "en": "to keep (a promise)"
+      },
+      {
+       "jp": "der Teller",
+       "reading": "/deːɐ̯ ˈtɛlɐ/",
+       "fr": "l’assiette",
+       "en": "the plate"
+      },
+      {
+       "jp": "wütend",
+       "reading": "/ˈvyːtn̩t/",
+       "fr": "furieux",
+       "en": "angry, furious"
+      },
+      {
+       "jp": "werfen",
+       "reading": "/ˈvɛʁfn̩/",
+       "fr": "jeter, lancer",
+       "en": "to throw"
+      },
+      {
+       "jp": "verzaubern",
+       "reading": "/fɛɐ̯ˈtsaʊbɐn/",
+       "fr": "ensorceler",
+       "en": "to put a spell on"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que dit le roi à sa fille ?",
+        "en": "What does the king tell his daughter?"
+       },
+       "choices": [
+        {
+         "fr": "Qu’elle doit tenir sa promesse",
+         "en": "That she must keep her promise"
+        },
+        {
+         "fr": "Qu’elle doit chasser la grenouille",
+         "en": "That she must send the frog away"
+        },
+        {
+         "fr": "Qu’elle doit retourner au puits",
+         "en": "That she must go back to the well"
+        }
+       ],
+       "answer": 0
+      },
+      {
+       "q": {
+        "fr": "Qui était vraiment la grenouille ?",
+        "en": "Who was the frog really?"
+       },
+       "choices": [
+        {
+         "fr": "Le frère de la princesse",
+         "en": "The princess’s brother"
+        },
+        {
+         "fr": "Une sorcière",
+         "en": "A witch"
+        },
+        {
+         "fr": "Un jeune roi ensorcelé",
+         "en": "A young king under a spell"
+        }
+       ],
+       "answer": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hans-im-glueck",
+   "glyph": "U",
+   "level": "GOETHEA2",
+   "color": "#B8902A",
+   "title": {
+    "jp": "Hans im Glück",
+    "fr": "Jean le Chanceux",
+    "en": "Lucky Hans"
+   },
+   "summary": {
+    "fr": "Après sept ans de travail, Jean reçoit un lingot d’or… et l’échange, de troc en troc, jusqu’à n’avoir plus rien. Est-il fou ou heureux ?",
+    "en": "After seven years’ work, Hans is given a lump of gold… and swaps it, deal after deal, until he has nothing left. Is he a fool or a happy man?"
+   },
+   "chapters": [
+    {
+     "slug": "hans-im-glueck-1",
+     "title": {
+      "jp": "Gold, Pferd und Kuh",
+      "fr": "L’or, le cheval et la vache",
+      "en": "Gold, horse and cow"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Hans hat sieben Jahre bei seinem Herrn gearbeitet. Jetzt wollte er nach Hause zu seiner Mutter.",
+        "fr": "Jean a travaillé sept ans chez son maître. Maintenant, il voulait rentrer chez sa mère.",
+        "en": "Hans worked for his master for seven years. Now he wanted to go home to his mother.",
+        "kana": "Hans hat sieben Jahre bei seinem Herrn gearbeitet. Jetzt wollte er nach Hause zu seiner Mutter."
+       },
+       {
+        "jp": "Der Herr hat ihm ein Stück Gold gegeben, so groß wie sein Kopf.",
+        "fr": "Le maître lui a donné un morceau d’or gros comme sa tête.",
+        "en": "The master gave him a lump of gold as big as his head.",
+        "kana": "Der Herr hat ihm ein Stück Gold gegeben, so groß wie sein Kopf."
+       },
+       {
+        "jp": "Aber das Gold war schwer, und der Weg war lang.",
+        "fr": "Mais l’or était lourd, et le chemin était long.",
+        "en": "But the gold was heavy, and the way was long.",
+        "kana": "Aber das Gold war schwer, und der Weg war lang."
+       }
+      ],
+      [
+       {
+        "jp": "Da ist ein Reiter gekommen. „Reiten ist besser als laufen“, hat Hans gedacht, und er hat das Gold gegen das Pferd getauscht.",
+        "fr": "Alors un cavalier est arrivé. « Aller à cheval vaut mieux que marcher », a pensé Jean, et il a échangé l’or contre le cheval.",
+        "en": "Then a rider came along. “Riding is better than walking,” thought Hans, and he swapped the gold for the horse.",
+        "kana": "Da ist ein Reiter gekommen. „Reiten ist besser als laufen“, hat Hans gedacht, und er hat das Gold gegen das Pferd getauscht."
+       },
+       {
+        "jp": "Das Pferd ist zu schnell gelaufen, und Hans ist heruntergefallen.",
+        "fr": "Le cheval a couru trop vite, et Jean est tombé.",
+        "en": "The horse ran too fast, and Hans fell off.",
+        "kana": "Das Pferd ist zu schnell gelaufen, und Hans ist heruntergefallen."
+       },
+       {
+        "jp": "Also hat er das Pferd gegen eine Kuh getauscht, weil eine Kuh ruhiger ist und Milch gibt.",
+        "fr": "Il a donc échangé le cheval contre une vache, parce qu’une vache est plus calme et donne du lait.",
+        "en": "So he swapped the horse for a cow, because a cow is calmer and gives milk.",
+        "kana": "Also hat er das Pferd gegen eine Kuh getauscht, weil eine Kuh ruhiger ist und Milch gibt."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "der Herr",
+       "reading": "/deːɐ̯ hɛʁ/",
+       "fr": "le maître, le patron",
+       "en": "the master"
+      },
+      {
+       "jp": "schwer",
+       "reading": "/ʃveːɐ̯/",
+       "fr": "lourd",
+       "en": "heavy"
+      },
+      {
+       "jp": "der Reiter",
+       "reading": "/deːɐ̯ ˈʁaɪtɐ/",
+       "fr": "le cavalier",
+       "en": "the rider"
+      },
+      {
+       "jp": "das Pferd",
+       "reading": "/das pfeːɐ̯t/",
+       "fr": "le cheval",
+       "en": "the horse"
+      },
+      {
+       "jp": "tauschen",
+       "reading": "/ˈtaʊʃn̩/",
+       "fr": "échanger",
+       "en": "to swap"
+      },
+      {
+       "jp": "die Kuh",
+       "reading": "/diː kuː/",
+       "fr": "la vache",
+       "en": "the cow"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Pourquoi Jean échange-t-il son or ?",
+        "en": "Why does Hans swap his gold?"
+       },
+       "choices": [
+        {
+         "fr": "Il veut acheter une maison",
+         "en": "He wants to buy a house"
+        },
+        {
+         "fr": "Il est lourd et le chemin est long",
+         "en": "It is heavy and the way is long"
+        },
+        {
+         "fr": "Son maître le lui demande",
+         "en": "His master asks him to"
+        }
+       ],
+       "answer": 1
+      },
+      {
+       "q": {
+        "fr": "Pourquoi préfère-t-il ensuite une vache au cheval ?",
+        "en": "Why does he then prefer a cow to the horse?"
+       },
+       "choices": [
+        {
+         "fr": "Elle est plus calme et donne du lait",
+         "en": "It is calmer and gives milk"
+        },
+        {
+         "fr": "Elle court plus vite",
+         "en": "It runs faster"
+        },
+        {
+         "fr": "Elle vaut plus cher",
+         "en": "It is worth more"
+        }
+       ],
+       "answer": 0
+      }
+     ]
+    },
+    {
+     "slug": "hans-im-glueck-2",
+     "title": {
+      "jp": "Frei wie ein Vogel",
+      "fr": "Libre comme un oiseau",
+      "en": "Free as a bird"
+     },
+     "paragraphs": [
+      [
+       {
+        "jp": "Die Kuh hat keine Milch gegeben. Hans hat sie gegen ein Schwein getauscht und das Schwein gegen eine Gans.",
+        "fr": "La vache n’a pas donné de lait. Jean l’a échangée contre un cochon, et le cochon contre une oie.",
+        "en": "The cow gave no milk. Hans swapped it for a pig, and the pig for a goose.",
+        "kana": "Die Kuh hat keine Milch gegeben. Hans hat sie gegen ein Schwein getauscht und das Schwein gegen eine Gans."
+       },
+       {
+        "jp": "Für die Gans hat er am Ende einen schweren Stein bekommen.",
+        "fr": "Contre l’oie, il a fini par recevoir une lourde pierre.",
+        "en": "For the goose he ended up with a heavy stone.",
+        "kana": "Für die Gans hat er am Ende einen schweren Stein bekommen."
+       },
+       {
+        "jp": "„Ich habe immer Glück“, hat er gesagt. „Jeder Tausch war besser als der letzte.“",
+        "fr": "« J’ai toujours de la chance, a-t-il dit. Chaque échange était meilleur que le précédent. »",
+        "en": "“I am always lucky,” he said. “Every swap was better than the last.”",
+        "kana": "„Ich habe immer Glück“, hat er gesagt. „Jeder Tausch war besser als der letzte.“"
+       }
+      ],
+      [
+       {
+        "jp": "An einem Brunnen wollte Hans trinken. Da ist der Stein ins Wasser gefallen.",
+        "fr": "Près d’un puits, Jean a voulu boire. Alors la pierre est tombée dans l’eau.",
+        "en": "At a well Hans wanted to drink. Then the stone fell into the water.",
+        "kana": "An einem Brunnen wollte Hans trinken. Da ist der Stein ins Wasser gefallen."
+       },
+       {
+        "jp": "Hans hat gelacht: „Jetzt muss ich nichts mehr tragen. Ich bin der glücklichste Mensch der Welt!“",
+        "fr": "Jean a ri : « Maintenant, je n’ai plus rien à porter. Je suis l’homme le plus heureux du monde ! »",
+        "en": "Hans laughed: “Now I don’t have to carry anything any more. I am the happiest person in the world!”",
+        "kana": "Hans hat gelacht: „Jetzt muss ich nichts mehr tragen. Ich bin der glücklichste Mensch der Welt!“"
+       },
+       {
+        "jp": "Und er ist frei und leicht zu seiner Mutter nach Hause gelaufen.",
+        "fr": "Et il a couru, libre et léger, jusque chez sa mère.",
+        "en": "And he ran home to his mother, free and light.",
+        "kana": "Und er ist frei und leicht zu seiner Mutter nach Hause gelaufen."
+       }
+      ]
+     ],
+     "words": [
+      {
+       "jp": "das Schwein",
+       "reading": "/das ʃvaɪn/",
+       "fr": "le cochon",
+       "en": "the pig"
+      },
+      {
+       "jp": "die Gans",
+       "reading": "/diː ɡans/",
+       "fr": "l’oie",
+       "en": "the goose"
+      },
+      {
+       "jp": "der Stein",
+       "reading": "/deːɐ̯ ʃtaɪn/",
+       "fr": "la pierre",
+       "en": "the stone"
+      },
+      {
+       "jp": "das Glück",
+       "reading": "/das ɡlʏk/",
+       "fr": "la chance ; le bonheur",
+       "en": "luck; happiness"
+      },
+      {
+       "jp": "frei",
+       "reading": "/fʁaɪ/",
+       "fr": "libre",
+       "en": "free"
+      },
+      {
+       "jp": "leicht",
+       "reading": "/laɪçt/",
+       "fr": "léger",
+       "en": "light"
+      }
+     ],
+     "questions": [
+      {
+       "q": {
+        "fr": "Que reçoit Jean en échange de l’oie ?",
+        "en": "What does Hans get in exchange for the goose?"
+       },
+       "choices": [
+        {
+         "fr": "Un sac d’or",
+         "en": "A bag of gold"
+        },
+        {
+         "fr": "Un cochon",
+         "en": "A pig"
+        },
+        {
+         "fr": "Une lourde pierre",
+         "en": "A heavy stone"
+        }
+       ],
+       "answer": 2
+      },
+      {
+       "q": {
+        "fr": "Pourquoi Jean rit-il à la fin ?",
+        "en": "Why does Hans laugh at the end?"
+       },
+       "choices": [
+        {
+         "fr": "Il a retrouvé son or",
+         "en": "He has found his gold again"
+        },
+        {
+         "fr": "Il n’a plus rien à porter",
+         "en": "He has nothing left to carry"
+        },
+        {
+         "fr": "Sa mère lui offre un cheval",
+         "en": "His mother gives him a horse"
+        }
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ]
   }
  ],
  "notices": {

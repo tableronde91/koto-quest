@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
  * Mode histoire allemand (l'apprenti·e des frères Grimm) : le décor de chaque île raconte son chapitre.
  * Goethe A1, la Route des contes : maisons à colombages de Hanau et Steinau, ruelles de Marbourg, maison de pain d'épices,
  * château de Sababurg sous les ronces, marché de Göttingen, mont de Dame Holle, Hamelin et les Musiciens de Brême.
+ * Goethe A2, du Rhin à la Forêt-Noire : puits du Roi Grenouille, bal de Cendrillon, tour de Raiponce, miroir de la Reine, halte du Chat botté, Oie d'or, château de Barbe-de-Grive.
  * Dessins originaux, centrés sur (0, 0).
  */
 const PLASTER = '#F4EDDC';
@@ -187,6 +188,85 @@ function BremenHall({ ...p }: P) {
   );
 }
 
+/** Vieux puits de pierre, sa poulie et la balle d'or. */
+function Well({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-9" y="-8" width="18" height="8" rx="2" fill={STONE} />
+      <ellipse cx="0" cy="-8" rx="9" ry="3" fill="#3A6AA8" />
+      <path d="M-8 -8 V-20 M8 -8 V-20" stroke={WOOD} strokeWidth="1.6" />
+      <path d="M-11 -20 L0 -26 L11 -20Z" fill={ROOF} />
+      <circle cx={calm ? 14 : 0} cy={calm ? -2 : -9} r="2.4" fill={GOLD} />
+    </g>
+  );
+}
+
+/** Tour de Raiponce : haute, sans porte, une seule fenêtre et la tresse dorée. */
+function Tower({ calm = false, ...p }: P & { calm?: boolean }) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-6" y="-30" width="12" height="30" fill="#BDB7AA" />
+      <path d="M-9 -30 L0 -42 L9 -30Z" fill={ROOF} />
+      <rect x="-2.5" y="-26" width="5" height="6" rx="2.5" fill={BEAM} />
+      {calm && <path d="M2 -21 Q7 -12 4 -2" stroke={GOLD} strokeWidth="2" fill="none" strokeLinecap="round" />}
+      <path d="M-6 -8 H6 M-6 -16 H6" stroke={STONE} strokeWidth="0.6" />
+    </g>
+  );
+}
+
+/** Miroir de la Reine : cadre doré ovale sur pied. */
+function Mirror({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M0 0 V-8" stroke={GOLD} strokeWidth="2" />
+      <path d="M-5 0 H5" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+      <ellipse cx="0" cy="-18" rx="8" ry="11" fill={GOLD} />
+      <ellipse cx="0" cy="-18" rx="6" ry="9" fill="#CFE6F2" />
+      <path d="M-3 -23 L2 -14" stroke={SNOW} strokeWidth="1.4" opacity="0.8" />
+    </g>
+  );
+}
+
+/** Château du Sud : donjon, deux ailes et bannière. */
+function Castle({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <rect x="-16" y="-12" width="32" height="12" fill={STONE} />
+      <rect x="-6" y="-26" width="12" height="26" fill="#BDB7AA" />
+      <path d="M-8 -26 L0 -36 L8 -26Z" fill={ROOF} />
+      <path d="M-16 -12 V-15 H-13 V-12 M-10 -12 V-15 H-7 V-12 M7 -12 V-15 H10 V-12 M13 -12 V-15 H16 V-12" stroke={STONE} strokeWidth="2" />
+      <rect x="-2.5" y="-7" width="5" height="7" rx="2.5" fill={BEAM} />
+      <path d="M0 -36 V-42 L5 -40 L0 -38" fill={GOLD} stroke={BEAM} strokeWidth="0.5" />
+    </g>
+  );
+}
+
+/** L'Oie d'or. */
+function Goose({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <ellipse cx="0" cy="-5" rx="7" ry="5" fill={GOLD} />
+      <path d="M5 -7 Q9 -14 6 -17" stroke={GOLD} strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="6" cy="-17" r="2.4" fill={GOLD} />
+      <path d="M8 -17 L11 -16.5 L8 -16Z" fill="#E2703A" />
+      <path d="M-2 0 V2 M2 0 V2" stroke="#E2703A" strokeWidth="1.2" />
+    </g>
+  );
+}
+
+/** Borne et panneau de gare : le voyage du Chat botté. */
+function Halt({ ...p }: P) {
+  return (
+    <g transform={at(p)}>
+      <path d="M-14 0 H14" stroke={BEAM} strokeWidth="1.4" />
+      <path d="M-12 0 V2 M-6 0 V2 M0 0 V2 M6 0 V2 M12 0 V2" stroke={WOOD} strokeWidth="1.6" />
+      <rect x="-1" y="-16" width="2" height="16" fill={WOOD} />
+      <rect x="-8" y="-20" width="16" height="6" rx="1" fill={PLASTER} stroke={BEAM} strokeWidth="0.7" />
+      <path d="M-5 -17 H5" stroke={BEAM} strokeWidth="1" />
+    </g>
+  );
+}
+
 export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   // Hanau : la maison natale des Grimm et le feu du Rumpelstilzchen
   'goethea1-w1': (calm) => (<><TimberHouse x={-12} y={12} /><Campfire x={12} y={14} calm={calm} /><Fir x={28} y={12} s={0.7} /></>),
@@ -206,4 +286,23 @@ export const GERMAN_SCENES: Record<string, (calm: boolean) => ReactNode> = {
   'goethea1-w8': (calm) => (<><TownGate x={-12} y={13} /><TimberHouse x={8} y={13} s={0.8} />{!calm && <PipeNotes x={26} y={10} />}</>),
   // Brême : les quatre Musiciens devant l'hôtel de ville
   'goethea1-final': () => (<><BremenHall x={-10} y={13} /><Musicians x={20} y={14} /></>),
+  // ───── Goethe A2 : du Rhin à la Forêt-Noire ─────
+  // Le puits du Roi Grenouille (la balle d'or en ressort une fois le conte apaisé)
+  'goethea2-w1': (calm) => (<><Well x={-4} y={13} calm={calm} /><Fir x={-26} y={12} s={0.8} /><Fir x={24} y={12} s={0.7} /></>),
+  // La maison de Cendrillon et le château du bal
+  'goethea2-w2': () => (<><TimberHouse x={-16} y={13} s={0.9} /><Castle x={16} y={12} s={0.8} /></>),
+  // La tour de Raiponce dans la forêt
+  'goethea2-w3': (calm) => (<><Fir x={-24} y={12} /><Tower x={0} y={14} calm={calm} /><Fir x={22} y={12} s={0.8} /></>),
+  // Le château de la Reine et son miroir
+  'goethea2-w4': () => (<><Castle x={-10} y={13} /><Mirror x={22} y={14} s={0.9} /></>),
+  // Le chemin de Jean le Chanceux : le puits au bord de la route
+  'goethea2-w5': (calm) => (<><Signpost x={-18} y={14} /><Well x={8} y={13} calm={!calm} /><Fir x={30} y={12} s={0.6} /></>),
+  // La halte et l'auberge du Chat botté
+  'goethea2-w6': () => (<><Halt x={-14} y={14} /><TimberHouse x={14} y={13} s={0.9} /></>),
+  // L'auberge de l'Oie d'or
+  'goethea2-w7': () => (<><TimberHouse x={-12} y={13} /><Goose x={14} y={14} /><Fir x={30} y={12} s={0.6} /></>),
+  // Le château du Roi Barbe-de-Grive
+  'goethea2-w8': () => (<><Castle x={-4} y={13} s={1.1} /><ClothStall x={26} y={13} s={0.6} /></>),
+  // Le festin des contes
+  'goethea2-final': () => (<><Castle x={-12} y={13} /><Goose x={14} y={14} s={0.8} /><Mirror x={28} y={14} s={0.6} /></>),
 };

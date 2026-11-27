@@ -26,7 +26,7 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     expect(me.preferences).toMatchObject({ studyLanguage: 'de', targetLevel: 'GOETHEA1' });
     const path = (await agent.get('/api/path/GOETHEA1').expect(200)).body;
     expect(path.level).toMatchObject({ code: 'GOETHEA1', region: 'Route des contes' });
-    expect(path.levels.map((l: any) => l.code)).toEqual(['GOETHEA1']);
+    expect(path.levels.map((l: any) => l.code)).toEqual(['GOETHEA1', 'GOETHEA2']);
     expect(path.worlds).toHaveLength(9);
     expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['Ä', 'Ö', 'ß', 'ä', 'ö', '7', '❄', '♪']);
     expect(path.worlds.at(-1)).toMatchObject({ slug: 'goethea1-final', exam: { slug: 'goethea1-official' } });
@@ -50,7 +50,7 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     expect(s.questions.length).toBeGreaterThan(5);
 
     const reading = (await agent.get('/api/reading').expect(200)).body;
-    expect(reading.stories.map((x: any) => x.slug)).toEqual(['bremer-stadtmusikanten', 'suesser-brei', 'sterntaler']);
+    expect(reading.stories.map((x: any) => x.slug)).toEqual(['bremer-stadtmusikanten', 'suesser-brei', 'sterntaler', 'froschkoenig', 'hans-im-glueck']);
     await agent.get('/api/reading/chapters/medio-pollito-1').expect(404);
     const ch = stories.stories.find((x: any) => x.slug === 'suesser-brei').chapters[0];
     const r = (await agent.post('/api/reading/chapters/suesser-brei-1/complete').send({ answers: ch.questions.map((q: any) => q.answer) }).expect(201)).body;
@@ -103,6 +103,27 @@ describe('Allemand : préparer le Goethe-Zertifikat', () => {
     for (const q of exam2.questions) answers2[q.id] = q.type === 'listening_choice' ? '—' : await correctAnswer(ctx.prisma, q.id);
     const fail = (await agent.post('/api/exams/goethea1-official/submit').send({ sessionId: exam2.sessionId, answers: answers2 }).expect(200)).body;
     expect(fail).toMatchObject({ passed: false, percent: 57 });
+  });
+
+  it('Goethe A2 : du Rhin à la Forêt-Noire, ses gardiens, sa saga et son examen (20 + 20 + 5 questions)', async () => {
+    const { agent } = await signUpGerman(ctx);
+    await agent.put('/api/me/preferences').send({ targetLevel: 'GOETHEA2' }).expect(200);
+    const path = (await agent.get('/api/path/GOETHEA2').expect(200)).body;
+    expect(path.level).toMatchObject({ code: 'GOETHEA2', region: 'Forêt-Noire' });
+    expect(path.worlds).toHaveLength(9);
+    expect(path.worlds.slice(0, 8).map((w: any) => w.boss.glyph)).toEqual(['♔', '♟', '♜', '♕', '☘', '♞', '♢', '♚']);
+    expect(path.worlds.at(-1)).toMatchObject({ slug: 'goethea2-final', exam: { slug: 'goethea2-official' } });
+    expect(path.worlds[0].chapters[0].lessons[0]).toMatchObject({ slug: 'de-perfekt-haben' });
+    const exam = (await agent.post('/api/exams/goethea2-official/start').expect(201)).body;
+    expect(exam.questions).toHaveLength(45);
+    expect(exam.exam.durationMin).toBe(90);
+    expect(exam.questions.filter((q: any) => q.type === 'listening_choice')).toHaveLength(20);
+    const answers: Record<string, unknown> = {};
+    for (const q of exam.questions) answers[q.id] = await correctAnswer(ctx.prisma, q.id);
+    const result = (await agent.post('/api/exams/goethea2-official/submit').send({ sessionId: exam.sessionId, answers }).expect(200)).body;
+    expect(result).toMatchObject({ passed: true, percent: 100 });
+    const saga = JSON.parse(readFileSync(resolve(__dirname, '../../../content/story/story.json'), 'utf8')).levels.GOETHEA2;
+    expect(saga).toMatchObject({ glyph: 'Ö', jp: 'Schwarzwald' });
   });
 
   it('saga : l’apprenti·e des frères Grimm, un chapitre par île', async () => {

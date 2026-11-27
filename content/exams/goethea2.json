@@ -1,0 +1,776 @@
+{
+ "slug": "goethea2",
+ "level": "GOETHEA2",
+ "contentVersion": "2026.11.27",
+ "notice": "Questions rédigées par Koto Quest au format de l’examen officiel Goethe-Zertifikat A2 (Goethe-Institut : types d’épreuves, consignes en allemand, notation sur 100, réussite à 60 points). L’épreuve Schreiben se fait par choix multiple et l’épreuve orale (Sprechen) n’est pas évaluée. Ce ne sont pas des questions officielles.",
+ "parts": [
+  {
+   "id": "h-radio",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 1",
+   "title": "Radio, annonces et répondeur",
+   "prompt": "Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung.",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "N|Und jetzt das Wetter für morgen: Am Vormittag regnet es noch im ganzen Land. Am Nachmittag kommt die Sonne, und es wird bis zu zwanzig Grad warm.",
+     "choices": [
+      "Am Nachmittag scheint die Sonne.",
+      "Es regnet den ganzen Tag.",
+      "Es wird kälter als heute."
+     ],
+     "answer": "Am Nachmittag scheint die Sonne.",
+     "explanation": "Transcription : Narrateur : Und jetzt das Wetter für morgen: Am Vormittag regnet es noch im ganzen Land. Am Nachmittag kommt die Sonne, und es wird bis zu zwanzig Grad warm.",
+     "text": "★ Wie wird das Wetter morgen?"
+    },
+    {
+     "audio": "N|Achtung an Gleis sieben: Der ICE nach Freiburg, Abfahrt 14.12 Uhr, hat heute circa zwanzig Minuten Verspätung. Wir bitten um Entschuldigung.",
+     "choices": [
+      "Der Zug kommt später.",
+      "Der Zug fällt aus.",
+      "Der Zug fährt von einem anderen Gleis."
+     ],
+     "answer": "Der Zug kommt später.",
+     "explanation": "Transcription : Narrateur : Achtung an Gleis sieben: Der ICE nach Freiburg, Abfahrt 14.12 Uhr, hat heute circa zwanzig Minuten Verspätung. Wir bitten um Entschuldigung.",
+     "text": "★ Was ist mit dem Zug nach Freiburg?"
+    },
+    {
+     "audio": "F|Guten Tag, Herr Lang, hier ist die Praxis Doktor Weber. Ihr Termin am Donnerstag fällt leider aus. Können Sie am Freitag um halb elf kommen? Bitte rufen Sie uns zurück.",
+     "choices": [
+      "Am Freitag um 10.30 Uhr.",
+      "Am Donnerstag um 10.30 Uhr.",
+      "Am Freitag um 11.30 Uhr."
+     ],
+     "answer": "Am Freitag um 10.30 Uhr.",
+     "explanation": "Transcription : Femme : Guten Tag, Herr Lang, hier ist die Praxis Doktor Weber. Ihr Termin am Donnerstag fällt leider aus. Können Sie am Freitag um halb elf kommen? Bitte rufen Sie uns zurück.",
+     "text": "★ Wann ist der neue Termin?"
+    },
+    {
+     "audio": "N|Liebe Kundinnen und Kunden, heute im Angebot: frisches Brot aus unserer Bäckerei für nur zwei Euro und Äpfel aus der Region, das Kilo für einen Euro neunundneunzig.",
+     "choices": [
+      "Brot und Äpfel.",
+      "Käse und Milch.",
+      "Kuchen und Kaffee."
+     ],
+     "answer": "Brot und Äpfel.",
+     "explanation": "Transcription : Narrateur : Liebe Kundinnen und Kunden, heute im Angebot: frisches Brot aus unserer Bäckerei für nur zwei Euro und Äpfel aus der Region, das Kilo für einen Euro neunundneunzig.",
+     "text": "★ Was ist heute im Angebot?"
+    },
+    {
+     "audio": "M|Hallo Julia, hier ist Markus. Ich stehe im Stau und komme eine halbe Stunde später zum Kino. Kauf bitte schon die Karten, ich gebe dir das Geld später.",
+     "choices": [
+      "Die Kinokarten kaufen.",
+      "Auf Markus zu Hause warten.",
+      "Markus mit dem Auto abholen."
+     ],
+     "answer": "Die Kinokarten kaufen.",
+     "explanation": "Transcription : Homme : Hallo Julia, hier ist Markus. Ich stehe im Stau und komme eine halbe Stunde später zum Kino. Kauf bitte schon die Karten, ich gebe dir das Geld später.",
+     "text": "★ Was soll Julia tun?"
+    },
+    {
+     "audio": "N|Verkehrsmeldung: Auf der A5 zwischen Karlsruhe und Baden-Baden gibt es nach einem Unfall fünf Kilometer Stau. Bitte fahren Sie langsam.",
+     "choices": [
+      "Es gibt einen Stau.",
+      "Die Autobahn ist geschlossen.",
+      "Es schneit stark."
+     ],
+     "answer": "Es gibt einen Stau.",
+     "explanation": "Transcription : Narrateur : Verkehrsmeldung: Auf der A5 zwischen Karlsruhe und Baden-Baden gibt es nach einem Unfall fünf Kilometer Stau. Bitte fahren Sie langsam.",
+     "text": "★ Was ist auf der A5 los?"
+    },
+    {
+     "audio": "F|Sie hören den Anrufbeantworter der Stadtbibliothek. Wir sind von Dienstag bis Samstag von zehn bis achtzehn Uhr für Sie da. Am Montag ist die Bibliothek geschlossen.",
+     "choices": [
+      "Am Montag.",
+      "Am Samstag.",
+      "Am Dienstag."
+     ],
+     "answer": "Am Montag.",
+     "explanation": "Transcription : Femme : Sie hören den Anrufbeantworter der Stadtbibliothek. Wir sind von Dienstag bis Samstag von zehn bis achtzehn Uhr für Sie da. Am Montag ist die Bibliothek geschlossen.",
+     "text": "★ Wann ist die Bibliothek geschlossen?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-woche",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 2",
+   "title": "Une conversation : la semaine de Tim",
+   "prompt": "Sie hören ein Gespräch. Was hat Tim an diesem Tag gemacht?",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er hat lange gearbeitet.",
+      "Er war im Kino.",
+      "Er hat Fußball gespielt."
+     ],
+     "answer": "Er hat lange gearbeitet.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Montag"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er ist ins Kino gegangen.",
+      "Er war beim Zahnarzt.",
+      "Er hat eingekauft."
+     ],
+     "answer": "Er ist ins Kino gegangen.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Dienstag"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er war beim Zahnarzt.",
+      "Er hat die Wohnung geputzt.",
+      "Er hat gearbeitet."
+     ],
+     "answer": "Er war beim Zahnarzt.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Mittwoch"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er hat für seine Eltern eingekauft.",
+      "Er hat Fußball gespielt.",
+      "Er ist nach Heidelberg gefahren."
+     ],
+     "answer": "Er hat für seine Eltern eingekauft.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Donnerstag"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er hat Fußball gespielt.",
+      "Er hat lange geschlafen.",
+      "Er war im Kino."
+     ],
+     "answer": "Er hat Fußball gespielt.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Freitag"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er hat geschlafen und geputzt.",
+      "Er hat seine Schwester besucht.",
+      "Er hat eingekauft."
+     ],
+     "answer": "Er hat geschlafen und geputzt.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Samstag"
+    },
+    {
+     "audio": "F|Na, Tim, wie war deine Woche?\nM|Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen.\nF|Und am Mittwoch?\nM|Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt.\nF|Und das Wochenende?\nM|Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "choices": [
+      "Er hat seine Schwester besucht.",
+      "Er hat die Wohnung geputzt.",
+      "Er war im Büro."
+     ],
+     "answer": "Er hat seine Schwester besucht.",
+     "explanation": "Transcription : Femme : Na, Tim, wie war deine Woche? / Homme : Ziemlich voll! Am Montag habe ich bis acht Uhr im Büro gearbeitet. Am Dienstag bin ich mit Lena ins Kino gegangen. / Femme : Und am Mittwoch? / Homme : Da war ich beim Zahnarzt. Am Donnerstag habe ich für meine Eltern eingekauft, und am Freitag habe ich endlich Fußball gespielt. / Femme : Und das Wochenende? / Homme : Am Samstag habe ich lange geschlafen und dann meine Wohnung geputzt. Am Sonntag bin ich mit dem Zug zu meiner Schwester nach Heidelberg gefahren.",
+     "text": "★ Sonntag"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-gespraeche",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 3",
+   "title": "Dialogues courts",
+   "prompt": "Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung.",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "F|Entschuldigung, ich suche die Apotheke.\nM|Gehen Sie hier geradeaus bis zur Kirche. Die Apotheke ist direkt dahinter.",
+     "choices": [
+      "Hinter der Kirche.",
+      "Neben dem Bahnhof.",
+      "Vor der Schule."
+     ],
+     "answer": "Hinter der Kirche.",
+     "explanation": "Transcription : Femme : Entschuldigung, ich suche die Apotheke. / Homme : Gehen Sie hier geradeaus bis zur Kirche. Die Apotheke ist direkt dahinter.",
+     "text": "★ Wo ist die Apotheke?"
+    },
+    {
+     "audio": "M|Was hast du deiner Mutter zum Geburtstag geschenkt?\nF|Zuerst wollte ich Blumen kaufen, aber dann habe ich ein Buch genommen. Sie liest so gern.",
+     "choices": [
+      "Ein Buch.",
+      "Blumen.",
+      "Einen Kuchen."
+     ],
+     "answer": "Ein Buch.",
+     "explanation": "Transcription : Homme : Was hast du deiner Mutter zum Geburtstag geschenkt? / Femme : Zuerst wollte ich Blumen kaufen, aber dann habe ich ein Buch genommen. Sie liest so gern.",
+     "text": "★ Was hat die Frau geschenkt?"
+    },
+    {
+     "audio": "F|Wie kommst du morgen zur Arbeit? Die Busse fahren doch nicht.\nM|Ich weiß. Ich nehme das Fahrrad, das Auto ist in der Werkstatt.",
+     "choices": [
+      "Mit dem Fahrrad.",
+      "Mit dem Bus.",
+      "Mit dem Auto."
+     ],
+     "answer": "Mit dem Fahrrad.",
+     "explanation": "Transcription : Femme : Wie kommst du morgen zur Arbeit? Die Busse fahren doch nicht. / Homme : Ich weiß. Ich nehme das Fahrrad, das Auto ist in der Werkstatt.",
+     "text": "★ Wie fährt der Mann morgen zur Arbeit?"
+    },
+    {
+     "audio": "M|Guten Tag, ich hätte gern ein Doppelzimmer für zwei Nächte.\nF|Gern. Mit Frühstück kostet das hundertsechzig Euro für beide Nächte.",
+     "choices": [
+      "160 Euro.",
+      "116 Euro.",
+      "60 Euro."
+     ],
+     "answer": "160 Euro.",
+     "explanation": "Transcription : Homme : Guten Tag, ich hätte gern ein Doppelzimmer für zwei Nächte. / Femme : Gern. Mit Frühstück kostet das hundertsechzig Euro für beide Nächte.",
+     "text": "★ Wie viel kostet das Zimmer für zwei Nächte?"
+    },
+    {
+     "audio": "F|Warum warst du gestern nicht im Deutschkurs?\nM|Ich war krank. Ich hatte Fieber und bin den ganzen Tag im Bett geblieben.",
+     "choices": [
+      "Er war krank.",
+      "Er hatte Urlaub.",
+      "Er musste arbeiten."
+     ],
+     "answer": "Er war krank.",
+     "explanation": "Transcription : Femme : Warum warst du gestern nicht im Deutschkurs? / Homme : Ich war krank. Ich hatte Fieber und bin den ganzen Tag im Bett geblieben.",
+     "text": "★ Warum war der Mann nicht im Kurs?"
+    },
+    {
+     "audio": "M|Welche Wohnung nimmst du jetzt?\nF|Die im Zentrum ist schöner, aber zu teuer. Ich nehme die kleinere am Stadtrand, die ist ruhiger.",
+     "choices": [
+      "Die kleinere am Stadtrand.",
+      "Die teure im Zentrum.",
+      "Keine von beiden."
+     ],
+     "answer": "Die kleinere am Stadtrand.",
+     "explanation": "Transcription : Homme : Welche Wohnung nimmst du jetzt? / Femme : Die im Zentrum ist schöner, aber zu teuer. Ich nehme die kleinere am Stadtrand, die ist ruhiger.",
+     "text": "★ Welche Wohnung nimmt die Frau?"
+    },
+    {
+     "audio": "F|Sollen wir uns um sieben vor dem Restaurant treffen?\nM|Lieber um halb acht, ich muss noch meinen Sohn vom Sport abholen.",
+     "choices": [
+      "Um halb acht.",
+      "Um sieben.",
+      "Um acht."
+     ],
+     "answer": "Um halb acht.",
+     "explanation": "Transcription : Femme : Sollen wir uns um sieben vor dem Restaurant treffen? / Homme : Lieber um halb acht, ich muss noch meinen Sohn vom Sport abholen.",
+     "text": "★ Wann treffen sie sich?"
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "h-interview",
+   "section": "listening",
+   "jpTitle": "Hören — Teil 4",
+   "title": "Une interview : vrai ou faux",
+   "prompt": "Sie hören ein Interview. Sind die Aussagen richtig oder falsch?",
+   "count": 5,
+   "questions": [
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Jonas hat als Kind gern mit seiner Großmutter gekocht."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Er hat seine Ausbildung in einer Bäckerei gemacht."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Sein Restaurant ist in Freiburg."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Am Montag arbeitet er."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Er findet, dass er seine Familie zu wenig sieht."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Richtig",
+      "Falsch"
+     ],
+     "answer": "Richtig",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Er möchte ein Kochbuch schreiben."
+    },
+    {
+     "audio": "F|Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum?\nM|Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen.\nF|Und heute haben Sie ein eigenes Restaurant.\nM|Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei.\nF|Was gefällt Ihnen nicht so an Ihrem Beruf?\nM|Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig.\nF|Und Ihre Pläne für die Zukunft?\nM|Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "choices": [
+      "Falsch",
+      "Richtig"
+     ],
+     "answer": "Falsch",
+     "explanation": "Transcription : Femme : Herzlich willkommen bei Radio Schwarzwald. Mein Gast heute ist Jonas Keller. Jonas, Sie sind Koch von Beruf. Warum? / Homme : Weil ich schon als Kind gern mit meiner Großmutter gekocht habe. Mit sechzehn habe ich dann die Ausbildung in einem Hotel angefangen. / Femme : Und heute haben Sie ein eigenes Restaurant. / Homme : Ja, seit drei Jahren, in Freiburg. Wir sind sechs Kollegen. Am Montag ist geschlossen, da habe ich frei. / Femme : Was gefällt Ihnen nicht so an Ihrem Beruf? / Homme : Die Arbeitszeiten. Ich arbeite fast jeden Abend und oft am Wochenende. Meine Familie sehe ich zu wenig. / Femme : Und Ihre Pläne für die Zukunft? / Homme : Nächstes Jahr werde ich ein Kochbuch schreiben, mit Rezepten aus der Region.",
+     "text": "★ Das Restaurant gibt es seit zehn Jahren."
+    }
+   ],
+   "listening": true
+  },
+  {
+   "id": "l-artikel",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 1",
+   "title": "Un article de journal",
+   "prompt": "Lesen Sie den Text und wählen Sie die richtige Lösung.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "war früher Lehrerin.",
+      "ist Köchin von Beruf.",
+      "arbeitet noch in einer Schule."
+     ],
+     "answer": "war früher Lehrerin.",
+     "explanation": "Réponse : war früher Lehrerin.",
+     "text": "★ Clara Roth …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    },
+    {
+     "choices": [
+      "liest Frau Roth ein Märchen vor.",
+      "ist das Café geschlossen.",
+      "gibt es einen Kochkurs."
+     ],
+     "answer": "liest Frau Roth ein Märchen vor.",
+     "explanation": "Réponse : liest Frau Roth ein Märchen vor.",
+     "text": "★ Am Samstag um 15 Uhr …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    },
+    {
+     "choices": [
+      "das Café klein ist.",
+      "der Eintritt teuer ist.",
+      "es nur am Samstag geöffnet ist."
+     ],
+     "answer": "das Café klein ist.",
+     "explanation": "Réponse : das Café klein ist.",
+     "text": "★ Man sollte reservieren, weil …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    },
+    {
+     "choices": [
+      "Apfelkuchen.",
+      "Rotkäppchen-Kuchen.",
+      "Suppe."
+     ],
+     "answer": "Apfelkuchen.",
+     "explanation": "Réponse : Apfelkuchen.",
+     "text": "★ Die Gäste essen am liebsten …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    },
+    {
+     "choices": [
+      "will Frau Roth auch im Garten vorlesen.",
+      "ist das Café geschlossen.",
+      "liest Frau Roth nicht mehr vor."
+     ],
+     "answer": "will Frau Roth auch im Garten vorlesen.",
+     "explanation": "Réponse : will Frau Roth auch im Garten vorlesen.",
+     "text": "★ Im Sommer …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    },
+    {
+     "choices": [
+      "seit einem Monat.",
+      "seit einem Jahr.",
+      "seit letzter Woche."
+     ],
+     "answer": "seit einem Monat.",
+     "explanation": "Réponse : seit einem Monat.",
+     "text": "★ Das Café gibt es …",
+     "passage": "NEU IN UNSERER STADT: DAS MÄRCHENCAFÉ\nSeit einem Monat gibt es in der Schlossstraße ein besonderes Café. Die Besitzerin, Clara Roth, hat früher als Lehrerin gearbeitet. „Ich habe meinen Schülern immer Märchen vorgelesen“, sagt sie. „Jetzt mache ich das für alle.“ Jeden Samstag um 15 Uhr liest sie im Café ein Märchen der Brüder Grimm vor. Der Eintritt ist frei, aber man sollte einen Platz reservieren, weil das Café sehr klein ist. Auf der Karte stehen Kuchen mit Namen wie „Rotkäppchen“ oder „Schneewittchen“. Am beliebtesten ist der Apfelkuchen. Das Café ist von Mittwoch bis Sonntag geöffnet. Im Sommer möchte Frau Roth auch im Garten vorlesen."
+    }
+   ]
+  },
+  {
+   "id": "l-kaufhaus",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 2",
+   "title": "Le plan d’un grand magasin",
+   "prompt": "Lesen Sie den Wegweiser. In welchen Stock gehen Sie?",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "2. Stock",
+      "1. Stock",
+      "Erdgeschoss"
+     ],
+     "answer": "2. Stock",
+     "explanation": "Réponse : 2. Stock",
+     "text": "★ Sie brauchen einen neuen Tisch für Ihre Küche.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "Untergeschoss",
+      "Erdgeschoss",
+      "3. Stock"
+     ],
+     "answer": "Untergeschoss",
+     "explanation": "Réponse : Untergeschoss",
+     "text": "★ Sie möchten Tabletten gegen Husten kaufen.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "1. Stock",
+      "2. Stock",
+      "Untergeschoss"
+     ],
+     "answer": "1. Stock",
+     "explanation": "Réponse : 1. Stock",
+     "text": "★ Sie suchen einen Mantel für Ihren Sohn.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "Erdgeschoss",
+      "2. Stock",
+      "1. Stock"
+     ],
+     "answer": "Erdgeschoss",
+     "explanation": "Réponse : Erdgeschoss",
+     "text": "★ Ihr Handy ist kaputt. Sie möchten ein neues.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "3. Stock",
+      "Untergeschoss",
+      "Erdgeschoss"
+     ],
+     "answer": "3. Stock",
+     "explanation": "Réponse : 3. Stock",
+     "text": "★ Sie haben Hunger und möchten etwas Warmes essen.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "Erdgeschoss",
+      "Untergeschoss",
+      "3. Stock"
+     ],
+     "answer": "Erdgeschoss",
+     "explanation": "Réponse : Erdgeschoss",
+     "text": "★ Sie möchten Ihrer Freundin Blumen mitbringen.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    },
+    {
+     "choices": [
+      "Untergeschoss",
+      "3. Stock",
+      "1. Stock"
+     ],
+     "answer": "Untergeschoss",
+     "explanation": "Réponse : Untergeschoss",
+     "text": "★ Sie brauchen Brot für das Frühstück.",
+     "passage": "KAUFHAUS AM MARKT — Wegweiser\n3. Stock: Restaurant, Kinderspielplatz, Toiletten\n2. Stock: Möbel, Lampen, Betten, Küchen\n1. Stock: Damenmode, Herrenmode, Schuhe, Kinderkleidung\nErdgeschoss: Bücher, Zeitungen, Handys und Computer, Blumen, Information\nUntergeschoss: Supermarkt, Bäckerei, Apotheke"
+    }
+   ]
+  },
+  {
+   "id": "l-email",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 3",
+   "title": "Un courriel",
+   "prompt": "Lesen Sie die E-Mail und wählen Sie die richtige Lösung.",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "sie arbeiten muss.",
+      "ihr Bruder krank ist.",
+      "sie einen Salat machen muss."
+     ],
+     "answer": "sie arbeiten muss.",
+     "explanation": "Réponse : sie arbeiten muss.",
+     "text": "★ Marie kommt später zur Party, weil …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    },
+    {
+     "choices": [
+      "ob sie etwas mitbringen soll.",
+      "wo Sophie wohnt.",
+      "wann die Party anfängt."
+     ],
+     "answer": "ob sie etwas mitbringen soll.",
+     "explanation": "Réponse : ob sie etwas mitbringen soll.",
+     "text": "★ Marie möchte wissen, …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    },
+    {
+     "choices": [
+      "besucht gerade seine Schwester.",
+      "wohnt schon lange in der Stadt.",
+      "kennt Sophie gut."
+     ],
+     "answer": "besucht gerade seine Schwester.",
+     "explanation": "Réponse : besucht gerade seine Schwester.",
+     "text": "★ Felix …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    },
+    {
+     "choices": [
+      "schlafen Marie und Felix bei Marie.",
+      "schlafen alle bei Sophie.",
+      "fährt Felix nach Hause."
+     ],
+     "answer": "schlafen Marie und Felix bei Marie.",
+     "explanation": "Réponse : schlafen Marie und Felix bei Marie.",
+     "text": "★ Nach der Party …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    },
+    {
+     "choices": [
+      "eine neue Arbeit.",
+      "eine neue Wohnung.",
+      "eine neue Schwester."
+     ],
+     "answer": "eine neue Arbeit.",
+     "explanation": "Réponse : eine neue Arbeit.",
+     "text": "★ Sophie hat …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    },
+    {
+     "choices": [
+      "letzte Woche getroffen.",
+      "zur Party eingeladen.",
+      "noch nie gesehen."
+     ],
+     "answer": "letzte Woche getroffen.",
+     "explanation": "Réponse : letzte Woche getroffen.",
+     "text": "★ Marie hat Sophies Schwester …",
+     "passage": "Liebe Sophie,\nvielen Dank für deine Einladung! Ich komme sehr gern zu deiner Party am Samstag. Leider kann ich erst um neun Uhr da sein, weil ich bis acht arbeiten muss. Soll ich etwas mitbringen? Ich könnte einen Salat machen oder Getränke kaufen. Mein Bruder Felix ist gerade bei mir zu Besuch. Darf er auch mitkommen? Er ist sehr nett und kennt hier noch niemanden. Nach der Party können wir bei mir schlafen, dann musst du nicht für uns aufräumen. Übrigens: Ich habe letzte Woche deine Schwester in der Stadt getroffen. Sie hat mir erzählt, dass du eine neue Stelle hast. Herzlichen Glückwunsch!\nBis Samstag und liebe Grüße\nMarie"
+    }
+   ]
+  },
+  {
+   "id": "l-anzeigen",
+   "section": "reading",
+   "jpTitle": "Lesen — Teil 4",
+   "title": "Petites annonces",
+   "prompt": "Lesen Sie die Anzeigen. Welche Anzeige passt zu welcher Person?",
+   "count": 5,
+   "questions": [
+    {
+     "choices": [
+      "Anzeige A",
+      "Anzeige E",
+      "Anzeige F"
+     ],
+     "answer": "Anzeige A",
+     "explanation": "Réponse : Anzeige A",
+     "text": "★ Herr Yilmaz arbeitet den ganzen Tag und möchte nach der Arbeit Deutsch lernen.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    },
+    {
+     "choices": [
+      "Anzeige C",
+      "Anzeige A",
+      "Anzeige D"
+     ],
+     "answer": "Anzeige C",
+     "explanation": "Réponse : Anzeige C",
+     "text": "★ Frau Berg sucht eine Wohnung für ihre Familie. Sie möchte nicht im Zentrum wohnen.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    },
+    {
+     "choices": [
+      "Anzeige B",
+      "Anzeige C",
+      "Anzeige F"
+     ],
+     "answer": "Anzeige B",
+     "explanation": "Réponse : Anzeige B",
+     "text": "★ Das Fahrrad von Lukas ist kaputt. Er braucht es morgen wieder.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    },
+    {
+     "choices": [
+      "Anzeige E",
+      "Anzeige A",
+      "Anzeige B"
+     ],
+     "answer": "Anzeige E",
+     "explanation": "Réponse : Anzeige E",
+     "text": "★ Die Tochter von Frau Kim ist sechs Jahre alt und kann noch nicht schwimmen.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    },
+    {
+     "choices": [
+      "Anzeige D",
+      "Anzeige B",
+      "Anzeige C"
+     ],
+     "answer": "Anzeige D",
+     "explanation": "Réponse : Anzeige D",
+     "text": "★ Herr Braun ist Koch und möchte nur zwanzig Stunden pro Woche arbeiten.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    },
+    {
+     "choices": [
+      "Anzeige F",
+      "Anzeige A",
+      "Anzeige E"
+     ],
+     "answer": "Anzeige F",
+     "explanation": "Réponse : Anzeige F",
+     "text": "★ Frau Schulz ist siebzig und versteht ihren neuen Laptop nicht.",
+     "passage": "A — SPRACHSCHULE LINGUA: Deutschkurse am Abend für Berufstätige. Montag und Mittwoch, 18.30 bis 20 Uhr. Kleine Gruppen.\nB — FAHRRAD-FRITZ: Wir reparieren Ihr Fahrrad in 24 Stunden. Auch gebrauchte Fahrräder ab 80 Euro.\nC — WOHNEN IM GRÜNEN: Helle 3-Zimmer-Wohnung mit Garten, ruhig, 10 Minuten zum Bahnhof. 850 Euro warm.\nD — RESTAURANT ZUM GOLDENEN HIRSCH sucht Koch / Köchin in Teilzeit. Erfahrung erwünscht. Tel. 0761 23 45 67.\nE — SCHWIMMKURSE FÜR KINDER ab 5 Jahren. Jeden Samstagvormittag im Stadtbad. Anmeldung online.\nF — COMPUTER-HILFE zu Hause: Ich installiere Programme und erkläre alles in Ruhe. 20 Euro pro Stunde."
+    }
+   ]
+  },
+  {
+   "id": "s-sms",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 1",
+   "title": "Un SMS",
+   "prompt": "Lesen Sie die Situation und wählen Sie die beste Nachricht.",
+   "count": 2,
+   "questions": [
+    {
+     "choices": [
+      "Hallo Tom, es tut mir leid, ich komme zwanzig Minuten später, weil mein Bus Verspätung hat. Wir treffen uns direkt vor dem Kino. Bis gleich! Anna",
+      "Hallo Tom, es tut mir leid, ich komme zwanzig Minuten später, weil mein Bus hat Verspätung. Wir treffen uns direkt vor das Kino. Bis gleich!",
+      "Tom, Bus, später, Kino.",
+      "Hallo Tom, ich bin pünktlich, weil mein Bus Verspätung hat. Wir treffen uns gestern vor dem Kino."
+     ],
+     "answer": "Hallo Tom, es tut mir leid, ich komme zwanzig Minuten später, weil mein Bus Verspätung hat. Wir treffen uns direkt vor dem Kino. Bis gleich! Anna",
+     "explanation": "Réponse : Hallo Tom, es tut mir leid, ich komme zwanzig Minuten später, weil mein Bus Verspätung hat. Wir treffen uns direkt vor dem Kino. Bis gleich! Anna",
+     "text": "★ Situation: Sie sind mit Tom verabredet und kommen zu spät. Schreiben Sie: Entschuldigung, warum Sie später kommen, wo Sie sich treffen."
+    },
+    {
+     "choices": [
+      "Liebe Frau Meier, ich bin heute leider krank und kann nicht zum Kurs kommen. Könnten Sie mir bitte die Hausaufgaben schicken? Vielen Dank und viele Grüße, Paul Martin",
+      "Liebe Frau Meier, ich bin heute leider krank und kann nicht zum Kurs gekommen. Könnten Sie mich bitte die Hausaufgaben schicken?",
+      "Hallo, bin krank. Hausaufgaben?",
+      "Liebe Frau Meier, ich komme heute zum Kurs, weil ich krank bin. Schicken Sie die Hausaufgaben nicht."
+     ],
+     "answer": "Liebe Frau Meier, ich bin heute leider krank und kann nicht zum Kurs kommen. Könnten Sie mir bitte die Hausaufgaben schicken? Vielen Dank und viele Grüße, Paul Martin",
+     "explanation": "Réponse : Liebe Frau Meier, ich bin heute leider krank und kann nicht zum Kurs kommen. Könnten Sie mir bitte die Hausaufgaben schicken? Vielen Dank und viele Grüße, Paul Martin",
+     "text": "★ Situation: Sie können heute nicht zum Deutschkurs kommen. Schreiben Sie Ihrer Lehrerin: warum, und bitten Sie um die Hausaufgaben."
+    },
+    {
+     "choices": [
+      "Hallo Lena, danke für die Einladung! Ich komme gern am Freitag. Soll ich etwas zu trinken mitbringen? Wann fängt die Party an? Liebe Grüße, Max",
+      "Hallo Lena, danke für die Einladung! Ich komme gern am Freitag. Soll ich etwas zu trinken mitbringe? Wann die Party fängt an?",
+      "Lena, Freitag ok. Trinken? Wann?",
+      "Hallo Lena, danke für die Einladung! Ich kann leider nicht, aber ich komme gern am Freitag nicht."
+     ],
+     "answer": "Hallo Lena, danke für die Einladung! Ich komme gern am Freitag. Soll ich etwas zu trinken mitbringen? Wann fängt die Party an? Liebe Grüße, Max",
+     "explanation": "Réponse : Hallo Lena, danke für die Einladung! Ich komme gern am Freitag. Soll ich etwas zu trinken mitbringen? Wann fängt die Party an? Liebe Grüße, Max",
+     "text": "★ Situation: Lena hat Sie zu einer Party eingeladen. Schreiben Sie: Dank, dass Sie kommen, eine Frage zum Mitbringen, eine Frage zur Uhrzeit."
+    }
+   ]
+  },
+  {
+   "id": "s-email",
+   "section": "writing",
+   "jpTitle": "Schreiben — Teil 2",
+   "title": "Un courriel",
+   "prompt": "Lesen Sie die Situation und wählen Sie die passende Antwort.",
+   "count": 3,
+   "questions": [
+    {
+     "choices": [
+      "Sehr geehrter Herr Braun,",
+      "Hallo Braun,",
+      "Lieber Chef Braun!",
+      "Hi,"
+     ],
+     "answer": "Sehr geehrter Herr Braun,",
+     "explanation": "Réponse : Sehr geehrter Herr Braun,",
+     "text": "★ Sie schreiben Ihrem neuen Vermieter, Herrn Braun, eine E-Mail. Wie beginnen Sie?"
+    },
+    {
+     "choices": [
+      "Mit freundlichen Grüßen",
+      "Tschüss und bis bald",
+      "Liebe Grüße und Küsse",
+      "Mach’s gut"
+     ],
+     "answer": "Mit freundlichen Grüßen",
+     "explanation": "Réponse : Mit freundlichen Grüßen",
+     "text": "★ Wie beenden Sie die E-Mail an Herrn Braun?"
+    },
+    {
+     "choices": [
+      "Könnten Sie mir bitte sagen, wann ich den Schlüssel abholen kann?",
+      "Sag mir, wann ich den Schlüssel abhole!",
+      "Wann ich kann den Schlüssel abholen?",
+      "Ich will den Schlüssel jetzt."
+     ],
+     "answer": "Könnten Sie mir bitte sagen, wann ich den Schlüssel abholen kann?",
+     "explanation": "Réponse : Könnten Sie mir bitte sagen, wann ich den Schlüssel abholen kann?",
+     "text": "★ Sie möchten höflich fragen, wann Sie den Wohnungsschlüssel bekommen. Was schreiben Sie?"
+    },
+    {
+     "choices": [
+      "Ich habe die Wohnung am Samstag gesehen, und sie hat mir sehr gut gefallen.",
+      "Ich habe die Wohnung am Samstag gesehen, und sie hat mich sehr gut gefallen.",
+      "Ich bin die Wohnung am Samstag gesehen.",
+      "Ich sehe die Wohnung letzten Samstag."
+     ],
+     "answer": "Ich habe die Wohnung am Samstag gesehen, und sie hat mir sehr gut gefallen.",
+     "explanation": "Réponse : Ich habe die Wohnung am Samstag gesehen, und sie hat mir sehr gut gefallen.",
+     "text": "★ Sie möchten schreiben, dass Sie die Wohnung besichtigt haben und sie mögen. Was ist richtig?"
+    },
+    {
+     "choices": [
+      "Leider kann ich am Montag nicht kommen, weil ich arbeiten muss.",
+      "Leider ich kann am Montag nicht kommen, weil ich muss arbeiten.",
+      "Leider kann ich am Montag nicht kommen, denn ich arbeiten muss.",
+      "Leider kommen ich am Montag nicht."
+     ],
+     "answer": "Leider kann ich am Montag nicht kommen, weil ich arbeiten muss.",
+     "explanation": "Réponse : Leider kann ich am Montag nicht kommen, weil ich arbeiten muss.",
+     "text": "★ Sie können am Montag nicht zum Termin kommen und geben den Grund an. Was ist richtig?"
+    }
+   ]
+  }
+ ]
+}

@@ -146,7 +146,89 @@ STERN = STORY('sterntaler', 'Z', 'GOETHEA1', '#3A5A8A', ('Die Sterntaler', 'Les 
   ]),
 ])
 
-DE_STORIES = [BREMER, BREI, STERN]
+# ═════════════════════════ Der Froschkönig (A2) ═════════════════════════
+FROSCH = STORY('froschkoenig', 'F', 'GOETHEA2', '#3E7A4A', ('Der Froschkönig', 'Le Roi Grenouille', 'The Frog King'),
+  ('Une princesse perd sa balle d’or dans un puits ; une grenouille la lui rend… contre une promesse qu’elle voudrait bien oublier.', 'A princess loses her golden ball in a well; a frog gives it back… in return for a promise she would rather forget.'), [
+  CH('froschkoenig-1', ('Die goldene Kugel', 'La balle d’or', 'The golden ball'), [
+    [S('Eine junge Prinzessin hat jeden Tag am Brunnen mit ihrer goldenen Kugel gespielt.', 'Une jeune princesse jouait chaque jour près du puits avec sa balle d’or.', 'A young princess played by the well every day with her golden ball.'),
+     S('Eines Tages ist die Kugel ins Wasser gefallen.', 'Un jour, la balle est tombée dans l’eau.', 'One day the ball fell into the water.'),
+     S('Die Prinzessin hat geweint, weil der Brunnen so tief war.', 'La princesse a pleuré, parce que le puits était si profond.', 'The princess cried because the well was so deep.')],
+    [S('Da hat ein Frosch gefragt: „Was gibst du mir, wenn ich dir die Kugel hole?“', 'Alors une grenouille a demandé : « Que me donnes-tu si je vais te chercher la balle ? »', 'Then a frog asked: “What will you give me if I fetch the ball for you?”'),
+     S('„Ich möchte mit dir essen und in deinem Bett schlafen.“', '« Je voudrais manger avec toi et dormir dans ton lit. »', '“I would like to eat with you and sleep in your bed.”'),
+     S('Die Prinzessin hat alles versprochen, aber sie hat gedacht: „Ein Frosch kann doch nicht mitkommen!“', 'La princesse a tout promis, mais elle a pensé : « Une grenouille ne peut tout de même pas venir avec moi ! »', 'The princess promised everything, but she thought: “A frog can’t come along, surely!”')],
+  ], [
+    W('der Brunnen', '/deːɐ̯ ˈbʁʊnən/', 'le puits', 'the well'),
+    W('die Kugel', '/diː ˈkuːɡl̩/', 'la balle, la boule', 'the ball'),
+    W('weinen', '/ˈvaɪnən/', 'pleurer', 'to cry'),
+    W('tief', '/tiːf/', 'profond', 'deep'),
+    W('der Frosch', '/deːɐ̯ fʁɔʃ/', 'la grenouille', 'the frog'),
+    W('versprechen', '/fɛɐ̯ˈʃpʁɛçn̩/', 'promettre', 'to promise'),
+  ], [
+    Q(('Pourquoi la princesse pleure-t-elle ?', 'Why does the princess cry?'), [('Sa balle est tombée dans un puits profond', 'Her ball has fallen into a deep well'), ('Elle a perdu son chemin', 'She has lost her way'), ('La grenouille l’a mordue', 'The frog bit her')], 0),
+    Q(('Que demande la grenouille en échange ?', 'What does the frog ask for in return?'), [('Manger avec elle et dormir dans son lit', 'To eat with her and sleep in her bed'), ('De l’or et des bijoux', 'Gold and jewels'), ('Un baiser tout de suite', 'A kiss straight away')], 0),
+  ]),
+  CH('froschkoenig-2', ('Der Gast am Tisch', 'L’invité à table', 'The guest at the table'), [
+    [S('Am nächsten Tag hat es an der Tür geklopft: Der Frosch war da.', 'Le lendemain, on a frappé à la porte : la grenouille était là.', 'The next day there was a knock at the door: the frog was there.'),
+     S('Der König hat gesagt: „Was du versprochen hast, musst du auch halten.“', 'Le roi a dit : « Ce que tu as promis, tu dois le tenir. »', 'The king said: “What you have promised, you must keep.”'),
+     S('Also hat der Frosch vom goldenen Teller gegessen, und die Prinzessin hat sich sehr geärgert.', 'La grenouille a donc mangé dans l’assiette d’or, et la princesse s’est beaucoup fâchée.', 'So the frog ate from the golden plate, and the princess was very annoyed.')],
+    [S('Im Schlafzimmer hat sie den Frosch wütend an die Wand geworfen.', 'Dans la chambre, furieuse, elle a jeté la grenouille contre le mur.', 'In the bedroom she angrily threw the frog against the wall.'),
+     S('Aber da war er kein Frosch mehr, sondern ein junger König mit freundlichen Augen.', 'Mais ce n’était plus une grenouille : c’était un jeune roi au regard bienveillant.', 'But he was no longer a frog: he was a young king with friendly eyes.'),
+     S('Eine Hexe hatte ihn verzaubert. Am nächsten Morgen sind die beiden zusammen in sein Land gefahren.', 'Une sorcière l’avait ensorcelé. Le lendemain matin, ils sont partis ensemble pour son pays.', 'A witch had put a spell on him. The next morning the two of them travelled to his country together.')],
+  ], [
+    W('klopfen', '/ˈklɔpfn̩/', 'frapper (à la porte)', 'to knock'),
+    W('halten', '/ˈhaltn̩/', 'tenir (une promesse)', 'to keep (a promise)'),
+    W('der Teller', '/deːɐ̯ ˈtɛlɐ/', 'l’assiette', 'the plate'),
+    W('wütend', '/ˈvyːtn̩t/', 'furieux', 'angry, furious'),
+    W('werfen', '/ˈvɛʁfn̩/', 'jeter, lancer', 'to throw'),
+    W('verzaubern', '/fɛɐ̯ˈtsaʊbɐn/', 'ensorceler', 'to put a spell on'),
+  ], [
+    Q(('Que dit le roi à sa fille ?', 'What does the king tell his daughter?'), [('Qu’elle doit tenir sa promesse', 'That she must keep her promise'), ('Qu’elle doit chasser la grenouille', 'That she must send the frog away'), ('Qu’elle doit retourner au puits', 'That she must go back to the well')], 0),
+    Q(('Qui était vraiment la grenouille ?', 'Who was the frog really?'), [('Un jeune roi ensorcelé', 'A young king under a spell'), ('Une sorcière', 'A witch'), ('Le frère de la princesse', 'The princess’s brother')], 0),
+  ]),
+])
+
+# ═════════════════════════ Hans im Glück (A2) ═════════════════════════
+HANS = STORY('hans-im-glueck', 'U', 'GOETHEA2', '#B8902A', ('Hans im Glück', 'Jean le Chanceux', 'Lucky Hans'),
+  ('Après sept ans de travail, Jean reçoit un lingot d’or… et l’échange, de troc en troc, jusqu’à n’avoir plus rien. Est-il fou ou heureux ?', 'After seven years’ work, Hans is given a lump of gold… and swaps it, deal after deal, until he has nothing left. Is he a fool or a happy man?'), [
+  CH('hans-im-glueck-1', ('Gold, Pferd und Kuh', 'L’or, le cheval et la vache', 'Gold, horse and cow'), [
+    [S('Hans hat sieben Jahre bei seinem Herrn gearbeitet. Jetzt wollte er nach Hause zu seiner Mutter.', 'Jean a travaillé sept ans chez son maître. Maintenant, il voulait rentrer chez sa mère.', 'Hans worked for his master for seven years. Now he wanted to go home to his mother.'),
+     S('Der Herr hat ihm ein Stück Gold gegeben, so groß wie sein Kopf.', 'Le maître lui a donné un morceau d’or gros comme sa tête.', 'The master gave him a lump of gold as big as his head.'),
+     S('Aber das Gold war schwer, und der Weg war lang.', 'Mais l’or était lourd, et le chemin était long.', 'But the gold was heavy, and the way was long.')],
+    [S('Da ist ein Reiter gekommen. „Reiten ist besser als laufen“, hat Hans gedacht, und er hat das Gold gegen das Pferd getauscht.', 'Alors un cavalier est arrivé. « Aller à cheval vaut mieux que marcher », a pensé Jean, et il a échangé l’or contre le cheval.', 'Then a rider came along. “Riding is better than walking,” thought Hans, and he swapped the gold for the horse.'),
+     S('Das Pferd ist zu schnell gelaufen, und Hans ist heruntergefallen.', 'Le cheval a couru trop vite, et Jean est tombé.', 'The horse ran too fast, and Hans fell off.'),
+     S('Also hat er das Pferd gegen eine Kuh getauscht, weil eine Kuh ruhiger ist und Milch gibt.', 'Il a donc échangé le cheval contre une vache, parce qu’une vache est plus calme et donne du lait.', 'So he swapped the horse for a cow, because a cow is calmer and gives milk.')],
+  ], [
+    W('der Herr', '/deːɐ̯ hɛʁ/', 'le maître, le patron', 'the master'),
+    W('schwer', '/ʃveːɐ̯/', 'lourd', 'heavy'),
+    W('der Reiter', '/deːɐ̯ ˈʁaɪtɐ/', 'le cavalier', 'the rider'),
+    W('das Pferd', '/das pfeːɐ̯t/', 'le cheval', 'the horse'),
+    W('tauschen', '/ˈtaʊʃn̩/', 'échanger', 'to swap'),
+    W('die Kuh', '/diː kuː/', 'la vache', 'the cow'),
+  ], [
+    Q(('Pourquoi Jean échange-t-il son or ?', 'Why does Hans swap his gold?'), [('Il est lourd et le chemin est long', 'It is heavy and the way is long'), ('Il veut acheter une maison', 'He wants to buy a house'), ('Son maître le lui demande', 'His master asks him to')], 0),
+    Q(('Pourquoi préfère-t-il ensuite une vache au cheval ?', 'Why does he then prefer a cow to the horse?'), [('Elle est plus calme et donne du lait', 'It is calmer and gives milk'), ('Elle court plus vite', 'It runs faster'), ('Elle vaut plus cher', 'It is worth more')], 0),
+  ]),
+  CH('hans-im-glueck-2', ('Frei wie ein Vogel', 'Libre comme un oiseau', 'Free as a bird'), [
+    [S('Die Kuh hat keine Milch gegeben. Hans hat sie gegen ein Schwein getauscht und das Schwein gegen eine Gans.', 'La vache n’a pas donné de lait. Jean l’a échangée contre un cochon, et le cochon contre une oie.', 'The cow gave no milk. Hans swapped it for a pig, and the pig for a goose.'),
+     S('Für die Gans hat er am Ende einen schweren Stein bekommen.', 'Contre l’oie, il a fini par recevoir une lourde pierre.', 'For the goose he ended up with a heavy stone.'),
+     S('„Ich habe immer Glück“, hat er gesagt. „Jeder Tausch war besser als der letzte.“', '« J’ai toujours de la chance, a-t-il dit. Chaque échange était meilleur que le précédent. »', '“I am always lucky,” he said. “Every swap was better than the last.”')],
+    [S('An einem Brunnen wollte Hans trinken. Da ist der Stein ins Wasser gefallen.', 'Près d’un puits, Jean a voulu boire. Alors la pierre est tombée dans l’eau.', 'At a well Hans wanted to drink. Then the stone fell into the water.'),
+     S('Hans hat gelacht: „Jetzt muss ich nichts mehr tragen. Ich bin der glücklichste Mensch der Welt!“', 'Jean a ri : « Maintenant, je n’ai plus rien à porter. Je suis l’homme le plus heureux du monde ! »', 'Hans laughed: “Now I don’t have to carry anything any more. I am the happiest person in the world!”'),
+     S('Und er ist frei und leicht zu seiner Mutter nach Hause gelaufen.', 'Et il a couru, libre et léger, jusque chez sa mère.', 'And he ran home to his mother, free and light.')],
+  ], [
+    W('das Schwein', '/das ʃvaɪn/', 'le cochon', 'the pig'),
+    W('die Gans', '/diː ɡans/', 'l’oie', 'the goose'),
+    W('der Stein', '/deːɐ̯ ʃtaɪn/', 'la pierre', 'the stone'),
+    W('das Glück', '/das ɡlʏk/', 'la chance ; le bonheur', 'luck; happiness'),
+    W('frei', '/fʁaɪ/', 'libre', 'free'),
+    W('leicht', '/laɪçt/', 'léger', 'light'),
+  ], [
+    Q(('Que reçoit Jean en échange de l’oie ?', 'What does Hans get in exchange for the goose?'), [('Une lourde pierre', 'A heavy stone'), ('Un cochon', 'A pig'), ('Un sac d’or', 'A bag of gold')], 0),
+    Q(('Pourquoi Jean rit-il à la fin ?', 'Why does Hans laugh at the end?'), [('Il n’a plus rien à porter', 'He has nothing left to carry'), ('Il a retrouvé son or', 'He has found his gold again'), ('Sa mère lui offre un cheval', 'His mother gives him a horse')], 0),
+  ]),
+])
+
+DE_STORIES = [BREMER, BREI, STERN, FROSCH, HANS]
 
 import sys
 sys.path.insert(0, os.path.dirname(__file__))

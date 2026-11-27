@@ -4437,6 +4437,159 @@
      }
     }
    }
+  },
+  "GOETHEA2": {
+   "glyph": "Ö",
+   "jp": "Schwarzwald",
+   "color": "#5A3A6A",
+   "saga": {
+    "fr": "Du Rhin à la Forêt-Noire",
+    "en": "From the Rhine to the Black Forest"
+   },
+   "hero": {
+    "fr": "Apprenti·e des frères Grimm",
+    "en": "The Brothers Grimm’s apprentice"
+   },
+   "short": {
+    "fr": "L’apprenti·e",
+    "en": "The apprentice"
+   },
+   "prologue": {
+    "fr": "Huit contes ont retrouvé leur place, mais le livre a encore des pages blanches. « Les autres sont partis vers le sud, dit Jacob en dépliant une carte. Le long du Rhin, puis dans la Forêt-Noire, là où les sapins cachent les tours et les châteaux. » Wilhelm te tend un carnet neuf : « Cette fois, il faudra raconter ce qui s’est passé, comparer, expliquer pourquoi. Les personnages du Sud sont plus bavards… et plus têtus. »",
+    "en": "Eight tales are back in their place, but the book still has blank pages. “The others have gone south,” says Jacob, unfolding a map. “Along the Rhine, then into the Black Forest, where the fir trees hide towers and castles.” Wilhelm hands you a new notebook: “This time you will have to say what happened, compare, explain why. The characters of the South are more talkative… and more stubborn.”"
+   },
+   "epilogue": {
+    "fr": "Au grand festin des contes, tout le monde est à table : la grenouille près de la princesse, Cendrillon à côté de Raiponce, Jean le Chanceux les mains vides et le cœur léger. Tu racontes le voyage, tu compares, tu expliques, et personne ne te reprend. « Le livre s’épaissit, sourit Wilhelm. Mais au nord, vers le Harz, on parle de sorcières et d’un empereur endormi… »",
+    "en": "At the great feast of tales everyone is at the table: the frog next to the princess, Cinderella beside Rapunzel, Lucky Hans with empty hands and a light heart. You tell the journey, compare, explain, and nobody corrects you. “The book is getting thicker,” smiles Wilhelm. “But to the north, towards the Harz, people talk of witches and a sleeping emperor…”"
+   },
+   "chapters": {
+    "goethea2-w1": {
+     "title": {
+      "fr": "Le puits du Roi Grenouille",
+      "en": "The Frog King’s well"
+     },
+     "intro": {
+      "fr": "Au bord d’un vieux puits, le Roi Grenouille tient la balle d’or entre ses pattes et veut une histoire en échange. Raconte ta journée d’hier au Perfekt, participes compris.",
+      "en": "Beside an old well, the Frog King holds the golden ball in his paws and wants a story in exchange. Tell him about yesterday in the Perfekt, participles included."
+     },
+     "outro": {
+      "fr": "La grenouille plonge, remonte avec la balle… et retrouve sa couronne. Une page se remplit dans le livre.",
+      "en": "The frog dives, comes back up with the ball… and gets his crown back. A page fills up in the book."
+     }
+    },
+    "goethea2-w2": {
+     "title": {
+      "fr": "Le bal de Cendrillon",
+      "en": "Cinderella’s ball"
+     },
+     "intro": {
+      "fr": "Dans la maison aux cendres, la Marâtre garde la porte et veut tout savoir du bal. Dis qui est allé où, comment c’était, et réponds aux invitations.",
+      "en": "In the house of ashes, the Stepmother guards the door and wants to know everything about the ball. Say who went where, what it was like, and reply to the invitations."
+     },
+     "outro": {
+      "fr": "La pantoufle va à Cendrillon, la Marâtre se tait, et les colombes ramènent tout le monde dans le conte.",
+      "en": "The slipper fits Cinderella, the Stepmother falls silent, and the doves take everyone back into the tale."
+     }
+    },
+    "goethea2-w3": {
+     "title": {
+      "fr": "La tour de Raiponce",
+      "en": "Rapunzel’s tower"
+     },
+     "intro": {
+      "fr": "Au milieu de la forêt, Dame Gothel surveille une tour sans porte ni escalier. Décris les pièces, pose chaque meuble au bon endroit et choisis le bon cas après chaque préposition.",
+      "en": "In the middle of the forest, Mother Gothel watches over a tower with no door or stairs. Describe the rooms, put each piece of furniture in the right place and choose the right case after each preposition."
+     },
+     "outro": {
+      "fr": "Raiponce laisse descendre sa tresse. Dame Gothel, vaincue par la grammaire, regagne sa page.",
+      "en": "Rapunzel lets down her braid. Mother Gothel, beaten by grammar, returns to her page."
+     }
+    },
+    "goethea2-w4": {
+     "title": {
+      "fr": "Le miroir de la Reine",
+      "en": "The Queen’s mirror"
+     },
+     "intro": {
+      "fr": "Dans la salle aux miroirs, la Reine interroge son reflet du matin au soir. Compare, classe et décris : plus belle, la plus belle, une belle pomme rouge.",
+      "en": "In the hall of mirrors, the Queen questions her reflection from morning till night. Compare, rank and describe: fairer, the fairest, a beautiful red apple."
+     },
+     "outro": {
+      "fr": "Le miroir dit enfin la vérité sans trembler. La Reine pose sa pomme et rentre dans le conte.",
+      "en": "The mirror finally tells the truth without trembling. The Queen puts down her apple and goes back into the tale."
+     }
+    },
+    "goethea2-w5": {
+     "title": {
+      "fr": "Le chemin de Jean le Chanceux",
+      "en": "Lucky Hans’s road"
+     },
+     "intro": {
+      "fr": "Sur la route du retour, Jean échange tout ce qu’il possède et rit de plus belle. Parle métier avec lui, puis explique-lui pourquoi avec weil et ce que tu en penses avec dass.",
+      "en": "On the road home, Hans swaps everything he owns and laughs all the more. Talk about jobs with him, then explain why with weil and what you think with dass."
+     },
+     "outro": {
+      "fr": "Les mains vides, Jean court vers sa mère : « Je suis l’homme le plus heureux du monde ! » Et le livre gagne un conte.",
+      "en": "Empty-handed, Hans runs to his mother: “I am the happiest man in the world!” And the book gains a tale."
+     }
+    },
+    "goethea2-w6": {
+     "title": {
+      "fr": "Les routes du Chat botté",
+      "en": "Puss in Boots’ roads"
+     },
+     "intro": {
+      "fr": "De gare en auberge, le Chat botté prépare l’arrivée de son maître. Prends ton billet, réserve une chambre, pose tes conditions avec wenn et dis à qui tu donnes quoi.",
+      "en": "From station to inn, Puss in Boots prepares his master’s arrival. Buy your ticket, book a room, set your conditions with wenn and say who you give what to."
+     },
+     "outro": {
+      "fr": "Le Chat botté ôte son chapeau : le château est à son maître, et lui retourne ronronner entre deux pages.",
+      "en": "Puss in Boots takes off his hat: the castle belongs to his master, and he goes back to purr between two pages."
+     }
+    },
+    "goethea2-w7": {
+     "title": {
+      "fr": "L’auberge de l’Oie d’or",
+      "en": "The Golden Goose inn"
+     },
+     "intro": {
+      "fr": "À l’auberge, tous ceux qui ont touché l’Oie d’or sont collés les uns aux autres et tombent malades d’énervement. Soigne-les, conseille-les, et fais rire la princesse.",
+      "en": "At the inn, everyone who touched the Golden Goose is stuck to one another and falling ill with annoyance. Treat them, advise them, and make the princess laugh."
+     },
+     "outro": {
+      "fr": "La princesse éclate de rire, le charme se rompt et la file se défait. L’oie s’envole vers le livre.",
+      "en": "The princess bursts out laughing, the spell breaks and the line comes apart. The goose flies off towards the book."
+     }
+    },
+    "goethea2-w8": {
+     "title": {
+      "fr": "Le château du Roi Barbe-de-Grive",
+      "en": "King Thrushbeard’s castle"
+     },
+     "intro": {
+      "fr": "Au château, le Roi Barbe-de-Grive n’écoute que les demandes bien tournées. Demande avec könnte et würde, promets avec werden et annonce ta visite par message.",
+      "en": "At the castle, King Thrushbeard only listens to well-turned requests. Ask with könnte and würde, promise with werden and announce your visit by message."
+     },
+     "outro": {
+      "fr": "Le roi rit dans sa barbe pointue et t’invite au festin. La princesse, elle, a appris à dire merci.",
+      "en": "The king laughs into his pointed beard and invites you to the feast. As for the princess, she has learnt to say thank you."
+     }
+    },
+    "goethea2-final": {
+     "title": {
+      "fr": "Le festin des contes",
+      "en": "The feast of tales"
+     },
+     "intro": {
+      "fr": "Dans la grande salle, tous les personnages retrouvés t’attendent pour l’épreuve : lis, écoute et écris comme au Goethe-Zertifikat A2. Il faut au moins 60 points sur 100.",
+      "en": "In the great hall, all the characters you found are waiting for the test: read, listen and write as in the Goethe-Zertifikat A2. You need at least 60 points out of 100."
+     },
+     "outro": {
+      "fr": "Les verres se lèvent en ton honneur. Niveau Goethe A2 validé : les contes du Sud sont de retour dans le livre !",
+      "en": "Glasses are raised in your honour. Goethe A2 level complete: the tales of the South are back in the book!"
+     }
+    }
+   }
   }
  }
 }

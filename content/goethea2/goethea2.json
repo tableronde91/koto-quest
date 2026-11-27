@@ -1,0 +1,3746 @@
+{
+ "contentVersion": "2026.11.27",
+ "level": {
+  "code": "GOETHEA2",
+  "title": "Goethe A2 : du Rhin à la Forêt-Noire",
+  "region": "Forêt-Noire",
+  "order": 49
+ },
+ "notice": "Les listes de vocabulaire de Koto Quest suivent les compétences du niveau A2 du CECRL et préparent au Goethe-Zertifikat A2, mais ne sont pas des listes officielles du Goethe-Institut.",
+ "worlds": [
+  {
+   "slug": "goethea2-w1",
+   "title": "Le puits du Roi Grenouille",
+   "region": "Forêt-Noire",
+   "description": "Raconter ce qu’on a fait avec le Perfekt (haben + participe), former les participes réguliers et irréguliers, situer une action dans le passé.",
+   "boss": {
+    "name": "Le Roi Grenouille",
+    "glyph": "♔",
+    "intro": "Au fond du puits, le Roi Grenouille garde la balle d’or de la princesse : il ne la rendra qu’à qui lui racontera sa journée d’hier sans une faute. Qu’as-tu fait, mangé, vu, perdu ?"
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w1-c1",
+     "title": "Qu’as-tu fait hier ?",
+     "lessons": [
+      {
+       "slug": "de-perfekt-haben",
+       "title": "Le Perfekt avec haben",
+       "objective": "Raconter une action passée avec haben et le participe en fin de phrase.",
+       "minutes": 9,
+       "explanation": [
+        "À l’oral, le passé se dit presque toujours au Perfekt : haben conjugué en deuxième position + participe passé à la fin. Ich habe gestern Fußball gespielt.",
+        "Participe régulier : ge- + radical + -t. spielen → gespielt, machen → gemacht, kaufen → gekauft, lernen → gelernt. Radical en -t ou -d : -et (arbeiten → gearbeitet).",
+        "Pas de ge- pour les verbes en -ieren (telefonieren → telefoniert) ni pour les préfixes inséparables be-, ver-, er- (besuchen → besucht, verkaufen → verkauft)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-perfekt-haben",
+         "kind": "grammar",
+         "front": "haben + Partizip II",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passé composé avec haben"
+        },
+        {
+         "slug": "gram-de-partizip-ge-t",
+         "kind": "grammar",
+         "front": "ge- + Stamm + -t",
+         "reading": null,
+         "romaji": null,
+         "meaning": "participe passé régulier"
+        },
+        {
+         "slug": "de-gemacht",
+         "kind": "vocabulary",
+         "front": "machen → gemacht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire → fait"
+        },
+        {
+         "slug": "de-gespielt",
+         "kind": "vocabulary",
+         "front": "spielen → gespielt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jouer → joué"
+        },
+        {
+         "slug": "de-gekauft",
+         "kind": "vocabulary",
+         "front": "kaufen → gekauft",
+         "reading": null,
+         "romaji": null,
+         "meaning": "acheter → acheté"
+        },
+        {
+         "slug": "de-besucht",
+         "kind": "vocabulary",
+         "front": "besuchen → besucht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rendre visite → rendu visite"
+        },
+        {
+         "slug": "de-gestern",
+         "kind": "vocabulary",
+         "front": "gestern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "hier"
+        },
+        {
+         "slug": "de-schon",
+         "kind": "vocabulary",
+         "front": "schon",
+         "reading": null,
+         "romaji": null,
+         "meaning": "déjà"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Was hast du gestern gemacht? — Ich habe im Garten gespielt.",
+         "reading": null,
+         "fr": "Qu’as-tu fait hier ? — J’ai joué dans le jardin."
+        },
+        {
+         "jp": "Die Prinzessin hat eine goldene Kugel gekauft.",
+         "reading": null,
+         "fr": "La princesse a acheté une balle d’or."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich habe gestern Tennis ＿.",
+         "choices": [
+          "gespielt",
+          "spielen",
+          "spielt"
+         ],
+         "answer": "gespielt",
+         "explanation": "Perfekt : haben + participe gespielt, à la fin.",
+         "translation": "J’ai joué au tennis hier."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir ＿ unsere Großmutter besucht.",
+         "choices": [
+          "haben",
+          "sind",
+          "hat"
+         ],
+         "answer": "haben",
+         "explanation": "Besuchen se conjugue avec haben : wir haben… besucht.",
+         "translation": "Nous avons rendu visite à notre grand-mère."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Qu’as-tu fait hier ? »",
+         "answer": [
+          "Was",
+          "hast",
+          "du",
+          "gestern",
+          "gemacht?"
+         ],
+         "explanation": "Haben en deuxième position, le participe à la fin."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Er hat das Buch schon gekauft.",
+         "translation": "Il n’a pas encore acheté le livre.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Schon = déjà : le livre est acheté."
+        }
+       ]
+      },
+      {
+       "slug": "de-partizip-irr",
+       "title": "Les participes irréguliers",
+       "objective": "Employer les participes en -en des verbes forts les plus courants.",
+       "minutes": 9,
+       "explanation": [
+        "Les verbes forts font leur participe en ge- + radical (souvent modifié) + -en : essen → gegessen, trinken → getrunken, sehen → gesehen, lesen → gelesen, schreiben → geschrieben.",
+        "Avec une particule séparable, ge- se glisse au milieu : einkaufen → eingekauft, anrufen → angerufen, fernsehen → ferngesehen.",
+        "Quelques formes à connaître par cœur : nehmen → genommen, finden → gefunden, verlieren → verloren, vergessen → vergessen, bringen → gebracht."
+       ],
+       "items": [
+        {
+         "slug": "de-gegessen",
+         "kind": "vocabulary",
+         "front": "essen → gegessen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "manger → mangé"
+        },
+        {
+         "slug": "de-getrunken",
+         "kind": "vocabulary",
+         "front": "trinken → getrunken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "boire → bu"
+        },
+        {
+         "slug": "de-gesehen",
+         "kind": "vocabulary",
+         "front": "sehen → gesehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "voir → vu"
+        },
+        {
+         "slug": "de-gelesen",
+         "kind": "vocabulary",
+         "front": "lesen → gelesen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lire → lu"
+        },
+        {
+         "slug": "de-geschrieben",
+         "kind": "vocabulary",
+         "front": "schreiben → geschrieben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "écrire → écrit"
+        },
+        {
+         "slug": "de-gefunden",
+         "kind": "vocabulary",
+         "front": "finden → gefunden",
+         "reading": null,
+         "romaji": null,
+         "meaning": "trouver → trouvé"
+        },
+        {
+         "slug": "de-verloren",
+         "kind": "vocabulary",
+         "front": "verlieren → verloren",
+         "reading": null,
+         "romaji": null,
+         "meaning": "perdre → perdu"
+        },
+        {
+         "slug": "de-angerufen",
+         "kind": "vocabulary",
+         "front": "anrufen → angerufen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "appeler (au téléphone) → appelé"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Prinzessin hat ihre Kugel verloren, und der Frosch hat sie gefunden.",
+         "reading": null,
+         "fr": "La princesse a perdu sa balle, et la grenouille l’a trouvée."
+        },
+        {
+         "jp": "Hast du das Märchen schon gelesen? — Nein, aber ich habe den Film gesehen.",
+         "reading": null,
+         "fr": "As-tu déjà lu le conte ? — Non, mais j’ai vu le film."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Frosch hat vom goldenen Teller ＿.",
+         "choices": [
+          "gegessen",
+          "geesst",
+          "essen"
+         ],
+         "answer": "gegessen",
+         "explanation": "Essen → gegessen (irrégulier).",
+         "translation": "La grenouille a mangé dans l’assiette d’or."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich habe meinen Schlüssel ＿.",
+         "choices": [
+          "verloren",
+          "geverloren",
+          "verliert"
+         ],
+         "answer": "verloren",
+         "explanation": "Verlieren → verloren : pas de ge- avec le préfixe ver-.",
+         "translation": "J’ai perdu ma clé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie hat ihre Mutter ＿.",
+         "choices": [
+          "angerufen",
+          "geanruft",
+          "anrufen"
+         ],
+         "answer": "angerufen",
+         "explanation": "Particule séparable : an-ge-rufen.",
+         "translation": "Elle a appelé sa mère."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Frosch",
+           "jp": "Was hast du heute gegessen?"
+          }
+         ],
+         "translation": "La grenouille te demande ce que tu as mangé (une soupe).",
+         "choices": [
+          "Ich habe eine Suppe gegessen.",
+          "Ich esse eine Suppe gegessen.",
+          "Ich bin eine Suppe."
+         ],
+         "answer": "Ich habe eine Suppe gegessen.",
+         "explanation": "Perfekt : ich habe… gegessen."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w1-c2",
+     "title": "La balle d’or",
+     "lessons": [
+      {
+       "slug": "de-zeit-vergangen",
+       "title": "Situer dans le passé",
+       "objective": "Dire quand une action a eu lieu et depuis combien de temps.",
+       "minutes": 8,
+       "explanation": [
+        "Repères du passé : gestern (hier), vorgestern (avant-hier), letzte Woche (la semaine dernière), letztes Jahr (l’année dernière), vor zwei Tagen (il y a deux jours).",
+        "Vor + datif = il y a : vor einem Jahr, vor drei Wochen. Seit + datif = depuis, avec le présent : Ich lerne seit einem Jahr Deutsch (j’apprends l’allemand depuis un an).",
+        "Noch nie = jamais encore ; schon einmal = déjà une fois. Warst du schon einmal in Heidelberg? — Nein, noch nie."
+       ],
+       "items": [
+        {
+         "slug": "de-letzte-woche",
+         "kind": "vocabulary",
+         "front": "letzte Woche",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la semaine dernière"
+        },
+        {
+         "slug": "de-letztes-jahr",
+         "kind": "vocabulary",
+         "front": "letztes Jahr",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’année dernière"
+        },
+        {
+         "slug": "gram-de-vor-zeit",
+         "kind": "grammar",
+         "front": "vor + Dativ (Zeit)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "il y a (temps écoulé)"
+        },
+        {
+         "slug": "gram-de-seit",
+         "kind": "grammar",
+         "front": "seit + Dativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "depuis"
+        },
+        {
+         "slug": "de-noch-nie",
+         "kind": "vocabulary",
+         "front": "noch nie",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jamais auparavant"
+        },
+        {
+         "slug": "de-frueher",
+         "kind": "vocabulary",
+         "front": "früher",
+         "reading": null,
+         "romaji": null,
+         "meaning": "autrefois, avant"
+        },
+        {
+         "slug": "de-danach",
+         "kind": "vocabulary",
+         "front": "danach",
+         "reading": null,
+         "romaji": null,
+         "meaning": "après cela"
+        },
+        {
+         "slug": "de-zuerst",
+         "kind": "vocabulary",
+         "front": "zuerst",
+         "reading": null,
+         "romaji": null,
+         "meaning": "d’abord"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Vor drei Tagen hat die Prinzessin am Brunnen gespielt.",
+         "reading": null,
+         "fr": "Il y a trois jours, la princesse a joué près du puits."
+        },
+        {
+         "jp": "Der Frosch wohnt seit einem Jahr im Brunnen.",
+         "reading": null,
+         "fr": "La grenouille habite dans le puits depuis un an."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich lerne ＿ zwei Jahren Deutsch.",
+         "choices": [
+          "seit",
+          "vor",
+          "letzte"
+         ],
+         "answer": "seit",
+         "explanation": "Action qui dure encore : seit + datif, avec le présent.",
+         "translation": "J’apprends l’allemand depuis deux ans."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ einer Woche habe ich ihn gesehen.",
+         "choices": [
+          "Vor",
+          "Seit",
+          "Früher"
+         ],
+         "answer": "Vor",
+         "explanation": "Il y a une semaine : vor einer Woche.",
+         "translation": "Je l’ai vu il y a une semaine."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Ich habe noch nie einen Frosch geküsst.",
+         "translation": "La personne a déjà embrassé une grenouille.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Noch nie = jamais encore."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « D’abord j’ai mangé, ensuite j’ai lu. »",
+         "answer": [
+          "Zuerst",
+          "habe",
+          "ich",
+          "gegessen,",
+          "danach",
+          "habe",
+          "ich",
+          "gelesen."
+         ],
+         "explanation": "Zuerst et danach en tête : le verbe reste deuxième, le sujet le suit."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w2",
+   "title": "Le bal de Cendrillon",
+   "region": "Forêt-Noire",
+   "description": "Employer le Perfekt avec sein pour les déplacements, le prétérit de sein et haben, inviter, accepter et refuser.",
+   "boss": {
+    "name": "La Marâtre de Cendrillon",
+    "glyph": "♟",
+    "intro": "La Marâtre a enfermé Cendrillon et mêlé les lentilles aux cendres. Elle n’ouvrira la porte qu’à qui racontera le bal : qui est venu, où es-tu allé, comment c’était ?"
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w2-c1",
+     "title": "Aller et revenir",
+     "lessons": [
+      {
+       "slug": "de-perfekt-sein",
+       "title": "Le Perfekt avec sein",
+       "objective": "Raconter un déplacement ou un changement d’état au passé.",
+       "minutes": 9,
+       "explanation": [
+        "Les verbes de déplacement et de changement d’état forment leur Perfekt avec sein : gehen → ist gegangen, kommen → ist gekommen, fahren → ist gefahren, fliegen → ist geflogen.",
+        "Aussi avec sein : bleiben → ist geblieben (rester), sein → ist gewesen (être), aufstehen → ist aufgestanden, einschlafen → ist eingeschlafen, passieren → ist passiert.",
+        "Test simple : je vais de A à B, ou mon état change → sein. Tout le reste → haben. Ich bin nach Hause gegangen, mais Ich habe zu Hause gegessen."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-perfekt-sein",
+         "kind": "grammar",
+         "front": "sein + Partizip II",
+         "reading": null,
+         "romaji": null,
+         "meaning": "passé composé avec sein"
+        },
+        {
+         "slug": "de-gegangen",
+         "kind": "vocabulary",
+         "front": "gehen → ist gegangen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aller → allé"
+        },
+        {
+         "slug": "de-gekommen",
+         "kind": "vocabulary",
+         "front": "kommen → ist gekommen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "venir → venu"
+        },
+        {
+         "slug": "de-gefahren",
+         "kind": "vocabulary",
+         "front": "fahren → ist gefahren",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aller (en véhicule) → allé"
+        },
+        {
+         "slug": "de-geblieben",
+         "kind": "vocabulary",
+         "front": "bleiben → ist geblieben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rester → resté"
+        },
+        {
+         "slug": "de-aufgestanden",
+         "kind": "vocabulary",
+         "front": "aufstehen → ist aufgestanden",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se lever → levé"
+        },
+        {
+         "slug": "de-passiert",
+         "kind": "vocabulary",
+         "front": "Was ist passiert?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Que s’est-il passé ?"
+        },
+        {
+         "slug": "de-tanzen",
+         "kind": "vocabulary",
+         "front": "tanzen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "danser"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Aschenputtel ist zum Ball gegangen und hat mit dem Prinzen getanzt.",
+         "reading": null,
+         "fr": "Cendrillon est allée au bal et a dansé avec le prince."
+        },
+        {
+         "jp": "Um Mitternacht ist sie schnell nach Hause gefahren.",
+         "reading": null,
+         "fr": "À minuit, elle est vite rentrée chez elle."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich ＿ gestern ins Kino gegangen.",
+         "choices": [
+          "bin",
+          "habe",
+          "ist"
+         ],
+         "answer": "bin",
+         "explanation": "Gehen (déplacement) se conjugue avec sein : ich bin gegangen.",
+         "translation": "Hier, je suis allé au cinéma."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir ＿ Pizza gegessen.",
+         "choices": [
+          "haben",
+          "sind",
+          "seid"
+         ],
+         "answer": "haben",
+         "explanation": "Essen n’est pas un déplacement : haben.",
+         "translation": "Nous avons mangé une pizza."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er ist zu Hause ＿.",
+         "choices": [
+          "geblieben",
+          "gebleibt",
+          "bleiben"
+         ],
+         "answer": "geblieben",
+         "explanation": "Bleiben → geblieben, avec sein.",
+         "translation": "Il est resté à la maison."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Stiefmutter",
+           "jp": "Was ist passiert?"
+          }
+         ],
+         "translation": "La Marâtre demande ce qui s’est passé (Cendrillon est partie).",
+         "choices": [
+          "Aschenputtel ist weggegangen.",
+          "Aschenputtel hat weggegangen.",
+          "Aschenputtel geht gestern."
+         ],
+         "answer": "Aschenputtel ist weggegangen.",
+         "explanation": "Weggehen : déplacement, donc ist weggegangen."
+        }
+       ]
+      },
+      {
+       "slug": "de-war-hatte",
+       "title": "C’était… : war et hatte",
+       "objective": "Décrire une situation passée avec le prétérit de sein et haben.",
+       "minutes": 8,
+       "explanation": [
+        "Pour sein et haben, on préfère le prétérit au Perfekt : ich war (j’étais, j’ai été), du warst, er war, wir waren, ihr wart, sie waren.",
+        "Haben : ich hatte (j’avais, j’ai eu), du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Ich hatte keine Zeit.",
+        "Pour donner son avis sur un moment passé : Wie war das Fest? — Es war toll / schön / langweilig. Es hat mir gefallen (ça m’a plu)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-war",
+         "kind": "grammar",
+         "front": "ich war / du warst / er war",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’étais / tu étais / il était"
+        },
+        {
+         "slug": "gram-de-hatte",
+         "kind": "grammar",
+         "front": "ich hatte / du hattest / er hatte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’avais / tu avais / il avait"
+        },
+        {
+         "slug": "de-toll",
+         "kind": "vocabulary",
+         "front": "toll",
+         "reading": null,
+         "romaji": null,
+         "meaning": "génial, super"
+        },
+        {
+         "slug": "de-langweilig",
+         "kind": "vocabulary",
+         "front": "langweilig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ennuyeux"
+        },
+        {
+         "slug": "de-fest",
+         "kind": "vocabulary",
+         "front": "das Fest",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fête"
+        },
+        {
+         "slug": "de-zeit-haben",
+         "kind": "vocabulary",
+         "front": "Zeit haben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir le temps"
+        },
+        {
+         "slug": "de-gefallen",
+         "kind": "vocabulary",
+         "front": "Es hat mir gefallen.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Ça m’a plu."
+        },
+        {
+         "slug": "de-muede",
+         "kind": "vocabulary",
+         "front": "müde",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fatigué"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Wie war der Ball? — Er war toll, aber ich hatte nur wenig Zeit.",
+         "reading": null,
+         "fr": "Comment était le bal ? — Il était génial, mais je n’avais que peu de temps."
+        },
+        {
+         "jp": "Die Schwestern waren müde und hatten schlechte Laune.",
+         "reading": null,
+         "fr": "Les sœurs étaient fatiguées et de mauvaise humeur."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Gestern ＿ ich sehr müde.",
+         "choices": [
+          "war",
+          "hatte",
+          "bin"
+         ],
+         "answer": "war",
+         "explanation": "Être au passé : ich war.",
+         "translation": "Hier, j’étais très fatigué."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir ＿ leider keine Zeit.",
+         "choices": [
+          "hatten",
+          "waren",
+          "hattet"
+         ],
+         "answer": "hatten",
+         "explanation": "Avoir au passé, avec wir : hatten.",
+         "translation": "Nous n’avions malheureusement pas le temps."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Das Fest war langweilig.",
+         "translation": "La fête était géniale.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Langweilig = ennuyeux."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Prinz",
+           "jp": "Wie war der Abend?"
+          }
+         ],
+         "translation": "Le prince te demande comment était la soirée (elle t’a plu).",
+         "choices": [
+          "Er war toll. Es hat mir gefallen.",
+          "Er hatte toll.",
+          "Ich bin toll gewesen haben."
+         ],
+         "answer": "Er war toll. Es hat mir gefallen.",
+         "explanation": "Avis au passé : es war + adjectif."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w2-c2",
+     "title": "Trois soirs de fête",
+     "lessons": [
+      {
+       "slug": "de-einladen",
+       "title": "Inviter, accepter, refuser",
+       "objective": "Inviter quelqu’un, fixer un rendez-vous et répondre à une invitation.",
+       "minutes": 8,
+       "explanation": [
+        "Inviter : Ich möchte dich zu meinem Geburtstag einladen. Hast du am Samstag Zeit? Kommst du mit? (tu viens avec nous ?).",
+        "Accepter : Ja, gern! / Ich komme gern. / Vielen Dank für die Einladung. Refuser : Tut mir leid, ich kann leider nicht. / Da habe ich schon etwas vor (j’ai déjà quelque chose de prévu).",
+        "Fixer le rendez-vous : Wann treffen wir uns? (quand se retrouve-t-on ?) — Um acht vor dem Schloss. Soll ich etwas mitbringen? (dois-je apporter quelque chose ?)."
+       ],
+       "items": [
+        {
+         "slug": "de-einladen",
+         "kind": "vocabulary",
+         "front": "einladen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "inviter"
+        },
+        {
+         "slug": "de-einladung",
+         "kind": "vocabulary",
+         "front": "die Einladung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’invitation"
+        },
+        {
+         "slug": "de-tut-mir-leid",
+         "kind": "vocabulary",
+         "front": "Tut mir leid.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Je suis désolé·e."
+        },
+        {
+         "slug": "de-sich-treffen",
+         "kind": "vocabulary",
+         "front": "sich treffen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se retrouver, se rencontrer"
+        },
+        {
+         "slug": "de-mitbringen",
+         "kind": "vocabulary",
+         "front": "mitbringen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "apporter (avec soi)"
+        },
+        {
+         "slug": "de-geschenk",
+         "kind": "vocabulary",
+         "front": "das Geschenk",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cadeau"
+        },
+        {
+         "slug": "de-vorhaben",
+         "kind": "vocabulary",
+         "front": "etwas vorhaben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir quelque chose de prévu"
+        },
+        {
+         "slug": "de-mitkommen",
+         "kind": "vocabulary",
+         "front": "mitkommen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "venir avec (quelqu’un)"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der König lädt alle Mädchen zum Ball ein.",
+         "reading": null,
+         "fr": "Le roi invite toutes les jeunes filles au bal."
+        },
+        {
+         "jp": "Kommst du mit? — Tut mir leid, ich habe schon etwas vor.",
+         "reading": null,
+         "fr": "Tu viens avec nous ? — Désolé, j’ai déjà quelque chose de prévu."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Freundin",
+           "jp": "Ich mache am Samstag eine Party. Kommst du?"
+          }
+         ],
+         "translation": "Une amie t’invite samedi (tu acceptes).",
+         "choices": [
+          "Ja, gern! Soll ich etwas mitbringen?",
+          "Ja, ich habe gegangen.",
+          "Nein, ich bin ein Geschenk."
+         ],
+         "answer": "Ja, gern! Soll ich etwas mitbringen?",
+         "explanation": "On accepte avec Ja, gern!"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Vielen Dank für die ＿!",
+         "choices": [
+          "Einladung",
+          "Zeit",
+          "Woche"
+         ],
+         "answer": "Einladung",
+         "explanation": "On remercie pour l’invitation : die Einladung.",
+         "translation": "Merci beaucoup pour l’invitation !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Wann ＿ wir uns? — Um acht vor dem Schloss.",
+         "choices": [
+          "treffen",
+          "laden",
+          "bringen"
+         ],
+         "answer": "treffen",
+         "explanation": "Se retrouver : sich treffen.",
+         "translation": "Quand se retrouve-t-on ? — À huit heures devant le château."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Tut mir leid, ich kann leider nicht kommen.",
+         "translation": "La personne accepte l’invitation.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Ich kann leider nicht = je ne peux malheureusement pas : c’est un refus."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w3",
+   "title": "La tour de Raiponce",
+   "region": "Forêt-Noire",
+   "description": "Décrire un logement et ses meubles, distinguer le lieu (datif) et la direction (accusatif), employer les prépositions toujours suivies du datif.",
+   "boss": {
+    "name": "Dame Gothel",
+    "glyph": "♜",
+    "intro": "Dame Gothel a muré la porte de la tour : on n’y entre que par la fenêtre. Décris chaque pièce et dis où poser chaque meuble pour qu’elle te laisse monter jusqu’à Raiponce."
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w3-c1",
+     "title": "Une chambre sous les toits",
+     "lessons": [
+      {
+       "slug": "de-wohnung",
+       "title": "Le logement et les meubles",
+       "objective": "Décrire les pièces d’un logement et ce qui s’y trouve.",
+       "minutes": 8,
+       "explanation": [
+        "Les pièces : das Zimmer (la pièce, la chambre), das Wohnzimmer (le salon), das Schlafzimmer (la chambre à coucher), die Küche (la cuisine), das Bad (la salle de bains).",
+        "Pour louer : die Wohnung (l’appartement), die Miete (le loyer), der Vermieter (le propriétaire). Die Wohnung ist 60 Quadratmeter groß und kostet 600 Euro warm (charges comprises).",
+        "Donner son avis : Die Wohnung ist hell (lumineuse), dunkel (sombre), ruhig (calme), laut (bruyante). Ich finde sie zu klein = je la trouve trop petite."
+       ],
+       "items": [
+        {
+         "slug": "de-wohnung",
+         "kind": "vocabulary",
+         "front": "die Wohnung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’appartement"
+        },
+        {
+         "slug": "de-zimmer",
+         "kind": "vocabulary",
+         "front": "das Zimmer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la pièce, la chambre"
+        },
+        {
+         "slug": "de-kueche",
+         "kind": "vocabulary",
+         "front": "die Küche",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la cuisine (pièce)"
+        },
+        {
+         "slug": "de-bad",
+         "kind": "vocabulary",
+         "front": "das Bad",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la salle de bains"
+        },
+        {
+         "slug": "de-miete",
+         "kind": "vocabulary",
+         "front": "die Miete",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le loyer"
+        },
+        {
+         "slug": "de-tisch",
+         "kind": "vocabulary",
+         "front": "der Tisch",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la table"
+        },
+        {
+         "slug": "de-bett",
+         "kind": "vocabulary",
+         "front": "das Bett",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le lit"
+        },
+        {
+         "slug": "de-fenster",
+         "kind": "vocabulary",
+         "front": "das Fenster",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fenêtre"
+        },
+        {
+         "slug": "de-hell-dunkel",
+         "kind": "vocabulary",
+         "front": "hell / dunkel",
+         "reading": null,
+         "romaji": null,
+         "meaning": "clair / sombre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Rapunzels Zimmer ist klein, aber hell: Es hat nur ein Fenster.",
+         "reading": null,
+         "fr": "La chambre de Raiponce est petite mais lumineuse : elle n’a qu’une fenêtre."
+        },
+        {
+         "jp": "Die Wohnung hat zwei Zimmer, eine Küche und ein Bad. Die Miete ist nicht teuer.",
+         "reading": null,
+         "fr": "L’appartement a deux pièces, une cuisine et une salle de bains. Le loyer n’est pas cher."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Wir kochen in der ＿.",
+         "choices": [
+          "Küche",
+          "Miete",
+          "Wohnung"
+         ],
+         "answer": "Küche",
+         "explanation": "On cuisine dans la cuisine : die Küche.",
+         "translation": "Nous cuisinons dans la cuisine."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Die ＿ kostet 600 Euro im Monat.",
+         "choices": [
+          "Miete",
+          "Küche",
+          "Tisch"
+         ],
+         "answer": "Miete",
+         "explanation": "Ce qu’on paie chaque mois : die Miete.",
+         "translation": "Le loyer coûte 600 euros par mois."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Das Zimmer ist dunkel.",
+         "translation": "La pièce est lumineuse.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Dunkel = sombre, le contraire de hell."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Vermieter",
+           "jp": "Wie finden Sie die Wohnung?"
+          }
+         ],
+         "translation": "Le propriétaire demande ton avis (tu la trouves belle mais trop petite).",
+         "choices": [
+          "Sie ist schön, aber zu klein.",
+          "Sie hat schön, aber klein.",
+          "Ich bin die Wohnung."
+         ],
+         "answer": "Sie ist schön, aber zu klein.",
+         "explanation": "Avis : sie ist + adjectif ; zu = trop."
+        }
+       ]
+      },
+      {
+       "slug": "de-wechsel",
+       "title": "Où ? ou vers où ? Les prépositions mixtes",
+       "objective": "Dire où se trouve un objet et où on le pose.",
+       "minutes": 9,
+       "explanation": [
+        "Neuf prépositions changent de cas : in, an, auf, über, unter, vor, hinter, neben, zwischen. Lieu (wo ?) → datif ; direction (wohin ?) → accusatif.",
+        "Das Buch liegt auf dem Tisch (où ? datif). Ich lege das Buch auf den Tisch (vers où ? accusatif). Rappel : dem → masculin et neutre, der → féminin au datif.",
+        "Les verbes vont par paires : liegen / legen (être posé / poser à plat), stehen / stellen (être debout / poser debout), hängen (être accroché / accrocher)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-wechselpraep",
+         "kind": "grammar",
+         "front": "Wo? + Dativ / Wohin? + Akkusativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lieu au datif / direction à l’accusatif"
+        },
+        {
+         "slug": "de-auf",
+         "kind": "vocabulary",
+         "front": "auf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sur (posé dessus)"
+        },
+        {
+         "slug": "de-unter",
+         "kind": "vocabulary",
+         "front": "unter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sous"
+        },
+        {
+         "slug": "de-vor-ort",
+         "kind": "vocabulary",
+         "front": "vor",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devant"
+        },
+        {
+         "slug": "de-hinter",
+         "kind": "vocabulary",
+         "front": "hinter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "derrière"
+        },
+        {
+         "slug": "de-zwischen",
+         "kind": "vocabulary",
+         "front": "zwischen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "entre"
+        },
+        {
+         "slug": "de-legen-liegen",
+         "kind": "vocabulary",
+         "front": "legen / liegen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poser à plat / être posé"
+        },
+        {
+         "slug": "de-stellen-stehen",
+         "kind": "vocabulary",
+         "front": "stellen / stehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poser debout / être debout"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Prinz steht vor dem Turm. Rapunzel lässt ihr Haar aus dem Fenster.",
+         "reading": null,
+         "fr": "Le prince est devant la tour. Raiponce laisse tomber ses cheveux par la fenêtre."
+        },
+        {
+         "jp": "Stell die Lampe auf den Tisch! — Sie steht schon auf dem Tisch.",
+         "reading": null,
+         "fr": "Pose la lampe sur la table ! — Elle est déjà sur la table."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das Buch liegt auf ＿ Tisch.",
+         "choices": [
+          "dem",
+          "den",
+          "der"
+         ],
+         "answer": "dem",
+         "explanation": "Où ? → datif : auf dem Tisch.",
+         "translation": "Le livre est sur la table."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich lege das Buch auf ＿ Tisch.",
+         "choices": [
+          "den",
+          "dem",
+          "das"
+         ],
+         "answer": "den",
+         "explanation": "Vers où ? → accusatif : auf den Tisch.",
+         "translation": "Je pose le livre sur la table."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Katze schläft unter ＿ Bett.",
+         "choices": [
+          "dem",
+          "das",
+          "den"
+         ],
+         "answer": "dem",
+         "explanation": "Où ? → datif ; das Bett → dem Bett.",
+         "translation": "Le chat dort sous le lit."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wir gehen in ＿ Küche.",
+         "choices": [
+          "die",
+          "der",
+          "dem"
+         ],
+         "answer": "die",
+         "explanation": "Direction → accusatif : in die Küche.",
+         "translation": "Nous allons dans la cuisine."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w3-c2",
+     "title": "Par la fenêtre",
+     "lessons": [
+      {
+       "slug": "de-dativ-praep",
+       "title": "Les prépositions toujours suivies du datif",
+       "objective": "Employer mit, bei, von, zu, aus, nach et seit avec le bon article.",
+       "minutes": 8,
+       "explanation": [
+        "Toujours le datif après : aus (hors de, originaire de), bei (chez, près de), mit (avec), nach (après, vers), seit (depuis), von (de), zu (chez, vers).",
+        "Les articles au datif : dem (masculin, neutre), der (féminin), den + -n (pluriel). Mit dem Bus, mit der Bahn, mit den Kindern. Contractions : zum, zur, vom, beim.",
+        "Bei = chez quelqu’un, sans mouvement : Ich wohne bei meinen Eltern. Zu = chez quelqu’un, avec mouvement : Ich gehe zu meinen Eltern. Pour les villes et pays : nach Berlin."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-dativ-praep",
+         "kind": "grammar",
+         "front": "aus, bei, mit, nach, seit, von, zu + Dativ",
+         "reading": null,
+         "romaji": null,
+         "meaning": "prépositions suivies du datif"
+        },
+        {
+         "slug": "de-mit",
+         "kind": "vocabulary",
+         "front": "mit",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avec"
+        },
+        {
+         "slug": "de-bei",
+         "kind": "vocabulary",
+         "front": "bei",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chez, près de (sans mouvement)"
+        },
+        {
+         "slug": "de-von",
+         "kind": "vocabulary",
+         "front": "von",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de (provenance, appartenance)"
+        },
+        {
+         "slug": "de-zu-prep",
+         "kind": "vocabulary",
+         "front": "zu",
+         "reading": null,
+         "romaji": null,
+         "meaning": "chez, vers (avec mouvement)"
+        },
+        {
+         "slug": "de-nach-ort",
+         "kind": "vocabulary",
+         "front": "nach",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vers (ville, pays) ; après"
+        },
+        {
+         "slug": "de-turm",
+         "kind": "vocabulary",
+         "front": "der Turm",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la tour"
+        },
+        {
+         "slug": "de-haar",
+         "kind": "vocabulary",
+         "front": "das Haar",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le cheveu, la chevelure"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Rapunzel wohnt bei Frau Gothel in einem Turm.",
+         "reading": null,
+         "fr": "Raiponce habite chez Dame Gothel, dans une tour."
+        },
+        {
+         "jp": "Der Prinz kommt mit dem Pferd und geht zum Turm.",
+         "reading": null,
+         "fr": "Le prince arrive à cheval et va vers la tour."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich fahre mit ＿ Bus zur Arbeit.",
+         "choices": [
+          "dem",
+          "den",
+          "der"
+         ],
+         "answer": "dem",
+         "explanation": "Mit + datif ; der Bus → dem Bus.",
+         "translation": "Je vais au travail en bus."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie wohnt ＿ ihren Eltern.",
+         "choices": [
+          "bei",
+          "zu",
+          "nach"
+         ],
+         "answer": "bei",
+         "explanation": "Chez quelqu’un, sans mouvement : bei.",
+         "translation": "Elle habite chez ses parents."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Am Sonntag fahren wir ＿ Heidelberg.",
+         "choices": [
+          "nach",
+          "zu",
+          "bei"
+         ],
+         "answer": "nach",
+         "explanation": "Vers une ville : nach.",
+         "translation": "Dimanche, nous allons à Heidelberg."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je vais chez le médecin. »",
+         "answer": [
+          "Ich",
+          "gehe",
+          "zum",
+          "Arzt."
+         ],
+         "explanation": "Mouvement vers une personne : zu + dem = zum."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w4",
+   "title": "Le miroir de la Reine",
+   "region": "Forêt-Noire",
+   "description": "Comparer avec le comparatif et le superlatif, accorder l’adjectif devant le nom, demander lequel avec welcher.",
+   "boss": {
+    "name": "La Reine au miroir",
+    "glyph": "♕",
+    "intro": "« Miroir, miroir au mur… » La Reine veut savoir qui est la plus belle, la plus grande, la plus rapide. Compare sans te tromper : son miroir ne ment jamais, et elle déteste les fautes de grammaire."
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w4-c1",
+     "title": "Miroir, miroir",
+     "lessons": [
+      {
+       "slug": "de-komparativ",
+       "title": "Le comparatif : -er als",
+       "objective": "Comparer deux personnes ou deux choses.",
+       "minutes": 8,
+       "explanation": [
+        "Comparatif : adjectif + -er, puis als (que). klein → kleiner, schön → schöner. Schneewittchen ist schöner als die Königin.",
+        "Les adjectifs courts en a, o, u prennent souvent le tréma : alt → älter, groß → größer, jung → jünger, kalt → kälter, warm → wärmer.",
+        "Irréguliers : gut → besser, viel → mehr, gern → lieber, hoch → höher. Égalité : so… wie (aussi… que). Er ist so groß wie ich."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-komparativ",
+         "kind": "grammar",
+         "front": "Adjektiv + -er als",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plus… que"
+        },
+        {
+         "slug": "gram-de-so-wie",
+         "kind": "grammar",
+         "front": "so … wie",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aussi… que"
+        },
+        {
+         "slug": "de-aelter",
+         "kind": "vocabulary",
+         "front": "alt → älter",
+         "reading": null,
+         "romaji": null,
+         "meaning": "vieux → plus vieux"
+        },
+        {
+         "slug": "de-groesser",
+         "kind": "vocabulary",
+         "front": "groß → größer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "grand → plus grand"
+        },
+        {
+         "slug": "de-besser",
+         "kind": "vocabulary",
+         "front": "gut → besser",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bon → meilleur"
+        },
+        {
+         "slug": "de-mehr",
+         "kind": "vocabulary",
+         "front": "viel → mehr",
+         "reading": null,
+         "romaji": null,
+         "meaning": "beaucoup → plus"
+        },
+        {
+         "slug": "de-spiegel",
+         "kind": "vocabulary",
+         "front": "der Spiegel",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le miroir"
+        },
+        {
+         "slug": "de-koenigin",
+         "kind": "vocabulary",
+         "front": "die Königin",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la reine"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Schneewittchen ist jünger und schöner als die Königin.",
+         "reading": null,
+         "fr": "Blanche-Neige est plus jeune et plus belle que la reine."
+        },
+        {
+         "jp": "Der Jäger ist so groß wie der König.",
+         "reading": null,
+         "fr": "Le chasseur est aussi grand que le roi."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Mein Bruder ist ＿ als ich.",
+         "choices": [
+          "älter",
+          "alter",
+          "am ältesten"
+         ],
+         "answer": "älter",
+         "explanation": "Alt → älter, avec tréma.",
+         "translation": "Mon frère est plus âgé que moi."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Dieser Kuchen schmeckt ＿ als der Apfel.",
+         "choices": [
+          "besser",
+          "guter",
+          "mehr gut"
+         ],
+         "answer": "besser",
+         "explanation": "Gut → besser (irrégulier).",
+         "translation": "Ce gâteau est meilleur que la pomme."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie ist so schön ＿ ihre Mutter.",
+         "choices": [
+          "wie",
+          "als",
+          "von"
+         ],
+         "answer": "wie",
+         "explanation": "Égalité : so… wie.",
+         "translation": "Elle est aussi belle que sa mère."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Die Zwerge sind kleiner als Schneewittchen.",
+         "translation": "Les nains sont plus grands que Blanche-Neige.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Kleiner = plus petits."
+        }
+       ]
+      },
+      {
+       "slug": "de-superlativ",
+       "title": "Le superlatif : am -sten",
+       "objective": "Dire qui est le plus… de tous.",
+       "minutes": 8,
+       "explanation": [
+        "Superlatif après un verbe : am + adjectif + -sten. schnell → am schnellsten, schön → am schönsten. Après -t, -d, -s, -ß, -z : -esten (alt → am ältesten).",
+        "Devant un nom : der / die / das + adjectif + -ste. Die schönste Frau im ganzen Land (la plus belle femme de tout le pays).",
+        "Irréguliers : gut → am besten, viel → am meisten, gern → am liebsten, groß → am größten, hoch → am höchsten. Am liebsten esse ich Kuchen = ce que je préfère, c’est le gâteau."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-superlativ",
+         "kind": "grammar",
+         "front": "am + Adjektiv + -sten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le plus… (superlatif)"
+        },
+        {
+         "slug": "de-am-besten",
+         "kind": "vocabulary",
+         "front": "am besten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le mieux"
+        },
+        {
+         "slug": "de-am-liebsten",
+         "kind": "vocabulary",
+         "front": "am liebsten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "de préférence (ce que j’aime le plus)"
+        },
+        {
+         "slug": "de-am-meisten",
+         "kind": "vocabulary",
+         "front": "am meisten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le plus"
+        },
+        {
+         "slug": "de-die-schoenste",
+         "kind": "vocabulary",
+         "front": "die Schönste",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la plus belle"
+        },
+        {
+         "slug": "de-land",
+         "kind": "vocabulary",
+         "front": "das Land",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le pays"
+        },
+        {
+         "slug": "de-wer",
+         "kind": "vocabulary",
+         "front": "Wer?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Qui ?"
+        },
+        {
+         "slug": "de-ganz",
+         "kind": "vocabulary",
+         "front": "ganz",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tout entier ; tout à fait"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Spieglein, Spieglein an der Wand, wer ist die Schönste im ganzen Land?",
+         "reading": null,
+         "fr": "Miroir, petit miroir au mur, qui est la plus belle de tout le pays ?"
+        },
+        {
+         "jp": "Von allen Zwergen läuft der jüngste am schnellsten.",
+         "reading": null,
+         "fr": "De tous les nains, c’est le plus jeune qui court le plus vite."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wer läuft am ＿?",
+         "choices": [
+          "schnellsten",
+          "schneller",
+          "schnell"
+         ],
+         "answer": "schnellsten",
+         "explanation": "Superlatif : am schnellsten.",
+         "translation": "Qui court le plus vite ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Am ＿ trinke ich Tee.",
+         "choices": [
+          "liebsten",
+          "lieber",
+          "gern"
+         ],
+         "answer": "liebsten",
+         "explanation": "Gern → lieber → am liebsten.",
+         "translation": "Ce que je préfère boire, c’est le thé."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie ist die ＿ Frau im Land.",
+         "choices": [
+          "schönste",
+          "schöner",
+          "am schönsten"
+         ],
+         "answer": "schönste",
+         "explanation": "Devant un nom : die schönste Frau.",
+         "translation": "Elle est la plus belle femme du pays."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Königin",
+           "jp": "Wer ist die Schönste im ganzen Land?"
+          }
+         ],
+         "translation": "La Reine interroge son miroir (réponds comme lui : Blanche-Neige).",
+         "choices": [
+          "Schneewittchen ist die Schönste.",
+          "Schneewittchen ist schöner.",
+          "Schneewittchen ist am schön."
+         ],
+         "answer": "Schneewittchen ist die Schönste.",
+         "explanation": "Superlatif devant un nom sous-entendu : die Schönste."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w4-c2",
+     "title": "La pomme rouge",
+     "lessons": [
+      {
+       "slug": "de-adjektiv",
+       "title": "L’adjectif devant le nom",
+       "objective": "Accorder l’adjectif épithète après ein et après der.",
+       "minutes": 9,
+       "explanation": [
+        "Après sein, l’adjectif ne change pas (Der Apfel ist rot). Devant un nom, il prend une terminaison : der rote Apfel, ein roter Apfel.",
+        "Après ein (nominatif) : l’adjectif montre le genre. ein roter Apfel (der), eine rote Blume (die), ein rotes Kleid (das). Après der, die, das : toujours -e (der rote Apfel, die rote Blume, das rote Kleid).",
+        "À l’accusatif masculin, tout prend -en : Ich esse einen roten Apfel / den roten Apfel. Au pluriel après die : -en (die roten Äpfel). Welcher Apfel? = quelle pomme ? — Dieser hier (celle-ci)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-adj-ein",
+         "kind": "grammar",
+         "front": "ein roter / eine rote / ein rotes",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adjectif après ein (nominatif)"
+        },
+        {
+         "slug": "gram-de-adj-der",
+         "kind": "grammar",
+         "front": "der / die / das rote …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adjectif après der, die, das (nominatif)"
+        },
+        {
+         "slug": "gram-de-adj-akk-m",
+         "kind": "grammar",
+         "front": "einen roten / den roten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "adjectif à l’accusatif masculin"
+        },
+        {
+         "slug": "gram-de-welcher",
+         "kind": "grammar",
+         "front": "welcher / welche / welches",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lequel, quel"
+        },
+        {
+         "slug": "gram-de-dieser",
+         "kind": "grammar",
+         "front": "dieser / diese / dieses",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ce / cette (celui-ci)"
+        },
+        {
+         "slug": "de-kleid",
+         "kind": "vocabulary",
+         "front": "das Kleid",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la robe"
+        },
+        {
+         "slug": "de-blume",
+         "kind": "vocabulary",
+         "front": "die Blume",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fleur"
+        },
+        {
+         "slug": "de-neu",
+         "kind": "vocabulary",
+         "front": "neu",
+         "reading": null,
+         "romaji": null,
+         "meaning": "nouveau"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Königin bringt einen schönen roten Apfel.",
+         "reading": null,
+         "fr": "La reine apporte une belle pomme rouge."
+        },
+        {
+         "jp": "Welches Kleid möchtest du? — Dieses neue Kleid hier.",
+         "reading": null,
+         "fr": "Quelle robe voudrais-tu ? — Cette nouvelle robe-ci."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Das ist ein ＿ Apfel.",
+         "choices": [
+          "roter",
+          "rote",
+          "rotes"
+         ],
+         "answer": "roter",
+         "explanation": "Der Apfel, après ein : -er.",
+         "translation": "C’est une pomme rouge."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie trägt ein ＿ Kleid.",
+         "choices": [
+          "neues",
+          "neuer",
+          "neue"
+         ],
+         "answer": "neues",
+         "explanation": "Das Kleid, après ein : -es.",
+         "translation": "Elle porte une robe neuve."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich esse den ＿ Apfel nicht!",
+         "choices": [
+          "roten",
+          "rote",
+          "roter"
+         ],
+         "answer": "roten",
+         "explanation": "Accusatif masculin : den roten Apfel.",
+         "translation": "Je ne mange pas la pomme rouge !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ Blume gefällt dir? — Die rote.",
+         "choices": [
+          "Welche",
+          "Welcher",
+          "Welches"
+         ],
+         "answer": "Welche",
+         "explanation": "Die Blume est féminin : welche.",
+         "translation": "Quelle fleur te plaît ? — La rouge."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w5",
+   "title": "Le chemin de Jean le Chanceux",
+   "region": "Forêt-Noire",
+   "description": "Parler de son métier et de sa journée de travail, donner une raison avec weil et rapporter une opinion avec dass.",
+   "boss": {
+    "name": "Jean le Chanceux",
+    "glyph": "☘",
+    "intro": "Après sept ans de travail, Jean le Chanceux échange son or contre un cheval, puis une vache, puis une oie… et se dit toujours plus heureux. Demande-lui pourquoi : il ne répond qu’aux phrases où le verbe est à la bonne place."
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w5-c1",
+     "title": "Sept ans de travail",
+     "lessons": [
+      {
+       "slug": "de-beruf",
+       "title": "Les métiers et le travail",
+       "objective": "Dire ce qu’on fait dans la vie et décrire son travail.",
+       "minutes": 8,
+       "explanation": [
+        "Was sind Sie von Beruf? = quel est votre métier ? On répond sans article : Ich bin Lehrer / Lehrerin. Le féminin se forme en -in : der Arzt → die Ärztin, der Koch → die Köchin.",
+        "Ich arbeite als Verkäuferin (comme vendeuse) bei einer Firma (dans une entreprise), in einem Büro (dans un bureau). Ich arbeite Vollzeit / Teilzeit.",
+        "Der Chef / die Chefin (le / la responsable), der Kollege / die Kollegin (le / la collègue), das Gehalt (le salaire), der Urlaub (les congés). Ich habe frei = je suis en congé."
+       ],
+       "items": [
+        {
+         "slug": "de-beruf",
+         "kind": "vocabulary",
+         "front": "der Beruf",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le métier"
+        },
+        {
+         "slug": "de-von-beruf",
+         "kind": "vocabulary",
+         "front": "Was sind Sie von Beruf?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Quel est votre métier ?"
+        },
+        {
+         "slug": "de-lehrer",
+         "kind": "vocabulary",
+         "front": "der Lehrer / die Lehrerin",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le professeur / la professeure"
+        },
+        {
+         "slug": "de-verkaeufer",
+         "kind": "vocabulary",
+         "front": "der Verkäufer / die Verkäuferin",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le vendeur / la vendeuse"
+        },
+        {
+         "slug": "de-firma",
+         "kind": "vocabulary",
+         "front": "die Firma",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’entreprise"
+        },
+        {
+         "slug": "de-buero",
+         "kind": "vocabulary",
+         "front": "das Büro",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le bureau (lieu)"
+        },
+        {
+         "slug": "de-kollege",
+         "kind": "vocabulary",
+         "front": "der Kollege / die Kollegin",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le / la collègue"
+        },
+        {
+         "slug": "de-urlaub",
+         "kind": "vocabulary",
+         "front": "der Urlaub",
+         "reading": null,
+         "romaji": null,
+         "meaning": "les congés, les vacances"
+        },
+        {
+         "slug": "de-arbeiten-als",
+         "kind": "vocabulary",
+         "front": "arbeiten als …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "travailler comme…"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Was sind Sie von Beruf? — Ich bin Koch. Ich arbeite in einem Gasthaus.",
+         "reading": null,
+         "fr": "Quel est votre métier ? — Je suis cuisinier. Je travaille dans une auberge."
+        },
+        {
+         "jp": "Hans hat sieben Jahre bei seinem Chef gearbeitet. Jetzt hat er Urlaub.",
+         "reading": null,
+         "fr": "Jean a travaillé sept ans chez son patron. Maintenant, il est en congé."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Meine Schwester ist ＿.",
+         "choices": [
+          "Lehrerin",
+          "eine Lehrer",
+          "Lehrer"
+         ],
+         "answer": "Lehrerin",
+         "explanation": "Métier sans article, au féminin : Lehrerin.",
+         "translation": "Ma sœur est professeure."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Er arbeitet ＿ Verkäufer.",
+         "choices": [
+          "als",
+          "wie",
+          "für"
+         ],
+         "answer": "als",
+         "explanation": "Travailler comme : arbeiten als.",
+         "translation": "Il travaille comme vendeur."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Beamtin",
+           "jp": "Was sind Sie von Beruf?"
+          }
+         ],
+         "translation": "On te demande ton métier (tu es cuisinier ou cuisinière).",
+         "choices": [
+          "Ich bin Koch.",
+          "Ich habe Koch.",
+          "Ich bin ein Büro."
+         ],
+         "answer": "Ich bin Koch.",
+         "explanation": "Ich bin + métier, sans article."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Im August habe ich drei Wochen Urlaub.",
+         "translation": "La personne travaille tout le mois d’août.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Urlaub = congés."
+        }
+       ]
+      },
+      {
+       "slug": "de-weil",
+       "title": "Donner une raison : weil",
+       "objective": "Expliquer pourquoi, avec le verbe à la fin de la subordonnée.",
+       "minutes": 9,
+       "explanation": [
+        "Warum? (pourquoi ?) — Weil… (parce que…). Après weil, le verbe conjugué va à la fin : Ich bleibe zu Hause, weil ich krank bin.",
+        "Avec un Perfekt ou un verbe de modalité, c’est l’auxiliaire conjugué qui ferme la phrase : … weil ich lange gearbeitet habe ; … weil ich arbeiten muss.",
+        "Denn (car) donne aussi la raison, mais sans changer l’ordre des mots : Ich bleibe zu Hause, denn ich bin krank. Une virgule sépare toujours les deux propositions."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-weil",
+         "kind": "grammar",
+         "front": "weil + Verb am Ende",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parce que (verbe à la fin)"
+        },
+        {
+         "slug": "gram-de-denn",
+         "kind": "grammar",
+         "front": "denn",
+         "reading": null,
+         "romaji": null,
+         "meaning": "car"
+        },
+        {
+         "slug": "de-warum",
+         "kind": "vocabulary",
+         "front": "Warum?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Pourquoi ?"
+        },
+        {
+         "slug": "de-gluecklich",
+         "kind": "vocabulary",
+         "front": "glücklich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "heureux"
+        },
+        {
+         "slug": "de-schwer",
+         "kind": "vocabulary",
+         "front": "schwer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "lourd ; difficile"
+        },
+        {
+         "slug": "de-leicht",
+         "kind": "vocabulary",
+         "front": "leicht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "léger ; facile"
+        },
+        {
+         "slug": "de-gold",
+         "kind": "vocabulary",
+         "front": "das Gold",
+         "reading": null,
+         "romaji": null,
+         "meaning": "or (métal)"
+        },
+        {
+         "slug": "de-tauschen",
+         "kind": "vocabulary",
+         "front": "tauschen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "échanger"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Warum tauscht Hans sein Gold? — Weil es zu schwer ist.",
+         "reading": null,
+         "fr": "Pourquoi Jean échange-t-il son or ? — Parce qu’il est trop lourd."
+        },
+        {
+         "jp": "Er ist glücklich, weil er nichts mehr tragen muss.",
+         "reading": null,
+         "fr": "Il est heureux parce qu’il n’a plus rien à porter."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « … parce que je suis malade. »",
+         "answer": [
+          "weil",
+          "ich",
+          "krank",
+          "bin."
+         ],
+         "explanation": "Après weil, le verbe conjugué va à la fin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich lerne Deutsch, weil ich in Berlin arbeiten ＿.",
+         "choices": [
+          "will",
+          "wollen",
+          "gewollt"
+         ],
+         "answer": "will",
+         "explanation": "Le verbe conjugué (will) ferme la subordonnée.",
+         "translation": "J’apprends l’allemand parce que je veux travailler à Berlin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er kommt nicht, ＿ er hat keine Zeit.",
+         "choices": [
+          "denn",
+          "weil",
+          "warum"
+         ],
+         "answer": "denn",
+         "explanation": "Le verbe reste en deuxième position : c’est denn.",
+         "translation": "Il ne vient pas, car il n’a pas le temps."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Hans",
+           "jp": "Warum bist du so glücklich?"
+          }
+         ],
+         "translation": "Jean te demande pourquoi tu es si heureux (tu es en congé).",
+         "choices": [
+          "Weil ich Urlaub habe.",
+          "Weil ich habe Urlaub.",
+          "Denn ich Urlaub habe."
+         ],
+         "answer": "Weil ich Urlaub habe.",
+         "explanation": "Weil + verbe à la fin : weil ich Urlaub habe."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w5-c2",
+     "title": "De l’or contre une oie",
+     "lessons": [
+      {
+       "slug": "de-dass",
+       "title": "Dire ce qu’on pense : dass",
+       "objective": "Donner son opinion et rapporter ce que quelqu’un dit.",
+       "minutes": 8,
+       "explanation": [
+        "Dass (que) introduit une subordonnée, verbe à la fin : Ich glaube, dass er recht hat (je crois qu’il a raison). Ich finde, dass das Buch gut ist.",
+        "Pour rapporter : Er sagt, dass er müde ist (il dit qu’il est fatigué). Sie schreibt, dass sie morgen kommt.",
+        "Être d’accord ou non : Das stimmt (c’est vrai). Du hast recht (tu as raison). Das finde ich nicht (je ne trouve pas). Ich bin nicht sicher (je ne suis pas sûr)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-dass",
+         "kind": "grammar",
+         "front": "dass + Verb am Ende",
+         "reading": null,
+         "romaji": null,
+         "meaning": "que (verbe à la fin)"
+        },
+        {
+         "slug": "de-glauben",
+         "kind": "vocabulary",
+         "front": "glauben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "croire"
+        },
+        {
+         "slug": "de-sagen",
+         "kind": "vocabulary",
+         "front": "sagen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "dire"
+        },
+        {
+         "slug": "de-finden-meinung",
+         "kind": "vocabulary",
+         "front": "Ich finde, dass …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Je trouve que…"
+        },
+        {
+         "slug": "de-recht-haben",
+         "kind": "vocabulary",
+         "front": "recht haben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "avoir raison"
+        },
+        {
+         "slug": "de-das-stimmt",
+         "kind": "vocabulary",
+         "front": "Das stimmt.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "C’est vrai, c’est exact."
+        },
+        {
+         "slug": "de-sicher",
+         "kind": "vocabulary",
+         "front": "sicher",
+         "reading": null,
+         "romaji": null,
+         "meaning": "sûr, certain"
+        },
+        {
+         "slug": "de-dumm",
+         "kind": "vocabulary",
+         "front": "dumm",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bête, stupide"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Leute sagen, dass Hans dumm ist. Aber Hans findet, dass er Glück hat.",
+         "reading": null,
+         "fr": "Les gens disent que Jean est bête. Mais Jean trouve qu’il a de la chance."
+        },
+        {
+         "jp": "Ich glaube, dass du recht hast. — Ja, das stimmt.",
+         "reading": null,
+         "fr": "Je crois que tu as raison. — Oui, c’est vrai."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Je crois qu’il est heureux. »",
+         "answer": [
+          "Ich",
+          "glaube,",
+          "dass",
+          "er",
+          "glücklich",
+          "ist."
+         ],
+         "explanation": "Après dass, le verbe conjugué va à la fin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sie sagt, ＿ sie morgen kommt.",
+         "choices": [
+          "dass",
+          "weil",
+          "denn"
+         ],
+         "answer": "dass",
+         "explanation": "Rapporter une parole : sagen, dass…",
+         "translation": "Elle dit qu’elle vient demain."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich finde, dass der Film langweilig ＿.",
+         "choices": [
+          "ist",
+          "sein",
+          "bin"
+         ],
+         "answer": "ist",
+         "explanation": "Le verbe conjugué ferme la subordonnée : … langweilig ist.",
+         "translation": "Je trouve que le film est ennuyeux."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Du hast recht, das stimmt.",
+         "translation": "La personne n’est pas d’accord.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Du hast recht, das stimmt = tu as raison, c’est vrai."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w6",
+   "title": "Les routes du Chat botté",
+   "region": "Forêt-Noire",
+   "description": "Voyager en train et à l’hôtel, exprimer une condition avec wenn, employer les pronoms au datif avec geben, helfen et gefallen.",
+   "boss": {
+    "name": "Le Chat botté",
+    "glyph": "♞",
+    "intro": "Bottes aux pattes et sac sur l’épaule, le Chat botté court les routes pour faire la fortune de son maître. Il te mènera au château… si tu sais prendre un billet, réserver une chambre et dire à qui tu donnes quoi."
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w6-c1",
+     "title": "En route",
+     "lessons": [
+      {
+       "slug": "de-reise",
+       "title": "Voyager : le train et l’hôtel",
+       "objective": "Acheter un billet, comprendre une annonce de gare et réserver une chambre.",
+       "minutes": 8,
+       "explanation": [
+        "À la gare : die Fahrkarte (le billet), einfach (aller simple) / hin und zurück (aller-retour), das Gleis (la voie), die Abfahrt (le départ), die Ankunft (l’arrivée), umsteigen (changer de train).",
+        "Annonces : Der Zug hat zehn Minuten Verspätung (dix minutes de retard). Der Zug fällt aus (le train est supprimé). Bitte einsteigen! (en voiture !).",
+        "À l’hôtel : Ich habe ein Zimmer reserviert. Ein Einzelzimmer / Doppelzimmer für zwei Nächte, mit Frühstück. Wo ist der Schlüssel?"
+       ],
+       "items": [
+        {
+         "slug": "de-zug",
+         "kind": "vocabulary",
+         "front": "der Zug",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le train"
+        },
+        {
+         "slug": "de-fahrkarte",
+         "kind": "vocabulary",
+         "front": "die Fahrkarte",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le billet (de train, de bus)"
+        },
+        {
+         "slug": "de-gleis",
+         "kind": "vocabulary",
+         "front": "das Gleis",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la voie, le quai"
+        },
+        {
+         "slug": "de-verspaetung",
+         "kind": "vocabulary",
+         "front": "die Verspätung",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le retard"
+        },
+        {
+         "slug": "de-umsteigen",
+         "kind": "vocabulary",
+         "front": "umsteigen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "changer (de train, de bus)"
+        },
+        {
+         "slug": "de-hin-und-zurueck",
+         "kind": "vocabulary",
+         "front": "hin und zurück",
+         "reading": null,
+         "romaji": null,
+         "meaning": "aller-retour"
+        },
+        {
+         "slug": "de-reservieren",
+         "kind": "vocabulary",
+         "front": "reservieren",
+         "reading": null,
+         "romaji": null,
+         "meaning": "réserver"
+        },
+        {
+         "slug": "de-schluessel",
+         "kind": "vocabulary",
+         "front": "der Schlüssel",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la clé"
+        },
+        {
+         "slug": "de-koffer",
+         "kind": "vocabulary",
+         "front": "der Koffer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la valise"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Eine Fahrkarte nach Freiburg, hin und zurück, bitte. — Der Zug fährt von Gleis drei.",
+         "reading": null,
+         "fr": "Un billet pour Fribourg, aller-retour, s’il vous plaît. — Le train part de la voie trois."
+        },
+        {
+         "jp": "Der Zug hat Verspätung. Wir müssen in Karlsruhe umsteigen.",
+         "reading": null,
+         "fr": "Le train a du retard. Nous devons changer à Karlsruhe."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Der Zug nach Basel fährt von ＿ fünf.",
+         "choices": [
+          "Gleis",
+          "Koffer",
+          "Schlüssel"
+         ],
+         "answer": "Gleis",
+         "explanation": "La voie : das Gleis.",
+         "translation": "Le train pour Bâle part de la voie cinq."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Der Zug kommt später: Er hat zwanzig Minuten ＿.",
+         "choices": [
+          "Verspätung",
+          "Fahrkarte",
+          "Abfahrt"
+         ],
+         "answer": "Verspätung",
+         "explanation": "Il arrive plus tard : Verspätung.",
+         "translation": "Le train arrive plus tard : il a vingt minutes de retard."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Hotel",
+           "jp": "Guten Abend! Kann ich Ihnen helfen?"
+          }
+         ],
+         "translation": "À la réception, tu as réservé une chambre.",
+         "choices": [
+          "Ja, ich habe ein Zimmer reserviert.",
+          "Ja, ich bin ein Zimmer.",
+          "Nein, der Zug hat Verspätung."
+         ],
+         "answer": "Ja, ich habe ein Zimmer reserviert.",
+         "explanation": "Réserver : ich habe… reserviert."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Sie müssen in Mannheim umsteigen.",
+         "translation": "Le train est direct.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Umsteigen = changer de train."
+        }
+       ]
+      },
+      {
+       "slug": "de-wenn",
+       "title": "Si, quand : wenn",
+       "objective": "Exprimer une condition ou une habitude.",
+       "minutes": 8,
+       "explanation": [
+        "Wenn = si (condition) ou quand, chaque fois que (habitude). Le verbe va à la fin : Wenn ich Zeit habe, …",
+        "Si la subordonnée est en tête, elle occupe la première place : le verbe de la principale vient juste après la virgule. Wenn es regnet, bleibe ich zu Hause.",
+        "Ne pas confondre : wenn (si, chaque fois que), wann (quand ? dans une question) et als (quand, pour un moment unique du passé : Als ich klein war, …)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-wenn",
+         "kind": "grammar",
+         "front": "wenn + Verb am Ende",
+         "reading": null,
+         "romaji": null,
+         "meaning": "si, quand (verbe à la fin)"
+        },
+        {
+         "slug": "gram-de-nebensatz-vorn",
+         "kind": "grammar",
+         "front": "Nebensatz, Verb + Subjekt",
+         "reading": null,
+         "romaji": null,
+         "meaning": "subordonnée en tête, puis verbe + sujet"
+        },
+        {
+         "slug": "gram-de-als-zeit",
+         "kind": "grammar",
+         "front": "als (Vergangenheit)",
+         "reading": null,
+         "romaji": null,
+         "meaning": "quand (moment unique du passé)"
+        },
+        {
+         "slug": "de-vielleicht",
+         "kind": "vocabulary",
+         "front": "vielleicht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "peut-être"
+        },
+        {
+         "slug": "de-immer",
+         "kind": "vocabulary",
+         "front": "immer",
+         "reading": null,
+         "romaji": null,
+         "meaning": "toujours"
+        },
+        {
+         "slug": "de-manchmal",
+         "kind": "vocabulary",
+         "front": "manchmal",
+         "reading": null,
+         "romaji": null,
+         "meaning": "parfois"
+        },
+        {
+         "slug": "de-nie",
+         "kind": "vocabulary",
+         "front": "nie",
+         "reading": null,
+         "romaji": null,
+         "meaning": "jamais"
+        },
+        {
+         "slug": "de-stiefel",
+         "kind": "vocabulary",
+         "front": "der Stiefel",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la botte"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Wenn du mir Stiefel gibst, mache ich dich reich.",
+         "reading": null,
+         "fr": "Si tu me donnes des bottes, je te rendrai riche."
+        },
+        {
+         "jp": "Wenn der König kommt, läuft der Kater immer schnell zum Schloss.",
+         "reading": null,
+         "fr": "Quand le roi arrive, le chat court toujours vite au château."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « S’il pleut, je reste à la maison. »",
+         "answer": [
+          "Wenn",
+          "es",
+          "regnet,",
+          "bleibe",
+          "ich",
+          "zu",
+          "Hause."
+         ],
+         "explanation": "Subordonnée en tête : le verbe bleibe suit la virgule."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Wenn ich Zeit ＿, besuche ich dich.",
+         "choices": [
+          "habe",
+          "haben",
+          "gehabt"
+         ],
+         "answer": "habe",
+         "explanation": "Après wenn, le verbe conjugué est à la fin de la subordonnée.",
+         "translation": "Si j’ai le temps, je te rendrai visite."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ fährt der Zug ab? — Um neun Uhr.",
+         "choices": [
+          "Wann",
+          "Wenn",
+          "Als"
+         ],
+         "answer": "Wann",
+         "explanation": "Question sur le moment : wann.",
+         "translation": "Quand part le train ? — À neuf heures."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ ich klein war, hatte ich eine Katze.",
+         "choices": [
+          "Als",
+          "Wenn",
+          "Wann"
+         ],
+         "answer": "Als",
+         "explanation": "Moment unique du passé : als.",
+         "translation": "Quand j’étais petit, j’avais un chat."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w6-c2",
+     "title": "Le marquis de Carabas",
+     "lessons": [
+      {
+       "slug": "de-pronomen-dativ",
+       "title": "À qui ? Les pronoms au datif",
+       "objective": "Dire à qui on donne, on montre ou on offre quelque chose.",
+       "minutes": 9,
+       "explanation": [
+        "Les pronoms au datif : mir (à moi), dir (à toi), ihm (à lui), ihr (à elle), uns (à nous), euch (à vous), ihnen (à eux), Ihnen (à vous, poli).",
+        "Verbes à deux compléments : la personne au datif, la chose à l’accusatif. Ich gebe dem König einen Fisch. Ich schenke ihm ein Buch. Kannst du mir den Weg zeigen?",
+        "Certains verbes demandent toujours le datif : helfen (Ich helfe dir), gefallen (Das gefällt mir = ça me plaît), gehören (Das gehört mir = c’est à moi), danken (Ich danke Ihnen)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-mir-dir",
+         "kind": "grammar",
+         "front": "mir / dir / ihm / ihr",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à moi / à toi / à lui / à elle"
+        },
+        {
+         "slug": "gram-de-uns-euch",
+         "kind": "grammar",
+         "front": "uns / euch / ihnen / Ihnen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "à nous / à vous / à eux / à vous (poli)"
+        },
+        {
+         "slug": "de-geben",
+         "kind": "vocabulary",
+         "front": "geben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "donner"
+        },
+        {
+         "slug": "de-schenken",
+         "kind": "vocabulary",
+         "front": "schenken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "offrir (un cadeau)"
+        },
+        {
+         "slug": "de-zeigen",
+         "kind": "vocabulary",
+         "front": "zeigen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "montrer"
+        },
+        {
+         "slug": "de-gefaellt-mir",
+         "kind": "vocabulary",
+         "front": "Das gefällt mir.",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Ça me plaît."
+        },
+        {
+         "slug": "de-gehoeren",
+         "kind": "vocabulary",
+         "front": "gehören",
+         "reading": null,
+         "romaji": null,
+         "meaning": "appartenir à"
+        },
+        {
+         "slug": "de-danken",
+         "kind": "vocabulary",
+         "front": "danken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "remercier"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Kater schenkt dem König einen Hasen. Der König dankt ihm.",
+         "reading": null,
+         "fr": "Le chat offre un lièvre au roi. Le roi le remercie."
+        },
+        {
+         "jp": "Wem gehört das Schloss? — Es gehört meinem Herrn.",
+         "reading": null,
+         "fr": "À qui appartient le château ? — Il appartient à mon maître."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Kannst du ＿ helfen? Ich finde den Weg nicht.",
+         "choices": [
+          "mir",
+          "mich",
+          "ich"
+         ],
+         "answer": "mir",
+         "explanation": "Helfen demande le datif : mir.",
+         "translation": "Peux-tu m’aider ? Je ne trouve pas le chemin."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich schenke ＿ ein Buch. Er liest gern.",
+         "choices": [
+          "ihm",
+          "ihn",
+          "er"
+         ],
+         "answer": "ihm",
+         "explanation": "À lui : ihm (datif).",
+         "translation": "Je lui offre un livre. Il aime lire."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Die Stiefel gefallen ＿ sehr, Frau Müller?",
+         "choices": [
+          "Ihnen",
+          "Sie",
+          "dich"
+         ],
+         "answer": "Ihnen",
+         "explanation": "Gefallen + datif ; forme polie : Ihnen.",
+         "translation": "Les bottes vous plaisent beaucoup, madame Müller ?"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "König",
+           "jp": "Wem gehört dieses Land?"
+          }
+         ],
+         "translation": "Le roi demande à qui est cette terre (à ton maître).",
+         "choices": [
+          "Es gehört meinem Herrn.",
+          "Es gehört mein Herr.",
+          "Es gefällt mich."
+         ],
+         "answer": "Es gehört meinem Herrn.",
+         "explanation": "Gehören + datif : meinem Herrn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w7",
+   "title": "L’auberge de l’Oie d’or",
+   "region": "Forêt-Noire",
+   "description": "Employer les verbes pronominaux, décrire ses symptômes chez le médecin et donner un conseil avec sollen.",
+   "boss": {
+    "name": "L’Oie d’or",
+    "glyph": "♢",
+    "intro": "Quiconque touche l’Oie d’or y reste collé : l’aubergiste, ses filles, le curé… toute une file qui éternue et se plaint. Soigne chacun, donne les bons conseils, et fais enfin rire la princesse triste !"
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w7-c1",
+     "title": "Tous collés !",
+     "lessons": [
+      {
+       "slug": "de-reflexiv",
+       "title": "Les verbes pronominaux",
+       "objective": "Parler de sa toilette, de ses sentiments et de ses habitudes.",
+       "minutes": 8,
+       "explanation": [
+        "Le pronom réfléchi : ich … mich, du … dich, er / sie … sich, wir … uns, ihr … euch, sie / Sie … sich. Ich wasche mich. Er freut sich.",
+        "Le pronom suit le verbe conjugué : Ich ziehe mich an (je m’habille). Dans une question : Freust du dich?",
+        "Verbes courants : sich waschen (se laver), sich anziehen (s’habiller), sich freuen (se réjouir), sich ärgern (s’énerver), sich setzen (s’asseoir), sich fühlen (se sentir)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-reflexiv",
+         "kind": "grammar",
+         "front": "mich / dich / sich / uns / euch",
+         "reading": null,
+         "romaji": null,
+         "meaning": "me / te / se / nous / vous (réfléchi)"
+        },
+        {
+         "slug": "de-sich-waschen",
+         "kind": "vocabulary",
+         "front": "sich waschen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se laver"
+        },
+        {
+         "slug": "de-sich-anziehen",
+         "kind": "vocabulary",
+         "front": "sich anziehen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’habiller"
+        },
+        {
+         "slug": "de-sich-freuen",
+         "kind": "vocabulary",
+         "front": "sich freuen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se réjouir, être content"
+        },
+        {
+         "slug": "de-sich-aergern",
+         "kind": "vocabulary",
+         "front": "sich ärgern",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’énerver, se fâcher"
+        },
+        {
+         "slug": "de-sich-setzen",
+         "kind": "vocabulary",
+         "front": "sich setzen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "s’asseoir"
+        },
+        {
+         "slug": "de-sich-fuehlen",
+         "kind": "vocabulary",
+         "front": "sich fühlen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se sentir"
+        },
+        {
+         "slug": "de-lachen",
+         "kind": "vocabulary",
+         "front": "lachen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rire"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Prinzessin lacht nie. Heute freut sie sich zum ersten Mal.",
+         "reading": null,
+         "fr": "La princesse ne rit jamais. Aujourd’hui, elle se réjouit pour la première fois."
+        },
+        {
+         "jp": "Der Wirt ärgert sich, weil er an der Gans klebt.",
+         "reading": null,
+         "fr": "L’aubergiste s’énerve parce qu’il est collé à l’oie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich wasche ＿ jeden Morgen.",
+         "choices": [
+          "mich",
+          "sich",
+          "dich"
+         ],
+         "answer": "mich",
+         "explanation": "Avec ich : mich.",
+         "translation": "Je me lave tous les matins."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er freut ＿ über das Geschenk.",
+         "choices": [
+          "sich",
+          "ihn",
+          "mich"
+         ],
+         "answer": "sich",
+         "explanation": "Avec er / sie : sich.",
+         "translation": "Il se réjouit du cadeau."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Comment te sens-tu aujourd’hui ? »",
+         "answer": [
+          "Wie",
+          "fühlst",
+          "du",
+          "dich",
+          "heute?"
+         ],
+         "explanation": "Dans la question, le pronom réfléchi suit le sujet."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Sie ärgert sich über den Lärm.",
+         "translation": "Elle est contente du bruit.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Sich ärgern = s’énerver."
+        }
+       ]
+      },
+      {
+       "slug": "de-arzt",
+       "title": "Chez le médecin",
+       "objective": "Décrire ses symptômes, comprendre une ordonnance et prendre rendez-vous.",
+       "minutes": 8,
+       "explanation": [
+        "Les symptômes : Ich habe Fieber (de la fièvre), Husten (la toux), Schnupfen (le rhume), Halsschmerzen (mal à la gorge). Ich bin erkältet = je suis enrhumé.",
+        "Le médecin prescrit : das Rezept (l’ordonnance), das Medikament (le médicament), die Tablette (le comprimé). Nehmen Sie dreimal täglich eine Tablette. On va les chercher à la Apotheke.",
+        "Prendre rendez-vous : Ich hätte gern einen Termin (je voudrais un rendez-vous). Geht es am Dienstag um zehn? En cas d’arrêt : die Krankschreibung."
+       ],
+       "items": [
+        {
+         "slug": "de-fieber",
+         "kind": "vocabulary",
+         "front": "das Fieber",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la fièvre"
+        },
+        {
+         "slug": "de-husten",
+         "kind": "vocabulary",
+         "front": "der Husten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la toux"
+        },
+        {
+         "slug": "de-erkaeltet",
+         "kind": "vocabulary",
+         "front": "erkältet sein",
+         "reading": null,
+         "romaji": null,
+         "meaning": "être enrhumé"
+        },
+        {
+         "slug": "de-rezept",
+         "kind": "vocabulary",
+         "front": "das Rezept",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’ordonnance ; la recette"
+        },
+        {
+         "slug": "de-medikament",
+         "kind": "vocabulary",
+         "front": "das Medikament",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le médicament"
+        },
+        {
+         "slug": "de-tablette",
+         "kind": "vocabulary",
+         "front": "die Tablette",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le comprimé"
+        },
+        {
+         "slug": "de-termin",
+         "kind": "vocabulary",
+         "front": "der Termin",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le rendez-vous"
+        },
+        {
+         "slug": "de-apotheke",
+         "kind": "vocabulary",
+         "front": "die Apotheke",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la pharmacie"
+        },
+        {
+         "slug": "de-gesund",
+         "kind": "vocabulary",
+         "front": "gesund",
+         "reading": null,
+         "romaji": null,
+         "meaning": "en bonne santé ; sain"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Ich habe Fieber und Husten. — Hier ist ein Rezept. Gehen Sie zur Apotheke.",
+         "reading": null,
+         "fr": "J’ai de la fièvre et je tousse. — Voici une ordonnance. Allez à la pharmacie."
+        },
+        {
+         "jp": "Ich hätte gern einen Termin. — Geht es morgen um neun Uhr?",
+         "reading": null,
+         "fr": "Je voudrais un rendez-vous. — Demain à neuf heures, ça va ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Mit dem Rezept gehe ich zur ＿.",
+         "choices": [
+          "Apotheke",
+          "Tablette",
+          "Husten"
+         ],
+         "answer": "Apotheke",
+         "explanation": "Les médicaments se retirent à la pharmacie : die Apotheke.",
+         "translation": "Avec l’ordonnance, je vais à la pharmacie."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Nehmen Sie dreimal täglich eine ＿.",
+         "choices": [
+          "Tablette",
+          "Apotheke",
+          "Termin"
+         ],
+         "answer": "Tablette",
+         "explanation": "On prend un comprimé : die Tablette.",
+         "translation": "Prenez un comprimé trois fois par jour."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Praxis",
+           "jp": "Praxis Doktor Weber, guten Tag!"
+          }
+         ],
+         "translation": "Tu appelles le cabinet pour prendre rendez-vous.",
+         "choices": [
+          "Guten Tag, ich hätte gern einen Termin.",
+          "Guten Tag, ich bin ein Rezept.",
+          "Guten Tag, ich habe gesund."
+         ],
+         "answer": "Guten Tag, ich hätte gern einen Termin.",
+         "explanation": "Demander un rendez-vous : ich hätte gern einen Termin."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Ich bin wieder gesund.",
+         "translation": "La personne est encore malade.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Wieder gesund = de nouveau en bonne santé."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w7-c2",
+     "title": "Le rire de la princesse",
+     "lessons": [
+      {
+       "slug": "de-sollen",
+       "title": "Conseiller : sollen et l’impératif",
+       "objective": "Rapporter une consigne et donner un conseil.",
+       "minutes": 8,
+       "explanation": [
+        "Sollen rapporte la consigne de quelqu’un d’autre : Der Arzt sagt, ich soll im Bett bleiben (le médecin dit que je dois rester au lit). ich soll, du sollst, er soll, wir sollen.",
+        "Pour conseiller poliment : Du solltest… (tu devrais…). Du solltest mehr schlafen. Sie sollten weniger arbeiten.",
+        "L’impératif à trois personnes : Trink viel Wasser! (du) / Trinkt viel Wasser! (ihr) / Trinken Sie viel Wasser! (Sie). Avec bitte ou mal, l’ordre devient aimable : Komm mal her!"
+       ],
+       "items": [
+        {
+         "slug": "gram-de-sollen",
+         "kind": "grammar",
+         "front": "ich soll / du sollst / er soll",
+         "reading": null,
+         "romaji": null,
+         "meaning": "je dois (on me le demande)"
+        },
+        {
+         "slug": "gram-de-solltest",
+         "kind": "grammar",
+         "front": "du solltest / Sie sollten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "tu devrais / vous devriez"
+        },
+        {
+         "slug": "gram-de-imperativ-ihr",
+         "kind": "grammar",
+         "front": "Trink! / Trinkt! / Trinken Sie!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "impératif (du, ihr, Sie)"
+        },
+        {
+         "slug": "de-im-bett-bleiben",
+         "kind": "vocabulary",
+         "front": "im Bett bleiben",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rester au lit"
+        },
+        {
+         "slug": "de-rauchen",
+         "kind": "vocabulary",
+         "front": "rauchen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "fumer"
+        },
+        {
+         "slug": "de-sport-machen",
+         "kind": "vocabulary",
+         "front": "Sport machen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "faire du sport"
+        },
+        {
+         "slug": "de-viel-wenig",
+         "kind": "vocabulary",
+         "front": "viel / wenig",
+         "reading": null,
+         "romaji": null,
+         "meaning": "beaucoup / peu"
+        },
+        {
+         "slug": "de-rat",
+         "kind": "vocabulary",
+         "front": "der Rat",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le conseil"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Der Arzt sagt, ich soll viel Tee trinken und im Bett bleiben.",
+         "reading": null,
+         "fr": "Le médecin dit que je dois boire beaucoup de thé et rester au lit."
+        },
+        {
+         "jp": "Du solltest weniger arbeiten und mehr Sport machen.",
+         "reading": null,
+         "fr": "Tu devrais moins travailler et faire plus de sport."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Der Arzt sagt, du ＿ nicht rauchen.",
+         "choices": [
+          "sollst",
+          "soll",
+          "sollen"
+         ],
+         "answer": "sollst",
+         "explanation": "Avec du : sollst.",
+         "translation": "Le médecin dit que tu ne dois pas fumer."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Du bist müde? Du ＿ mehr schlafen.",
+         "choices": [
+          "solltest",
+          "sollst du",
+          "gesollt"
+         ],
+         "answer": "solltest",
+         "explanation": "Conseil : du solltest + infinitif.",
+         "translation": "Tu es fatigué ? Tu devrais dormir davantage."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Kinder, ＿ viel Wasser!",
+         "choices": [
+          "trinkt",
+          "trink",
+          "trinken"
+         ],
+         "answer": "trinkt",
+         "explanation": "À plusieurs personnes qu’on tutoie : trinkt!",
+         "translation": "Les enfants, buvez beaucoup d’eau !"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Freund",
+           "jp": "Ich habe Fieber und Husten. Was soll ich tun?"
+          }
+         ],
+         "translation": "Un ami malade te demande conseil.",
+         "choices": [
+          "Du solltest zum Arzt gehen.",
+          "Du sollst krank.",
+          "Du solltest mehr rauchen."
+         ],
+         "answer": "Du solltest zum Arzt gehen.",
+         "explanation": "Conseil : du solltest… gehen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-w8",
+   "title": "Le château du Roi Barbe-de-Grive",
+   "region": "Forêt-Noire",
+   "description": "Demander poliment avec könnte, würde et hätte gern, parler de l’avenir avec werden, téléphoner et écrire un message.",
+   "boss": {
+    "name": "Le Roi Barbe-de-Grive",
+    "glyph": "♚",
+    "intro": "La princesse orgueilleuse s’est moquée de tous ses prétendants, et le Roi Barbe-de-Grive lui donne une leçon de politesse. À toi d’abord : demande, propose et promets avec les formes les plus courtoises."
+   },
+   "chapters": [
+    {
+     "slug": "goethea2-w8-c1",
+     "title": "Une leçon de politesse",
+     "lessons": [
+      {
+       "slug": "de-hoeflich",
+       "title": "La politesse : könnte, würde, hätte gern",
+       "objective": "Demander un service ou exprimer un souhait avec courtoisie.",
+       "minutes": 8,
+       "explanation": [
+        "Könnten Sie…? (pourriez-vous… ?) est plus poli que Können Sie…? Könnten Sie mir bitte helfen? Könntest du das Fenster öffnen?",
+        "Würde + infinitif exprime un souhait ou une demande : Ich würde gern nach Berlin fahren (j’aimerais aller à Berlin). Würden Sie bitte warten?",
+        "Ich hätte gern… = j’aimerais avoir… (au magasin, au restaurant). Ich wäre gern… = j’aimerais être… Darf ich…? = puis-je… ?"
+       ],
+       "items": [
+        {
+         "slug": "gram-de-koennten",
+         "kind": "grammar",
+         "front": "Könnten Sie …? / Könntest du …?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Pourriez-vous… ?"
+        },
+        {
+         "slug": "gram-de-wuerde",
+         "kind": "grammar",
+         "front": "ich würde gern + Infinitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aimerais + infinitif"
+        },
+        {
+         "slug": "gram-de-haette-gern",
+         "kind": "grammar",
+         "front": "ich hätte gern …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "j’aimerais avoir…"
+        },
+        {
+         "slug": "de-darf-ich",
+         "kind": "vocabulary",
+         "front": "Darf ich …?",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Puis-je… ?"
+        },
+        {
+         "slug": "de-warten",
+         "kind": "vocabulary",
+         "front": "warten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "attendre"
+        },
+        {
+         "slug": "de-oeffnen",
+         "kind": "vocabulary",
+         "front": "öffnen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "ouvrir"
+        },
+        {
+         "slug": "de-hoeflich",
+         "kind": "vocabulary",
+         "front": "höflich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "poli"
+        },
+        {
+         "slug": "de-natuerlich",
+         "kind": "vocabulary",
+         "front": "natürlich",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bien sûr, naturellement"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Könnten Sie mir bitte die Tür öffnen? — Natürlich, gern.",
+         "reading": null,
+         "fr": "Pourriez-vous m’ouvrir la porte, s’il vous plaît ? — Bien sûr, volontiers."
+        },
+        {
+         "jp": "Ich würde gern den König sprechen. — Würden Sie bitte hier warten?",
+         "reading": null,
+         "fr": "J’aimerais parler au roi. — Voudriez-vous attendre ici, s’il vous plaît ?"
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "＿ Sie mir bitte helfen?",
+         "choices": [
+          "Könnten",
+          "Könntest",
+          "Kann"
+         ],
+         "answer": "Könnten",
+         "explanation": "Forme polie avec Sie : Könnten Sie…?",
+         "translation": "Pourriez-vous m’aider, s’il vous plaît ?"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich ＿ gern einen Kaffee.",
+         "choices": [
+          "hätte",
+          "würde",
+          "könnte"
+         ],
+         "answer": "hätte",
+         "explanation": "J’aimerais avoir : ich hätte gern.",
+         "translation": "J’aimerais un café."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich ＿ gern nach Wien fahren.",
+         "choices": [
+          "würde",
+          "hätte",
+          "wäre"
+         ],
+         "answer": "würde",
+         "explanation": "Souhait + infinitif : ich würde gern… fahren.",
+         "translation": "J’aimerais aller à Vienne."
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Diener",
+           "jp": "Guten Tag. Was wünschen Sie?"
+          }
+         ],
+         "translation": "Le serviteur t’accueille au château (tu voudrais parler au roi).",
+         "choices": [
+          "Ich würde gern den König sprechen.",
+          "Ich will König.",
+          "Gib mir den König!"
+         ],
+         "answer": "Ich würde gern den König sprechen.",
+         "explanation": "Demande polie : ich würde gern + infinitif."
+        }
+       ]
+      },
+      {
+       "slug": "de-werden",
+       "title": "Parler de l’avenir : werden",
+       "objective": "Dire ce qu’on fera, faire une promesse ou une prévision.",
+       "minutes": 8,
+       "explanation": [
+        "Souvent, le présent + un repère de temps suffit : Morgen fahre ich nach Köln. Nächste Woche habe ich Urlaub.",
+        "Pour une promesse, une prévision ou un projet : werden + infinitif à la fin. ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden. Ich werde dich nie vergessen.",
+        "Werden seul = devenir : Sie wird Königin (elle devient reine). Es wird kalt (il commence à faire froid). Repères : bald (bientôt), später (plus tard), in zwei Jahren (dans deux ans)."
+       ],
+       "items": [
+        {
+         "slug": "gram-de-futur",
+         "kind": "grammar",
+         "front": "werden + Infinitiv",
+         "reading": null,
+         "romaji": null,
+         "meaning": "futur (werden + infinitif)"
+        },
+        {
+         "slug": "de-werden",
+         "kind": "vocabulary",
+         "front": "werden",
+         "reading": null,
+         "romaji": null,
+         "meaning": "devenir"
+        },
+        {
+         "slug": "de-bald",
+         "kind": "vocabulary",
+         "front": "bald",
+         "reading": null,
+         "romaji": null,
+         "meaning": "bientôt"
+        },
+        {
+         "slug": "de-spaeter",
+         "kind": "vocabulary",
+         "front": "später",
+         "reading": null,
+         "romaji": null,
+         "meaning": "plus tard"
+        },
+        {
+         "slug": "de-naechste-woche",
+         "kind": "vocabulary",
+         "front": "nächste Woche",
+         "reading": null,
+         "romaji": null,
+         "meaning": "la semaine prochaine"
+        },
+        {
+         "slug": "de-zukunft",
+         "kind": "vocabulary",
+         "front": "die Zukunft",
+         "reading": null,
+         "romaji": null,
+         "meaning": "l’avenir"
+        },
+        {
+         "slug": "de-versprechen",
+         "kind": "vocabulary",
+         "front": "versprechen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "promettre"
+        },
+        {
+         "slug": "de-heiraten",
+         "kind": "vocabulary",
+         "front": "heiraten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "se marier, épouser"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Die Prinzessin wird den ersten Bettler heiraten: Das hat der König versprochen.",
+         "reading": null,
+         "fr": "La princesse épousera le premier mendiant venu : le roi l’a promis."
+        },
+        {
+         "jp": "Bald wird sie Königin. In Zukunft wird sie höflicher sein.",
+         "reading": null,
+         "fr": "Bientôt, elle sera reine. À l’avenir, elle sera plus polie."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Ich ＿ dich morgen anrufen.",
+         "choices": [
+          "werde",
+          "wirst",
+          "wird"
+         ],
+         "answer": "werde",
+         "explanation": "Avec ich : werde.",
+         "translation": "Je t’appellerai demain."
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Er ＿ Arzt. Er studiert Medizin.",
+         "choices": [
+          "wird",
+          "werde",
+          "ist geworden haben"
+         ],
+         "answer": "wird",
+         "explanation": "Werden = devenir ; avec er : wird.",
+         "translation": "Il devient médecin. Il étudie la médecine."
+        },
+        {
+         "type": "sentence_order",
+         "prompt": "Remets dans l’ordre : « Nous irons bientôt à Berlin. »",
+         "answer": [
+          "Wir",
+          "werden",
+          "bald",
+          "nach",
+          "Berlin",
+          "fahren."
+         ],
+         "explanation": "Werden en deuxième position, l’infinitif à la fin."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Nächste Woche habe ich Urlaub.",
+         "translation": "La personne parle de la semaine dernière.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Nächste Woche = la semaine prochaine."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "goethea2-w8-c2",
+     "title": "Des nouvelles du château",
+     "lessons": [
+      {
+       "slug": "de-medien",
+       "title": "Téléphoner et écrire un message",
+       "objective": "Se présenter au téléphone, laisser un message et écrire un courriel simple.",
+       "minutes": 8,
+       "explanation": [
+        "Au téléphone, on décroche en donnant son nom : Müller, guten Tag! Hier ist Anna Weber. Kann ich bitte Herrn Braun sprechen? Auf Wiederhören! (au revoir, au téléphone).",
+        "Laisser un message : Können Sie ihm etwas ausrichten? (pouvez-vous lui transmettre un message ?). Ich rufe später zurück (je rappelle plus tard). Bitte rufen Sie mich zurück.",
+        "Écrire : Liebe Anna, / Lieber Paul, (familier) ; Sehr geehrte Frau Braun, / Sehr geehrter Herr Braun, (formel). Fin : Viele Grüße / Liebe Grüße (familier), Mit freundlichen Grüßen (formel)."
+       ],
+       "items": [
+        {
+         "slug": "de-handy",
+         "kind": "vocabulary",
+         "front": "das Handy",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le portable (téléphone)"
+        },
+        {
+         "slug": "de-nachricht",
+         "kind": "vocabulary",
+         "front": "die Nachricht",
+         "reading": null,
+         "romaji": null,
+         "meaning": "le message ; la nouvelle"
+        },
+        {
+         "slug": "de-zurueckrufen",
+         "kind": "vocabulary",
+         "front": "zurückrufen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "rappeler (au téléphone)"
+        },
+        {
+         "slug": "de-auf-wiederhoeren",
+         "kind": "vocabulary",
+         "front": "Auf Wiederhören!",
+         "reading": null,
+         "romaji": null,
+         "meaning": "au revoir ! (au téléphone)"
+        },
+        {
+         "slug": "de-schicken",
+         "kind": "vocabulary",
+         "front": "schicken",
+         "reading": null,
+         "romaji": null,
+         "meaning": "envoyer"
+        },
+        {
+         "slug": "de-sehr-geehrte",
+         "kind": "vocabulary",
+         "front": "Sehr geehrte Frau … / Sehr geehrter Herr …",
+         "reading": null,
+         "romaji": null,
+         "meaning": "Madame… / Monsieur… (lettre formelle)"
+        },
+        {
+         "slug": "de-viele-gruesse",
+         "kind": "vocabulary",
+         "front": "Viele Grüße",
+         "reading": null,
+         "romaji": null,
+         "meaning": "amicalement, bien à toi"
+        },
+        {
+         "slug": "de-mfg",
+         "kind": "vocabulary",
+         "front": "Mit freundlichen Grüßen",
+         "reading": null,
+         "romaji": null,
+         "meaning": "cordialement"
+        },
+        {
+         "slug": "de-antworten",
+         "kind": "vocabulary",
+         "front": "antworten",
+         "reading": null,
+         "romaji": null,
+         "meaning": "répondre"
+        }
+       ],
+       "examples": [
+        {
+         "jp": "Hier ist Anna Weber. Kann ich bitte Herrn Braun sprechen? — Er ist nicht da. Er ruft Sie später zurück.",
+         "reading": null,
+         "fr": "Ici Anna Weber. Puis-je parler à monsieur Braun ? — Il n’est pas là. Il vous rappellera plus tard."
+        },
+        {
+         "jp": "Schick mir bitte eine Nachricht, wenn du am Bahnhof bist.",
+         "reading": null,
+         "fr": "Envoie-moi un message quand tu seras à la gare, s’il te plaît."
+        }
+       ],
+       "exercises": [
+        {
+         "type": "fill_blank",
+         "prompt": "Complète la phrase.",
+         "sentence": "Am Telefon sagt man zum Schluss: Auf ＿!",
+         "choices": [
+          "Wiederhören",
+          "Wiedersehen",
+          "Nachricht"
+         ],
+         "answer": "Wiederhören",
+         "explanation": "Au téléphone, on s’entend sans se voir : Auf Wiederhören.",
+         "translation": "Au téléphone, on dit pour finir : au revoir !"
+        },
+        {
+         "type": "fill_blank",
+         "prompt": "Choisis la forme qui convient.",
+         "sentence": "Sehr ＿ Herr Braun, …",
+         "choices": [
+          "geehrter",
+          "geehrte",
+          "lieber"
+         ],
+         "answer": "geehrter",
+         "explanation": "Formel, pour un homme : Sehr geehrter Herr…",
+         "translation": "Monsieur Braun, …"
+        },
+        {
+         "type": "dialogue_choice",
+         "prompt": "Que réponds-tu ?",
+         "lines": [
+          {
+           "speaker": "Sekretärin",
+           "jp": "Herr Braun ist leider nicht da."
+          }
+         ],
+         "translation": "La secrétaire t’annonce que M. Braun est absent (tu rappelleras plus tard).",
+         "choices": [
+          "Danke, ich rufe später zurück.",
+          "Danke, ich bin Herr Braun.",
+          "Auf Wiedersehen am Telefon gehabt."
+         ],
+         "answer": "Danke, ich rufe später zurück.",
+         "explanation": "Rappeler : zurückrufen ; ich rufe später zurück."
+        },
+        {
+         "type": "true_false",
+         "prompt": "Vrai ou faux ?",
+         "sentence": "Liebe Anna, … Viele Grüße, Tom",
+         "translation": "C’est une lettre formelle.",
+         "choices": [
+          "Vrai",
+          "Faux"
+         ],
+         "answer": "Faux",
+         "explanation": "Liebe… et Viele Grüße sont familiers."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "goethea2-final",
+   "title": "Simulation Goethe A2 : le festin des contes",
+   "region": "Forêt-Noire",
+   "description": "Examen blanc au format du Goethe-Zertifikat A2, en allemand : Lesen, Hören et Schreiben (l’oral, Sprechen, n’est pas évalué). Noté sur 100 ; réussite à partir de 60 points.",
+   "exam": "goethea2-official",
+   "chapters": []
+  }
+ ]
+}

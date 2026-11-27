@@ -557,6 +557,8 @@ const GOETHE_MOCK = (level: string): ExamDef => ({
 
 export const EXAM_GOETHEA1 = GOETHE_OFFICIAL('GOETHEA1', 65, 15, 15, 5);
 export const EXAM_GOETHEA1_MOCK = GOETHE_MOCK('GOETHEA1');
+export const EXAM_GOETHEA2 = GOETHE_OFFICIAL('GOETHEA2', 90, 20, 20, 5);
+export const EXAM_GOETHEA2_MOCK = GOETHE_MOCK('GOETHEA2');
 
 export const EXAM_DELEA1 = DELE_OFFICIAL('DELEA1', 90, 25, 25, 5);
 export const EXAM_DELEA1_MOCK = DELE_MOCK('DELEA1');
@@ -586,6 +588,8 @@ export const EXAMS: Record<string, ExamDef> = {
   [EXAM_HSK6.slug]: EXAM_HSK6,
   [EXAM_GOETHEA1_MOCK.slug]: EXAM_GOETHEA1_MOCK,
   [EXAM_GOETHEA1.slug]: EXAM_GOETHEA1,
+  [EXAM_GOETHEA2_MOCK.slug]: EXAM_GOETHEA2_MOCK,
+  [EXAM_GOETHEA2.slug]: EXAM_GOETHEA2,
   [EXAM_DELEA1_MOCK.slug]: EXAM_DELEA1_MOCK,
   [EXAM_DELEA1.slug]: EXAM_DELEA1,
   [EXAM_DELEA2_MOCK.slug]: EXAM_DELEA2_MOCK,
@@ -945,11 +949,19 @@ const TIPS_GOETHE: Partial<Record<ExamSectionId, string>> = {
   writing: 'Schreiben : entraîne-toi à remplir un formulaire et à écrire un court message avec formule d’appel, trois informations et formule de fin (Liebe…, Viele Grüße).',
 };
 
+/** Conseils propres au Goethe A2 et au-delà : le passé, les cas, les subordonnées. */
+const TIPS_GOETHE_A2: Partial<Record<ExamSectionId, string>> = {
+  grammar: 'Grammaire : reprends le Perfekt (haben ou sein, participes irréguliers), le datif après mit, bei, zu, les prépositions mixtes (wo ? / wohin ?) et le verbe à la fin après weil, dass et wenn, puis entraîne-toi dans l’atelier Goethe.',
+  listening: 'Hören : écoute la radio, les annonces de gare et les messages de répondeur ; note d’abord l’heure, le jour et le lieu, puis vérifie à la deuxième écoute.',
+  writing: 'Schreiben : entraîne-toi à écrire un SMS de trois informations et un courriel formel (Sehr geehrte…, Könnten Sie…, Mit freundlichen Grüßen).',
+};
+
 export function examRecommendations(grade: ExamGrade, level = 'N5'): string[] {
   if (/^GOETHE[ABC][12]$/.test(level)) {
     const weakDe = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);
     if (!weakDe.length) return ['Très bon résultat dans toutes les sections. Continue tes révisions quotidiennes pour le garder dans la durée.'];
-    return weakDe.map((s) => TIPS_GOETHE[s.id] ?? TIPS_GOETHE.grammar!).filter(Boolean);
+    const tipsDe = level === 'GOETHEA1' ? TIPS_GOETHE : { ...TIPS_GOETHE, ...TIPS_GOETHE_A2 };
+    return weakDe.map((s) => tipsDe[s.id] ?? tipsDe.grammar!).filter(Boolean);
   }
   if (/^DELE[ABC][12]$/.test(level)) {
     const weakEs = grade.sections.filter((s) => s.total > 0 && s.percent < 75).sort((a, b) => a.percent - b.percent);

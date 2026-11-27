@@ -29,4 +29,5 @@ export const MOCK_EXAM: Record<string, string> = {
   DELEC1: 'delec1-official',
   DELEC2: 'delec2-official',
   GOETHEA1: 'goethea1-official',
+  GOETHEA2: 'goethea2-official',
 };
